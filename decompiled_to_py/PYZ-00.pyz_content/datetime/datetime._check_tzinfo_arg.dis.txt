@@ -1,0 +1,29 @@
+# Disassembly for datetime._check_tzinfo_arg
+# From module file: datetime
+
+## co_consts:
+(None, 'tzinfo argument must be None or of a tzinfo subclass')
+
+## co_names:
+('isinstance', 'tzinfo', 'TypeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            tz
+   4: POP_JUMP_FORWARD_IF_NONE to 78
+   6: LOAD_GLOBAL          NULL + isinstance
+  18: LOAD_FAST            tz
+  20: LOAD_GLOBAL          tzinfo
+  32: PRECALL              
+  36: CALL                 
+  46: POP_JUMP_FORWARD_IF_TRUE to 82
+  48: LOAD_GLOBAL          NULL + TypeError
+  60: LOAD_CONST           'tzinfo argument must be None or of a tzinfo subclass'
+  62: PRECALL              
+  66: CALL                 
+  76: RAISE_VARARGS        
+  78: LOAD_CONST           None
+  80: RETURN_VALUE         
+  82: LOAD_CONST           None
+  84: RETURN_VALUE         

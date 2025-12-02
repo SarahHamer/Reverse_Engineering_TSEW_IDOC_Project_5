@@ -1,0 +1,95 @@
+# Disassembly for argparse._AttributeHolder.__repr__
+# From module file: argparse
+
+## co_consts:
+(None, '=', '**%s', '(', ', ', ')')
+
+## co_names:
+('type', '__name__', '_get_args', 'append', 'repr', '_get_kwargs', 'isidentifier', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + type
+  14: LOAD_FAST            self
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_ATTR            __name__
+  40: STORE_FAST           type_name
+  42: BUILD_LIST           
+  44: STORE_FAST           arg_strings
+  46: BUILD_MAP            
+  48: STORE_FAST           star_args
+  50: LOAD_FAST            self
+  52: LOAD_METHOD          _get_args
+  74: PRECALL              
+  78: CALL                 
+  88: GET_ITER             
+  90: FOR_ITER             to 164
+  92: STORE_FAST           arg
+  94: LOAD_FAST            arg_strings
+  96: LOAD_METHOD          append
+ 118: LOAD_GLOBAL          NULL + repr
+ 130: LOAD_FAST            arg
+ 132: PRECALL              
+ 136: CALL                 
+ 146: PRECALL              
+ 150: CALL                 
+ 160: POP_TOP              
+ 162: JUMP_BACKWARD        to 90
+ 164: LOAD_FAST            self
+ 166: LOAD_METHOD          _get_kwargs
+ 188: PRECALL              
+ 192: CALL                 
+ 202: GET_ITER             
+ 204: FOR_ITER             to 320
+ 206: UNPACK_SEQUENCE      
+ 210: STORE_FAST           name
+ 212: STORE_FAST           value
+ 214: LOAD_FAST            name
+ 216: LOAD_METHOD          isidentifier
+ 238: PRECALL              
+ 242: CALL                 
+ 252: POP_JUMP_FORWARD_IF_FALSE to 308
+ 254: LOAD_FAST            arg_strings
+ 256: LOAD_METHOD          append
+ 278: LOAD_FAST            name
+ 280: FORMAT_VALUE         str
+ 282: LOAD_CONST           '='
+ 284: LOAD_FAST            value
+ 286: FORMAT_VALUE         repr
+ 288: BUILD_STRING         
+ 290: PRECALL              
+ 294: CALL                 
+ 304: POP_TOP              
+ 306: JUMP_BACKWARD        to 204
+ 308: LOAD_FAST            value
+ 310: LOAD_FAST            star_args
+ 312: LOAD_FAST            name
+ 314: STORE_SUBSCR         
+ 318: JUMP_BACKWARD        to 204
+ 320: LOAD_FAST            star_args
+ 322: POP_JUMP_FORWARD_IF_FALSE to 398
+ 324: LOAD_FAST            arg_strings
+ 326: LOAD_METHOD          append
+ 348: LOAD_CONST           '**%s'
+ 350: LOAD_GLOBAL          NULL + repr
+ 362: LOAD_FAST            star_args
+ 364: PRECALL              
+ 368: CALL                 
+ 378: BINARY_OP            %
+ 382: PRECALL              
+ 386: CALL                 
+ 396: POP_TOP              
+ 398: LOAD_FAST            type_name
+ 400: FORMAT_VALUE         str
+ 402: LOAD_CONST           '('
+ 404: LOAD_CONST           ', '
+ 406: LOAD_METHOD          join
+ 428: LOAD_FAST            arg_strings
+ 430: PRECALL              
+ 434: CALL                 
+ 444: FORMAT_VALUE         str
+ 446: LOAD_CONST           ')'
+ 448: BUILD_STRING         
+ 450: RETURN_VALUE         

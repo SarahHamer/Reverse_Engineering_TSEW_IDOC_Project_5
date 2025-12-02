@@ -1,0 +1,40 @@
+# Disassembly for tarfile.calc_chksums
+# From module file: tarfile
+
+## co_consts:
+("Calculate the checksum for a member's header by summing up all\n       characters except for the chksum field which is treated as if\n       it was filled with spaces. According to the GNU tar sources,\n       some tars (Sun and NeXT) calculate chksum with signed char,\n       which will be different if there are chars in the buffer with\n       the high bit set. So we calculate two checksums, unsigned and\n       signed.\n    ", 256, '148B8x356B', '148b8x356b')
+
+## co_names:
+('sum', 'struct', 'unpack_from')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           256
+   4: LOAD_GLOBAL          NULL + sum
+  16: LOAD_GLOBAL          NULL + struct
+  28: LOAD_ATTR            unpack_from
+  38: LOAD_CONST           '148B8x356B'
+  40: LOAD_FAST            buf
+  42: PRECALL              
+  46: CALL                 
+  56: PRECALL              
+  60: CALL                 
+  70: BINARY_OP            +
+  74: STORE_FAST           unsigned_chksum
+  76: LOAD_CONST           256
+  78: LOAD_GLOBAL          NULL + sum
+  90: LOAD_GLOBAL          NULL + struct
+ 102: LOAD_ATTR            unpack_from
+ 112: LOAD_CONST           '148b8x356b'
+ 114: LOAD_FAST            buf
+ 116: PRECALL              
+ 120: CALL                 
+ 130: PRECALL              
+ 134: CALL                 
+ 144: BINARY_OP            +
+ 148: STORE_FAST           signed_chksum
+ 150: LOAD_FAST            unsigned_chksum
+ 152: LOAD_FAST            signed_chksum
+ 154: BUILD_TUPLE          
+ 156: RETURN_VALUE         

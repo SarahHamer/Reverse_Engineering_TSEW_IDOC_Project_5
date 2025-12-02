@@ -1,0 +1,101 @@
+# Disassembly for selectors.KqueueSelector.unregister
+# From module file: selectors
+
+## co_consts:
+(None, 0)
+
+## co_names:
+('super', 'unregister', 'events', 'EVENT_READ', 'select', 'kevent', 'fd', 'KQ_FILTER_READ', 'KQ_EV_DELETE', '_selector', 'control', 'OSError', 'EVENT_WRITE', 'KQ_FILTER_WRITE')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + super
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_METHOD          unregister
+  52: LOAD_FAST            fileobj
+  54: PRECALL              
+  58: CALL                 
+  68: STORE_FAST           key
+  70: LOAD_FAST            key
+  72: LOAD_ATTR            events
+  82: LOAD_GLOBAL          EVENT_READ
+  94: BINARY_OP            &
+  98: POP_JUMP_FORWARD_IF_FALSE to 288
+ 100: LOAD_GLOBAL          NULL + select
+ 112: LOAD_ATTR            kevent
+ 122: LOAD_FAST            key
+ 124: LOAD_ATTR            fd
+ 134: LOAD_GLOBAL          select
+ 146: LOAD_ATTR            KQ_FILTER_READ
+ 156: LOAD_GLOBAL          select
+ 168: LOAD_ATTR            KQ_EV_DELETE
+ 178: PRECALL              
+ 182: CALL                 
+ 192: STORE_FAST           kev
+ 194: NOP                  
+ 196: LOAD_FAST            self
+ 198: LOAD_ATTR            _selector
+ 208: LOAD_METHOD          control
+ 230: LOAD_FAST            kev
+ 232: BUILD_LIST           
+ 234: LOAD_CONST           0
+ 236: LOAD_CONST           0
+ 238: PRECALL              
+ 242: CALL                 
+ 252: POP_TOP              
+ 254: JUMP_FORWARD         to 288
+ 256: PUSH_EXC_INFO        
+ 258: LOAD_GLOBAL          OSError
+ 270: CHECK_EXC_MATCH      
+ 272: POP_JUMP_FORWARD_IF_FALSE to 280
+ 274: POP_TOP              
+ 276: POP_EXCEPT           
+ 278: JUMP_FORWARD         to 288
+ 280: RERAISE              
+ 282: COPY                 
+ 284: POP_EXCEPT           
+ 286: RERAISE              
+ 288: LOAD_FAST            key
+ 290: LOAD_ATTR            events
+ 300: LOAD_GLOBAL          EVENT_WRITE
+ 312: BINARY_OP            &
+ 316: POP_JUMP_FORWARD_IF_FALSE to 506
+ 318: LOAD_GLOBAL          NULL + select
+ 330: LOAD_ATTR            kevent
+ 340: LOAD_FAST            key
+ 342: LOAD_ATTR            fd
+ 352: LOAD_GLOBAL          select
+ 364: LOAD_ATTR            KQ_FILTER_WRITE
+ 374: LOAD_GLOBAL          select
+ 386: LOAD_ATTR            KQ_EV_DELETE
+ 396: PRECALL              
+ 400: CALL                 
+ 410: STORE_FAST           kev
+ 412: NOP                  
+ 414: LOAD_FAST            self
+ 416: LOAD_ATTR            _selector
+ 426: LOAD_METHOD          control
+ 448: LOAD_FAST            kev
+ 450: BUILD_LIST           
+ 452: LOAD_CONST           0
+ 454: LOAD_CONST           0
+ 456: PRECALL              
+ 460: CALL                 
+ 470: POP_TOP              
+ 472: JUMP_FORWARD         to 506
+ 474: PUSH_EXC_INFO        
+ 476: LOAD_GLOBAL          OSError
+ 488: CHECK_EXC_MATCH      
+ 490: POP_JUMP_FORWARD_IF_FALSE to 498
+ 492: POP_TOP              
+ 494: POP_EXCEPT           
+ 496: JUMP_FORWARD         to 506
+ 498: RERAISE              
+ 500: COPY                 
+ 502: POP_EXCEPT           
+ 504: RERAISE              
+ 506: LOAD_FAST            key
+ 508: RETURN_VALUE         

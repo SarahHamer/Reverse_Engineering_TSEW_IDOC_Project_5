@@ -1,0 +1,48 @@
+# Disassembly for http.DefaultCookiePolicy.return_ok
+# From module file: http.cookiejar
+
+## co_consts:
+('\n        If you override .return_ok(), be sure to call this method.  If it\n        returns false, so should your subclass (assuming your subclass wants to\n        be more strict about which cookies to return).\n\n        ', ' - checking cookie %s=%s', ('version', 'verifiability', 'secure', 'expires', 'port', 'domain'), 'return_ok_', False, True)
+
+## co_names:
+('_debug', 'name', 'value', 'getattr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _debug
+  14: LOAD_CONST           ' - checking cookie %s=%s'
+  16: LOAD_FAST            cookie
+  18: LOAD_ATTR            name
+  28: LOAD_FAST            cookie
+  30: LOAD_ATTR            value
+  40: PRECALL              
+  44: CALL                 
+  54: POP_TOP              
+  56: LOAD_CONST           ('version', 'verifiability', 'secure', 'expires', 'port', 'domain')
+  58: GET_ITER             
+  60: FOR_ITER             to 138
+  62: STORE_FAST           n
+  64: LOAD_CONST           'return_ok_'
+  66: LOAD_FAST            n
+  68: BINARY_OP            +
+  72: STORE_FAST           fn_name
+  74: LOAD_GLOBAL          NULL + getattr
+  86: LOAD_FAST            self
+  88: LOAD_FAST            fn_name
+  90: PRECALL              
+  94: CALL                 
+ 104: STORE_FAST           fn
+ 106: PUSH_NULL            
+ 108: LOAD_FAST            fn
+ 110: LOAD_FAST            cookie
+ 112: LOAD_FAST            request
+ 114: PRECALL              
+ 118: CALL                 
+ 128: POP_JUMP_FORWARD_IF_TRUE to 136
+ 130: POP_TOP              
+ 132: LOAD_CONST           False
+ 134: RETURN_VALUE         
+ 136: JUMP_BACKWARD        to 60
+ 138: LOAD_CONST           True
+ 140: RETURN_VALUE         

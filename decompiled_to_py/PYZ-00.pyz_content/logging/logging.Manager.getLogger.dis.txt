@@ -1,0 +1,118 @@
+# Disassembly for logging.Manager.getLogger
+# From module file: logging
+
+## co_consts:
+('\n        Get a logger with the specified name (channel name), creating it\n        if it doesn\'t yet exist. This name is a dot-separated hierarchical\n        name, such as "a", "a.b", "a.b.c" or similar.\n\n        If a PlaceHolder existed for the specified name [i.e. the logger\n        didn\'t exist but a child of it did], replace it with the created\n        logger and fix up the parent/child references which pointed to the\n        placeholder to now point to the logger.\n        ', None, 'A logger name must be a string')
+
+## co_names:
+('isinstance', 'str', 'TypeError', '_acquireLock', 'loggerDict', 'PlaceHolder', 'loggerClass', '_loggerClass', 'manager', '_fixupChildren', '_fixupParents', '_releaseLock')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: STORE_FAST           rv
+   6: LOAD_GLOBAL          NULL + isinstance
+  18: LOAD_FAST            name
+  20: LOAD_GLOBAL          str
+  32: PRECALL              
+  36: CALL                 
+  46: POP_JUMP_FORWARD_IF_TRUE to 78
+  48: LOAD_GLOBAL          NULL + TypeError
+  60: LOAD_CONST           'A logger name must be a string'
+  62: PRECALL              
+  66: CALL                 
+  76: RAISE_VARARGS        
+  78: LOAD_GLOBAL          NULL + _acquireLock
+  90: PRECALL              
+  94: CALL                 
+ 104: POP_TOP              
+ 106: NOP                  
+ 108: LOAD_FAST            name
+ 110: LOAD_FAST            self
+ 112: LOAD_ATTR            loggerDict
+ 122: CONTAINS_OP          
+ 124: POP_JUMP_FORWARD_IF_FALSE to 366
+ 126: LOAD_FAST            self
+ 128: LOAD_ATTR            loggerDict
+ 138: LOAD_FAST            name
+ 140: BINARY_SUBSCR        
+ 150: STORE_FAST           rv
+ 152: LOAD_GLOBAL          NULL + isinstance
+ 164: LOAD_FAST            rv
+ 166: LOAD_GLOBAL          PlaceHolder
+ 178: PRECALL              
+ 182: CALL                 
+ 192: POP_JUMP_FORWARD_IF_FALSE to 364
+ 194: LOAD_FAST            rv
+ 196: STORE_FAST           ph
+ 198: PUSH_NULL            
+ 200: LOAD_FAST            self
+ 202: LOAD_ATTR            loggerClass
+ 212: JUMP_IF_TRUE_OR_POP  to 226
+ 214: LOAD_GLOBAL          _loggerClass
+ 226: LOAD_FAST            name
+ 228: PRECALL              
+ 232: CALL                 
+ 242: STORE_FAST           rv
+ 244: LOAD_FAST            self
+ 246: LOAD_FAST            rv
+ 248: STORE_ATTR           manager
+ 258: LOAD_FAST            rv
+ 260: LOAD_FAST            self
+ 262: LOAD_ATTR            loggerDict
+ 272: LOAD_FAST            name
+ 274: STORE_SUBSCR         
+ 278: LOAD_FAST            self
+ 280: LOAD_METHOD          _fixupChildren
+ 302: LOAD_FAST            ph
+ 304: LOAD_FAST            rv
+ 306: PRECALL              
+ 310: CALL                 
+ 320: POP_TOP              
+ 322: LOAD_FAST            self
+ 324: LOAD_METHOD          _fixupParents
+ 346: LOAD_FAST            rv
+ 348: PRECALL              
+ 352: CALL                 
+ 362: POP_TOP              
+ 364: JUMP_FORWARD         to 488
+ 366: PUSH_NULL            
+ 368: LOAD_FAST            self
+ 370: LOAD_ATTR            loggerClass
+ 380: JUMP_IF_TRUE_OR_POP  to 394
+ 382: LOAD_GLOBAL          _loggerClass
+ 394: LOAD_FAST            name
+ 396: PRECALL              
+ 400: CALL                 
+ 410: STORE_FAST           rv
+ 412: LOAD_FAST            self
+ 414: LOAD_FAST            rv
+ 416: STORE_ATTR           manager
+ 426: LOAD_FAST            rv
+ 428: LOAD_FAST            self
+ 430: LOAD_ATTR            loggerDict
+ 440: LOAD_FAST            name
+ 442: STORE_SUBSCR         
+ 446: LOAD_FAST            self
+ 448: LOAD_METHOD          _fixupParents
+ 470: LOAD_FAST            rv
+ 472: PRECALL              
+ 476: CALL                 
+ 486: POP_TOP              
+ 488: LOAD_GLOBAL          NULL + _releaseLock
+ 500: PRECALL              
+ 504: CALL                 
+ 514: POP_TOP              
+ 516: JUMP_FORWARD         to 556
+ 518: PUSH_EXC_INFO        
+ 520: LOAD_GLOBAL          NULL + _releaseLock
+ 532: PRECALL              
+ 536: CALL                 
+ 546: POP_TOP              
+ 548: RERAISE              
+ 550: COPY                 
+ 552: POP_EXCEPT           
+ 554: RERAISE              
+ 556: LOAD_FAST            rv
+ 558: RETURN_VALUE         

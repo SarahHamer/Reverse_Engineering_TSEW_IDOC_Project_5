@@ -1,0 +1,118 @@
+# Disassembly for inspect.Signature.__str__
+# From module file: inspect
+
+## co_consts:
+(None, False, True, '/', '*', '({})', ', ', ' -> {}')
+
+## co_names:
+('parameters', 'values', 'str', 'kind', '_POSITIONAL_ONLY', 'append', '_VAR_POSITIONAL', '_KEYWORD_ONLY', 'format', 'join', 'return_annotation', '_empty', 'formatannotation')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           result
+   6: LOAD_CONST           False
+   8: STORE_FAST           render_pos_only_separator
+  10: LOAD_CONST           True
+  12: STORE_FAST           render_kw_only_separator
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            parameters
+  26: LOAD_METHOD          values
+  48: PRECALL              
+  52: CALL                 
+  62: GET_ITER             
+  64: FOR_ITER             to 334
+  66: STORE_FAST           param
+  68: LOAD_GLOBAL          NULL + str
+  80: LOAD_FAST            param
+  82: PRECALL              
+  86: CALL                 
+  96: STORE_FAST           formatted
+  98: LOAD_FAST            param
+ 100: LOAD_ATTR            kind
+ 110: STORE_FAST           kind
+ 112: LOAD_FAST            kind
+ 114: LOAD_GLOBAL          _POSITIONAL_ONLY
+ 126: COMPARE_OP           ==
+ 132: POP_JUMP_FORWARD_IF_FALSE to 140
+ 134: LOAD_CONST           True
+ 136: STORE_FAST           render_pos_only_separator
+ 138: JUMP_FORWARD         to 190
+ 140: LOAD_FAST            render_pos_only_separator
+ 142: POP_JUMP_FORWARD_IF_FALSE to 190
+ 144: LOAD_FAST            result
+ 146: LOAD_METHOD          append
+ 168: LOAD_CONST           '/'
+ 170: PRECALL              
+ 174: CALL                 
+ 184: POP_TOP              
+ 186: LOAD_CONST           False
+ 188: STORE_FAST           render_pos_only_separator
+ 190: LOAD_FAST            kind
+ 192: LOAD_GLOBAL          _VAR_POSITIONAL
+ 204: COMPARE_OP           ==
+ 210: POP_JUMP_FORWARD_IF_FALSE to 218
+ 212: LOAD_CONST           False
+ 214: STORE_FAST           render_kw_only_separator
+ 216: JUMP_FORWARD         to 290
+ 218: LOAD_FAST            kind
+ 220: LOAD_GLOBAL          _KEYWORD_ONLY
+ 232: COMPARE_OP           ==
+ 238: POP_JUMP_FORWARD_IF_FALSE to 290
+ 240: LOAD_FAST            render_kw_only_separator
+ 242: POP_JUMP_FORWARD_IF_FALSE to 290
+ 244: LOAD_FAST            result
+ 246: LOAD_METHOD          append
+ 268: LOAD_CONST           '*'
+ 270: PRECALL              
+ 274: CALL                 
+ 284: POP_TOP              
+ 286: LOAD_CONST           False
+ 288: STORE_FAST           render_kw_only_separator
+ 290: LOAD_FAST            result
+ 292: LOAD_METHOD          append
+ 314: LOAD_FAST            formatted
+ 316: PRECALL              
+ 320: CALL                 
+ 330: POP_TOP              
+ 332: JUMP_BACKWARD        to 64
+ 334: LOAD_FAST            render_pos_only_separator
+ 336: POP_JUMP_FORWARD_IF_FALSE to 380
+ 338: LOAD_FAST            result
+ 340: LOAD_METHOD          append
+ 362: LOAD_CONST           '/'
+ 364: PRECALL              
+ 368: CALL                 
+ 378: POP_TOP              
+ 380: LOAD_CONST           '({})'
+ 382: LOAD_METHOD          format
+ 404: LOAD_CONST           ', '
+ 406: LOAD_METHOD          join
+ 428: LOAD_FAST            result
+ 430: PRECALL              
+ 434: CALL                 
+ 444: PRECALL              
+ 448: CALL                 
+ 458: STORE_FAST           rendered
+ 460: LOAD_FAST            self
+ 462: LOAD_ATTR            return_annotation
+ 472: LOAD_GLOBAL          _empty
+ 484: IS_OP                
+ 486: POP_JUMP_FORWARD_IF_FALSE to 576
+ 488: LOAD_GLOBAL          NULL + formatannotation
+ 500: LOAD_FAST            self
+ 502: LOAD_ATTR            return_annotation
+ 512: PRECALL              
+ 516: CALL                 
+ 526: STORE_FAST           anno
+ 528: LOAD_FAST            rendered
+ 530: LOAD_CONST           ' -> {}'
+ 532: LOAD_METHOD          format
+ 554: LOAD_FAST            anno
+ 556: PRECALL              
+ 560: CALL                 
+ 570: BINARY_OP            +=
+ 574: STORE_FAST           rendered
+ 576: LOAD_FAST            rendered
+ 578: RETURN_VALUE         

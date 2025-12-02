@@ -1,0 +1,103 @@
+# Disassembly for logging.Manager._fixupParents
+# From module file: logging
+
+## co_consts:
+('\n        Ensure that there are either loggers or placeholders all the way\n        from the specified logger to the root of the logger hierarchy.\n        ', '.', None, 0, 1)
+
+## co_names:
+('name', 'rfind', 'loggerDict', 'PlaceHolder', 'isinstance', 'Logger', 'append', 'root', 'parent')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            alogger
+   4: LOAD_ATTR            name
+  14: STORE_FAST           name
+  16: LOAD_FAST            name
+  18: LOAD_METHOD          rfind
+  40: LOAD_CONST           '.'
+  42: PRECALL              
+  46: CALL                 
+  56: STORE_FAST           i
+  58: LOAD_CONST           None
+  60: STORE_FAST           rv
+  62: LOAD_FAST            i
+  64: LOAD_CONST           0
+  66: COMPARE_OP           >
+  72: POP_JUMP_FORWARD_IF_FALSE to 394
+  74: LOAD_FAST            rv
+  76: POP_JUMP_FORWARD_IF_TRUE to 394
+  78: LOAD_FAST            name
+  80: LOAD_CONST           None
+  82: LOAD_FAST            i
+  84: BUILD_SLICE          
+  86: BINARY_SUBSCR        
+  96: STORE_FAST           substr
+  98: LOAD_FAST            substr
+ 100: LOAD_FAST            self
+ 102: LOAD_ATTR            loggerDict
+ 112: CONTAINS_OP          
+ 114: POP_JUMP_FORWARD_IF_FALSE to 164
+ 116: LOAD_GLOBAL          NULL + PlaceHolder
+ 128: LOAD_FAST            alogger
+ 130: PRECALL              
+ 134: CALL                 
+ 144: LOAD_FAST            self
+ 146: LOAD_ATTR            loggerDict
+ 156: LOAD_FAST            substr
+ 158: STORE_SUBSCR         
+ 162: JUMP_FORWARD         to 326
+ 164: LOAD_FAST            self
+ 166: LOAD_ATTR            loggerDict
+ 176: LOAD_FAST            substr
+ 178: BINARY_SUBSCR        
+ 188: STORE_FAST           obj
+ 190: LOAD_GLOBAL          NULL + isinstance
+ 202: LOAD_FAST            obj
+ 204: LOAD_GLOBAL          Logger
+ 216: PRECALL              
+ 220: CALL                 
+ 230: POP_JUMP_FORWARD_IF_FALSE to 238
+ 232: LOAD_FAST            obj
+ 234: STORE_FAST           rv
+ 236: JUMP_FORWARD         to 326
+ 238: LOAD_GLOBAL          NULL + isinstance
+ 250: LOAD_FAST            obj
+ 252: LOAD_GLOBAL          PlaceHolder
+ 264: PRECALL              
+ 268: CALL                 
+ 278: POP_JUMP_FORWARD_IF_TRUE to 284
+ 280: LOAD_ASSERTION_ERROR 
+ 282: RAISE_VARARGS        
+ 284: LOAD_FAST            obj
+ 286: LOAD_METHOD          append
+ 308: LOAD_FAST            alogger
+ 310: PRECALL              
+ 314: CALL                 
+ 324: POP_TOP              
+ 326: LOAD_FAST            name
+ 328: LOAD_METHOD          rfind
+ 350: LOAD_CONST           '.'
+ 352: LOAD_CONST           0
+ 354: LOAD_FAST            i
+ 356: LOAD_CONST           1
+ 358: BINARY_OP            -
+ 362: PRECALL              
+ 366: CALL                 
+ 376: STORE_FAST           i
+ 378: LOAD_FAST            i
+ 380: LOAD_CONST           0
+ 382: COMPARE_OP           >
+ 388: POP_JUMP_FORWARD_IF_FALSE to 394
+ 390: LOAD_FAST            rv
+ 392: POP_JUMP_BACKWARD_IF_FALSE to 78
+ 394: LOAD_FAST            rv
+ 396: POP_JUMP_FORWARD_IF_TRUE to 412
+ 398: LOAD_FAST            self
+ 400: LOAD_ATTR            root
+ 410: STORE_FAST           rv
+ 412: LOAD_FAST            rv
+ 414: LOAD_FAST            alogger
+ 416: STORE_ATTR           parent
+ 426: LOAD_CONST           None
+ 428: RETURN_VALUE         

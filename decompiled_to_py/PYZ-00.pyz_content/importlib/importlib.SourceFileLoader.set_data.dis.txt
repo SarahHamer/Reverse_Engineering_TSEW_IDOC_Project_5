@@ -1,0 +1,147 @@
+# Disassembly for importlib.SourceFileLoader.set_data
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Write bytes data to a file.', 'could not create {!r}: {!r}', None, 'created {!r}')
+
+## co_names:
+('_path_split', '_path_isdir', 'append', 'reversed', '_path_join', '_os', 'mkdir', 'FileExistsError', 'OSError', '_bootstrap', '_verbose_message', '_write_atomic')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _path_split
+  14: LOAD_FAST            path
+  16: PRECALL              
+  20: CALL                 
+  30: UNPACK_SEQUENCE      
+  34: STORE_FAST           parent
+  36: STORE_FAST           filename
+  38: BUILD_LIST           
+  40: STORE_FAST           path_parts
+  42: LOAD_FAST            parent
+  44: POP_JUMP_FORWARD_IF_FALSE to 188
+  46: LOAD_GLOBAL          NULL + _path_isdir
+  58: LOAD_FAST            parent
+  60: PRECALL              
+  64: CALL                 
+  74: POP_JUMP_FORWARD_IF_TRUE to 188
+  76: LOAD_GLOBAL          NULL + _path_split
+  88: LOAD_FAST            parent
+  90: PRECALL              
+  94: CALL                 
+ 104: UNPACK_SEQUENCE      
+ 108: STORE_FAST           parent
+ 110: STORE_FAST           part
+ 112: LOAD_FAST            path_parts
+ 114: LOAD_METHOD          append
+ 136: LOAD_FAST            part
+ 138: PRECALL              
+ 142: CALL                 
+ 152: POP_TOP              
+ 154: LOAD_FAST            parent
+ 156: POP_JUMP_FORWARD_IF_FALSE to 188
+ 158: LOAD_GLOBAL          NULL + _path_isdir
+ 170: LOAD_FAST            parent
+ 172: PRECALL              
+ 176: CALL                 
+ 186: POP_JUMP_BACKWARD_IF_FALSE to 76
+ 188: LOAD_GLOBAL          NULL + reversed
+ 200: LOAD_FAST            path_parts
+ 202: PRECALL              
+ 206: CALL                 
+ 216: GET_ITER             
+ 218: FOR_ITER             to 426
+ 220: STORE_FAST           part
+ 222: LOAD_GLOBAL          NULL + _path_join
+ 234: LOAD_FAST            parent
+ 236: LOAD_FAST            part
+ 238: PRECALL              
+ 242: CALL                 
+ 252: STORE_FAST           parent
+ 254: NOP                  
+ 256: LOAD_GLOBAL          NULL + _os
+ 268: LOAD_ATTR            mkdir
+ 278: LOAD_FAST            parent
+ 280: PRECALL              
+ 284: CALL                 
+ 294: POP_TOP              
+ 296: JUMP_BACKWARD        to 218
+ 298: PUSH_EXC_INFO        
+ 300: LOAD_GLOBAL          FileExistsError
+ 312: CHECK_EXC_MATCH      
+ 314: POP_JUMP_FORWARD_IF_FALSE to 322
+ 316: POP_TOP              
+ 318: POP_EXCEPT           
+ 320: JUMP_BACKWARD        to 218
+ 322: LOAD_GLOBAL          OSError
+ 334: CHECK_EXC_MATCH      
+ 336: POP_JUMP_FORWARD_IF_FALSE to 418
+ 338: STORE_FAST           exc
+ 340: LOAD_GLOBAL          _bootstrap
+ 352: LOAD_METHOD          _verbose_message
+ 374: LOAD_CONST           'could not create {!r}: {!r}'
+ 376: LOAD_FAST            parent
+ 378: LOAD_FAST            exc
+ 380: PRECALL              
+ 384: CALL                 
+ 394: POP_TOP              
+ 396: POP_EXCEPT           
+ 398: LOAD_CONST           None
+ 400: STORE_FAST           exc
+ 402: DELETE_FAST          exc
+ 404: POP_TOP              
+ 406: LOAD_CONST           None
+ 408: RETURN_VALUE         
+ 410: LOAD_CONST           None
+ 412: STORE_FAST           exc
+ 414: DELETE_FAST          exc
+ 416: RERAISE              
+ 418: RERAISE              
+ 420: COPY                 
+ 422: POP_EXCEPT           
+ 424: RERAISE              
+ 426: NOP                  
+ 428: LOAD_GLOBAL          NULL + _write_atomic
+ 440: LOAD_FAST            path
+ 442: LOAD_FAST            data
+ 444: LOAD_FAST            _mode
+ 446: PRECALL              
+ 450: CALL                 
+ 460: POP_TOP              
+ 462: LOAD_GLOBAL          _bootstrap
+ 474: LOAD_METHOD          _verbose_message
+ 496: LOAD_CONST           'created {!r}'
+ 498: LOAD_FAST            path
+ 500: PRECALL              
+ 504: CALL                 
+ 514: POP_TOP              
+ 516: LOAD_CONST           None
+ 518: RETURN_VALUE         
+ 520: PUSH_EXC_INFO        
+ 522: LOAD_GLOBAL          OSError
+ 534: CHECK_EXC_MATCH      
+ 536: POP_JUMP_FORWARD_IF_FALSE to 616
+ 538: STORE_FAST           exc
+ 540: LOAD_GLOBAL          _bootstrap
+ 552: LOAD_METHOD          _verbose_message
+ 574: LOAD_CONST           'could not create {!r}: {!r}'
+ 576: LOAD_FAST            path
+ 578: LOAD_FAST            exc
+ 580: PRECALL              
+ 584: CALL                 
+ 594: POP_TOP              
+ 596: POP_EXCEPT           
+ 598: LOAD_CONST           None
+ 600: STORE_FAST           exc
+ 602: DELETE_FAST          exc
+ 604: LOAD_CONST           None
+ 606: RETURN_VALUE         
+ 608: LOAD_CONST           None
+ 610: STORE_FAST           exc
+ 612: DELETE_FAST          exc
+ 614: RERAISE              
+ 616: RERAISE              
+ 618: COPY                 
+ 620: POP_EXCEPT           
+ 622: RERAISE              

@@ -1,0 +1,95 @@
+# Disassembly for ssl.get_server_certificate
+# From module file: ssl
+
+## co_consts:
+("Retrieve the certificate from the server at the specified address,\n    and return it as a PEM-encoded string.\n    If 'ca_certs' is specified, validate the server cert against it.\n    If 'ssl_version' is specified, use it in the connection attempt.\n    If 'timeout' is specified, use it in the connection attempt.\n    ", None, ('cert_reqs', 'cafile'), ('timeout',), ('server_hostname',), True)
+
+## co_names:
+('CERT_REQUIRED', 'CERT_NONE', '_create_stdlib_context', 'create_connection', 'wrap_socket', 'getpeercert', 'DER_cert_to_PEM_cert')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            addr
+   4: UNPACK_SEQUENCE      
+   8: STORE_FAST           host
+  10: STORE_FAST           port
+  12: LOAD_FAST            ca_certs
+  14: POP_JUMP_FORWARD_IF_NONE to 32
+  16: LOAD_GLOBAL          CERT_REQUIRED
+  28: STORE_FAST           cert_reqs
+  30: JUMP_FORWARD         to 46
+  32: LOAD_GLOBAL          CERT_NONE
+  44: STORE_FAST           cert_reqs
+  46: LOAD_GLOBAL          NULL + _create_stdlib_context
+  58: LOAD_FAST            ssl_version
+  60: LOAD_FAST            cert_reqs
+  62: LOAD_FAST            ca_certs
+  64: KW_NAMES             
+  66: PRECALL              
+  70: CALL                 
+  80: STORE_FAST           context
+  82: LOAD_GLOBAL          NULL + create_connection
+  94: LOAD_FAST            addr
+  96: LOAD_FAST            timeout
+  98: KW_NAMES             
+ 100: PRECALL              
+ 104: CALL                 
+ 114: BEFORE_WITH          
+ 116: STORE_FAST           sock
+ 118: LOAD_FAST            context
+ 120: LOAD_METHOD          wrap_socket
+ 142: LOAD_FAST            sock
+ 144: LOAD_FAST            host
+ 146: KW_NAMES             
+ 148: PRECALL              
+ 152: CALL                 
+ 162: BEFORE_WITH          
+ 164: STORE_FAST           sslsock
+ 166: LOAD_FAST            sslsock
+ 168: LOAD_METHOD          getpeercert
+ 190: LOAD_CONST           True
+ 192: PRECALL              
+ 196: CALL                 
+ 206: STORE_FAST           dercert
+ 208: LOAD_CONST           None
+ 210: LOAD_CONST           None
+ 212: LOAD_CONST           None
+ 214: PRECALL              
+ 218: CALL                 
+ 228: POP_TOP              
+ 230: JUMP_FORWARD         to 254
+ 232: PUSH_EXC_INFO        
+ 234: WITH_EXCEPT_START    
+ 236: POP_JUMP_FORWARD_IF_TRUE to 246
+ 238: RERAISE              
+ 240: COPY                 
+ 242: POP_EXCEPT           
+ 244: RERAISE              
+ 246: POP_TOP              
+ 248: POP_EXCEPT           
+ 250: POP_TOP              
+ 252: POP_TOP              
+ 254: LOAD_CONST           None
+ 256: LOAD_CONST           None
+ 258: LOAD_CONST           None
+ 260: PRECALL              
+ 264: CALL                 
+ 274: POP_TOP              
+ 276: JUMP_FORWARD         to 300
+ 278: PUSH_EXC_INFO        
+ 280: WITH_EXCEPT_START    
+ 282: POP_JUMP_FORWARD_IF_TRUE to 292
+ 284: RERAISE              
+ 286: COPY                 
+ 288: POP_EXCEPT           
+ 290: RERAISE              
+ 292: POP_TOP              
+ 294: POP_EXCEPT           
+ 296: POP_TOP              
+ 298: POP_TOP              
+ 300: LOAD_GLOBAL          NULL + DER_cert_to_PEM_cert
+ 312: LOAD_FAST            dercert
+ 314: PRECALL              
+ 318: CALL                 
+ 328: RETURN_VALUE         

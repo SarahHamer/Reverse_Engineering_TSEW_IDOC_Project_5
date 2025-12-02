@@ -1,0 +1,61 @@
+# Disassembly for calendar.timegm
+# From module file: calendar
+
+## co_consts:
+('Unrelated but handy function to calculate Unix timestamp from GMT.', None, 6, 1, 24, 60)
+
+## co_names:
+('datetime', 'date', 'toordinal', '_EPOCH_ORD')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            tuple
+   4: LOAD_CONST           None
+   6: LOAD_CONST           6
+   8: BUILD_SLICE          
+  10: BINARY_SUBSCR        
+  20: UNPACK_SEQUENCE      
+  24: STORE_FAST           year
+  26: STORE_FAST           month
+  28: STORE_FAST           day
+  30: STORE_FAST           hour
+  32: STORE_FAST           minute
+  34: STORE_FAST           second
+  36: LOAD_GLOBAL          NULL + datetime
+  48: LOAD_ATTR            date
+  58: LOAD_FAST            year
+  60: LOAD_FAST            month
+  62: LOAD_CONST           1
+  64: PRECALL              
+  68: CALL                 
+  78: LOAD_METHOD          toordinal
+ 100: PRECALL              
+ 104: CALL                 
+ 114: LOAD_GLOBAL          _EPOCH_ORD
+ 126: BINARY_OP            -
+ 130: LOAD_FAST            day
+ 132: BINARY_OP            +
+ 136: LOAD_CONST           1
+ 138: BINARY_OP            -
+ 142: STORE_FAST           days
+ 144: LOAD_FAST            days
+ 146: LOAD_CONST           24
+ 148: BINARY_OP            *
+ 152: LOAD_FAST            hour
+ 154: BINARY_OP            +
+ 158: STORE_FAST           hours
+ 160: LOAD_FAST            hours
+ 162: LOAD_CONST           60
+ 164: BINARY_OP            *
+ 168: LOAD_FAST            minute
+ 170: BINARY_OP            +
+ 174: STORE_FAST           minutes
+ 176: LOAD_FAST            minutes
+ 178: LOAD_CONST           60
+ 180: BINARY_OP            *
+ 184: LOAD_FAST            second
+ 186: BINARY_OP            +
+ 190: STORE_FAST           seconds
+ 192: LOAD_FAST            seconds
+ 194: RETURN_VALUE         

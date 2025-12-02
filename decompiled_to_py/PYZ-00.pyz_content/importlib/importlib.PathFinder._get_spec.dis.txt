@@ -1,0 +1,93 @@
+# Disassembly for importlib.PathFinder._get_spec
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Find the loader or namespace_path for this module/package name.', None, 'find_spec', 'spec missing loader')
+
+## co_names:
+('isinstance', 'str', '_path_importer_cache', 'hasattr', 'find_spec', '_legacy_get_spec', 'loader', 'submodule_search_locations', 'ImportError', 'extend', '_bootstrap', 'ModuleSpec')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           namespace_path
+   6: LOAD_FAST            path
+   8: GET_ITER             
+  10: FOR_ITER             to 346
+  12: STORE_FAST           entry
+  14: LOAD_GLOBAL          NULL + isinstance
+  26: LOAD_FAST            entry
+  28: LOAD_GLOBAL          str
+  40: PRECALL              
+  44: CALL                 
+  54: POP_JUMP_FORWARD_IF_TRUE to 58
+  56: JUMP_BACKWARD        to 10
+  58: LOAD_FAST            cls
+  60: LOAD_METHOD          _path_importer_cache
+  82: LOAD_FAST            entry
+  84: PRECALL              
+  88: CALL                 
+  98: STORE_FAST           finder
+ 100: LOAD_FAST            finder
+ 102: POP_JUMP_FORWARD_IF_NONE to 344
+ 104: LOAD_GLOBAL          NULL + hasattr
+ 116: LOAD_FAST            finder
+ 118: LOAD_CONST           'find_spec'
+ 120: PRECALL              
+ 124: CALL                 
+ 134: POP_JUMP_FORWARD_IF_FALSE to 182
+ 136: LOAD_FAST            finder
+ 138: LOAD_METHOD          find_spec
+ 160: LOAD_FAST            fullname
+ 162: LOAD_FAST            target
+ 164: PRECALL              
+ 168: CALL                 
+ 178: STORE_FAST           spec
+ 180: JUMP_FORWARD         to 226
+ 182: LOAD_FAST            cls
+ 184: LOAD_METHOD          _legacy_get_spec
+ 206: LOAD_FAST            fullname
+ 208: LOAD_FAST            finder
+ 210: PRECALL              
+ 214: CALL                 
+ 224: STORE_FAST           spec
+ 226: LOAD_FAST            spec
+ 228: POP_JUMP_FORWARD_IF_NOT_NONE to 232
+ 230: JUMP_BACKWARD        to 10
+ 232: LOAD_FAST            spec
+ 234: LOAD_ATTR            loader
+ 244: POP_JUMP_FORWARD_IF_NONE to 254
+ 246: LOAD_FAST            spec
+ 248: SWAP                 
+ 250: POP_TOP              
+ 252: RETURN_VALUE         
+ 254: LOAD_FAST            spec
+ 256: LOAD_ATTR            submodule_search_locations
+ 266: STORE_FAST           portions
+ 268: LOAD_FAST            portions
+ 270: POP_JUMP_FORWARD_IF_NOT_NONE to 302
+ 272: LOAD_GLOBAL          NULL + ImportError
+ 284: LOAD_CONST           'spec missing loader'
+ 286: PRECALL              
+ 290: CALL                 
+ 300: RAISE_VARARGS        
+ 302: LOAD_FAST            namespace_path
+ 304: LOAD_METHOD          extend
+ 326: LOAD_FAST            portions
+ 328: PRECALL              
+ 332: CALL                 
+ 342: POP_TOP              
+ 344: JUMP_BACKWARD        to 10
+ 346: LOAD_GLOBAL          _bootstrap
+ 358: LOAD_METHOD          ModuleSpec
+ 380: LOAD_FAST            fullname
+ 382: LOAD_CONST           None
+ 384: PRECALL              
+ 388: CALL                 
+ 398: STORE_FAST           spec
+ 400: LOAD_FAST            namespace_path
+ 402: LOAD_FAST            spec
+ 404: STORE_ATTR           submodule_search_locations
+ 414: LOAD_FAST            spec
+ 416: RETURN_VALUE         

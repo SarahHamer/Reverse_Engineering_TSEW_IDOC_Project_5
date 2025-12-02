@@ -1,0 +1,18 @@
+# Disassembly for statistics.NormalDist.variance
+# From module file: statistics
+
+## co_consts:
+('Square of the standard deviation.',)
+
+## co_names:
+('_sigma',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _sigma
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            _sigma
+  26: BINARY_OP            *
+  30: RETURN_VALUE         

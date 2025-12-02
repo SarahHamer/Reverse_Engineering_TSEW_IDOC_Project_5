@@ -1,0 +1,22 @@
+# Disassembly for threading.Barrier.n_waiting
+# From module file: threading
+
+## co_consts:
+('Return the number of threads currently waiting at the barrier.', 0)
+
+## co_names:
+('_state', '_count')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _state
+  14: LOAD_CONST           0
+  16: COMPARE_OP           ==
+  22: POP_JUMP_FORWARD_IF_FALSE to 38
+  24: LOAD_FAST            self
+  26: LOAD_ATTR            _count
+  36: RETURN_VALUE         
+  38: LOAD_CONST           0
+  40: RETURN_VALUE         

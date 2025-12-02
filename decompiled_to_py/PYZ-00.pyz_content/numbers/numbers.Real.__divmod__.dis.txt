@@ -1,0 +1,20 @@
+# Disassembly for numbers.Real.__divmod__
+# From module file: numbers
+
+## co_consts:
+('divmod(self, other): The pair (self // other, self % other).\n\n        Sometimes this can be computed faster than the pair of\n        operations.\n        ',)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_FAST            other
+   6: BINARY_OP            //
+  10: LOAD_FAST            self
+  12: LOAD_FAST            other
+  14: BINARY_OP            %
+  18: BUILD_TUPLE          
+  20: RETURN_VALUE         

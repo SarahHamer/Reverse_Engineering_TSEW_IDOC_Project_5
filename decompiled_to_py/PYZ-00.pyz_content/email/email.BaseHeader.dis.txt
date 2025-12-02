@@ -1,0 +1,50 @@
+# Disassembly for email.BaseHeader
+# From module file: email.headerregistry
+
+## co_consts:
+('BaseHeader', "Base class for message headers.\n\n    Implements generic behavior and provides tools for subclasses.\n\n    A subclass must define a classmethod named 'parse' that takes an unfolded\n    value string and a dictionary as its arguments.  The dictionary will\n    contain one key, 'defects', initialized to an empty list.  After the call\n    the dictionary must contain two additional keys: parse_tree, set to the\n    parse tree obtained from parsing the header, and 'decoded', set to the\n    string value of the idealized representation of the data from the value.\n    (That is, encoded words are decoded, and values that have canonical\n    representations are so represented.)\n\n    The defects key is intended to collect parsing defects, which the message\n    parser will subsequently dispose of as appropriate.  The parser should not,\n    insofar as practical, raise any errors.  Defects should be added to the\n    list instead.  The standard header parsers register defects for RFC\n    compliance issues, for obsolete RFC syntax, and for unrecoverable parsing\n    errors.\n\n    The parse method may add additional keys to the dictionary.  In this case\n    the subclass must define an 'init' method, which will be passed the\n    dictionary as its keyword arguments.  The method should use (usually by\n    setting them as the value of similarly named attributes) and remove all the\n    extra keys added by its parse method, and then use super to call its parent\n    class with the remaining arguments and keywords.\n\n    The subclass should also make sure that a 'max_count' attribute is defined\n    that is either None or 1. XXX: need to better define this API.\n\n    ", <code object __new__ at 0x00000240691DA9E0, file "email\headerregistry.py", line 190>, <code object init at 0x000002406945FE10, file "email\headerregistry.py", line 200>, <code object name at 0x0000024069495BD0, file "email\headerregistry.py", line 205>, <code object defects at 0x000002406945FF00, file "email\headerregistry.py", line 209>, <code object __reduce__ at 0x00000240693AB4B0, file "email\headerregistry.py", line 213>, <code object _reconstruct at 0x000002406945DB60, file "email\headerregistry.py", line 223>, <code object fold at 0x0000024068D6D0A0, file "email\headerregistry.py", line 227>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__new__', 'init', 'property', 'name', 'defects', '__reduce__', 'classmethod', '_reconstruct', 'fold')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'BaseHeader'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           "Base class for message headers.\n\n    Implements generic behavior and provides tools for subclasses.\n\n    A subclass must define a classmethod named 'parse' that takes an unfolded\n    value string and a dictionary as its arguments.  The dictionary will\n    contain one key, 'defects', initialized to an empty list.  After the call\n    the dictionary must contain two additional keys: parse_tree, set to the\n    parse tree obtained from parsing the header, and 'decoded', set to the\n    string value of the idealized representation of the data from the value.\n    (That is, encoded words are decoded, and values that have canonical\n    representations are so represented.)\n\n    The defects key is intended to collect parsing defects, which the message\n    parser will subsequently dispose of as appropriate.  The parser should not,\n    insofar as practical, raise any errors.  Defects should be added to the\n    list instead.  The standard header parsers register defects for RFC\n    compliance issues, for obsolete RFC syntax, and for unrecoverable parsing\n    errors.\n\n    The parse method may add additional keys to the dictionary.  In this case\n    the subclass must define an 'init' method, which will be passed the\n    dictionary as its keyword arguments.  The method should use (usually by\n    setting them as the value of similarly named attributes) and remove all the\n    extra keys added by its parse method, and then use super to call its parent\n    class with the remaining arguments and keywords.\n\n    The subclass should also make sure that a 'max_count' attribute is defined\n    that is either None or 1. XXX: need to better define this API.\n\n    "
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object __new__ at 0x00000240691DA9E0, file "email\headerregistry.py", line 190>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           __new__
+  20: LOAD_CONST           <code object init at 0x000002406945FE10, file "email\headerregistry.py", line 200>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           init
+  26: LOAD_NAME            property
+  28: LOAD_CONST           <code object name at 0x0000024069495BD0, file "email\headerregistry.py", line 205>
+  30: MAKE_FUNCTION        
+  32: PRECALL              
+  36: CALL                 
+  46: STORE_NAME           name
+  48: LOAD_NAME            property
+  50: LOAD_CONST           <code object defects at 0x000002406945FF00, file "email\headerregistry.py", line 209>
+  52: MAKE_FUNCTION        
+  54: PRECALL              
+  58: CALL                 
+  68: STORE_NAME           defects
+  70: LOAD_CONST           <code object __reduce__ at 0x00000240693AB4B0, file "email\headerregistry.py", line 213>
+  72: MAKE_FUNCTION        
+  74: STORE_NAME           __reduce__
+  76: LOAD_NAME            classmethod
+  78: LOAD_CONST           <code object _reconstruct at 0x000002406945DB60, file "email\headerregistry.py", line 223>
+  80: MAKE_FUNCTION        
+  82: PRECALL              
+  86: CALL                 
+  96: STORE_NAME           _reconstruct
+  98: LOAD_CONST           <code object fold at 0x0000024068D6D0A0, file "email\headerregistry.py", line 227>
+ 100: MAKE_FUNCTION        
+ 102: STORE_NAME           fold
+ 104: LOAD_CONST           None
+ 106: RETURN_VALUE         

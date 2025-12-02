@@ -1,0 +1,38 @@
+# Disassembly for http.FileCookieJar
+# From module file: http.cookiejar
+
+## co_consts:
+('FileCookieJar', 'CookieJar that can be loaded from and saved to a file.', None, False, <code object __init__ at 0x00000240691C14D0, file "http\cookiejar.py", line 1779>, <code object save at 0x0000024069465D10, file "http\cookiejar.py", line 1791>, <code object load at 0x000002406942E8D0, file "http\cookiejar.py", line 1795>, <code object revert at 0x0000024068CA0D60, file "http\cookiejar.py", line 1804>, (None, False, None), (None, False, False))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', 'save', 'load', 'revert')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'FileCookieJar'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'CookieJar that can be loaded from and saved to a file.'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           (None, False, None)
+  16: LOAD_CONST           <code object __init__ at 0x00000240691C14D0, file "http\cookiejar.py", line 1779>
+  18: MAKE_FUNCTION        defaults
+  20: STORE_NAME           __init__
+  22: LOAD_CONST           (None, False, False)
+  24: LOAD_CONST           <code object save at 0x0000024069465D10, file "http\cookiejar.py", line 1791>
+  26: MAKE_FUNCTION        defaults
+  28: STORE_NAME           save
+  30: LOAD_CONST           (None, False, False)
+  32: LOAD_CONST           <code object load at 0x000002406942E8D0, file "http\cookiejar.py", line 1795>
+  34: MAKE_FUNCTION        defaults
+  36: STORE_NAME           load
+  38: NOP                  
+  40: NOP                  
+  42: LOAD_CONST           (None, False, False)
+  44: LOAD_CONST           <code object revert at 0x0000024068CA0D60, file "http\cookiejar.py", line 1804>
+  46: MAKE_FUNCTION        defaults
+  48: STORE_NAME           revert
+  50: LOAD_CONST           None
+  52: RETURN_VALUE         

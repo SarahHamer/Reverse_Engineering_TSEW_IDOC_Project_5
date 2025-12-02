@@ -1,0 +1,186 @@
+# Disassembly for email.decode_params
+# From module file: email.utils
+
+## co_consts:
+('Decode parameters list according to RFC 2231.\n\n    params is a sequence of 2-tuples containing (param name, string value).\n    ', 0, 1, None, '*', 'name', 'num', '"%s"', False, 'latin-1', ('encoding',), True)
+
+## co_names:
+('endswith', 'unquote', 'rfc2231_continuation', 'match', 'group', 'int', 'setdefault', 'append', 'quote', 'items', 'sort', 'urllib', 'parse', 'EMPTYSTRING', 'join', 'decode_rfc2231')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            params
+   4: LOAD_CONST           0
+   6: BINARY_SUBSCR        
+  16: BUILD_LIST           
+  18: STORE_FAST           new_params
+  20: BUILD_MAP            
+  22: STORE_FAST           rfc2231_params
+  24: LOAD_FAST            params
+  26: LOAD_CONST           1
+  28: LOAD_CONST           None
+  30: BUILD_SLICE          
+  32: BINARY_SUBSCR        
+  42: GET_ITER             
+  44: FOR_ITER             to 436
+  46: UNPACK_SEQUENCE      
+  50: STORE_FAST           name
+  52: STORE_FAST           value
+  54: LOAD_FAST            name
+  56: LOAD_METHOD          endswith
+  78: LOAD_CONST           '*'
+  80: PRECALL              
+  84: CALL                 
+  94: STORE_FAST           encoded
+  96: LOAD_GLOBAL          NULL + unquote
+ 108: LOAD_FAST            value
+ 110: PRECALL              
+ 114: CALL                 
+ 124: STORE_FAST           value
+ 126: LOAD_GLOBAL          rfc2231_continuation
+ 138: LOAD_METHOD          match
+ 160: LOAD_FAST            name
+ 162: PRECALL              
+ 166: CALL                 
+ 176: STORE_FAST           mo
+ 178: LOAD_FAST            mo
+ 180: POP_JUMP_FORWARD_IF_FALSE to 356
+ 182: LOAD_FAST            mo
+ 184: LOAD_METHOD          group
+ 206: LOAD_CONST           'name'
+ 208: LOAD_CONST           'num'
+ 210: PRECALL              
+ 214: CALL                 
+ 224: UNPACK_SEQUENCE      
+ 228: STORE_FAST           name
+ 230: STORE_FAST           num
+ 232: LOAD_FAST            num
+ 234: POP_JUMP_FORWARD_IF_NONE to 266
+ 236: LOAD_GLOBAL          NULL + int
+ 248: LOAD_FAST            num
+ 250: PRECALL              
+ 254: CALL                 
+ 264: STORE_FAST           num
+ 266: LOAD_FAST            rfc2231_params
+ 268: LOAD_METHOD          setdefault
+ 290: LOAD_FAST            name
+ 292: BUILD_LIST           
+ 294: PRECALL              
+ 298: CALL                 
+ 308: LOAD_METHOD          append
+ 330: LOAD_FAST            num
+ 332: LOAD_FAST            value
+ 334: LOAD_FAST            encoded
+ 336: BUILD_TUPLE          
+ 338: PRECALL              
+ 342: CALL                 
+ 352: POP_TOP              
+ 354: JUMP_BACKWARD        to 44
+ 356: LOAD_FAST            new_params
+ 358: LOAD_METHOD          append
+ 380: LOAD_FAST            name
+ 382: LOAD_CONST           '"%s"'
+ 384: LOAD_GLOBAL          NULL + quote
+ 396: LOAD_FAST            value
+ 398: PRECALL              
+ 402: CALL                 
+ 412: BINARY_OP            %
+ 416: BUILD_TUPLE          
+ 418: PRECALL              
+ 422: CALL                 
+ 432: POP_TOP              
+ 434: JUMP_BACKWARD        to 44
+ 436: LOAD_FAST            rfc2231_params
+ 438: POP_JUMP_FORWARD_IF_FALSE to 906
+ 440: LOAD_FAST            rfc2231_params
+ 442: LOAD_METHOD          items
+ 464: PRECALL              
+ 468: CALL                 
+ 478: GET_ITER             
+ 480: FOR_ITER             to 906
+ 482: UNPACK_SEQUENCE      
+ 486: STORE_FAST           name
+ 488: STORE_FAST           continuations
+ 490: BUILD_LIST           
+ 492: STORE_FAST           value
+ 494: LOAD_CONST           False
+ 496: STORE_FAST           extended
+ 498: LOAD_FAST            continuations
+ 500: LOAD_METHOD          sort
+ 522: PRECALL              
+ 526: CALL                 
+ 536: POP_TOP              
+ 538: LOAD_FAST            continuations
+ 540: GET_ITER             
+ 542: FOR_ITER             to 672
+ 544: UNPACK_SEQUENCE      
+ 548: STORE_FAST           num
+ 550: STORE_FAST           s
+ 552: STORE_FAST           encoded
+ 554: LOAD_FAST            encoded
+ 556: POP_JUMP_FORWARD_IF_FALSE to 628
+ 558: LOAD_GLOBAL          urllib
+ 570: LOAD_ATTR            parse
+ 580: LOAD_METHOD          unquote
+ 602: LOAD_FAST            s
+ 604: LOAD_CONST           'latin-1'
+ 606: KW_NAMES             
+ 608: PRECALL              
+ 612: CALL                 
+ 622: STORE_FAST           s
+ 624: LOAD_CONST           True
+ 626: STORE_FAST           extended
+ 628: LOAD_FAST            value
+ 630: LOAD_METHOD          append
+ 652: LOAD_FAST            s
+ 654: PRECALL              
+ 658: CALL                 
+ 668: POP_TOP              
+ 670: JUMP_BACKWARD        to 542
+ 672: LOAD_GLOBAL          NULL + quote
+ 684: LOAD_GLOBAL          EMPTYSTRING
+ 696: LOAD_METHOD          join
+ 718: LOAD_FAST            value
+ 720: PRECALL              
+ 724: CALL                 
+ 734: PRECALL              
+ 738: CALL                 
+ 748: STORE_FAST           value
+ 750: LOAD_FAST            extended
+ 752: POP_JUMP_FORWARD_IF_FALSE to 852
+ 754: LOAD_GLOBAL          NULL + decode_rfc2231
+ 766: LOAD_FAST            value
+ 768: PRECALL              
+ 772: CALL                 
+ 782: UNPACK_SEQUENCE      
+ 786: STORE_FAST           charset
+ 788: STORE_FAST           language
+ 790: STORE_FAST           value
+ 792: LOAD_FAST            new_params
+ 794: LOAD_METHOD          append
+ 816: LOAD_FAST            name
+ 818: LOAD_FAST            charset
+ 820: LOAD_FAST            language
+ 822: LOAD_CONST           '"%s"'
+ 824: LOAD_FAST            value
+ 826: BINARY_OP            %
+ 830: BUILD_TUPLE          
+ 832: BUILD_TUPLE          
+ 834: PRECALL              
+ 838: CALL                 
+ 848: POP_TOP              
+ 850: JUMP_BACKWARD        to 480
+ 852: LOAD_FAST            new_params
+ 854: LOAD_METHOD          append
+ 876: LOAD_FAST            name
+ 878: LOAD_CONST           '"%s"'
+ 880: LOAD_FAST            value
+ 882: BINARY_OP            %
+ 886: BUILD_TUPLE          
+ 888: PRECALL              
+ 892: CALL                 
+ 902: POP_TOP              
+ 904: JUMP_BACKWARD        to 480
+ 906: LOAD_FAST            new_params
+ 908: RETURN_VALUE         

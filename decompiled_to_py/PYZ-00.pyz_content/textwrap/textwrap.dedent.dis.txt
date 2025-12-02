@@ -1,0 +1,96 @@
+# Disassembly for textwrap.dedent
+# From module file: textwrap
+
+## co_consts:
+('Remove any common leading whitespace from every line in `text`.\n\n    This can be used to make triple-quoted strings line up with the left\n    edge of the display, while still presenting them in the source code\n    in indented form.\n\n    Note that tabs and spaces are both treated as whitespace, but they\n    are not equal: the lines "  hello" and "\\thello" are\n    considered to have no common leading whitespace.\n\n    Entirely blank lines are normalized to a newline character.\n    ', None, '', 0, '\n', 'line = ', ', margin = ', '(?m)^')
+
+## co_names:
+('_whitespace_only_re', 'sub', '_leading_whitespace_re', 'findall', 'startswith', 'enumerate', 'zip', 'split', 're')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: STORE_FAST           margin
+   6: LOAD_GLOBAL          _whitespace_only_re
+  18: LOAD_METHOD          sub
+  40: LOAD_CONST           ''
+  42: LOAD_FAST            text
+  44: PRECALL              
+  48: CALL                 
+  58: STORE_FAST           text
+  60: LOAD_GLOBAL          _leading_whitespace_re
+  72: LOAD_METHOD          findall
+  94: LOAD_FAST            text
+  96: PRECALL              
+ 100: CALL                 
+ 110: STORE_FAST           indents
+ 112: LOAD_FAST            indents
+ 114: GET_ITER             
+ 116: FOR_ITER             to 336
+ 118: STORE_FAST           indent
+ 120: LOAD_FAST            margin
+ 122: POP_JUMP_FORWARD_IF_NOT_NONE to 130
+ 124: LOAD_FAST            indent
+ 126: STORE_FAST           margin
+ 128: JUMP_BACKWARD        to 116
+ 130: LOAD_FAST            indent
+ 132: LOAD_METHOD          startswith
+ 154: LOAD_FAST            margin
+ 156: PRECALL              
+ 160: CALL                 
+ 170: POP_JUMP_FORWARD_IF_FALSE to 174
+ 172: JUMP_BACKWARD        to 116
+ 174: LOAD_FAST            margin
+ 176: LOAD_METHOD          startswith
+ 198: LOAD_FAST            indent
+ 200: PRECALL              
+ 204: CALL                 
+ 214: POP_JUMP_FORWARD_IF_FALSE to 222
+ 216: LOAD_FAST            indent
+ 218: STORE_FAST           margin
+ 220: JUMP_BACKWARD        to 116
+ 222: LOAD_GLOBAL          NULL + enumerate
+ 234: LOAD_GLOBAL          NULL + zip
+ 246: LOAD_FAST            margin
+ 248: LOAD_FAST            indent
+ 250: PRECALL              
+ 254: CALL                 
+ 264: PRECALL              
+ 268: CALL                 
+ 278: GET_ITER             
+ 280: FOR_ITER             to 334
+ 282: UNPACK_SEQUENCE      
+ 286: STORE_FAST           i
+ 288: UNPACK_SEQUENCE      
+ 292: STORE_FAST           x
+ 294: STORE_FAST           y
+ 296: LOAD_FAST            x
+ 298: LOAD_FAST            y
+ 300: COMPARE_OP           !=
+ 306: POP_JUMP_FORWARD_IF_FALSE to 332
+ 308: LOAD_FAST            margin
+ 310: LOAD_CONST           None
+ 312: LOAD_FAST            i
+ 314: BUILD_SLICE          
+ 316: BINARY_SUBSCR        
+ 326: STORE_FAST           margin
+ 328: POP_TOP              
+ 330: JUMP_FORWARD         to 334
+ 332: JUMP_BACKWARD        to 280
+ 334: JUMP_BACKWARD        to 116
+ 336: NOP                  
+ 338: LOAD_FAST            margin
+ 340: POP_JUMP_FORWARD_IF_FALSE to 392
+ 342: LOAD_GLOBAL          NULL + re
+ 354: LOAD_ATTR            sub
+ 364: LOAD_CONST           '(?m)^'
+ 366: LOAD_FAST            margin
+ 368: BINARY_OP            +
+ 372: LOAD_CONST           ''
+ 374: LOAD_FAST            text
+ 376: PRECALL              
+ 380: CALL                 
+ 390: STORE_FAST           text
+ 392: LOAD_FAST            text
+ 394: RETURN_VALUE         

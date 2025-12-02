@@ -1,0 +1,48 @@
+# Disassembly for email._format_timetuple_and_zone
+# From module file: email.utils
+
+## co_consts:
+(None, '%s, %02d %s %04d %02d:%02d:%02d %s', ('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'), 6, 2, ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'), 1, 0, 3, 4, 5)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '%s, %02d %s %04d %02d:%02d:%02d %s'
+   4: BUILD_LIST           
+   6: LOAD_CONST           ('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun')
+   8: LIST_EXTEND          
+  10: LOAD_FAST            timetuple
+  12: LOAD_CONST           6
+  14: BINARY_SUBSCR        
+  24: BINARY_SUBSCR        
+  34: LOAD_FAST            timetuple
+  36: LOAD_CONST           2
+  38: BINARY_SUBSCR        
+  48: BUILD_LIST           
+  50: LOAD_CONST           ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')
+  52: LIST_EXTEND          
+  54: LOAD_FAST            timetuple
+  56: LOAD_CONST           1
+  58: BINARY_SUBSCR        
+  68: LOAD_CONST           1
+  70: BINARY_OP            -
+  74: BINARY_SUBSCR        
+  84: LOAD_FAST            timetuple
+  86: LOAD_CONST           0
+  88: BINARY_SUBSCR        
+  98: LOAD_FAST            timetuple
+ 100: LOAD_CONST           3
+ 102: BINARY_SUBSCR        
+ 112: LOAD_FAST            timetuple
+ 114: LOAD_CONST           4
+ 116: BINARY_SUBSCR        
+ 126: LOAD_FAST            timetuple
+ 128: LOAD_CONST           5
+ 130: BINARY_SUBSCR        
+ 140: LOAD_FAST            zone
+ 142: BUILD_TUPLE          
+ 144: BINARY_OP            %
+ 148: RETURN_VALUE         

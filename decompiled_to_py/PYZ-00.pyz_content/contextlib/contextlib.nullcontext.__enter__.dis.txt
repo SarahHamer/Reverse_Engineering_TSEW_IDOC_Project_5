@@ -1,0 +1,15 @@
+# Disassembly for contextlib.nullcontext.__enter__
+# From module file: contextlib
+
+## co_consts:
+(None,)
+
+## co_names:
+('enter_result',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            enter_result
+  14: RETURN_VALUE         

@@ -1,0 +1,15 @@
+# Disassembly for datetime.datetime.microsecond
+# From module file: datetime
+
+## co_consts:
+('microsecond (0-999999)',)
+
+## co_names:
+('_microsecond',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _microsecond
+  14: RETURN_VALUE         

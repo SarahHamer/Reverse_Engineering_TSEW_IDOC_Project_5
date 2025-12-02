@@ -1,0 +1,31 @@
+# Disassembly for importlib.resources.MultiplexedPath.iterdir
+# From module file: importlib.resources.readers
+
+## co_consts:
+(None, <code object <genexpr> at 0x00000240693EA530, file "importlib\resources\readers.py", line 70>, 'name', ('key',))
+
+## co_names:
+('_paths', 'unique_everseen', 'operator', 'attrgetter')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           <code object <genexpr> at 0x00000240693EA530, file "importlib\resources\readers.py", line 70>
+   4: MAKE_FUNCTION        
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            _paths
+  18: GET_ITER             
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           files
+  36: LOAD_GLOBAL          NULL + unique_everseen
+  48: LOAD_FAST            files
+  50: LOAD_GLOBAL          NULL + operator
+  62: LOAD_ATTR            attrgetter
+  72: LOAD_CONST           'name'
+  74: PRECALL              
+  78: CALL                 
+  88: KW_NAMES             
+  90: PRECALL              
+  94: CALL                 
+ 104: RETURN_VALUE         

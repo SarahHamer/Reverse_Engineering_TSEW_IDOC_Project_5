@@ -1,0 +1,34 @@
+# Disassembly for argparse.HelpFormatter.add_usage
+# From module file: argparse
+
+## co_consts:
+(None,)
+
+## co_names:
+('SUPPRESS', '_add_item', '_format_usage')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            usage
+   4: LOAD_GLOBAL          SUPPRESS
+  16: IS_OP                
+  18: POP_JUMP_FORWARD_IF_FALSE to 90
+  20: LOAD_FAST            usage
+  22: LOAD_FAST            actions
+  24: LOAD_FAST            groups
+  26: LOAD_FAST            prefix
+  28: BUILD_TUPLE          
+  30: STORE_FAST           args
+  32: LOAD_FAST            self
+  34: LOAD_METHOD          _add_item
+  56: LOAD_FAST            self
+  58: LOAD_ATTR            _format_usage
+  68: LOAD_FAST            args
+  70: PRECALL              
+  74: CALL                 
+  84: POP_TOP              
+  86: LOAD_CONST           None
+  88: RETURN_VALUE         
+  90: LOAD_CONST           None
+  92: RETURN_VALUE         

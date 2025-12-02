@@ -1,0 +1,44 @@
+# Disassembly for importlib.Distribution.from_name
+# From module file: importlib.metadata
+
+## co_consts:
+("Return the Distribution for the given package name.\n\n        :param name: The name of the distribution package to search for.\n        :return: The Distribution instance (or subclass thereof) for the named\n            package, if found.\n        :raises PackageNotFoundError: When the named package's distribution\n            metadata cannot be found.\n        :raises ValueError: When an invalid value is supplied for name.\n        ", 'A distribution name is required.', ('name',))
+
+## co_names:
+('ValueError', 'next', 'discover', 'StopIteration', 'PackageNotFoundError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            name
+   4: POP_JUMP_FORWARD_IF_TRUE to 36
+   6: LOAD_GLOBAL          NULL + ValueError
+  18: LOAD_CONST           'A distribution name is required.'
+  20: PRECALL              
+  24: CALL                 
+  34: RAISE_VARARGS        
+  36: NOP                  
+  38: LOAD_GLOBAL          NULL + next
+  50: LOAD_FAST            cls
+  52: LOAD_METHOD          discover
+  74: LOAD_FAST            name
+  76: KW_NAMES             
+  78: PRECALL              
+  82: CALL                 
+  92: PRECALL              
+  96: CALL                 
+ 106: RETURN_VALUE         
+ 108: PUSH_EXC_INFO        
+ 110: LOAD_GLOBAL          StopIteration
+ 122: CHECK_EXC_MATCH      
+ 124: POP_JUMP_FORWARD_IF_FALSE to 158
+ 126: POP_TOP              
+ 128: LOAD_GLOBAL          NULL + PackageNotFoundError
+ 140: LOAD_FAST            name
+ 142: PRECALL              
+ 146: CALL                 
+ 156: RAISE_VARARGS        
+ 158: RERAISE              
+ 160: COPY                 
+ 162: POP_EXCEPT           
+ 164: RERAISE              

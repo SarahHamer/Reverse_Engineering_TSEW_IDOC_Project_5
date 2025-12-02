@@ -1,0 +1,38 @@
+# Disassembly for importlib.PathDistribution._name_from_stem
+# From module file: importlib.metadata
+
+## co_consts:
+("\n        >>> PathDistribution._name_from_stem('foo-3.0.egg-info')\n        'foo'\n        >>> PathDistribution._name_from_stem('CherryPy-3.0.dist-info')\n        'CherryPy'\n        >>> PathDistribution._name_from_stem('face.egg-info')\n        'face'\n        >>> PathDistribution._name_from_stem('foo.bar')\n        ", ('.dist-info', '.egg-info'), None, '-')
+
+## co_names:
+('os', 'path', 'splitext', 'partition')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          os
+  14: LOAD_ATTR            path
+  24: LOAD_METHOD          splitext
+  46: LOAD_FAST            stem
+  48: PRECALL              
+  52: CALL                 
+  62: UNPACK_SEQUENCE      
+  66: STORE_FAST           filename
+  68: STORE_FAST           ext
+  70: LOAD_FAST            ext
+  72: LOAD_CONST           ('.dist-info', '.egg-info')
+  74: CONTAINS_OP          
+  76: POP_JUMP_FORWARD_IF_FALSE to 82
+  78: LOAD_CONST           None
+  80: RETURN_VALUE         
+  82: LOAD_FAST            filename
+  84: LOAD_METHOD          partition
+ 106: LOAD_CONST           '-'
+ 108: PRECALL              
+ 112: CALL                 
+ 122: UNPACK_SEQUENCE      
+ 126: STORE_FAST           name
+ 128: STORE_FAST           sep
+ 130: STORE_FAST           rest
+ 132: LOAD_FAST            name
+ 134: RETURN_VALUE         

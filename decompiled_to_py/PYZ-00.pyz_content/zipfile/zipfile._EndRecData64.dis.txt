@@ -1,0 +1,160 @@
+# Disassembly for zipfile._EndRecData64
+# From module file: zipfile
+
+## co_consts:
+('\n    Read the ZIP64 end-of-archive records and use that to update endrec\n    ', 2, 0, 1, 'zipfiles that span multiple disks are not supported')
+
+## co_names:
+('seek', 'sizeEndCentDir64Locator', 'OSError', 'read', 'len', 'struct', 'unpack', 'structEndArchive64Locator', 'stringEndArchive64Locator', 'BadZipFile', 'sizeEndCentDir64', 'structEndArchive64', 'stringEndArchive64', '_ECD_SIGNATURE', '_ECD_DISK_NUMBER', '_ECD_DISK_START', '_ECD_ENTRIES_THIS_DISK', '_ECD_ENTRIES_TOTAL', '_ECD_SIZE', '_ECD_OFFSET')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            fpin
+   6: LOAD_METHOD          seek
+  28: LOAD_FAST            offset
+  30: LOAD_GLOBAL          sizeEndCentDir64Locator
+  42: BINARY_OP            -
+  46: LOAD_CONST           2
+  48: PRECALL              
+  52: CALL                 
+  62: POP_TOP              
+  64: JUMP_FORWARD         to 102
+  66: PUSH_EXC_INFO        
+  68: LOAD_GLOBAL          OSError
+  80: CHECK_EXC_MATCH      
+  82: POP_JUMP_FORWARD_IF_FALSE to 94
+  84: POP_TOP              
+  86: LOAD_FAST            endrec
+  88: SWAP                 
+  90: POP_EXCEPT           
+  92: RETURN_VALUE         
+  94: RERAISE              
+  96: COPY                 
+  98: POP_EXCEPT           
+ 100: RERAISE              
+ 102: LOAD_FAST            fpin
+ 104: LOAD_METHOD          read
+ 126: LOAD_GLOBAL          sizeEndCentDir64Locator
+ 138: PRECALL              
+ 142: CALL                 
+ 152: STORE_FAST           data
+ 154: LOAD_GLOBAL          NULL + len
+ 166: LOAD_FAST            data
+ 168: PRECALL              
+ 172: CALL                 
+ 182: LOAD_GLOBAL          sizeEndCentDir64Locator
+ 194: COMPARE_OP           !=
+ 200: POP_JUMP_FORWARD_IF_FALSE to 206
+ 202: LOAD_FAST            endrec
+ 204: RETURN_VALUE         
+ 206: LOAD_GLOBAL          NULL + struct
+ 218: LOAD_ATTR            unpack
+ 228: LOAD_GLOBAL          structEndArchive64Locator
+ 240: LOAD_FAST            data
+ 242: PRECALL              
+ 246: CALL                 
+ 256: UNPACK_SEQUENCE      
+ 260: STORE_FAST           sig
+ 262: STORE_FAST           diskno
+ 264: STORE_FAST           reloff
+ 266: STORE_FAST           disks
+ 268: LOAD_FAST            sig
+ 270: LOAD_GLOBAL          stringEndArchive64Locator
+ 282: COMPARE_OP           !=
+ 288: POP_JUMP_FORWARD_IF_FALSE to 294
+ 290: LOAD_FAST            endrec
+ 292: RETURN_VALUE         
+ 294: LOAD_FAST            diskno
+ 296: LOAD_CONST           0
+ 298: COMPARE_OP           !=
+ 304: POP_JUMP_FORWARD_IF_TRUE to 318
+ 306: LOAD_FAST            disks
+ 308: LOAD_CONST           1
+ 310: COMPARE_OP           >
+ 316: POP_JUMP_FORWARD_IF_FALSE to 348
+ 318: LOAD_GLOBAL          NULL + BadZipFile
+ 330: LOAD_CONST           'zipfiles that span multiple disks are not supported'
+ 332: PRECALL              
+ 336: CALL                 
+ 346: RAISE_VARARGS        
+ 348: LOAD_FAST            fpin
+ 350: LOAD_METHOD          seek
+ 372: LOAD_FAST            offset
+ 374: LOAD_GLOBAL          sizeEndCentDir64Locator
+ 386: BINARY_OP            -
+ 390: LOAD_GLOBAL          sizeEndCentDir64
+ 402: BINARY_OP            -
+ 406: LOAD_CONST           2
+ 408: PRECALL              
+ 412: CALL                 
+ 422: POP_TOP              
+ 424: LOAD_FAST            fpin
+ 426: LOAD_METHOD          read
+ 448: LOAD_GLOBAL          sizeEndCentDir64
+ 460: PRECALL              
+ 464: CALL                 
+ 474: STORE_FAST           data
+ 476: LOAD_GLOBAL          NULL + len
+ 488: LOAD_FAST            data
+ 490: PRECALL              
+ 494: CALL                 
+ 504: LOAD_GLOBAL          sizeEndCentDir64
+ 516: COMPARE_OP           !=
+ 522: POP_JUMP_FORWARD_IF_FALSE to 528
+ 524: LOAD_FAST            endrec
+ 526: RETURN_VALUE         
+ 528: LOAD_GLOBAL          NULL + struct
+ 540: LOAD_ATTR            unpack
+ 550: LOAD_GLOBAL          structEndArchive64
+ 562: LOAD_FAST            data
+ 564: PRECALL              
+ 568: CALL                 
+ 578: UNPACK_SEQUENCE      
+ 582: STORE_FAST           sig
+ 584: STORE_FAST           sz
+ 586: STORE_FAST           create_version
+ 588: STORE_FAST           read_version
+ 590: STORE_FAST           disk_num
+ 592: STORE_FAST           disk_dir
+ 594: STORE_FAST           dircount
+ 596: STORE_FAST           dircount2
+ 598: STORE_FAST           dirsize
+ 600: STORE_FAST           diroffset
+ 602: LOAD_FAST            sig
+ 604: LOAD_GLOBAL          stringEndArchive64
+ 616: COMPARE_OP           !=
+ 622: POP_JUMP_FORWARD_IF_FALSE to 628
+ 624: LOAD_FAST            endrec
+ 626: RETURN_VALUE         
+ 628: LOAD_FAST            sig
+ 630: LOAD_FAST            endrec
+ 632: LOAD_GLOBAL          _ECD_SIGNATURE
+ 644: STORE_SUBSCR         
+ 648: LOAD_FAST            disk_num
+ 650: LOAD_FAST            endrec
+ 652: LOAD_GLOBAL          _ECD_DISK_NUMBER
+ 664: STORE_SUBSCR         
+ 668: LOAD_FAST            disk_dir
+ 670: LOAD_FAST            endrec
+ 672: LOAD_GLOBAL          _ECD_DISK_START
+ 684: STORE_SUBSCR         
+ 688: LOAD_FAST            dircount
+ 690: LOAD_FAST            endrec
+ 692: LOAD_GLOBAL          _ECD_ENTRIES_THIS_DISK
+ 704: STORE_SUBSCR         
+ 708: LOAD_FAST            dircount2
+ 710: LOAD_FAST            endrec
+ 712: LOAD_GLOBAL          _ECD_ENTRIES_TOTAL
+ 724: STORE_SUBSCR         
+ 728: LOAD_FAST            dirsize
+ 730: LOAD_FAST            endrec
+ 732: LOAD_GLOBAL          _ECD_SIZE
+ 744: STORE_SUBSCR         
+ 748: LOAD_FAST            diroffset
+ 750: LOAD_FAST            endrec
+ 752: LOAD_GLOBAL          _ECD_OFFSET
+ 764: STORE_SUBSCR         
+ 768: LOAD_FAST            endrec
+ 770: RETURN_VALUE         

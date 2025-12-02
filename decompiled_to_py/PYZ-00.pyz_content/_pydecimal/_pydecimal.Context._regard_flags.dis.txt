@@ -1,0 +1,42 @@
+# Disassembly for _pydecimal.Context._regard_flags
+# From module file: _pydecimal
+
+## co_consts:
+('Stop ignoring the flags, if they are raised', 0, None)
+
+## co_names:
+('isinstance', 'tuple', 'list', '_ignored_flags', 'remove')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            flags
+   4: POP_JUMP_FORWARD_IF_FALSE to 90
+   6: LOAD_GLOBAL          NULL + isinstance
+  18: LOAD_FAST            flags
+  20: LOAD_CONST           0
+  22: BINARY_SUBSCR        
+  32: LOAD_GLOBAL          tuple
+  44: LOAD_GLOBAL          list
+  56: BUILD_TUPLE          
+  58: PRECALL              
+  62: CALL                 
+  72: POP_JUMP_FORWARD_IF_FALSE to 90
+  74: LOAD_FAST            flags
+  76: LOAD_CONST           0
+  78: BINARY_SUBSCR        
+  88: STORE_FAST           flags
+  90: LOAD_FAST            flags
+  92: GET_ITER             
+  94: FOR_ITER             to 152
+  96: STORE_FAST           flag
+  98: LOAD_FAST            self
+ 100: LOAD_ATTR            _ignored_flags
+ 110: LOAD_METHOD          remove
+ 132: LOAD_FAST            flag
+ 134: PRECALL              
+ 138: CALL                 
+ 148: POP_TOP              
+ 150: JUMP_BACKWARD        to 94
+ 152: LOAD_CONST           None
+ 154: RETURN_VALUE         

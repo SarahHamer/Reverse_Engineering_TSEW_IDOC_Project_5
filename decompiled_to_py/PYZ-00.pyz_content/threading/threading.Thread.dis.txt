@@ -1,0 +1,129 @@
+# Disassembly for threading.Thread
+# From module file: threading
+
+## co_consts:
+('Thread', 'A class that represents a thread of control.\n\n    This class can be safely subclassed in a limited fashion. There are two ways\n    to specify the activity: by passing a callable object to the constructor, or\n    by overriding the run() method in a subclass.\n\n    ', False, None, (), ('daemon',), <code object __init__ at 0x0000024068DC0380, file "threading.py", line 849>, <code object _reset_internal_locks at 0x000002406942CB20, file "threading.py", line 907>, <code object __repr__ at 0x00000240691DB120, file "threading.py", line 924>, <code object start at 0x0000024068C5ABD0, file "threading.py", line 938>, <code object run at 0x0000024069419110, file "threading.py", line 964>, <code object _bootstrap at 0x000002406941A8B0, file "threading.py", line 981>, <code object _set_ident at 0x000002406945FA50, file "threading.py", line 1001>, <code object _set_native_id at 0x000002406945FB40, file "threading.py", line 1005>, <code object _set_tstate_lock at 0x00000240691DBA30, file "threading.py", line 1008>, <code object _bootstrap_inner at 0x0000024068B79230, file "threading.py", line 1021>, <code object _stop at 0x000002406942E100, file "threading.py", line 1044>, <code object _delete at 0x00000240693D2FB0, file "threading.py", line 1071>, <code object join at 0x0000024069365770, file "threading.py", line 1080>, True, -1, <code object _wait_for_tstate_lock at 0x0000024069365F30, file "threading.py", line 1118>, <code object name at 0x000002406945FD20, file "threading.py", line 1145>, <code object name at 0x0000024069449F00, file "threading.py", line 1156>, <code object ident at 0x000002406945DA70, file "threading.py", line 1161>, <code object native_id at 0x000002406945F000, file "threading.py", line 1174>, <code object is_alive at 0x00000240691C2970, file "threading.py", line 1185>, <code object daemon at 0x000002406945DC50, file "threading.py", line 1199>, <code object daemon at 0x000002406922C570, file "threading.py", line 1214>, <code object isDaemon at 0x000002406944B440, file "threading.py", line 1222>, <code object setDaemon at 0x000002406944A340, file "threading.py", line 1233>, <code object getName at 0x000002406944A230, file "threading.py", line 1244>, <code object setName at 0x000002406944B110, file "threading.py", line 1255>, (None, None, None, (), None), (None,), (True, -1))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '_initialized', '__init__', '_reset_internal_locks', '__repr__', 'start', 'run', '_bootstrap', '_set_ident', '_HAVE_THREAD_NATIVE_ID', '_set_native_id', '_set_tstate_lock', '_bootstrap_inner', '_stop', '_delete', 'join', '_wait_for_tstate_lock', 'property', 'name', 'setter', 'ident', 'native_id', 'is_alive', 'daemon', 'isDaemon', 'setDaemon', 'getName', 'setName')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Thread'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'A class that represents a thread of control.\n\n    This class can be safely subclassed in a limited fashion. There are two ways\n    to specify the activity: by passing a callable object to the constructor, or\n    by overriding the run() method in a subclass.\n\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           False
+  16: STORE_NAME           _initialized
+  18: NOP                  
+  20: NOP                  
+  22: LOAD_CONST           (None, None, None, (), None)
+  24: LOAD_CONST           None
+  26: LOAD_CONST           ('daemon',)
+  28: BUILD_CONST_KEY_MAP  
+  30: LOAD_CONST           <code object __init__ at 0x0000024068DC0380, file "threading.py", line 849>
+  32: MAKE_FUNCTION        defaults, kwdefaults
+  34: STORE_NAME           __init__
+  36: LOAD_CONST           <code object _reset_internal_locks at 0x000002406942CB20, file "threading.py", line 907>
+  38: MAKE_FUNCTION        
+  40: STORE_NAME           _reset_internal_locks
+  42: LOAD_CONST           <code object __repr__ at 0x00000240691DB120, file "threading.py", line 924>
+  44: MAKE_FUNCTION        
+  46: STORE_NAME           __repr__
+  48: LOAD_CONST           <code object start at 0x0000024068C5ABD0, file "threading.py", line 938>
+  50: MAKE_FUNCTION        
+  52: STORE_NAME           start
+  54: LOAD_CONST           <code object run at 0x0000024069419110, file "threading.py", line 964>
+  56: MAKE_FUNCTION        
+  58: STORE_NAME           run
+  60: LOAD_CONST           <code object _bootstrap at 0x000002406941A8B0, file "threading.py", line 981>
+  62: MAKE_FUNCTION        
+  64: STORE_NAME           _bootstrap
+  66: LOAD_CONST           <code object _set_ident at 0x000002406945FA50, file "threading.py", line 1001>
+  68: MAKE_FUNCTION        
+  70: STORE_NAME           _set_ident
+  72: LOAD_NAME            _HAVE_THREAD_NATIVE_ID
+  74: POP_JUMP_FORWARD_IF_FALSE to 82
+  76: LOAD_CONST           <code object _set_native_id at 0x000002406945FB40, file "threading.py", line 1005>
+  78: MAKE_FUNCTION        
+  80: STORE_NAME           _set_native_id
+  82: LOAD_CONST           <code object _set_tstate_lock at 0x00000240691DBA30, file "threading.py", line 1008>
+  84: MAKE_FUNCTION        
+  86: STORE_NAME           _set_tstate_lock
+  88: LOAD_CONST           <code object _bootstrap_inner at 0x0000024068B79230, file "threading.py", line 1021>
+  90: MAKE_FUNCTION        
+  92: STORE_NAME           _bootstrap_inner
+  94: LOAD_CONST           <code object _stop at 0x000002406942E100, file "threading.py", line 1044>
+  96: MAKE_FUNCTION        
+  98: STORE_NAME           _stop
+ 100: LOAD_CONST           <code object _delete at 0x00000240693D2FB0, file "threading.py", line 1071>
+ 102: MAKE_FUNCTION        
+ 104: STORE_NAME           _delete
+ 106: LOAD_CONST           (None,)
+ 108: LOAD_CONST           <code object join at 0x0000024069365770, file "threading.py", line 1080>
+ 110: MAKE_FUNCTION        defaults
+ 112: STORE_NAME           join
+ 114: LOAD_CONST           (True, -1)
+ 116: LOAD_CONST           <code object _wait_for_tstate_lock at 0x0000024069365F30, file "threading.py", line 1118>
+ 118: MAKE_FUNCTION        defaults
+ 120: STORE_NAME           _wait_for_tstate_lock
+ 122: LOAD_NAME            property
+ 124: LOAD_CONST           <code object name at 0x000002406945FD20, file "threading.py", line 1145>
+ 126: MAKE_FUNCTION        
+ 128: PRECALL              
+ 132: CALL                 
+ 142: STORE_NAME           name
+ 144: LOAD_NAME            name
+ 146: LOAD_ATTR            setter
+ 156: LOAD_CONST           <code object name at 0x0000024069449F00, file "threading.py", line 1156>
+ 158: MAKE_FUNCTION        
+ 160: PRECALL              
+ 164: CALL                 
+ 174: STORE_NAME           name
+ 176: LOAD_NAME            property
+ 178: LOAD_CONST           <code object ident at 0x000002406945DA70, file "threading.py", line 1161>
+ 180: MAKE_FUNCTION        
+ 182: PRECALL              
+ 186: CALL                 
+ 196: STORE_NAME           ident
+ 198: LOAD_NAME            _HAVE_THREAD_NATIVE_ID
+ 200: POP_JUMP_FORWARD_IF_FALSE to 224
+ 202: LOAD_NAME            property
+ 204: LOAD_CONST           <code object native_id at 0x000002406945F000, file "threading.py", line 1174>
+ 206: MAKE_FUNCTION        
+ 208: PRECALL              
+ 212: CALL                 
+ 222: STORE_NAME           native_id
+ 224: LOAD_CONST           <code object is_alive at 0x00000240691C2970, file "threading.py", line 1185>
+ 226: MAKE_FUNCTION        
+ 228: STORE_NAME           is_alive
+ 230: LOAD_NAME            property
+ 232: LOAD_CONST           <code object daemon at 0x000002406945DC50, file "threading.py", line 1199>
+ 234: MAKE_FUNCTION        
+ 236: PRECALL              
+ 240: CALL                 
+ 250: STORE_NAME           daemon
+ 252: LOAD_NAME            daemon
+ 254: LOAD_ATTR            setter
+ 264: LOAD_CONST           <code object daemon at 0x000002406922C570, file "threading.py", line 1214>
+ 266: MAKE_FUNCTION        
+ 268: PRECALL              
+ 272: CALL                 
+ 282: STORE_NAME           daemon
+ 284: LOAD_CONST           <code object isDaemon at 0x000002406944B440, file "threading.py", line 1222>
+ 286: MAKE_FUNCTION        
+ 288: STORE_NAME           isDaemon
+ 290: LOAD_CONST           <code object setDaemon at 0x000002406944A340, file "threading.py", line 1233>
+ 292: MAKE_FUNCTION        
+ 294: STORE_NAME           setDaemon
+ 296: LOAD_CONST           <code object getName at 0x000002406944A230, file "threading.py", line 1244>
+ 298: MAKE_FUNCTION        
+ 300: STORE_NAME           getName
+ 302: LOAD_CONST           <code object setName at 0x000002406944B110, file "threading.py", line 1255>
+ 304: MAKE_FUNCTION        
+ 306: STORE_NAME           setName
+ 308: LOAD_CONST           None
+ 310: RETURN_VALUE         

@@ -1,0 +1,34 @@
+# Disassembly for importlib.resources.NamespaceReader.__init__
+# From module file: importlib.resources.readers
+
+## co_consts:
+(None, 'NamespacePath', 'Invalid path')
+
+## co_names:
+('str', 'ValueError', 'MultiplexedPath', 'list', 'path')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'NamespacePath'
+   4: LOAD_GLOBAL          NULL + str
+  16: LOAD_FAST            namespace_path
+  18: PRECALL              
+  22: CALL                 
+  32: CONTAINS_OP          
+  34: POP_JUMP_FORWARD_IF_FALSE to 66
+  36: LOAD_GLOBAL          NULL + ValueError
+  48: LOAD_CONST           'Invalid path'
+  50: PRECALL              
+  54: CALL                 
+  64: RAISE_VARARGS        
+  66: LOAD_GLOBAL          NULL + MultiplexedPath
+  78: LOAD_GLOBAL          NULL + list
+  90: LOAD_FAST            namespace_path
+  92: PRECALL              
+  96: CALL                 
+ 106: CALL_FUNCTION_EX     
+ 108: LOAD_FAST            self
+ 110: STORE_ATTR           path
+ 120: LOAD_CONST           None
+ 122: RETURN_VALUE         

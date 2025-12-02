@@ -1,0 +1,32 @@
+# Disassembly for fractions.Fraction.__str__
+# From module file: fractions
+
+## co_consts:
+('str(self)', 1, '/')
+
+## co_names:
+('_denominator', 'str', '_numerator')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _denominator
+  14: LOAD_CONST           1
+  16: COMPARE_OP           ==
+  22: POP_JUMP_FORWARD_IF_FALSE to 64
+  24: LOAD_GLOBAL          NULL + str
+  36: LOAD_FAST            self
+  38: LOAD_ATTR            _numerator
+  48: PRECALL              
+  52: CALL                 
+  62: RETURN_VALUE         
+  64: LOAD_FAST            self
+  66: LOAD_ATTR            _numerator
+  76: FORMAT_VALUE         str
+  78: LOAD_CONST           '/'
+  80: LOAD_FAST            self
+  82: LOAD_ATTR            _denominator
+  92: FORMAT_VALUE         str
+  94: BUILD_STRING         
+  96: RETURN_VALUE         

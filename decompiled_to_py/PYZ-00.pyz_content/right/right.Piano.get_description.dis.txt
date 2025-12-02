@@ -1,0 +1,26 @@
+# Disassembly for right.Piano.get_description
+# From module file: right
+
+## co_consts:
+(None, 'A piano is in the middle of the room.  The piano has %d lights on it with %d lit.')
+
+## co_names:
+('len', 'songs_played', 'keys', 'num_songs_played')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'A piano is in the middle of the room.  The piano has %d lights on it with %d lit.'
+   4: LOAD_GLOBAL          NULL + len
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            songs_played
+  28: LOAD_METHOD          keys
+  50: PRECALL              
+  54: CALL                 
+  64: PRECALL              
+  68: CALL                 
+  78: LOAD_FAST            self
+  80: LOAD_ATTR            num_songs_played
+  90: BUILD_TUPLE          
+  92: BINARY_OP            %
+  96: RETURN_VALUE         

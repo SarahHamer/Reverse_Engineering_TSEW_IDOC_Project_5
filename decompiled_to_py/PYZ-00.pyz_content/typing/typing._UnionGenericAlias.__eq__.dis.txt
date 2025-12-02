@@ -1,0 +1,35 @@
+# Disassembly for typing._UnionGenericAlias.__eq__
+# From module file: typing
+
+## co_consts:
+(None,)
+
+## co_names:
+('isinstance', '_UnionGenericAlias', 'types', 'UnionType', 'NotImplemented', 'set', '__args__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            other
+  16: LOAD_GLOBAL          _UnionGenericAlias
+  28: LOAD_GLOBAL          types
+  40: LOAD_ATTR            UnionType
+  50: BUILD_TUPLE          
+  52: PRECALL              
+  56: CALL                 
+  66: POP_JUMP_FORWARD_IF_TRUE to 82
+  68: LOAD_GLOBAL          NotImplemented
+  80: RETURN_VALUE         
+  82: LOAD_GLOBAL          NULL + set
+  94: LOAD_FAST            self
+  96: LOAD_ATTR            __args__
+ 106: PRECALL              
+ 110: CALL                 
+ 120: LOAD_GLOBAL          NULL + set
+ 132: LOAD_FAST            other
+ 134: LOAD_ATTR            __args__
+ 144: PRECALL              
+ 148: CALL                 
+ 158: COMPARE_OP           ==
+ 164: RETURN_VALUE         

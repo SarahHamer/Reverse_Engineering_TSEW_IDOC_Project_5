@@ -1,0 +1,19 @@
+# Disassembly for email.Generator._compile_re
+# From module file: email.generator
+
+## co_consts:
+(None,)
+
+## co_names:
+('re', 'compile')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + re
+  14: LOAD_ATTR            compile
+  24: LOAD_FAST            s
+  26: LOAD_FAST            flags
+  28: PRECALL              
+  32: CALL                 
+  42: RETURN_VALUE         

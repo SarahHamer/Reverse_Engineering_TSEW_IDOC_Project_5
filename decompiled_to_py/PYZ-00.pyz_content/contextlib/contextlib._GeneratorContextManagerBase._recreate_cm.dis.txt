@@ -1,0 +1,23 @@
+# Disassembly for contextlib._GeneratorContextManagerBase._recreate_cm
+# From module file: contextlib
+
+## co_consts:
+(None,)
+
+## co_names:
+('__class__', 'func', 'args', 'kwds')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          __class__
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            func
+  38: LOAD_FAST            self
+  40: LOAD_ATTR            args
+  50: LOAD_FAST            self
+  52: LOAD_ATTR            kwds
+  62: PRECALL              
+  66: CALL                 
+  76: RETURN_VALUE         

@@ -1,0 +1,46 @@
+# Disassembly for tracemalloc.Filter._match
+# From module file: tracemalloc
+
+## co_consts:
+(None,)
+
+## co_names:
+('_match_traceback', 'domain', 'inclusive')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            trace
+   4: UNPACK_SEQUENCE      
+   8: STORE_FAST           domain
+  10: STORE_FAST           size
+  12: STORE_FAST           traceback
+  14: STORE_FAST           total_nframe
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          _match_traceback
+  40: LOAD_FAST            traceback
+  42: PRECALL              
+  46: CALL                 
+  56: STORE_FAST           res
+  58: LOAD_FAST            self
+  60: LOAD_ATTR            domain
+  70: POP_JUMP_FORWARD_IF_NONE to 138
+  72: LOAD_FAST            self
+  74: LOAD_ATTR            inclusive
+  84: POP_JUMP_FORWARD_IF_FALSE to 112
+  86: LOAD_FAST            res
+  88: JUMP_IF_FALSE_OR_POP to 110
+  90: LOAD_FAST            domain
+  92: LOAD_FAST            self
+  94: LOAD_ATTR            domain
+ 104: COMPARE_OP           ==
+ 110: RETURN_VALUE         
+ 112: LOAD_FAST            res
+ 114: JUMP_IF_TRUE_OR_POP  to 136
+ 116: LOAD_FAST            domain
+ 118: LOAD_FAST            self
+ 120: LOAD_ATTR            domain
+ 130: COMPARE_OP           !=
+ 136: RETURN_VALUE         
+ 138: LOAD_FAST            res
+ 140: RETURN_VALUE         

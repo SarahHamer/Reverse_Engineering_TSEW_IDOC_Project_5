@@ -1,0 +1,158 @@
+# Disassembly for email.get_phrase
+# From module file: email._header_value_parser
+
+## co_consts:
+(' phrase = 1*word / obs-phrase\n        obs-phrase = word *(word / "." / CFWS)\n\n    This means a phrase can be a sequence of words, periods, and CFWS in any\n    order as long as it starts with at least one word.  If anything other than\n    words is detected, an ObsoleteHeaderDefect is added to the token\'s defect\n    list.  We also accept a phrase that starts with CFWS followed by a dot;\n    this is registered as an InvalidHeaderDefect, since it is not supported by\n    even the obsolete grammar.\n\n    ', 'phrase does not start with word', 0, '.', "period in 'phrase'", 1, None, 'comment found without atom')
+
+## co_names:
+('Phrase', 'get_word', 'append', 'errors', 'HeaderParseError', 'defects', 'InvalidHeaderDefect', 'PHRASE_ENDS', 'DOT', 'ObsoleteHeaderDefect', 'CFWS_LEADER', 'get_cfws')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + Phrase
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           phrase
+  30: NOP                  
+  32: LOAD_GLOBAL          NULL + get_word
+  44: LOAD_FAST            value
+  46: PRECALL              
+  50: CALL                 
+  60: UNPACK_SEQUENCE      
+  64: STORE_FAST           token
+  66: STORE_FAST           value
+  68: LOAD_FAST            phrase
+  70: LOAD_METHOD          append
+  92: LOAD_FAST            token
+  94: PRECALL              
+  98: CALL                 
+ 108: POP_TOP              
+ 110: JUMP_FORWARD         to 242
+ 112: PUSH_EXC_INFO        
+ 114: LOAD_GLOBAL          errors
+ 126: LOAD_ATTR            HeaderParseError
+ 136: CHECK_EXC_MATCH      
+ 138: POP_JUMP_FORWARD_IF_FALSE to 234
+ 140: POP_TOP              
+ 142: LOAD_FAST            phrase
+ 144: LOAD_ATTR            defects
+ 154: LOAD_METHOD          append
+ 176: LOAD_GLOBAL          NULL + errors
+ 188: LOAD_ATTR            InvalidHeaderDefect
+ 198: LOAD_CONST           'phrase does not start with word'
+ 200: PRECALL              
+ 204: CALL                 
+ 214: PRECALL              
+ 218: CALL                 
+ 228: POP_TOP              
+ 230: POP_EXCEPT           
+ 232: JUMP_FORWARD         to 242
+ 234: RERAISE              
+ 236: COPY                 
+ 238: POP_EXCEPT           
+ 240: RERAISE              
+ 242: LOAD_FAST            value
+ 244: EXTENDED_ARG         
+ 246: POP_JUMP_FORWARD_IF_FALSE to 780
+ 248: LOAD_FAST            value
+ 250: LOAD_CONST           0
+ 252: BINARY_SUBSCR        
+ 262: LOAD_GLOBAL          PHRASE_ENDS
+ 274: CONTAINS_OP          
+ 276: POP_JUMP_FORWARD_IF_FALSE to 780
+ 278: LOAD_FAST            value
+ 280: LOAD_CONST           0
+ 282: BINARY_SUBSCR        
+ 292: LOAD_CONST           '.'
+ 294: COMPARE_OP           ==
+ 300: POP_JUMP_FORWARD_IF_FALSE to 464
+ 302: LOAD_FAST            phrase
+ 304: LOAD_METHOD          append
+ 326: LOAD_GLOBAL          DOT
+ 338: PRECALL              
+ 342: CALL                 
+ 352: POP_TOP              
+ 354: LOAD_FAST            phrase
+ 356: LOAD_ATTR            defects
+ 366: LOAD_METHOD          append
+ 388: LOAD_GLOBAL          NULL + errors
+ 400: LOAD_ATTR            ObsoleteHeaderDefect
+ 410: LOAD_CONST           "period in 'phrase'"
+ 412: PRECALL              
+ 416: CALL                 
+ 426: PRECALL              
+ 430: CALL                 
+ 440: POP_TOP              
+ 442: LOAD_FAST            value
+ 444: LOAD_CONST           1
+ 446: LOAD_CONST           None
+ 448: BUILD_SLICE          
+ 450: BINARY_SUBSCR        
+ 460: STORE_FAST           value
+ 462: JUMP_FORWARD         to 746
+ 464: NOP                  
+ 466: LOAD_GLOBAL          NULL + get_word
+ 478: LOAD_FAST            value
+ 480: PRECALL              
+ 484: CALL                 
+ 494: UNPACK_SEQUENCE      
+ 498: STORE_FAST           token
+ 500: STORE_FAST           value
+ 502: JUMP_FORWARD         to 704
+ 504: PUSH_EXC_INFO        
+ 506: LOAD_GLOBAL          errors
+ 518: LOAD_ATTR            HeaderParseError
+ 528: CHECK_EXC_MATCH      
+ 530: POP_JUMP_FORWARD_IF_FALSE to 696
+ 532: POP_TOP              
+ 534: LOAD_FAST            value
+ 536: LOAD_CONST           0
+ 538: BINARY_SUBSCR        
+ 548: LOAD_GLOBAL          CFWS_LEADER
+ 560: CONTAINS_OP          
+ 562: POP_JUMP_FORWARD_IF_FALSE to 690
+ 564: LOAD_GLOBAL          NULL + get_cfws
+ 576: LOAD_FAST            value
+ 578: PRECALL              
+ 582: CALL                 
+ 592: UNPACK_SEQUENCE      
+ 596: STORE_FAST           token
+ 598: STORE_FAST           value
+ 600: LOAD_FAST            phrase
+ 602: LOAD_ATTR            defects
+ 612: LOAD_METHOD          append
+ 634: LOAD_GLOBAL          NULL + errors
+ 646: LOAD_ATTR            ObsoleteHeaderDefect
+ 656: LOAD_CONST           'comment found without atom'
+ 658: PRECALL              
+ 662: CALL                 
+ 672: PRECALL              
+ 676: CALL                 
+ 686: POP_TOP              
+ 688: JUMP_FORWARD         to 692
+ 690: RAISE_VARARGS        
+ 692: POP_EXCEPT           
+ 694: JUMP_FORWARD         to 704
+ 696: RERAISE              
+ 698: COPY                 
+ 700: POP_EXCEPT           
+ 702: RERAISE              
+ 704: LOAD_FAST            phrase
+ 706: LOAD_METHOD          append
+ 728: LOAD_FAST            token
+ 730: PRECALL              
+ 734: CALL                 
+ 744: POP_TOP              
+ 746: LOAD_FAST            value
+ 748: POP_JUMP_FORWARD_IF_FALSE to 780
+ 750: LOAD_FAST            value
+ 752: LOAD_CONST           0
+ 754: BINARY_SUBSCR        
+ 764: LOAD_GLOBAL          PHRASE_ENDS
+ 776: CONTAINS_OP          
+ 778: POP_JUMP_BACKWARD_IF_TRUE to 278
+ 780: LOAD_FAST            phrase
+ 782: LOAD_FAST            value
+ 784: BUILD_TUPLE          
+ 786: RETURN_VALUE         

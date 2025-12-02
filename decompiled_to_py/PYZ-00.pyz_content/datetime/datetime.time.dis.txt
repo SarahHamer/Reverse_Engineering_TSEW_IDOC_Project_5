@@ -1,0 +1,142 @@
+# Disassembly for datetime.time
+# From module file: datetime
+
+## co_consts:
+('time', 'Time with time zone.\n\n    Constructors:\n\n    __new__()\n\n    Operators:\n\n    __repr__, __str__\n    __eq__, __le__, __lt__, __ge__, __gt__, __hash__\n\n    Methods:\n\n    strftime()\n    isoformat()\n    utcoffset()\n    tzname()\n    dst()\n\n    Properties (readonly):\n    hour, minute, second, microsecond, tzinfo, fold\n    ', ('_hour', '_minute', '_second', '_microsecond', '_tzinfo', '_hashcode', '_fold'), 0, None, ('fold',), <code object __new__ at 0x0000024068D3F6F0, file "datetime.py", line 1340>, <code object hour at 0x0000024069494920, file "datetime.py", line 1380>, <code object minute at 0x0000024069494030, file "datetime.py", line 1385>, <code object second at 0x0000024069494100, file "datetime.py", line 1390>, <code object microsecond at 0x0000024069496CE0, file "datetime.py", line 1395>, <code object tzinfo at 0x0000024069494510, file "datetime.py", line 1400>, <code object fold at 0x0000024069494440, file "datetime.py", line 1405>, <code object __eq__ at 0x00000240693D3CC0, file "datetime.py", line 1413>, <code object __le__ at 0x0000024069CC8030, file "datetime.py", line 1419>, <code object __lt__ at 0x0000024069CC8160, file "datetime.py", line 1425>, <code object __ge__ at 0x0000024069CC8290, file "datetime.py", line 1431>, <code object __gt__ at 0x0000024069CC83C0, file "datetime.py", line 1437>, False, <code object _cmp at 0x0000024068C54660, file "datetime.py", line 1443>, <code object __hash__ at 0x0000024068D41170, file "datetime.py", line 1471>, <code object _tzstr at 0x00000240693EBE30, file "datetime.py", line 1494>, <code object __repr__ at 0x0000024068E7DA00, file "datetime.py", line 1499>, 'auto', <code object isoformat at 0x000002406922C2D0, file "datetime.py", line 1518>, <code object fromisoformat at 0x00000240691F5890, file "datetime.py", line 1537>, <code object strftime at 0x000002406944B000, file "datetime.py", line 1554>, <code object __format__ at 0x00000240691F5A30, file "datetime.py", line 1565>, <code object utcoffset at 0x0000024069CC84F0, file "datetime.py", line 1574>, <code object tzname at 0x0000024069CC8620, file "datetime.py", line 1583>, <code object dst at 0x0000024069CC8750, file "datetime.py", line 1596>, True, <code object replace at 0x000002406949D5C0, file "datetime.py", line 1611>, 3, <code object _getstate at 0x000002406934FCF0, file "datetime.py", line 1630>, <code object __setstate at 0x000002406934F990, file "datetime.py", line 1643>, <code object __reduce_ex__ at 0x0000024069CDC130, file "datetime.py", line 1656>, <code object __reduce__ at 0x000002406945E5B0, file "datetime.py", line 1659>, (0, 0, 0, 0, None), (False,), ('auto',), (None, None, None, None, True), (3,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__slots__', '__new__', 'property', 'hour', 'minute', 'second', 'microsecond', 'tzinfo', 'fold', '__eq__', '__le__', '__lt__', '__ge__', '__gt__', '_cmp', '__hash__', '_tzstr', '__repr__', 'isoformat', '__str__', 'classmethod', 'fromisoformat', 'strftime', '__format__', 'utcoffset', 'tzname', 'dst', 'replace', '_getstate', '_time__setstate', '__reduce_ex__', '__reduce__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'time'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Time with time zone.\n\n    Constructors:\n\n    __new__()\n\n    Operators:\n\n    __repr__, __str__\n    __eq__, __le__, __lt__, __ge__, __gt__, __hash__\n\n    Methods:\n\n    strftime()\n    isoformat()\n    utcoffset()\n    tzname()\n    dst()\n\n    Properties (readonly):\n    hour, minute, second, microsecond, tzinfo, fold\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ('_hour', '_minute', '_second', '_microsecond', '_tzinfo', '_hashcode', '_fold')
+  16: STORE_NAME           __slots__
+  18: LOAD_CONST           (0, 0, 0, 0, None)
+  20: LOAD_CONST           0
+  22: LOAD_CONST           ('fold',)
+  24: BUILD_CONST_KEY_MAP  
+  26: LOAD_CONST           <code object __new__ at 0x0000024068D3F6F0, file "datetime.py", line 1340>
+  28: MAKE_FUNCTION        defaults, kwdefaults
+  30: STORE_NAME           __new__
+  32: LOAD_NAME            property
+  34: LOAD_CONST           <code object hour at 0x0000024069494920, file "datetime.py", line 1380>
+  36: MAKE_FUNCTION        
+  38: PRECALL              
+  42: CALL                 
+  52: STORE_NAME           hour
+  54: LOAD_NAME            property
+  56: LOAD_CONST           <code object minute at 0x0000024069494030, file "datetime.py", line 1385>
+  58: MAKE_FUNCTION        
+  60: PRECALL              
+  64: CALL                 
+  74: STORE_NAME           minute
+  76: LOAD_NAME            property
+  78: LOAD_CONST           <code object second at 0x0000024069494100, file "datetime.py", line 1390>
+  80: MAKE_FUNCTION        
+  82: PRECALL              
+  86: CALL                 
+  96: STORE_NAME           second
+  98: LOAD_NAME            property
+ 100: LOAD_CONST           <code object microsecond at 0x0000024069496CE0, file "datetime.py", line 1395>
+ 102: MAKE_FUNCTION        
+ 104: PRECALL              
+ 108: CALL                 
+ 118: STORE_NAME           microsecond
+ 120: LOAD_NAME            property
+ 122: LOAD_CONST           <code object tzinfo at 0x0000024069494510, file "datetime.py", line 1400>
+ 124: MAKE_FUNCTION        
+ 126: PRECALL              
+ 130: CALL                 
+ 140: STORE_NAME           tzinfo
+ 142: LOAD_NAME            property
+ 144: LOAD_CONST           <code object fold at 0x0000024069494440, file "datetime.py", line 1405>
+ 146: MAKE_FUNCTION        
+ 148: PRECALL              
+ 152: CALL                 
+ 162: STORE_NAME           fold
+ 164: LOAD_CONST           <code object __eq__ at 0x00000240693D3CC0, file "datetime.py", line 1413>
+ 166: MAKE_FUNCTION        
+ 168: STORE_NAME           __eq__
+ 170: LOAD_CONST           <code object __le__ at 0x0000024069CC8030, file "datetime.py", line 1419>
+ 172: MAKE_FUNCTION        
+ 174: STORE_NAME           __le__
+ 176: LOAD_CONST           <code object __lt__ at 0x0000024069CC8160, file "datetime.py", line 1425>
+ 178: MAKE_FUNCTION        
+ 180: STORE_NAME           __lt__
+ 182: LOAD_CONST           <code object __ge__ at 0x0000024069CC8290, file "datetime.py", line 1431>
+ 184: MAKE_FUNCTION        
+ 186: STORE_NAME           __ge__
+ 188: LOAD_CONST           <code object __gt__ at 0x0000024069CC83C0, file "datetime.py", line 1437>
+ 190: MAKE_FUNCTION        
+ 192: STORE_NAME           __gt__
+ 194: LOAD_CONST           (False,)
+ 196: LOAD_CONST           <code object _cmp at 0x0000024068C54660, file "datetime.py", line 1443>
+ 198: MAKE_FUNCTION        defaults
+ 200: STORE_NAME           _cmp
+ 202: LOAD_CONST           <code object __hash__ at 0x0000024068D41170, file "datetime.py", line 1471>
+ 204: MAKE_FUNCTION        
+ 206: STORE_NAME           __hash__
+ 208: LOAD_CONST           <code object _tzstr at 0x00000240693EBE30, file "datetime.py", line 1494>
+ 210: MAKE_FUNCTION        
+ 212: STORE_NAME           _tzstr
+ 214: LOAD_CONST           <code object __repr__ at 0x0000024068E7DA00, file "datetime.py", line 1499>
+ 216: MAKE_FUNCTION        
+ 218: STORE_NAME           __repr__
+ 220: LOAD_CONST           ('auto',)
+ 222: LOAD_CONST           <code object isoformat at 0x000002406922C2D0, file "datetime.py", line 1518>
+ 224: MAKE_FUNCTION        defaults
+ 226: STORE_NAME           isoformat
+ 228: LOAD_NAME            isoformat
+ 230: STORE_NAME           __str__
+ 232: LOAD_NAME            classmethod
+ 234: LOAD_CONST           <code object fromisoformat at 0x00000240691F5890, file "datetime.py", line 1537>
+ 236: MAKE_FUNCTION        
+ 238: PRECALL              
+ 242: CALL                 
+ 252: STORE_NAME           fromisoformat
+ 254: LOAD_CONST           <code object strftime at 0x000002406944B000, file "datetime.py", line 1554>
+ 256: MAKE_FUNCTION        
+ 258: STORE_NAME           strftime
+ 260: LOAD_CONST           <code object __format__ at 0x00000240691F5A30, file "datetime.py", line 1565>
+ 262: MAKE_FUNCTION        
+ 264: STORE_NAME           __format__
+ 266: LOAD_CONST           <code object utcoffset at 0x0000024069CC84F0, file "datetime.py", line 1574>
+ 268: MAKE_FUNCTION        
+ 270: STORE_NAME           utcoffset
+ 272: LOAD_CONST           <code object tzname at 0x0000024069CC8620, file "datetime.py", line 1583>
+ 274: MAKE_FUNCTION        
+ 276: STORE_NAME           tzname
+ 278: LOAD_CONST           <code object dst at 0x0000024069CC8750, file "datetime.py", line 1596>
+ 280: MAKE_FUNCTION        
+ 282: STORE_NAME           dst
+ 284: NOP                  
+ 286: NOP                  
+ 288: LOAD_CONST           (None, None, None, None, True)
+ 290: LOAD_CONST           None
+ 292: LOAD_CONST           ('fold',)
+ 294: BUILD_CONST_KEY_MAP  
+ 296: LOAD_CONST           <code object replace at 0x000002406949D5C0, file "datetime.py", line 1611>
+ 298: MAKE_FUNCTION        defaults, kwdefaults
+ 300: STORE_NAME           replace
+ 302: LOAD_CONST           (3,)
+ 304: LOAD_CONST           <code object _getstate at 0x000002406934FCF0, file "datetime.py", line 1630>
+ 306: MAKE_FUNCTION        defaults
+ 308: STORE_NAME           _getstate
+ 310: LOAD_CONST           <code object __setstate at 0x000002406934F990, file "datetime.py", line 1643>
+ 312: MAKE_FUNCTION        
+ 314: STORE_NAME           _time__setstate
+ 316: LOAD_CONST           <code object __reduce_ex__ at 0x0000024069CDC130, file "datetime.py", line 1656>
+ 318: MAKE_FUNCTION        
+ 320: STORE_NAME           __reduce_ex__
+ 322: LOAD_CONST           <code object __reduce__ at 0x000002406945E5B0, file "datetime.py", line 1659>
+ 324: MAKE_FUNCTION        
+ 326: STORE_NAME           __reduce__
+ 328: LOAD_CONST           None
+ 330: RETURN_VALUE         

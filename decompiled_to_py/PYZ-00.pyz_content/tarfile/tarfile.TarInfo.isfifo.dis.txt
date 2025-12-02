@@ -1,0 +1,17 @@
+# Disassembly for tarfile.TarInfo.isfifo
+# From module file: tarfile
+
+## co_consts:
+('Return True if it is a FIFO.',)
+
+## co_names:
+('type', 'FIFOTYPE')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            type
+  14: LOAD_GLOBAL          FIFOTYPE
+  26: COMPARE_OP           ==
+  32: RETURN_VALUE         

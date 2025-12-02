@@ -1,0 +1,19 @@
+# Disassembly for importlib.Distribution._read_dist_info_reqs
+# From module file: importlib.metadata
+
+## co_consts:
+(None, 'Requires-Dist')
+
+## co_names:
+('metadata', 'get_all')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            metadata
+  14: LOAD_METHOD          get_all
+  36: LOAD_CONST           'Requires-Dist'
+  38: PRECALL              
+  42: CALL                 
+  52: RETURN_VALUE         

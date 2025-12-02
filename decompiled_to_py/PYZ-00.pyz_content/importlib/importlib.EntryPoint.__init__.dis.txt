@@ -1,0 +1,26 @@
+# Disassembly for importlib.EntryPoint.__init__
+# From module file: importlib.metadata
+
+## co_consts:
+(None, ('name', 'value', 'group'))
+
+## co_names:
+('vars', 'update')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + vars
+  14: LOAD_FAST            self
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_METHOD          update
+  52: LOAD_FAST            name
+  54: LOAD_FAST            value
+  56: LOAD_FAST            group
+  58: KW_NAMES             
+  60: PRECALL              
+  64: CALL                 
+  74: POP_TOP              
+  76: LOAD_CONST           None
+  78: RETURN_VALUE         

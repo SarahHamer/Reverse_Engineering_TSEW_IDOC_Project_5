@@ -1,0 +1,44 @@
+# Disassembly for gettext.dgettext
+# From module file: gettext
+
+## co_consts:
+(None,)
+
+## co_names:
+('translation', '_localedirs', 'get', 'OSError', 'gettext')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_GLOBAL          NULL + translation
+  16: LOAD_FAST            domain
+  18: LOAD_GLOBAL          _localedirs
+  30: LOAD_METHOD          get
+  52: LOAD_FAST            domain
+  54: LOAD_CONST           None
+  56: PRECALL              
+  60: CALL                 
+  70: PRECALL              
+  74: CALL                 
+  84: STORE_FAST           t
+  86: JUMP_FORWARD         to 124
+  88: PUSH_EXC_INFO        
+  90: LOAD_GLOBAL          OSError
+ 102: CHECK_EXC_MATCH      
+ 104: POP_JUMP_FORWARD_IF_FALSE to 116
+ 106: POP_TOP              
+ 108: LOAD_FAST            message
+ 110: SWAP                 
+ 112: POP_EXCEPT           
+ 114: RETURN_VALUE         
+ 116: RERAISE              
+ 118: COPY                 
+ 120: POP_EXCEPT           
+ 122: RERAISE              
+ 124: LOAD_FAST            t
+ 126: LOAD_METHOD          gettext
+ 148: LOAD_FAST            message
+ 150: PRECALL              
+ 154: CALL                 
+ 164: RETURN_VALUE         

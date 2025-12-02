@@ -1,0 +1,56 @@
+# Disassembly for importlib.WindowsRegistryFinder
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('WindowsRegistryFinder', 'Meta path finder for modules declared in the Windows registry.', 'Software\\Python\\PythonCore\\{sys_version}\\Modules\\{fullname}', 'Software\\Python\\PythonCore\\{sys_version}\\Modules\\{fullname}\\Debug', '_d.pyd', <code object _open_registry at 0x00000240691C0DF0, file "importlib\_bootstrap_external.py", line 863>, <code object _search_registry at 0x0000024069366310, file "importlib\_bootstrap_external.py", line 870>, None, <code object find_spec at 0x0000024069CD8430, file "importlib\_bootstrap_external.py", line 885>, <code object find_module at 0x00000240693D23D0, file "importlib\_bootstrap_external.py", line 901>, (None, None), (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'REGISTRY_KEY', 'REGISTRY_KEY_DEBUG', '_MS_WINDOWS', 'EXTENSION_SUFFIXES', 'DEBUG_BUILD', 'staticmethod', '_open_registry', 'classmethod', '_search_registry', 'find_spec', 'find_module')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'WindowsRegistryFinder'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Meta path finder for modules declared in the Windows registry.'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           'Software\\Python\\PythonCore\\{sys_version}\\Modules\\{fullname}'
+  16: STORE_NAME           REGISTRY_KEY
+  18: LOAD_CONST           'Software\\Python\\PythonCore\\{sys_version}\\Modules\\{fullname}\\Debug'
+  20: STORE_NAME           REGISTRY_KEY_DEBUG
+  22: LOAD_NAME            _MS_WINDOWS
+  24: JUMP_IF_FALSE_OR_POP to 32
+  26: LOAD_CONST           '_d.pyd'
+  28: LOAD_NAME            EXTENSION_SUFFIXES
+  30: CONTAINS_OP          
+  32: STORE_NAME           DEBUG_BUILD
+  34: LOAD_NAME            staticmethod
+  36: LOAD_CONST           <code object _open_registry at 0x00000240691C0DF0, file "importlib\_bootstrap_external.py", line 863>
+  38: MAKE_FUNCTION        
+  40: PRECALL              
+  44: CALL                 
+  54: STORE_NAME           _open_registry
+  56: LOAD_NAME            classmethod
+  58: LOAD_CONST           <code object _search_registry at 0x0000024069366310, file "importlib\_bootstrap_external.py", line 870>
+  60: MAKE_FUNCTION        
+  62: PRECALL              
+  66: CALL                 
+  76: STORE_NAME           _search_registry
+  78: LOAD_NAME            classmethod
+  80: LOAD_CONST           (None, None)
+  82: LOAD_CONST           <code object find_spec at 0x0000024069CD8430, file "importlib\_bootstrap_external.py", line 885>
+  84: MAKE_FUNCTION        defaults
+  86: PRECALL              
+  90: CALL                 
+ 100: STORE_NAME           find_spec
+ 102: LOAD_NAME            classmethod
+ 104: LOAD_CONST           (None,)
+ 106: LOAD_CONST           <code object find_module at 0x00000240693D23D0, file "importlib\_bootstrap_external.py", line 901>
+ 108: MAKE_FUNCTION        defaults
+ 110: PRECALL              
+ 114: CALL                 
+ 124: STORE_NAME           find_module
+ 126: LOAD_CONST           None
+ 128: RETURN_VALUE         

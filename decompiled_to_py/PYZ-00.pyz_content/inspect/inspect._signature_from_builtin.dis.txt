@@ -1,0 +1,52 @@
+# Disassembly for inspect._signature_from_builtin
+# From module file: inspect
+
+## co_consts:
+('Private helper function to get signature for\n    builtin callables.\n    ', '{!r} is not a Python builtin function', '__text_signature__', None, 'no signature found for builtin {!r}')
+
+## co_names:
+('_signature_is_builtin', 'TypeError', 'format', 'getattr', 'ValueError', '_signature_fromstr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _signature_is_builtin
+  14: LOAD_FAST            func
+  16: PRECALL              
+  20: CALL                 
+  30: POP_JUMP_FORWARD_IF_TRUE to 100
+  32: LOAD_GLOBAL          NULL + TypeError
+  44: LOAD_CONST           '{!r} is not a Python builtin function'
+  46: LOAD_METHOD          format
+  68: LOAD_FAST            func
+  70: PRECALL              
+  74: CALL                 
+  84: PRECALL              
+  88: CALL                 
+  98: RAISE_VARARGS        
+ 100: LOAD_GLOBAL          NULL + getattr
+ 112: LOAD_FAST            func
+ 114: LOAD_CONST           '__text_signature__'
+ 116: LOAD_CONST           None
+ 118: PRECALL              
+ 122: CALL                 
+ 132: STORE_FAST           s
+ 134: LOAD_FAST            s
+ 136: POP_JUMP_FORWARD_IF_TRUE to 206
+ 138: LOAD_GLOBAL          NULL + ValueError
+ 150: LOAD_CONST           'no signature found for builtin {!r}'
+ 152: LOAD_METHOD          format
+ 174: LOAD_FAST            func
+ 176: PRECALL              
+ 180: CALL                 
+ 190: PRECALL              
+ 194: CALL                 
+ 204: RAISE_VARARGS        
+ 206: LOAD_GLOBAL          NULL + _signature_fromstr
+ 218: LOAD_FAST            cls
+ 220: LOAD_FAST            func
+ 222: LOAD_FAST            s
+ 224: LOAD_FAST            skip_bound_arg
+ 226: PRECALL              
+ 230: CALL                 
+ 240: RETURN_VALUE         

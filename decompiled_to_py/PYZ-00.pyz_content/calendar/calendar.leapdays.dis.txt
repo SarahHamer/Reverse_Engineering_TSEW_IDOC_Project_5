@@ -1,0 +1,44 @@
+# Disassembly for calendar.leapdays
+# From module file: calendar
+
+## co_consts:
+('Return number of leap years in range [y1, y2).\n       Assume y1 <= y2.', 1, 4, 100, 400)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            y1
+   4: LOAD_CONST           1
+   6: BINARY_OP            -=
+  10: STORE_FAST           y1
+  12: LOAD_FAST            y2
+  14: LOAD_CONST           1
+  16: BINARY_OP            -=
+  20: STORE_FAST           y2
+  22: LOAD_FAST            y2
+  24: LOAD_CONST           4
+  26: BINARY_OP            //
+  30: LOAD_FAST            y1
+  32: LOAD_CONST           4
+  34: BINARY_OP            //
+  38: BINARY_OP            -
+  42: LOAD_FAST            y2
+  44: LOAD_CONST           100
+  46: BINARY_OP            //
+  50: LOAD_FAST            y1
+  52: LOAD_CONST           100
+  54: BINARY_OP            //
+  58: BINARY_OP            -
+  62: BINARY_OP            -
+  66: LOAD_FAST            y2
+  68: LOAD_CONST           400
+  70: BINARY_OP            //
+  74: LOAD_FAST            y1
+  76: LOAD_CONST           400
+  78: BINARY_OP            //
+  82: BINARY_OP            -
+  86: BINARY_OP            +
+  90: RETURN_VALUE         

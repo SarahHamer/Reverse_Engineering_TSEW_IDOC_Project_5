@@ -1,0 +1,144 @@
+# Disassembly for shutil.unpack_archive
+# From module file: shutil
+
+## co_consts:
+('Unpack an archive.\n\n    `filename` is the name of the archive.\n\n    `extract_dir` is the name of the target directory, where the archive\n    is unpacked. If not provided, the current working directory is used.\n\n    `format` is the archive format: one of "zip", "tar", "gztar", "bztar",\n    or "xztar".  Or any other registered format.  If not provided,\n    unpack_archive will use the filename extension and see if an unpacker\n    was registered for that extension.\n\n    In case none is found, a ValueError is raised.\n\n    If `filter` is given, it is passed to the underlying\n    extraction function.\n    ', 'shutil.unpack_archive', None, 'filter', "Unknown unpack format '{0}'", 1, 2, "Unknown archive format '{0}'")
+
+## co_names:
+('sys', 'audit', 'os', 'getcwd', 'fspath', '_UNPACK_FORMATS', 'KeyError', 'ValueError', 'format', 'dict', '_find_unpack_format', 'ReadError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + sys
+  14: LOAD_ATTR            audit
+  24: LOAD_CONST           'shutil.unpack_archive'
+  26: LOAD_FAST            filename
+  28: LOAD_FAST            extract_dir
+  30: LOAD_FAST            format
+  32: PRECALL              
+  36: CALL                 
+  46: POP_TOP              
+  48: LOAD_FAST            extract_dir
+  50: POP_JUMP_FORWARD_IF_NOT_NONE to 90
+  52: LOAD_GLOBAL          NULL + os
+  64: LOAD_ATTR            getcwd
+  74: PRECALL              
+  78: CALL                 
+  88: STORE_FAST           extract_dir
+  90: LOAD_GLOBAL          NULL + os
+ 102: LOAD_ATTR            fspath
+ 112: LOAD_FAST            extract_dir
+ 114: PRECALL              
+ 118: CALL                 
+ 128: STORE_FAST           extract_dir
+ 130: LOAD_GLOBAL          NULL + os
+ 142: LOAD_ATTR            fspath
+ 152: LOAD_FAST            filename
+ 154: PRECALL              
+ 158: CALL                 
+ 168: STORE_FAST           filename
+ 170: LOAD_FAST            filter
+ 172: POP_JUMP_FORWARD_IF_NOT_NONE to 180
+ 174: BUILD_MAP            
+ 176: STORE_FAST           filter_kwargs
+ 178: JUMP_FORWARD         to 188
+ 180: LOAD_CONST           'filter'
+ 182: LOAD_FAST            filter
+ 184: BUILD_MAP            
+ 186: STORE_FAST           filter_kwargs
+ 188: LOAD_FAST            format
+ 190: POP_JUMP_FORWARD_IF_NONE to 402
+ 192: NOP                  
+ 194: LOAD_GLOBAL          _UNPACK_FORMATS
+ 206: LOAD_FAST            format
+ 208: BINARY_SUBSCR        
+ 218: STORE_FAST           format_info
+ 220: JUMP_FORWARD         to 320
+ 222: PUSH_EXC_INFO        
+ 224: LOAD_GLOBAL          KeyError
+ 236: CHECK_EXC_MATCH      
+ 238: POP_JUMP_FORWARD_IF_FALSE to 312
+ 240: POP_TOP              
+ 242: LOAD_GLOBAL          NULL + ValueError
+ 254: LOAD_CONST           "Unknown unpack format '{0}'"
+ 256: LOAD_METHOD          format
+ 278: LOAD_FAST            format
+ 280: PRECALL              
+ 284: CALL                 
+ 294: PRECALL              
+ 298: CALL                 
+ 308: LOAD_CONST           None
+ 310: RAISE_VARARGS        
+ 312: RERAISE              
+ 314: COPY                 
+ 316: POP_EXCEPT           
+ 318: RERAISE              
+ 320: LOAD_FAST            format_info
+ 322: LOAD_CONST           1
+ 324: BINARY_SUBSCR        
+ 334: STORE_FAST           func
+ 336: PUSH_NULL            
+ 338: LOAD_FAST            func
+ 340: LOAD_FAST            filename
+ 342: LOAD_FAST            extract_dir
+ 344: BUILD_TUPLE          
+ 346: BUILD_MAP            
+ 348: LOAD_GLOBAL          NULL + dict
+ 360: LOAD_FAST            format_info
+ 362: LOAD_CONST           2
+ 364: BINARY_SUBSCR        
+ 374: PRECALL              
+ 378: CALL                 
+ 388: DICT_MERGE           
+ 390: LOAD_FAST            filter_kwargs
+ 392: DICT_MERGE           
+ 394: CALL_FUNCTION_EX     
+ 396: POP_TOP              
+ 398: LOAD_CONST           None
+ 400: RETURN_VALUE         
+ 402: LOAD_GLOBAL          NULL + _find_unpack_format
+ 414: LOAD_FAST            filename
+ 416: PRECALL              
+ 420: CALL                 
+ 430: STORE_FAST           format
+ 432: LOAD_FAST            format
+ 434: POP_JUMP_FORWARD_IF_NOT_NONE to 504
+ 436: LOAD_GLOBAL          NULL + ReadError
+ 448: LOAD_CONST           "Unknown archive format '{0}'"
+ 450: LOAD_METHOD          format
+ 472: LOAD_FAST            filename
+ 474: PRECALL              
+ 478: CALL                 
+ 488: PRECALL              
+ 492: CALL                 
+ 502: RAISE_VARARGS        
+ 504: LOAD_GLOBAL          _UNPACK_FORMATS
+ 516: LOAD_FAST            format
+ 518: BINARY_SUBSCR        
+ 528: LOAD_CONST           1
+ 530: BINARY_SUBSCR        
+ 540: STORE_FAST           func
+ 542: LOAD_GLOBAL          NULL + dict
+ 554: LOAD_GLOBAL          _UNPACK_FORMATS
+ 566: LOAD_FAST            format
+ 568: BINARY_SUBSCR        
+ 578: LOAD_CONST           2
+ 580: BINARY_SUBSCR        
+ 590: PRECALL              
+ 594: CALL                 
+ 604: LOAD_FAST            filter_kwargs
+ 606: BINARY_OP            |
+ 610: STORE_FAST           kwargs
+ 612: PUSH_NULL            
+ 614: LOAD_FAST            func
+ 616: LOAD_FAST            filename
+ 618: LOAD_FAST            extract_dir
+ 620: BUILD_TUPLE          
+ 622: BUILD_MAP            
+ 624: LOAD_FAST            kwargs
+ 626: DICT_MERGE           
+ 628: CALL_FUNCTION_EX     
+ 630: POP_TOP              
+ 632: LOAD_CONST           None
+ 634: RETURN_VALUE         

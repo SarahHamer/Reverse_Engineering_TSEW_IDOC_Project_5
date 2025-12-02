@@ -1,0 +1,32 @@
+# Disassembly for dis._get_const_value
+# From module file: dis
+
+## co_consts:
+('Helper to get the value of the const in a hasconst op.\n\n       Returns the dereferenced constant if this is possible.\n       Otherwise (if it is a LOAD_CONST and co_consts is not\n       provided) returns the dis.UNKNOWN sentinel.\n    ',)
+
+## co_names:
+('hasconst', 'UNKNOWN', 'LOAD_CONST')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            op
+   4: LOAD_GLOBAL          hasconst
+  16: CONTAINS_OP          
+  18: POP_JUMP_FORWARD_IF_TRUE to 24
+  20: LOAD_ASSERTION_ERROR 
+  22: RAISE_VARARGS        
+  24: LOAD_GLOBAL          UNKNOWN
+  36: STORE_FAST           argval
+  38: LOAD_FAST            op
+  40: LOAD_GLOBAL          LOAD_CONST
+  52: COMPARE_OP           ==
+  58: POP_JUMP_FORWARD_IF_FALSE to 80
+  60: LOAD_FAST            co_consts
+  62: POP_JUMP_FORWARD_IF_NONE to 80
+  64: LOAD_FAST            co_consts
+  66: LOAD_FAST            arg
+  68: BINARY_SUBSCR        
+  78: STORE_FAST           argval
+  80: LOAD_FAST            argval
+  82: RETURN_VALUE         

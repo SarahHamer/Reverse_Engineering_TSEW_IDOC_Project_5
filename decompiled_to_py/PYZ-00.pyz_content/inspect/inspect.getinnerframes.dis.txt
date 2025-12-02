@@ -1,0 +1,47 @@
+# Disassembly for inspect.getinnerframes
+# From module file: inspect
+
+## co_consts:
+("Get a list of records for a traceback's frame and all lower frames.\n\n    Each record contains a frame object, filename, line number, function\n    name, a list of lines of context, and index within the context.", 'positions')
+
+## co_names:
+('getframeinfo', 'tb_frame', 'append', 'FrameInfo', 'positions', 'tb_next')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           framelist
+   6: LOAD_FAST            tb
+   8: POP_JUMP_FORWARD_IF_FALSE to 154
+  10: LOAD_GLOBAL          NULL + getframeinfo
+  22: LOAD_FAST            tb
+  24: LOAD_FAST            context
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           traceback_info
+  42: LOAD_FAST            tb
+  44: LOAD_ATTR            tb_frame
+  54: BUILD_TUPLE          
+  56: LOAD_FAST            traceback_info
+  58: BINARY_OP            +
+  62: STORE_FAST           frameinfo
+  64: LOAD_FAST            framelist
+  66: LOAD_METHOD          append
+  88: LOAD_GLOBAL          NULL + FrameInfo
+ 100: LOAD_FAST            frameinfo
+ 102: LOAD_CONST           'positions'
+ 104: LOAD_FAST            traceback_info
+ 106: LOAD_ATTR            positions
+ 116: BUILD_MAP            
+ 118: CALL_FUNCTION_EX     
+ 120: PRECALL              
+ 124: CALL                 
+ 134: POP_TOP              
+ 136: LOAD_FAST            tb
+ 138: LOAD_ATTR            tb_next
+ 148: STORE_FAST           tb
+ 150: LOAD_FAST            tb
+ 152: POP_JUMP_BACKWARD_IF_TRUE to 10
+ 154: LOAD_FAST            framelist
+ 156: RETURN_VALUE         

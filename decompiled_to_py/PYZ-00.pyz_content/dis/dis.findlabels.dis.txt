@@ -1,0 +1,70 @@
+# Disassembly for dis.findlabels
+# From module file: dis
+
+## co_consts:
+('Detect all offsets in a byte code which are jump targets.\n\n    Return the list of offsets.\n\n    ', None, 2)
+
+## co_names:
+('_unpack_opargs', 'hasjrel', '_is_backward_jump', 'hasjabs', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           labels
+   6: LOAD_GLOBAL          NULL + _unpack_opargs
+  18: LOAD_FAST            code
+  20: PRECALL              
+  24: CALL                 
+  34: GET_ITER             
+  36: FOR_ITER             to 214
+  38: UNPACK_SEQUENCE      
+  42: STORE_FAST           offset
+  44: STORE_FAST           op
+  46: STORE_FAST           arg
+  48: LOAD_FAST            arg
+  50: POP_JUMP_FORWARD_IF_NONE to 212
+  52: LOAD_FAST            op
+  54: LOAD_GLOBAL          hasjrel
+  66: CONTAINS_OP          
+  68: POP_JUMP_FORWARD_IF_FALSE to 130
+  70: LOAD_GLOBAL          NULL + _is_backward_jump
+  82: LOAD_FAST            op
+  84: PRECALL              
+  88: CALL                 
+  98: POP_JUMP_FORWARD_IF_FALSE to 106
+ 100: LOAD_FAST            arg
+ 102: UNARY_NEGATIVE       
+ 104: STORE_FAST           arg
+ 106: LOAD_FAST            offset
+ 108: LOAD_CONST           2
+ 110: BINARY_OP            +
+ 114: LOAD_FAST            arg
+ 116: LOAD_CONST           2
+ 118: BINARY_OP            *
+ 122: BINARY_OP            +
+ 126: STORE_FAST           label
+ 128: JUMP_FORWARD         to 162
+ 130: LOAD_FAST            op
+ 132: LOAD_GLOBAL          hasjabs
+ 144: CONTAINS_OP          
+ 146: POP_JUMP_FORWARD_IF_FALSE to 160
+ 148: LOAD_FAST            arg
+ 150: LOAD_CONST           2
+ 152: BINARY_OP            *
+ 156: STORE_FAST           label
+ 158: JUMP_FORWARD         to 162
+ 160: JUMP_BACKWARD        to 36
+ 162: LOAD_FAST            label
+ 164: LOAD_FAST            labels
+ 166: CONTAINS_OP          
+ 168: POP_JUMP_FORWARD_IF_FALSE to 212
+ 170: LOAD_FAST            labels
+ 172: LOAD_METHOD          append
+ 194: LOAD_FAST            label
+ 196: PRECALL              
+ 200: CALL                 
+ 210: POP_TOP              
+ 212: JUMP_BACKWARD        to 36
+ 214: LOAD_FAST            labels
+ 216: RETURN_VALUE         

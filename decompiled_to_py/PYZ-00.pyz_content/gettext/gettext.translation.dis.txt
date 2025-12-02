@@ -1,0 +1,129 @@
+# Disassembly for gettext.translation
+# From module file: gettext
+
+## co_consts:
+(None, True, ('all',), 0, ('ENOENT',), 'No translation file found for domain', 'rb')
+
+## co_names:
+('GNUTranslations', 'find', 'NullTranslations', 'errno', 'ENOENT', 'FileNotFoundError', 'os', 'path', 'abspath', '_translations', 'get', 'open', 'setdefault', 'copy', 'add_fallback')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            class_
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 20
+   6: LOAD_GLOBAL          GNUTranslations
+  18: STORE_FAST           class_
+  20: LOAD_GLOBAL          NULL + find
+  32: LOAD_FAST            domain
+  34: LOAD_FAST            localedir
+  36: LOAD_FAST            languages
+  38: LOAD_CONST           True
+  40: KW_NAMES             
+  42: PRECALL              
+  46: CALL                 
+  56: STORE_FAST           mofiles
+  58: LOAD_FAST            mofiles
+  60: POP_JUMP_FORWARD_IF_TRUE to 140
+  62: LOAD_FAST            fallback
+  64: POP_JUMP_FORWARD_IF_FALSE to 94
+  66: LOAD_GLOBAL          NULL + NullTranslations
+  78: PRECALL              
+  82: CALL                 
+  92: RETURN_VALUE         
+  94: LOAD_CONST           0
+  96: LOAD_CONST           ('ENOENT',)
+  98: IMPORT_NAME          errno
+ 100: IMPORT_FROM          ENOENT
+ 102: STORE_FAST           ENOENT
+ 104: POP_TOP              
+ 106: LOAD_GLOBAL          NULL + FileNotFoundError
+ 118: LOAD_FAST            ENOENT
+ 120: LOAD_CONST           'No translation file found for domain'
+ 122: LOAD_FAST            domain
+ 124: PRECALL              
+ 128: CALL                 
+ 138: RAISE_VARARGS        
+ 140: LOAD_CONST           None
+ 142: STORE_FAST           result
+ 144: LOAD_FAST            mofiles
+ 146: GET_ITER             
+ 148: FOR_ITER             to 530
+ 150: STORE_FAST           mofile
+ 152: LOAD_FAST            class_
+ 154: LOAD_GLOBAL          os
+ 166: LOAD_ATTR            path
+ 176: LOAD_METHOD          abspath
+ 198: LOAD_FAST            mofile
+ 200: PRECALL              
+ 204: CALL                 
+ 214: BUILD_TUPLE          
+ 216: STORE_FAST           key
+ 218: LOAD_GLOBAL          _translations
+ 230: LOAD_METHOD          get
+ 252: LOAD_FAST            key
+ 254: PRECALL              
+ 258: CALL                 
+ 268: STORE_FAST           t
+ 270: LOAD_FAST            t
+ 272: POP_JUMP_FORWARD_IF_NOT_NONE to 426
+ 274: LOAD_GLOBAL          NULL + open
+ 286: LOAD_FAST            mofile
+ 288: LOAD_CONST           'rb'
+ 290: PRECALL              
+ 294: CALL                 
+ 304: BEFORE_WITH          
+ 306: STORE_FAST           fp
+ 308: LOAD_GLOBAL          _translations
+ 320: LOAD_METHOD          setdefault
+ 342: LOAD_FAST            key
+ 344: PUSH_NULL            
+ 346: LOAD_FAST            class_
+ 348: LOAD_FAST            fp
+ 350: PRECALL              
+ 354: CALL                 
+ 364: PRECALL              
+ 368: CALL                 
+ 378: STORE_FAST           t
+ 380: LOAD_CONST           None
+ 382: LOAD_CONST           None
+ 384: LOAD_CONST           None
+ 386: PRECALL              
+ 390: CALL                 
+ 400: POP_TOP              
+ 402: JUMP_FORWARD         to 426
+ 404: PUSH_EXC_INFO        
+ 406: WITH_EXCEPT_START    
+ 408: POP_JUMP_FORWARD_IF_TRUE to 418
+ 410: RERAISE              
+ 412: COPY                 
+ 414: POP_EXCEPT           
+ 416: RERAISE              
+ 418: POP_TOP              
+ 420: POP_EXCEPT           
+ 422: POP_TOP              
+ 424: POP_TOP              
+ 426: LOAD_CONST           0
+ 428: LOAD_CONST           None
+ 430: IMPORT_NAME          copy
+ 432: STORE_FAST           copy
+ 434: LOAD_FAST            copy
+ 436: LOAD_METHOD          copy
+ 458: LOAD_FAST            t
+ 460: PRECALL              
+ 464: CALL                 
+ 474: STORE_FAST           t
+ 476: LOAD_FAST            result
+ 478: POP_JUMP_FORWARD_IF_NOT_NONE to 486
+ 480: LOAD_FAST            t
+ 482: STORE_FAST           result
+ 484: JUMP_BACKWARD        to 148
+ 486: LOAD_FAST            result
+ 488: LOAD_METHOD          add_fallback
+ 510: LOAD_FAST            t
+ 512: PRECALL              
+ 516: CALL                 
+ 526: POP_TOP              
+ 528: JUMP_BACKWARD        to 148
+ 530: LOAD_FAST            result
+ 532: RETURN_VALUE         

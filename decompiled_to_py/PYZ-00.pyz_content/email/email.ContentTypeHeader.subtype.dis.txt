@@ -1,0 +1,15 @@
+# Disassembly for email.ContentTypeHeader.subtype
+# From module file: email.headerregistry
+
+## co_consts:
+(None,)
+
+## co_names:
+('_subtype',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _subtype
+  14: RETURN_VALUE         

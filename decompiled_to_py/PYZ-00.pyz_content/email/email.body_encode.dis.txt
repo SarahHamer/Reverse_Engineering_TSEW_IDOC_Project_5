@@ -1,0 +1,225 @@
+# Disassembly for email.body_encode
+# From module file: email.quoprimime
+
+## co_consts:
+('Encode with quoted-printable, wrapping at maxlinelen characters.\n\n    Each line of encoded text will end with eol, which defaults to "\\n".  Set\n    this to "\\r\\n" if you will be using the result of this function directly\n    in an email.\n\n    Each line will be wrapped at, at most, maxlinelen characters before the\n    eol string (maxlinelen defaults to 76 characters, the maximum value\n    permitted by RFC 2045).  Long lines will have the \'soft line break\'\n    quoted-printable character "=" appended to them, so the decoded text will\n    be identical to the original text.\n\n    The minimum maxlinelen is 4 to have room for a quoted character ("=XX")\n    followed by a soft line break.  Smaller values will generate a\n    ValueError.\n\n    ', 4, 'maxlinelen must be at least 4', '=', 1, 0, 2, -1, ' \t', 3, None, '')
+
+## co_names:
+('ValueError', 'translate', '_QUOPRI_BODY_ENCODE_MAP', 'append', 'splitlines', 'len', 'quote', 'CRLF', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            maxlinelen
+   4: LOAD_CONST           4
+   6: COMPARE_OP           <
+  12: POP_JUMP_FORWARD_IF_FALSE to 44
+  14: LOAD_GLOBAL          NULL + ValueError
+  26: LOAD_CONST           'maxlinelen must be at least 4'
+  28: PRECALL              
+  32: CALL                 
+  42: RAISE_VARARGS        
+  44: LOAD_FAST            body
+  46: POP_JUMP_FORWARD_IF_TRUE to 52
+  48: LOAD_FAST            body
+  50: RETURN_VALUE         
+  52: LOAD_FAST            body
+  54: LOAD_METHOD          translate
+  76: LOAD_GLOBAL          _QUOPRI_BODY_ENCODE_MAP
+  88: PRECALL              
+  92: CALL                 
+ 102: STORE_FAST           body
+ 104: LOAD_CONST           '='
+ 106: LOAD_FAST            eol
+ 108: BINARY_OP            +
+ 112: STORE_FAST           soft_break
+ 114: LOAD_FAST            maxlinelen
+ 116: LOAD_CONST           1
+ 118: BINARY_OP            -
+ 122: STORE_FAST           maxlinelen1
+ 124: BUILD_LIST           
+ 126: STORE_FAST           encoded_body
+ 128: LOAD_FAST            encoded_body
+ 130: LOAD_ATTR            append
+ 140: STORE_FAST           append
+ 142: LOAD_FAST            body
+ 144: LOAD_METHOD          splitlines
+ 166: PRECALL              
+ 170: CALL                 
+ 180: GET_ITER             
+ 182: EXTENDED_ARG         
+ 184: FOR_ITER             to 746
+ 186: STORE_FAST           line
+ 188: LOAD_CONST           0
+ 190: STORE_FAST           start
+ 192: LOAD_GLOBAL          NULL + len
+ 204: LOAD_FAST            line
+ 206: PRECALL              
+ 210: CALL                 
+ 220: LOAD_CONST           1
+ 222: BINARY_OP            -
+ 226: LOAD_FAST            maxlinelen
+ 228: BINARY_OP            -
+ 232: STORE_FAST           laststart
+ 234: LOAD_FAST            start
+ 236: LOAD_FAST            laststart
+ 238: COMPARE_OP           <=
+ 244: POP_JUMP_FORWARD_IF_FALSE to 482
+ 246: LOAD_FAST            start
+ 248: LOAD_FAST            maxlinelen1
+ 250: BINARY_OP            +
+ 254: STORE_FAST           stop
+ 256: LOAD_FAST            line
+ 258: LOAD_FAST            stop
+ 260: LOAD_CONST           2
+ 262: BINARY_OP            -
+ 266: BINARY_SUBSCR        
+ 276: LOAD_CONST           '='
+ 278: COMPARE_OP           ==
+ 284: POP_JUMP_FORWARD_IF_FALSE to 342
+ 286: PUSH_NULL            
+ 288: LOAD_FAST            append
+ 290: LOAD_FAST            line
+ 292: LOAD_FAST            start
+ 294: LOAD_FAST            stop
+ 296: LOAD_CONST           1
+ 298: BINARY_OP            -
+ 302: BUILD_SLICE          
+ 304: BINARY_SUBSCR        
+ 314: PRECALL              
+ 318: CALL                 
+ 328: POP_TOP              
+ 330: LOAD_FAST            stop
+ 332: LOAD_CONST           2
+ 334: BINARY_OP            -
+ 338: STORE_FAST           start
+ 340: JUMP_FORWARD         to 470
+ 342: LOAD_FAST            line
+ 344: LOAD_FAST            stop
+ 346: LOAD_CONST           1
+ 348: BINARY_OP            -
+ 352: BINARY_SUBSCR        
+ 362: LOAD_CONST           '='
+ 364: COMPARE_OP           ==
+ 370: POP_JUMP_FORWARD_IF_FALSE to 422
+ 372: PUSH_NULL            
+ 374: LOAD_FAST            append
+ 376: LOAD_FAST            line
+ 378: LOAD_FAST            start
+ 380: LOAD_FAST            stop
+ 382: BUILD_SLICE          
+ 384: BINARY_SUBSCR        
+ 394: PRECALL              
+ 398: CALL                 
+ 408: POP_TOP              
+ 410: LOAD_FAST            stop
+ 412: LOAD_CONST           1
+ 414: BINARY_OP            -
+ 418: STORE_FAST           start
+ 420: JUMP_FORWARD         to 470
+ 422: PUSH_NULL            
+ 424: LOAD_FAST            append
+ 426: LOAD_FAST            line
+ 428: LOAD_FAST            start
+ 430: LOAD_FAST            stop
+ 432: BUILD_SLICE          
+ 434: BINARY_SUBSCR        
+ 444: LOAD_CONST           '='
+ 446: BINARY_OP            +
+ 450: PRECALL              
+ 454: CALL                 
+ 464: POP_TOP              
+ 466: LOAD_FAST            stop
+ 468: STORE_FAST           start
+ 470: LOAD_FAST            start
+ 472: LOAD_FAST            laststart
+ 474: COMPARE_OP           <=
+ 480: POP_JUMP_BACKWARD_IF_TRUE to 246
+ 482: LOAD_FAST            line
+ 484: POP_JUMP_FORWARD_IF_FALSE to 704
+ 486: LOAD_FAST            line
+ 488: LOAD_CONST           -1
+ 490: BINARY_SUBSCR        
+ 500: LOAD_CONST           ' \t'
+ 502: CONTAINS_OP          
+ 504: POP_JUMP_FORWARD_IF_FALSE to 704
+ 506: LOAD_FAST            start
+ 508: LOAD_FAST            laststart
+ 510: BINARY_OP            -
+ 514: STORE_FAST           room
+ 516: LOAD_FAST            room
+ 518: LOAD_CONST           3
+ 520: COMPARE_OP           >=
+ 526: POP_JUMP_FORWARD_IF_FALSE to 572
+ 528: LOAD_GLOBAL          NULL + quote
+ 540: LOAD_FAST            line
+ 542: LOAD_CONST           -1
+ 544: BINARY_SUBSCR        
+ 554: PRECALL              
+ 558: CALL                 
+ 568: STORE_FAST           q
+ 570: JUMP_FORWARD         to 656
+ 572: LOAD_FAST            room
+ 574: LOAD_CONST           2
+ 576: COMPARE_OP           ==
+ 582: POP_JUMP_FORWARD_IF_FALSE to 608
+ 584: LOAD_FAST            line
+ 586: LOAD_CONST           -1
+ 588: BINARY_SUBSCR        
+ 598: LOAD_FAST            soft_break
+ 600: BINARY_OP            +
+ 604: STORE_FAST           q
+ 606: JUMP_FORWARD         to 656
+ 608: LOAD_FAST            soft_break
+ 610: LOAD_GLOBAL          NULL + quote
+ 622: LOAD_FAST            line
+ 624: LOAD_CONST           -1
+ 626: BINARY_SUBSCR        
+ 636: PRECALL              
+ 640: CALL                 
+ 650: BINARY_OP            +
+ 654: STORE_FAST           q
+ 656: PUSH_NULL            
+ 658: LOAD_FAST            append
+ 660: LOAD_FAST            line
+ 662: LOAD_FAST            start
+ 664: LOAD_CONST           -1
+ 666: BUILD_SLICE          
+ 668: BINARY_SUBSCR        
+ 678: LOAD_FAST            q
+ 680: BINARY_OP            +
+ 684: PRECALL              
+ 688: CALL                 
+ 698: POP_TOP              
+ 700: EXTENDED_ARG         
+ 702: JUMP_BACKWARD        to 182
+ 704: PUSH_NULL            
+ 706: LOAD_FAST            append
+ 708: LOAD_FAST            line
+ 710: LOAD_FAST            start
+ 712: LOAD_CONST           None
+ 714: BUILD_SLICE          
+ 716: BINARY_SUBSCR        
+ 726: PRECALL              
+ 730: CALL                 
+ 740: POP_TOP              
+ 742: EXTENDED_ARG         
+ 744: JUMP_BACKWARD        to 182
+ 746: LOAD_FAST            body
+ 748: LOAD_CONST           -1
+ 750: BINARY_SUBSCR        
+ 760: LOAD_GLOBAL          CRLF
+ 772: CONTAINS_OP          
+ 774: POP_JUMP_FORWARD_IF_FALSE to 798
+ 776: PUSH_NULL            
+ 778: LOAD_FAST            append
+ 780: LOAD_CONST           ''
+ 782: PRECALL              
+ 786: CALL                 
+ 796: POP_TOP              
+ 798: LOAD_FAST            eol
+ 800: LOAD_METHOD          join
+ 822: LOAD_FAST            encoded_body
+ 824: PRECALL              
+ 828: CALL                 
+ 838: RETURN_VALUE         

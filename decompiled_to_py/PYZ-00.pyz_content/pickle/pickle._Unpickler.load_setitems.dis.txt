@@ -1,0 +1,47 @@
+# Disassembly for pickle._Unpickler.load_setitems
+# From module file: pickle
+
+## co_consts:
+(None, -1, 0, 2, 1)
+
+## co_names:
+('pop_mark', 'stack', 'range', 'len')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          pop_mark
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           items
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            stack
+  54: LOAD_CONST           -1
+  56: BINARY_SUBSCR        
+  66: STORE_FAST           dict
+  68: LOAD_GLOBAL          NULL + range
+  80: LOAD_CONST           0
+  82: LOAD_GLOBAL          NULL + len
+  94: LOAD_FAST            items
+  96: PRECALL              
+ 100: CALL                 
+ 110: LOAD_CONST           2
+ 112: PRECALL              
+ 116: CALL                 
+ 126: GET_ITER             
+ 128: FOR_ITER             to 174
+ 130: STORE_FAST           i
+ 132: LOAD_FAST            items
+ 134: LOAD_FAST            i
+ 136: LOAD_CONST           1
+ 138: BINARY_OP            +
+ 142: BINARY_SUBSCR        
+ 152: LOAD_FAST            dict
+ 154: LOAD_FAST            items
+ 156: LOAD_FAST            i
+ 158: BINARY_SUBSCR        
+ 168: STORE_SUBSCR         
+ 172: JUMP_BACKWARD        to 128
+ 174: LOAD_CONST           None
+ 176: RETURN_VALUE         

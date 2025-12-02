@@ -1,0 +1,85 @@
+# Disassembly for pprint._perfcheck
+# From module file: pprint
+
+## co_consts:
+(None, 0, 'string', (1, 2), 3, 4, 6, 8, (5, 7), 100000, True, '_safe_repr:', 'pformat:')
+
+## co_names:
+('time', 'PrettyPrinter', 'perf_counter', '_safe_repr', 'pformat', 'print')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           None
+   6: IMPORT_NAME          time
+   8: STORE_FAST           time
+  10: LOAD_FAST            object
+  12: POP_JUMP_FORWARD_IF_NOT_NONE to 44
+  14: LOAD_CONST           'string'
+  16: LOAD_CONST           (1, 2)
+  18: LOAD_CONST           3
+  20: LOAD_CONST           4
+  22: BUILD_LIST           
+  24: LOAD_CONST           6
+  26: LOAD_CONST           8
+  28: LOAD_CONST           (5, 7)
+  30: BUILD_CONST_KEY_MAP  
+  32: BUILD_TUPLE          
+  34: BUILD_LIST           
+  36: LOAD_CONST           100000
+  38: BINARY_OP            *
+  42: STORE_FAST           object
+  44: LOAD_GLOBAL          NULL + PrettyPrinter
+  56: PRECALL              
+  60: CALL                 
+  70: STORE_FAST           p
+  72: LOAD_FAST            time
+  74: LOAD_METHOD          perf_counter
+  96: PRECALL              
+ 100: CALL                 
+ 110: STORE_FAST           t1
+ 112: LOAD_FAST            p
+ 114: LOAD_METHOD          _safe_repr
+ 136: LOAD_FAST            object
+ 138: BUILD_MAP            
+ 140: LOAD_CONST           None
+ 142: LOAD_CONST           0
+ 144: LOAD_CONST           True
+ 146: PRECALL              
+ 150: CALL                 
+ 160: POP_TOP              
+ 162: LOAD_FAST            time
+ 164: LOAD_METHOD          perf_counter
+ 186: PRECALL              
+ 190: CALL                 
+ 200: STORE_FAST           t2
+ 202: LOAD_FAST            p
+ 204: LOAD_METHOD          pformat
+ 226: LOAD_FAST            object
+ 228: PRECALL              
+ 232: CALL                 
+ 242: POP_TOP              
+ 244: LOAD_FAST            time
+ 246: LOAD_METHOD          perf_counter
+ 268: PRECALL              
+ 272: CALL                 
+ 282: STORE_FAST           t3
+ 284: LOAD_GLOBAL          NULL + print
+ 296: LOAD_CONST           '_safe_repr:'
+ 298: LOAD_FAST            t2
+ 300: LOAD_FAST            t1
+ 302: BINARY_OP            -
+ 306: PRECALL              
+ 310: CALL                 
+ 320: POP_TOP              
+ 322: LOAD_GLOBAL          NULL + print
+ 334: LOAD_CONST           'pformat:'
+ 336: LOAD_FAST            t3
+ 338: LOAD_FAST            t2
+ 340: BINARY_OP            -
+ 344: PRECALL              
+ 348: CALL                 
+ 358: POP_TOP              
+ 360: LOAD_CONST           None
+ 362: RETURN_VALUE         

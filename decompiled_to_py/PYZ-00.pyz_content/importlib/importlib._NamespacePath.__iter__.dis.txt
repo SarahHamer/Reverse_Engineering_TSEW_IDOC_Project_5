@@ -1,0 +1,20 @@
+# Disassembly for importlib._NamespacePath.__iter__
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+(None,)
+
+## co_names:
+('iter', '_recalculate')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + iter
+  14: LOAD_FAST            self
+  16: LOAD_METHOD          _recalculate
+  38: PRECALL              
+  42: CALL                 
+  52: PRECALL              
+  56: CALL                 
+  66: RETURN_VALUE         

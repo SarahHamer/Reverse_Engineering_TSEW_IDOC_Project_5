@@ -1,0 +1,25 @@
+# Disassembly for random.Random.expovariate
+# From module file: random
+
+## co_consts:
+('Exponential distribution.\n\n        lambd is 1.0 divided by the desired mean.  It should be\n        nonzero.  (The parameter would be called "lambda", but that is\n        a reserved word in Python.)  Returned values range from 0 to\n        positive infinity if lambd is positive, and from negative\n        infinity to 0 if lambd is negative.\n\n        ', 1.0)
+
+## co_names:
+('_log', 'random')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _log
+  14: LOAD_CONST           1.0
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          random
+  40: PRECALL              
+  44: CALL                 
+  54: BINARY_OP            -
+  58: PRECALL              
+  62: CALL                 
+  72: UNARY_NEGATIVE       
+  74: LOAD_FAST            lambd
+  76: BINARY_OP            /
+  80: RETURN_VALUE         

@@ -1,0 +1,94 @@
+# Disassembly for _pydecimal._normalize
+# From module file: _pydecimal
+
+## co_consts:
+('Normalizes op1, op2 to have the same exp and length of coefficient.\n\n    Done during addition.\n    ', -1, 2, 1, 10)
+
+## co_names:
+('exp', 'len', 'str', 'int', 'min')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            op1
+   4: LOAD_ATTR            exp
+  14: LOAD_FAST            op2
+  16: LOAD_ATTR            exp
+  26: COMPARE_OP           <
+  32: POP_JUMP_FORWARD_IF_FALSE to 44
+  34: LOAD_FAST            op2
+  36: STORE_FAST           tmp
+  38: LOAD_FAST            op1
+  40: STORE_FAST           other
+  42: JUMP_FORWARD         to 52
+  44: LOAD_FAST            op1
+  46: STORE_FAST           tmp
+  48: LOAD_FAST            op2
+  50: STORE_FAST           other
+  52: LOAD_GLOBAL          NULL + len
+  64: LOAD_GLOBAL          NULL + str
+  76: LOAD_FAST            tmp
+  78: LOAD_ATTR            int
+  88: PRECALL              
+  92: CALL                 
+ 102: PRECALL              
+ 106: CALL                 
+ 116: STORE_FAST           tmp_len
+ 118: LOAD_GLOBAL          NULL + len
+ 130: LOAD_GLOBAL          NULL + str
+ 142: LOAD_FAST            other
+ 144: LOAD_ATTR            int
+ 154: PRECALL              
+ 158: CALL                 
+ 168: PRECALL              
+ 172: CALL                 
+ 182: STORE_FAST           other_len
+ 184: LOAD_FAST            tmp
+ 186: LOAD_ATTR            exp
+ 196: LOAD_GLOBAL          NULL + min
+ 208: LOAD_CONST           -1
+ 210: LOAD_FAST            tmp_len
+ 212: LOAD_FAST            prec
+ 214: BINARY_OP            -
+ 218: LOAD_CONST           2
+ 220: BINARY_OP            -
+ 224: PRECALL              
+ 228: CALL                 
+ 238: BINARY_OP            +
+ 242: STORE_FAST           exp
+ 244: LOAD_FAST            other_len
+ 246: LOAD_FAST            other
+ 248: LOAD_ATTR            exp
+ 258: BINARY_OP            +
+ 262: LOAD_CONST           1
+ 264: BINARY_OP            -
+ 268: LOAD_FAST            exp
+ 270: COMPARE_OP           <
+ 276: POP_JUMP_FORWARD_IF_FALSE to 306
+ 278: LOAD_CONST           1
+ 280: LOAD_FAST            other
+ 282: STORE_ATTR           int
+ 292: LOAD_FAST            exp
+ 294: LOAD_FAST            other
+ 296: STORE_ATTR           exp
+ 306: LOAD_FAST            tmp
+ 308: COPY                 
+ 310: LOAD_ATTR            int
+ 320: LOAD_CONST           10
+ 322: LOAD_FAST            tmp
+ 324: LOAD_ATTR            exp
+ 334: LOAD_FAST            other
+ 336: LOAD_ATTR            exp
+ 346: BINARY_OP            -
+ 350: BINARY_OP            **
+ 354: BINARY_OP            *=
+ 358: SWAP                 
+ 360: STORE_ATTR           int
+ 370: LOAD_FAST            other
+ 372: LOAD_ATTR            exp
+ 382: LOAD_FAST            tmp
+ 384: STORE_ATTR           exp
+ 394: LOAD_FAST            op1
+ 396: LOAD_FAST            op2
+ 398: BUILD_TUPLE          
+ 400: RETURN_VALUE         

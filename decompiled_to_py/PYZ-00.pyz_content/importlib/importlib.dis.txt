@@ -1,0 +1,389 @@
+# Disassembly for importlib
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Core implementation of path-based import.\n\nThis module is NOT meant to be directly imported! It has been designed such\nthat it can be bootstrapped into Python as the implementation of import. As\nsuch it requires the injection of specific modules and attributes in order to\nwork. One should use importlib as the public-facing version of this module.\n\n', None, 0, 'win32', '\\', '/', <code object <genexpr> at 0x00000240693EB730, file "importlib\_bootstrap_external.py", line 46>, '', <code object <setcomp> at 0x0000024069427C50, file "importlib\_bootstrap_external.py", line 50>, ('win',), ('cygwin', 'darwin'), <code object _make_relax_case at 0x000002406949C8D0, file "importlib\_bootstrap_external.py", line 60>, <code object _pack_uint32 at 0x000002406944B110, file "importlib\_bootstrap_external.py", line 79>, <code object _unpack_uint32 at 0x0000024069419E90, file "importlib\_bootstrap_external.py", line 84>, <code object _unpack_uint16 at 0x000002406941B1B0, file "importlib\_bootstrap_external.py", line 89>, <code object _path_join at 0x0000024068C28CB0, file "importlib\_bootstrap_external.py", line 96>, <code object _path_join at 0x000002406944B550, file "importlib\_bootstrap_external.py", line 126>, <code object _path_split at 0x00000240693AB870, file "importlib\_bootstrap_external.py", line 132>, <code object _path_stat at 0x000002406945FD20, file "importlib\_bootstrap_external.py", line 140>, <code object _path_is_mode_type at 0x0000024069419D70, file "importlib\_bootstrap_external.py", line 150>, <code object _path_isfile at 0x0000024069465610, file "importlib\_bootstrap_external.py", line 159>, <code object _path_isdir at 0x000002406944A890, file "importlib\_bootstrap_external.py", line 164>, <code object _path_isabs at 0x00000240691F56F0, file "importlib\_bootstrap_external.py", line 172>, <code object _path_isabs at 0x000002406945F870, file "importlib\_bootstrap_external.py", line 180>, 438, <code object _write_atomic at 0x0000024068D2FEA0, file "importlib\_bootstrap_external.py", line 185>, 3495, 2, 'little', b'\r\n', '__pycache__', 'opt-', '.py', '.pyw', '.pyc', ('optimization',), <code object cache_from_source at 0x0000024066CE7CA0, file "importlib\_bootstrap_external.py", line 437>, <code object source_from_cache at 0x0000024068E134B0, file "importlib\_bootstrap_external.py", line 508>, <code object _get_sourcefile at 0x0000024069365F30, file "importlib\_bootstrap_external.py", line 548>, <code object _get_cached at 0x00000240691F5F10, file "importlib\_bootstrap_external.py", line 567>, <code object _calc_mode at 0x0000024069419590, file "importlib\_bootstrap_external.py", line 579>, <code object _check_name at 0x00000240694197D0, file "importlib\_bootstrap_external.py", line 591>, <code object _find_module_shim at 0x000002406934FB40, file "importlib\_bootstrap_external.py", line 622>, <code object _classify_pyc at 0x0000024068BD4E80, file "importlib\_bootstrap_external.py", line 642>, <code object _validate_timestamp_pyc at 0x0000024069498570, file "importlib\_bootstrap_external.py", line 675>, <code object _validate_hash_pyc at 0x00000240693EA330, file "importlib\_bootstrap_external.py", line 703>, <code object _compile_bytecode at 0x00000240694988F0, file "importlib\_bootstrap_external.py", line 727>, <code object _code_to_timestamp_pyc at 0x0000024069CD8630, file "importlib\_bootstrap_external.py", line 740>, True, <code object _code_to_hash_pyc at 0x000002406947C5D0, file "importlib\_bootstrap_external.py", line 750>, <code object decode_source at 0x000002406934F630, file "importlib\_bootstrap_external.py", line 761>, ('loader', 'submodule_search_locations'), <code object spec_from_file_location at 0x0000024068D03E70, file "importlib\_bootstrap_external.py", line 778>, <code object WindowsRegistryFinder at 0x00000240693ABAF0, file "importlib\_bootstrap_external.py", line 851>, 'WindowsRegistryFinder', <code object _LoaderBasics at 0x000002406945DF20, file "importlib\_bootstrap_external.py", line 918>, '_LoaderBasics', <code object SourceLoader at 0x00000240693EA930, file "importlib\_bootstrap_external.py", line 948>, 'SourceLoader', <code object FileLoader at 0x00000240693D22A0, file "importlib\_bootstrap_external.py", line 1092>, 'FileLoader', <code object SourceFileLoader at 0x000002406945DD40, file "importlib\_bootstrap_external.py", line 1142>, 'SourceFileLoader', <code object SourcelessFileLoader at 0x0000024069467750, file "importlib\_bootstrap_external.py", line 1187>, 'SourcelessFileLoader', <code object ExtensionFileLoader at 0x000002406944A450, file "importlib\_bootstrap_external.py", line 1212>, 'ExtensionFileLoader', <code object _NamespacePath at 0x000002406944BAA0, file "importlib\_bootstrap_external.py", line 1265>, '_NamespacePath', <code object NamespaceLoader at 0x000002406944BBB0, file "importlib\_bootstrap_external.py", line 1336>, 'NamespaceLoader', <code object PathFinder at 0x00000240691E9230, file "importlib\_bootstrap_external.py", line 1389>, 'PathFinder', <code object FileFinder at 0x000002406944B660, file "importlib\_bootstrap_external.py", line 1550>, 'FileFinder', <code object _fix_up_module at 0x0000024069365B50, file "importlib\_bootstrap_external.py", line 1710>, <code object _get_supported_file_loaders at 0x00000240693D3930, file "importlib\_bootstrap_external.py", line 1733>, <code object _set_bootstrap_module at 0x00000240694953B0, file "importlib\_bootstrap_external.py", line 1744>, <code object _install at 0x00000240691F63F0, file "importlib\_bootstrap_external.py", line 1749>, (438,), (None,), (None, None, None), (0, 0), (True,))
+
+## co_names:
+('__doc__', '_bootstrap', '_imp', '_io', 'sys', '_warnings', 'marshal', 'platform', '_MS_WINDOWS', 'nt', '_os', 'winreg', 'posix', 'path_separators', 'all', 'path_sep', 'tuple', 'path_sep_tuple', 'join', '_pathseps_with_colon', '_CASE_INSENSITIVE_PLATFORMS_STR_KEY', '_CASE_INSENSITIVE_PLATFORMS_BYTES_KEY', '_CASE_INSENSITIVE_PLATFORMS', '_make_relax_case', '_relax_case', '_pack_uint32', '_unpack_uint32', '_unpack_uint16', '_path_join', '_path_split', '_path_stat', '_path_is_mode_type', '_path_isfile', '_path_isdir', '_path_isabs', '_write_atomic', 'type', '__code__', '_code_type', 'to_bytes', 'MAGIC_NUMBER', 'int', 'from_bytes', '_RAW_MAGIC_NUMBER', '_PYCACHE', '_OPT', 'SOURCE_SUFFIXES', 'append', 'extension_suffixes', 'EXTENSION_SUFFIXES', 'BYTECODE_SUFFIXES', 'DEBUG_BYTECODE_SUFFIXES', 'OPTIMIZED_BYTECODE_SUFFIXES', 'cache_from_source', 'source_from_cache', '_get_sourcefile', '_get_cached', '_calc_mode', '_check_name', '_find_module_shim', '_classify_pyc', '_validate_timestamp_pyc', '_validate_hash_pyc', '_compile_bytecode', '_code_to_timestamp_pyc', '_code_to_hash_pyc', 'decode_source', 'object', '_POPULATE', 'spec_from_file_location', 'WindowsRegistryFinder', '_LoaderBasics', 'SourceLoader', 'FileLoader', 'SourceFileLoader', 'SourcelessFileLoader', 'ExtensionFileLoader', '_NamespacePath', 'NamespaceLoader', '_NamespaceLoader', 'PathFinder', 'FileFinder', '_fix_up_module', '_get_supported_file_loaders', '_set_bootstrap_module', '_install')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'Core implementation of path-based import.\n\nThis module is NOT meant to be directly imported! It has been designed such\nthat it can be bootstrapped into Python as the implementation of import. As\nsuch it requires the injection of specific modules and attributes in order to\nwork. One should use importlib as the public-facing version of this module.\n\n'
+   4: STORE_NAME           __doc__
+   6: LOAD_CONST           None
+   8: STORE_GLOBAL         _bootstrap
+  10: LOAD_CONST           0
+  12: LOAD_CONST           None
+  14: IMPORT_NAME          _imp
+  16: STORE_NAME           _imp
+  18: LOAD_CONST           0
+  20: LOAD_CONST           None
+  22: IMPORT_NAME          _io
+  24: STORE_NAME           _io
+  26: LOAD_CONST           0
+  28: LOAD_CONST           None
+  30: IMPORT_NAME          sys
+  32: STORE_NAME           sys
+  34: LOAD_CONST           0
+  36: LOAD_CONST           None
+  38: IMPORT_NAME          _warnings
+  40: STORE_NAME           _warnings
+  42: LOAD_CONST           0
+  44: LOAD_CONST           None
+  46: IMPORT_NAME          marshal
+  48: STORE_NAME           marshal
+  50: LOAD_NAME            sys
+  52: LOAD_ATTR            platform
+  62: LOAD_CONST           'win32'
+  64: COMPARE_OP           ==
+  70: STORE_NAME           _MS_WINDOWS
+  72: LOAD_NAME            _MS_WINDOWS
+  74: POP_JUMP_FORWARD_IF_FALSE to 94
+  76: LOAD_CONST           0
+  78: LOAD_CONST           None
+  80: IMPORT_NAME          nt
+  82: STORE_NAME           _os
+  84: LOAD_CONST           0
+  86: LOAD_CONST           None
+  88: IMPORT_NAME          winreg
+  90: STORE_NAME           winreg
+  92: JUMP_FORWARD         to 102
+  94: LOAD_CONST           0
+  96: LOAD_CONST           None
+  98: IMPORT_NAME          posix
+ 100: STORE_NAME           _os
+ 102: LOAD_NAME            _MS_WINDOWS
+ 104: POP_JUMP_FORWARD_IF_FALSE to 116
+ 106: LOAD_CONST           '\\'
+ 108: LOAD_CONST           '/'
+ 110: BUILD_LIST           
+ 112: STORE_NAME           path_separators
+ 114: JUMP_FORWARD         to 122
+ 116: LOAD_CONST           '/'
+ 118: BUILD_LIST           
+ 120: STORE_NAME           path_separators
+ 122: PUSH_NULL            
+ 124: LOAD_NAME            all
+ 126: LOAD_CONST           <code object <genexpr> at 0x00000240693EB730, file "importlib\_bootstrap_external.py", line 46>
+ 128: MAKE_FUNCTION        
+ 130: LOAD_NAME            path_separators
+ 132: GET_ITER             
+ 134: PRECALL              
+ 138: CALL                 
+ 148: PRECALL              
+ 152: CALL                 
+ 162: POP_JUMP_FORWARD_IF_TRUE to 168
+ 164: LOAD_ASSERTION_ERROR 
+ 166: RAISE_VARARGS        
+ 168: LOAD_NAME            path_separators
+ 170: LOAD_CONST           0
+ 172: BINARY_SUBSCR        
+ 182: STORE_NAME           path_sep
+ 184: PUSH_NULL            
+ 186: LOAD_NAME            tuple
+ 188: LOAD_NAME            path_separators
+ 190: PRECALL              
+ 194: CALL                 
+ 204: STORE_NAME           path_sep_tuple
+ 206: LOAD_CONST           ''
+ 208: LOAD_METHOD          join
+ 230: LOAD_NAME            path_separators
+ 232: PRECALL              
+ 236: CALL                 
+ 246: STORE_NAME           path_separators
+ 248: LOAD_CONST           <code object <setcomp> at 0x0000024069427C50, file "importlib\_bootstrap_external.py", line 50>
+ 250: MAKE_FUNCTION        
+ 252: LOAD_NAME            path_separators
+ 254: GET_ITER             
+ 256: PRECALL              
+ 260: CALL                 
+ 270: STORE_NAME           _pathseps_with_colon
+ 272: LOAD_CONST           ('win',)
+ 274: STORE_NAME           _CASE_INSENSITIVE_PLATFORMS_STR_KEY
+ 276: LOAD_CONST           ('cygwin', 'darwin')
+ 278: STORE_NAME           _CASE_INSENSITIVE_PLATFORMS_BYTES_KEY
+ 280: LOAD_NAME            _CASE_INSENSITIVE_PLATFORMS_BYTES_KEY
+ 282: LOAD_NAME            _CASE_INSENSITIVE_PLATFORMS_STR_KEY
+ 284: BINARY_OP            +
+ 288: STORE_NAME           _CASE_INSENSITIVE_PLATFORMS
+ 290: LOAD_CONST           <code object _make_relax_case at 0x000002406949C8D0, file "importlib\_bootstrap_external.py", line 60>
+ 292: MAKE_FUNCTION        
+ 294: STORE_NAME           _make_relax_case
+ 296: PUSH_NULL            
+ 298: LOAD_NAME            _make_relax_case
+ 300: PRECALL              
+ 304: CALL                 
+ 314: STORE_NAME           _relax_case
+ 316: LOAD_CONST           <code object _pack_uint32 at 0x000002406944B110, file "importlib\_bootstrap_external.py", line 79>
+ 318: MAKE_FUNCTION        
+ 320: STORE_NAME           _pack_uint32
+ 322: LOAD_CONST           <code object _unpack_uint32 at 0x0000024069419E90, file "importlib\_bootstrap_external.py", line 84>
+ 324: MAKE_FUNCTION        
+ 326: STORE_NAME           _unpack_uint32
+ 328: LOAD_CONST           <code object _unpack_uint16 at 0x000002406941B1B0, file "importlib\_bootstrap_external.py", line 89>
+ 330: MAKE_FUNCTION        
+ 332: STORE_NAME           _unpack_uint16
+ 334: LOAD_NAME            _MS_WINDOWS
+ 336: POP_JUMP_FORWARD_IF_FALSE to 346
+ 338: LOAD_CONST           <code object _path_join at 0x0000024068C28CB0, file "importlib\_bootstrap_external.py", line 96>
+ 340: MAKE_FUNCTION        
+ 342: STORE_NAME           _path_join
+ 344: JUMP_FORWARD         to 352
+ 346: LOAD_CONST           <code object _path_join at 0x000002406944B550, file "importlib\_bootstrap_external.py", line 126>
+ 348: MAKE_FUNCTION        
+ 350: STORE_NAME           _path_join
+ 352: LOAD_CONST           <code object _path_split at 0x00000240693AB870, file "importlib\_bootstrap_external.py", line 132>
+ 354: MAKE_FUNCTION        
+ 356: STORE_NAME           _path_split
+ 358: LOAD_CONST           <code object _path_stat at 0x000002406945FD20, file "importlib\_bootstrap_external.py", line 140>
+ 360: MAKE_FUNCTION        
+ 362: STORE_NAME           _path_stat
+ 364: LOAD_CONST           <code object _path_is_mode_type at 0x0000024069419D70, file "importlib\_bootstrap_external.py", line 150>
+ 366: MAKE_FUNCTION        
+ 368: STORE_NAME           _path_is_mode_type
+ 370: LOAD_CONST           <code object _path_isfile at 0x0000024069465610, file "importlib\_bootstrap_external.py", line 159>
+ 372: MAKE_FUNCTION        
+ 374: STORE_NAME           _path_isfile
+ 376: LOAD_CONST           <code object _path_isdir at 0x000002406944A890, file "importlib\_bootstrap_external.py", line 164>
+ 378: MAKE_FUNCTION        
+ 380: STORE_NAME           _path_isdir
+ 382: LOAD_NAME            _MS_WINDOWS
+ 384: POP_JUMP_FORWARD_IF_FALSE to 394
+ 386: LOAD_CONST           <code object _path_isabs at 0x00000240691F56F0, file "importlib\_bootstrap_external.py", line 172>
+ 388: MAKE_FUNCTION        
+ 390: STORE_NAME           _path_isabs
+ 392: JUMP_FORWARD         to 400
+ 394: LOAD_CONST           <code object _path_isabs at 0x000002406945F870, file "importlib\_bootstrap_external.py", line 180>
+ 396: MAKE_FUNCTION        
+ 398: STORE_NAME           _path_isabs
+ 400: LOAD_CONST           (438,)
+ 402: LOAD_CONST           <code object _write_atomic at 0x0000024068D2FEA0, file "importlib\_bootstrap_external.py", line 185>
+ 404: MAKE_FUNCTION        defaults
+ 406: STORE_NAME           _write_atomic
+ 408: PUSH_NULL            
+ 410: LOAD_NAME            type
+ 412: LOAD_NAME            _write_atomic
+ 414: LOAD_ATTR            __code__
+ 424: PRECALL              
+ 428: CALL                 
+ 438: STORE_NAME           _code_type
+ 440: LOAD_CONST           3495
+ 442: LOAD_METHOD          to_bytes
+ 464: LOAD_CONST           2
+ 466: LOAD_CONST           'little'
+ 468: PRECALL              
+ 472: CALL                 
+ 482: LOAD_CONST           b'\r\n'
+ 484: BINARY_OP            +
+ 488: STORE_NAME           MAGIC_NUMBER
+ 490: LOAD_NAME            int
+ 492: LOAD_METHOD          from_bytes
+ 514: LOAD_NAME            MAGIC_NUMBER
+ 516: LOAD_CONST           'little'
+ 518: PRECALL              
+ 522: CALL                 
+ 532: STORE_NAME           _RAW_MAGIC_NUMBER
+ 534: LOAD_CONST           '__pycache__'
+ 536: STORE_NAME           _PYCACHE
+ 538: LOAD_CONST           'opt-'
+ 540: STORE_NAME           _OPT
+ 542: LOAD_CONST           '.py'
+ 544: BUILD_LIST           
+ 546: STORE_NAME           SOURCE_SUFFIXES
+ 548: LOAD_NAME            _MS_WINDOWS
+ 550: POP_JUMP_FORWARD_IF_FALSE to 594
+ 552: LOAD_NAME            SOURCE_SUFFIXES
+ 554: LOAD_METHOD          append
+ 576: LOAD_CONST           '.pyw'
+ 578: PRECALL              
+ 582: CALL                 
+ 592: POP_TOP              
+ 594: PUSH_NULL            
+ 596: LOAD_NAME            _imp
+ 598: LOAD_ATTR            extension_suffixes
+ 608: PRECALL              
+ 612: CALL                 
+ 622: STORE_NAME           EXTENSION_SUFFIXES
+ 624: LOAD_CONST           '.pyc'
+ 626: BUILD_LIST           
+ 628: STORE_NAME           BYTECODE_SUFFIXES
+ 630: LOAD_NAME            BYTECODE_SUFFIXES
+ 632: COPY                 
+ 634: STORE_NAME           DEBUG_BYTECODE_SUFFIXES
+ 636: STORE_NAME           OPTIMIZED_BYTECODE_SUFFIXES
+ 638: LOAD_CONST           (None,)
+ 640: LOAD_CONST           None
+ 642: LOAD_CONST           ('optimization',)
+ 644: BUILD_CONST_KEY_MAP  
+ 646: LOAD_CONST           <code object cache_from_source at 0x0000024066CE7CA0, file "importlib\_bootstrap_external.py", line 437>
+ 648: MAKE_FUNCTION        defaults, kwdefaults
+ 650: STORE_NAME           cache_from_source
+ 652: LOAD_CONST           <code object source_from_cache at 0x0000024068E134B0, file "importlib\_bootstrap_external.py", line 508>
+ 654: MAKE_FUNCTION        
+ 656: STORE_NAME           source_from_cache
+ 658: LOAD_CONST           <code object _get_sourcefile at 0x0000024069365F30, file "importlib\_bootstrap_external.py", line 548>
+ 660: MAKE_FUNCTION        
+ 662: STORE_NAME           _get_sourcefile
+ 664: LOAD_CONST           <code object _get_cached at 0x00000240691F5F10, file "importlib\_bootstrap_external.py", line 567>
+ 666: MAKE_FUNCTION        
+ 668: STORE_NAME           _get_cached
+ 670: LOAD_CONST           <code object _calc_mode at 0x0000024069419590, file "importlib\_bootstrap_external.py", line 579>
+ 672: MAKE_FUNCTION        
+ 674: STORE_NAME           _calc_mode
+ 676: LOAD_CONST           <code object _check_name at 0x00000240694197D0, file "importlib\_bootstrap_external.py", line 591>
+ 678: MAKE_FUNCTION        
+ 680: STORE_NAME           _check_name
+ 682: LOAD_CONST           <code object _find_module_shim at 0x000002406934FB40, file "importlib\_bootstrap_external.py", line 622>
+ 684: MAKE_FUNCTION        
+ 686: STORE_NAME           _find_module_shim
+ 688: LOAD_CONST           <code object _classify_pyc at 0x0000024068BD4E80, file "importlib\_bootstrap_external.py", line 642>
+ 690: MAKE_FUNCTION        
+ 692: STORE_NAME           _classify_pyc
+ 694: LOAD_CONST           <code object _validate_timestamp_pyc at 0x0000024069498570, file "importlib\_bootstrap_external.py", line 675>
+ 696: MAKE_FUNCTION        
+ 698: STORE_NAME           _validate_timestamp_pyc
+ 700: LOAD_CONST           <code object _validate_hash_pyc at 0x00000240693EA330, file "importlib\_bootstrap_external.py", line 703>
+ 702: MAKE_FUNCTION        
+ 704: STORE_NAME           _validate_hash_pyc
+ 706: LOAD_CONST           (None, None, None)
+ 708: LOAD_CONST           <code object _compile_bytecode at 0x00000240694988F0, file "importlib\_bootstrap_external.py", line 727>
+ 710: MAKE_FUNCTION        defaults
+ 712: STORE_NAME           _compile_bytecode
+ 714: LOAD_CONST           (0, 0)
+ 716: LOAD_CONST           <code object _code_to_timestamp_pyc at 0x0000024069CD8630, file "importlib\_bootstrap_external.py", line 740>
+ 718: MAKE_FUNCTION        defaults
+ 720: STORE_NAME           _code_to_timestamp_pyc
+ 722: LOAD_CONST           (True,)
+ 724: LOAD_CONST           <code object _code_to_hash_pyc at 0x000002406947C5D0, file "importlib\_bootstrap_external.py", line 750>
+ 726: MAKE_FUNCTION        defaults
+ 728: STORE_NAME           _code_to_hash_pyc
+ 730: LOAD_CONST           <code object decode_source at 0x000002406934F630, file "importlib\_bootstrap_external.py", line 761>
+ 732: MAKE_FUNCTION        
+ 734: STORE_NAME           decode_source
+ 736: PUSH_NULL            
+ 738: LOAD_NAME            object
+ 740: PRECALL              
+ 744: CALL                 
+ 754: STORE_NAME           _POPULATE
+ 756: LOAD_CONST           (None,)
+ 758: LOAD_CONST           None
+ 760: LOAD_NAME            _POPULATE
+ 762: LOAD_CONST           ('loader', 'submodule_search_locations')
+ 764: BUILD_CONST_KEY_MAP  
+ 766: LOAD_CONST           <code object spec_from_file_location at 0x0000024068D03E70, file "importlib\_bootstrap_external.py", line 778>
+ 768: MAKE_FUNCTION        defaults, kwdefaults
+ 770: STORE_NAME           spec_from_file_location
+ 772: PUSH_NULL            
+ 774: LOAD_BUILD_CLASS     
+ 776: LOAD_CONST           <code object WindowsRegistryFinder at 0x00000240693ABAF0, file "importlib\_bootstrap_external.py", line 851>
+ 778: MAKE_FUNCTION        
+ 780: LOAD_CONST           'WindowsRegistryFinder'
+ 782: PRECALL              
+ 786: CALL                 
+ 796: STORE_NAME           WindowsRegistryFinder
+ 798: PUSH_NULL            
+ 800: LOAD_BUILD_CLASS     
+ 802: LOAD_CONST           <code object _LoaderBasics at 0x000002406945DF20, file "importlib\_bootstrap_external.py", line 918>
+ 804: MAKE_FUNCTION        
+ 806: LOAD_CONST           '_LoaderBasics'
+ 808: PRECALL              
+ 812: CALL                 
+ 822: STORE_NAME           _LoaderBasics
+ 824: PUSH_NULL            
+ 826: LOAD_BUILD_CLASS     
+ 828: LOAD_CONST           <code object SourceLoader at 0x00000240693EA930, file "importlib\_bootstrap_external.py", line 948>
+ 830: MAKE_FUNCTION        
+ 832: LOAD_CONST           'SourceLoader'
+ 834: LOAD_NAME            _LoaderBasics
+ 836: PRECALL              
+ 840: CALL                 
+ 850: STORE_NAME           SourceLoader
+ 852: PUSH_NULL            
+ 854: LOAD_BUILD_CLASS     
+ 856: LOAD_CONST           <code object FileLoader at 0x00000240693D22A0, file "importlib\_bootstrap_external.py", line 1092>
+ 858: MAKE_FUNCTION        
+ 860: LOAD_CONST           'FileLoader'
+ 862: PRECALL              
+ 866: CALL                 
+ 876: STORE_NAME           FileLoader
+ 878: PUSH_NULL            
+ 880: LOAD_BUILD_CLASS     
+ 882: LOAD_CONST           <code object SourceFileLoader at 0x000002406945DD40, file "importlib\_bootstrap_external.py", line 1142>
+ 884: MAKE_FUNCTION        
+ 886: LOAD_CONST           'SourceFileLoader'
+ 888: LOAD_NAME            FileLoader
+ 890: LOAD_NAME            SourceLoader
+ 892: PRECALL              
+ 896: CALL                 
+ 906: STORE_NAME           SourceFileLoader
+ 908: PUSH_NULL            
+ 910: LOAD_BUILD_CLASS     
+ 912: LOAD_CONST           <code object SourcelessFileLoader at 0x0000024069467750, file "importlib\_bootstrap_external.py", line 1187>
+ 914: MAKE_FUNCTION        
+ 916: LOAD_CONST           'SourcelessFileLoader'
+ 918: LOAD_NAME            FileLoader
+ 920: LOAD_NAME            _LoaderBasics
+ 922: PRECALL              
+ 926: CALL                 
+ 936: STORE_NAME           SourcelessFileLoader
+ 938: PUSH_NULL            
+ 940: LOAD_BUILD_CLASS     
+ 942: LOAD_CONST           <code object ExtensionFileLoader at 0x000002406944A450, file "importlib\_bootstrap_external.py", line 1212>
+ 944: MAKE_FUNCTION        
+ 946: LOAD_CONST           'ExtensionFileLoader'
+ 948: LOAD_NAME            FileLoader
+ 950: LOAD_NAME            _LoaderBasics
+ 952: PRECALL              
+ 956: CALL                 
+ 966: STORE_NAME           ExtensionFileLoader
+ 968: PUSH_NULL            
+ 970: LOAD_BUILD_CLASS     
+ 972: LOAD_CONST           <code object _NamespacePath at 0x000002406944BAA0, file "importlib\_bootstrap_external.py", line 1265>
+ 974: MAKE_FUNCTION        
+ 976: LOAD_CONST           '_NamespacePath'
+ 978: PRECALL              
+ 982: CALL                 
+ 992: STORE_NAME           _NamespacePath
+ 994: PUSH_NULL            
+ 996: LOAD_BUILD_CLASS     
+ 998: LOAD_CONST           <code object NamespaceLoader at 0x000002406944BBB0, file "importlib\_bootstrap_external.py", line 1336>
+1000: MAKE_FUNCTION        
+1002: LOAD_CONST           'NamespaceLoader'
+1004: PRECALL              
+1008: CALL                 
+1018: STORE_NAME           NamespaceLoader
+1020: LOAD_NAME            NamespaceLoader
+1022: STORE_NAME           _NamespaceLoader
+1024: PUSH_NULL            
+1026: LOAD_BUILD_CLASS     
+1028: LOAD_CONST           <code object PathFinder at 0x00000240691E9230, file "importlib\_bootstrap_external.py", line 1389>
+1030: MAKE_FUNCTION        
+1032: LOAD_CONST           'PathFinder'
+1034: PRECALL              
+1038: CALL                 
+1048: STORE_NAME           PathFinder
+1050: PUSH_NULL            
+1052: LOAD_BUILD_CLASS     
+1054: LOAD_CONST           <code object FileFinder at 0x000002406944B660, file "importlib\_bootstrap_external.py", line 1550>
+1056: MAKE_FUNCTION        
+1058: LOAD_CONST           'FileFinder'
+1060: PRECALL              
+1064: CALL                 
+1074: STORE_NAME           FileFinder
+1076: LOAD_CONST           (None,)
+1078: LOAD_CONST           <code object _fix_up_module at 0x0000024069365B50, file "importlib\_bootstrap_external.py", line 1710>
+1080: MAKE_FUNCTION        defaults
+1082: STORE_NAME           _fix_up_module
+1084: LOAD_CONST           <code object _get_supported_file_loaders at 0x00000240693D3930, file "importlib\_bootstrap_external.py", line 1733>
+1086: MAKE_FUNCTION        
+1088: STORE_NAME           _get_supported_file_loaders
+1090: LOAD_CONST           <code object _set_bootstrap_module at 0x00000240694953B0, file "importlib\_bootstrap_external.py", line 1744>
+1092: MAKE_FUNCTION        
+1094: STORE_NAME           _set_bootstrap_module
+1096: LOAD_CONST           <code object _install at 0x00000240691F63F0, file "importlib\_bootstrap_external.py", line 1749>
+1098: MAKE_FUNCTION        
+1100: STORE_NAME           _install
+1102: LOAD_CONST           None
+1104: RETURN_VALUE         

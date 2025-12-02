@@ -1,0 +1,62 @@
+# Disassembly for ftplib.FTP.close
+# From module file: ftplib
+
+## co_consts:
+('Close the connection without assuming anything about it.', None)
+
+## co_names:
+('file', 'close', 'sock')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            file
+  16: STORE_FAST           file
+  18: LOAD_CONST           None
+  20: LOAD_FAST            self
+  22: STORE_ATTR           file
+  32: LOAD_FAST            file
+  34: POP_JUMP_FORWARD_IF_NONE to 76
+  36: LOAD_FAST            file
+  38: LOAD_METHOD          close
+  60: PRECALL              
+  64: CALL                 
+  74: POP_TOP              
+  76: LOAD_FAST            self
+  78: LOAD_ATTR            sock
+  88: STORE_FAST           sock
+  90: LOAD_CONST           None
+  92: LOAD_FAST            self
+  94: STORE_ATTR           sock
+ 104: LOAD_FAST            sock
+ 106: POP_JUMP_FORWARD_IF_NONE to 152
+ 108: LOAD_FAST            sock
+ 110: LOAD_METHOD          close
+ 132: PRECALL              
+ 136: CALL                 
+ 146: POP_TOP              
+ 148: LOAD_CONST           None
+ 150: RETURN_VALUE         
+ 152: LOAD_CONST           None
+ 154: RETURN_VALUE         
+ 156: PUSH_EXC_INFO        
+ 158: LOAD_FAST            self
+ 160: LOAD_ATTR            sock
+ 170: STORE_FAST           sock
+ 172: LOAD_CONST           None
+ 174: LOAD_FAST            self
+ 176: STORE_ATTR           sock
+ 186: LOAD_FAST            sock
+ 188: POP_JUMP_FORWARD_IF_NONE to 232
+ 190: LOAD_FAST            sock
+ 192: LOAD_METHOD          close
+ 214: PRECALL              
+ 218: CALL                 
+ 228: POP_TOP              
+ 230: RERAISE              
+ 232: RERAISE              
+ 234: COPY                 
+ 236: POP_EXCEPT           
+ 238: RERAISE              

@@ -1,0 +1,26 @@
+# Disassembly for email._sanitize
+# From module file: email.utils
+
+## co_consts:
+(None, 'utf-8', 'surrogateescape', 'replace')
+
+## co_names:
+('encode', 'decode')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            string
+   4: LOAD_METHOD          encode
+  26: LOAD_CONST           'utf-8'
+  28: LOAD_CONST           'surrogateescape'
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_FAST           original_bytes
+  46: LOAD_FAST            original_bytes
+  48: LOAD_METHOD          decode
+  70: LOAD_CONST           'utf-8'
+  72: LOAD_CONST           'replace'
+  74: PRECALL              
+  78: CALL                 
+  88: RETURN_VALUE         

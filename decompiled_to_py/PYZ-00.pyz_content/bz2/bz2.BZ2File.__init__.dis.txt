@@ -1,0 +1,176 @@
+# Disassembly for bz2.BZ2File.__init__
+# From module file: bz2
+
+## co_consts:
+("Open a bzip2-compressed file.\n\n        If filename is a str, bytes, or PathLike object, it gives the\n        name of the file to be opened. Otherwise, it should be a file\n        object, which will be used to read or write the compressed data.\n\n        mode can be 'r' for reading (default), 'w' for (over)writing,\n        'x' for creating exclusively, or 'a' for appending. These can\n        equivalently be given as 'rb', 'wb', 'xb', and 'ab'.\n\n        If mode is 'w', 'x' or 'a', compresslevel can be a number between 1\n        and 9 specifying the level of compression: 1 produces the least\n        compression, and 9 (default) produces the most compression.\n\n        If mode is 'r', the input file may be the concatenation of\n        multiple compressed streams.\n        ", None, False, 1, 9, 'compresslevel must be between 1 and 9', ('', 'r', 'rb'), 'rb', ('w', 'wb'), 'wb', ('x', 'xb'), 'xb', ('a', 'ab'), 'ab', 'Invalid mode: ', True, 'read', 'write', 'filename must be a str, bytes, file or PathLike object', ('trailing_error',), 0)
+
+## co_names:
+('_fp', '_closefp', '_MODE_CLOSED', '_mode', 'ValueError', '_MODE_READ', '_MODE_WRITE', 'BZ2Compressor', '_compressor', 'isinstance', 'str', 'bytes', 'os', 'PathLike', '_builtin_open', 'hasattr', 'TypeError', '_compression', 'DecompressReader', 'BZ2Decompressor', 'OSError', 'io', 'BufferedReader', '_buffer', '_pos')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: LOAD_FAST            self
+   6: STORE_ATTR           _fp
+  16: LOAD_CONST           False
+  18: LOAD_FAST            self
+  20: STORE_ATTR           _closefp
+  30: LOAD_GLOBAL          _MODE_CLOSED
+  42: LOAD_FAST            self
+  44: STORE_ATTR           _mode
+  54: LOAD_CONST           1
+  56: LOAD_FAST            compresslevel
+  58: SWAP                 
+  60: COPY                 
+  62: COMPARE_OP           <=
+  68: POP_JUMP_FORWARD_IF_FALSE to 82
+  70: LOAD_CONST           9
+  72: COMPARE_OP           <=
+  78: POP_JUMP_FORWARD_IF_TRUE to 114
+  80: JUMP_FORWARD         to 84
+  82: POP_TOP              
+  84: LOAD_GLOBAL          NULL + ValueError
+  96: LOAD_CONST           'compresslevel must be between 1 and 9'
+  98: PRECALL              
+ 102: CALL                 
+ 112: RAISE_VARARGS        
+ 114: LOAD_FAST            mode
+ 116: LOAD_CONST           ('', 'r', 'rb')
+ 118: CONTAINS_OP          
+ 120: POP_JUMP_FORWARD_IF_FALSE to 142
+ 122: LOAD_CONST           'rb'
+ 124: STORE_FAST           mode
+ 126: LOAD_GLOBAL          _MODE_READ
+ 138: STORE_FAST           mode_code
+ 140: JUMP_FORWARD         to 382
+ 142: LOAD_FAST            mode
+ 144: LOAD_CONST           ('w', 'wb')
+ 146: CONTAINS_OP          
+ 148: POP_JUMP_FORWARD_IF_FALSE to 210
+ 150: LOAD_CONST           'wb'
+ 152: STORE_FAST           mode
+ 154: LOAD_GLOBAL          _MODE_WRITE
+ 166: STORE_FAST           mode_code
+ 168: LOAD_GLOBAL          NULL + BZ2Compressor
+ 180: LOAD_FAST            compresslevel
+ 182: PRECALL              
+ 186: CALL                 
+ 196: LOAD_FAST            self
+ 198: STORE_ATTR           _compressor
+ 208: JUMP_FORWARD         to 382
+ 210: LOAD_FAST            mode
+ 212: LOAD_CONST           ('x', 'xb')
+ 214: CONTAINS_OP          
+ 216: POP_JUMP_FORWARD_IF_FALSE to 278
+ 218: LOAD_CONST           'xb'
+ 220: STORE_FAST           mode
+ 222: LOAD_GLOBAL          _MODE_WRITE
+ 234: STORE_FAST           mode_code
+ 236: LOAD_GLOBAL          NULL + BZ2Compressor
+ 248: LOAD_FAST            compresslevel
+ 250: PRECALL              
+ 254: CALL                 
+ 264: LOAD_FAST            self
+ 266: STORE_ATTR           _compressor
+ 276: JUMP_FORWARD         to 382
+ 278: LOAD_FAST            mode
+ 280: LOAD_CONST           ('a', 'ab')
+ 282: CONTAINS_OP          
+ 284: POP_JUMP_FORWARD_IF_FALSE to 346
+ 286: LOAD_CONST           'ab'
+ 288: STORE_FAST           mode
+ 290: LOAD_GLOBAL          _MODE_WRITE
+ 302: STORE_FAST           mode_code
+ 304: LOAD_GLOBAL          NULL + BZ2Compressor
+ 316: LOAD_FAST            compresslevel
+ 318: PRECALL              
+ 322: CALL                 
+ 332: LOAD_FAST            self
+ 334: STORE_ATTR           _compressor
+ 344: JUMP_FORWARD         to 382
+ 346: LOAD_GLOBAL          NULL + ValueError
+ 358: LOAD_CONST           'Invalid mode: '
+ 360: LOAD_FAST            mode
+ 362: FORMAT_VALUE         repr
+ 364: BUILD_STRING         
+ 366: PRECALL              
+ 370: CALL                 
+ 380: RAISE_VARARGS        
+ 382: LOAD_GLOBAL          NULL + isinstance
+ 394: LOAD_FAST            filename
+ 396: LOAD_GLOBAL          str
+ 408: LOAD_GLOBAL          bytes
+ 420: LOAD_GLOBAL          os
+ 432: LOAD_ATTR            PathLike
+ 442: BUILD_TUPLE          
+ 444: PRECALL              
+ 448: CALL                 
+ 458: POP_JUMP_FORWARD_IF_FALSE to 532
+ 460: LOAD_GLOBAL          NULL + _builtin_open
+ 472: LOAD_FAST            filename
+ 474: LOAD_FAST            mode
+ 476: PRECALL              
+ 480: CALL                 
+ 490: LOAD_FAST            self
+ 492: STORE_ATTR           _fp
+ 502: LOAD_CONST           True
+ 504: LOAD_FAST            self
+ 506: STORE_ATTR           _closefp
+ 516: LOAD_FAST            mode_code
+ 518: LOAD_FAST            self
+ 520: STORE_ATTR           _mode
+ 530: JUMP_FORWARD         to 656
+ 532: LOAD_GLOBAL          NULL + hasattr
+ 544: LOAD_FAST            filename
+ 546: LOAD_CONST           'read'
+ 548: PRECALL              
+ 552: CALL                 
+ 562: POP_JUMP_FORWARD_IF_TRUE to 596
+ 564: LOAD_GLOBAL          NULL + hasattr
+ 576: LOAD_FAST            filename
+ 578: LOAD_CONST           'write'
+ 580: PRECALL              
+ 584: CALL                 
+ 594: POP_JUMP_FORWARD_IF_FALSE to 626
+ 596: LOAD_FAST            filename
+ 598: LOAD_FAST            self
+ 600: STORE_ATTR           _fp
+ 610: LOAD_FAST            mode_code
+ 612: LOAD_FAST            self
+ 614: STORE_ATTR           _mode
+ 624: JUMP_FORWARD         to 656
+ 626: LOAD_GLOBAL          NULL + TypeError
+ 638: LOAD_CONST           'filename must be a str, bytes, file or PathLike object'
+ 640: PRECALL              
+ 644: CALL                 
+ 654: RAISE_VARARGS        
+ 656: LOAD_FAST            self
+ 658: LOAD_ATTR            _mode
+ 668: LOAD_GLOBAL          _MODE_READ
+ 680: COMPARE_OP           ==
+ 686: POP_JUMP_FORWARD_IF_FALSE to 818
+ 688: LOAD_GLOBAL          NULL + _compression
+ 700: LOAD_ATTR            DecompressReader
+ 710: LOAD_FAST            self
+ 712: LOAD_ATTR            _fp
+ 722: LOAD_GLOBAL          BZ2Decompressor
+ 734: LOAD_GLOBAL          OSError
+ 746: KW_NAMES             
+ 748: PRECALL              
+ 752: CALL                 
+ 762: STORE_FAST           raw
+ 764: LOAD_GLOBAL          NULL + io
+ 776: LOAD_ATTR            BufferedReader
+ 786: LOAD_FAST            raw
+ 788: PRECALL              
+ 792: CALL                 
+ 802: LOAD_FAST            self
+ 804: STORE_ATTR           _buffer
+ 814: LOAD_CONST           None
+ 816: RETURN_VALUE         
+ 818: LOAD_CONST           0
+ 820: LOAD_FAST            self
+ 822: STORE_ATTR           _pos
+ 832: LOAD_CONST           None
+ 834: RETURN_VALUE         

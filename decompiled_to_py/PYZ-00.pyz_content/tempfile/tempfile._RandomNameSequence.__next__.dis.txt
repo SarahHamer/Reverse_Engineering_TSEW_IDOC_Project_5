@@ -1,0 +1,26 @@
+# Disassembly for tempfile._RandomNameSequence.__next__
+# From module file: tempfile
+
+## co_consts:
+(None, '', 8, ('k',))
+
+## co_names:
+('join', 'rng', 'choices', 'characters')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           ''
+   4: LOAD_METHOD          join
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            rng
+  38: LOAD_METHOD          choices
+  60: LOAD_FAST            self
+  62: LOAD_ATTR            characters
+  72: LOAD_CONST           8
+  74: KW_NAMES             
+  76: PRECALL              
+  80: CALL                 
+  90: PRECALL              
+  94: CALL                 
+ 104: RETURN_VALUE         

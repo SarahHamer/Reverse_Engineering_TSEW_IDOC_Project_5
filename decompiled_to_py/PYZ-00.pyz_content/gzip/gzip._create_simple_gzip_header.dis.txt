@@ -1,0 +1,51 @@
+# Disassembly for gzip._create_simple_gzip_header
+# From module file: gzip
+
+## co_consts:
+('\n    Write a simple gzip header with no extra fields.\n    :param compresslevel: Compresslevel used to determine the xfl bytes.\n    :param mtime: The mtime (must support conversion to a 32-bit integer).\n    :return: A bytes object representing the gzip header.\n    ', None, 2, 4, 0, '<BBBBLBB', 31, 139, 8, 255)
+
+## co_names:
+('time', '_COMPRESS_LEVEL_BEST', '_COMPRESS_LEVEL_FAST', 'struct', 'pack', 'int')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            mtime
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 44
+   6: LOAD_GLOBAL          NULL + time
+  18: LOAD_ATTR            time
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           mtime
+  44: LOAD_FAST            compresslevel
+  46: LOAD_GLOBAL          _COMPRESS_LEVEL_BEST
+  58: COMPARE_OP           ==
+  64: POP_JUMP_FORWARD_IF_FALSE to 72
+  66: LOAD_CONST           2
+  68: STORE_FAST           xfl
+  70: JUMP_FORWARD         to 104
+  72: LOAD_FAST            compresslevel
+  74: LOAD_GLOBAL          _COMPRESS_LEVEL_FAST
+  86: COMPARE_OP           ==
+  92: POP_JUMP_FORWARD_IF_FALSE to 100
+  94: LOAD_CONST           4
+  96: STORE_FAST           xfl
+  98: JUMP_FORWARD         to 104
+ 100: LOAD_CONST           0
+ 102: STORE_FAST           xfl
+ 104: LOAD_GLOBAL          NULL + struct
+ 116: LOAD_ATTR            pack
+ 126: LOAD_CONST           '<BBBBLBB'
+ 128: LOAD_CONST           31
+ 130: LOAD_CONST           139
+ 132: LOAD_CONST           8
+ 134: LOAD_CONST           0
+ 136: LOAD_GLOBAL          NULL + int
+ 148: LOAD_FAST            mtime
+ 150: PRECALL              
+ 154: CALL                 
+ 164: LOAD_FAST            xfl
+ 166: LOAD_CONST           255
+ 168: PRECALL              
+ 172: CALL                 
+ 182: RETURN_VALUE         

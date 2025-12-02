@@ -1,0 +1,98 @@
+# Disassembly for email._get_ptext_to_endchars
+# From module file: email._header_value_parser
+
+## co_consts:
+('Scan printables/quoted-pairs until endchars and return unquoted ptext.\n\n    This function turns a run of qcontent, ccontent-without-comments, or\n    dtext-with-quoted-printables into a single string by unquoting any\n    quoted printables.  It returns the string, the remaining value, and\n    a flag that is True iff there were any quoted printables decoded.\n\n    ', 1, False, '\\', True, '', None)
+
+## co_names:
+('_wsp_splitter', 'range', 'len', 'append', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _wsp_splitter
+  14: LOAD_FAST            value
+  16: LOAD_CONST           1
+  18: PRECALL              
+  22: CALL                 
+  32: UNPACK_EX            
+  34: STORE_FAST           fragment
+  36: STORE_FAST           remainder
+  38: BUILD_LIST           
+  40: STORE_FAST           vchars
+  42: LOAD_CONST           False
+  44: STORE_FAST           escape
+  46: LOAD_CONST           False
+  48: STORE_FAST           had_qp
+  50: LOAD_GLOBAL          NULL + range
+  62: LOAD_GLOBAL          NULL + len
+  74: LOAD_FAST            fragment
+  76: PRECALL              
+  80: CALL                 
+  90: PRECALL              
+  94: CALL                 
+ 104: GET_ITER             
+ 106: FOR_ITER             to 244
+ 108: STORE_FAST           pos
+ 110: LOAD_FAST            fragment
+ 112: LOAD_FAST            pos
+ 114: BINARY_SUBSCR        
+ 124: LOAD_CONST           '\\'
+ 126: COMPARE_OP           ==
+ 132: POP_JUMP_FORWARD_IF_FALSE to 154
+ 134: LOAD_FAST            escape
+ 136: POP_JUMP_FORWARD_IF_FALSE to 148
+ 138: LOAD_CONST           False
+ 140: STORE_FAST           escape
+ 142: LOAD_CONST           True
+ 144: STORE_FAST           had_qp
+ 146: JUMP_FORWARD         to 154
+ 148: LOAD_CONST           True
+ 150: STORE_FAST           escape
+ 152: JUMP_BACKWARD        to 106
+ 154: LOAD_FAST            escape
+ 156: POP_JUMP_FORWARD_IF_FALSE to 164
+ 158: LOAD_CONST           False
+ 160: STORE_FAST           escape
+ 162: JUMP_FORWARD         to 188
+ 164: LOAD_FAST            fragment
+ 166: LOAD_FAST            pos
+ 168: BINARY_SUBSCR        
+ 178: LOAD_FAST            endchars
+ 180: CONTAINS_OP          
+ 182: POP_JUMP_FORWARD_IF_FALSE to 188
+ 184: POP_TOP              
+ 186: JUMP_FORWARD         to 254
+ 188: LOAD_FAST            vchars
+ 190: LOAD_METHOD          append
+ 212: LOAD_FAST            fragment
+ 214: LOAD_FAST            pos
+ 216: BINARY_SUBSCR        
+ 226: PRECALL              
+ 230: CALL                 
+ 240: POP_TOP              
+ 242: JUMP_BACKWARD        to 106
+ 244: LOAD_FAST            pos
+ 246: LOAD_CONST           1
+ 248: BINARY_OP            +
+ 252: STORE_FAST           pos
+ 254: LOAD_CONST           ''
+ 256: LOAD_METHOD          join
+ 278: LOAD_FAST            vchars
+ 280: PRECALL              
+ 284: CALL                 
+ 294: LOAD_CONST           ''
+ 296: LOAD_METHOD          join
+ 318: LOAD_FAST            fragment
+ 320: LOAD_FAST            pos
+ 322: LOAD_CONST           None
+ 324: BUILD_SLICE          
+ 326: BINARY_SUBSCR        
+ 336: BUILD_LIST           
+ 338: LOAD_FAST            remainder
+ 340: BINARY_OP            +
+ 344: PRECALL              
+ 348: CALL                 
+ 358: LOAD_FAST            had_qp
+ 360: BUILD_TUPLE          
+ 362: RETURN_VALUE         

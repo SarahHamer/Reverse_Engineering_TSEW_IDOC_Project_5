@@ -1,0 +1,23 @@
+# Disassembly for central.Machine.check
+# From module file: central
+
+## co_consts:
+(None, True, 'The machine has a panel with a grid of buttons with numbers.  Above the panel is a screen.\nNext to the screen is a slot and a message saying:\n --- Insert photo to begin.')
+
+## co_names:
+('checked', 'send_message')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           True
+   4: LOAD_FAST            self
+   6: STORE_ATTR           checked
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          send_message
+  40: LOAD_CONST           'The machine has a panel with a grid of buttons with numbers.  Above the panel is a screen.\nNext to the screen is a slot and a message saying:\n --- Insert photo to begin.'
+  42: PRECALL              
+  46: CALL                 
+  56: POP_TOP              
+  58: LOAD_CONST           None
+  60: RETURN_VALUE         

@@ -1,0 +1,72 @@
+# Disassembly for ast._Unparser.visit_AsyncWith
+# From module file: ast
+
+## co_consts:
+(None, 'async with ', <code object <lambda> at 0x0000024069CE46C0, file "ast.py", line 1107>, ('extra',))
+
+## co_names:
+('fill', 'interleave', 'traverse', 'items', 'block', 'get_type_comment', 'body')
+
+## bytecode:
+
+   0: MAKE_CELL            self
+   2: RESUME               
+   4: LOAD_DEREF           self
+   6: LOAD_METHOD          fill
+  28: LOAD_CONST           'async with '
+  30: PRECALL              
+  34: CALL                 
+  44: POP_TOP              
+  46: LOAD_DEREF           self
+  48: LOAD_METHOD          interleave
+  70: LOAD_CLOSURE         self
+  72: BUILD_TUPLE          
+  74: LOAD_CONST           <code object <lambda> at 0x0000024069CE46C0, file "ast.py", line 1107>
+  76: MAKE_FUNCTION        closure
+  78: LOAD_DEREF           self
+  80: LOAD_ATTR            traverse
+  90: LOAD_FAST            node
+  92: LOAD_ATTR            items
+ 102: PRECALL              
+ 106: CALL                 
+ 116: POP_TOP              
+ 118: LOAD_DEREF           self
+ 120: LOAD_METHOD          block
+ 142: LOAD_DEREF           self
+ 144: LOAD_METHOD          get_type_comment
+ 166: LOAD_FAST            node
+ 168: PRECALL              
+ 172: CALL                 
+ 182: KW_NAMES             
+ 184: PRECALL              
+ 188: CALL                 
+ 198: BEFORE_WITH          
+ 200: POP_TOP              
+ 202: LOAD_DEREF           self
+ 204: LOAD_METHOD          traverse
+ 226: LOAD_FAST            node
+ 228: LOAD_ATTR            body
+ 238: PRECALL              
+ 242: CALL                 
+ 252: POP_TOP              
+ 254: LOAD_CONST           None
+ 256: LOAD_CONST           None
+ 258: LOAD_CONST           None
+ 260: PRECALL              
+ 264: CALL                 
+ 274: POP_TOP              
+ 276: LOAD_CONST           None
+ 278: RETURN_VALUE         
+ 280: PUSH_EXC_INFO        
+ 282: WITH_EXCEPT_START    
+ 284: POP_JUMP_FORWARD_IF_TRUE to 294
+ 286: RERAISE              
+ 288: COPY                 
+ 290: POP_EXCEPT           
+ 292: RERAISE              
+ 294: POP_TOP              
+ 296: POP_EXCEPT           
+ 298: POP_TOP              
+ 300: POP_TOP              
+ 302: LOAD_CONST           None
+ 304: RETURN_VALUE         

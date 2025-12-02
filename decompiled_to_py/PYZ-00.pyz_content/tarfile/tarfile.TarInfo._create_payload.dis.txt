@@ -1,0 +1,37 @@
+# Disassembly for tarfile.TarInfo._create_payload
+# From module file: tarfile
+
+## co_consts:
+('Return the string payload filled with zero bytes\n           up to the next 512 byte border.\n        ', 0)
+
+## co_names:
+('divmod', 'len', 'BLOCKSIZE', 'NUL')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + divmod
+  14: LOAD_GLOBAL          NULL + len
+  26: LOAD_FAST            payload
+  28: PRECALL              
+  32: CALL                 
+  42: LOAD_GLOBAL          BLOCKSIZE
+  54: PRECALL              
+  58: CALL                 
+  68: UNPACK_SEQUENCE      
+  72: STORE_FAST           blocks
+  74: STORE_FAST           remainder
+  76: LOAD_FAST            remainder
+  78: LOAD_CONST           0
+  80: COMPARE_OP           >
+  86: POP_JUMP_FORWARD_IF_FALSE to 130
+  88: LOAD_FAST            payload
+  90: LOAD_GLOBAL          BLOCKSIZE
+ 102: LOAD_FAST            remainder
+ 104: BINARY_OP            -
+ 108: LOAD_GLOBAL          NUL
+ 120: BINARY_OP            *
+ 124: BINARY_OP            +=
+ 128: STORE_FAST           payload
+ 130: LOAD_FAST            payload
+ 132: RETURN_VALUE         

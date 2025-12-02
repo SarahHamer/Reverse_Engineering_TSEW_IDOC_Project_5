@@ -1,0 +1,18 @@
+# Disassembly for ssl.SSLObject.version
+# From module file: ssl
+
+## co_consts:
+('Return a string identifying the protocol version used by the\n        current SSL channel. ',)
+
+## co_names:
+('_sslobj', 'version')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _sslobj
+  14: LOAD_METHOD          version
+  36: PRECALL              
+  40: CALL                 
+  50: RETURN_VALUE         

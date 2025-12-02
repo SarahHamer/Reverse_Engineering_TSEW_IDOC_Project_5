@@ -1,0 +1,31 @@
+# Disassembly for email.getaddresses
+# From module file: email.utils
+
+## co_consts:
+('Return a list of (REALNAME, EMAIL) for each fieldvalue.', <code object <genexpr> at 0x000002406945FF00, file "email\utils.py", line 112>)
+
+## co_names:
+('COMMASPACE', 'join', '_AddressList', 'addresslist')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          COMMASPACE
+  14: LOAD_METHOD          join
+  36: LOAD_CONST           <code object <genexpr> at 0x000002406945FF00, file "email\utils.py", line 112>
+  38: MAKE_FUNCTION        
+  40: LOAD_FAST            fieldvalues
+  42: GET_ITER             
+  44: PRECALL              
+  48: CALL                 
+  58: PRECALL              
+  62: CALL                 
+  72: STORE_FAST           all
+  74: LOAD_GLOBAL          NULL + _AddressList
+  86: LOAD_FAST            all
+  88: PRECALL              
+  92: CALL                 
+ 102: STORE_FAST           a
+ 104: LOAD_FAST            a
+ 106: LOAD_ATTR            addresslist
+ 116: RETURN_VALUE         

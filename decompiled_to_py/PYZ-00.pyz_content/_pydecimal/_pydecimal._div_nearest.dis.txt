@@ -1,0 +1,32 @@
+# Disassembly for _pydecimal._div_nearest
+# From module file: _pydecimal
+
+## co_consts:
+('Closest integer to a/b, a and b positive integers; rounds to even\n    in the case of a tie.\n\n    ', 2, 1)
+
+## co_names:
+('divmod',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + divmod
+  14: LOAD_FAST            a
+  16: LOAD_FAST            b
+  18: PRECALL              
+  22: CALL                 
+  32: UNPACK_SEQUENCE      
+  36: STORE_FAST           q
+  38: STORE_FAST           r
+  40: LOAD_FAST            q
+  42: LOAD_CONST           2
+  44: LOAD_FAST            r
+  46: BINARY_OP            *
+  50: LOAD_FAST            q
+  52: LOAD_CONST           1
+  54: BINARY_OP            &
+  58: BINARY_OP            +
+  62: LOAD_FAST            b
+  64: COMPARE_OP           >
+  70: BINARY_OP            +
+  74: RETURN_VALUE         

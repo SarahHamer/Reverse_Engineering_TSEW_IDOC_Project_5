@@ -1,0 +1,69 @@
+# Disassembly for ftplib.FTP.cwd
+# From module file: ftplib
+
+## co_consts:
+('Change to a directory.', '..', 'CDUP', 0, None, 3, '500', '', '.', 'CWD ')
+
+## co_names:
+('voidcmd', 'error_perm', 'args')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            dirname
+   4: LOAD_CONST           '..'
+   6: COMPARE_OP           ==
+  12: POP_JUMP_FORWARD_IF_FALSE to 156
+  14: NOP                  
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          voidcmd
+  40: LOAD_CONST           'CDUP'
+  42: PRECALL              
+  46: CALL                 
+  56: RETURN_VALUE         
+  58: PUSH_EXC_INFO        
+  60: LOAD_GLOBAL          error_perm
+  72: CHECK_EXC_MATCH      
+  74: POP_JUMP_FORWARD_IF_FALSE to 148
+  76: STORE_FAST           msg
+  78: LOAD_FAST            msg
+  80: LOAD_ATTR            args
+  90: LOAD_CONST           0
+  92: BINARY_SUBSCR        
+ 102: LOAD_CONST           None
+ 104: LOAD_CONST           3
+ 106: BUILD_SLICE          
+ 108: BINARY_SUBSCR        
+ 118: LOAD_CONST           '500'
+ 120: COMPARE_OP           !=
+ 126: POP_JUMP_FORWARD_IF_FALSE to 130
+ 128: RAISE_VARARGS        
+ 130: POP_EXCEPT           
+ 132: LOAD_CONST           None
+ 134: STORE_FAST           msg
+ 136: DELETE_FAST          msg
+ 138: JUMP_FORWARD         to 172
+ 140: LOAD_CONST           None
+ 142: STORE_FAST           msg
+ 144: DELETE_FAST          msg
+ 146: RERAISE              
+ 148: RERAISE              
+ 150: COPY                 
+ 152: POP_EXCEPT           
+ 154: RERAISE              
+ 156: LOAD_FAST            dirname
+ 158: LOAD_CONST           ''
+ 160: COMPARE_OP           ==
+ 166: POP_JUMP_FORWARD_IF_FALSE to 172
+ 168: LOAD_CONST           '.'
+ 170: STORE_FAST           dirname
+ 172: LOAD_CONST           'CWD '
+ 174: LOAD_FAST            dirname
+ 176: BINARY_OP            +
+ 180: STORE_FAST           cmd
+ 182: LOAD_FAST            self
+ 184: LOAD_METHOD          voidcmd
+ 206: LOAD_FAST            cmd
+ 208: PRECALL              
+ 212: CALL                 
+ 222: RETURN_VALUE         

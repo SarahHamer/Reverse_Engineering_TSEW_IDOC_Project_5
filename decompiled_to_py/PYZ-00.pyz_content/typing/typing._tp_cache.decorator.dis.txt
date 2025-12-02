@@ -1,0 +1,48 @@
+# Disassembly for typing._tp_cache.decorator
+# From module file: typing
+
+## co_consts:
+(None, ('typed',), <code object inner at 0x00000240693EBA30, file "typing.py", line 352>)
+
+## co_names:
+('functools', 'lru_cache', '_cleanups', 'append', 'cache_clear', 'wraps')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: MAKE_CELL            func
+   4: MAKE_CELL            cached
+   6: RESUME               
+   8: PUSH_NULL            
+  10: LOAD_GLOBAL          NULL + functools
+  22: LOAD_ATTR            lru_cache
+  32: LOAD_DEREF           typed
+  34: KW_NAMES             
+  36: PRECALL              
+  40: CALL                 
+  50: LOAD_DEREF           func
+  52: PRECALL              
+  56: CALL                 
+  66: STORE_DEREF          cached
+  68: LOAD_GLOBAL          _cleanups
+  80: LOAD_METHOD          append
+ 102: LOAD_DEREF           cached
+ 104: LOAD_ATTR            cache_clear
+ 114: PRECALL              
+ 118: CALL                 
+ 128: POP_TOP              
+ 130: LOAD_GLOBAL          NULL + functools
+ 142: LOAD_ATTR            wraps
+ 152: LOAD_DEREF           func
+ 154: PRECALL              
+ 158: CALL                 
+ 168: LOAD_CLOSURE         cached
+ 170: LOAD_CLOSURE         func
+ 172: BUILD_TUPLE          
+ 174: LOAD_CONST           <code object inner at 0x00000240693EBA30, file "typing.py", line 352>
+ 176: MAKE_FUNCTION        closure
+ 178: PRECALL              
+ 182: CALL                 
+ 192: STORE_FAST           inner
+ 194: LOAD_FAST            inner
+ 196: RETURN_VALUE         

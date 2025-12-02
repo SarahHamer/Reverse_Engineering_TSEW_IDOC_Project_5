@@ -1,0 +1,18 @@
+# Disassembly for tracemalloc.Traceback.__contains__
+# From module file: tracemalloc
+
+## co_consts:
+(None,)
+
+## co_names:
+('_frame', '_frames')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            frame
+   4: LOAD_ATTR            _frame
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            _frames
+  26: CONTAINS_OP          
+  28: RETURN_VALUE         

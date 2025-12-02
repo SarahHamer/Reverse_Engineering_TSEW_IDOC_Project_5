@@ -1,0 +1,149 @@
+# Disassembly for zipfile.ZipExtFile.read1
+# From module file: zipfile
+
+## co_consts:
+('Read up to n bytes with at most one read() system call.', None, 0, b'')
+
+## co_names:
+('_readbuffer', '_offset', '_eof', '_read1', 'MAX_N', 'len')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            n
+   4: POP_JUMP_FORWARD_IF_NONE to 18
+   6: LOAD_FAST            n
+   8: LOAD_CONST           0
+  10: COMPARE_OP           <
+  16: POP_JUMP_FORWARD_IF_FALSE to 186
+  18: LOAD_FAST            self
+  20: LOAD_ATTR            _readbuffer
+  30: LOAD_FAST            self
+  32: LOAD_ATTR            _offset
+  42: LOAD_CONST           None
+  44: BUILD_SLICE          
+  46: BINARY_SUBSCR        
+  56: STORE_FAST           buf
+  58: LOAD_CONST           b''
+  60: LOAD_FAST            self
+  62: STORE_ATTR           _readbuffer
+  72: LOAD_CONST           0
+  74: LOAD_FAST            self
+  76: STORE_ATTR           _offset
+  86: LOAD_FAST            self
+  88: LOAD_ATTR            _eof
+  98: POP_JUMP_FORWARD_IF_TRUE to 182
+ 100: LOAD_FAST            self
+ 102: LOAD_METHOD          _read1
+ 124: LOAD_FAST            self
+ 126: LOAD_ATTR            MAX_N
+ 136: PRECALL              
+ 140: CALL                 
+ 150: STORE_FAST           data
+ 152: LOAD_FAST            data
+ 154: POP_JUMP_FORWARD_IF_FALSE to 168
+ 156: LOAD_FAST            buf
+ 158: LOAD_FAST            data
+ 160: BINARY_OP            +=
+ 164: STORE_FAST           buf
+ 166: JUMP_FORWARD         to 182
+ 168: LOAD_FAST            self
+ 170: LOAD_ATTR            _eof
+ 180: POP_JUMP_BACKWARD_IF_FALSE to 100
+ 182: LOAD_FAST            buf
+ 184: RETURN_VALUE         
+ 186: LOAD_FAST            n
+ 188: LOAD_FAST            self
+ 190: LOAD_ATTR            _offset
+ 200: BINARY_OP            +
+ 204: STORE_FAST           end
+ 206: LOAD_FAST            end
+ 208: LOAD_GLOBAL          NULL + len
+ 220: LOAD_FAST            self
+ 222: LOAD_ATTR            _readbuffer
+ 232: PRECALL              
+ 236: CALL                 
+ 246: COMPARE_OP           <
+ 252: POP_JUMP_FORWARD_IF_FALSE to 312
+ 254: LOAD_FAST            self
+ 256: LOAD_ATTR            _readbuffer
+ 266: LOAD_FAST            self
+ 268: LOAD_ATTR            _offset
+ 278: LOAD_FAST            end
+ 280: BUILD_SLICE          
+ 282: BINARY_SUBSCR        
+ 292: STORE_FAST           buf
+ 294: LOAD_FAST            end
+ 296: LOAD_FAST            self
+ 298: STORE_ATTR           _offset
+ 308: LOAD_FAST            buf
+ 310: RETURN_VALUE         
+ 312: LOAD_FAST            end
+ 314: LOAD_GLOBAL          NULL + len
+ 326: LOAD_FAST            self
+ 328: LOAD_ATTR            _readbuffer
+ 338: PRECALL              
+ 342: CALL                 
+ 352: BINARY_OP            -
+ 356: STORE_FAST           n
+ 358: LOAD_FAST            self
+ 360: LOAD_ATTR            _readbuffer
+ 370: LOAD_FAST            self
+ 372: LOAD_ATTR            _offset
+ 382: LOAD_CONST           None
+ 384: BUILD_SLICE          
+ 386: BINARY_SUBSCR        
+ 396: STORE_FAST           buf
+ 398: LOAD_CONST           b''
+ 400: LOAD_FAST            self
+ 402: STORE_ATTR           _readbuffer
+ 412: LOAD_CONST           0
+ 414: LOAD_FAST            self
+ 416: STORE_ATTR           _offset
+ 426: LOAD_FAST            n
+ 428: LOAD_CONST           0
+ 430: COMPARE_OP           >
+ 436: POP_JUMP_FORWARD_IF_FALSE to 618
+ 438: LOAD_FAST            self
+ 440: LOAD_ATTR            _eof
+ 450: POP_JUMP_FORWARD_IF_TRUE to 618
+ 452: LOAD_FAST            self
+ 454: LOAD_METHOD          _read1
+ 476: LOAD_FAST            n
+ 478: PRECALL              
+ 482: CALL                 
+ 492: STORE_FAST           data
+ 494: LOAD_FAST            n
+ 496: LOAD_GLOBAL          NULL + len
+ 508: LOAD_FAST            data
+ 510: PRECALL              
+ 514: CALL                 
+ 524: COMPARE_OP           <
+ 530: POP_JUMP_FORWARD_IF_FALSE to 588
+ 532: LOAD_FAST            data
+ 534: LOAD_FAST            self
+ 536: STORE_ATTR           _readbuffer
+ 546: LOAD_FAST            n
+ 548: LOAD_FAST            self
+ 550: STORE_ATTR           _offset
+ 560: LOAD_FAST            buf
+ 562: LOAD_FAST            data
+ 564: LOAD_CONST           None
+ 566: LOAD_FAST            n
+ 568: BUILD_SLICE          
+ 570: BINARY_SUBSCR        
+ 580: BINARY_OP            +=
+ 584: STORE_FAST           buf
+ 586: JUMP_FORWARD         to 618
+ 588: LOAD_FAST            data
+ 590: POP_JUMP_FORWARD_IF_FALSE to 604
+ 592: LOAD_FAST            buf
+ 594: LOAD_FAST            data
+ 596: BINARY_OP            +=
+ 600: STORE_FAST           buf
+ 602: JUMP_FORWARD         to 618
+ 604: LOAD_FAST            self
+ 606: LOAD_ATTR            _eof
+ 616: POP_JUMP_BACKWARD_IF_FALSE to 452
+ 618: LOAD_FAST            buf
+ 620: RETURN_VALUE         

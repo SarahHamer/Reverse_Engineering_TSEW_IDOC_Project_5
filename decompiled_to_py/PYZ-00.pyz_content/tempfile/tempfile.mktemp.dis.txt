@@ -1,0 +1,63 @@
+# Disassembly for tempfile.mktemp
+# From module file: tempfile
+
+## co_consts:
+("User-callable function to return a unique temporary file name.  The\n    file is not created.\n\n    Arguments are similar to mkstemp, except that the 'text' argument is\n    not accepted, and suffix=None, prefix=None and bytes file names are not\n    supported.\n\n    THIS FUNCTION IS UNSAFE AND SHOULD NOT BE USED.  The file name may\n    refer to a file that did not exist at some point, but by the time\n    you get around to creating it, someone else may have beaten you to\n    the punch.\n    ", None, 'No usable temporary filename found')
+
+## co_names:
+('gettempdir', '_get_candidate_names', 'range', 'TMP_MAX', 'next', '_os', 'path', 'join', '_exists', 'FileExistsError', '_errno', 'EEXIST')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            dir
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 34
+   6: LOAD_GLOBAL          NULL + gettempdir
+  18: PRECALL              
+  22: CALL                 
+  32: STORE_FAST           dir
+  34: LOAD_GLOBAL          NULL + _get_candidate_names
+  46: PRECALL              
+  50: CALL                 
+  60: STORE_FAST           names
+  62: LOAD_GLOBAL          NULL + range
+  74: LOAD_GLOBAL          TMP_MAX
+  86: PRECALL              
+  90: CALL                 
+ 100: GET_ITER             
+ 102: FOR_ITER             to 252
+ 104: STORE_FAST           seq
+ 106: LOAD_GLOBAL          NULL + next
+ 118: LOAD_FAST            names
+ 120: PRECALL              
+ 124: CALL                 
+ 134: STORE_FAST           name
+ 136: LOAD_GLOBAL          _os
+ 148: LOAD_ATTR            path
+ 158: LOAD_METHOD          join
+ 180: LOAD_FAST            dir
+ 182: LOAD_FAST            prefix
+ 184: LOAD_FAST            name
+ 186: BINARY_OP            +
+ 190: LOAD_FAST            suffix
+ 192: BINARY_OP            +
+ 196: PRECALL              
+ 200: CALL                 
+ 210: STORE_FAST           file
+ 212: LOAD_GLOBAL          NULL + _exists
+ 224: LOAD_FAST            file
+ 226: PRECALL              
+ 230: CALL                 
+ 240: POP_JUMP_FORWARD_IF_TRUE to 250
+ 242: LOAD_FAST            file
+ 244: SWAP                 
+ 246: POP_TOP              
+ 248: RETURN_VALUE         
+ 250: JUMP_BACKWARD        to 102
+ 252: LOAD_GLOBAL          NULL + FileExistsError
+ 264: LOAD_GLOBAL          _errno
+ 276: LOAD_ATTR            EEXIST
+ 286: LOAD_CONST           'No usable temporary filename found'
+ 288: PRECALL              
+ 292: CALL                 
+ 302: RAISE_VARARGS        

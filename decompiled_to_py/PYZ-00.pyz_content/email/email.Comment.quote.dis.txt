@@ -1,0 +1,42 @@
+# Disassembly for email.Comment.quote
+# From module file: email._header_value_parser
+
+## co_consts:
+(None, 'comment', '\\', '\\\\', '(', '\\(', ')', '\\)')
+
+## co_names:
+('token_type', 'str', 'replace')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            value
+   4: LOAD_ATTR            token_type
+  14: LOAD_CONST           'comment'
+  16: COMPARE_OP           ==
+  22: POP_JUMP_FORWARD_IF_FALSE to 54
+  24: LOAD_GLOBAL          NULL + str
+  36: LOAD_FAST            value
+  38: PRECALL              
+  42: CALL                 
+  52: RETURN_VALUE         
+  54: LOAD_GLOBAL          NULL + str
+  66: LOAD_FAST            value
+  68: PRECALL              
+  72: CALL                 
+  82: LOAD_METHOD          replace
+ 104: LOAD_CONST           '\\'
+ 106: LOAD_CONST           '\\\\'
+ 108: PRECALL              
+ 112: CALL                 
+ 122: LOAD_METHOD          replace
+ 144: LOAD_CONST           '('
+ 146: LOAD_CONST           '\\('
+ 148: PRECALL              
+ 152: CALL                 
+ 162: LOAD_METHOD          replace
+ 184: LOAD_CONST           ')'
+ 186: LOAD_CONST           '\\)'
+ 188: PRECALL              
+ 192: CALL                 
+ 202: RETURN_VALUE         

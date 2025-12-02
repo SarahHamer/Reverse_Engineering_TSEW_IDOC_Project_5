@@ -1,0 +1,27 @@
+# Disassembly for gzip._GzipReader._read_gzip_header
+# From module file: gzip
+
+## co_consts:
+(None, False, True)
+
+## co_names:
+('_read_gzip_header', '_fp', '_last_mtime')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _read_gzip_header
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            _fp
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           last_mtime
+  42: LOAD_FAST            last_mtime
+  44: POP_JUMP_FORWARD_IF_NOT_NONE to 50
+  46: LOAD_CONST           False
+  48: RETURN_VALUE         
+  50: LOAD_FAST            last_mtime
+  52: LOAD_FAST            self
+  54: STORE_ATTR           _last_mtime
+  64: LOAD_CONST           True
+  66: RETURN_VALUE         

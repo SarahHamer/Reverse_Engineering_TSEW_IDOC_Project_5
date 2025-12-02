@@ -1,0 +1,18 @@
+# Disassembly for ssl.SSLObject.verify_client_post_handshake
+# From module file: ssl
+
+## co_consts:
+(None,)
+
+## co_names:
+('_sslobj', 'verify_client_post_handshake')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _sslobj
+  14: LOAD_METHOD          verify_client_post_handshake
+  36: PRECALL              
+  40: CALL                 
+  50: RETURN_VALUE         

@@ -1,0 +1,80 @@
+# Disassembly for tempfile._infer_return_type
+# From module file: tempfile
+
+## co_consts:
+('Look at the type of all args and divine their implied return type.', None, "Can't mix bytes and non-bytes in path components.")
+
+## co_names:
+('isinstance', '_os', 'PathLike', 'fspath', 'bytes', 'str', 'TypeError', 'tempdir')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: STORE_FAST           return_type
+   6: LOAD_FAST            args
+   8: GET_ITER             
+  10: FOR_ITER             to 282
+  12: STORE_FAST           arg
+  14: LOAD_FAST            arg
+  16: POP_JUMP_FORWARD_IF_NOT_NONE to 20
+  18: JUMP_BACKWARD        to 10
+  20: LOAD_GLOBAL          NULL + isinstance
+  32: LOAD_FAST            arg
+  34: LOAD_GLOBAL          _os
+  46: LOAD_ATTR            PathLike
+  56: PRECALL              
+  60: CALL                 
+  70: POP_JUMP_FORWARD_IF_FALSE to 112
+  72: LOAD_GLOBAL          NULL + _os
+  84: LOAD_ATTR            fspath
+  94: LOAD_FAST            arg
+  96: PRECALL              
+ 100: CALL                 
+ 110: STORE_FAST           arg
+ 112: LOAD_GLOBAL          NULL + isinstance
+ 124: LOAD_FAST            arg
+ 126: LOAD_GLOBAL          bytes
+ 138: PRECALL              
+ 142: CALL                 
+ 152: POP_JUMP_FORWARD_IF_FALSE to 218
+ 154: LOAD_FAST            return_type
+ 156: LOAD_GLOBAL          str
+ 168: IS_OP                
+ 170: POP_JUMP_FORWARD_IF_FALSE to 202
+ 172: LOAD_GLOBAL          NULL + TypeError
+ 184: LOAD_CONST           "Can't mix bytes and non-bytes in path components."
+ 186: PRECALL              
+ 190: CALL                 
+ 200: RAISE_VARARGS        
+ 202: LOAD_GLOBAL          bytes
+ 214: STORE_FAST           return_type
+ 216: JUMP_BACKWARD        to 10
+ 218: LOAD_FAST            return_type
+ 220: LOAD_GLOBAL          bytes
+ 232: IS_OP                
+ 234: POP_JUMP_FORWARD_IF_FALSE to 266
+ 236: LOAD_GLOBAL          NULL + TypeError
+ 248: LOAD_CONST           "Can't mix bytes and non-bytes in path components."
+ 250: PRECALL              
+ 254: CALL                 
+ 264: RAISE_VARARGS        
+ 266: LOAD_GLOBAL          str
+ 278: STORE_FAST           return_type
+ 280: JUMP_BACKWARD        to 10
+ 282: LOAD_FAST            return_type
+ 284: POP_JUMP_FORWARD_IF_NOT_NONE to 380
+ 286: LOAD_GLOBAL          tempdir
+ 298: POP_JUMP_FORWARD_IF_NONE to 352
+ 300: LOAD_GLOBAL          NULL + isinstance
+ 312: LOAD_GLOBAL          tempdir
+ 324: LOAD_GLOBAL          str
+ 336: PRECALL              
+ 340: CALL                 
+ 350: POP_JUMP_FORWARD_IF_FALSE to 366
+ 352: LOAD_GLOBAL          str
+ 364: RETURN_VALUE         
+ 366: LOAD_GLOBAL          bytes
+ 378: RETURN_VALUE         
+ 380: LOAD_FAST            return_type
+ 382: RETURN_VALUE         

@@ -1,0 +1,48 @@
+# Disassembly for importlib._LoaderBasics.is_package
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+("Concrete implementation of InspectLoader.is_package by checking if\n        the path returned by get_filename has a filename of '__init__.py'.", 1, '.', 0, 2, '__init__')
+
+## co_names:
+('_path_split', 'get_filename', 'rsplit', 'rpartition')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _path_split
+  14: LOAD_FAST            self
+  16: LOAD_METHOD          get_filename
+  38: LOAD_FAST            fullname
+  40: PRECALL              
+  44: CALL                 
+  54: PRECALL              
+  58: CALL                 
+  68: LOAD_CONST           1
+  70: BINARY_SUBSCR        
+  80: STORE_FAST           filename
+  82: LOAD_FAST            filename
+  84: LOAD_METHOD          rsplit
+ 106: LOAD_CONST           '.'
+ 108: LOAD_CONST           1
+ 110: PRECALL              
+ 114: CALL                 
+ 124: LOAD_CONST           0
+ 126: BINARY_SUBSCR        
+ 136: STORE_FAST           filename_base
+ 138: LOAD_FAST            fullname
+ 140: LOAD_METHOD          rpartition
+ 162: LOAD_CONST           '.'
+ 164: PRECALL              
+ 168: CALL                 
+ 178: LOAD_CONST           2
+ 180: BINARY_SUBSCR        
+ 190: STORE_FAST           tail_name
+ 192: LOAD_FAST            filename_base
+ 194: LOAD_CONST           '__init__'
+ 196: COMPARE_OP           ==
+ 202: JUMP_IF_FALSE_OR_POP to 214
+ 204: LOAD_FAST            tail_name
+ 206: LOAD_CONST           '__init__'
+ 208: COMPARE_OP           !=
+ 214: RETURN_VALUE         

@@ -1,0 +1,67 @@
+# Disassembly for threading.Thread._wait_for_tstate_lock
+# From module file: threading
+
+## co_consts:
+(None,)
+
+## co_names:
+('_tstate_lock', '_is_stopped', 'acquire', 'release', '_stop', 'locked')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _tstate_lock
+  14: STORE_FAST           lock
+  16: LOAD_FAST            lock
+  18: POP_JUMP_FORWARD_IF_NOT_NONE to 42
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            _is_stopped
+  32: POP_JUMP_FORWARD_IF_TRUE to 38
+  34: LOAD_ASSERTION_ERROR 
+  36: RAISE_VARARGS        
+  38: LOAD_CONST           None
+  40: RETURN_VALUE         
+  42: NOP                  
+  44: LOAD_FAST            lock
+  46: LOAD_METHOD          acquire
+  68: LOAD_FAST            block
+  70: LOAD_FAST            timeout
+  72: PRECALL              
+  76: CALL                 
+  86: POP_JUMP_FORWARD_IF_FALSE to 172
+  88: LOAD_FAST            lock
+  90: LOAD_METHOD          release
+ 112: PRECALL              
+ 116: CALL                 
+ 126: POP_TOP              
+ 128: LOAD_FAST            self
+ 130: LOAD_METHOD          _stop
+ 152: PRECALL              
+ 156: CALL                 
+ 166: POP_TOP              
+ 168: LOAD_CONST           None
+ 170: RETURN_VALUE         
+ 172: LOAD_CONST           None
+ 174: RETURN_VALUE         
+ 176: PUSH_EXC_INFO        
+ 178: POP_TOP              
+ 180: LOAD_FAST            lock
+ 182: LOAD_METHOD          locked
+ 204: PRECALL              
+ 208: CALL                 
+ 218: POP_JUMP_FORWARD_IF_FALSE to 300
+ 220: LOAD_FAST            lock
+ 222: LOAD_METHOD          release
+ 244: PRECALL              
+ 248: CALL                 
+ 258: POP_TOP              
+ 260: LOAD_FAST            self
+ 262: LOAD_METHOD          _stop
+ 284: PRECALL              
+ 288: CALL                 
+ 298: POP_TOP              
+ 300: RAISE_VARARGS        
+ 302: COPY                 
+ 304: POP_EXCEPT           
+ 306: RERAISE              

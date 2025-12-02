@@ -1,0 +1,25 @@
+# Disassembly for mimetypes.guess_all_extensions
+# From module file: mimetypes
+
+## co_consts:
+("Guess the extensions for a file based on its MIME type.\n\n    Return value is a list of strings giving the possible filename\n    extensions, including the leading dot ('.').  The extension is not\n    guaranteed to have been associated with any particular data\n    stream, but would be mapped to the MIME type `type' by\n    guess_type().  If no extension can be guessed for `type', None\n    is returned.\n\n    Optional `strict' argument when false adds a bunch of commonly found,\n    but non-standard types.\n    ",)
+
+## co_names:
+('_db', 'init', 'guess_all_extensions')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _db
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 44
+  16: LOAD_GLOBAL          NULL + init
+  28: PRECALL              
+  32: CALL                 
+  42: POP_TOP              
+  44: LOAD_GLOBAL          _db
+  56: LOAD_METHOD          guess_all_extensions
+  78: LOAD_FAST            type
+  80: LOAD_FAST            strict
+  82: PRECALL              
+  86: CALL                 
+  96: RETURN_VALUE         

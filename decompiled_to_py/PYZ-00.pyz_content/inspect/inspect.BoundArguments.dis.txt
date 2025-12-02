@@ -1,0 +1,58 @@
+# Disassembly for inspect.BoundArguments
+# From module file: inspect
+
+## co_consts:
+('BoundArguments', "Result of `Signature.bind` call.  Holds the mapping of arguments\n    to the function's parameters.\n\n    Has the following public attributes:\n\n    * arguments : dict\n        An ordered mutable mapping of parameters' names to arguments' values.\n        Does not contain arguments' default values.\n    * signature : Signature\n        The Signature object that created this instance.\n    * args : tuple\n        Tuple of positional arguments values.\n    * kwargs : dict\n        Dict of keyword arguments values.\n    ", ('arguments', '_signature', '__weakref__'), <code object __init__ at 0x0000024069466E90, file "inspect.py", line 2831>, <code object signature at 0x0000024069495E40, file "inspect.py", line 2835>, <code object args at 0x0000024068BB9CC0, file "inspect.py", line 2839>, <code object kwargs at 0x0000024069CD8A30, file "inspect.py", line 2862>, <code object apply_defaults at 0x0000024068D6D540, file "inspect.py", line 2892>, <code object __eq__ at 0x00000240693AA330, file "inspect.py", line 2920>, <code object __setstate__ at 0x0000024069CF0930, file "inspect.py", line 2928>, <code object __getstate__ at 0x0000024069466F70, file "inspect.py", line 2932>, <code object __repr__ at 0x00000240694983B0, file "inspect.py", line 2935>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__slots__', '__init__', 'property', 'signature', 'args', 'kwargs', 'apply_defaults', '__eq__', '__setstate__', '__getstate__', '__repr__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'BoundArguments'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           "Result of `Signature.bind` call.  Holds the mapping of arguments\n    to the function's parameters.\n\n    Has the following public attributes:\n\n    * arguments : dict\n        An ordered mutable mapping of parameters' names to arguments' values.\n        Does not contain arguments' default values.\n    * signature : Signature\n        The Signature object that created this instance.\n    * args : tuple\n        Tuple of positional arguments values.\n    * kwargs : dict\n        Dict of keyword arguments values.\n    "
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ('arguments', '_signature', '__weakref__')
+  16: STORE_NAME           __slots__
+  18: LOAD_CONST           <code object __init__ at 0x0000024069466E90, file "inspect.py", line 2831>
+  20: MAKE_FUNCTION        
+  22: STORE_NAME           __init__
+  24: LOAD_NAME            property
+  26: LOAD_CONST           <code object signature at 0x0000024069495E40, file "inspect.py", line 2835>
+  28: MAKE_FUNCTION        
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_NAME           signature
+  46: LOAD_NAME            property
+  48: LOAD_CONST           <code object args at 0x0000024068BB9CC0, file "inspect.py", line 2839>
+  50: MAKE_FUNCTION        
+  52: PRECALL              
+  56: CALL                 
+  66: STORE_NAME           args
+  68: LOAD_NAME            property
+  70: LOAD_CONST           <code object kwargs at 0x0000024069CD8A30, file "inspect.py", line 2862>
+  72: MAKE_FUNCTION        
+  74: PRECALL              
+  78: CALL                 
+  88: STORE_NAME           kwargs
+  90: LOAD_CONST           <code object apply_defaults at 0x0000024068D6D540, file "inspect.py", line 2892>
+  92: MAKE_FUNCTION        
+  94: STORE_NAME           apply_defaults
+  96: LOAD_CONST           <code object __eq__ at 0x00000240693AA330, file "inspect.py", line 2920>
+  98: MAKE_FUNCTION        
+ 100: STORE_NAME           __eq__
+ 102: LOAD_CONST           <code object __setstate__ at 0x0000024069CF0930, file "inspect.py", line 2928>
+ 104: MAKE_FUNCTION        
+ 106: STORE_NAME           __setstate__
+ 108: LOAD_CONST           <code object __getstate__ at 0x0000024069466F70, file "inspect.py", line 2932>
+ 110: MAKE_FUNCTION        
+ 112: STORE_NAME           __getstate__
+ 114: LOAD_CONST           <code object __repr__ at 0x00000240694983B0, file "inspect.py", line 2935>
+ 116: MAKE_FUNCTION        
+ 118: STORE_NAME           __repr__
+ 120: LOAD_CONST           None
+ 122: RETURN_VALUE         

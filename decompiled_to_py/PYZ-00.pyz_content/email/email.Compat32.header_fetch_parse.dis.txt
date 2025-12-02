@@ -1,0 +1,19 @@
+# Disassembly for email.Compat32.header_fetch_parse
+# From module file: email._policybase
+
+## co_consts:
+('+\n        If the value contains binary data, it is converted into a Header object\n        using the unknown-8bit charset.  Otherwise it is returned unmodified.\n        ',)
+
+## co_names:
+('_sanitize_header',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _sanitize_header
+  26: LOAD_FAST            name
+  28: LOAD_FAST            value
+  30: PRECALL              
+  34: CALL                 
+  44: RETURN_VALUE         

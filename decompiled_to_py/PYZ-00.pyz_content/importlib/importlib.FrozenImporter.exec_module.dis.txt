@@ -1,0 +1,34 @@
+# Disassembly for importlib.FrozenImporter.exec_module
+# From module file: importlib._bootstrap
+
+## co_consts:
+(None,)
+
+## co_names:
+('__spec__', 'name', '_call_with_frames_removed', '_imp', 'get_frozen_object', 'exec', '__dict__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            module
+   4: LOAD_ATTR            __spec__
+  14: STORE_FAST           spec
+  16: LOAD_FAST            spec
+  18: LOAD_ATTR            name
+  28: STORE_FAST           name
+  30: LOAD_GLOBAL          NULL + _call_with_frames_removed
+  42: LOAD_GLOBAL          _imp
+  54: LOAD_ATTR            get_frozen_object
+  64: LOAD_FAST            name
+  66: PRECALL              
+  70: CALL                 
+  80: STORE_FAST           code
+  82: LOAD_GLOBAL          NULL + exec
+  94: LOAD_FAST            code
+  96: LOAD_FAST            module
+  98: LOAD_ATTR            __dict__
+ 108: PRECALL              
+ 112: CALL                 
+ 122: POP_TOP              
+ 124: LOAD_CONST           None
+ 126: RETURN_VALUE         

@@ -1,0 +1,26 @@
+# Disassembly for datetime.timezone._create
+# From module file: datetime
+
+## co_consts:
+(None,)
+
+## co_names:
+('tzinfo', '__new__', '_offset', '_name')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          tzinfo
+  14: LOAD_METHOD          __new__
+  36: LOAD_FAST            cls
+  38: PRECALL              
+  42: CALL                 
+  52: STORE_FAST           self
+  54: LOAD_FAST            offset
+  56: LOAD_FAST            self
+  58: STORE_ATTR           _offset
+  68: LOAD_FAST            name
+  70: LOAD_FAST            self
+  72: STORE_ATTR           _name
+  82: LOAD_FAST            self
+  84: RETURN_VALUE         

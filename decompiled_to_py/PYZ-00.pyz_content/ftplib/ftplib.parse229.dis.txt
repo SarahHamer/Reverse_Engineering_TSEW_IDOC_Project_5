@@ -1,0 +1,118 @@
+# Disassembly for ftplib.parse229
+# From module file: ftplib
+
+## co_consts:
+("Parse the '229' response for an EPSV request.\n    Raises error_proto if it does not contain '(|||port|)'\n    Return ('host.addr.as.numbers', port#) tuple.", None, 3, '229', '(', 0, ')', 1, 5)
+
+## co_names:
+('error_reply', 'find', 'error_proto', 'split', 'len', 'int')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            resp
+   4: LOAD_CONST           None
+   6: LOAD_CONST           3
+   8: BUILD_SLICE          
+  10: BINARY_SUBSCR        
+  20: LOAD_CONST           '229'
+  22: COMPARE_OP           !=
+  28: POP_JUMP_FORWARD_IF_FALSE to 60
+  30: LOAD_GLOBAL          NULL + error_reply
+  42: LOAD_FAST            resp
+  44: PRECALL              
+  48: CALL                 
+  58: RAISE_VARARGS        
+  60: LOAD_FAST            resp
+  62: LOAD_METHOD          find
+  84: LOAD_CONST           '('
+  86: PRECALL              
+  90: CALL                 
+ 100: STORE_FAST           left
+ 102: LOAD_FAST            left
+ 104: LOAD_CONST           0
+ 106: COMPARE_OP           <
+ 112: POP_JUMP_FORWARD_IF_FALSE to 144
+ 114: LOAD_GLOBAL          NULL + error_proto
+ 126: LOAD_FAST            resp
+ 128: PRECALL              
+ 132: CALL                 
+ 142: RAISE_VARARGS        
+ 144: LOAD_FAST            resp
+ 146: LOAD_METHOD          find
+ 168: LOAD_CONST           ')'
+ 170: LOAD_FAST            left
+ 172: LOAD_CONST           1
+ 174: BINARY_OP            +
+ 178: PRECALL              
+ 182: CALL                 
+ 192: STORE_FAST           right
+ 194: LOAD_FAST            right
+ 196: LOAD_CONST           0
+ 198: COMPARE_OP           <
+ 204: POP_JUMP_FORWARD_IF_FALSE to 236
+ 206: LOAD_GLOBAL          NULL + error_proto
+ 218: LOAD_FAST            resp
+ 220: PRECALL              
+ 224: CALL                 
+ 234: RAISE_VARARGS        
+ 236: LOAD_FAST            resp
+ 238: LOAD_FAST            left
+ 240: LOAD_CONST           1
+ 242: BINARY_OP            +
+ 246: BINARY_SUBSCR        
+ 256: LOAD_FAST            resp
+ 258: LOAD_FAST            right
+ 260: LOAD_CONST           1
+ 262: BINARY_OP            -
+ 266: BINARY_SUBSCR        
+ 276: COMPARE_OP           !=
+ 282: POP_JUMP_FORWARD_IF_FALSE to 314
+ 284: LOAD_GLOBAL          NULL + error_proto
+ 296: LOAD_FAST            resp
+ 298: PRECALL              
+ 302: CALL                 
+ 312: RAISE_VARARGS        
+ 314: LOAD_FAST            resp
+ 316: LOAD_FAST            left
+ 318: LOAD_CONST           1
+ 320: BINARY_OP            +
+ 324: LOAD_FAST            right
+ 326: BUILD_SLICE          
+ 328: BINARY_SUBSCR        
+ 338: LOAD_METHOD          split
+ 360: LOAD_FAST            resp
+ 362: LOAD_FAST            left
+ 364: LOAD_CONST           1
+ 366: BINARY_OP            +
+ 370: BINARY_SUBSCR        
+ 380: PRECALL              
+ 384: CALL                 
+ 394: STORE_FAST           parts
+ 396: LOAD_GLOBAL          NULL + len
+ 408: LOAD_FAST            parts
+ 410: PRECALL              
+ 414: CALL                 
+ 424: LOAD_CONST           5
+ 426: COMPARE_OP           !=
+ 432: POP_JUMP_FORWARD_IF_FALSE to 464
+ 434: LOAD_GLOBAL          NULL + error_proto
+ 446: LOAD_FAST            resp
+ 448: PRECALL              
+ 452: CALL                 
+ 462: RAISE_VARARGS        
+ 464: LOAD_FAST            peer
+ 466: LOAD_CONST           0
+ 468: BINARY_SUBSCR        
+ 478: STORE_FAST           host
+ 480: LOAD_GLOBAL          NULL + int
+ 492: LOAD_FAST            parts
+ 494: LOAD_CONST           3
+ 496: BINARY_SUBSCR        
+ 506: PRECALL              
+ 510: CALL                 
+ 520: STORE_FAST           port
+ 522: LOAD_FAST            host
+ 524: LOAD_FAST            port
+ 526: BUILD_TUPLE          
+ 528: RETURN_VALUE         

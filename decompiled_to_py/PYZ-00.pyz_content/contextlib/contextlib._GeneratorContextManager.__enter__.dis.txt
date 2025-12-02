@@ -1,0 +1,40 @@
+# Disassembly for contextlib._GeneratorContextManager.__enter__
+# From module file: contextlib
+
+## co_consts:
+(None, "generator didn't yield")
+
+## co_names:
+('args', 'kwds', 'func', 'next', 'gen', 'StopIteration', 'RuntimeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: DELETE_ATTR          args
+   6: LOAD_FAST            self
+   8: DELETE_ATTR          kwds
+  10: LOAD_FAST            self
+  12: DELETE_ATTR          func
+  14: NOP                  
+  16: LOAD_GLOBAL          NULL + next
+  28: LOAD_FAST            self
+  30: LOAD_ATTR            gen
+  40: PRECALL              
+  44: CALL                 
+  54: RETURN_VALUE         
+  56: PUSH_EXC_INFO        
+  58: LOAD_GLOBAL          StopIteration
+  70: CHECK_EXC_MATCH      
+  72: POP_JUMP_FORWARD_IF_FALSE to 108
+  74: POP_TOP              
+  76: LOAD_GLOBAL          NULL + RuntimeError
+  88: LOAD_CONST           "generator didn't yield"
+  90: PRECALL              
+  94: CALL                 
+ 104: LOAD_CONST           None
+ 106: RAISE_VARARGS        
+ 108: RERAISE              
+ 110: COPY                 
+ 112: POP_EXCEPT           
+ 114: RERAISE              

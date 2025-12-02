@@ -1,0 +1,279 @@
+# Disassembly for argparse.ArgumentParser.parse_known_intermixed_args
+# From module file: argparse
+
+## co_consts:
+(None, <code object <listcomp> at 0x00000240693EBC30, file "argparse.py", line 2402>, 'parse_intermixed_args: positional arg with nargs=%s', 0, <code object <listcomp> at 0x00000240693EBD30, file "argparse.py", line 2408>, 'parse_intermixed_args: positional in mutuallyExclusiveGroup', 7, ('warn',), 'Do not expect ', ' in ', False)
+
+## co_names:
+('_get_positional_actions', 'TypeError', 'nargs', '_mutually_exclusive_groups', 'usage', 'format_usage', 'save_nargs', 'SUPPRESS', 'default', 'save_default', 'parse_known_args', 'hasattr', 'dest', 'getattr', 'warnings', 'warn', 'delattr', '_get_optional_actions', 'required', 'save_required')
+
+## bytecode:
+
+   0: MAKE_CELL            positionals
+   2: RESUME               
+   4: LOAD_FAST            self
+   6: LOAD_METHOD          _get_positional_actions
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_DEREF          positionals
+  44: LOAD_CONST           <code object <listcomp> at 0x00000240693EBC30, file "argparse.py", line 2402>
+  46: MAKE_FUNCTION        
+  48: LOAD_DEREF           positionals
+  50: GET_ITER             
+  52: PRECALL              
+  56: CALL                 
+  66: STORE_FAST           a
+  68: LOAD_FAST            a
+  70: POP_JUMP_FORWARD_IF_FALSE to 130
+  72: LOAD_GLOBAL          NULL + TypeError
+  84: LOAD_CONST           'parse_intermixed_args: positional arg with nargs=%s'
+  86: LOAD_FAST            a
+  88: LOAD_CONST           0
+  90: BINARY_SUBSCR        
+ 100: LOAD_ATTR            nargs
+ 110: BINARY_OP            %
+ 114: PRECALL              
+ 118: CALL                 
+ 128: RAISE_VARARGS        
+ 130: LOAD_CLOSURE         positionals
+ 132: BUILD_TUPLE          
+ 134: LOAD_CONST           <code object <listcomp> at 0x00000240693EBD30, file "argparse.py", line 2408>
+ 136: MAKE_FUNCTION        closure
+ 138: LOAD_FAST            self
+ 140: LOAD_ATTR            _mutually_exclusive_groups
+ 150: GET_ITER             
+ 152: PRECALL              
+ 156: CALL                 
+ 166: POP_JUMP_FORWARD_IF_FALSE to 198
+ 168: LOAD_GLOBAL          NULL + TypeError
+ 180: LOAD_CONST           'parse_intermixed_args: positional in mutuallyExclusiveGroup'
+ 182: PRECALL              
+ 186: CALL                 
+ 196: RAISE_VARARGS        
+ 198: NOP                  
+ 200: LOAD_FAST            self
+ 202: LOAD_ATTR            usage
+ 212: STORE_FAST           save_usage
+ 214: NOP                  
+ 216: LOAD_FAST            self
+ 218: LOAD_ATTR            usage
+ 228: POP_JUMP_FORWARD_IF_NOT_NONE to 296
+ 230: LOAD_FAST            self
+ 232: LOAD_METHOD          format_usage
+ 254: PRECALL              
+ 258: CALL                 
+ 268: LOAD_CONST           7
+ 270: LOAD_CONST           None
+ 272: BUILD_SLICE          
+ 274: BINARY_SUBSCR        
+ 284: LOAD_FAST            self
+ 286: STORE_ATTR           usage
+ 296: LOAD_DEREF           positionals
+ 298: GET_ITER             
+ 300: FOR_ITER             to 402
+ 302: STORE_FAST           action
+ 304: LOAD_FAST            action
+ 306: LOAD_ATTR            nargs
+ 316: LOAD_FAST            action
+ 318: STORE_ATTR           save_nargs
+ 328: LOAD_GLOBAL          SUPPRESS
+ 340: LOAD_FAST            action
+ 342: STORE_ATTR           nargs
+ 352: LOAD_FAST            action
+ 354: LOAD_ATTR            default
+ 364: LOAD_FAST            action
+ 366: STORE_ATTR           save_default
+ 376: LOAD_GLOBAL          SUPPRESS
+ 388: LOAD_FAST            action
+ 390: STORE_ATTR           default
+ 400: JUMP_BACKWARD        to 300
+ 402: LOAD_FAST            self
+ 404: LOAD_METHOD          parse_known_args
+ 426: LOAD_FAST            args
+ 428: LOAD_FAST            namespace
+ 430: PRECALL              
+ 434: CALL                 
+ 444: UNPACK_SEQUENCE      
+ 448: STORE_FAST           namespace
+ 450: STORE_FAST           remaining_args
+ 452: LOAD_DEREF           positionals
+ 454: GET_ITER             
+ 456: FOR_ITER             to 652
+ 458: STORE_FAST           action
+ 460: LOAD_GLOBAL          NULL + hasattr
+ 472: LOAD_FAST            namespace
+ 474: LOAD_FAST            action
+ 476: LOAD_ATTR            dest
+ 486: PRECALL              
+ 490: CALL                 
+ 500: POP_JUMP_FORWARD_IF_FALSE to 650
+ 502: LOAD_GLOBAL          NULL + getattr
+ 514: LOAD_FAST            namespace
+ 516: LOAD_FAST            action
+ 518: LOAD_ATTR            dest
+ 528: PRECALL              
+ 532: CALL                 
+ 542: BUILD_LIST           
+ 544: COMPARE_OP           ==
+ 550: POP_JUMP_FORWARD_IF_FALSE to 650
+ 552: LOAD_CONST           0
+ 554: LOAD_CONST           ('warn',)
+ 556: IMPORT_NAME          warnings
+ 558: IMPORT_FROM          warn
+ 560: STORE_FAST           warn
+ 562: POP_TOP              
+ 564: PUSH_NULL            
+ 566: LOAD_FAST            warn
+ 568: LOAD_CONST           'Do not expect '
+ 570: LOAD_FAST            action
+ 572: LOAD_ATTR            dest
+ 582: FORMAT_VALUE         str
+ 584: LOAD_CONST           ' in '
+ 586: LOAD_FAST            namespace
+ 588: FORMAT_VALUE         str
+ 590: BUILD_STRING         
+ 592: PRECALL              
+ 596: CALL                 
+ 606: POP_TOP              
+ 608: LOAD_GLOBAL          NULL + delattr
+ 620: LOAD_FAST            namespace
+ 622: LOAD_FAST            action
+ 624: LOAD_ATTR            dest
+ 634: PRECALL              
+ 638: CALL                 
+ 648: POP_TOP              
+ 650: JUMP_BACKWARD        to 456
+ 652: NOP                  
+ 654: LOAD_DEREF           positionals
+ 656: GET_ITER             
+ 658: FOR_ITER             to 712
+ 660: STORE_FAST           action
+ 662: LOAD_FAST            action
+ 664: LOAD_ATTR            save_nargs
+ 674: LOAD_FAST            action
+ 676: STORE_ATTR           nargs
+ 686: LOAD_FAST            action
+ 688: LOAD_ATTR            save_default
+ 698: LOAD_FAST            action
+ 700: STORE_ATTR           default
+ 710: JUMP_BACKWARD        to 658
+ 712: JUMP_FORWARD         to 782
+ 714: PUSH_EXC_INFO        
+ 716: LOAD_DEREF           positionals
+ 718: GET_ITER             
+ 720: FOR_ITER             to 774
+ 722: STORE_FAST           action
+ 724: LOAD_FAST            action
+ 726: LOAD_ATTR            save_nargs
+ 736: LOAD_FAST            action
+ 738: STORE_ATTR           nargs
+ 748: LOAD_FAST            action
+ 750: LOAD_ATTR            save_default
+ 760: LOAD_FAST            action
+ 762: STORE_ATTR           default
+ 772: JUMP_BACKWARD        to 720
+ 774: RERAISE              
+ 776: COPY                 
+ 778: POP_EXCEPT           
+ 780: RERAISE              
+ 782: LOAD_FAST            self
+ 784: LOAD_METHOD          _get_optional_actions
+ 806: PRECALL              
+ 810: CALL                 
+ 820: STORE_FAST           optionals
+ 822: NOP                  
+ 824: LOAD_FAST            optionals
+ 826: GET_ITER             
+ 828: FOR_ITER             to 872
+ 830: STORE_FAST           action
+ 832: LOAD_FAST            action
+ 834: LOAD_ATTR            required
+ 844: LOAD_FAST            action
+ 846: STORE_ATTR           save_required
+ 856: LOAD_CONST           False
+ 858: LOAD_FAST            action
+ 860: STORE_ATTR           required
+ 870: JUMP_BACKWARD        to 828
+ 872: LOAD_FAST            self
+ 874: LOAD_ATTR            _mutually_exclusive_groups
+ 884: GET_ITER             
+ 886: FOR_ITER             to 930
+ 888: STORE_FAST           group
+ 890: LOAD_FAST            group
+ 892: LOAD_ATTR            required
+ 902: LOAD_FAST            group
+ 904: STORE_ATTR           save_required
+ 914: LOAD_CONST           False
+ 916: LOAD_FAST            group
+ 918: STORE_ATTR           required
+ 928: JUMP_BACKWARD        to 886
+ 930: LOAD_FAST            self
+ 932: LOAD_METHOD          parse_known_args
+ 954: LOAD_FAST            remaining_args
+ 956: LOAD_FAST            namespace
+ 958: PRECALL              
+ 962: CALL                 
+ 972: UNPACK_SEQUENCE      
+ 976: STORE_FAST           namespace
+ 978: STORE_FAST           extras
+ 980: LOAD_FAST            optionals
+ 982: GET_ITER             
+ 984: FOR_ITER             to 1014
+ 986: STORE_FAST           action
+ 988: LOAD_FAST            action
+ 990: LOAD_ATTR            save_required
+1000: LOAD_FAST            action
+1002: STORE_ATTR           required
+1012: JUMP_BACKWARD        to 984
+1014: LOAD_FAST            self
+1016: LOAD_ATTR            _mutually_exclusive_groups
+1026: GET_ITER             
+1028: FOR_ITER             to 1058
+1030: STORE_FAST           group
+1032: LOAD_FAST            group
+1034: LOAD_ATTR            save_required
+1044: LOAD_FAST            group
+1046: STORE_ATTR           required
+1056: JUMP_BACKWARD        to 1028
+1058: JUMP_FORWARD         to 1148
+1060: PUSH_EXC_INFO        
+1062: LOAD_FAST            optionals
+1064: GET_ITER             
+1066: FOR_ITER             to 1096
+1068: STORE_FAST           action
+1070: LOAD_FAST            action
+1072: LOAD_ATTR            save_required
+1082: LOAD_FAST            action
+1084: STORE_ATTR           required
+1094: JUMP_BACKWARD        to 1066
+1096: LOAD_FAST            self
+1098: LOAD_ATTR            _mutually_exclusive_groups
+1108: GET_ITER             
+1110: FOR_ITER             to 1140
+1112: STORE_FAST           group
+1114: LOAD_FAST            group
+1116: LOAD_ATTR            save_required
+1126: LOAD_FAST            group
+1128: STORE_ATTR           required
+1138: JUMP_BACKWARD        to 1110
+1140: RERAISE              
+1142: COPY                 
+1144: POP_EXCEPT           
+1146: RERAISE              
+1148: NOP                  
+1150: LOAD_FAST            save_usage
+1152: LOAD_FAST            self
+1154: STORE_ATTR           usage
+1164: JUMP_FORWARD         to 1190
+1166: PUSH_EXC_INFO        
+1168: LOAD_FAST            save_usage
+1170: LOAD_FAST            self
+1172: STORE_ATTR           usage
+1182: RERAISE              
+1184: COPY                 
+1186: POP_EXCEPT           
+1188: RERAISE              
+1190: LOAD_FAST            namespace
+1192: LOAD_FAST            extras
+1194: BUILD_TUPLE          
+1196: RETURN_VALUE         

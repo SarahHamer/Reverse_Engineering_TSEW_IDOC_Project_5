@@ -1,0 +1,25 @@
+# Disassembly for email.MIMEPart.__str__
+# From module file: email.message
+
+## co_consts:
+(None, True, ('utf8',), ('policy',))
+
+## co_names:
+('as_string', 'policy', 'clone')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          as_string
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            policy
+  38: LOAD_METHOD          clone
+  60: LOAD_CONST           True
+  62: KW_NAMES             
+  64: PRECALL              
+  68: CALL                 
+  78: KW_NAMES             
+  80: PRECALL              
+  84: CALL                 
+  94: RETURN_VALUE         

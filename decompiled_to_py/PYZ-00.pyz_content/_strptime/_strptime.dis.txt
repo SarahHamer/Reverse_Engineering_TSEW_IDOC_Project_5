@@ -1,0 +1,117 @@
+# Disassembly for _strptime
+# From module file: _strptime
+
+## co_consts:
+('Strptime-related classes and functions.\n\nCLASSES:\n    LocaleTime -- Discovers and stores locale-specific time information\n    TimeRE -- Creates regexes for pattern matching a string of text containing\n                time information\n\nFUNCTIONS:\n    _getlang -- Figure out what language is being used for the locale\n    strptime -- Calculates the time struct represented by the passed-in string\n\n', 0, None, ('compile',), ('IGNORECASE',), ('escape',), ('date', 'timedelta', 'timezone'), ('allocate_lock',), <code object _getlang at 0x00000240693EB830, file "_strptime.py", line 26>, <code object LocaleTime at 0x000002406945E010, file "_strptime.py", line 30>, 'LocaleTime', <code object TimeRE at 0x000002406945F960, file "_strptime.py", line 170>, 'TimeRE', 5, <code object _calc_julian_from_U_or_W at 0x00000240691EA8B0, file "_strptime.py", line 272>, <code object _calc_julian_from_V at 0x000002406947C5D0, file "_strptime.py", line 293>, '%a %b %d %H:%M:%S %Y', <code object _strptime at 0x0000024068E11050, file "_strptime.py", line 309>, <code object _strptime_time at 0x00000240693AAFB0, file "_strptime.py", line 559>, <code object _strptime_datetime at 0x00000240691F63F0, file "_strptime.py", line 565>, ('%a %b %d %H:%M:%S %Y',))
+
+## co_names:
+('__doc__', 'time', 'locale', 'calendar', 're', 'compile', 're_compile', 'IGNORECASE', 'escape', 're_escape', 'datetime', 'date', 'datetime_date', 'timedelta', 'datetime_timedelta', 'timezone', 'datetime_timezone', '_thread', 'allocate_lock', '_thread_allocate_lock', '__all__', '_getlang', 'object', 'LocaleTime', 'dict', 'TimeRE', '_cache_lock', '_TimeRE_cache', '_CACHE_MAX_SIZE', '_regex_cache', '_calc_julian_from_U_or_W', '_calc_julian_from_V', '_strptime', '_strptime_time', '_strptime_datetime')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'Strptime-related classes and functions.\n\nCLASSES:\n    LocaleTime -- Discovers and stores locale-specific time information\n    TimeRE -- Creates regexes for pattern matching a string of text containing\n                time information\n\nFUNCTIONS:\n    _getlang -- Figure out what language is being used for the locale\n    strptime -- Calculates the time struct represented by the passed-in string\n\n'
+   4: STORE_NAME           __doc__
+   6: LOAD_CONST           0
+   8: LOAD_CONST           None
+  10: IMPORT_NAME          time
+  12: STORE_NAME           time
+  14: LOAD_CONST           0
+  16: LOAD_CONST           None
+  18: IMPORT_NAME          locale
+  20: STORE_NAME           locale
+  22: LOAD_CONST           0
+  24: LOAD_CONST           None
+  26: IMPORT_NAME          calendar
+  28: STORE_NAME           calendar
+  30: LOAD_CONST           0
+  32: LOAD_CONST           ('compile',)
+  34: IMPORT_NAME          re
+  36: IMPORT_FROM          compile
+  38: STORE_NAME           re_compile
+  40: POP_TOP              
+  42: LOAD_CONST           0
+  44: LOAD_CONST           ('IGNORECASE',)
+  46: IMPORT_NAME          re
+  48: IMPORT_FROM          IGNORECASE
+  50: STORE_NAME           IGNORECASE
+  52: POP_TOP              
+  54: LOAD_CONST           0
+  56: LOAD_CONST           ('escape',)
+  58: IMPORT_NAME          re
+  60: IMPORT_FROM          escape
+  62: STORE_NAME           re_escape
+  64: POP_TOP              
+  66: LOAD_CONST           0
+  68: LOAD_CONST           ('date', 'timedelta', 'timezone')
+  70: IMPORT_NAME          datetime
+  72: IMPORT_FROM          date
+  74: STORE_NAME           datetime_date
+  76: IMPORT_FROM          timedelta
+  78: STORE_NAME           datetime_timedelta
+  80: IMPORT_FROM          timezone
+  82: STORE_NAME           datetime_timezone
+  84: POP_TOP              
+  86: LOAD_CONST           0
+  88: LOAD_CONST           ('allocate_lock',)
+  90: IMPORT_NAME          _thread
+  92: IMPORT_FROM          allocate_lock
+  94: STORE_NAME           _thread_allocate_lock
+  96: POP_TOP              
+  98: BUILD_LIST           
+ 100: STORE_NAME           __all__
+ 102: LOAD_CONST           <code object _getlang at 0x00000240693EB830, file "_strptime.py", line 26>
+ 104: MAKE_FUNCTION        
+ 106: STORE_NAME           _getlang
+ 108: PUSH_NULL            
+ 110: LOAD_BUILD_CLASS     
+ 112: LOAD_CONST           <code object LocaleTime at 0x000002406945E010, file "_strptime.py", line 30>
+ 114: MAKE_FUNCTION        
+ 116: LOAD_CONST           'LocaleTime'
+ 118: LOAD_NAME            object
+ 120: PRECALL              
+ 124: CALL                 
+ 134: STORE_NAME           LocaleTime
+ 136: PUSH_NULL            
+ 138: LOAD_BUILD_CLASS     
+ 140: LOAD_CONST           <code object TimeRE at 0x000002406945F960, file "_strptime.py", line 170>
+ 142: MAKE_FUNCTION        
+ 144: LOAD_CONST           'TimeRE'
+ 146: LOAD_NAME            dict
+ 148: PRECALL              
+ 152: CALL                 
+ 162: STORE_NAME           TimeRE
+ 164: PUSH_NULL            
+ 166: LOAD_NAME            _thread_allocate_lock
+ 168: PRECALL              
+ 172: CALL                 
+ 182: STORE_NAME           _cache_lock
+ 184: PUSH_NULL            
+ 186: LOAD_NAME            TimeRE
+ 188: PRECALL              
+ 192: CALL                 
+ 202: STORE_GLOBAL         _TimeRE_cache
+ 204: LOAD_CONST           5
+ 206: STORE_NAME           _CACHE_MAX_SIZE
+ 208: BUILD_MAP            
+ 210: STORE_GLOBAL         _regex_cache
+ 212: LOAD_CONST           <code object _calc_julian_from_U_or_W at 0x00000240691EA8B0, file "_strptime.py", line 272>
+ 214: MAKE_FUNCTION        
+ 216: STORE_NAME           _calc_julian_from_U_or_W
+ 218: LOAD_CONST           <code object _calc_julian_from_V at 0x000002406947C5D0, file "_strptime.py", line 293>
+ 220: MAKE_FUNCTION        
+ 222: STORE_NAME           _calc_julian_from_V
+ 224: LOAD_CONST           ('%a %b %d %H:%M:%S %Y',)
+ 226: LOAD_CONST           <code object _strptime at 0x0000024068E11050, file "_strptime.py", line 309>
+ 228: MAKE_FUNCTION        defaults
+ 230: STORE_NAME           _strptime
+ 232: LOAD_CONST           ('%a %b %d %H:%M:%S %Y',)
+ 234: LOAD_CONST           <code object _strptime_time at 0x00000240693AAFB0, file "_strptime.py", line 559>
+ 236: MAKE_FUNCTION        defaults
+ 238: STORE_NAME           _strptime_time
+ 240: LOAD_CONST           ('%a %b %d %H:%M:%S %Y',)
+ 242: LOAD_CONST           <code object _strptime_datetime at 0x00000240691F63F0, file "_strptime.py", line 565>
+ 244: MAKE_FUNCTION        defaults
+ 246: STORE_NAME           _strptime_datetime
+ 248: LOAD_CONST           None
+ 250: RETURN_VALUE         

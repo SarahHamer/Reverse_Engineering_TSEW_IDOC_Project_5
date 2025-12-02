@@ -1,0 +1,36 @@
+# Disassembly for email.ContentManager
+# From module file: email.contentmanager
+
+## co_consts:
+('ContentManager', <code object __init__ at 0x00000240694657D0, file "email\contentmanager.py", line 9>, <code object add_get_handler at 0x0000024069465450, file "email\contentmanager.py", line 13>, <code object get_content at 0x0000024069365D40, file "email\contentmanager.py", line 16>, <code object add_set_handler at 0x0000024069467830, file "email\contentmanager.py", line 27>, <code object set_content at 0x00000240691E9E30, file "email\contentmanager.py", line 30>, <code object _find_set_handler at 0x0000024068DA78D0, file "email\contentmanager.py", line 39>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', 'add_get_handler', 'get_content', 'add_set_handler', 'set_content', '_find_set_handler')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'ContentManager'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           <code object __init__ at 0x00000240694657D0, file "email\contentmanager.py", line 9>
+  12: MAKE_FUNCTION        
+  14: STORE_NAME           __init__
+  16: LOAD_CONST           <code object add_get_handler at 0x0000024069465450, file "email\contentmanager.py", line 13>
+  18: MAKE_FUNCTION        
+  20: STORE_NAME           add_get_handler
+  22: LOAD_CONST           <code object get_content at 0x0000024069365D40, file "email\contentmanager.py", line 16>
+  24: MAKE_FUNCTION        
+  26: STORE_NAME           get_content
+  28: LOAD_CONST           <code object add_set_handler at 0x0000024069467830, file "email\contentmanager.py", line 27>
+  30: MAKE_FUNCTION        
+  32: STORE_NAME           add_set_handler
+  34: LOAD_CONST           <code object set_content at 0x00000240691E9E30, file "email\contentmanager.py", line 30>
+  36: MAKE_FUNCTION        
+  38: STORE_NAME           set_content
+  40: LOAD_CONST           <code object _find_set_handler at 0x0000024068DA78D0, file "email\contentmanager.py", line 39>
+  42: MAKE_FUNCTION        
+  44: STORE_NAME           _find_set_handler
+  46: LOAD_CONST           None
+  48: RETURN_VALUE         

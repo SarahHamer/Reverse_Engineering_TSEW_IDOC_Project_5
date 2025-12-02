@@ -1,0 +1,72 @@
+# Disassembly for ftplib.FTP.getresp
+# From module file: ftplib
+
+## co_consts:
+(None, '*resp*', 3, 1, frozenset({'2', '1', '3'}), '4', '5')
+
+## co_names:
+('getmultiline', 'debugging', 'print', 'sanitize', 'lastresp', 'error_temp', 'error_perm', 'error_proto')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          getmultiline
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           resp
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            debugging
+  54: POP_JUMP_FORWARD_IF_FALSE to 126
+  56: LOAD_GLOBAL          NULL + print
+  68: LOAD_CONST           '*resp*'
+  70: LOAD_FAST            self
+  72: LOAD_METHOD          sanitize
+  94: LOAD_FAST            resp
+  96: PRECALL              
+ 100: CALL                 
+ 110: PRECALL              
+ 114: CALL                 
+ 124: POP_TOP              
+ 126: LOAD_FAST            resp
+ 128: LOAD_CONST           None
+ 130: LOAD_CONST           3
+ 132: BUILD_SLICE          
+ 134: BINARY_SUBSCR        
+ 144: LOAD_FAST            self
+ 146: STORE_ATTR           lastresp
+ 156: LOAD_FAST            resp
+ 158: LOAD_CONST           None
+ 160: LOAD_CONST           1
+ 162: BUILD_SLICE          
+ 164: BINARY_SUBSCR        
+ 174: STORE_FAST           c
+ 176: LOAD_FAST            c
+ 178: LOAD_CONST           frozenset({'2', '1', '3'})
+ 180: CONTAINS_OP          
+ 182: POP_JUMP_FORWARD_IF_FALSE to 188
+ 184: LOAD_FAST            resp
+ 186: RETURN_VALUE         
+ 188: LOAD_FAST            c
+ 190: LOAD_CONST           '4'
+ 192: COMPARE_OP           ==
+ 198: POP_JUMP_FORWARD_IF_FALSE to 230
+ 200: LOAD_GLOBAL          NULL + error_temp
+ 212: LOAD_FAST            resp
+ 214: PRECALL              
+ 218: CALL                 
+ 228: RAISE_VARARGS        
+ 230: LOAD_FAST            c
+ 232: LOAD_CONST           '5'
+ 234: COMPARE_OP           ==
+ 240: POP_JUMP_FORWARD_IF_FALSE to 272
+ 242: LOAD_GLOBAL          NULL + error_perm
+ 254: LOAD_FAST            resp
+ 256: PRECALL              
+ 260: CALL                 
+ 270: RAISE_VARARGS        
+ 272: LOAD_GLOBAL          NULL + error_proto
+ 284: LOAD_FAST            resp
+ 286: PRECALL              
+ 290: CALL                 
+ 300: RAISE_VARARGS        

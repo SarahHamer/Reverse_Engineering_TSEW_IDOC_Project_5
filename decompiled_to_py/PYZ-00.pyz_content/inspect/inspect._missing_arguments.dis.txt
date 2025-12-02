@@ -1,0 +1,92 @@
+# Disassembly for inspect._missing_arguments
+# From module file: inspect
+
+## co_consts:
+(None, <code object <listcomp> at 0x0000024069CDC3F0, file "inspect.py", line 1486>, 1, 0, 2, '{} and {}', ', {} and {}', -2, ', ', '%s() missing %i required %s argument%s: %s', 'positional', 'keyword-only', '', 's')
+
+## co_names:
+('len', 'format', 'join', 'TypeError')
+
+## bytecode:
+
+   0: MAKE_CELL            values
+   2: RESUME               
+   4: LOAD_CLOSURE         values
+   6: BUILD_TUPLE          
+   8: LOAD_CONST           <code object <listcomp> at 0x0000024069CDC3F0, file "inspect.py", line 1486>
+  10: MAKE_FUNCTION        closure
+  12: LOAD_FAST            argnames
+  14: GET_ITER             
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           names
+  32: LOAD_GLOBAL          NULL + len
+  44: LOAD_FAST            names
+  46: PRECALL              
+  50: CALL                 
+  60: STORE_FAST           missing
+  62: LOAD_FAST            missing
+  64: LOAD_CONST           1
+  66: COMPARE_OP           ==
+  72: POP_JUMP_FORWARD_IF_FALSE to 92
+  74: LOAD_FAST            names
+  76: LOAD_CONST           0
+  78: BINARY_SUBSCR        
+  88: STORE_FAST           s
+  90: JUMP_FORWARD         to 220
+  92: LOAD_FAST            missing
+  94: LOAD_CONST           2
+  96: COMPARE_OP           ==
+ 102: POP_JUMP_FORWARD_IF_FALSE to 126
+ 104: PUSH_NULL            
+ 106: LOAD_CONST           '{} and {}'
+ 108: LOAD_ATTR            format
+ 118: LOAD_FAST            names
+ 120: CALL_FUNCTION_EX     
+ 122: STORE_FAST           s
+ 124: JUMP_FORWARD         to 220
+ 126: PUSH_NULL            
+ 128: LOAD_CONST           ', {} and {}'
+ 130: LOAD_ATTR            format
+ 140: LOAD_FAST            names
+ 142: LOAD_CONST           -2
+ 144: LOAD_CONST           None
+ 146: BUILD_SLICE          
+ 148: BINARY_SUBSCR        
+ 158: CALL_FUNCTION_EX     
+ 160: STORE_FAST           tail
+ 162: LOAD_FAST            names
+ 164: LOAD_CONST           -2
+ 166: LOAD_CONST           None
+ 168: BUILD_SLICE          
+ 170: DELETE_SUBSCR        
+ 172: LOAD_CONST           ', '
+ 174: LOAD_METHOD          join
+ 196: LOAD_FAST            names
+ 198: PRECALL              
+ 202: CALL                 
+ 212: LOAD_FAST            tail
+ 214: BINARY_OP            +
+ 218: STORE_FAST           s
+ 220: LOAD_GLOBAL          NULL + TypeError
+ 232: LOAD_CONST           '%s() missing %i required %s argument%s: %s'
+ 234: LOAD_FAST            f_name
+ 236: LOAD_FAST            missing
+ 238: LOAD_FAST            pos
+ 240: POP_JUMP_FORWARD_IF_FALSE to 246
+ 242: LOAD_CONST           'positional'
+ 244: JUMP_FORWARD         to 248
+ 246: LOAD_CONST           'keyword-only'
+ 248: LOAD_FAST            missing
+ 250: LOAD_CONST           1
+ 252: COMPARE_OP           ==
+ 258: POP_JUMP_FORWARD_IF_FALSE to 264
+ 260: LOAD_CONST           ''
+ 262: JUMP_FORWARD         to 266
+ 264: LOAD_CONST           's'
+ 266: LOAD_FAST            s
+ 268: BUILD_TUPLE          
+ 270: BINARY_OP            %
+ 274: PRECALL              
+ 278: CALL                 
+ 288: RAISE_VARARGS        

@@ -1,0 +1,66 @@
+# Disassembly for _strptime._calc_julian_from_U_or_W
+# From module file: _strptime
+
+## co_consts:
+('Calculate the Julian day based on the year, week of the year, and day of\n    the week, with week_start_day representing whether the week of the year\n    assumes the week starts on Sunday or Monday (6 or 0).', 1, 7, 0)
+
+## co_names:
+('datetime_date', 'weekday')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + datetime_date
+  14: LOAD_FAST            year
+  16: LOAD_CONST           1
+  18: LOAD_CONST           1
+  20: PRECALL              
+  24: CALL                 
+  34: LOAD_METHOD          weekday
+  56: PRECALL              
+  60: CALL                 
+  70: STORE_FAST           first_weekday
+  72: LOAD_FAST            week_starts_Mon
+  74: POP_JUMP_FORWARD_IF_TRUE to 108
+  76: LOAD_FAST            first_weekday
+  78: LOAD_CONST           1
+  80: BINARY_OP            +
+  84: LOAD_CONST           7
+  86: BINARY_OP            %
+  90: STORE_FAST           first_weekday
+  92: LOAD_FAST            day_of_week
+  94: LOAD_CONST           1
+  96: BINARY_OP            +
+ 100: LOAD_CONST           7
+ 102: BINARY_OP            %
+ 106: STORE_FAST           day_of_week
+ 108: LOAD_CONST           7
+ 110: LOAD_FAST            first_weekday
+ 112: BINARY_OP            -
+ 116: LOAD_CONST           7
+ 118: BINARY_OP            %
+ 122: STORE_FAST           week_0_length
+ 124: LOAD_FAST            week_of_year
+ 126: LOAD_CONST           0
+ 128: COMPARE_OP           ==
+ 134: POP_JUMP_FORWARD_IF_FALSE to 152
+ 136: LOAD_CONST           1
+ 138: LOAD_FAST            day_of_week
+ 140: BINARY_OP            +
+ 144: LOAD_FAST            first_weekday
+ 146: BINARY_OP            -
+ 150: RETURN_VALUE         
+ 152: LOAD_FAST            week_0_length
+ 154: LOAD_CONST           7
+ 156: LOAD_FAST            week_of_year
+ 158: LOAD_CONST           1
+ 160: BINARY_OP            -
+ 164: BINARY_OP            *
+ 168: BINARY_OP            +
+ 172: STORE_FAST           days_to_week
+ 174: LOAD_CONST           1
+ 176: LOAD_FAST            days_to_week
+ 178: BINARY_OP            +
+ 182: LOAD_FAST            day_of_week
+ 184: BINARY_OP            +
+ 188: RETURN_VALUE         

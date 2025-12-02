@@ -1,0 +1,46 @@
+# Disassembly for importlib.metadata.Message._repair_headers
+# From module file: importlib.metadata._adapters
+
+## co_consts:
+(None, <code object redent at 0x00000240693EBD30, file "importlib\metadata\_adapters.py", line 43>, <code object <listcomp> at 0x000002406945ED30, file "importlib\metadata\_adapters.py", line 49>, '_headers', 'Description')
+
+## co_names:
+('vars', '_payload', 'append', 'get_payload')
+
+## bytecode:
+
+   0: MAKE_CELL            redent
+   2: RESUME               
+   4: LOAD_CONST           <code object redent at 0x00000240693EBD30, file "importlib\metadata\_adapters.py", line 43>
+   6: MAKE_FUNCTION        
+   8: STORE_DEREF          redent
+  10: LOAD_CLOSURE         redent
+  12: BUILD_TUPLE          
+  14: LOAD_CONST           <code object <listcomp> at 0x000002406945ED30, file "importlib\metadata\_adapters.py", line 49>
+  16: MAKE_FUNCTION        closure
+  18: LOAD_GLOBAL          NULL + vars
+  30: LOAD_FAST            self
+  32: PRECALL              
+  36: CALL                 
+  46: LOAD_CONST           '_headers'
+  48: BINARY_SUBSCR        
+  58: GET_ITER             
+  60: PRECALL              
+  64: CALL                 
+  74: STORE_FAST           headers
+  76: LOAD_FAST            self
+  78: LOAD_ATTR            _payload
+  88: POP_JUMP_FORWARD_IF_FALSE to 172
+  90: LOAD_FAST            headers
+  92: LOAD_METHOD          append
+ 114: LOAD_CONST           'Description'
+ 116: LOAD_FAST            self
+ 118: LOAD_METHOD          get_payload
+ 140: PRECALL              
+ 144: CALL                 
+ 154: BUILD_TUPLE          
+ 156: PRECALL              
+ 160: CALL                 
+ 170: POP_TOP              
+ 172: LOAD_FAST            headers
+ 174: RETURN_VALUE         

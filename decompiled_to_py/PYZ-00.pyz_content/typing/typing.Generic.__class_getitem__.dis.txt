@@ -1,0 +1,172 @@
+# Disassembly for typing.Generic.__class_getitem__
+# From module file: typing
+
+## co_consts:
+('Parameterizes a generic class.\n\n        At least, parameterizing a generic class is the *main* thing this method\n        does. For example, for some generic class `Foo`, this is called when we\n        do `Foo[int]` - there, with `cls=Foo` and `params=int`.\n\n        However, note that this method is also called when defining generic\n        classes in the first place with `class Foo(Generic[T]): ...`.\n        ', <code object <genexpr> at 0x0000024069CF45D0, file "typing.py", line 1818>, 'Parameter list to ', '[...] cannot be empty', <code object <genexpr> at 0x0000024069CF46C0, file "typing.py", line 1825>, 'Parameters to ', '[...] must all be type variables or parameter specification variables.', '[...] must all be unique', '__typing_prepare_subst__', None, True, ('_paramspec_tvars',))
+
+## co_names:
+('isinstance', 'tuple', 'Generic', 'Protocol', 'TypeError', '__qualname__', 'all', '__name__', 'len', 'set', '__parameters__', 'getattr', '_check_generic', 'zip', 'TypeVarTuple', 'extend', 'append', '_GenericAlias')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            params
+  16: LOAD_GLOBAL          tuple
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_TRUE to 50
+  44: LOAD_FAST            params
+  46: BUILD_TUPLE          
+  48: STORE_FAST           params
+  50: LOAD_GLOBAL          NULL + tuple
+  62: LOAD_CONST           <code object <genexpr> at 0x0000024069CF45D0, file "typing.py", line 1818>
+  64: MAKE_FUNCTION        
+  66: LOAD_FAST            params
+  68: GET_ITER             
+  70: PRECALL              
+  74: CALL                 
+  84: PRECALL              
+  88: CALL                 
+  98: STORE_FAST           params
+ 100: LOAD_FAST            cls
+ 102: LOAD_GLOBAL          Generic
+ 114: LOAD_GLOBAL          Protocol
+ 126: BUILD_TUPLE          
+ 128: CONTAINS_OP          
+ 130: POP_JUMP_FORWARD_IF_FALSE to 422
+ 132: LOAD_FAST            params
+ 134: POP_JUMP_FORWARD_IF_TRUE to 184
+ 136: LOAD_GLOBAL          NULL + TypeError
+ 148: LOAD_CONST           'Parameter list to '
+ 150: LOAD_FAST            cls
+ 152: LOAD_ATTR            __qualname__
+ 162: FORMAT_VALUE         
+ 164: LOAD_CONST           '[...] cannot be empty'
+ 166: BUILD_STRING         
+ 168: PRECALL              
+ 172: CALL                 
+ 182: RAISE_VARARGS        
+ 184: LOAD_GLOBAL          NULL + all
+ 196: LOAD_CONST           <code object <genexpr> at 0x0000024069CF46C0, file "typing.py", line 1825>
+ 198: MAKE_FUNCTION        
+ 200: LOAD_FAST            params
+ 202: GET_ITER             
+ 204: PRECALL              
+ 208: CALL                 
+ 218: PRECALL              
+ 222: CALL                 
+ 232: POP_JUMP_FORWARD_IF_TRUE to 282
+ 234: LOAD_GLOBAL          NULL + TypeError
+ 246: LOAD_CONST           'Parameters to '
+ 248: LOAD_FAST            cls
+ 250: LOAD_ATTR            __name__
+ 260: FORMAT_VALUE         
+ 262: LOAD_CONST           '[...] must all be type variables or parameter specification variables.'
+ 264: BUILD_STRING         
+ 266: PRECALL              
+ 270: CALL                 
+ 280: RAISE_VARARGS        
+ 282: LOAD_GLOBAL          NULL + len
+ 294: LOAD_GLOBAL          NULL + set
+ 306: LOAD_FAST            params
+ 308: PRECALL              
+ 312: CALL                 
+ 322: PRECALL              
+ 326: CALL                 
+ 336: LOAD_GLOBAL          NULL + len
+ 348: LOAD_FAST            params
+ 350: PRECALL              
+ 354: CALL                 
+ 364: COMPARE_OP           !=
+ 370: POP_JUMP_FORWARD_IF_FALSE to 420
+ 372: LOAD_GLOBAL          NULL + TypeError
+ 384: LOAD_CONST           'Parameters to '
+ 386: LOAD_FAST            cls
+ 388: LOAD_ATTR            __name__
+ 398: FORMAT_VALUE         
+ 400: LOAD_CONST           '[...] must all be unique'
+ 402: BUILD_STRING         
+ 404: PRECALL              
+ 408: CALL                 
+ 418: RAISE_VARARGS        
+ 420: JUMP_FORWARD         to 790
+ 422: LOAD_FAST            cls
+ 424: LOAD_ATTR            __parameters__
+ 434: GET_ITER             
+ 436: FOR_ITER             to 504
+ 438: STORE_FAST           param
+ 440: LOAD_GLOBAL          NULL + getattr
+ 452: LOAD_FAST            param
+ 454: LOAD_CONST           '__typing_prepare_subst__'
+ 456: LOAD_CONST           None
+ 458: PRECALL              
+ 462: CALL                 
+ 472: STORE_FAST           prepare
+ 474: LOAD_FAST            prepare
+ 476: POP_JUMP_FORWARD_IF_NONE to 502
+ 478: PUSH_NULL            
+ 480: LOAD_FAST            prepare
+ 482: LOAD_FAST            cls
+ 484: LOAD_FAST            params
+ 486: PRECALL              
+ 490: CALL                 
+ 500: STORE_FAST           params
+ 502: JUMP_BACKWARD        to 436
+ 504: LOAD_GLOBAL          NULL + _check_generic
+ 516: LOAD_FAST            cls
+ 518: LOAD_FAST            params
+ 520: LOAD_GLOBAL          NULL + len
+ 532: LOAD_FAST            cls
+ 534: LOAD_ATTR            __parameters__
+ 544: PRECALL              
+ 548: CALL                 
+ 558: PRECALL              
+ 562: CALL                 
+ 572: POP_TOP              
+ 574: BUILD_LIST           
+ 576: STORE_FAST           new_args
+ 578: LOAD_GLOBAL          NULL + zip
+ 590: LOAD_FAST            cls
+ 592: LOAD_ATTR            __parameters__
+ 602: LOAD_FAST            params
+ 604: PRECALL              
+ 608: CALL                 
+ 618: GET_ITER             
+ 620: FOR_ITER             to 760
+ 622: UNPACK_SEQUENCE      
+ 626: STORE_FAST           param
+ 628: STORE_FAST           new_arg
+ 630: LOAD_GLOBAL          NULL + isinstance
+ 642: LOAD_FAST            param
+ 644: LOAD_GLOBAL          TypeVarTuple
+ 656: PRECALL              
+ 660: CALL                 
+ 670: POP_JUMP_FORWARD_IF_FALSE to 716
+ 672: LOAD_FAST            new_args
+ 674: LOAD_METHOD          extend
+ 696: LOAD_FAST            new_arg
+ 698: PRECALL              
+ 702: CALL                 
+ 712: POP_TOP              
+ 714: JUMP_BACKWARD        to 620
+ 716: LOAD_FAST            new_args
+ 718: LOAD_METHOD          append
+ 740: LOAD_FAST            new_arg
+ 742: PRECALL              
+ 746: CALL                 
+ 756: POP_TOP              
+ 758: JUMP_BACKWARD        to 620
+ 760: LOAD_GLOBAL          NULL + tuple
+ 772: LOAD_FAST            new_args
+ 774: PRECALL              
+ 778: CALL                 
+ 788: STORE_FAST           params
+ 790: LOAD_GLOBAL          NULL + _GenericAlias
+ 802: LOAD_FAST            cls
+ 804: LOAD_FAST            params
+ 806: LOAD_CONST           True
+ 808: KW_NAMES             
+ 810: PRECALL              
+ 814: CALL                 
+ 824: RETURN_VALUE         

@@ -1,0 +1,20 @@
+# Disassembly for importlib.EntryPoint._key
+# From module file: importlib.metadata
+
+## co_consts:
+(None,)
+
+## co_names:
+('name', 'value', 'group')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            name
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            value
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            group
+  38: BUILD_TUPLE          
+  40: RETURN_VALUE         

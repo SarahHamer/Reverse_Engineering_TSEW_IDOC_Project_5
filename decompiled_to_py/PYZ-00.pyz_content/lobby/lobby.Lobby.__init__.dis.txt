@@ -1,0 +1,58 @@
+# Disassembly for lobby.Lobby.__init__
+# From module file: lobby
+
+## co_consts:
+(None, False)
+
+## co_names:
+('super', '__init__', 'is_opened', 'Notepad', 'set_parent', 'Telephone', 'TicketMachine', 'SignInSheet')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + super
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_METHOD          __init__
+  52: LOAD_FAST            name
+  54: PRECALL              
+  58: CALL                 
+  68: POP_TOP              
+  70: LOAD_CONST           False
+  72: LOAD_FAST            self
+  74: STORE_ATTR           is_opened
+  84: LOAD_GLOBAL          NULL + Notepad
+  96: PRECALL              
+ 100: CALL                 
+ 110: LOAD_METHOD          set_parent
+ 132: LOAD_FAST            self
+ 134: PRECALL              
+ 138: CALL                 
+ 148: POP_TOP              
+ 150: LOAD_GLOBAL          NULL + Telephone
+ 162: PRECALL              
+ 166: CALL                 
+ 176: LOAD_METHOD          set_parent
+ 198: LOAD_FAST            self
+ 200: PRECALL              
+ 204: CALL                 
+ 214: POP_TOP              
+ 216: LOAD_GLOBAL          NULL + TicketMachine
+ 228: PRECALL              
+ 232: CALL                 
+ 242: LOAD_METHOD          set_parent
+ 264: LOAD_FAST            self
+ 266: PRECALL              
+ 270: CALL                 
+ 280: POP_TOP              
+ 282: LOAD_GLOBAL          NULL + SignInSheet
+ 294: PRECALL              
+ 298: CALL                 
+ 308: LOAD_METHOD          set_parent
+ 330: LOAD_FAST            self
+ 332: PRECALL              
+ 336: CALL                 
+ 346: POP_TOP              
+ 348: LOAD_CONST           None
+ 350: RETURN_VALUE         

@@ -1,0 +1,22 @@
+# Disassembly for logging.RootLogger.__init__
+# From module file: logging
+
+## co_consts:
+('\n        Initialize the logger with the name "root".\n        ', 'root', None)
+
+## co_names:
+('Logger', '__init__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          Logger
+  14: LOAD_METHOD          __init__
+  36: LOAD_FAST            self
+  38: LOAD_CONST           'root'
+  40: LOAD_FAST            level
+  42: PRECALL              
+  46: CALL                 
+  56: POP_TOP              
+  58: LOAD_CONST           None
+  60: RETURN_VALUE         

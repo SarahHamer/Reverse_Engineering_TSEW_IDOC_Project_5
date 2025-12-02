@@ -1,0 +1,20 @@
+# Disassembly for pickle._Framer.start_framing
+# From module file: pickle
+
+## co_consts:
+(None,)
+
+## co_names:
+('io', 'BytesIO', 'current_frame')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + io
+  14: LOAD_ATTR            BytesIO
+  24: PRECALL              
+  28: CALL                 
+  38: LOAD_FAST            self
+  40: STORE_ATTR           current_frame
+  50: LOAD_CONST           None
+  52: RETURN_VALUE         

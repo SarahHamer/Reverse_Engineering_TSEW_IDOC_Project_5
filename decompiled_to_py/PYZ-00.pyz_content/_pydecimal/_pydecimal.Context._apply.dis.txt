@@ -1,0 +1,21 @@
+# Disassembly for _pydecimal.Context._apply
+# From module file: _pydecimal
+
+## co_consts:
+(None,)
+
+## co_names:
+('str', '_fix')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + str
+  14: LOAD_FAST            a
+  16: LOAD_METHOD          _fix
+  38: LOAD_FAST            self
+  40: PRECALL              
+  44: CALL                 
+  54: PRECALL              
+  58: CALL                 
+  68: RETURN_VALUE         

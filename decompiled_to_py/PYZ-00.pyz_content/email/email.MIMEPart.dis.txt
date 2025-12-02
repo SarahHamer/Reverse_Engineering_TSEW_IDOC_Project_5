@@ -1,0 +1,104 @@
+# Disassembly for email.MIMEPart
+# From module file: email.message
+
+## co_consts:
+('MIMEPart', None, <code object __init__ at 0x0000024069419FB0, file "email\message.py", line 974>, False, <code object as_string at 0x00000240693D3800, file "email\message.py", line 981>, <code object __str__ at 0x000002406941B090, file "email\message.py", line 997>, <code object is_attachment at 0x000002406944A9A0, file "email\message.py", line 1000>, <code object _find_body at 0x0000024068C359B0, file "email\message.py", line 1004>, ('related', 'html', 'plain'), <code object get_body at 0x00000240693AB730, file "email\message.py", line 1033>, frozenset({('multipart', 'related'), ('text', 'plain'), ('text', 'html'), ('multipart', 'alternative')}), <code object iter_attachments at 0x0000024068DC9F80, file "email\message.py", line 1057>, <code object iter_parts at 0x00000240693D2D50, file "email\message.py", line 1112>, ('content_manager',), <code object get_content at 0x00000240693EB430, file "email\message.py", line 1120>, <code object set_content at 0x00000240693EB230, file "email\message.py", line 1125>, <code object _make_multipart at 0x0000024068C57540, file "email\message.py", line 1130>, <code object make_related at 0x000002406945E970, file "email\message.py", line 1157>, <code object make_alternative at 0x000002406945EA60, file "email\message.py", line 1160>, <code object make_mixed at 0x000002406945EC40, file "email\message.py", line 1163>, ('_disp',), <code object _add_multipart at 0x0000024069365770, file "email\message.py", line 1166>, <code object add_related at 0x000002406945F0F0, file "email\message.py", line 1176>, <code object add_alternative at 0x0000024069465D10, file "email\message.py", line 1179>, <code object add_attachment at 0x000002406945ED30, file "email\message.py", line 1182>, <code object clear at 0x0000024069465FB0, file "email\message.py", line 1185>, <code object clear_content at 0x00000240693EB330, file "email\message.py", line 1189>, (None,), (False, None, None), (('related', 'html', 'plain'),))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', 'as_string', '__str__', 'is_attachment', '_find_body', 'get_body', '_body_types', 'iter_attachments', 'iter_parts', 'get_content', 'set_content', '_make_multipart', 'make_related', 'make_alternative', 'make_mixed', '_add_multipart', 'add_related', 'add_alternative', 'add_attachment', 'clear', 'clear_content', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'MIMEPart'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           (None,)
+  14: LOAD_CLOSURE         __class__
+  16: BUILD_TUPLE          
+  18: LOAD_CONST           <code object __init__ at 0x0000024069419FB0, file "email\message.py", line 974>
+  20: MAKE_FUNCTION        defaults, closure
+  22: STORE_NAME           __init__
+  24: LOAD_CONST           (False, None, None)
+  26: LOAD_CLOSURE         __class__
+  28: BUILD_TUPLE          
+  30: LOAD_CONST           <code object as_string at 0x00000240693D3800, file "email\message.py", line 981>
+  32: MAKE_FUNCTION        defaults, closure
+  34: STORE_NAME           as_string
+  36: LOAD_CONST           <code object __str__ at 0x000002406941B090, file "email\message.py", line 997>
+  38: MAKE_FUNCTION        
+  40: STORE_NAME           __str__
+  42: LOAD_CONST           <code object is_attachment at 0x000002406944A9A0, file "email\message.py", line 1000>
+  44: MAKE_FUNCTION        
+  46: STORE_NAME           is_attachment
+  48: LOAD_CONST           <code object _find_body at 0x0000024068C359B0, file "email\message.py", line 1004>
+  50: MAKE_FUNCTION        
+  52: STORE_NAME           _find_body
+  54: LOAD_CONST           (('related', 'html', 'plain'),)
+  56: LOAD_CONST           <code object get_body at 0x00000240693AB730, file "email\message.py", line 1033>
+  58: MAKE_FUNCTION        defaults
+  60: STORE_NAME           get_body
+  62: BUILD_SET            
+  64: LOAD_CONST           frozenset({('multipart', 'related'), ('text', 'plain'), ('text', 'html'), ('multipart', 'alternative')})
+  66: SET_UPDATE           
+  68: STORE_NAME           _body_types
+  70: LOAD_CONST           <code object iter_attachments at 0x0000024068DC9F80, file "email\message.py", line 1057>
+  72: MAKE_FUNCTION        
+  74: STORE_NAME           iter_attachments
+  76: LOAD_CONST           <code object iter_parts at 0x00000240693D2D50, file "email\message.py", line 1112>
+  78: MAKE_FUNCTION        
+  80: STORE_NAME           iter_parts
+  82: LOAD_CONST           None
+  84: LOAD_CONST           ('content_manager',)
+  86: BUILD_CONST_KEY_MAP  
+  88: LOAD_CONST           <code object get_content at 0x00000240693EB430, file "email\message.py", line 1120>
+  90: MAKE_FUNCTION        kwdefaults
+  92: STORE_NAME           get_content
+  94: LOAD_CONST           None
+  96: LOAD_CONST           ('content_manager',)
+  98: BUILD_CONST_KEY_MAP  
+ 100: LOAD_CONST           <code object set_content at 0x00000240693EB230, file "email\message.py", line 1125>
+ 102: MAKE_FUNCTION        kwdefaults
+ 104: STORE_NAME           set_content
+ 106: LOAD_CONST           <code object _make_multipart at 0x0000024068C57540, file "email\message.py", line 1130>
+ 108: MAKE_FUNCTION        
+ 110: STORE_NAME           _make_multipart
+ 112: LOAD_CONST           (None,)
+ 114: LOAD_CONST           <code object make_related at 0x000002406945E970, file "email\message.py", line 1157>
+ 116: MAKE_FUNCTION        defaults
+ 118: STORE_NAME           make_related
+ 120: LOAD_CONST           (None,)
+ 122: LOAD_CONST           <code object make_alternative at 0x000002406945EA60, file "email\message.py", line 1160>
+ 124: MAKE_FUNCTION        defaults
+ 126: STORE_NAME           make_alternative
+ 128: LOAD_CONST           (None,)
+ 130: LOAD_CONST           <code object make_mixed at 0x000002406945EC40, file "email\message.py", line 1163>
+ 132: MAKE_FUNCTION        defaults
+ 134: STORE_NAME           make_mixed
+ 136: LOAD_CONST           None
+ 138: LOAD_CONST           ('_disp',)
+ 140: BUILD_CONST_KEY_MAP  
+ 142: LOAD_CONST           <code object _add_multipart at 0x0000024069365770, file "email\message.py", line 1166>
+ 144: MAKE_FUNCTION        kwdefaults
+ 146: STORE_NAME           _add_multipart
+ 148: LOAD_CONST           <code object add_related at 0x000002406945F0F0, file "email\message.py", line 1176>
+ 150: MAKE_FUNCTION        
+ 152: STORE_NAME           add_related
+ 154: LOAD_CONST           <code object add_alternative at 0x0000024069465D10, file "email\message.py", line 1179>
+ 156: MAKE_FUNCTION        
+ 158: STORE_NAME           add_alternative
+ 160: LOAD_CONST           <code object add_attachment at 0x000002406945ED30, file "email\message.py", line 1182>
+ 162: MAKE_FUNCTION        
+ 164: STORE_NAME           add_attachment
+ 166: LOAD_CONST           <code object clear at 0x0000024069465FB0, file "email\message.py", line 1185>
+ 168: MAKE_FUNCTION        
+ 170: STORE_NAME           clear
+ 172: LOAD_CONST           <code object clear_content at 0x00000240693EB330, file "email\message.py", line 1189>
+ 174: MAKE_FUNCTION        
+ 176: STORE_NAME           clear_content
+ 178: LOAD_CLOSURE         __class__
+ 180: COPY                 
+ 182: STORE_NAME           __classcell__
+ 184: RETURN_VALUE         

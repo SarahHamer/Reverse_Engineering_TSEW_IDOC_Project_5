@@ -1,0 +1,22 @@
+# Disassembly for ssl.SSLSocket.__init__
+# From module file: ssl
+
+## co_consts:
+(None, ' does not have a public constructor. Instances are returned by SSLContext.wrap_socket().')
+
+## co_names:
+('TypeError', '__class__', '__name__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + TypeError
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            __class__
+  26: LOAD_ATTR            __name__
+  36: FORMAT_VALUE         
+  38: LOAD_CONST           ' does not have a public constructor. Instances are returned by SSLContext.wrap_socket().'
+  40: BUILD_STRING         
+  42: PRECALL              
+  46: CALL                 
+  56: RAISE_VARARGS        

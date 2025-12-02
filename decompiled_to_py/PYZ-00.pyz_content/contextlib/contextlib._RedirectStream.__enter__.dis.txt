@@ -1,0 +1,36 @@
+# Disassembly for contextlib._RedirectStream.__enter__
+# From module file: contextlib
+
+## co_consts:
+(None,)
+
+## co_names:
+('_old_targets', 'append', 'getattr', 'sys', '_stream', 'setattr', '_new_target')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _old_targets
+  14: LOAD_METHOD          append
+  36: LOAD_GLOBAL          NULL + getattr
+  48: LOAD_GLOBAL          sys
+  60: LOAD_FAST            self
+  62: LOAD_ATTR            _stream
+  72: PRECALL              
+  76: CALL                 
+  86: PRECALL              
+  90: CALL                 
+ 100: POP_TOP              
+ 102: LOAD_GLOBAL          NULL + setattr
+ 114: LOAD_GLOBAL          sys
+ 126: LOAD_FAST            self
+ 128: LOAD_ATTR            _stream
+ 138: LOAD_FAST            self
+ 140: LOAD_ATTR            _new_target
+ 150: PRECALL              
+ 154: CALL                 
+ 164: POP_TOP              
+ 166: LOAD_FAST            self
+ 168: LOAD_ATTR            _new_target
+ 178: RETURN_VALUE         

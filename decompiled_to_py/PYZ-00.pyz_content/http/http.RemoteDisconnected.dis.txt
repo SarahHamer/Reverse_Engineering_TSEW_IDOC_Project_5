@@ -1,0 +1,21 @@
+# Disassembly for http.RemoteDisconnected
+# From module file: http.client
+
+## co_consts:
+('RemoteDisconnected', <code object __init__ at 0x000002406941A550, file "http\client.py", line 1524>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'RemoteDisconnected'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           <code object __init__ at 0x000002406941A550, file "http\client.py", line 1524>
+  12: MAKE_FUNCTION        
+  14: STORE_NAME           __init__
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         

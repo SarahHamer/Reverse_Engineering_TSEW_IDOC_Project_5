@@ -1,0 +1,24 @@
+# Disassembly for threading.Condition.notify_all
+# From module file: threading
+
+## co_consts:
+('Wake up all threads waiting on this condition.\n\n        If the calling thread has not acquired the lock when this method\n        is called, a RuntimeError is raised.\n\n        ', None)
+
+## co_names:
+('notify', 'len', '_waiters')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          notify
+  26: LOAD_GLOBAL          NULL + len
+  38: LOAD_FAST            self
+  40: LOAD_ATTR            _waiters
+  50: PRECALL              
+  54: CALL                 
+  64: PRECALL              
+  68: CALL                 
+  78: POP_TOP              
+  80: LOAD_CONST           None
+  82: RETURN_VALUE         

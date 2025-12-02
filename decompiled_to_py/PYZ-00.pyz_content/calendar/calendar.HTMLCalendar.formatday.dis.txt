@@ -1,0 +1,30 @@
+# Disassembly for calendar.HTMLCalendar.formatday
+# From module file: calendar
+
+## co_consts:
+('\n        Return a day as a table cell.\n        ', 0, '<td class="%s">&nbsp;</td>', '<td class="%s">%d</td>')
+
+## co_names:
+('cssclass_noday', 'cssclasses')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            day
+   4: LOAD_CONST           0
+   6: COMPARE_OP           ==
+  12: POP_JUMP_FORWARD_IF_FALSE to 34
+  14: LOAD_CONST           '<td class="%s">&nbsp;</td>'
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            cssclass_noday
+  28: BINARY_OP            %
+  32: RETURN_VALUE         
+  34: LOAD_CONST           '<td class="%s">%d</td>'
+  36: LOAD_FAST            self
+  38: LOAD_ATTR            cssclasses
+  48: LOAD_FAST            weekday
+  50: BINARY_SUBSCR        
+  60: LOAD_FAST            day
+  62: BUILD_TUPLE          
+  64: BINARY_OP            %
+  68: RETURN_VALUE         

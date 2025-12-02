@@ -1,0 +1,28 @@
+# Disassembly for threading.Thread.getName
+# From module file: threading
+
+## co_consts:
+('Return a string used for identification purposes only.\n\n        This method is deprecated, use the name attribute instead.\n\n        ', 0, None, 'getName() is deprecated, get the name attribute instead', 2, ('stacklevel',))
+
+## co_names:
+('warnings', 'warn', 'DeprecationWarning', 'name')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           None
+   6: IMPORT_NAME          warnings
+   8: STORE_FAST           warnings
+  10: LOAD_FAST            warnings
+  12: LOAD_METHOD          warn
+  34: LOAD_CONST           'getName() is deprecated, get the name attribute instead'
+  36: LOAD_GLOBAL          DeprecationWarning
+  48: LOAD_CONST           2
+  50: KW_NAMES             
+  52: PRECALL              
+  56: CALL                 
+  66: POP_TOP              
+  68: LOAD_FAST            self
+  70: LOAD_ATTR            name
+  80: RETURN_VALUE         

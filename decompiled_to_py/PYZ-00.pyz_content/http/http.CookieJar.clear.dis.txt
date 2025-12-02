@@ -1,0 +1,63 @@
+# Disassembly for http.CookieJar.clear
+# From module file: http.cookiejar
+
+## co_consts:
+('Clear some cookies.\n\n        Invoking this method without arguments will clear all cookies.  If\n        given a single argument, only cookies belonging to that domain will be\n        removed.  If given two arguments, cookies belonging to the specified\n        path within that domain are removed.  If given three arguments, then\n        the cookie with the specified name, path and domain is removed.\n\n        Raises KeyError if no matching cookie exists.\n\n        ', None, 'domain and path must be given to remove a cookie by name', 'domain must be given to remove cookies by path')
+
+## co_names:
+('ValueError', '_cookies')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            name
+   4: POP_JUMP_FORWARD_IF_NONE to 88
+   6: LOAD_FAST            domain
+   8: POP_JUMP_FORWARD_IF_NONE to 14
+  10: LOAD_FAST            path
+  12: POP_JUMP_FORWARD_IF_NOT_NONE to 44
+  14: LOAD_GLOBAL          NULL + ValueError
+  26: LOAD_CONST           'domain and path must be given to remove a cookie by name'
+  28: PRECALL              
+  32: CALL                 
+  42: RAISE_VARARGS        
+  44: LOAD_FAST            self
+  46: LOAD_ATTR            _cookies
+  56: LOAD_FAST            domain
+  58: BINARY_SUBSCR        
+  68: LOAD_FAST            path
+  70: BINARY_SUBSCR        
+  80: LOAD_FAST            name
+  82: DELETE_SUBSCR        
+  84: LOAD_CONST           None
+  86: RETURN_VALUE         
+  88: LOAD_FAST            path
+  90: POP_JUMP_FORWARD_IF_NONE to 158
+  92: LOAD_FAST            domain
+  94: POP_JUMP_FORWARD_IF_NOT_NONE to 126
+  96: LOAD_GLOBAL          NULL + ValueError
+ 108: LOAD_CONST           'domain must be given to remove cookies by path'
+ 110: PRECALL              
+ 114: CALL                 
+ 124: RAISE_VARARGS        
+ 126: LOAD_FAST            self
+ 128: LOAD_ATTR            _cookies
+ 138: LOAD_FAST            domain
+ 140: BINARY_SUBSCR        
+ 150: LOAD_FAST            path
+ 152: DELETE_SUBSCR        
+ 154: LOAD_CONST           None
+ 156: RETURN_VALUE         
+ 158: LOAD_FAST            domain
+ 160: POP_JUMP_FORWARD_IF_NONE to 182
+ 162: LOAD_FAST            self
+ 164: LOAD_ATTR            _cookies
+ 174: LOAD_FAST            domain
+ 176: DELETE_SUBSCR        
+ 178: LOAD_CONST           None
+ 180: RETURN_VALUE         
+ 182: BUILD_MAP            
+ 184: LOAD_FAST            self
+ 186: STORE_ATTR           _cookies
+ 196: LOAD_CONST           None
+ 198: RETURN_VALUE         

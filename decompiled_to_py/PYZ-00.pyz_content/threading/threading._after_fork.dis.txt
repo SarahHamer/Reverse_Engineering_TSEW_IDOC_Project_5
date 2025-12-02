@@ -1,0 +1,152 @@
+# Disassembly for threading._after_fork
+# From module file: threading
+
+## co_consts:
+('\n    Cleanup threading module state that should not exist after a fork.\n    ', True, False, 1, None)
+
+## co_names:
+('RLock', '_active_limbo_lock', '_active', 'get_ident', 'KeyError', '_MainThread', '_main_thread', '_allocate_lock', '_shutdown_locks_lock', 'set', '_shutdown_locks', '_enumerate', 'update', '_dangling', '_reset_internal_locks', '_ident', '_stop', '_limbo', 'clear', 'len')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + RLock
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_GLOBAL         _active_limbo_lock
+  30: BUILD_MAP            
+  32: STORE_FAST           new_active
+  34: NOP                  
+  36: LOAD_GLOBAL          _active
+  48: LOAD_GLOBAL          NULL + get_ident
+  60: PRECALL              
+  64: CALL                 
+  74: BINARY_SUBSCR        
+  84: STORE_FAST           current
+  86: JUMP_FORWARD         to 148
+  88: PUSH_EXC_INFO        
+  90: LOAD_GLOBAL          KeyError
+ 102: CHECK_EXC_MATCH      
+ 104: POP_JUMP_FORWARD_IF_FALSE to 140
+ 106: POP_TOP              
+ 108: LOAD_GLOBAL          NULL + _MainThread
+ 120: PRECALL              
+ 124: CALL                 
+ 134: STORE_FAST           current
+ 136: POP_EXCEPT           
+ 138: JUMP_FORWARD         to 148
+ 140: RERAISE              
+ 142: COPY                 
+ 144: POP_EXCEPT           
+ 146: RERAISE              
+ 148: LOAD_FAST            current
+ 150: STORE_GLOBAL         _main_thread
+ 152: LOAD_GLOBAL          NULL + _allocate_lock
+ 164: PRECALL              
+ 168: CALL                 
+ 178: STORE_GLOBAL         _shutdown_locks_lock
+ 180: LOAD_GLOBAL          NULL + set
+ 192: PRECALL              
+ 196: CALL                 
+ 206: STORE_GLOBAL         _shutdown_locks
+ 208: LOAD_GLOBAL          _active_limbo_lock
+ 220: BEFORE_WITH          
+ 222: POP_TOP              
+ 224: LOAD_GLOBAL          NULL + set
+ 236: LOAD_GLOBAL          NULL + _enumerate
+ 248: PRECALL              
+ 252: CALL                 
+ 262: PRECALL              
+ 266: CALL                 
+ 276: STORE_FAST           threads
+ 278: LOAD_FAST            threads
+ 280: LOAD_METHOD          update
+ 302: LOAD_GLOBAL          _dangling
+ 314: PRECALL              
+ 318: CALL                 
+ 328: POP_TOP              
+ 330: LOAD_FAST            threads
+ 332: GET_ITER             
+ 334: FOR_ITER             to 526
+ 336: STORE_FAST           thread
+ 338: LOAD_FAST            thread
+ 340: LOAD_FAST            current
+ 342: IS_OP                
+ 344: POP_JUMP_FORWARD_IF_FALSE to 442
+ 346: LOAD_FAST            thread
+ 348: LOAD_METHOD          _reset_internal_locks
+ 370: LOAD_CONST           True
+ 372: PRECALL              
+ 376: CALL                 
+ 386: POP_TOP              
+ 388: LOAD_GLOBAL          NULL + get_ident
+ 400: PRECALL              
+ 404: CALL                 
+ 414: STORE_FAST           ident
+ 416: LOAD_FAST            ident
+ 418: LOAD_FAST            thread
+ 420: STORE_ATTR           _ident
+ 430: LOAD_FAST            thread
+ 432: LOAD_FAST            new_active
+ 434: LOAD_FAST            ident
+ 436: STORE_SUBSCR         
+ 440: JUMP_BACKWARD        to 334
+ 442: LOAD_FAST            thread
+ 444: LOAD_METHOD          _reset_internal_locks
+ 466: LOAD_CONST           False
+ 468: PRECALL              
+ 472: CALL                 
+ 482: POP_TOP              
+ 484: LOAD_FAST            thread
+ 486: LOAD_METHOD          _stop
+ 508: PRECALL              
+ 512: CALL                 
+ 522: POP_TOP              
+ 524: JUMP_BACKWARD        to 334
+ 526: LOAD_GLOBAL          _limbo
+ 538: LOAD_METHOD          clear
+ 560: PRECALL              
+ 564: CALL                 
+ 574: POP_TOP              
+ 576: LOAD_GLOBAL          _active
+ 588: LOAD_METHOD          clear
+ 610: PRECALL              
+ 614: CALL                 
+ 624: POP_TOP              
+ 626: LOAD_GLOBAL          _active
+ 638: LOAD_METHOD          update
+ 660: LOAD_FAST            new_active
+ 662: PRECALL              
+ 666: CALL                 
+ 676: POP_TOP              
+ 678: LOAD_GLOBAL          NULL + len
+ 690: LOAD_GLOBAL          _active
+ 702: PRECALL              
+ 706: CALL                 
+ 716: LOAD_CONST           1
+ 718: COMPARE_OP           ==
+ 724: POP_JUMP_FORWARD_IF_TRUE to 730
+ 726: LOAD_ASSERTION_ERROR 
+ 728: RAISE_VARARGS        
+ 730: NOP                  
+ 732: LOAD_CONST           None
+ 734: LOAD_CONST           None
+ 736: LOAD_CONST           None
+ 738: PRECALL              
+ 742: CALL                 
+ 752: POP_TOP              
+ 754: LOAD_CONST           None
+ 756: RETURN_VALUE         
+ 758: PUSH_EXC_INFO        
+ 760: WITH_EXCEPT_START    
+ 762: POP_JUMP_FORWARD_IF_TRUE to 772
+ 764: RERAISE              
+ 766: COPY                 
+ 768: POP_EXCEPT           
+ 770: RERAISE              
+ 772: POP_TOP              
+ 774: POP_EXCEPT           
+ 776: POP_TOP              
+ 778: POP_TOP              
+ 780: LOAD_CONST           None
+ 782: RETURN_VALUE         

@@ -1,0 +1,42 @@
+# Disassembly for email.Terminal._pp
+# From module file: email._header_value_parser
+
+## co_consts:
+(None, '{}{}/{}({}){}', '', ' {}')
+
+## co_names:
+('format', '__class__', '__name__', 'token_type', 'super', '__repr__', 'defects')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_CONST           '{}{}/{}({}){}'
+   6: LOAD_METHOD          format
+  28: LOAD_FAST            indent
+  30: LOAD_FAST            self
+  32: LOAD_ATTR            __class__
+  42: LOAD_ATTR            __name__
+  52: LOAD_FAST            self
+  54: LOAD_ATTR            token_type
+  64: LOAD_GLOBAL          NULL + super
+  76: PRECALL              
+  80: CALL                 
+  90: LOAD_METHOD          __repr__
+ 112: PRECALL              
+ 116: CALL                 
+ 126: LOAD_FAST            self
+ 128: LOAD_ATTR            defects
+ 138: POP_JUMP_FORWARD_IF_TRUE to 144
+ 140: LOAD_CONST           ''
+ 142: JUMP_FORWARD         to 194
+ 144: LOAD_CONST           ' {}'
+ 146: LOAD_METHOD          format
+ 168: LOAD_FAST            self
+ 170: LOAD_ATTR            defects
+ 180: PRECALL              
+ 184: CALL                 
+ 194: PRECALL              
+ 198: CALL                 
+ 208: BUILD_LIST           
+ 210: RETURN_VALUE         

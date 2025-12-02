@@ -1,0 +1,28 @@
+# Disassembly for http.DefaultCookiePolicy.return_ok_expires
+# From module file: http.cookiejar
+
+## co_consts:
+(None, '   cookie expired', False, True)
+
+## co_names:
+('is_expired', '_now', '_debug')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            cookie
+   4: LOAD_METHOD          is_expired
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            _now
+  38: PRECALL              
+  42: CALL                 
+  52: POP_JUMP_FORWARD_IF_FALSE to 88
+  54: LOAD_GLOBAL          NULL + _debug
+  66: LOAD_CONST           '   cookie expired'
+  68: PRECALL              
+  72: CALL                 
+  82: POP_TOP              
+  84: LOAD_CONST           False
+  86: RETURN_VALUE         
+  88: LOAD_CONST           True
+  90: RETURN_VALUE         

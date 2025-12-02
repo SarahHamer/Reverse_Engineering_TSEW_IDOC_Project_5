@@ -1,0 +1,38 @@
+# Disassembly for logging._register_at_fork_reinit_lock
+# From module file: logging
+
+## co_consts:
+(None,)
+
+## co_names:
+('_acquireLock', '_at_fork_reinit_lock_weakset', 'add', '_releaseLock')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _acquireLock
+  14: PRECALL              
+  18: CALL                 
+  28: POP_TOP              
+  30: NOP                  
+  32: LOAD_GLOBAL          _at_fork_reinit_lock_weakset
+  44: LOAD_METHOD          add
+  66: LOAD_FAST            instance
+  68: PRECALL              
+  72: CALL                 
+  82: POP_TOP              
+  84: LOAD_GLOBAL          NULL + _releaseLock
+  96: PRECALL              
+ 100: CALL                 
+ 110: POP_TOP              
+ 112: LOAD_CONST           None
+ 114: RETURN_VALUE         
+ 116: PUSH_EXC_INFO        
+ 118: LOAD_GLOBAL          NULL + _releaseLock
+ 130: PRECALL              
+ 134: CALL                 
+ 144: POP_TOP              
+ 146: RERAISE              
+ 148: COPY                 
+ 150: POP_EXCEPT           
+ 152: RERAISE              

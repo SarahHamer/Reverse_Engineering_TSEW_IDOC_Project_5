@@ -1,0 +1,87 @@
+# Disassembly for importlib.BuiltinImporter
+# From module file: importlib._bootstrap
+
+## co_consts:
+('BuiltinImporter', 'Meta path import for built-in modules.\n\n    All methods are either class or static methods to avoid the need to\n    instantiate the class.\n\n    ', 'built-in', <code object module_repr at 0x00000240693D2E80, file "importlib\_bootstrap.py", line 737>, None, <code object find_spec at 0x000002406941AE50, file "importlib\_bootstrap.py", line 748>, <code object find_module at 0x00000240693AA6F0, file "importlib\_bootstrap.py", line 755>, <code object create_module at 0x000002406921FE00, file "importlib\_bootstrap.py", line 770>, <code object exec_module at 0x00000240693EB930, file "importlib\_bootstrap.py", line 778>, <code object get_code at 0x000002406943BDB0, file "importlib\_bootstrap.py", line 783>, <code object get_source at 0x000002406943B930, file "importlib\_bootstrap.py", line 789>, <code object is_package at 0x000002406943B6F0, file "importlib\_bootstrap.py", line 795>, (None, None), (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '_ORIGIN', 'staticmethod', 'module_repr', 'classmethod', 'find_spec', 'find_module', 'create_module', 'exec_module', '_requires_builtin', 'get_code', 'get_source', 'is_package', '_load_module_shim', 'load_module')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'BuiltinImporter'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Meta path import for built-in modules.\n\n    All methods are either class or static methods to avoid the need to\n    instantiate the class.\n\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           'built-in'
+  16: STORE_NAME           _ORIGIN
+  18: LOAD_NAME            staticmethod
+  20: LOAD_CONST           <code object module_repr at 0x00000240693D2E80, file "importlib\_bootstrap.py", line 737>
+  22: MAKE_FUNCTION        
+  24: PRECALL              
+  28: CALL                 
+  38: STORE_NAME           module_repr
+  40: LOAD_NAME            classmethod
+  42: LOAD_CONST           (None, None)
+  44: LOAD_CONST           <code object find_spec at 0x000002406941AE50, file "importlib\_bootstrap.py", line 748>
+  46: MAKE_FUNCTION        defaults
+  48: PRECALL              
+  52: CALL                 
+  62: STORE_NAME           find_spec
+  64: LOAD_NAME            classmethod
+  66: LOAD_CONST           (None,)
+  68: LOAD_CONST           <code object find_module at 0x00000240693AA6F0, file "importlib\_bootstrap.py", line 755>
+  70: MAKE_FUNCTION        defaults
+  72: PRECALL              
+  76: CALL                 
+  86: STORE_NAME           find_module
+  88: LOAD_NAME            staticmethod
+  90: LOAD_CONST           <code object create_module at 0x000002406921FE00, file "importlib\_bootstrap.py", line 770>
+  92: MAKE_FUNCTION        
+  94: PRECALL              
+  98: CALL                 
+ 108: STORE_NAME           create_module
+ 110: LOAD_NAME            staticmethod
+ 112: LOAD_CONST           <code object exec_module at 0x00000240693EB930, file "importlib\_bootstrap.py", line 778>
+ 114: MAKE_FUNCTION        
+ 116: PRECALL              
+ 120: CALL                 
+ 130: STORE_NAME           exec_module
+ 132: LOAD_NAME            classmethod
+ 134: LOAD_NAME            _requires_builtin
+ 136: LOAD_CONST           <code object get_code at 0x000002406943BDB0, file "importlib\_bootstrap.py", line 783>
+ 138: MAKE_FUNCTION        
+ 140: PRECALL              
+ 144: CALL                 
+ 154: PRECALL              
+ 158: CALL                 
+ 168: STORE_NAME           get_code
+ 170: LOAD_NAME            classmethod
+ 172: LOAD_NAME            _requires_builtin
+ 174: LOAD_CONST           <code object get_source at 0x000002406943B930, file "importlib\_bootstrap.py", line 789>
+ 176: MAKE_FUNCTION        
+ 178: PRECALL              
+ 182: CALL                 
+ 192: PRECALL              
+ 196: CALL                 
+ 206: STORE_NAME           get_source
+ 208: LOAD_NAME            classmethod
+ 210: LOAD_NAME            _requires_builtin
+ 212: LOAD_CONST           <code object is_package at 0x000002406943B6F0, file "importlib\_bootstrap.py", line 795>
+ 214: MAKE_FUNCTION        
+ 216: PRECALL              
+ 220: CALL                 
+ 230: PRECALL              
+ 234: CALL                 
+ 244: STORE_NAME           is_package
+ 246: PUSH_NULL            
+ 248: LOAD_NAME            classmethod
+ 250: LOAD_NAME            _load_module_shim
+ 252: PRECALL              
+ 256: CALL                 
+ 266: STORE_NAME           load_module
+ 268: LOAD_CONST           None
+ 270: RETURN_VALUE         

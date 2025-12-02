@@ -1,0 +1,50 @@
+# Disassembly for typing._remove_dups_flatten
+# From module file: typing
+
+## co_consts:
+('Internal helper for Union creation and substitution.\n\n    Flatten Unions among parameters, then remove duplicates.\n    ',)
+
+## co_names:
+('isinstance', '_UnionGenericAlias', 'types', 'UnionType', 'extend', '__args__', 'append', 'tuple', '_deduplicate')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           params
+   6: LOAD_FAST            parameters
+   8: GET_ITER             
+  10: FOR_ITER             to 178
+  12: STORE_FAST           p
+  14: LOAD_GLOBAL          NULL + isinstance
+  26: LOAD_FAST            p
+  28: LOAD_GLOBAL          _UnionGenericAlias
+  40: LOAD_GLOBAL          types
+  52: LOAD_ATTR            UnionType
+  62: BUILD_TUPLE          
+  64: PRECALL              
+  68: CALL                 
+  78: POP_JUMP_FORWARD_IF_FALSE to 134
+  80: LOAD_FAST            params
+  82: LOAD_METHOD          extend
+ 104: LOAD_FAST            p
+ 106: LOAD_ATTR            __args__
+ 116: PRECALL              
+ 120: CALL                 
+ 130: POP_TOP              
+ 132: JUMP_BACKWARD        to 10
+ 134: LOAD_FAST            params
+ 136: LOAD_METHOD          append
+ 158: LOAD_FAST            p
+ 160: PRECALL              
+ 164: CALL                 
+ 174: POP_TOP              
+ 176: JUMP_BACKWARD        to 10
+ 178: LOAD_GLOBAL          NULL + tuple
+ 190: LOAD_GLOBAL          NULL + _deduplicate
+ 202: LOAD_FAST            params
+ 204: PRECALL              
+ 208: CALL                 
+ 218: PRECALL              
+ 222: CALL                 
+ 232: RETURN_VALUE         

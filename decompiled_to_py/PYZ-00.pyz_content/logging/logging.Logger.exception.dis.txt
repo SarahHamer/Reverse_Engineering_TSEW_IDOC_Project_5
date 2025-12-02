@@ -1,0 +1,29 @@
+# Disassembly for logging.Logger.exception
+# From module file: logging
+
+## co_consts:
+('\n        Convenience method for logging an ERROR with exception information.\n        ', 'exc_info', None)
+
+## co_names:
+('error',)
+
+## bytecode:
+
+   0: RESUME               
+   2: PUSH_NULL            
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            error
+  16: LOAD_FAST            msg
+  18: BUILD_LIST           
+  20: LOAD_FAST            args
+  22: LIST_EXTEND          
+  24: LIST_TO_TUPLE        
+  26: LOAD_CONST           'exc_info'
+  28: LOAD_FAST            exc_info
+  30: BUILD_MAP            
+  32: LOAD_FAST            kwargs
+  34: DICT_MERGE           
+  36: CALL_FUNCTION_EX     
+  38: POP_TOP              
+  40: LOAD_CONST           None
+  42: RETURN_VALUE         

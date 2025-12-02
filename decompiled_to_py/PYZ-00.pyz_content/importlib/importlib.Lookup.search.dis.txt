@@ -1,0 +1,57 @@
+# Disassembly for importlib.Lookup.search
+# From module file: importlib.metadata
+
+## co_consts:
+(None,)
+
+## co_names:
+('infos', 'normalized', 'itertools', 'chain', 'from_iterable', 'values', 'eggs', 'legacy_normalized')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            prepared
+   4: POP_JUMP_FORWARD_IF_FALSE to 42
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            infos
+  18: LOAD_FAST            prepared
+  20: LOAD_ATTR            normalized
+  30: BINARY_SUBSCR        
+  40: JUMP_FORWARD         to 148
+  42: LOAD_GLOBAL          itertools
+  54: LOAD_ATTR            chain
+  64: LOAD_METHOD          from_iterable
+  86: LOAD_FAST            self
+  88: LOAD_ATTR            infos
+  98: LOAD_METHOD          values
+ 120: PRECALL              
+ 124: CALL                 
+ 134: PRECALL              
+ 138: CALL                 
+ 148: STORE_FAST           infos
+ 150: LOAD_FAST            prepared
+ 152: POP_JUMP_FORWARD_IF_FALSE to 190
+ 154: LOAD_FAST            self
+ 156: LOAD_ATTR            eggs
+ 166: LOAD_FAST            prepared
+ 168: LOAD_ATTR            legacy_normalized
+ 178: BINARY_SUBSCR        
+ 188: JUMP_FORWARD         to 296
+ 190: LOAD_GLOBAL          itertools
+ 202: LOAD_ATTR            chain
+ 212: LOAD_METHOD          from_iterable
+ 234: LOAD_FAST            self
+ 236: LOAD_ATTR            eggs
+ 246: LOAD_METHOD          values
+ 268: PRECALL              
+ 272: CALL                 
+ 282: PRECALL              
+ 286: CALL                 
+ 296: STORE_FAST           eggs
+ 298: LOAD_GLOBAL          NULL + itertools
+ 310: LOAD_ATTR            chain
+ 320: LOAD_FAST            infos
+ 322: LOAD_FAST            eggs
+ 324: PRECALL              
+ 328: CALL                 
+ 338: RETURN_VALUE         

@@ -1,0 +1,59 @@
+# Disassembly for datetime.time.replace
+# From module file: datetime
+
+## co_consts:
+('Return a new time with new values for the specified fields.', None, True, ('fold',))
+
+## co_names:
+('hour', 'minute', 'second', 'microsecond', 'tzinfo', '_fold', 'type')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            hour
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 20
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            hour
+  18: STORE_FAST           hour
+  20: LOAD_FAST            minute
+  22: POP_JUMP_FORWARD_IF_NOT_NONE to 38
+  24: LOAD_FAST            self
+  26: LOAD_ATTR            minute
+  36: STORE_FAST           minute
+  38: LOAD_FAST            second
+  40: POP_JUMP_FORWARD_IF_NOT_NONE to 56
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            second
+  54: STORE_FAST           second
+  56: LOAD_FAST            microsecond
+  58: POP_JUMP_FORWARD_IF_NOT_NONE to 74
+  60: LOAD_FAST            self
+  62: LOAD_ATTR            microsecond
+  72: STORE_FAST           microsecond
+  74: LOAD_FAST            tzinfo
+  76: LOAD_CONST           True
+  78: IS_OP                
+  80: POP_JUMP_FORWARD_IF_FALSE to 96
+  82: LOAD_FAST            self
+  84: LOAD_ATTR            tzinfo
+  94: STORE_FAST           tzinfo
+  96: LOAD_FAST            fold
+  98: POP_JUMP_FORWARD_IF_NOT_NONE to 114
+ 100: LOAD_FAST            self
+ 102: LOAD_ATTR            _fold
+ 112: STORE_FAST           fold
+ 114: PUSH_NULL            
+ 116: LOAD_GLOBAL          NULL + type
+ 128: LOAD_FAST            self
+ 130: PRECALL              
+ 134: CALL                 
+ 144: LOAD_FAST            hour
+ 146: LOAD_FAST            minute
+ 148: LOAD_FAST            second
+ 150: LOAD_FAST            microsecond
+ 152: LOAD_FAST            tzinfo
+ 154: LOAD_FAST            fold
+ 156: KW_NAMES             
+ 158: PRECALL              
+ 162: CALL                 
+ 172: RETURN_VALUE         

@@ -1,0 +1,29 @@
+# Disassembly for calendar._localized_day.<listcomp>
+# From module file: calendar
+
+## co_consts:
+(2001, 1)
+
+## co_names:
+('datetime', 'date', 'strftime')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 72
+   8: STORE_FAST           i
+  10: LOAD_GLOBAL          NULL + datetime
+  22: LOAD_ATTR            date
+  32: LOAD_CONST           2001
+  34: LOAD_CONST           1
+  36: LOAD_FAST            i
+  38: LOAD_CONST           1
+  40: BINARY_OP            +
+  44: PRECALL              
+  48: CALL                 
+  58: LOAD_ATTR            strftime
+  68: LIST_APPEND          
+  70: JUMP_BACKWARD        to 6
+  72: RETURN_VALUE         

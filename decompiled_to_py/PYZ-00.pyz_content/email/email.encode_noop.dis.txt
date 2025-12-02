@@ -1,0 +1,14 @@
+# Disassembly for email.encode_noop
+# From module file: email.encoders
+
+## co_consts:
+('Do nothing.', None)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: RETURN_VALUE         

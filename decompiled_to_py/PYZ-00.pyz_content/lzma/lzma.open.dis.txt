@@ -1,0 +1,89 @@
+# Disassembly for lzma.open
+# From module file: lzma
+
+## co_consts:
+('Open an LZMA-compressed file in binary or text mode.\n\n    filename can be either an actual file name (given as a str, bytes,\n    or PathLike object), in which case the named file is opened, or it\n    can be an existing file object to read from or write to.\n\n    The mode argument can be "r", "rb" (default), "w", "wb", "x", "xb",\n    "a", or "ab" for binary mode, or "rt", "wt", "xt", or "at" for text\n    mode.\n\n    The format, check, preset and filters arguments specify the\n    compression settings, as for LZMACompressor, LZMADecompressor and\n    LZMAFile.\n\n    For binary mode, this function is equivalent to the LZMAFile\n    constructor: LZMAFile(filename, mode, ...). In this case, the\n    encoding, errors and newline arguments must not be provided.\n\n    For text mode, an LZMAFile object is created, and wrapped in an\n    io.TextIOWrapper instance with the specified encoding, error\n    handling behavior, and line ending(s).\n\n    ', 't', 'b', 'Invalid mode: ', None, "Argument 'encoding' not supported in binary mode", "Argument 'errors' not supported in binary mode", "Argument 'newline' not supported in binary mode", '', ('format', 'check', 'preset', 'filters'))
+
+## co_names:
+('ValueError', 'replace', 'LZMAFile', 'io', 'text_encoding', 'TextIOWrapper')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           't'
+   4: LOAD_FAST            mode
+   6: CONTAINS_OP          
+   8: POP_JUMP_FORWARD_IF_FALSE to 56
+  10: LOAD_CONST           'b'
+  12: LOAD_FAST            mode
+  14: CONTAINS_OP          
+  16: POP_JUMP_FORWARD_IF_FALSE to 54
+  18: LOAD_GLOBAL          NULL + ValueError
+  30: LOAD_CONST           'Invalid mode: '
+  32: LOAD_FAST            mode
+  34: FORMAT_VALUE         repr
+  36: BUILD_STRING         
+  38: PRECALL              
+  42: CALL                 
+  52: RAISE_VARARGS        
+  54: JUMP_FORWARD         to 158
+  56: LOAD_FAST            encoding
+  58: POP_JUMP_FORWARD_IF_NONE to 90
+  60: LOAD_GLOBAL          NULL + ValueError
+  72: LOAD_CONST           "Argument 'encoding' not supported in binary mode"
+  74: PRECALL              
+  78: CALL                 
+  88: RAISE_VARARGS        
+  90: LOAD_FAST            errors
+  92: POP_JUMP_FORWARD_IF_NONE to 124
+  94: LOAD_GLOBAL          NULL + ValueError
+ 106: LOAD_CONST           "Argument 'errors' not supported in binary mode"
+ 108: PRECALL              
+ 112: CALL                 
+ 122: RAISE_VARARGS        
+ 124: LOAD_FAST            newline
+ 126: POP_JUMP_FORWARD_IF_NONE to 158
+ 128: LOAD_GLOBAL          NULL + ValueError
+ 140: LOAD_CONST           "Argument 'newline' not supported in binary mode"
+ 142: PRECALL              
+ 146: CALL                 
+ 156: RAISE_VARARGS        
+ 158: LOAD_FAST            mode
+ 160: LOAD_METHOD          replace
+ 182: LOAD_CONST           't'
+ 184: LOAD_CONST           ''
+ 186: PRECALL              
+ 190: CALL                 
+ 200: STORE_FAST           lz_mode
+ 202: LOAD_GLOBAL          NULL + LZMAFile
+ 214: LOAD_FAST            filename
+ 216: LOAD_FAST            lz_mode
+ 218: LOAD_FAST            format
+ 220: LOAD_FAST            check
+ 222: LOAD_FAST            preset
+ 224: LOAD_FAST            filters
+ 226: KW_NAMES             
+ 228: PRECALL              
+ 232: CALL                 
+ 242: STORE_FAST           binary_file
+ 244: LOAD_CONST           't'
+ 246: LOAD_FAST            mode
+ 248: CONTAINS_OP          
+ 250: POP_JUMP_FORWARD_IF_FALSE to 338
+ 252: LOAD_GLOBAL          NULL + io
+ 264: LOAD_ATTR            text_encoding
+ 274: LOAD_FAST            encoding
+ 276: PRECALL              
+ 280: CALL                 
+ 290: STORE_FAST           encoding
+ 292: LOAD_GLOBAL          NULL + io
+ 304: LOAD_ATTR            TextIOWrapper
+ 314: LOAD_FAST            binary_file
+ 316: LOAD_FAST            encoding
+ 318: LOAD_FAST            errors
+ 320: LOAD_FAST            newline
+ 322: PRECALL              
+ 326: CALL                 
+ 336: RETURN_VALUE         
+ 338: LOAD_FAST            binary_file
+ 340: RETURN_VALUE         

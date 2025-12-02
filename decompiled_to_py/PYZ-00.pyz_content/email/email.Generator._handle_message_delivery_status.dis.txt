@@ -1,0 +1,100 @@
+# Disassembly for email.Generator._handle_message_delivery_status
+# From module file: email.generator
+
+## co_consts:
+(None, False, ('unixfrom', 'linesep'), -1)
+
+## co_names:
+('get_payload', '_new_buffer', 'clone', 'flatten', '_NL', 'getvalue', 'split', '_encoded_NL', '_encoded_EMPTY', 'append', 'join', '_fp', 'write')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           blocks
+   6: LOAD_FAST            msg
+   8: LOAD_METHOD          get_payload
+  30: PRECALL              
+  34: CALL                 
+  44: GET_ITER             
+  46: FOR_ITER             to 472
+  48: STORE_FAST           part
+  50: LOAD_FAST            self
+  52: LOAD_METHOD          _new_buffer
+  74: PRECALL              
+  78: CALL                 
+  88: STORE_FAST           s
+  90: LOAD_FAST            self
+  92: LOAD_METHOD          clone
+ 114: LOAD_FAST            s
+ 116: PRECALL              
+ 120: CALL                 
+ 130: STORE_FAST           g
+ 132: LOAD_FAST            g
+ 134: LOAD_METHOD          flatten
+ 156: LOAD_FAST            part
+ 158: LOAD_CONST           False
+ 160: LOAD_FAST            self
+ 162: LOAD_ATTR            _NL
+ 172: KW_NAMES             
+ 174: PRECALL              
+ 178: CALL                 
+ 188: POP_TOP              
+ 190: LOAD_FAST            s
+ 192: LOAD_METHOD          getvalue
+ 214: PRECALL              
+ 218: CALL                 
+ 228: STORE_FAST           text
+ 230: LOAD_FAST            text
+ 232: LOAD_METHOD          split
+ 254: LOAD_FAST            self
+ 256: LOAD_ATTR            _encoded_NL
+ 266: PRECALL              
+ 270: CALL                 
+ 280: STORE_FAST           lines
+ 282: LOAD_FAST            lines
+ 284: POP_JUMP_FORWARD_IF_FALSE to 428
+ 286: LOAD_FAST            lines
+ 288: LOAD_CONST           -1
+ 290: BINARY_SUBSCR        
+ 300: LOAD_FAST            self
+ 302: LOAD_ATTR            _encoded_EMPTY
+ 312: COMPARE_OP           ==
+ 318: POP_JUMP_FORWARD_IF_FALSE to 428
+ 320: LOAD_FAST            blocks
+ 322: LOAD_METHOD          append
+ 344: LOAD_FAST            self
+ 346: LOAD_ATTR            _encoded_NL
+ 356: LOAD_METHOD          join
+ 378: LOAD_FAST            lines
+ 380: LOAD_CONST           None
+ 382: LOAD_CONST           -1
+ 384: BUILD_SLICE          
+ 386: BINARY_SUBSCR        
+ 396: PRECALL              
+ 400: CALL                 
+ 410: PRECALL              
+ 414: CALL                 
+ 424: POP_TOP              
+ 426: JUMP_BACKWARD        to 46
+ 428: LOAD_FAST            blocks
+ 430: LOAD_METHOD          append
+ 452: LOAD_FAST            text
+ 454: PRECALL              
+ 458: CALL                 
+ 468: POP_TOP              
+ 470: JUMP_BACKWARD        to 46
+ 472: LOAD_FAST            self
+ 474: LOAD_ATTR            _fp
+ 484: LOAD_METHOD          write
+ 506: LOAD_FAST            self
+ 508: LOAD_ATTR            _encoded_NL
+ 518: LOAD_METHOD          join
+ 540: LOAD_FAST            blocks
+ 542: PRECALL              
+ 546: CALL                 
+ 556: PRECALL              
+ 560: CALL                 
+ 570: POP_TOP              
+ 572: LOAD_CONST           None
+ 574: RETURN_VALUE         

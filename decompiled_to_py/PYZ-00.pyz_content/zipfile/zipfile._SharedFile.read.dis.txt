@@ -1,0 +1,70 @@
+# Disassembly for zipfile._SharedFile.read
+# From module file: zipfile
+
+## co_consts:
+(None, "Can't read from the ZIP file while there is an open writing handle on it. Close the writing handle before trying to read.")
+
+## co_names:
+('_lock', '_writing', 'ValueError', '_file', 'seek', '_pos', 'read', 'tell')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _lock
+  14: BEFORE_WITH          
+  16: POP_TOP              
+  18: LOAD_FAST            self
+  20: LOAD_METHOD          _writing
+  42: PRECALL              
+  46: CALL                 
+  56: POP_JUMP_FORWARD_IF_FALSE to 88
+  58: LOAD_GLOBAL          NULL + ValueError
+  70: LOAD_CONST           "Can't read from the ZIP file while there is an open writing handle on it. Close the writing handle before trying to read."
+  72: PRECALL              
+  76: CALL                 
+  86: RAISE_VARARGS        
+  88: LOAD_FAST            self
+  90: LOAD_ATTR            _file
+ 100: LOAD_METHOD          seek
+ 122: LOAD_FAST            self
+ 124: LOAD_ATTR            _pos
+ 134: PRECALL              
+ 138: CALL                 
+ 148: POP_TOP              
+ 150: LOAD_FAST            self
+ 152: LOAD_ATTR            _file
+ 162: LOAD_METHOD          read
+ 184: LOAD_FAST            n
+ 186: PRECALL              
+ 190: CALL                 
+ 200: STORE_FAST           data
+ 202: LOAD_FAST            self
+ 204: LOAD_ATTR            _file
+ 214: LOAD_METHOD          tell
+ 236: PRECALL              
+ 240: CALL                 
+ 250: LOAD_FAST            self
+ 252: STORE_ATTR           _pos
+ 262: LOAD_FAST            data
+ 264: SWAP                 
+ 266: LOAD_CONST           None
+ 268: LOAD_CONST           None
+ 270: LOAD_CONST           None
+ 272: PRECALL              
+ 276: CALL                 
+ 286: POP_TOP              
+ 288: RETURN_VALUE         
+ 290: PUSH_EXC_INFO        
+ 292: WITH_EXCEPT_START    
+ 294: POP_JUMP_FORWARD_IF_TRUE to 304
+ 296: RERAISE              
+ 298: COPY                 
+ 300: POP_EXCEPT           
+ 302: RERAISE              
+ 304: POP_TOP              
+ 306: POP_EXCEPT           
+ 308: POP_TOP              
+ 310: POP_TOP              
+ 312: LOAD_CONST           None
+ 314: RETURN_VALUE         

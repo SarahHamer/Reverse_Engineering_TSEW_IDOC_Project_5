@@ -1,0 +1,21 @@
+# Disassembly for typing.ForwardRef.__hash__
+# From module file: typing
+
+## co_consts:
+(None,)
+
+## co_names:
+('hash', '__forward_arg__', '__forward_module__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + hash
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            __forward_arg__
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            __forward_module__
+  38: BUILD_TUPLE          
+  40: PRECALL              
+  44: CALL                 
+  54: RETURN_VALUE         

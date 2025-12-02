@@ -1,0 +1,29 @@
+# Disassembly for socket.socket.close
+# From module file: socket
+
+## co_consts:
+(None, True, 0)
+
+## co_names:
+('_closed', '_io_refs', '_real_close')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           True
+   4: LOAD_FAST            self
+   6: STORE_ATTR           _closed
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            _io_refs
+  28: LOAD_CONST           0
+  30: COMPARE_OP           <=
+  36: POP_JUMP_FORWARD_IF_FALSE to 82
+  38: LOAD_FAST            self
+  40: LOAD_METHOD          _real_close
+  62: PRECALL              
+  66: CALL                 
+  76: POP_TOP              
+  78: LOAD_CONST           None
+  80: RETURN_VALUE         
+  82: LOAD_CONST           None
+  84: RETURN_VALUE         

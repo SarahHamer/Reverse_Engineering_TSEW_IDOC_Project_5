@@ -1,0 +1,28 @@
+# Disassembly for threading._enumerate
+# From module file: threading
+
+## co_consts:
+(None,)
+
+## co_names:
+('list', '_active', 'values', '_limbo')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + list
+  14: LOAD_GLOBAL          _active
+  26: LOAD_METHOD          values
+  48: PRECALL              
+  52: CALL                 
+  62: PRECALL              
+  66: CALL                 
+  76: LOAD_GLOBAL          NULL + list
+  88: LOAD_GLOBAL          _limbo
+ 100: LOAD_METHOD          values
+ 122: PRECALL              
+ 126: CALL                 
+ 136: PRECALL              
+ 140: CALL                 
+ 150: BINARY_OP            +
+ 154: RETURN_VALUE         

@@ -1,0 +1,28 @@
+# Disassembly for subprocess.Handle.Detach
+# From module file: subprocess
+
+## co_consts:
+(None, True, 'already closed')
+
+## co_names:
+('closed', 'int', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            closed
+  14: POP_JUMP_FORWARD_IF_TRUE to 60
+  16: LOAD_CONST           True
+  18: LOAD_FAST            self
+  20: STORE_ATTR           closed
+  30: LOAD_GLOBAL          NULL + int
+  42: LOAD_FAST            self
+  44: PRECALL              
+  48: CALL                 
+  58: RETURN_VALUE         
+  60: LOAD_GLOBAL          NULL + ValueError
+  72: LOAD_CONST           'already closed'
+  74: PRECALL              
+  78: CALL                 
+  88: RAISE_VARARGS        

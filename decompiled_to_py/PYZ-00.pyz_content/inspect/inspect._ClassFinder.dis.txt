@@ -1,0 +1,29 @@
+# Disassembly for inspect._ClassFinder
+# From module file: inspect
+
+## co_consts:
+('_ClassFinder', <code object __init__ at 0x0000024069465DF0, file "inspect.py", line 1026>, <code object visit_FunctionDef at 0x00000240691A7D70, file "inspect.py", line 1030>, <code object visit_ClassDef at 0x0000024068BB6D50, file "inspect.py", line 1039>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', 'visit_FunctionDef', 'visit_AsyncFunctionDef', 'visit_ClassDef')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_ClassFinder'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           <code object __init__ at 0x0000024069465DF0, file "inspect.py", line 1026>
+  12: MAKE_FUNCTION        
+  14: STORE_NAME           __init__
+  16: LOAD_CONST           <code object visit_FunctionDef at 0x00000240691A7D70, file "inspect.py", line 1030>
+  18: MAKE_FUNCTION        
+  20: STORE_NAME           visit_FunctionDef
+  22: LOAD_NAME            visit_FunctionDef
+  24: STORE_NAME           visit_AsyncFunctionDef
+  26: LOAD_CONST           <code object visit_ClassDef at 0x0000024068BB6D50, file "inspect.py", line 1039>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           visit_ClassDef
+  32: LOAD_CONST           None
+  34: RETURN_VALUE         

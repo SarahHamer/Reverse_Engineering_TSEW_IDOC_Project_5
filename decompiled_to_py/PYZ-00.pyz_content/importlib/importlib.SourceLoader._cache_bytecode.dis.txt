@@ -1,0 +1,19 @@
+# Disassembly for importlib.SourceLoader._cache_bytecode
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Optional method which writes data (bytes) to a file path (a str).\n\n        Implementing this method allows for the writing of bytecode files.\n\n        The source path is needed in order to correctly transfer permissions\n        ',)
+
+## co_names:
+('set_data',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          set_data
+  26: LOAD_FAST            cache_path
+  28: LOAD_FAST            data
+  30: PRECALL              
+  34: CALL                 
+  44: RETURN_VALUE         

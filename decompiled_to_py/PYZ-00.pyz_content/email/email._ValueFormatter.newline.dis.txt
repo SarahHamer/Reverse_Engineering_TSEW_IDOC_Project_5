@@ -1,0 +1,81 @@
+# Disassembly for email._ValueFormatter.newline
+# From module file: email.header
+
+## co_consts:
+(None, (' ', ''), 0, -1)
+
+## co_names:
+('_current_line', 'pop', 'push', 'len', 'is_onlyws', '_lines', 'str', 'append', 'reset')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _current_line
+  14: LOAD_METHOD          pop
+  36: PRECALL              
+  40: CALL                 
+  50: STORE_FAST           end_of_line
+  52: LOAD_FAST            end_of_line
+  54: LOAD_CONST           (' ', '')
+  56: COMPARE_OP           !=
+  62: POP_JUMP_FORWARD_IF_FALSE to 94
+  64: PUSH_NULL            
+  66: LOAD_FAST            self
+  68: LOAD_ATTR            _current_line
+  78: LOAD_ATTR            push
+  88: LOAD_FAST            end_of_line
+  90: CALL_FUNCTION_EX     
+  92: POP_TOP              
+  94: LOAD_GLOBAL          NULL + len
+ 106: LOAD_FAST            self
+ 108: LOAD_ATTR            _current_line
+ 118: PRECALL              
+ 122: CALL                 
+ 132: LOAD_CONST           0
+ 134: COMPARE_OP           >
+ 140: POP_JUMP_FORWARD_IF_FALSE to 374
+ 142: LOAD_FAST            self
+ 144: LOAD_ATTR            _current_line
+ 154: LOAD_METHOD          is_onlyws
+ 176: PRECALL              
+ 180: CALL                 
+ 190: POP_JUMP_FORWARD_IF_FALSE to 286
+ 192: LOAD_FAST            self
+ 194: LOAD_ATTR            _lines
+ 204: POP_JUMP_FORWARD_IF_FALSE to 286
+ 206: LOAD_FAST            self
+ 208: LOAD_ATTR            _lines
+ 218: LOAD_CONST           -1
+ 220: COPY                 
+ 222: COPY                 
+ 224: BINARY_SUBSCR        
+ 234: LOAD_GLOBAL          NULL + str
+ 246: LOAD_FAST            self
+ 248: LOAD_ATTR            _current_line
+ 258: PRECALL              
+ 262: CALL                 
+ 272: BINARY_OP            +=
+ 276: SWAP                 
+ 278: SWAP                 
+ 280: STORE_SUBSCR         
+ 284: JUMP_FORWARD         to 374
+ 286: LOAD_FAST            self
+ 288: LOAD_ATTR            _lines
+ 298: LOAD_METHOD          append
+ 320: LOAD_GLOBAL          NULL + str
+ 332: LOAD_FAST            self
+ 334: LOAD_ATTR            _current_line
+ 344: PRECALL              
+ 348: CALL                 
+ 358: PRECALL              
+ 362: CALL                 
+ 372: POP_TOP              
+ 374: LOAD_FAST            self
+ 376: LOAD_ATTR            _current_line
+ 386: LOAD_METHOD          reset
+ 408: PRECALL              
+ 412: CALL                 
+ 422: POP_TOP              
+ 424: LOAD_CONST           None
+ 426: RETURN_VALUE         

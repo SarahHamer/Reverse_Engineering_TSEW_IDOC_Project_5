@@ -1,0 +1,238 @@
+# Disassembly for random.Random.sample
+# From module file: random
+
+## co_consts:
+("Chooses k unique random elements from a population sequence.\n\n        Returns a new list containing elements from the population while\n        leaving the original population unchanged.  The resulting list is\n        in selection order so that all sub-slices will also be valid random\n        samples.  This allows raffle winners (the sample) to be partitioned\n        into grand prize and second place winners (the subslices).\n\n        Members of the population need not be hashable or unique.  If the\n        population contains repeats, then each occurrence is a possible\n        selection in the sample.\n\n        Repeated elements can be specified one at a time or with the optional\n        counts parameter.  For example:\n\n            sample(['red', 'blue'], counts=[4, 2], k=5)\n\n        is equivalent to:\n\n            sample(['red', 'red', 'red', 'red', 'blue', 'blue'], k=5)\n\n        To choose a sample from a range of integers, use range() for the\n        population argument.  This is especially fast and space efficient\n        for sampling from a large population:\n\n            sample(range(10000000), 60)\n\n        ", 'Population must be a sequence.  For dicts or sets, use sorted(d).', None, 'The number of counts does not match the population', 'Counts must be integers', 0, 'Total of counts must be greater than zero', ('k',), <code object <listcomp> at 0x000002406945FF00, file "random.py", line 453>, 'Sample larger than population or is negative', 21, 5, 4, 3, 1)
+
+## co_names:
+('isinstance', '_Sequence', 'TypeError', 'len', 'list', '_accumulate', 'ValueError', 'pop', 'int', 'sample', 'range', '_bisect', '_randbelow', '_ceil', '_log', 'set', 'add')
+
+## bytecode:
+
+   0: MAKE_CELL            population
+   2: MAKE_CELL            bisect
+   4: MAKE_CELL            cum_counts
+   6: RESUME               
+   8: LOAD_GLOBAL          NULL + isinstance
+  20: LOAD_DEREF           population
+  22: LOAD_GLOBAL          _Sequence
+  34: PRECALL              
+  38: CALL                 
+  48: POP_JUMP_FORWARD_IF_TRUE to 80
+  50: LOAD_GLOBAL          NULL + TypeError
+  62: LOAD_CONST           'Population must be a sequence.  For dicts or sets, use sorted(d).'
+  64: PRECALL              
+  68: CALL                 
+  78: RAISE_VARARGS        
+  80: LOAD_GLOBAL          NULL + len
+  92: LOAD_DEREF           population
+  94: PRECALL              
+  98: CALL                 
+ 108: STORE_FAST           n
+ 110: LOAD_FAST            counts
+ 112: POP_JUMP_FORWARD_IF_NONE to 510
+ 114: LOAD_GLOBAL          NULL + list
+ 126: LOAD_GLOBAL          NULL + _accumulate
+ 138: LOAD_FAST            counts
+ 140: PRECALL              
+ 144: CALL                 
+ 154: PRECALL              
+ 158: CALL                 
+ 168: STORE_DEREF          cum_counts
+ 170: LOAD_GLOBAL          NULL + len
+ 182: LOAD_DEREF           cum_counts
+ 184: PRECALL              
+ 188: CALL                 
+ 198: LOAD_FAST            n
+ 200: COMPARE_OP           !=
+ 206: POP_JUMP_FORWARD_IF_FALSE to 238
+ 208: LOAD_GLOBAL          NULL + ValueError
+ 220: LOAD_CONST           'The number of counts does not match the population'
+ 222: PRECALL              
+ 226: CALL                 
+ 236: RAISE_VARARGS        
+ 238: LOAD_DEREF           cum_counts
+ 240: LOAD_METHOD          pop
+ 262: PRECALL              
+ 266: CALL                 
+ 276: STORE_FAST           total
+ 278: LOAD_GLOBAL          NULL + isinstance
+ 290: LOAD_FAST            total
+ 292: LOAD_GLOBAL          int
+ 304: PRECALL              
+ 308: CALL                 
+ 318: POP_JUMP_FORWARD_IF_TRUE to 350
+ 320: LOAD_GLOBAL          NULL + TypeError
+ 332: LOAD_CONST           'Counts must be integers'
+ 334: PRECALL              
+ 338: CALL                 
+ 348: RAISE_VARARGS        
+ 350: LOAD_FAST            total
+ 352: LOAD_CONST           0
+ 354: COMPARE_OP           <=
+ 360: POP_JUMP_FORWARD_IF_FALSE to 392
+ 362: LOAD_GLOBAL          NULL + ValueError
+ 374: LOAD_CONST           'Total of counts must be greater than zero'
+ 376: PRECALL              
+ 380: CALL                 
+ 390: RAISE_VARARGS        
+ 392: LOAD_FAST            self
+ 394: LOAD_METHOD          sample
+ 416: LOAD_GLOBAL          NULL + range
+ 428: LOAD_FAST            total
+ 430: PRECALL              
+ 434: CALL                 
+ 444: LOAD_FAST            k
+ 446: KW_NAMES             
+ 448: PRECALL              
+ 452: CALL                 
+ 462: STORE_FAST           selections
+ 464: LOAD_GLOBAL          _bisect
+ 476: STORE_DEREF          bisect
+ 478: LOAD_CLOSURE         bisect
+ 480: LOAD_CLOSURE         cum_counts
+ 482: LOAD_CLOSURE         population
+ 484: BUILD_TUPLE          
+ 486: LOAD_CONST           <code object <listcomp> at 0x000002406945FF00, file "random.py", line 453>
+ 488: MAKE_FUNCTION        closure
+ 490: LOAD_FAST            selections
+ 492: GET_ITER             
+ 494: PRECALL              
+ 498: CALL                 
+ 508: RETURN_VALUE         
+ 510: LOAD_FAST            self
+ 512: LOAD_ATTR            _randbelow
+ 522: STORE_FAST           randbelow
+ 524: LOAD_CONST           0
+ 526: LOAD_FAST            k
+ 528: SWAP                 
+ 530: COPY                 
+ 532: COMPARE_OP           <=
+ 538: POP_JUMP_FORWARD_IF_FALSE to 552
+ 540: LOAD_FAST            n
+ 542: COMPARE_OP           <=
+ 548: POP_JUMP_FORWARD_IF_TRUE to 584
+ 550: JUMP_FORWARD         to 554
+ 552: POP_TOP              
+ 554: LOAD_GLOBAL          NULL + ValueError
+ 566: LOAD_CONST           'Sample larger than population or is negative'
+ 568: PRECALL              
+ 572: CALL                 
+ 582: RAISE_VARARGS        
+ 584: LOAD_CONST           None
+ 586: BUILD_LIST           
+ 588: LOAD_FAST            k
+ 590: BINARY_OP            *
+ 594: STORE_FAST           result
+ 596: LOAD_CONST           21
+ 598: STORE_FAST           setsize
+ 600: LOAD_FAST            k
+ 602: LOAD_CONST           5
+ 604: COMPARE_OP           >
+ 610: POP_JUMP_FORWARD_IF_FALSE to 688
+ 612: LOAD_FAST            setsize
+ 614: LOAD_CONST           4
+ 616: LOAD_GLOBAL          NULL + _ceil
+ 628: LOAD_GLOBAL          NULL + _log
+ 640: LOAD_FAST            k
+ 642: LOAD_CONST           3
+ 644: BINARY_OP            *
+ 648: LOAD_CONST           4
+ 650: PRECALL              
+ 654: CALL                 
+ 664: PRECALL              
+ 668: CALL                 
+ 678: BINARY_OP            **
+ 682: BINARY_OP            +=
+ 686: STORE_FAST           setsize
+ 688: LOAD_FAST            n
+ 690: LOAD_FAST            setsize
+ 692: COMPARE_OP           <=
+ 698: POP_JUMP_FORWARD_IF_FALSE to 852
+ 700: LOAD_GLOBAL          NULL + list
+ 712: LOAD_DEREF           population
+ 714: PRECALL              
+ 718: CALL                 
+ 728: STORE_FAST           pool
+ 730: LOAD_GLOBAL          NULL + range
+ 742: LOAD_FAST            k
+ 744: PRECALL              
+ 748: CALL                 
+ 758: GET_ITER             
+ 760: FOR_ITER             to 850
+ 762: STORE_FAST           i
+ 764: PUSH_NULL            
+ 766: LOAD_FAST            randbelow
+ 768: LOAD_FAST            n
+ 770: LOAD_FAST            i
+ 772: BINARY_OP            -
+ 776: PRECALL              
+ 780: CALL                 
+ 790: STORE_FAST           j
+ 792: LOAD_FAST            pool
+ 794: LOAD_FAST            j
+ 796: BINARY_SUBSCR        
+ 806: LOAD_FAST            result
+ 808: LOAD_FAST            i
+ 810: STORE_SUBSCR         
+ 814: LOAD_FAST            pool
+ 816: LOAD_FAST            n
+ 818: LOAD_FAST            i
+ 820: BINARY_OP            -
+ 824: LOAD_CONST           1
+ 826: BINARY_OP            -
+ 830: BINARY_SUBSCR        
+ 840: LOAD_FAST            pool
+ 842: LOAD_FAST            j
+ 844: STORE_SUBSCR         
+ 848: JUMP_BACKWARD        to 760
+ 850: JUMP_FORWARD         to 1034
+ 852: LOAD_GLOBAL          NULL + set
+ 864: PRECALL              
+ 868: CALL                 
+ 878: STORE_FAST           selected
+ 880: LOAD_FAST            selected
+ 882: LOAD_ATTR            add
+ 892: STORE_FAST           selected_add
+ 894: LOAD_GLOBAL          NULL + range
+ 906: LOAD_FAST            k
+ 908: PRECALL              
+ 912: CALL                 
+ 922: GET_ITER             
+ 924: FOR_ITER             to 1034
+ 926: STORE_FAST           i
+ 928: PUSH_NULL            
+ 930: LOAD_FAST            randbelow
+ 932: LOAD_FAST            n
+ 934: PRECALL              
+ 938: CALL                 
+ 948: STORE_FAST           j
+ 950: LOAD_FAST            j
+ 952: LOAD_FAST            selected
+ 954: CONTAINS_OP          
+ 956: POP_JUMP_FORWARD_IF_FALSE to 988
+ 958: PUSH_NULL            
+ 960: LOAD_FAST            randbelow
+ 962: LOAD_FAST            n
+ 964: PRECALL              
+ 968: CALL                 
+ 978: STORE_FAST           j
+ 980: LOAD_FAST            j
+ 982: LOAD_FAST            selected
+ 984: CONTAINS_OP          
+ 986: POP_JUMP_BACKWARD_IF_TRUE to 958
+ 988: PUSH_NULL            
+ 990: LOAD_FAST            selected_add
+ 992: LOAD_FAST            j
+ 994: PRECALL              
+ 998: CALL                 
+1008: POP_TOP              
+1010: LOAD_DEREF           population
+1012: LOAD_FAST            j
+1014: BINARY_SUBSCR        
+1024: LOAD_FAST            result
+1026: LOAD_FAST            i
+1028: STORE_SUBSCR         
+1032: JUMP_BACKWARD        to 924
+1034: LOAD_FAST            result
+1036: RETURN_VALUE         

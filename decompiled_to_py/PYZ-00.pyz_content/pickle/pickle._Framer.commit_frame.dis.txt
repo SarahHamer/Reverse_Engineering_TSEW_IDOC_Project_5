@@ -1,0 +1,77 @@
+# Disassembly for pickle._Framer.commit_frame
+# From module file: pickle
+
+## co_consts:
+(None, '<Q')
+
+## co_names:
+('current_frame', 'tell', '_FRAME_SIZE_TARGET', 'getbuffer', 'file_write', 'len', '_FRAME_SIZE_MIN', 'FRAME', 'pack', 'io', 'BytesIO')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            current_frame
+  14: POP_JUMP_FORWARD_IF_FALSE to 360
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            current_frame
+  28: STORE_FAST           f
+  30: LOAD_FAST            f
+  32: LOAD_METHOD          tell
+  54: PRECALL              
+  58: CALL                 
+  68: LOAD_FAST            self
+  70: LOAD_ATTR            _FRAME_SIZE_TARGET
+  80: COMPARE_OP           >=
+  86: POP_JUMP_FORWARD_IF_TRUE to 92
+  88: LOAD_FAST            force
+  90: POP_JUMP_FORWARD_IF_FALSE to 364
+  92: LOAD_FAST            f
+  94: LOAD_METHOD          getbuffer
+ 116: PRECALL              
+ 120: CALL                 
+ 130: STORE_FAST           data
+ 132: LOAD_FAST            self
+ 134: LOAD_ATTR            file_write
+ 144: STORE_FAST           write
+ 146: LOAD_GLOBAL          NULL + len
+ 158: LOAD_FAST            data
+ 160: PRECALL              
+ 164: CALL                 
+ 174: LOAD_FAST            self
+ 176: LOAD_ATTR            _FRAME_SIZE_MIN
+ 186: COMPARE_OP           >=
+ 192: POP_JUMP_FORWARD_IF_FALSE to 286
+ 194: PUSH_NULL            
+ 196: LOAD_FAST            write
+ 198: LOAD_GLOBAL          FRAME
+ 210: LOAD_GLOBAL          NULL + pack
+ 222: LOAD_CONST           '<Q'
+ 224: LOAD_GLOBAL          NULL + len
+ 236: LOAD_FAST            data
+ 238: PRECALL              
+ 242: CALL                 
+ 252: PRECALL              
+ 256: CALL                 
+ 266: BINARY_OP            +
+ 270: PRECALL              
+ 274: CALL                 
+ 284: POP_TOP              
+ 286: PUSH_NULL            
+ 288: LOAD_FAST            write
+ 290: LOAD_FAST            data
+ 292: PRECALL              
+ 296: CALL                 
+ 306: POP_TOP              
+ 308: LOAD_GLOBAL          NULL + io
+ 320: LOAD_ATTR            BytesIO
+ 330: PRECALL              
+ 334: CALL                 
+ 344: LOAD_FAST            self
+ 346: STORE_ATTR           current_frame
+ 356: LOAD_CONST           None
+ 358: RETURN_VALUE         
+ 360: LOAD_CONST           None
+ 362: RETURN_VALUE         
+ 364: LOAD_CONST           None
+ 366: RETURN_VALUE         

@@ -1,0 +1,14 @@
+# Disassembly for importlib.resources.CompatibilityFiles.OrphanPath.is_file
+# From module file: importlib.resources._adapters
+
+## co_consts:
+(None, False)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           False
+   4: RETURN_VALUE         

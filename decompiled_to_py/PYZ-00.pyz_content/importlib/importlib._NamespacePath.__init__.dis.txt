@@ -1,0 +1,36 @@
+# Disassembly for importlib._NamespacePath.__init__
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+(None,)
+
+## co_names:
+('_name', '_path', 'tuple', '_get_parent_path', '_last_parent_path', '_epoch', '_last_epoch', '_path_finder')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            name
+   4: LOAD_FAST            self
+   6: STORE_ATTR           _name
+  16: LOAD_FAST            path
+  18: LOAD_FAST            self
+  20: STORE_ATTR           _path
+  30: LOAD_GLOBAL          NULL + tuple
+  42: LOAD_FAST            self
+  44: LOAD_METHOD          _get_parent_path
+  66: PRECALL              
+  70: CALL                 
+  80: PRECALL              
+  84: CALL                 
+  94: LOAD_FAST            self
+  96: STORE_ATTR           _last_parent_path
+ 106: LOAD_FAST            self
+ 108: LOAD_ATTR            _epoch
+ 118: LOAD_FAST            self
+ 120: STORE_ATTR           _last_epoch
+ 130: LOAD_FAST            path_finder
+ 132: LOAD_FAST            self
+ 134: STORE_ATTR           _path_finder
+ 144: LOAD_CONST           None
+ 146: RETURN_VALUE         

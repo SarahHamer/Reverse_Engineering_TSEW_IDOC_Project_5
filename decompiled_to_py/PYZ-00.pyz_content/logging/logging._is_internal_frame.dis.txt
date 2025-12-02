@@ -1,0 +1,33 @@
+# Disassembly for logging._is_internal_frame
+# From module file: logging
+
+## co_consts:
+('Signal whether the frame is a CPython or logging module internal.', 'importlib', '_bootstrap')
+
+## co_names:
+('os', 'path', 'normcase', 'f_code', 'co_filename', '_srcfile')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          os
+  14: LOAD_ATTR            path
+  24: LOAD_METHOD          normcase
+  46: LOAD_FAST            frame
+  48: LOAD_ATTR            f_code
+  58: LOAD_ATTR            co_filename
+  68: PRECALL              
+  72: CALL                 
+  82: STORE_FAST           filename
+  84: LOAD_FAST            filename
+  86: LOAD_GLOBAL          _srcfile
+  98: COMPARE_OP           ==
+ 104: JUMP_IF_TRUE_OR_POP  to 120
+ 106: LOAD_CONST           'importlib'
+ 108: LOAD_FAST            filename
+ 110: CONTAINS_OP          
+ 112: JUMP_IF_FALSE_OR_POP to 120
+ 114: LOAD_CONST           '_bootstrap'
+ 116: LOAD_FAST            filename
+ 118: CONTAINS_OP          
+ 120: RETURN_VALUE         

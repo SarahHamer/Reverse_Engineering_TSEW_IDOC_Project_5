@@ -1,0 +1,17 @@
+# Disassembly for typing.ParamSpec.args
+# From module file: typing
+
+## co_consts:
+(None,)
+
+## co_names:
+('ParamSpecArgs',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + ParamSpecArgs
+  14: LOAD_FAST            self
+  16: PRECALL              
+  20: CALL                 
+  30: RETURN_VALUE         

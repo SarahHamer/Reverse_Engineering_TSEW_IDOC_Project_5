@@ -1,0 +1,33 @@
+# Disassembly for email.UnstructuredHeader
+# From module file: email.headerregistry
+
+## co_consts:
+('UnstructuredHeader', None, <code object parse at 0x0000024069419D70, file "email\headerregistry.py", line 265>)
+
+## co_names:
+('__name__', '__module__', '__qualname__', 'max_count', 'staticmethod', 'parser', 'get_unstructured', 'value_parser', 'classmethod', 'parse')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'UnstructuredHeader'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           None
+  12: STORE_NAME           max_count
+  14: PUSH_NULL            
+  16: LOAD_NAME            staticmethod
+  18: LOAD_NAME            parser
+  20: LOAD_ATTR            get_unstructured
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_NAME           value_parser
+  46: LOAD_NAME            classmethod
+  48: LOAD_CONST           <code object parse at 0x0000024069419D70, file "email\headerregistry.py", line 265>
+  50: MAKE_FUNCTION        
+  52: PRECALL              
+  56: CALL                 
+  66: STORE_NAME           parse
+  68: LOAD_CONST           None
+  70: RETURN_VALUE         

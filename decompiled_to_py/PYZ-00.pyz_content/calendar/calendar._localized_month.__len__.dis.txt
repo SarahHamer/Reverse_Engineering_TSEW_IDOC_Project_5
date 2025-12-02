@@ -1,0 +1,14 @@
+# Disassembly for calendar._localized_month.__len__
+# From module file: calendar
+
+## co_consts:
+(None, 13)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           13
+   4: RETURN_VALUE         

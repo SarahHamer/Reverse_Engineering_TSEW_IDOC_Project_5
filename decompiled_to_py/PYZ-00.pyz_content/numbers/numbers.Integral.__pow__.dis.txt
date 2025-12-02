@@ -1,0 +1,14 @@
+# Disassembly for numbers.Integral.__pow__
+# From module file: numbers
+
+## co_consts:
+("self ** exponent % modulus, but maybe faster.\n\n        Accept the modulus argument if you want to support the\n        3-argument version of pow(). Raise a TypeError if exponent < 0\n        or any argument isn't Integral. Otherwise, just implement the\n        2-argument version described in Complex.\n        ",)
+
+## co_names:
+('NotImplementedError',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NotImplementedError
+  14: RAISE_VARARGS        

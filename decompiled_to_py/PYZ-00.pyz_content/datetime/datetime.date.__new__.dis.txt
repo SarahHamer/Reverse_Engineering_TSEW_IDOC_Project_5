@@ -1,0 +1,123 @@
+# Disassembly for datetime.date.__new__
+# From module file: datetime
+
+## co_consts:
+('Constructor.\n\n        Arguments:\n\n        year, month, day (required, base 1)\n        ', None, 4, 1, 2, 3, 12, 'latin1', "Failed to encode latin1 string when unpickling a date object. pickle.load(data, encoding='latin1') is assumed.", -1)
+
+## co_names:
+('isinstance', 'bytes', 'str', 'len', 'ord', 'encode', 'UnicodeEncodeError', 'ValueError', 'object', '__new__', '_date__setstate', '_hashcode', '_check_date_fields', '_year', '_month', '_day')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            month
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 432
+   6: LOAD_GLOBAL          NULL + isinstance
+  18: LOAD_FAST            year
+  20: LOAD_GLOBAL          bytes
+  32: LOAD_GLOBAL          str
+  44: BUILD_TUPLE          
+  46: PRECALL              
+  50: CALL                 
+  60: POP_JUMP_FORWARD_IF_FALSE to 432
+  62: LOAD_GLOBAL          NULL + len
+  74: LOAD_FAST            year
+  76: PRECALL              
+  80: CALL                 
+  90: LOAD_CONST           4
+  92: COMPARE_OP           ==
+  98: POP_JUMP_FORWARD_IF_FALSE to 432
+ 100: LOAD_CONST           1
+ 102: LOAD_GLOBAL          NULL + ord
+ 114: LOAD_FAST            year
+ 116: LOAD_CONST           2
+ 118: LOAD_CONST           3
+ 120: BUILD_SLICE          
+ 122: BINARY_SUBSCR        
+ 132: PRECALL              
+ 136: CALL                 
+ 146: SWAP                 
+ 148: COPY                 
+ 150: COMPARE_OP           <=
+ 156: POP_JUMP_FORWARD_IF_FALSE to 170
+ 158: LOAD_CONST           12
+ 160: COMPARE_OP           <=
+ 166: POP_JUMP_FORWARD_IF_FALSE to 432
+ 168: JUMP_FORWARD         to 174
+ 170: POP_TOP              
+ 172: JUMP_FORWARD         to 432
+ 174: LOAD_GLOBAL          NULL + isinstance
+ 186: LOAD_FAST            year
+ 188: LOAD_GLOBAL          str
+ 200: PRECALL              
+ 204: CALL                 
+ 214: POP_JUMP_FORWARD_IF_FALSE to 320
+ 216: NOP                  
+ 218: LOAD_FAST            year
+ 220: LOAD_METHOD          encode
+ 242: LOAD_CONST           'latin1'
+ 244: PRECALL              
+ 248: CALL                 
+ 258: STORE_FAST           year
+ 260: JUMP_FORWARD         to 320
+ 262: PUSH_EXC_INFO        
+ 264: LOAD_GLOBAL          UnicodeEncodeError
+ 276: CHECK_EXC_MATCH      
+ 278: POP_JUMP_FORWARD_IF_FALSE to 312
+ 280: POP_TOP              
+ 282: LOAD_GLOBAL          NULL + ValueError
+ 294: LOAD_CONST           "Failed to encode latin1 string when unpickling a date object. pickle.load(data, encoding='latin1') is assumed."
+ 296: PRECALL              
+ 300: CALL                 
+ 310: RAISE_VARARGS        
+ 312: RERAISE              
+ 314: COPY                 
+ 316: POP_EXCEPT           
+ 318: RERAISE              
+ 320: LOAD_GLOBAL          object
+ 332: LOAD_METHOD          __new__
+ 354: LOAD_FAST            cls
+ 356: PRECALL              
+ 360: CALL                 
+ 370: STORE_FAST           self
+ 372: LOAD_FAST            self
+ 374: LOAD_METHOD          _date__setstate
+ 396: LOAD_FAST            year
+ 398: PRECALL              
+ 402: CALL                 
+ 412: POP_TOP              
+ 414: LOAD_CONST           -1
+ 416: LOAD_FAST            self
+ 418: STORE_ATTR           _hashcode
+ 428: LOAD_FAST            self
+ 430: RETURN_VALUE         
+ 432: LOAD_GLOBAL          NULL + _check_date_fields
+ 444: LOAD_FAST            year
+ 446: LOAD_FAST            month
+ 448: LOAD_FAST            day
+ 450: PRECALL              
+ 454: CALL                 
+ 464: UNPACK_SEQUENCE      
+ 468: STORE_FAST           year
+ 470: STORE_FAST           month
+ 472: STORE_FAST           day
+ 474: LOAD_GLOBAL          object
+ 486: LOAD_METHOD          __new__
+ 508: LOAD_FAST            cls
+ 510: PRECALL              
+ 514: CALL                 
+ 524: STORE_FAST           self
+ 526: LOAD_FAST            year
+ 528: LOAD_FAST            self
+ 530: STORE_ATTR           _year
+ 540: LOAD_FAST            month
+ 542: LOAD_FAST            self
+ 544: STORE_ATTR           _month
+ 554: LOAD_FAST            day
+ 556: LOAD_FAST            self
+ 558: STORE_ATTR           _day
+ 568: LOAD_CONST           -1
+ 570: LOAD_FAST            self
+ 572: STORE_ATTR           _hashcode
+ 582: LOAD_FAST            self
+ 584: RETURN_VALUE         

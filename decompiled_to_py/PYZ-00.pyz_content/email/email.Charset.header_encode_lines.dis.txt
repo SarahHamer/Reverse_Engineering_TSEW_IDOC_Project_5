@@ -1,0 +1,169 @@
+# Disassembly for email.Charset.header_encode_lines
+# From module file: email.charset
+
+## co_consts:
+("Header-encode a string by converting it first to bytes.\n\n        This is similar to `header_encode()` except that the string is fit\n        into maximum line lengths as given by the argument.\n\n        :param string: A unicode string for the header.  It must be possible\n            to encode this string to bytes using the character set's\n            output codec.\n        :param maxlengths: Maximum line length iterator.  Each element\n            returned from this iterator will provide the next maximum line\n            length.  This parameter is used as an argument to built-in next()\n            and should never be exhausted.  The maximum line lengths should\n            not count the RFC 2047 chrome.  These line lengths are only a\n            hint; the splitter does the best it can.\n        :return: Lines of encoded strings, each with RFC 2047 chrome.\n        ", 'us-ascii', ('charset',), None, ' ', '')
+
+## co_names:
+('output_codec', '_encode', '_get_encoder', 'partial', 'header_encode', 'get_output_charset', 'len', 'RFC2047_CHROME_LEN', 'next', 'append', 'EMPTYSTRING', 'join', 'header_length', 'pop')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            output_codec
+  14: JUMP_IF_TRUE_OR_POP  to 18
+  16: LOAD_CONST           'us-ascii'
+  18: STORE_FAST           codec
+  20: LOAD_GLOBAL          NULL + _encode
+  32: LOAD_FAST            string
+  34: LOAD_FAST            codec
+  36: PRECALL              
+  40: CALL                 
+  50: STORE_FAST           header_bytes
+  52: LOAD_FAST            self
+  54: LOAD_METHOD          _get_encoder
+  76: LOAD_FAST            header_bytes
+  78: PRECALL              
+  82: CALL                 
+  92: STORE_FAST           encoder_module
+  94: LOAD_GLOBAL          NULL + partial
+ 106: LOAD_FAST            encoder_module
+ 108: LOAD_ATTR            header_encode
+ 118: LOAD_FAST            codec
+ 120: KW_NAMES             
+ 122: PRECALL              
+ 126: CALL                 
+ 136: STORE_FAST           encoder
+ 138: LOAD_FAST            self
+ 140: LOAD_METHOD          get_output_charset
+ 162: PRECALL              
+ 166: CALL                 
+ 176: STORE_FAST           charset
+ 178: LOAD_GLOBAL          NULL + len
+ 190: LOAD_FAST            charset
+ 192: PRECALL              
+ 196: CALL                 
+ 206: LOAD_GLOBAL          RFC2047_CHROME_LEN
+ 218: BINARY_OP            +
+ 222: STORE_FAST           extra
+ 224: BUILD_LIST           
+ 226: STORE_FAST           lines
+ 228: BUILD_LIST           
+ 230: STORE_FAST           current_line
+ 232: LOAD_GLOBAL          NULL + next
+ 244: LOAD_FAST            maxlengths
+ 246: PRECALL              
+ 250: CALL                 
+ 260: LOAD_FAST            extra
+ 262: BINARY_OP            -
+ 266: STORE_FAST           maxlen
+ 268: LOAD_FAST            string
+ 270: GET_ITER             
+ 272: FOR_ITER             to 744
+ 274: STORE_FAST           character
+ 276: LOAD_FAST            current_line
+ 278: LOAD_METHOD          append
+ 300: LOAD_FAST            character
+ 302: PRECALL              
+ 306: CALL                 
+ 316: POP_TOP              
+ 318: LOAD_GLOBAL          EMPTYSTRING
+ 330: LOAD_METHOD          join
+ 352: LOAD_FAST            current_line
+ 354: PRECALL              
+ 358: CALL                 
+ 368: STORE_FAST           this_line
+ 370: LOAD_FAST            encoder_module
+ 372: LOAD_METHOD          header_length
+ 394: LOAD_GLOBAL          NULL + _encode
+ 406: LOAD_FAST            this_line
+ 408: LOAD_FAST            charset
+ 410: PRECALL              
+ 414: CALL                 
+ 424: PRECALL              
+ 428: CALL                 
+ 438: STORE_FAST           length
+ 440: LOAD_FAST            length
+ 442: LOAD_FAST            maxlen
+ 444: COMPARE_OP           >
+ 450: POP_JUMP_FORWARD_IF_FALSE to 742
+ 452: LOAD_FAST            current_line
+ 454: LOAD_METHOD          pop
+ 476: PRECALL              
+ 480: CALL                 
+ 490: POP_TOP              
+ 492: LOAD_FAST            lines
+ 494: POP_JUMP_FORWARD_IF_TRUE to 544
+ 496: LOAD_FAST            current_line
+ 498: POP_JUMP_FORWARD_IF_TRUE to 544
+ 500: LOAD_FAST            lines
+ 502: LOAD_METHOD          append
+ 524: LOAD_CONST           None
+ 526: PRECALL              
+ 530: CALL                 
+ 540: POP_TOP              
+ 542: JUMP_FORWARD         to 700
+ 544: LOAD_FAST            lines
+ 546: POP_JUMP_FORWARD_IF_FALSE to 552
+ 548: LOAD_CONST           ' '
+ 550: JUMP_FORWARD         to 554
+ 552: LOAD_CONST           ''
+ 554: STORE_FAST           separator
+ 556: LOAD_GLOBAL          EMPTYSTRING
+ 568: LOAD_METHOD          join
+ 590: LOAD_FAST            current_line
+ 592: PRECALL              
+ 596: CALL                 
+ 606: STORE_FAST           joined_line
+ 608: LOAD_GLOBAL          NULL + _encode
+ 620: LOAD_FAST            joined_line
+ 622: LOAD_FAST            codec
+ 624: PRECALL              
+ 628: CALL                 
+ 638: STORE_FAST           header_bytes
+ 640: LOAD_FAST            lines
+ 642: LOAD_METHOD          append
+ 664: PUSH_NULL            
+ 666: LOAD_FAST            encoder
+ 668: LOAD_FAST            header_bytes
+ 670: PRECALL              
+ 674: CALL                 
+ 684: PRECALL              
+ 688: CALL                 
+ 698: POP_TOP              
+ 700: LOAD_FAST            character
+ 702: BUILD_LIST           
+ 704: STORE_FAST           current_line
+ 706: LOAD_GLOBAL          NULL + next
+ 718: LOAD_FAST            maxlengths
+ 720: PRECALL              
+ 724: CALL                 
+ 734: LOAD_FAST            extra
+ 736: BINARY_OP            -
+ 740: STORE_FAST           maxlen
+ 742: JUMP_BACKWARD        to 272
+ 744: LOAD_GLOBAL          EMPTYSTRING
+ 756: LOAD_METHOD          join
+ 778: LOAD_FAST            current_line
+ 780: PRECALL              
+ 784: CALL                 
+ 794: STORE_FAST           joined_line
+ 796: LOAD_GLOBAL          NULL + _encode
+ 808: LOAD_FAST            joined_line
+ 810: LOAD_FAST            codec
+ 812: PRECALL              
+ 816: CALL                 
+ 826: STORE_FAST           header_bytes
+ 828: LOAD_FAST            lines
+ 830: LOAD_METHOD          append
+ 852: PUSH_NULL            
+ 854: LOAD_FAST            encoder
+ 856: LOAD_FAST            header_bytes
+ 858: PRECALL              
+ 862: CALL                 
+ 872: PRECALL              
+ 876: CALL                 
+ 886: POP_TOP              
+ 888: LOAD_FAST            lines
+ 890: RETURN_VALUE         

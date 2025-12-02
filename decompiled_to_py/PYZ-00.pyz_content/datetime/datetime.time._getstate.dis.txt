@@ -1,0 +1,67 @@
+# Disassembly for datetime.time._getstate
+# From module file: datetime
+
+## co_consts:
+(None, 256, 3, 128)
+
+## co_names:
+('divmod', '_microsecond', '_hour', '_fold', 'bytes', '_minute', '_second', '_tzinfo')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + divmod
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            _microsecond
+  26: LOAD_CONST           256
+  28: PRECALL              
+  32: CALL                 
+  42: UNPACK_SEQUENCE      
+  46: STORE_FAST           us2
+  48: STORE_FAST           us3
+  50: LOAD_GLOBAL          NULL + divmod
+  62: LOAD_FAST            us2
+  64: LOAD_CONST           256
+  66: PRECALL              
+  70: CALL                 
+  80: UNPACK_SEQUENCE      
+  84: STORE_FAST           us1
+  86: STORE_FAST           us2
+  88: LOAD_FAST            self
+  90: LOAD_ATTR            _hour
+ 100: STORE_FAST           h
+ 102: LOAD_FAST            self
+ 104: LOAD_ATTR            _fold
+ 114: POP_JUMP_FORWARD_IF_FALSE to 138
+ 116: LOAD_FAST            protocol
+ 118: LOAD_CONST           3
+ 120: COMPARE_OP           >
+ 126: POP_JUMP_FORWARD_IF_FALSE to 138
+ 128: LOAD_FAST            h
+ 130: LOAD_CONST           128
+ 132: BINARY_OP            +=
+ 136: STORE_FAST           h
+ 138: LOAD_GLOBAL          NULL + bytes
+ 150: LOAD_FAST            h
+ 152: LOAD_FAST            self
+ 154: LOAD_ATTR            _minute
+ 164: LOAD_FAST            self
+ 166: LOAD_ATTR            _second
+ 176: LOAD_FAST            us1
+ 178: LOAD_FAST            us2
+ 180: LOAD_FAST            us3
+ 182: BUILD_LIST           
+ 184: PRECALL              
+ 188: CALL                 
+ 198: STORE_FAST           basestate
+ 200: LOAD_FAST            self
+ 202: LOAD_ATTR            _tzinfo
+ 212: POP_JUMP_FORWARD_IF_NOT_NONE to 220
+ 214: LOAD_FAST            basestate
+ 216: BUILD_TUPLE          
+ 218: RETURN_VALUE         
+ 220: LOAD_FAST            basestate
+ 222: LOAD_FAST            self
+ 224: LOAD_ATTR            _tzinfo
+ 234: BUILD_TUPLE          
+ 236: RETURN_VALUE         

@@ -1,0 +1,35 @@
+# Disassembly for tarfile._FileInFile.readinto
+# From module file: tarfile
+
+## co_consts:
+(None,)
+
+## co_names:
+('read', 'len')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          read
+  26: LOAD_GLOBAL          NULL + len
+  38: LOAD_FAST            b
+  40: PRECALL              
+  44: CALL                 
+  54: PRECALL              
+  58: CALL                 
+  68: STORE_FAST           buf
+  70: LOAD_FAST            buf
+  72: LOAD_FAST            b
+  74: LOAD_CONST           None
+  76: LOAD_GLOBAL          NULL + len
+  88: LOAD_FAST            buf
+  90: PRECALL              
+  94: CALL                 
+ 104: BUILD_SLICE          
+ 106: STORE_SUBSCR         
+ 110: LOAD_GLOBAL          NULL + len
+ 122: LOAD_FAST            buf
+ 124: PRECALL              
+ 128: CALL                 
+ 138: RETURN_VALUE         

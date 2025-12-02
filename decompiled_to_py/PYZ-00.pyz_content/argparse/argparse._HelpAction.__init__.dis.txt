@@ -1,0 +1,30 @@
+# Disassembly for argparse._HelpAction.__init__
+# From module file: argparse
+
+## co_consts:
+(None, 0, ('option_strings', 'dest', 'default', 'nargs', 'help'))
+
+## co_names:
+('super', '_HelpAction', '__init__')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + super
+  16: LOAD_GLOBAL          _HelpAction
+  28: LOAD_FAST            self
+  30: PRECALL              
+  34: CALL                 
+  44: LOAD_METHOD          __init__
+  66: LOAD_FAST            option_strings
+  68: LOAD_FAST            dest
+  70: LOAD_FAST            default
+  72: LOAD_CONST           0
+  74: LOAD_FAST            help
+  76: KW_NAMES             
+  78: PRECALL              
+  82: CALL                 
+  92: POP_TOP              
+  94: LOAD_CONST           None
+  96: RETURN_VALUE         

@@ -1,0 +1,46 @@
+# Disassembly for bz2.BZ2File.readline
+# From module file: bz2
+
+## co_consts:
+("Read a line of uncompressed bytes from the file.\n\n        The terminating newline (if present) is retained. If size is\n        non-negative, no more than size bytes will be read (in which\n        case the line may be incomplete). Returns b'' if already at EOF.\n        ", '__index__', 'Integer argument expected')
+
+## co_names:
+('isinstance', 'int', 'hasattr', 'TypeError', '__index__', '_check_can_read', '_buffer', 'readline')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            size
+  16: LOAD_GLOBAL          int
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_TRUE to 146
+  44: LOAD_GLOBAL          NULL + hasattr
+  56: LOAD_FAST            size
+  58: LOAD_CONST           '__index__'
+  60: PRECALL              
+  64: CALL                 
+  74: POP_JUMP_FORWARD_IF_TRUE to 106
+  76: LOAD_GLOBAL          NULL + TypeError
+  88: LOAD_CONST           'Integer argument expected'
+  90: PRECALL              
+  94: CALL                 
+ 104: RAISE_VARARGS        
+ 106: LOAD_FAST            size
+ 108: LOAD_METHOD          __index__
+ 130: PRECALL              
+ 134: CALL                 
+ 144: STORE_FAST           size
+ 146: LOAD_FAST            self
+ 148: LOAD_METHOD          _check_can_read
+ 170: PRECALL              
+ 174: CALL                 
+ 184: POP_TOP              
+ 186: LOAD_FAST            self
+ 188: LOAD_ATTR            _buffer
+ 198: LOAD_METHOD          readline
+ 220: LOAD_FAST            size
+ 222: PRECALL              
+ 226: CALL                 
+ 236: RETURN_VALUE         

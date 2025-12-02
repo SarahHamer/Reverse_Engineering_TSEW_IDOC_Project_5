@@ -1,0 +1,17 @@
+# Disassembly for calendar.Calendar.setfirstweekday
+# From module file: calendar
+
+## co_consts:
+(None,)
+
+## co_names:
+('_firstweekday',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            firstweekday
+   4: LOAD_FAST            self
+   6: STORE_ATTR           _firstweekday
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         

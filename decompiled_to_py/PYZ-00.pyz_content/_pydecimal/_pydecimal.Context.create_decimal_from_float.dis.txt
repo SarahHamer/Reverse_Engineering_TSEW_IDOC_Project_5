@@ -1,0 +1,24 @@
+# Disassembly for _pydecimal.Context.create_decimal_from_float
+# From module file: _pydecimal
+
+## co_consts:
+("Creates a new Decimal instance from a float but rounding using self\n        as the context.\n\n        >>> context = Context(prec=5, rounding=ROUND_DOWN)\n        >>> context.create_decimal_from_float(3.1415926535897932)\n        Decimal('3.1415')\n        >>> context = Context(prec=5, traps=[Inexact])\n        >>> context.create_decimal_from_float(3.1415926535897932)\n        Traceback (most recent call last):\n            ...\n        decimal.Inexact: None\n\n        ",)
+
+## co_names:
+('Decimal', 'from_float', '_fix')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          Decimal
+  14: LOAD_METHOD          from_float
+  36: LOAD_FAST            f
+  38: PRECALL              
+  42: CALL                 
+  52: STORE_FAST           d
+  54: LOAD_FAST            d
+  56: LOAD_METHOD          _fix
+  78: LOAD_FAST            self
+  80: PRECALL              
+  84: CALL                 
+  94: RETURN_VALUE         

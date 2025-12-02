@@ -1,0 +1,28 @@
+# Disassembly for _pydecimal.Decimal._round_floor
+# From module file: _pydecimal
+
+## co_consts:
+('Rounds down (not towards 0 if negative)',)
+
+## co_names:
+('_sign', '_round_down')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _sign
+  14: POP_JUMP_FORWARD_IF_TRUE to 58
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          _round_down
+  40: LOAD_FAST            prec
+  42: PRECALL              
+  46: CALL                 
+  56: RETURN_VALUE         
+  58: LOAD_FAST            self
+  60: LOAD_METHOD          _round_down
+  82: LOAD_FAST            prec
+  84: PRECALL              
+  88: CALL                 
+  98: UNARY_NEGATIVE       
+ 100: RETURN_VALUE         

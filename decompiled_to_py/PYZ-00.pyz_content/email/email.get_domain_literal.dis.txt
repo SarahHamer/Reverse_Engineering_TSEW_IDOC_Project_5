@@ -1,0 +1,213 @@
+# Disassembly for email.get_domain_literal
+# From module file: email._header_value_parser
+
+## co_consts:
+(' domain-literal = [CFWS] "[" *([FWS] dtext) [FWS] "]" [CFWS]\n\n    ', 0, 'expected domain-literal', '[', "expected '[' at start of domain-literal but found '{}'", 1, None, 'domain-literal-start', ']', "expected ']' at end of domain-literal but found '{}'", 'domain-literal-end')
+
+## co_names:
+('DomainLiteral', 'CFWS_LEADER', 'get_cfws', 'append', 'errors', 'HeaderParseError', 'format', '_check_for_early_dl_end', 'ValueTerminal', 'WSP', 'get_fws', 'get_dtext')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + DomainLiteral
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           domain_literal
+  30: LOAD_FAST            value
+  32: LOAD_CONST           0
+  34: BINARY_SUBSCR        
+  44: LOAD_GLOBAL          CFWS_LEADER
+  56: CONTAINS_OP          
+  58: POP_JUMP_FORWARD_IF_FALSE to 138
+  60: LOAD_GLOBAL          NULL + get_cfws
+  72: LOAD_FAST            value
+  74: PRECALL              
+  78: CALL                 
+  88: UNPACK_SEQUENCE      
+  92: STORE_FAST           token
+  94: STORE_FAST           value
+  96: LOAD_FAST            domain_literal
+  98: LOAD_METHOD          append
+ 120: LOAD_FAST            token
+ 122: PRECALL              
+ 126: CALL                 
+ 136: POP_TOP              
+ 138: LOAD_FAST            value
+ 140: POP_JUMP_FORWARD_IF_TRUE to 182
+ 142: LOAD_GLOBAL          NULL + errors
+ 154: LOAD_ATTR            HeaderParseError
+ 164: LOAD_CONST           'expected domain-literal'
+ 166: PRECALL              
+ 170: CALL                 
+ 180: RAISE_VARARGS        
+ 182: LOAD_FAST            value
+ 184: LOAD_CONST           0
+ 186: BINARY_SUBSCR        
+ 196: LOAD_CONST           '['
+ 198: COMPARE_OP           !=
+ 204: POP_JUMP_FORWARD_IF_FALSE to 284
+ 206: LOAD_GLOBAL          NULL + errors
+ 218: LOAD_ATTR            HeaderParseError
+ 228: LOAD_CONST           "expected '[' at start of domain-literal but found '{}'"
+ 230: LOAD_METHOD          format
+ 252: LOAD_FAST            value
+ 254: PRECALL              
+ 258: CALL                 
+ 268: PRECALL              
+ 272: CALL                 
+ 282: RAISE_VARARGS        
+ 284: LOAD_FAST            value
+ 286: LOAD_CONST           1
+ 288: LOAD_CONST           None
+ 290: BUILD_SLICE          
+ 292: BINARY_SUBSCR        
+ 302: STORE_FAST           value
+ 304: LOAD_GLOBAL          NULL + _check_for_early_dl_end
+ 316: LOAD_FAST            value
+ 318: LOAD_FAST            domain_literal
+ 320: PRECALL              
+ 324: CALL                 
+ 334: POP_JUMP_FORWARD_IF_FALSE to 344
+ 336: LOAD_FAST            domain_literal
+ 338: LOAD_FAST            value
+ 340: BUILD_TUPLE          
+ 342: RETURN_VALUE         
+ 344: LOAD_FAST            domain_literal
+ 346: LOAD_METHOD          append
+ 368: LOAD_GLOBAL          NULL + ValueTerminal
+ 380: LOAD_CONST           '['
+ 382: LOAD_CONST           'domain-literal-start'
+ 384: PRECALL              
+ 388: CALL                 
+ 398: PRECALL              
+ 402: CALL                 
+ 412: POP_TOP              
+ 414: LOAD_FAST            value
+ 416: LOAD_CONST           0
+ 418: BINARY_SUBSCR        
+ 428: LOAD_GLOBAL          WSP
+ 440: CONTAINS_OP          
+ 442: POP_JUMP_FORWARD_IF_FALSE to 522
+ 444: LOAD_GLOBAL          NULL + get_fws
+ 456: LOAD_FAST            value
+ 458: PRECALL              
+ 462: CALL                 
+ 472: UNPACK_SEQUENCE      
+ 476: STORE_FAST           token
+ 478: STORE_FAST           value
+ 480: LOAD_FAST            domain_literal
+ 482: LOAD_METHOD          append
+ 504: LOAD_FAST            token
+ 506: PRECALL              
+ 510: CALL                 
+ 520: POP_TOP              
+ 522: LOAD_GLOBAL          NULL + get_dtext
+ 534: LOAD_FAST            value
+ 536: PRECALL              
+ 540: CALL                 
+ 550: UNPACK_SEQUENCE      
+ 554: STORE_FAST           token
+ 556: STORE_FAST           value
+ 558: LOAD_FAST            domain_literal
+ 560: LOAD_METHOD          append
+ 582: LOAD_FAST            token
+ 584: PRECALL              
+ 588: CALL                 
+ 598: POP_TOP              
+ 600: LOAD_GLOBAL          NULL + _check_for_early_dl_end
+ 612: LOAD_FAST            value
+ 614: LOAD_FAST            domain_literal
+ 616: PRECALL              
+ 620: CALL                 
+ 630: POP_JUMP_FORWARD_IF_FALSE to 640
+ 632: LOAD_FAST            domain_literal
+ 634: LOAD_FAST            value
+ 636: BUILD_TUPLE          
+ 638: RETURN_VALUE         
+ 640: LOAD_FAST            value
+ 642: LOAD_CONST           0
+ 644: BINARY_SUBSCR        
+ 654: LOAD_GLOBAL          WSP
+ 666: CONTAINS_OP          
+ 668: POP_JUMP_FORWARD_IF_FALSE to 748
+ 670: LOAD_GLOBAL          NULL + get_fws
+ 682: LOAD_FAST            value
+ 684: PRECALL              
+ 688: CALL                 
+ 698: UNPACK_SEQUENCE      
+ 702: STORE_FAST           token
+ 704: STORE_FAST           value
+ 706: LOAD_FAST            domain_literal
+ 708: LOAD_METHOD          append
+ 730: LOAD_FAST            token
+ 732: PRECALL              
+ 736: CALL                 
+ 746: POP_TOP              
+ 748: LOAD_GLOBAL          NULL + _check_for_early_dl_end
+ 760: LOAD_FAST            value
+ 762: LOAD_FAST            domain_literal
+ 764: PRECALL              
+ 768: CALL                 
+ 778: POP_JUMP_FORWARD_IF_FALSE to 788
+ 780: LOAD_FAST            domain_literal
+ 782: LOAD_FAST            value
+ 784: BUILD_TUPLE          
+ 786: RETURN_VALUE         
+ 788: LOAD_FAST            value
+ 790: LOAD_CONST           0
+ 792: BINARY_SUBSCR        
+ 802: LOAD_CONST           ']'
+ 804: COMPARE_OP           !=
+ 810: POP_JUMP_FORWARD_IF_FALSE to 890
+ 812: LOAD_GLOBAL          NULL + errors
+ 824: LOAD_ATTR            HeaderParseError
+ 834: LOAD_CONST           "expected ']' at end of domain-literal but found '{}'"
+ 836: LOAD_METHOD          format
+ 858: LOAD_FAST            value
+ 860: PRECALL              
+ 864: CALL                 
+ 874: PRECALL              
+ 878: CALL                 
+ 888: RAISE_VARARGS        
+ 890: LOAD_FAST            domain_literal
+ 892: LOAD_METHOD          append
+ 914: LOAD_GLOBAL          NULL + ValueTerminal
+ 926: LOAD_CONST           ']'
+ 928: LOAD_CONST           'domain-literal-end'
+ 930: PRECALL              
+ 934: CALL                 
+ 944: PRECALL              
+ 948: CALL                 
+ 958: POP_TOP              
+ 960: LOAD_FAST            value
+ 962: LOAD_CONST           1
+ 964: LOAD_CONST           None
+ 966: BUILD_SLICE          
+ 968: BINARY_SUBSCR        
+ 978: STORE_FAST           value
+ 980: LOAD_FAST            value
+ 982: POP_JUMP_FORWARD_IF_FALSE to 1092
+ 984: LOAD_FAST            value
+ 986: LOAD_CONST           0
+ 988: BINARY_SUBSCR        
+ 998: LOAD_GLOBAL          CFWS_LEADER
+1010: CONTAINS_OP          
+1012: POP_JUMP_FORWARD_IF_FALSE to 1092
+1014: LOAD_GLOBAL          NULL + get_cfws
+1026: LOAD_FAST            value
+1028: PRECALL              
+1032: CALL                 
+1042: UNPACK_SEQUENCE      
+1046: STORE_FAST           token
+1048: STORE_FAST           value
+1050: LOAD_FAST            domain_literal
+1052: LOAD_METHOD          append
+1074: LOAD_FAST            token
+1076: PRECALL              
+1080: CALL                 
+1090: POP_TOP              
+1092: LOAD_FAST            domain_literal
+1094: LOAD_FAST            value
+1096: BUILD_TUPLE          
+1098: RETURN_VALUE         

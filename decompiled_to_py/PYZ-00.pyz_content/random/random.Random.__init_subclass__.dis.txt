@@ -1,0 +1,52 @@
+# Disassembly for random.Random.__init_subclass__
+# From module file: random
+
+## co_consts:
+('Control how subclasses generate random integers.\n\n        The algorithm a subclass can use depends on the random() and/or\n        getrandbits() implementation available to it and determines\n        whether it can generate random integers from arbitrarily large\n        ranges.\n        ', '_randbelow', 'getrandbits', 'random', None)
+
+## co_names:
+('__mro__', '__dict__', '_randbelow_with_getrandbits', '_randbelow', '_randbelow_without_getrandbits')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            cls
+   4: LOAD_ATTR            __mro__
+  14: GET_ITER             
+  16: FOR_ITER             to 142
+  18: STORE_FAST           c
+  20: LOAD_CONST           '_randbelow'
+  22: LOAD_FAST            c
+  24: LOAD_ATTR            __dict__
+  34: CONTAINS_OP          
+  36: POP_JUMP_FORWARD_IF_FALSE to 44
+  38: POP_TOP              
+  40: LOAD_CONST           None
+  42: RETURN_VALUE         
+  44: LOAD_CONST           'getrandbits'
+  46: LOAD_FAST            c
+  48: LOAD_ATTR            __dict__
+  58: CONTAINS_OP          
+  60: POP_JUMP_FORWARD_IF_FALSE to 92
+  62: LOAD_FAST            cls
+  64: LOAD_ATTR            _randbelow_with_getrandbits
+  74: LOAD_FAST            cls
+  76: STORE_ATTR           _randbelow
+  86: POP_TOP              
+  88: LOAD_CONST           None
+  90: RETURN_VALUE         
+  92: LOAD_CONST           'random'
+  94: LOAD_FAST            c
+  96: LOAD_ATTR            __dict__
+ 106: CONTAINS_OP          
+ 108: POP_JUMP_FORWARD_IF_FALSE to 140
+ 110: LOAD_FAST            cls
+ 112: LOAD_ATTR            _randbelow_without_getrandbits
+ 122: LOAD_FAST            cls
+ 124: STORE_ATTR           _randbelow
+ 134: POP_TOP              
+ 136: LOAD_CONST           None
+ 138: RETURN_VALUE         
+ 140: JUMP_BACKWARD        to 16
+ 142: LOAD_CONST           None
+ 144: RETURN_VALUE         

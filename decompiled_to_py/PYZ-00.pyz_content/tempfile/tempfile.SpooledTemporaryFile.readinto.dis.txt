@@ -1,0 +1,19 @@
+# Disassembly for tempfile.SpooledTemporaryFile.readinto
+# From module file: tempfile
+
+## co_consts:
+(None,)
+
+## co_names:
+('_file', 'readinto')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _file
+  14: LOAD_METHOD          readinto
+  36: LOAD_FAST            b
+  38: PRECALL              
+  42: CALL                 
+  52: RETURN_VALUE         

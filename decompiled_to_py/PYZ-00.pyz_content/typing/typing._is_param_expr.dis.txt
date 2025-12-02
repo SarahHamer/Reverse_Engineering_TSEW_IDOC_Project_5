@@ -1,0 +1,26 @@
+# Disassembly for typing._is_param_expr
+# From module file: typing
+
+## co_consts:
+(None, Ellipsis)
+
+## co_names:
+('isinstance', 'tuple', 'list', 'ParamSpec', '_ConcatenateGenericAlias')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            arg
+   4: LOAD_CONST           Ellipsis
+   6: IS_OP                
+   8: JUMP_IF_TRUE_OR_POP  to 88
+  10: LOAD_GLOBAL          NULL + isinstance
+  22: LOAD_FAST            arg
+  24: LOAD_GLOBAL          tuple
+  36: LOAD_GLOBAL          list
+  48: LOAD_GLOBAL          ParamSpec
+  60: LOAD_GLOBAL          _ConcatenateGenericAlias
+  72: BUILD_TUPLE          
+  74: PRECALL              
+  78: CALL                 
+  88: RETURN_VALUE         

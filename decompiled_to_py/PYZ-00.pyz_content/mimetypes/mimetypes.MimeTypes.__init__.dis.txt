@@ -1,0 +1,90 @@
+# Disassembly for mimetypes.MimeTypes.__init__
+# From module file: mimetypes
+
+## co_consts:
+(None, True, False)
+
+## co_names:
+('inited', 'init', '_encodings_map_default', 'copy', 'encodings_map', '_suffix_map_default', 'suffix_map', 'types_map', 'types_map_inv', '_types_map_default', 'items', 'add_type', '_common_types_default', 'read')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          inited
+  14: POP_JUMP_FORWARD_IF_TRUE to 44
+  16: LOAD_GLOBAL          NULL + init
+  28: PRECALL              
+  32: CALL                 
+  42: POP_TOP              
+  44: LOAD_GLOBAL          _encodings_map_default
+  56: LOAD_METHOD          copy
+  78: PRECALL              
+  82: CALL                 
+  92: LOAD_FAST            self
+  94: STORE_ATTR           encodings_map
+ 104: LOAD_GLOBAL          _suffix_map_default
+ 116: LOAD_METHOD          copy
+ 138: PRECALL              
+ 142: CALL                 
+ 152: LOAD_FAST            self
+ 154: STORE_ATTR           suffix_map
+ 164: BUILD_MAP            
+ 166: BUILD_MAP            
+ 168: BUILD_TUPLE          
+ 170: LOAD_FAST            self
+ 172: STORE_ATTR           types_map
+ 182: BUILD_MAP            
+ 184: BUILD_MAP            
+ 186: BUILD_TUPLE          
+ 188: LOAD_FAST            self
+ 190: STORE_ATTR           types_map_inv
+ 200: LOAD_GLOBAL          _types_map_default
+ 212: LOAD_METHOD          items
+ 234: PRECALL              
+ 238: CALL                 
+ 248: GET_ITER             
+ 250: FOR_ITER             to 308
+ 252: UNPACK_SEQUENCE      
+ 256: STORE_FAST           ext
+ 258: STORE_FAST           type
+ 260: LOAD_FAST            self
+ 262: LOAD_METHOD          add_type
+ 284: LOAD_FAST            type
+ 286: LOAD_FAST            ext
+ 288: LOAD_CONST           True
+ 290: PRECALL              
+ 294: CALL                 
+ 304: POP_TOP              
+ 306: JUMP_BACKWARD        to 250
+ 308: LOAD_GLOBAL          _common_types_default
+ 320: LOAD_METHOD          items
+ 342: PRECALL              
+ 346: CALL                 
+ 356: GET_ITER             
+ 358: FOR_ITER             to 416
+ 360: UNPACK_SEQUENCE      
+ 364: STORE_FAST           ext
+ 366: STORE_FAST           type
+ 368: LOAD_FAST            self
+ 370: LOAD_METHOD          add_type
+ 392: LOAD_FAST            type
+ 394: LOAD_FAST            ext
+ 396: LOAD_CONST           False
+ 398: PRECALL              
+ 402: CALL                 
+ 412: POP_TOP              
+ 414: JUMP_BACKWARD        to 358
+ 416: LOAD_FAST            filenames
+ 418: GET_ITER             
+ 420: FOR_ITER             to 470
+ 422: STORE_FAST           name
+ 424: LOAD_FAST            self
+ 426: LOAD_METHOD          read
+ 448: LOAD_FAST            name
+ 450: LOAD_FAST            strict
+ 452: PRECALL              
+ 456: CALL                 
+ 466: POP_TOP              
+ 468: JUMP_BACKWARD        to 420
+ 470: LOAD_CONST           None
+ 472: RETURN_VALUE         

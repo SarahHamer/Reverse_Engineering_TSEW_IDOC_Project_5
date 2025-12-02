@@ -1,0 +1,130 @@
+# Disassembly for http.HTTPConnection.putheader
+# From module file: http.client
+
+## co_consts:
+("Send a request header line to the server.\n\n        For example: h.putheader('Accept', 'text/html')\n        ", 'encode', 'ascii', 'Invalid header name ', 'latin-1', 'Invalid header value ', b'\r\n\t', b': ', None)
+
+## co_names:
+('_HTTPConnection__state', '_CS_REQ_STARTED', 'CannotSendHeader', 'hasattr', 'encode', '_is_legal_header_name', 'ValueError', 'list', 'enumerate', 'isinstance', 'int', 'str', '_is_illegal_header_value', 'join', '_output')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _HTTPConnection__state
+  14: LOAD_GLOBAL          _CS_REQ_STARTED
+  26: COMPARE_OP           !=
+  32: POP_JUMP_FORWARD_IF_FALSE to 62
+  34: LOAD_GLOBAL          NULL + CannotSendHeader
+  46: PRECALL              
+  50: CALL                 
+  60: RAISE_VARARGS        
+  62: LOAD_GLOBAL          NULL + hasattr
+  74: LOAD_FAST            header
+  76: LOAD_CONST           'encode'
+  78: PRECALL              
+  82: CALL                 
+  92: POP_JUMP_FORWARD_IF_FALSE to 136
+  94: LOAD_FAST            header
+  96: LOAD_METHOD          encode
+ 118: LOAD_CONST           'ascii'
+ 120: PRECALL              
+ 124: CALL                 
+ 134: STORE_FAST           header
+ 136: LOAD_GLOBAL          NULL + _is_legal_header_name
+ 148: LOAD_FAST            header
+ 150: PRECALL              
+ 154: CALL                 
+ 164: POP_JUMP_FORWARD_IF_TRUE to 202
+ 166: LOAD_GLOBAL          NULL + ValueError
+ 178: LOAD_CONST           'Invalid header name '
+ 180: LOAD_FAST            header
+ 182: FORMAT_VALUE         repr
+ 184: BUILD_STRING         
+ 186: PRECALL              
+ 190: CALL                 
+ 200: RAISE_VARARGS        
+ 202: LOAD_GLOBAL          NULL + list
+ 214: LOAD_FAST            values
+ 216: PRECALL              
+ 220: CALL                 
+ 230: STORE_FAST           values
+ 232: LOAD_GLOBAL          NULL + enumerate
+ 244: LOAD_FAST            values
+ 246: PRECALL              
+ 250: CALL                 
+ 260: GET_ITER             
+ 262: FOR_ITER             to 562
+ 264: UNPACK_SEQUENCE      
+ 268: STORE_FAST           i
+ 270: STORE_FAST           one_value
+ 272: LOAD_GLOBAL          NULL + hasattr
+ 284: LOAD_FAST            one_value
+ 286: LOAD_CONST           'encode'
+ 288: PRECALL              
+ 292: CALL                 
+ 302: POP_JUMP_FORWARD_IF_FALSE to 354
+ 304: LOAD_FAST            one_value
+ 306: LOAD_METHOD          encode
+ 328: LOAD_CONST           'latin-1'
+ 330: PRECALL              
+ 334: CALL                 
+ 344: LOAD_FAST            values
+ 346: LOAD_FAST            i
+ 348: STORE_SUBSCR         
+ 352: JUMP_FORWARD         to 470
+ 354: LOAD_GLOBAL          NULL + isinstance
+ 366: LOAD_FAST            one_value
+ 368: LOAD_GLOBAL          int
+ 380: PRECALL              
+ 384: CALL                 
+ 394: POP_JUMP_FORWARD_IF_FALSE to 470
+ 396: LOAD_GLOBAL          NULL + str
+ 408: LOAD_FAST            one_value
+ 410: PRECALL              
+ 414: CALL                 
+ 424: LOAD_METHOD          encode
+ 446: LOAD_CONST           'ascii'
+ 448: PRECALL              
+ 452: CALL                 
+ 462: LOAD_FAST            values
+ 464: LOAD_FAST            i
+ 466: STORE_SUBSCR         
+ 470: LOAD_GLOBAL          NULL + _is_illegal_header_value
+ 482: LOAD_FAST            values
+ 484: LOAD_FAST            i
+ 486: BINARY_SUBSCR        
+ 496: PRECALL              
+ 500: CALL                 
+ 510: POP_JUMP_FORWARD_IF_FALSE to 560
+ 512: LOAD_GLOBAL          NULL + ValueError
+ 524: LOAD_CONST           'Invalid header value '
+ 526: LOAD_FAST            values
+ 528: LOAD_FAST            i
+ 530: BINARY_SUBSCR        
+ 540: FORMAT_VALUE         repr
+ 542: BUILD_STRING         
+ 544: PRECALL              
+ 548: CALL                 
+ 558: RAISE_VARARGS        
+ 560: JUMP_BACKWARD        to 262
+ 562: LOAD_CONST           b'\r\n\t'
+ 564: LOAD_METHOD          join
+ 586: LOAD_FAST            values
+ 588: PRECALL              
+ 592: CALL                 
+ 602: STORE_FAST           value
+ 604: LOAD_FAST            header
+ 606: LOAD_CONST           b': '
+ 608: BINARY_OP            +
+ 612: LOAD_FAST            value
+ 614: BINARY_OP            +
+ 618: STORE_FAST           header
+ 620: LOAD_FAST            self
+ 622: LOAD_METHOD          _output
+ 644: LOAD_FAST            header
+ 646: PRECALL              
+ 650: CALL                 
+ 660: POP_TOP              
+ 662: LOAD_CONST           None
+ 664: RETURN_VALUE         

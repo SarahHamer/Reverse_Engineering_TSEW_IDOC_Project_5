@@ -1,0 +1,44 @@
+# Disassembly for gettext.GNUTranslations
+# From module file: gettext
+
+## co_consts:
+('GNUTranslations', 2500072158, 3725722773, '%s\x04%s', (0, 1), <code object _get_versions at 0x00000240694949F0, file "gettext.py", line 328>, <code object _parse at 0x0000024068BBF7A0, file "gettext.py", line 332>, <code object gettext at 0x00000240691DA9E0, file "gettext.py", line 421>, <code object ngettext at 0x000002406942E290, file "gettext.py", line 432>, <code object pgettext at 0x000002406947C5D0, file "gettext.py", line 444>, <code object npgettext at 0x00000240691F5890, file "gettext.py", line 456>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', 'LE_MAGIC', 'BE_MAGIC', 'CONTEXT', 'VERSIONS', '_get_versions', '_parse', 'gettext', 'ngettext', 'pgettext', 'npgettext')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'GNUTranslations'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           2500072158
+  12: STORE_NAME           LE_MAGIC
+  14: LOAD_CONST           3725722773
+  16: STORE_NAME           BE_MAGIC
+  18: LOAD_CONST           '%s\x04%s'
+  20: STORE_NAME           CONTEXT
+  22: LOAD_CONST           (0, 1)
+  24: STORE_NAME           VERSIONS
+  26: LOAD_CONST           <code object _get_versions at 0x00000240694949F0, file "gettext.py", line 328>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           _get_versions
+  32: LOAD_CONST           <code object _parse at 0x0000024068BBF7A0, file "gettext.py", line 332>
+  34: MAKE_FUNCTION        
+  36: STORE_NAME           _parse
+  38: LOAD_CONST           <code object gettext at 0x00000240691DA9E0, file "gettext.py", line 421>
+  40: MAKE_FUNCTION        
+  42: STORE_NAME           gettext
+  44: LOAD_CONST           <code object ngettext at 0x000002406942E290, file "gettext.py", line 432>
+  46: MAKE_FUNCTION        
+  48: STORE_NAME           ngettext
+  50: LOAD_CONST           <code object pgettext at 0x000002406947C5D0, file "gettext.py", line 444>
+  52: MAKE_FUNCTION        
+  54: STORE_NAME           pgettext
+  56: LOAD_CONST           <code object npgettext at 0x00000240691F5890, file "gettext.py", line 456>
+  58: MAKE_FUNCTION        
+  60: STORE_NAME           npgettext
+  62: LOAD_CONST           None
+  64: RETURN_VALUE         

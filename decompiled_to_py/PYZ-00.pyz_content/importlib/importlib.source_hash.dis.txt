@@ -1,0 +1,19 @@
+# Disassembly for importlib.source_hash
+# From module file: importlib.util
+
+## co_consts:
+('Return the hash of *source_bytes* as used in hash-based pyc files.',)
+
+## co_names:
+('_imp', 'source_hash', '_RAW_MAGIC_NUMBER')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _imp
+  14: LOAD_ATTR            source_hash
+  24: LOAD_GLOBAL          _RAW_MAGIC_NUMBER
+  36: LOAD_FAST            source_bytes
+  38: PRECALL              
+  42: CALL                 
+  52: RETURN_VALUE         

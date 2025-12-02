@@ -1,0 +1,31 @@
+# Disassembly for random.Random.weibullvariate
+# From module file: random
+
+## co_consts:
+('Weibull distribution.\n\n        alpha is the scale parameter and beta is the shape parameter.\n\n        ', 1.0)
+
+## co_names:
+('random', '_log')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           1.0
+   4: LOAD_FAST            self
+   6: LOAD_METHOD          random
+  28: PRECALL              
+  32: CALL                 
+  42: BINARY_OP            -
+  46: STORE_FAST           u
+  48: LOAD_FAST            alpha
+  50: LOAD_GLOBAL          NULL + _log
+  62: LOAD_FAST            u
+  64: PRECALL              
+  68: CALL                 
+  78: UNARY_NEGATIVE       
+  80: LOAD_CONST           1.0
+  82: LOAD_FAST            beta
+  84: BINARY_OP            /
+  88: BINARY_OP            **
+  92: BINARY_OP            *
+  96: RETURN_VALUE         

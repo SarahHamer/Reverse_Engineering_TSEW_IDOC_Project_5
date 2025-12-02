@@ -1,0 +1,23 @@
+# Disassembly for pickle._Unpickler.load_tuple1
+# From module file: pickle
+
+## co_consts:
+(None, -1)
+
+## co_names:
+('stack',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            stack
+  14: LOAD_CONST           -1
+  16: BINARY_SUBSCR        
+  26: BUILD_TUPLE          
+  28: LOAD_FAST            self
+  30: LOAD_ATTR            stack
+  40: LOAD_CONST           -1
+  42: STORE_SUBSCR         
+  46: LOAD_CONST           None
+  48: RETURN_VALUE         

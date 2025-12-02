@@ -1,0 +1,18 @@
+# Disassembly for email._ValueFormatter.__str__
+# From module file: email.header
+
+## co_consts:
+(None,)
+
+## co_names:
+('_str', 'NL')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _str
+  26: LOAD_GLOBAL          NL
+  38: PRECALL              
+  42: CALL                 
+  52: RETURN_VALUE         

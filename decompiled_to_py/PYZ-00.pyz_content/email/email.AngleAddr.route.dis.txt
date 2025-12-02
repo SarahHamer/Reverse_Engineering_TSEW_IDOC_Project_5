@@ -1,0 +1,29 @@
+# Disassembly for email.AngleAddr.route
+# From module file: email._header_value_parser
+
+## co_consts:
+(None, 'obs-route')
+
+## co_names:
+('token_type', 'domains')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: GET_ITER             
+   6: FOR_ITER             to 52
+   8: STORE_FAST           x
+  10: LOAD_FAST            x
+  12: LOAD_ATTR            token_type
+  22: LOAD_CONST           'obs-route'
+  24: COMPARE_OP           ==
+  30: POP_JUMP_FORWARD_IF_FALSE to 50
+  32: LOAD_FAST            x
+  34: LOAD_ATTR            domains
+  44: SWAP                 
+  46: POP_TOP              
+  48: RETURN_VALUE         
+  50: JUMP_BACKWARD        to 6
+  52: LOAD_CONST           None
+  54: RETURN_VALUE         

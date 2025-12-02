@@ -1,0 +1,14 @@
+# Disassembly for calendar._localized_month.<lambda>
+# From module file: calendar
+
+## co_consts:
+(None, '')
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           ''
+   4: RETURN_VALUE         

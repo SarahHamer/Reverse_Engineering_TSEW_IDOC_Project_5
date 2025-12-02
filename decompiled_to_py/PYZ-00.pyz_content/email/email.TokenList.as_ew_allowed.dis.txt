@@ -1,0 +1,22 @@
+# Disassembly for email.TokenList.as_ew_allowed
+# From module file: email._header_value_parser
+
+## co_consts:
+('True if all top level tokens of this part may be RFC2047 encoded.', <code object <genexpr> at 0x0000024069466090, file "email\_header_value_parser.py", line 146>)
+
+## co_names:
+('all',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + all
+  14: LOAD_CONST           <code object <genexpr> at 0x0000024069466090, file "email\_header_value_parser.py", line 146>
+  16: MAKE_FUNCTION        
+  18: LOAD_FAST            self
+  20: GET_ITER             
+  22: PRECALL              
+  26: CALL                 
+  36: PRECALL              
+  40: CALL                 
+  50: RETURN_VALUE         

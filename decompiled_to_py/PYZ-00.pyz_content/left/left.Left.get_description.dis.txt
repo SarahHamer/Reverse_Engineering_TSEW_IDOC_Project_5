@@ -1,0 +1,59 @@
+# Disassembly for left.Left.get_description
+# From module file: left
+
+## co_consts:
+(None, '$div', 'You are in the Left Wing.  Math symbols and diagrams adorn the walls.  You feel smart being here.', 'Player', 0, '\n', '\nThere is a door behind you leading back to the breakroom.\n')
+
+## co_names:
+('children', 'get_visible', 'is_a', 'get_description', 'len')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '$div'
+   4: STORE_FAST           desc
+   6: LOAD_FAST            desc
+   8: LOAD_CONST           'You are in the Left Wing.  Math symbols and diagrams adorn the walls.  You feel smart being here.'
+  10: BINARY_OP            +=
+  14: STORE_FAST           desc
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            children
+  28: GET_ITER             
+  30: FOR_ITER             to 212
+  32: STORE_FAST           child
+  34: LOAD_FAST            child
+  36: LOAD_METHOD          get_visible
+  58: PRECALL              
+  62: CALL                 
+  72: POP_JUMP_FORWARD_IF_FALSE to 210
+  74: LOAD_FAST            child
+  76: LOAD_METHOD          is_a
+  98: LOAD_CONST           'Player'
+ 100: PRECALL              
+ 104: CALL                 
+ 114: POP_JUMP_FORWARD_IF_TRUE to 210
+ 116: LOAD_FAST            child
+ 118: LOAD_METHOD          get_description
+ 140: PRECALL              
+ 144: CALL                 
+ 154: STORE_FAST           child_desc
+ 156: LOAD_GLOBAL          NULL + len
+ 168: LOAD_FAST            child_desc
+ 170: PRECALL              
+ 174: CALL                 
+ 184: LOAD_CONST           0
+ 186: COMPARE_OP           >
+ 192: POP_JUMP_FORWARD_IF_FALSE to 210
+ 194: LOAD_FAST            desc
+ 196: LOAD_CONST           '\n'
+ 198: LOAD_FAST            child_desc
+ 200: BINARY_OP            +
+ 204: BINARY_OP            +=
+ 208: STORE_FAST           desc
+ 210: JUMP_BACKWARD        to 30
+ 212: LOAD_FAST            desc
+ 214: LOAD_CONST           '\nThere is a door behind you leading back to the breakroom.\n'
+ 216: BINARY_OP            +=
+ 220: STORE_FAST           desc
+ 222: LOAD_FAST            desc
+ 224: RETURN_VALUE         

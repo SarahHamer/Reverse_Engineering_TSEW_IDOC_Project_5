@@ -1,0 +1,179 @@
+# Disassembly for central.Machine.draw_card
+# From module file: central
+
+## co_consts:
+(None, 5, 'found', 2, 1, '', 'face', ' ', '\n', 0)
+
+## co_names:
+('cards', 'screen_set', 'card_width', 'card_height', 'card_back_str', 'str', 'card_front_str', 'replace', 'split', 'len')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            cards
+  14: LOAD_FAST            card_num
+  16: BINARY_SUBSCR        
+  26: STORE_FAST           card
+  28: LOAD_FAST            card_num
+  30: LOAD_CONST           5
+  32: BINARY_OP            //
+  36: STORE_FAST           row_num
+  38: LOAD_FAST            card_num
+  40: LOAD_CONST           5
+  42: BINARY_OP            %
+  46: STORE_FAST           col_num
+  48: LOAD_FAST            card
+  50: LOAD_CONST           'found'
+  52: BINARY_SUBSCR        
+  62: POP_JUMP_FORWARD_IF_TRUE to 338
+  64: LOAD_FAST            found
+  66: POP_JUMP_FORWARD_IF_TRUE to 338
+  68: LOAD_FAST            self
+  70: LOAD_METHOD          screen_set
+  92: LOAD_FAST            screen
+  94: LOAD_FAST            col_num
+  96: LOAD_GLOBAL          card_width
+ 108: BINARY_OP            *
+ 112: LOAD_FAST            row_num
+ 114: LOAD_GLOBAL          card_height
+ 126: BINARY_OP            *
+ 130: LOAD_GLOBAL          card_back_str
+ 142: PRECALL              
+ 146: CALL                 
+ 156: POP_TOP              
+ 158: LOAD_FAST            col_num
+ 160: LOAD_GLOBAL          card_width
+ 172: BINARY_OP            *
+ 176: LOAD_GLOBAL          card_width
+ 188: LOAD_CONST           2
+ 190: BINARY_OP            //
+ 194: BINARY_OP            +
+ 198: LOAD_CONST           1
+ 200: BINARY_OP            -
+ 204: STORE_FAST           x
+ 206: LOAD_FAST            row_num
+ 208: LOAD_GLOBAL          card_height
+ 220: BINARY_OP            *
+ 224: LOAD_GLOBAL          card_height
+ 236: LOAD_CONST           2
+ 238: BINARY_OP            //
+ 242: BINARY_OP            +
+ 246: LOAD_CONST           1
+ 248: BINARY_OP            -
+ 252: STORE_FAST           y
+ 254: LOAD_FAST            self
+ 256: LOAD_METHOD          screen_set
+ 278: LOAD_FAST            screen
+ 280: LOAD_FAST            x
+ 282: LOAD_FAST            y
+ 284: LOAD_GLOBAL          NULL + str
+ 296: LOAD_FAST            card_num
+ 298: LOAD_CONST           1
+ 300: BINARY_OP            +
+ 304: PRECALL              
+ 308: CALL                 
+ 318: PRECALL              
+ 322: CALL                 
+ 332: POP_TOP              
+ 334: LOAD_CONST           None
+ 336: RETURN_VALUE         
+ 338: LOAD_FAST            self
+ 340: LOAD_METHOD          screen_set
+ 362: LOAD_FAST            screen
+ 364: LOAD_FAST            col_num
+ 366: LOAD_GLOBAL          card_width
+ 378: BINARY_OP            *
+ 382: LOAD_FAST            row_num
+ 384: LOAD_GLOBAL          card_height
+ 396: BINARY_OP            *
+ 400: LOAD_GLOBAL          card_front_str
+ 412: PRECALL              
+ 416: CALL                 
+ 426: POP_TOP              
+ 428: LOAD_FAST            col_num
+ 430: LOAD_GLOBAL          card_width
+ 442: BINARY_OP            *
+ 446: LOAD_GLOBAL          card_width
+ 458: LOAD_CONST           2
+ 460: BINARY_OP            //
+ 464: BINARY_OP            +
+ 468: LOAD_CONST           1
+ 470: BINARY_OP            -
+ 474: STORE_FAST           x
+ 476: LOAD_FAST            row_num
+ 478: LOAD_GLOBAL          card_height
+ 490: BINARY_OP            *
+ 494: LOAD_GLOBAL          card_height
+ 506: LOAD_CONST           2
+ 508: BINARY_OP            //
+ 512: BINARY_OP            +
+ 516: LOAD_CONST           1
+ 518: BINARY_OP            -
+ 522: STORE_FAST           y
+ 524: LOAD_CONST           ''
+ 526: STORE_FAST           face
+ 528: LOAD_FAST            card
+ 530: LOAD_CONST           'face'
+ 532: BINARY_SUBSCR        
+ 542: LOAD_METHOD          replace
+ 564: LOAD_CONST           ' '
+ 566: LOAD_CONST           '\n'
+ 568: PRECALL              
+ 572: CALL                 
+ 582: LOAD_METHOD          split
+ 604: LOAD_CONST           '\n'
+ 606: PRECALL              
+ 610: CALL                 
+ 620: STORE_FAST           face_lines
+ 622: LOAD_FAST            y
+ 624: LOAD_GLOBAL          NULL + len
+ 636: LOAD_FAST            face_lines
+ 638: PRECALL              
+ 642: CALL                 
+ 652: LOAD_CONST           2
+ 654: BINARY_OP            //
+ 658: BINARY_OP            -=
+ 662: STORE_FAST           y
+ 664: LOAD_CONST           0
+ 666: STORE_FAST           face_line_length
+ 668: LOAD_FAST            face_lines
+ 670: GET_ITER             
+ 672: FOR_ITER             to 762
+ 674: STORE_FAST           face_line
+ 676: LOAD_FAST            face
+ 678: LOAD_FAST            face_line
+ 680: LOAD_CONST           '\n'
+ 682: BINARY_OP            +
+ 686: BINARY_OP            +=
+ 690: STORE_FAST           face
+ 692: LOAD_GLOBAL          NULL + len
+ 704: LOAD_FAST            face_line
+ 706: PRECALL              
+ 710: CALL                 
+ 720: LOAD_FAST            face_line_length
+ 722: COMPARE_OP           >
+ 728: POP_JUMP_FORWARD_IF_FALSE to 760
+ 730: LOAD_GLOBAL          NULL + len
+ 742: LOAD_FAST            face_line
+ 744: PRECALL              
+ 748: CALL                 
+ 758: STORE_FAST           face_line_length
+ 760: JUMP_BACKWARD        to 672
+ 762: LOAD_FAST            x
+ 764: LOAD_FAST            face_line_length
+ 766: LOAD_CONST           2
+ 768: BINARY_OP            //
+ 772: BINARY_OP            -=
+ 776: STORE_FAST           x
+ 778: LOAD_FAST            self
+ 780: LOAD_METHOD          screen_set
+ 802: LOAD_FAST            screen
+ 804: LOAD_FAST            x
+ 806: LOAD_FAST            y
+ 808: LOAD_FAST            face
+ 810: PRECALL              
+ 814: CALL                 
+ 824: POP_TOP              
+ 826: LOAD_CONST           None
+ 828: RETURN_VALUE         

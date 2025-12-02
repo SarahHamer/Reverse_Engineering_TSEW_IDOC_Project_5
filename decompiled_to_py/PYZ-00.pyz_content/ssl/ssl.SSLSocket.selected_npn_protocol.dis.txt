@@ -1,0 +1,28 @@
+# Disassembly for ssl.SSLSocket.selected_npn_protocol
+# From module file: ssl
+
+## co_consts:
+(None, 'ssl NPN is deprecated, use ALPN instead', 2, ('stacklevel',))
+
+## co_names:
+('_checkClosed', 'warnings', 'warn', 'DeprecationWarning')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _checkClosed
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_GLOBAL          NULL + warnings
+  54: LOAD_ATTR            warn
+  64: LOAD_CONST           'ssl NPN is deprecated, use ALPN instead'
+  66: LOAD_GLOBAL          DeprecationWarning
+  78: LOAD_CONST           2
+  80: KW_NAMES             
+  82: PRECALL              
+  86: CALL                 
+  96: POP_TOP              
+  98: LOAD_CONST           None
+ 100: RETURN_VALUE         

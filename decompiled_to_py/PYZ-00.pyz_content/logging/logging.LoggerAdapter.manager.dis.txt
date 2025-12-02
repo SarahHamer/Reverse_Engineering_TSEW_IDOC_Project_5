@@ -1,0 +1,18 @@
+# Disassembly for logging.LoggerAdapter.manager
+# From module file: logging
+
+## co_consts:
+(None,)
+
+## co_names:
+('logger', 'manager')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            value
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            logger
+  16: STORE_ATTR           manager
+  26: LOAD_CONST           None
+  28: RETURN_VALUE         

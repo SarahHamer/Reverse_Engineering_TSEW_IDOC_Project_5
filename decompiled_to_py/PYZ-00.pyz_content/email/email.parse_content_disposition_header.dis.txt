@@ -1,0 +1,149 @@
+# Disassembly for email.parse_content_disposition_header
+# From module file: email._header_value_parser
+
+## co_consts:
+(' disposition-type *( ";" parameter )\n\n    ', 'Missing content disposition', 'Expected content disposition but found {!r}', 0, ';', 'Only parameters are valid after content disposition, but found {!r}', 'parameter-separator', 1, None)
+
+## co_names:
+('ContentDisposition', 'defects', 'append', 'errors', 'HeaderMissingRequiredValue', 'get_token', 'HeaderParseError', 'InvalidHeaderDefect', 'format', '_find_mime_parameters', 'value', 'strip', 'lower', 'content_disposition', 'ValueTerminal', 'parse_mime_parameters')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + ContentDisposition
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           disp_header
+  30: LOAD_FAST            value
+  32: POP_JUMP_FORWARD_IF_TRUE to 126
+  34: LOAD_FAST            disp_header
+  36: LOAD_ATTR            defects
+  46: LOAD_METHOD          append
+  68: LOAD_GLOBAL          NULL + errors
+  80: LOAD_ATTR            HeaderMissingRequiredValue
+  90: LOAD_CONST           'Missing content disposition'
+  92: PRECALL              
+  96: CALL                 
+ 106: PRECALL              
+ 110: CALL                 
+ 120: POP_TOP              
+ 122: LOAD_FAST            disp_header
+ 124: RETURN_VALUE         
+ 126: NOP                  
+ 128: LOAD_GLOBAL          NULL + get_token
+ 140: LOAD_FAST            value
+ 142: PRECALL              
+ 146: CALL                 
+ 156: UNPACK_SEQUENCE      
+ 160: STORE_FAST           token
+ 162: STORE_FAST           value
+ 164: JUMP_FORWARD         to 370
+ 166: PUSH_EXC_INFO        
+ 168: LOAD_GLOBAL          errors
+ 180: LOAD_ATTR            HeaderParseError
+ 190: CHECK_EXC_MATCH      
+ 192: POP_JUMP_FORWARD_IF_FALSE to 362
+ 194: POP_TOP              
+ 196: LOAD_FAST            disp_header
+ 198: LOAD_ATTR            defects
+ 208: LOAD_METHOD          append
+ 230: LOAD_GLOBAL          NULL + errors
+ 242: LOAD_ATTR            InvalidHeaderDefect
+ 252: LOAD_CONST           'Expected content disposition but found {!r}'
+ 254: LOAD_METHOD          format
+ 276: LOAD_FAST            value
+ 278: PRECALL              
+ 282: CALL                 
+ 292: PRECALL              
+ 296: CALL                 
+ 306: PRECALL              
+ 310: CALL                 
+ 320: POP_TOP              
+ 322: LOAD_GLOBAL          NULL + _find_mime_parameters
+ 334: LOAD_FAST            disp_header
+ 336: LOAD_FAST            value
+ 338: PRECALL              
+ 342: CALL                 
+ 352: POP_TOP              
+ 354: LOAD_FAST            disp_header
+ 356: SWAP                 
+ 358: POP_EXCEPT           
+ 360: RETURN_VALUE         
+ 362: RERAISE              
+ 364: COPY                 
+ 366: POP_EXCEPT           
+ 368: RERAISE              
+ 370: LOAD_FAST            disp_header
+ 372: LOAD_METHOD          append
+ 394: LOAD_FAST            token
+ 396: PRECALL              
+ 400: CALL                 
+ 410: POP_TOP              
+ 412: LOAD_FAST            token
+ 414: LOAD_ATTR            value
+ 424: LOAD_METHOD          strip
+ 446: PRECALL              
+ 450: CALL                 
+ 460: LOAD_METHOD          lower
+ 482: PRECALL              
+ 486: CALL                 
+ 496: LOAD_FAST            disp_header
+ 498: STORE_ATTR           content_disposition
+ 508: LOAD_FAST            value
+ 510: POP_JUMP_FORWARD_IF_TRUE to 516
+ 512: LOAD_FAST            disp_header
+ 514: RETURN_VALUE         
+ 516: LOAD_FAST            value
+ 518: LOAD_CONST           0
+ 520: BINARY_SUBSCR        
+ 530: LOAD_CONST           ';'
+ 532: COMPARE_OP           !=
+ 538: POP_JUMP_FORWARD_IF_FALSE to 702
+ 540: LOAD_FAST            disp_header
+ 542: LOAD_ATTR            defects
+ 552: LOAD_METHOD          append
+ 574: LOAD_GLOBAL          NULL + errors
+ 586: LOAD_ATTR            InvalidHeaderDefect
+ 596: LOAD_CONST           'Only parameters are valid after content disposition, but found {!r}'
+ 598: LOAD_METHOD          format
+ 620: LOAD_FAST            value
+ 622: PRECALL              
+ 626: CALL                 
+ 636: PRECALL              
+ 640: CALL                 
+ 650: PRECALL              
+ 654: CALL                 
+ 664: POP_TOP              
+ 666: LOAD_GLOBAL          NULL + _find_mime_parameters
+ 678: LOAD_FAST            disp_header
+ 680: LOAD_FAST            value
+ 682: PRECALL              
+ 686: CALL                 
+ 696: POP_TOP              
+ 698: LOAD_FAST            disp_header
+ 700: RETURN_VALUE         
+ 702: LOAD_FAST            disp_header
+ 704: LOAD_METHOD          append
+ 726: LOAD_GLOBAL          NULL + ValueTerminal
+ 738: LOAD_CONST           ';'
+ 740: LOAD_CONST           'parameter-separator'
+ 742: PRECALL              
+ 746: CALL                 
+ 756: PRECALL              
+ 760: CALL                 
+ 770: POP_TOP              
+ 772: LOAD_FAST            disp_header
+ 774: LOAD_METHOD          append
+ 796: LOAD_GLOBAL          NULL + parse_mime_parameters
+ 808: LOAD_FAST            value
+ 810: LOAD_CONST           1
+ 812: LOAD_CONST           None
+ 814: BUILD_SLICE          
+ 816: BINARY_SUBSCR        
+ 826: PRECALL              
+ 830: CALL                 
+ 840: PRECALL              
+ 844: CALL                 
+ 854: POP_TOP              
+ 856: LOAD_FAST            disp_header
+ 858: RETURN_VALUE         

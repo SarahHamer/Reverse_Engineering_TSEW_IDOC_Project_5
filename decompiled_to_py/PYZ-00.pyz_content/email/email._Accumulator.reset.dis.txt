@@ -1,0 +1,27 @@
+# Disassembly for email._Accumulator.reset
+# From module file: email.header
+
+## co_consts:
+(None, 0)
+
+## co_names:
+('_initial_size',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            startval
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 10
+   6: BUILD_LIST           
+   8: STORE_FAST           startval
+  10: LOAD_FAST            startval
+  12: LOAD_FAST            self
+  14: LOAD_CONST           None
+  16: LOAD_CONST           None
+  18: BUILD_SLICE          
+  20: STORE_SUBSCR         
+  24: LOAD_CONST           0
+  26: LOAD_FAST            self
+  28: STORE_ATTR           _initial_size
+  38: LOAD_CONST           None
+  40: RETURN_VALUE         

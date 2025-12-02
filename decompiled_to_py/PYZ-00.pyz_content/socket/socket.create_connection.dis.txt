@@ -1,0 +1,149 @@
+# Disassembly for socket.create_connection
+# From module file: socket
+
+## co_consts:
+("Connect to *address* and return the socket object.\n\n    Convenience function.  Connect to *address* (a 2-tuple ``(host,\n    port)``) and return the socket object.  Passing the optional\n    *timeout* parameter will set the timeout on the socket instance\n    before attempting to connect.  If no *timeout* is supplied, the\n    global default timeout setting returned by :func:`getdefaulttimeout`\n    is used.  If *source_address* is set it must be a tuple of (host, port)\n    for the socket to bind as a source address before making the connection.\n    A host of '' or port 0 tells the OS to use the default. When a connection\n    cannot be created, raises the last error if *all_errors* is False,\n    and an ExceptionGroup of all errors if *all_errors* is True.\n    ", 0, None, 'create_connection failed', 'getaddrinfo returns an empty list')
+
+## co_names:
+('getaddrinfo', 'SOCK_STREAM', 'socket', '_GLOBAL_DEFAULT_TIMEOUT', 'settimeout', 'bind', 'connect', 'clear', 'error', 'append', 'close', 'len', 'ExceptionGroup')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            address
+   4: UNPACK_SEQUENCE      
+   8: STORE_FAST           host
+  10: STORE_FAST           port
+  12: BUILD_LIST           
+  14: STORE_FAST           exceptions
+  16: LOAD_GLOBAL          NULL + getaddrinfo
+  28: LOAD_FAST            host
+  30: LOAD_FAST            port
+  32: LOAD_CONST           0
+  34: LOAD_GLOBAL          SOCK_STREAM
+  46: PRECALL              
+  50: CALL                 
+  60: GET_ITER             
+  62: FOR_ITER             to 494
+  64: STORE_FAST           res
+  66: LOAD_FAST            res
+  68: UNPACK_SEQUENCE      
+  72: STORE_FAST           af
+  74: STORE_FAST           socktype
+  76: STORE_FAST           proto
+  78: STORE_FAST           canonname
+  80: STORE_FAST           sa
+  82: LOAD_CONST           None
+  84: STORE_FAST           sock
+  86: NOP                  
+  88: LOAD_GLOBAL          NULL + socket
+ 100: LOAD_FAST            af
+ 102: LOAD_FAST            socktype
+ 104: LOAD_FAST            proto
+ 106: PRECALL              
+ 110: CALL                 
+ 120: STORE_FAST           sock
+ 122: LOAD_FAST            timeout
+ 124: LOAD_GLOBAL          _GLOBAL_DEFAULT_TIMEOUT
+ 136: IS_OP                
+ 138: POP_JUMP_FORWARD_IF_FALSE to 182
+ 140: LOAD_FAST            sock
+ 142: LOAD_METHOD          settimeout
+ 164: LOAD_FAST            timeout
+ 166: PRECALL              
+ 170: CALL                 
+ 180: POP_TOP              
+ 182: LOAD_FAST            source_address
+ 184: POP_JUMP_FORWARD_IF_FALSE to 228
+ 186: LOAD_FAST            sock
+ 188: LOAD_METHOD          bind
+ 210: LOAD_FAST            source_address
+ 212: PRECALL              
+ 216: CALL                 
+ 226: POP_TOP              
+ 228: LOAD_FAST            sock
+ 230: LOAD_METHOD          connect
+ 252: LOAD_FAST            sa
+ 254: PRECALL              
+ 258: CALL                 
+ 268: POP_TOP              
+ 270: LOAD_FAST            exceptions
+ 272: LOAD_METHOD          clear
+ 294: PRECALL              
+ 298: CALL                 
+ 308: POP_TOP              
+ 310: LOAD_FAST            sock
+ 312: SWAP                 
+ 314: POP_TOP              
+ 316: RETURN_VALUE         
+ 318: PUSH_EXC_INFO        
+ 320: LOAD_GLOBAL          error
+ 332: CHECK_EXC_MATCH      
+ 334: POP_JUMP_FORWARD_IF_FALSE to 486
+ 336: STORE_FAST           exc
+ 338: LOAD_FAST            all_errors
+ 340: POP_JUMP_FORWARD_IF_TRUE to 382
+ 342: LOAD_FAST            exceptions
+ 344: LOAD_METHOD          clear
+ 366: PRECALL              
+ 370: CALL                 
+ 380: POP_TOP              
+ 382: LOAD_FAST            exceptions
+ 384: LOAD_METHOD          append
+ 406: LOAD_FAST            exc
+ 408: PRECALL              
+ 412: CALL                 
+ 422: POP_TOP              
+ 424: LOAD_FAST            sock
+ 426: POP_JUMP_FORWARD_IF_NONE to 468
+ 428: LOAD_FAST            sock
+ 430: LOAD_METHOD          close
+ 452: PRECALL              
+ 456: CALL                 
+ 466: POP_TOP              
+ 468: POP_EXCEPT           
+ 470: LOAD_CONST           None
+ 472: STORE_FAST           exc
+ 474: DELETE_FAST          exc
+ 476: JUMP_BACKWARD        to 62
+ 478: LOAD_CONST           None
+ 480: STORE_FAST           exc
+ 482: DELETE_FAST          exc
+ 484: RERAISE              
+ 486: RERAISE              
+ 488: COPY                 
+ 490: POP_EXCEPT           
+ 492: RERAISE              
+ 494: LOAD_GLOBAL          NULL + len
+ 506: LOAD_FAST            exceptions
+ 508: PRECALL              
+ 512: CALL                 
+ 522: POP_JUMP_FORWARD_IF_FALSE to 628
+ 524: NOP                  
+ 526: LOAD_FAST            all_errors
+ 528: POP_JUMP_FORWARD_IF_TRUE to 546
+ 530: LOAD_FAST            exceptions
+ 532: LOAD_CONST           0
+ 534: BINARY_SUBSCR        
+ 544: RAISE_VARARGS        
+ 546: LOAD_GLOBAL          NULL + ExceptionGroup
+ 558: LOAD_CONST           'create_connection failed'
+ 560: LOAD_FAST            exceptions
+ 562: PRECALL              
+ 566: CALL                 
+ 576: RAISE_VARARGS        
+ 578: PUSH_EXC_INFO        
+ 580: LOAD_FAST            exceptions
+ 582: LOAD_METHOD          clear
+ 604: PRECALL              
+ 608: CALL                 
+ 618: POP_TOP              
+ 620: RERAISE              
+ 622: COPY                 
+ 624: POP_EXCEPT           
+ 626: RERAISE              
+ 628: LOAD_GLOBAL          NULL + error
+ 640: LOAD_CONST           'getaddrinfo returns an empty list'
+ 642: PRECALL              
+ 646: CALL                 
+ 656: RAISE_VARARGS        

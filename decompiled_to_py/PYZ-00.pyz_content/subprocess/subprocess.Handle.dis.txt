@@ -1,0 +1,34 @@
+# Disassembly for subprocess.Handle
+# From module file: subprocess
+
+## co_consts:
+('Handle', False, <code object Close at 0x00000240693EAF30, file "subprocess.py", line 218>, <code object Detach at 0x000002406941A0D0, file "subprocess.py", line 223>, <code object __repr__ at 0x00000240693EB230, file "subprocess.py", line 229>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', 'closed', '_winapi', 'CloseHandle', 'Close', 'Detach', '__repr__', '__del__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Handle'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           False
+  12: STORE_NAME           closed
+  14: LOAD_NAME            _winapi
+  16: LOAD_ATTR            CloseHandle
+  26: BUILD_TUPLE          
+  28: LOAD_CONST           <code object Close at 0x00000240693EAF30, file "subprocess.py", line 218>
+  30: MAKE_FUNCTION        defaults
+  32: STORE_NAME           Close
+  34: LOAD_CONST           <code object Detach at 0x000002406941A0D0, file "subprocess.py", line 223>
+  36: MAKE_FUNCTION        
+  38: STORE_NAME           Detach
+  40: LOAD_CONST           <code object __repr__ at 0x00000240693EB230, file "subprocess.py", line 229>
+  42: MAKE_FUNCTION        
+  44: STORE_NAME           __repr__
+  46: LOAD_NAME            Close
+  48: STORE_NAME           __del__
+  50: LOAD_CONST           None
+  52: RETURN_VALUE         

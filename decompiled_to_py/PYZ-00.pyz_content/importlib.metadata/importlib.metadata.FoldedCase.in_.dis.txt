@@ -1,0 +1,19 @@
+# Disassembly for importlib.metadata.FoldedCase.in_
+# From module file: importlib.metadata._text
+
+## co_consts:
+('Does self appear in other?',)
+
+## co_names:
+('FoldedCase',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_GLOBAL          NULL + FoldedCase
+  16: LOAD_FAST            other
+  18: PRECALL              
+  22: CALL                 
+  32: CONTAINS_OP          
+  34: RETURN_VALUE         

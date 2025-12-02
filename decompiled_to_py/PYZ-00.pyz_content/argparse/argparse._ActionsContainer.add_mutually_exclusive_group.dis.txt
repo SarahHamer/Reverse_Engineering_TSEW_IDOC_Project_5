@@ -1,0 +1,29 @@
+# Disassembly for argparse._ActionsContainer.add_mutually_exclusive_group
+# From module file: argparse
+
+## co_consts:
+(None,)
+
+## co_names:
+('_MutuallyExclusiveGroup', '_mutually_exclusive_groups', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _MutuallyExclusiveGroup
+  14: LOAD_FAST            self
+  16: BUILD_TUPLE          
+  18: BUILD_MAP            
+  20: LOAD_FAST            kwargs
+  22: DICT_MERGE           
+  24: CALL_FUNCTION_EX     
+  26: STORE_FAST           group
+  28: LOAD_FAST            self
+  30: LOAD_ATTR            _mutually_exclusive_groups
+  40: LOAD_METHOD          append
+  62: LOAD_FAST            group
+  64: PRECALL              
+  68: CALL                 
+  78: POP_TOP              
+  80: LOAD_FAST            group
+  82: RETURN_VALUE         

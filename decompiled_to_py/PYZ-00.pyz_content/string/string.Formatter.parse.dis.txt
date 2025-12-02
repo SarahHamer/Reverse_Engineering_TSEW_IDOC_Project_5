@@ -1,0 +1,18 @@
+# Disassembly for string.Formatter.parse
+# From module file: string
+
+## co_consts:
+(None,)
+
+## co_names:
+('_string', 'formatter_parser')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _string
+  14: LOAD_ATTR            formatter_parser
+  24: LOAD_FAST            format_string
+  26: PRECALL              
+  30: CALL                 
+  40: RETURN_VALUE         

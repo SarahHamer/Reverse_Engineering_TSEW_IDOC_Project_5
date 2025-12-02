@@ -1,0 +1,33 @@
+# Disassembly for calendar.TextCalendar.formatweekday
+# From module file: calendar
+
+## co_consts:
+('\n        Returns a formatted week day name.\n        ', 9, None)
+
+## co_names:
+('day_name', 'day_abbr', 'center')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            width
+   4: LOAD_CONST           9
+   6: COMPARE_OP           >=
+  12: POP_JUMP_FORWARD_IF_FALSE to 30
+  14: LOAD_GLOBAL          day_name
+  26: STORE_FAST           names
+  28: JUMP_FORWARD         to 44
+  30: LOAD_GLOBAL          day_abbr
+  42: STORE_FAST           names
+  44: LOAD_FAST            names
+  46: LOAD_FAST            day
+  48: BINARY_SUBSCR        
+  58: LOAD_CONST           None
+  60: LOAD_FAST            width
+  62: BUILD_SLICE          
+  64: BINARY_SUBSCR        
+  74: LOAD_METHOD          center
+  96: LOAD_FAST            width
+  98: PRECALL              
+ 102: CALL                 
+ 112: RETURN_VALUE         

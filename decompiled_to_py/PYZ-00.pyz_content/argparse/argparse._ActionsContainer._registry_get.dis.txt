@@ -1,0 +1,22 @@
+# Disassembly for argparse._ActionsContainer._registry_get
+# From module file: argparse
+
+## co_consts:
+(None,)
+
+## co_names:
+('_registries', 'get')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _registries
+  14: LOAD_FAST            registry_name
+  16: BINARY_SUBSCR        
+  26: LOAD_METHOD          get
+  48: LOAD_FAST            value
+  50: LOAD_FAST            default
+  52: PRECALL              
+  56: CALL                 
+  66: RETURN_VALUE         

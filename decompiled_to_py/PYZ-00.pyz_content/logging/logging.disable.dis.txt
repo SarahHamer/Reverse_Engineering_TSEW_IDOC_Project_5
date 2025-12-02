@@ -1,0 +1,24 @@
+# Disassembly for logging.disable
+# From module file: logging
+
+## co_consts:
+("\n    Disable all logging calls of severity 'level' and below.\n    ", None)
+
+## co_names:
+('root', 'manager', 'disable', '_clear_cache')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            level
+   4: LOAD_GLOBAL          root
+  16: LOAD_ATTR            manager
+  26: STORE_ATTR           disable
+  36: LOAD_GLOBAL          root
+  48: LOAD_ATTR            manager
+  58: LOAD_METHOD          _clear_cache
+  80: PRECALL              
+  84: CALL                 
+  94: POP_TOP              
+  96: LOAD_CONST           None
+  98: RETURN_VALUE         

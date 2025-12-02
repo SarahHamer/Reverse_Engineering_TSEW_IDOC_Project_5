@@ -1,0 +1,259 @@
+# Disassembly for email.get_address_list
+# From module file: email._header_value_parser
+
+## co_consts:
+(' address_list = (address *("," address)) / obs-addr-list\n        obs-addr-list = *([CFWS] ",") address *("," [address / CFWS])\n\n    We depart from the formal grammar here by continuing to parse until the end\n    of the input, assuming the input to be entirely composed of an\n    address-list.  This is always true in email parsing, and allows us\n    to skip invalid addresses to parse additional valid ones.\n\n    ', None, 0, ',', 'address-list entry with no content', 'invalid address in address-list', 'empty element in address-list', -1, 'invalid-mailbox', 'list-separator', 1)
+
+## co_names:
+('AddressList', 'get_address', 'append', 'errors', 'HeaderParseError', 'CFWS_LEADER', 'get_cfws', 'defects', 'ObsoleteHeaderDefect', 'get_invalid_mailbox', 'Address', 'InvalidHeaderDefect', 'token_type', 'extend', 'ValueTerminal')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + AddressList
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           address_list
+  30: LOAD_FAST            value
+  32: EXTENDED_ARG         
+  34: POP_JUMP_FORWARD_IF_FALSE to 1296
+  36: NOP                  
+  38: LOAD_GLOBAL          NULL + get_address
+  50: LOAD_FAST            value
+  52: PRECALL              
+  56: CALL                 
+  66: UNPACK_SEQUENCE      
+  70: STORE_FAST           token
+  72: STORE_FAST           value
+  74: LOAD_FAST            address_list
+  76: LOAD_METHOD          append
+  98: LOAD_FAST            token
+ 100: PRECALL              
+ 104: CALL                 
+ 114: POP_TOP              
+ 116: EXTENDED_ARG         
+ 118: JUMP_FORWARD         to 958
+ 120: PUSH_EXC_INFO        
+ 122: LOAD_GLOBAL          errors
+ 134: LOAD_ATTR            HeaderParseError
+ 144: CHECK_EXC_MATCH      
+ 146: EXTENDED_ARG         
+ 148: POP_JUMP_FORWARD_IF_FALSE to 950
+ 150: STORE_FAST           err
+ 152: LOAD_CONST           None
+ 154: STORE_FAST           leader
+ 156: LOAD_FAST            value
+ 158: LOAD_CONST           0
+ 160: BINARY_SUBSCR        
+ 170: LOAD_GLOBAL          CFWS_LEADER
+ 182: CONTAINS_OP          
+ 184: POP_JUMP_FORWARD_IF_FALSE to 602
+ 186: LOAD_GLOBAL          NULL + get_cfws
+ 198: LOAD_FAST            value
+ 200: PRECALL              
+ 204: CALL                 
+ 214: UNPACK_SEQUENCE      
+ 218: STORE_FAST           leader
+ 220: STORE_FAST           value
+ 222: LOAD_FAST            value
+ 224: POP_JUMP_FORWARD_IF_FALSE to 250
+ 226: LOAD_FAST            value
+ 228: LOAD_CONST           0
+ 230: BINARY_SUBSCR        
+ 240: LOAD_CONST           ','
+ 242: COMPARE_OP           ==
+ 248: POP_JUMP_FORWARD_IF_FALSE to 384
+ 250: LOAD_FAST            address_list
+ 252: LOAD_METHOD          append
+ 274: LOAD_FAST            leader
+ 276: PRECALL              
+ 280: CALL                 
+ 290: POP_TOP              
+ 292: LOAD_FAST            address_list
+ 294: LOAD_ATTR            defects
+ 304: LOAD_METHOD          append
+ 326: LOAD_GLOBAL          NULL + errors
+ 338: LOAD_ATTR            ObsoleteHeaderDefect
+ 348: LOAD_CONST           'address-list entry with no content'
+ 350: PRECALL              
+ 354: CALL                 
+ 364: PRECALL              
+ 368: CALL                 
+ 378: POP_TOP              
+ 380: EXTENDED_ARG         
+ 382: JUMP_FORWARD         to 932
+ 384: LOAD_GLOBAL          NULL + get_invalid_mailbox
+ 396: LOAD_FAST            value
+ 398: LOAD_CONST           ','
+ 400: PRECALL              
+ 404: CALL                 
+ 414: UNPACK_SEQUENCE      
+ 418: STORE_FAST           token
+ 420: STORE_FAST           value
+ 422: LOAD_FAST            leader
+ 424: POP_JUMP_FORWARD_IF_NONE to 442
+ 426: LOAD_FAST            leader
+ 428: BUILD_LIST           
+ 430: LOAD_FAST            token
+ 432: LOAD_CONST           None
+ 434: LOAD_CONST           0
+ 436: BUILD_SLICE          
+ 438: STORE_SUBSCR         
+ 442: LOAD_FAST            address_list
+ 444: LOAD_METHOD          append
+ 466: LOAD_GLOBAL          NULL + Address
+ 478: LOAD_FAST            token
+ 480: BUILD_LIST           
+ 482: PRECALL              
+ 486: CALL                 
+ 496: PRECALL              
+ 500: CALL                 
+ 510: POP_TOP              
+ 512: LOAD_FAST            address_list
+ 514: LOAD_ATTR            defects
+ 524: LOAD_METHOD          append
+ 546: LOAD_GLOBAL          NULL + errors
+ 558: LOAD_ATTR            InvalidHeaderDefect
+ 568: LOAD_CONST           'invalid address in address-list'
+ 570: PRECALL              
+ 574: CALL                 
+ 584: PRECALL              
+ 588: CALL                 
+ 598: POP_TOP              
+ 600: JUMP_FORWARD         to 932
+ 602: LOAD_FAST            value
+ 604: LOAD_CONST           0
+ 606: BINARY_SUBSCR        
+ 616: LOAD_CONST           ','
+ 618: COMPARE_OP           ==
+ 624: POP_JUMP_FORWARD_IF_FALSE to 716
+ 626: LOAD_FAST            address_list
+ 628: LOAD_ATTR            defects
+ 638: LOAD_METHOD          append
+ 660: LOAD_GLOBAL          NULL + errors
+ 672: LOAD_ATTR            ObsoleteHeaderDefect
+ 682: LOAD_CONST           'empty element in address-list'
+ 684: PRECALL              
+ 688: CALL                 
+ 698: PRECALL              
+ 702: CALL                 
+ 712: POP_TOP              
+ 714: JUMP_FORWARD         to 932
+ 716: LOAD_GLOBAL          NULL + get_invalid_mailbox
+ 728: LOAD_FAST            value
+ 730: LOAD_CONST           ','
+ 732: PRECALL              
+ 736: CALL                 
+ 746: UNPACK_SEQUENCE      
+ 750: STORE_FAST           token
+ 752: STORE_FAST           value
+ 754: LOAD_FAST            leader
+ 756: POP_JUMP_FORWARD_IF_NONE to 774
+ 758: LOAD_FAST            leader
+ 760: BUILD_LIST           
+ 762: LOAD_FAST            token
+ 764: LOAD_CONST           None
+ 766: LOAD_CONST           0
+ 768: BUILD_SLICE          
+ 770: STORE_SUBSCR         
+ 774: LOAD_FAST            address_list
+ 776: LOAD_METHOD          append
+ 798: LOAD_GLOBAL          NULL + Address
+ 810: LOAD_FAST            token
+ 812: BUILD_LIST           
+ 814: PRECALL              
+ 818: CALL                 
+ 828: PRECALL              
+ 832: CALL                 
+ 842: POP_TOP              
+ 844: LOAD_FAST            address_list
+ 846: LOAD_ATTR            defects
+ 856: LOAD_METHOD          append
+ 878: LOAD_GLOBAL          NULL + errors
+ 890: LOAD_ATTR            InvalidHeaderDefect
+ 900: LOAD_CONST           'invalid address in address-list'
+ 902: PRECALL              
+ 906: CALL                 
+ 916: PRECALL              
+ 920: CALL                 
+ 930: POP_TOP              
+ 932: POP_EXCEPT           
+ 934: LOAD_CONST           None
+ 936: STORE_FAST           err
+ 938: DELETE_FAST          err
+ 940: JUMP_FORWARD         to 958
+ 942: LOAD_CONST           None
+ 944: STORE_FAST           err
+ 946: DELETE_FAST          err
+ 948: RERAISE              
+ 950: RERAISE              
+ 952: COPY                 
+ 954: POP_EXCEPT           
+ 956: RERAISE              
+ 958: LOAD_FAST            value
+ 960: POP_JUMP_FORWARD_IF_FALSE to 1196
+ 962: LOAD_FAST            value
+ 964: LOAD_CONST           0
+ 966: BINARY_SUBSCR        
+ 976: LOAD_CONST           ','
+ 978: COMPARE_OP           !=
+ 984: POP_JUMP_FORWARD_IF_FALSE to 1196
+ 986: LOAD_FAST            address_list
+ 988: LOAD_CONST           -1
+ 990: BINARY_SUBSCR        
+1000: LOAD_CONST           0
+1002: BINARY_SUBSCR        
+1012: STORE_FAST           mailbox
+1014: LOAD_CONST           'invalid-mailbox'
+1016: LOAD_FAST            mailbox
+1018: STORE_ATTR           token_type
+1028: LOAD_GLOBAL          NULL + get_invalid_mailbox
+1040: LOAD_FAST            value
+1042: LOAD_CONST           ','
+1044: PRECALL              
+1048: CALL                 
+1058: UNPACK_SEQUENCE      
+1062: STORE_FAST           token
+1064: STORE_FAST           value
+1066: LOAD_FAST            mailbox
+1068: LOAD_METHOD          extend
+1090: LOAD_FAST            token
+1092: PRECALL              
+1096: CALL                 
+1106: POP_TOP              
+1108: LOAD_FAST            address_list
+1110: LOAD_ATTR            defects
+1120: LOAD_METHOD          append
+1142: LOAD_GLOBAL          NULL + errors
+1154: LOAD_ATTR            InvalidHeaderDefect
+1164: LOAD_CONST           'invalid address in address-list'
+1166: PRECALL              
+1170: CALL                 
+1180: PRECALL              
+1184: CALL                 
+1194: POP_TOP              
+1196: LOAD_FAST            value
+1198: POP_JUMP_FORWARD_IF_FALSE to 1290
+1200: LOAD_FAST            address_list
+1202: LOAD_METHOD          append
+1224: LOAD_GLOBAL          NULL + ValueTerminal
+1236: LOAD_CONST           ','
+1238: LOAD_CONST           'list-separator'
+1240: PRECALL              
+1244: CALL                 
+1254: PRECALL              
+1258: CALL                 
+1268: POP_TOP              
+1270: LOAD_FAST            value
+1272: LOAD_CONST           1
+1274: LOAD_CONST           None
+1276: BUILD_SLICE          
+1278: BINARY_SUBSCR        
+1288: STORE_FAST           value
+1290: LOAD_FAST            value
+1292: EXTENDED_ARG         
+1294: POP_JUMP_BACKWARD_IF_TRUE to 36
+1296: LOAD_FAST            address_list
+1298: LOAD_FAST            value
+1300: BUILD_TUPLE          
+1302: RETURN_VALUE         

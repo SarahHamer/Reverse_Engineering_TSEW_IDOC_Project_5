@@ -1,0 +1,238 @@
+# Disassembly for selectors
+# From module file: selectors
+
+## co_consts:
+('Selectors module.\n\nThis module allows high-level and efficient I/O multiplexing, built upon the\n`select` module primitives.\n', 0, ('ABCMeta', 'abstractmethod'), ('namedtuple',), ('Mapping',), None, 1, 2, <code object _fileobj_to_fd at 0x000002406931F630, file "selectors.py", line 21>, 'SelectorKey', ('fileobj', 'fd', 'events', 'data'), 'SelectorKey(fileobj, fd, events, data)\n\n    Object used to associate a file object to its backing\n    file descriptor, selected event mask, and attached data.\n', 'File object registered.', 'Underlying file descriptor.', 'Events that must be waited for on this file object.', 'Optional opaque data associated to this file object.\nFor example, this could be used to store a per-client session ID.', <code object _SelectorMapping at 0x000002406945EB50, file "selectors.py", line 60>, '_SelectorMapping', <code object BaseSelector at 0x00000240691F13E0, file "selectors.py", line 80>, 'BaseSelector', ('metaclass',), <code object _BaseSelectorImpl at 0x00000240693EB530, file "selectors.py", line 206>, '_BaseSelectorImpl', <code object SelectSelector at 0x00000240693D2630, file "selectors.py", line 290>, 'SelectSelector', <code object _PollLikeSelector at 0x000002406944AAB0, file "selectors.py", line 341>, '_PollLikeSelector', 'poll', <code object PollSelector at 0x00000240693EAF30, file "selectors.py", line 433>, 'PollSelector', 'epoll', <code object EpollSelector at 0x000002406941AC10, file "selectors.py", line 442>, 'EpollSelector', 'devpoll', <code object DevpollSelector at 0x000002406944B110, file "selectors.py", line 490>, 'DevpollSelector', 'kqueue', <code object KqueueSelector at 0x000002406944A010, file "selectors.py", line 506>, 'KqueueSelector', <code object _can_use at 0x000002406942CFD0, file "selectors.py", line 583>)
+
+## co_names:
+('__doc__', 'abc', 'ABCMeta', 'abstractmethod', 'collections', 'namedtuple', 'collections.abc', 'Mapping', 'math', 'select', 'sys', 'EVENT_READ', 'EVENT_WRITE', '_fileobj_to_fd', 'SelectorKey', 'fileobj', 'fd', 'events', 'data', '_SelectorMapping', 'BaseSelector', '_BaseSelectorImpl', 'SelectSelector', '_PollLikeSelector', 'hasattr', 'PollSelector', 'EpollSelector', 'DevpollSelector', 'KqueueSelector', '_can_use', 'DefaultSelector')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'Selectors module.\n\nThis module allows high-level and efficient I/O multiplexing, built upon the\n`select` module primitives.\n'
+   4: STORE_NAME           __doc__
+   6: LOAD_CONST           0
+   8: LOAD_CONST           ('ABCMeta', 'abstractmethod')
+  10: IMPORT_NAME          abc
+  12: IMPORT_FROM          ABCMeta
+  14: STORE_NAME           ABCMeta
+  16: IMPORT_FROM          abstractmethod
+  18: STORE_NAME           abstractmethod
+  20: POP_TOP              
+  22: LOAD_CONST           0
+  24: LOAD_CONST           ('namedtuple',)
+  26: IMPORT_NAME          collections
+  28: IMPORT_FROM          namedtuple
+  30: STORE_NAME           namedtuple
+  32: POP_TOP              
+  34: LOAD_CONST           0
+  36: LOAD_CONST           ('Mapping',)
+  38: IMPORT_NAME          collections.abc
+  40: IMPORT_FROM          Mapping
+  42: STORE_NAME           Mapping
+  44: POP_TOP              
+  46: LOAD_CONST           0
+  48: LOAD_CONST           None
+  50: IMPORT_NAME          math
+  52: STORE_NAME           math
+  54: LOAD_CONST           0
+  56: LOAD_CONST           None
+  58: IMPORT_NAME          select
+  60: STORE_NAME           select
+  62: LOAD_CONST           0
+  64: LOAD_CONST           None
+  66: IMPORT_NAME          sys
+  68: STORE_NAME           sys
+  70: LOAD_CONST           1
+  72: STORE_NAME           EVENT_READ
+  74: LOAD_CONST           2
+  76: STORE_NAME           EVENT_WRITE
+  78: LOAD_CONST           <code object _fileobj_to_fd at 0x000002406931F630, file "selectors.py", line 21>
+  80: MAKE_FUNCTION        
+  82: STORE_NAME           _fileobj_to_fd
+  84: PUSH_NULL            
+  86: LOAD_NAME            namedtuple
+  88: LOAD_CONST           'SelectorKey'
+  90: BUILD_LIST           
+  92: LOAD_CONST           ('fileobj', 'fd', 'events', 'data')
+  94: LIST_EXTEND          
+  96: PRECALL              
+ 100: CALL                 
+ 110: STORE_NAME           SelectorKey
+ 112: LOAD_CONST           'SelectorKey(fileobj, fd, events, data)\n\n    Object used to associate a file object to its backing\n    file descriptor, selected event mask, and attached data.\n'
+ 114: LOAD_NAME            SelectorKey
+ 116: STORE_ATTR           __doc__
+ 126: LOAD_CONST           'File object registered.'
+ 128: LOAD_NAME            SelectorKey
+ 130: LOAD_ATTR            fileobj
+ 140: STORE_ATTR           __doc__
+ 150: LOAD_CONST           'Underlying file descriptor.'
+ 152: LOAD_NAME            SelectorKey
+ 154: LOAD_ATTR            fd
+ 164: STORE_ATTR           __doc__
+ 174: LOAD_CONST           'Events that must be waited for on this file object.'
+ 176: LOAD_NAME            SelectorKey
+ 178: LOAD_ATTR            events
+ 188: STORE_ATTR           __doc__
+ 198: LOAD_CONST           'Optional opaque data associated to this file object.\nFor example, this could be used to store a per-client session ID.'
+ 200: LOAD_NAME            SelectorKey
+ 202: LOAD_ATTR            data
+ 212: STORE_ATTR           __doc__
+ 222: PUSH_NULL            
+ 224: LOAD_BUILD_CLASS     
+ 226: LOAD_CONST           <code object _SelectorMapping at 0x000002406945EB50, file "selectors.py", line 60>
+ 228: MAKE_FUNCTION        
+ 230: LOAD_CONST           '_SelectorMapping'
+ 232: LOAD_NAME            Mapping
+ 234: PRECALL              
+ 238: CALL                 
+ 248: STORE_NAME           _SelectorMapping
+ 250: PUSH_NULL            
+ 252: LOAD_BUILD_CLASS     
+ 254: LOAD_CONST           <code object BaseSelector at 0x00000240691F13E0, file "selectors.py", line 80>
+ 256: MAKE_FUNCTION        
+ 258: LOAD_CONST           'BaseSelector'
+ 260: LOAD_NAME            ABCMeta
+ 262: KW_NAMES             
+ 264: PRECALL              
+ 268: CALL                 
+ 278: STORE_NAME           BaseSelector
+ 280: PUSH_NULL            
+ 282: LOAD_BUILD_CLASS     
+ 284: LOAD_CONST           <code object _BaseSelectorImpl at 0x00000240693EB530, file "selectors.py", line 206>
+ 286: MAKE_FUNCTION        
+ 288: LOAD_CONST           '_BaseSelectorImpl'
+ 290: LOAD_NAME            BaseSelector
+ 292: PRECALL              
+ 296: CALL                 
+ 306: STORE_NAME           _BaseSelectorImpl
+ 308: PUSH_NULL            
+ 310: LOAD_BUILD_CLASS     
+ 312: LOAD_CONST           <code object SelectSelector at 0x00000240693D2630, file "selectors.py", line 290>
+ 314: MAKE_FUNCTION        
+ 316: LOAD_CONST           'SelectSelector'
+ 318: LOAD_NAME            _BaseSelectorImpl
+ 320: PRECALL              
+ 324: CALL                 
+ 334: STORE_NAME           SelectSelector
+ 336: PUSH_NULL            
+ 338: LOAD_BUILD_CLASS     
+ 340: LOAD_CONST           <code object _PollLikeSelector at 0x000002406944AAB0, file "selectors.py", line 341>
+ 342: MAKE_FUNCTION        
+ 344: LOAD_CONST           '_PollLikeSelector'
+ 346: LOAD_NAME            _BaseSelectorImpl
+ 348: PRECALL              
+ 352: CALL                 
+ 362: STORE_NAME           _PollLikeSelector
+ 364: PUSH_NULL            
+ 366: LOAD_NAME            hasattr
+ 368: LOAD_NAME            select
+ 370: LOAD_CONST           'poll'
+ 372: PRECALL              
+ 376: CALL                 
+ 386: POP_JUMP_FORWARD_IF_FALSE to 416
+ 388: PUSH_NULL            
+ 390: LOAD_BUILD_CLASS     
+ 392: LOAD_CONST           <code object PollSelector at 0x00000240693EAF30, file "selectors.py", line 433>
+ 394: MAKE_FUNCTION        
+ 396: LOAD_CONST           'PollSelector'
+ 398: LOAD_NAME            _PollLikeSelector
+ 400: PRECALL              
+ 404: CALL                 
+ 414: STORE_NAME           PollSelector
+ 416: PUSH_NULL            
+ 418: LOAD_NAME            hasattr
+ 420: LOAD_NAME            select
+ 422: LOAD_CONST           'epoll'
+ 424: PRECALL              
+ 428: CALL                 
+ 438: POP_JUMP_FORWARD_IF_FALSE to 468
+ 440: PUSH_NULL            
+ 442: LOAD_BUILD_CLASS     
+ 444: LOAD_CONST           <code object EpollSelector at 0x000002406941AC10, file "selectors.py", line 442>
+ 446: MAKE_FUNCTION        
+ 448: LOAD_CONST           'EpollSelector'
+ 450: LOAD_NAME            _PollLikeSelector
+ 452: PRECALL              
+ 456: CALL                 
+ 466: STORE_NAME           EpollSelector
+ 468: PUSH_NULL            
+ 470: LOAD_NAME            hasattr
+ 472: LOAD_NAME            select
+ 474: LOAD_CONST           'devpoll'
+ 476: PRECALL              
+ 480: CALL                 
+ 490: POP_JUMP_FORWARD_IF_FALSE to 520
+ 492: PUSH_NULL            
+ 494: LOAD_BUILD_CLASS     
+ 496: LOAD_CONST           <code object DevpollSelector at 0x000002406944B110, file "selectors.py", line 490>
+ 498: MAKE_FUNCTION        
+ 500: LOAD_CONST           'DevpollSelector'
+ 502: LOAD_NAME            _PollLikeSelector
+ 504: PRECALL              
+ 508: CALL                 
+ 518: STORE_NAME           DevpollSelector
+ 520: PUSH_NULL            
+ 522: LOAD_NAME            hasattr
+ 524: LOAD_NAME            select
+ 526: LOAD_CONST           'kqueue'
+ 528: PRECALL              
+ 532: CALL                 
+ 542: POP_JUMP_FORWARD_IF_FALSE to 572
+ 544: PUSH_NULL            
+ 546: LOAD_BUILD_CLASS     
+ 548: LOAD_CONST           <code object KqueueSelector at 0x000002406944A010, file "selectors.py", line 506>
+ 550: MAKE_FUNCTION        
+ 552: LOAD_CONST           'KqueueSelector'
+ 554: LOAD_NAME            _BaseSelectorImpl
+ 556: PRECALL              
+ 560: CALL                 
+ 570: STORE_NAME           KqueueSelector
+ 572: LOAD_CONST           <code object _can_use at 0x000002406942CFD0, file "selectors.py", line 583>
+ 574: MAKE_FUNCTION        
+ 576: STORE_NAME           _can_use
+ 578: PUSH_NULL            
+ 580: LOAD_NAME            _can_use
+ 582: LOAD_CONST           'kqueue'
+ 584: PRECALL              
+ 588: CALL                 
+ 598: POP_JUMP_FORWARD_IF_FALSE to 608
+ 600: LOAD_NAME            KqueueSelector
+ 602: STORE_NAME           DefaultSelector
+ 604: LOAD_CONST           None
+ 606: RETURN_VALUE         
+ 608: PUSH_NULL            
+ 610: LOAD_NAME            _can_use
+ 612: LOAD_CONST           'epoll'
+ 614: PRECALL              
+ 618: CALL                 
+ 628: POP_JUMP_FORWARD_IF_FALSE to 638
+ 630: LOAD_NAME            EpollSelector
+ 632: STORE_NAME           DefaultSelector
+ 634: LOAD_CONST           None
+ 636: RETURN_VALUE         
+ 638: PUSH_NULL            
+ 640: LOAD_NAME            _can_use
+ 642: LOAD_CONST           'devpoll'
+ 644: PRECALL              
+ 648: CALL                 
+ 658: POP_JUMP_FORWARD_IF_FALSE to 668
+ 660: LOAD_NAME            DevpollSelector
+ 662: STORE_NAME           DefaultSelector
+ 664: LOAD_CONST           None
+ 666: RETURN_VALUE         
+ 668: PUSH_NULL            
+ 670: LOAD_NAME            _can_use
+ 672: LOAD_CONST           'poll'
+ 674: PRECALL              
+ 678: CALL                 
+ 688: POP_JUMP_FORWARD_IF_FALSE to 698
+ 690: LOAD_NAME            PollSelector
+ 692: STORE_NAME           DefaultSelector
+ 694: LOAD_CONST           None
+ 696: RETURN_VALUE         
+ 698: LOAD_NAME            SelectSelector
+ 700: STORE_NAME           DefaultSelector
+ 702: LOAD_CONST           None
+ 704: RETURN_VALUE         

@@ -1,0 +1,50 @@
+# Disassembly for gettext.NullTranslations
+# From module file: gettext
+
+## co_consts:
+('NullTranslations', None, <code object __init__ at 0x000002406941AAF0, file "gettext.py", line 259>, <code object _parse at 0x000002406943BB70, file "gettext.py", line 266>, <code object add_fallback at 0x0000024069419D70, file "gettext.py", line 269>, <code object gettext at 0x00000240693EB330, file "gettext.py", line 275>, <code object ngettext at 0x000002406941B090, file "gettext.py", line 280>, <code object pgettext at 0x000002406944ABC0, file "gettext.py", line 288>, <code object npgettext at 0x0000024069419110, file "gettext.py", line 293>, <code object info at 0x0000024069495A30, file "gettext.py", line 301>, <code object charset at 0x0000024069495D70, file "gettext.py", line 304>, <code object install at 0x00000240691F39F0, file "gettext.py", line 307>, (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', '_parse', 'add_fallback', 'gettext', 'ngettext', 'pgettext', 'npgettext', 'info', 'charset', 'install')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'NullTranslations'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           (None,)
+  12: LOAD_CONST           <code object __init__ at 0x000002406941AAF0, file "gettext.py", line 259>
+  14: MAKE_FUNCTION        defaults
+  16: STORE_NAME           __init__
+  18: LOAD_CONST           <code object _parse at 0x000002406943BB70, file "gettext.py", line 266>
+  20: MAKE_FUNCTION        
+  22: STORE_NAME           _parse
+  24: LOAD_CONST           <code object add_fallback at 0x0000024069419D70, file "gettext.py", line 269>
+  26: MAKE_FUNCTION        
+  28: STORE_NAME           add_fallback
+  30: LOAD_CONST           <code object gettext at 0x00000240693EB330, file "gettext.py", line 275>
+  32: MAKE_FUNCTION        
+  34: STORE_NAME           gettext
+  36: LOAD_CONST           <code object ngettext at 0x000002406941B090, file "gettext.py", line 280>
+  38: MAKE_FUNCTION        
+  40: STORE_NAME           ngettext
+  42: LOAD_CONST           <code object pgettext at 0x000002406944ABC0, file "gettext.py", line 288>
+  44: MAKE_FUNCTION        
+  46: STORE_NAME           pgettext
+  48: LOAD_CONST           <code object npgettext at 0x0000024069419110, file "gettext.py", line 293>
+  50: MAKE_FUNCTION        
+  52: STORE_NAME           npgettext
+  54: LOAD_CONST           <code object info at 0x0000024069495A30, file "gettext.py", line 301>
+  56: MAKE_FUNCTION        
+  58: STORE_NAME           info
+  60: LOAD_CONST           <code object charset at 0x0000024069495D70, file "gettext.py", line 304>
+  62: MAKE_FUNCTION        
+  64: STORE_NAME           charset
+  66: LOAD_CONST           (None,)
+  68: LOAD_CONST           <code object install at 0x00000240691F39F0, file "gettext.py", line 307>
+  70: MAKE_FUNCTION        defaults
+  72: STORE_NAME           install
+  74: LOAD_CONST           None
+  76: RETURN_VALUE         

@@ -1,0 +1,766 @@
+# Disassembly for subprocess.Popen.__init__
+# From module file: subprocess
+
+## co_consts:
+('Create new Popen instance.', ' does not support processes.', None, False, -1, 'bufsize must be an integer', 'pipesize must be an integer', 'preexec_fn is not supported on Windows platforms', 'pass_fds overriding close_fds.', True, 'startupinfo is only supported on Windows platforms', 0, 'creationflags is only supported on Windows platforms', 'Cannot disambiguate when both text and universal_newlines are supplied but different. Pass one or the other.', 0.25, 1, 'setregid', "The 'group' parameter is not supported on the current platform", 'The group parameter cannot be a string on systems without the grp module', 'Group must be a string or an integer, not {}', 'Group ID cannot be negative, got ', 'setgroups', "The 'extra_groups' parameter is not supported on the current platform", 'Groups must be a list, not a string', 'Items in extra_groups cannot be strings on systems without the grp module', 'Items in extra_groups must be a string or integer, not {}', 'setreuid', "The 'user' parameter is not supported on the current platform", 'The user parameter cannot be a string on systems without the pwd module', 'User must be a string or an integer', 'User ID cannot be negative, got ', 'wb', ('write_through', 'line_buffering', 'encoding', 'errors'), 'rb', ('encoding', 'errors'), '_devnull')
+
+## co_names:
+('_can_fork_exec', 'OSError', 'errno', 'ENOTSUP', 'sys', 'platform', '_cleanup', 'threading', 'Lock', '_waitpid_lock', '_input', '_communication_started', 'isinstance', 'int', 'TypeError', '_mswindows', 'ValueError', 'warnings', 'warn', 'RuntimeWarning', 'args', 'stdin', 'stdout', 'stderr', 'pid', 'returncode', 'encoding', 'errors', 'pipesize', 'bool', 'SubprocessError', 'text_mode', '_text_encoding', '_sigint_wait_secs', '_closed_child_pipe_fds', 'hasattr', 'os', 'str', 'grp', 'ImportError', 'getgrnam', 'gr_gid', 'format', 'type', 'append', 'pwd', 'getpwnam', 'pw_uid', '_get_handles', 'msvcrt', 'open_osfhandle', 'Detach', 'io', 'open', 'TextIOWrapper', '_execute_child', 'filter', 'close', 'PIPE', '_devnull', 'Handle', 'Close')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _can_fork_exec
+  14: POP_JUMP_FORWARD_IF_TRUE to 94
+  16: LOAD_GLOBAL          NULL + OSError
+  28: LOAD_GLOBAL          errno
+  40: LOAD_ATTR            ENOTSUP
+  50: LOAD_GLOBAL          sys
+  62: LOAD_ATTR            platform
+  72: FORMAT_VALUE         
+  74: LOAD_CONST           ' does not support processes.'
+  76: BUILD_STRING         
+  78: PRECALL              
+  82: CALL                 
+  92: RAISE_VARARGS        
+  94: LOAD_GLOBAL          NULL + _cleanup
+ 106: PRECALL              
+ 110: CALL                 
+ 120: POP_TOP              
+ 122: LOAD_GLOBAL          NULL + threading
+ 134: LOAD_ATTR            Lock
+ 144: PRECALL              
+ 148: CALL                 
+ 158: LOAD_FAST            self
+ 160: STORE_ATTR           _waitpid_lock
+ 170: LOAD_CONST           None
+ 172: LOAD_FAST            self
+ 174: STORE_ATTR           _input
+ 184: LOAD_CONST           False
+ 186: LOAD_FAST            self
+ 188: STORE_ATTR           _communication_started
+ 198: LOAD_FAST            bufsize
+ 200: POP_JUMP_FORWARD_IF_NOT_NONE to 206
+ 202: LOAD_CONST           -1
+ 204: STORE_FAST           bufsize
+ 206: LOAD_GLOBAL          NULL + isinstance
+ 218: LOAD_FAST            bufsize
+ 220: LOAD_GLOBAL          int
+ 232: PRECALL              
+ 236: CALL                 
+ 246: POP_JUMP_FORWARD_IF_TRUE to 278
+ 248: LOAD_GLOBAL          NULL + TypeError
+ 260: LOAD_CONST           'bufsize must be an integer'
+ 262: PRECALL              
+ 266: CALL                 
+ 276: RAISE_VARARGS        
+ 278: LOAD_FAST            pipesize
+ 280: POP_JUMP_FORWARD_IF_NOT_NONE to 286
+ 282: LOAD_CONST           -1
+ 284: STORE_FAST           pipesize
+ 286: LOAD_GLOBAL          NULL + isinstance
+ 298: LOAD_FAST            pipesize
+ 300: LOAD_GLOBAL          int
+ 312: PRECALL              
+ 316: CALL                 
+ 326: POP_JUMP_FORWARD_IF_TRUE to 358
+ 328: LOAD_GLOBAL          NULL + TypeError
+ 340: LOAD_CONST           'pipesize must be an integer'
+ 342: PRECALL              
+ 346: CALL                 
+ 356: RAISE_VARARGS        
+ 358: LOAD_GLOBAL          _mswindows
+ 370: POP_JUMP_FORWARD_IF_FALSE to 408
+ 372: LOAD_FAST            preexec_fn
+ 374: POP_JUMP_FORWARD_IF_NONE to 406
+ 376: LOAD_GLOBAL          NULL + ValueError
+ 388: LOAD_CONST           'preexec_fn is not supported on Windows platforms'
+ 390: PRECALL              
+ 394: CALL                 
+ 404: RAISE_VARARGS        
+ 406: JUMP_FORWARD         to 548
+ 408: LOAD_FAST            pass_fds
+ 410: POP_JUMP_FORWARD_IF_FALSE to 472
+ 412: LOAD_FAST            close_fds
+ 414: POP_JUMP_FORWARD_IF_TRUE to 472
+ 416: LOAD_GLOBAL          NULL + warnings
+ 428: LOAD_ATTR            warn
+ 438: LOAD_CONST           'pass_fds overriding close_fds.'
+ 440: LOAD_GLOBAL          RuntimeWarning
+ 452: PRECALL              
+ 456: CALL                 
+ 466: POP_TOP              
+ 468: LOAD_CONST           True
+ 470: STORE_FAST           close_fds
+ 472: LOAD_FAST            startupinfo
+ 474: POP_JUMP_FORWARD_IF_NONE to 506
+ 476: LOAD_GLOBAL          NULL + ValueError
+ 488: LOAD_CONST           'startupinfo is only supported on Windows platforms'
+ 490: PRECALL              
+ 494: CALL                 
+ 504: RAISE_VARARGS        
+ 506: LOAD_FAST            creationflags
+ 508: LOAD_CONST           0
+ 510: COMPARE_OP           !=
+ 516: POP_JUMP_FORWARD_IF_FALSE to 548
+ 518: LOAD_GLOBAL          NULL + ValueError
+ 530: LOAD_CONST           'creationflags is only supported on Windows platforms'
+ 532: PRECALL              
+ 536: CALL                 
+ 546: RAISE_VARARGS        
+ 548: LOAD_FAST            args
+ 550: LOAD_FAST            self
+ 552: STORE_ATTR           args
+ 562: LOAD_CONST           None
+ 564: LOAD_FAST            self
+ 566: STORE_ATTR           stdin
+ 576: LOAD_CONST           None
+ 578: LOAD_FAST            self
+ 580: STORE_ATTR           stdout
+ 590: LOAD_CONST           None
+ 592: LOAD_FAST            self
+ 594: STORE_ATTR           stderr
+ 604: LOAD_CONST           None
+ 606: LOAD_FAST            self
+ 608: STORE_ATTR           pid
+ 618: LOAD_CONST           None
+ 620: LOAD_FAST            self
+ 622: STORE_ATTR           returncode
+ 632: LOAD_FAST            encoding
+ 634: LOAD_FAST            self
+ 636: STORE_ATTR           encoding
+ 646: LOAD_FAST            errors
+ 648: LOAD_FAST            self
+ 650: STORE_ATTR           errors
+ 660: LOAD_FAST            pipesize
+ 662: LOAD_FAST            self
+ 664: STORE_ATTR           pipesize
+ 674: LOAD_FAST            text
+ 676: POP_JUMP_FORWARD_IF_NONE to 776
+ 678: LOAD_FAST            universal_newlines
+ 680: POP_JUMP_FORWARD_IF_NONE to 776
+ 682: LOAD_GLOBAL          NULL + bool
+ 694: LOAD_FAST            universal_newlines
+ 696: PRECALL              
+ 700: CALL                 
+ 710: LOAD_GLOBAL          NULL + bool
+ 722: LOAD_FAST            text
+ 724: PRECALL              
+ 728: CALL                 
+ 738: COMPARE_OP           !=
+ 744: POP_JUMP_FORWARD_IF_FALSE to 776
+ 746: LOAD_GLOBAL          NULL + SubprocessError
+ 758: LOAD_CONST           'Cannot disambiguate when both text and universal_newlines are supplied but different. Pass one or the other.'
+ 760: PRECALL              
+ 764: CALL                 
+ 774: RAISE_VARARGS        
+ 776: LOAD_FAST            encoding
+ 778: JUMP_IF_TRUE_OR_POP  to 790
+ 780: LOAD_FAST            errors
+ 782: JUMP_IF_TRUE_OR_POP  to 790
+ 784: LOAD_FAST            text
+ 786: JUMP_IF_TRUE_OR_POP  to 790
+ 788: LOAD_FAST            universal_newlines
+ 790: LOAD_FAST            self
+ 792: STORE_ATTR           text_mode
+ 802: LOAD_FAST            self
+ 804: LOAD_ATTR            text_mode
+ 814: POP_JUMP_FORWARD_IF_FALSE to 862
+ 816: LOAD_FAST            encoding
+ 818: POP_JUMP_FORWARD_IF_NOT_NONE to 862
+ 820: LOAD_GLOBAL          NULL + _text_encoding
+ 832: PRECALL              
+ 836: CALL                 
+ 846: COPY                 
+ 848: LOAD_FAST            self
+ 850: STORE_ATTR           encoding
+ 860: STORE_FAST           encoding
+ 862: LOAD_CONST           0.25
+ 864: LOAD_FAST            self
+ 866: STORE_ATTR           _sigint_wait_secs
+ 876: LOAD_CONST           False
+ 878: LOAD_FAST            self
+ 880: STORE_ATTR           _closed_child_pipe_fds
+ 890: LOAD_FAST            self
+ 892: LOAD_ATTR            text_mode
+ 902: POP_JUMP_FORWARD_IF_FALSE to 930
+ 904: LOAD_FAST            bufsize
+ 906: LOAD_CONST           1
+ 908: COMPARE_OP           ==
+ 914: POP_JUMP_FORWARD_IF_FALSE to 926
+ 916: LOAD_CONST           True
+ 918: STORE_FAST           line_buffering
+ 920: LOAD_CONST           -1
+ 922: STORE_FAST           bufsize
+ 924: JUMP_FORWARD         to 930
+ 926: LOAD_CONST           False
+ 928: STORE_FAST           line_buffering
+ 930: LOAD_FAST            process_group
+ 932: POP_JUMP_FORWARD_IF_NOT_NONE to 938
+ 934: LOAD_CONST           -1
+ 936: STORE_FAST           process_group
+ 938: LOAD_CONST           None
+ 940: STORE_FAST           gid
+ 942: LOAD_FAST            group
+ 944: POP_JUMP_FORWARD_IF_NONE to 1374
+ 946: LOAD_GLOBAL          NULL + hasattr
+ 958: LOAD_GLOBAL          os
+ 970: LOAD_CONST           'setregid'
+ 972: PRECALL              
+ 976: CALL                 
+ 986: POP_JUMP_FORWARD_IF_TRUE to 1018
+ 988: LOAD_GLOBAL          NULL + ValueError
+1000: LOAD_CONST           "The 'group' parameter is not supported on the current platform"
+1002: PRECALL              
+1006: CALL                 
+1016: RAISE_VARARGS        
+1018: LOAD_GLOBAL          NULL + isinstance
+1030: LOAD_FAST            group
+1032: LOAD_GLOBAL          str
+1044: PRECALL              
+1048: CALL                 
+1058: POP_JUMP_FORWARD_IF_FALSE to 1184
+1060: NOP                  
+1062: LOAD_CONST           0
+1064: LOAD_CONST           None
+1066: IMPORT_NAME          grp
+1068: STORE_FAST           grp
+1070: JUMP_FORWARD         to 1130
+1072: PUSH_EXC_INFO        
+1074: LOAD_GLOBAL          ImportError
+1086: CHECK_EXC_MATCH      
+1088: POP_JUMP_FORWARD_IF_FALSE to 1122
+1090: POP_TOP              
+1092: LOAD_GLOBAL          NULL + ValueError
+1104: LOAD_CONST           'The group parameter cannot be a string on systems without the grp module'
+1106: PRECALL              
+1110: CALL                 
+1120: RAISE_VARARGS        
+1122: RERAISE              
+1124: COPY                 
+1126: POP_EXCEPT           
+1128: RERAISE              
+1130: LOAD_FAST            grp
+1132: LOAD_METHOD          getgrnam
+1154: LOAD_FAST            group
+1156: PRECALL              
+1160: CALL                 
+1170: LOAD_ATTR            gr_gid
+1180: STORE_FAST           gid
+1182: JUMP_FORWARD         to 1326
+1184: LOAD_GLOBAL          NULL + isinstance
+1196: LOAD_FAST            group
+1198: LOAD_GLOBAL          int
+1210: PRECALL              
+1214: CALL                 
+1224: POP_JUMP_FORWARD_IF_FALSE to 1232
+1226: LOAD_FAST            group
+1228: STORE_FAST           gid
+1230: JUMP_FORWARD         to 1326
+1232: LOAD_GLOBAL          NULL + TypeError
+1244: LOAD_CONST           'Group must be a string or an integer, not {}'
+1246: LOAD_METHOD          format
+1268: LOAD_GLOBAL          NULL + type
+1280: LOAD_FAST            group
+1282: PRECALL              
+1286: CALL                 
+1296: PRECALL              
+1300: CALL                 
+1310: PRECALL              
+1314: CALL                 
+1324: RAISE_VARARGS        
+1326: LOAD_FAST            gid
+1328: LOAD_CONST           0
+1330: COMPARE_OP           <
+1336: POP_JUMP_FORWARD_IF_FALSE to 1374
+1338: LOAD_GLOBAL          NULL + ValueError
+1350: LOAD_CONST           'Group ID cannot be negative, got '
+1352: LOAD_FAST            gid
+1354: FORMAT_VALUE         
+1356: BUILD_STRING         
+1358: PRECALL              
+1362: CALL                 
+1372: RAISE_VARARGS        
+1374: LOAD_CONST           None
+1376: STORE_FAST           gids
+1378: LOAD_FAST            extra_groups
+1380: EXTENDED_ARG         
+1382: POP_JUMP_FORWARD_IF_NONE to 1982
+1384: LOAD_GLOBAL          NULL + hasattr
+1396: LOAD_GLOBAL          os
+1408: LOAD_CONST           'setgroups'
+1410: PRECALL              
+1414: CALL                 
+1424: POP_JUMP_FORWARD_IF_TRUE to 1456
+1426: LOAD_GLOBAL          NULL + ValueError
+1438: LOAD_CONST           "The 'extra_groups' parameter is not supported on the current platform"
+1440: PRECALL              
+1444: CALL                 
+1454: RAISE_VARARGS        
+1456: LOAD_GLOBAL          NULL + isinstance
+1468: LOAD_FAST            extra_groups
+1470: LOAD_GLOBAL          str
+1482: PRECALL              
+1486: CALL                 
+1496: POP_JUMP_FORWARD_IF_FALSE to 1528
+1498: LOAD_GLOBAL          NULL + ValueError
+1510: LOAD_CONST           'Groups must be a list, not a string'
+1512: PRECALL              
+1516: CALL                 
+1526: RAISE_VARARGS        
+1528: BUILD_LIST           
+1530: STORE_FAST           gids
+1532: LOAD_FAST            extra_groups
+1534: GET_ITER             
+1536: FOR_ITER             to 1924
+1538: STORE_FAST           extra_group
+1540: LOAD_GLOBAL          NULL + isinstance
+1552: LOAD_FAST            extra_group
+1554: LOAD_GLOBAL          str
+1566: PRECALL              
+1570: CALL                 
+1580: POP_JUMP_FORWARD_IF_FALSE to 1744
+1582: NOP                  
+1584: LOAD_CONST           0
+1586: LOAD_CONST           None
+1588: IMPORT_NAME          grp
+1590: STORE_FAST           grp
+1592: JUMP_FORWARD         to 1652
+1594: PUSH_EXC_INFO        
+1596: LOAD_GLOBAL          ImportError
+1608: CHECK_EXC_MATCH      
+1610: POP_JUMP_FORWARD_IF_FALSE to 1644
+1612: POP_TOP              
+1614: LOAD_GLOBAL          NULL + ValueError
+1626: LOAD_CONST           'Items in extra_groups cannot be strings on systems without the grp module'
+1628: PRECALL              
+1632: CALL                 
+1642: RAISE_VARARGS        
+1644: RERAISE              
+1646: COPY                 
+1648: POP_EXCEPT           
+1650: RERAISE              
+1652: LOAD_FAST            gids
+1654: LOAD_METHOD          append
+1676: LOAD_FAST            grp
+1678: LOAD_METHOD          getgrnam
+1700: LOAD_FAST            extra_group
+1702: PRECALL              
+1706: CALL                 
+1716: LOAD_ATTR            gr_gid
+1726: PRECALL              
+1730: CALL                 
+1740: POP_TOP              
+1742: JUMP_BACKWARD        to 1536
+1744: LOAD_GLOBAL          NULL + isinstance
+1756: LOAD_FAST            extra_group
+1758: LOAD_GLOBAL          int
+1770: PRECALL              
+1774: CALL                 
+1784: POP_JUMP_FORWARD_IF_FALSE to 1830
+1786: LOAD_FAST            gids
+1788: LOAD_METHOD          append
+1810: LOAD_FAST            extra_group
+1812: PRECALL              
+1816: CALL                 
+1826: POP_TOP              
+1828: JUMP_BACKWARD        to 1536
+1830: LOAD_GLOBAL          NULL + TypeError
+1842: LOAD_CONST           'Items in extra_groups must be a string or integer, not {}'
+1844: LOAD_METHOD          format
+1866: LOAD_GLOBAL          NULL + type
+1878: LOAD_FAST            extra_group
+1880: PRECALL              
+1884: CALL                 
+1894: PRECALL              
+1898: CALL                 
+1908: PRECALL              
+1912: CALL                 
+1922: RAISE_VARARGS        
+1924: LOAD_FAST            gids
+1926: GET_ITER             
+1928: FOR_ITER             to 1982
+1930: STORE_FAST           gid_check
+1932: LOAD_FAST            gid_check
+1934: LOAD_CONST           0
+1936: COMPARE_OP           <
+1942: POP_JUMP_FORWARD_IF_FALSE to 1980
+1944: LOAD_GLOBAL          NULL + ValueError
+1956: LOAD_CONST           'Group ID cannot be negative, got '
+1958: LOAD_FAST            gid_check
+1960: FORMAT_VALUE         
+1962: BUILD_STRING         
+1964: PRECALL              
+1968: CALL                 
+1978: RAISE_VARARGS        
+1980: JUMP_BACKWARD        to 1928
+1982: LOAD_CONST           None
+1984: STORE_FAST           uid
+1986: LOAD_FAST            user
+1988: POP_JUMP_FORWARD_IF_NONE to 2354
+1990: LOAD_GLOBAL          NULL + hasattr
+2002: LOAD_GLOBAL          os
+2014: LOAD_CONST           'setreuid'
+2016: PRECALL              
+2020: CALL                 
+2030: POP_JUMP_FORWARD_IF_TRUE to 2062
+2032: LOAD_GLOBAL          NULL + ValueError
+2044: LOAD_CONST           "The 'user' parameter is not supported on the current platform"
+2046: PRECALL              
+2050: CALL                 
+2060: RAISE_VARARGS        
+2062: LOAD_GLOBAL          NULL + isinstance
+2074: LOAD_FAST            user
+2076: LOAD_GLOBAL          str
+2088: PRECALL              
+2092: CALL                 
+2102: POP_JUMP_FORWARD_IF_FALSE to 2228
+2104: NOP                  
+2106: LOAD_CONST           0
+2108: LOAD_CONST           None
+2110: IMPORT_NAME          pwd
+2112: STORE_FAST           pwd
+2114: JUMP_FORWARD         to 2174
+2116: PUSH_EXC_INFO        
+2118: LOAD_GLOBAL          ImportError
+2130: CHECK_EXC_MATCH      
+2132: POP_JUMP_FORWARD_IF_FALSE to 2166
+2134: POP_TOP              
+2136: LOAD_GLOBAL          NULL + ValueError
+2148: LOAD_CONST           'The user parameter cannot be a string on systems without the pwd module'
+2150: PRECALL              
+2154: CALL                 
+2164: RAISE_VARARGS        
+2166: RERAISE              
+2168: COPY                 
+2170: POP_EXCEPT           
+2172: RERAISE              
+2174: LOAD_FAST            pwd
+2176: LOAD_METHOD          getpwnam
+2198: LOAD_FAST            user
+2200: PRECALL              
+2204: CALL                 
+2214: LOAD_ATTR            pw_uid
+2224: STORE_FAST           uid
+2226: JUMP_FORWARD         to 2306
+2228: LOAD_GLOBAL          NULL + isinstance
+2240: LOAD_FAST            user
+2242: LOAD_GLOBAL          int
+2254: PRECALL              
+2258: CALL                 
+2268: POP_JUMP_FORWARD_IF_FALSE to 2276
+2270: LOAD_FAST            user
+2272: STORE_FAST           uid
+2274: JUMP_FORWARD         to 2306
+2276: LOAD_GLOBAL          NULL + TypeError
+2288: LOAD_CONST           'User must be a string or an integer'
+2290: PRECALL              
+2294: CALL                 
+2304: RAISE_VARARGS        
+2306: LOAD_FAST            uid
+2308: LOAD_CONST           0
+2310: COMPARE_OP           <
+2316: POP_JUMP_FORWARD_IF_FALSE to 2354
+2318: LOAD_GLOBAL          NULL + ValueError
+2330: LOAD_CONST           'User ID cannot be negative, got '
+2332: LOAD_FAST            uid
+2334: FORMAT_VALUE         
+2336: BUILD_STRING         
+2338: PRECALL              
+2342: CALL                 
+2352: RAISE_VARARGS        
+2354: LOAD_FAST            self
+2356: LOAD_METHOD          _get_handles
+2378: LOAD_FAST            stdin
+2380: LOAD_FAST            stdout
+2382: LOAD_FAST            stderr
+2384: PRECALL              
+2388: CALL                 
+2398: UNPACK_SEQUENCE      
+2402: STORE_FAST           p2cread
+2404: STORE_FAST           p2cwrite
+2406: STORE_FAST           c2pread
+2408: STORE_FAST           c2pwrite
+2410: STORE_FAST           errread
+2412: STORE_FAST           errwrite
+2414: LOAD_GLOBAL          _mswindows
+2426: POP_JUMP_FORWARD_IF_FALSE to 2698
+2428: LOAD_FAST            p2cwrite
+2430: LOAD_CONST           -1
+2432: COMPARE_OP           !=
+2438: POP_JUMP_FORWARD_IF_FALSE to 2518
+2440: LOAD_GLOBAL          NULL + msvcrt
+2452: LOAD_ATTR            open_osfhandle
+2462: LOAD_FAST            p2cwrite
+2464: LOAD_METHOD          Detach
+2486: PRECALL              
+2490: CALL                 
+2500: LOAD_CONST           0
+2502: PRECALL              
+2506: CALL                 
+2516: STORE_FAST           p2cwrite
+2518: LOAD_FAST            c2pread
+2520: LOAD_CONST           -1
+2522: COMPARE_OP           !=
+2528: POP_JUMP_FORWARD_IF_FALSE to 2608
+2530: LOAD_GLOBAL          NULL + msvcrt
+2542: LOAD_ATTR            open_osfhandle
+2552: LOAD_FAST            c2pread
+2554: LOAD_METHOD          Detach
+2576: PRECALL              
+2580: CALL                 
+2590: LOAD_CONST           0
+2592: PRECALL              
+2596: CALL                 
+2606: STORE_FAST           c2pread
+2608: LOAD_FAST            errread
+2610: LOAD_CONST           -1
+2612: COMPARE_OP           !=
+2618: POP_JUMP_FORWARD_IF_FALSE to 2698
+2620: LOAD_GLOBAL          NULL + msvcrt
+2632: LOAD_ATTR            open_osfhandle
+2642: LOAD_FAST            errread
+2644: LOAD_METHOD          Detach
+2666: PRECALL              
+2670: CALL                 
+2680: LOAD_CONST           0
+2682: PRECALL              
+2686: CALL                 
+2696: STORE_FAST           errread
+2698: NOP                  
+2700: LOAD_FAST            p2cwrite
+2702: LOAD_CONST           -1
+2704: COMPARE_OP           !=
+2710: POP_JUMP_FORWARD_IF_FALSE to 2850
+2712: LOAD_GLOBAL          NULL + io
+2724: LOAD_ATTR            open
+2734: LOAD_FAST            p2cwrite
+2736: LOAD_CONST           'wb'
+2738: LOAD_FAST            bufsize
+2740: PRECALL              
+2744: CALL                 
+2754: LOAD_FAST            self
+2756: STORE_ATTR           stdin
+2766: LOAD_FAST            self
+2768: LOAD_ATTR            text_mode
+2778: POP_JUMP_FORWARD_IF_FALSE to 2850
+2780: LOAD_GLOBAL          NULL + io
+2792: LOAD_ATTR            TextIOWrapper
+2802: LOAD_FAST            self
+2804: LOAD_ATTR            stdin
+2814: LOAD_CONST           True
+2816: LOAD_FAST            line_buffering
+2818: LOAD_FAST            encoding
+2820: LOAD_FAST            errors
+2822: KW_NAMES             
+2824: PRECALL              
+2828: CALL                 
+2838: LOAD_FAST            self
+2840: STORE_ATTR           stdin
+2850: LOAD_FAST            c2pread
+2852: LOAD_CONST           -1
+2854: COMPARE_OP           !=
+2860: POP_JUMP_FORWARD_IF_FALSE to 2996
+2862: LOAD_GLOBAL          NULL + io
+2874: LOAD_ATTR            open
+2884: LOAD_FAST            c2pread
+2886: LOAD_CONST           'rb'
+2888: LOAD_FAST            bufsize
+2890: PRECALL              
+2894: CALL                 
+2904: LOAD_FAST            self
+2906: STORE_ATTR           stdout
+2916: LOAD_FAST            self
+2918: LOAD_ATTR            text_mode
+2928: POP_JUMP_FORWARD_IF_FALSE to 2996
+2930: LOAD_GLOBAL          NULL + io
+2942: LOAD_ATTR            TextIOWrapper
+2952: LOAD_FAST            self
+2954: LOAD_ATTR            stdout
+2964: LOAD_FAST            encoding
+2966: LOAD_FAST            errors
+2968: KW_NAMES             
+2970: PRECALL              
+2974: CALL                 
+2984: LOAD_FAST            self
+2986: STORE_ATTR           stdout
+2996: LOAD_FAST            errread
+2998: LOAD_CONST           -1
+3000: COMPARE_OP           !=
+3006: POP_JUMP_FORWARD_IF_FALSE to 3142
+3008: LOAD_GLOBAL          NULL + io
+3020: LOAD_ATTR            open
+3030: LOAD_FAST            errread
+3032: LOAD_CONST           'rb'
+3034: LOAD_FAST            bufsize
+3036: PRECALL              
+3040: CALL                 
+3050: LOAD_FAST            self
+3052: STORE_ATTR           stderr
+3062: LOAD_FAST            self
+3064: LOAD_ATTR            text_mode
+3074: POP_JUMP_FORWARD_IF_FALSE to 3142
+3076: LOAD_GLOBAL          NULL + io
+3088: LOAD_ATTR            TextIOWrapper
+3098: LOAD_FAST            self
+3100: LOAD_ATTR            stderr
+3110: LOAD_FAST            encoding
+3112: LOAD_FAST            errors
+3114: KW_NAMES             
+3116: PRECALL              
+3120: CALL                 
+3130: LOAD_FAST            self
+3132: STORE_ATTR           stderr
+3142: LOAD_FAST            self
+3144: LOAD_METHOD          _execute_child
+3166: LOAD_FAST            args
+3168: LOAD_FAST            executable
+3170: LOAD_FAST            preexec_fn
+3172: LOAD_FAST            close_fds
+3174: LOAD_FAST            pass_fds
+3176: LOAD_FAST            cwd
+3178: LOAD_FAST            env
+3180: LOAD_FAST            startupinfo
+3182: LOAD_FAST            creationflags
+3184: LOAD_FAST            shell
+3186: LOAD_FAST            p2cread
+3188: LOAD_FAST            p2cwrite
+3190: LOAD_FAST            c2pread
+3192: LOAD_FAST            c2pwrite
+3194: LOAD_FAST            errread
+3196: LOAD_FAST            errwrite
+3198: LOAD_FAST            restore_signals
+3200: LOAD_FAST            gid
+3202: LOAD_FAST            gids
+3204: LOAD_FAST            uid
+3206: LOAD_FAST            umask
+3208: LOAD_FAST            start_new_session
+3210: LOAD_FAST            process_group
+3212: PRECALL              
+3216: CALL                 
+3226: POP_TOP              
+3228: LOAD_CONST           None
+3230: RETURN_VALUE         
+3232: PUSH_EXC_INFO        
+3234: POP_TOP              
+3236: LOAD_GLOBAL          NULL + filter
+3248: LOAD_CONST           None
+3250: LOAD_FAST            self
+3252: LOAD_ATTR            stdin
+3262: LOAD_FAST            self
+3264: LOAD_ATTR            stdout
+3274: LOAD_FAST            self
+3276: LOAD_ATTR            stderr
+3286: BUILD_TUPLE          
+3288: PRECALL              
+3292: CALL                 
+3302: GET_ITER             
+3304: FOR_ITER             to 3384
+3306: STORE_FAST           f
+3308: NOP                  
+3310: LOAD_FAST            f
+3312: LOAD_METHOD          close
+3334: PRECALL              
+3338: CALL                 
+3348: POP_TOP              
+3350: JUMP_BACKWARD        to 3304
+3352: PUSH_EXC_INFO        
+3354: LOAD_GLOBAL          OSError
+3366: CHECK_EXC_MATCH      
+3368: POP_JUMP_FORWARD_IF_FALSE to 3376
+3370: POP_TOP              
+3372: POP_EXCEPT           
+3374: JUMP_BACKWARD        to 3304
+3376: RERAISE              
+3378: COPY                 
+3380: POP_EXCEPT           
+3382: RERAISE              
+3384: LOAD_FAST            self
+3386: LOAD_ATTR            _closed_child_pipe_fds
+3396: POP_JUMP_FORWARD_IF_TRUE to 3860
+3398: BUILD_LIST           
+3400: STORE_FAST           to_close
+3402: LOAD_FAST            stdin
+3404: LOAD_GLOBAL          PIPE
+3416: COMPARE_OP           ==
+3422: POP_JUMP_FORWARD_IF_FALSE to 3466
+3424: LOAD_FAST            to_close
+3426: LOAD_METHOD          append
+3448: LOAD_FAST            p2cread
+3450: PRECALL              
+3454: CALL                 
+3464: POP_TOP              
+3466: LOAD_FAST            stdout
+3468: LOAD_GLOBAL          PIPE
+3480: COMPARE_OP           ==
+3486: POP_JUMP_FORWARD_IF_FALSE to 3530
+3488: LOAD_FAST            to_close
+3490: LOAD_METHOD          append
+3512: LOAD_FAST            c2pwrite
+3514: PRECALL              
+3518: CALL                 
+3528: POP_TOP              
+3530: LOAD_FAST            stderr
+3532: LOAD_GLOBAL          PIPE
+3544: COMPARE_OP           ==
+3550: POP_JUMP_FORWARD_IF_FALSE to 3594
+3552: LOAD_FAST            to_close
+3554: LOAD_METHOD          append
+3576: LOAD_FAST            errwrite
+3578: PRECALL              
+3582: CALL                 
+3592: POP_TOP              
+3594: LOAD_GLOBAL          NULL + hasattr
+3606: LOAD_FAST            self
+3608: LOAD_CONST           '_devnull'
+3610: PRECALL              
+3614: CALL                 
+3624: POP_JUMP_FORWARD_IF_FALSE to 3678
+3626: LOAD_FAST            to_close
+3628: LOAD_METHOD          append
+3650: LOAD_FAST            self
+3652: LOAD_ATTR            _devnull
+3662: PRECALL              
+3666: CALL                 
+3676: POP_TOP              
+3678: LOAD_FAST            to_close
+3680: GET_ITER             
+3682: FOR_ITER             to 3860
+3684: STORE_FAST           fd
+3686: NOP                  
+3688: LOAD_GLOBAL          _mswindows
+3700: POP_JUMP_FORWARD_IF_FALSE to 3786
+3702: LOAD_GLOBAL          NULL + isinstance
+3714: LOAD_FAST            fd
+3716: LOAD_GLOBAL          Handle
+3728: PRECALL              
+3732: CALL                 
+3742: POP_JUMP_FORWARD_IF_FALSE to 3786
+3744: LOAD_FAST            fd
+3746: LOAD_METHOD          Close
+3768: PRECALL              
+3772: CALL                 
+3782: POP_TOP              
+3784: JUMP_FORWARD         to 3826
+3786: LOAD_GLOBAL          NULL + os
+3798: LOAD_ATTR            close
+3808: LOAD_FAST            fd
+3810: PRECALL              
+3814: CALL                 
+3824: POP_TOP              
+3826: JUMP_BACKWARD        to 3682
+3828: PUSH_EXC_INFO        
+3830: LOAD_GLOBAL          OSError
+3842: CHECK_EXC_MATCH      
+3844: POP_JUMP_FORWARD_IF_FALSE to 3852
+3846: POP_TOP              
+3848: POP_EXCEPT           
+3850: JUMP_BACKWARD        to 3682
+3852: RERAISE              
+3854: COPY                 
+3856: POP_EXCEPT           
+3858: RERAISE              
+3860: RAISE_VARARGS        
+3862: COPY                 
+3864: POP_EXCEPT           
+3866: RERAISE              

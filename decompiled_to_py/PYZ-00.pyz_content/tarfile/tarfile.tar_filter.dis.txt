@@ -1,0 +1,36 @@
+# Disassembly for tarfile.tar_filter
+# From module file: tarfile
+
+## co_consts:
+(None, False, 'deep', ())
+
+## co_names:
+('_get_filtered_attrs', 'replace')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _get_filtered_attrs
+  14: LOAD_FAST            member
+  16: LOAD_FAST            dest_path
+  18: LOAD_CONST           False
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           new_attrs
+  36: LOAD_FAST            new_attrs
+  38: POP_JUMP_FORWARD_IF_FALSE to 74
+  40: PUSH_NULL            
+  42: LOAD_FAST            member
+  44: LOAD_ATTR            replace
+  54: LOAD_CONST           ()
+  56: BUILD_MAP            
+  58: LOAD_FAST            new_attrs
+  60: DICT_MERGE           
+  62: LOAD_CONST           'deep'
+  64: LOAD_CONST           False
+  66: BUILD_MAP            
+  68: DICT_MERGE           
+  70: CALL_FUNCTION_EX     
+  72: RETURN_VALUE         
+  74: LOAD_FAST            member
+  76: RETURN_VALUE         

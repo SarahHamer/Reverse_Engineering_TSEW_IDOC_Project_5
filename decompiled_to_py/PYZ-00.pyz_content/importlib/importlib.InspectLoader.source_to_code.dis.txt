@@ -1,0 +1,21 @@
+# Disassembly for importlib.InspectLoader.source_to_code
+# From module file: importlib.abc
+
+## co_consts:
+("Compile 'data' into a code object.\n\n        The 'data' argument can be anything that compile() can handle. The'path'\n        argument should be where the data was retrieved (when applicable).", 'exec', True, ('dont_inherit',))
+
+## co_names:
+('compile',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + compile
+  14: LOAD_FAST            data
+  16: LOAD_FAST            path
+  18: LOAD_CONST           'exec'
+  20: LOAD_CONST           True
+  22: KW_NAMES             
+  24: PRECALL              
+  28: CALL                 
+  38: RETURN_VALUE         

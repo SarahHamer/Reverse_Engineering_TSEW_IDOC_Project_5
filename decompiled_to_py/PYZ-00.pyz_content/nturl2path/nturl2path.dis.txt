@@ -1,0 +1,22 @@
+# Disassembly for nturl2path
+# From module file: nturl2path
+
+## co_consts:
+('Convert a NT pathname to a file URL and vice versa.\n\nThis module only exists to provide OS-specific code\nfor urllib.requests, thus do not use directly.\n', <code object url2pathname at 0x0000024068C26CA0, file "nturl2path.py", line 8>, <code object pathname2url at 0x0000024068E7F250, file "nturl2path.py", line 45>, None)
+
+## co_names:
+('__doc__', 'url2pathname', 'pathname2url')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'Convert a NT pathname to a file URL and vice versa.\n\nThis module only exists to provide OS-specific code\nfor urllib.requests, thus do not use directly.\n'
+   4: STORE_NAME           __doc__
+   6: LOAD_CONST           <code object url2pathname at 0x0000024068C26CA0, file "nturl2path.py", line 8>
+   8: MAKE_FUNCTION        
+  10: STORE_NAME           url2pathname
+  12: LOAD_CONST           <code object pathname2url at 0x0000024068E7F250, file "nturl2path.py", line 45>
+  14: MAKE_FUNCTION        
+  16: STORE_NAME           pathname2url
+  18: LOAD_CONST           None
+  20: RETURN_VALUE         

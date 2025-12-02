@@ -1,0 +1,17 @@
+# Disassembly for typing._SpecialGenericAlias.__repr__
+# From module file: typing
+
+## co_consts:
+(None, 'typing.')
+
+## co_names:
+('_name',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'typing.'
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            _name
+  16: BINARY_OP            +
+  20: RETURN_VALUE         

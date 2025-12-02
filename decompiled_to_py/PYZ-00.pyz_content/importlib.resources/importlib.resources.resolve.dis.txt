@@ -1,0 +1,27 @@
+# Disassembly for importlib.resources.resolve
+# From module file: importlib.resources._common
+
+## co_consts:
+(None,)
+
+## co_names:
+('isinstance', 'types', 'ModuleType', 'importlib', 'import_module')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            cand
+  16: LOAD_GLOBAL          types
+  28: LOAD_ATTR            ModuleType
+  38: PRECALL              
+  42: CALL                 
+  52: POP_JUMP_FORWARD_IF_FALSE to 58
+  54: LOAD_FAST            cand
+  56: JUMP_FORWARD         to 96
+  58: LOAD_GLOBAL          NULL + importlib
+  70: LOAD_ATTR            import_module
+  80: LOAD_FAST            cand
+  82: PRECALL              
+  86: CALL                 
+  96: RETURN_VALUE         

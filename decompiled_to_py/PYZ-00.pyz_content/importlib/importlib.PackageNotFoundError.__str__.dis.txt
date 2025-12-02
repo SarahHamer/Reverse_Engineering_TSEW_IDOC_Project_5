@@ -1,0 +1,18 @@
+# Disassembly for importlib.PackageNotFoundError.__str__
+# From module file: importlib.metadata
+
+## co_consts:
+(None, 'No package metadata was found for ')
+
+## co_names:
+('name',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'No package metadata was found for '
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            name
+  16: FORMAT_VALUE         
+  18: BUILD_STRING         
+  20: RETURN_VALUE         

@@ -1,0 +1,24 @@
+# Disassembly for gzip._GzipReader._init_read
+# From module file: gzip
+
+## co_consts:
+(None, b'', 0)
+
+## co_names:
+('zlib', 'crc32', '_crc', '_stream_size')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + zlib
+  14: LOAD_ATTR            crc32
+  24: LOAD_CONST           b''
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_FAST            self
+  42: STORE_ATTR           _crc
+  52: LOAD_CONST           0
+  54: LOAD_FAST            self
+  56: STORE_ATTR           _stream_size
+  66: LOAD_CONST           None
+  68: RETURN_VALUE         

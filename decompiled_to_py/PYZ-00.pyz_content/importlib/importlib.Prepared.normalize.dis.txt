@@ -1,0 +1,28 @@
+# Disassembly for importlib.Prepared.normalize
+# From module file: importlib.metadata
+
+## co_consts:
+('\n        PEP 503 normalization plus dashes as underscores.\n        ', '[-_.]+', '-', '_')
+
+## co_names:
+('re', 'sub', 'lower', 'replace')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + re
+  14: LOAD_ATTR            sub
+  24: LOAD_CONST           '[-_.]+'
+  26: LOAD_CONST           '-'
+  28: LOAD_FAST            name
+  30: PRECALL              
+  34: CALL                 
+  44: LOAD_METHOD          lower
+  66: PRECALL              
+  70: CALL                 
+  80: LOAD_METHOD          replace
+ 102: LOAD_CONST           '-'
+ 104: LOAD_CONST           '_'
+ 106: PRECALL              
+ 110: CALL                 
+ 120: RETURN_VALUE         

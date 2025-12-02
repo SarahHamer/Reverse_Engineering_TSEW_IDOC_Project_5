@@ -1,0 +1,43 @@
+# Disassembly for typing._BaseGenericAlias.__setattr__
+# From module file: typing
+
+## co_consts:
+(None, frozenset({'_inst', '_name', '_paramspec_tvars', '_nparams'}))
+
+## co_names:
+('_is_dunder', 'super', '__setattr__', 'setattr', '__origin__')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + _is_dunder
+  16: LOAD_FAST            attr
+  18: PRECALL              
+  22: CALL                 
+  32: POP_JUMP_FORWARD_IF_TRUE to 42
+  34: LOAD_FAST            attr
+  36: LOAD_CONST           frozenset({'_inst', '_name', '_paramspec_tvars', '_nparams'})
+  38: CONTAINS_OP          
+  40: POP_JUMP_FORWARD_IF_FALSE to 114
+  42: LOAD_GLOBAL          NULL + super
+  54: PRECALL              
+  58: CALL                 
+  68: LOAD_METHOD          __setattr__
+  90: LOAD_FAST            attr
+  92: LOAD_FAST            val
+  94: PRECALL              
+  98: CALL                 
+ 108: POP_TOP              
+ 110: LOAD_CONST           None
+ 112: RETURN_VALUE         
+ 114: LOAD_GLOBAL          NULL + setattr
+ 126: LOAD_FAST            self
+ 128: LOAD_ATTR            __origin__
+ 138: LOAD_FAST            attr
+ 140: LOAD_FAST            val
+ 142: PRECALL              
+ 146: CALL                 
+ 156: POP_TOP              
+ 158: LOAD_CONST           None
+ 160: RETURN_VALUE         

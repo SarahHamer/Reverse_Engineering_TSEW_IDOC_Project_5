@@ -1,0 +1,106 @@
+# Disassembly for tarfile.copyfileobj
+# From module file: tarfile
+
+## co_consts:
+('Copy length bytes from fileobj src to fileobj dst.\n       If length is None, copy the entire content.\n    ', 16384, 0, None, 'unexpected end of data')
+
+## co_names:
+('shutil', 'copyfileobj', 'divmod', 'range', 'read', 'len', 'write')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            bufsize
+   4: JUMP_IF_TRUE_OR_POP  to 8
+   6: LOAD_CONST           16384
+   8: STORE_FAST           bufsize
+  10: LOAD_FAST            length
+  12: LOAD_CONST           0
+  14: COMPARE_OP           ==
+  20: POP_JUMP_FORWARD_IF_FALSE to 26
+  22: LOAD_CONST           None
+  24: RETURN_VALUE         
+  26: LOAD_FAST            length
+  28: POP_JUMP_FORWARD_IF_NOT_NONE to 78
+  30: LOAD_GLOBAL          NULL + shutil
+  42: LOAD_ATTR            copyfileobj
+  52: LOAD_FAST            src
+  54: LOAD_FAST            dst
+  56: LOAD_FAST            bufsize
+  58: PRECALL              
+  62: CALL                 
+  72: POP_TOP              
+  74: LOAD_CONST           None
+  76: RETURN_VALUE         
+  78: LOAD_GLOBAL          NULL + divmod
+  90: LOAD_FAST            length
+  92: LOAD_FAST            bufsize
+  94: PRECALL              
+  98: CALL                 
+ 108: UNPACK_SEQUENCE      
+ 112: STORE_FAST           blocks
+ 114: STORE_FAST           remainder
+ 116: LOAD_GLOBAL          NULL + range
+ 128: LOAD_FAST            blocks
+ 130: PRECALL              
+ 134: CALL                 
+ 144: GET_ITER             
+ 146: FOR_ITER             to 296
+ 148: STORE_FAST           b
+ 150: LOAD_FAST            src
+ 152: LOAD_METHOD          read
+ 174: LOAD_FAST            bufsize
+ 176: PRECALL              
+ 180: CALL                 
+ 190: STORE_FAST           buf
+ 192: LOAD_GLOBAL          NULL + len
+ 204: LOAD_FAST            buf
+ 206: PRECALL              
+ 210: CALL                 
+ 220: LOAD_FAST            bufsize
+ 222: COMPARE_OP           <
+ 228: POP_JUMP_FORWARD_IF_FALSE to 252
+ 230: PUSH_NULL            
+ 232: LOAD_FAST            exception
+ 234: LOAD_CONST           'unexpected end of data'
+ 236: PRECALL              
+ 240: CALL                 
+ 250: RAISE_VARARGS        
+ 252: LOAD_FAST            dst
+ 254: LOAD_METHOD          write
+ 276: LOAD_FAST            buf
+ 278: PRECALL              
+ 282: CALL                 
+ 292: POP_TOP              
+ 294: JUMP_BACKWARD        to 146
+ 296: LOAD_FAST            remainder
+ 298: LOAD_CONST           0
+ 300: COMPARE_OP           !=
+ 306: POP_JUMP_FORWARD_IF_FALSE to 452
+ 308: LOAD_FAST            src
+ 310: LOAD_METHOD          read
+ 332: LOAD_FAST            remainder
+ 334: PRECALL              
+ 338: CALL                 
+ 348: STORE_FAST           buf
+ 350: LOAD_GLOBAL          NULL + len
+ 362: LOAD_FAST            buf
+ 364: PRECALL              
+ 368: CALL                 
+ 378: LOAD_FAST            remainder
+ 380: COMPARE_OP           <
+ 386: POP_JUMP_FORWARD_IF_FALSE to 410
+ 388: PUSH_NULL            
+ 390: LOAD_FAST            exception
+ 392: LOAD_CONST           'unexpected end of data'
+ 394: PRECALL              
+ 398: CALL                 
+ 408: RAISE_VARARGS        
+ 410: LOAD_FAST            dst
+ 412: LOAD_METHOD          write
+ 434: LOAD_FAST            buf
+ 436: PRECALL              
+ 440: CALL                 
+ 450: POP_TOP              
+ 452: LOAD_CONST           None
+ 454: RETURN_VALUE         

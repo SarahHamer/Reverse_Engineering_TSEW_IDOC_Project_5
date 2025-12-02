@@ -1,0 +1,17 @@
+# Disassembly for gzip.GzipFile.writable
+# From module file: gzip
+
+## co_consts:
+(None,)
+
+## co_names:
+('mode', 'WRITE')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            mode
+  14: LOAD_GLOBAL          WRITE
+  26: COMPARE_OP           ==
+  32: RETURN_VALUE         

@@ -1,0 +1,34 @@
+# Disassembly for zipfile._check_zipfile
+# From module file: zipfile
+
+## co_consts:
+(None, True, False)
+
+## co_names:
+('_EndRecData', 'OSError')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_GLOBAL          NULL + _EndRecData
+  16: LOAD_FAST            fp
+  18: PRECALL              
+  22: CALL                 
+  32: POP_JUMP_FORWARD_IF_FALSE to 38
+  34: LOAD_CONST           True
+  36: RETURN_VALUE         
+  38: JUMP_FORWARD         to 72
+  40: PUSH_EXC_INFO        
+  42: LOAD_GLOBAL          OSError
+  54: CHECK_EXC_MATCH      
+  56: POP_JUMP_FORWARD_IF_FALSE to 64
+  58: POP_TOP              
+  60: POP_EXCEPT           
+  62: JUMP_FORWARD         to 72
+  64: RERAISE              
+  66: COPY                 
+  68: POP_EXCEPT           
+  70: RERAISE              
+  72: LOAD_CONST           False
+  74: RETURN_VALUE         

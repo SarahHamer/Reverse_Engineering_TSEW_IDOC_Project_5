@@ -1,0 +1,42 @@
+# Disassembly for importlib.FrozenImporter.create_module
+# From module file: importlib._bootstrap
+
+## co_consts:
+('Set __file__, if able.',)
+
+## co_names:
+('_new_module', 'name', 'loader_state', 'filename', '__file__', 'AttributeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _new_module
+  14: LOAD_FAST            spec
+  16: LOAD_ATTR            name
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           module
+  42: NOP                  
+  44: LOAD_FAST            spec
+  46: LOAD_ATTR            loader_state
+  56: LOAD_ATTR            filename
+  66: STORE_FAST           filename
+  68: LOAD_FAST            filename
+  70: POP_JUMP_FORWARD_IF_FALSE to 86
+  72: LOAD_FAST            filename
+  74: LOAD_FAST            module
+  76: STORE_ATTR           __file__
+  86: JUMP_FORWARD         to 120
+  88: PUSH_EXC_INFO        
+  90: LOAD_GLOBAL          AttributeError
+ 102: CHECK_EXC_MATCH      
+ 104: POP_JUMP_FORWARD_IF_FALSE to 112
+ 106: POP_TOP              
+ 108: POP_EXCEPT           
+ 110: JUMP_FORWARD         to 120
+ 112: RERAISE              
+ 114: COPY                 
+ 116: POP_EXCEPT           
+ 118: RERAISE              
+ 120: LOAD_FAST            module
+ 122: RETURN_VALUE         

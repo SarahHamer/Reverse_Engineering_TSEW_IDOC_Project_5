@@ -1,0 +1,56 @@
+# Disassembly for importlib._code_to_timestamp_pyc
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Produce the data for a timestamp-based pyc.', 0)
+
+## co_names:
+('bytearray', 'MAGIC_NUMBER', 'extend', '_pack_uint32', 'marshal', 'dumps')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + bytearray
+  14: LOAD_GLOBAL          MAGIC_NUMBER
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           data
+  42: LOAD_FAST            data
+  44: LOAD_METHOD          extend
+  66: LOAD_GLOBAL          NULL + _pack_uint32
+  78: LOAD_CONST           0
+  80: PRECALL              
+  84: CALL                 
+  94: PRECALL              
+  98: CALL                 
+ 108: POP_TOP              
+ 110: LOAD_FAST            data
+ 112: LOAD_METHOD          extend
+ 134: LOAD_GLOBAL          NULL + _pack_uint32
+ 146: LOAD_FAST            mtime
+ 148: PRECALL              
+ 152: CALL                 
+ 162: PRECALL              
+ 166: CALL                 
+ 176: POP_TOP              
+ 178: LOAD_FAST            data
+ 180: LOAD_METHOD          extend
+ 202: LOAD_GLOBAL          NULL + _pack_uint32
+ 214: LOAD_FAST            source_size
+ 216: PRECALL              
+ 220: CALL                 
+ 230: PRECALL              
+ 234: CALL                 
+ 244: POP_TOP              
+ 246: LOAD_FAST            data
+ 248: LOAD_METHOD          extend
+ 270: LOAD_GLOBAL          NULL + marshal
+ 282: LOAD_ATTR            dumps
+ 292: LOAD_FAST            code
+ 294: PRECALL              
+ 298: CALL                 
+ 308: PRECALL              
+ 312: CALL                 
+ 322: POP_TOP              
+ 324: LOAD_FAST            data
+ 326: RETURN_VALUE         

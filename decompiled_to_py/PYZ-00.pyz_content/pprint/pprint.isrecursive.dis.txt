@@ -1,0 +1,25 @@
+# Disassembly for pprint.isrecursive
+# From module file: pprint
+
+## co_consts:
+('Determine if object requires a recursive representation.', None, 0, 2)
+
+## co_names:
+('PrettyPrinter', '_safe_repr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + PrettyPrinter
+  14: PRECALL              
+  18: CALL                 
+  28: LOAD_METHOD          _safe_repr
+  50: LOAD_FAST            object
+  52: BUILD_MAP            
+  54: LOAD_CONST           None
+  56: LOAD_CONST           0
+  58: PRECALL              
+  62: CALL                 
+  72: LOAD_CONST           2
+  74: BINARY_SUBSCR        
+  84: RETURN_VALUE         

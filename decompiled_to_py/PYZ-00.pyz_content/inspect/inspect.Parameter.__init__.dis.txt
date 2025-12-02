@@ -1,0 +1,179 @@
+# Disassembly for inspect.Parameter.__init__
+# From module file: inspect
+
+## co_consts:
+(None, 'value ', ' is not a valid Parameter.kind', '{} parameters cannot have default values', 'name is a required attribute for Parameter', 'name must be a str, not a {}', 0, '.', 1, 'implicit arguments must be passed as positional or keyword arguments, not {}', 'implicit{}', '{!r} is not a valid parameter name')
+
+## co_names:
+('_ParameterKind', '_kind', 'ValueError', '_empty', '_VAR_POSITIONAL', '_VAR_KEYWORD', 'format', 'description', '_default', '_annotation', 'isinstance', 'str', 'type', '__name__', 'TypeError', 'isdigit', '_POSITIONAL_OR_KEYWORD', '_POSITIONAL_ONLY', 'iskeyword', 'isidentifier', '_name')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_GLOBAL          NULL + _ParameterKind
+  16: LOAD_FAST            kind
+  18: PRECALL              
+  22: CALL                 
+  32: LOAD_FAST            self
+  34: STORE_ATTR           _kind
+  44: JUMP_FORWARD         to 112
+  46: PUSH_EXC_INFO        
+  48: LOAD_GLOBAL          ValueError
+  60: CHECK_EXC_MATCH      
+  62: POP_JUMP_FORWARD_IF_FALSE to 104
+  64: POP_TOP              
+  66: LOAD_GLOBAL          NULL + ValueError
+  78: LOAD_CONST           'value '
+  80: LOAD_FAST            kind
+  82: FORMAT_VALUE         repr
+  84: LOAD_CONST           ' is not a valid Parameter.kind'
+  86: BUILD_STRING         
+  88: PRECALL              
+  92: CALL                 
+ 102: RAISE_VARARGS        
+ 104: RERAISE              
+ 106: COPY                 
+ 108: POP_EXCEPT           
+ 110: RERAISE              
+ 112: LOAD_FAST            default
+ 114: LOAD_GLOBAL          _empty
+ 126: IS_OP                
+ 128: POP_JUMP_FORWARD_IF_FALSE to 268
+ 130: LOAD_FAST            self
+ 132: LOAD_ATTR            _kind
+ 142: LOAD_GLOBAL          _VAR_POSITIONAL
+ 154: LOAD_GLOBAL          _VAR_KEYWORD
+ 166: BUILD_TUPLE          
+ 168: CONTAINS_OP          
+ 170: POP_JUMP_FORWARD_IF_FALSE to 268
+ 172: LOAD_CONST           '{} parameters cannot have default values'
+ 174: STORE_FAST           msg
+ 176: LOAD_FAST            msg
+ 178: LOAD_METHOD          format
+ 200: LOAD_FAST            self
+ 202: LOAD_ATTR            _kind
+ 212: LOAD_ATTR            description
+ 222: PRECALL              
+ 226: CALL                 
+ 236: STORE_FAST           msg
+ 238: LOAD_GLOBAL          NULL + ValueError
+ 250: LOAD_FAST            msg
+ 252: PRECALL              
+ 256: CALL                 
+ 266: RAISE_VARARGS        
+ 268: LOAD_FAST            default
+ 270: LOAD_FAST            self
+ 272: STORE_ATTR           _default
+ 282: LOAD_FAST            annotation
+ 284: LOAD_FAST            self
+ 286: STORE_ATTR           _annotation
+ 296: LOAD_FAST            name
+ 298: LOAD_GLOBAL          _empty
+ 310: IS_OP                
+ 312: POP_JUMP_FORWARD_IF_FALSE to 344
+ 314: LOAD_GLOBAL          NULL + ValueError
+ 326: LOAD_CONST           'name is a required attribute for Parameter'
+ 328: PRECALL              
+ 332: CALL                 
+ 342: RAISE_VARARGS        
+ 344: LOAD_GLOBAL          NULL + isinstance
+ 356: LOAD_FAST            name
+ 358: LOAD_GLOBAL          str
+ 370: PRECALL              
+ 374: CALL                 
+ 384: POP_JUMP_FORWARD_IF_TRUE to 494
+ 386: LOAD_CONST           'name must be a str, not a {}'
+ 388: LOAD_METHOD          format
+ 410: LOAD_GLOBAL          NULL + type
+ 422: LOAD_FAST            name
+ 424: PRECALL              
+ 428: CALL                 
+ 438: LOAD_ATTR            __name__
+ 448: PRECALL              
+ 452: CALL                 
+ 462: STORE_FAST           msg
+ 464: LOAD_GLOBAL          NULL + TypeError
+ 476: LOAD_FAST            msg
+ 478: PRECALL              
+ 482: CALL                 
+ 492: RAISE_VARARGS        
+ 494: LOAD_FAST            name
+ 496: LOAD_CONST           0
+ 498: BINARY_SUBSCR        
+ 508: LOAD_CONST           '.'
+ 510: COMPARE_OP           ==
+ 516: POP_JUMP_FORWARD_IF_FALSE to 784
+ 518: LOAD_FAST            name
+ 520: LOAD_CONST           1
+ 522: LOAD_CONST           None
+ 524: BUILD_SLICE          
+ 526: BINARY_SUBSCR        
+ 536: LOAD_METHOD          isdigit
+ 558: PRECALL              
+ 562: CALL                 
+ 572: POP_JUMP_FORWARD_IF_FALSE to 784
+ 574: LOAD_FAST            self
+ 576: LOAD_ATTR            _kind
+ 586: LOAD_GLOBAL          _POSITIONAL_OR_KEYWORD
+ 598: COMPARE_OP           !=
+ 604: POP_JUMP_FORWARD_IF_FALSE to 702
+ 606: LOAD_CONST           'implicit arguments must be passed as positional or keyword arguments, not {}'
+ 608: STORE_FAST           msg
+ 610: LOAD_FAST            msg
+ 612: LOAD_METHOD          format
+ 634: LOAD_FAST            self
+ 636: LOAD_ATTR            _kind
+ 646: LOAD_ATTR            description
+ 656: PRECALL              
+ 660: CALL                 
+ 670: STORE_FAST           msg
+ 672: LOAD_GLOBAL          NULL + ValueError
+ 684: LOAD_FAST            msg
+ 686: PRECALL              
+ 690: CALL                 
+ 700: RAISE_VARARGS        
+ 702: LOAD_GLOBAL          _POSITIONAL_ONLY
+ 714: LOAD_FAST            self
+ 716: STORE_ATTR           _kind
+ 726: LOAD_CONST           'implicit{}'
+ 728: LOAD_METHOD          format
+ 750: LOAD_FAST            name
+ 752: LOAD_CONST           1
+ 754: LOAD_CONST           None
+ 756: BUILD_SLICE          
+ 758: BINARY_SUBSCR        
+ 768: PRECALL              
+ 772: CALL                 
+ 782: STORE_FAST           name
+ 784: LOAD_GLOBAL          NULL + iskeyword
+ 796: LOAD_FAST            name
+ 798: PRECALL              
+ 802: CALL                 
+ 812: JUMP_IF_FALSE_OR_POP to 840
+ 814: LOAD_FAST            self
+ 816: LOAD_ATTR            _kind
+ 826: LOAD_GLOBAL          _POSITIONAL_ONLY
+ 838: IS_OP                
+ 840: STORE_FAST           is_keyword
+ 842: LOAD_FAST            is_keyword
+ 844: POP_JUMP_FORWARD_IF_TRUE to 886
+ 846: LOAD_FAST            name
+ 848: LOAD_METHOD          isidentifier
+ 870: PRECALL              
+ 874: CALL                 
+ 884: POP_JUMP_FORWARD_IF_TRUE to 954
+ 886: LOAD_GLOBAL          NULL + ValueError
+ 898: LOAD_CONST           '{!r} is not a valid parameter name'
+ 900: LOAD_METHOD          format
+ 922: LOAD_FAST            name
+ 924: PRECALL              
+ 928: CALL                 
+ 938: PRECALL              
+ 942: CALL                 
+ 952: RAISE_VARARGS        
+ 954: LOAD_FAST            name
+ 956: LOAD_FAST            self
+ 958: STORE_ATTR           _name
+ 968: LOAD_CONST           None
+ 970: RETURN_VALUE         

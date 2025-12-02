@@ -1,0 +1,25 @@
+# Disassembly for logging.fatal
+# From module file: logging
+
+## co_consts:
+("\n    Don't use this function, use critical() instead.\n    ", None)
+
+## co_names:
+('critical',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + critical
+  14: LOAD_FAST            msg
+  16: BUILD_LIST           
+  18: LOAD_FAST            args
+  20: LIST_EXTEND          
+  22: LIST_TO_TUPLE        
+  24: BUILD_MAP            
+  26: LOAD_FAST            kwargs
+  28: DICT_MERGE           
+  30: CALL_FUNCTION_EX     
+  32: POP_TOP              
+  34: LOAD_CONST           None
+  36: RETURN_VALUE         

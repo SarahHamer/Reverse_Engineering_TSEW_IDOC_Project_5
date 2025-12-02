@@ -1,0 +1,227 @@
+# Disassembly for base64.a85decode
+# From module file: base64
+
+## co_consts:
+('Decode the Ascii85 encoded bytes-like object or ASCII string b.\n\n    foldspaces is a flag that specifies whether the \'y\' short sequence should be\n    accepted as shorthand for 4 consecutive spaces (ASCII 0x20). This feature is\n    not supported by the "standard" Adobe encoding.\n\n    adobe controls whether the input sequence is in Adobe Ascii85 format (i.e.\n    is framed with <~ and ~>).\n\n    ignorechars should be a byte string containing characters to ignore from the\n    input. This should only contain whitespace characters, and by default\n    contains all whitespace characters in ASCII.\n\n    The result is returned as a bytes object.\n    ', 'Ascii85 encoded byte sequences must end with {!r}', 2, -2, None, '!I', b'uuuu', 33, 117, 5, 0, 85, 'Ascii85 overflow', 122, 'z inside Ascii85 5-tuple', b'\x00\x00\x00\x00', 121, 'y inside Ascii85 5-tuple', b'    ', 'Non-Ascii85 digit found: %c', b'', 4)
+
+## co_names:
+('_bytes_from_decode_data', 'endswith', '_A85END', 'ValueError', 'format', 'startswith', '_A85START', 'struct', 'Struct', 'pack', 'append', 'clear', 'len', 'error', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _bytes_from_decode_data
+  14: LOAD_FAST            b
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           b
+  32: LOAD_FAST            adobe
+  34: POP_JUMP_FORWARD_IF_FALSE to 260
+  36: LOAD_FAST            b
+  38: LOAD_METHOD          endswith
+  60: LOAD_GLOBAL          _A85END
+  72: PRECALL              
+  76: CALL                 
+  86: POP_JUMP_FORWARD_IF_TRUE to 166
+  88: LOAD_GLOBAL          NULL + ValueError
+ 100: LOAD_CONST           'Ascii85 encoded byte sequences must end with {!r}'
+ 102: LOAD_METHOD          format
+ 124: LOAD_GLOBAL          _A85END
+ 136: PRECALL              
+ 140: CALL                 
+ 150: PRECALL              
+ 154: CALL                 
+ 164: RAISE_VARARGS        
+ 166: LOAD_FAST            b
+ 168: LOAD_METHOD          startswith
+ 190: LOAD_GLOBAL          _A85START
+ 202: PRECALL              
+ 206: CALL                 
+ 216: POP_JUMP_FORWARD_IF_FALSE to 240
+ 218: LOAD_FAST            b
+ 220: LOAD_CONST           2
+ 222: LOAD_CONST           -2
+ 224: BUILD_SLICE          
+ 226: BINARY_SUBSCR        
+ 236: STORE_FAST           b
+ 238: JUMP_FORWARD         to 260
+ 240: LOAD_FAST            b
+ 242: LOAD_CONST           None
+ 244: LOAD_CONST           -2
+ 246: BUILD_SLICE          
+ 248: BINARY_SUBSCR        
+ 258: STORE_FAST           b
+ 260: LOAD_GLOBAL          NULL + struct
+ 272: LOAD_ATTR            Struct
+ 282: LOAD_CONST           '!I'
+ 284: PRECALL              
+ 288: CALL                 
+ 298: LOAD_ATTR            pack
+ 308: STORE_FAST           packI
+ 310: BUILD_LIST           
+ 312: STORE_FAST           decoded
+ 314: LOAD_FAST            decoded
+ 316: LOAD_ATTR            append
+ 326: STORE_FAST           decoded_append
+ 328: BUILD_LIST           
+ 330: STORE_FAST           curr
+ 332: LOAD_FAST            curr
+ 334: LOAD_ATTR            append
+ 344: STORE_FAST           curr_append
+ 346: LOAD_FAST            curr
+ 348: LOAD_ATTR            clear
+ 358: STORE_FAST           curr_clear
+ 360: LOAD_FAST            b
+ 362: LOAD_CONST           b'uuuu'
+ 364: BINARY_OP            +
+ 368: GET_ITER             
+ 370: FOR_ITER             to 828
+ 372: STORE_FAST           x
+ 374: LOAD_CONST           33
+ 376: LOAD_FAST            x
+ 378: SWAP                 
+ 380: COPY                 
+ 382: COMPARE_OP           <=
+ 388: POP_JUMP_FORWARD_IF_FALSE to 402
+ 390: LOAD_CONST           117
+ 392: COMPARE_OP           <=
+ 398: POP_JUMP_FORWARD_IF_FALSE to 638
+ 400: JUMP_FORWARD         to 406
+ 402: POP_TOP              
+ 404: JUMP_FORWARD         to 638
+ 406: PUSH_NULL            
+ 408: LOAD_FAST            curr_append
+ 410: LOAD_FAST            x
+ 412: PRECALL              
+ 416: CALL                 
+ 426: POP_TOP              
+ 428: LOAD_GLOBAL          NULL + len
+ 440: LOAD_FAST            curr
+ 442: PRECALL              
+ 446: CALL                 
+ 456: LOAD_CONST           5
+ 458: COMPARE_OP           ==
+ 464: POP_JUMP_FORWARD_IF_FALSE to 636
+ 466: LOAD_CONST           0
+ 468: STORE_FAST           acc
+ 470: LOAD_FAST            curr
+ 472: GET_ITER             
+ 474: FOR_ITER             to 502
+ 476: STORE_FAST           x
+ 478: LOAD_CONST           85
+ 480: LOAD_FAST            acc
+ 482: BINARY_OP            *
+ 486: LOAD_FAST            x
+ 488: LOAD_CONST           33
+ 490: BINARY_OP            -
+ 494: BINARY_OP            +
+ 498: STORE_FAST           acc
+ 500: JUMP_BACKWARD        to 474
+ 502: NOP                  
+ 504: PUSH_NULL            
+ 506: LOAD_FAST            decoded_append
+ 508: PUSH_NULL            
+ 510: LOAD_FAST            packI
+ 512: LOAD_FAST            acc
+ 514: PRECALL              
+ 518: CALL                 
+ 528: PRECALL              
+ 532: CALL                 
+ 542: POP_TOP              
+ 544: JUMP_FORWARD         to 616
+ 546: PUSH_EXC_INFO        
+ 548: LOAD_GLOBAL          struct
+ 560: LOAD_ATTR            error
+ 570: CHECK_EXC_MATCH      
+ 572: POP_JUMP_FORWARD_IF_FALSE to 608
+ 574: POP_TOP              
+ 576: LOAD_GLOBAL          NULL + ValueError
+ 588: LOAD_CONST           'Ascii85 overflow'
+ 590: PRECALL              
+ 594: CALL                 
+ 604: LOAD_CONST           None
+ 606: RAISE_VARARGS        
+ 608: RERAISE              
+ 610: COPY                 
+ 612: POP_EXCEPT           
+ 614: RERAISE              
+ 616: PUSH_NULL            
+ 618: LOAD_FAST            curr_clear
+ 620: PRECALL              
+ 624: CALL                 
+ 634: POP_TOP              
+ 636: JUMP_BACKWARD        to 370
+ 638: LOAD_FAST            x
+ 640: LOAD_CONST           122
+ 642: COMPARE_OP           ==
+ 648: POP_JUMP_FORWARD_IF_FALSE to 708
+ 650: LOAD_FAST            curr
+ 652: POP_JUMP_FORWARD_IF_FALSE to 684
+ 654: LOAD_GLOBAL          NULL + ValueError
+ 666: LOAD_CONST           'z inside Ascii85 5-tuple'
+ 668: PRECALL              
+ 672: CALL                 
+ 682: RAISE_VARARGS        
+ 684: PUSH_NULL            
+ 686: LOAD_FAST            decoded_append
+ 688: LOAD_CONST           b'\x00\x00\x00\x00'
+ 690: PRECALL              
+ 694: CALL                 
+ 704: POP_TOP              
+ 706: JUMP_BACKWARD        to 370
+ 708: LOAD_FAST            foldspaces
+ 710: POP_JUMP_FORWARD_IF_FALSE to 782
+ 712: LOAD_FAST            x
+ 714: LOAD_CONST           121
+ 716: COMPARE_OP           ==
+ 722: POP_JUMP_FORWARD_IF_FALSE to 782
+ 724: LOAD_FAST            curr
+ 726: POP_JUMP_FORWARD_IF_FALSE to 758
+ 728: LOAD_GLOBAL          NULL + ValueError
+ 740: LOAD_CONST           'y inside Ascii85 5-tuple'
+ 742: PRECALL              
+ 746: CALL                 
+ 756: RAISE_VARARGS        
+ 758: PUSH_NULL            
+ 760: LOAD_FAST            decoded_append
+ 762: LOAD_CONST           b'    '
+ 764: PRECALL              
+ 768: CALL                 
+ 778: POP_TOP              
+ 780: JUMP_BACKWARD        to 370
+ 782: LOAD_FAST            x
+ 784: LOAD_FAST            ignorechars
+ 786: CONTAINS_OP          
+ 788: POP_JUMP_FORWARD_IF_FALSE to 792
+ 790: JUMP_BACKWARD        to 370
+ 792: LOAD_GLOBAL          NULL + ValueError
+ 804: LOAD_CONST           'Non-Ascii85 digit found: %c'
+ 806: LOAD_FAST            x
+ 808: BINARY_OP            %
+ 812: PRECALL              
+ 816: CALL                 
+ 826: RAISE_VARARGS        
+ 828: LOAD_CONST           b''
+ 830: LOAD_METHOD          join
+ 852: LOAD_FAST            decoded
+ 854: PRECALL              
+ 858: CALL                 
+ 868: STORE_FAST           result
+ 870: LOAD_CONST           4
+ 872: LOAD_GLOBAL          NULL + len
+ 884: LOAD_FAST            curr
+ 886: PRECALL              
+ 890: CALL                 
+ 900: BINARY_OP            -
+ 904: STORE_FAST           padding
+ 906: LOAD_FAST            padding
+ 908: POP_JUMP_FORWARD_IF_FALSE to 932
+ 910: LOAD_FAST            result
+ 912: LOAD_CONST           None
+ 914: LOAD_FAST            padding
+ 916: UNARY_NEGATIVE       
+ 918: BUILD_SLICE          
+ 920: BINARY_SUBSCR        
+ 930: STORE_FAST           result
+ 932: LOAD_FAST            result
+ 934: RETURN_VALUE         

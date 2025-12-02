@@ -1,0 +1,23 @@
+# Disassembly for zipfile.Path.is_dir
+# From module file: zipfile
+
+## co_consts:
+(None, '/')
+
+## co_names:
+('at', 'endswith')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            at
+  14: UNARY_NOT            
+  16: JUMP_IF_TRUE_OR_POP  to 68
+  18: LOAD_FAST            self
+  20: LOAD_ATTR            at
+  30: LOAD_METHOD          endswith
+  52: LOAD_CONST           '/'
+  54: PRECALL              
+  58: CALL                 
+  68: RETURN_VALUE         

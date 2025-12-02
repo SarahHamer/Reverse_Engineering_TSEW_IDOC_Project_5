@@ -1,0 +1,18 @@
+# Disassembly for fractions.Fraction.__bool__
+# From module file: fractions
+
+## co_consts:
+('a != 0',)
+
+## co_names:
+('bool', '_numerator')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + bool
+  14: LOAD_FAST            a
+  16: LOAD_ATTR            _numerator
+  26: PRECALL              
+  30: CALL                 
+  40: RETURN_VALUE         

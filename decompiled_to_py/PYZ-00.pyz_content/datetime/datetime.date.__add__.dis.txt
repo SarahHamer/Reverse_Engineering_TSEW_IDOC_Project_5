@@ -1,0 +1,54 @@
+# Disassembly for datetime.date.__add__
+# From module file: datetime
+
+## co_consts:
+('Add a date to a timedelta.', 0, 'result out of range')
+
+## co_names:
+('isinstance', 'timedelta', 'toordinal', 'days', '_MAXORDINAL', 'type', 'fromordinal', 'OverflowError', 'NotImplemented')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            other
+  16: LOAD_GLOBAL          timedelta
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 240
+  44: LOAD_FAST            self
+  46: LOAD_METHOD          toordinal
+  68: PRECALL              
+  72: CALL                 
+  82: LOAD_FAST            other
+  84: LOAD_ATTR            days
+  94: BINARY_OP            +
+  98: STORE_FAST           o
+ 100: LOAD_CONST           0
+ 102: LOAD_FAST            o
+ 104: SWAP                 
+ 106: COPY                 
+ 108: COMPARE_OP           <
+ 114: POP_JUMP_FORWARD_IF_FALSE to 138
+ 116: LOAD_GLOBAL          _MAXORDINAL
+ 128: COMPARE_OP           <=
+ 134: POP_JUMP_FORWARD_IF_FALSE to 210
+ 136: JUMP_FORWARD         to 142
+ 138: POP_TOP              
+ 140: JUMP_FORWARD         to 210
+ 142: LOAD_GLOBAL          NULL + type
+ 154: LOAD_FAST            self
+ 156: PRECALL              
+ 160: CALL                 
+ 170: LOAD_METHOD          fromordinal
+ 192: LOAD_FAST            o
+ 194: PRECALL              
+ 198: CALL                 
+ 208: RETURN_VALUE         
+ 210: LOAD_GLOBAL          NULL + OverflowError
+ 222: LOAD_CONST           'result out of range'
+ 224: PRECALL              
+ 228: CALL                 
+ 238: RAISE_VARARGS        
+ 240: LOAD_GLOBAL          NotImplemented
+ 252: RETURN_VALUE         

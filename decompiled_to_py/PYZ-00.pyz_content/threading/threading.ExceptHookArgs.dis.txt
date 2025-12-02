@@ -1,0 +1,16 @@
+# Disassembly for threading.ExceptHookArgs
+# From module file: threading
+
+## co_consts:
+(None,)
+
+## co_names:
+('_ExceptHookArgs',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _ExceptHookArgs
+  14: LOAD_FAST            args
+  16: CALL_FUNCTION_EX     
+  18: RETURN_VALUE         

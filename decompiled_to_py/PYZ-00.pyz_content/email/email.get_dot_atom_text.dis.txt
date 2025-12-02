@@ -1,0 +1,105 @@
+# Disassembly for email.get_dot_atom_text
+# From module file: email._header_value_parser
+
+## co_consts:
+(' dot-text = 1*atext *("." 1*atext)\n\n    ', 0, "expected atom at a start of dot-atom-text but found '{}'", '.', 1, None, -1, "expected atom at end of dot-atom-text but found '{}'")
+
+## co_names:
+('DotAtomText', 'ATOM_ENDS', 'errors', 'HeaderParseError', 'format', 'get_atext', 'append', 'DOT')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + DotAtomText
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           dot_atom_text
+  30: LOAD_FAST            value
+  32: POP_JUMP_FORWARD_IF_FALSE to 64
+  34: LOAD_FAST            value
+  36: LOAD_CONST           0
+  38: BINARY_SUBSCR        
+  48: LOAD_GLOBAL          ATOM_ENDS
+  60: CONTAINS_OP          
+  62: POP_JUMP_FORWARD_IF_FALSE to 142
+  64: LOAD_GLOBAL          NULL + errors
+  76: LOAD_ATTR            HeaderParseError
+  86: LOAD_CONST           "expected atom at a start of dot-atom-text but found '{}'"
+  88: LOAD_METHOD          format
+ 110: LOAD_FAST            value
+ 112: PRECALL              
+ 116: CALL                 
+ 126: PRECALL              
+ 130: CALL                 
+ 140: RAISE_VARARGS        
+ 142: LOAD_FAST            value
+ 144: POP_JUMP_FORWARD_IF_FALSE to 388
+ 146: LOAD_FAST            value
+ 148: LOAD_CONST           0
+ 150: BINARY_SUBSCR        
+ 160: LOAD_GLOBAL          ATOM_ENDS
+ 172: CONTAINS_OP          
+ 174: POP_JUMP_FORWARD_IF_FALSE to 388
+ 176: LOAD_GLOBAL          NULL + get_atext
+ 188: LOAD_FAST            value
+ 190: PRECALL              
+ 194: CALL                 
+ 204: UNPACK_SEQUENCE      
+ 208: STORE_FAST           token
+ 210: STORE_FAST           value
+ 212: LOAD_FAST            dot_atom_text
+ 214: LOAD_METHOD          append
+ 236: LOAD_FAST            token
+ 238: PRECALL              
+ 242: CALL                 
+ 252: POP_TOP              
+ 254: LOAD_FAST            value
+ 256: POP_JUMP_FORWARD_IF_FALSE to 354
+ 258: LOAD_FAST            value
+ 260: LOAD_CONST           0
+ 262: BINARY_SUBSCR        
+ 272: LOAD_CONST           '.'
+ 274: COMPARE_OP           ==
+ 280: POP_JUMP_FORWARD_IF_FALSE to 354
+ 282: LOAD_FAST            dot_atom_text
+ 284: LOAD_METHOD          append
+ 306: LOAD_GLOBAL          DOT
+ 318: PRECALL              
+ 322: CALL                 
+ 332: POP_TOP              
+ 334: LOAD_FAST            value
+ 336: LOAD_CONST           1
+ 338: LOAD_CONST           None
+ 340: BUILD_SLICE          
+ 342: BINARY_SUBSCR        
+ 352: STORE_FAST           value
+ 354: LOAD_FAST            value
+ 356: POP_JUMP_FORWARD_IF_FALSE to 388
+ 358: LOAD_FAST            value
+ 360: LOAD_CONST           0
+ 362: BINARY_SUBSCR        
+ 372: LOAD_GLOBAL          ATOM_ENDS
+ 384: CONTAINS_OP          
+ 386: POP_JUMP_BACKWARD_IF_TRUE to 176
+ 388: LOAD_FAST            dot_atom_text
+ 390: LOAD_CONST           -1
+ 392: BINARY_SUBSCR        
+ 402: LOAD_GLOBAL          DOT
+ 414: IS_OP                
+ 416: POP_JUMP_FORWARD_IF_FALSE to 502
+ 418: LOAD_GLOBAL          NULL + errors
+ 430: LOAD_ATTR            HeaderParseError
+ 440: LOAD_CONST           "expected atom at end of dot-atom-text but found '{}'"
+ 442: LOAD_METHOD          format
+ 464: LOAD_CONST           '.'
+ 466: LOAD_FAST            value
+ 468: BINARY_OP            +
+ 472: PRECALL              
+ 476: CALL                 
+ 486: PRECALL              
+ 490: CALL                 
+ 500: RAISE_VARARGS        
+ 502: LOAD_FAST            dot_atom_text
+ 504: LOAD_FAST            value
+ 506: BUILD_TUPLE          
+ 508: RETURN_VALUE         

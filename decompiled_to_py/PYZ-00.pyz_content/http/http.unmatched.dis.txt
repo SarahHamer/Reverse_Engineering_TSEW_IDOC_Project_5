@@ -1,0 +1,34 @@
+# Disassembly for http.unmatched
+# From module file: http.cookiejar
+
+## co_consts:
+('Return unmatched part of re.Match object.', 0, None)
+
+## co_names:
+('span', 'string')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            match
+   4: LOAD_METHOD          span
+  26: LOAD_CONST           0
+  28: PRECALL              
+  32: CALL                 
+  42: UNPACK_SEQUENCE      
+  46: STORE_FAST           start
+  48: STORE_FAST           end
+  50: LOAD_FAST            match
+  52: LOAD_ATTR            string
+  62: LOAD_CONST           None
+  64: LOAD_FAST            start
+  66: BUILD_SLICE          
+  68: BINARY_SUBSCR        
+  78: LOAD_FAST            match
+  80: LOAD_ATTR            string
+  90: LOAD_FAST            end
+  92: LOAD_CONST           None
+  94: BUILD_SLICE          
+  96: BINARY_SUBSCR        
+ 106: BINARY_OP            +
+ 110: RETURN_VALUE         

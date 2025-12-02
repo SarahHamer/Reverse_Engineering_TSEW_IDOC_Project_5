@@ -1,0 +1,51 @@
+# Disassembly for email.FeedParser
+# From module file: email.feedparser
+
+## co_consts:
+('FeedParser', 'A feed-style parser of email.', None, ('policy',), <code object __init__ at 0x0000024068C8D8F0, file "email\feedparser.py", line 137>, <code object _set_headersonly at 0x0000024069427C50, file "email\feedparser.py", line 168>, <code object feed at 0x0000024069419110, file "email\feedparser.py", line 171>, <code object _call_parse at 0x000002406944A230, file "email\feedparser.py", line 176>, <code object close at 0x0000024068E21FA0, file "email\feedparser.py", line 182>, <code object _new_message at 0x0000024068D6F7F0, file "email\feedparser.py", line 195>, <code object _pop_message at 0x00000240693A9570, file "email\feedparser.py", line 208>, <code object _parsegen at 0x0000024068C86830, file "email\feedparser.py", line 216>, <code object _parse_headers at 0x0000024068E0FA10, file "email\feedparser.py", line 469>, (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'compat32', '__init__', '_set_headersonly', 'feed', '_call_parse', 'close', '_new_message', '_pop_message', '_parsegen', '_parse_headers')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'FeedParser'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'A feed-style parser of email.'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           (None,)
+  16: LOAD_NAME            compat32
+  18: LOAD_CONST           ('policy',)
+  20: BUILD_CONST_KEY_MAP  
+  22: LOAD_CONST           <code object __init__ at 0x0000024068C8D8F0, file "email\feedparser.py", line 137>
+  24: MAKE_FUNCTION        defaults, kwdefaults
+  26: STORE_NAME           __init__
+  28: LOAD_CONST           <code object _set_headersonly at 0x0000024069427C50, file "email\feedparser.py", line 168>
+  30: MAKE_FUNCTION        
+  32: STORE_NAME           _set_headersonly
+  34: LOAD_CONST           <code object feed at 0x0000024069419110, file "email\feedparser.py", line 171>
+  36: MAKE_FUNCTION        
+  38: STORE_NAME           feed
+  40: LOAD_CONST           <code object _call_parse at 0x000002406944A230, file "email\feedparser.py", line 176>
+  42: MAKE_FUNCTION        
+  44: STORE_NAME           _call_parse
+  46: LOAD_CONST           <code object close at 0x0000024068E21FA0, file "email\feedparser.py", line 182>
+  48: MAKE_FUNCTION        
+  50: STORE_NAME           close
+  52: LOAD_CONST           <code object _new_message at 0x0000024068D6F7F0, file "email\feedparser.py", line 195>
+  54: MAKE_FUNCTION        
+  56: STORE_NAME           _new_message
+  58: LOAD_CONST           <code object _pop_message at 0x00000240693A9570, file "email\feedparser.py", line 208>
+  60: MAKE_FUNCTION        
+  62: STORE_NAME           _pop_message
+  64: LOAD_CONST           <code object _parsegen at 0x0000024068C86830, file "email\feedparser.py", line 216>
+  66: MAKE_FUNCTION        
+  68: STORE_NAME           _parsegen
+  70: LOAD_CONST           <code object _parse_headers at 0x0000024068E0FA10, file "email\feedparser.py", line 469>
+  72: MAKE_FUNCTION        
+  74: STORE_NAME           _parse_headers
+  76: LOAD_CONST           None
+  78: RETURN_VALUE         

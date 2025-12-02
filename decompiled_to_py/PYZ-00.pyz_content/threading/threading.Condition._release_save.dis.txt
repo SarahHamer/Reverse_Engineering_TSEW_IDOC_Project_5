@@ -1,0 +1,20 @@
+# Disassembly for threading.Condition._release_save
+# From module file: threading
+
+## co_consts:
+(None,)
+
+## co_names:
+('_lock', 'release')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _lock
+  14: LOAD_METHOD          release
+  36: PRECALL              
+  40: CALL                 
+  50: POP_TOP              
+  52: LOAD_CONST           None
+  54: RETURN_VALUE         

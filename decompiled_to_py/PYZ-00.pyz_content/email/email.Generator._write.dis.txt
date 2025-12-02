@@ -1,0 +1,127 @@
+# Disassembly for email.Generator._write
+# From module file: email.generator
+
+## co_consts:
+(None, 'content-transfer-encoding', 0, 'Content-Transfer-Encoding', 'content-type', 1, '_write_headers')
+
+## co_names:
+('_fp', '_munge_cte', '_new_buffer', '_dispatch', 'deepcopy', 'get', 'replace_header', 'getattr', '_write_headers', 'write', 'getvalue')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _fp
+  14: STORE_FAST           oldfp
+  16: NOP                  
+  18: LOAD_CONST           None
+  20: LOAD_FAST            self
+  22: STORE_ATTR           _munge_cte
+  32: LOAD_FAST            self
+  34: LOAD_METHOD          _new_buffer
+  56: PRECALL              
+  60: CALL                 
+  70: COPY                 
+  72: LOAD_FAST            self
+  74: STORE_ATTR           _fp
+  84: STORE_FAST           sfp
+  86: LOAD_FAST            self
+  88: LOAD_METHOD          _dispatch
+ 110: LOAD_FAST            msg
+ 112: PRECALL              
+ 116: CALL                 
+ 126: POP_TOP              
+ 128: LOAD_FAST            oldfp
+ 130: LOAD_FAST            self
+ 132: STORE_ATTR           _fp
+ 142: LOAD_FAST            self
+ 144: LOAD_ATTR            _munge_cte
+ 154: STORE_FAST           munge_cte
+ 156: LOAD_FAST            self
+ 158: DELETE_ATTR          _munge_cte
+ 160: JUMP_FORWARD         to 204
+ 162: PUSH_EXC_INFO        
+ 164: LOAD_FAST            oldfp
+ 166: LOAD_FAST            self
+ 168: STORE_ATTR           _fp
+ 178: LOAD_FAST            self
+ 180: LOAD_ATTR            _munge_cte
+ 190: STORE_FAST           munge_cte
+ 192: LOAD_FAST            self
+ 194: DELETE_ATTR          _munge_cte
+ 196: RERAISE              
+ 198: COPY                 
+ 200: POP_EXCEPT           
+ 202: RERAISE              
+ 204: LOAD_FAST            munge_cte
+ 206: POP_JUMP_FORWARD_IF_FALSE to 416
+ 208: LOAD_GLOBAL          NULL + deepcopy
+ 220: LOAD_FAST            msg
+ 222: PRECALL              
+ 226: CALL                 
+ 236: STORE_FAST           msg
+ 238: LOAD_FAST            msg
+ 240: LOAD_METHOD          get
+ 262: LOAD_CONST           'content-transfer-encoding'
+ 264: PRECALL              
+ 268: CALL                 
+ 278: POP_JUMP_FORWARD_IF_NOT_NONE to 304
+ 280: LOAD_FAST            munge_cte
+ 282: LOAD_CONST           0
+ 284: BINARY_SUBSCR        
+ 294: LOAD_FAST            msg
+ 296: LOAD_CONST           'Content-Transfer-Encoding'
+ 298: STORE_SUBSCR         
+ 302: JUMP_FORWARD         to 360
+ 304: LOAD_FAST            msg
+ 306: LOAD_METHOD          replace_header
+ 328: LOAD_CONST           'content-transfer-encoding'
+ 330: LOAD_FAST            munge_cte
+ 332: LOAD_CONST           0
+ 334: BINARY_SUBSCR        
+ 344: PRECALL              
+ 348: CALL                 
+ 358: POP_TOP              
+ 360: LOAD_FAST            msg
+ 362: LOAD_METHOD          replace_header
+ 384: LOAD_CONST           'content-type'
+ 386: LOAD_FAST            munge_cte
+ 388: LOAD_CONST           1
+ 390: BINARY_SUBSCR        
+ 400: PRECALL              
+ 404: CALL                 
+ 414: POP_TOP              
+ 416: LOAD_GLOBAL          NULL + getattr
+ 428: LOAD_FAST            msg
+ 430: LOAD_CONST           '_write_headers'
+ 432: LOAD_CONST           None
+ 434: PRECALL              
+ 438: CALL                 
+ 448: STORE_FAST           meth
+ 450: LOAD_FAST            meth
+ 452: POP_JUMP_FORWARD_IF_NOT_NONE to 498
+ 454: LOAD_FAST            self
+ 456: LOAD_METHOD          _write_headers
+ 478: LOAD_FAST            msg
+ 480: PRECALL              
+ 484: CALL                 
+ 494: POP_TOP              
+ 496: JUMP_FORWARD         to 520
+ 498: PUSH_NULL            
+ 500: LOAD_FAST            meth
+ 502: LOAD_FAST            self
+ 504: PRECALL              
+ 508: CALL                 
+ 518: POP_TOP              
+ 520: LOAD_FAST            self
+ 522: LOAD_ATTR            _fp
+ 532: LOAD_METHOD          write
+ 554: LOAD_FAST            sfp
+ 556: LOAD_METHOD          getvalue
+ 578: PRECALL              
+ 582: CALL                 
+ 592: PRECALL              
+ 596: CALL                 
+ 606: POP_TOP              
+ 608: LOAD_CONST           None
+ 610: RETURN_VALUE         

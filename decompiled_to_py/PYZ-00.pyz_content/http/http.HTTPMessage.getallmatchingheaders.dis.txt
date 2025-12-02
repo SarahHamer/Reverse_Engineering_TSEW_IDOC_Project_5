@@ -1,0 +1,71 @@
+# Disassembly for http.HTTPMessage.getallmatchingheaders
+# From module file: http.client
+
+## co_consts:
+('Find all header lines matching a given header name.\n\n        Look through the list of headers and find all lines matching a given\n        header name (and their continuation lines).  A list of the lines is\n        returned, without interpretation.  If the header does not occur, an\n        empty list is returned.  If the header occurs multiple times, all\n        occurrences are returned.  Case is not important in the header name.\n\n        ', ':', 0, None, 1)
+
+## co_names:
+('lower', 'len', 'keys', 'isspace', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            name
+   4: LOAD_METHOD          lower
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_CONST           ':'
+  42: BINARY_OP            +
+  46: STORE_FAST           name
+  48: LOAD_GLOBAL          NULL + len
+  60: LOAD_FAST            name
+  62: PRECALL              
+  66: CALL                 
+  76: STORE_FAST           n
+  78: BUILD_LIST           
+  80: STORE_FAST           lst
+  82: LOAD_CONST           0
+  84: STORE_FAST           hit
+  86: LOAD_FAST            self
+  88: LOAD_METHOD          keys
+ 110: PRECALL              
+ 114: CALL                 
+ 124: GET_ITER             
+ 126: FOR_ITER             to 308
+ 128: STORE_FAST           line
+ 130: LOAD_FAST            line
+ 132: LOAD_CONST           None
+ 134: LOAD_FAST            n
+ 136: BUILD_SLICE          
+ 138: BINARY_SUBSCR        
+ 148: LOAD_METHOD          lower
+ 170: PRECALL              
+ 174: CALL                 
+ 184: LOAD_FAST            name
+ 186: COMPARE_OP           ==
+ 192: POP_JUMP_FORWARD_IF_FALSE to 200
+ 194: LOAD_CONST           1
+ 196: STORE_FAST           hit
+ 198: JUMP_FORWARD         to 260
+ 200: LOAD_FAST            line
+ 202: LOAD_CONST           None
+ 204: LOAD_CONST           1
+ 206: BUILD_SLICE          
+ 208: BINARY_SUBSCR        
+ 218: LOAD_METHOD          isspace
+ 240: PRECALL              
+ 244: CALL                 
+ 254: POP_JUMP_FORWARD_IF_TRUE to 260
+ 256: LOAD_CONST           0
+ 258: STORE_FAST           hit
+ 260: LOAD_FAST            hit
+ 262: POP_JUMP_FORWARD_IF_FALSE to 306
+ 264: LOAD_FAST            lst
+ 266: LOAD_METHOD          append
+ 288: LOAD_FAST            line
+ 290: PRECALL              
+ 294: CALL                 
+ 304: POP_TOP              
+ 306: JUMP_BACKWARD        to 126
+ 308: LOAD_FAST            lst
+ 310: RETURN_VALUE         

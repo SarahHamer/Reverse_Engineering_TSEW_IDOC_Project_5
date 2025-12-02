@@ -1,0 +1,20 @@
+# Disassembly for email.MIMEPart.clear
+# From module file: email.message
+
+## co_consts:
+(None,)
+
+## co_names:
+('_headers', '_payload')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            self
+   6: STORE_ATTR           _headers
+  16: LOAD_CONST           None
+  18: LOAD_FAST            self
+  20: STORE_ATTR           _payload
+  30: LOAD_CONST           None
+  32: RETURN_VALUE         

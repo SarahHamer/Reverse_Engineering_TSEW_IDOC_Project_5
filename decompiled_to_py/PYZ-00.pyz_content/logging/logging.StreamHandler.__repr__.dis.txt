@@ -1,0 +1,51 @@
+# Disassembly for logging.StreamHandler.__repr__
+# From module file: logging
+
+## co_consts:
+(None, 'name', '', ' ', '<', '(', ')>')
+
+## co_names:
+('getLevelName', 'level', 'getattr', 'stream', 'str', '__class__', '__name__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + getLevelName
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            level
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           level
+  42: LOAD_GLOBAL          NULL + getattr
+  54: LOAD_FAST            self
+  56: LOAD_ATTR            stream
+  66: LOAD_CONST           'name'
+  68: LOAD_CONST           ''
+  70: PRECALL              
+  74: CALL                 
+  84: STORE_FAST           name
+  86: LOAD_GLOBAL          NULL + str
+  98: LOAD_FAST            name
+ 100: PRECALL              
+ 104: CALL                 
+ 114: STORE_FAST           name
+ 116: LOAD_FAST            name
+ 118: POP_JUMP_FORWARD_IF_FALSE to 130
+ 120: LOAD_FAST            name
+ 122: LOAD_CONST           ' '
+ 124: BINARY_OP            +=
+ 128: STORE_FAST           name
+ 130: LOAD_CONST           '<'
+ 132: LOAD_FAST            self
+ 134: LOAD_ATTR            __class__
+ 144: LOAD_ATTR            __name__
+ 154: FORMAT_VALUE         str
+ 156: LOAD_CONST           ' '
+ 158: LOAD_FAST            name
+ 160: FORMAT_VALUE         str
+ 162: LOAD_CONST           '('
+ 164: LOAD_FAST            level
+ 166: FORMAT_VALUE         str
+ 168: LOAD_CONST           ')>'
+ 170: BUILD_STRING         
+ 172: RETURN_VALUE         

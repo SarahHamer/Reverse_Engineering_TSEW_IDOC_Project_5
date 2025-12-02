@@ -1,0 +1,63 @@
+# Disassembly for ftplib.FTP.getmultiline
+# From module file: ftplib
+
+## co_consts:
+(None, 3, 4, '-', 1, '\n')
+
+## co_names:
+('getline',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          getline
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           line
+  42: LOAD_FAST            line
+  44: LOAD_CONST           3
+  46: LOAD_CONST           4
+  48: BUILD_SLICE          
+  50: BINARY_SUBSCR        
+  60: LOAD_CONST           '-'
+  62: COMPARE_OP           ==
+  68: POP_JUMP_FORWARD_IF_FALSE to 208
+  70: LOAD_FAST            line
+  72: LOAD_CONST           None
+  74: LOAD_CONST           3
+  76: BUILD_SLICE          
+  78: BINARY_SUBSCR        
+  88: STORE_FAST           code
+  90: NOP                  
+  92: LOAD_FAST            self
+  94: LOAD_METHOD          getline
+ 116: PRECALL              
+ 120: CALL                 
+ 130: STORE_FAST           nextline
+ 132: LOAD_FAST            line
+ 134: LOAD_CONST           '\n'
+ 136: LOAD_FAST            nextline
+ 138: BINARY_OP            +
+ 142: BINARY_OP            +
+ 146: STORE_FAST           line
+ 148: LOAD_FAST            nextline
+ 150: LOAD_CONST           None
+ 152: LOAD_CONST           3
+ 154: BUILD_SLICE          
+ 156: BINARY_SUBSCR        
+ 166: LOAD_FAST            code
+ 168: COMPARE_OP           ==
+ 174: POP_JUMP_FORWARD_IF_FALSE to 206
+ 176: LOAD_FAST            nextline
+ 178: LOAD_CONST           3
+ 180: LOAD_CONST           4
+ 182: BUILD_SLICE          
+ 184: BINARY_SUBSCR        
+ 194: LOAD_CONST           '-'
+ 196: COMPARE_OP           !=
+ 202: POP_JUMP_FORWARD_IF_FALSE to 206
+ 204: JUMP_FORWARD         to 208
+ 206: JUMP_BACKWARD        to 92
+ 208: LOAD_FAST            line
+ 210: RETURN_VALUE         

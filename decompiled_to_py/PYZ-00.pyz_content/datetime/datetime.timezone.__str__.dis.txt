@@ -1,0 +1,18 @@
+# Disassembly for datetime.timezone.__str__
+# From module file: datetime
+
+## co_consts:
+(None,)
+
+## co_names:
+('tzname',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          tzname
+  26: LOAD_CONST           None
+  28: PRECALL              
+  32: CALL                 
+  42: RETURN_VALUE         

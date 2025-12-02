@@ -1,0 +1,25 @@
+# Disassembly for _pydecimal.Context.compare_total_mag
+# From module file: _pydecimal
+
+## co_consts:
+("Compares two operands using their abstract representation ignoring sign.\n\n        Like compare_total, but with operand's sign ignored and assumed to be 0.\n        ", True, ('raiseit',))
+
+## co_names:
+('_convert_other', 'compare_total_mag')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _convert_other
+  14: LOAD_FAST            a
+  16: LOAD_CONST           True
+  18: KW_NAMES             
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           a
+  36: LOAD_FAST            a
+  38: LOAD_METHOD          compare_total_mag
+  60: LOAD_FAST            b
+  62: PRECALL              
+  66: CALL                 
+  76: RETURN_VALUE         

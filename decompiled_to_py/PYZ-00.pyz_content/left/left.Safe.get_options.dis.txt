@@ -1,0 +1,31 @@
+# Disassembly for left.Safe.get_options
+# From module file: left
+
+## co_consts:
+(None, <code object <lambda> at 0x000002406945DD40, file "left.py", line 129>, 'Try to unlock the safe.')
+
+## co_names:
+('unlocked', 'append')
+
+## bytecode:
+
+   0: MAKE_CELL            self
+   2: RESUME               
+   4: BUILD_LIST           
+   6: STORE_FAST           options
+   8: LOAD_DEREF           self
+  10: LOAD_ATTR            unlocked
+  20: POP_JUMP_FORWARD_IF_TRUE to 74
+  22: LOAD_FAST            options
+  24: LOAD_METHOD          append
+  46: LOAD_CLOSURE         self
+  48: BUILD_TUPLE          
+  50: LOAD_CONST           <code object <lambda> at 0x000002406945DD40, file "left.py", line 129>
+  52: MAKE_FUNCTION        closure
+  54: LOAD_CONST           'Try to unlock the safe.'
+  56: BUILD_TUPLE          
+  58: PRECALL              
+  62: CALL                 
+  72: POP_TOP              
+  74: LOAD_FAST            options
+  76: RETURN_VALUE         

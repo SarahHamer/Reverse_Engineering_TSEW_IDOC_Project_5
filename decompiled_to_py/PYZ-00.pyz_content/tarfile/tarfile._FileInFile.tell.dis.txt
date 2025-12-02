@@ -1,0 +1,15 @@
+# Disassembly for tarfile._FileInFile.tell
+# From module file: tarfile
+
+## co_consts:
+('Return the current file position.\n        ',)
+
+## co_names:
+('position',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            position
+  14: RETURN_VALUE         

@@ -1,0 +1,33 @@
+# Disassembly for gettext.NullTranslations.__init__
+# From module file: gettext
+
+## co_consts:
+(None,)
+
+## co_names:
+('_info', '_charset', '_fallback', '_parse')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_MAP            
+   4: LOAD_FAST            self
+   6: STORE_ATTR           _info
+  16: LOAD_CONST           None
+  18: LOAD_FAST            self
+  20: STORE_ATTR           _charset
+  30: LOAD_CONST           None
+  32: LOAD_FAST            self
+  34: STORE_ATTR           _fallback
+  44: LOAD_FAST            fp
+  46: POP_JUMP_FORWARD_IF_NONE to 94
+  48: LOAD_FAST            self
+  50: LOAD_METHOD          _parse
+  72: LOAD_FAST            fp
+  74: PRECALL              
+  78: CALL                 
+  88: POP_TOP              
+  90: LOAD_CONST           None
+  92: RETURN_VALUE         
+  94: LOAD_CONST           None
+  96: RETURN_VALUE         

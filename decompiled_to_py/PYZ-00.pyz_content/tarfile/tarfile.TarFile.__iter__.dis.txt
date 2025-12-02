@@ -1,0 +1,88 @@
+# Disassembly for tarfile.TarFile.__iter__
+# From module file: tarfile
+
+## co_consts:
+('Provide an iterator object.\n        ', None, 0, 1, True)
+
+## co_names:
+('_loaded', 'members', 'firstmember', 'next', 'len')
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            _loaded
+  18: POP_JUMP_FORWARD_IF_FALSE to 50
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            members
+  32: GET_YIELD_FROM_ITER  
+  34: LOAD_CONST           None
+  36: SEND                 to 44
+  38: YIELD_VALUE          
+  40: RESUME               
+  42: JUMP_BACKWARD_NO_INTERRUPT to 36
+  44: POP_TOP              
+  46: LOAD_CONST           None
+  48: RETURN_VALUE         
+  50: LOAD_CONST           0
+  52: STORE_FAST           index
+  54: LOAD_FAST            self
+  56: LOAD_ATTR            firstmember
+  66: POP_JUMP_FORWARD_IF_NONE to 126
+  68: LOAD_FAST            self
+  70: LOAD_METHOD          next
+  92: PRECALL              
+  96: CALL                 
+ 106: STORE_FAST           tarinfo
+ 108: LOAD_FAST            index
+ 110: LOAD_CONST           1
+ 112: BINARY_OP            +=
+ 116: STORE_FAST           index
+ 118: LOAD_FAST            tarinfo
+ 120: YIELD_VALUE          
+ 122: RESUME               
+ 124: POP_TOP              
+ 126: NOP                  
+ 128: LOAD_FAST            index
+ 130: LOAD_GLOBAL          NULL + len
+ 142: LOAD_FAST            self
+ 144: LOAD_ATTR            members
+ 154: PRECALL              
+ 158: CALL                 
+ 168: COMPARE_OP           <
+ 174: POP_JUMP_FORWARD_IF_FALSE to 204
+ 176: LOAD_FAST            self
+ 178: LOAD_ATTR            members
+ 188: LOAD_FAST            index
+ 190: BINARY_SUBSCR        
+ 200: STORE_FAST           tarinfo
+ 202: JUMP_FORWARD         to 286
+ 204: LOAD_FAST            self
+ 206: LOAD_ATTR            _loaded
+ 216: POP_JUMP_FORWARD_IF_TRUE to 282
+ 218: LOAD_FAST            self
+ 220: LOAD_METHOD          next
+ 242: PRECALL              
+ 246: CALL                 
+ 256: STORE_FAST           tarinfo
+ 258: LOAD_FAST            tarinfo
+ 260: POP_JUMP_FORWARD_IF_TRUE to 280
+ 262: LOAD_CONST           True
+ 264: LOAD_FAST            self
+ 266: STORE_ATTR           _loaded
+ 276: LOAD_CONST           None
+ 278: RETURN_VALUE         
+ 280: JUMP_FORWARD         to 286
+ 282: LOAD_CONST           None
+ 284: RETURN_VALUE         
+ 286: LOAD_FAST            index
+ 288: LOAD_CONST           1
+ 290: BINARY_OP            +=
+ 294: STORE_FAST           index
+ 296: LOAD_FAST            tarinfo
+ 298: YIELD_VALUE          
+ 300: RESUME               
+ 302: POP_TOP              
+ 304: JUMP_BACKWARD        to 128

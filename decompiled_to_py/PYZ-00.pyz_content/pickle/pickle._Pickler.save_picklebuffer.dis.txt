@@ -1,0 +1,111 @@
+# Disassembly for pickle._Pickler.save_picklebuffer
+# From module file: pickle
+
+## co_consts:
+(None, 5, 'PickleBuffer can only pickled with protocol >= 5', 'PickleBuffer can not be pickled when pointing to a non-contiguous buffer', True)
+
+## co_names:
+('proto', 'PicklingError', 'raw', 'contiguous', '_buffer_callback', 'bool', 'readonly', 'save_bytes', 'tobytes', 'save_bytearray', 'write', 'NEXT_BUFFER', 'READONLY_BUFFER')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            proto
+  14: LOAD_CONST           5
+  16: COMPARE_OP           <
+  22: POP_JUMP_FORWARD_IF_FALSE to 54
+  24: LOAD_GLOBAL          NULL + PicklingError
+  36: LOAD_CONST           'PickleBuffer can only pickled with protocol >= 5'
+  38: PRECALL              
+  42: CALL                 
+  52: RAISE_VARARGS        
+  54: LOAD_FAST            obj
+  56: LOAD_METHOD          raw
+  78: PRECALL              
+  82: CALL                 
+  92: BEFORE_WITH          
+  94: STORE_FAST           m
+  96: LOAD_FAST            m
+  98: LOAD_ATTR            contiguous
+ 108: POP_JUMP_FORWARD_IF_TRUE to 140
+ 110: LOAD_GLOBAL          NULL + PicklingError
+ 122: LOAD_CONST           'PickleBuffer can not be pickled when pointing to a non-contiguous buffer'
+ 124: PRECALL              
+ 128: CALL                 
+ 138: RAISE_VARARGS        
+ 140: LOAD_CONST           True
+ 142: STORE_FAST           in_band
+ 144: LOAD_FAST            self
+ 146: LOAD_ATTR            _buffer_callback
+ 156: POP_JUMP_FORWARD_IF_NONE to 226
+ 158: LOAD_GLOBAL          NULL + bool
+ 170: LOAD_FAST            self
+ 172: LOAD_METHOD          _buffer_callback
+ 194: LOAD_FAST            obj
+ 196: PRECALL              
+ 200: CALL                 
+ 210: PRECALL              
+ 214: CALL                 
+ 224: STORE_FAST           in_band
+ 226: LOAD_FAST            in_band
+ 228: POP_JUMP_FORWARD_IF_FALSE to 404
+ 230: LOAD_FAST            m
+ 232: LOAD_ATTR            readonly
+ 242: POP_JUMP_FORWARD_IF_FALSE to 324
+ 244: LOAD_FAST            self
+ 246: LOAD_METHOD          save_bytes
+ 268: LOAD_FAST            m
+ 270: LOAD_METHOD          tobytes
+ 292: PRECALL              
+ 296: CALL                 
+ 306: PRECALL              
+ 310: CALL                 
+ 320: POP_TOP              
+ 322: JUMP_FORWARD         to 522
+ 324: LOAD_FAST            self
+ 326: LOAD_METHOD          save_bytearray
+ 348: LOAD_FAST            m
+ 350: LOAD_METHOD          tobytes
+ 372: PRECALL              
+ 376: CALL                 
+ 386: PRECALL              
+ 390: CALL                 
+ 400: POP_TOP              
+ 402: JUMP_FORWARD         to 522
+ 404: LOAD_FAST            self
+ 406: LOAD_METHOD          write
+ 428: LOAD_GLOBAL          NEXT_BUFFER
+ 440: PRECALL              
+ 444: CALL                 
+ 454: POP_TOP              
+ 456: LOAD_FAST            m
+ 458: LOAD_ATTR            readonly
+ 468: POP_JUMP_FORWARD_IF_FALSE to 522
+ 470: LOAD_FAST            self
+ 472: LOAD_METHOD          write
+ 494: LOAD_GLOBAL          READONLY_BUFFER
+ 506: PRECALL              
+ 510: CALL                 
+ 520: POP_TOP              
+ 522: LOAD_CONST           None
+ 524: LOAD_CONST           None
+ 526: LOAD_CONST           None
+ 528: PRECALL              
+ 532: CALL                 
+ 542: POP_TOP              
+ 544: LOAD_CONST           None
+ 546: RETURN_VALUE         
+ 548: PUSH_EXC_INFO        
+ 550: WITH_EXCEPT_START    
+ 552: POP_JUMP_FORWARD_IF_TRUE to 562
+ 554: RERAISE              
+ 556: COPY                 
+ 558: POP_EXCEPT           
+ 560: RERAISE              
+ 562: POP_TOP              
+ 564: POP_EXCEPT           
+ 566: POP_TOP              
+ 568: POP_TOP              
+ 570: LOAD_CONST           None
+ 572: RETURN_VALUE         

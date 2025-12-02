@@ -1,0 +1,69 @@
+# Disassembly for http.HTTPConnection.__init__
+# From module file: http.client
+
+## co_consts:
+(None,)
+
+## co_names:
+('timeout', 'source_address', 'blocksize', 'sock', '_buffer', '_HTTPConnection__response', '_CS_IDLE', '_HTTPConnection__state', '_method', '_tunnel_host', '_tunnel_port', '_tunnel_headers', '_get_hostport', 'host', 'port', '_validate_host', 'socket', 'create_connection', '_create_connection')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            timeout
+   4: LOAD_FAST            self
+   6: STORE_ATTR           timeout
+  16: LOAD_FAST            source_address
+  18: LOAD_FAST            self
+  20: STORE_ATTR           source_address
+  30: LOAD_FAST            blocksize
+  32: LOAD_FAST            self
+  34: STORE_ATTR           blocksize
+  44: LOAD_CONST           None
+  46: LOAD_FAST            self
+  48: STORE_ATTR           sock
+  58: BUILD_LIST           
+  60: LOAD_FAST            self
+  62: STORE_ATTR           _buffer
+  72: LOAD_CONST           None
+  74: LOAD_FAST            self
+  76: STORE_ATTR           _HTTPConnection__response
+  86: LOAD_GLOBAL          _CS_IDLE
+  98: LOAD_FAST            self
+ 100: STORE_ATTR           _HTTPConnection__state
+ 110: LOAD_CONST           None
+ 112: LOAD_FAST            self
+ 114: STORE_ATTR           _method
+ 124: LOAD_CONST           None
+ 126: LOAD_FAST            self
+ 128: STORE_ATTR           _tunnel_host
+ 138: LOAD_CONST           None
+ 140: LOAD_FAST            self
+ 142: STORE_ATTR           _tunnel_port
+ 152: BUILD_MAP            
+ 154: LOAD_FAST            self
+ 156: STORE_ATTR           _tunnel_headers
+ 166: LOAD_FAST            self
+ 168: LOAD_METHOD          _get_hostport
+ 190: LOAD_FAST            host
+ 192: LOAD_FAST            port
+ 194: PRECALL              
+ 198: CALL                 
+ 208: UNPACK_SEQUENCE      
+ 212: LOAD_FAST            self
+ 214: STORE_ATTR           host
+ 224: LOAD_FAST            self
+ 226: STORE_ATTR           port
+ 236: LOAD_FAST            self
+ 238: LOAD_METHOD          _validate_host
+ 260: LOAD_FAST            self
+ 262: LOAD_ATTR            host
+ 272: PRECALL              
+ 276: CALL                 
+ 286: POP_TOP              
+ 288: LOAD_GLOBAL          socket
+ 300: LOAD_ATTR            create_connection
+ 310: LOAD_FAST            self
+ 312: STORE_ATTR           _create_connection
+ 322: LOAD_CONST           None
+ 324: RETURN_VALUE         

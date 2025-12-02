@@ -1,0 +1,119 @@
+# Disassembly for netrc._netrclex.get_token
+# From module file: netrc
+
+## co_consts:
+(None, 0, '', '"', '\\')
+
+## co_names:
+('pushback', 'pop', 'iter', '_read_char', 'whitespace')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            pushback
+  14: POP_JUMP_FORWARD_IF_FALSE to 68
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            pushback
+  28: LOAD_METHOD          pop
+  50: LOAD_CONST           0
+  52: PRECALL              
+  56: CALL                 
+  66: RETURN_VALUE         
+  68: LOAD_CONST           ''
+  70: STORE_FAST           token
+  72: LOAD_GLOBAL          NULL + iter
+  84: LOAD_FAST            self
+  86: LOAD_ATTR            _read_char
+  96: LOAD_CONST           ''
+  98: PRECALL              
+ 102: CALL                 
+ 112: STORE_FAST           fiter
+ 114: LOAD_FAST            fiter
+ 116: GET_ITER             
+ 118: FOR_ITER             to 418
+ 120: STORE_FAST           ch
+ 122: LOAD_FAST            ch
+ 124: LOAD_FAST            self
+ 126: LOAD_ATTR            whitespace
+ 136: CONTAINS_OP          
+ 138: POP_JUMP_FORWARD_IF_FALSE to 142
+ 140: JUMP_BACKWARD        to 118
+ 142: LOAD_FAST            ch
+ 144: LOAD_CONST           '"'
+ 146: COMPARE_OP           ==
+ 152: POP_JUMP_FORWARD_IF_FALSE to 252
+ 154: LOAD_FAST            fiter
+ 156: GET_ITER             
+ 158: FOR_ITER             to 250
+ 160: STORE_FAST           ch
+ 162: LOAD_FAST            ch
+ 164: LOAD_CONST           '"'
+ 166: COMPARE_OP           ==
+ 172: POP_JUMP_FORWARD_IF_FALSE to 186
+ 174: LOAD_FAST            token
+ 176: SWAP                 
+ 178: POP_TOP              
+ 180: SWAP                 
+ 182: POP_TOP              
+ 184: RETURN_VALUE         
+ 186: LOAD_FAST            ch
+ 188: LOAD_CONST           '\\'
+ 190: COMPARE_OP           ==
+ 196: POP_JUMP_FORWARD_IF_FALSE to 238
+ 198: LOAD_FAST            self
+ 200: LOAD_METHOD          _read_char
+ 222: PRECALL              
+ 226: CALL                 
+ 236: STORE_FAST           ch
+ 238: LOAD_FAST            token
+ 240: LOAD_FAST            ch
+ 242: BINARY_OP            +=
+ 246: STORE_FAST           token
+ 248: JUMP_BACKWARD        to 158
+ 250: JUMP_BACKWARD        to 118
+ 252: LOAD_FAST            ch
+ 254: LOAD_CONST           '\\'
+ 256: COMPARE_OP           ==
+ 262: POP_JUMP_FORWARD_IF_FALSE to 304
+ 264: LOAD_FAST            self
+ 266: LOAD_METHOD          _read_char
+ 288: PRECALL              
+ 292: CALL                 
+ 302: STORE_FAST           ch
+ 304: LOAD_FAST            token
+ 306: LOAD_FAST            ch
+ 308: BINARY_OP            +=
+ 312: STORE_FAST           token
+ 314: LOAD_FAST            fiter
+ 316: GET_ITER             
+ 318: FOR_ITER             to 416
+ 320: STORE_FAST           ch
+ 322: LOAD_FAST            ch
+ 324: LOAD_FAST            self
+ 326: LOAD_ATTR            whitespace
+ 336: CONTAINS_OP          
+ 338: POP_JUMP_FORWARD_IF_FALSE to 352
+ 340: LOAD_FAST            token
+ 342: SWAP                 
+ 344: POP_TOP              
+ 346: SWAP                 
+ 348: POP_TOP              
+ 350: RETURN_VALUE         
+ 352: LOAD_FAST            ch
+ 354: LOAD_CONST           '\\'
+ 356: COMPARE_OP           ==
+ 362: POP_JUMP_FORWARD_IF_FALSE to 404
+ 364: LOAD_FAST            self
+ 366: LOAD_METHOD          _read_char
+ 388: PRECALL              
+ 392: CALL                 
+ 402: STORE_FAST           ch
+ 404: LOAD_FAST            token
+ 406: LOAD_FAST            ch
+ 408: BINARY_OP            +=
+ 412: STORE_FAST           token
+ 414: JUMP_BACKWARD        to 318
+ 416: JUMP_BACKWARD        to 118
+ 418: LOAD_FAST            token
+ 420: RETURN_VALUE         

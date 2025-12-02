@@ -1,0 +1,43 @@
+# Disassembly for dis.findlinestarts
+# From module file: dis
+
+## co_consts:
+('Find the offsets in a byte code which are start of lines in the source.\n\n    Generate pairs (offset, lineno)\n    ', None)
+
+## co_names:
+('co_lines',)
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_CONST           None
+   8: STORE_FAST           lastline
+  10: LOAD_FAST            code
+  12: LOAD_METHOD          co_lines
+  34: PRECALL              
+  38: CALL                 
+  48: GET_ITER             
+  50: FOR_ITER             to 96
+  52: UNPACK_SEQUENCE      
+  56: STORE_FAST           start
+  58: STORE_FAST           end
+  60: STORE_FAST           line
+  62: LOAD_FAST            line
+  64: POP_JUMP_FORWARD_IF_NONE to 94
+  66: LOAD_FAST            line
+  68: LOAD_FAST            lastline
+  70: COMPARE_OP           !=
+  76: POP_JUMP_FORWARD_IF_FALSE to 94
+  78: LOAD_FAST            line
+  80: STORE_FAST           lastline
+  82: LOAD_FAST            start
+  84: LOAD_FAST            line
+  86: BUILD_TUPLE          
+  88: YIELD_VALUE          
+  90: RESUME               
+  92: POP_TOP              
+  94: JUMP_BACKWARD        to 50
+  96: LOAD_CONST           None
+  98: RETURN_VALUE         

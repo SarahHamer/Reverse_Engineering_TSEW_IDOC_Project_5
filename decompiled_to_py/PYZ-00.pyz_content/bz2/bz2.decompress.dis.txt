@@ -1,0 +1,67 @@
+# Disassembly for bz2.decompress
+# From module file: bz2
+
+## co_consts:
+('Decompress a block of data.\n\n    For incremental decompression, use a BZ2Decompressor object instead.\n    ', 'Compressed data ended before the end-of-stream marker was reached', b'')
+
+## co_names:
+('BZ2Decompressor', 'decompress', 'OSError', 'append', 'eof', 'ValueError', 'unused_data', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           results
+   6: LOAD_FAST            data
+   8: POP_JUMP_FORWARD_IF_FALSE to 226
+  10: LOAD_GLOBAL          NULL + BZ2Decompressor
+  22: PRECALL              
+  26: CALL                 
+  36: STORE_FAST           decomp
+  38: NOP                  
+  40: LOAD_FAST            decomp
+  42: LOAD_METHOD          decompress
+  64: LOAD_FAST            data
+  66: PRECALL              
+  70: CALL                 
+  80: STORE_FAST           res
+  82: JUMP_FORWARD         to 122
+  84: PUSH_EXC_INFO        
+  86: LOAD_GLOBAL          OSError
+  98: CHECK_EXC_MATCH      
+ 100: POP_JUMP_FORWARD_IF_FALSE to 114
+ 102: POP_TOP              
+ 104: LOAD_FAST            results
+ 106: POP_JUMP_FORWARD_IF_FALSE to 112
+ 108: POP_EXCEPT           
+ 110: JUMP_FORWARD         to 226
+ 112: RAISE_VARARGS        
+ 114: RERAISE              
+ 116: COPY                 
+ 118: POP_EXCEPT           
+ 120: RERAISE              
+ 122: LOAD_FAST            results
+ 124: LOAD_METHOD          append
+ 146: LOAD_FAST            res
+ 148: PRECALL              
+ 152: CALL                 
+ 162: POP_TOP              
+ 164: LOAD_FAST            decomp
+ 166: LOAD_ATTR            eof
+ 176: POP_JUMP_FORWARD_IF_TRUE to 208
+ 178: LOAD_GLOBAL          NULL + ValueError
+ 190: LOAD_CONST           'Compressed data ended before the end-of-stream marker was reached'
+ 192: PRECALL              
+ 196: CALL                 
+ 206: RAISE_VARARGS        
+ 208: LOAD_FAST            decomp
+ 210: LOAD_ATTR            unused_data
+ 220: STORE_FAST           data
+ 222: LOAD_FAST            data
+ 224: POP_JUMP_BACKWARD_IF_TRUE to 10
+ 226: LOAD_CONST           b''
+ 228: LOAD_METHOD          join
+ 250: LOAD_FAST            results
+ 252: PRECALL              
+ 256: CALL                 
+ 266: RETURN_VALUE         

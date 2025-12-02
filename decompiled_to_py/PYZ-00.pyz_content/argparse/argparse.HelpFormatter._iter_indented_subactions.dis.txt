@@ -1,0 +1,53 @@
+# Disassembly for argparse.HelpFormatter._iter_indented_subactions
+# From module file: argparse
+
+## co_consts:
+(None,)
+
+## co_names:
+('_get_subactions', '_indent', '_dedent', 'AttributeError')
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: NOP                  
+   8: LOAD_FAST            action
+  10: LOAD_ATTR            _get_subactions
+  20: STORE_FAST           get_subactions
+  22: LOAD_FAST            self
+  24: LOAD_METHOD          _indent
+  46: PRECALL              
+  50: CALL                 
+  60: POP_TOP              
+  62: PUSH_NULL            
+  64: LOAD_FAST            get_subactions
+  66: PRECALL              
+  70: CALL                 
+  80: GET_YIELD_FROM_ITER  
+  82: LOAD_CONST           None
+  84: SEND                 to 92
+  86: YIELD_VALUE          
+  88: RESUME               
+  90: JUMP_BACKWARD_NO_INTERRUPT to 84
+  92: POP_TOP              
+  94: LOAD_FAST            self
+  96: LOAD_METHOD          _dedent
+ 118: PRECALL              
+ 122: CALL                 
+ 132: POP_TOP              
+ 134: LOAD_CONST           None
+ 136: RETURN_VALUE         
+ 138: PUSH_EXC_INFO        
+ 140: LOAD_GLOBAL          AttributeError
+ 152: CHECK_EXC_MATCH      
+ 154: POP_JUMP_FORWARD_IF_FALSE to 164
+ 156: POP_TOP              
+ 158: POP_EXCEPT           
+ 160: LOAD_CONST           None
+ 162: RETURN_VALUE         
+ 164: RERAISE              
+ 166: COPY                 
+ 168: POP_EXCEPT           
+ 170: RERAISE              

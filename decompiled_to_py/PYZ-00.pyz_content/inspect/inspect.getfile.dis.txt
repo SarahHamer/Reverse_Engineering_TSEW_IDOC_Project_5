@@ -1,0 +1,137 @@
+# Disassembly for inspect.getfile
+# From module file: inspect
+
+## co_consts:
+('Work out which source or compiled file an object was defined in.', '__file__', None, '{!r} is a built-in module', '__module__', '__main__', 'source code not available', '{!r} is a built-in class', 'module, class, method, function, traceback, frame, or code object was expected, got {}')
+
+## co_names:
+('ismodule', 'getattr', '__file__', 'TypeError', 'format', 'isclass', 'hasattr', 'sys', 'modules', 'get', '__module__', 'OSError', 'ismethod', '__func__', 'isfunction', '__code__', 'istraceback', 'tb_frame', 'isframe', 'f_code', 'iscode', 'co_filename', 'type', '__name__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + ismodule
+  14: LOAD_FAST            object
+  16: PRECALL              
+  20: CALL                 
+  30: POP_JUMP_FORWARD_IF_FALSE to 148
+  32: LOAD_GLOBAL          NULL + getattr
+  44: LOAD_FAST            object
+  46: LOAD_CONST           '__file__'
+  48: LOAD_CONST           None
+  50: PRECALL              
+  54: CALL                 
+  64: POP_JUMP_FORWARD_IF_FALSE to 80
+  66: LOAD_FAST            object
+  68: LOAD_ATTR            __file__
+  78: RETURN_VALUE         
+  80: LOAD_GLOBAL          NULL + TypeError
+  92: LOAD_CONST           '{!r} is a built-in module'
+  94: LOAD_METHOD          format
+ 116: LOAD_FAST            object
+ 118: PRECALL              
+ 122: CALL                 
+ 132: PRECALL              
+ 136: CALL                 
+ 146: RAISE_VARARGS        
+ 148: LOAD_GLOBAL          NULL + isclass
+ 160: LOAD_FAST            object
+ 162: PRECALL              
+ 166: CALL                 
+ 176: POP_JUMP_FORWARD_IF_FALSE to 450
+ 178: LOAD_GLOBAL          NULL + hasattr
+ 190: LOAD_FAST            object
+ 192: LOAD_CONST           '__module__'
+ 194: PRECALL              
+ 198: CALL                 
+ 208: POP_JUMP_FORWARD_IF_FALSE to 382
+ 210: LOAD_GLOBAL          sys
+ 222: LOAD_ATTR            modules
+ 232: LOAD_METHOD          get
+ 254: LOAD_FAST            object
+ 256: LOAD_ATTR            __module__
+ 266: PRECALL              
+ 270: CALL                 
+ 280: STORE_FAST           module
+ 282: LOAD_GLOBAL          NULL + getattr
+ 294: LOAD_FAST            module
+ 296: LOAD_CONST           '__file__'
+ 298: LOAD_CONST           None
+ 300: PRECALL              
+ 304: CALL                 
+ 314: POP_JUMP_FORWARD_IF_FALSE to 330
+ 316: LOAD_FAST            module
+ 318: LOAD_ATTR            __file__
+ 328: RETURN_VALUE         
+ 330: LOAD_FAST            object
+ 332: LOAD_ATTR            __module__
+ 342: LOAD_CONST           '__main__'
+ 344: COMPARE_OP           ==
+ 350: POP_JUMP_FORWARD_IF_FALSE to 382
+ 352: LOAD_GLOBAL          NULL + OSError
+ 364: LOAD_CONST           'source code not available'
+ 366: PRECALL              
+ 370: CALL                 
+ 380: RAISE_VARARGS        
+ 382: LOAD_GLOBAL          NULL + TypeError
+ 394: LOAD_CONST           '{!r} is a built-in class'
+ 396: LOAD_METHOD          format
+ 418: LOAD_FAST            object
+ 420: PRECALL              
+ 424: CALL                 
+ 434: PRECALL              
+ 438: CALL                 
+ 448: RAISE_VARARGS        
+ 450: LOAD_GLOBAL          NULL + ismethod
+ 462: LOAD_FAST            object
+ 464: PRECALL              
+ 468: CALL                 
+ 478: POP_JUMP_FORWARD_IF_FALSE to 494
+ 480: LOAD_FAST            object
+ 482: LOAD_ATTR            __func__
+ 492: STORE_FAST           object
+ 494: LOAD_GLOBAL          NULL + isfunction
+ 506: LOAD_FAST            object
+ 508: PRECALL              
+ 512: CALL                 
+ 522: POP_JUMP_FORWARD_IF_FALSE to 538
+ 524: LOAD_FAST            object
+ 526: LOAD_ATTR            __code__
+ 536: STORE_FAST           object
+ 538: LOAD_GLOBAL          NULL + istraceback
+ 550: LOAD_FAST            object
+ 552: PRECALL              
+ 556: CALL                 
+ 566: POP_JUMP_FORWARD_IF_FALSE to 582
+ 568: LOAD_FAST            object
+ 570: LOAD_ATTR            tb_frame
+ 580: STORE_FAST           object
+ 582: LOAD_GLOBAL          NULL + isframe
+ 594: LOAD_FAST            object
+ 596: PRECALL              
+ 600: CALL                 
+ 610: POP_JUMP_FORWARD_IF_FALSE to 626
+ 612: LOAD_FAST            object
+ 614: LOAD_ATTR            f_code
+ 624: STORE_FAST           object
+ 626: LOAD_GLOBAL          NULL + iscode
+ 638: LOAD_FAST            object
+ 640: PRECALL              
+ 644: CALL                 
+ 654: POP_JUMP_FORWARD_IF_FALSE to 670
+ 656: LOAD_FAST            object
+ 658: LOAD_ATTR            co_filename
+ 668: RETURN_VALUE         
+ 670: LOAD_GLOBAL          NULL + TypeError
+ 682: LOAD_CONST           'module, class, method, function, traceback, frame, or code object was expected, got {}'
+ 684: LOAD_METHOD          format
+ 706: LOAD_GLOBAL          NULL + type
+ 718: LOAD_FAST            object
+ 720: PRECALL              
+ 724: CALL                 
+ 734: LOAD_ATTR            __name__
+ 744: PRECALL              
+ 748: CALL                 
+ 758: PRECALL              
+ 762: CALL                 
+ 772: RAISE_VARARGS        

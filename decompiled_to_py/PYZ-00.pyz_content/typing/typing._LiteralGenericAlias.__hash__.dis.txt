@@ -1,0 +1,24 @@
+# Disassembly for typing._LiteralGenericAlias.__hash__
+# From module file: typing
+
+## co_consts:
+(None,)
+
+## co_names:
+('hash', 'frozenset', '_value_and_type_iter', '__args__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + hash
+  14: LOAD_GLOBAL          NULL + frozenset
+  26: LOAD_GLOBAL          NULL + _value_and_type_iter
+  38: LOAD_FAST            self
+  40: LOAD_ATTR            __args__
+  50: PRECALL              
+  54: CALL                 
+  64: PRECALL              
+  68: CALL                 
+  78: PRECALL              
+  82: CALL                 
+  92: RETURN_VALUE         

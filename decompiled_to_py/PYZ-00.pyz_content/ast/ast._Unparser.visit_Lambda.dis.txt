@@ -1,0 +1,113 @@
+# Disassembly for ast._Unparser.visit_Lambda
+# From module file: ast
+
+## co_consts:
+(None, 'lambda', ' ', ': ')
+
+## co_names:
+('require_parens', '_Precedence', 'TEST', 'write', 'buffered', 'traverse', 'args', 'set_precedence', 'body')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          require_parens
+  26: LOAD_GLOBAL          _Precedence
+  38: LOAD_ATTR            TEST
+  48: LOAD_FAST            node
+  50: PRECALL              
+  54: CALL                 
+  64: BEFORE_WITH          
+  66: POP_TOP              
+  68: LOAD_FAST            self
+  70: LOAD_METHOD          write
+  92: LOAD_CONST           'lambda'
+  94: PRECALL              
+  98: CALL                 
+ 108: POP_TOP              
+ 110: LOAD_FAST            self
+ 112: LOAD_METHOD          buffered
+ 134: PRECALL              
+ 138: CALL                 
+ 148: BEFORE_WITH          
+ 150: STORE_FAST           buffer
+ 152: LOAD_FAST            self
+ 154: LOAD_METHOD          traverse
+ 176: LOAD_FAST            node
+ 178: LOAD_ATTR            args
+ 188: PRECALL              
+ 192: CALL                 
+ 202: POP_TOP              
+ 204: LOAD_CONST           None
+ 206: LOAD_CONST           None
+ 208: LOAD_CONST           None
+ 210: PRECALL              
+ 214: CALL                 
+ 224: POP_TOP              
+ 226: JUMP_FORWARD         to 250
+ 228: PUSH_EXC_INFO        
+ 230: WITH_EXCEPT_START    
+ 232: POP_JUMP_FORWARD_IF_TRUE to 242
+ 234: RERAISE              
+ 236: COPY                 
+ 238: POP_EXCEPT           
+ 240: RERAISE              
+ 242: POP_TOP              
+ 244: POP_EXCEPT           
+ 246: POP_TOP              
+ 248: POP_TOP              
+ 250: LOAD_FAST            buffer
+ 252: POP_JUMP_FORWARD_IF_FALSE to 282
+ 254: PUSH_NULL            
+ 256: LOAD_FAST            self
+ 258: LOAD_ATTR            write
+ 268: LOAD_CONST           ' '
+ 270: BUILD_LIST           
+ 272: LOAD_FAST            buffer
+ 274: LIST_EXTEND          
+ 276: LIST_TO_TUPLE        
+ 278: CALL_FUNCTION_EX     
+ 280: POP_TOP              
+ 282: LOAD_FAST            self
+ 284: LOAD_METHOD          write
+ 306: LOAD_CONST           ': '
+ 308: PRECALL              
+ 312: CALL                 
+ 322: POP_TOP              
+ 324: LOAD_FAST            self
+ 326: LOAD_METHOD          set_precedence
+ 348: LOAD_GLOBAL          _Precedence
+ 360: LOAD_ATTR            TEST
+ 370: LOAD_FAST            node
+ 372: LOAD_ATTR            body
+ 382: PRECALL              
+ 386: CALL                 
+ 396: POP_TOP              
+ 398: LOAD_FAST            self
+ 400: LOAD_METHOD          traverse
+ 422: LOAD_FAST            node
+ 424: LOAD_ATTR            body
+ 434: PRECALL              
+ 438: CALL                 
+ 448: POP_TOP              
+ 450: LOAD_CONST           None
+ 452: LOAD_CONST           None
+ 454: LOAD_CONST           None
+ 456: PRECALL              
+ 460: CALL                 
+ 470: POP_TOP              
+ 472: LOAD_CONST           None
+ 474: RETURN_VALUE         
+ 476: PUSH_EXC_INFO        
+ 478: WITH_EXCEPT_START    
+ 480: POP_JUMP_FORWARD_IF_TRUE to 490
+ 482: RERAISE              
+ 484: COPY                 
+ 486: POP_EXCEPT           
+ 488: RERAISE              
+ 490: POP_TOP              
+ 492: POP_EXCEPT           
+ 494: POP_TOP              
+ 496: POP_TOP              
+ 498: LOAD_CONST           None
+ 500: RETURN_VALUE         

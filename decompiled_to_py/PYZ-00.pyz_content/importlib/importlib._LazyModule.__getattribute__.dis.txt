@@ -1,0 +1,116 @@
+# Disassembly for importlib._LazyModule.__getattribute__
+# From module file: importlib.util
+
+## co_consts:
+('Trigger the load of the module and return the attribute.', '__dict__', 'module object for ', ' substituted in sys.modules during a lazy load')
+
+## co_names:
+('types', 'ModuleType', '__class__', '__spec__', 'name', 'loader_state', '__dict__', 'items', 'id', 'loader', 'exec_module', 'sys', 'modules', 'ValueError', 'update', 'getattr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          types
+  14: LOAD_ATTR            ModuleType
+  24: LOAD_FAST            self
+  26: STORE_ATTR           __class__
+  36: LOAD_FAST            self
+  38: LOAD_ATTR            __spec__
+  48: LOAD_ATTR            name
+  58: STORE_FAST           original_name
+  60: LOAD_FAST            self
+  62: LOAD_ATTR            __spec__
+  72: LOAD_ATTR            loader_state
+  82: LOAD_CONST           '__dict__'
+  84: BINARY_SUBSCR        
+  94: STORE_FAST           attrs_then
+  96: LOAD_FAST            self
+  98: LOAD_ATTR            __dict__
+ 108: STORE_FAST           attrs_now
+ 110: BUILD_MAP            
+ 112: STORE_FAST           attrs_updated
+ 114: LOAD_FAST            attrs_now
+ 116: LOAD_METHOD          items
+ 138: PRECALL              
+ 142: CALL                 
+ 152: GET_ITER             
+ 154: FOR_ITER             to 284
+ 156: UNPACK_SEQUENCE      
+ 160: STORE_FAST           key
+ 162: STORE_FAST           value
+ 164: LOAD_FAST            key
+ 166: LOAD_FAST            attrs_then
+ 168: CONTAINS_OP          
+ 170: POP_JUMP_FORWARD_IF_FALSE to 184
+ 172: LOAD_FAST            value
+ 174: LOAD_FAST            attrs_updated
+ 176: LOAD_FAST            key
+ 178: STORE_SUBSCR         
+ 182: JUMP_BACKWARD        to 154
+ 184: LOAD_GLOBAL          NULL + id
+ 196: LOAD_FAST            attrs_now
+ 198: LOAD_FAST            key
+ 200: BINARY_SUBSCR        
+ 210: PRECALL              
+ 214: CALL                 
+ 224: LOAD_GLOBAL          NULL + id
+ 236: LOAD_FAST            attrs_then
+ 238: LOAD_FAST            key
+ 240: BINARY_SUBSCR        
+ 250: PRECALL              
+ 254: CALL                 
+ 264: COMPARE_OP           !=
+ 270: POP_JUMP_FORWARD_IF_FALSE to 282
+ 272: LOAD_FAST            value
+ 274: LOAD_FAST            attrs_updated
+ 276: LOAD_FAST            key
+ 278: STORE_SUBSCR         
+ 282: JUMP_BACKWARD        to 154
+ 284: LOAD_FAST            self
+ 286: LOAD_ATTR            __spec__
+ 296: LOAD_ATTR            loader
+ 306: LOAD_METHOD          exec_module
+ 328: LOAD_FAST            self
+ 330: PRECALL              
+ 334: CALL                 
+ 344: POP_TOP              
+ 346: LOAD_FAST            original_name
+ 348: LOAD_GLOBAL          sys
+ 360: LOAD_ATTR            modules
+ 370: CONTAINS_OP          
+ 372: POP_JUMP_FORWARD_IF_FALSE to 508
+ 374: LOAD_GLOBAL          NULL + id
+ 386: LOAD_FAST            self
+ 388: PRECALL              
+ 392: CALL                 
+ 402: LOAD_GLOBAL          NULL + id
+ 414: LOAD_GLOBAL          sys
+ 426: LOAD_ATTR            modules
+ 436: LOAD_FAST            original_name
+ 438: BINARY_SUBSCR        
+ 448: PRECALL              
+ 452: CALL                 
+ 462: COMPARE_OP           !=
+ 468: POP_JUMP_FORWARD_IF_FALSE to 508
+ 470: LOAD_GLOBAL          NULL + ValueError
+ 482: LOAD_CONST           'module object for '
+ 484: LOAD_FAST            original_name
+ 486: FORMAT_VALUE         repr
+ 488: LOAD_CONST           ' substituted in sys.modules during a lazy load'
+ 490: BUILD_STRING         
+ 492: PRECALL              
+ 496: CALL                 
+ 506: RAISE_VARARGS        
+ 508: LOAD_FAST            self
+ 510: LOAD_ATTR            __dict__
+ 520: LOAD_METHOD          update
+ 542: LOAD_FAST            attrs_updated
+ 544: PRECALL              
+ 548: CALL                 
+ 558: POP_TOP              
+ 560: LOAD_GLOBAL          NULL + getattr
+ 572: LOAD_FAST            self
+ 574: LOAD_FAST            attr
+ 576: PRECALL              
+ 580: CALL                 
+ 590: RETURN_VALUE         

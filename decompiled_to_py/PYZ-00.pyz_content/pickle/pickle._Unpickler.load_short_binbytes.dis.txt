@@ -1,0 +1,32 @@
+# Disassembly for pickle._Unpickler.load_short_binbytes
+# From module file: pickle
+
+## co_consts:
+(None, 1, 0)
+
+## co_names:
+('read', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          read
+  26: LOAD_CONST           1
+  28: PRECALL              
+  32: CALL                 
+  42: LOAD_CONST           0
+  44: BINARY_SUBSCR        
+  54: STORE_FAST           len
+  56: LOAD_FAST            self
+  58: LOAD_METHOD          append
+  80: LOAD_FAST            self
+  82: LOAD_METHOD          read
+ 104: LOAD_FAST            len
+ 106: PRECALL              
+ 110: CALL                 
+ 120: PRECALL              
+ 124: CALL                 
+ 134: POP_TOP              
+ 136: LOAD_CONST           None
+ 138: RETURN_VALUE         

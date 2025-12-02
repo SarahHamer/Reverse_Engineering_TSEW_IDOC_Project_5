@@ -1,0 +1,260 @@
+# Disassembly for email.parse_content_type_header
+# From module file: email._header_value_parser
+
+## co_consts:
+(' maintype "/" subtype *( ";" parameter )\n\n    The maintype and substype are tokens.  Theoretically they could\n    be checked against the official IANA list + x-token, but we\n    don\'t do that.\n    ', False, 'Missing content type specification', 'Expected content maintype but found {!r}', 0, '/', 'Invalid content type', 'content-type-separator', 1, None, 'Expected content subtype but found {!r}', ';', 'Only parameters are valid after content type, but found {!r}', 'parameter-separator')
+
+## co_names:
+('ContentType', 'defects', 'append', 'errors', 'HeaderMissingRequiredValue', 'get_token', 'HeaderParseError', 'InvalidHeaderDefect', 'format', '_find_mime_parameters', 'value', 'strip', 'lower', 'maintype', 'ValueTerminal', 'subtype', 'parse_mime_parameters')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + ContentType
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           ctype
+  30: LOAD_CONST           False
+  32: STORE_FAST           recover
+  34: LOAD_FAST            value
+  36: POP_JUMP_FORWARD_IF_TRUE to 130
+  38: LOAD_FAST            ctype
+  40: LOAD_ATTR            defects
+  50: LOAD_METHOD          append
+  72: LOAD_GLOBAL          NULL + errors
+  84: LOAD_ATTR            HeaderMissingRequiredValue
+  94: LOAD_CONST           'Missing content type specification'
+  96: PRECALL              
+ 100: CALL                 
+ 110: PRECALL              
+ 114: CALL                 
+ 124: POP_TOP              
+ 126: LOAD_FAST            ctype
+ 128: RETURN_VALUE         
+ 130: NOP                  
+ 132: LOAD_GLOBAL          NULL + get_token
+ 144: LOAD_FAST            value
+ 146: PRECALL              
+ 150: CALL                 
+ 160: UNPACK_SEQUENCE      
+ 164: STORE_FAST           token
+ 166: STORE_FAST           value
+ 168: JUMP_FORWARD         to 374
+ 170: PUSH_EXC_INFO        
+ 172: LOAD_GLOBAL          errors
+ 184: LOAD_ATTR            HeaderParseError
+ 194: CHECK_EXC_MATCH      
+ 196: POP_JUMP_FORWARD_IF_FALSE to 366
+ 198: POP_TOP              
+ 200: LOAD_FAST            ctype
+ 202: LOAD_ATTR            defects
+ 212: LOAD_METHOD          append
+ 234: LOAD_GLOBAL          NULL + errors
+ 246: LOAD_ATTR            InvalidHeaderDefect
+ 256: LOAD_CONST           'Expected content maintype but found {!r}'
+ 258: LOAD_METHOD          format
+ 280: LOAD_FAST            value
+ 282: PRECALL              
+ 286: CALL                 
+ 296: PRECALL              
+ 300: CALL                 
+ 310: PRECALL              
+ 314: CALL                 
+ 324: POP_TOP              
+ 326: LOAD_GLOBAL          NULL + _find_mime_parameters
+ 338: LOAD_FAST            ctype
+ 340: LOAD_FAST            value
+ 342: PRECALL              
+ 346: CALL                 
+ 356: POP_TOP              
+ 358: LOAD_FAST            ctype
+ 360: SWAP                 
+ 362: POP_EXCEPT           
+ 364: RETURN_VALUE         
+ 366: RERAISE              
+ 368: COPY                 
+ 370: POP_EXCEPT           
+ 372: RERAISE              
+ 374: LOAD_FAST            ctype
+ 376: LOAD_METHOD          append
+ 398: LOAD_FAST            token
+ 400: PRECALL              
+ 404: CALL                 
+ 414: POP_TOP              
+ 416: LOAD_FAST            value
+ 418: POP_JUMP_FORWARD_IF_FALSE to 444
+ 420: LOAD_FAST            value
+ 422: LOAD_CONST           0
+ 424: BINARY_SUBSCR        
+ 434: LOAD_CONST           '/'
+ 436: COMPARE_OP           !=
+ 442: POP_JUMP_FORWARD_IF_FALSE to 572
+ 444: LOAD_FAST            ctype
+ 446: LOAD_ATTR            defects
+ 456: LOAD_METHOD          append
+ 478: LOAD_GLOBAL          NULL + errors
+ 490: LOAD_ATTR            InvalidHeaderDefect
+ 500: LOAD_CONST           'Invalid content type'
+ 502: PRECALL              
+ 506: CALL                 
+ 516: PRECALL              
+ 520: CALL                 
+ 530: POP_TOP              
+ 532: LOAD_FAST            value
+ 534: POP_JUMP_FORWARD_IF_FALSE to 568
+ 536: LOAD_GLOBAL          NULL + _find_mime_parameters
+ 548: LOAD_FAST            ctype
+ 550: LOAD_FAST            value
+ 552: PRECALL              
+ 556: CALL                 
+ 566: POP_TOP              
+ 568: LOAD_FAST            ctype
+ 570: RETURN_VALUE         
+ 572: LOAD_FAST            token
+ 574: LOAD_ATTR            value
+ 584: LOAD_METHOD          strip
+ 606: PRECALL              
+ 610: CALL                 
+ 620: LOAD_METHOD          lower
+ 642: PRECALL              
+ 646: CALL                 
+ 656: LOAD_FAST            ctype
+ 658: STORE_ATTR           maintype
+ 668: LOAD_FAST            ctype
+ 670: LOAD_METHOD          append
+ 692: LOAD_GLOBAL          NULL + ValueTerminal
+ 704: LOAD_CONST           '/'
+ 706: LOAD_CONST           'content-type-separator'
+ 708: PRECALL              
+ 712: CALL                 
+ 722: PRECALL              
+ 726: CALL                 
+ 736: POP_TOP              
+ 738: LOAD_FAST            value
+ 740: LOAD_CONST           1
+ 742: LOAD_CONST           None
+ 744: BUILD_SLICE          
+ 746: BINARY_SUBSCR        
+ 756: STORE_FAST           value
+ 758: NOP                  
+ 760: LOAD_GLOBAL          NULL + get_token
+ 772: LOAD_FAST            value
+ 774: PRECALL              
+ 778: CALL                 
+ 788: UNPACK_SEQUENCE      
+ 792: STORE_FAST           token
+ 794: STORE_FAST           value
+ 796: JUMP_FORWARD         to 1002
+ 798: PUSH_EXC_INFO        
+ 800: LOAD_GLOBAL          errors
+ 812: LOAD_ATTR            HeaderParseError
+ 822: CHECK_EXC_MATCH      
+ 824: POP_JUMP_FORWARD_IF_FALSE to 994
+ 826: POP_TOP              
+ 828: LOAD_FAST            ctype
+ 830: LOAD_ATTR            defects
+ 840: LOAD_METHOD          append
+ 862: LOAD_GLOBAL          NULL + errors
+ 874: LOAD_ATTR            InvalidHeaderDefect
+ 884: LOAD_CONST           'Expected content subtype but found {!r}'
+ 886: LOAD_METHOD          format
+ 908: LOAD_FAST            value
+ 910: PRECALL              
+ 914: CALL                 
+ 924: PRECALL              
+ 928: CALL                 
+ 938: PRECALL              
+ 942: CALL                 
+ 952: POP_TOP              
+ 954: LOAD_GLOBAL          NULL + _find_mime_parameters
+ 966: LOAD_FAST            ctype
+ 968: LOAD_FAST            value
+ 970: PRECALL              
+ 974: CALL                 
+ 984: POP_TOP              
+ 986: LOAD_FAST            ctype
+ 988: SWAP                 
+ 990: POP_EXCEPT           
+ 992: RETURN_VALUE         
+ 994: RERAISE              
+ 996: COPY                 
+ 998: POP_EXCEPT           
+1000: RERAISE              
+1002: LOAD_FAST            ctype
+1004: LOAD_METHOD          append
+1026: LOAD_FAST            token
+1028: PRECALL              
+1032: CALL                 
+1042: POP_TOP              
+1044: LOAD_FAST            token
+1046: LOAD_ATTR            value
+1056: LOAD_METHOD          strip
+1078: PRECALL              
+1082: CALL                 
+1092: LOAD_METHOD          lower
+1114: PRECALL              
+1118: CALL                 
+1128: LOAD_FAST            ctype
+1130: STORE_ATTR           subtype
+1140: LOAD_FAST            value
+1142: POP_JUMP_FORWARD_IF_TRUE to 1148
+1144: LOAD_FAST            ctype
+1146: RETURN_VALUE         
+1148: LOAD_FAST            value
+1150: LOAD_CONST           0
+1152: BINARY_SUBSCR        
+1162: LOAD_CONST           ';'
+1164: COMPARE_OP           !=
+1170: POP_JUMP_FORWARD_IF_FALSE to 1342
+1172: LOAD_FAST            ctype
+1174: LOAD_ATTR            defects
+1184: LOAD_METHOD          append
+1206: LOAD_GLOBAL          NULL + errors
+1218: LOAD_ATTR            InvalidHeaderDefect
+1228: LOAD_CONST           'Only parameters are valid after content type, but found {!r}'
+1230: LOAD_METHOD          format
+1252: LOAD_FAST            value
+1254: PRECALL              
+1258: CALL                 
+1268: PRECALL              
+1272: CALL                 
+1282: PRECALL              
+1286: CALL                 
+1296: POP_TOP              
+1298: LOAD_FAST            ctype
+1300: DELETE_ATTR          maintype
+1302: LOAD_FAST            ctype
+1304: DELETE_ATTR          subtype
+1306: LOAD_GLOBAL          NULL + _find_mime_parameters
+1318: LOAD_FAST            ctype
+1320: LOAD_FAST            value
+1322: PRECALL              
+1326: CALL                 
+1336: POP_TOP              
+1338: LOAD_FAST            ctype
+1340: RETURN_VALUE         
+1342: LOAD_FAST            ctype
+1344: LOAD_METHOD          append
+1366: LOAD_GLOBAL          NULL + ValueTerminal
+1378: LOAD_CONST           ';'
+1380: LOAD_CONST           'parameter-separator'
+1382: PRECALL              
+1386: CALL                 
+1396: PRECALL              
+1400: CALL                 
+1410: POP_TOP              
+1412: LOAD_FAST            ctype
+1414: LOAD_METHOD          append
+1436: LOAD_GLOBAL          NULL + parse_mime_parameters
+1448: LOAD_FAST            value
+1450: LOAD_CONST           1
+1452: LOAD_CONST           None
+1454: BUILD_SLICE          
+1456: BINARY_SUBSCR        
+1466: PRECALL              
+1470: CALL                 
+1480: PRECALL              
+1484: CALL                 
+1494: POP_TOP              
+1496: LOAD_FAST            ctype
+1498: RETURN_VALUE         

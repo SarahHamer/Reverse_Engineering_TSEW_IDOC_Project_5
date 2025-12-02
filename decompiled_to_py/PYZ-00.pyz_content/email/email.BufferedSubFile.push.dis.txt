@@ -1,0 +1,81 @@
+# Disassembly for email.BufferedSubFile.push
+# From module file: email.feedparser
+
+## co_consts:
+('Push some new data into this object.', '\n', '\r', None, 0, -1)
+
+## co_names:
+('_partial', 'write', 'seek', 'readlines', 'truncate', 'endswith', 'pop', 'pushlines')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _partial
+  14: LOAD_METHOD          write
+  36: LOAD_FAST            data
+  38: PRECALL              
+  42: CALL                 
+  52: POP_TOP              
+  54: LOAD_CONST           '\n'
+  56: LOAD_FAST            data
+  58: CONTAINS_OP          
+  60: POP_JUMP_FORWARD_IF_FALSE to 74
+  62: LOAD_CONST           '\r'
+  64: LOAD_FAST            data
+  66: CONTAINS_OP          
+  68: POP_JUMP_FORWARD_IF_FALSE to 74
+  70: LOAD_CONST           None
+  72: RETURN_VALUE         
+  74: LOAD_FAST            self
+  76: LOAD_ATTR            _partial
+  86: LOAD_METHOD          seek
+ 108: LOAD_CONST           0
+ 110: PRECALL              
+ 114: CALL                 
+ 124: POP_TOP              
+ 126: LOAD_FAST            self
+ 128: LOAD_ATTR            _partial
+ 138: LOAD_METHOD          readlines
+ 160: PRECALL              
+ 164: CALL                 
+ 174: STORE_FAST           parts
+ 176: LOAD_FAST            self
+ 178: LOAD_ATTR            _partial
+ 188: LOAD_METHOD          seek
+ 210: LOAD_CONST           0
+ 212: PRECALL              
+ 216: CALL                 
+ 226: POP_TOP              
+ 228: LOAD_FAST            self
+ 230: LOAD_ATTR            _partial
+ 240: LOAD_METHOD          truncate
+ 262: PRECALL              
+ 266: CALL                 
+ 276: POP_TOP              
+ 278: LOAD_FAST            parts
+ 280: LOAD_CONST           -1
+ 282: BINARY_SUBSCR        
+ 292: LOAD_METHOD          endswith
+ 314: LOAD_CONST           '\n'
+ 316: PRECALL              
+ 320: CALL                 
+ 330: POP_JUMP_FORWARD_IF_TRUE to 420
+ 332: LOAD_FAST            self
+ 334: LOAD_ATTR            _partial
+ 344: LOAD_METHOD          write
+ 366: LOAD_FAST            parts
+ 368: LOAD_METHOD          pop
+ 390: PRECALL              
+ 394: CALL                 
+ 404: PRECALL              
+ 408: CALL                 
+ 418: POP_TOP              
+ 420: LOAD_FAST            self
+ 422: LOAD_METHOD          pushlines
+ 444: LOAD_FAST            parts
+ 446: PRECALL              
+ 450: CALL                 
+ 460: POP_TOP              
+ 462: LOAD_CONST           None
+ 464: RETURN_VALUE         

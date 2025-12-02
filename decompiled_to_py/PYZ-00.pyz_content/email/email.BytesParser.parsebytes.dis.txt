@@ -1,0 +1,28 @@
+# Disassembly for email.BytesParser.parsebytes
+# From module file: email.parser
+
+## co_consts:
+('Create a message structure from a byte string.\n\n        Returns the root of the message structure.  Optional headersonly is a\n        flag specifying whether to stop parsing after reading the headers or\n        not.  The default is False, meaning it parses the entire contents of\n        the file.\n        ', 'ASCII', 'surrogateescape', ('errors',))
+
+## co_names:
+('decode', 'parser', 'parsestr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            text
+   4: LOAD_METHOD          decode
+  26: LOAD_CONST           'ASCII'
+  28: LOAD_CONST           'surrogateescape'
+  30: KW_NAMES             
+  32: PRECALL              
+  36: CALL                 
+  46: STORE_FAST           text
+  48: LOAD_FAST            self
+  50: LOAD_ATTR            parser
+  60: LOAD_METHOD          parsestr
+  82: LOAD_FAST            text
+  84: LOAD_FAST            headersonly
+  86: PRECALL              
+  90: CALL                 
+ 100: RETURN_VALUE         

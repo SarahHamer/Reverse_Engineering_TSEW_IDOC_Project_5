@@ -1,0 +1,23 @@
+# Disassembly for ssl.SSLObject.selected_npn_protocol
+# From module file: ssl
+
+## co_consts:
+('Return the currently selected NPN protocol as a string, or ``None``\n        if a next protocol was not negotiated or if NPN is not supported by one\n        of the peers.', 'ssl NPN is deprecated, use ALPN instead', 2, ('stacklevel',), None)
+
+## co_names:
+('warnings', 'warn', 'DeprecationWarning')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + warnings
+  14: LOAD_ATTR            warn
+  24: LOAD_CONST           'ssl NPN is deprecated, use ALPN instead'
+  26: LOAD_GLOBAL          DeprecationWarning
+  38: LOAD_CONST           2
+  40: KW_NAMES             
+  42: PRECALL              
+  46: CALL                 
+  56: POP_TOP              
+  58: LOAD_CONST           None
+  60: RETURN_VALUE         

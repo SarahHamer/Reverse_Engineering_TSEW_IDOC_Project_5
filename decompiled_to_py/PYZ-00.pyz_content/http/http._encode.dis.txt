@@ -1,0 +1,65 @@
+# Disassembly for http._encode
+# From module file: http.client
+
+## co_consts:
+('Call data.encode("latin-1") but show a better error message.', 'latin-1', ' (', '.20', ') is not valid Latin-1. Use ', ".encode('utf-8') if you want to send it encoded in UTF-8.", None)
+
+## co_names:
+('encode', 'UnicodeEncodeError', 'encoding', 'object', 'start', 'end', 'title')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            data
+   6: LOAD_METHOD          encode
+  28: LOAD_CONST           'latin-1'
+  30: PRECALL              
+  34: CALL                 
+  44: RETURN_VALUE         
+  46: PUSH_EXC_INFO        
+  48: LOAD_GLOBAL          UnicodeEncodeError
+  60: CHECK_EXC_MATCH      
+  62: POP_JUMP_FORWARD_IF_FALSE to 246
+  64: STORE_FAST           err
+  66: LOAD_GLOBAL          NULL + UnicodeEncodeError
+  78: LOAD_FAST            err
+  80: LOAD_ATTR            encoding
+  90: LOAD_FAST            err
+  92: LOAD_ATTR            object
+ 102: LOAD_FAST            err
+ 104: LOAD_ATTR            start
+ 114: LOAD_FAST            err
+ 116: LOAD_ATTR            end
+ 126: LOAD_FAST            name
+ 128: LOAD_METHOD          title
+ 150: PRECALL              
+ 154: CALL                 
+ 164: FORMAT_VALUE         str
+ 166: LOAD_CONST           ' ('
+ 168: LOAD_FAST            data
+ 170: LOAD_FAST            err
+ 172: LOAD_ATTR            start
+ 182: LOAD_FAST            err
+ 184: LOAD_ATTR            end
+ 194: BUILD_SLICE          
+ 196: BINARY_SUBSCR        
+ 206: LOAD_CONST           '.20'
+ 208: FORMAT_VALUE         repr, with format
+ 210: LOAD_CONST           ') is not valid Latin-1. Use '
+ 212: LOAD_FAST            name
+ 214: FORMAT_VALUE         str
+ 216: LOAD_CONST           ".encode('utf-8') if you want to send it encoded in UTF-8."
+ 218: BUILD_STRING         
+ 220: PRECALL              
+ 224: CALL                 
+ 234: LOAD_CONST           None
+ 236: RAISE_VARARGS        
+ 238: LOAD_CONST           None
+ 240: STORE_FAST           err
+ 242: DELETE_FAST          err
+ 244: RERAISE              
+ 246: RERAISE              
+ 248: COPY                 
+ 250: POP_EXCEPT           
+ 252: RERAISE              

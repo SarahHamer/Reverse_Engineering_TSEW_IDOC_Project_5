@@ -1,0 +1,151 @@
+# Disassembly for importlib._load_backward_compatible
+# From module file: importlib._bootstrap
+
+## co_consts:
+(None, '__loader__', '__package__', '__path__', '.', 0, '__spec__')
+
+## co_names:
+('loader', 'load_module', 'name', 'sys', 'modules', 'pop', 'getattr', '__loader__', 'AttributeError', '__name__', '__package__', 'hasattr', 'rpartition', '__spec__')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            spec
+   6: LOAD_ATTR            loader
+  16: LOAD_METHOD          load_module
+  38: LOAD_FAST            spec
+  40: LOAD_ATTR            name
+  50: PRECALL              
+  54: CALL                 
+  64: POP_TOP              
+  66: JUMP_FORWARD         to 230
+  68: PUSH_EXC_INFO        
+  70: POP_TOP              
+  72: LOAD_FAST            spec
+  74: LOAD_ATTR            name
+  84: LOAD_GLOBAL          sys
+  96: LOAD_ATTR            modules
+ 106: CONTAINS_OP          
+ 108: POP_JUMP_FORWARD_IF_FALSE to 222
+ 110: LOAD_GLOBAL          sys
+ 122: LOAD_ATTR            modules
+ 132: LOAD_METHOD          pop
+ 154: LOAD_FAST            spec
+ 156: LOAD_ATTR            name
+ 166: PRECALL              
+ 170: CALL                 
+ 180: STORE_FAST           module
+ 182: LOAD_FAST            module
+ 184: LOAD_GLOBAL          sys
+ 196: LOAD_ATTR            modules
+ 206: LOAD_FAST            spec
+ 208: LOAD_ATTR            name
+ 218: STORE_SUBSCR         
+ 222: RAISE_VARARGS        
+ 224: COPY                 
+ 226: POP_EXCEPT           
+ 228: RERAISE              
+ 230: LOAD_GLOBAL          sys
+ 242: LOAD_ATTR            modules
+ 252: LOAD_METHOD          pop
+ 274: LOAD_FAST            spec
+ 276: LOAD_ATTR            name
+ 286: PRECALL              
+ 290: CALL                 
+ 300: STORE_FAST           module
+ 302: LOAD_FAST            module
+ 304: LOAD_GLOBAL          sys
+ 316: LOAD_ATTR            modules
+ 326: LOAD_FAST            spec
+ 328: LOAD_ATTR            name
+ 338: STORE_SUBSCR         
+ 342: LOAD_GLOBAL          NULL + getattr
+ 354: LOAD_FAST            module
+ 356: LOAD_CONST           '__loader__'
+ 358: LOAD_CONST           None
+ 360: PRECALL              
+ 364: CALL                 
+ 374: POP_JUMP_FORWARD_IF_NOT_NONE to 436
+ 376: NOP                  
+ 378: LOAD_FAST            spec
+ 380: LOAD_ATTR            loader
+ 390: LOAD_FAST            module
+ 392: STORE_ATTR           __loader__
+ 402: JUMP_FORWARD         to 436
+ 404: PUSH_EXC_INFO        
+ 406: LOAD_GLOBAL          AttributeError
+ 418: CHECK_EXC_MATCH      
+ 420: POP_JUMP_FORWARD_IF_FALSE to 428
+ 422: POP_TOP              
+ 424: POP_EXCEPT           
+ 426: JUMP_FORWARD         to 436
+ 428: RERAISE              
+ 430: COPY                 
+ 432: POP_EXCEPT           
+ 434: RERAISE              
+ 436: LOAD_GLOBAL          NULL + getattr
+ 448: LOAD_FAST            module
+ 450: LOAD_CONST           '__package__'
+ 452: LOAD_CONST           None
+ 454: PRECALL              
+ 458: CALL                 
+ 468: POP_JUMP_FORWARD_IF_NOT_NONE to 636
+ 470: NOP                  
+ 472: LOAD_FAST            module
+ 474: LOAD_ATTR            __name__
+ 484: LOAD_FAST            module
+ 486: STORE_ATTR           __package__
+ 496: LOAD_GLOBAL          NULL + hasattr
+ 508: LOAD_FAST            module
+ 510: LOAD_CONST           '__path__'
+ 512: PRECALL              
+ 516: CALL                 
+ 526: POP_JUMP_FORWARD_IF_TRUE to 602
+ 528: LOAD_FAST            spec
+ 530: LOAD_ATTR            name
+ 540: LOAD_METHOD          rpartition
+ 562: LOAD_CONST           '.'
+ 564: PRECALL              
+ 568: CALL                 
+ 578: LOAD_CONST           0
+ 580: BINARY_SUBSCR        
+ 590: LOAD_FAST            module
+ 592: STORE_ATTR           __package__
+ 602: JUMP_FORWARD         to 636
+ 604: PUSH_EXC_INFO        
+ 606: LOAD_GLOBAL          AttributeError
+ 618: CHECK_EXC_MATCH      
+ 620: POP_JUMP_FORWARD_IF_FALSE to 628
+ 622: POP_TOP              
+ 624: POP_EXCEPT           
+ 626: JUMP_FORWARD         to 636
+ 628: RERAISE              
+ 630: COPY                 
+ 632: POP_EXCEPT           
+ 634: RERAISE              
+ 636: LOAD_GLOBAL          NULL + getattr
+ 648: LOAD_FAST            module
+ 650: LOAD_CONST           '__spec__'
+ 652: LOAD_CONST           None
+ 654: PRECALL              
+ 658: CALL                 
+ 668: POP_JUMP_FORWARD_IF_NOT_NONE to 720
+ 670: NOP                  
+ 672: LOAD_FAST            spec
+ 674: LOAD_FAST            module
+ 676: STORE_ATTR           __spec__
+ 686: JUMP_FORWARD         to 720
+ 688: PUSH_EXC_INFO        
+ 690: LOAD_GLOBAL          AttributeError
+ 702: CHECK_EXC_MATCH      
+ 704: POP_JUMP_FORWARD_IF_FALSE to 712
+ 706: POP_TOP              
+ 708: POP_EXCEPT           
+ 710: JUMP_FORWARD         to 720
+ 712: RERAISE              
+ 714: COPY                 
+ 716: POP_EXCEPT           
+ 718: RERAISE              
+ 720: LOAD_FAST            module
+ 722: RETURN_VALUE         

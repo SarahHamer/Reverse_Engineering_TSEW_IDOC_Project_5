@@ -1,0 +1,82 @@
+# Disassembly for logging.StringTemplateStyle.validate
+# From module file: logging
+
+## co_consts:
+(None, 'named', 'braced', 0, '$', "invalid format: bare '$' not allowed", 'invalid format: no fields')
+
+## co_names:
+('Template', 'pattern', 'set', 'finditer', '_fmt', 'groupdict', 'add', 'group', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          Template
+  14: LOAD_ATTR            pattern
+  24: STORE_FAST           pattern
+  26: LOAD_GLOBAL          NULL + set
+  38: PRECALL              
+  42: CALL                 
+  52: STORE_FAST           fields
+  54: LOAD_FAST            pattern
+  56: LOAD_METHOD          finditer
+  78: LOAD_FAST            self
+  80: LOAD_ATTR            _fmt
+  90: PRECALL              
+  94: CALL                 
+ 104: GET_ITER             
+ 106: FOR_ITER             to 376
+ 108: STORE_FAST           m
+ 110: LOAD_FAST            m
+ 112: LOAD_METHOD          groupdict
+ 134: PRECALL              
+ 138: CALL                 
+ 148: STORE_FAST           d
+ 150: LOAD_FAST            d
+ 152: LOAD_CONST           'named'
+ 154: BINARY_SUBSCR        
+ 164: POP_JUMP_FORWARD_IF_FALSE to 222
+ 166: LOAD_FAST            fields
+ 168: LOAD_METHOD          add
+ 190: LOAD_FAST            d
+ 192: LOAD_CONST           'named'
+ 194: BINARY_SUBSCR        
+ 204: PRECALL              
+ 208: CALL                 
+ 218: POP_TOP              
+ 220: JUMP_BACKWARD        to 106
+ 222: LOAD_FAST            d
+ 224: LOAD_CONST           'braced'
+ 226: BINARY_SUBSCR        
+ 236: POP_JUMP_FORWARD_IF_FALSE to 294
+ 238: LOAD_FAST            fields
+ 240: LOAD_METHOD          add
+ 262: LOAD_FAST            d
+ 264: LOAD_CONST           'braced'
+ 266: BINARY_SUBSCR        
+ 276: PRECALL              
+ 280: CALL                 
+ 290: POP_TOP              
+ 292: JUMP_BACKWARD        to 106
+ 294: LOAD_FAST            m
+ 296: LOAD_METHOD          group
+ 318: LOAD_CONST           0
+ 320: PRECALL              
+ 324: CALL                 
+ 334: LOAD_CONST           '$'
+ 336: COMPARE_OP           ==
+ 342: POP_JUMP_FORWARD_IF_FALSE to 374
+ 344: LOAD_GLOBAL          NULL + ValueError
+ 356: LOAD_CONST           "invalid format: bare '$' not allowed"
+ 358: PRECALL              
+ 362: CALL                 
+ 372: RAISE_VARARGS        
+ 374: JUMP_BACKWARD        to 106
+ 376: LOAD_FAST            fields
+ 378: POP_JUMP_FORWARD_IF_TRUE to 410
+ 380: LOAD_GLOBAL          NULL + ValueError
+ 392: LOAD_CONST           'invalid format: no fields'
+ 394: PRECALL              
+ 398: CALL                 
+ 408: RAISE_VARARGS        
+ 410: LOAD_CONST           None
+ 412: RETURN_VALUE         

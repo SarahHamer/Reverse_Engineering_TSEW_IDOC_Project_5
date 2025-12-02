@@ -1,0 +1,44 @@
+# Disassembly for tempfile.TemporaryDirectory.__init__
+# From module file: tempfile
+
+## co_consts:
+(None, 'Implicitly cleaning up {!r}', ('warn_message', 'ignore_errors'))
+
+## co_names:
+('mkdtemp', 'name', '_ignore_cleanup_errors', '_weakref', 'finalize', '_cleanup', 'format', '_finalizer')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + mkdtemp
+  14: LOAD_FAST            suffix
+  16: LOAD_FAST            prefix
+  18: LOAD_FAST            dir
+  20: PRECALL              
+  24: CALL                 
+  34: LOAD_FAST            self
+  36: STORE_ATTR           name
+  46: LOAD_FAST            ignore_cleanup_errors
+  48: LOAD_FAST            self
+  50: STORE_ATTR           _ignore_cleanup_errors
+  60: LOAD_GLOBAL          NULL + _weakref
+  72: LOAD_ATTR            finalize
+  82: LOAD_FAST            self
+  84: LOAD_FAST            self
+  86: LOAD_ATTR            _cleanup
+  96: LOAD_FAST            self
+  98: LOAD_ATTR            name
+ 108: LOAD_CONST           'Implicitly cleaning up {!r}'
+ 110: LOAD_METHOD          format
+ 132: LOAD_FAST            self
+ 134: PRECALL              
+ 138: CALL                 
+ 148: LOAD_FAST            self
+ 150: LOAD_ATTR            _ignore_cleanup_errors
+ 160: KW_NAMES             
+ 162: PRECALL              
+ 166: CALL                 
+ 176: LOAD_FAST            self
+ 178: STORE_ATTR           _finalizer
+ 188: LOAD_CONST           None
+ 190: RETURN_VALUE         

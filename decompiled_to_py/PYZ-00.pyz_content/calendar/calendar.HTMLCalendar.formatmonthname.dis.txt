@@ -1,0 +1,40 @@
+# Disassembly for calendar.HTMLCalendar.formatmonthname
+# From module file: calendar
+
+## co_consts:
+('\n        Return a month name as a table row.\n        ', ' ', '%s', '<tr><th colspan="7" class="', '">', '</th></tr>')
+
+## co_names:
+('month_name', 'cssclass_month_head')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            withyear
+   4: POP_JUMP_FORWARD_IF_FALSE to 44
+   6: LOAD_GLOBAL          month_name
+  18: LOAD_FAST            themonth
+  20: BINARY_SUBSCR        
+  30: FORMAT_VALUE         str
+  32: LOAD_CONST           ' '
+  34: LOAD_FAST            theyear
+  36: FORMAT_VALUE         str
+  38: BUILD_STRING         
+  40: STORE_FAST           s
+  42: JUMP_FORWARD         to 76
+  44: LOAD_CONST           '%s'
+  46: LOAD_GLOBAL          month_name
+  58: LOAD_FAST            themonth
+  60: BINARY_SUBSCR        
+  70: BINARY_OP            %
+  74: STORE_FAST           s
+  76: LOAD_CONST           '<tr><th colspan="7" class="'
+  78: LOAD_FAST            self
+  80: LOAD_ATTR            cssclass_month_head
+  90: FORMAT_VALUE         str
+  92: LOAD_CONST           '">'
+  94: LOAD_FAST            s
+  96: FORMAT_VALUE         str
+  98: LOAD_CONST           '</th></tr>'
+ 100: BUILD_STRING         
+ 102: RETURN_VALUE         

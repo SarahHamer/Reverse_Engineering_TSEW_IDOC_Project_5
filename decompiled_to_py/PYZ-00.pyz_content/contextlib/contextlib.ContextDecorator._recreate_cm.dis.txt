@@ -1,0 +1,14 @@
+# Disassembly for contextlib.ContextDecorator._recreate_cm
+# From module file: contextlib
+
+## co_consts:
+('Return a recreated instance of self.\n\n        Allows an otherwise one-shot context manager like\n        _GeneratorContextManager to support use as\n        a decorator via implicit recreation.\n\n        This is a private interface just for _GeneratorContextManager.\n        See issue #11647 for details.\n        ',)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: RETURN_VALUE         

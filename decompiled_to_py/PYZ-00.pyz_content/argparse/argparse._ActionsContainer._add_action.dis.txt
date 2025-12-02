@@ -1,0 +1,64 @@
+# Disassembly for argparse._ActionsContainer._add_action
+# From module file: argparse
+
+## co_consts:
+(None, True)
+
+## co_names:
+('_check_conflict', '_actions', 'append', 'container', 'option_strings', '_option_string_actions', '_negative_number_matcher', 'match', '_has_negative_number_optionals')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _check_conflict
+  26: LOAD_FAST            action
+  28: PRECALL              
+  32: CALL                 
+  42: POP_TOP              
+  44: LOAD_FAST            self
+  46: LOAD_ATTR            _actions
+  56: LOAD_METHOD          append
+  78: LOAD_FAST            action
+  80: PRECALL              
+  84: CALL                 
+  94: POP_TOP              
+  96: LOAD_FAST            self
+  98: LOAD_FAST            action
+ 100: STORE_ATTR           container
+ 110: LOAD_FAST            action
+ 112: LOAD_ATTR            option_strings
+ 122: GET_ITER             
+ 124: FOR_ITER             to 150
+ 126: STORE_FAST           option_string
+ 128: LOAD_FAST            action
+ 130: LOAD_FAST            self
+ 132: LOAD_ATTR            _option_string_actions
+ 142: LOAD_FAST            option_string
+ 144: STORE_SUBSCR         
+ 148: JUMP_BACKWARD        to 124
+ 150: LOAD_FAST            action
+ 152: LOAD_ATTR            option_strings
+ 162: GET_ITER             
+ 164: FOR_ITER             to 288
+ 166: STORE_FAST           option_string
+ 168: LOAD_FAST            self
+ 170: LOAD_ATTR            _negative_number_matcher
+ 180: LOAD_METHOD          match
+ 202: LOAD_FAST            option_string
+ 204: PRECALL              
+ 208: CALL                 
+ 218: POP_JUMP_FORWARD_IF_FALSE to 286
+ 220: LOAD_FAST            self
+ 222: LOAD_ATTR            _has_negative_number_optionals
+ 232: POP_JUMP_FORWARD_IF_TRUE to 286
+ 234: LOAD_FAST            self
+ 236: LOAD_ATTR            _has_negative_number_optionals
+ 246: LOAD_METHOD          append
+ 268: LOAD_CONST           True
+ 270: PRECALL              
+ 274: CALL                 
+ 284: POP_TOP              
+ 286: JUMP_BACKWARD        to 164
+ 288: LOAD_FAST            action
+ 290: RETURN_VALUE         

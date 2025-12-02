@@ -1,0 +1,41 @@
+# Disassembly for zipfile.ZipExtFile._init_decrypter
+# From module file: zipfile
+
+## co_consts:
+(None, 12, 11)
+
+## co_names:
+('_ZipDecrypter', '_pwd', '_decrypter', '_fileobj', 'read', '_compress_left')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _ZipDecrypter
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            _pwd
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_FAST            self
+  42: STORE_ATTR           _decrypter
+  52: LOAD_FAST            self
+  54: LOAD_ATTR            _fileobj
+  64: LOAD_METHOD          read
+  86: LOAD_CONST           12
+  88: PRECALL              
+  92: CALL                 
+ 102: STORE_FAST           header
+ 104: LOAD_FAST            self
+ 106: COPY                 
+ 108: LOAD_ATTR            _compress_left
+ 118: LOAD_CONST           12
+ 120: BINARY_OP            -=
+ 124: SWAP                 
+ 126: STORE_ATTR           _compress_left
+ 136: LOAD_FAST            self
+ 138: LOAD_METHOD          _decrypter
+ 160: LOAD_FAST            header
+ 162: PRECALL              
+ 166: CALL                 
+ 176: LOAD_CONST           11
+ 178: BINARY_SUBSCR        
+ 188: RETURN_VALUE         

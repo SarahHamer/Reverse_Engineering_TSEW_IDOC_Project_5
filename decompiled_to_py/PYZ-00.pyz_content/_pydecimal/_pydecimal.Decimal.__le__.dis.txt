@@ -1,0 +1,45 @@
+# Disassembly for _pydecimal.Decimal.__le__
+# From module file: _pydecimal
+
+## co_consts:
+(None, False, 0)
+
+## co_names:
+('_convert_for_comparison', 'NotImplemented', '_compare_check_nans', '_cmp')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _convert_for_comparison
+  14: LOAD_FAST            self
+  16: LOAD_FAST            other
+  18: PRECALL              
+  22: CALL                 
+  32: UNPACK_SEQUENCE      
+  36: STORE_FAST           self
+  38: STORE_FAST           other
+  40: LOAD_FAST            other
+  42: LOAD_GLOBAL          NotImplemented
+  54: IS_OP                
+  56: POP_JUMP_FORWARD_IF_FALSE to 62
+  58: LOAD_FAST            other
+  60: RETURN_VALUE         
+  62: LOAD_FAST            self
+  64: LOAD_METHOD          _compare_check_nans
+  86: LOAD_FAST            other
+  88: LOAD_FAST            context
+  90: PRECALL              
+  94: CALL                 
+ 104: STORE_FAST           ans
+ 106: LOAD_FAST            ans
+ 108: POP_JUMP_FORWARD_IF_FALSE to 114
+ 110: LOAD_CONST           False
+ 112: RETURN_VALUE         
+ 114: LOAD_FAST            self
+ 116: LOAD_METHOD          _cmp
+ 138: LOAD_FAST            other
+ 140: PRECALL              
+ 144: CALL                 
+ 154: LOAD_CONST           0
+ 156: COMPARE_OP           <=
+ 162: RETURN_VALUE         

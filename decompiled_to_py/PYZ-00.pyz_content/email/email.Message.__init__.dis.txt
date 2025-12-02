@@ -1,0 +1,41 @@
+# Disassembly for email.Message.__init__
+# From module file: email.message
+
+## co_consts:
+(None, 'text/plain')
+
+## co_names:
+('policy', '_headers', '_unixfrom', '_payload', '_charset', 'preamble', 'epilogue', 'defects', '_default_type')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            policy
+   4: LOAD_FAST            self
+   6: STORE_ATTR           policy
+  16: BUILD_LIST           
+  18: LOAD_FAST            self
+  20: STORE_ATTR           _headers
+  30: LOAD_CONST           None
+  32: LOAD_FAST            self
+  34: STORE_ATTR           _unixfrom
+  44: LOAD_CONST           None
+  46: LOAD_FAST            self
+  48: STORE_ATTR           _payload
+  58: LOAD_CONST           None
+  60: LOAD_FAST            self
+  62: STORE_ATTR           _charset
+  72: LOAD_CONST           None
+  74: COPY                 
+  76: LOAD_FAST            self
+  78: STORE_ATTR           preamble
+  88: LOAD_FAST            self
+  90: STORE_ATTR           epilogue
+ 100: BUILD_LIST           
+ 102: LOAD_FAST            self
+ 104: STORE_ATTR           defects
+ 114: LOAD_CONST           'text/plain'
+ 116: LOAD_FAST            self
+ 118: STORE_ATTR           _default_type
+ 128: LOAD_CONST           None
+ 130: RETURN_VALUE         

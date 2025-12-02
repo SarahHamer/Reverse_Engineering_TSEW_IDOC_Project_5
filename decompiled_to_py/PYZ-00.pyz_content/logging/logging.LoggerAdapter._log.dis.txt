@@ -1,0 +1,25 @@
+# Disassembly for logging.LoggerAdapter._log
+# From module file: logging
+
+## co_consts:
+('\n        Low-level log implementation, proxied to allow nested logger adapters.\n        ', ('exc_info', 'extra', 'stack_info'))
+
+## co_names:
+('logger', '_log')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            logger
+  14: LOAD_METHOD          _log
+  36: LOAD_FAST            level
+  38: LOAD_FAST            msg
+  40: LOAD_FAST            args
+  42: LOAD_FAST            exc_info
+  44: LOAD_FAST            extra
+  46: LOAD_FAST            stack_info
+  48: KW_NAMES             
+  50: PRECALL              
+  54: CALL                 
+  64: RETURN_VALUE         

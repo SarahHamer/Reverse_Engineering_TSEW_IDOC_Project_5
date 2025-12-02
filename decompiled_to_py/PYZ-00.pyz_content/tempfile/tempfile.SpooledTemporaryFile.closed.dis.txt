@@ -1,0 +1,16 @@
+# Disassembly for tempfile.SpooledTemporaryFile.closed
+# From module file: tempfile
+
+## co_consts:
+(None,)
+
+## co_names:
+('_file', 'closed')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _file
+  14: LOAD_ATTR            closed
+  24: RETURN_VALUE         

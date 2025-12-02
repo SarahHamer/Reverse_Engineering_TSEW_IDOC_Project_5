@@ -1,0 +1,37 @@
+# Disassembly for email._QByteMap
+# From module file: email._encoded_words
+
+## co_consts:
+('_QByteMap', b'-!*+/', 'ascii', <code object __missing__ at 0x00000240693AB4B0, file "email\_encoded_words.py", line 77>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', 'ascii_letters', 'encode', 'digits', 'safe', '__missing__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_QByteMap'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           b'-!*+/'
+  12: PUSH_NULL            
+  14: LOAD_NAME            ascii_letters
+  16: LOAD_ATTR            encode
+  26: LOAD_CONST           'ascii'
+  28: PRECALL              
+  32: CALL                 
+  42: BINARY_OP            +
+  46: PUSH_NULL            
+  48: LOAD_NAME            digits
+  50: LOAD_ATTR            encode
+  60: LOAD_CONST           'ascii'
+  62: PRECALL              
+  66: CALL                 
+  76: BINARY_OP            +
+  80: STORE_NAME           safe
+  82: LOAD_CONST           <code object __missing__ at 0x00000240693AB4B0, file "email\_encoded_words.py", line 77>
+  84: MAKE_FUNCTION        
+  86: STORE_NAME           __missing__
+  88: LOAD_CONST           None
+  90: RETURN_VALUE         

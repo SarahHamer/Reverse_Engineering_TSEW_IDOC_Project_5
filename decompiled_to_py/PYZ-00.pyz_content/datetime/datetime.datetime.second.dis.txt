@@ -1,0 +1,15 @@
+# Disassembly for datetime.datetime.second
+# From module file: datetime
+
+## co_consts:
+('second (0-59)',)
+
+## co_names:
+('_second',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _second
+  14: RETURN_VALUE         

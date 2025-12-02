@@ -1,0 +1,44 @@
+# Disassembly for ftplib.FTP.size
+# From module file: ftplib
+
+## co_consts:
+('Retrieve the size of a file.', 'SIZE ', None, 3, '213')
+
+## co_names:
+('sendcmd', 'strip', 'int')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          sendcmd
+  26: LOAD_CONST           'SIZE '
+  28: LOAD_FAST            filename
+  30: BINARY_OP            +
+  34: PRECALL              
+  38: CALL                 
+  48: STORE_FAST           resp
+  50: LOAD_FAST            resp
+  52: LOAD_CONST           None
+  54: LOAD_CONST           3
+  56: BUILD_SLICE          
+  58: BINARY_SUBSCR        
+  68: LOAD_CONST           '213'
+  70: COMPARE_OP           ==
+  76: POP_JUMP_FORWARD_IF_FALSE to 164
+  78: LOAD_FAST            resp
+  80: LOAD_CONST           3
+  82: LOAD_CONST           None
+  84: BUILD_SLICE          
+  86: BINARY_SUBSCR        
+  96: LOAD_METHOD          strip
+ 118: PRECALL              
+ 122: CALL                 
+ 132: STORE_FAST           s
+ 134: LOAD_GLOBAL          NULL + int
+ 146: LOAD_FAST            s
+ 148: PRECALL              
+ 152: CALL                 
+ 162: RETURN_VALUE         
+ 164: LOAD_CONST           None
+ 166: RETURN_VALUE         

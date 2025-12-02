@@ -1,0 +1,56 @@
+# Disassembly for typing._check_generic
+# From module file: typing
+
+## co_consts:
+('Check correct count for parameters of a generic cls (internal helper).\n\n    This gives a nice error message in case of count mismatch.\n    ', ' is not a generic class', 'Too ', 'many', 'few', ' arguments for ', '; actual ', ', expected ', None)
+
+## co_names:
+('TypeError', 'len')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            elen
+   4: POP_JUMP_FORWARD_IF_TRUE to 42
+   6: LOAD_GLOBAL          NULL + TypeError
+  18: LOAD_FAST            cls
+  20: FORMAT_VALUE         
+  22: LOAD_CONST           ' is not a generic class'
+  24: BUILD_STRING         
+  26: PRECALL              
+  30: CALL                 
+  40: RAISE_VARARGS        
+  42: LOAD_GLOBAL          NULL + len
+  54: LOAD_FAST            parameters
+  56: PRECALL              
+  60: CALL                 
+  70: STORE_FAST           alen
+  72: LOAD_FAST            alen
+  74: LOAD_FAST            elen
+  76: COMPARE_OP           !=
+  82: POP_JUMP_FORWARD_IF_FALSE to 154
+  84: LOAD_GLOBAL          NULL + TypeError
+  96: LOAD_CONST           'Too '
+  98: LOAD_FAST            alen
+ 100: LOAD_FAST            elen
+ 102: COMPARE_OP           >
+ 108: POP_JUMP_FORWARD_IF_FALSE to 114
+ 110: LOAD_CONST           'many'
+ 112: JUMP_FORWARD         to 116
+ 114: LOAD_CONST           'few'
+ 116: FORMAT_VALUE         
+ 118: LOAD_CONST           ' arguments for '
+ 120: LOAD_FAST            cls
+ 122: FORMAT_VALUE         
+ 124: LOAD_CONST           '; actual '
+ 126: LOAD_FAST            alen
+ 128: FORMAT_VALUE         
+ 130: LOAD_CONST           ', expected '
+ 132: LOAD_FAST            elen
+ 134: FORMAT_VALUE         
+ 136: BUILD_STRING         
+ 138: PRECALL              
+ 142: CALL                 
+ 152: RAISE_VARARGS        
+ 154: LOAD_CONST           None
+ 156: RETURN_VALUE         

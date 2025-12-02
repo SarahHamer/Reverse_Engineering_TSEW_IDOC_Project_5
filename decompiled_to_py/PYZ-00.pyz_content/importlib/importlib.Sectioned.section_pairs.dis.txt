@@ -1,0 +1,26 @@
+# Disassembly for importlib.Sectioned.section_pairs
+# From module file: importlib.metadata
+
+## co_consts:
+(None, <code object <genexpr> at 0x00000240693AA470, file "importlib\metadata\__init__.py", line 101>, ('filter_',))
+
+## co_names:
+('read', 'valid')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           <code object <genexpr> at 0x00000240693AA470, file "importlib\metadata\__init__.py", line 101>
+   4: MAKE_FUNCTION        
+   6: LOAD_FAST            cls
+   8: LOAD_METHOD          read
+  30: LOAD_FAST            text
+  32: LOAD_FAST            cls
+  34: LOAD_ATTR            valid
+  44: KW_NAMES             
+  46: PRECALL              
+  50: CALL                 
+  60: GET_ITER             
+  62: PRECALL              
+  66: CALL                 
+  76: RETURN_VALUE         

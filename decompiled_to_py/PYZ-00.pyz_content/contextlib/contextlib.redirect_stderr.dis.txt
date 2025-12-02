@@ -1,0 +1,22 @@
+# Disassembly for contextlib.redirect_stderr
+# From module file: contextlib
+
+## co_consts:
+('redirect_stderr', 'Context manager for temporarily redirecting stderr to another file.', 'stderr', None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '_stream')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'redirect_stderr'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Context manager for temporarily redirecting stderr to another file.'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           'stderr'
+  16: STORE_NAME           _stream
+  18: LOAD_CONST           None
+  20: RETURN_VALUE         

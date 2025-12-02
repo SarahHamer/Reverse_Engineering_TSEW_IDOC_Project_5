@@ -1,0 +1,85 @@
+# Disassembly for email.Generator
+# From module file: email.generator
+
+## co_consts:
+('Generator', 'Generates output from a Message object tree.\n\n    This basic generator writes the message to the given file object as plain\n    text.\n    ', None, ('policy',), <code object __init__ at 0x000002406944A340, file "email\generator.py", line 35>, <code object write at 0x00000240693EB930, file "email\generator.py", line 67>, False, <code object flatten at 0x0000024068DD5A90, file "email\generator.py", line 71>, <code object clone at 0x00000240693EA630, file "email\generator.py", line 120>, <code object _new_buffer at 0x0000024069467830, file "email\generator.py", line 140>, <code object _encode at 0x000002406943ABB0, file "email\generator.py", line 144>, <code object _write_lines at 0x00000240691A7D70, file "email\generator.py", line 148>, <code object _write at 0x0000024068B79230, file "email\generator.py", line 164>, <code object _dispatch at 0x0000024068E223E0, file "email\generator.py", line 203>, <code object _write_headers at 0x000002406942E100, file "email\generator.py", line 223>, <code object _handle_text at 0x0000024068DC1E00, file "email\generator.py", line 233>, <code object _handle_multipart at 0x0000024068E96730, file "email\generator.py", line 257>, <code object _handle_multipart_signed at 0x00000240691C18F0, file "email\generator.py", line 315>, <code object _handle_message_delivery_status at 0x0000024068B3E350, file "email\generator.py", line 326>, <code object _handle_message at 0x0000024068DB5390, file "email\generator.py", line 347>, <code object _make_boundary at 0x000002406931F630, file "email\generator.py", line 372>, <code object _compile_re at 0x000002406945FE10, file "email\generator.py", line 390>, (None, None), (False, None), (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', 'write', 'flatten', 'clone', '_new_buffer', '_encode', '_write_lines', '_write', '_dispatch', '_write_headers', '_handle_text', '_writeBody', '_handle_multipart', '_handle_multipart_signed', '_handle_message_delivery_status', '_handle_message', 'classmethod', '_make_boundary', '_compile_re')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Generator'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Generates output from a Message object tree.\n\n    This basic generator writes the message to the given file object as plain\n    text.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           (None, None)
+  16: LOAD_CONST           None
+  18: LOAD_CONST           ('policy',)
+  20: BUILD_CONST_KEY_MAP  
+  22: LOAD_CONST           <code object __init__ at 0x000002406944A340, file "email\generator.py", line 35>
+  24: MAKE_FUNCTION        defaults, kwdefaults
+  26: STORE_NAME           __init__
+  28: LOAD_CONST           <code object write at 0x00000240693EB930, file "email\generator.py", line 67>
+  30: MAKE_FUNCTION        
+  32: STORE_NAME           write
+  34: LOAD_CONST           (False, None)
+  36: LOAD_CONST           <code object flatten at 0x0000024068DD5A90, file "email\generator.py", line 71>
+  38: MAKE_FUNCTION        defaults
+  40: STORE_NAME           flatten
+  42: LOAD_CONST           <code object clone at 0x00000240693EA630, file "email\generator.py", line 120>
+  44: MAKE_FUNCTION        
+  46: STORE_NAME           clone
+  48: LOAD_CONST           <code object _new_buffer at 0x0000024069467830, file "email\generator.py", line 140>
+  50: MAKE_FUNCTION        
+  52: STORE_NAME           _new_buffer
+  54: LOAD_CONST           <code object _encode at 0x000002406943ABB0, file "email\generator.py", line 144>
+  56: MAKE_FUNCTION        
+  58: STORE_NAME           _encode
+  60: LOAD_CONST           <code object _write_lines at 0x00000240691A7D70, file "email\generator.py", line 148>
+  62: MAKE_FUNCTION        
+  64: STORE_NAME           _write_lines
+  66: LOAD_CONST           <code object _write at 0x0000024068B79230, file "email\generator.py", line 164>
+  68: MAKE_FUNCTION        
+  70: STORE_NAME           _write
+  72: LOAD_CONST           <code object _dispatch at 0x0000024068E223E0, file "email\generator.py", line 203>
+  74: MAKE_FUNCTION        
+  76: STORE_NAME           _dispatch
+  78: LOAD_CONST           <code object _write_headers at 0x000002406942E100, file "email\generator.py", line 223>
+  80: MAKE_FUNCTION        
+  82: STORE_NAME           _write_headers
+  84: LOAD_CONST           <code object _handle_text at 0x0000024068DC1E00, file "email\generator.py", line 233>
+  86: MAKE_FUNCTION        
+  88: STORE_NAME           _handle_text
+  90: LOAD_NAME            _handle_text
+  92: STORE_NAME           _writeBody
+  94: LOAD_CONST           <code object _handle_multipart at 0x0000024068E96730, file "email\generator.py", line 257>
+  96: MAKE_FUNCTION        
+  98: STORE_NAME           _handle_multipart
+ 100: LOAD_CONST           <code object _handle_multipart_signed at 0x00000240691C18F0, file "email\generator.py", line 315>
+ 102: MAKE_FUNCTION        
+ 104: STORE_NAME           _handle_multipart_signed
+ 106: LOAD_CONST           <code object _handle_message_delivery_status at 0x0000024068B3E350, file "email\generator.py", line 326>
+ 108: MAKE_FUNCTION        
+ 110: STORE_NAME           _handle_message_delivery_status
+ 112: LOAD_CONST           <code object _handle_message at 0x0000024068DB5390, file "email\generator.py", line 347>
+ 114: MAKE_FUNCTION        
+ 116: STORE_NAME           _handle_message
+ 118: LOAD_NAME            classmethod
+ 120: LOAD_CONST           (None,)
+ 122: LOAD_CONST           <code object _make_boundary at 0x000002406931F630, file "email\generator.py", line 372>
+ 124: MAKE_FUNCTION        defaults
+ 126: PRECALL              
+ 130: CALL                 
+ 140: STORE_NAME           _make_boundary
+ 142: LOAD_NAME            classmethod
+ 144: LOAD_CONST           <code object _compile_re at 0x000002406945FE10, file "email\generator.py", line 390>
+ 146: MAKE_FUNCTION        
+ 148: PRECALL              
+ 152: CALL                 
+ 162: STORE_NAME           _compile_re
+ 164: LOAD_CONST           None
+ 166: RETURN_VALUE         

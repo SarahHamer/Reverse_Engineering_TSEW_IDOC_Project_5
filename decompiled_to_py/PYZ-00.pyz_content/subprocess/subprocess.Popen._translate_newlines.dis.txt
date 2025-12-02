@@ -1,0 +1,31 @@
+# Disassembly for subprocess.Popen._translate_newlines
+# From module file: subprocess
+
+## co_consts:
+(None, '\r\n', '\n', '\r')
+
+## co_names:
+('decode', 'replace')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            data
+   4: LOAD_METHOD          decode
+  26: LOAD_FAST            encoding
+  28: LOAD_FAST            errors
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_FAST           data
+  46: LOAD_FAST            data
+  48: LOAD_METHOD          replace
+  70: LOAD_CONST           '\r\n'
+  72: LOAD_CONST           '\n'
+  74: PRECALL              
+  78: CALL                 
+  88: LOAD_METHOD          replace
+ 110: LOAD_CONST           '\r'
+ 112: LOAD_CONST           '\n'
+ 114: PRECALL              
+ 118: CALL                 
+ 128: RETURN_VALUE         

@@ -1,0 +1,32 @@
+# Disassembly for inspect._signature_fromstr.RewriteSymbolics
+# From module file: inspect
+
+## co_consts:
+('_signature_fromstr.<locals>.RewriteSymbolics', <code object visit_Attribute at 0x0000024068D6D2F0, file "inspect.py", line 2227>, <code object visit_Name at 0x00000240693AB730, file "inspect.py", line 2239>, <code object visit_BinOp at 0x0000024068B7ABB0, file "inspect.py", line 2244>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', 'visit_Attribute', 'visit_Name', 'visit_BinOp')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           '_signature_fromstr.<locals>.RewriteSymbolics'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CLOSURE         wrap_value
+  14: BUILD_TUPLE          
+  16: LOAD_CONST           <code object visit_Attribute at 0x0000024068D6D2F0, file "inspect.py", line 2227>
+  18: MAKE_FUNCTION        closure
+  20: STORE_NAME           visit_Attribute
+  22: LOAD_CLOSURE         wrap_value
+  24: BUILD_TUPLE          
+  26: LOAD_CONST           <code object visit_Name at 0x00000240693AB730, file "inspect.py", line 2239>
+  28: MAKE_FUNCTION        closure
+  30: STORE_NAME           visit_Name
+  32: LOAD_CONST           <code object visit_BinOp at 0x0000024068B7ABB0, file "inspect.py", line 2244>
+  34: MAKE_FUNCTION        
+  36: STORE_NAME           visit_BinOp
+  38: LOAD_CONST           None
+  40: RETURN_VALUE         

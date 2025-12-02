@@ -1,0 +1,16 @@
+# Disassembly for logging.LoggerAdapter.name
+# From module file: logging
+
+## co_consts:
+(None,)
+
+## co_names:
+('logger', 'name')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            logger
+  14: LOAD_ATTR            name
+  24: RETURN_VALUE         

@@ -1,0 +1,37 @@
+# Disassembly for tracemalloc.Filter._match_frame_impl
+# From module file: tracemalloc
+
+## co_consts:
+(None, False, True)
+
+## co_names:
+('_normalize_filename', 'fnmatch', '_filename_pattern', 'lineno')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _normalize_filename
+  14: LOAD_FAST            filename
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           filename
+  32: LOAD_GLOBAL          NULL + fnmatch
+  44: LOAD_ATTR            fnmatch
+  54: LOAD_FAST            filename
+  56: LOAD_FAST            self
+  58: LOAD_ATTR            _filename_pattern
+  68: PRECALL              
+  72: CALL                 
+  82: POP_JUMP_FORWARD_IF_TRUE to 88
+  84: LOAD_CONST           False
+  86: RETURN_VALUE         
+  88: LOAD_FAST            self
+  90: LOAD_ATTR            lineno
+ 100: POP_JUMP_FORWARD_IF_NOT_NONE to 106
+ 102: LOAD_CONST           True
+ 104: RETURN_VALUE         
+ 106: LOAD_FAST            lineno
+ 108: LOAD_FAST            self
+ 110: LOAD_ATTR            lineno
+ 120: COMPARE_OP           ==
+ 126: RETURN_VALUE         

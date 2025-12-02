@@ -1,0 +1,14 @@
+# Disassembly for importlib.metadata.PackageMetadata.json
+# From module file: importlib.metadata._meta
+
+## co_consts:
+('\n        A JSON-compatible form of the metadata.\n        ', None)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: RETURN_VALUE         

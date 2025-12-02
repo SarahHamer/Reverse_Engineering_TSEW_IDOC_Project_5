@@ -1,0 +1,17 @@
+# Disassembly for importlib.Distribution.name
+# From module file: importlib.metadata
+
+## co_consts:
+("Return the 'Name' metadata for the distribution package.", 'Name')
+
+## co_names:
+('metadata',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            metadata
+  14: LOAD_CONST           'Name'
+  16: BINARY_SUBSCR        
+  26: RETURN_VALUE         

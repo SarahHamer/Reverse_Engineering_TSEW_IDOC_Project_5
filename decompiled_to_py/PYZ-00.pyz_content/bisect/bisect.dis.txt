@@ -1,0 +1,65 @@
+# Disassembly for bisect
+# From module file: bisect
+
+## co_consts:
+('Bisection algorithms.', 0, None, ('key',), <code object insort_right at 0x00000240691F13E0, file "bisect.py", line 4>, <code object bisect_right at 0x00000240691DAF50, file "bisect.py", line 19>, <code object insort_left at 0x00000240691F23A0, file "bisect.py", line 53>, <code object bisect_left at 0x00000240691DB120, file "bisect.py", line 68>, ('*',), (0, None))
+
+## co_names:
+('__doc__', 'insort_right', 'bisect_right', 'insort_left', 'bisect_left', '_bisect', 'ImportError', 'bisect', 'insort')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'Bisection algorithms.'
+   4: STORE_NAME           __doc__
+   6: LOAD_CONST           (0, None)
+   8: LOAD_CONST           None
+  10: LOAD_CONST           ('key',)
+  12: BUILD_CONST_KEY_MAP  
+  14: LOAD_CONST           <code object insort_right at 0x00000240691F13E0, file "bisect.py", line 4>
+  16: MAKE_FUNCTION        defaults, kwdefaults
+  18: STORE_NAME           insort_right
+  20: LOAD_CONST           (0, None)
+  22: LOAD_CONST           None
+  24: LOAD_CONST           ('key',)
+  26: BUILD_CONST_KEY_MAP  
+  28: LOAD_CONST           <code object bisect_right at 0x00000240691DAF50, file "bisect.py", line 19>
+  30: MAKE_FUNCTION        defaults, kwdefaults
+  32: STORE_NAME           bisect_right
+  34: LOAD_CONST           (0, None)
+  36: LOAD_CONST           None
+  38: LOAD_CONST           ('key',)
+  40: BUILD_CONST_KEY_MAP  
+  42: LOAD_CONST           <code object insort_left at 0x00000240691F23A0, file "bisect.py", line 53>
+  44: MAKE_FUNCTION        defaults, kwdefaults
+  46: STORE_NAME           insort_left
+  48: LOAD_CONST           (0, None)
+  50: LOAD_CONST           None
+  52: LOAD_CONST           ('key',)
+  54: BUILD_CONST_KEY_MAP  
+  56: LOAD_CONST           <code object bisect_left at 0x00000240691DB120, file "bisect.py", line 68>
+  58: MAKE_FUNCTION        defaults, kwdefaults
+  60: STORE_NAME           bisect_left
+  62: NOP                  
+  64: LOAD_CONST           0
+  66: LOAD_CONST           ('*',)
+  68: IMPORT_NAME          _bisect
+  70: IMPORT_STAR          
+  72: JUMP_FORWARD         to 96
+  74: PUSH_EXC_INFO        
+  76: LOAD_NAME            ImportError
+  78: CHECK_EXC_MATCH      
+  80: POP_JUMP_FORWARD_IF_FALSE to 88
+  82: POP_TOP              
+  84: POP_EXCEPT           
+  86: JUMP_FORWARD         to 96
+  88: RERAISE              
+  90: COPY                 
+  92: POP_EXCEPT           
+  94: RERAISE              
+  96: LOAD_NAME            bisect_right
+  98: STORE_NAME           bisect
+ 100: LOAD_NAME            insort_right
+ 102: STORE_NAME           insort
+ 104: LOAD_CONST           None
+ 106: RETURN_VALUE         

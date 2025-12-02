@@ -1,0 +1,58 @@
+# Disassembly for mimetypes.MimeTypes
+# From module file: mimetypes
+
+## co_consts:
+('MimeTypes', 'MIME-types datastore.\n\n    This datastore can handle information from mime.types-style files\n    and supports basic determination of MIME type from a filename or\n    URL, and can guess a reasonable extension given a MIME type.\n    ', (), True, <code object __init__ at 0x0000024068D30140, file "mimetypes.py", line 72>, <code object add_type at 0x00000240691C2C30, file "mimetypes.py", line 86>, <code object guess_type at 0x0000024068D03A80, file "mimetypes.py", line 103>, <code object guess_all_extensions at 0x00000240691A7BB0, file "mimetypes.py", line 164>, <code object guess_extension at 0x00000240693EA730, file "mimetypes.py", line 183>, <code object read at 0x00000240693AB9B0, file "mimetypes.py", line 201>, <code object readfp at 0x0000024069365770, file "mimetypes.py", line 212>, <code object read_windows_registry at 0x000002406921FE00, file "mimetypes.py", line 235>, <code object _read_windows_registry at 0x0000024068D2F6C0, file "mimetypes.py", line 257>, None, ((), True), (True,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', 'add_type', 'guess_type', 'guess_all_extensions', 'guess_extension', 'read', 'readfp', 'read_windows_registry', 'classmethod', '_read_windows_registry')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'MimeTypes'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'MIME-types datastore.\n\n    This datastore can handle information from mime.types-style files\n    and supports basic determination of MIME type from a filename or\n    URL, and can guess a reasonable extension given a MIME type.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ((), True)
+  16: LOAD_CONST           <code object __init__ at 0x0000024068D30140, file "mimetypes.py", line 72>
+  18: MAKE_FUNCTION        defaults
+  20: STORE_NAME           __init__
+  22: LOAD_CONST           (True,)
+  24: LOAD_CONST           <code object add_type at 0x00000240691C2C30, file "mimetypes.py", line 86>
+  26: MAKE_FUNCTION        defaults
+  28: STORE_NAME           add_type
+  30: LOAD_CONST           (True,)
+  32: LOAD_CONST           <code object guess_type at 0x0000024068D03A80, file "mimetypes.py", line 103>
+  34: MAKE_FUNCTION        defaults
+  36: STORE_NAME           guess_type
+  38: LOAD_CONST           (True,)
+  40: LOAD_CONST           <code object guess_all_extensions at 0x00000240691A7BB0, file "mimetypes.py", line 164>
+  42: MAKE_FUNCTION        defaults
+  44: STORE_NAME           guess_all_extensions
+  46: LOAD_CONST           (True,)
+  48: LOAD_CONST           <code object guess_extension at 0x00000240693EA730, file "mimetypes.py", line 183>
+  50: MAKE_FUNCTION        defaults
+  52: STORE_NAME           guess_extension
+  54: LOAD_CONST           (True,)
+  56: LOAD_CONST           <code object read at 0x00000240693AB9B0, file "mimetypes.py", line 201>
+  58: MAKE_FUNCTION        defaults
+  60: STORE_NAME           read
+  62: LOAD_CONST           (True,)
+  64: LOAD_CONST           <code object readfp at 0x0000024069365770, file "mimetypes.py", line 212>
+  66: MAKE_FUNCTION        defaults
+  68: STORE_NAME           readfp
+  70: LOAD_CONST           (True,)
+  72: LOAD_CONST           <code object read_windows_registry at 0x000002406921FE00, file "mimetypes.py", line 235>
+  74: MAKE_FUNCTION        defaults
+  76: STORE_NAME           read_windows_registry
+  78: LOAD_NAME            classmethod
+  80: LOAD_CONST           <code object _read_windows_registry at 0x0000024068D2F6C0, file "mimetypes.py", line 257>
+  82: MAKE_FUNCTION        
+  84: PRECALL              
+  88: CALL                 
+  98: STORE_NAME           _read_windows_registry
+ 100: LOAD_CONST           None
+ 102: RETURN_VALUE         

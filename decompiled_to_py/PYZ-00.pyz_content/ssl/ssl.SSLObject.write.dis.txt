@@ -1,0 +1,19 @@
+# Disassembly for ssl.SSLObject.write
+# From module file: ssl
+
+## co_consts:
+("Write 'data' to the SSL object and return the number of bytes\n        written.\n\n        The 'data' argument must support the buffer interface.\n        ",)
+
+## co_names:
+('_sslobj', 'write')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _sslobj
+  14: LOAD_METHOD          write
+  36: LOAD_FAST            data
+  38: PRECALL              
+  42: CALL                 
+  52: RETURN_VALUE         

@@ -1,0 +1,43 @@
+# Disassembly for threading.Barrier._release
+# From module file: threading
+
+## co_consts:
+(None, 1)
+
+## co_names:
+('_action', '_state', '_cond', 'notify_all', '_break')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            _action
+  16: POP_JUMP_FORWARD_IF_FALSE to 58
+  18: LOAD_FAST            self
+  20: LOAD_METHOD          _action
+  42: PRECALL              
+  46: CALL                 
+  56: POP_TOP              
+  58: LOAD_CONST           1
+  60: LOAD_FAST            self
+  62: STORE_ATTR           _state
+  72: LOAD_FAST            self
+  74: LOAD_ATTR            _cond
+  84: LOAD_METHOD          notify_all
+ 106: PRECALL              
+ 110: CALL                 
+ 120: POP_TOP              
+ 122: LOAD_CONST           None
+ 124: RETURN_VALUE         
+ 126: PUSH_EXC_INFO        
+ 128: POP_TOP              
+ 130: LOAD_FAST            self
+ 132: LOAD_METHOD          _break
+ 154: PRECALL              
+ 158: CALL                 
+ 168: POP_TOP              
+ 170: RAISE_VARARGS        
+ 172: COPY                 
+ 174: POP_EXCEPT           
+ 176: RERAISE              

@@ -1,0 +1,14 @@
+# Disassembly for importlib.ExtensionFileLoader.get_code
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Return None as an extension module cannot create a code object.', None)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: RETURN_VALUE         

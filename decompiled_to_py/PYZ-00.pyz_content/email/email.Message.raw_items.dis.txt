@@ -1,0 +1,21 @@
+# Disassembly for email.Message.raw_items
+# From module file: email.message
+
+## co_consts:
+('Return the (name, value) header pairs without modification.\n\n        This is an "internal" API, intended only for use by a generator.\n        ',)
+
+## co_names:
+('iter', '_headers', 'copy')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + iter
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            _headers
+  26: LOAD_METHOD          copy
+  48: PRECALL              
+  52: CALL                 
+  62: PRECALL              
+  66: CALL                 
+  76: RETURN_VALUE         

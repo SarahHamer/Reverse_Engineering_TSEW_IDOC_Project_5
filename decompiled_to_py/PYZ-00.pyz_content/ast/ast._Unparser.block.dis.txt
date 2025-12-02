@@ -1,0 +1,48 @@
+# Disassembly for ast._Unparser.block
+# From module file: ast
+
+## co_consts:
+("A context manager for preparing the source for blocks. It adds\n        the character':', increases the indentation on enter and decreases\n        the indentation on exit. If *extra* is given, it will be directly\n        appended after the colon character.\n        ", ':', 1, None)
+
+## co_names:
+('write', '_indent')
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_FAST            self
+   8: LOAD_METHOD          write
+  30: LOAD_CONST           ':'
+  32: PRECALL              
+  36: CALL                 
+  46: POP_TOP              
+  48: LOAD_FAST            extra
+  50: POP_JUMP_FORWARD_IF_FALSE to 94
+  52: LOAD_FAST            self
+  54: LOAD_METHOD          write
+  76: LOAD_FAST            extra
+  78: PRECALL              
+  82: CALL                 
+  92: POP_TOP              
+  94: LOAD_FAST            self
+  96: COPY                 
+  98: LOAD_ATTR            _indent
+ 108: LOAD_CONST           1
+ 110: BINARY_OP            +=
+ 114: SWAP                 
+ 116: STORE_ATTR           _indent
+ 126: LOAD_CONST           None
+ 128: YIELD_VALUE          
+ 130: RESUME               
+ 132: POP_TOP              
+ 134: LOAD_FAST            self
+ 136: COPY                 
+ 138: LOAD_ATTR            _indent
+ 148: LOAD_CONST           1
+ 150: BINARY_OP            -=
+ 154: SWAP                 
+ 156: STORE_ATTR           _indent
+ 166: LOAD_CONST           None
+ 168: RETURN_VALUE         

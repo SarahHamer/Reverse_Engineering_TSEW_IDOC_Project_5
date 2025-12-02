@@ -1,0 +1,497 @@
+# Disassembly for inspect._signature_from_callable
+# From module file: inspect
+
+## co_consts:
+('Private helper function to get signature for arbitrary\n    callable objects.\n    ', ('follow_wrapper_chains', 'skip_bound_arg', 'globals', 'locals', 'sigcls', 'eval_str'), '{!r} is not a callable object', <code object <lambda> at 0x0000024069CF49C0, file "inspect.py", line 2465>, ('stop',), None, 'unexpected object {!r} in __signature__ attribute', (None,), 0, ('parameters',), ('skip_bound_arg', 'globals', 'locals', 'eval_str'), ('skip_bound_arg',), '__call__', '__new__', '__init__', -1, 'no signature found for builtin type {!r}', 'no signature found for {!r}', 'no signature found for builtin function {!r}', 'callable {!r} is not supported by signature')
+
+## co_names:
+('functools', 'partial', '_signature_from_callable', 'callable', 'TypeError', 'format', 'isinstance', 'types', 'MethodType', '__func__', '_signature_bound_method', 'unwrap', '__signature__', 'Signature', 'AttributeError', '_partialmethod', 'partialmethod', 'func', '_signature_get_partial', 'tuple', 'parameters', 'values', 'kind', 'Parameter', 'VAR_POSITIONAL', 'replace', 'isfunction', '_signature_is_functionlike', '_signature_from_function', '_signature_is_builtin', '_signature_from_builtin', 'type', '_signature_get_user_defined_method', '__mro__', '__dict__', '__text_signature__', '_signature_fromstr', '__init__', 'object', '__new__', 'from_callable', 'ValueError', '_NonUserDefinedCallables', 'BuiltinFunctionType')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + functools
+  14: LOAD_ATTR            partial
+  24: LOAD_GLOBAL          _signature_from_callable
+  36: LOAD_FAST            follow_wrapper_chains
+  38: LOAD_FAST            skip_bound_arg
+  40: LOAD_FAST            globals
+  42: LOAD_FAST            locals
+  44: LOAD_FAST            sigcls
+  46: LOAD_FAST            eval_str
+  48: KW_NAMES             
+  50: PRECALL              
+  54: CALL                 
+  64: STORE_FAST           _get_signature_of
+  66: LOAD_GLOBAL          NULL + callable
+  78: LOAD_FAST            obj
+  80: PRECALL              
+  84: CALL                 
+  94: POP_JUMP_FORWARD_IF_TRUE to 164
+  96: LOAD_GLOBAL          NULL + TypeError
+ 108: LOAD_CONST           '{!r} is not a callable object'
+ 110: LOAD_METHOD          format
+ 132: LOAD_FAST            obj
+ 134: PRECALL              
+ 138: CALL                 
+ 148: PRECALL              
+ 152: CALL                 
+ 162: RAISE_VARARGS        
+ 164: LOAD_GLOBAL          NULL + isinstance
+ 176: LOAD_FAST            obj
+ 178: LOAD_GLOBAL          types
+ 190: LOAD_ATTR            MethodType
+ 200: PRECALL              
+ 204: CALL                 
+ 214: POP_JUMP_FORWARD_IF_FALSE to 286
+ 216: PUSH_NULL            
+ 218: LOAD_FAST            _get_signature_of
+ 220: LOAD_FAST            obj
+ 222: LOAD_ATTR            __func__
+ 232: PRECALL              
+ 236: CALL                 
+ 246: STORE_FAST           sig
+ 248: LOAD_FAST            skip_bound_arg
+ 250: POP_JUMP_FORWARD_IF_FALSE to 282
+ 252: LOAD_GLOBAL          NULL + _signature_bound_method
+ 264: LOAD_FAST            sig
+ 266: PRECALL              
+ 270: CALL                 
+ 280: RETURN_VALUE         
+ 282: LOAD_FAST            sig
+ 284: RETURN_VALUE         
+ 286: LOAD_FAST            follow_wrapper_chains
+ 288: POP_JUMP_FORWARD_IF_FALSE to 400
+ 290: LOAD_GLOBAL          NULL + unwrap
+ 302: LOAD_FAST            obj
+ 304: LOAD_CONST           <code object <lambda> at 0x0000024069CF49C0, file "inspect.py", line 2465>
+ 306: MAKE_FUNCTION        
+ 308: KW_NAMES             
+ 310: PRECALL              
+ 314: CALL                 
+ 324: STORE_FAST           obj
+ 326: LOAD_GLOBAL          NULL + isinstance
+ 338: LOAD_FAST            obj
+ 340: LOAD_GLOBAL          types
+ 352: LOAD_ATTR            MethodType
+ 362: PRECALL              
+ 366: CALL                 
+ 376: POP_JUMP_FORWARD_IF_FALSE to 400
+ 378: PUSH_NULL            
+ 380: LOAD_FAST            _get_signature_of
+ 382: LOAD_FAST            obj
+ 384: PRECALL              
+ 388: CALL                 
+ 398: RETURN_VALUE         
+ 400: NOP                  
+ 402: LOAD_FAST            obj
+ 404: LOAD_ATTR            __signature__
+ 414: STORE_FAST           sig
+ 416: LOAD_FAST            sig
+ 418: POP_JUMP_FORWARD_IF_NONE to 534
+ 420: LOAD_GLOBAL          NULL + isinstance
+ 432: LOAD_FAST            sig
+ 434: LOAD_GLOBAL          Signature
+ 446: PRECALL              
+ 450: CALL                 
+ 460: POP_JUMP_FORWARD_IF_TRUE to 530
+ 462: LOAD_GLOBAL          NULL + TypeError
+ 474: LOAD_CONST           'unexpected object {!r} in __signature__ attribute'
+ 476: LOAD_METHOD          format
+ 498: LOAD_FAST            sig
+ 500: PRECALL              
+ 504: CALL                 
+ 514: PRECALL              
+ 518: CALL                 
+ 528: RAISE_VARARGS        
+ 530: LOAD_FAST            sig
+ 532: RETURN_VALUE         
+ 534: JUMP_FORWARD         to 568
+ 536: PUSH_EXC_INFO        
+ 538: LOAD_GLOBAL          AttributeError
+ 550: CHECK_EXC_MATCH      
+ 552: POP_JUMP_FORWARD_IF_FALSE to 560
+ 554: POP_TOP              
+ 556: POP_EXCEPT           
+ 558: JUMP_FORWARD         to 568
+ 560: RERAISE              
+ 562: COPY                 
+ 564: POP_EXCEPT           
+ 566: RERAISE              
+ 568: NOP                  
+ 570: LOAD_FAST            obj
+ 572: LOAD_ATTR            _partialmethod
+ 582: STORE_FAST           partialmethod
+ 584: LOAD_GLOBAL          NULL + isinstance
+ 596: LOAD_FAST            partialmethod
+ 598: LOAD_GLOBAL          functools
+ 610: LOAD_ATTR            partialmethod
+ 620: PRECALL              
+ 624: CALL                 
+ 634: POP_JUMP_FORWARD_IF_FALSE to 992
+ 636: PUSH_NULL            
+ 638: LOAD_FAST            _get_signature_of
+ 640: LOAD_FAST            partialmethod
+ 642: LOAD_ATTR            func
+ 652: PRECALL              
+ 656: CALL                 
+ 666: STORE_FAST           wrapped_sig
+ 668: LOAD_GLOBAL          NULL + _signature_get_partial
+ 680: LOAD_FAST            wrapped_sig
+ 682: LOAD_FAST            partialmethod
+ 684: LOAD_CONST           (None,)
+ 686: PRECALL              
+ 690: CALL                 
+ 700: STORE_FAST           sig
+ 702: LOAD_GLOBAL          NULL + tuple
+ 714: LOAD_FAST            wrapped_sig
+ 716: LOAD_ATTR            parameters
+ 726: LOAD_METHOD          values
+ 748: PRECALL              
+ 752: CALL                 
+ 762: PRECALL              
+ 766: CALL                 
+ 776: LOAD_CONST           0
+ 778: BINARY_SUBSCR        
+ 788: STORE_FAST           first_wrapped_param
+ 790: LOAD_FAST            first_wrapped_param
+ 792: LOAD_ATTR            kind
+ 802: LOAD_GLOBAL          Parameter
+ 814: LOAD_ATTR            VAR_POSITIONAL
+ 824: IS_OP                
+ 826: POP_JUMP_FORWARD_IF_FALSE to 832
+ 828: LOAD_FAST            sig
+ 830: RETURN_VALUE         
+ 832: LOAD_GLOBAL          NULL + tuple
+ 844: LOAD_FAST            sig
+ 846: LOAD_ATTR            parameters
+ 856: LOAD_METHOD          values
+ 878: PRECALL              
+ 882: CALL                 
+ 892: PRECALL              
+ 896: CALL                 
+ 906: STORE_FAST           sig_params
+ 908: LOAD_FAST            sig_params
+ 910: POP_JUMP_FORWARD_IF_FALSE to 936
+ 912: LOAD_FAST            first_wrapped_param
+ 914: LOAD_FAST            sig_params
+ 916: LOAD_CONST           0
+ 918: BINARY_SUBSCR        
+ 928: IS_OP                
+ 930: POP_JUMP_FORWARD_IF_TRUE to 936
+ 932: LOAD_ASSERTION_ERROR 
+ 934: RAISE_VARARGS        
+ 936: LOAD_FAST            first_wrapped_param
+ 938: BUILD_TUPLE          
+ 940: LOAD_FAST            sig_params
+ 942: BINARY_OP            +
+ 946: STORE_FAST           new_params
+ 948: LOAD_FAST            sig
+ 950: LOAD_METHOD          replace
+ 972: LOAD_FAST            new_params
+ 974: KW_NAMES             
+ 976: PRECALL              
+ 980: CALL                 
+ 990: RETURN_VALUE         
+ 992: JUMP_FORWARD         to 1026
+ 994: PUSH_EXC_INFO        
+ 996: LOAD_GLOBAL          AttributeError
+1008: CHECK_EXC_MATCH      
+1010: POP_JUMP_FORWARD_IF_FALSE to 1018
+1012: POP_TOP              
+1014: POP_EXCEPT           
+1016: JUMP_FORWARD         to 1026
+1018: RERAISE              
+1020: COPY                 
+1022: POP_EXCEPT           
+1024: RERAISE              
+1026: LOAD_GLOBAL          NULL + isfunction
+1038: LOAD_FAST            obj
+1040: PRECALL              
+1044: CALL                 
+1054: POP_JUMP_FORWARD_IF_TRUE to 1086
+1056: LOAD_GLOBAL          NULL + _signature_is_functionlike
+1068: LOAD_FAST            obj
+1070: PRECALL              
+1074: CALL                 
+1084: POP_JUMP_FORWARD_IF_FALSE to 1128
+1086: LOAD_GLOBAL          NULL + _signature_from_function
+1098: LOAD_FAST            sigcls
+1100: LOAD_FAST            obj
+1102: LOAD_FAST            skip_bound_arg
+1104: LOAD_FAST            globals
+1106: LOAD_FAST            locals
+1108: LOAD_FAST            eval_str
+1110: KW_NAMES             
+1112: PRECALL              
+1116: CALL                 
+1126: RETURN_VALUE         
+1128: LOAD_GLOBAL          NULL + _signature_is_builtin
+1140: LOAD_FAST            obj
+1142: PRECALL              
+1146: CALL                 
+1156: POP_JUMP_FORWARD_IF_FALSE to 1194
+1158: LOAD_GLOBAL          NULL + _signature_from_builtin
+1170: LOAD_FAST            sigcls
+1172: LOAD_FAST            obj
+1174: LOAD_FAST            skip_bound_arg
+1176: KW_NAMES             
+1178: PRECALL              
+1182: CALL                 
+1192: RETURN_VALUE         
+1194: LOAD_GLOBAL          NULL + isinstance
+1206: LOAD_FAST            obj
+1208: LOAD_GLOBAL          functools
+1220: LOAD_ATTR            partial
+1230: PRECALL              
+1234: CALL                 
+1244: POP_JUMP_FORWARD_IF_FALSE to 1310
+1246: PUSH_NULL            
+1248: LOAD_FAST            _get_signature_of
+1250: LOAD_FAST            obj
+1252: LOAD_ATTR            func
+1262: PRECALL              
+1266: CALL                 
+1276: STORE_FAST           wrapped_sig
+1278: LOAD_GLOBAL          NULL + _signature_get_partial
+1290: LOAD_FAST            wrapped_sig
+1292: LOAD_FAST            obj
+1294: PRECALL              
+1298: CALL                 
+1308: RETURN_VALUE         
+1310: LOAD_CONST           None
+1312: STORE_FAST           sig
+1314: LOAD_GLOBAL          NULL + isinstance
+1326: LOAD_FAST            obj
+1328: LOAD_GLOBAL          type
+1340: PRECALL              
+1344: CALL                 
+1354: EXTENDED_ARG         
+1356: POP_JUMP_FORWARD_IF_FALSE to 1974
+1358: LOAD_GLOBAL          NULL + _signature_get_user_defined_method
+1370: LOAD_GLOBAL          NULL + type
+1382: LOAD_FAST            obj
+1384: PRECALL              
+1388: CALL                 
+1398: LOAD_CONST           '__call__'
+1400: PRECALL              
+1404: CALL                 
+1414: STORE_FAST           call
+1416: LOAD_FAST            call
+1418: POP_JUMP_FORWARD_IF_NONE to 1444
+1420: PUSH_NULL            
+1422: LOAD_FAST            _get_signature_of
+1424: LOAD_FAST            call
+1426: PRECALL              
+1430: CALL                 
+1440: STORE_FAST           sig
+1442: JUMP_FORWARD         to 1618
+1444: LOAD_CONST           None
+1446: STORE_FAST           factory_method
+1448: LOAD_GLOBAL          NULL + _signature_get_user_defined_method
+1460: LOAD_FAST            obj
+1462: LOAD_CONST           '__new__'
+1464: PRECALL              
+1468: CALL                 
+1478: STORE_FAST           new
+1480: LOAD_GLOBAL          NULL + _signature_get_user_defined_method
+1492: LOAD_FAST            obj
+1494: LOAD_CONST           '__init__'
+1496: PRECALL              
+1500: CALL                 
+1510: STORE_FAST           init
+1512: LOAD_FAST            obj
+1514: LOAD_ATTR            __mro__
+1524: GET_ITER             
+1526: FOR_ITER             to 1592
+1528: STORE_FAST           base
+1530: LOAD_FAST            new
+1532: POP_JUMP_FORWARD_IF_NONE to 1560
+1534: LOAD_CONST           '__new__'
+1536: LOAD_FAST            base
+1538: LOAD_ATTR            __dict__
+1548: CONTAINS_OP          
+1550: POP_JUMP_FORWARD_IF_FALSE to 1560
+1552: LOAD_FAST            new
+1554: STORE_FAST           factory_method
+1556: POP_TOP              
+1558: JUMP_FORWARD         to 1592
+1560: LOAD_FAST            init
+1562: POP_JUMP_FORWARD_IF_NONE to 1590
+1564: LOAD_CONST           '__init__'
+1566: LOAD_FAST            base
+1568: LOAD_ATTR            __dict__
+1578: CONTAINS_OP          
+1580: POP_JUMP_FORWARD_IF_FALSE to 1590
+1582: LOAD_FAST            init
+1584: STORE_FAST           factory_method
+1586: POP_TOP              
+1588: JUMP_FORWARD         to 1592
+1590: JUMP_BACKWARD        to 1526
+1592: LOAD_FAST            factory_method
+1594: POP_JUMP_FORWARD_IF_NONE to 1618
+1596: PUSH_NULL            
+1598: LOAD_FAST            _get_signature_of
+1600: LOAD_FAST            factory_method
+1602: PRECALL              
+1606: CALL                 
+1616: STORE_FAST           sig
+1618: LOAD_FAST            sig
+1620: POP_JUMP_FORWARD_IF_NOT_NONE to 1972
+1622: LOAD_FAST            obj
+1624: LOAD_ATTR            __mro__
+1634: LOAD_CONST           None
+1636: LOAD_CONST           -1
+1638: BUILD_SLICE          
+1640: BINARY_SUBSCR        
+1650: GET_ITER             
+1652: FOR_ITER             to 1748
+1654: STORE_FAST           base
+1656: NOP                  
+1658: LOAD_FAST            base
+1660: LOAD_ATTR            __text_signature__
+1670: STORE_FAST           text_sig
+1672: LOAD_FAST            text_sig
+1674: POP_JUMP_FORWARD_IF_FALSE to 1714
+1676: LOAD_GLOBAL          NULL + _signature_fromstr
+1688: LOAD_FAST            sigcls
+1690: LOAD_FAST            base
+1692: LOAD_FAST            text_sig
+1694: PRECALL              
+1698: CALL                 
+1708: SWAP                 
+1710: POP_TOP              
+1712: RETURN_VALUE         
+1714: JUMP_BACKWARD        to 1652
+1716: PUSH_EXC_INFO        
+1718: LOAD_GLOBAL          AttributeError
+1730: CHECK_EXC_MATCH      
+1732: POP_JUMP_FORWARD_IF_FALSE to 1740
+1734: POP_TOP              
+1736: POP_EXCEPT           
+1738: JUMP_BACKWARD        to 1652
+1740: RERAISE              
+1742: COPY                 
+1744: POP_EXCEPT           
+1746: RERAISE              
+1748: LOAD_GLOBAL          type
+1760: LOAD_FAST            obj
+1762: LOAD_ATTR            __mro__
+1772: CONTAINS_OP          
+1774: POP_JUMP_FORWARD_IF_FALSE to 1972
+1776: LOAD_FAST            obj
+1778: LOAD_ATTR            __init__
+1788: LOAD_GLOBAL          object
+1800: LOAD_ATTR            __init__
+1810: IS_OP                
+1812: POP_JUMP_FORWARD_IF_FALSE to 1904
+1814: LOAD_FAST            obj
+1816: LOAD_ATTR            __new__
+1826: LOAD_GLOBAL          object
+1838: LOAD_ATTR            __new__
+1848: IS_OP                
+1850: POP_JUMP_FORWARD_IF_FALSE to 1904
+1852: LOAD_FAST            sigcls
+1854: LOAD_METHOD          from_callable
+1876: LOAD_GLOBAL          object
+1888: PRECALL              
+1892: CALL                 
+1902: RETURN_VALUE         
+1904: LOAD_GLOBAL          NULL + ValueError
+1916: LOAD_CONST           'no signature found for builtin type {!r}'
+1918: LOAD_METHOD          format
+1940: LOAD_FAST            obj
+1942: PRECALL              
+1946: CALL                 
+1956: PRECALL              
+1960: CALL                 
+1970: RAISE_VARARGS        
+1972: JUMP_FORWARD         to 2214
+1974: LOAD_GLOBAL          NULL + isinstance
+1986: LOAD_FAST            obj
+1988: LOAD_GLOBAL          _NonUserDefinedCallables
+2000: PRECALL              
+2004: CALL                 
+2014: POP_JUMP_FORWARD_IF_TRUE to 2214
+2016: LOAD_GLOBAL          NULL + _signature_get_user_defined_method
+2028: LOAD_GLOBAL          NULL + type
+2040: LOAD_FAST            obj
+2042: PRECALL              
+2046: CALL                 
+2056: LOAD_CONST           '__call__'
+2058: PRECALL              
+2062: CALL                 
+2072: STORE_FAST           call
+2074: LOAD_FAST            call
+2076: POP_JUMP_FORWARD_IF_NONE to 2214
+2078: NOP                  
+2080: PUSH_NULL            
+2082: LOAD_FAST            _get_signature_of
+2084: LOAD_FAST            call
+2086: PRECALL              
+2090: CALL                 
+2100: STORE_FAST           sig
+2102: JUMP_FORWARD         to 2214
+2104: PUSH_EXC_INFO        
+2106: LOAD_GLOBAL          ValueError
+2118: CHECK_EXC_MATCH      
+2120: POP_JUMP_FORWARD_IF_FALSE to 2206
+2122: STORE_FAST           ex
+2124: LOAD_CONST           'no signature found for {!r}'
+2126: LOAD_METHOD          format
+2148: LOAD_FAST            obj
+2150: PRECALL              
+2154: CALL                 
+2164: STORE_FAST           msg
+2166: LOAD_GLOBAL          NULL + ValueError
+2178: LOAD_FAST            msg
+2180: PRECALL              
+2184: CALL                 
+2194: LOAD_FAST            ex
+2196: RAISE_VARARGS        
+2198: LOAD_CONST           None
+2200: STORE_FAST           ex
+2202: DELETE_FAST          ex
+2204: RERAISE              
+2206: RERAISE              
+2208: COPY                 
+2210: POP_EXCEPT           
+2212: RERAISE              
+2214: LOAD_FAST            sig
+2216: POP_JUMP_FORWARD_IF_NONE to 2256
+2218: LOAD_FAST            skip_bound_arg
+2220: POP_JUMP_FORWARD_IF_FALSE to 2252
+2222: LOAD_GLOBAL          NULL + _signature_bound_method
+2234: LOAD_FAST            sig
+2236: PRECALL              
+2240: CALL                 
+2250: RETURN_VALUE         
+2252: LOAD_FAST            sig
+2254: RETURN_VALUE         
+2256: LOAD_GLOBAL          NULL + isinstance
+2268: LOAD_FAST            obj
+2270: LOAD_GLOBAL          types
+2282: LOAD_ATTR            BuiltinFunctionType
+2292: PRECALL              
+2296: CALL                 
+2306: POP_JUMP_FORWARD_IF_FALSE to 2380
+2308: LOAD_CONST           'no signature found for builtin function {!r}'
+2310: LOAD_METHOD          format
+2332: LOAD_FAST            obj
+2334: PRECALL              
+2338: CALL                 
+2348: STORE_FAST           msg
+2350: LOAD_GLOBAL          NULL + ValueError
+2362: LOAD_FAST            msg
+2364: PRECALL              
+2368: CALL                 
+2378: RAISE_VARARGS        
+2380: LOAD_GLOBAL          NULL + ValueError
+2392: LOAD_CONST           'callable {!r} is not supported by signature'
+2394: LOAD_METHOD          format
+2416: LOAD_FAST            obj
+2418: PRECALL              
+2422: CALL                 
+2432: PRECALL              
+2436: CALL                 
+2446: RAISE_VARARGS        

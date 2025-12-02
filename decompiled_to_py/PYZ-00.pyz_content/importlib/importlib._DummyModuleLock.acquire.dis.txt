@@ -1,0 +1,21 @@
+# Disassembly for importlib._DummyModuleLock.acquire
+# From module file: importlib._bootstrap
+
+## co_consts:
+(None, 1, True)
+
+## co_names:
+('count',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: COPY                 
+   6: LOAD_ATTR            count
+  16: LOAD_CONST           1
+  18: BINARY_OP            +=
+  22: SWAP                 
+  24: STORE_ATTR           count
+  34: LOAD_CONST           True
+  36: RETURN_VALUE         

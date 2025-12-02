@@ -1,0 +1,20 @@
+# Disassembly for _pydecimal.FloatOperation
+# From module file: _pydecimal
+
+## co_consts:
+('FloatOperation', 'Enable stricter semantics for mixing floats and Decimals.\n\n    If the signal is not trapped (default), mixing floats and Decimals is\n    permitted in the Decimal() constructor, context.create_decimal() and\n    all comparison operators. Both conversion and comparisons are exact.\n    Any occurrence of a mixed operation is silently recorded by setting\n    FloatOperation in the context flags.  Explicit conversions with\n    Decimal.from_float() or context.create_decimal_from_float() do not\n    set the flag.\n\n    Otherwise (the signal is trapped), only equality comparisons and explicit\n    conversions are silent. All other mixed operations raise FloatOperation.\n    ', None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'FloatOperation'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Enable stricter semantics for mixing floats and Decimals.\n\n    If the signal is not trapped (default), mixing floats and Decimals is\n    permitted in the Decimal() constructor, context.create_decimal() and\n    all comparison operators. Both conversion and comparisons are exact.\n    Any occurrence of a mixed operation is silently recorded by setting\n    FloatOperation in the context flags.  Explicit conversions with\n    Decimal.from_float() or context.create_decimal_from_float() do not\n    set the flag.\n\n    Otherwise (the signal is trapped), only equality comparisons and explicit\n    conversions are silent. All other mixed operations raise FloatOperation.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           None
+  16: RETURN_VALUE         

@@ -1,0 +1,28 @@
+# Disassembly for email.GroupList.mailboxes
+# From module file: email._header_value_parser
+
+## co_consts:
+(None, 0, 'mailbox-list')
+
+## co_names:
+('token_type', 'mailboxes')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: POP_JUMP_FORWARD_IF_FALSE to 40
+   6: LOAD_FAST            self
+   8: LOAD_CONST           0
+  10: BINARY_SUBSCR        
+  20: LOAD_ATTR            token_type
+  30: LOAD_CONST           'mailbox-list'
+  32: COMPARE_OP           !=
+  38: POP_JUMP_FORWARD_IF_FALSE to 44
+  40: BUILD_LIST           
+  42: RETURN_VALUE         
+  44: LOAD_FAST            self
+  46: LOAD_CONST           0
+  48: BINARY_SUBSCR        
+  58: LOAD_ATTR            mailboxes
+  68: RETURN_VALUE         

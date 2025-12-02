@@ -1,0 +1,56 @@
+# Disassembly for email.formatdate
+# From module file: email.utils
+
+## co_consts:
+('Returns a date string as specified by RFC 2822, e.g.:\n\n    Fri, 09 Nov 2001 01:08:47 -0000\n\n    Optional timeval if given is a floating point time value as accepted by\n    gmtime() and localtime(), otherwise the current time is used.\n\n    Optional localtime is a flag that when True, interprets timeval, and\n    returns a date relative to the local timezone instead of UTC, properly\n    taking daylight savings time into account.\n\n    Optional argument usegmt means that the timezone is written out as\n    an ascii string, not numeric one (so "GMT" instead of "+0000"). This\n    is needed for HTTP, and is only used when localtime==False.\n    ', None, False)
+
+## co_names:
+('time', 'datetime', 'fromtimestamp', 'timezone', 'utc', 'utcfromtimestamp', 'astimezone', 'format_datetime')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            timeval
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 44
+   6: LOAD_GLOBAL          NULL + time
+  18: LOAD_ATTR            time
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           timeval
+  44: LOAD_FAST            localtime
+  46: POP_JUMP_FORWARD_IF_TRUE to 52
+  48: LOAD_FAST            usegmt
+  50: POP_JUMP_FORWARD_IF_FALSE to 148
+  52: LOAD_GLOBAL          datetime
+  64: LOAD_ATTR            datetime
+  74: LOAD_METHOD          fromtimestamp
+  96: LOAD_FAST            timeval
+  98: LOAD_GLOBAL          datetime
+ 110: LOAD_ATTR            timezone
+ 120: LOAD_ATTR            utc
+ 130: PRECALL              
+ 134: CALL                 
+ 144: STORE_FAST           dt
+ 146: JUMP_FORWARD         to 210
+ 148: LOAD_GLOBAL          datetime
+ 160: LOAD_ATTR            datetime
+ 170: LOAD_METHOD          utcfromtimestamp
+ 192: LOAD_FAST            timeval
+ 194: PRECALL              
+ 198: CALL                 
+ 208: STORE_FAST           dt
+ 210: LOAD_FAST            localtime
+ 212: POP_JUMP_FORWARD_IF_FALSE to 258
+ 214: LOAD_FAST            dt
+ 216: LOAD_METHOD          astimezone
+ 238: PRECALL              
+ 242: CALL                 
+ 252: STORE_FAST           dt
+ 254: LOAD_CONST           False
+ 256: STORE_FAST           usegmt
+ 258: LOAD_GLOBAL          NULL + format_datetime
+ 270: LOAD_FAST            dt
+ 272: LOAD_FAST            usegmt
+ 274: PRECALL              
+ 278: CALL                 
+ 288: RETURN_VALUE         

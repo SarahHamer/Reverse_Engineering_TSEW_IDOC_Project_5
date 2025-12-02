@@ -1,0 +1,21 @@
+# Disassembly for typing._GenericAlias.__hash__
+# From module file: typing
+
+## co_consts:
+(None,)
+
+## co_names:
+('hash', '__origin__', '__args__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + hash
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            __origin__
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            __args__
+  38: BUILD_TUPLE          
+  40: PRECALL              
+  44: CALL                 
+  54: RETURN_VALUE         

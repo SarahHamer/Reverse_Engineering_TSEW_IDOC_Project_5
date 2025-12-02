@@ -1,0 +1,20 @@
+# Disassembly for importlib.resources.MultiplexedPath.open
+# From module file: importlib.resources.readers
+
+## co_consts:
+(None, ' is not a file')
+
+## co_names:
+('FileNotFoundError',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + FileNotFoundError
+  14: LOAD_FAST            self
+  16: FORMAT_VALUE         
+  18: LOAD_CONST           ' is not a file'
+  20: BUILD_STRING         
+  22: PRECALL              
+  26: CALL                 
+  36: RAISE_VARARGS        

@@ -1,0 +1,21 @@
+# Disassembly for importlib._NamespacePath.append
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+(None,)
+
+## co_names:
+('_path', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _path
+  14: LOAD_METHOD          append
+  36: LOAD_FAST            item
+  38: PRECALL              
+  42: CALL                 
+  52: POP_TOP              
+  54: LOAD_CONST           None
+  56: RETURN_VALUE         

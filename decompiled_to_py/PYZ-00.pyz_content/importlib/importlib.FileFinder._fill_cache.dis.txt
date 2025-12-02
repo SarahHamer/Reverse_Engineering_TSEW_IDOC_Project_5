@@ -1,0 +1,119 @@
+# Disassembly for importlib.FileFinder._fill_cache
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Fill the cache of potential modules and packages for this directory.', 'win', '.', '{}.{}', <code object <setcomp> at 0x000002406945E010, file "importlib\_bootstrap_external.py", line 1684>, None)
+
+## co_names:
+('path', '_os', 'listdir', 'getcwd', 'FileNotFoundError', 'PermissionError', 'NotADirectoryError', 'sys', 'platform', 'startswith', 'set', '_path_cache', 'partition', 'format', 'lower', 'add', '_CASE_INSENSITIVE_PLATFORMS', '_relaxed_path_cache')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            path
+  14: STORE_FAST           path
+  16: NOP                  
+  18: LOAD_GLOBAL          NULL + _os
+  30: LOAD_ATTR            listdir
+  40: LOAD_FAST            path
+  42: JUMP_IF_TRUE_OR_POP  to 80
+  44: LOAD_GLOBAL          NULL + _os
+  56: LOAD_ATTR            getcwd
+  66: PRECALL              
+  70: CALL                 
+  80: PRECALL              
+  84: CALL                 
+  94: STORE_FAST           contents
+  96: JUMP_FORWARD         to 160
+  98: PUSH_EXC_INFO        
+ 100: LOAD_GLOBAL          FileNotFoundError
+ 112: LOAD_GLOBAL          PermissionError
+ 124: LOAD_GLOBAL          NotADirectoryError
+ 136: BUILD_TUPLE          
+ 138: CHECK_EXC_MATCH      
+ 140: POP_JUMP_FORWARD_IF_FALSE to 152
+ 142: POP_TOP              
+ 144: BUILD_LIST           
+ 146: STORE_FAST           contents
+ 148: POP_EXCEPT           
+ 150: JUMP_FORWARD         to 160
+ 152: RERAISE              
+ 154: COPY                 
+ 156: POP_EXCEPT           
+ 158: RERAISE              
+ 160: LOAD_GLOBAL          sys
+ 172: LOAD_ATTR            platform
+ 182: LOAD_METHOD          startswith
+ 204: LOAD_CONST           'win'
+ 206: PRECALL              
+ 210: CALL                 
+ 220: POP_JUMP_FORWARD_IF_TRUE to 264
+ 222: LOAD_GLOBAL          NULL + set
+ 234: LOAD_FAST            contents
+ 236: PRECALL              
+ 240: CALL                 
+ 250: LOAD_FAST            self
+ 252: STORE_ATTR           _path_cache
+ 262: JUMP_FORWARD         to 498
+ 264: LOAD_GLOBAL          NULL + set
+ 276: PRECALL              
+ 280: CALL                 
+ 290: STORE_FAST           lower_suffix_contents
+ 292: LOAD_FAST            contents
+ 294: GET_ITER             
+ 296: FOR_ITER             to 484
+ 298: STORE_FAST           item
+ 300: LOAD_FAST            item
+ 302: LOAD_METHOD          partition
+ 324: LOAD_CONST           '.'
+ 326: PRECALL              
+ 330: CALL                 
+ 340: UNPACK_SEQUENCE      
+ 344: STORE_FAST           name
+ 346: STORE_FAST           dot
+ 348: STORE_FAST           suffix
+ 350: LOAD_FAST            dot
+ 352: POP_JUMP_FORWARD_IF_FALSE to 436
+ 354: LOAD_CONST           '{}.{}'
+ 356: LOAD_METHOD          format
+ 378: LOAD_FAST            name
+ 380: LOAD_FAST            suffix
+ 382: LOAD_METHOD          lower
+ 404: PRECALL              
+ 408: CALL                 
+ 418: PRECALL              
+ 422: CALL                 
+ 432: STORE_FAST           new_name
+ 434: JUMP_FORWARD         to 440
+ 436: LOAD_FAST            name
+ 438: STORE_FAST           new_name
+ 440: LOAD_FAST            lower_suffix_contents
+ 442: LOAD_METHOD          add
+ 464: LOAD_FAST            new_name
+ 466: PRECALL              
+ 470: CALL                 
+ 480: POP_TOP              
+ 482: JUMP_BACKWARD        to 296
+ 484: LOAD_FAST            lower_suffix_contents
+ 486: LOAD_FAST            self
+ 488: STORE_ATTR           _path_cache
+ 498: LOAD_GLOBAL          sys
+ 510: LOAD_ATTR            platform
+ 520: LOAD_METHOD          startswith
+ 542: LOAD_GLOBAL          _CASE_INSENSITIVE_PLATFORMS
+ 554: PRECALL              
+ 558: CALL                 
+ 568: POP_JUMP_FORWARD_IF_FALSE to 608
+ 570: LOAD_CONST           <code object <setcomp> at 0x000002406945E010, file "importlib\_bootstrap_external.py", line 1684>
+ 572: MAKE_FUNCTION        
+ 574: LOAD_FAST            contents
+ 576: GET_ITER             
+ 578: PRECALL              
+ 582: CALL                 
+ 592: LOAD_FAST            self
+ 594: STORE_ATTR           _relaxed_path_cache
+ 604: LOAD_CONST           None
+ 606: RETURN_VALUE         
+ 608: LOAD_CONST           None
+ 610: RETURN_VALUE         

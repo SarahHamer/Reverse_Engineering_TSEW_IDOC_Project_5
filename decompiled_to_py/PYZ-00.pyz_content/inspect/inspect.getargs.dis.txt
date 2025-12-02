@@ -1,0 +1,98 @@
+# Disassembly for inspect.getargs
+# From module file: inspect
+
+## co_consts:
+("Get information about the arguments accepted by a code object.\n\n    Three things are returned: (args, varargs, varkw), where\n    'args' is the list of argument names. Keyword-only arguments are\n    appended. 'varargs' and 'varkw' are the names of the * and **\n    arguments or None.", '{!r} is not a code object', None, 0, 1)
+
+## co_names:
+('iscode', 'TypeError', 'format', 'co_varnames', 'co_argcount', 'co_kwonlyargcount', 'list', 'co_flags', 'CO_VARARGS', 'CO_VARKEYWORDS', 'Arguments')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + iscode
+  14: LOAD_FAST            co
+  16: PRECALL              
+  20: CALL                 
+  30: POP_JUMP_FORWARD_IF_TRUE to 100
+  32: LOAD_GLOBAL          NULL + TypeError
+  44: LOAD_CONST           '{!r} is not a code object'
+  46: LOAD_METHOD          format
+  68: LOAD_FAST            co
+  70: PRECALL              
+  74: CALL                 
+  84: PRECALL              
+  88: CALL                 
+  98: RAISE_VARARGS        
+ 100: LOAD_FAST            co
+ 102: LOAD_ATTR            co_varnames
+ 112: STORE_FAST           names
+ 114: LOAD_FAST            co
+ 116: LOAD_ATTR            co_argcount
+ 126: STORE_FAST           nargs
+ 128: LOAD_FAST            co
+ 130: LOAD_ATTR            co_kwonlyargcount
+ 140: STORE_FAST           nkwargs
+ 142: LOAD_GLOBAL          NULL + list
+ 154: LOAD_FAST            names
+ 156: LOAD_CONST           None
+ 158: LOAD_FAST            nargs
+ 160: BUILD_SLICE          
+ 162: BINARY_SUBSCR        
+ 172: PRECALL              
+ 176: CALL                 
+ 186: STORE_FAST           args
+ 188: LOAD_GLOBAL          NULL + list
+ 200: LOAD_FAST            names
+ 202: LOAD_FAST            nargs
+ 204: LOAD_FAST            nargs
+ 206: LOAD_FAST            nkwargs
+ 208: BINARY_OP            +
+ 212: BUILD_SLICE          
+ 214: BINARY_SUBSCR        
+ 224: PRECALL              
+ 228: CALL                 
+ 238: STORE_FAST           kwonlyargs
+ 240: LOAD_CONST           0
+ 242: STORE_FAST           step
+ 244: LOAD_FAST            nargs
+ 246: LOAD_FAST            nkwargs
+ 248: BINARY_OP            +=
+ 252: STORE_FAST           nargs
+ 254: LOAD_CONST           None
+ 256: STORE_FAST           varargs
+ 258: LOAD_FAST            co
+ 260: LOAD_ATTR            co_flags
+ 270: LOAD_GLOBAL          CO_VARARGS
+ 282: BINARY_OP            &
+ 286: POP_JUMP_FORWARD_IF_FALSE to 324
+ 288: LOAD_FAST            co
+ 290: LOAD_ATTR            co_varnames
+ 300: LOAD_FAST            nargs
+ 302: BINARY_SUBSCR        
+ 312: STORE_FAST           varargs
+ 314: LOAD_FAST            nargs
+ 316: LOAD_CONST           1
+ 318: BINARY_OP            +
+ 322: STORE_FAST           nargs
+ 324: LOAD_CONST           None
+ 326: STORE_FAST           varkw
+ 328: LOAD_FAST            co
+ 330: LOAD_ATTR            co_flags
+ 340: LOAD_GLOBAL          CO_VARKEYWORDS
+ 352: BINARY_OP            &
+ 356: POP_JUMP_FORWARD_IF_FALSE to 384
+ 358: LOAD_FAST            co
+ 360: LOAD_ATTR            co_varnames
+ 370: LOAD_FAST            nargs
+ 372: BINARY_SUBSCR        
+ 382: STORE_FAST           varkw
+ 384: LOAD_GLOBAL          NULL + Arguments
+ 396: LOAD_FAST            args
+ 398: LOAD_FAST            kwonlyargs
+ 400: BINARY_OP            +
+ 404: LOAD_FAST            varargs
+ 406: LOAD_FAST            varkw
+ 408: PRECALL              
+ 412: CALL                 
+ 422: RETURN_VALUE         

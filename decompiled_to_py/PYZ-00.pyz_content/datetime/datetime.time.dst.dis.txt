@@ -1,0 +1,32 @@
+# Disassembly for datetime.time.dst
+# From module file: datetime
+
+## co_consts:
+("Return 0 if DST is not in effect, or the DST offset (as timedelta\n        positive eastward) if DST is in effect.\n\n        This is purely informational; the DST offset has already been added to\n        the UTC offset returned by utcoffset() if applicable, so there's no\n        need to consult dst() unless you're interested in displaying the DST\n        info.\n        ", None, 'dst')
+
+## co_names:
+('_tzinfo', 'dst', '_check_utc_offset')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _tzinfo
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 20
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            _tzinfo
+  32: LOAD_METHOD          dst
+  54: LOAD_CONST           None
+  56: PRECALL              
+  60: CALL                 
+  70: STORE_FAST           offset
+  72: LOAD_GLOBAL          NULL + _check_utc_offset
+  84: LOAD_CONST           'dst'
+  86: LOAD_FAST            offset
+  88: PRECALL              
+  92: CALL                 
+ 102: POP_TOP              
+ 104: LOAD_FAST            offset
+ 106: RETURN_VALUE         

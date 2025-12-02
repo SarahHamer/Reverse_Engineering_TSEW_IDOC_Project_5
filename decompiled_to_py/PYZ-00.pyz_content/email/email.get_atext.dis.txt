@@ -1,0 +1,58 @@
+# Disassembly for email.get_atext
+# From module file: email._header_value_parser
+
+## co_consts:
+("atext = <matches _atext_matcher>\n\n    We allow any non-ATOM_ENDS in atext, but add an InvalidATextDefect to\n    the token's defects list if we find non-atext characters.\n    ", "expected atext but found '{}'", None, 'atext')
+
+## co_names:
+('_non_atom_end_matcher', 'errors', 'HeaderParseError', 'format', 'group', 'len', 'ValueTerminal', '_validate_xtext')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _non_atom_end_matcher
+  14: LOAD_FAST            value
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           m
+  32: LOAD_FAST            m
+  34: POP_JUMP_FORWARD_IF_TRUE to 114
+  36: LOAD_GLOBAL          NULL + errors
+  48: LOAD_ATTR            HeaderParseError
+  58: LOAD_CONST           "expected atext but found '{}'"
+  60: LOAD_METHOD          format
+  82: LOAD_FAST            value
+  84: PRECALL              
+  88: CALL                 
+  98: PRECALL              
+ 102: CALL                 
+ 112: RAISE_VARARGS        
+ 114: LOAD_FAST            m
+ 116: LOAD_METHOD          group
+ 138: PRECALL              
+ 142: CALL                 
+ 152: STORE_FAST           atext
+ 154: LOAD_FAST            value
+ 156: LOAD_GLOBAL          NULL + len
+ 168: LOAD_FAST            atext
+ 170: PRECALL              
+ 174: CALL                 
+ 184: LOAD_CONST           None
+ 186: BUILD_SLICE          
+ 188: BINARY_SUBSCR        
+ 198: STORE_FAST           value
+ 200: LOAD_GLOBAL          NULL + ValueTerminal
+ 212: LOAD_FAST            atext
+ 214: LOAD_CONST           'atext'
+ 216: PRECALL              
+ 220: CALL                 
+ 230: STORE_FAST           atext
+ 232: LOAD_GLOBAL          NULL + _validate_xtext
+ 244: LOAD_FAST            atext
+ 246: PRECALL              
+ 250: CALL                 
+ 260: POP_TOP              
+ 262: LOAD_FAST            atext
+ 264: LOAD_FAST            value
+ 266: BUILD_TUPLE          
+ 268: RETURN_VALUE         

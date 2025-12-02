@@ -1,0 +1,88 @@
+# Disassembly for getpass.win_getpass
+# From module file: getpass
+
+## co_consts:
+('Prompt for password with echo off, using Windows getwch().', '', 1, '\r', '\n', '\x03', '\x08', None, -1)
+
+## co_names:
+('sys', 'stdin', '__stdin__', 'fallback_getpass', 'msvcrt', 'putwch', 'getwch', 'KeyboardInterrupt')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          sys
+  14: LOAD_ATTR            stdin
+  24: LOAD_GLOBAL          sys
+  36: LOAD_ATTR            __stdin__
+  46: IS_OP                
+  48: POP_JUMP_FORWARD_IF_FALSE to 82
+  50: LOAD_GLOBAL          NULL + fallback_getpass
+  62: LOAD_FAST            prompt
+  64: LOAD_FAST            stream
+  66: PRECALL              
+  70: CALL                 
+  80: RETURN_VALUE         
+  82: LOAD_FAST            prompt
+  84: GET_ITER             
+  86: FOR_ITER             to 132
+  88: STORE_FAST           c
+  90: LOAD_GLOBAL          NULL + msvcrt
+ 102: LOAD_ATTR            putwch
+ 112: LOAD_FAST            c
+ 114: PRECALL              
+ 118: CALL                 
+ 128: POP_TOP              
+ 130: JUMP_BACKWARD        to 86
+ 132: LOAD_CONST           ''
+ 134: STORE_FAST           pw
+ 136: NOP                  
+ 138: LOAD_GLOBAL          NULL + msvcrt
+ 150: LOAD_ATTR            getwch
+ 160: PRECALL              
+ 164: CALL                 
+ 174: STORE_FAST           c
+ 176: LOAD_FAST            c
+ 178: LOAD_CONST           '\r'
+ 180: COMPARE_OP           ==
+ 186: POP_JUMP_FORWARD_IF_TRUE to 200
+ 188: LOAD_FAST            c
+ 190: LOAD_CONST           '\n'
+ 192: COMPARE_OP           ==
+ 198: POP_JUMP_FORWARD_IF_FALSE to 202
+ 200: JUMP_FORWARD         to 274
+ 202: LOAD_FAST            c
+ 204: LOAD_CONST           '\x03'
+ 206: COMPARE_OP           ==
+ 212: POP_JUMP_FORWARD_IF_FALSE to 228
+ 214: LOAD_GLOBAL          KeyboardInterrupt
+ 226: RAISE_VARARGS        
+ 228: LOAD_FAST            c
+ 230: LOAD_CONST           '\x08'
+ 232: COMPARE_OP           ==
+ 238: POP_JUMP_FORWARD_IF_FALSE to 262
+ 240: LOAD_FAST            pw
+ 242: LOAD_CONST           None
+ 244: LOAD_CONST           -1
+ 246: BUILD_SLICE          
+ 248: BINARY_SUBSCR        
+ 258: STORE_FAST           pw
+ 260: JUMP_FORWARD         to 272
+ 262: LOAD_FAST            pw
+ 264: LOAD_FAST            c
+ 266: BINARY_OP            +
+ 270: STORE_FAST           pw
+ 272: JUMP_BACKWARD        to 138
+ 274: LOAD_GLOBAL          NULL + msvcrt
+ 286: LOAD_ATTR            putwch
+ 296: LOAD_CONST           '\r'
+ 298: PRECALL              
+ 302: CALL                 
+ 312: POP_TOP              
+ 314: LOAD_GLOBAL          NULL + msvcrt
+ 326: LOAD_ATTR            putwch
+ 336: LOAD_CONST           '\n'
+ 338: PRECALL              
+ 342: CALL                 
+ 352: POP_TOP              
+ 354: LOAD_FAST            pw
+ 356: RETURN_VALUE         

@@ -1,0 +1,62 @@
+# Disassembly for argparse._get_action_name
+# From module file: argparse
+
+## co_consts:
+(None, '/', '{', ',', '}')
+
+## co_names:
+('option_strings', 'join', 'metavar', 'SUPPRESS', 'dest', 'choices')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            argument
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 10
+   6: LOAD_CONST           None
+   8: RETURN_VALUE         
+  10: LOAD_FAST            argument
+  12: LOAD_ATTR            option_strings
+  22: POP_JUMP_FORWARD_IF_FALSE to 76
+  24: LOAD_CONST           '/'
+  26: LOAD_METHOD          join
+  48: LOAD_FAST            argument
+  50: LOAD_ATTR            option_strings
+  60: PRECALL              
+  64: CALL                 
+  74: RETURN_VALUE         
+  76: LOAD_FAST            argument
+  78: LOAD_ATTR            metavar
+  88: LOAD_CONST           None
+  90: LOAD_GLOBAL          SUPPRESS
+ 102: BUILD_TUPLE          
+ 104: CONTAINS_OP          
+ 106: POP_JUMP_FORWARD_IF_FALSE to 122
+ 108: LOAD_FAST            argument
+ 110: LOAD_ATTR            metavar
+ 120: RETURN_VALUE         
+ 122: LOAD_FAST            argument
+ 124: LOAD_ATTR            dest
+ 134: LOAD_CONST           None
+ 136: LOAD_GLOBAL          SUPPRESS
+ 148: BUILD_TUPLE          
+ 150: CONTAINS_OP          
+ 152: POP_JUMP_FORWARD_IF_FALSE to 168
+ 154: LOAD_FAST            argument
+ 156: LOAD_ATTR            dest
+ 166: RETURN_VALUE         
+ 168: LOAD_FAST            argument
+ 170: LOAD_ATTR            choices
+ 180: POP_JUMP_FORWARD_IF_FALSE to 246
+ 182: LOAD_CONST           '{'
+ 184: LOAD_CONST           ','
+ 186: LOAD_METHOD          join
+ 208: LOAD_FAST            argument
+ 210: LOAD_ATTR            choices
+ 220: PRECALL              
+ 224: CALL                 
+ 234: BINARY_OP            +
+ 238: LOAD_CONST           '}'
+ 240: BINARY_OP            +
+ 244: RETURN_VALUE         
+ 246: LOAD_CONST           None
+ 248: RETURN_VALUE         

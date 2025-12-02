@@ -1,0 +1,46 @@
+# Disassembly for datetime.datetime.timetuple
+# From module file: datetime
+
+## co_consts:
+('Return local time tuple compatible with time.localtime().', None, -1, 1, 0)
+
+## co_names:
+('dst', '_build_struct_time', 'year', 'month', 'day', 'hour', 'minute', 'second')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          dst
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           dst
+  42: LOAD_FAST            dst
+  44: POP_JUMP_FORWARD_IF_NOT_NONE to 52
+  46: LOAD_CONST           -1
+  48: STORE_FAST           dst
+  50: JUMP_FORWARD         to 66
+  52: LOAD_FAST            dst
+  54: POP_JUMP_FORWARD_IF_FALSE to 62
+  56: LOAD_CONST           1
+  58: STORE_FAST           dst
+  60: JUMP_FORWARD         to 66
+  62: LOAD_CONST           0
+  64: STORE_FAST           dst
+  66: LOAD_GLOBAL          NULL + _build_struct_time
+  78: LOAD_FAST            self
+  80: LOAD_ATTR            year
+  90: LOAD_FAST            self
+  92: LOAD_ATTR            month
+ 102: LOAD_FAST            self
+ 104: LOAD_ATTR            day
+ 114: LOAD_FAST            self
+ 116: LOAD_ATTR            hour
+ 126: LOAD_FAST            self
+ 128: LOAD_ATTR            minute
+ 138: LOAD_FAST            self
+ 140: LOAD_ATTR            second
+ 150: LOAD_FAST            dst
+ 152: PRECALL              
+ 156: CALL                 
+ 166: RETURN_VALUE         

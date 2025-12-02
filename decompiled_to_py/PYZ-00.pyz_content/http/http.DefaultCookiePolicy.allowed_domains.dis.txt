@@ -1,0 +1,15 @@
+# Disassembly for http.DefaultCookiePolicy.allowed_domains
+# From module file: http.cookiejar
+
+## co_consts:
+('Return None, or the sequence of allowed domains (as a tuple).',)
+
+## co_names:
+('_allowed_domains',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _allowed_domains
+  14: RETURN_VALUE         

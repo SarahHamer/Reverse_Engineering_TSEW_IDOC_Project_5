@@ -1,0 +1,123 @@
+# Disassembly for inspect._too_many
+# From module file: inspect
+
+## co_consts:
+(None, <code object <listcomp> at 0x00000240694657D0, file "inspect.py", line 1503>, 1, 'at least %d', True, 'from %d to %d', '', ' positional argument%s (and %d keyword-only argument%s)', 's', '%s() takes %s positional argument%s but %d%s %s given', 'was', 'were')
+
+## co_names:
+('len', 'str', 'TypeError')
+
+## bytecode:
+
+   0: MAKE_CELL            values
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + len
+  16: LOAD_FAST            args
+  18: PRECALL              
+  22: CALL                 
+  32: LOAD_FAST            defcount
+  34: BINARY_OP            -
+  38: STORE_FAST           atleast
+  40: LOAD_GLOBAL          NULL + len
+  52: LOAD_CLOSURE         values
+  54: BUILD_TUPLE          
+  56: LOAD_CONST           <code object <listcomp> at 0x00000240694657D0, file "inspect.py", line 1503>
+  58: MAKE_FUNCTION        closure
+  60: LOAD_FAST            kwonly
+  62: GET_ITER             
+  64: PRECALL              
+  68: CALL                 
+  78: PRECALL              
+  82: CALL                 
+  92: STORE_FAST           kwonly_given
+  94: LOAD_FAST            varargs
+  96: POP_JUMP_FORWARD_IF_FALSE to 124
+  98: LOAD_FAST            atleast
+ 100: LOAD_CONST           1
+ 102: COMPARE_OP           !=
+ 108: STORE_FAST           plural
+ 110: LOAD_CONST           'at least %d'
+ 112: LOAD_FAST            atleast
+ 114: BUILD_TUPLE          
+ 116: BINARY_OP            %
+ 120: STORE_FAST           sig
+ 122: JUMP_FORWARD         to 268
+ 124: LOAD_FAST            defcount
+ 126: POP_JUMP_FORWARD_IF_FALSE to 174
+ 128: LOAD_CONST           True
+ 130: STORE_FAST           plural
+ 132: LOAD_CONST           'from %d to %d'
+ 134: LOAD_FAST            atleast
+ 136: LOAD_GLOBAL          NULL + len
+ 148: LOAD_FAST            args
+ 150: PRECALL              
+ 154: CALL                 
+ 164: BUILD_TUPLE          
+ 166: BINARY_OP            %
+ 170: STORE_FAST           sig
+ 172: JUMP_FORWARD         to 268
+ 174: LOAD_GLOBAL          NULL + len
+ 186: LOAD_FAST            args
+ 188: PRECALL              
+ 192: CALL                 
+ 202: LOAD_CONST           1
+ 204: COMPARE_OP           !=
+ 210: STORE_FAST           plural
+ 212: LOAD_GLOBAL          NULL + str
+ 224: LOAD_GLOBAL          NULL + len
+ 236: LOAD_FAST            args
+ 238: PRECALL              
+ 242: CALL                 
+ 252: PRECALL              
+ 256: CALL                 
+ 266: STORE_FAST           sig
+ 268: LOAD_CONST           ''
+ 270: STORE_FAST           kwonly_sig
+ 272: LOAD_FAST            kwonly_given
+ 274: POP_JUMP_FORWARD_IF_FALSE to 328
+ 276: LOAD_CONST           ' positional argument%s (and %d keyword-only argument%s)'
+ 278: STORE_FAST           msg
+ 280: LOAD_FAST            msg
+ 282: LOAD_FAST            given
+ 284: LOAD_CONST           1
+ 286: COMPARE_OP           !=
+ 292: POP_JUMP_FORWARD_IF_FALSE to 298
+ 294: LOAD_CONST           's'
+ 296: JUMP_FORWARD         to 300
+ 298: LOAD_CONST           ''
+ 300: LOAD_FAST            kwonly_given
+ 302: LOAD_FAST            kwonly_given
+ 304: LOAD_CONST           1
+ 306: COMPARE_OP           !=
+ 312: POP_JUMP_FORWARD_IF_FALSE to 318
+ 314: LOAD_CONST           's'
+ 316: JUMP_FORWARD         to 320
+ 318: LOAD_CONST           ''
+ 320: BUILD_TUPLE          
+ 322: BINARY_OP            %
+ 326: STORE_FAST           kwonly_sig
+ 328: LOAD_GLOBAL          NULL + TypeError
+ 340: LOAD_CONST           '%s() takes %s positional argument%s but %d%s %s given'
+ 342: LOAD_FAST            f_name
+ 344: LOAD_FAST            sig
+ 346: LOAD_FAST            plural
+ 348: POP_JUMP_FORWARD_IF_FALSE to 354
+ 350: LOAD_CONST           's'
+ 352: JUMP_FORWARD         to 356
+ 354: LOAD_CONST           ''
+ 356: LOAD_FAST            given
+ 358: LOAD_FAST            kwonly_sig
+ 360: LOAD_FAST            given
+ 362: LOAD_CONST           1
+ 364: COMPARE_OP           ==
+ 370: POP_JUMP_FORWARD_IF_FALSE to 380
+ 372: LOAD_FAST            kwonly_given
+ 374: POP_JUMP_FORWARD_IF_TRUE to 380
+ 376: LOAD_CONST           'was'
+ 378: JUMP_FORWARD         to 382
+ 380: LOAD_CONST           'were'
+ 382: BUILD_TUPLE          
+ 384: BINARY_OP            %
+ 388: PRECALL              
+ 392: CALL                 
+ 402: RAISE_VARARGS        

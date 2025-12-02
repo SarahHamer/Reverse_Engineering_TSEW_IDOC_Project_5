@@ -1,0 +1,37 @@
+# Disassembly for subprocess.CompletedProcess
+# From module file: subprocess
+
+## co_consts:
+('CompletedProcess', 'A process that has finished running.\n\n    This is returned by run().\n\n    Attributes:\n      args: The list or str args passed to run().\n      returncode: The exit code of the process, negative for signals.\n      stdout: The standard output (None if not captured).\n      stderr: The standard error (None if not captured).\n    ', None, <code object __init__ at 0x00000240693EB430, file "subprocess.py", line 481>, <code object __repr__ at 0x0000024068E1DBC0, file "subprocess.py", line 487>, <code object check_returncode at 0x000002406941A550, file "subprocess.py", line 499>, (None, None))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', '__repr__', 'classmethod', 'types', 'GenericAlias', '__class_getitem__', 'check_returncode')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'CompletedProcess'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'A process that has finished running.\n\n    This is returned by run().\n\n    Attributes:\n      args: The list or str args passed to run().\n      returncode: The exit code of the process, negative for signals.\n      stdout: The standard output (None if not captured).\n      stderr: The standard error (None if not captured).\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           (None, None)
+  16: LOAD_CONST           <code object __init__ at 0x00000240693EB430, file "subprocess.py", line 481>
+  18: MAKE_FUNCTION        defaults
+  20: STORE_NAME           __init__
+  22: LOAD_CONST           <code object __repr__ at 0x0000024068E1DBC0, file "subprocess.py", line 487>
+  24: MAKE_FUNCTION        
+  26: STORE_NAME           __repr__
+  28: PUSH_NULL            
+  30: LOAD_NAME            classmethod
+  32: LOAD_NAME            types
+  34: LOAD_ATTR            GenericAlias
+  44: PRECALL              
+  48: CALL                 
+  58: STORE_NAME           __class_getitem__
+  60: LOAD_CONST           <code object check_returncode at 0x000002406941A550, file "subprocess.py", line 499>
+  62: MAKE_FUNCTION        
+  64: STORE_NAME           check_returncode
+  66: LOAD_CONST           None
+  68: RETURN_VALUE         

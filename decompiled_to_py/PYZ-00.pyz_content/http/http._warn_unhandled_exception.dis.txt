@@ -1,0 +1,53 @@
+# Disassembly for http._warn_unhandled_exception
+# From module file: http.cookiejar
+
+## co_consts:
+(None, 0, 'http.cookiejar bug!\n%s', 2, ('stacklevel',))
+
+## co_names:
+('io', 'warnings', 'traceback', 'StringIO', 'print_exc', 'getvalue', 'warn')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           None
+   6: IMPORT_NAME          io
+   8: STORE_FAST           io
+  10: LOAD_CONST           0
+  12: LOAD_CONST           None
+  14: IMPORT_NAME          warnings
+  16: STORE_FAST           warnings
+  18: LOAD_CONST           0
+  20: LOAD_CONST           None
+  22: IMPORT_NAME          traceback
+  24: STORE_FAST           traceback
+  26: LOAD_FAST            io
+  28: LOAD_METHOD          StringIO
+  50: PRECALL              
+  54: CALL                 
+  64: STORE_FAST           f
+  66: LOAD_FAST            traceback
+  68: LOAD_METHOD          print_exc
+  90: LOAD_CONST           None
+  92: LOAD_FAST            f
+  94: PRECALL              
+  98: CALL                 
+ 108: POP_TOP              
+ 110: LOAD_FAST            f
+ 112: LOAD_METHOD          getvalue
+ 134: PRECALL              
+ 138: CALL                 
+ 148: STORE_FAST           msg
+ 150: LOAD_FAST            warnings
+ 152: LOAD_METHOD          warn
+ 174: LOAD_CONST           'http.cookiejar bug!\n%s'
+ 176: LOAD_FAST            msg
+ 178: BINARY_OP            %
+ 182: LOAD_CONST           2
+ 184: KW_NAMES             
+ 186: PRECALL              
+ 190: CALL                 
+ 200: POP_TOP              
+ 202: LOAD_CONST           None
+ 204: RETURN_VALUE         

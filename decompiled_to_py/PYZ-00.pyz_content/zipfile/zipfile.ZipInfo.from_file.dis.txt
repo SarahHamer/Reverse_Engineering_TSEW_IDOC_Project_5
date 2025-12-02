@@ -1,0 +1,156 @@
+# Disassembly for zipfile.ZipInfo.from_file
+# From module file: zipfile
+
+## co_consts:
+('Construct an appropriate ZipInfo for a file on the filesystem.\n\n        filename should be the path to a file or directory on the filesystem.\n\n        arcname is the name which it will have within the archive (by default,\n        this will be the same as filename, but without a drive letter and with\n        leading path separators removed).\n        ', 0, 6, 1980, (1980, 1, 1, 0, 0, 0), 2107, (2107, 12, 31, 23, 59, 59), None, 1, '/', 65535, 16)
+
+## co_names:
+('isinstance', 'os', 'PathLike', 'fspath', 'stat', 'S_ISDIR', 'st_mode', 'time', 'localtime', 'st_mtime', 'path', 'normpath', 'splitdrive', 'sep', 'altsep', 'external_attr', 'file_size', 'st_size')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            filename
+  16: LOAD_GLOBAL          os
+  28: LOAD_ATTR            PathLike
+  38: PRECALL              
+  42: CALL                 
+  52: POP_JUMP_FORWARD_IF_FALSE to 94
+  54: LOAD_GLOBAL          NULL + os
+  66: LOAD_ATTR            fspath
+  76: LOAD_FAST            filename
+  78: PRECALL              
+  82: CALL                 
+  92: STORE_FAST           filename
+  94: LOAD_GLOBAL          NULL + os
+ 106: LOAD_ATTR            stat
+ 116: LOAD_FAST            filename
+ 118: PRECALL              
+ 122: CALL                 
+ 132: STORE_FAST           st
+ 134: LOAD_GLOBAL          NULL + stat
+ 146: LOAD_ATTR            S_ISDIR
+ 156: LOAD_FAST            st
+ 158: LOAD_ATTR            st_mode
+ 168: PRECALL              
+ 172: CALL                 
+ 182: STORE_FAST           isdir
+ 184: LOAD_GLOBAL          NULL + time
+ 196: LOAD_ATTR            localtime
+ 206: LOAD_FAST            st
+ 208: LOAD_ATTR            st_mtime
+ 218: PRECALL              
+ 222: CALL                 
+ 232: STORE_FAST           mtime
+ 234: LOAD_FAST            mtime
+ 236: LOAD_CONST           0
+ 238: LOAD_CONST           6
+ 240: BUILD_SLICE          
+ 242: BINARY_SUBSCR        
+ 252: STORE_FAST           date_time
+ 254: LOAD_FAST            strict_timestamps
+ 256: POP_JUMP_FORWARD_IF_TRUE to 288
+ 258: LOAD_FAST            date_time
+ 260: LOAD_CONST           0
+ 262: BINARY_SUBSCR        
+ 272: LOAD_CONST           1980
+ 274: COMPARE_OP           <
+ 280: POP_JUMP_FORWARD_IF_FALSE to 288
+ 282: LOAD_CONST           (1980, 1, 1, 0, 0, 0)
+ 284: STORE_FAST           date_time
+ 286: JUMP_FORWARD         to 320
+ 288: LOAD_FAST            strict_timestamps
+ 290: POP_JUMP_FORWARD_IF_TRUE to 320
+ 292: LOAD_FAST            date_time
+ 294: LOAD_CONST           0
+ 296: BINARY_SUBSCR        
+ 306: LOAD_CONST           2107
+ 308: COMPARE_OP           >
+ 314: POP_JUMP_FORWARD_IF_FALSE to 320
+ 316: LOAD_CONST           (2107, 12, 31, 23, 59, 59)
+ 318: STORE_FAST           date_time
+ 320: LOAD_FAST            arcname
+ 322: POP_JUMP_FORWARD_IF_NOT_NONE to 328
+ 324: LOAD_FAST            filename
+ 326: STORE_FAST           arcname
+ 328: LOAD_GLOBAL          os
+ 340: LOAD_ATTR            path
+ 350: LOAD_METHOD          normpath
+ 372: LOAD_GLOBAL          os
+ 384: LOAD_ATTR            path
+ 394: LOAD_METHOD          splitdrive
+ 416: LOAD_FAST            arcname
+ 418: PRECALL              
+ 422: CALL                 
+ 432: LOAD_CONST           1
+ 434: BINARY_SUBSCR        
+ 444: PRECALL              
+ 448: CALL                 
+ 458: STORE_FAST           arcname
+ 460: LOAD_FAST            arcname
+ 462: LOAD_CONST           0
+ 464: BINARY_SUBSCR        
+ 474: LOAD_GLOBAL          os
+ 486: LOAD_ATTR            sep
+ 496: LOAD_GLOBAL          os
+ 508: LOAD_ATTR            altsep
+ 518: BUILD_TUPLE          
+ 520: CONTAINS_OP          
+ 522: POP_JUMP_FORWARD_IF_FALSE to 608
+ 524: LOAD_FAST            arcname
+ 526: LOAD_CONST           1
+ 528: LOAD_CONST           None
+ 530: BUILD_SLICE          
+ 532: BINARY_SUBSCR        
+ 542: STORE_FAST           arcname
+ 544: LOAD_FAST            arcname
+ 546: LOAD_CONST           0
+ 548: BINARY_SUBSCR        
+ 558: LOAD_GLOBAL          os
+ 570: LOAD_ATTR            sep
+ 580: LOAD_GLOBAL          os
+ 592: LOAD_ATTR            altsep
+ 602: BUILD_TUPLE          
+ 604: CONTAINS_OP          
+ 606: POP_JUMP_BACKWARD_IF_TRUE to 524
+ 608: LOAD_FAST            isdir
+ 610: POP_JUMP_FORWARD_IF_FALSE to 622
+ 612: LOAD_FAST            arcname
+ 614: LOAD_CONST           '/'
+ 616: BINARY_OP            +=
+ 620: STORE_FAST           arcname
+ 622: PUSH_NULL            
+ 624: LOAD_FAST            cls
+ 626: LOAD_FAST            arcname
+ 628: LOAD_FAST            date_time
+ 630: PRECALL              
+ 634: CALL                 
+ 644: STORE_FAST           zinfo
+ 646: LOAD_FAST            st
+ 648: LOAD_ATTR            st_mode
+ 658: LOAD_CONST           65535
+ 660: BINARY_OP            &
+ 664: LOAD_CONST           16
+ 666: BINARY_OP            <<
+ 670: LOAD_FAST            zinfo
+ 672: STORE_ATTR           external_attr
+ 682: LOAD_FAST            isdir
+ 684: POP_JUMP_FORWARD_IF_FALSE to 734
+ 686: LOAD_CONST           0
+ 688: LOAD_FAST            zinfo
+ 690: STORE_ATTR           file_size
+ 700: LOAD_FAST            zinfo
+ 702: COPY                 
+ 704: LOAD_ATTR            external_attr
+ 714: LOAD_CONST           16
+ 716: BINARY_OP            |=
+ 720: SWAP                 
+ 722: STORE_ATTR           external_attr
+ 732: JUMP_FORWARD         to 758
+ 734: LOAD_FAST            st
+ 736: LOAD_ATTR            st_size
+ 746: LOAD_FAST            zinfo
+ 748: STORE_ATTR           file_size
+ 758: LOAD_FAST            zinfo
+ 760: RETURN_VALUE         

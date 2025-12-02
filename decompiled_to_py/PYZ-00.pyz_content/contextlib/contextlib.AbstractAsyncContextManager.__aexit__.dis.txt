@@ -1,0 +1,16 @@
+# Disassembly for contextlib.AbstractAsyncContextManager.__aexit__
+# From module file: contextlib
+
+## co_consts:
+('Raise any exception triggered within the runtime context.', None)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_CONST           None
+   8: RETURN_VALUE         

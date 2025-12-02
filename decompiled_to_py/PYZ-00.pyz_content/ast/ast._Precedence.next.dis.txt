@@ -1,0 +1,34 @@
+# Disassembly for ast._Precedence.next
+# From module file: ast
+
+## co_consts:
+(None, 1)
+
+## co_names:
+('__class__', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            self
+   6: LOAD_METHOD          __class__
+  28: LOAD_FAST            self
+  30: LOAD_CONST           1
+  32: BINARY_OP            +
+  36: PRECALL              
+  40: CALL                 
+  50: RETURN_VALUE         
+  52: PUSH_EXC_INFO        
+  54: LOAD_GLOBAL          ValueError
+  66: CHECK_EXC_MATCH      
+  68: POP_JUMP_FORWARD_IF_FALSE to 80
+  70: POP_TOP              
+  72: LOAD_FAST            self
+  74: SWAP                 
+  76: POP_EXCEPT           
+  78: RETURN_VALUE         
+  80: RERAISE              
+  82: COPY                 
+  84: POP_EXCEPT           
+  86: RERAISE              

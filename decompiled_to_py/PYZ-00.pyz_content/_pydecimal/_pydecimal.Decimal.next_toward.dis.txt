@@ -1,0 +1,138 @@
+# Disassembly for _pydecimal.Decimal.next_toward
+# From module file: _pydecimal
+
+## co_consts:
+('Returns the number closest to self, in the direction towards other.\n\n        The result is the closest representable number to self\n        (excluding self) that is in the direction towards other,\n        unless both have the same value.  If the two operands are\n        numerically equal, then the result is a copy of self with the\n        sign set to be the same as the sign of other.\n        ', True, ('raiseit',), None, 0, -1, 'Infinite result from next_toward')
+
+## co_names:
+('_convert_other', 'getcontext', '_check_nans', '_cmp', 'copy_sign', 'next_plus', 'next_minus', '_isinfinity', '_raise_error', 'Overflow', '_sign', 'Inexact', 'Rounded', 'adjusted', 'Emin', 'Underflow', 'Subnormal', 'Clamped')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _convert_other
+  14: LOAD_FAST            other
+  16: LOAD_CONST           True
+  18: KW_NAMES             
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           other
+  36: LOAD_FAST            context
+  38: POP_JUMP_FORWARD_IF_NOT_NONE to 68
+  40: LOAD_GLOBAL          NULL + getcontext
+  52: PRECALL              
+  56: CALL                 
+  66: STORE_FAST           context
+  68: LOAD_FAST            self
+  70: LOAD_METHOD          _check_nans
+  92: LOAD_FAST            other
+  94: LOAD_FAST            context
+  96: PRECALL              
+ 100: CALL                 
+ 110: STORE_FAST           ans
+ 112: LOAD_FAST            ans
+ 114: POP_JUMP_FORWARD_IF_FALSE to 120
+ 116: LOAD_FAST            ans
+ 118: RETURN_VALUE         
+ 120: LOAD_FAST            self
+ 122: LOAD_METHOD          _cmp
+ 144: LOAD_FAST            other
+ 146: PRECALL              
+ 150: CALL                 
+ 160: STORE_FAST           comparison
+ 162: LOAD_FAST            comparison
+ 164: LOAD_CONST           0
+ 166: COMPARE_OP           ==
+ 172: POP_JUMP_FORWARD_IF_FALSE to 216
+ 174: LOAD_FAST            self
+ 176: LOAD_METHOD          copy_sign
+ 198: LOAD_FAST            other
+ 200: PRECALL              
+ 204: CALL                 
+ 214: RETURN_VALUE         
+ 216: LOAD_FAST            comparison
+ 218: LOAD_CONST           -1
+ 220: COMPARE_OP           ==
+ 226: POP_JUMP_FORWARD_IF_FALSE to 272
+ 228: LOAD_FAST            self
+ 230: LOAD_METHOD          next_plus
+ 252: LOAD_FAST            context
+ 254: PRECALL              
+ 258: CALL                 
+ 268: STORE_FAST           ans
+ 270: JUMP_FORWARD         to 314
+ 272: LOAD_FAST            self
+ 274: LOAD_METHOD          next_minus
+ 296: LOAD_FAST            context
+ 298: PRECALL              
+ 302: CALL                 
+ 312: STORE_FAST           ans
+ 314: LOAD_FAST            ans
+ 316: LOAD_METHOD          _isinfinity
+ 338: PRECALL              
+ 342: CALL                 
+ 352: POP_JUMP_FORWARD_IF_FALSE to 526
+ 354: LOAD_FAST            context
+ 356: LOAD_METHOD          _raise_error
+ 378: LOAD_GLOBAL          Overflow
+ 390: LOAD_CONST           'Infinite result from next_toward'
+ 392: LOAD_FAST            ans
+ 394: LOAD_ATTR            _sign
+ 404: PRECALL              
+ 408: CALL                 
+ 418: POP_TOP              
+ 420: LOAD_FAST            context
+ 422: LOAD_METHOD          _raise_error
+ 444: LOAD_GLOBAL          Inexact
+ 456: PRECALL              
+ 460: CALL                 
+ 470: POP_TOP              
+ 472: LOAD_FAST            context
+ 474: LOAD_METHOD          _raise_error
+ 496: LOAD_GLOBAL          Rounded
+ 508: PRECALL              
+ 512: CALL                 
+ 522: POP_TOP              
+ 524: JUMP_FORWARD         to 848
+ 526: LOAD_FAST            ans
+ 528: LOAD_METHOD          adjusted
+ 550: PRECALL              
+ 554: CALL                 
+ 564: LOAD_FAST            context
+ 566: LOAD_ATTR            Emin
+ 576: COMPARE_OP           <
+ 582: POP_JUMP_FORWARD_IF_FALSE to 848
+ 584: LOAD_FAST            context
+ 586: LOAD_METHOD          _raise_error
+ 608: LOAD_GLOBAL          Underflow
+ 620: PRECALL              
+ 624: CALL                 
+ 634: POP_TOP              
+ 636: LOAD_FAST            context
+ 638: LOAD_METHOD          _raise_error
+ 660: LOAD_GLOBAL          Subnormal
+ 672: PRECALL              
+ 676: CALL                 
+ 686: POP_TOP              
+ 688: LOAD_FAST            context
+ 690: LOAD_METHOD          _raise_error
+ 712: LOAD_GLOBAL          Inexact
+ 724: PRECALL              
+ 728: CALL                 
+ 738: POP_TOP              
+ 740: LOAD_FAST            context
+ 742: LOAD_METHOD          _raise_error
+ 764: LOAD_GLOBAL          Rounded
+ 776: PRECALL              
+ 780: CALL                 
+ 790: POP_TOP              
+ 792: LOAD_FAST            ans
+ 794: POP_JUMP_FORWARD_IF_TRUE to 848
+ 796: LOAD_FAST            context
+ 798: LOAD_METHOD          _raise_error
+ 820: LOAD_GLOBAL          Clamped
+ 832: PRECALL              
+ 836: CALL                 
+ 846: POP_TOP              
+ 848: LOAD_FAST            ans
+ 850: RETURN_VALUE         

@@ -1,0 +1,31 @@
+# Disassembly for importlib.invalidate_caches
+# From module file: importlib
+
+## co_consts:
+('Call the invalidate_caches() method on all meta path finders stored in\n    sys.meta_path (where implemented).', 'invalidate_caches', None)
+
+## co_names:
+('sys', 'meta_path', 'hasattr', 'invalidate_caches')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          sys
+  14: LOAD_ATTR            meta_path
+  24: GET_ITER             
+  26: FOR_ITER             to 104
+  28: STORE_FAST           finder
+  30: LOAD_GLOBAL          NULL + hasattr
+  42: LOAD_FAST            finder
+  44: LOAD_CONST           'invalidate_caches'
+  46: PRECALL              
+  50: CALL                 
+  60: POP_JUMP_FORWARD_IF_FALSE to 102
+  62: LOAD_FAST            finder
+  64: LOAD_METHOD          invalidate_caches
+  86: PRECALL              
+  90: CALL                 
+ 100: POP_TOP              
+ 102: JUMP_BACKWARD        to 26
+ 104: LOAD_CONST           None
+ 106: RETURN_VALUE         

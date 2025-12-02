@@ -1,0 +1,14 @@
+# Disassembly for typing._Immutable.__copy__
+# From module file: typing
+
+## co_consts:
+(None,)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: RETURN_VALUE         

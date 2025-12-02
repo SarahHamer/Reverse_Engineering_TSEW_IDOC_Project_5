@@ -1,0 +1,29 @@
+# Disassembly for gettext.NullTranslations.add_fallback
+# From module file: gettext
+
+## co_consts:
+(None,)
+
+## co_names:
+('_fallback', 'add_fallback')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _fallback
+  14: POP_JUMP_FORWARD_IF_FALSE to 72
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            _fallback
+  28: LOAD_METHOD          add_fallback
+  50: LOAD_FAST            fallback
+  52: PRECALL              
+  56: CALL                 
+  66: POP_TOP              
+  68: LOAD_CONST           None
+  70: RETURN_VALUE         
+  72: LOAD_FAST            fallback
+  74: LOAD_FAST            self
+  76: STORE_ATTR           _fallback
+  86: LOAD_CONST           None
+  88: RETURN_VALUE         

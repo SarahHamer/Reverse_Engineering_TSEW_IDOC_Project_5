@@ -1,0 +1,585 @@
+# Disassembly for zipfile
+# From module file: zipfile
+
+## co_consts:
+('\nRead and write ZIP files.\n\nXXX references to utf-8 need further investigation.\n', 0, None, ('BadZipFile', 'BadZipfile', 'error', 'ZIP_STORED', 'ZIP_DEFLATED', 'ZIP_BZIP2', 'ZIP_LZMA', 'is_zipfile', 'ZipInfo', 'ZipFile', 'PyZipFile', 'LargeZipFile', 'Path'), <code object BadZipFile at 0x0000024069496DB0, file "zipfile.py", line 43>, 'BadZipFile', <code object LargeZipFile at 0x0000024069496F50, file "zipfile.py", line 47>, 'LargeZipFile', 2147483647, 65535, 8, 12, 14, 20, 45, 46, 63, b'<4s4H2LH', b'PK\x05\x06', 1, 2, 3, 4, 5, 6, 7, 9, '<4s4B4HL2L5H2L', b'PK\x01\x02', 10, 11, 13, 15, 16, 17, 18, 32, 64, 2048, '<4s2B4HL2L2H', b'PK\x03\x04', '<4sLQL', b'PK\x06\x07', '<4sQ2H2L4Q', b'PK\x06\x06', 134695760, '<HH', <code object _strip_extra at 0x0000024068E1B9A0, file "zipfile.py", line 197>, <code object _check_zipfile at 0x000002406944A450, file "zipfile.py", line 218>, <code object is_zipfile at 0x00000240691F5890, file "zipfile.py", line 226>, <code object _EndRecData64 at 0x0000024068E3F220, file "zipfile.py", line 242>, <code object _EndRecData at 0x0000024068E11630, file "zipfile.py", line 285>, <code object ZipInfo at 0x000002406941B630, file "zipfile.py", line 346>, 'ZipInfo', <code object _gen_crc at 0x000002406944AEF0, file "zipfile.py", line 568>, <code object _ZipDecrypter at 0x00000240691F68D0, file "zipfile.py", line 584>, <code object LZMACompressor at 0x00000240694679F0, file "zipfile.py", line 622>, 'LZMACompressor', <code object LZMADecompressor at 0x0000024069466F70, file "zipfile.py", line 645>, 'LZMADecompressor', 'store', 'shrink', 'reduce', 'implode', 'tokenize', 'deflate', 'deflate64', 'bzip2', 'lzma', 'terse', 19, 'lz77', 97, 'wavpack', 98, 'ppmd', <code object _check_compression at 0x00000240691DBC00, file "zipfile.py", line 693>, <code object _get_compressor at 0x000002406952C9D0, file "zipfile.py", line 712>, <code object _get_decompressor at 0x0000024068DF6270, file "zipfile.py", line 728>, <code object _SharedFile at 0x000002406945F960, file "zipfile.py", line 746>, '_SharedFile', <code object _Tellable at 0x000002406945D890, file "zipfile.py", line 786>, '_Tellable', <code object ZipExtFile at 0x000002406922D680, file "zipfile.py", line 806>, 'ZipExtFile', <code object _ZipWriteFile at 0x00000240693EA430, file "zipfile.py", line 1135>, '_ZipWriteFile', <code object ZipFile at 0x0000024069365960, file "zipfile.py", line 1219>, 'ZipFile', <code object PyZipFile at 0x0000024069CF63D0, file "zipfile.py", line 1999>, 'PyZipFile', <code object _parents at 0x00000240693EAA30, file "zipfile.py", line 2173>, <code object _ancestry at 0x000002406942E5B0, file "zipfile.py", line 2192>, <code object _difference at 0x000002406944B220, file "zipfile.py", line 2218>, <code object CompleteDirs at 0x0000024069419590, file "zipfile.py", line 2226>, 'CompleteDirs', <code object FastLookup at 0x0000024069CF65B0, file "zipfile.py", line 2286>, 'FastLookup', <code object _extract_text_encoding at 0x0000024069CF66A0, file "zipfile.py", line 2305>, <code object Path at 0x0000024069498E30, file "zipfile.py", line 2310>, 'Path', <code object main at 0x0000024068DFAC80, file "zipfile.py", line 2498>, '__main__', (None,))
+
+## co_names:
+('__doc__', 'binascii', 'importlib.util', 'importlib', 'io', 'itertools', 'os', 'posixpath', 'shutil', 'stat', 'struct', 'sys', 'threading', 'time', 'contextlib', 'pathlib', 'zlib', 'crc32', 'ImportError', 'bz2', 'lzma', '__all__', 'Exception', 'BadZipFile', 'LargeZipFile', 'error', 'BadZipfile', 'ZIP64_LIMIT', 'ZIP_FILECOUNT_LIMIT', 'ZIP_MAX_COMMENT', 'ZIP_STORED', 'ZIP_DEFLATED', 'ZIP_BZIP2', 'ZIP_LZMA', 'DEFAULT_VERSION', 'ZIP64_VERSION', 'BZIP2_VERSION', 'LZMA_VERSION', 'MAX_EXTRACT_VERSION', 'structEndArchive', 'stringEndArchive', 'calcsize', 'sizeEndCentDir', '_ECD_SIGNATURE', '_ECD_DISK_NUMBER', '_ECD_DISK_START', '_ECD_ENTRIES_THIS_DISK', '_ECD_ENTRIES_TOTAL', '_ECD_SIZE', '_ECD_OFFSET', '_ECD_COMMENT_SIZE', '_ECD_COMMENT', '_ECD_LOCATION', 'structCentralDir', 'stringCentralDir', 'sizeCentralDir', '_CD_SIGNATURE', '_CD_CREATE_VERSION', '_CD_CREATE_SYSTEM', '_CD_EXTRACT_VERSION', '_CD_EXTRACT_SYSTEM', '_CD_FLAG_BITS', '_CD_COMPRESS_TYPE', '_CD_TIME', '_CD_DATE', '_CD_CRC', '_CD_COMPRESSED_SIZE', '_CD_UNCOMPRESSED_SIZE', '_CD_FILENAME_LENGTH', '_CD_EXTRA_FIELD_LENGTH', '_CD_COMMENT_LENGTH', '_CD_DISK_NUMBER_START', '_CD_INTERNAL_FILE_ATTRIBUTES', '_CD_EXTERNAL_FILE_ATTRIBUTES', '_CD_LOCAL_HEADER_OFFSET', '_MASK_ENCRYPTED', '_MASK_COMPRESS_OPTION_1', '_MASK_USE_DATA_DESCRIPTOR', '_MASK_COMPRESSED_PATCH', '_MASK_STRONG_ENCRYPTION', '_MASK_UTF_FILENAME', 'structFileHeader', 'stringFileHeader', 'sizeFileHeader', '_FH_SIGNATURE', '_FH_EXTRACT_VERSION', '_FH_EXTRACT_SYSTEM', '_FH_GENERAL_PURPOSE_FLAG_BITS', '_FH_COMPRESSION_METHOD', '_FH_LAST_MOD_TIME', '_FH_LAST_MOD_DATE', '_FH_CRC', '_FH_COMPRESSED_SIZE', '_FH_UNCOMPRESSED_SIZE', '_FH_FILENAME_LENGTH', '_FH_EXTRA_FIELD_LENGTH', 'structEndArchive64Locator', 'stringEndArchive64Locator', 'sizeEndCentDir64Locator', 'structEndArchive64', 'stringEndArchive64', 'sizeEndCentDir64', '_CD64_SIGNATURE', '_CD64_DIRECTORY_RECSIZE', '_CD64_CREATE_VERSION', '_CD64_EXTRACT_VERSION', '_CD64_DISK_NUMBER', '_CD64_DISK_NUMBER_START', '_CD64_NUMBER_ENTRIES_THIS_DISK', '_CD64_NUMBER_ENTRIES_TOTAL', '_CD64_DIRECTORY_SIZE', '_CD64_OFFSET_START_CENTDIR', '_DD_SIGNATURE', 'Struct', '_EXTRA_FIELD_STRUCT', '_strip_extra', '_check_zipfile', 'is_zipfile', '_EndRecData64', '_EndRecData', 'object', 'ZipInfo', '_crctable', '_gen_crc', '_ZipDecrypter', 'LZMACompressor', 'LZMADecompressor', 'compressor_names', '_check_compression', '_get_compressor', '_get_decompressor', '_SharedFile', '_Tellable', 'BufferedIOBase', 'ZipExtFile', '_ZipWriteFile', 'ZipFile', 'PyZipFile', '_parents', '_ancestry', 'dict', 'fromkeys', '_dedupe', '_difference', 'CompleteDirs', 'FastLookup', '_extract_text_encoding', 'Path', 'main', '__name__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '\nRead and write ZIP files.\n\nXXX references to utf-8 need further investigation.\n'
+   4: STORE_NAME           __doc__
+   6: LOAD_CONST           0
+   8: LOAD_CONST           None
+  10: IMPORT_NAME          binascii
+  12: STORE_NAME           binascii
+  14: LOAD_CONST           0
+  16: LOAD_CONST           None
+  18: IMPORT_NAME          importlib.util
+  20: STORE_NAME           importlib
+  22: LOAD_CONST           0
+  24: LOAD_CONST           None
+  26: IMPORT_NAME          io
+  28: STORE_NAME           io
+  30: LOAD_CONST           0
+  32: LOAD_CONST           None
+  34: IMPORT_NAME          itertools
+  36: STORE_NAME           itertools
+  38: LOAD_CONST           0
+  40: LOAD_CONST           None
+  42: IMPORT_NAME          os
+  44: STORE_NAME           os
+  46: LOAD_CONST           0
+  48: LOAD_CONST           None
+  50: IMPORT_NAME          posixpath
+  52: STORE_NAME           posixpath
+  54: LOAD_CONST           0
+  56: LOAD_CONST           None
+  58: IMPORT_NAME          shutil
+  60: STORE_NAME           shutil
+  62: LOAD_CONST           0
+  64: LOAD_CONST           None
+  66: IMPORT_NAME          stat
+  68: STORE_NAME           stat
+  70: LOAD_CONST           0
+  72: LOAD_CONST           None
+  74: IMPORT_NAME          struct
+  76: STORE_NAME           struct
+  78: LOAD_CONST           0
+  80: LOAD_CONST           None
+  82: IMPORT_NAME          sys
+  84: STORE_NAME           sys
+  86: LOAD_CONST           0
+  88: LOAD_CONST           None
+  90: IMPORT_NAME          threading
+  92: STORE_NAME           threading
+  94: LOAD_CONST           0
+  96: LOAD_CONST           None
+  98: IMPORT_NAME          time
+ 100: STORE_NAME           time
+ 102: LOAD_CONST           0
+ 104: LOAD_CONST           None
+ 106: IMPORT_NAME          contextlib
+ 108: STORE_NAME           contextlib
+ 110: LOAD_CONST           0
+ 112: LOAD_CONST           None
+ 114: IMPORT_NAME          pathlib
+ 116: STORE_NAME           pathlib
+ 118: NOP                  
+ 120: LOAD_CONST           0
+ 122: LOAD_CONST           None
+ 124: IMPORT_NAME          zlib
+ 126: STORE_NAME           zlib
+ 128: LOAD_NAME            zlib
+ 130: LOAD_ATTR            crc32
+ 140: STORE_NAME           crc32
+ 142: JUMP_FORWARD         to 184
+ 144: PUSH_EXC_INFO        
+ 146: LOAD_NAME            ImportError
+ 148: CHECK_EXC_MATCH      
+ 150: POP_JUMP_FORWARD_IF_FALSE to 176
+ 152: POP_TOP              
+ 154: LOAD_CONST           None
+ 156: STORE_NAME           zlib
+ 158: LOAD_NAME            binascii
+ 160: LOAD_ATTR            crc32
+ 170: STORE_NAME           crc32
+ 172: POP_EXCEPT           
+ 174: JUMP_FORWARD         to 184
+ 176: RERAISE              
+ 178: COPY                 
+ 180: POP_EXCEPT           
+ 182: RERAISE              
+ 184: NOP                  
+ 186: LOAD_CONST           0
+ 188: LOAD_CONST           None
+ 190: IMPORT_NAME          bz2
+ 192: STORE_NAME           bz2
+ 194: JUMP_FORWARD         to 222
+ 196: PUSH_EXC_INFO        
+ 198: LOAD_NAME            ImportError
+ 200: CHECK_EXC_MATCH      
+ 202: POP_JUMP_FORWARD_IF_FALSE to 214
+ 204: POP_TOP              
+ 206: LOAD_CONST           None
+ 208: STORE_NAME           bz2
+ 210: POP_EXCEPT           
+ 212: JUMP_FORWARD         to 222
+ 214: RERAISE              
+ 216: COPY                 
+ 218: POP_EXCEPT           
+ 220: RERAISE              
+ 222: NOP                  
+ 224: LOAD_CONST           0
+ 226: LOAD_CONST           None
+ 228: IMPORT_NAME          lzma
+ 230: STORE_NAME           lzma
+ 232: JUMP_FORWARD         to 260
+ 234: PUSH_EXC_INFO        
+ 236: LOAD_NAME            ImportError
+ 238: CHECK_EXC_MATCH      
+ 240: POP_JUMP_FORWARD_IF_FALSE to 252
+ 242: POP_TOP              
+ 244: LOAD_CONST           None
+ 246: STORE_NAME           lzma
+ 248: POP_EXCEPT           
+ 250: JUMP_FORWARD         to 260
+ 252: RERAISE              
+ 254: COPY                 
+ 256: POP_EXCEPT           
+ 258: RERAISE              
+ 260: BUILD_LIST           
+ 262: LOAD_CONST           ('BadZipFile', 'BadZipfile', 'error', 'ZIP_STORED', 'ZIP_DEFLATED', 'ZIP_BZIP2', 'ZIP_LZMA', 'is_zipfile', 'ZipInfo', 'ZipFile', 'PyZipFile', 'LargeZipFile', 'Path')
+ 264: LIST_EXTEND          
+ 266: STORE_NAME           __all__
+ 268: PUSH_NULL            
+ 270: LOAD_BUILD_CLASS     
+ 272: LOAD_CONST           <code object BadZipFile at 0x0000024069496DB0, file "zipfile.py", line 43>
+ 274: MAKE_FUNCTION        
+ 276: LOAD_CONST           'BadZipFile'
+ 278: LOAD_NAME            Exception
+ 280: PRECALL              
+ 284: CALL                 
+ 294: STORE_NAME           BadZipFile
+ 296: PUSH_NULL            
+ 298: LOAD_BUILD_CLASS     
+ 300: LOAD_CONST           <code object LargeZipFile at 0x0000024069496F50, file "zipfile.py", line 47>
+ 302: MAKE_FUNCTION        
+ 304: LOAD_CONST           'LargeZipFile'
+ 306: LOAD_NAME            Exception
+ 308: PRECALL              
+ 312: CALL                 
+ 322: STORE_NAME           LargeZipFile
+ 324: LOAD_NAME            BadZipFile
+ 326: COPY                 
+ 328: STORE_NAME           error
+ 330: STORE_NAME           BadZipfile
+ 332: LOAD_CONST           2147483647
+ 334: STORE_NAME           ZIP64_LIMIT
+ 336: LOAD_CONST           65535
+ 338: STORE_NAME           ZIP_FILECOUNT_LIMIT
+ 340: LOAD_CONST           65535
+ 342: STORE_NAME           ZIP_MAX_COMMENT
+ 344: LOAD_CONST           0
+ 346: STORE_NAME           ZIP_STORED
+ 348: LOAD_CONST           8
+ 350: STORE_NAME           ZIP_DEFLATED
+ 352: LOAD_CONST           12
+ 354: STORE_NAME           ZIP_BZIP2
+ 356: LOAD_CONST           14
+ 358: STORE_NAME           ZIP_LZMA
+ 360: LOAD_CONST           20
+ 362: STORE_NAME           DEFAULT_VERSION
+ 364: LOAD_CONST           45
+ 366: STORE_NAME           ZIP64_VERSION
+ 368: LOAD_CONST           46
+ 370: STORE_NAME           BZIP2_VERSION
+ 372: LOAD_CONST           63
+ 374: STORE_NAME           LZMA_VERSION
+ 376: LOAD_CONST           63
+ 378: STORE_NAME           MAX_EXTRACT_VERSION
+ 380: LOAD_CONST           b'<4s4H2LH'
+ 382: STORE_NAME           structEndArchive
+ 384: LOAD_CONST           b'PK\x05\x06'
+ 386: STORE_NAME           stringEndArchive
+ 388: PUSH_NULL            
+ 390: LOAD_NAME            struct
+ 392: LOAD_ATTR            calcsize
+ 402: LOAD_NAME            structEndArchive
+ 404: PRECALL              
+ 408: CALL                 
+ 418: STORE_NAME           sizeEndCentDir
+ 420: LOAD_CONST           0
+ 422: STORE_NAME           _ECD_SIGNATURE
+ 424: LOAD_CONST           1
+ 426: STORE_NAME           _ECD_DISK_NUMBER
+ 428: LOAD_CONST           2
+ 430: STORE_NAME           _ECD_DISK_START
+ 432: LOAD_CONST           3
+ 434: STORE_NAME           _ECD_ENTRIES_THIS_DISK
+ 436: LOAD_CONST           4
+ 438: STORE_NAME           _ECD_ENTRIES_TOTAL
+ 440: LOAD_CONST           5
+ 442: STORE_NAME           _ECD_SIZE
+ 444: LOAD_CONST           6
+ 446: STORE_NAME           _ECD_OFFSET
+ 448: LOAD_CONST           7
+ 450: STORE_NAME           _ECD_COMMENT_SIZE
+ 452: LOAD_CONST           8
+ 454: STORE_NAME           _ECD_COMMENT
+ 456: LOAD_CONST           9
+ 458: STORE_NAME           _ECD_LOCATION
+ 460: LOAD_CONST           '<4s4B4HL2L5H2L'
+ 462: STORE_NAME           structCentralDir
+ 464: LOAD_CONST           b'PK\x01\x02'
+ 466: STORE_NAME           stringCentralDir
+ 468: PUSH_NULL            
+ 470: LOAD_NAME            struct
+ 472: LOAD_ATTR            calcsize
+ 482: LOAD_NAME            structCentralDir
+ 484: PRECALL              
+ 488: CALL                 
+ 498: STORE_NAME           sizeCentralDir
+ 500: LOAD_CONST           0
+ 502: STORE_NAME           _CD_SIGNATURE
+ 504: LOAD_CONST           1
+ 506: STORE_NAME           _CD_CREATE_VERSION
+ 508: LOAD_CONST           2
+ 510: STORE_NAME           _CD_CREATE_SYSTEM
+ 512: LOAD_CONST           3
+ 514: STORE_NAME           _CD_EXTRACT_VERSION
+ 516: LOAD_CONST           4
+ 518: STORE_NAME           _CD_EXTRACT_SYSTEM
+ 520: LOAD_CONST           5
+ 522: STORE_NAME           _CD_FLAG_BITS
+ 524: LOAD_CONST           6
+ 526: STORE_NAME           _CD_COMPRESS_TYPE
+ 528: LOAD_CONST           7
+ 530: STORE_NAME           _CD_TIME
+ 532: LOAD_CONST           8
+ 534: STORE_NAME           _CD_DATE
+ 536: LOAD_CONST           9
+ 538: STORE_NAME           _CD_CRC
+ 540: LOAD_CONST           10
+ 542: STORE_NAME           _CD_COMPRESSED_SIZE
+ 544: LOAD_CONST           11
+ 546: STORE_NAME           _CD_UNCOMPRESSED_SIZE
+ 548: LOAD_CONST           12
+ 550: STORE_NAME           _CD_FILENAME_LENGTH
+ 552: LOAD_CONST           13
+ 554: STORE_NAME           _CD_EXTRA_FIELD_LENGTH
+ 556: LOAD_CONST           14
+ 558: STORE_NAME           _CD_COMMENT_LENGTH
+ 560: LOAD_CONST           15
+ 562: STORE_NAME           _CD_DISK_NUMBER_START
+ 564: LOAD_CONST           16
+ 566: STORE_NAME           _CD_INTERNAL_FILE_ATTRIBUTES
+ 568: LOAD_CONST           17
+ 570: STORE_NAME           _CD_EXTERNAL_FILE_ATTRIBUTES
+ 572: LOAD_CONST           18
+ 574: STORE_NAME           _CD_LOCAL_HEADER_OFFSET
+ 576: LOAD_CONST           1
+ 578: STORE_NAME           _MASK_ENCRYPTED
+ 580: LOAD_CONST           2
+ 582: STORE_NAME           _MASK_COMPRESS_OPTION_1
+ 584: LOAD_CONST           8
+ 586: STORE_NAME           _MASK_USE_DATA_DESCRIPTOR
+ 588: LOAD_CONST           32
+ 590: STORE_NAME           _MASK_COMPRESSED_PATCH
+ 592: LOAD_CONST           64
+ 594: STORE_NAME           _MASK_STRONG_ENCRYPTION
+ 596: LOAD_CONST           2048
+ 598: STORE_NAME           _MASK_UTF_FILENAME
+ 600: LOAD_CONST           '<4s2B4HL2L2H'
+ 602: STORE_NAME           structFileHeader
+ 604: LOAD_CONST           b'PK\x03\x04'
+ 606: STORE_NAME           stringFileHeader
+ 608: PUSH_NULL            
+ 610: LOAD_NAME            struct
+ 612: LOAD_ATTR            calcsize
+ 622: LOAD_NAME            structFileHeader
+ 624: PRECALL              
+ 628: CALL                 
+ 638: STORE_NAME           sizeFileHeader
+ 640: LOAD_CONST           0
+ 642: STORE_NAME           _FH_SIGNATURE
+ 644: LOAD_CONST           1
+ 646: STORE_NAME           _FH_EXTRACT_VERSION
+ 648: LOAD_CONST           2
+ 650: STORE_NAME           _FH_EXTRACT_SYSTEM
+ 652: LOAD_CONST           3
+ 654: STORE_NAME           _FH_GENERAL_PURPOSE_FLAG_BITS
+ 656: LOAD_CONST           4
+ 658: STORE_NAME           _FH_COMPRESSION_METHOD
+ 660: LOAD_CONST           5
+ 662: STORE_NAME           _FH_LAST_MOD_TIME
+ 664: LOAD_CONST           6
+ 666: STORE_NAME           _FH_LAST_MOD_DATE
+ 668: LOAD_CONST           7
+ 670: STORE_NAME           _FH_CRC
+ 672: LOAD_CONST           8
+ 674: STORE_NAME           _FH_COMPRESSED_SIZE
+ 676: LOAD_CONST           9
+ 678: STORE_NAME           _FH_UNCOMPRESSED_SIZE
+ 680: LOAD_CONST           10
+ 682: STORE_NAME           _FH_FILENAME_LENGTH
+ 684: LOAD_CONST           11
+ 686: STORE_NAME           _FH_EXTRA_FIELD_LENGTH
+ 688: LOAD_CONST           '<4sLQL'
+ 690: STORE_NAME           structEndArchive64Locator
+ 692: LOAD_CONST           b'PK\x06\x07'
+ 694: STORE_NAME           stringEndArchive64Locator
+ 696: PUSH_NULL            
+ 698: LOAD_NAME            struct
+ 700: LOAD_ATTR            calcsize
+ 710: LOAD_NAME            structEndArchive64Locator
+ 712: PRECALL              
+ 716: CALL                 
+ 726: STORE_NAME           sizeEndCentDir64Locator
+ 728: LOAD_CONST           '<4sQ2H2L4Q'
+ 730: STORE_NAME           structEndArchive64
+ 732: LOAD_CONST           b'PK\x06\x06'
+ 734: STORE_NAME           stringEndArchive64
+ 736: PUSH_NULL            
+ 738: LOAD_NAME            struct
+ 740: LOAD_ATTR            calcsize
+ 750: LOAD_NAME            structEndArchive64
+ 752: PRECALL              
+ 756: CALL                 
+ 766: STORE_NAME           sizeEndCentDir64
+ 768: LOAD_CONST           0
+ 770: STORE_NAME           _CD64_SIGNATURE
+ 772: LOAD_CONST           1
+ 774: STORE_NAME           _CD64_DIRECTORY_RECSIZE
+ 776: LOAD_CONST           2
+ 778: STORE_NAME           _CD64_CREATE_VERSION
+ 780: LOAD_CONST           3
+ 782: STORE_NAME           _CD64_EXTRACT_VERSION
+ 784: LOAD_CONST           4
+ 786: STORE_NAME           _CD64_DISK_NUMBER
+ 788: LOAD_CONST           5
+ 790: STORE_NAME           _CD64_DISK_NUMBER_START
+ 792: LOAD_CONST           6
+ 794: STORE_NAME           _CD64_NUMBER_ENTRIES_THIS_DISK
+ 796: LOAD_CONST           7
+ 798: STORE_NAME           _CD64_NUMBER_ENTRIES_TOTAL
+ 800: LOAD_CONST           8
+ 802: STORE_NAME           _CD64_DIRECTORY_SIZE
+ 804: LOAD_CONST           9
+ 806: STORE_NAME           _CD64_OFFSET_START_CENTDIR
+ 808: LOAD_CONST           134695760
+ 810: STORE_NAME           _DD_SIGNATURE
+ 812: PUSH_NULL            
+ 814: LOAD_NAME            struct
+ 816: LOAD_ATTR            Struct
+ 826: LOAD_CONST           '<HH'
+ 828: PRECALL              
+ 832: CALL                 
+ 842: STORE_NAME           _EXTRA_FIELD_STRUCT
+ 844: LOAD_CONST           <code object _strip_extra at 0x0000024068E1B9A0, file "zipfile.py", line 197>
+ 846: MAKE_FUNCTION        
+ 848: STORE_NAME           _strip_extra
+ 850: LOAD_CONST           <code object _check_zipfile at 0x000002406944A450, file "zipfile.py", line 218>
+ 852: MAKE_FUNCTION        
+ 854: STORE_NAME           _check_zipfile
+ 856: LOAD_CONST           <code object is_zipfile at 0x00000240691F5890, file "zipfile.py", line 226>
+ 858: MAKE_FUNCTION        
+ 860: STORE_NAME           is_zipfile
+ 862: LOAD_CONST           <code object _EndRecData64 at 0x0000024068E3F220, file "zipfile.py", line 242>
+ 864: MAKE_FUNCTION        
+ 866: STORE_NAME           _EndRecData64
+ 868: LOAD_CONST           <code object _EndRecData at 0x0000024068E11630, file "zipfile.py", line 285>
+ 870: MAKE_FUNCTION        
+ 872: STORE_NAME           _EndRecData
+ 874: PUSH_NULL            
+ 876: LOAD_BUILD_CLASS     
+ 878: LOAD_CONST           <code object ZipInfo at 0x000002406941B630, file "zipfile.py", line 346>
+ 880: MAKE_FUNCTION        
+ 882: LOAD_CONST           'ZipInfo'
+ 884: LOAD_NAME            object
+ 886: PRECALL              
+ 890: CALL                 
+ 900: STORE_NAME           ZipInfo
+ 902: LOAD_CONST           None
+ 904: STORE_GLOBAL         _crctable
+ 906: LOAD_CONST           <code object _gen_crc at 0x000002406944AEF0, file "zipfile.py", line 568>
+ 908: MAKE_FUNCTION        
+ 910: STORE_NAME           _gen_crc
+ 912: LOAD_CONST           <code object _ZipDecrypter at 0x00000240691F68D0, file "zipfile.py", line 584>
+ 914: MAKE_FUNCTION        
+ 916: STORE_NAME           _ZipDecrypter
+ 918: PUSH_NULL            
+ 920: LOAD_BUILD_CLASS     
+ 922: LOAD_CONST           <code object LZMACompressor at 0x00000240694679F0, file "zipfile.py", line 622>
+ 924: MAKE_FUNCTION        
+ 926: LOAD_CONST           'LZMACompressor'
+ 928: PRECALL              
+ 932: CALL                 
+ 942: STORE_NAME           LZMACompressor
+ 944: PUSH_NULL            
+ 946: LOAD_BUILD_CLASS     
+ 948: LOAD_CONST           <code object LZMADecompressor at 0x0000024069466F70, file "zipfile.py", line 645>
+ 950: MAKE_FUNCTION        
+ 952: LOAD_CONST           'LZMADecompressor'
+ 954: PRECALL              
+ 958: CALL                 
+ 968: STORE_NAME           LZMADecompressor
+ 970: BUILD_MAP            
+ 972: LOAD_CONST           0
+ 974: LOAD_CONST           'store'
+ 976: MAP_ADD              
+ 978: LOAD_CONST           1
+ 980: LOAD_CONST           'shrink'
+ 982: MAP_ADD              
+ 984: LOAD_CONST           2
+ 986: LOAD_CONST           'reduce'
+ 988: MAP_ADD              
+ 990: LOAD_CONST           3
+ 992: LOAD_CONST           'reduce'
+ 994: MAP_ADD              
+ 996: LOAD_CONST           4
+ 998: LOAD_CONST           'reduce'
+1000: MAP_ADD              
+1002: LOAD_CONST           5
+1004: LOAD_CONST           'reduce'
+1006: MAP_ADD              
+1008: LOAD_CONST           6
+1010: LOAD_CONST           'implode'
+1012: MAP_ADD              
+1014: LOAD_CONST           7
+1016: LOAD_CONST           'tokenize'
+1018: MAP_ADD              
+1020: LOAD_CONST           8
+1022: LOAD_CONST           'deflate'
+1024: MAP_ADD              
+1026: LOAD_CONST           9
+1028: LOAD_CONST           'deflate64'
+1030: MAP_ADD              
+1032: LOAD_CONST           10
+1034: LOAD_CONST           'implode'
+1036: MAP_ADD              
+1038: LOAD_CONST           12
+1040: LOAD_CONST           'bzip2'
+1042: MAP_ADD              
+1044: LOAD_CONST           14
+1046: LOAD_CONST           'lzma'
+1048: MAP_ADD              
+1050: LOAD_CONST           18
+1052: LOAD_CONST           'terse'
+1054: MAP_ADD              
+1056: LOAD_CONST           19
+1058: LOAD_CONST           'lz77'
+1060: MAP_ADD              
+1062: LOAD_CONST           97
+1064: LOAD_CONST           'wavpack'
+1066: MAP_ADD              
+1068: LOAD_CONST           98
+1070: LOAD_CONST           'ppmd'
+1072: MAP_ADD              
+1074: STORE_NAME           compressor_names
+1076: LOAD_CONST           <code object _check_compression at 0x00000240691DBC00, file "zipfile.py", line 693>
+1078: MAKE_FUNCTION        
+1080: STORE_NAME           _check_compression
+1082: LOAD_CONST           (None,)
+1084: LOAD_CONST           <code object _get_compressor at 0x000002406952C9D0, file "zipfile.py", line 712>
+1086: MAKE_FUNCTION        defaults
+1088: STORE_NAME           _get_compressor
+1090: LOAD_CONST           <code object _get_decompressor at 0x0000024068DF6270, file "zipfile.py", line 728>
+1092: MAKE_FUNCTION        
+1094: STORE_NAME           _get_decompressor
+1096: PUSH_NULL            
+1098: LOAD_BUILD_CLASS     
+1100: LOAD_CONST           <code object _SharedFile at 0x000002406945F960, file "zipfile.py", line 746>
+1102: MAKE_FUNCTION        
+1104: LOAD_CONST           '_SharedFile'
+1106: PRECALL              
+1110: CALL                 
+1120: STORE_NAME           _SharedFile
+1122: PUSH_NULL            
+1124: LOAD_BUILD_CLASS     
+1126: LOAD_CONST           <code object _Tellable at 0x000002406945D890, file "zipfile.py", line 786>
+1128: MAKE_FUNCTION        
+1130: LOAD_CONST           '_Tellable'
+1132: PRECALL              
+1136: CALL                 
+1146: STORE_NAME           _Tellable
+1148: PUSH_NULL            
+1150: LOAD_BUILD_CLASS     
+1152: LOAD_CONST           <code object ZipExtFile at 0x000002406922D680, file "zipfile.py", line 806>
+1154: MAKE_FUNCTION        
+1156: LOAD_CONST           'ZipExtFile'
+1158: LOAD_NAME            io
+1160: LOAD_ATTR            BufferedIOBase
+1170: PRECALL              
+1174: CALL                 
+1184: STORE_NAME           ZipExtFile
+1186: PUSH_NULL            
+1188: LOAD_BUILD_CLASS     
+1190: LOAD_CONST           <code object _ZipWriteFile at 0x00000240693EA430, file "zipfile.py", line 1135>
+1192: MAKE_FUNCTION        
+1194: LOAD_CONST           '_ZipWriteFile'
+1196: LOAD_NAME            io
+1198: LOAD_ATTR            BufferedIOBase
+1208: PRECALL              
+1212: CALL                 
+1222: STORE_NAME           _ZipWriteFile
+1224: PUSH_NULL            
+1226: LOAD_BUILD_CLASS     
+1228: LOAD_CONST           <code object ZipFile at 0x0000024069365960, file "zipfile.py", line 1219>
+1230: MAKE_FUNCTION        
+1232: LOAD_CONST           'ZipFile'
+1234: PRECALL              
+1238: CALL                 
+1248: STORE_NAME           ZipFile
+1250: PUSH_NULL            
+1252: LOAD_BUILD_CLASS     
+1254: LOAD_CONST           <code object PyZipFile at 0x0000024069CF63D0, file "zipfile.py", line 1999>
+1256: MAKE_FUNCTION        
+1258: LOAD_CONST           'PyZipFile'
+1260: LOAD_NAME            ZipFile
+1262: PRECALL              
+1266: CALL                 
+1276: STORE_NAME           PyZipFile
+1278: LOAD_CONST           <code object _parents at 0x00000240693EAA30, file "zipfile.py", line 2173>
+1280: MAKE_FUNCTION        
+1282: STORE_NAME           _parents
+1284: LOAD_CONST           <code object _ancestry at 0x000002406942E5B0, file "zipfile.py", line 2192>
+1286: MAKE_FUNCTION        
+1288: STORE_NAME           _ancestry
+1290: LOAD_NAME            dict
+1292: LOAD_ATTR            fromkeys
+1302: STORE_NAME           _dedupe
+1304: NOP                  
+1306: LOAD_CONST           <code object _difference at 0x000002406944B220, file "zipfile.py", line 2218>
+1308: MAKE_FUNCTION        
+1310: STORE_NAME           _difference
+1312: PUSH_NULL            
+1314: LOAD_BUILD_CLASS     
+1316: LOAD_CONST           <code object CompleteDirs at 0x0000024069419590, file "zipfile.py", line 2226>
+1318: MAKE_FUNCTION        
+1320: LOAD_CONST           'CompleteDirs'
+1322: LOAD_NAME            ZipFile
+1324: PRECALL              
+1328: CALL                 
+1338: STORE_NAME           CompleteDirs
+1340: PUSH_NULL            
+1342: LOAD_BUILD_CLASS     
+1344: LOAD_CONST           <code object FastLookup at 0x0000024069CF65B0, file "zipfile.py", line 2286>
+1346: MAKE_FUNCTION        
+1348: LOAD_CONST           'FastLookup'
+1350: LOAD_NAME            CompleteDirs
+1352: PRECALL              
+1356: CALL                 
+1366: STORE_NAME           FastLookup
+1368: LOAD_CONST           (None,)
+1370: LOAD_CONST           <code object _extract_text_encoding at 0x0000024069CF66A0, file "zipfile.py", line 2305>
+1372: MAKE_FUNCTION        defaults
+1374: STORE_NAME           _extract_text_encoding
+1376: PUSH_NULL            
+1378: LOAD_BUILD_CLASS     
+1380: LOAD_CONST           <code object Path at 0x0000024069498E30, file "zipfile.py", line 2310>
+1382: MAKE_FUNCTION        
+1384: LOAD_CONST           'Path'
+1386: PRECALL              
+1390: CALL                 
+1400: STORE_NAME           Path
+1402: LOAD_CONST           (None,)
+1404: LOAD_CONST           <code object main at 0x0000024068DFAC80, file "zipfile.py", line 2498>
+1406: MAKE_FUNCTION        defaults
+1408: STORE_NAME           main
+1410: LOAD_NAME            __name__
+1412: LOAD_CONST           '__main__'
+1414: COMPARE_OP           ==
+1420: POP_JUMP_FORWARD_IF_FALSE to 1446
+1422: PUSH_NULL            
+1424: LOAD_NAME            main
+1426: PRECALL              
+1430: CALL                 
+1440: POP_TOP              
+1442: LOAD_CONST           None
+1444: RETURN_VALUE         
+1446: LOAD_CONST           None
+1448: RETURN_VALUE         

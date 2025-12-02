@@ -1,0 +1,68 @@
+# Disassembly for importlib._find_spec_from_path
+# From module file: importlib.util
+
+## co_consts:
+("Return the spec for the specified module.\n\n    First, sys.modules is checked to see if the module was already imported. If\n    so, then sys.modules[name].__spec__ is returned. If that happens to be\n    set to None, then ValueError is raised. If the module is not in\n    sys.modules, then sys.meta_path is searched for a suitable spec with the\n    value of 'path' given to the finders. None is returned if no spec could\n    be found.\n\n    Dotted names do not have their parent packages implicitly imported. You will\n    most likely need to explicitly import all parent packages in the proper\n    order for a submodule to get the correct spec.\n\n    ", None, '{}.__spec__ is None', '{}.__spec__ is not set')
+
+## co_names:
+('sys', 'modules', '_find_spec', '__spec__', 'ValueError', 'format', 'AttributeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            name
+   4: LOAD_GLOBAL          sys
+  16: LOAD_ATTR            modules
+  26: CONTAINS_OP          
+  28: POP_JUMP_FORWARD_IF_FALSE to 62
+  30: LOAD_GLOBAL          NULL + _find_spec
+  42: LOAD_FAST            name
+  44: LOAD_FAST            path
+  46: PRECALL              
+  50: CALL                 
+  60: RETURN_VALUE         
+  62: LOAD_GLOBAL          sys
+  74: LOAD_ATTR            modules
+  84: LOAD_FAST            name
+  86: BINARY_SUBSCR        
+  96: STORE_FAST           module
+  98: LOAD_FAST            module
+ 100: POP_JUMP_FORWARD_IF_NOT_NONE to 106
+ 102: LOAD_CONST           None
+ 104: RETURN_VALUE         
+ 106: NOP                  
+ 108: LOAD_FAST            module
+ 110: LOAD_ATTR            __spec__
+ 120: STORE_FAST           spec
+ 122: LOAD_FAST            spec
+ 124: POP_JUMP_FORWARD_IF_NOT_NONE to 194
+ 126: LOAD_GLOBAL          NULL + ValueError
+ 138: LOAD_CONST           '{}.__spec__ is None'
+ 140: LOAD_METHOD          format
+ 162: LOAD_FAST            name
+ 164: PRECALL              
+ 168: CALL                 
+ 178: PRECALL              
+ 182: CALL                 
+ 192: RAISE_VARARGS        
+ 194: LOAD_FAST            spec
+ 196: RETURN_VALUE         
+ 198: PUSH_EXC_INFO        
+ 200: LOAD_GLOBAL          AttributeError
+ 212: CHECK_EXC_MATCH      
+ 214: POP_JUMP_FORWARD_IF_FALSE to 288
+ 216: POP_TOP              
+ 218: LOAD_GLOBAL          NULL + ValueError
+ 230: LOAD_CONST           '{}.__spec__ is not set'
+ 232: LOAD_METHOD          format
+ 254: LOAD_FAST            name
+ 256: PRECALL              
+ 260: CALL                 
+ 270: PRECALL              
+ 274: CALL                 
+ 284: LOAD_CONST           None
+ 286: RAISE_VARARGS        
+ 288: RERAISE              
+ 290: COPY                 
+ 292: POP_EXCEPT           
+ 294: RERAISE              

@@ -1,0 +1,71 @@
+# Disassembly for inspect._signature_bound_method
+# From module file: inspect
+
+## co_consts:
+('Private helper to transform signatures for unbound\n    functions to bound methods.\n    ', 0, 'invalid method signature', 1, None, 'invalid argument type', ('parameters',))
+
+## co_names:
+('tuple', 'parameters', 'values', 'kind', '_VAR_KEYWORD', '_KEYWORD_ONLY', 'ValueError', '_POSITIONAL_OR_KEYWORD', '_POSITIONAL_ONLY', '_VAR_POSITIONAL', 'replace')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + tuple
+  14: LOAD_FAST            sig
+  16: LOAD_ATTR            parameters
+  26: LOAD_METHOD          values
+  48: PRECALL              
+  52: CALL                 
+  62: PRECALL              
+  66: CALL                 
+  76: STORE_FAST           params
+  78: LOAD_FAST            params
+  80: POP_JUMP_FORWARD_IF_FALSE to 136
+  82: LOAD_FAST            params
+  84: LOAD_CONST           0
+  86: BINARY_SUBSCR        
+  96: LOAD_ATTR            kind
+ 106: LOAD_GLOBAL          _VAR_KEYWORD
+ 118: LOAD_GLOBAL          _KEYWORD_ONLY
+ 130: BUILD_TUPLE          
+ 132: CONTAINS_OP          
+ 134: POP_JUMP_FORWARD_IF_FALSE to 166
+ 136: LOAD_GLOBAL          NULL + ValueError
+ 148: LOAD_CONST           'invalid method signature'
+ 150: PRECALL              
+ 154: CALL                 
+ 164: RAISE_VARARGS        
+ 166: LOAD_FAST            params
+ 168: LOAD_CONST           0
+ 170: BINARY_SUBSCR        
+ 180: LOAD_ATTR            kind
+ 190: STORE_FAST           kind
+ 192: LOAD_FAST            kind
+ 194: LOAD_GLOBAL          _POSITIONAL_OR_KEYWORD
+ 206: LOAD_GLOBAL          _POSITIONAL_ONLY
+ 218: BUILD_TUPLE          
+ 220: CONTAINS_OP          
+ 222: POP_JUMP_FORWARD_IF_FALSE to 246
+ 224: LOAD_FAST            params
+ 226: LOAD_CONST           1
+ 228: LOAD_CONST           None
+ 230: BUILD_SLICE          
+ 232: BINARY_SUBSCR        
+ 242: STORE_FAST           params
+ 244: JUMP_FORWARD         to 294
+ 246: LOAD_FAST            kind
+ 248: LOAD_GLOBAL          _VAR_POSITIONAL
+ 260: IS_OP                
+ 262: POP_JUMP_FORWARD_IF_FALSE to 294
+ 264: LOAD_GLOBAL          NULL + ValueError
+ 276: LOAD_CONST           'invalid argument type'
+ 278: PRECALL              
+ 282: CALL                 
+ 292: RAISE_VARARGS        
+ 294: LOAD_FAST            sig
+ 296: LOAD_METHOD          replace
+ 318: LOAD_FAST            params
+ 320: KW_NAMES             
+ 322: PRECALL              
+ 326: CALL                 
+ 336: RETURN_VALUE         

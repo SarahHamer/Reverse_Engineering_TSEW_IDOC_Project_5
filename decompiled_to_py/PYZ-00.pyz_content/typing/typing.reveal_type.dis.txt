@@ -1,0 +1,29 @@
+# Disassembly for typing.reveal_type
+# From module file: typing
+
+## co_consts:
+('Reveal the inferred type of a variable.\n\n    When a static type checker encounters a call to ``reveal_type()``,\n    it will emit the inferred type of the argument::\n\n        x: int = 1\n        reveal_type(x)\n\n    Running a static type checker (e.g., mypy) on this example\n    will produce output similar to \'Revealed type is "builtins.int"\'.\n\n    At runtime, the function prints the runtime type of the\n    argument and returns it unchanged.\n    ', 'Runtime type is ', ('file',))
+
+## co_names:
+('print', 'type', '__name__', 'sys', 'stderr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + print
+  14: LOAD_CONST           'Runtime type is '
+  16: LOAD_GLOBAL          NULL + type
+  28: LOAD_FAST            obj
+  30: PRECALL              
+  34: CALL                 
+  44: LOAD_ATTR            __name__
+  54: FORMAT_VALUE         repr
+  56: BUILD_STRING         
+  58: LOAD_GLOBAL          sys
+  70: LOAD_ATTR            stderr
+  80: KW_NAMES             
+  82: PRECALL              
+  86: CALL                 
+  96: POP_TOP              
+  98: LOAD_FAST            obj
+ 100: RETURN_VALUE         

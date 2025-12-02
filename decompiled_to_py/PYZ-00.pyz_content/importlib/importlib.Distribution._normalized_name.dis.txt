@@ -1,0 +1,19 @@
+# Disassembly for importlib.Distribution._normalized_name
+# From module file: importlib.metadata
+
+## co_consts:
+('Return a normalized version of the name.',)
+
+## co_names:
+('Prepared', 'normalize', 'name')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          Prepared
+  14: LOAD_METHOD          normalize
+  36: LOAD_FAST            self
+  38: LOAD_ATTR            name
+  48: PRECALL              
+  52: CALL                 
+  62: RETURN_VALUE         

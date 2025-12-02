@@ -1,0 +1,35 @@
+# Disassembly for calendar.Calendar.iterweekdays
+# From module file: calendar
+
+## co_consts:
+('\n        Return an iterator for one week of weekday numbers starting with the\n        configured first one.\n        ', 7, None)
+
+## co_names:
+('range', 'firstweekday')
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_GLOBAL          NULL + range
+  18: LOAD_FAST            self
+  20: LOAD_ATTR            firstweekday
+  30: LOAD_FAST            self
+  32: LOAD_ATTR            firstweekday
+  42: LOAD_CONST           7
+  44: BINARY_OP            +
+  48: PRECALL              
+  52: CALL                 
+  62: GET_ITER             
+  64: FOR_ITER             to 84
+  66: STORE_FAST           i
+  68: LOAD_FAST            i
+  70: LOAD_CONST           7
+  72: BINARY_OP            %
+  76: YIELD_VALUE          
+  78: RESUME               
+  80: POP_TOP              
+  82: JUMP_BACKWARD        to 64
+  84: LOAD_CONST           None
+  86: RETURN_VALUE         

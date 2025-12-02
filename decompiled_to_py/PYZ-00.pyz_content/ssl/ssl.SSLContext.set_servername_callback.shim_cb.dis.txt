@@ -1,0 +1,27 @@
+# Disassembly for ssl.SSLContext.set_servername_callback.shim_cb
+# From module file: ssl
+
+## co_consts:
+(None,)
+
+## co_names:
+('_encode_hostname',)
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_DEREF           self
+   6: LOAD_METHOD          _encode_hostname
+  28: LOAD_FAST            servername
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_FAST           servername
+  46: PUSH_NULL            
+  48: LOAD_DEREF           server_name_callback
+  50: LOAD_FAST            sslobj
+  52: LOAD_FAST            servername
+  54: LOAD_FAST            sslctx
+  56: PRECALL              
+  60: CALL                 
+  70: RETURN_VALUE         

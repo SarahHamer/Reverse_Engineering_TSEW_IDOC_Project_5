@@ -1,0 +1,30 @@
+# Disassembly for email.add_charset
+# From module file: email.charset
+
+## co_consts:
+("Add character set properties to the global registry.\n\n    charset is the input character set, and must be the canonical name of a\n    character set.\n\n    Optional header_enc and body_enc is either Charset.QP for\n    quoted-printable, Charset.BASE64 for base64 encoding, Charset.SHORTEST for\n    the shortest of qp or base64 encoding, or None for no encoding.  SHORTEST\n    is only valid for header_enc.  It describes how message headers and\n    message bodies in the input charset are to be encoded.  Default is no\n    encoding.\n\n    Optional output_charset is the character set that the output should be\n    in.  Conversions will proceed from input charset, to Unicode, to the\n    output charset when the method Charset.convert() is called.  The default\n    is to output in the same character set as the input.\n\n    Both input_charset and output_charset must have Unicode codec entries in\n    the module's charset-to-codec mapping; use add_codec(charset, codecname)\n    to add codecs the module does not know about.  See the codecs module's\n    documentation for more information.\n    ", 'SHORTEST not allowed for body_enc', None)
+
+## co_names:
+('SHORTEST', 'ValueError', 'CHARSETS')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            body_enc
+   4: LOAD_GLOBAL          SHORTEST
+  16: COMPARE_OP           ==
+  22: POP_JUMP_FORWARD_IF_FALSE to 54
+  24: LOAD_GLOBAL          NULL + ValueError
+  36: LOAD_CONST           'SHORTEST not allowed for body_enc'
+  38: PRECALL              
+  42: CALL                 
+  52: RAISE_VARARGS        
+  54: LOAD_FAST            header_enc
+  56: LOAD_FAST            body_enc
+  58: LOAD_FAST            output_charset
+  60: BUILD_TUPLE          
+  62: LOAD_GLOBAL          CHARSETS
+  74: LOAD_FAST            charset
+  76: STORE_SUBSCR         
+  80: LOAD_CONST           None
+  82: RETURN_VALUE         

@@ -1,0 +1,18 @@
+# Disassembly for importlib._path_isfile
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Replacement for os.path.isfile.', 32768)
+
+## co_names:
+('_path_is_mode_type',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _path_is_mode_type
+  14: LOAD_FAST            path
+  16: LOAD_CONST           32768
+  18: PRECALL              
+  22: CALL                 
+  32: RETURN_VALUE         

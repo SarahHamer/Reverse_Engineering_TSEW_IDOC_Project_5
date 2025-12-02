@@ -1,0 +1,18 @@
+# Disassembly for tracemalloc._Traces.__contains__
+# From module file: tracemalloc
+
+## co_consts:
+(None,)
+
+## co_names:
+('_trace', '_traces')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            trace
+   4: LOAD_ATTR            _trace
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            _traces
+  26: CONTAINS_OP          
+  28: RETURN_VALUE         

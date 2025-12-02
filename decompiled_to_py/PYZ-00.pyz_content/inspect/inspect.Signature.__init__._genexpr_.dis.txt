@@ -1,0 +1,27 @@
+# Disassembly for inspect.Signature.__init__.<genexpr>
+# From module file: inspect
+
+## co_consts:
+(None,)
+
+## co_names:
+('name',)
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_FAST            .0
+   8: FOR_ITER             to 36
+  10: STORE_FAST           param
+  12: LOAD_FAST            param
+  14: LOAD_ATTR            name
+  24: LOAD_FAST            param
+  26: BUILD_TUPLE          
+  28: YIELD_VALUE          
+  30: RESUME               
+  32: POP_TOP              
+  34: JUMP_BACKWARD        to 8
+  36: LOAD_CONST           None
+  38: RETURN_VALUE         

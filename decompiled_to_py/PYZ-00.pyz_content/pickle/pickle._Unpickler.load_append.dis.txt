@@ -1,0 +1,32 @@
+# Disassembly for pickle._Unpickler.load_append
+# From module file: pickle
+
+## co_consts:
+(None, -1)
+
+## co_names:
+('stack', 'pop', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            stack
+  14: STORE_FAST           stack
+  16: LOAD_FAST            stack
+  18: LOAD_METHOD          pop
+  40: PRECALL              
+  44: CALL                 
+  54: STORE_FAST           value
+  56: LOAD_FAST            stack
+  58: LOAD_CONST           -1
+  60: BINARY_SUBSCR        
+  70: STORE_FAST           list
+  72: LOAD_FAST            list
+  74: LOAD_METHOD          append
+  96: LOAD_FAST            value
+  98: PRECALL              
+ 102: CALL                 
+ 112: POP_TOP              
+ 114: LOAD_CONST           None
+ 116: RETURN_VALUE         

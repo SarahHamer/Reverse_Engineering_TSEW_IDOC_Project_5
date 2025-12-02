@@ -1,0 +1,19 @@
+# Disassembly for ast._Unparser.visit_Delete.<lambda>
+# From module file: ast
+
+## co_consts:
+(None, ', ')
+
+## co_names:
+('write',)
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_DEREF           self
+   6: LOAD_METHOD          write
+  28: LOAD_CONST           ', '
+  30: PRECALL              
+  34: CALL                 
+  44: RETURN_VALUE         

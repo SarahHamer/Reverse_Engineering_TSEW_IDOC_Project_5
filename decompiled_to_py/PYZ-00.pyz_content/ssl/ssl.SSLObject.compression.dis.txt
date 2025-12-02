@@ -1,0 +1,18 @@
+# Disassembly for ssl.SSLObject.compression
+# From module file: ssl
+
+## co_consts:
+('Return the current compression algorithm in use, or ``None`` if\n        compression was not negotiated or not supported by one of the peers.',)
+
+## co_names:
+('_sslobj', 'compression')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _sslobj
+  14: LOAD_METHOD          compression
+  36: PRECALL              
+  40: CALL                 
+  50: RETURN_VALUE         

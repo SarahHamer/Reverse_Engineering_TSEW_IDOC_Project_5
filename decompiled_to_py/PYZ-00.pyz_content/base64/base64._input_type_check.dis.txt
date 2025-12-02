@@ -1,0 +1,86 @@
+# Disassembly for base64._input_type_check
+# From module file: base64
+
+## co_consts:
+(None, 'expected bytes-like object, not %s', ('c', 'b', 'B'), 'expected single byte elements, not ', ' from ', 1, 'expected 1-D data, not %d-D data from %s')
+
+## co_names:
+('memoryview', 'TypeError', '__class__', '__name__', 'format', 'ndim')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_GLOBAL          NULL + memoryview
+  16: LOAD_FAST            s
+  18: PRECALL              
+  22: CALL                 
+  32: STORE_FAST           m
+  34: JUMP_FORWARD         to 134
+  36: PUSH_EXC_INFO        
+  38: LOAD_GLOBAL          TypeError
+  50: CHECK_EXC_MATCH      
+  52: POP_JUMP_FORWARD_IF_FALSE to 126
+  54: STORE_FAST           err
+  56: LOAD_CONST           'expected bytes-like object, not %s'
+  58: LOAD_FAST            s
+  60: LOAD_ATTR            __class__
+  70: LOAD_ATTR            __name__
+  80: BINARY_OP            %
+  84: STORE_FAST           msg
+  86: LOAD_GLOBAL          NULL + TypeError
+  98: LOAD_FAST            msg
+ 100: PRECALL              
+ 104: CALL                 
+ 114: LOAD_FAST            err
+ 116: RAISE_VARARGS        
+ 118: LOAD_CONST           None
+ 120: STORE_FAST           err
+ 122: DELETE_FAST          err
+ 124: RERAISE              
+ 126: RERAISE              
+ 128: COPY                 
+ 130: POP_EXCEPT           
+ 132: RERAISE              
+ 134: LOAD_FAST            m
+ 136: LOAD_ATTR            format
+ 146: LOAD_CONST           ('c', 'b', 'B')
+ 148: CONTAINS_OP          
+ 150: POP_JUMP_FORWARD_IF_FALSE to 228
+ 152: LOAD_CONST           'expected single byte elements, not '
+ 154: LOAD_FAST            m
+ 156: LOAD_ATTR            format
+ 166: FORMAT_VALUE         repr
+ 168: LOAD_CONST           ' from '
+ 170: LOAD_FAST            s
+ 172: LOAD_ATTR            __class__
+ 182: LOAD_ATTR            __name__
+ 192: FORMAT_VALUE         str
+ 194: BUILD_STRING         
+ 196: STORE_FAST           msg
+ 198: LOAD_GLOBAL          NULL + TypeError
+ 210: LOAD_FAST            msg
+ 212: PRECALL              
+ 216: CALL                 
+ 226: RAISE_VARARGS        
+ 228: LOAD_FAST            m
+ 230: LOAD_ATTR            ndim
+ 240: LOAD_CONST           1
+ 242: COMPARE_OP           !=
+ 248: POP_JUMP_FORWARD_IF_FALSE to 324
+ 250: LOAD_CONST           'expected 1-D data, not %d-D data from %s'
+ 252: LOAD_FAST            m
+ 254: LOAD_ATTR            ndim
+ 264: LOAD_FAST            s
+ 266: LOAD_ATTR            __class__
+ 276: LOAD_ATTR            __name__
+ 286: BUILD_TUPLE          
+ 288: BINARY_OP            %
+ 292: STORE_FAST           msg
+ 294: LOAD_GLOBAL          NULL + TypeError
+ 306: LOAD_FAST            msg
+ 308: PRECALL              
+ 312: CALL                 
+ 322: RAISE_VARARGS        
+ 324: LOAD_CONST           None
+ 326: RETURN_VALUE         

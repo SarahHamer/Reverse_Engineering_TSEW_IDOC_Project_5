@@ -1,0 +1,14 @@
+# Disassembly for http.CookiePolicy.path_return_ok
+# From module file: http.cookiejar
+
+## co_consts:
+('Return false if cookies should not be returned, given cookie path.\n        ', True)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           True
+   4: RETURN_VALUE         

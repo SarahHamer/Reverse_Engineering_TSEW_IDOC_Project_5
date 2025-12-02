@@ -1,0 +1,69 @@
+# Disassembly for pprint.PrettyPrinter._pprint_simplenamespace
+# From module file: pprint
+
+## co_consts:
+(None, 'namespace', 1, '(', ')')
+
+## co_names:
+('type', '_types', 'SimpleNamespace', '__class__', '__name__', 'len', '__dict__', 'items', 'write', '_format_namespace_items')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + type
+  14: LOAD_FAST            object
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_GLOBAL          _types
+  42: LOAD_ATTR            SimpleNamespace
+  52: IS_OP                
+  54: POP_JUMP_FORWARD_IF_FALSE to 62
+  56: LOAD_CONST           'namespace'
+  58: STORE_FAST           cls_name
+  60: JUMP_FORWARD         to 86
+  62: LOAD_FAST            object
+  64: LOAD_ATTR            __class__
+  74: LOAD_ATTR            __name__
+  84: STORE_FAST           cls_name
+  86: LOAD_FAST            indent
+  88: LOAD_GLOBAL          NULL + len
+ 100: LOAD_FAST            cls_name
+ 102: PRECALL              
+ 106: CALL                 
+ 116: LOAD_CONST           1
+ 118: BINARY_OP            +
+ 122: BINARY_OP            +=
+ 126: STORE_FAST           indent
+ 128: LOAD_FAST            object
+ 130: LOAD_ATTR            __dict__
+ 140: LOAD_METHOD          items
+ 162: PRECALL              
+ 166: CALL                 
+ 176: STORE_FAST           items
+ 178: LOAD_FAST            stream
+ 180: LOAD_METHOD          write
+ 202: LOAD_FAST            cls_name
+ 204: LOAD_CONST           '('
+ 206: BINARY_OP            +
+ 210: PRECALL              
+ 214: CALL                 
+ 224: POP_TOP              
+ 226: LOAD_FAST            self
+ 228: LOAD_METHOD          _format_namespace_items
+ 250: LOAD_FAST            items
+ 252: LOAD_FAST            stream
+ 254: LOAD_FAST            indent
+ 256: LOAD_FAST            allowance
+ 258: LOAD_FAST            context
+ 260: LOAD_FAST            level
+ 262: PRECALL              
+ 266: CALL                 
+ 276: POP_TOP              
+ 278: LOAD_FAST            stream
+ 280: LOAD_METHOD          write
+ 302: LOAD_CONST           ')'
+ 304: PRECALL              
+ 308: CALL                 
+ 318: POP_TOP              
+ 320: LOAD_CONST           None
+ 322: RETURN_VALUE         

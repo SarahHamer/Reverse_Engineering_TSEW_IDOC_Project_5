@@ -1,0 +1,14 @@
+# Disassembly for right.ColorWheel.get_description
+# From module file: right
+
+## co_consts:
+(None, 'There is a color wheel on the wall.')
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'There is a color wheel on the wall.'
+   4: RETURN_VALUE         

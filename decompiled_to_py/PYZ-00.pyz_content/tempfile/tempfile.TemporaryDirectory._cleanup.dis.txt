@@ -1,0 +1,29 @@
+# Disassembly for tempfile.TemporaryDirectory._cleanup
+# From module file: tempfile
+
+## co_consts:
+(None, ('ignore_errors',))
+
+## co_names:
+('_rmtree', '_warnings', 'warn', 'ResourceWarning')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            cls
+   4: LOAD_METHOD          _rmtree
+  26: LOAD_FAST            name
+  28: LOAD_FAST            ignore_errors
+  30: KW_NAMES             
+  32: PRECALL              
+  36: CALL                 
+  46: POP_TOP              
+  48: LOAD_GLOBAL          NULL + _warnings
+  60: LOAD_ATTR            warn
+  70: LOAD_FAST            warn_message
+  72: LOAD_GLOBAL          ResourceWarning
+  84: PRECALL              
+  88: CALL                 
+  98: POP_TOP              
+ 100: LOAD_CONST           None
+ 102: RETURN_VALUE         

@@ -1,0 +1,40 @@
+# Disassembly for _pydecimal.Context.divide
+# From module file: _pydecimal
+
+## co_consts:
+("Decimal division in a specified context.\n\n        >>> ExtendedContext.divide(Decimal('1'), Decimal('3'))\n        Decimal('0.333333333')\n        >>> ExtendedContext.divide(Decimal('2'), Decimal('3'))\n        Decimal('0.666666667')\n        >>> ExtendedContext.divide(Decimal('5'), Decimal('2'))\n        Decimal('2.5')\n        >>> ExtendedContext.divide(Decimal('1'), Decimal('10'))\n        Decimal('0.1')\n        >>> ExtendedContext.divide(Decimal('12'), Decimal('12'))\n        Decimal('1')\n        >>> ExtendedContext.divide(Decimal('8.00'), Decimal('2'))\n        Decimal('4.00')\n        >>> ExtendedContext.divide(Decimal('2.400'), Decimal('2.0'))\n        Decimal('1.20')\n        >>> ExtendedContext.divide(Decimal('1000'), Decimal('100'))\n        Decimal('10')\n        >>> ExtendedContext.divide(Decimal('1000'), Decimal('1'))\n        Decimal('1000')\n        >>> ExtendedContext.divide(Decimal('2.40E+6'), Decimal('2'))\n        Decimal('1.20E+6')\n        >>> ExtendedContext.divide(5, 5)\n        Decimal('1')\n        >>> ExtendedContext.divide(Decimal(5), 5)\n        Decimal('1')\n        >>> ExtendedContext.divide(5, Decimal(5))\n        Decimal('1')\n        ", True, ('raiseit',), ('context',), 'Unable to convert %s to Decimal')
+
+## co_names:
+('_convert_other', '__truediv__', 'NotImplemented', 'TypeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _convert_other
+  14: LOAD_FAST            a
+  16: LOAD_CONST           True
+  18: KW_NAMES             
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           a
+  36: LOAD_FAST            a
+  38: LOAD_METHOD          __truediv__
+  60: LOAD_FAST            b
+  62: LOAD_FAST            self
+  64: KW_NAMES             
+  66: PRECALL              
+  70: CALL                 
+  80: STORE_FAST           r
+  82: LOAD_FAST            r
+  84: LOAD_GLOBAL          NotImplemented
+  96: IS_OP                
+  98: POP_JUMP_FORWARD_IF_FALSE to 136
+ 100: LOAD_GLOBAL          NULL + TypeError
+ 112: LOAD_CONST           'Unable to convert %s to Decimal'
+ 114: LOAD_FAST            b
+ 116: BINARY_OP            %
+ 120: PRECALL              
+ 124: CALL                 
+ 134: RAISE_VARARGS        
+ 136: LOAD_FAST            r
+ 138: RETURN_VALUE         

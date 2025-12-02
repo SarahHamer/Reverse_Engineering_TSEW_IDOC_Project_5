@@ -1,0 +1,38 @@
+# Disassembly for datetime.tzinfo.__reduce__
+# From module file: datetime
+
+## co_consts:
+(None, '__getinitargs__', ())
+
+## co_names:
+('getattr', '__class__', '__getstate__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + getattr
+  14: LOAD_FAST            self
+  16: LOAD_CONST           '__getinitargs__'
+  18: LOAD_CONST           None
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           getinitargs
+  36: LOAD_FAST            getinitargs
+  38: POP_JUMP_FORWARD_IF_FALSE to 62
+  40: PUSH_NULL            
+  42: LOAD_FAST            getinitargs
+  44: PRECALL              
+  48: CALL                 
+  58: STORE_FAST           args
+  60: JUMP_FORWARD         to 66
+  62: LOAD_CONST           ()
+  64: STORE_FAST           args
+  66: LOAD_FAST            self
+  68: LOAD_ATTR            __class__
+  78: LOAD_FAST            args
+  80: LOAD_FAST            self
+  82: LOAD_METHOD          __getstate__
+ 104: PRECALL              
+ 108: CALL                 
+ 118: BUILD_TUPLE          
+ 120: RETURN_VALUE         

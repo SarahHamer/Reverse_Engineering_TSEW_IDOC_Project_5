@@ -1,0 +1,270 @@
+# Disassembly for email._fold_as_ew
+# From module file: email._header_value_parser
+
+## co_consts:
+('Fold string to_encode into lines as encoded word, combining if allowed.\n    Return the new value for last_ew, or None if ew_combine_allowed is False.\n\n    If there is already an encoded word in the last line of lines (indicated by\n    a non-None value for last_ew) and ew_combine_allowed is true, decode the\n    existing ew, combine it with to_encode, and re-encode.  Otherwise, encode\n    to_encode.  In either case, split to_encode as necessary so that the\n    encoded segments fit within maxlen.\n\n    ', None, -1, 0, 1, '', 'us-ascii', 'utf-8', 7, 'max_line_length is too small to fit an encoded word', ' ', ('charset',))
+
+## co_names:
+('str', 'get_unstructured', 'WSP', 'len', 'append', '_steal_trailing_WSP_if_exists', 'errors', 'HeaderParseError', '_ew', 'encode')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            last_ew
+   4: POP_JUMP_FORWARD_IF_NONE to 138
+   6: LOAD_FAST            ew_combine_allowed
+   8: POP_JUMP_FORWARD_IF_FALSE to 138
+  10: LOAD_GLOBAL          NULL + str
+  22: LOAD_GLOBAL          NULL + get_unstructured
+  34: LOAD_FAST            lines
+  36: LOAD_CONST           -1
+  38: BINARY_SUBSCR        
+  48: LOAD_FAST            last_ew
+  50: LOAD_CONST           None
+  52: BUILD_SLICE          
+  54: BINARY_SUBSCR        
+  64: LOAD_FAST            to_encode
+  66: BINARY_OP            +
+  70: PRECALL              
+  74: CALL                 
+  84: PRECALL              
+  88: CALL                 
+  98: STORE_FAST           to_encode
+ 100: LOAD_FAST            lines
+ 102: LOAD_CONST           -1
+ 104: BINARY_SUBSCR        
+ 114: LOAD_CONST           None
+ 116: LOAD_FAST            last_ew
+ 118: BUILD_SLICE          
+ 120: BINARY_SUBSCR        
+ 130: LOAD_FAST            lines
+ 132: LOAD_CONST           -1
+ 134: STORE_SUBSCR         
+ 138: LOAD_FAST            to_encode
+ 140: LOAD_CONST           0
+ 142: BINARY_SUBSCR        
+ 152: LOAD_GLOBAL          WSP
+ 164: CONTAINS_OP          
+ 166: POP_JUMP_FORWARD_IF_FALSE to 354
+ 168: LOAD_FAST            to_encode
+ 170: LOAD_CONST           0
+ 172: BINARY_SUBSCR        
+ 182: STORE_FAST           leading_wsp
+ 184: LOAD_FAST            to_encode
+ 186: LOAD_CONST           1
+ 188: LOAD_CONST           None
+ 190: BUILD_SLICE          
+ 192: BINARY_SUBSCR        
+ 202: STORE_FAST           to_encode
+ 204: LOAD_GLOBAL          NULL + len
+ 216: LOAD_FAST            lines
+ 218: LOAD_CONST           -1
+ 220: BINARY_SUBSCR        
+ 230: PRECALL              
+ 234: CALL                 
+ 244: LOAD_FAST            maxlen
+ 246: COMPARE_OP           ==
+ 252: POP_JUMP_FORWARD_IF_FALSE to 322
+ 254: LOAD_FAST            lines
+ 256: LOAD_METHOD          append
+ 278: LOAD_GLOBAL          NULL + _steal_trailing_WSP_if_exists
+ 290: LOAD_FAST            lines
+ 292: PRECALL              
+ 296: CALL                 
+ 306: PRECALL              
+ 310: CALL                 
+ 320: POP_TOP              
+ 322: LOAD_FAST            lines
+ 324: LOAD_CONST           -1
+ 326: COPY                 
+ 328: COPY                 
+ 330: BINARY_SUBSCR        
+ 340: LOAD_FAST            leading_wsp
+ 342: BINARY_OP            +=
+ 346: SWAP                 
+ 348: SWAP                 
+ 350: STORE_SUBSCR         
+ 354: LOAD_CONST           ''
+ 356: STORE_FAST           trailing_wsp
+ 358: LOAD_FAST            to_encode
+ 360: LOAD_CONST           -1
+ 362: BINARY_SUBSCR        
+ 372: LOAD_GLOBAL          WSP
+ 384: CONTAINS_OP          
+ 386: POP_JUMP_FORWARD_IF_FALSE to 424
+ 388: LOAD_FAST            to_encode
+ 390: LOAD_CONST           -1
+ 392: BINARY_SUBSCR        
+ 402: STORE_FAST           trailing_wsp
+ 404: LOAD_FAST            to_encode
+ 406: LOAD_CONST           None
+ 408: LOAD_CONST           -1
+ 410: BUILD_SLICE          
+ 412: BINARY_SUBSCR        
+ 422: STORE_FAST           to_encode
+ 424: LOAD_FAST            last_ew
+ 426: POP_JUMP_FORWARD_IF_NOT_NONE to 470
+ 428: LOAD_GLOBAL          NULL + len
+ 440: LOAD_FAST            lines
+ 442: LOAD_CONST           -1
+ 444: BINARY_SUBSCR        
+ 454: PRECALL              
+ 458: CALL                 
+ 468: JUMP_FORWARD         to 472
+ 470: LOAD_FAST            last_ew
+ 472: STORE_FAST           new_last_ew
+ 474: LOAD_FAST            charset
+ 476: LOAD_CONST           'us-ascii'
+ 478: COMPARE_OP           ==
+ 484: POP_JUMP_FORWARD_IF_FALSE to 490
+ 486: LOAD_CONST           'utf-8'
+ 488: JUMP_FORWARD         to 492
+ 490: LOAD_FAST            charset
+ 492: STORE_FAST           encode_as
+ 494: LOAD_GLOBAL          NULL + len
+ 506: LOAD_FAST            encode_as
+ 508: PRECALL              
+ 512: CALL                 
+ 522: LOAD_CONST           7
+ 524: BINARY_OP            +
+ 528: STORE_FAST           chrome_len
+ 530: LOAD_FAST            chrome_len
+ 532: LOAD_CONST           1
+ 534: BINARY_OP            +
+ 538: LOAD_FAST            maxlen
+ 540: COMPARE_OP           >=
+ 546: POP_JUMP_FORWARD_IF_FALSE to 588
+ 548: LOAD_GLOBAL          NULL + errors
+ 560: LOAD_ATTR            HeaderParseError
+ 570: LOAD_CONST           'max_line_length is too small to fit an encoded word'
+ 572: PRECALL              
+ 576: CALL                 
+ 586: RAISE_VARARGS        
+ 588: LOAD_FAST            to_encode
+ 590: POP_JUMP_FORWARD_IF_FALSE to 1100
+ 592: LOAD_FAST            maxlen
+ 594: LOAD_GLOBAL          NULL + len
+ 606: LOAD_FAST            lines
+ 608: LOAD_CONST           -1
+ 610: BINARY_SUBSCR        
+ 620: PRECALL              
+ 624: CALL                 
+ 634: BINARY_OP            -
+ 638: STORE_FAST           remaining_space
+ 640: LOAD_FAST            remaining_space
+ 642: LOAD_FAST            chrome_len
+ 644: BINARY_OP            -
+ 648: STORE_FAST           text_space
+ 650: LOAD_FAST            text_space
+ 652: LOAD_CONST           0
+ 654: COMPARE_OP           <=
+ 660: POP_JUMP_FORWARD_IF_FALSE to 706
+ 662: LOAD_FAST            lines
+ 664: LOAD_METHOD          append
+ 686: LOAD_CONST           ' '
+ 688: PRECALL              
+ 692: CALL                 
+ 702: POP_TOP              
+ 704: JUMP_BACKWARD        to 588
+ 706: LOAD_FAST            to_encode
+ 708: LOAD_CONST           None
+ 710: LOAD_FAST            text_space
+ 712: BUILD_SLICE          
+ 714: BINARY_SUBSCR        
+ 724: STORE_FAST           to_encode_word
+ 726: LOAD_GLOBAL          NULL + _ew
+ 738: LOAD_ATTR            encode
+ 748: LOAD_FAST            to_encode_word
+ 750: LOAD_FAST            encode_as
+ 752: KW_NAMES             
+ 754: PRECALL              
+ 758: CALL                 
+ 768: STORE_FAST           encoded_word
+ 770: LOAD_GLOBAL          NULL + len
+ 782: LOAD_FAST            encoded_word
+ 784: PRECALL              
+ 788: CALL                 
+ 798: LOAD_FAST            remaining_space
+ 800: BINARY_OP            -
+ 804: STORE_FAST           excess
+ 806: LOAD_FAST            excess
+ 808: LOAD_CONST           0
+ 810: COMPARE_OP           >
+ 816: POP_JUMP_FORWARD_IF_FALSE to 930
+ 818: LOAD_FAST            to_encode_word
+ 820: LOAD_CONST           None
+ 822: LOAD_CONST           -1
+ 824: BUILD_SLICE          
+ 826: BINARY_SUBSCR        
+ 836: STORE_FAST           to_encode_word
+ 838: LOAD_GLOBAL          NULL + _ew
+ 850: LOAD_ATTR            encode
+ 860: LOAD_FAST            to_encode_word
+ 862: LOAD_FAST            encode_as
+ 864: KW_NAMES             
+ 866: PRECALL              
+ 870: CALL                 
+ 880: STORE_FAST           encoded_word
+ 882: LOAD_GLOBAL          NULL + len
+ 894: LOAD_FAST            encoded_word
+ 896: PRECALL              
+ 900: CALL                 
+ 910: LOAD_FAST            remaining_space
+ 912: BINARY_OP            -
+ 916: STORE_FAST           excess
+ 918: LOAD_FAST            excess
+ 920: LOAD_CONST           0
+ 922: COMPARE_OP           >
+ 928: POP_JUMP_BACKWARD_IF_TRUE to 818
+ 930: LOAD_FAST            lines
+ 932: LOAD_CONST           -1
+ 934: COPY                 
+ 936: COPY                 
+ 938: BINARY_SUBSCR        
+ 948: LOAD_FAST            encoded_word
+ 950: BINARY_OP            +=
+ 954: SWAP                 
+ 956: SWAP                 
+ 958: STORE_SUBSCR         
+ 962: LOAD_FAST            to_encode
+ 964: LOAD_GLOBAL          NULL + len
+ 976: LOAD_FAST            to_encode_word
+ 978: PRECALL              
+ 982: CALL                 
+ 992: LOAD_CONST           None
+ 994: BUILD_SLICE          
+ 996: BINARY_SUBSCR        
+1006: STORE_FAST           to_encode
+1008: LOAD_FAST            to_encode
+1010: POP_JUMP_FORWARD_IF_FALSE to 1096
+1012: LOAD_FAST            lines
+1014: LOAD_METHOD          append
+1036: LOAD_CONST           ' '
+1038: PRECALL              
+1042: CALL                 
+1052: POP_TOP              
+1054: LOAD_GLOBAL          NULL + len
+1066: LOAD_FAST            lines
+1068: LOAD_CONST           -1
+1070: BINARY_SUBSCR        
+1080: PRECALL              
+1084: CALL                 
+1094: STORE_FAST           new_last_ew
+1096: LOAD_FAST            to_encode
+1098: POP_JUMP_BACKWARD_IF_TRUE to 592
+1100: LOAD_FAST            lines
+1102: LOAD_CONST           -1
+1104: COPY                 
+1106: COPY                 
+1108: BINARY_SUBSCR        
+1118: LOAD_FAST            trailing_wsp
+1120: BINARY_OP            +=
+1124: SWAP                 
+1126: SWAP                 
+1128: STORE_SUBSCR         
+1132: LOAD_FAST            ew_combine_allowed
+1134: POP_JUMP_FORWARD_IF_FALSE to 1140
+1136: LOAD_FAST            new_last_ew
+1138: JUMP_FORWARD         to 1142
+1140: LOAD_CONST           None
+1142: RETURN_VALUE         

@@ -1,0 +1,149 @@
+# Disassembly for typing._eval_type
+# From module file: typing
+
+## co_consts:
+('Evaluate all forward references in the given type t.\n\n    For use of globalns and localns see the docstring for get_type_hints().\n    recursive_guard is used to prevent infinite recursion with a recursive\n    ForwardRef.\n    ', <code object <genexpr> at 0x000002406941AAF0, file "typing.py", line 377>, None, -1, <code object <genexpr> at 0x00000240693EAF30, file "typing.py", line 388>)
+
+## co_names:
+('isinstance', 'ForwardRef', '_evaluate', '_GenericAlias', 'GenericAlias', 'types', 'UnionType', 'tuple', '__args__', '__unpacked__', '_should_unflatten_callable_args', '__origin__', 'Unpack', 'functools', 'reduce', 'operator', 'or_', 'copy_with')
+
+## bytecode:
+
+   0: MAKE_CELL            globalns
+   2: MAKE_CELL            localns
+   4: MAKE_CELL            recursive_guard
+   6: RESUME               
+   8: LOAD_GLOBAL          NULL + isinstance
+  20: LOAD_FAST            t
+  22: LOAD_GLOBAL          ForwardRef
+  34: PRECALL              
+  38: CALL                 
+  48: POP_JUMP_FORWARD_IF_FALSE to 96
+  50: LOAD_FAST            t
+  52: LOAD_METHOD          _evaluate
+  74: LOAD_DEREF           globalns
+  76: LOAD_DEREF           localns
+  78: LOAD_DEREF           recursive_guard
+  80: PRECALL              
+  84: CALL                 
+  94: RETURN_VALUE         
+  96: LOAD_GLOBAL          NULL + isinstance
+ 108: LOAD_FAST            t
+ 110: LOAD_GLOBAL          _GenericAlias
+ 122: LOAD_GLOBAL          GenericAlias
+ 134: LOAD_GLOBAL          types
+ 146: LOAD_ATTR            UnionType
+ 156: BUILD_TUPLE          
+ 158: PRECALL              
+ 162: CALL                 
+ 172: EXTENDED_ARG         
+ 174: POP_JUMP_FORWARD_IF_FALSE to 774
+ 176: LOAD_GLOBAL          NULL + isinstance
+ 188: LOAD_FAST            t
+ 190: LOAD_GLOBAL          GenericAlias
+ 202: PRECALL              
+ 206: CALL                 
+ 216: POP_JUMP_FORWARD_IF_FALSE to 440
+ 218: LOAD_GLOBAL          NULL + tuple
+ 230: LOAD_CONST           <code object <genexpr> at 0x000002406941AAF0, file "typing.py", line 377>
+ 232: MAKE_FUNCTION        
+ 234: LOAD_FAST            t
+ 236: LOAD_ATTR            __args__
+ 246: GET_ITER             
+ 248: PRECALL              
+ 252: CALL                 
+ 262: PRECALL              
+ 266: CALL                 
+ 276: STORE_FAST           args
+ 278: LOAD_FAST            t
+ 280: LOAD_ATTR            __unpacked__
+ 290: STORE_FAST           is_unpacked
+ 292: LOAD_GLOBAL          NULL + _should_unflatten_callable_args
+ 304: LOAD_FAST            t
+ 306: LOAD_FAST            args
+ 308: PRECALL              
+ 312: CALL                 
+ 322: POP_JUMP_FORWARD_IF_FALSE to 384
+ 324: LOAD_FAST            t
+ 326: LOAD_ATTR            __origin__
+ 336: LOAD_FAST            args
+ 338: LOAD_CONST           None
+ 340: LOAD_CONST           -1
+ 342: BUILD_SLICE          
+ 344: BINARY_SUBSCR        
+ 354: LOAD_FAST            args
+ 356: LOAD_CONST           -1
+ 358: BINARY_SUBSCR        
+ 368: BUILD_TUPLE          
+ 370: BINARY_SUBSCR        
+ 380: STORE_FAST           t
+ 382: JUMP_FORWARD         to 410
+ 384: LOAD_FAST            t
+ 386: LOAD_ATTR            __origin__
+ 396: LOAD_FAST            args
+ 398: BINARY_SUBSCR        
+ 408: STORE_FAST           t
+ 410: LOAD_FAST            is_unpacked
+ 412: POP_JUMP_FORWARD_IF_FALSE to 440
+ 414: LOAD_GLOBAL          Unpack
+ 426: LOAD_FAST            t
+ 428: BINARY_SUBSCR        
+ 438: STORE_FAST           t
+ 440: LOAD_GLOBAL          NULL + tuple
+ 452: LOAD_CLOSURE         globalns
+ 454: LOAD_CLOSURE         localns
+ 456: LOAD_CLOSURE         recursive_guard
+ 458: BUILD_TUPLE          
+ 460: LOAD_CONST           <code object <genexpr> at 0x00000240693EAF30, file "typing.py", line 388>
+ 462: MAKE_FUNCTION        closure
+ 464: LOAD_FAST            t
+ 466: LOAD_ATTR            __args__
+ 476: GET_ITER             
+ 478: PRECALL              
+ 482: CALL                 
+ 492: PRECALL              
+ 496: CALL                 
+ 506: STORE_FAST           ev_args
+ 508: LOAD_FAST            ev_args
+ 510: LOAD_FAST            t
+ 512: LOAD_ATTR            __args__
+ 522: COMPARE_OP           ==
+ 528: POP_JUMP_FORWARD_IF_FALSE to 534
+ 530: LOAD_FAST            t
+ 532: RETURN_VALUE         
+ 534: LOAD_GLOBAL          NULL + isinstance
+ 546: LOAD_FAST            t
+ 548: LOAD_GLOBAL          GenericAlias
+ 560: PRECALL              
+ 564: CALL                 
+ 574: POP_JUMP_FORWARD_IF_FALSE to 618
+ 576: LOAD_GLOBAL          NULL + GenericAlias
+ 588: LOAD_FAST            t
+ 590: LOAD_ATTR            __origin__
+ 600: LOAD_FAST            ev_args
+ 602: PRECALL              
+ 606: CALL                 
+ 616: RETURN_VALUE         
+ 618: LOAD_GLOBAL          NULL + isinstance
+ 630: LOAD_FAST            t
+ 632: LOAD_GLOBAL          types
+ 644: LOAD_ATTR            UnionType
+ 654: PRECALL              
+ 658: CALL                 
+ 668: POP_JUMP_FORWARD_IF_FALSE to 732
+ 670: LOAD_GLOBAL          NULL + functools
+ 682: LOAD_ATTR            reduce
+ 692: LOAD_GLOBAL          operator
+ 704: LOAD_ATTR            or_
+ 714: LOAD_FAST            ev_args
+ 716: PRECALL              
+ 720: CALL                 
+ 730: RETURN_VALUE         
+ 732: LOAD_FAST            t
+ 734: LOAD_METHOD          copy_with
+ 756: LOAD_FAST            ev_args
+ 758: PRECALL              
+ 762: CALL                 
+ 772: RETURN_VALUE         
+ 774: LOAD_FAST            t
+ 776: RETURN_VALUE         

@@ -1,0 +1,47 @@
+# Disassembly for logging.Filterer.filter
+# From module file: logging
+
+## co_consts:
+('\n        Determine if a record is loggable by consulting all the filters.\n\n        The default is to allow the record to be logged; any filter can veto\n        this and the record is then dropped. Returns a zero value if a record\n        is to be dropped, else non-zero.\n\n        .. versionchanged:: 3.2\n\n           Allow filters to be just callables.\n        ', True, 'filter', False)
+
+## co_names:
+('filters', 'hasattr', 'filter')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           True
+   4: STORE_FAST           rv
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            filters
+  18: GET_ITER             
+  20: FOR_ITER             to 136
+  22: STORE_FAST           f
+  24: LOAD_GLOBAL          NULL + hasattr
+  36: LOAD_FAST            f
+  38: LOAD_CONST           'filter'
+  40: PRECALL              
+  44: CALL                 
+  54: POP_JUMP_FORWARD_IF_FALSE to 100
+  56: LOAD_FAST            f
+  58: LOAD_METHOD          filter
+  80: LOAD_FAST            record
+  82: PRECALL              
+  86: CALL                 
+  96: STORE_FAST           result
+  98: JUMP_FORWARD         to 122
+ 100: PUSH_NULL            
+ 102: LOAD_FAST            f
+ 104: LOAD_FAST            record
+ 106: PRECALL              
+ 110: CALL                 
+ 120: STORE_FAST           result
+ 122: LOAD_FAST            result
+ 124: POP_JUMP_FORWARD_IF_TRUE to 134
+ 126: LOAD_CONST           False
+ 128: STORE_FAST           rv
+ 130: POP_TOP              
+ 132: JUMP_FORWARD         to 136
+ 134: JUMP_BACKWARD        to 20
+ 136: LOAD_FAST            rv
+ 138: RETURN_VALUE         

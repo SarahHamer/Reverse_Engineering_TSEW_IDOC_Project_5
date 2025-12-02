@@ -1,0 +1,22 @@
+# Disassembly for zipfile._extract_text_encoding
+# From module file: zipfile
+
+## co_consts:
+(None, 3)
+
+## co_names:
+('io', 'text_encoding')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + io
+  14: LOAD_ATTR            text_encoding
+  24: LOAD_FAST            encoding
+  26: LOAD_CONST           3
+  28: PRECALL              
+  32: CALL                 
+  42: LOAD_FAST            args
+  44: LOAD_FAST            kwargs
+  46: BUILD_TUPLE          
+  48: RETURN_VALUE         

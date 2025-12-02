@@ -1,0 +1,17 @@
+# Disassembly for csv.DictReader.fieldnames
+# From module file: csv
+
+## co_consts:
+(None,)
+
+## co_names:
+('_fieldnames',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            value
+   4: LOAD_FAST            self
+   6: STORE_ATTR           _fieldnames
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         

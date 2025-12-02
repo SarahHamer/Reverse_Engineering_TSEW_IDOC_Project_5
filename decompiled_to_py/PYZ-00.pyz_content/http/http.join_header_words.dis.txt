@@ -1,0 +1,79 @@
+# Disassembly for http.join_header_words
+# From module file: http.cookiejar
+
+## co_consts:
+('Do the inverse (almost) of the conversion done by split_header_words.\n\n    Takes a list of lists of (key, value) pairs and produces a single header\n    value.  Attribute values are quoted if needed.\n\n    >>> join_header_words([[("text/plain", None), ("charset", "iso-8859-1")]])\n    \'text/plain; charset="iso-8859-1"\'\n    >>> join_header_words([[("text/plain", None)], [("charset", "iso-8859-1")]])\n    \'text/plain, charset="iso-8859-1"\'\n\n    ', None, '^\\w+$', '\\\\\\1', '"%s"', '=', '; ', ', ')
+
+## co_names:
+('re', 'search', 'HEADER_JOIN_ESCAPE_RE', 'sub', 'append', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           headers
+   6: LOAD_FAST            lists
+   8: GET_ITER             
+  10: FOR_ITER             to 286
+  12: STORE_FAST           pairs
+  14: BUILD_LIST           
+  16: STORE_FAST           attr
+  18: LOAD_FAST            pairs
+  20: GET_ITER             
+  22: FOR_ITER             to 200
+  24: UNPACK_SEQUENCE      
+  28: STORE_FAST           k
+  30: STORE_FAST           v
+  32: LOAD_FAST            v
+  34: POP_JUMP_FORWARD_IF_NONE to 156
+  36: LOAD_GLOBAL          NULL + re
+  48: LOAD_ATTR            search
+  58: LOAD_CONST           '^\\w+$'
+  60: LOAD_FAST            v
+  62: PRECALL              
+  66: CALL                 
+  76: POP_JUMP_FORWARD_IF_TRUE to 142
+  78: LOAD_GLOBAL          HEADER_JOIN_ESCAPE_RE
+  90: LOAD_METHOD          sub
+ 112: LOAD_CONST           '\\\\\\1'
+ 114: LOAD_FAST            v
+ 116: PRECALL              
+ 120: CALL                 
+ 130: STORE_FAST           v
+ 132: LOAD_CONST           '"%s"'
+ 134: LOAD_FAST            v
+ 136: BINARY_OP            %
+ 140: STORE_FAST           v
+ 142: LOAD_FAST            k
+ 144: FORMAT_VALUE         str
+ 146: LOAD_CONST           '='
+ 148: LOAD_FAST            v
+ 150: FORMAT_VALUE         str
+ 152: BUILD_STRING         
+ 154: STORE_FAST           k
+ 156: LOAD_FAST            attr
+ 158: LOAD_METHOD          append
+ 180: LOAD_FAST            k
+ 182: PRECALL              
+ 186: CALL                 
+ 196: POP_TOP              
+ 198: JUMP_BACKWARD        to 22
+ 200: LOAD_FAST            attr
+ 202: POP_JUMP_FORWARD_IF_FALSE to 284
+ 204: LOAD_FAST            headers
+ 206: LOAD_METHOD          append
+ 228: LOAD_CONST           '; '
+ 230: LOAD_METHOD          join
+ 252: LOAD_FAST            attr
+ 254: PRECALL              
+ 258: CALL                 
+ 268: PRECALL              
+ 272: CALL                 
+ 282: POP_TOP              
+ 284: JUMP_BACKWARD        to 10
+ 286: LOAD_CONST           ', '
+ 288: LOAD_METHOD          join
+ 310: LOAD_FAST            headers
+ 312: PRECALL              
+ 316: CALL                 
+ 326: RETURN_VALUE         

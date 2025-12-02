@@ -1,0 +1,43 @@
+# Disassembly for base64.b16decode
+# From module file: base64
+
+## co_consts:
+('Decode the Base16 encoded bytes-like object or ASCII string s.\n\n    Optional casefold is a flag specifying whether a lowercase alphabet is\n    acceptable as input.  For security purposes, the default is False.\n\n    The result is returned as a bytes object.  A binascii.Error is raised if\n    s is incorrectly padded or if there are non-alphabet characters present\n    in the input.\n    ', b'[^0-9A-F]', 'Non-base16 digit found')
+
+## co_names:
+('_bytes_from_decode_data', 'upper', 're', 'search', 'binascii', 'Error', 'unhexlify')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _bytes_from_decode_data
+  14: LOAD_FAST            s
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           s
+  32: LOAD_FAST            casefold
+  34: POP_JUMP_FORWARD_IF_FALSE to 76
+  36: LOAD_FAST            s
+  38: LOAD_METHOD          upper
+  60: PRECALL              
+  64: CALL                 
+  74: STORE_FAST           s
+  76: LOAD_GLOBAL          NULL + re
+  88: LOAD_ATTR            search
+  98: LOAD_CONST           b'[^0-9A-F]'
+ 100: LOAD_FAST            s
+ 102: PRECALL              
+ 106: CALL                 
+ 116: POP_JUMP_FORWARD_IF_FALSE to 158
+ 118: LOAD_GLOBAL          NULL + binascii
+ 130: LOAD_ATTR            Error
+ 140: LOAD_CONST           'Non-base16 digit found'
+ 142: PRECALL              
+ 146: CALL                 
+ 156: RAISE_VARARGS        
+ 158: LOAD_GLOBAL          NULL + binascii
+ 170: LOAD_ATTR            unhexlify
+ 180: LOAD_FAST            s
+ 182: PRECALL              
+ 186: CALL                 
+ 196: RETURN_VALUE         

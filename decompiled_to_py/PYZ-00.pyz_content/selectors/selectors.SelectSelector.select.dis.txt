@@ -1,0 +1,109 @@
+# Disassembly for selectors.SelectSelector.select
+# From module file: selectors
+
+## co_consts:
+(None, 0)
+
+## co_names:
+('max', '_select', '_readers', '_writers', 'InterruptedError', 'set', 'EVENT_READ', 'EVENT_WRITE', '_key_from_fd', 'append', 'events')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            timeout
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 10
+   6: LOAD_CONST           None
+   8: JUMP_FORWARD         to 40
+  10: LOAD_GLOBAL          NULL + max
+  22: LOAD_FAST            timeout
+  24: LOAD_CONST           0
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           timeout
+  42: BUILD_LIST           
+  44: STORE_FAST           ready
+  46: NOP                  
+  48: LOAD_FAST            self
+  50: LOAD_METHOD          _select
+  72: LOAD_FAST            self
+  74: LOAD_ATTR            _readers
+  84: LOAD_FAST            self
+  86: LOAD_ATTR            _writers
+  96: BUILD_LIST           
+  98: LOAD_FAST            timeout
+ 100: PRECALL              
+ 104: CALL                 
+ 114: UNPACK_SEQUENCE      
+ 118: STORE_FAST           r
+ 120: STORE_FAST           w
+ 122: STORE_FAST           _
+ 124: JUMP_FORWARD         to 162
+ 126: PUSH_EXC_INFO        
+ 128: LOAD_GLOBAL          InterruptedError
+ 140: CHECK_EXC_MATCH      
+ 142: POP_JUMP_FORWARD_IF_FALSE to 154
+ 144: POP_TOP              
+ 146: LOAD_FAST            ready
+ 148: SWAP                 
+ 150: POP_EXCEPT           
+ 152: RETURN_VALUE         
+ 154: RERAISE              
+ 156: COPY                 
+ 158: POP_EXCEPT           
+ 160: RERAISE              
+ 162: LOAD_GLOBAL          NULL + set
+ 174: LOAD_FAST            r
+ 176: PRECALL              
+ 180: CALL                 
+ 190: STORE_FAST           r
+ 192: LOAD_GLOBAL          NULL + set
+ 204: LOAD_FAST            w
+ 206: PRECALL              
+ 210: CALL                 
+ 220: STORE_FAST           w
+ 222: LOAD_FAST            r
+ 224: LOAD_FAST            w
+ 226: BINARY_OP            |
+ 230: GET_ITER             
+ 232: FOR_ITER             to 406
+ 234: STORE_FAST           fd
+ 236: LOAD_CONST           0
+ 238: STORE_FAST           events
+ 240: LOAD_FAST            fd
+ 242: LOAD_FAST            r
+ 244: CONTAINS_OP          
+ 246: POP_JUMP_FORWARD_IF_FALSE to 268
+ 248: LOAD_FAST            events
+ 250: LOAD_GLOBAL          EVENT_READ
+ 262: BINARY_OP            |=
+ 266: STORE_FAST           events
+ 268: LOAD_FAST            fd
+ 270: LOAD_FAST            w
+ 272: CONTAINS_OP          
+ 274: POP_JUMP_FORWARD_IF_FALSE to 296
+ 276: LOAD_FAST            events
+ 278: LOAD_GLOBAL          EVENT_WRITE
+ 290: BINARY_OP            |=
+ 294: STORE_FAST           events
+ 296: LOAD_FAST            self
+ 298: LOAD_METHOD          _key_from_fd
+ 320: LOAD_FAST            fd
+ 322: PRECALL              
+ 326: CALL                 
+ 336: STORE_FAST           key
+ 338: LOAD_FAST            key
+ 340: POP_JUMP_FORWARD_IF_FALSE to 404
+ 342: LOAD_FAST            ready
+ 344: LOAD_METHOD          append
+ 366: LOAD_FAST            key
+ 368: LOAD_FAST            events
+ 370: LOAD_FAST            key
+ 372: LOAD_ATTR            events
+ 382: BINARY_OP            &
+ 386: BUILD_TUPLE          
+ 388: PRECALL              
+ 392: CALL                 
+ 402: POP_TOP              
+ 404: JUMP_BACKWARD        to 232
+ 406: LOAD_FAST            ready
+ 408: RETURN_VALUE         

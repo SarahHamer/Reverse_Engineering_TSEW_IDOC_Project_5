@@ -1,0 +1,49 @@
+# Disassembly for typing._CallableGenericAlias.__reduce__
+# From module file: typing
+
+## co_consts:
+(None, 2, 0, -1)
+
+## co_names:
+('__args__', 'len', '_is_param_expr', 'list', 'operator', 'getitem', 'Callable')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            __args__
+  14: STORE_FAST           args
+  16: LOAD_GLOBAL          NULL + len
+  28: LOAD_FAST            args
+  30: PRECALL              
+  34: CALL                 
+  44: LOAD_CONST           2
+  46: COMPARE_OP           ==
+  52: POP_JUMP_FORWARD_IF_FALSE to 96
+  54: LOAD_GLOBAL          NULL + _is_param_expr
+  66: LOAD_FAST            args
+  68: LOAD_CONST           0
+  70: BINARY_SUBSCR        
+  80: PRECALL              
+  84: CALL                 
+  94: POP_JUMP_FORWARD_IF_TRUE to 158
+  96: LOAD_GLOBAL          NULL + list
+ 108: LOAD_FAST            args
+ 110: LOAD_CONST           None
+ 112: LOAD_CONST           -1
+ 114: BUILD_SLICE          
+ 116: BINARY_SUBSCR        
+ 126: PRECALL              
+ 130: CALL                 
+ 140: LOAD_FAST            args
+ 142: LOAD_CONST           -1
+ 144: BINARY_SUBSCR        
+ 154: BUILD_TUPLE          
+ 156: STORE_FAST           args
+ 158: LOAD_GLOBAL          operator
+ 170: LOAD_ATTR            getitem
+ 180: LOAD_GLOBAL          Callable
+ 192: LOAD_FAST            args
+ 194: BUILD_TUPLE          
+ 196: BUILD_TUPLE          
+ 198: RETURN_VALUE         

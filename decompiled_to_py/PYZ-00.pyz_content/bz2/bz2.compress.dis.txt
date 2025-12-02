@@ -1,0 +1,28 @@
+# Disassembly for bz2.compress
+# From module file: bz2
+
+## co_consts:
+('Compress a block of data.\n\n    compresslevel, if given, must be a number between 1 and 9.\n\n    For incremental compression, use a BZ2Compressor object instead.\n    ',)
+
+## co_names:
+('BZ2Compressor', 'compress', 'flush')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + BZ2Compressor
+  14: LOAD_FAST            compresslevel
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           comp
+  32: LOAD_FAST            comp
+  34: LOAD_METHOD          compress
+  56: LOAD_FAST            data
+  58: PRECALL              
+  62: CALL                 
+  72: LOAD_FAST            comp
+  74: LOAD_METHOD          flush
+  96: PRECALL              
+ 100: CALL                 
+ 110: BINARY_OP            +
+ 114: RETURN_VALUE         

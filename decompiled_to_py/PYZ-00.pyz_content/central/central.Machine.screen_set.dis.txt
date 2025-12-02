@@ -1,0 +1,52 @@
+# Disassembly for central.Machine.screen_set
+# From module file: central
+
+## co_consts:
+(None, 0, '\n', 1)
+
+## co_names:
+('split', 'photo_width')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: STORE_FAST           y_offset
+   6: LOAD_FAST            s
+   8: LOAD_METHOD          split
+  30: LOAD_CONST           '\n'
+  32: PRECALL              
+  36: CALL                 
+  46: GET_ITER             
+  48: FOR_ITER             to 132
+  50: STORE_FAST           line
+  52: LOAD_CONST           0
+  54: STORE_FAST           x_offset
+  56: LOAD_FAST            line
+  58: GET_ITER             
+  60: FOR_ITER             to 120
+  62: STORE_FAST           ch
+  64: LOAD_FAST            ch
+  66: LOAD_FAST            screen
+  68: LOAD_FAST            y
+  70: LOAD_FAST            y_offset
+  72: BINARY_OP            +
+  76: LOAD_GLOBAL          photo_width
+  88: BINARY_OP            *
+  92: LOAD_FAST            x
+  94: BINARY_OP            +
+  98: LOAD_FAST            x_offset
+ 100: BINARY_OP            +
+ 104: STORE_SUBSCR         
+ 108: LOAD_FAST            x_offset
+ 110: LOAD_CONST           1
+ 112: BINARY_OP            +=
+ 116: STORE_FAST           x_offset
+ 118: JUMP_BACKWARD        to 60
+ 120: LOAD_FAST            y_offset
+ 122: LOAD_CONST           1
+ 124: BINARY_OP            +=
+ 128: STORE_FAST           y_offset
+ 130: JUMP_BACKWARD        to 48
+ 132: LOAD_CONST           None
+ 134: RETURN_VALUE         

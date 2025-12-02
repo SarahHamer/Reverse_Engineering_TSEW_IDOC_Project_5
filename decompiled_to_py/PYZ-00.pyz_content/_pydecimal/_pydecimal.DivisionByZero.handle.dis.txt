@@ -1,0 +1,16 @@
+# Disassembly for _pydecimal.DivisionByZero.handle
+# From module file: _pydecimal
+
+## co_consts:
+(None,)
+
+## co_names:
+('_SignedInfinity',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _SignedInfinity
+  14: LOAD_FAST            sign
+  16: BINARY_SUBSCR        
+  26: RETURN_VALUE         

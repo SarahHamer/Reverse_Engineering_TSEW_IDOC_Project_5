@@ -1,0 +1,210 @@
+# Disassembly for hashlib.__get_builtin_constructor
+# From module file: hashlib
+
+## co_consts:
+(None, frozenset({'SHA1', 'sha1'}), 0, 'SHA1', 'sha1', frozenset({'md5', 'MD5'}), 'MD5', 'md5', frozenset({'SHA256', 'sha256', 'SHA224', 'sha224'}), 'SHA224', 'sha224', 'SHA256', 'sha256', frozenset({'sha512', 'SHA512', 'SHA384', 'sha384'}), 'SHA384', 'sha384', 'SHA512', 'sha512', frozenset({'blake2s', 'blake2b'}), 'blake2b', 'blake2s', frozenset({'sha3_224', 'sha3_512', 'sha3_384', 'sha3_256'}), 'sha3_224', 'sha3_256', 'sha3_384', 'sha3_512', frozenset({'shake_256', 'shake_128'}), 'shake_128', 'shake_256', 'unsupported hash type ')
+
+## co_names:
+('__builtin_constructor_cache', 'get', '_sha1', 'sha1', '_md5', 'md5', '_sha256', 'sha224', 'sha256', '_sha512', 'sha384', 'sha512', '_blake2', 'blake2b', 'blake2s', '_sha3', 'sha3_224', 'sha3_256', 'sha3_384', 'sha3_512', 'shake_128', 'shake_256', 'ImportError', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          __builtin_constructor_cache
+  14: STORE_FAST           cache
+  16: LOAD_FAST            cache
+  18: LOAD_METHOD          get
+  40: LOAD_FAST            name
+  42: PRECALL              
+  46: CALL                 
+  56: STORE_FAST           constructor
+  58: LOAD_FAST            constructor
+  60: POP_JUMP_FORWARD_IF_NONE to 66
+  62: LOAD_FAST            constructor
+  64: RETURN_VALUE         
+  66: NOP                  
+  68: LOAD_FAST            name
+  70: LOAD_CONST           frozenset({'SHA1', 'sha1'})
+  72: CONTAINS_OP          
+  74: POP_JUMP_FORWARD_IF_FALSE to 116
+  76: LOAD_CONST           0
+  78: LOAD_CONST           None
+  80: IMPORT_NAME          _sha1
+  82: STORE_FAST           _sha1
+  84: LOAD_FAST            _sha1
+  86: LOAD_ATTR            sha1
+  96: COPY                 
+  98: LOAD_FAST            cache
+ 100: LOAD_CONST           'SHA1'
+ 102: STORE_SUBSCR         
+ 106: LOAD_FAST            cache
+ 108: LOAD_CONST           'sha1'
+ 110: STORE_SUBSCR         
+ 114: JUMP_FORWARD         to 532
+ 116: LOAD_FAST            name
+ 118: LOAD_CONST           frozenset({'md5', 'MD5'})
+ 120: CONTAINS_OP          
+ 122: POP_JUMP_FORWARD_IF_FALSE to 164
+ 124: LOAD_CONST           0
+ 126: LOAD_CONST           None
+ 128: IMPORT_NAME          _md5
+ 130: STORE_FAST           _md5
+ 132: LOAD_FAST            _md5
+ 134: LOAD_ATTR            md5
+ 144: COPY                 
+ 146: LOAD_FAST            cache
+ 148: LOAD_CONST           'MD5'
+ 150: STORE_SUBSCR         
+ 154: LOAD_FAST            cache
+ 156: LOAD_CONST           'md5'
+ 158: STORE_SUBSCR         
+ 162: JUMP_FORWARD         to 532
+ 164: LOAD_FAST            name
+ 166: LOAD_CONST           frozenset({'SHA256', 'sha256', 'SHA224', 'sha224'})
+ 168: CONTAINS_OP          
+ 170: POP_JUMP_FORWARD_IF_FALSE to 242
+ 172: LOAD_CONST           0
+ 174: LOAD_CONST           None
+ 176: IMPORT_NAME          _sha256
+ 178: STORE_FAST           _sha256
+ 180: LOAD_FAST            _sha256
+ 182: LOAD_ATTR            sha224
+ 192: COPY                 
+ 194: LOAD_FAST            cache
+ 196: LOAD_CONST           'SHA224'
+ 198: STORE_SUBSCR         
+ 202: LOAD_FAST            cache
+ 204: LOAD_CONST           'sha224'
+ 206: STORE_SUBSCR         
+ 210: LOAD_FAST            _sha256
+ 212: LOAD_ATTR            sha256
+ 222: COPY                 
+ 224: LOAD_FAST            cache
+ 226: LOAD_CONST           'SHA256'
+ 228: STORE_SUBSCR         
+ 232: LOAD_FAST            cache
+ 234: LOAD_CONST           'sha256'
+ 236: STORE_SUBSCR         
+ 240: JUMP_FORWARD         to 532
+ 242: LOAD_FAST            name
+ 244: LOAD_CONST           frozenset({'sha512', 'SHA512', 'SHA384', 'sha384'})
+ 246: CONTAINS_OP          
+ 248: POP_JUMP_FORWARD_IF_FALSE to 320
+ 250: LOAD_CONST           0
+ 252: LOAD_CONST           None
+ 254: IMPORT_NAME          _sha512
+ 256: STORE_FAST           _sha512
+ 258: LOAD_FAST            _sha512
+ 260: LOAD_ATTR            sha384
+ 270: COPY                 
+ 272: LOAD_FAST            cache
+ 274: LOAD_CONST           'SHA384'
+ 276: STORE_SUBSCR         
+ 280: LOAD_FAST            cache
+ 282: LOAD_CONST           'sha384'
+ 284: STORE_SUBSCR         
+ 288: LOAD_FAST            _sha512
+ 290: LOAD_ATTR            sha512
+ 300: COPY                 
+ 302: LOAD_FAST            cache
+ 304: LOAD_CONST           'SHA512'
+ 306: STORE_SUBSCR         
+ 310: LOAD_FAST            cache
+ 312: LOAD_CONST           'sha512'
+ 314: STORE_SUBSCR         
+ 318: JUMP_FORWARD         to 532
+ 320: LOAD_FAST            name
+ 322: LOAD_CONST           frozenset({'blake2s', 'blake2b'})
+ 324: CONTAINS_OP          
+ 326: POP_JUMP_FORWARD_IF_FALSE to 378
+ 328: LOAD_CONST           0
+ 330: LOAD_CONST           None
+ 332: IMPORT_NAME          _blake2
+ 334: STORE_FAST           _blake2
+ 336: LOAD_FAST            _blake2
+ 338: LOAD_ATTR            blake2b
+ 348: LOAD_FAST            cache
+ 350: LOAD_CONST           'blake2b'
+ 352: STORE_SUBSCR         
+ 356: LOAD_FAST            _blake2
+ 358: LOAD_ATTR            blake2s
+ 368: LOAD_FAST            cache
+ 370: LOAD_CONST           'blake2s'
+ 372: STORE_SUBSCR         
+ 376: JUMP_FORWARD         to 532
+ 378: LOAD_FAST            name
+ 380: LOAD_CONST           frozenset({'sha3_224', 'sha3_512', 'sha3_384', 'sha3_256'})
+ 382: CONTAINS_OP          
+ 384: POP_JUMP_FORWARD_IF_FALSE to 476
+ 386: LOAD_CONST           0
+ 388: LOAD_CONST           None
+ 390: IMPORT_NAME          _sha3
+ 392: STORE_FAST           _sha3
+ 394: LOAD_FAST            _sha3
+ 396: LOAD_ATTR            sha3_224
+ 406: LOAD_FAST            cache
+ 408: LOAD_CONST           'sha3_224'
+ 410: STORE_SUBSCR         
+ 414: LOAD_FAST            _sha3
+ 416: LOAD_ATTR            sha3_256
+ 426: LOAD_FAST            cache
+ 428: LOAD_CONST           'sha3_256'
+ 430: STORE_SUBSCR         
+ 434: LOAD_FAST            _sha3
+ 436: LOAD_ATTR            sha3_384
+ 446: LOAD_FAST            cache
+ 448: LOAD_CONST           'sha3_384'
+ 450: STORE_SUBSCR         
+ 454: LOAD_FAST            _sha3
+ 456: LOAD_ATTR            sha3_512
+ 466: LOAD_FAST            cache
+ 468: LOAD_CONST           'sha3_512'
+ 470: STORE_SUBSCR         
+ 474: JUMP_FORWARD         to 532
+ 476: LOAD_FAST            name
+ 478: LOAD_CONST           frozenset({'shake_256', 'shake_128'})
+ 480: CONTAINS_OP          
+ 482: POP_JUMP_FORWARD_IF_FALSE to 532
+ 484: LOAD_CONST           0
+ 486: LOAD_CONST           None
+ 488: IMPORT_NAME          _sha3
+ 490: STORE_FAST           _sha3
+ 492: LOAD_FAST            _sha3
+ 494: LOAD_ATTR            shake_128
+ 504: LOAD_FAST            cache
+ 506: LOAD_CONST           'shake_128'
+ 508: STORE_SUBSCR         
+ 512: LOAD_FAST            _sha3
+ 514: LOAD_ATTR            shake_256
+ 524: LOAD_FAST            cache
+ 526: LOAD_CONST           'shake_256'
+ 528: STORE_SUBSCR         
+ 532: JUMP_FORWARD         to 566
+ 534: PUSH_EXC_INFO        
+ 536: LOAD_GLOBAL          ImportError
+ 548: CHECK_EXC_MATCH      
+ 550: POP_JUMP_FORWARD_IF_FALSE to 558
+ 552: POP_TOP              
+ 554: POP_EXCEPT           
+ 556: JUMP_FORWARD         to 566
+ 558: RERAISE              
+ 560: COPY                 
+ 562: POP_EXCEPT           
+ 564: RERAISE              
+ 566: LOAD_FAST            cache
+ 568: LOAD_METHOD          get
+ 590: LOAD_FAST            name
+ 592: PRECALL              
+ 596: CALL                 
+ 606: STORE_FAST           constructor
+ 608: LOAD_FAST            constructor
+ 610: POP_JUMP_FORWARD_IF_NONE to 616
+ 612: LOAD_FAST            constructor
+ 614: RETURN_VALUE         
+ 616: LOAD_GLOBAL          NULL + ValueError
+ 628: LOAD_CONST           'unsupported hash type '
+ 630: LOAD_FAST            name
+ 632: BINARY_OP            +
+ 636: PRECALL              
+ 640: CALL                 
+ 650: RAISE_VARARGS        

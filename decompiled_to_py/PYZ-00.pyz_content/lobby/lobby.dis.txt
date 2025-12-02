@@ -1,0 +1,72 @@
+# Disassembly for lobby
+# From module file: lobby
+
+## co_consts:
+(0, ('*',), <code object Notepad at 0x00000240691F13E0, file "lobby.py", line 4>, 'Notepad', <code object Telephone at 0x00000240691F39F0, file "lobby.py", line 47>, 'Telephone', <code object Ticket at 0x000002406945F5A0, file "lobby.py", line 105>, 'Ticket', <code object TicketMachine at 0x00000240693AA6F0, file "lobby.py", line 113>, 'TicketMachine', <code object SignInSheet at 0x00000240693AA0B0, file "lobby.py", line 142>, 'SignInSheet', <code object Lobby at 0x000002406922CD50, file "lobby.py", line 177>, 'Lobby', None)
+
+## co_names:
+('entities', 'Item', 'Notepad', 'Telephone', 'Ticket', 'TicketMachine', 'SignInSheet', 'Room', 'Lobby')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           ('*',)
+   6: IMPORT_NAME          entities
+   8: IMPORT_STAR          
+  10: PUSH_NULL            
+  12: LOAD_BUILD_CLASS     
+  14: LOAD_CONST           <code object Notepad at 0x00000240691F13E0, file "lobby.py", line 4>
+  16: MAKE_FUNCTION        
+  18: LOAD_CONST           'Notepad'
+  20: LOAD_NAME            Item
+  22: PRECALL              
+  26: CALL                 
+  36: STORE_NAME           Notepad
+  38: PUSH_NULL            
+  40: LOAD_BUILD_CLASS     
+  42: LOAD_CONST           <code object Telephone at 0x00000240691F39F0, file "lobby.py", line 47>
+  44: MAKE_FUNCTION        
+  46: LOAD_CONST           'Telephone'
+  48: LOAD_NAME            Item
+  50: PRECALL              
+  54: CALL                 
+  64: STORE_NAME           Telephone
+  66: PUSH_NULL            
+  68: LOAD_BUILD_CLASS     
+  70: LOAD_CONST           <code object Ticket at 0x000002406945F5A0, file "lobby.py", line 105>
+  72: MAKE_FUNCTION        
+  74: LOAD_CONST           'Ticket'
+  76: LOAD_NAME            Item
+  78: PRECALL              
+  82: CALL                 
+  92: STORE_NAME           Ticket
+  94: PUSH_NULL            
+  96: LOAD_BUILD_CLASS     
+  98: LOAD_CONST           <code object TicketMachine at 0x00000240693AA6F0, file "lobby.py", line 113>
+ 100: MAKE_FUNCTION        
+ 102: LOAD_CONST           'TicketMachine'
+ 104: LOAD_NAME            Item
+ 106: PRECALL              
+ 110: CALL                 
+ 120: STORE_NAME           TicketMachine
+ 122: PUSH_NULL            
+ 124: LOAD_BUILD_CLASS     
+ 126: LOAD_CONST           <code object SignInSheet at 0x00000240693AA0B0, file "lobby.py", line 142>
+ 128: MAKE_FUNCTION        
+ 130: LOAD_CONST           'SignInSheet'
+ 132: LOAD_NAME            Item
+ 134: PRECALL              
+ 138: CALL                 
+ 148: STORE_NAME           SignInSheet
+ 150: PUSH_NULL            
+ 152: LOAD_BUILD_CLASS     
+ 154: LOAD_CONST           <code object Lobby at 0x000002406922CD50, file "lobby.py", line 177>
+ 156: MAKE_FUNCTION        
+ 158: LOAD_CONST           'Lobby'
+ 160: LOAD_NAME            Room
+ 162: PRECALL              
+ 166: CALL                 
+ 176: STORE_NAME           Lobby
+ 178: LOAD_CONST           None
+ 180: RETURN_VALUE         

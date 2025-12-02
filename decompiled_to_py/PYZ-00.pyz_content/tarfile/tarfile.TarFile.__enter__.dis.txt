@@ -1,0 +1,19 @@
+# Disassembly for tarfile.TarFile.__enter__
+# From module file: tarfile
+
+## co_consts:
+(None,)
+
+## co_names:
+('_check',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _check
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_FAST            self
+  44: RETURN_VALUE         

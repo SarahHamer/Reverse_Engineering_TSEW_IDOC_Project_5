@@ -1,0 +1,107 @@
+# Disassembly for tarfile.TarFile._getmember
+# From module file: tarfile
+
+## co_consts:
+('Find an archive member by name from bottom to top.\n           If tarinfo is given, it is used as the starting point.\n        ', False, None, True)
+
+## co_names:
+('getmembers', 'index', 'ValueError', 'os', 'path', 'normpath', 'reversed', 'offset', 'name')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          getmembers
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           members
+  42: LOAD_CONST           False
+  44: STORE_FAST           skipping
+  46: LOAD_FAST            tarinfo
+  48: POP_JUMP_FORWARD_IF_NONE to 152
+  50: NOP                  
+  52: LOAD_FAST            members
+  54: LOAD_METHOD          index
+  76: LOAD_FAST            tarinfo
+  78: PRECALL              
+  82: CALL                 
+  92: STORE_FAST           index
+  94: LOAD_FAST            members
+  96: LOAD_CONST           None
+  98: LOAD_FAST            index
+ 100: BUILD_SLICE          
+ 102: BINARY_SUBSCR        
+ 112: STORE_FAST           members
+ 114: JUMP_FORWARD         to 152
+ 116: PUSH_EXC_INFO        
+ 118: LOAD_GLOBAL          ValueError
+ 130: CHECK_EXC_MATCH      
+ 132: POP_JUMP_FORWARD_IF_FALSE to 144
+ 134: POP_TOP              
+ 136: LOAD_CONST           True
+ 138: STORE_FAST           skipping
+ 140: POP_EXCEPT           
+ 142: JUMP_FORWARD         to 152
+ 144: RERAISE              
+ 146: COPY                 
+ 148: POP_EXCEPT           
+ 150: RERAISE              
+ 152: LOAD_FAST            normalize
+ 154: POP_JUMP_FORWARD_IF_FALSE to 218
+ 156: LOAD_GLOBAL          os
+ 168: LOAD_ATTR            path
+ 178: LOAD_METHOD          normpath
+ 200: LOAD_FAST            name
+ 202: PRECALL              
+ 206: CALL                 
+ 216: STORE_FAST           name
+ 218: LOAD_GLOBAL          NULL + reversed
+ 230: LOAD_FAST            members
+ 232: PRECALL              
+ 236: CALL                 
+ 246: GET_ITER             
+ 248: FOR_ITER             to 408
+ 250: STORE_FAST           member
+ 252: LOAD_FAST            skipping
+ 254: POP_JUMP_FORWARD_IF_FALSE to 294
+ 256: LOAD_FAST            tarinfo
+ 258: LOAD_ATTR            offset
+ 268: LOAD_FAST            member
+ 270: LOAD_ATTR            offset
+ 280: COMPARE_OP           ==
+ 286: POP_JUMP_FORWARD_IF_FALSE to 292
+ 288: LOAD_CONST           False
+ 290: STORE_FAST           skipping
+ 292: JUMP_BACKWARD        to 248
+ 294: LOAD_FAST            normalize
+ 296: POP_JUMP_FORWARD_IF_FALSE to 372
+ 298: LOAD_GLOBAL          os
+ 310: LOAD_ATTR            path
+ 320: LOAD_METHOD          normpath
+ 342: LOAD_FAST            member
+ 344: LOAD_ATTR            name
+ 354: PRECALL              
+ 358: CALL                 
+ 368: STORE_FAST           member_name
+ 370: JUMP_FORWARD         to 386
+ 372: LOAD_FAST            member
+ 374: LOAD_ATTR            name
+ 384: STORE_FAST           member_name
+ 386: LOAD_FAST            name
+ 388: LOAD_FAST            member_name
+ 390: COMPARE_OP           ==
+ 396: POP_JUMP_FORWARD_IF_FALSE to 406
+ 398: LOAD_FAST            member
+ 400: SWAP                 
+ 402: POP_TOP              
+ 404: RETURN_VALUE         
+ 406: JUMP_BACKWARD        to 248
+ 408: LOAD_FAST            skipping
+ 410: POP_JUMP_FORWARD_IF_FALSE to 442
+ 412: LOAD_GLOBAL          NULL + ValueError
+ 424: LOAD_FAST            tarinfo
+ 426: PRECALL              
+ 430: CALL                 
+ 440: RAISE_VARARGS        
+ 442: LOAD_CONST           None
+ 444: RETURN_VALUE         

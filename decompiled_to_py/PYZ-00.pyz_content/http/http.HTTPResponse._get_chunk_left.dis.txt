@@ -1,0 +1,67 @@
+# Disassembly for http.HTTPResponse._get_chunk_left
+# From module file: http.client
+
+## co_consts:
+(None, 2, b'', 0)
+
+## co_names:
+('chunk_left', '_safe_read', '_read_next_chunk_size', 'ValueError', 'IncompleteRead', '_read_and_discard_trailer', '_close_conn')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            chunk_left
+  14: STORE_FAST           chunk_left
+  16: LOAD_FAST            chunk_left
+  18: POP_JUMP_FORWARD_IF_TRUE to 278
+  20: LOAD_FAST            chunk_left
+  22: POP_JUMP_FORWARD_IF_NONE to 66
+  24: LOAD_FAST            self
+  26: LOAD_METHOD          _safe_read
+  48: LOAD_CONST           2
+  50: PRECALL              
+  54: CALL                 
+  64: POP_TOP              
+  66: NOP                  
+  68: LOAD_FAST            self
+  70: LOAD_METHOD          _read_next_chunk_size
+  92: PRECALL              
+  96: CALL                 
+ 106: STORE_FAST           chunk_left
+ 108: JUMP_FORWARD         to 168
+ 110: PUSH_EXC_INFO        
+ 112: LOAD_GLOBAL          ValueError
+ 124: CHECK_EXC_MATCH      
+ 126: POP_JUMP_FORWARD_IF_FALSE to 160
+ 128: POP_TOP              
+ 130: LOAD_GLOBAL          NULL + IncompleteRead
+ 142: LOAD_CONST           b''
+ 144: PRECALL              
+ 148: CALL                 
+ 158: RAISE_VARARGS        
+ 160: RERAISE              
+ 162: COPY                 
+ 164: POP_EXCEPT           
+ 166: RERAISE              
+ 168: LOAD_FAST            chunk_left
+ 170: LOAD_CONST           0
+ 172: COMPARE_OP           ==
+ 178: POP_JUMP_FORWARD_IF_FALSE to 264
+ 180: LOAD_FAST            self
+ 182: LOAD_METHOD          _read_and_discard_trailer
+ 204: PRECALL              
+ 208: CALL                 
+ 218: POP_TOP              
+ 220: LOAD_FAST            self
+ 222: LOAD_METHOD          _close_conn
+ 244: PRECALL              
+ 248: CALL                 
+ 258: POP_TOP              
+ 260: LOAD_CONST           None
+ 262: STORE_FAST           chunk_left
+ 264: LOAD_FAST            chunk_left
+ 266: LOAD_FAST            self
+ 268: STORE_ATTR           chunk_left
+ 278: LOAD_FAST            chunk_left
+ 280: RETURN_VALUE         

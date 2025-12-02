@@ -1,0 +1,48 @@
+# Disassembly for importlib.InspectLoader
+# From module file: importlib.abc
+
+## co_consts:
+('InspectLoader', 'Abstract base class for loaders which support inspection about the\n    modules they can load.\n\n    This ABC represents one of the optional protocols specified by PEP 302.\n\n    ', <code object is_package at 0x0000024069494FA0, file "importlib\abc.py", line 186>, <code object get_code at 0x0000024069419FB0, file "importlib\abc.py", line 194>, <code object get_source at 0x00000240694946B0, file "importlib\abc.py", line 207>, '<string>', <code object source_to_code at 0x0000024069465610, file "importlib\abc.py", line 216>, None, ('<string>',))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'is_package', 'get_code', 'abc', 'abstractmethod', 'get_source', 'staticmethod', 'source_to_code', '_bootstrap_external', '_LoaderBasics', 'exec_module', 'load_module')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'InspectLoader'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Abstract base class for loaders which support inspection about the\n    modules they can load.\n\n    This ABC represents one of the optional protocols specified by PEP 302.\n\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object is_package at 0x0000024069494FA0, file "importlib\abc.py", line 186>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           is_package
+  20: LOAD_CONST           <code object get_code at 0x0000024069419FB0, file "importlib\abc.py", line 194>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           get_code
+  26: LOAD_NAME            abc
+  28: LOAD_ATTR            abstractmethod
+  38: LOAD_CONST           <code object get_source at 0x00000240694946B0, file "importlib\abc.py", line 207>
+  40: MAKE_FUNCTION        
+  42: PRECALL              
+  46: CALL                 
+  56: STORE_NAME           get_source
+  58: LOAD_NAME            staticmethod
+  60: LOAD_CONST           ('<string>',)
+  62: LOAD_CONST           <code object source_to_code at 0x0000024069465610, file "importlib\abc.py", line 216>
+  64: MAKE_FUNCTION        defaults
+  66: PRECALL              
+  70: CALL                 
+  80: STORE_NAME           source_to_code
+  82: LOAD_NAME            _bootstrap_external
+  84: LOAD_ATTR            _LoaderBasics
+  94: LOAD_ATTR            exec_module
+ 104: STORE_NAME           exec_module
+ 106: LOAD_NAME            _bootstrap_external
+ 108: LOAD_ATTR            _LoaderBasics
+ 118: LOAD_ATTR            load_module
+ 128: STORE_NAME           load_module
+ 130: LOAD_CONST           None
+ 132: RETURN_VALUE         

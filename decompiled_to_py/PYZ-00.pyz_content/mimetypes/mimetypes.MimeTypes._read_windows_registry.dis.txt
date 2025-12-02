@@ -1,0 +1,136 @@
+# Disassembly for mimetypes.MimeTypes._read_windows_registry
+# From module file: mimetypes
+
+## co_consts:
+(None, <code object enum_types at 0x00000240693D3B90, file "mimetypes.py", line 259>, '', '.', 'Content Type')
+
+## co_names:
+('_winreg', 'OpenKey', 'HKEY_CLASSES_ROOT', 'startswith', 'QueryValueEx', 'REG_SZ', 'OSError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           <code object enum_types at 0x00000240693D3B90, file "mimetypes.py", line 259>
+   4: MAKE_FUNCTION        
+   6: STORE_FAST           enum_types
+   8: LOAD_GLOBAL          NULL + _winreg
+  20: LOAD_ATTR            OpenKey
+  30: LOAD_GLOBAL          _winreg
+  42: LOAD_ATTR            HKEY_CLASSES_ROOT
+  52: LOAD_CONST           ''
+  54: PRECALL              
+  58: CALL                 
+  68: BEFORE_WITH          
+  70: STORE_FAST           hkcr
+  72: PUSH_NULL            
+  74: LOAD_FAST            enum_types
+  76: LOAD_FAST            hkcr
+  78: PRECALL              
+  82: CALL                 
+  92: GET_ITER             
+  94: FOR_ITER             to 422
+  96: STORE_FAST           subkeyname
+  98: NOP                  
+ 100: LOAD_GLOBAL          NULL + _winreg
+ 112: LOAD_ATTR            OpenKey
+ 122: LOAD_FAST            hkcr
+ 124: LOAD_FAST            subkeyname
+ 126: PRECALL              
+ 130: CALL                 
+ 140: BEFORE_WITH          
+ 142: STORE_FAST           subkey
+ 144: LOAD_FAST            subkeyname
+ 146: LOAD_METHOD          startswith
+ 168: LOAD_CONST           '.'
+ 170: PRECALL              
+ 174: CALL                 
+ 184: POP_JUMP_FORWARD_IF_TRUE to 212
+ 186: NOP                  
+ 188: LOAD_CONST           None
+ 190: LOAD_CONST           None
+ 192: LOAD_CONST           None
+ 194: PRECALL              
+ 198: CALL                 
+ 208: POP_TOP              
+ 210: JUMP_BACKWARD        to 94
+ 212: LOAD_GLOBAL          NULL + _winreg
+ 224: LOAD_ATTR            QueryValueEx
+ 234: LOAD_FAST            subkey
+ 236: LOAD_CONST           'Content Type'
+ 238: PRECALL              
+ 242: CALL                 
+ 252: UNPACK_SEQUENCE      
+ 256: STORE_FAST           mimetype
+ 258: STORE_FAST           datatype
+ 260: LOAD_FAST            datatype
+ 262: LOAD_GLOBAL          _winreg
+ 274: LOAD_ATTR            REG_SZ
+ 284: COMPARE_OP           !=
+ 290: POP_JUMP_FORWARD_IF_FALSE to 318
+ 292: NOP                  
+ 294: LOAD_CONST           None
+ 296: LOAD_CONST           None
+ 298: LOAD_CONST           None
+ 300: PRECALL              
+ 304: CALL                 
+ 314: POP_TOP              
+ 316: JUMP_BACKWARD        to 94
+ 318: PUSH_NULL            
+ 320: LOAD_FAST            add_type
+ 322: LOAD_FAST            mimetype
+ 324: LOAD_FAST            subkeyname
+ 326: PRECALL              
+ 330: CALL                 
+ 340: POP_TOP              
+ 342: LOAD_CONST           None
+ 344: LOAD_CONST           None
+ 346: LOAD_CONST           None
+ 348: PRECALL              
+ 352: CALL                 
+ 362: POP_TOP              
+ 364: JUMP_FORWARD         to 388
+ 366: PUSH_EXC_INFO        
+ 368: WITH_EXCEPT_START    
+ 370: POP_JUMP_FORWARD_IF_TRUE to 380
+ 372: RERAISE              
+ 374: COPY                 
+ 376: POP_EXCEPT           
+ 378: RERAISE              
+ 380: POP_TOP              
+ 382: POP_EXCEPT           
+ 384: POP_TOP              
+ 386: POP_TOP              
+ 388: JUMP_BACKWARD        to 94
+ 390: PUSH_EXC_INFO        
+ 392: LOAD_GLOBAL          OSError
+ 404: CHECK_EXC_MATCH      
+ 406: POP_JUMP_FORWARD_IF_FALSE to 414
+ 408: POP_TOP              
+ 410: POP_EXCEPT           
+ 412: JUMP_BACKWARD        to 94
+ 414: RERAISE              
+ 416: COPY                 
+ 418: POP_EXCEPT           
+ 420: RERAISE              
+ 422: NOP                  
+ 424: LOAD_CONST           None
+ 426: LOAD_CONST           None
+ 428: LOAD_CONST           None
+ 430: PRECALL              
+ 434: CALL                 
+ 444: POP_TOP              
+ 446: LOAD_CONST           None
+ 448: RETURN_VALUE         
+ 450: PUSH_EXC_INFO        
+ 452: WITH_EXCEPT_START    
+ 454: POP_JUMP_FORWARD_IF_TRUE to 464
+ 456: RERAISE              
+ 458: COPY                 
+ 460: POP_EXCEPT           
+ 462: RERAISE              
+ 464: POP_TOP              
+ 466: POP_EXCEPT           
+ 468: POP_TOP              
+ 470: POP_TOP              
+ 472: LOAD_CONST           None
+ 474: RETURN_VALUE         

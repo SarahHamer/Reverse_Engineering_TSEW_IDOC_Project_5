@@ -1,0 +1,22 @@
+# Disassembly for importlib.NamespaceLoader.__init__
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+(None,)
+
+## co_names:
+('_NamespacePath', '_path')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _NamespacePath
+  14: LOAD_FAST            name
+  16: LOAD_FAST            path
+  18: LOAD_FAST            path_finder
+  20: PRECALL              
+  24: CALL                 
+  34: LOAD_FAST            self
+  36: STORE_ATTR           _path
+  46: LOAD_CONST           None
+  48: RETURN_VALUE         

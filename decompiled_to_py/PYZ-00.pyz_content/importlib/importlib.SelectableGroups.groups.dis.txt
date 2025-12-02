@@ -1,0 +1,16 @@
+# Disassembly for importlib.SelectableGroups.groups
+# From module file: importlib.metadata
+
+## co_consts:
+(None,)
+
+## co_names:
+('_all', 'groups')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _all
+  14: LOAD_ATTR            groups
+  24: RETURN_VALUE         

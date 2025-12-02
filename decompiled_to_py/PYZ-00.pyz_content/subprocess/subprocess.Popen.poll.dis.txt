@@ -1,0 +1,17 @@
+# Disassembly for subprocess.Popen.poll
+# From module file: subprocess
+
+## co_consts:
+('Check if child process has terminated. Set and return returncode\n        attribute.',)
+
+## co_names:
+('_internal_poll',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _internal_poll
+  26: PRECALL              
+  30: CALL                 
+  40: RETURN_VALUE         

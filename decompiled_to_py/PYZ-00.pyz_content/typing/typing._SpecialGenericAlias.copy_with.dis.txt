@@ -1,0 +1,24 @@
+# Disassembly for typing._SpecialGenericAlias.copy_with
+# From module file: typing
+
+## co_consts:
+(None, ('name', 'inst'))
+
+## co_names:
+('_GenericAlias', '__origin__', '_name', '_inst')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _GenericAlias
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            __origin__
+  26: LOAD_FAST            params
+  28: LOAD_FAST            self
+  30: LOAD_ATTR            _name
+  40: LOAD_FAST            self
+  42: LOAD_ATTR            _inst
+  52: KW_NAMES             
+  54: PRECALL              
+  58: CALL                 
+  68: RETURN_VALUE         

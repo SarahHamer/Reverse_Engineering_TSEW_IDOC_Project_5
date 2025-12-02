@@ -1,0 +1,66 @@
+# Disassembly for importlib.PathFinder._path_importer_cache
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Get the finder for the path entry from sys.path_importer_cache.\n\n        If the path entry is not in the cache, find the appropriate finder\n        and cache it. If no finder is available, store None.\n\n        ', '', None)
+
+## co_names:
+('_os', 'getcwd', 'FileNotFoundError', 'sys', 'path_importer_cache', 'KeyError', '_path_hooks')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            path
+   4: LOAD_CONST           ''
+   6: COMPARE_OP           ==
+  12: POP_JUMP_FORWARD_IF_FALSE to 90
+  14: NOP                  
+  16: LOAD_GLOBAL          NULL + _os
+  28: LOAD_ATTR            getcwd
+  38: PRECALL              
+  42: CALL                 
+  52: STORE_FAST           path
+  54: JUMP_FORWARD         to 90
+  56: PUSH_EXC_INFO        
+  58: LOAD_GLOBAL          FileNotFoundError
+  70: CHECK_EXC_MATCH      
+  72: POP_JUMP_FORWARD_IF_FALSE to 82
+  74: POP_TOP              
+  76: POP_EXCEPT           
+  78: LOAD_CONST           None
+  80: RETURN_VALUE         
+  82: RERAISE              
+  84: COPY                 
+  86: POP_EXCEPT           
+  88: RERAISE              
+  90: NOP                  
+  92: LOAD_GLOBAL          sys
+ 104: LOAD_ATTR            path_importer_cache
+ 114: LOAD_FAST            path
+ 116: BINARY_SUBSCR        
+ 126: STORE_FAST           finder
+ 128: JUMP_FORWARD         to 234
+ 130: PUSH_EXC_INFO        
+ 132: LOAD_GLOBAL          KeyError
+ 144: CHECK_EXC_MATCH      
+ 146: POP_JUMP_FORWARD_IF_FALSE to 226
+ 148: POP_TOP              
+ 150: LOAD_FAST            cls
+ 152: LOAD_METHOD          _path_hooks
+ 174: LOAD_FAST            path
+ 176: PRECALL              
+ 180: CALL                 
+ 190: STORE_FAST           finder
+ 192: LOAD_FAST            finder
+ 194: LOAD_GLOBAL          sys
+ 206: LOAD_ATTR            path_importer_cache
+ 216: LOAD_FAST            path
+ 218: STORE_SUBSCR         
+ 222: POP_EXCEPT           
+ 224: JUMP_FORWARD         to 234
+ 226: RERAISE              
+ 228: COPY                 
+ 230: POP_EXCEPT           
+ 232: RERAISE              
+ 234: LOAD_FAST            finder
+ 236: RETURN_VALUE         

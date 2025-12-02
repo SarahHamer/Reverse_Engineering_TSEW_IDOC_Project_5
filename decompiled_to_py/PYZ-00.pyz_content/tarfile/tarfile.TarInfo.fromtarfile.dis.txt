@@ -1,0 +1,44 @@
+# Disassembly for tarfile.TarInfo.fromtarfile
+# From module file: tarfile
+
+## co_consts:
+('Return the next TarInfo object from TarFile object\n           tarfile.\n        ',)
+
+## co_names:
+('fileobj', 'read', 'BLOCKSIZE', 'frombuf', 'encoding', 'errors', 'tell', 'offset', '_proc_member')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            tarfile
+   4: LOAD_ATTR            fileobj
+  14: LOAD_METHOD          read
+  36: LOAD_GLOBAL          BLOCKSIZE
+  48: PRECALL              
+  52: CALL                 
+  62: STORE_FAST           buf
+  64: LOAD_FAST            cls
+  66: LOAD_METHOD          frombuf
+  88: LOAD_FAST            buf
+  90: LOAD_FAST            tarfile
+  92: LOAD_ATTR            encoding
+ 102: LOAD_FAST            tarfile
+ 104: LOAD_ATTR            errors
+ 114: PRECALL              
+ 118: CALL                 
+ 128: STORE_FAST           obj
+ 130: LOAD_FAST            tarfile
+ 132: LOAD_ATTR            fileobj
+ 142: LOAD_METHOD          tell
+ 164: PRECALL              
+ 168: CALL                 
+ 178: LOAD_GLOBAL          BLOCKSIZE
+ 190: BINARY_OP            -
+ 194: LOAD_FAST            obj
+ 196: STORE_ATTR           offset
+ 206: LOAD_FAST            obj
+ 208: LOAD_METHOD          _proc_member
+ 230: LOAD_FAST            tarfile
+ 232: PRECALL              
+ 236: CALL                 
+ 246: RETURN_VALUE         

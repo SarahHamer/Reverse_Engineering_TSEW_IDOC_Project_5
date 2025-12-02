@@ -1,0 +1,37 @@
+# Disassembly for logging.captureWarnings
+# From module file: logging
+
+## co_consts:
+('\n    If capture is true, redirect all warnings to the logging package.\n    If capture is False, ensure that warnings are not redirected to logging\n    but to their original destinations.\n    ', None)
+
+## co_names:
+('_warnings_showwarning', 'warnings', 'showwarning', '_showwarning')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            capture
+   4: POP_JUMP_FORWARD_IF_FALSE to 86
+   6: LOAD_GLOBAL          _warnings_showwarning
+  18: POP_JUMP_FORWARD_IF_NOT_NONE to 82
+  20: LOAD_GLOBAL          warnings
+  32: LOAD_ATTR            showwarning
+  42: STORE_GLOBAL         _warnings_showwarning
+  44: LOAD_GLOBAL          _showwarning
+  56: LOAD_GLOBAL          warnings
+  68: STORE_ATTR           showwarning
+  78: LOAD_CONST           None
+  80: RETURN_VALUE         
+  82: LOAD_CONST           None
+  84: RETURN_VALUE         
+  86: LOAD_GLOBAL          _warnings_showwarning
+  98: POP_JUMP_FORWARD_IF_NONE to 142
+ 100: LOAD_GLOBAL          _warnings_showwarning
+ 112: LOAD_GLOBAL          warnings
+ 124: STORE_ATTR           showwarning
+ 134: LOAD_CONST           None
+ 136: STORE_GLOBAL         _warnings_showwarning
+ 138: LOAD_CONST           None
+ 140: RETURN_VALUE         
+ 142: LOAD_CONST           None
+ 144: RETURN_VALUE         

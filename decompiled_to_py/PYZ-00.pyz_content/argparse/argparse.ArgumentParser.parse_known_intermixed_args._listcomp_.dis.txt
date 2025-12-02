@@ -1,0 +1,32 @@
+# Disassembly for argparse.ArgumentParser.parse_known_intermixed_args.<listcomp>
+# From module file: argparse
+
+## co_consts:
+()
+
+## co_names:
+('_group_actions', 'dest')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: BUILD_LIST           
+   6: LOAD_FAST            .0
+   8: FOR_ITER             to 56
+  10: STORE_FAST           group
+  12: LOAD_FAST            group
+  14: LOAD_ATTR            _group_actions
+  24: GET_ITER             
+  26: FOR_ITER             to 54
+  28: STORE_FAST           action
+  30: LOAD_FAST            action
+  32: LOAD_DEREF           positionals
+  34: CONTAINS_OP          
+  36: POP_JUMP_BACKWARD_IF_FALSE to 26
+  38: LOAD_FAST            action
+  40: LOAD_ATTR            dest
+  50: LIST_APPEND          
+  52: JUMP_BACKWARD        to 26
+  54: JUMP_BACKWARD        to 8
+  56: RETURN_VALUE         

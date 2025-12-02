@@ -1,0 +1,14 @@
+# Disassembly for ftplib.FTP.__enter__
+# From module file: ftplib
+
+## co_consts:
+(None,)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: RETURN_VALUE         

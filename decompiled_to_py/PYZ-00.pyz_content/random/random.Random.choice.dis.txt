@@ -1,0 +1,33 @@
+# Disassembly for random.Random.choice
+# From module file: random
+
+## co_consts:
+('Choose a random element from a non-empty sequence.', 'Cannot choose from an empty sequence')
+
+## co_names:
+('len', 'IndexError', '_randbelow')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + len
+  14: LOAD_FAST            seq
+  16: PRECALL              
+  20: CALL                 
+  30: POP_JUMP_FORWARD_IF_TRUE to 62
+  32: LOAD_GLOBAL          NULL + IndexError
+  44: LOAD_CONST           'Cannot choose from an empty sequence'
+  46: PRECALL              
+  50: CALL                 
+  60: RAISE_VARARGS        
+  62: LOAD_FAST            seq
+  64: LOAD_FAST            self
+  66: LOAD_METHOD          _randbelow
+  88: LOAD_GLOBAL          NULL + len
+ 100: LOAD_FAST            seq
+ 102: PRECALL              
+ 106: CALL                 
+ 116: PRECALL              
+ 120: CALL                 
+ 130: BINARY_SUBSCR        
+ 140: RETURN_VALUE         

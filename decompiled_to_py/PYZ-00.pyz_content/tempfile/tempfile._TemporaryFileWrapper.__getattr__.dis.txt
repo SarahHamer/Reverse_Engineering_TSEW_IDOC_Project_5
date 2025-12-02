@@ -1,0 +1,65 @@
+# Disassembly for tempfile._TemporaryFileWrapper.__getattr__
+# From module file: tempfile
+
+## co_consts:
+(None, 'file', '__call__', <code object func_wrapper at 0x0000024069495210, file "tempfile.py", line 481>)
+
+## co_names:
+('__dict__', 'getattr', 'hasattr', '_functools', 'wraps', '_closer', 'isinstance', 'int', 'setattr')
+
+## bytecode:
+
+   0: MAKE_CELL            func
+   2: RESUME               
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            __dict__
+  16: LOAD_CONST           'file'
+  18: BINARY_SUBSCR        
+  28: STORE_FAST           file
+  30: LOAD_GLOBAL          NULL + getattr
+  42: LOAD_FAST            file
+  44: LOAD_FAST            name
+  46: PRECALL              
+  50: CALL                 
+  60: STORE_FAST           a
+  62: LOAD_GLOBAL          NULL + hasattr
+  74: LOAD_FAST            a
+  76: LOAD_CONST           '__call__'
+  78: PRECALL              
+  82: CALL                 
+  92: POP_JUMP_FORWARD_IF_FALSE to 188
+  94: LOAD_FAST            a
+  96: STORE_DEREF          func
+  98: LOAD_GLOBAL          NULL + _functools
+ 110: LOAD_ATTR            wraps
+ 120: LOAD_DEREF           func
+ 122: PRECALL              
+ 126: CALL                 
+ 136: LOAD_CLOSURE         func
+ 138: BUILD_TUPLE          
+ 140: LOAD_CONST           <code object func_wrapper at 0x0000024069495210, file "tempfile.py", line 481>
+ 142: MAKE_FUNCTION        closure
+ 144: PRECALL              
+ 148: CALL                 
+ 158: STORE_FAST           func_wrapper
+ 160: LOAD_FAST            self
+ 162: LOAD_ATTR            _closer
+ 172: LOAD_FAST            func_wrapper
+ 174: STORE_ATTR           _closer
+ 184: LOAD_FAST            func_wrapper
+ 186: STORE_FAST           a
+ 188: LOAD_GLOBAL          NULL + isinstance
+ 200: LOAD_FAST            a
+ 202: LOAD_GLOBAL          int
+ 214: PRECALL              
+ 218: CALL                 
+ 228: POP_JUMP_FORWARD_IF_TRUE to 264
+ 230: LOAD_GLOBAL          NULL + setattr
+ 242: LOAD_FAST            self
+ 244: LOAD_FAST            name
+ 246: LOAD_FAST            a
+ 248: PRECALL              
+ 252: CALL                 
+ 262: POP_TOP              
+ 264: LOAD_FAST            a
+ 266: RETURN_VALUE         

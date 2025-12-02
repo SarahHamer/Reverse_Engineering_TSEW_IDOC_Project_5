@@ -1,0 +1,91 @@
+# Disassembly for http.CookieJar._cookies_for_domain
+# From module file: http.cookiejar
+
+## co_consts:
+(None, 'Checking %s for cookies to return', '   not returning cookie', "   it's a match")
+
+## co_names:
+('_policy', 'domain_return_ok', '_debug', '_cookies', 'keys', 'path_return_ok', 'values', 'return_ok', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           cookies
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            _policy
+  18: LOAD_METHOD          domain_return_ok
+  40: LOAD_FAST            domain
+  42: LOAD_FAST            request
+  44: PRECALL              
+  48: CALL                 
+  58: POP_JUMP_FORWARD_IF_TRUE to 64
+  60: BUILD_LIST           
+  62: RETURN_VALUE         
+  64: LOAD_GLOBAL          NULL + _debug
+  76: LOAD_CONST           'Checking %s for cookies to return'
+  78: LOAD_FAST            domain
+  80: PRECALL              
+  84: CALL                 
+  94: POP_TOP              
+  96: LOAD_FAST            self
+  98: LOAD_ATTR            _cookies
+ 108: LOAD_FAST            domain
+ 110: BINARY_SUBSCR        
+ 120: STORE_FAST           cookies_by_path
+ 122: LOAD_FAST            cookies_by_path
+ 124: LOAD_METHOD          keys
+ 146: PRECALL              
+ 150: CALL                 
+ 160: GET_ITER             
+ 162: FOR_ITER             to 444
+ 164: STORE_FAST           path
+ 166: LOAD_FAST            self
+ 168: LOAD_ATTR            _policy
+ 178: LOAD_METHOD          path_return_ok
+ 200: LOAD_FAST            path
+ 202: LOAD_FAST            request
+ 204: PRECALL              
+ 208: CALL                 
+ 218: POP_JUMP_FORWARD_IF_TRUE to 222
+ 220: JUMP_BACKWARD        to 162
+ 222: LOAD_FAST            cookies_by_path
+ 224: LOAD_FAST            path
+ 226: BINARY_SUBSCR        
+ 236: STORE_FAST           cookies_by_name
+ 238: LOAD_FAST            cookies_by_name
+ 240: LOAD_METHOD          values
+ 262: PRECALL              
+ 266: CALL                 
+ 276: GET_ITER             
+ 278: FOR_ITER             to 442
+ 280: STORE_FAST           cookie
+ 282: LOAD_FAST            self
+ 284: LOAD_ATTR            _policy
+ 294: LOAD_METHOD          return_ok
+ 316: LOAD_FAST            cookie
+ 318: LOAD_FAST            request
+ 320: PRECALL              
+ 324: CALL                 
+ 334: POP_JUMP_FORWARD_IF_TRUE to 368
+ 336: LOAD_GLOBAL          NULL + _debug
+ 348: LOAD_CONST           '   not returning cookie'
+ 350: PRECALL              
+ 354: CALL                 
+ 364: POP_TOP              
+ 366: JUMP_BACKWARD        to 278
+ 368: LOAD_GLOBAL          NULL + _debug
+ 380: LOAD_CONST           "   it's a match"
+ 382: PRECALL              
+ 386: CALL                 
+ 396: POP_TOP              
+ 398: LOAD_FAST            cookies
+ 400: LOAD_METHOD          append
+ 422: LOAD_FAST            cookie
+ 424: PRECALL              
+ 428: CALL                 
+ 438: POP_TOP              
+ 440: JUMP_BACKWARD        to 278
+ 442: JUMP_BACKWARD        to 162
+ 444: LOAD_FAST            cookies
+ 446: RETURN_VALUE         

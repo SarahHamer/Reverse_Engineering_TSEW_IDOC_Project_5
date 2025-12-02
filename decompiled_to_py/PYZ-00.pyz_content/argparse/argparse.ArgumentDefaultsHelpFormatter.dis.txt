@@ -1,0 +1,23 @@
+# Disassembly for argparse.ArgumentDefaultsHelpFormatter
+# From module file: argparse
+
+## co_consts:
+('ArgumentDefaultsHelpFormatter', 'Help message formatter which adds default values to argument help.\n\n    Only the name of this class is considered a public API. All the methods\n    provided by the class are considered an implementation detail.\n    ', <code object _get_help_string at 0x00000240693AA330, file "argparse.py", line 705>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '_get_help_string')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'ArgumentDefaultsHelpFormatter'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Help message formatter which adds default values to argument help.\n\n    Only the name of this class is considered a public API. All the methods\n    provided by the class are considered an implementation detail.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object _get_help_string at 0x00000240693AA330, file "argparse.py", line 705>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           _get_help_string
+  20: LOAD_CONST           None
+  22: RETURN_VALUE         

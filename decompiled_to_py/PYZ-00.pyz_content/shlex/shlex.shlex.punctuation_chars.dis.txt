@@ -1,0 +1,15 @@
+# Disassembly for shlex.shlex.punctuation_chars
+# From module file: shlex
+
+## co_consts:
+(None,)
+
+## co_names:
+('_punctuation_chars',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _punctuation_chars
+  14: RETURN_VALUE         

@@ -1,0 +1,29 @@
+# Disassembly for email.BareQuotedString
+# From module file: email._header_value_parser
+
+## co_consts:
+('BareQuotedString', 'bare-quoted-string', <code object __str__ at 0x000002406941AAF0, file "email\_header_value_parser.py", line 255>, <code object value at 0x00000240693EB930, file "email\_header_value_parser.py", line 258>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', 'token_type', '__str__', 'property', 'value')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'BareQuotedString'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'bare-quoted-string'
+  12: STORE_NAME           token_type
+  14: LOAD_CONST           <code object __str__ at 0x000002406941AAF0, file "email\_header_value_parser.py", line 255>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           __str__
+  20: LOAD_NAME            property
+  22: LOAD_CONST           <code object value at 0x00000240693EB930, file "email\_header_value_parser.py", line 258>
+  24: MAKE_FUNCTION        
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_NAME           value
+  42: LOAD_CONST           None
+  44: RETURN_VALUE         

@@ -1,0 +1,37 @@
+# Disassembly for email.HeaderRegistry.__getitem__
+# From module file: email.headerregistry
+
+## co_consts:
+(None, '_')
+
+## co_names:
+('registry', 'get', 'lower', 'default_class', 'type', '__name__', 'base_class')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            registry
+  14: LOAD_METHOD          get
+  36: LOAD_FAST            name
+  38: LOAD_METHOD          lower
+  60: PRECALL              
+  64: CALL                 
+  74: LOAD_FAST            self
+  76: LOAD_ATTR            default_class
+  86: PRECALL              
+  90: CALL                 
+ 100: STORE_FAST           cls
+ 102: LOAD_GLOBAL          NULL + type
+ 114: LOAD_CONST           '_'
+ 116: LOAD_FAST            cls
+ 118: LOAD_ATTR            __name__
+ 128: BINARY_OP            +
+ 132: LOAD_FAST            cls
+ 134: LOAD_FAST            self
+ 136: LOAD_ATTR            base_class
+ 146: BUILD_TUPLE          
+ 148: BUILD_MAP            
+ 150: PRECALL              
+ 154: CALL                 
+ 164: RETURN_VALUE         

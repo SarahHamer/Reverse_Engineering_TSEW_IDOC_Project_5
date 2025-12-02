@@ -1,0 +1,55 @@
+# Disassembly for datetime.time.fromisoformat
+# From module file: datetime
+
+## co_consts:
+('Construct a time from a string in one of the ISO 8601 formats.', 'fromisoformat: argument must be str', 'T', 'Invalid isoformat string: ')
+
+## co_names:
+('isinstance', 'str', 'TypeError', 'removeprefix', '_parse_isoformat_time', 'Exception', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            time_string
+  16: LOAD_GLOBAL          str
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_TRUE to 74
+  44: LOAD_GLOBAL          NULL + TypeError
+  56: LOAD_CONST           'fromisoformat: argument must be str'
+  58: PRECALL              
+  62: CALL                 
+  72: RAISE_VARARGS        
+  74: LOAD_FAST            time_string
+  76: LOAD_METHOD          removeprefix
+  98: LOAD_CONST           'T'
+ 100: PRECALL              
+ 104: CALL                 
+ 114: STORE_FAST           time_string
+ 116: NOP                  
+ 118: PUSH_NULL            
+ 120: LOAD_FAST            cls
+ 122: LOAD_GLOBAL          NULL + _parse_isoformat_time
+ 134: LOAD_FAST            time_string
+ 136: PRECALL              
+ 140: CALL                 
+ 150: CALL_FUNCTION_EX     
+ 152: RETURN_VALUE         
+ 154: PUSH_EXC_INFO        
+ 156: LOAD_GLOBAL          Exception
+ 168: CHECK_EXC_MATCH      
+ 170: POP_JUMP_FORWARD_IF_FALSE to 210
+ 172: POP_TOP              
+ 174: LOAD_GLOBAL          NULL + ValueError
+ 186: LOAD_CONST           'Invalid isoformat string: '
+ 188: LOAD_FAST            time_string
+ 190: FORMAT_VALUE         repr
+ 192: BUILD_STRING         
+ 194: PRECALL              
+ 198: CALL                 
+ 208: RAISE_VARARGS        
+ 210: RERAISE              
+ 212: COPY                 
+ 214: POP_EXCEPT           
+ 216: RERAISE              

@@ -1,0 +1,41 @@
+# Disassembly for inspect._signature_get_user_defined_method
+# From module file: inspect
+
+## co_consts:
+('Private helper. Checks if ``cls`` has an attribute\n    named ``method_name`` and returns it only if it is a\n    pure python function.\n    ', None)
+
+## co_names:
+('getattr', 'isinstance', '_NonUserDefinedCallables', 'AttributeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_GLOBAL          NULL + getattr
+  16: LOAD_FAST            cls
+  18: LOAD_FAST            method_name
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           meth
+  36: LOAD_GLOBAL          NULL + isinstance
+  48: LOAD_FAST            meth
+  50: LOAD_GLOBAL          _NonUserDefinedCallables
+  62: PRECALL              
+  66: CALL                 
+  76: POP_JUMP_FORWARD_IF_TRUE to 82
+  78: LOAD_FAST            meth
+  80: RETURN_VALUE         
+  82: LOAD_CONST           None
+  84: RETURN_VALUE         
+  86: PUSH_EXC_INFO        
+  88: LOAD_GLOBAL          AttributeError
+ 100: CHECK_EXC_MATCH      
+ 102: POP_JUMP_FORWARD_IF_FALSE to 112
+ 104: POP_TOP              
+ 106: POP_EXCEPT           
+ 108: LOAD_CONST           None
+ 110: RETURN_VALUE         
+ 112: RERAISE              
+ 114: COPY                 
+ 116: POP_EXCEPT           
+ 118: RERAISE              

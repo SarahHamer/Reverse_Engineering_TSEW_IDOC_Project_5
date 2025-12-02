@@ -1,0 +1,16 @@
+# Disassembly for ssl.SSLObject.server_side
+# From module file: ssl
+
+## co_consts:
+('Whether this is a server-side socket.',)
+
+## co_names:
+('_sslobj', 'server_side')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _sslobj
+  14: LOAD_ATTR            server_side
+  24: RETURN_VALUE         

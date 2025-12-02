@@ -1,0 +1,332 @@
+# Disassembly for inspect._signature_from_function
+# From module file: inspect
+
+## co_consts:
+('Private helper: constructs Signature for the given python function.', False, True, '{!r} is not a Python function', '__text_signature__', None, ('globals', 'locals', 'eval_str'), 0, ('annotation', 'kind'), 1, ('annotation', 'kind', 'default'), 'return', ('return_annotation', '__validate_parameters__'))
+
+## co_names:
+('isfunction', '_signature_is_functionlike', 'TypeError', 'format', 'getattr', '_signature_fromstr', '_parameter_cls', '__code__', 'co_argcount', 'co_varnames', 'co_posonlyargcount', 'co_kwonlyargcount', 'get_annotations', '__defaults__', '__kwdefaults__', 'len', '_POSITIONAL_ONLY', '_POSITIONAL_OR_KEYWORD', 'get', '_empty', 'append', 'enumerate', 'co_flags', 'CO_VARARGS', '_VAR_POSITIONAL', '_KEYWORD_ONLY', 'CO_VARKEYWORDS', '_VAR_KEYWORD')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           False
+   4: STORE_FAST           is_duck_function
+   6: LOAD_GLOBAL          NULL + isfunction
+  18: LOAD_FAST            func
+  20: PRECALL              
+  24: CALL                 
+  34: POP_JUMP_FORWARD_IF_TRUE to 140
+  36: LOAD_GLOBAL          NULL + _signature_is_functionlike
+  48: LOAD_FAST            func
+  50: PRECALL              
+  54: CALL                 
+  64: POP_JUMP_FORWARD_IF_FALSE to 72
+  66: LOAD_CONST           True
+  68: STORE_FAST           is_duck_function
+  70: JUMP_FORWARD         to 140
+  72: LOAD_GLOBAL          NULL + TypeError
+  84: LOAD_CONST           '{!r} is not a Python function'
+  86: LOAD_METHOD          format
+ 108: LOAD_FAST            func
+ 110: PRECALL              
+ 114: CALL                 
+ 124: PRECALL              
+ 128: CALL                 
+ 138: RAISE_VARARGS        
+ 140: LOAD_GLOBAL          NULL + getattr
+ 152: LOAD_FAST            func
+ 154: LOAD_CONST           '__text_signature__'
+ 156: LOAD_CONST           None
+ 158: PRECALL              
+ 162: CALL                 
+ 172: STORE_FAST           s
+ 174: LOAD_FAST            s
+ 176: POP_JUMP_FORWARD_IF_FALSE to 214
+ 178: LOAD_GLOBAL          NULL + _signature_fromstr
+ 190: LOAD_FAST            cls
+ 192: LOAD_FAST            func
+ 194: LOAD_FAST            s
+ 196: LOAD_FAST            skip_bound_arg
+ 198: PRECALL              
+ 202: CALL                 
+ 212: RETURN_VALUE         
+ 214: LOAD_FAST            cls
+ 216: LOAD_ATTR            _parameter_cls
+ 226: STORE_FAST           Parameter
+ 228: LOAD_FAST            func
+ 230: LOAD_ATTR            __code__
+ 240: STORE_FAST           func_code
+ 242: LOAD_FAST            func_code
+ 244: LOAD_ATTR            co_argcount
+ 254: STORE_FAST           pos_count
+ 256: LOAD_FAST            func_code
+ 258: LOAD_ATTR            co_varnames
+ 268: STORE_FAST           arg_names
+ 270: LOAD_FAST            func_code
+ 272: LOAD_ATTR            co_posonlyargcount
+ 282: STORE_FAST           posonly_count
+ 284: LOAD_FAST            arg_names
+ 286: LOAD_CONST           None
+ 288: LOAD_FAST            pos_count
+ 290: BUILD_SLICE          
+ 292: BINARY_SUBSCR        
+ 302: STORE_FAST           positional
+ 304: LOAD_FAST            func_code
+ 306: LOAD_ATTR            co_kwonlyargcount
+ 316: STORE_FAST           keyword_only_count
+ 318: LOAD_FAST            arg_names
+ 320: LOAD_FAST            pos_count
+ 322: LOAD_FAST            pos_count
+ 324: LOAD_FAST            keyword_only_count
+ 326: BINARY_OP            +
+ 330: BUILD_SLICE          
+ 332: BINARY_SUBSCR        
+ 342: STORE_FAST           keyword_only
+ 344: LOAD_GLOBAL          NULL + get_annotations
+ 356: LOAD_FAST            func
+ 358: LOAD_FAST            globals
+ 360: LOAD_FAST            locals
+ 362: LOAD_FAST            eval_str
+ 364: KW_NAMES             
+ 366: PRECALL              
+ 370: CALL                 
+ 380: STORE_FAST           annotations
+ 382: LOAD_FAST            func
+ 384: LOAD_ATTR            __defaults__
+ 394: STORE_FAST           defaults
+ 396: LOAD_FAST            func
+ 398: LOAD_ATTR            __kwdefaults__
+ 408: STORE_FAST           kwdefaults
+ 410: LOAD_FAST            defaults
+ 412: POP_JUMP_FORWARD_IF_FALSE to 446
+ 414: LOAD_GLOBAL          NULL + len
+ 426: LOAD_FAST            defaults
+ 428: PRECALL              
+ 432: CALL                 
+ 442: STORE_FAST           pos_default_count
+ 444: JUMP_FORWARD         to 450
+ 446: LOAD_CONST           0
+ 448: STORE_FAST           pos_default_count
+ 450: BUILD_LIST           
+ 452: STORE_FAST           parameters
+ 454: LOAD_FAST            pos_count
+ 456: LOAD_FAST            pos_default_count
+ 458: BINARY_OP            -
+ 462: STORE_FAST           non_default_count
+ 464: LOAD_FAST            posonly_count
+ 466: STORE_FAST           posonly_left
+ 468: LOAD_FAST            positional
+ 470: LOAD_CONST           None
+ 472: LOAD_FAST            non_default_count
+ 474: BUILD_SLICE          
+ 476: BINARY_SUBSCR        
+ 486: GET_ITER             
+ 488: FOR_ITER             to 660
+ 490: STORE_FAST           name
+ 492: LOAD_FAST            posonly_left
+ 494: POP_JUMP_FORWARD_IF_FALSE to 510
+ 496: LOAD_GLOBAL          _POSITIONAL_ONLY
+ 508: JUMP_FORWARD         to 522
+ 510: LOAD_GLOBAL          _POSITIONAL_OR_KEYWORD
+ 522: STORE_FAST           kind
+ 524: LOAD_FAST            annotations
+ 526: LOAD_METHOD          get
+ 548: LOAD_FAST            name
+ 550: LOAD_GLOBAL          _empty
+ 562: PRECALL              
+ 566: CALL                 
+ 576: STORE_FAST           annotation
+ 578: LOAD_FAST            parameters
+ 580: LOAD_METHOD          append
+ 602: PUSH_NULL            
+ 604: LOAD_FAST            Parameter
+ 606: LOAD_FAST            name
+ 608: LOAD_FAST            annotation
+ 610: LOAD_FAST            kind
+ 612: KW_NAMES             
+ 614: PRECALL              
+ 618: CALL                 
+ 628: PRECALL              
+ 632: CALL                 
+ 642: POP_TOP              
+ 644: LOAD_FAST            posonly_left
+ 646: POP_JUMP_FORWARD_IF_FALSE to 658
+ 648: LOAD_FAST            posonly_left
+ 650: LOAD_CONST           1
+ 652: BINARY_OP            -=
+ 656: STORE_FAST           posonly_left
+ 658: JUMP_BACKWARD        to 488
+ 660: LOAD_GLOBAL          NULL + enumerate
+ 672: LOAD_FAST            positional
+ 674: LOAD_FAST            non_default_count
+ 676: LOAD_CONST           None
+ 678: BUILD_SLICE          
+ 680: BINARY_SUBSCR        
+ 690: PRECALL              
+ 694: CALL                 
+ 704: GET_ITER             
+ 706: FOR_ITER             to 898
+ 708: UNPACK_SEQUENCE      
+ 712: STORE_FAST           offset
+ 714: STORE_FAST           name
+ 716: LOAD_FAST            posonly_left
+ 718: POP_JUMP_FORWARD_IF_FALSE to 734
+ 720: LOAD_GLOBAL          _POSITIONAL_ONLY
+ 732: JUMP_FORWARD         to 746
+ 734: LOAD_GLOBAL          _POSITIONAL_OR_KEYWORD
+ 746: STORE_FAST           kind
+ 748: LOAD_FAST            annotations
+ 750: LOAD_METHOD          get
+ 772: LOAD_FAST            name
+ 774: LOAD_GLOBAL          _empty
+ 786: PRECALL              
+ 790: CALL                 
+ 800: STORE_FAST           annotation
+ 802: LOAD_FAST            parameters
+ 804: LOAD_METHOD          append
+ 826: PUSH_NULL            
+ 828: LOAD_FAST            Parameter
+ 830: LOAD_FAST            name
+ 832: LOAD_FAST            annotation
+ 834: LOAD_FAST            kind
+ 836: LOAD_FAST            defaults
+ 838: LOAD_FAST            offset
+ 840: BINARY_SUBSCR        
+ 850: KW_NAMES             
+ 852: PRECALL              
+ 856: CALL                 
+ 866: PRECALL              
+ 870: CALL                 
+ 880: POP_TOP              
+ 882: LOAD_FAST            posonly_left
+ 884: POP_JUMP_FORWARD_IF_FALSE to 896
+ 886: LOAD_FAST            posonly_left
+ 888: LOAD_CONST           1
+ 890: BINARY_OP            -=
+ 894: STORE_FAST           posonly_left
+ 896: JUMP_BACKWARD        to 706
+ 898: LOAD_FAST            func_code
+ 900: LOAD_ATTR            co_flags
+ 910: LOAD_GLOBAL          CO_VARARGS
+ 922: BINARY_OP            &
+ 926: POP_JUMP_FORWARD_IF_FALSE to 1080
+ 928: LOAD_FAST            arg_names
+ 930: LOAD_FAST            pos_count
+ 932: LOAD_FAST            keyword_only_count
+ 934: BINARY_OP            +
+ 938: BINARY_SUBSCR        
+ 948: STORE_FAST           name
+ 950: LOAD_FAST            annotations
+ 952: LOAD_METHOD          get
+ 974: LOAD_FAST            name
+ 976: LOAD_GLOBAL          _empty
+ 988: PRECALL              
+ 992: CALL                 
+1002: STORE_FAST           annotation
+1004: LOAD_FAST            parameters
+1006: LOAD_METHOD          append
+1028: PUSH_NULL            
+1030: LOAD_FAST            Parameter
+1032: LOAD_FAST            name
+1034: LOAD_FAST            annotation
+1036: LOAD_GLOBAL          _VAR_POSITIONAL
+1048: KW_NAMES             
+1050: PRECALL              
+1054: CALL                 
+1064: PRECALL              
+1068: CALL                 
+1078: POP_TOP              
+1080: LOAD_FAST            keyword_only
+1082: GET_ITER             
+1084: FOR_ITER             to 1294
+1086: STORE_FAST           name
+1088: LOAD_GLOBAL          _empty
+1100: STORE_FAST           default
+1102: LOAD_FAST            kwdefaults
+1104: POP_JUMP_FORWARD_IF_NONE to 1160
+1106: LOAD_FAST            kwdefaults
+1108: LOAD_METHOD          get
+1130: LOAD_FAST            name
+1132: LOAD_GLOBAL          _empty
+1144: PRECALL              
+1148: CALL                 
+1158: STORE_FAST           default
+1160: LOAD_FAST            annotations
+1162: LOAD_METHOD          get
+1184: LOAD_FAST            name
+1186: LOAD_GLOBAL          _empty
+1198: PRECALL              
+1202: CALL                 
+1212: STORE_FAST           annotation
+1214: LOAD_FAST            parameters
+1216: LOAD_METHOD          append
+1238: PUSH_NULL            
+1240: LOAD_FAST            Parameter
+1242: LOAD_FAST            name
+1244: LOAD_FAST            annotation
+1246: LOAD_GLOBAL          _KEYWORD_ONLY
+1258: LOAD_FAST            default
+1260: KW_NAMES             
+1262: PRECALL              
+1266: CALL                 
+1276: PRECALL              
+1280: CALL                 
+1290: POP_TOP              
+1292: JUMP_BACKWARD        to 1084
+1294: LOAD_FAST            func_code
+1296: LOAD_ATTR            co_flags
+1306: LOAD_GLOBAL          CO_VARKEYWORDS
+1318: BINARY_OP            &
+1322: POP_JUMP_FORWARD_IF_FALSE to 1520
+1324: LOAD_FAST            pos_count
+1326: LOAD_FAST            keyword_only_count
+1328: BINARY_OP            +
+1332: STORE_FAST           index
+1334: LOAD_FAST            func_code
+1336: LOAD_ATTR            co_flags
+1346: LOAD_GLOBAL          CO_VARARGS
+1358: BINARY_OP            &
+1362: POP_JUMP_FORWARD_IF_FALSE to 1374
+1364: LOAD_FAST            index
+1366: LOAD_CONST           1
+1368: BINARY_OP            +=
+1372: STORE_FAST           index
+1374: LOAD_FAST            arg_names
+1376: LOAD_FAST            index
+1378: BINARY_SUBSCR        
+1388: STORE_FAST           name
+1390: LOAD_FAST            annotations
+1392: LOAD_METHOD          get
+1414: LOAD_FAST            name
+1416: LOAD_GLOBAL          _empty
+1428: PRECALL              
+1432: CALL                 
+1442: STORE_FAST           annotation
+1444: LOAD_FAST            parameters
+1446: LOAD_METHOD          append
+1468: PUSH_NULL            
+1470: LOAD_FAST            Parameter
+1472: LOAD_FAST            name
+1474: LOAD_FAST            annotation
+1476: LOAD_GLOBAL          _VAR_KEYWORD
+1488: KW_NAMES             
+1490: PRECALL              
+1494: CALL                 
+1504: PRECALL              
+1508: CALL                 
+1518: POP_TOP              
+1520: PUSH_NULL            
+1522: LOAD_FAST            cls
+1524: LOAD_FAST            parameters
+1526: LOAD_FAST            annotations
+1528: LOAD_METHOD          get
+1550: LOAD_CONST           'return'
+1552: LOAD_GLOBAL          _empty
+1564: PRECALL              
+1568: CALL                 
+1578: LOAD_FAST            is_duck_function
+1580: KW_NAMES             
+1582: PRECALL              
+1586: CALL                 
+1596: RETURN_VALUE         

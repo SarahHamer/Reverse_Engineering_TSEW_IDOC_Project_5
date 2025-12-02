@@ -1,0 +1,61 @@
+# Disassembly for importlib._NamespacePath._recalculate
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+(None,)
+
+## co_names:
+('tuple', '_get_parent_path', '_last_parent_path', '_epoch', '_last_epoch', '_path_finder', '_name', 'loader', 'submodule_search_locations', '_path')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + tuple
+  14: LOAD_FAST            self
+  16: LOAD_METHOD          _get_parent_path
+  38: PRECALL              
+  42: CALL                 
+  52: PRECALL              
+  56: CALL                 
+  66: STORE_FAST           parent_path
+  68: LOAD_FAST            parent_path
+  70: LOAD_FAST            self
+  72: LOAD_ATTR            _last_parent_path
+  82: COMPARE_OP           !=
+  88: POP_JUMP_FORWARD_IF_TRUE to 122
+  90: LOAD_FAST            self
+  92: LOAD_ATTR            _epoch
+ 102: LOAD_FAST            self
+ 104: LOAD_ATTR            _last_epoch
+ 114: COMPARE_OP           !=
+ 120: POP_JUMP_FORWARD_IF_FALSE to 270
+ 122: LOAD_FAST            self
+ 124: LOAD_METHOD          _path_finder
+ 146: LOAD_FAST            self
+ 148: LOAD_ATTR            _name
+ 158: LOAD_FAST            parent_path
+ 160: PRECALL              
+ 164: CALL                 
+ 174: STORE_FAST           spec
+ 176: LOAD_FAST            spec
+ 178: POP_JUMP_FORWARD_IF_NONE to 232
+ 180: LOAD_FAST            spec
+ 182: LOAD_ATTR            loader
+ 192: POP_JUMP_FORWARD_IF_NOT_NONE to 232
+ 194: LOAD_FAST            spec
+ 196: LOAD_ATTR            submodule_search_locations
+ 206: POP_JUMP_FORWARD_IF_FALSE to 232
+ 208: LOAD_FAST            spec
+ 210: LOAD_ATTR            submodule_search_locations
+ 220: LOAD_FAST            self
+ 222: STORE_ATTR           _path
+ 232: LOAD_FAST            parent_path
+ 234: LOAD_FAST            self
+ 236: STORE_ATTR           _last_parent_path
+ 246: LOAD_FAST            self
+ 248: LOAD_ATTR            _epoch
+ 258: LOAD_FAST            self
+ 260: STORE_ATTR           _last_epoch
+ 270: LOAD_FAST            self
+ 272: LOAD_ATTR            _path
+ 282: RETURN_VALUE         

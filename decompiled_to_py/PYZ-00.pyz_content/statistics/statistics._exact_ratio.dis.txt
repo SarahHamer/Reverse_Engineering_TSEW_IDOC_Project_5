@@ -1,0 +1,79 @@
+# Disassembly for statistics._exact_ratio
+# From module file: statistics
+
+## co_consts:
+('Return Real number x to exact (numerator, denominator) pair.\n\n    >>> _exact_ratio(0.25)\n    (1, 4)\n\n    x is expected to be an int, Fraction, Decimal or float.\n    ', None, "can't convert type '", "' to numerator/denominator")
+
+## co_names:
+('as_integer_ratio', 'AttributeError', 'OverflowError', 'ValueError', '_isfinite', 'numerator', 'denominator', 'type', '__name__', 'TypeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            x
+   6: LOAD_METHOD          as_integer_ratio
+  28: PRECALL              
+  32: CALL                 
+  42: RETURN_VALUE         
+  44: PUSH_EXC_INFO        
+  46: LOAD_GLOBAL          AttributeError
+  58: CHECK_EXC_MATCH      
+  60: POP_JUMP_FORWARD_IF_FALSE to 68
+  62: POP_TOP              
+  64: POP_EXCEPT           
+  66: JUMP_FORWARD         to 154
+  68: LOAD_GLOBAL          OverflowError
+  80: LOAD_GLOBAL          ValueError
+  92: BUILD_TUPLE          
+  94: CHECK_EXC_MATCH      
+  96: POP_JUMP_FORWARD_IF_FALSE to 146
+  98: POP_TOP              
+ 100: LOAD_GLOBAL          NULL + _isfinite
+ 112: LOAD_FAST            x
+ 114: PRECALL              
+ 118: CALL                 
+ 128: POP_JUMP_FORWARD_IF_FALSE to 134
+ 130: LOAD_ASSERTION_ERROR 
+ 132: RAISE_VARARGS        
+ 134: LOAD_FAST            x
+ 136: LOAD_CONST           None
+ 138: BUILD_TUPLE          
+ 140: SWAP                 
+ 142: POP_EXCEPT           
+ 144: RETURN_VALUE         
+ 146: RERAISE              
+ 148: COPY                 
+ 150: POP_EXCEPT           
+ 152: RERAISE              
+ 154: NOP                  
+ 156: LOAD_FAST            x
+ 158: LOAD_ATTR            numerator
+ 168: LOAD_FAST            x
+ 170: LOAD_ATTR            denominator
+ 180: BUILD_TUPLE          
+ 182: RETURN_VALUE         
+ 184: PUSH_EXC_INFO        
+ 186: LOAD_GLOBAL          AttributeError
+ 198: CHECK_EXC_MATCH      
+ 200: POP_JUMP_FORWARD_IF_FALSE to 282
+ 202: POP_TOP              
+ 204: LOAD_CONST           "can't convert type '"
+ 206: LOAD_GLOBAL          NULL + type
+ 218: LOAD_FAST            x
+ 220: PRECALL              
+ 224: CALL                 
+ 234: LOAD_ATTR            __name__
+ 244: FORMAT_VALUE         
+ 246: LOAD_CONST           "' to numerator/denominator"
+ 248: BUILD_STRING         
+ 250: STORE_FAST           msg
+ 252: LOAD_GLOBAL          NULL + TypeError
+ 264: LOAD_FAST            msg
+ 266: PRECALL              
+ 270: CALL                 
+ 280: RAISE_VARARGS        
+ 282: RERAISE              
+ 284: COPY                 
+ 286: POP_EXCEPT           
+ 288: RERAISE              

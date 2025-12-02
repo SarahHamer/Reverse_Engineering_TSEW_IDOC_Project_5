@@ -1,0 +1,121 @@
+# Disassembly for email.DateHeader.parse
+# From module file: email.headerregistry
+
+## co_consts:
+(None, 'defects', 'datetime', '', 'decoded', 'parse_tree', 'Invalid date value or format')
+
+## co_names:
+('append', 'errors', 'HeaderMissingRequiredValue', 'parser', 'TokenList', 'isinstance', 'str', 'utils', 'parsedate_to_datetime', 'ValueError', 'InvalidDateDefect', 'format_datetime', 'value_parser')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            value
+   4: POP_JUMP_FORWARD_IF_TRUE to 162
+   6: LOAD_FAST            kwds
+   8: LOAD_CONST           'defects'
+  10: BINARY_SUBSCR        
+  20: LOAD_METHOD          append
+  42: LOAD_GLOBAL          NULL + errors
+  54: LOAD_ATTR            HeaderMissingRequiredValue
+  64: PRECALL              
+  68: CALL                 
+  78: PRECALL              
+  82: CALL                 
+  92: POP_TOP              
+  94: LOAD_CONST           None
+  96: LOAD_FAST            kwds
+  98: LOAD_CONST           'datetime'
+ 100: STORE_SUBSCR         
+ 104: LOAD_CONST           ''
+ 106: LOAD_FAST            kwds
+ 108: LOAD_CONST           'decoded'
+ 110: STORE_SUBSCR         
+ 114: LOAD_GLOBAL          NULL + parser
+ 126: LOAD_ATTR            TokenList
+ 136: PRECALL              
+ 140: CALL                 
+ 150: LOAD_FAST            kwds
+ 152: LOAD_CONST           'parse_tree'
+ 154: STORE_SUBSCR         
+ 158: LOAD_CONST           None
+ 160: RETURN_VALUE         
+ 162: LOAD_GLOBAL          NULL + isinstance
+ 174: LOAD_FAST            value
+ 176: LOAD_GLOBAL          str
+ 188: PRECALL              
+ 192: CALL                 
+ 202: POP_JUMP_FORWARD_IF_FALSE to 436
+ 204: LOAD_FAST            value
+ 206: LOAD_FAST            kwds
+ 208: LOAD_CONST           'decoded'
+ 210: STORE_SUBSCR         
+ 214: NOP                  
+ 216: LOAD_GLOBAL          NULL + utils
+ 228: LOAD_ATTR            parsedate_to_datetime
+ 238: LOAD_FAST            value
+ 240: PRECALL              
+ 244: CALL                 
+ 254: STORE_FAST           value
+ 256: JUMP_FORWARD         to 436
+ 258: PUSH_EXC_INFO        
+ 260: LOAD_GLOBAL          ValueError
+ 272: CHECK_EXC_MATCH      
+ 274: POP_JUMP_FORWARD_IF_FALSE to 428
+ 276: POP_TOP              
+ 278: LOAD_FAST            kwds
+ 280: LOAD_CONST           'defects'
+ 282: BINARY_SUBSCR        
+ 292: LOAD_METHOD          append
+ 314: LOAD_GLOBAL          NULL + errors
+ 326: LOAD_ATTR            InvalidDateDefect
+ 336: LOAD_CONST           'Invalid date value or format'
+ 338: PRECALL              
+ 342: CALL                 
+ 352: PRECALL              
+ 356: CALL                 
+ 366: POP_TOP              
+ 368: LOAD_CONST           None
+ 370: LOAD_FAST            kwds
+ 372: LOAD_CONST           'datetime'
+ 374: STORE_SUBSCR         
+ 378: LOAD_GLOBAL          NULL + parser
+ 390: LOAD_ATTR            TokenList
+ 400: PRECALL              
+ 404: CALL                 
+ 414: LOAD_FAST            kwds
+ 416: LOAD_CONST           'parse_tree'
+ 418: STORE_SUBSCR         
+ 422: POP_EXCEPT           
+ 424: LOAD_CONST           None
+ 426: RETURN_VALUE         
+ 428: RERAISE              
+ 430: COPY                 
+ 432: POP_EXCEPT           
+ 434: RERAISE              
+ 436: LOAD_FAST            value
+ 438: LOAD_FAST            kwds
+ 440: LOAD_CONST           'datetime'
+ 442: STORE_SUBSCR         
+ 446: LOAD_GLOBAL          NULL + utils
+ 458: LOAD_ATTR            format_datetime
+ 468: LOAD_FAST            kwds
+ 470: LOAD_CONST           'datetime'
+ 472: BINARY_SUBSCR        
+ 482: PRECALL              
+ 486: CALL                 
+ 496: LOAD_FAST            kwds
+ 498: LOAD_CONST           'decoded'
+ 500: STORE_SUBSCR         
+ 504: LOAD_FAST            cls
+ 506: LOAD_METHOD          value_parser
+ 528: LOAD_FAST            kwds
+ 530: LOAD_CONST           'decoded'
+ 532: BINARY_SUBSCR        
+ 542: PRECALL              
+ 546: CALL                 
+ 556: LOAD_FAST            kwds
+ 558: LOAD_CONST           'parse_tree'
+ 560: STORE_SUBSCR         
+ 564: LOAD_CONST           None
+ 566: RETURN_VALUE         

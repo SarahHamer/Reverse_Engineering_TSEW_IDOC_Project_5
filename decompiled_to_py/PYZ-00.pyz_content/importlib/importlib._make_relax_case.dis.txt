@@ -1,0 +1,43 @@
+# Disassembly for importlib._make_relax_case
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+(None, 'PYTHONCASEOK', b'PYTHONCASEOK', <code object _relax_case at 0x00000240693EBD30, file "importlib\_bootstrap_external.py", line 67>, <code object _relax_case at 0x000002406943BAB0, file "importlib\_bootstrap_external.py", line 71>)
+
+## co_names:
+('sys', 'platform', 'startswith', '_CASE_INSENSITIVE_PLATFORMS', '_CASE_INSENSITIVE_PLATFORMS_STR_KEY')
+
+## bytecode:
+
+   0: MAKE_CELL            key
+   2: RESUME               
+   4: LOAD_GLOBAL          sys
+  16: LOAD_ATTR            platform
+  26: LOAD_METHOD          startswith
+  48: LOAD_GLOBAL          _CASE_INSENSITIVE_PLATFORMS
+  60: PRECALL              
+  64: CALL                 
+  74: POP_JUMP_FORWARD_IF_FALSE to 170
+  76: LOAD_GLOBAL          sys
+  88: LOAD_ATTR            platform
+  98: LOAD_METHOD          startswith
+ 120: LOAD_GLOBAL          _CASE_INSENSITIVE_PLATFORMS_STR_KEY
+ 132: PRECALL              
+ 136: CALL                 
+ 146: POP_JUMP_FORWARD_IF_FALSE to 154
+ 148: LOAD_CONST           'PYTHONCASEOK'
+ 150: STORE_DEREF          key
+ 152: JUMP_FORWARD         to 158
+ 154: LOAD_CONST           b'PYTHONCASEOK'
+ 156: STORE_DEREF          key
+ 158: LOAD_CLOSURE         key
+ 160: BUILD_TUPLE          
+ 162: LOAD_CONST           <code object _relax_case at 0x00000240693EBD30, file "importlib\_bootstrap_external.py", line 67>
+ 164: MAKE_FUNCTION        closure
+ 166: STORE_FAST           _relax_case
+ 168: JUMP_FORWARD         to 176
+ 170: LOAD_CONST           <code object _relax_case at 0x000002406943BAB0, file "importlib\_bootstrap_external.py", line 71>
+ 172: MAKE_FUNCTION        
+ 174: STORE_FAST           _relax_case
+ 176: LOAD_FAST            _relax_case
+ 178: RETURN_VALUE         

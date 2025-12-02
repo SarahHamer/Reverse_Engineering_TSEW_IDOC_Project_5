@@ -1,0 +1,49 @@
+# Disassembly for email.make_header
+# From module file: email.header
+
+## co_consts:
+('Create a Header from a sequence of pairs as returned by decode_header()\n\n    decode_header() takes a header value string and returns a sequence of\n    pairs of the format (decoded_string, charset) where charset is the string\n    name of the character set.\n\n    This function takes one of those sequence of pairs and returns a Header\n    instance.  Optional maxlinelen, header_name, and continuation_ws are as in\n    the Header constructor.\n    ', ('maxlinelen', 'header_name', 'continuation_ws'))
+
+## co_names:
+('Header', 'isinstance', 'Charset', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + Header
+  14: LOAD_FAST            maxlinelen
+  16: LOAD_FAST            header_name
+  18: LOAD_FAST            continuation_ws
+  20: KW_NAMES             
+  22: PRECALL              
+  26: CALL                 
+  36: STORE_FAST           h
+  38: LOAD_FAST            decoded_seq
+  40: GET_ITER             
+  42: FOR_ITER             to 174
+  44: UNPACK_SEQUENCE      
+  48: STORE_FAST           s
+  50: STORE_FAST           charset
+  52: LOAD_FAST            charset
+  54: POP_JUMP_FORWARD_IF_NONE to 128
+  56: LOAD_GLOBAL          NULL + isinstance
+  68: LOAD_FAST            charset
+  70: LOAD_GLOBAL          Charset
+  82: PRECALL              
+  86: CALL                 
+  96: POP_JUMP_FORWARD_IF_TRUE to 128
+  98: LOAD_GLOBAL          NULL + Charset
+ 110: LOAD_FAST            charset
+ 112: PRECALL              
+ 116: CALL                 
+ 126: STORE_FAST           charset
+ 128: LOAD_FAST            h
+ 130: LOAD_METHOD          append
+ 152: LOAD_FAST            s
+ 154: LOAD_FAST            charset
+ 156: PRECALL              
+ 160: CALL                 
+ 170: POP_TOP              
+ 172: JUMP_BACKWARD        to 42
+ 174: LOAD_FAST            h
+ 176: RETURN_VALUE         

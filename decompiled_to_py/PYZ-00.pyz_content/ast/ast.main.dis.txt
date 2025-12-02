@@ -1,0 +1,141 @@
+# Disassembly for ast.main
+# From module file: ast
+
+## co_consts:
+(None, 0, 'python -m ast', ('prog',), 'infile', 'rb', ('mode',), '?', '-', 'the file to parse; defaults to stdin', ('type', 'nargs', 'default', 'help'), '-m', '--mode', 'exec', ('exec', 'single', 'eval', 'func_type'), 'specify what kind of code must be parsed', ('default', 'choices', 'help'), '--no-type-comments', True, 'store_false', "don't add information about type comments", ('default', 'action', 'help'), '-a', '--include-attributes', 'store_true', 'include attributes such as line numbers and column offsets', ('action', 'help'), '-i', '--indent', 3, 'indentation of nodes (number of spaces)', ('type', 'default', 'help'), ('type_comments',), ('include_attributes', 'indent'))
+
+## co_names:
+('argparse', 'ArgumentParser', 'add_argument', 'FileType', 'int', 'parse_args', 'infile', 'read', 'parse', 'name', 'mode', 'no_type_comments', 'print', 'dump', 'include_attributes', 'indent')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           None
+   6: IMPORT_NAME          argparse
+   8: STORE_FAST           argparse
+  10: LOAD_FAST            argparse
+  12: LOAD_METHOD          ArgumentParser
+  34: LOAD_CONST           'python -m ast'
+  36: KW_NAMES             
+  38: PRECALL              
+  42: CALL                 
+  52: STORE_FAST           parser
+  54: LOAD_FAST            parser
+  56: LOAD_METHOD          add_argument
+  78: LOAD_CONST           'infile'
+  80: LOAD_FAST            argparse
+  82: LOAD_METHOD          FileType
+ 104: LOAD_CONST           'rb'
+ 106: KW_NAMES             
+ 108: PRECALL              
+ 112: CALL                 
+ 122: LOAD_CONST           '?'
+ 124: LOAD_CONST           '-'
+ 126: LOAD_CONST           'the file to parse; defaults to stdin'
+ 128: KW_NAMES             
+ 130: PRECALL              
+ 134: CALL                 
+ 144: POP_TOP              
+ 146: LOAD_FAST            parser
+ 148: LOAD_METHOD          add_argument
+ 170: LOAD_CONST           '-m'
+ 172: LOAD_CONST           '--mode'
+ 174: LOAD_CONST           'exec'
+ 176: LOAD_CONST           ('exec', 'single', 'eval', 'func_type')
+ 178: LOAD_CONST           'specify what kind of code must be parsed'
+ 180: KW_NAMES             
+ 182: PRECALL              
+ 186: CALL                 
+ 196: POP_TOP              
+ 198: LOAD_FAST            parser
+ 200: LOAD_METHOD          add_argument
+ 222: LOAD_CONST           '--no-type-comments'
+ 224: LOAD_CONST           True
+ 226: LOAD_CONST           'store_false'
+ 228: LOAD_CONST           "don't add information about type comments"
+ 230: KW_NAMES             
+ 232: PRECALL              
+ 236: CALL                 
+ 246: POP_TOP              
+ 248: LOAD_FAST            parser
+ 250: LOAD_METHOD          add_argument
+ 272: LOAD_CONST           '-a'
+ 274: LOAD_CONST           '--include-attributes'
+ 276: LOAD_CONST           'store_true'
+ 278: LOAD_CONST           'include attributes such as line numbers and column offsets'
+ 280: KW_NAMES             
+ 282: PRECALL              
+ 286: CALL                 
+ 296: POP_TOP              
+ 298: LOAD_FAST            parser
+ 300: LOAD_METHOD          add_argument
+ 322: LOAD_CONST           '-i'
+ 324: LOAD_CONST           '--indent'
+ 326: LOAD_GLOBAL          int
+ 338: LOAD_CONST           3
+ 340: LOAD_CONST           'indentation of nodes (number of spaces)'
+ 342: KW_NAMES             
+ 344: PRECALL              
+ 348: CALL                 
+ 358: POP_TOP              
+ 360: LOAD_FAST            parser
+ 362: LOAD_METHOD          parse_args
+ 384: PRECALL              
+ 388: CALL                 
+ 398: STORE_FAST           args
+ 400: LOAD_FAST            args
+ 402: LOAD_ATTR            infile
+ 412: BEFORE_WITH          
+ 414: STORE_FAST           infile
+ 416: LOAD_FAST            infile
+ 418: LOAD_METHOD          read
+ 440: PRECALL              
+ 444: CALL                 
+ 454: STORE_FAST           source
+ 456: LOAD_CONST           None
+ 458: LOAD_CONST           None
+ 460: LOAD_CONST           None
+ 462: PRECALL              
+ 466: CALL                 
+ 476: POP_TOP              
+ 478: JUMP_FORWARD         to 502
+ 480: PUSH_EXC_INFO        
+ 482: WITH_EXCEPT_START    
+ 484: POP_JUMP_FORWARD_IF_TRUE to 494
+ 486: RERAISE              
+ 488: COPY                 
+ 490: POP_EXCEPT           
+ 492: RERAISE              
+ 494: POP_TOP              
+ 496: POP_EXCEPT           
+ 498: POP_TOP              
+ 500: POP_TOP              
+ 502: LOAD_GLOBAL          NULL + parse
+ 514: LOAD_FAST            source
+ 516: LOAD_FAST            args
+ 518: LOAD_ATTR            infile
+ 528: LOAD_ATTR            name
+ 538: LOAD_FAST            args
+ 540: LOAD_ATTR            mode
+ 550: LOAD_FAST            args
+ 552: LOAD_ATTR            no_type_comments
+ 562: KW_NAMES             
+ 564: PRECALL              
+ 568: CALL                 
+ 578: STORE_FAST           tree
+ 580: LOAD_GLOBAL          NULL + print
+ 592: LOAD_GLOBAL          NULL + dump
+ 604: LOAD_FAST            tree
+ 606: LOAD_FAST            args
+ 608: LOAD_ATTR            include_attributes
+ 618: LOAD_FAST            args
+ 620: LOAD_ATTR            indent
+ 630: KW_NAMES             
+ 632: PRECALL              
+ 636: CALL                 
+ 646: PRECALL              
+ 650: CALL                 
+ 660: POP_TOP              
+ 662: LOAD_CONST           None
+ 664: RETURN_VALUE         

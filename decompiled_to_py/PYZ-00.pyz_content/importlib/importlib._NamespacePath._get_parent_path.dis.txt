@@ -1,0 +1,28 @@
+# Disassembly for importlib._NamespacePath._get_parent_path
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+(None,)
+
+## co_names:
+('_find_parent_path_names', 'getattr', 'sys', 'modules')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _find_parent_path_names
+  26: PRECALL              
+  30: CALL                 
+  40: UNPACK_SEQUENCE      
+  44: STORE_FAST           parent_module_name
+  46: STORE_FAST           path_attr_name
+  48: LOAD_GLOBAL          NULL + getattr
+  60: LOAD_GLOBAL          sys
+  72: LOAD_ATTR            modules
+  82: LOAD_FAST            parent_module_name
+  84: BINARY_SUBSCR        
+  94: LOAD_FAST            path_attr_name
+  96: PRECALL              
+ 100: CALL                 
+ 110: RETURN_VALUE         

@@ -1,0 +1,126 @@
+# Disassembly for http.CookieJar.add_cookie_header
+# From module file: http.cookiejar
+
+## co_consts:
+('Add correct Cookie: header to request (urllib.request.Request object).\n\n        The Cookie2 header is also added unless policy.hide_cookie2 is true.\n\n        ', 'add_cookie_header', 'Cookie', '; ', 'Cookie2', 1, '$Version="1"', None)
+
+## co_names:
+('_debug', '_cookies_lock', 'acquire', 'int', 'time', '_policy', '_now', '_cookies_for_request', '_cookie_attrs', 'has_header', 'add_unredirected_header', 'join', 'rfc2965', 'hide_cookie2', 'version', 'release', 'clear_expired_cookies')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _debug
+  14: LOAD_CONST           'add_cookie_header'
+  16: PRECALL              
+  20: CALL                 
+  30: POP_TOP              
+  32: LOAD_FAST            self
+  34: LOAD_ATTR            _cookies_lock
+  44: LOAD_METHOD          acquire
+  66: PRECALL              
+  70: CALL                 
+  80: POP_TOP              
+  82: NOP                  
+  84: LOAD_GLOBAL          NULL + int
+  96: LOAD_GLOBAL          NULL + time
+ 108: LOAD_ATTR            time
+ 118: PRECALL              
+ 122: CALL                 
+ 132: PRECALL              
+ 136: CALL                 
+ 146: COPY                 
+ 148: LOAD_FAST            self
+ 150: LOAD_ATTR            _policy
+ 160: STORE_ATTR           _now
+ 170: LOAD_FAST            self
+ 172: STORE_ATTR           _now
+ 182: LOAD_FAST            self
+ 184: LOAD_METHOD          _cookies_for_request
+ 206: LOAD_FAST            request
+ 208: PRECALL              
+ 212: CALL                 
+ 222: STORE_FAST           cookies
+ 224: LOAD_FAST            self
+ 226: LOAD_METHOD          _cookie_attrs
+ 248: LOAD_FAST            cookies
+ 250: PRECALL              
+ 254: CALL                 
+ 264: STORE_FAST           attrs
+ 266: LOAD_FAST            attrs
+ 268: POP_JUMP_FORWARD_IF_FALSE to 394
+ 270: LOAD_FAST            request
+ 272: LOAD_METHOD          has_header
+ 294: LOAD_CONST           'Cookie'
+ 296: PRECALL              
+ 300: CALL                 
+ 310: POP_JUMP_FORWARD_IF_TRUE to 394
+ 312: LOAD_FAST            request
+ 314: LOAD_METHOD          add_unredirected_header
+ 336: LOAD_CONST           'Cookie'
+ 338: LOAD_CONST           '; '
+ 340: LOAD_METHOD          join
+ 362: LOAD_FAST            attrs
+ 364: PRECALL              
+ 368: CALL                 
+ 378: PRECALL              
+ 382: CALL                 
+ 392: POP_TOP              
+ 394: LOAD_FAST            self
+ 396: LOAD_ATTR            _policy
+ 406: LOAD_ATTR            rfc2965
+ 416: POP_JUMP_FORWARD_IF_FALSE to 564
+ 418: LOAD_FAST            self
+ 420: LOAD_ATTR            _policy
+ 430: LOAD_ATTR            hide_cookie2
+ 440: POP_JUMP_FORWARD_IF_TRUE to 564
+ 442: LOAD_FAST            request
+ 444: LOAD_METHOD          has_header
+ 466: LOAD_CONST           'Cookie2'
+ 468: PRECALL              
+ 472: CALL                 
+ 482: POP_JUMP_FORWARD_IF_TRUE to 564
+ 484: LOAD_FAST            cookies
+ 486: GET_ITER             
+ 488: FOR_ITER             to 564
+ 490: STORE_FAST           cookie
+ 492: LOAD_FAST            cookie
+ 494: LOAD_ATTR            version
+ 504: LOAD_CONST           1
+ 506: COMPARE_OP           !=
+ 512: POP_JUMP_FORWARD_IF_FALSE to 562
+ 514: LOAD_FAST            request
+ 516: LOAD_METHOD          add_unredirected_header
+ 538: LOAD_CONST           'Cookie2'
+ 540: LOAD_CONST           '$Version="1"'
+ 542: PRECALL              
+ 546: CALL                 
+ 556: POP_TOP              
+ 558: POP_TOP              
+ 560: JUMP_FORWARD         to 564
+ 562: JUMP_BACKWARD        to 488
+ 564: LOAD_FAST            self
+ 566: LOAD_ATTR            _cookies_lock
+ 576: LOAD_METHOD          release
+ 598: PRECALL              
+ 602: CALL                 
+ 612: POP_TOP              
+ 614: JUMP_FORWARD         to 676
+ 616: PUSH_EXC_INFO        
+ 618: LOAD_FAST            self
+ 620: LOAD_ATTR            _cookies_lock
+ 630: LOAD_METHOD          release
+ 652: PRECALL              
+ 656: CALL                 
+ 666: POP_TOP              
+ 668: RERAISE              
+ 670: COPY                 
+ 672: POP_EXCEPT           
+ 674: RERAISE              
+ 676: LOAD_FAST            self
+ 678: LOAD_METHOD          clear_expired_cookies
+ 700: PRECALL              
+ 704: CALL                 
+ 714: POP_TOP              
+ 716: LOAD_CONST           None
+ 718: RETURN_VALUE         

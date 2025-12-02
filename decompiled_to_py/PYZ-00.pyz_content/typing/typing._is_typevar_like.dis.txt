@@ -1,0 +1,25 @@
+# Disassembly for typing._is_typevar_like
+# From module file: typing
+
+## co_consts:
+(None,)
+
+## co_names:
+('isinstance', 'TypeVar', 'ParamSpec', '_is_unpacked_typevartuple')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            x
+  16: LOAD_GLOBAL          TypeVar
+  28: LOAD_GLOBAL          ParamSpec
+  40: BUILD_TUPLE          
+  42: PRECALL              
+  46: CALL                 
+  56: JUMP_IF_TRUE_OR_POP  to 86
+  58: LOAD_GLOBAL          NULL + _is_unpacked_typevartuple
+  70: LOAD_FAST            x
+  72: PRECALL              
+  76: CALL                 
+  86: RETURN_VALUE         

@@ -1,0 +1,22 @@
+# Disassembly for textwrap.TextWrapper.fill
+# From module file: textwrap
+
+## co_consts:
+("fill(text : string) -> string\n\n        Reformat the single paragraph in 'text' to fit in lines of no\n        more than 'self.width' columns, and return a new string\n        containing the entire wrapped paragraph.\n        ", '\n')
+
+## co_names:
+('join', 'wrap')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '\n'
+   4: LOAD_METHOD          join
+  26: LOAD_FAST            self
+  28: LOAD_METHOD          wrap
+  50: LOAD_FAST            text
+  52: PRECALL              
+  56: CALL                 
+  66: PRECALL              
+  70: CALL                 
+  80: RETURN_VALUE         

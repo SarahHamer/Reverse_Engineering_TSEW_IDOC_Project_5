@@ -1,0 +1,34 @@
+# Disassembly for importlib.FileFinder.path_hook.path_hook_for_FileFinder
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Path hook for importlib.machinery.FileFinder.', 'only directories are supported', ('path',))
+
+## co_names:
+('_path_isdir', 'ImportError')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + _path_isdir
+  16: LOAD_FAST            path
+  18: PRECALL              
+  22: CALL                 
+  32: POP_JUMP_FORWARD_IF_TRUE to 68
+  34: LOAD_GLOBAL          NULL + ImportError
+  46: LOAD_CONST           'only directories are supported'
+  48: LOAD_FAST            path
+  50: KW_NAMES             
+  52: PRECALL              
+  56: CALL                 
+  66: RAISE_VARARGS        
+  68: PUSH_NULL            
+  70: LOAD_DEREF           cls
+  72: LOAD_FAST            path
+  74: BUILD_LIST           
+  76: LOAD_DEREF           loader_details
+  78: LIST_EXTEND          
+  80: LIST_TO_TUPLE        
+  82: CALL_FUNCTION_EX     
+  84: RETURN_VALUE         

@@ -1,0 +1,71 @@
+# Disassembly for textwrap.TextWrapper._fix_sentence_endings
+# From module file: textwrap
+
+## co_consts:
+('_fix_sentence_endings(chunks : [string])\n\n        Correct for sentence endings buried in \'chunks\'.  Eg. when the\n        original text contains "... foo.\\nBar ...", munge_whitespace()\n        and split() will convert that to [..., "foo.", " ", "Bar", ...]\n        which has one too few spaces; this method simply changes the one\n        space to two.\n        ', 0, 1, ' ', '  ', 2, None)
+
+## co_names:
+('sentence_end_re', 'search', 'len')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: STORE_FAST           i
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            sentence_end_re
+  18: LOAD_ATTR            search
+  28: STORE_FAST           patsearch
+  30: LOAD_FAST            i
+  32: LOAD_GLOBAL          NULL + len
+  44: LOAD_FAST            chunks
+  46: PRECALL              
+  50: CALL                 
+  60: LOAD_CONST           1
+  62: BINARY_OP            -
+  66: COMPARE_OP           <
+  72: POP_JUMP_FORWARD_IF_FALSE to 224
+  74: LOAD_FAST            chunks
+  76: LOAD_FAST            i
+  78: LOAD_CONST           1
+  80: BINARY_OP            +
+  84: BINARY_SUBSCR        
+  94: LOAD_CONST           ' '
+  96: COMPARE_OP           ==
+ 102: POP_JUMP_FORWARD_IF_FALSE to 166
+ 104: PUSH_NULL            
+ 106: LOAD_FAST            patsearch
+ 108: LOAD_FAST            chunks
+ 110: LOAD_FAST            i
+ 112: BINARY_SUBSCR        
+ 122: PRECALL              
+ 126: CALL                 
+ 136: POP_JUMP_FORWARD_IF_FALSE to 166
+ 138: LOAD_CONST           '  '
+ 140: LOAD_FAST            chunks
+ 142: LOAD_FAST            i
+ 144: LOAD_CONST           1
+ 146: BINARY_OP            +
+ 150: STORE_SUBSCR         
+ 154: LOAD_FAST            i
+ 156: LOAD_CONST           2
+ 158: BINARY_OP            +=
+ 162: STORE_FAST           i
+ 164: JUMP_FORWARD         to 176
+ 166: LOAD_FAST            i
+ 168: LOAD_CONST           1
+ 170: BINARY_OP            +=
+ 174: STORE_FAST           i
+ 176: LOAD_FAST            i
+ 178: LOAD_GLOBAL          NULL + len
+ 190: LOAD_FAST            chunks
+ 192: PRECALL              
+ 196: CALL                 
+ 206: LOAD_CONST           1
+ 208: BINARY_OP            -
+ 212: COMPARE_OP           <
+ 218: POP_JUMP_BACKWARD_IF_TRUE to 74
+ 220: LOAD_CONST           None
+ 222: RETURN_VALUE         
+ 224: LOAD_CONST           None
+ 226: RETURN_VALUE         

@@ -1,0 +1,20 @@
+# Disassembly for ftplib.FTP.rmd
+# From module file: ftplib
+
+## co_consts:
+('Remove a directory.', 'RMD ')
+
+## co_names:
+('voidcmd',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          voidcmd
+  26: LOAD_CONST           'RMD '
+  28: LOAD_FAST            dirname
+  30: BINARY_OP            +
+  34: PRECALL              
+  38: CALL                 
+  48: RETURN_VALUE         

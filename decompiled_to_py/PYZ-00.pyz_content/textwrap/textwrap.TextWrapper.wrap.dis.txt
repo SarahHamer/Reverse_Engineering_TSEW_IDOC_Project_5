@@ -1,0 +1,33 @@
+# Disassembly for textwrap.TextWrapper.wrap
+# From module file: textwrap
+
+## co_consts:
+("wrap(text : string) -> [string]\n\n        Reformat the single paragraph in 'text' so it fits in lines of\n        no more than 'self.width' columns, and return a list of wrapped\n        lines.  Tabs in 'text' are expanded with string.expandtabs(),\n        and all other whitespace characters (including newline) are\n        converted to space.\n        ",)
+
+## co_names:
+('_split_chunks', 'fix_sentence_endings', '_fix_sentence_endings', '_wrap_chunks')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _split_chunks
+  26: LOAD_FAST            text
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           chunks
+  44: LOAD_FAST            self
+  46: LOAD_ATTR            fix_sentence_endings
+  56: POP_JUMP_FORWARD_IF_FALSE to 100
+  58: LOAD_FAST            self
+  60: LOAD_METHOD          _fix_sentence_endings
+  82: LOAD_FAST            chunks
+  84: PRECALL              
+  88: CALL                 
+  98: POP_TOP              
+ 100: LOAD_FAST            self
+ 102: LOAD_METHOD          _wrap_chunks
+ 124: LOAD_FAST            chunks
+ 126: PRECALL              
+ 130: CALL                 
+ 140: RETURN_VALUE         

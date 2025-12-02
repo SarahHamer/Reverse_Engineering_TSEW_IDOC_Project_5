@@ -1,0 +1,86 @@
+# Disassembly for bz2.open
+# From module file: bz2
+
+## co_consts:
+('Open a bzip2-compressed file in binary or text mode.\n\n    The filename argument can be an actual filename (a str, bytes, or\n    PathLike object), or an existing file object to read from or write\n    to.\n\n    The mode argument can be "r", "rb", "w", "wb", "x", "xb", "a" or\n    "ab" for binary mode, or "rt", "wt", "xt" or "at" for text mode.\n    The default mode is "rb", and the default compresslevel is 9.\n\n    For binary mode, this function is equivalent to the BZ2File\n    constructor: BZ2File(filename, mode, compresslevel). In this case,\n    the encoding, errors and newline arguments must not be provided.\n\n    For text mode, a BZ2File object is created, and wrapped in an\n    io.TextIOWrapper instance with the specified encoding, error\n    handling behavior, and line ending(s).\n\n    ', 't', 'b', 'Invalid mode: ', None, "Argument 'encoding' not supported in binary mode", "Argument 'errors' not supported in binary mode", "Argument 'newline' not supported in binary mode", '', ('compresslevel',))
+
+## co_names:
+('ValueError', 'replace', 'BZ2File', 'io', 'text_encoding', 'TextIOWrapper')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           't'
+   4: LOAD_FAST            mode
+   6: CONTAINS_OP          
+   8: POP_JUMP_FORWARD_IF_FALSE to 56
+  10: LOAD_CONST           'b'
+  12: LOAD_FAST            mode
+  14: CONTAINS_OP          
+  16: POP_JUMP_FORWARD_IF_FALSE to 54
+  18: LOAD_GLOBAL          NULL + ValueError
+  30: LOAD_CONST           'Invalid mode: '
+  32: LOAD_FAST            mode
+  34: FORMAT_VALUE         repr
+  36: BUILD_STRING         
+  38: PRECALL              
+  42: CALL                 
+  52: RAISE_VARARGS        
+  54: JUMP_FORWARD         to 158
+  56: LOAD_FAST            encoding
+  58: POP_JUMP_FORWARD_IF_NONE to 90
+  60: LOAD_GLOBAL          NULL + ValueError
+  72: LOAD_CONST           "Argument 'encoding' not supported in binary mode"
+  74: PRECALL              
+  78: CALL                 
+  88: RAISE_VARARGS        
+  90: LOAD_FAST            errors
+  92: POP_JUMP_FORWARD_IF_NONE to 124
+  94: LOAD_GLOBAL          NULL + ValueError
+ 106: LOAD_CONST           "Argument 'errors' not supported in binary mode"
+ 108: PRECALL              
+ 112: CALL                 
+ 122: RAISE_VARARGS        
+ 124: LOAD_FAST            newline
+ 126: POP_JUMP_FORWARD_IF_NONE to 158
+ 128: LOAD_GLOBAL          NULL + ValueError
+ 140: LOAD_CONST           "Argument 'newline' not supported in binary mode"
+ 142: PRECALL              
+ 146: CALL                 
+ 156: RAISE_VARARGS        
+ 158: LOAD_FAST            mode
+ 160: LOAD_METHOD          replace
+ 182: LOAD_CONST           't'
+ 184: LOAD_CONST           ''
+ 186: PRECALL              
+ 190: CALL                 
+ 200: STORE_FAST           bz_mode
+ 202: LOAD_GLOBAL          NULL + BZ2File
+ 214: LOAD_FAST            filename
+ 216: LOAD_FAST            bz_mode
+ 218: LOAD_FAST            compresslevel
+ 220: KW_NAMES             
+ 222: PRECALL              
+ 226: CALL                 
+ 236: STORE_FAST           binary_file
+ 238: LOAD_CONST           't'
+ 240: LOAD_FAST            mode
+ 242: CONTAINS_OP          
+ 244: POP_JUMP_FORWARD_IF_FALSE to 332
+ 246: LOAD_GLOBAL          NULL + io
+ 258: LOAD_ATTR            text_encoding
+ 268: LOAD_FAST            encoding
+ 270: PRECALL              
+ 274: CALL                 
+ 284: STORE_FAST           encoding
+ 286: LOAD_GLOBAL          NULL + io
+ 298: LOAD_ATTR            TextIOWrapper
+ 308: LOAD_FAST            binary_file
+ 310: LOAD_FAST            encoding
+ 312: LOAD_FAST            errors
+ 314: LOAD_FAST            newline
+ 316: PRECALL              
+ 320: CALL                 
+ 330: RETURN_VALUE         
+ 332: LOAD_FAST            binary_file
+ 334: RETURN_VALUE         

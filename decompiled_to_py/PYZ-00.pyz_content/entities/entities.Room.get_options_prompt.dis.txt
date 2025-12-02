@@ -1,0 +1,14 @@
+# Disassembly for entities.Room.get_options_prompt
+# From module file: entities
+
+## co_consts:
+(None, 'What would you like to do?')
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'What would you like to do?'
+   4: RETURN_VALUE         

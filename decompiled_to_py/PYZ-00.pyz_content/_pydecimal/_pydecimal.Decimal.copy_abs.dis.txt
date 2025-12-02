@@ -1,0 +1,23 @@
+# Disassembly for _pydecimal.Decimal.copy_abs
+# From module file: _pydecimal
+
+## co_consts:
+('Returns a copy with the sign set to 0. ', 0)
+
+## co_names:
+('_dec_from_triple', '_int', '_exp', '_is_special')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _dec_from_triple
+  14: LOAD_CONST           0
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            _int
+  28: LOAD_FAST            self
+  30: LOAD_ATTR            _exp
+  40: LOAD_FAST            self
+  42: LOAD_ATTR            _is_special
+  52: PRECALL              
+  56: CALL                 
+  66: RETURN_VALUE         

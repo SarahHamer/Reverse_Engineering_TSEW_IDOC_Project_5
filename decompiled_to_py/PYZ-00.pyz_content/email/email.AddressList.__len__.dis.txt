@@ -1,0 +1,18 @@
+# Disassembly for email.AddressList.__len__
+# From module file: email._parseaddr
+
+## co_consts:
+(None,)
+
+## co_names:
+('len', 'addresslist')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + len
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            addresslist
+  26: PRECALL              
+  30: CALL                 
+  40: RETURN_VALUE         

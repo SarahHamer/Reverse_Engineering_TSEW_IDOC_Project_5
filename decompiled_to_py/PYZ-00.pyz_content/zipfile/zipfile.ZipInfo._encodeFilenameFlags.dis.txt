@@ -1,0 +1,46 @@
+# Disassembly for zipfile.ZipInfo._encodeFilenameFlags
+# From module file: zipfile
+
+## co_consts:
+(None, 'ascii', 'utf-8')
+
+## co_names:
+('filename', 'encode', 'flag_bits', 'UnicodeEncodeError', '_MASK_UTF_FILENAME')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            filename
+  16: LOAD_METHOD          encode
+  38: LOAD_CONST           'ascii'
+  40: PRECALL              
+  44: CALL                 
+  54: LOAD_FAST            self
+  56: LOAD_ATTR            flag_bits
+  66: BUILD_TUPLE          
+  68: RETURN_VALUE         
+  70: PUSH_EXC_INFO        
+  72: LOAD_GLOBAL          UnicodeEncodeError
+  84: CHECK_EXC_MATCH      
+  86: POP_JUMP_FORWARD_IF_FALSE to 176
+  88: POP_TOP              
+  90: LOAD_FAST            self
+  92: LOAD_ATTR            filename
+ 102: LOAD_METHOD          encode
+ 124: LOAD_CONST           'utf-8'
+ 126: PRECALL              
+ 130: CALL                 
+ 140: LOAD_FAST            self
+ 142: LOAD_ATTR            flag_bits
+ 152: LOAD_GLOBAL          _MASK_UTF_FILENAME
+ 164: BINARY_OP            |
+ 168: BUILD_TUPLE          
+ 170: SWAP                 
+ 172: POP_EXCEPT           
+ 174: RETURN_VALUE         
+ 176: RERAISE              
+ 178: COPY                 
+ 180: POP_EXCEPT           
+ 182: RERAISE              

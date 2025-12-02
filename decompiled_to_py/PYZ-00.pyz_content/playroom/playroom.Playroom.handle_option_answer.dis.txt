@@ -1,0 +1,53 @@
+# Disassembly for playroom.Playroom.handle_option_answer
+# From module file: playroom
+
+## co_consts:
+(None, 'P', "You pinch yourself.\nYou are no longer in the playroom.\nYou hear beeping as you open your eyes.  You can't quite focus yet,\nbut you can tell you are laying down.\nYou can start to make out white walls around you.  You are in a bed.\n\nYou can hear excited people talking and footsteps coming close:\n\n --- Sam is waking up!\n\nYou feel someone hold your hand.  You look to your left as your vision becomes more clear.\n\n --- Mom! ... Dad!\n\n", True, 'Congratulations!', 'S', 'You decide to stay here and continue to play.')
+
+## co_names:
+('send_message', 'world', 'game_over', 'restart')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            value
+   4: COPY                 
+   6: LOAD_CONST           'P'
+   8: COMPARE_OP           ==
+  14: POP_JUMP_FORWARD_IF_FALSE to 118
+  16: POP_TOP              
+  18: LOAD_FAST            self
+  20: LOAD_METHOD          send_message
+  42: LOAD_CONST           "You pinch yourself.\nYou are no longer in the playroom.\nYou hear beeping as you open your eyes.  You can't quite focus yet,\nbut you can tell you are laying down.\nYou can start to make out white walls around you.  You are in a bed.\n\nYou can hear excited people talking and footsteps coming close:\n\n --- Sam is waking up!\n\nYou feel someone hold your hand.  You look to your left as your vision becomes more clear.\n\n --- Mom! ... Dad!\n\n"
+  44: PRECALL              
+  48: CALL                 
+  58: POP_TOP              
+  60: LOAD_FAST            self
+  62: LOAD_ATTR            world
+  72: LOAD_METHOD          game_over
+  94: LOAD_CONST           True
+  96: LOAD_CONST           'Congratulations!'
+  98: PRECALL              
+ 102: CALL                 
+ 112: POP_TOP              
+ 114: LOAD_CONST           None
+ 116: RETURN_VALUE         
+ 118: LOAD_CONST           'S'
+ 120: COMPARE_OP           ==
+ 126: POP_JUMP_FORWARD_IF_FALSE to 210
+ 128: LOAD_CONST           True
+ 130: LOAD_FAST            self
+ 132: LOAD_ATTR            world
+ 142: STORE_ATTR           restart
+ 152: LOAD_FAST            self
+ 154: LOAD_ATTR            world
+ 164: LOAD_METHOD          game_over
+ 186: LOAD_CONST           True
+ 188: LOAD_CONST           'You decide to stay here and continue to play.'
+ 190: PRECALL              
+ 194: CALL                 
+ 204: POP_TOP              
+ 206: LOAD_CONST           None
+ 208: RETURN_VALUE         
+ 210: LOAD_CONST           None
+ 212: RETURN_VALUE         

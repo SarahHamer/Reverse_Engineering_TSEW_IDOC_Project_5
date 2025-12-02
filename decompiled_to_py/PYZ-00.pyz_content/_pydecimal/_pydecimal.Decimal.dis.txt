@@ -1,0 +1,467 @@
+# Disassembly for _pydecimal.Decimal
+# From module file: _pydecimal
+
+## co_consts:
+('Decimal', 'Floating point class for decimal arithmetic.', ('_exp', '_int', '_sign', '_is_special'), '0', None, <code object __new__ at 0x0000024068BBF5A0, file "_pydecimal.py", line 532>, <code object from_float at 0x0000024068BFE3B0, file "_pydecimal.py", line 682>, <code object _isnan at 0x00000240693EBC30, file "_pydecimal.py", line 727>, <code object _isinfinity at 0x000002406945E010, file "_pydecimal.py", line 742>, <code object _check_nans at 0x0000024068C8DB20, file "_pydecimal.py", line 755>, <code object _compare_check_nans at 0x0000024066C26DA0, file "_pydecimal.py", line 787>, <code object __bool__ at 0x00000240694665D0, file "_pydecimal.py", line 820>, <code object _cmp at 0x0000024068C55C40, file "_pydecimal.py", line 827>, <code object __eq__ at 0x00000240691C3050, file "_pydecimal.py", line 891>, <code object __lt__ at 0x00000240691C09D0, file "_pydecimal.py", line 899>, <code object __le__ at 0x00000240691C1BB0, file "_pydecimal.py", line 908>, <code object __gt__ at 0x00000240691C3890, file "_pydecimal.py", line 917>, <code object __ge__ at 0x00000240691C3B50, file "_pydecimal.py", line 926>, <code object compare at 0x00000240691EA8B0, file "_pydecimal.py", line 935>, <code object __hash__ at 0x0000024068D303E0, file "_pydecimal.py", line 953>, <code object as_tuple at 0x00000240693AA970, file "_pydecimal.py", line 979>, <code object as_integer_ratio at 0x0000024068D31100, file "_pydecimal.py", line 986>, <code object __repr__ at 0x0000024069465450, file "_pydecimal.py", line 1036>, False, <code object __str__ at 0x0000024068DD5040, file "_pydecimal.py", line 1041>, <code object to_eng_string at 0x000002406945E6A0, file "_pydecimal.py", line 1093>, <code object __neg__ at 0x00000240694981F0, file "_pydecimal.py", line 1102>, <code object __pos__ at 0x00000240694983B0, file "_pydecimal.py", line 1124>, True, <code object __abs__ at 0x00000240691F63F0, file "_pydecimal.py", line 1145>, <code object __add__ at 0x0000024068E11050, file "_pydecimal.py", line 1167>, <code object __sub__ at 0x00000240691F6730, file "_pydecimal.py", line 1255>, <code object __rsub__ at 0x0000024069419A10, file "_pydecimal.py", line 1269>, <code object __mul__ at 0x0000024068D60190, file "_pydecimal.py", line 1277>, <code object __truediv__ at 0x0000024068CF54C0, file "_pydecimal.py", line 1334>, <code object _divide at 0x0000024068D3EFA0, file "_pydecimal.py", line 1393>, <code object __rtruediv__ at 0x000002406941B090, file "_pydecimal.py", line 1426>, <code object __divmod__ at 0x0000024068DD5A90, file "_pydecimal.py", line 1433>, <code object __rdivmod__ at 0x0000024069419590, file "_pydecimal.py", line 1469>, <code object __mod__ at 0x0000024066C25920, file "_pydecimal.py", line 1476>, <code object __rmod__ at 0x000002406941A310, file "_pydecimal.py", line 1503>, <code object remainder_near at 0x0000024068E11DB0, file "_pydecimal.py", line 1510>, <code object __floordiv__ at 0x0000024068DC3750, file "_pydecimal.py", line 1585>, <code object __rfloordiv__ at 0x000002406941A0D0, file "_pydecimal.py", line 1613>, <code object __float__ at 0x00000240691E9FB0, file "_pydecimal.py", line 1620>, <code object __int__ at 0x0000024068E223E0, file "_pydecimal.py", line 1630>, <code object real at 0x000002406943BAB0, file "_pydecimal.py", line 1645>, <code object imag at 0x0000024069466F70, file "_pydecimal.py", line 1649>, <code object conjugate at 0x000002406943ABB0, file "_pydecimal.py", line 1653>, <code object __complex__ at 0x00000240693EA430, file "_pydecimal.py", line 1656>, <code object _fix_nan at 0x0000024069498570, file "_pydecimal.py", line 1659>, <code object _fix at 0x0000024068E12410, file "_pydecimal.py", line 1671>, <code object _round_down at 0x000002406945FC30, file "_pydecimal.py", line 1773>, <code object _round_up at 0x000002406945CF30, file "_pydecimal.py", line 1780>, <code object _round_half_up at 0x000002406944B220, file "_pydecimal.py", line 1784>, <code object _round_half_down at 0x000002406941AAF0, file "_pydecimal.py", line 1793>, <code object _round_half_even at 0x000002406922CC00, file "_pydecimal.py", line 1800>, <code object _round_ceiling at 0x000002406941B3F0, file "_pydecimal.py", line 1808>, <code object _round_floor at 0x000002406941AE50, file "_pydecimal.py", line 1815>, <code object _round_05up at 0x00000240693AA330, file "_pydecimal.py", line 1822>, ('ROUND_DOWN', 'ROUND_UP', 'ROUND_HALF_UP', 'ROUND_HALF_DOWN', 'ROUND_HALF_EVEN', 'ROUND_CEILING', 'ROUND_FLOOR', 'ROUND_05UP'), <code object __round__ at 0x0000024068E22820, file "_pydecimal.py", line 1840>, <code object __floor__ at 0x00000240691E87B0, file "_pydecimal.py", line 1902>, <code object __ceil__ at 0x00000240691E8AB0, file "_pydecimal.py", line 1917>, <code object fma at 0x0000024066C3DDD0, file "_pydecimal.py", line 1932>, <code object _power_modulo at 0x000002406959DE00, file "_pydecimal.py", line 1976>, <code object _power_exact at 0x0000024068CA3E30, file "_pydecimal.py", line 2061>, <code object __pow__ at 0x0000024068D436B0, file "_pydecimal.py", line 2298>, <code object __rpow__ at 0x000002406941A8B0, file "_pydecimal.py", line 2514>, <code object normalize at 0x0000024068DBF4D0, file "_pydecimal.py", line 2521>, <code object quantize at 0x0000024068C82190, file "_pydecimal.py", line 2546>, <code object same_quantum at 0x0000024069498730, file "_pydecimal.py", line 2607>, <code object _rescale at 0x0000024068DC31B0, file "_pydecimal.py", line 2622>, <code object _round at 0x0000024068C8F100, file "_pydecimal.py", line 2656>, <code object to_integral_exact at 0x0000024068E7B9E0, file "_pydecimal.py", line 2679>, <code object to_integral_value at 0x000002406934F120, file "_pydecimal.py", line 2708>, <code object sqrt at 0x0000024068D00780, file "_pydecimal.py", line 2727>, <code object max at 0x0000024068DC5910, file "_pydecimal.py", line 2826>, <code object min at 0x0000024068DC4830, file "_pydecimal.py", line 2868>, <code object _isinteger at 0x00000240693AA830, file "_pydecimal.py", line 2902>, <code object _iseven at 0x000002406944ABC0, file "_pydecimal.py", line 2911>, <code object adjusted at 0x0000024069419C50, file "_pydecimal.py", line 2917>, <code object canonical at 0x000002406943BF30, file "_pydecimal.py", line 2925>, <code object compare_signal at 0x00000240693ABAF0, file "_pydecimal.py", line 2933>, <code object compare_total at 0x0000024068DF75D0, file "_pydecimal.py", line 2945>, <code object compare_total_mag at 0x00000240691C0DF0, file "_pydecimal.py", line 3018>, <code object copy_abs at 0x00000240693EAE30, file "_pydecimal.py", line 3029>, <code object copy_negate at 0x000002406922CD50, file "_pydecimal.py", line 3033>, <code object copy_sign at 0x00000240693D2890, file "_pydecimal.py", line 3040>, <code object exp at 0x0000024068D44EB0, file "_pydecimal.py", line 3046>, <code object is_canonical at 0x000002406943B570, file "_pydecimal.py", line 3121>, <code object is_finite at 0x00000240694957C0, file "_pydecimal.py", line 3129>, <code object is_infinite at 0x00000240694941D0, file "_pydecimal.py", line 3137>, <code object is_nan at 0x0000024069494780, file "_pydecimal.py", line 3141>, <code object is_normal at 0x00000240693D3800, file "_pydecimal.py", line 3145>, <code object is_qnan at 0x0000024069495E40, file "_pydecimal.py", line 3153>, <code object is_signed at 0x0000024069494FA0, file "_pydecimal.py", line 3157>, <code object is_snan at 0x00000240694970F0, file "_pydecimal.py", line 3161>, <code object is_subnormal at 0x00000240693D2E80, file "_pydecimal.py", line 3165>, <code object is_zero at 0x0000024069465B50, file "_pydecimal.py", line 3173>, <code object _ln_exp_bound at 0x0000024068C092A0, file "_pydecimal.py", line 3177>, <code object ln at 0x0000024066C3D9C0, file "_pydecimal.py", line 3202>, <code object _log10_exp_bound at 0x0000024068DBFDA0, file "_pydecimal.py", line 3252>, <code object log10 at 0x0000024066CE7CA0, file "_pydecimal.py", line 3282>, <code object logb at 0x0000024069365D40, file "_pydecimal.py", line 3333>, <code object _islogical at 0x000002406944B880, file "_pydecimal.py", line 3363>, <code object _fill_logical at 0x0000024069498AB0, file "_pydecimal.py", line 3377>, <code object logical_and at 0x0000024068DA78D0, file "_pydecimal.py", line 3390>, <code object logical_invert at 0x00000240693AB5F0, file "_pydecimal.py", line 3407>, <code object logical_or at 0x0000024068DA96D0, file "_pydecimal.py", line 3414>, <code object logical_xor at 0x0000024068DA8CD0, file "_pydecimal.py", line 3431>, <code object max_mag at 0x0000024068DE2A60, file "_pydecimal.py", line 3448>, <code object min_mag at 0x0000024068DE2440, file "_pydecimal.py", line 3478>, <code object next_minus at 0x0000024068DE6490, file "_pydecimal.py", line 3508>, <code object next_plus at 0x0000024068DE2750, file "_pydecimal.py", line 3531>, <code object next_toward at 0x0000024068DF8FB0, file "_pydecimal.py", line 3554>, <code object number_class at 0x0000024068E20EA0, file "_pydecimal.py", line 3600>, <code object radix at 0x00000240694673D0, file "_pydecimal.py", line 3642>, <code object rotate at 0x0000024068DD2DE0, file "_pydecimal.py", line 3646>, <code object scaleb at 0x0000024068DE67A0, file "_pydecimal.py", line 3679>, <code object shift at 0x0000024068DCC760, file "_pydecimal.py", line 3704>, <code object __reduce__ at 0x000002406945F0F0, file "_pydecimal.py", line 3743>, <code object __copy__ at 0x00000240693D30E0, file "_pydecimal.py", line 3746>, <code object __deepcopy__ at 0x00000240693D3B90, file "_pydecimal.py", line 3751>, <code object __format__ at 0x0000024068D459F0, file "_pydecimal.py", line 3758>, ('0', None), (None, None), (None,), (False, None), (True, None))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__slots__', '__new__', 'classmethod', 'from_float', '_isnan', '_isinfinity', '_check_nans', '_compare_check_nans', '__bool__', '_cmp', '__eq__', '__lt__', '__le__', '__gt__', '__ge__', 'compare', '__hash__', 'as_tuple', 'as_integer_ratio', '__repr__', '__str__', 'to_eng_string', '__neg__', '__pos__', '__abs__', '__add__', '__radd__', '__sub__', '__rsub__', '__mul__', '__rmul__', '__truediv__', '_divide', '__rtruediv__', '__divmod__', '__rdivmod__', '__mod__', '__rmod__', 'remainder_near', '__floordiv__', '__rfloordiv__', '__float__', '__int__', '__trunc__', 'property', 'real', 'imag', 'conjugate', '__complex__', '_fix_nan', '_fix', '_round_down', '_round_up', '_round_half_up', '_round_half_down', '_round_half_even', '_round_ceiling', '_round_floor', '_round_05up', 'dict', '_pick_rounding_function', '__round__', '__floor__', '__ceil__', 'fma', '_power_modulo', '_power_exact', '__pow__', '__rpow__', 'normalize', 'quantize', 'same_quantum', '_rescale', '_round', 'to_integral_exact', 'to_integral_value', 'to_integral', 'sqrt', 'max', 'min', '_isinteger', '_iseven', 'adjusted', 'canonical', 'compare_signal', 'compare_total', 'compare_total_mag', 'copy_abs', 'copy_negate', 'copy_sign', 'exp', 'is_canonical', 'is_finite', 'is_infinite', 'is_nan', 'is_normal', 'is_qnan', 'is_signed', 'is_snan', 'is_subnormal', 'is_zero', '_ln_exp_bound', 'ln', '_log10_exp_bound', 'log10', 'logb', '_islogical', '_fill_logical', 'logical_and', 'logical_invert', 'logical_or', 'logical_xor', 'max_mag', 'min_mag', 'next_minus', 'next_plus', 'next_toward', 'number_class', 'radix', 'rotate', 'scaleb', 'shift', '__reduce__', '__copy__', '__deepcopy__', '__format__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Decimal'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Floating point class for decimal arithmetic.'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ('_exp', '_int', '_sign', '_is_special')
+  16: STORE_NAME           __slots__
+  18: LOAD_CONST           ('0', None)
+  20: LOAD_CONST           <code object __new__ at 0x0000024068BBF5A0, file "_pydecimal.py", line 532>
+  22: MAKE_FUNCTION        defaults
+  24: STORE_NAME           __new__
+  26: LOAD_NAME            classmethod
+  28: LOAD_CONST           <code object from_float at 0x0000024068BFE3B0, file "_pydecimal.py", line 682>
+  30: MAKE_FUNCTION        
+  32: PRECALL              
+  36: CALL                 
+  46: STORE_NAME           from_float
+  48: LOAD_CONST           <code object _isnan at 0x00000240693EBC30, file "_pydecimal.py", line 727>
+  50: MAKE_FUNCTION        
+  52: STORE_NAME           _isnan
+  54: LOAD_CONST           <code object _isinfinity at 0x000002406945E010, file "_pydecimal.py", line 742>
+  56: MAKE_FUNCTION        
+  58: STORE_NAME           _isinfinity
+  60: LOAD_CONST           (None, None)
+  62: LOAD_CONST           <code object _check_nans at 0x0000024068C8DB20, file "_pydecimal.py", line 755>
+  64: MAKE_FUNCTION        defaults
+  66: STORE_NAME           _check_nans
+  68: LOAD_CONST           <code object _compare_check_nans at 0x0000024066C26DA0, file "_pydecimal.py", line 787>
+  70: MAKE_FUNCTION        
+  72: STORE_NAME           _compare_check_nans
+  74: LOAD_CONST           <code object __bool__ at 0x00000240694665D0, file "_pydecimal.py", line 820>
+  76: MAKE_FUNCTION        
+  78: STORE_NAME           __bool__
+  80: LOAD_CONST           <code object _cmp at 0x0000024068C55C40, file "_pydecimal.py", line 827>
+  82: MAKE_FUNCTION        
+  84: STORE_NAME           _cmp
+  86: LOAD_CONST           (None,)
+  88: LOAD_CONST           <code object __eq__ at 0x00000240691C3050, file "_pydecimal.py", line 891>
+  90: MAKE_FUNCTION        defaults
+  92: STORE_NAME           __eq__
+  94: LOAD_CONST           (None,)
+  96: LOAD_CONST           <code object __lt__ at 0x00000240691C09D0, file "_pydecimal.py", line 899>
+  98: MAKE_FUNCTION        defaults
+ 100: STORE_NAME           __lt__
+ 102: LOAD_CONST           (None,)
+ 104: LOAD_CONST           <code object __le__ at 0x00000240691C1BB0, file "_pydecimal.py", line 908>
+ 106: MAKE_FUNCTION        defaults
+ 108: STORE_NAME           __le__
+ 110: LOAD_CONST           (None,)
+ 112: LOAD_CONST           <code object __gt__ at 0x00000240691C3890, file "_pydecimal.py", line 917>
+ 114: MAKE_FUNCTION        defaults
+ 116: STORE_NAME           __gt__
+ 118: LOAD_CONST           (None,)
+ 120: LOAD_CONST           <code object __ge__ at 0x00000240691C3B50, file "_pydecimal.py", line 926>
+ 122: MAKE_FUNCTION        defaults
+ 124: STORE_NAME           __ge__
+ 126: LOAD_CONST           (None,)
+ 128: LOAD_CONST           <code object compare at 0x00000240691EA8B0, file "_pydecimal.py", line 935>
+ 130: MAKE_FUNCTION        defaults
+ 132: STORE_NAME           compare
+ 134: LOAD_CONST           <code object __hash__ at 0x0000024068D303E0, file "_pydecimal.py", line 953>
+ 136: MAKE_FUNCTION        
+ 138: STORE_NAME           __hash__
+ 140: LOAD_CONST           <code object as_tuple at 0x00000240693AA970, file "_pydecimal.py", line 979>
+ 142: MAKE_FUNCTION        
+ 144: STORE_NAME           as_tuple
+ 146: LOAD_CONST           <code object as_integer_ratio at 0x0000024068D31100, file "_pydecimal.py", line 986>
+ 148: MAKE_FUNCTION        
+ 150: STORE_NAME           as_integer_ratio
+ 152: LOAD_CONST           <code object __repr__ at 0x0000024069465450, file "_pydecimal.py", line 1036>
+ 154: MAKE_FUNCTION        
+ 156: STORE_NAME           __repr__
+ 158: LOAD_CONST           (False, None)
+ 160: LOAD_CONST           <code object __str__ at 0x0000024068DD5040, file "_pydecimal.py", line 1041>
+ 162: MAKE_FUNCTION        defaults
+ 164: STORE_NAME           __str__
+ 166: LOAD_CONST           (None,)
+ 168: LOAD_CONST           <code object to_eng_string at 0x000002406945E6A0, file "_pydecimal.py", line 1093>
+ 170: MAKE_FUNCTION        defaults
+ 172: STORE_NAME           to_eng_string
+ 174: LOAD_CONST           (None,)
+ 176: LOAD_CONST           <code object __neg__ at 0x00000240694981F0, file "_pydecimal.py", line 1102>
+ 178: MAKE_FUNCTION        defaults
+ 180: STORE_NAME           __neg__
+ 182: LOAD_CONST           (None,)
+ 184: LOAD_CONST           <code object __pos__ at 0x00000240694983B0, file "_pydecimal.py", line 1124>
+ 186: MAKE_FUNCTION        defaults
+ 188: STORE_NAME           __pos__
+ 190: LOAD_CONST           (True, None)
+ 192: LOAD_CONST           <code object __abs__ at 0x00000240691F63F0, file "_pydecimal.py", line 1145>
+ 194: MAKE_FUNCTION        defaults
+ 196: STORE_NAME           __abs__
+ 198: LOAD_CONST           (None,)
+ 200: LOAD_CONST           <code object __add__ at 0x0000024068E11050, file "_pydecimal.py", line 1167>
+ 202: MAKE_FUNCTION        defaults
+ 204: STORE_NAME           __add__
+ 206: LOAD_NAME            __add__
+ 208: STORE_NAME           __radd__
+ 210: LOAD_CONST           (None,)
+ 212: LOAD_CONST           <code object __sub__ at 0x00000240691F6730, file "_pydecimal.py", line 1255>
+ 214: MAKE_FUNCTION        defaults
+ 216: STORE_NAME           __sub__
+ 218: LOAD_CONST           (None,)
+ 220: LOAD_CONST           <code object __rsub__ at 0x0000024069419A10, file "_pydecimal.py", line 1269>
+ 222: MAKE_FUNCTION        defaults
+ 224: STORE_NAME           __rsub__
+ 226: LOAD_CONST           (None,)
+ 228: LOAD_CONST           <code object __mul__ at 0x0000024068D60190, file "_pydecimal.py", line 1277>
+ 230: MAKE_FUNCTION        defaults
+ 232: STORE_NAME           __mul__
+ 234: LOAD_NAME            __mul__
+ 236: STORE_NAME           __rmul__
+ 238: LOAD_CONST           (None,)
+ 240: LOAD_CONST           <code object __truediv__ at 0x0000024068CF54C0, file "_pydecimal.py", line 1334>
+ 242: MAKE_FUNCTION        defaults
+ 244: STORE_NAME           __truediv__
+ 246: LOAD_CONST           <code object _divide at 0x0000024068D3EFA0, file "_pydecimal.py", line 1393>
+ 248: MAKE_FUNCTION        
+ 250: STORE_NAME           _divide
+ 252: LOAD_CONST           (None,)
+ 254: LOAD_CONST           <code object __rtruediv__ at 0x000002406941B090, file "_pydecimal.py", line 1426>
+ 256: MAKE_FUNCTION        defaults
+ 258: STORE_NAME           __rtruediv__
+ 260: LOAD_CONST           (None,)
+ 262: LOAD_CONST           <code object __divmod__ at 0x0000024068DD5A90, file "_pydecimal.py", line 1433>
+ 264: MAKE_FUNCTION        defaults
+ 266: STORE_NAME           __divmod__
+ 268: LOAD_CONST           (None,)
+ 270: LOAD_CONST           <code object __rdivmod__ at 0x0000024069419590, file "_pydecimal.py", line 1469>
+ 272: MAKE_FUNCTION        defaults
+ 274: STORE_NAME           __rdivmod__
+ 276: LOAD_CONST           (None,)
+ 278: LOAD_CONST           <code object __mod__ at 0x0000024066C25920, file "_pydecimal.py", line 1476>
+ 280: MAKE_FUNCTION        defaults
+ 282: STORE_NAME           __mod__
+ 284: LOAD_CONST           (None,)
+ 286: LOAD_CONST           <code object __rmod__ at 0x000002406941A310, file "_pydecimal.py", line 1503>
+ 288: MAKE_FUNCTION        defaults
+ 290: STORE_NAME           __rmod__
+ 292: LOAD_CONST           (None,)
+ 294: LOAD_CONST           <code object remainder_near at 0x0000024068E11DB0, file "_pydecimal.py", line 1510>
+ 296: MAKE_FUNCTION        defaults
+ 298: STORE_NAME           remainder_near
+ 300: LOAD_CONST           (None,)
+ 302: LOAD_CONST           <code object __floordiv__ at 0x0000024068DC3750, file "_pydecimal.py", line 1585>
+ 304: MAKE_FUNCTION        defaults
+ 306: STORE_NAME           __floordiv__
+ 308: LOAD_CONST           (None,)
+ 310: LOAD_CONST           <code object __rfloordiv__ at 0x000002406941A0D0, file "_pydecimal.py", line 1613>
+ 312: MAKE_FUNCTION        defaults
+ 314: STORE_NAME           __rfloordiv__
+ 316: LOAD_CONST           <code object __float__ at 0x00000240691E9FB0, file "_pydecimal.py", line 1620>
+ 318: MAKE_FUNCTION        
+ 320: STORE_NAME           __float__
+ 322: LOAD_CONST           <code object __int__ at 0x0000024068E223E0, file "_pydecimal.py", line 1630>
+ 324: MAKE_FUNCTION        
+ 326: STORE_NAME           __int__
+ 328: LOAD_NAME            __int__
+ 330: STORE_NAME           __trunc__
+ 332: LOAD_NAME            property
+ 334: LOAD_CONST           <code object real at 0x000002406943BAB0, file "_pydecimal.py", line 1645>
+ 336: MAKE_FUNCTION        
+ 338: PRECALL              
+ 342: CALL                 
+ 352: STORE_NAME           real
+ 354: LOAD_NAME            property
+ 356: LOAD_CONST           <code object imag at 0x0000024069466F70, file "_pydecimal.py", line 1649>
+ 358: MAKE_FUNCTION        
+ 360: PRECALL              
+ 364: CALL                 
+ 374: STORE_NAME           imag
+ 376: LOAD_CONST           <code object conjugate at 0x000002406943ABB0, file "_pydecimal.py", line 1653>
+ 378: MAKE_FUNCTION        
+ 380: STORE_NAME           conjugate
+ 382: LOAD_CONST           <code object __complex__ at 0x00000240693EA430, file "_pydecimal.py", line 1656>
+ 384: MAKE_FUNCTION        
+ 386: STORE_NAME           __complex__
+ 388: LOAD_CONST           <code object _fix_nan at 0x0000024069498570, file "_pydecimal.py", line 1659>
+ 390: MAKE_FUNCTION        
+ 392: STORE_NAME           _fix_nan
+ 394: LOAD_CONST           <code object _fix at 0x0000024068E12410, file "_pydecimal.py", line 1671>
+ 396: MAKE_FUNCTION        
+ 398: STORE_NAME           _fix
+ 400: LOAD_CONST           <code object _round_down at 0x000002406945FC30, file "_pydecimal.py", line 1773>
+ 402: MAKE_FUNCTION        
+ 404: STORE_NAME           _round_down
+ 406: LOAD_CONST           <code object _round_up at 0x000002406945CF30, file "_pydecimal.py", line 1780>
+ 408: MAKE_FUNCTION        
+ 410: STORE_NAME           _round_up
+ 412: LOAD_CONST           <code object _round_half_up at 0x000002406944B220, file "_pydecimal.py", line 1784>
+ 414: MAKE_FUNCTION        
+ 416: STORE_NAME           _round_half_up
+ 418: LOAD_CONST           <code object _round_half_down at 0x000002406941AAF0, file "_pydecimal.py", line 1793>
+ 420: MAKE_FUNCTION        
+ 422: STORE_NAME           _round_half_down
+ 424: LOAD_CONST           <code object _round_half_even at 0x000002406922CC00, file "_pydecimal.py", line 1800>
+ 426: MAKE_FUNCTION        
+ 428: STORE_NAME           _round_half_even
+ 430: LOAD_CONST           <code object _round_ceiling at 0x000002406941B3F0, file "_pydecimal.py", line 1808>
+ 432: MAKE_FUNCTION        
+ 434: STORE_NAME           _round_ceiling
+ 436: LOAD_CONST           <code object _round_floor at 0x000002406941AE50, file "_pydecimal.py", line 1815>
+ 438: MAKE_FUNCTION        
+ 440: STORE_NAME           _round_floor
+ 442: LOAD_CONST           <code object _round_05up at 0x00000240693AA330, file "_pydecimal.py", line 1822>
+ 444: MAKE_FUNCTION        
+ 446: STORE_NAME           _round_05up
+ 448: PUSH_NULL            
+ 450: LOAD_NAME            dict
+ 452: LOAD_NAME            _round_down
+ 454: LOAD_NAME            _round_up
+ 456: LOAD_NAME            _round_half_up
+ 458: LOAD_NAME            _round_half_down
+ 460: LOAD_NAME            _round_half_even
+ 462: LOAD_NAME            _round_ceiling
+ 464: LOAD_NAME            _round_floor
+ 466: LOAD_NAME            _round_05up
+ 468: KW_NAMES             
+ 470: PRECALL              
+ 474: CALL                 
+ 484: STORE_NAME           _pick_rounding_function
+ 486: LOAD_CONST           (None,)
+ 488: LOAD_CONST           <code object __round__ at 0x0000024068E22820, file "_pydecimal.py", line 1840>
+ 490: MAKE_FUNCTION        defaults
+ 492: STORE_NAME           __round__
+ 494: LOAD_CONST           <code object __floor__ at 0x00000240691E87B0, file "_pydecimal.py", line 1902>
+ 496: MAKE_FUNCTION        
+ 498: STORE_NAME           __floor__
+ 500: LOAD_CONST           <code object __ceil__ at 0x00000240691E8AB0, file "_pydecimal.py", line 1917>
+ 502: MAKE_FUNCTION        
+ 504: STORE_NAME           __ceil__
+ 506: LOAD_CONST           (None,)
+ 508: LOAD_CONST           <code object fma at 0x0000024066C3DDD0, file "_pydecimal.py", line 1932>
+ 510: MAKE_FUNCTION        defaults
+ 512: STORE_NAME           fma
+ 514: LOAD_CONST           (None,)
+ 516: LOAD_CONST           <code object _power_modulo at 0x000002406959DE00, file "_pydecimal.py", line 1976>
+ 518: MAKE_FUNCTION        defaults
+ 520: STORE_NAME           _power_modulo
+ 522: LOAD_CONST           <code object _power_exact at 0x0000024068CA3E30, file "_pydecimal.py", line 2061>
+ 524: MAKE_FUNCTION        
+ 526: STORE_NAME           _power_exact
+ 528: LOAD_CONST           (None, None)
+ 530: LOAD_CONST           <code object __pow__ at 0x0000024068D436B0, file "_pydecimal.py", line 2298>
+ 532: MAKE_FUNCTION        defaults
+ 534: STORE_NAME           __pow__
+ 536: LOAD_CONST           (None,)
+ 538: LOAD_CONST           <code object __rpow__ at 0x000002406941A8B0, file "_pydecimal.py", line 2514>
+ 540: MAKE_FUNCTION        defaults
+ 542: STORE_NAME           __rpow__
+ 544: LOAD_CONST           (None,)
+ 546: LOAD_CONST           <code object normalize at 0x0000024068DBF4D0, file "_pydecimal.py", line 2521>
+ 548: MAKE_FUNCTION        defaults
+ 550: STORE_NAME           normalize
+ 552: LOAD_CONST           (None, None)
+ 554: LOAD_CONST           <code object quantize at 0x0000024068C82190, file "_pydecimal.py", line 2546>
+ 556: MAKE_FUNCTION        defaults
+ 558: STORE_NAME           quantize
+ 560: LOAD_CONST           (None,)
+ 562: LOAD_CONST           <code object same_quantum at 0x0000024069498730, file "_pydecimal.py", line 2607>
+ 564: MAKE_FUNCTION        defaults
+ 566: STORE_NAME           same_quantum
+ 568: LOAD_CONST           <code object _rescale at 0x0000024068DC31B0, file "_pydecimal.py", line 2622>
+ 570: MAKE_FUNCTION        
+ 572: STORE_NAME           _rescale
+ 574: LOAD_CONST           <code object _round at 0x0000024068C8F100, file "_pydecimal.py", line 2656>
+ 576: MAKE_FUNCTION        
+ 578: STORE_NAME           _round
+ 580: LOAD_CONST           (None, None)
+ 582: LOAD_CONST           <code object to_integral_exact at 0x0000024068E7B9E0, file "_pydecimal.py", line 2679>
+ 584: MAKE_FUNCTION        defaults
+ 586: STORE_NAME           to_integral_exact
+ 588: LOAD_CONST           (None, None)
+ 590: LOAD_CONST           <code object to_integral_value at 0x000002406934F120, file "_pydecimal.py", line 2708>
+ 592: MAKE_FUNCTION        defaults
+ 594: STORE_NAME           to_integral_value
+ 596: LOAD_NAME            to_integral_value
+ 598: STORE_NAME           to_integral
+ 600: LOAD_CONST           (None,)
+ 602: LOAD_CONST           <code object sqrt at 0x0000024068D00780, file "_pydecimal.py", line 2727>
+ 604: MAKE_FUNCTION        defaults
+ 606: STORE_NAME           sqrt
+ 608: LOAD_CONST           (None,)
+ 610: LOAD_CONST           <code object max at 0x0000024068DC5910, file "_pydecimal.py", line 2826>
+ 612: MAKE_FUNCTION        defaults
+ 614: STORE_NAME           max
+ 616: LOAD_CONST           (None,)
+ 618: LOAD_CONST           <code object min at 0x0000024068DC4830, file "_pydecimal.py", line 2868>
+ 620: MAKE_FUNCTION        defaults
+ 622: STORE_NAME           min
+ 624: LOAD_CONST           <code object _isinteger at 0x00000240693AA830, file "_pydecimal.py", line 2902>
+ 626: MAKE_FUNCTION        
+ 628: STORE_NAME           _isinteger
+ 630: LOAD_CONST           <code object _iseven at 0x000002406944ABC0, file "_pydecimal.py", line 2911>
+ 632: MAKE_FUNCTION        
+ 634: STORE_NAME           _iseven
+ 636: LOAD_CONST           <code object adjusted at 0x0000024069419C50, file "_pydecimal.py", line 2917>
+ 638: MAKE_FUNCTION        
+ 640: STORE_NAME           adjusted
+ 642: LOAD_CONST           <code object canonical at 0x000002406943BF30, file "_pydecimal.py", line 2925>
+ 644: MAKE_FUNCTION        
+ 646: STORE_NAME           canonical
+ 648: LOAD_CONST           (None,)
+ 650: LOAD_CONST           <code object compare_signal at 0x00000240693ABAF0, file "_pydecimal.py", line 2933>
+ 652: MAKE_FUNCTION        defaults
+ 654: STORE_NAME           compare_signal
+ 656: LOAD_CONST           (None,)
+ 658: LOAD_CONST           <code object compare_total at 0x0000024068DF75D0, file "_pydecimal.py", line 2945>
+ 660: MAKE_FUNCTION        defaults
+ 662: STORE_NAME           compare_total
+ 664: LOAD_CONST           (None,)
+ 666: LOAD_CONST           <code object compare_total_mag at 0x00000240691C0DF0, file "_pydecimal.py", line 3018>
+ 668: MAKE_FUNCTION        defaults
+ 670: STORE_NAME           compare_total_mag
+ 672: LOAD_CONST           <code object copy_abs at 0x00000240693EAE30, file "_pydecimal.py", line 3029>
+ 674: MAKE_FUNCTION        
+ 676: STORE_NAME           copy_abs
+ 678: LOAD_CONST           <code object copy_negate at 0x000002406922CD50, file "_pydecimal.py", line 3033>
+ 680: MAKE_FUNCTION        
+ 682: STORE_NAME           copy_negate
+ 684: LOAD_CONST           (None,)
+ 686: LOAD_CONST           <code object copy_sign at 0x00000240693D2890, file "_pydecimal.py", line 3040>
+ 688: MAKE_FUNCTION        defaults
+ 690: STORE_NAME           copy_sign
+ 692: LOAD_CONST           (None,)
+ 694: LOAD_CONST           <code object exp at 0x0000024068D44EB0, file "_pydecimal.py", line 3046>
+ 696: MAKE_FUNCTION        defaults
+ 698: STORE_NAME           exp
+ 700: LOAD_CONST           <code object is_canonical at 0x000002406943B570, file "_pydecimal.py", line 3121>
+ 702: MAKE_FUNCTION        
+ 704: STORE_NAME           is_canonical
+ 706: LOAD_CONST           <code object is_finite at 0x00000240694957C0, file "_pydecimal.py", line 3129>
+ 708: MAKE_FUNCTION        
+ 710: STORE_NAME           is_finite
+ 712: LOAD_CONST           <code object is_infinite at 0x00000240694941D0, file "_pydecimal.py", line 3137>
+ 714: MAKE_FUNCTION        
+ 716: STORE_NAME           is_infinite
+ 718: LOAD_CONST           <code object is_nan at 0x0000024069494780, file "_pydecimal.py", line 3141>
+ 720: MAKE_FUNCTION        
+ 722: STORE_NAME           is_nan
+ 724: LOAD_CONST           (None,)
+ 726: LOAD_CONST           <code object is_normal at 0x00000240693D3800, file "_pydecimal.py", line 3145>
+ 728: MAKE_FUNCTION        defaults
+ 730: STORE_NAME           is_normal
+ 732: LOAD_CONST           <code object is_qnan at 0x0000024069495E40, file "_pydecimal.py", line 3153>
+ 734: MAKE_FUNCTION        
+ 736: STORE_NAME           is_qnan
+ 738: LOAD_CONST           <code object is_signed at 0x0000024069494FA0, file "_pydecimal.py", line 3157>
+ 740: MAKE_FUNCTION        
+ 742: STORE_NAME           is_signed
+ 744: LOAD_CONST           <code object is_snan at 0x00000240694970F0, file "_pydecimal.py", line 3161>
+ 746: MAKE_FUNCTION        
+ 748: STORE_NAME           is_snan
+ 750: LOAD_CONST           (None,)
+ 752: LOAD_CONST           <code object is_subnormal at 0x00000240693D2E80, file "_pydecimal.py", line 3165>
+ 754: MAKE_FUNCTION        defaults
+ 756: STORE_NAME           is_subnormal
+ 758: LOAD_CONST           <code object is_zero at 0x0000024069465B50, file "_pydecimal.py", line 3173>
+ 760: MAKE_FUNCTION        
+ 762: STORE_NAME           is_zero
+ 764: LOAD_CONST           <code object _ln_exp_bound at 0x0000024068C092A0, file "_pydecimal.py", line 3177>
+ 766: MAKE_FUNCTION        
+ 768: STORE_NAME           _ln_exp_bound
+ 770: LOAD_CONST           (None,)
+ 772: LOAD_CONST           <code object ln at 0x0000024066C3D9C0, file "_pydecimal.py", line 3202>
+ 774: MAKE_FUNCTION        defaults
+ 776: STORE_NAME           ln
+ 778: LOAD_CONST           <code object _log10_exp_bound at 0x0000024068DBFDA0, file "_pydecimal.py", line 3252>
+ 780: MAKE_FUNCTION        
+ 782: STORE_NAME           _log10_exp_bound
+ 784: LOAD_CONST           (None,)
+ 786: LOAD_CONST           <code object log10 at 0x0000024066CE7CA0, file "_pydecimal.py", line 3282>
+ 788: MAKE_FUNCTION        defaults
+ 790: STORE_NAME           log10
+ 792: LOAD_CONST           (None,)
+ 794: LOAD_CONST           <code object logb at 0x0000024069365D40, file "_pydecimal.py", line 3333>
+ 796: MAKE_FUNCTION        defaults
+ 798: STORE_NAME           logb
+ 800: LOAD_CONST           <code object _islogical at 0x000002406944B880, file "_pydecimal.py", line 3363>
+ 802: MAKE_FUNCTION        
+ 804: STORE_NAME           _islogical
+ 806: LOAD_CONST           <code object _fill_logical at 0x0000024069498AB0, file "_pydecimal.py", line 3377>
+ 808: MAKE_FUNCTION        
+ 810: STORE_NAME           _fill_logical
+ 812: LOAD_CONST           (None,)
+ 814: LOAD_CONST           <code object logical_and at 0x0000024068DA78D0, file "_pydecimal.py", line 3390>
+ 816: MAKE_FUNCTION        defaults
+ 818: STORE_NAME           logical_and
+ 820: LOAD_CONST           (None,)
+ 822: LOAD_CONST           <code object logical_invert at 0x00000240693AB5F0, file "_pydecimal.py", line 3407>
+ 824: MAKE_FUNCTION        defaults
+ 826: STORE_NAME           logical_invert
+ 828: LOAD_CONST           (None,)
+ 830: LOAD_CONST           <code object logical_or at 0x0000024068DA96D0, file "_pydecimal.py", line 3414>
+ 832: MAKE_FUNCTION        defaults
+ 834: STORE_NAME           logical_or
+ 836: LOAD_CONST           (None,)
+ 838: LOAD_CONST           <code object logical_xor at 0x0000024068DA8CD0, file "_pydecimal.py", line 3431>
+ 840: MAKE_FUNCTION        defaults
+ 842: STORE_NAME           logical_xor
+ 844: LOAD_CONST           (None,)
+ 846: LOAD_CONST           <code object max_mag at 0x0000024068DE2A60, file "_pydecimal.py", line 3448>
+ 848: MAKE_FUNCTION        defaults
+ 850: STORE_NAME           max_mag
+ 852: LOAD_CONST           (None,)
+ 854: LOAD_CONST           <code object min_mag at 0x0000024068DE2440, file "_pydecimal.py", line 3478>
+ 856: MAKE_FUNCTION        defaults
+ 858: STORE_NAME           min_mag
+ 860: LOAD_CONST           (None,)
+ 862: LOAD_CONST           <code object next_minus at 0x0000024068DE6490, file "_pydecimal.py", line 3508>
+ 864: MAKE_FUNCTION        defaults
+ 866: STORE_NAME           next_minus
+ 868: LOAD_CONST           (None,)
+ 870: LOAD_CONST           <code object next_plus at 0x0000024068DE2750, file "_pydecimal.py", line 3531>
+ 872: MAKE_FUNCTION        defaults
+ 874: STORE_NAME           next_plus
+ 876: LOAD_CONST           (None,)
+ 878: LOAD_CONST           <code object next_toward at 0x0000024068DF8FB0, file "_pydecimal.py", line 3554>
+ 880: MAKE_FUNCTION        defaults
+ 882: STORE_NAME           next_toward
+ 884: LOAD_CONST           (None,)
+ 886: LOAD_CONST           <code object number_class at 0x0000024068E20EA0, file "_pydecimal.py", line 3600>
+ 888: MAKE_FUNCTION        defaults
+ 890: STORE_NAME           number_class
+ 892: LOAD_CONST           <code object radix at 0x00000240694673D0, file "_pydecimal.py", line 3642>
+ 894: MAKE_FUNCTION        
+ 896: STORE_NAME           radix
+ 898: LOAD_CONST           (None,)
+ 900: LOAD_CONST           <code object rotate at 0x0000024068DD2DE0, file "_pydecimal.py", line 3646>
+ 902: MAKE_FUNCTION        defaults
+ 904: STORE_NAME           rotate
+ 906: LOAD_CONST           (None,)
+ 908: LOAD_CONST           <code object scaleb at 0x0000024068DE67A0, file "_pydecimal.py", line 3679>
+ 910: MAKE_FUNCTION        defaults
+ 912: STORE_NAME           scaleb
+ 914: LOAD_CONST           (None,)
+ 916: LOAD_CONST           <code object shift at 0x0000024068DCC760, file "_pydecimal.py", line 3704>
+ 918: MAKE_FUNCTION        defaults
+ 920: STORE_NAME           shift
+ 922: LOAD_CONST           <code object __reduce__ at 0x000002406945F0F0, file "_pydecimal.py", line 3743>
+ 924: MAKE_FUNCTION        
+ 926: STORE_NAME           __reduce__
+ 928: LOAD_CONST           <code object __copy__ at 0x00000240693D30E0, file "_pydecimal.py", line 3746>
+ 930: MAKE_FUNCTION        
+ 932: STORE_NAME           __copy__
+ 934: LOAD_CONST           <code object __deepcopy__ at 0x00000240693D3B90, file "_pydecimal.py", line 3751>
+ 936: MAKE_FUNCTION        
+ 938: STORE_NAME           __deepcopy__
+ 940: LOAD_CONST           (None, None)
+ 942: LOAD_CONST           <code object __format__ at 0x0000024068D459F0, file "_pydecimal.py", line 3758>
+ 944: MAKE_FUNCTION        defaults
+ 946: STORE_NAME           __format__
+ 948: LOAD_CONST           None
+ 950: RETURN_VALUE         

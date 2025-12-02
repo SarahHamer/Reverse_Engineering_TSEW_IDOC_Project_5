@@ -1,0 +1,17 @@
+# Disassembly for importlib.FastPath.__init__
+# From module file: importlib.metadata
+
+## co_consts:
+(None,)
+
+## co_names:
+('root',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            root
+   4: LOAD_FAST            self
+   6: STORE_ATTR           root
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         

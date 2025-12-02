@@ -1,0 +1,24 @@
+# Disassembly for _pydecimal.Context.__reduce__.<listcomp>
+# From module file: _pydecimal
+
+## co_consts:
+()
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 26
+   8: UNPACK_SEQUENCE      
+  12: STORE_FAST           sig
+  14: STORE_FAST           v
+  16: LOAD_FAST            v
+  18: POP_JUMP_BACKWARD_IF_FALSE to 6
+  20: LOAD_FAST            sig
+  22: LIST_APPEND          
+  24: JUMP_BACKWARD        to 6
+  26: RETURN_VALUE         

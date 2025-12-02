@@ -1,0 +1,74 @@
+# Disassembly for email.get_invalid_parameter
+# From module file: email._header_value_parser
+
+## co_consts:
+(" Read everything up to the next ';'.\n\n    This is outside the formal grammar.  The InvalidParameter TokenList that is\n    returned acts like a Parameter, but the data attributes are None.\n\n    ", 0, ';', 'misplaced-special', 1, None)
+
+## co_names:
+('InvalidParameter', 'PHRASE_ENDS', 'append', 'ValueTerminal', 'get_phrase')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + InvalidParameter
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           invalid_parameter
+  30: LOAD_FAST            value
+  32: POP_JUMP_FORWARD_IF_FALSE to 298
+  34: LOAD_FAST            value
+  36: LOAD_CONST           0
+  38: BINARY_SUBSCR        
+  48: LOAD_CONST           ';'
+  50: COMPARE_OP           !=
+  56: POP_JUMP_FORWARD_IF_FALSE to 298
+  58: LOAD_FAST            value
+  60: LOAD_CONST           0
+  62: BINARY_SUBSCR        
+  72: LOAD_GLOBAL          PHRASE_ENDS
+  84: CONTAINS_OP          
+  86: POP_JUMP_FORWARD_IF_FALSE to 192
+  88: LOAD_FAST            invalid_parameter
+  90: LOAD_METHOD          append
+ 112: LOAD_GLOBAL          NULL + ValueTerminal
+ 124: LOAD_FAST            value
+ 126: LOAD_CONST           0
+ 128: BINARY_SUBSCR        
+ 138: LOAD_CONST           'misplaced-special'
+ 140: PRECALL              
+ 144: CALL                 
+ 154: PRECALL              
+ 158: CALL                 
+ 168: POP_TOP              
+ 170: LOAD_FAST            value
+ 172: LOAD_CONST           1
+ 174: LOAD_CONST           None
+ 176: BUILD_SLICE          
+ 178: BINARY_SUBSCR        
+ 188: STORE_FAST           value
+ 190: JUMP_FORWARD         to 270
+ 192: LOAD_GLOBAL          NULL + get_phrase
+ 204: LOAD_FAST            value
+ 206: PRECALL              
+ 210: CALL                 
+ 220: UNPACK_SEQUENCE      
+ 224: STORE_FAST           token
+ 226: STORE_FAST           value
+ 228: LOAD_FAST            invalid_parameter
+ 230: LOAD_METHOD          append
+ 252: LOAD_FAST            token
+ 254: PRECALL              
+ 258: CALL                 
+ 268: POP_TOP              
+ 270: LOAD_FAST            value
+ 272: POP_JUMP_FORWARD_IF_FALSE to 298
+ 274: LOAD_FAST            value
+ 276: LOAD_CONST           0
+ 278: BINARY_SUBSCR        
+ 288: LOAD_CONST           ';'
+ 290: COMPARE_OP           !=
+ 296: POP_JUMP_BACKWARD_IF_TRUE to 58
+ 298: LOAD_FAST            invalid_parameter
+ 300: LOAD_FAST            value
+ 302: BUILD_TUPLE          
+ 304: RETURN_VALUE         

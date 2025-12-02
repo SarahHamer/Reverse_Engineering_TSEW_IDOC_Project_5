@@ -1,0 +1,190 @@
+# Disassembly for inspect._signature_strip_non_python_syntax
+# From module file: inspect
+
+## co_consts:
+('\n    Private helper function. Takes a signature in Argument Clinic\'s\n    extended signature format.\n\n    Returns a tuple of three things:\n      * that signature re-rendered in standard Python syntax,\n      * the index of the "self" parameter (generally 0), or None if\n        the function does not have a "self" parameter, and\n      * the index of the last "positional only" parameter,\n        or None if the signature has no positional-only parameters.\n    ', None, <code object <listcomp> at 0x0000024069CF0430, file "inspect.py", line 2121>, '\n', False, 0, ',', True, 1, '/', '$', ')', ', ', ' ', '')
+
+## co_names:
+('split', 'iter', '__next__', 'tokenize', 'append', 'token', 'OP', 'ERRORTOKEN', 'next', 'type', 'ENCODING', 'string', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            signature
+   4: POP_JUMP_FORWARD_IF_TRUE to 16
+   6: LOAD_FAST            signature
+   8: LOAD_CONST           None
+  10: LOAD_CONST           None
+  12: BUILD_TUPLE          
+  14: RETURN_VALUE         
+  16: LOAD_CONST           None
+  18: STORE_FAST           self_parameter
+  20: LOAD_CONST           None
+  22: STORE_FAST           last_positional_only
+  24: LOAD_CONST           <code object <listcomp> at 0x0000024069CF0430, file "inspect.py", line 2121>
+  26: MAKE_FUNCTION        
+  28: LOAD_FAST            signature
+  30: LOAD_METHOD          split
+  52: LOAD_CONST           '\n'
+  54: PRECALL              
+  58: CALL                 
+  68: GET_ITER             
+  70: PRECALL              
+  74: CALL                 
+  84: STORE_FAST           lines
+  86: LOAD_GLOBAL          NULL + iter
+  98: LOAD_FAST            lines
+ 100: PRECALL              
+ 104: CALL                 
+ 114: LOAD_ATTR            __next__
+ 124: STORE_FAST           generator
+ 126: LOAD_GLOBAL          NULL + tokenize
+ 138: LOAD_ATTR            tokenize
+ 148: LOAD_FAST            generator
+ 150: PRECALL              
+ 154: CALL                 
+ 164: STORE_FAST           token_stream
+ 166: LOAD_CONST           False
+ 168: STORE_FAST           delayed_comma
+ 170: LOAD_CONST           False
+ 172: STORE_FAST           skip_next_comma
+ 174: BUILD_LIST           
+ 176: STORE_FAST           text
+ 178: LOAD_FAST            text
+ 180: LOAD_ATTR            append
+ 190: STORE_FAST           add
+ 192: LOAD_CONST           0
+ 194: STORE_FAST           current_parameter
+ 196: LOAD_GLOBAL          token
+ 208: LOAD_ATTR            OP
+ 218: STORE_FAST           OP
+ 220: LOAD_GLOBAL          token
+ 232: LOAD_ATTR            ERRORTOKEN
+ 242: STORE_FAST           ERRORTOKEN
+ 244: LOAD_GLOBAL          NULL + next
+ 256: LOAD_FAST            token_stream
+ 258: PRECALL              
+ 262: CALL                 
+ 272: STORE_FAST           t
+ 274: LOAD_FAST            t
+ 276: LOAD_ATTR            type
+ 286: LOAD_GLOBAL          tokenize
+ 298: LOAD_ATTR            ENCODING
+ 308: COMPARE_OP           ==
+ 314: POP_JUMP_FORWARD_IF_TRUE to 320
+ 316: LOAD_ASSERTION_ERROR 
+ 318: RAISE_VARARGS        
+ 320: LOAD_FAST            token_stream
+ 322: GET_ITER             
+ 324: FOR_ITER             to 608
+ 326: STORE_FAST           t
+ 328: LOAD_FAST            t
+ 330: LOAD_ATTR            type
+ 340: LOAD_FAST            t
+ 342: LOAD_ATTR            string
+ 352: STORE_FAST           string
+ 354: STORE_FAST           type
+ 356: LOAD_FAST            type
+ 358: LOAD_FAST            OP
+ 360: COMPARE_OP           ==
+ 366: POP_JUMP_FORWARD_IF_FALSE to 458
+ 368: LOAD_FAST            string
+ 370: LOAD_CONST           ','
+ 372: COMPARE_OP           ==
+ 378: POP_JUMP_FORWARD_IF_FALSE to 414
+ 380: LOAD_FAST            skip_next_comma
+ 382: POP_JUMP_FORWARD_IF_FALSE to 390
+ 384: LOAD_CONST           False
+ 386: STORE_FAST           skip_next_comma
+ 388: JUMP_FORWARD         to 412
+ 390: LOAD_FAST            delayed_comma
+ 392: POP_JUMP_FORWARD_IF_FALSE to 398
+ 394: LOAD_ASSERTION_ERROR 
+ 396: RAISE_VARARGS        
+ 398: LOAD_CONST           True
+ 400: STORE_FAST           delayed_comma
+ 402: LOAD_FAST            current_parameter
+ 404: LOAD_CONST           1
+ 406: BINARY_OP            +=
+ 410: STORE_FAST           current_parameter
+ 412: JUMP_BACKWARD        to 324
+ 414: LOAD_FAST            string
+ 416: LOAD_CONST           '/'
+ 418: COMPARE_OP           ==
+ 424: POP_JUMP_FORWARD_IF_FALSE to 458
+ 426: LOAD_FAST            skip_next_comma
+ 428: POP_JUMP_FORWARD_IF_FALSE to 434
+ 430: LOAD_ASSERTION_ERROR 
+ 432: RAISE_VARARGS        
+ 434: LOAD_FAST            last_positional_only
+ 436: POP_JUMP_FORWARD_IF_NONE to 442
+ 438: LOAD_ASSERTION_ERROR 
+ 440: RAISE_VARARGS        
+ 442: LOAD_CONST           True
+ 444: STORE_FAST           skip_next_comma
+ 446: LOAD_FAST            current_parameter
+ 448: LOAD_CONST           1
+ 450: BINARY_OP            -
+ 454: STORE_FAST           last_positional_only
+ 456: JUMP_BACKWARD        to 324
+ 458: LOAD_FAST            type
+ 460: LOAD_FAST            ERRORTOKEN
+ 462: COMPARE_OP           ==
+ 468: POP_JUMP_FORWARD_IF_FALSE to 496
+ 470: LOAD_FAST            string
+ 472: LOAD_CONST           '$'
+ 474: COMPARE_OP           ==
+ 480: POP_JUMP_FORWARD_IF_FALSE to 496
+ 482: LOAD_FAST            self_parameter
+ 484: POP_JUMP_FORWARD_IF_NONE to 490
+ 486: LOAD_ASSERTION_ERROR 
+ 488: RAISE_VARARGS        
+ 490: LOAD_FAST            current_parameter
+ 492: STORE_FAST           self_parameter
+ 494: JUMP_BACKWARD        to 324
+ 496: LOAD_FAST            delayed_comma
+ 498: POP_JUMP_FORWARD_IF_FALSE to 550
+ 500: LOAD_CONST           False
+ 502: STORE_FAST           delayed_comma
+ 504: LOAD_FAST            type
+ 506: LOAD_FAST            OP
+ 508: COMPARE_OP           ==
+ 514: POP_JUMP_FORWARD_IF_FALSE to 528
+ 516: LOAD_FAST            string
+ 518: LOAD_CONST           ')'
+ 520: COMPARE_OP           ==
+ 526: POP_JUMP_FORWARD_IF_TRUE to 550
+ 528: PUSH_NULL            
+ 530: LOAD_FAST            add
+ 532: LOAD_CONST           ', '
+ 534: PRECALL              
+ 538: CALL                 
+ 548: POP_TOP              
+ 550: PUSH_NULL            
+ 552: LOAD_FAST            add
+ 554: LOAD_FAST            string
+ 556: PRECALL              
+ 560: CALL                 
+ 570: POP_TOP              
+ 572: LOAD_FAST            string
+ 574: LOAD_CONST           ','
+ 576: COMPARE_OP           ==
+ 582: POP_JUMP_FORWARD_IF_FALSE to 606
+ 584: PUSH_NULL            
+ 586: LOAD_FAST            add
+ 588: LOAD_CONST           ' '
+ 590: PRECALL              
+ 594: CALL                 
+ 604: POP_TOP              
+ 606: JUMP_BACKWARD        to 324
+ 608: LOAD_CONST           ''
+ 610: LOAD_METHOD          join
+ 632: LOAD_FAST            text
+ 634: PRECALL              
+ 638: CALL                 
+ 648: STORE_FAST           clean_signature
+ 650: LOAD_FAST            clean_signature
+ 652: LOAD_FAST            self_parameter
+ 654: LOAD_FAST            last_positional_only
+ 656: BUILD_TUPLE          
+ 658: RETURN_VALUE         

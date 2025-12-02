@@ -1,0 +1,91 @@
+# Disassembly for argparse.HelpFormatter.__init__
+# From module file: argparse
+
+## co_consts:
+(None, 0, 2, 20, '\\s+', '\\n\\n\\n+')
+
+## co_names:
+('shutil', 'get_terminal_size', 'columns', '_prog', '_indent_increment', 'min', 'max', '_max_help_position', '_width', '_current_indent', '_level', '_action_max_length', '_Section', '_root_section', '_current_section', '_re', 'compile', 'ASCII', '_whitespace_matcher', '_long_break_matcher')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            width
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 74
+   6: LOAD_CONST           0
+   8: LOAD_CONST           None
+  10: IMPORT_NAME          shutil
+  12: STORE_FAST           shutil
+  14: LOAD_FAST            shutil
+  16: LOAD_METHOD          get_terminal_size
+  38: PRECALL              
+  42: CALL                 
+  52: LOAD_ATTR            columns
+  62: STORE_FAST           width
+  64: LOAD_FAST            width
+  66: LOAD_CONST           2
+  68: BINARY_OP            -=
+  72: STORE_FAST           width
+  74: LOAD_FAST            prog
+  76: LOAD_FAST            self
+  78: STORE_ATTR           _prog
+  88: LOAD_FAST            indent_increment
+  90: LOAD_FAST            self
+  92: STORE_ATTR           _indent_increment
+ 102: LOAD_GLOBAL          NULL + min
+ 114: LOAD_FAST            max_help_position
+ 116: LOAD_GLOBAL          NULL + max
+ 128: LOAD_FAST            width
+ 130: LOAD_CONST           20
+ 132: BINARY_OP            -
+ 136: LOAD_FAST            indent_increment
+ 138: LOAD_CONST           2
+ 140: BINARY_OP            *
+ 144: PRECALL              
+ 148: CALL                 
+ 158: PRECALL              
+ 162: CALL                 
+ 172: LOAD_FAST            self
+ 174: STORE_ATTR           _max_help_position
+ 184: LOAD_FAST            width
+ 186: LOAD_FAST            self
+ 188: STORE_ATTR           _width
+ 198: LOAD_CONST           0
+ 200: LOAD_FAST            self
+ 202: STORE_ATTR           _current_indent
+ 212: LOAD_CONST           0
+ 214: LOAD_FAST            self
+ 216: STORE_ATTR           _level
+ 226: LOAD_CONST           0
+ 228: LOAD_FAST            self
+ 230: STORE_ATTR           _action_max_length
+ 240: LOAD_FAST            self
+ 242: LOAD_METHOD          _Section
+ 264: LOAD_FAST            self
+ 266: LOAD_CONST           None
+ 268: PRECALL              
+ 272: CALL                 
+ 282: LOAD_FAST            self
+ 284: STORE_ATTR           _root_section
+ 294: LOAD_FAST            self
+ 296: LOAD_ATTR            _root_section
+ 306: LOAD_FAST            self
+ 308: STORE_ATTR           _current_section
+ 318: LOAD_GLOBAL          NULL + _re
+ 330: LOAD_ATTR            compile
+ 340: LOAD_CONST           '\\s+'
+ 342: LOAD_GLOBAL          _re
+ 354: LOAD_ATTR            ASCII
+ 364: PRECALL              
+ 368: CALL                 
+ 378: LOAD_FAST            self
+ 380: STORE_ATTR           _whitespace_matcher
+ 390: LOAD_GLOBAL          NULL + _re
+ 402: LOAD_ATTR            compile
+ 412: LOAD_CONST           '\\n\\n\\n+'
+ 414: PRECALL              
+ 418: CALL                 
+ 428: LOAD_FAST            self
+ 430: STORE_ATTR           _long_break_matcher
+ 440: LOAD_CONST           None
+ 442: RETURN_VALUE         

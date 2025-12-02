@@ -1,0 +1,14 @@
+# Disassembly for typing.assert_type
+# From module file: typing
+
+## co_consts:
+('Ask a static type checker to confirm that the value is of the given type.\n\n    At runtime this does nothing: it returns the first argument unchanged with no\n    checks or side effects, no matter the actual type of the argument.\n\n    When a static type checker encounters a call to assert_type(), it\n    emits an error if the value is not of the specified type::\n\n        def greet(name: str) -> None:\n            assert_type(name, str)  # OK\n            assert_type(name, int)  # type checker error\n    ',)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            val
+   4: RETURN_VALUE         

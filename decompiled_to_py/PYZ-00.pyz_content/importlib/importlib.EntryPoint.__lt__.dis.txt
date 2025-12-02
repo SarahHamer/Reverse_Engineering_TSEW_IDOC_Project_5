@@ -1,0 +1,22 @@
+# Disassembly for importlib.EntryPoint.__lt__
+# From module file: importlib.metadata
+
+## co_consts:
+(None,)
+
+## co_names:
+('_key',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _key
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_FAST            other
+  42: LOAD_METHOD          _key
+  64: PRECALL              
+  68: CALL                 
+  78: COMPARE_OP           <
+  84: RETURN_VALUE         

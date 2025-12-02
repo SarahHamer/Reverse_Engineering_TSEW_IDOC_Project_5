@@ -1,0 +1,220 @@
+# Disassembly for dis.dis
+# From module file: dis
+
+## co_consts:
+('Disassemble classes, methods, functions, and other compiled objects.\n\n    With no argument, disassemble the last traceback.\n\n    Compiled objects currently include generator objects, async generator\n    objects, and coroutine objects, all of which store their code object\n    in a special attribute.\n    ', None, ('file', 'show_caches', 'adaptive'), '__func__', '__code__', 'gi_code', 'ag_code', 'cr_code', '__dict__', 'Disassembly of %s:', ('file',), ('file', 'depth', 'show_caches', 'adaptive'), 'Sorry:', 'co_code', ('file', 'show_caches'), "don't know how to disassemble %s objects")
+
+## co_names:
+('distb', 'hasattr', '__func__', '__code__', 'gi_code', 'ag_code', 'cr_code', 'sorted', '__dict__', 'items', 'isinstance', '_have_code', 'print', 'dis', 'TypeError', '_disassemble_recursive', 'bytes', 'bytearray', '_disassemble_bytes', 'str', '_disassemble_str', 'type', '__name__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            x
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 46
+   6: LOAD_GLOBAL          NULL + distb
+  18: LOAD_FAST            file
+  20: LOAD_FAST            show_caches
+  22: LOAD_FAST            adaptive
+  24: KW_NAMES             
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_CONST           None
+  44: RETURN_VALUE         
+  46: LOAD_GLOBAL          NULL + hasattr
+  58: LOAD_FAST            x
+  60: LOAD_CONST           '__func__'
+  62: PRECALL              
+  66: CALL                 
+  76: POP_JUMP_FORWARD_IF_FALSE to 92
+  78: LOAD_FAST            x
+  80: LOAD_ATTR            __func__
+  90: STORE_FAST           x
+  92: LOAD_GLOBAL          NULL + hasattr
+ 104: LOAD_FAST            x
+ 106: LOAD_CONST           '__code__'
+ 108: PRECALL              
+ 112: CALL                 
+ 122: POP_JUMP_FORWARD_IF_FALSE to 140
+ 124: LOAD_FAST            x
+ 126: LOAD_ATTR            __code__
+ 136: STORE_FAST           x
+ 138: JUMP_FORWARD         to 282
+ 140: LOAD_GLOBAL          NULL + hasattr
+ 152: LOAD_FAST            x
+ 154: LOAD_CONST           'gi_code'
+ 156: PRECALL              
+ 160: CALL                 
+ 170: POP_JUMP_FORWARD_IF_FALSE to 188
+ 172: LOAD_FAST            x
+ 174: LOAD_ATTR            gi_code
+ 184: STORE_FAST           x
+ 186: JUMP_FORWARD         to 282
+ 188: LOAD_GLOBAL          NULL + hasattr
+ 200: LOAD_FAST            x
+ 202: LOAD_CONST           'ag_code'
+ 204: PRECALL              
+ 208: CALL                 
+ 218: POP_JUMP_FORWARD_IF_FALSE to 236
+ 220: LOAD_FAST            x
+ 222: LOAD_ATTR            ag_code
+ 232: STORE_FAST           x
+ 234: JUMP_FORWARD         to 282
+ 236: LOAD_GLOBAL          NULL + hasattr
+ 248: LOAD_FAST            x
+ 250: LOAD_CONST           'cr_code'
+ 252: PRECALL              
+ 256: CALL                 
+ 266: POP_JUMP_FORWARD_IF_FALSE to 282
+ 268: LOAD_FAST            x
+ 270: LOAD_ATTR            cr_code
+ 280: STORE_FAST           x
+ 282: LOAD_GLOBAL          NULL + hasattr
+ 294: LOAD_FAST            x
+ 296: LOAD_CONST           '__dict__'
+ 298: PRECALL              
+ 302: CALL                 
+ 312: POP_JUMP_FORWARD_IF_FALSE to 650
+ 314: LOAD_GLOBAL          NULL + sorted
+ 326: LOAD_FAST            x
+ 328: LOAD_ATTR            __dict__
+ 338: LOAD_METHOD          items
+ 360: PRECALL              
+ 364: CALL                 
+ 374: PRECALL              
+ 378: CALL                 
+ 388: STORE_FAST           items
+ 390: LOAD_FAST            items
+ 392: GET_ITER             
+ 394: FOR_ITER             to 646
+ 396: UNPACK_SEQUENCE      
+ 400: STORE_FAST           name
+ 402: STORE_FAST           x1
+ 404: LOAD_GLOBAL          NULL + isinstance
+ 416: LOAD_FAST            x1
+ 418: LOAD_GLOBAL          _have_code
+ 430: PRECALL              
+ 434: CALL                 
+ 444: POP_JUMP_FORWARD_IF_FALSE to 644
+ 446: LOAD_GLOBAL          NULL + print
+ 458: LOAD_CONST           'Disassembly of %s:'
+ 460: LOAD_FAST            name
+ 462: BINARY_OP            %
+ 466: LOAD_FAST            file
+ 468: KW_NAMES             
+ 470: PRECALL              
+ 474: CALL                 
+ 484: POP_TOP              
+ 486: NOP                  
+ 488: LOAD_GLOBAL          NULL + dis
+ 500: LOAD_FAST            x1
+ 502: LOAD_FAST            file
+ 504: LOAD_FAST            depth
+ 506: LOAD_FAST            show_caches
+ 508: LOAD_FAST            adaptive
+ 510: KW_NAMES             
+ 512: PRECALL              
+ 516: CALL                 
+ 526: POP_TOP              
+ 528: JUMP_FORWARD         to 612
+ 530: PUSH_EXC_INFO        
+ 532: LOAD_GLOBAL          TypeError
+ 544: CHECK_EXC_MATCH      
+ 546: POP_JUMP_FORWARD_IF_FALSE to 604
+ 548: STORE_FAST           msg
+ 550: LOAD_GLOBAL          NULL + print
+ 562: LOAD_CONST           'Sorry:'
+ 564: LOAD_FAST            msg
+ 566: LOAD_FAST            file
+ 568: KW_NAMES             
+ 570: PRECALL              
+ 574: CALL                 
+ 584: POP_TOP              
+ 586: POP_EXCEPT           
+ 588: LOAD_CONST           None
+ 590: STORE_FAST           msg
+ 592: DELETE_FAST          msg
+ 594: JUMP_FORWARD         to 612
+ 596: LOAD_CONST           None
+ 598: STORE_FAST           msg
+ 600: DELETE_FAST          msg
+ 602: RERAISE              
+ 604: RERAISE              
+ 606: COPY                 
+ 608: POP_EXCEPT           
+ 610: RERAISE              
+ 612: LOAD_GLOBAL          NULL + print
+ 624: LOAD_FAST            file
+ 626: KW_NAMES             
+ 628: PRECALL              
+ 632: CALL                 
+ 642: POP_TOP              
+ 644: JUMP_BACKWARD        to 394
+ 646: LOAD_CONST           None
+ 648: RETURN_VALUE         
+ 650: LOAD_GLOBAL          NULL + hasattr
+ 662: LOAD_FAST            x
+ 664: LOAD_CONST           'co_code'
+ 666: PRECALL              
+ 670: CALL                 
+ 680: POP_JUMP_FORWARD_IF_FALSE to 726
+ 682: LOAD_GLOBAL          NULL + _disassemble_recursive
+ 694: LOAD_FAST            x
+ 696: LOAD_FAST            file
+ 698: LOAD_FAST            depth
+ 700: LOAD_FAST            show_caches
+ 702: LOAD_FAST            adaptive
+ 704: KW_NAMES             
+ 706: PRECALL              
+ 710: CALL                 
+ 720: POP_TOP              
+ 722: LOAD_CONST           None
+ 724: RETURN_VALUE         
+ 726: LOAD_GLOBAL          NULL + isinstance
+ 738: LOAD_FAST            x
+ 740: LOAD_GLOBAL          bytes
+ 752: LOAD_GLOBAL          bytearray
+ 764: BUILD_TUPLE          
+ 766: PRECALL              
+ 770: CALL                 
+ 780: POP_JUMP_FORWARD_IF_FALSE to 822
+ 782: LOAD_GLOBAL          NULL + _disassemble_bytes
+ 794: LOAD_FAST            x
+ 796: LOAD_FAST            file
+ 798: LOAD_FAST            show_caches
+ 800: KW_NAMES             
+ 802: PRECALL              
+ 806: CALL                 
+ 816: POP_TOP              
+ 818: LOAD_CONST           None
+ 820: RETURN_VALUE         
+ 822: LOAD_GLOBAL          NULL + isinstance
+ 834: LOAD_FAST            x
+ 836: LOAD_GLOBAL          str
+ 848: PRECALL              
+ 852: CALL                 
+ 862: POP_JUMP_FORWARD_IF_FALSE to 908
+ 864: LOAD_GLOBAL          NULL + _disassemble_str
+ 876: LOAD_FAST            x
+ 878: LOAD_FAST            file
+ 880: LOAD_FAST            depth
+ 882: LOAD_FAST            show_caches
+ 884: LOAD_FAST            adaptive
+ 886: KW_NAMES             
+ 888: PRECALL              
+ 892: CALL                 
+ 902: POP_TOP              
+ 904: LOAD_CONST           None
+ 906: RETURN_VALUE         
+ 908: LOAD_GLOBAL          NULL + TypeError
+ 920: LOAD_CONST           "don't know how to disassemble %s objects"
+ 922: LOAD_GLOBAL          NULL + type
+ 934: LOAD_FAST            x
+ 936: PRECALL              
+ 940: CALL                 
+ 950: LOAD_ATTR            __name__
+ 960: BINARY_OP            %
+ 964: PRECALL              
+ 968: CALL                 
+ 978: RAISE_VARARGS        

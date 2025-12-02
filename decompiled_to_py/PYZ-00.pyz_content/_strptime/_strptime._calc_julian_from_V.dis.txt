@@ -1,0 +1,68 @@
+# Disassembly for _strptime._calc_julian_from_V
+# From module file: _strptime
+
+## co_consts:
+('Calculate the Julian day based on the ISO 8601 year, week, and weekday.\n    ISO weeks start on Mondays, with week 01 being the week containing 4 Jan.\n    ISO week days range from 1 (Monday) to 7 (Sunday).\n    ', 1, 4, 3, 7)
+
+## co_names:
+('datetime_date', 'isoweekday', 'toordinal')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + datetime_date
+  14: LOAD_FAST            iso_year
+  16: LOAD_CONST           1
+  18: LOAD_CONST           4
+  20: PRECALL              
+  24: CALL                 
+  34: LOAD_METHOD          isoweekday
+  56: PRECALL              
+  60: CALL                 
+  70: LOAD_CONST           3
+  72: BINARY_OP            +
+  76: STORE_FAST           correction
+  78: LOAD_FAST            iso_week
+  80: LOAD_CONST           7
+  82: BINARY_OP            *
+  86: LOAD_FAST            iso_weekday
+  88: BINARY_OP            +
+  92: LOAD_FAST            correction
+  94: BINARY_OP            -
+  98: STORE_FAST           ordinal
+ 100: LOAD_FAST            ordinal
+ 102: LOAD_CONST           1
+ 104: COMPARE_OP           <
+ 110: POP_JUMP_FORWARD_IF_FALSE to 274
+ 112: LOAD_FAST            ordinal
+ 114: LOAD_GLOBAL          NULL + datetime_date
+ 126: LOAD_FAST            iso_year
+ 128: LOAD_CONST           1
+ 130: LOAD_CONST           1
+ 132: PRECALL              
+ 136: CALL                 
+ 146: LOAD_METHOD          toordinal
+ 168: PRECALL              
+ 172: CALL                 
+ 182: BINARY_OP            +=
+ 186: STORE_FAST           ordinal
+ 188: LOAD_FAST            iso_year
+ 190: LOAD_CONST           1
+ 192: BINARY_OP            -=
+ 196: STORE_FAST           iso_year
+ 198: LOAD_FAST            ordinal
+ 200: LOAD_GLOBAL          NULL + datetime_date
+ 212: LOAD_FAST            iso_year
+ 214: LOAD_CONST           1
+ 216: LOAD_CONST           1
+ 218: PRECALL              
+ 222: CALL                 
+ 232: LOAD_METHOD          toordinal
+ 254: PRECALL              
+ 258: CALL                 
+ 268: BINARY_OP            -=
+ 272: STORE_FAST           ordinal
+ 274: LOAD_FAST            iso_year
+ 276: LOAD_FAST            ordinal
+ 278: BUILD_TUPLE          
+ 280: RETURN_VALUE         

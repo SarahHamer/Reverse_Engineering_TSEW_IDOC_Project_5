@@ -1,0 +1,24 @@
+# Disassembly for stringprep.in_table_c12
+# From module file: stringprep
+
+## co_consts:
+(None, 'Zs', ' ')
+
+## co_names:
+('unicodedata', 'category')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + unicodedata
+  14: LOAD_ATTR            category
+  24: LOAD_FAST            code
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_CONST           'Zs'
+  42: COMPARE_OP           ==
+  48: JUMP_IF_FALSE_OR_POP to 60
+  50: LOAD_FAST            code
+  52: LOAD_CONST           ' '
+  54: COMPARE_OP           !=
+  60: RETURN_VALUE         

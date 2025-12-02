@@ -1,0 +1,91 @@
+# Disassembly for ssl._inet_paton
+# From module file: ssl
+
+## co_consts:
+('Try to convert an IP address to packed binary form\n\n    Supports IPv4 addresses on all platforms and IPv6 on platforms with IPv6\n    support.\n    ', '{!r} is not a quad-dotted IPv4 address.', '{!r} is neither an IPv4 nor an IP6 address.', '{!r} is not an IPv4 address.')
+
+## co_names:
+('_socket', 'inet_aton', 'inet_ntoa', 'ValueError', 'format', 'OSError', 'inet_pton', 'AF_INET6', 'AttributeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_GLOBAL          NULL + _socket
+  16: LOAD_ATTR            inet_aton
+  26: LOAD_FAST            ipname
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           addr
+  44: LOAD_GLOBAL          NULL + _socket
+  56: LOAD_ATTR            inet_ntoa
+  66: LOAD_FAST            addr
+  68: PRECALL              
+  72: CALL                 
+  82: LOAD_FAST            ipname
+  84: COMPARE_OP           ==
+  90: POP_JUMP_FORWARD_IF_FALSE to 96
+  92: LOAD_FAST            addr
+  94: RETURN_VALUE         
+  96: LOAD_GLOBAL          NULL + ValueError
+ 108: LOAD_CONST           '{!r} is not a quad-dotted IPv4 address.'
+ 110: LOAD_METHOD          format
+ 132: LOAD_FAST            ipname
+ 134: PRECALL              
+ 138: CALL                 
+ 148: PRECALL              
+ 152: CALL                 
+ 162: RAISE_VARARGS        
+ 164: PUSH_EXC_INFO        
+ 166: LOAD_GLOBAL          OSError
+ 178: CHECK_EXC_MATCH      
+ 180: POP_JUMP_FORWARD_IF_FALSE to 188
+ 182: POP_TOP              
+ 184: POP_EXCEPT           
+ 186: JUMP_FORWARD         to 196
+ 188: RERAISE              
+ 190: COPY                 
+ 192: POP_EXCEPT           
+ 194: RERAISE              
+ 196: NOP                  
+ 198: LOAD_GLOBAL          NULL + _socket
+ 210: LOAD_ATTR            inet_pton
+ 220: LOAD_GLOBAL          _socket
+ 232: LOAD_ATTR            AF_INET6
+ 242: LOAD_FAST            ipname
+ 244: PRECALL              
+ 248: CALL                 
+ 258: RETURN_VALUE         
+ 260: PUSH_EXC_INFO        
+ 262: LOAD_GLOBAL          OSError
+ 274: CHECK_EXC_MATCH      
+ 276: POP_JUMP_FORWARD_IF_FALSE to 348
+ 278: POP_TOP              
+ 280: LOAD_GLOBAL          NULL + ValueError
+ 292: LOAD_CONST           '{!r} is neither an IPv4 nor an IP6 address.'
+ 294: LOAD_METHOD          format
+ 316: LOAD_FAST            ipname
+ 318: PRECALL              
+ 322: CALL                 
+ 332: PRECALL              
+ 336: CALL                 
+ 346: RAISE_VARARGS        
+ 348: LOAD_GLOBAL          AttributeError
+ 360: CHECK_EXC_MATCH      
+ 362: POP_JUMP_FORWARD_IF_FALSE to 370
+ 364: POP_TOP              
+ 366: POP_EXCEPT           
+ 368: JUMP_FORWARD         to 378
+ 370: RERAISE              
+ 372: COPY                 
+ 374: POP_EXCEPT           
+ 376: RERAISE              
+ 378: LOAD_GLOBAL          NULL + ValueError
+ 390: LOAD_CONST           '{!r} is not an IPv4 address.'
+ 392: LOAD_METHOD          format
+ 414: LOAD_FAST            ipname
+ 416: PRECALL              
+ 420: CALL                 
+ 430: PRECALL              
+ 434: CALL                 
+ 444: RAISE_VARARGS        

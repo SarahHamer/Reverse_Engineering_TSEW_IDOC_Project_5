@@ -1,0 +1,26 @@
+# Disassembly for contextlib.contextmanager
+# From module file: contextlib
+
+## co_consts:
+('@contextmanager decorator.\n\n    Typical usage:\n\n        @contextmanager\n        def some_generator(<arguments>):\n            <setup>\n            try:\n                yield <value>\n            finally:\n                <cleanup>\n\n    This makes this:\n\n        with some_generator(<arguments>) as <variable>:\n            <body>\n\n    equivalent to this:\n\n        <setup>\n        try:\n            <variable> = <value>\n            <body>\n        finally:\n            <cleanup>\n    ', <code object helper at 0x0000024069465290, file "contextlib.py", line 287>)
+
+## co_names:
+('wraps',)
+
+## bytecode:
+
+   0: MAKE_CELL            func
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + wraps
+  16: LOAD_DEREF           func
+  18: PRECALL              
+  22: CALL                 
+  32: LOAD_CLOSURE         func
+  34: BUILD_TUPLE          
+  36: LOAD_CONST           <code object helper at 0x0000024069465290, file "contextlib.py", line 287>
+  38: MAKE_FUNCTION        closure
+  40: PRECALL              
+  44: CALL                 
+  54: STORE_FAST           helper
+  56: LOAD_FAST            helper
+  58: RETURN_VALUE         

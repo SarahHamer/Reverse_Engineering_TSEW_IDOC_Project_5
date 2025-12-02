@@ -1,0 +1,40 @@
+# Disassembly for email.encode_base64
+# From module file: email.encoders
+
+## co_consts:
+("Encode the message's payload in Base64.\n\n    Also, add an appropriate Content-Transfer-Encoding header.\n    ", True, ('decode',), 'ascii', 'base64', 'Content-Transfer-Encoding', None)
+
+## co_names:
+('get_payload', 'str', '_bencode', 'set_payload')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            msg
+   4: LOAD_METHOD          get_payload
+  26: LOAD_CONST           True
+  28: KW_NAMES             
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_FAST           orig
+  46: LOAD_GLOBAL          NULL + str
+  58: LOAD_GLOBAL          NULL + _bencode
+  70: LOAD_FAST            orig
+  72: PRECALL              
+  76: CALL                 
+  86: LOAD_CONST           'ascii'
+  88: PRECALL              
+  92: CALL                 
+ 102: STORE_FAST           encdata
+ 104: LOAD_FAST            msg
+ 106: LOAD_METHOD          set_payload
+ 128: LOAD_FAST            encdata
+ 130: PRECALL              
+ 134: CALL                 
+ 144: POP_TOP              
+ 146: LOAD_CONST           'base64'
+ 148: LOAD_FAST            msg
+ 150: LOAD_CONST           'Content-Transfer-Encoding'
+ 152: STORE_SUBSCR         
+ 156: LOAD_CONST           None
+ 158: RETURN_VALUE         

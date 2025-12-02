@@ -1,0 +1,39 @@
+# Disassembly for http.parse_headers
+# From module file: http.client
+
+## co_consts:
+('Parses only RFC2822 headers from a file pointer.\n\n    email Parser wants to see strings rather than bytes.\n    But a TextIOWrapper around self.rfile would buffer too many bytes\n    from the stream, bytes which we later need to read as bytes.\n    So we read the correct bytes here, as bytes, for email Parser\n    to parse.\n\n    ', b'', 'iso-8859-1', ('_class',))
+
+## co_names:
+('_read_headers', 'join', 'decode', 'email', 'parser', 'Parser', 'parsestr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _read_headers
+  14: LOAD_FAST            fp
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           headers
+  32: LOAD_CONST           b''
+  34: LOAD_METHOD          join
+  56: LOAD_FAST            headers
+  58: PRECALL              
+  62: CALL                 
+  72: LOAD_METHOD          decode
+  94: LOAD_CONST           'iso-8859-1'
+  96: PRECALL              
+ 100: CALL                 
+ 110: STORE_FAST           hstring
+ 112: LOAD_GLOBAL          email
+ 124: LOAD_ATTR            parser
+ 134: LOAD_METHOD          Parser
+ 156: LOAD_FAST            _class
+ 158: KW_NAMES             
+ 160: PRECALL              
+ 164: CALL                 
+ 174: LOAD_METHOD          parsestr
+ 196: LOAD_FAST            hstring
+ 198: PRECALL              
+ 202: CALL                 
+ 212: RETURN_VALUE         

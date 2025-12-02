@@ -1,0 +1,50 @@
+# Disassembly for logging.Filter.filter
+# From module file: logging
+
+## co_consts:
+('\n        Determine if the specified record is to be logged.\n\n        Returns True if the record should be logged, or False otherwise.\n        If deemed appropriate, the record may be modified in-place.\n        ', 0, True, False, '.')
+
+## co_names:
+('nlen', 'name', 'find')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            nlen
+  14: LOAD_CONST           0
+  16: COMPARE_OP           ==
+  22: POP_JUMP_FORWARD_IF_FALSE to 28
+  24: LOAD_CONST           True
+  26: RETURN_VALUE         
+  28: LOAD_FAST            self
+  30: LOAD_ATTR            name
+  40: LOAD_FAST            record
+  42: LOAD_ATTR            name
+  52: COMPARE_OP           ==
+  58: POP_JUMP_FORWARD_IF_FALSE to 64
+  60: LOAD_CONST           True
+  62: RETURN_VALUE         
+  64: LOAD_FAST            record
+  66: LOAD_ATTR            name
+  76: LOAD_METHOD          find
+  98: LOAD_FAST            self
+ 100: LOAD_ATTR            name
+ 110: LOAD_CONST           0
+ 112: LOAD_FAST            self
+ 114: LOAD_ATTR            nlen
+ 124: PRECALL              
+ 128: CALL                 
+ 138: LOAD_CONST           0
+ 140: COMPARE_OP           !=
+ 146: POP_JUMP_FORWARD_IF_FALSE to 152
+ 148: LOAD_CONST           False
+ 150: RETURN_VALUE         
+ 152: LOAD_FAST            record
+ 154: LOAD_ATTR            name
+ 164: LOAD_FAST            self
+ 166: LOAD_ATTR            nlen
+ 176: BINARY_SUBSCR        
+ 186: LOAD_CONST           '.'
+ 188: COMPARE_OP           ==
+ 194: RETURN_VALUE         

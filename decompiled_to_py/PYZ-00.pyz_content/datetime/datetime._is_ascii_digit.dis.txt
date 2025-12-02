@@ -1,0 +1,16 @@
+# Disassembly for datetime._is_ascii_digit
+# From module file: datetime
+
+## co_consts:
+(None, '0123456789')
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            c
+   4: LOAD_CONST           '0123456789'
+   6: CONTAINS_OP          
+   8: RETURN_VALUE         

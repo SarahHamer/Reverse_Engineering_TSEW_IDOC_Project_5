@@ -1,0 +1,27 @@
+# Disassembly for importlib.resources.FileReader
+# From module file: importlib.resources.readers
+
+## co_consts:
+('FileReader', <code object __init__ at 0x000002406944A560, file "importlib\resources\readers.py", line 16>, <code object resource_path at 0x000002406944A010, file "importlib\resources\readers.py", line 19>, <code object files at 0x0000024069495550, file "importlib\resources\readers.py", line 27>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', 'resource_path', 'files')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'FileReader'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           <code object __init__ at 0x000002406944A560, file "importlib\resources\readers.py", line 16>
+  12: MAKE_FUNCTION        
+  14: STORE_NAME           __init__
+  16: LOAD_CONST           <code object resource_path at 0x000002406944A010, file "importlib\resources\readers.py", line 19>
+  18: MAKE_FUNCTION        
+  20: STORE_NAME           resource_path
+  22: LOAD_CONST           <code object files at 0x0000024069495550, file "importlib\resources\readers.py", line 27>
+  24: MAKE_FUNCTION        
+  26: STORE_NAME           files
+  28: LOAD_CONST           None
+  30: RETURN_VALUE         

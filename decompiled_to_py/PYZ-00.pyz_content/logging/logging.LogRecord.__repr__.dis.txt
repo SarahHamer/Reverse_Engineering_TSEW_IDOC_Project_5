@@ -1,0 +1,35 @@
+# Disassembly for logging.LogRecord.__repr__
+# From module file: logging
+
+## co_consts:
+(None, '<LogRecord: ', ', ', ', "', '">')
+
+## co_names:
+('name', 'levelno', 'pathname', 'lineno', 'msg')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '<LogRecord: '
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            name
+  16: FORMAT_VALUE         str
+  18: LOAD_CONST           ', '
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            levelno
+  32: FORMAT_VALUE         str
+  34: LOAD_CONST           ', '
+  36: LOAD_FAST            self
+  38: LOAD_ATTR            pathname
+  48: FORMAT_VALUE         str
+  50: LOAD_CONST           ', '
+  52: LOAD_FAST            self
+  54: LOAD_ATTR            lineno
+  64: FORMAT_VALUE         str
+  66: LOAD_CONST           ', "'
+  68: LOAD_FAST            self
+  70: LOAD_ATTR            msg
+  80: FORMAT_VALUE         str
+  82: LOAD_CONST           '">'
+  84: BUILD_STRING         
+  86: RETURN_VALUE         

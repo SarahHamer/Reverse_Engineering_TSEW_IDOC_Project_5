@@ -1,0 +1,94 @@
+# Disassembly for importlib._module_to_load
+# From module file: importlib.util
+
+## co_consts:
+(None, True, False)
+
+## co_names:
+('sys', 'modules', 'get', 'type', '__initializing__', 'Exception', 'KeyError')
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_FAST            name
+   8: LOAD_GLOBAL          sys
+  20: LOAD_ATTR            modules
+  30: CONTAINS_OP          
+  32: STORE_FAST           is_reload
+  34: LOAD_GLOBAL          sys
+  46: LOAD_ATTR            modules
+  56: LOAD_METHOD          get
+  78: LOAD_FAST            name
+  80: PRECALL              
+  84: CALL                 
+  94: STORE_FAST           module
+  96: LOAD_FAST            is_reload
+  98: POP_JUMP_FORWARD_IF_TRUE to 202
+ 100: PUSH_NULL            
+ 102: LOAD_GLOBAL          NULL + type
+ 114: LOAD_GLOBAL          sys
+ 126: PRECALL              
+ 130: CALL                 
+ 140: LOAD_FAST            name
+ 142: PRECALL              
+ 146: CALL                 
+ 156: STORE_FAST           module
+ 158: LOAD_CONST           True
+ 160: LOAD_FAST            module
+ 162: STORE_ATTR           __initializing__
+ 172: LOAD_FAST            module
+ 174: LOAD_GLOBAL          sys
+ 186: LOAD_ATTR            modules
+ 196: LOAD_FAST            name
+ 198: STORE_SUBSCR         
+ 202: NOP                  
+ 204: LOAD_FAST            module
+ 206: YIELD_VALUE          
+ 208: RESUME               
+ 210: POP_TOP              
+ 212: JUMP_FORWARD         to 312
+ 214: PUSH_EXC_INFO        
+ 216: LOAD_GLOBAL          Exception
+ 228: CHECK_EXC_MATCH      
+ 230: POP_JUMP_FORWARD_IF_FALSE to 304
+ 232: POP_TOP              
+ 234: LOAD_FAST            is_reload
+ 236: POP_JUMP_FORWARD_IF_TRUE to 300
+ 238: NOP                  
+ 240: LOAD_GLOBAL          sys
+ 252: LOAD_ATTR            modules
+ 262: LOAD_FAST            name
+ 264: DELETE_SUBSCR        
+ 266: JUMP_FORWARD         to 300
+ 268: PUSH_EXC_INFO        
+ 270: LOAD_GLOBAL          KeyError
+ 282: CHECK_EXC_MATCH      
+ 284: POP_JUMP_FORWARD_IF_FALSE to 292
+ 286: POP_TOP              
+ 288: POP_EXCEPT           
+ 290: JUMP_FORWARD         to 300
+ 292: RERAISE              
+ 294: COPY                 
+ 296: POP_EXCEPT           
+ 298: RERAISE              
+ 300: POP_EXCEPT           
+ 302: JUMP_FORWARD         to 312
+ 304: RERAISE              
+ 306: COPY                 
+ 308: POP_EXCEPT           
+ 310: RERAISE              
+ 312: LOAD_CONST           False
+ 314: LOAD_FAST            module
+ 316: STORE_ATTR           __initializing__
+ 326: LOAD_CONST           None
+ 328: RETURN_VALUE         
+ 330: PUSH_EXC_INFO        
+ 332: LOAD_CONST           False
+ 334: LOAD_FAST            module
+ 336: STORE_ATTR           __initializing__
+ 346: RERAISE              
+ 348: COPY                 
+ 350: POP_EXCEPT           
+ 352: RERAISE              

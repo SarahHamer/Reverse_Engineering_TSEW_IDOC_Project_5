@@ -1,0 +1,21 @@
+# Disassembly for dataclasses._hash_exception
+# From module file: dataclasses
+
+## co_consts:
+(None, 'Cannot overwrite attribute __hash__ in class ')
+
+## co_names:
+('TypeError', '__name__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + TypeError
+  14: LOAD_CONST           'Cannot overwrite attribute __hash__ in class '
+  16: LOAD_FAST            cls
+  18: LOAD_ATTR            __name__
+  28: FORMAT_VALUE         
+  30: BUILD_STRING         
+  32: PRECALL              
+  36: CALL                 
+  46: RAISE_VARARGS        

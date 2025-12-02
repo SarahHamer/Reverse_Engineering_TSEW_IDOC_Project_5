@@ -1,0 +1,278 @@
+# Disassembly for subprocess.Popen._get_handles
+# From module file: subprocess
+
+## co_consts:
+('Construct and return tuple with IO objects:\n            p2cread, p2cwrite, c2pread, c2pwrite, errread, errwrite\n            ', (-1, -1), None, 0, 'F_SETPIPE_SZ', -1)
+
+## co_names:
+('_on_error_fd_closer', 'PIPE', 'os', 'pipe', 'extend', 'pipesize', 'hasattr', 'fcntl', 'F_SETPIPE_SZ', 'DEVNULL', '_get_devnull', 'isinstance', 'int', 'fileno', 'STDOUT', 'sys', '__stdout__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           (-1, -1)
+   4: UNPACK_SEQUENCE      
+   8: STORE_FAST           p2cread
+  10: STORE_FAST           p2cwrite
+  12: LOAD_CONST           (-1, -1)
+  14: UNPACK_SEQUENCE      
+  18: STORE_FAST           c2pread
+  20: STORE_FAST           c2pwrite
+  22: LOAD_CONST           (-1, -1)
+  24: UNPACK_SEQUENCE      
+  28: STORE_FAST           errread
+  30: STORE_FAST           errwrite
+  32: LOAD_FAST            self
+  34: LOAD_METHOD          _on_error_fd_closer
+  56: PRECALL              
+  60: CALL                 
+  70: BEFORE_WITH          
+  72: STORE_FAST           err_close_fds
+  74: LOAD_FAST            stdin
+  76: POP_JUMP_FORWARD_IF_NOT_NONE to 80
+  78: JUMP_FORWARD         to 484
+  80: LOAD_FAST            stdin
+  82: LOAD_GLOBAL          PIPE
+  94: COMPARE_OP           ==
+ 100: POP_JUMP_FORWARD_IF_FALSE to 332
+ 102: LOAD_GLOBAL          NULL + os
+ 114: LOAD_ATTR            pipe
+ 124: PRECALL              
+ 128: CALL                 
+ 138: UNPACK_SEQUENCE      
+ 142: STORE_FAST           p2cread
+ 144: STORE_FAST           p2cwrite
+ 146: LOAD_FAST            err_close_fds
+ 148: LOAD_METHOD          extend
+ 170: LOAD_FAST            p2cread
+ 172: LOAD_FAST            p2cwrite
+ 174: BUILD_TUPLE          
+ 176: PRECALL              
+ 180: CALL                 
+ 190: POP_TOP              
+ 192: LOAD_FAST            self
+ 194: LOAD_ATTR            pipesize
+ 204: LOAD_CONST           0
+ 206: COMPARE_OP           >
+ 212: POP_JUMP_FORWARD_IF_FALSE to 330
+ 214: LOAD_GLOBAL          NULL + hasattr
+ 226: LOAD_GLOBAL          fcntl
+ 238: LOAD_CONST           'F_SETPIPE_SZ'
+ 240: PRECALL              
+ 244: CALL                 
+ 254: POP_JUMP_FORWARD_IF_FALSE to 330
+ 256: LOAD_GLOBAL          NULL + fcntl
+ 268: LOAD_ATTR            fcntl
+ 278: LOAD_FAST            p2cwrite
+ 280: LOAD_GLOBAL          fcntl
+ 292: LOAD_ATTR            F_SETPIPE_SZ
+ 302: LOAD_FAST            self
+ 304: LOAD_ATTR            pipesize
+ 314: PRECALL              
+ 318: CALL                 
+ 328: POP_TOP              
+ 330: JUMP_FORWARD         to 484
+ 332: LOAD_FAST            stdin
+ 334: LOAD_GLOBAL          DEVNULL
+ 346: COMPARE_OP           ==
+ 352: POP_JUMP_FORWARD_IF_FALSE to 396
+ 354: LOAD_FAST            self
+ 356: LOAD_METHOD          _get_devnull
+ 378: PRECALL              
+ 382: CALL                 
+ 392: STORE_FAST           p2cread
+ 394: JUMP_FORWARD         to 484
+ 396: LOAD_GLOBAL          NULL + isinstance
+ 408: LOAD_FAST            stdin
+ 410: LOAD_GLOBAL          int
+ 422: PRECALL              
+ 426: CALL                 
+ 436: POP_JUMP_FORWARD_IF_FALSE to 444
+ 438: LOAD_FAST            stdin
+ 440: STORE_FAST           p2cread
+ 442: JUMP_FORWARD         to 484
+ 444: LOAD_FAST            stdin
+ 446: LOAD_METHOD          fileno
+ 468: PRECALL              
+ 472: CALL                 
+ 482: STORE_FAST           p2cread
+ 484: LOAD_FAST            stdout
+ 486: POP_JUMP_FORWARD_IF_NOT_NONE to 490
+ 488: JUMP_FORWARD         to 894
+ 490: LOAD_FAST            stdout
+ 492: LOAD_GLOBAL          PIPE
+ 504: COMPARE_OP           ==
+ 510: POP_JUMP_FORWARD_IF_FALSE to 742
+ 512: LOAD_GLOBAL          NULL + os
+ 524: LOAD_ATTR            pipe
+ 534: PRECALL              
+ 538: CALL                 
+ 548: UNPACK_SEQUENCE      
+ 552: STORE_FAST           c2pread
+ 554: STORE_FAST           c2pwrite
+ 556: LOAD_FAST            err_close_fds
+ 558: LOAD_METHOD          extend
+ 580: LOAD_FAST            c2pread
+ 582: LOAD_FAST            c2pwrite
+ 584: BUILD_TUPLE          
+ 586: PRECALL              
+ 590: CALL                 
+ 600: POP_TOP              
+ 602: LOAD_FAST            self
+ 604: LOAD_ATTR            pipesize
+ 614: LOAD_CONST           0
+ 616: COMPARE_OP           >
+ 622: POP_JUMP_FORWARD_IF_FALSE to 740
+ 624: LOAD_GLOBAL          NULL + hasattr
+ 636: LOAD_GLOBAL          fcntl
+ 648: LOAD_CONST           'F_SETPIPE_SZ'
+ 650: PRECALL              
+ 654: CALL                 
+ 664: POP_JUMP_FORWARD_IF_FALSE to 740
+ 666: LOAD_GLOBAL          NULL + fcntl
+ 678: LOAD_ATTR            fcntl
+ 688: LOAD_FAST            c2pwrite
+ 690: LOAD_GLOBAL          fcntl
+ 702: LOAD_ATTR            F_SETPIPE_SZ
+ 712: LOAD_FAST            self
+ 714: LOAD_ATTR            pipesize
+ 724: PRECALL              
+ 728: CALL                 
+ 738: POP_TOP              
+ 740: JUMP_FORWARD         to 894
+ 742: LOAD_FAST            stdout
+ 744: LOAD_GLOBAL          DEVNULL
+ 756: COMPARE_OP           ==
+ 762: POP_JUMP_FORWARD_IF_FALSE to 806
+ 764: LOAD_FAST            self
+ 766: LOAD_METHOD          _get_devnull
+ 788: PRECALL              
+ 792: CALL                 
+ 802: STORE_FAST           c2pwrite
+ 804: JUMP_FORWARD         to 894
+ 806: LOAD_GLOBAL          NULL + isinstance
+ 818: LOAD_FAST            stdout
+ 820: LOAD_GLOBAL          int
+ 832: PRECALL              
+ 836: CALL                 
+ 846: POP_JUMP_FORWARD_IF_FALSE to 854
+ 848: LOAD_FAST            stdout
+ 850: STORE_FAST           c2pwrite
+ 852: JUMP_FORWARD         to 894
+ 854: LOAD_FAST            stdout
+ 856: LOAD_METHOD          fileno
+ 878: PRECALL              
+ 882: CALL                 
+ 892: STORE_FAST           c2pwrite
+ 894: LOAD_FAST            stderr
+ 896: POP_JUMP_FORWARD_IF_NOT_NONE to 900
+ 898: JUMP_FORWARD         to 1406
+ 900: LOAD_FAST            stderr
+ 902: LOAD_GLOBAL          PIPE
+ 914: COMPARE_OP           ==
+ 920: POP_JUMP_FORWARD_IF_FALSE to 1152
+ 922: LOAD_GLOBAL          NULL + os
+ 934: LOAD_ATTR            pipe
+ 944: PRECALL              
+ 948: CALL                 
+ 958: UNPACK_SEQUENCE      
+ 962: STORE_FAST           errread
+ 964: STORE_FAST           errwrite
+ 966: LOAD_FAST            err_close_fds
+ 968: LOAD_METHOD          extend
+ 990: LOAD_FAST            errread
+ 992: LOAD_FAST            errwrite
+ 994: BUILD_TUPLE          
+ 996: PRECALL              
+1000: CALL                 
+1010: POP_TOP              
+1012: LOAD_FAST            self
+1014: LOAD_ATTR            pipesize
+1024: LOAD_CONST           0
+1026: COMPARE_OP           >
+1032: POP_JUMP_FORWARD_IF_FALSE to 1150
+1034: LOAD_GLOBAL          NULL + hasattr
+1046: LOAD_GLOBAL          fcntl
+1058: LOAD_CONST           'F_SETPIPE_SZ'
+1060: PRECALL              
+1064: CALL                 
+1074: POP_JUMP_FORWARD_IF_FALSE to 1150
+1076: LOAD_GLOBAL          NULL + fcntl
+1088: LOAD_ATTR            fcntl
+1098: LOAD_FAST            errwrite
+1100: LOAD_GLOBAL          fcntl
+1112: LOAD_ATTR            F_SETPIPE_SZ
+1122: LOAD_FAST            self
+1124: LOAD_ATTR            pipesize
+1134: PRECALL              
+1138: CALL                 
+1148: POP_TOP              
+1150: JUMP_FORWARD         to 1406
+1152: LOAD_FAST            stderr
+1154: LOAD_GLOBAL          STDOUT
+1166: COMPARE_OP           ==
+1172: POP_JUMP_FORWARD_IF_FALSE to 1254
+1174: LOAD_FAST            c2pwrite
+1176: LOAD_CONST           -1
+1178: COMPARE_OP           !=
+1184: POP_JUMP_FORWARD_IF_FALSE to 1192
+1186: LOAD_FAST            c2pwrite
+1188: STORE_FAST           errwrite
+1190: JUMP_FORWARD         to 1406
+1192: LOAD_GLOBAL          sys
+1204: LOAD_ATTR            __stdout__
+1214: LOAD_METHOD          fileno
+1236: PRECALL              
+1240: CALL                 
+1250: STORE_FAST           errwrite
+1252: JUMP_FORWARD         to 1406
+1254: LOAD_FAST            stderr
+1256: LOAD_GLOBAL          DEVNULL
+1268: COMPARE_OP           ==
+1274: POP_JUMP_FORWARD_IF_FALSE to 1318
+1276: LOAD_FAST            self
+1278: LOAD_METHOD          _get_devnull
+1300: PRECALL              
+1304: CALL                 
+1314: STORE_FAST           errwrite
+1316: JUMP_FORWARD         to 1406
+1318: LOAD_GLOBAL          NULL + isinstance
+1330: LOAD_FAST            stderr
+1332: LOAD_GLOBAL          int
+1344: PRECALL              
+1348: CALL                 
+1358: POP_JUMP_FORWARD_IF_FALSE to 1366
+1360: LOAD_FAST            stderr
+1362: STORE_FAST           errwrite
+1364: JUMP_FORWARD         to 1406
+1366: LOAD_FAST            stderr
+1368: LOAD_METHOD          fileno
+1390: PRECALL              
+1394: CALL                 
+1404: STORE_FAST           errwrite
+1406: LOAD_CONST           None
+1408: LOAD_CONST           None
+1410: LOAD_CONST           None
+1412: PRECALL              
+1416: CALL                 
+1426: POP_TOP              
+1428: JUMP_FORWARD         to 1452
+1430: PUSH_EXC_INFO        
+1432: WITH_EXCEPT_START    
+1434: POP_JUMP_FORWARD_IF_TRUE to 1444
+1436: RERAISE              
+1438: COPY                 
+1440: POP_EXCEPT           
+1442: RERAISE              
+1444: POP_TOP              
+1446: POP_EXCEPT           
+1448: POP_TOP              
+1450: POP_TOP              
+1452: LOAD_FAST            p2cread
+1454: LOAD_FAST            p2cwrite
+1456: LOAD_FAST            c2pread
+1458: LOAD_FAST            c2pwrite
+1460: LOAD_FAST            errread
+1462: LOAD_FAST            errwrite
+1464: BUILD_TUPLE          
+1466: RETURN_VALUE         

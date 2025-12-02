@@ -1,0 +1,28 @@
+# Disassembly for subprocess.Handle.Close
+# From module file: subprocess
+
+## co_consts:
+(None, True)
+
+## co_names:
+('closed',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            closed
+  14: POP_JUMP_FORWARD_IF_TRUE to 56
+  16: LOAD_CONST           True
+  18: LOAD_FAST            self
+  20: STORE_ATTR           closed
+  30: PUSH_NULL            
+  32: LOAD_FAST            CloseHandle
+  34: LOAD_FAST            self
+  36: PRECALL              
+  40: CALL                 
+  50: POP_TOP              
+  52: LOAD_CONST           None
+  54: RETURN_VALUE         
+  56: LOAD_CONST           None
+  58: RETURN_VALUE         

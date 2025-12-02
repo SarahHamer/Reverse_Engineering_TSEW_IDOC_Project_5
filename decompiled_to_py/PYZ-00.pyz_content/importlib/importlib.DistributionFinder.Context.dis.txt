@@ -1,0 +1,32 @@
+# Disassembly for importlib.DistributionFinder.Context
+# From module file: importlib.metadata
+
+## co_consts:
+('DistributionFinder.Context', '\n        Keyword arguments presented by the caller to\n        ``distributions()`` or ``Distribution.discover()``\n        to narrow the scope of a search for distributions\n        in all DistributionFinders.\n\n        Each DistributionFinder may expect any parameters\n        and should attempt to honor the canonical\n        parameters defined below when appropriate.\n        ', None, <code object __init__ at 0x000002406944ABC0, file "importlib\metadata\__init__.py", line 754>, <code object path at 0x0000024069419E90, file "importlib\metadata\__init__.py", line 757>)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'name', '__init__', 'property', 'path')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'DistributionFinder.Context'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           '\n        Keyword arguments presented by the caller to\n        ``distributions()`` or ``Distribution.discover()``\n        to narrow the scope of a search for distributions\n        in all DistributionFinders.\n\n        Each DistributionFinder may expect any parameters\n        and should attempt to honor the canonical\n        parameters defined below when appropriate.\n        '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           None
+  16: STORE_NAME           name
+  18: NOP                  
+  20: LOAD_CONST           <code object __init__ at 0x000002406944ABC0, file "importlib\metadata\__init__.py", line 754>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           __init__
+  26: LOAD_NAME            property
+  28: LOAD_CONST           <code object path at 0x0000024069419E90, file "importlib\metadata\__init__.py", line 757>
+  30: MAKE_FUNCTION        
+  32: PRECALL              
+  36: CALL                 
+  46: STORE_NAME           path
+  48: LOAD_CONST           None
+  50: RETURN_VALUE         

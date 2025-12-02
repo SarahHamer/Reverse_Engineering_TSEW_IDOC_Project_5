@@ -1,0 +1,127 @@
+# Disassembly for argparse._ActionsContainer._add_container_actions
+# From module file: argparse
+
+## co_consts:
+(None, 'cannot merge actions - two groups are named %r', ('title', 'description', 'conflict_handler'), ('required',))
+
+## co_names:
+('_action_groups', 'title', '_', 'ValueError', 'add_argument_group', 'description', 'conflict_handler', '_group_actions', '_mutually_exclusive_groups', 'add_mutually_exclusive_group', 'required', '_actions', 'get', '_add_action')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_MAP            
+   4: STORE_FAST           title_group_map
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            _action_groups
+  18: GET_ITER             
+  20: FOR_ITER             to 140
+  22: STORE_FAST           group
+  24: LOAD_FAST            group
+  26: LOAD_ATTR            title
+  36: LOAD_FAST            title_group_map
+  38: CONTAINS_OP          
+  40: POP_JUMP_FORWARD_IF_FALSE to 118
+  42: LOAD_GLOBAL          NULL + _
+  54: LOAD_CONST           'cannot merge actions - two groups are named %r'
+  56: PRECALL              
+  60: CALL                 
+  70: STORE_FAST           msg
+  72: LOAD_GLOBAL          NULL + ValueError
+  84: LOAD_FAST            msg
+  86: LOAD_FAST            group
+  88: LOAD_ATTR            title
+  98: BINARY_OP            %
+ 102: PRECALL              
+ 106: CALL                 
+ 116: RAISE_VARARGS        
+ 118: LOAD_FAST            group
+ 120: LOAD_FAST            title_group_map
+ 122: LOAD_FAST            group
+ 124: LOAD_ATTR            title
+ 134: STORE_SUBSCR         
+ 138: JUMP_BACKWARD        to 20
+ 140: BUILD_MAP            
+ 142: STORE_FAST           group_map
+ 144: LOAD_FAST            container
+ 146: LOAD_ATTR            _action_groups
+ 156: GET_ITER             
+ 158: FOR_ITER             to 328
+ 160: STORE_FAST           group
+ 162: LOAD_FAST            group
+ 164: LOAD_ATTR            title
+ 174: LOAD_FAST            title_group_map
+ 176: CONTAINS_OP          
+ 178: POP_JUMP_FORWARD_IF_FALSE to 274
+ 180: LOAD_FAST            self
+ 182: LOAD_METHOD          add_argument_group
+ 204: LOAD_FAST            group
+ 206: LOAD_ATTR            title
+ 216: LOAD_FAST            group
+ 218: LOAD_ATTR            description
+ 228: LOAD_FAST            group
+ 230: LOAD_ATTR            conflict_handler
+ 240: KW_NAMES             
+ 242: PRECALL              
+ 246: CALL                 
+ 256: LOAD_FAST            title_group_map
+ 258: LOAD_FAST            group
+ 260: LOAD_ATTR            title
+ 270: STORE_SUBSCR         
+ 274: LOAD_FAST            group
+ 276: LOAD_ATTR            _group_actions
+ 286: GET_ITER             
+ 288: FOR_ITER             to 326
+ 290: STORE_FAST           action
+ 292: LOAD_FAST            title_group_map
+ 294: LOAD_FAST            group
+ 296: LOAD_ATTR            title
+ 306: BINARY_SUBSCR        
+ 316: LOAD_FAST            group_map
+ 318: LOAD_FAST            action
+ 320: STORE_SUBSCR         
+ 324: JUMP_BACKWARD        to 288
+ 326: JUMP_BACKWARD        to 158
+ 328: LOAD_FAST            container
+ 330: LOAD_ATTR            _mutually_exclusive_groups
+ 340: GET_ITER             
+ 342: FOR_ITER             to 432
+ 344: STORE_FAST           group
+ 346: LOAD_FAST            self
+ 348: LOAD_METHOD          add_mutually_exclusive_group
+ 370: LOAD_FAST            group
+ 372: LOAD_ATTR            required
+ 382: KW_NAMES             
+ 384: PRECALL              
+ 388: CALL                 
+ 398: STORE_FAST           mutex_group
+ 400: LOAD_FAST            group
+ 402: LOAD_ATTR            _group_actions
+ 412: GET_ITER             
+ 414: FOR_ITER             to 430
+ 416: STORE_FAST           action
+ 418: LOAD_FAST            mutex_group
+ 420: LOAD_FAST            group_map
+ 422: LOAD_FAST            action
+ 424: STORE_SUBSCR         
+ 428: JUMP_BACKWARD        to 414
+ 430: JUMP_BACKWARD        to 342
+ 432: LOAD_FAST            container
+ 434: LOAD_ATTR            _actions
+ 444: GET_ITER             
+ 446: FOR_ITER             to 534
+ 448: STORE_FAST           action
+ 450: LOAD_FAST            group_map
+ 452: LOAD_METHOD          get
+ 474: LOAD_FAST            action
+ 476: LOAD_FAST            self
+ 478: PRECALL              
+ 482: CALL                 
+ 492: LOAD_METHOD          _add_action
+ 514: LOAD_FAST            action
+ 516: PRECALL              
+ 520: CALL                 
+ 530: POP_TOP              
+ 532: JUMP_BACKWARD        to 446
+ 534: LOAD_CONST           None
+ 536: RETURN_VALUE         

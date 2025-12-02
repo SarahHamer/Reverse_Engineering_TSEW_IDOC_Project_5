@@ -1,0 +1,46 @@
+# Disassembly for pickle._Unpickler.load_binbytes8
+# From module file: pickle
+
+## co_consts:
+(None, '<Q', 8, "BINBYTES8 exceeds system's maximum size of %d bytes")
+
+## co_names:
+('unpack', 'read', 'maxsize', 'UnpicklingError', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + unpack
+  14: LOAD_CONST           '<Q'
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          read
+  40: LOAD_CONST           8
+  42: PRECALL              
+  46: CALL                 
+  56: PRECALL              
+  60: CALL                 
+  70: UNPACK_SEQUENCE      
+  74: STORE_FAST           len
+  76: LOAD_FAST            len
+  78: LOAD_GLOBAL          maxsize
+  90: COMPARE_OP           >
+  96: POP_JUMP_FORWARD_IF_FALSE to 144
+  98: LOAD_GLOBAL          NULL + UnpicklingError
+ 110: LOAD_CONST           "BINBYTES8 exceeds system's maximum size of %d bytes"
+ 112: LOAD_GLOBAL          maxsize
+ 124: BINARY_OP            %
+ 128: PRECALL              
+ 132: CALL                 
+ 142: RAISE_VARARGS        
+ 144: LOAD_FAST            self
+ 146: LOAD_METHOD          append
+ 168: LOAD_FAST            self
+ 170: LOAD_METHOD          read
+ 192: LOAD_FAST            len
+ 194: PRECALL              
+ 198: CALL                 
+ 208: PRECALL              
+ 212: CALL                 
+ 222: POP_TOP              
+ 224: LOAD_CONST           None
+ 226: RETURN_VALUE         

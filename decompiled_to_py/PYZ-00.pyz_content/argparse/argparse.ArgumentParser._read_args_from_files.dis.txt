@@ -1,0 +1,135 @@
+# Disassembly for argparse.ArgumentParser._read_args_from_files
+# From module file: argparse
+
+## co_consts:
+(None, 0, 1)
+
+## co_names:
+('fromfile_prefix_chars', 'append', 'open', 'read', 'splitlines', 'convert_arg_line_to_args', '_read_args_from_files', 'extend', 'OSError', 'error', 'str')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           new_arg_strings
+   6: LOAD_FAST            arg_strings
+   8: GET_ITER             
+  10: EXTENDED_ARG         
+  12: FOR_ITER             to 568
+  14: STORE_FAST           arg_string
+  16: LOAD_FAST            arg_string
+  18: POP_JUMP_FORWARD_IF_FALSE to 50
+  20: LOAD_FAST            arg_string
+  22: LOAD_CONST           0
+  24: BINARY_SUBSCR        
+  34: LOAD_FAST            self
+  36: LOAD_ATTR            fromfile_prefix_chars
+  46: CONTAINS_OP          
+  48: POP_JUMP_FORWARD_IF_FALSE to 94
+  50: LOAD_FAST            new_arg_strings
+  52: LOAD_METHOD          append
+  74: LOAD_FAST            arg_string
+  76: PRECALL              
+  80: CALL                 
+  90: POP_TOP              
+  92: JUMP_BACKWARD        to 10
+  94: NOP                  
+  96: LOAD_GLOBAL          NULL + open
+ 108: LOAD_FAST            arg_string
+ 110: LOAD_CONST           1
+ 112: LOAD_CONST           None
+ 114: BUILD_SLICE          
+ 116: BINARY_SUBSCR        
+ 126: PRECALL              
+ 130: CALL                 
+ 140: BEFORE_WITH          
+ 142: STORE_FAST           args_file
+ 144: BUILD_LIST           
+ 146: STORE_FAST           arg_strings
+ 148: LOAD_FAST            args_file
+ 150: LOAD_METHOD          read
+ 172: PRECALL              
+ 176: CALL                 
+ 186: LOAD_METHOD          splitlines
+ 208: PRECALL              
+ 212: CALL                 
+ 222: GET_ITER             
+ 224: FOR_ITER             to 320
+ 226: STORE_FAST           arg_line
+ 228: LOAD_FAST            self
+ 230: LOAD_METHOD          convert_arg_line_to_args
+ 252: LOAD_FAST            arg_line
+ 254: PRECALL              
+ 258: CALL                 
+ 268: GET_ITER             
+ 270: FOR_ITER             to 318
+ 272: STORE_FAST           arg
+ 274: LOAD_FAST            arg_strings
+ 276: LOAD_METHOD          append
+ 298: LOAD_FAST            arg
+ 300: PRECALL              
+ 304: CALL                 
+ 314: POP_TOP              
+ 316: JUMP_BACKWARD        to 270
+ 318: JUMP_BACKWARD        to 224
+ 320: LOAD_FAST            self
+ 322: LOAD_METHOD          _read_args_from_files
+ 344: LOAD_FAST            arg_strings
+ 346: PRECALL              
+ 350: CALL                 
+ 360: STORE_FAST           arg_strings
+ 362: LOAD_FAST            new_arg_strings
+ 364: LOAD_METHOD          extend
+ 386: LOAD_FAST            arg_strings
+ 388: PRECALL              
+ 392: CALL                 
+ 402: POP_TOP              
+ 404: LOAD_CONST           None
+ 406: LOAD_CONST           None
+ 408: LOAD_CONST           None
+ 410: PRECALL              
+ 414: CALL                 
+ 424: POP_TOP              
+ 426: JUMP_FORWARD         to 450
+ 428: PUSH_EXC_INFO        
+ 430: WITH_EXCEPT_START    
+ 432: POP_JUMP_FORWARD_IF_TRUE to 442
+ 434: RERAISE              
+ 436: COPY                 
+ 438: POP_EXCEPT           
+ 440: RERAISE              
+ 442: POP_TOP              
+ 444: POP_EXCEPT           
+ 446: POP_TOP              
+ 448: POP_TOP              
+ 450: JUMP_BACKWARD        to 10
+ 452: PUSH_EXC_INFO        
+ 454: LOAD_GLOBAL          OSError
+ 466: CHECK_EXC_MATCH      
+ 468: POP_JUMP_FORWARD_IF_FALSE to 560
+ 470: STORE_FAST           err
+ 472: LOAD_FAST            self
+ 474: LOAD_METHOD          error
+ 496: LOAD_GLOBAL          NULL + str
+ 508: LOAD_FAST            err
+ 510: PRECALL              
+ 514: CALL                 
+ 524: PRECALL              
+ 528: CALL                 
+ 538: POP_TOP              
+ 540: POP_EXCEPT           
+ 542: LOAD_CONST           None
+ 544: STORE_FAST           err
+ 546: DELETE_FAST          err
+ 548: EXTENDED_ARG         
+ 550: JUMP_BACKWARD        to 10
+ 552: LOAD_CONST           None
+ 554: STORE_FAST           err
+ 556: DELETE_FAST          err
+ 558: RERAISE              
+ 560: RERAISE              
+ 562: COPY                 
+ 564: POP_EXCEPT           
+ 566: RERAISE              
+ 568: LOAD_FAST            new_arg_strings
+ 570: RETURN_VALUE         

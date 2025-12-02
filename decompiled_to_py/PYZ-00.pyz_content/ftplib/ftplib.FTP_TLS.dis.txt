@@ -1,0 +1,71 @@
+# Disassembly for ftplib.FTP_TLS
+# From module file: ftplib
+
+## co_consts:
+('FTP_TLS', "A FTP subclass which adds TLS support to FTP as described\n        in RFC-4217.\n\n        Connect as usual to port 21 implicitly securing the FTP control\n        connection before authenticating.\n\n        Securing the data connection requires user to explicitly ask\n        for it by calling prot_p() method.\n\n        Usage example:\n        >>> from ftplib import FTP_TLS\n        >>> ftps = FTP_TLS('ftp.python.org')\n        >>> ftps.login()  # login anonymously previously securing control channel\n        '230 Guest login ok, access restrictions apply.'\n        >>> ftps.prot_p()  # switch to secure data connection\n        '200 Protection level set to P'\n        >>> ftps.retrlines('LIST')  # list directory content securely\n        total 9\n        drwxr-xr-x   8 root     wheel        1024 Jan  3  1994 .\n        drwxr-xr-x   8 root     wheel        1024 Jan  3  1994 ..\n        drwxr-xr-x   2 root     wheel        1024 Jan  3  1994 bin\n        drwxr-xr-x   2 root     wheel        1024 Jan  3  1994 etc\n        d-wxrwxr-x   2 ftp      wheel        1024 Sep  5 13:43 incoming\n        drwxr-xr-x   2 root     wheel        1024 Nov 17  1993 lib\n        drwxr-xr-x   6 1094     wheel        1024 Sep 13 19:07 pub\n        drwxr-xr-x   3 root     wheel        1024 Jan  3  1994 usr\n        -rw-r--r--   1 root     root          312 Aug  1  1994 welcome.msg\n        '226 Transfer complete.'\n        >>> ftps.quit()\n        '221 Goodbye.'\n        >>>\n        ", '', None, 'utf-8', ('encoding',), <code object __init__ at 0x0000024068E223E0, file "ftplib.py", line 718>, True, <code object login at 0x000002406921FB20, file "ftplib.py", line 743>, <code object auth at 0x0000024068D6F100, file "ftplib.py", line 748>, <code object ccc at 0x00000240691E87B0, file "ftplib.py", line 760>, <code object prot_p at 0x0000024069419FB0, file "ftplib.py", line 768>, <code object prot_c at 0x00000240693EA330, file "ftplib.py", line 784>, <code object ntransfercmd at 0x00000240691C18F0, file "ftplib.py", line 792>, <code object abort at 0x000002406921FC90, file "ftplib.py", line 799>, ('', '', '', True), (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'ssl', 'PROTOCOL_TLS_CLIENT', 'ssl_version', '_GLOBAL_DEFAULT_TIMEOUT', '__init__', 'login', 'auth', 'ccc', 'prot_p', 'prot_c', 'ntransfercmd', 'abort', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'FTP_TLS'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           "A FTP subclass which adds TLS support to FTP as described\n        in RFC-4217.\n\n        Connect as usual to port 21 implicitly securing the FTP control\n        connection before authenticating.\n\n        Securing the data connection requires user to explicitly ask\n        for it by calling prot_p() method.\n\n        Usage example:\n        >>> from ftplib import FTP_TLS\n        >>> ftps = FTP_TLS('ftp.python.org')\n        >>> ftps.login()  # login anonymously previously securing control channel\n        '230 Guest login ok, access restrictions apply.'\n        >>> ftps.prot_p()  # switch to secure data connection\n        '200 Protection level set to P'\n        >>> ftps.retrlines('LIST')  # list directory content securely\n        total 9\n        drwxr-xr-x   8 root     wheel        1024 Jan  3  1994 .\n        drwxr-xr-x   8 root     wheel        1024 Jan  3  1994 ..\n        drwxr-xr-x   2 root     wheel        1024 Jan  3  1994 bin\n        drwxr-xr-x   2 root     wheel        1024 Jan  3  1994 etc\n        d-wxrwxr-x   2 ftp      wheel        1024 Sep  5 13:43 incoming\n        drwxr-xr-x   2 root     wheel        1024 Nov 17  1993 lib\n        drwxr-xr-x   6 1094     wheel        1024 Sep 13 19:07 pub\n        drwxr-xr-x   3 root     wheel        1024 Jan  3  1994 usr\n        -rw-r--r--   1 root     root          312 Aug  1  1994 welcome.msg\n        '226 Transfer complete.'\n        >>> ftps.quit()\n        '221 Goodbye.'\n        >>>\n        "
+  14: STORE_NAME           __doc__
+  16: LOAD_NAME            ssl
+  18: LOAD_ATTR            PROTOCOL_TLS_CLIENT
+  28: STORE_NAME           ssl_version
+  30: LOAD_CONST           ''
+  32: LOAD_CONST           ''
+  34: LOAD_CONST           ''
+  36: LOAD_CONST           ''
+  38: LOAD_CONST           None
+  40: LOAD_CONST           None
+  42: LOAD_CONST           None
+  44: LOAD_NAME            _GLOBAL_DEFAULT_TIMEOUT
+  46: LOAD_CONST           None
+  48: BUILD_TUPLE          
+  50: LOAD_CONST           'utf-8'
+  52: LOAD_CONST           ('encoding',)
+  54: BUILD_CONST_KEY_MAP  
+  56: LOAD_CLOSURE         __class__
+  58: BUILD_TUPLE          
+  60: LOAD_CONST           <code object __init__ at 0x0000024068E223E0, file "ftplib.py", line 718>
+  62: MAKE_FUNCTION        defaults, kwdefaults, closure
+  64: STORE_NAME           __init__
+  66: LOAD_CONST           ('', '', '', True)
+  68: LOAD_CLOSURE         __class__
+  70: BUILD_TUPLE          
+  72: LOAD_CONST           <code object login at 0x000002406921FB20, file "ftplib.py", line 743>
+  74: MAKE_FUNCTION        defaults, closure
+  76: STORE_NAME           login
+  78: LOAD_CONST           <code object auth at 0x0000024068D6F100, file "ftplib.py", line 748>
+  80: MAKE_FUNCTION        
+  82: STORE_NAME           auth
+  84: LOAD_CONST           <code object ccc at 0x00000240691E87B0, file "ftplib.py", line 760>
+  86: MAKE_FUNCTION        
+  88: STORE_NAME           ccc
+  90: LOAD_CONST           <code object prot_p at 0x0000024069419FB0, file "ftplib.py", line 768>
+  92: MAKE_FUNCTION        
+  94: STORE_NAME           prot_p
+  96: LOAD_CONST           <code object prot_c at 0x00000240693EA330, file "ftplib.py", line 784>
+  98: MAKE_FUNCTION        
+ 100: STORE_NAME           prot_c
+ 102: LOAD_CONST           (None,)
+ 104: LOAD_CLOSURE         __class__
+ 106: BUILD_TUPLE          
+ 108: LOAD_CONST           <code object ntransfercmd at 0x00000240691C18F0, file "ftplib.py", line 792>
+ 110: MAKE_FUNCTION        defaults, closure
+ 112: STORE_NAME           ntransfercmd
+ 114: LOAD_CONST           <code object abort at 0x000002406921FC90, file "ftplib.py", line 799>
+ 116: MAKE_FUNCTION        
+ 118: STORE_NAME           abort
+ 120: LOAD_CLOSURE         __class__
+ 122: COPY                 
+ 124: STORE_NAME           __classcell__
+ 126: RETURN_VALUE         

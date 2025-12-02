@@ -1,0 +1,40 @@
+# Disassembly for email.EmailPolicy.__init__
+# From module file: email.policy
+
+## co_consts:
+(None, 'header_factory', ())
+
+## co_names:
+('object', '__setattr__', 'HeaderRegistry', 'super', '__init__')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_CONST           'header_factory'
+   6: LOAD_FAST            kw
+   8: CONTAINS_OP          
+  10: POP_JUMP_FORWARD_IF_FALSE to 92
+  12: LOAD_GLOBAL          object
+  24: LOAD_METHOD          __setattr__
+  46: LOAD_FAST            self
+  48: LOAD_CONST           'header_factory'
+  50: LOAD_GLOBAL          NULL + HeaderRegistry
+  62: PRECALL              
+  66: CALL                 
+  76: PRECALL              
+  80: CALL                 
+  90: POP_TOP              
+  92: PUSH_NULL            
+  94: LOAD_GLOBAL          NULL + super
+ 106: PRECALL              
+ 110: CALL                 
+ 120: LOAD_ATTR            __init__
+ 130: LOAD_CONST           ()
+ 132: BUILD_MAP            
+ 134: LOAD_FAST            kw
+ 136: DICT_MERGE           
+ 138: CALL_FUNCTION_EX     
+ 140: POP_TOP              
+ 142: LOAD_CONST           None
+ 144: RETURN_VALUE         

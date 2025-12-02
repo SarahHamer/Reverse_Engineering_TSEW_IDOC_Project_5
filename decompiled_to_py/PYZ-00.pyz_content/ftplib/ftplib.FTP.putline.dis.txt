@@ -1,0 +1,66 @@
+# Disassembly for ftplib.FTP.putline
+# From module file: ftplib
+
+## co_consts:
+(None, '\r', '\n', 'an illegal newline character should not be contained', 'ftplib.sendcmd', 1, '*put*')
+
+## co_names:
+('ValueError', 'sys', 'audit', 'CRLF', 'debugging', 'print', 'sanitize', 'sock', 'sendall', 'encode', 'encoding')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '\r'
+   4: LOAD_FAST            line
+   6: CONTAINS_OP          
+   8: POP_JUMP_FORWARD_IF_TRUE to 18
+  10: LOAD_CONST           '\n'
+  12: LOAD_FAST            line
+  14: CONTAINS_OP          
+  16: POP_JUMP_FORWARD_IF_FALSE to 48
+  18: LOAD_GLOBAL          NULL + ValueError
+  30: LOAD_CONST           'an illegal newline character should not be contained'
+  32: PRECALL              
+  36: CALL                 
+  46: RAISE_VARARGS        
+  48: LOAD_GLOBAL          NULL + sys
+  60: LOAD_ATTR            audit
+  70: LOAD_CONST           'ftplib.sendcmd'
+  72: LOAD_FAST            self
+  74: LOAD_FAST            line
+  76: PRECALL              
+  80: CALL                 
+  90: POP_TOP              
+  92: LOAD_FAST            line
+  94: LOAD_GLOBAL          CRLF
+ 106: BINARY_OP            +
+ 110: STORE_FAST           line
+ 112: LOAD_FAST            self
+ 114: LOAD_ATTR            debugging
+ 124: LOAD_CONST           1
+ 126: COMPARE_OP           >
+ 132: POP_JUMP_FORWARD_IF_FALSE to 204
+ 134: LOAD_GLOBAL          NULL + print
+ 146: LOAD_CONST           '*put*'
+ 148: LOAD_FAST            self
+ 150: LOAD_METHOD          sanitize
+ 172: LOAD_FAST            line
+ 174: PRECALL              
+ 178: CALL                 
+ 188: PRECALL              
+ 192: CALL                 
+ 202: POP_TOP              
+ 204: LOAD_FAST            self
+ 206: LOAD_ATTR            sock
+ 216: LOAD_METHOD          sendall
+ 238: LOAD_FAST            line
+ 240: LOAD_METHOD          encode
+ 262: LOAD_FAST            self
+ 264: LOAD_ATTR            encoding
+ 274: PRECALL              
+ 278: CALL                 
+ 288: PRECALL              
+ 292: CALL                 
+ 302: POP_TOP              
+ 304: LOAD_CONST           None
+ 306: RETURN_VALUE         

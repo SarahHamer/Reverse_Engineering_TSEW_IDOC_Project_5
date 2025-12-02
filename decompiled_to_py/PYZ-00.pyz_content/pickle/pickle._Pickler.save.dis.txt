@@ -1,0 +1,246 @@
+# Disassembly for pickle._Pickler.save
+# From module file: pickle
+
+## co_consts:
+(None, 0, 'reducer_override', 'dispatch_table', '__reduce_ex__', '__reduce__', "Can't pickle ", ' object: ', '%s must return string or tuple', 2, 6, 'Tuple returned by %s must have two to six elements', 'obj')
+
+## co_names:
+('framer', 'commit_frame', 'persistent_id', 'save_pers', 'memo', 'get', 'id', 'write', 'NotImplemented', 'getattr', 'type', 'dispatch', 'dispatch_table', 'issubclass', 'save_global', 'proto', 'PicklingError', '__name__', 'isinstance', 'str', 'tuple', 'len', 'save_reduce')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            framer
+  14: LOAD_METHOD          commit_frame
+  36: PRECALL              
+  40: CALL                 
+  50: POP_TOP              
+  52: LOAD_FAST            self
+  54: LOAD_METHOD          persistent_id
+  76: LOAD_FAST            obj
+  78: PRECALL              
+  82: CALL                 
+  92: STORE_FAST           pid
+  94: LOAD_FAST            pid
+  96: POP_JUMP_FORWARD_IF_NONE to 148
+  98: LOAD_FAST            save_persistent_id
+ 100: POP_JUMP_FORWARD_IF_FALSE to 148
+ 102: LOAD_FAST            self
+ 104: LOAD_METHOD          save_pers
+ 126: LOAD_FAST            pid
+ 128: PRECALL              
+ 132: CALL                 
+ 142: POP_TOP              
+ 144: LOAD_CONST           None
+ 146: RETURN_VALUE         
+ 148: LOAD_FAST            self
+ 150: LOAD_ATTR            memo
+ 160: LOAD_METHOD          get
+ 182: LOAD_GLOBAL          NULL + id
+ 194: LOAD_FAST            obj
+ 196: PRECALL              
+ 200: CALL                 
+ 210: PRECALL              
+ 214: CALL                 
+ 224: STORE_FAST           x
+ 226: LOAD_FAST            x
+ 228: POP_JUMP_FORWARD_IF_NONE to 326
+ 230: LOAD_FAST            self
+ 232: LOAD_METHOD          write
+ 254: LOAD_FAST            self
+ 256: LOAD_METHOD          get
+ 278: LOAD_FAST            x
+ 280: LOAD_CONST           0
+ 282: BINARY_SUBSCR        
+ 292: PRECALL              
+ 296: CALL                 
+ 306: PRECALL              
+ 310: CALL                 
+ 320: POP_TOP              
+ 322: LOAD_CONST           None
+ 324: RETURN_VALUE         
+ 326: LOAD_GLOBAL          NotImplemented
+ 338: STORE_FAST           rv
+ 340: LOAD_GLOBAL          NULL + getattr
+ 352: LOAD_FAST            self
+ 354: LOAD_CONST           'reducer_override'
+ 356: LOAD_CONST           None
+ 358: PRECALL              
+ 362: CALL                 
+ 372: STORE_FAST           reduce
+ 374: LOAD_FAST            reduce
+ 376: POP_JUMP_FORWARD_IF_NONE to 400
+ 378: PUSH_NULL            
+ 380: LOAD_FAST            reduce
+ 382: LOAD_FAST            obj
+ 384: PRECALL              
+ 388: CALL                 
+ 398: STORE_FAST           rv
+ 400: LOAD_FAST            rv
+ 402: LOAD_GLOBAL          NotImplemented
+ 414: IS_OP                
+ 416: POP_JUMP_FORWARD_IF_FALSE to 914
+ 418: LOAD_GLOBAL          NULL + type
+ 430: LOAD_FAST            obj
+ 432: PRECALL              
+ 436: CALL                 
+ 446: STORE_FAST           t
+ 448: LOAD_FAST            self
+ 450: LOAD_ATTR            dispatch
+ 460: LOAD_METHOD          get
+ 482: LOAD_FAST            t
+ 484: PRECALL              
+ 488: CALL                 
+ 498: STORE_FAST           f
+ 500: LOAD_FAST            f
+ 502: POP_JUMP_FORWARD_IF_NONE to 532
+ 504: PUSH_NULL            
+ 506: LOAD_FAST            f
+ 508: LOAD_FAST            self
+ 510: LOAD_FAST            obj
+ 512: PRECALL              
+ 516: CALL                 
+ 526: POP_TOP              
+ 528: LOAD_CONST           None
+ 530: RETURN_VALUE         
+ 532: LOAD_GLOBAL          NULL + getattr
+ 544: LOAD_FAST            self
+ 546: LOAD_CONST           'dispatch_table'
+ 548: LOAD_GLOBAL          dispatch_table
+ 560: PRECALL              
+ 564: CALL                 
+ 574: LOAD_METHOD          get
+ 596: LOAD_FAST            t
+ 598: PRECALL              
+ 602: CALL                 
+ 612: STORE_FAST           reduce
+ 614: LOAD_FAST            reduce
+ 616: POP_JUMP_FORWARD_IF_NONE to 642
+ 618: PUSH_NULL            
+ 620: LOAD_FAST            reduce
+ 622: LOAD_FAST            obj
+ 624: PRECALL              
+ 628: CALL                 
+ 638: STORE_FAST           rv
+ 640: JUMP_FORWARD         to 914
+ 642: LOAD_GLOBAL          NULL + issubclass
+ 654: LOAD_FAST            t
+ 656: LOAD_GLOBAL          type
+ 668: PRECALL              
+ 672: CALL                 
+ 682: POP_JUMP_FORWARD_IF_FALSE to 730
+ 684: LOAD_FAST            self
+ 686: LOAD_METHOD          save_global
+ 708: LOAD_FAST            obj
+ 710: PRECALL              
+ 714: CALL                 
+ 724: POP_TOP              
+ 726: LOAD_CONST           None
+ 728: RETURN_VALUE         
+ 730: LOAD_GLOBAL          NULL + getattr
+ 742: LOAD_FAST            obj
+ 744: LOAD_CONST           '__reduce_ex__'
+ 746: LOAD_CONST           None
+ 748: PRECALL              
+ 752: CALL                 
+ 762: STORE_FAST           reduce
+ 764: LOAD_FAST            reduce
+ 766: POP_JUMP_FORWARD_IF_NONE to 802
+ 768: PUSH_NULL            
+ 770: LOAD_FAST            reduce
+ 772: LOAD_FAST            self
+ 774: LOAD_ATTR            proto
+ 784: PRECALL              
+ 788: CALL                 
+ 798: STORE_FAST           rv
+ 800: JUMP_FORWARD         to 914
+ 802: LOAD_GLOBAL          NULL + getattr
+ 814: LOAD_FAST            obj
+ 816: LOAD_CONST           '__reduce__'
+ 818: LOAD_CONST           None
+ 820: PRECALL              
+ 824: CALL                 
+ 834: STORE_FAST           reduce
+ 836: LOAD_FAST            reduce
+ 838: POP_JUMP_FORWARD_IF_NONE to 862
+ 840: PUSH_NULL            
+ 842: LOAD_FAST            reduce
+ 844: PRECALL              
+ 848: CALL                 
+ 858: STORE_FAST           rv
+ 860: JUMP_FORWARD         to 914
+ 862: LOAD_GLOBAL          NULL + PicklingError
+ 874: LOAD_CONST           "Can't pickle "
+ 876: LOAD_FAST            t
+ 878: LOAD_ATTR            __name__
+ 888: FORMAT_VALUE         repr
+ 890: LOAD_CONST           ' object: '
+ 892: LOAD_FAST            obj
+ 894: FORMAT_VALUE         repr
+ 896: BUILD_STRING         
+ 898: PRECALL              
+ 902: CALL                 
+ 912: RAISE_VARARGS        
+ 914: LOAD_GLOBAL          NULL + isinstance
+ 926: LOAD_FAST            rv
+ 928: LOAD_GLOBAL          str
+ 940: PRECALL              
+ 944: CALL                 
+ 954: POP_JUMP_FORWARD_IF_FALSE to 1004
+ 956: LOAD_FAST            self
+ 958: LOAD_METHOD          save_global
+ 980: LOAD_FAST            obj
+ 982: LOAD_FAST            rv
+ 984: PRECALL              
+ 988: CALL                 
+ 998: POP_TOP              
+1000: LOAD_CONST           None
+1002: RETURN_VALUE         
+1004: LOAD_GLOBAL          NULL + isinstance
+1016: LOAD_FAST            rv
+1018: LOAD_GLOBAL          tuple
+1030: PRECALL              
+1034: CALL                 
+1044: POP_JUMP_FORWARD_IF_TRUE to 1082
+1046: LOAD_GLOBAL          NULL + PicklingError
+1058: LOAD_CONST           '%s must return string or tuple'
+1060: LOAD_FAST            reduce
+1062: BINARY_OP            %
+1066: PRECALL              
+1070: CALL                 
+1080: RAISE_VARARGS        
+1082: LOAD_GLOBAL          NULL + len
+1094: LOAD_FAST            rv
+1096: PRECALL              
+1100: CALL                 
+1110: STORE_FAST           l
+1112: LOAD_CONST           2
+1114: LOAD_FAST            l
+1116: SWAP                 
+1118: COPY                 
+1120: COMPARE_OP           <=
+1126: POP_JUMP_FORWARD_IF_FALSE to 1140
+1128: LOAD_CONST           6
+1130: COMPARE_OP           <=
+1136: POP_JUMP_FORWARD_IF_TRUE to 1178
+1138: JUMP_FORWARD         to 1142
+1140: POP_TOP              
+1142: LOAD_GLOBAL          NULL + PicklingError
+1154: LOAD_CONST           'Tuple returned by %s must have two to six elements'
+1156: LOAD_FAST            reduce
+1158: BINARY_OP            %
+1162: PRECALL              
+1166: CALL                 
+1176: RAISE_VARARGS        
+1178: PUSH_NULL            
+1180: LOAD_FAST            self
+1182: LOAD_ATTR            save_reduce
+1192: LOAD_FAST            rv
+1194: LOAD_CONST           'obj'
+1196: LOAD_FAST            obj
+1198: BUILD_MAP            
+1200: CALL_FUNCTION_EX     
+1202: POP_TOP              
+1204: LOAD_CONST           None
+1206: RETURN_VALUE         

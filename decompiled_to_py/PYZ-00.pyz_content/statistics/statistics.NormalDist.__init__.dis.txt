@@ -1,0 +1,35 @@
+# Disassembly for statistics.NormalDist.__init__
+# From module file: statistics
+
+## co_consts:
+('NormalDist where mu is the mean and sigma is the standard deviation.', 0.0, 'sigma must be non-negative', None)
+
+## co_names:
+('StatisticsError', 'float', '_mu', '_sigma')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            sigma
+   4: LOAD_CONST           0.0
+   6: COMPARE_OP           <
+  12: POP_JUMP_FORWARD_IF_FALSE to 44
+  14: LOAD_GLOBAL          NULL + StatisticsError
+  26: LOAD_CONST           'sigma must be non-negative'
+  28: PRECALL              
+  32: CALL                 
+  42: RAISE_VARARGS        
+  44: LOAD_GLOBAL          NULL + float
+  56: LOAD_FAST            mu
+  58: PRECALL              
+  62: CALL                 
+  72: LOAD_FAST            self
+  74: STORE_ATTR           _mu
+  84: LOAD_GLOBAL          NULL + float
+  96: LOAD_FAST            sigma
+  98: PRECALL              
+ 102: CALL                 
+ 112: LOAD_FAST            self
+ 114: STORE_ATTR           _sigma
+ 124: LOAD_CONST           None
+ 126: RETURN_VALUE         

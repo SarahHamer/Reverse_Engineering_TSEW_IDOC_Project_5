@@ -1,0 +1,40 @@
+# Disassembly for importlib.Distribution.metadata
+# From module file: importlib.metadata
+
+## co_consts:
+('Return the parsed metadata for this Distribution.\n\n        The returned object will have keys that name the various bits of\n        metadata.  See PEP 566 for details.\n        ', 'METADATA', 'PKG-INFO', '')
+
+## co_names:
+('read_text', '_adapters', 'Message', 'email', 'message_from_string')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          read_text
+  26: LOAD_CONST           'METADATA'
+  28: PRECALL              
+  32: CALL                 
+  42: JUMP_IF_TRUE_OR_POP  to 126
+  44: LOAD_FAST            self
+  46: LOAD_METHOD          read_text
+  68: LOAD_CONST           'PKG-INFO'
+  70: PRECALL              
+  74: CALL                 
+  84: JUMP_IF_TRUE_OR_POP  to 126
+  86: LOAD_FAST            self
+  88: LOAD_METHOD          read_text
+ 110: LOAD_CONST           ''
+ 112: PRECALL              
+ 116: CALL                 
+ 126: STORE_FAST           text
+ 128: LOAD_GLOBAL          NULL + _adapters
+ 140: LOAD_ATTR            Message
+ 150: LOAD_GLOBAL          NULL + email
+ 162: LOAD_ATTR            message_from_string
+ 172: LOAD_FAST            text
+ 174: PRECALL              
+ 178: CALL                 
+ 188: PRECALL              
+ 192: CALL                 
+ 202: RETURN_VALUE         

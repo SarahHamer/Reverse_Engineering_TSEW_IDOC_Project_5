@@ -1,0 +1,34 @@
+# Disassembly for threading.current_thread
+# From module file: threading
+
+## co_consts:
+("Return the current Thread object, corresponding to the caller's thread of control.\n\n    If the caller's thread of control was not created through the threading\n    module, a dummy thread object with limited functionality is returned.\n\n    ",)
+
+## co_names:
+('_active', 'get_ident', 'KeyError', '_DummyThread')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_GLOBAL          _active
+  16: LOAD_GLOBAL          NULL + get_ident
+  28: PRECALL              
+  32: CALL                 
+  42: BINARY_SUBSCR        
+  52: RETURN_VALUE         
+  54: PUSH_EXC_INFO        
+  56: LOAD_GLOBAL          KeyError
+  68: CHECK_EXC_MATCH      
+  70: POP_JUMP_FORWARD_IF_FALSE to 106
+  72: POP_TOP              
+  74: LOAD_GLOBAL          NULL + _DummyThread
+  86: PRECALL              
+  90: CALL                 
+ 100: SWAP                 
+ 102: POP_EXCEPT           
+ 104: RETURN_VALUE         
+ 106: RERAISE              
+ 108: COPY                 
+ 110: POP_EXCEPT           
+ 112: RERAISE              

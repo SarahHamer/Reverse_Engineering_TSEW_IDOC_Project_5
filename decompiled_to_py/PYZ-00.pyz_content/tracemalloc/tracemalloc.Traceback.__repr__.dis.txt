@@ -1,0 +1,39 @@
+# Disassembly for tracemalloc.Traceback.__repr__
+# From module file: tracemalloc
+
+## co_consts:
+(None, '<Traceback ', '>', ' total_nframe=')
+
+## co_names:
+('tuple', '_total_nframe', 'total_nframe')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '<Traceback '
+   4: LOAD_GLOBAL          NULL + tuple
+  16: LOAD_FAST            self
+  18: PRECALL              
+  22: CALL                 
+  32: FORMAT_VALUE         
+  34: BUILD_STRING         
+  36: STORE_FAST           s
+  38: LOAD_FAST            self
+  40: LOAD_ATTR            _total_nframe
+  50: POP_JUMP_FORWARD_IF_NOT_NONE to 64
+  52: LOAD_FAST            s
+  54: LOAD_CONST           '>'
+  56: BINARY_OP            +=
+  60: STORE_FAST           s
+  62: JUMP_FORWARD         to 92
+  64: LOAD_FAST            s
+  66: LOAD_CONST           ' total_nframe='
+  68: LOAD_FAST            self
+  70: LOAD_ATTR            total_nframe
+  80: FORMAT_VALUE         
+  82: LOAD_CONST           '>'
+  84: BUILD_STRING         
+  86: BINARY_OP            +=
+  90: STORE_FAST           s
+  92: LOAD_FAST            s
+  94: RETURN_VALUE         

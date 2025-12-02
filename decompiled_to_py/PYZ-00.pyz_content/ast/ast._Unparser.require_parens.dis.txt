@@ -1,0 +1,26 @@
+# Disassembly for ast._Unparser.require_parens
+# From module file: ast
+
+## co_consts:
+('Shortcut to adding precedence related parens', '(', ')')
+
+## co_names:
+('delimit_if', 'get_precedence')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          delimit_if
+  26: LOAD_CONST           '('
+  28: LOAD_CONST           ')'
+  30: LOAD_FAST            self
+  32: LOAD_METHOD          get_precedence
+  54: LOAD_FAST            node
+  56: PRECALL              
+  60: CALL                 
+  70: LOAD_FAST            precedence
+  72: COMPARE_OP           >
+  78: PRECALL              
+  82: CALL                 
+  92: RETURN_VALUE         

@@ -1,0 +1,51 @@
+# Disassembly for contextlib._GeneratorContextManagerBase.__init__
+# From module file: contextlib
+
+## co_consts:
+(None, '__doc__')
+
+## co_names:
+('gen', 'func', 'args', 'kwds', 'getattr', 'type', '__doc__')
+
+## bytecode:
+
+   0: RESUME               
+   2: PUSH_NULL            
+   4: LOAD_FAST            func
+   6: LOAD_FAST            args
+   8: BUILD_MAP            
+  10: LOAD_FAST            kwds
+  12: DICT_MERGE           
+  14: CALL_FUNCTION_EX     
+  16: LOAD_FAST            self
+  18: STORE_ATTR           gen
+  28: LOAD_FAST            func
+  30: LOAD_FAST            args
+  32: LOAD_FAST            kwds
+  34: SWAP                 
+  36: LOAD_FAST            self
+  38: STORE_ATTR           func
+  48: LOAD_FAST            self
+  50: STORE_ATTR           args
+  60: LOAD_FAST            self
+  62: STORE_ATTR           kwds
+  72: LOAD_GLOBAL          NULL + getattr
+  84: LOAD_FAST            func
+  86: LOAD_CONST           '__doc__'
+  88: LOAD_CONST           None
+  90: PRECALL              
+  94: CALL                 
+ 104: STORE_FAST           doc
+ 106: LOAD_FAST            doc
+ 108: POP_JUMP_FORWARD_IF_NOT_NONE to 150
+ 110: LOAD_GLOBAL          NULL + type
+ 122: LOAD_FAST            self
+ 124: PRECALL              
+ 128: CALL                 
+ 138: LOAD_ATTR            __doc__
+ 148: STORE_FAST           doc
+ 150: LOAD_FAST            doc
+ 152: LOAD_FAST            self
+ 154: STORE_ATTR           __doc__
+ 164: LOAD_CONST           None
+ 166: RETURN_VALUE         

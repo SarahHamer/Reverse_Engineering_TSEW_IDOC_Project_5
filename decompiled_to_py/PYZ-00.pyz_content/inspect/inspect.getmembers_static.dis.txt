@@ -1,0 +1,19 @@
+# Disassembly for inspect.getmembers_static
+# From module file: inspect
+
+## co_consts:
+("Return all members of an object as (name, value) pairs sorted by name\n    without triggering dynamic lookup via the descriptor protocol,\n    __getattr__ or __getattribute__. Optionally, only return members that\n    satisfy a given predicate.\n\n    Note: this function may not be able to retrieve all members\n       that getmembers can fetch (like dynamically created attributes)\n       and may find members that getmembers can't (like descriptors\n       that raise AttributeError). It can also return descriptor objects\n       instead of instance members in some cases.\n    ",)
+
+## co_names:
+('_getmembers', 'getattr_static')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _getmembers
+  14: LOAD_FAST            object
+  16: LOAD_FAST            predicate
+  18: LOAD_GLOBAL          getattr_static
+  30: PRECALL              
+  34: CALL                 
+  44: RETURN_VALUE         

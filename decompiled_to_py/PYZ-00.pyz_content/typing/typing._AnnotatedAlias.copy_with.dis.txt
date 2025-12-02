@@ -1,0 +1,32 @@
+# Disassembly for typing._AnnotatedAlias.copy_with
+# From module file: typing
+
+## co_consts:
+(None, 1, 0)
+
+## co_names:
+('len', '_AnnotatedAlias', '__metadata__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + len
+  14: LOAD_FAST            params
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_CONST           1
+  32: COMPARE_OP           ==
+  38: POP_JUMP_FORWARD_IF_TRUE to 44
+  40: LOAD_ASSERTION_ERROR 
+  42: RAISE_VARARGS        
+  44: LOAD_FAST            params
+  46: LOAD_CONST           0
+  48: BINARY_SUBSCR        
+  58: STORE_FAST           new_type
+  60: LOAD_GLOBAL          NULL + _AnnotatedAlias
+  72: LOAD_FAST            new_type
+  74: LOAD_FAST            self
+  76: LOAD_ATTR            __metadata__
+  86: PRECALL              
+  90: CALL                 
+ 100: RETURN_VALUE         

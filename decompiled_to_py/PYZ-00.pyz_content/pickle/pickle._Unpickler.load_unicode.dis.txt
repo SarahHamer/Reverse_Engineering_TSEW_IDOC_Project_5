@@ -1,0 +1,31 @@
+# Disassembly for pickle._Unpickler.load_unicode
+# From module file: pickle
+
+## co_consts:
+(None, -1, 'raw-unicode-escape')
+
+## co_names:
+('append', 'str', 'readline')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          append
+  26: LOAD_GLOBAL          NULL + str
+  38: LOAD_FAST            self
+  40: LOAD_METHOD          readline
+  62: PRECALL              
+  66: CALL                 
+  76: LOAD_CONST           None
+  78: LOAD_CONST           -1
+  80: BUILD_SLICE          
+  82: BINARY_SUBSCR        
+  92: LOAD_CONST           'raw-unicode-escape'
+  94: PRECALL              
+  98: CALL                 
+ 108: PRECALL              
+ 112: CALL                 
+ 122: POP_TOP              
+ 124: LOAD_CONST           None
+ 126: RETURN_VALUE         

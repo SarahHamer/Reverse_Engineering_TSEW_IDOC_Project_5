@@ -1,0 +1,23 @@
+# Disassembly for logging.PercentStyle.__init__
+# From module file: logging
+
+## co_consts:
+(None,)
+
+## co_names:
+('default_format', '_fmt', '_defaults')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            fmt
+   4: JUMP_IF_TRUE_OR_POP  to 18
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            default_format
+  18: LOAD_FAST            self
+  20: STORE_ATTR           _fmt
+  30: LOAD_FAST            defaults
+  32: LOAD_FAST            self
+  34: STORE_ATTR           _defaults
+  44: LOAD_CONST           None
+  46: RETURN_VALUE         

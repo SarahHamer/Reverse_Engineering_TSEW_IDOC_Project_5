@@ -1,0 +1,528 @@
+# Disassembly for ssl
+# From module file: ssl
+
+## co_consts:
+('This module provides some more Pythonic support for SSL.\n\nObject types:\n\n  SSLSocket -- subtype of socket.socket which does SSL over the socket\n\nExceptions:\n\n  SSLError -- exception raised for I/O errors\n\nFunctions:\n\n  cert_time_to_seconds -- convert time string used for certificate\n                          notBefore and notAfter functions to integer\n                          seconds past the Epoch (the time values\n                          returned from time.time())\n\n  get_server_certificate (addr, ssl_version, ca_certs, timeout) -- Retrieve the\n                          certificate from the server at the specified\n                          address and return it as a PEM-encoded string\n\n\nInteger constants:\n\nSSL_ERROR_ZERO_RETURN\nSSL_ERROR_WANT_READ\nSSL_ERROR_WANT_WRITE\nSSL_ERROR_WANT_X509_LOOKUP\nSSL_ERROR_SYSCALL\nSSL_ERROR_SSL\nSSL_ERROR_WANT_CONNECT\n\nSSL_ERROR_EOF\nSSL_ERROR_INVALID_ERROR_CODE\n\nThe following group define certificate requirements that one side is\nallowing/requiring from the other side:\n\nCERT_NONE - no certificates from the other side are required (or will\n            be looked at if provided)\nCERT_OPTIONAL - certificates are not required, but if provided will be\n                validated, and if validation fails, the connection will\n                also fail\nCERT_REQUIRED - certificates are required, and will be validated, and\n                if validation fails, the connection will also fail\n\nThe following constants identify various SSL protocol variants:\n\nPROTOCOL_SSLv2\nPROTOCOL_SSLv3\nPROTOCOL_SSLv23\nPROTOCOL_TLS\nPROTOCOL_TLS_CLIENT\nPROTOCOL_TLS_SERVER\nPROTOCOL_TLSv1\nPROTOCOL_TLSv1_1\nPROTOCOL_TLSv1_2\n\nThe following constants identify various SSL alert message descriptions as per\nhttp://www.iana.org/assignments/tls-parameters/tls-parameters.xml#tls-parameters-6\n\nALERT_DESCRIPTION_CLOSE_NOTIFY\nALERT_DESCRIPTION_UNEXPECTED_MESSAGE\nALERT_DESCRIPTION_BAD_RECORD_MAC\nALERT_DESCRIPTION_RECORD_OVERFLOW\nALERT_DESCRIPTION_DECOMPRESSION_FAILURE\nALERT_DESCRIPTION_HANDSHAKE_FAILURE\nALERT_DESCRIPTION_BAD_CERTIFICATE\nALERT_DESCRIPTION_UNSUPPORTED_CERTIFICATE\nALERT_DESCRIPTION_CERTIFICATE_REVOKED\nALERT_DESCRIPTION_CERTIFICATE_EXPIRED\nALERT_DESCRIPTION_CERTIFICATE_UNKNOWN\nALERT_DESCRIPTION_ILLEGAL_PARAMETER\nALERT_DESCRIPTION_UNKNOWN_CA\nALERT_DESCRIPTION_ACCESS_DENIED\nALERT_DESCRIPTION_DECODE_ERROR\nALERT_DESCRIPTION_DECRYPT_ERROR\nALERT_DESCRIPTION_PROTOCOL_VERSION\nALERT_DESCRIPTION_INSUFFICIENT_SECURITY\nALERT_DESCRIPTION_INTERNAL_ERROR\nALERT_DESCRIPTION_USER_CANCELLED\nALERT_DESCRIPTION_NO_RENEGOTIATION\nALERT_DESCRIPTION_UNSUPPORTED_EXTENSION\nALERT_DESCRIPTION_CERTIFICATE_UNOBTAINABLE\nALERT_DESCRIPTION_UNRECOGNIZED_NAME\nALERT_DESCRIPTION_BAD_CERTIFICATE_STATUS_RESPONSE\nALERT_DESCRIPTION_BAD_CERTIFICATE_HASH_VALUE\nALERT_DESCRIPTION_UNKNOWN_PSK_IDENTITY\n', 0, None, ('namedtuple',), ('Enum', 'IntEnum', 'IntFlag'), ('_simple_enum',), ('OPENSSL_VERSION_NUMBER', 'OPENSSL_VERSION_INFO', 'OPENSSL_VERSION'), ('_SSLContext', 'MemoryBIO', 'SSLSession'), ('SSLError', 'SSLZeroReturnError', 'SSLWantReadError', 'SSLWantWriteError', 'SSLSyscallError', 'SSLEOFError', 'SSLCertVerificationError'), ('txt2obj', 'nid2obj'), ('RAND_status', 'RAND_add', 'RAND_bytes', 'RAND_pseudo_bytes'), ('RAND_egd',), ('HAS_SNI', 'HAS_ECDH', 'HAS_NPN', 'HAS_ALPN', 'HAS_SSLv2', 'HAS_SSLv3', 'HAS_TLSv1', 'HAS_TLSv1_1', 'HAS_TLSv1_2', 'HAS_TLSv1_3'), ('_DEFAULT_CIPHERS', '_OPENSSL_API_VERSION'), '_SSLMethod', <code object <lambda> at 0x000002406945F000, file "ssl.py", line 125>, ('source',), 'Options', <code object <lambda> at 0x000002406945D7A0, file "ssl.py", line 130>, 'AlertDescription', <code object <lambda> at 0x000002406945EA60, file "ssl.py", line 135>, 'SSLErrorNumber', <code object <lambda> at 0x000002406945D2F0, file "ssl.py", line 140>, 'VerifyFlags', <code object <lambda> at 0x000002406945F690, file "ssl.py", line 145>, 'VerifyMode', <code object <lambda> at 0x000002406945E970, file "ssl.py", line 150>, <code object <dictcomp> at 0x0000024069465DF0, file "ssl.py", line 154>, 'PROTOCOL_SSLv2', <code object TLSVersion at 0x00000240693D2170, file "ssl.py", line 159>, 'TLSVersion', <code object _TLSContentType at 0x000002406945FC30, file "ssl.py", line 170>, '_TLSContentType', <code object _TLSAlertType at 0x00000240691C05B0, file "ssl.py", line 185>, '_TLSAlertType', <code object _TLSMessageType at 0x00000240693D2D50, file "ssl.py", line 227>, '_TLSMessageType', 'win32', ('enum_certificates', 'enum_crls'), ('socket', 'SOCK_STREAM', 'create_connection'), ('SOL_SOCKET', 'SO_TYPE', '_GLOBAL_DEFAULT_TIMEOUT'), 'tls-unique', 'HOSTFLAG_NEVER_CHECK_SUBJECT', <code object _dnsname_match at 0x000002406952CBA0, file "ssl.py", line 280>, <code object _inet_paton at 0x0000024068DA7150, file "ssl.py", line 329>, <code object _ipaddress_match at 0x000002406944B330, file "ssl.py", line 364>, <code object match_hostname at 0x0000024068D3EB50, file "ssl.py", line 376>, 'DefaultVerifyPaths', 'cafile capath openssl_cafile_env openssl_cafile openssl_capath_env openssl_capath', <code object get_default_verify_paths at 0x0000024068DB5390, file "ssl.py", line 442>, <code object _ASN1Object at 0x000002406941B2D0, file "ssl.py", line 456>, '_ASN1Object', 'nid shortname longname oid', <code object Purpose at 0x0000024069467C90, file "ssl.py", line 477>, 'Purpose', <code object SSLContext at 0x000002406952D590, file "ssl.py", line 484>, 'SSLContext', ('cafile', 'capath', 'cadata'), <code object create_default_context at 0x0000024068BE4BC0, file "ssl.py", line 745>, False, ('cert_reqs', 'check_hostname', 'purpose', 'certfile', 'keyfile', 'cafile', 'capath', 'cadata'), <code object _create_unverified_context at 0x00000240663465B0, file "ssl.py", line 783>, <code object SSLObject at 0x0000024069498230, file "ssl.py", line 845>, 'SSLObject', <code object _sslcopydoc at 0x000002406944A9A0, file "ssl.py", line 1000>, <code object SSLSocket at 0x0000024068C2A5A0, file "ssl.py", line 1006>, 'SSLSocket', True, <code object wrap_socket at 0x0000024068C8EED0, file "ssl.py", line 1455>, <code object cert_time_to_seconds at 0x0000024069366AD0, file "ssl.py", line 1487>, '-----BEGIN CERTIFICATE-----', '-----END CERTIFICATE-----', <code object DER_cert_to_PEM_cert at 0x00000240691DB120, file "ssl.py", line 1520>, <code object PEM_cert_to_DER_cert at 0x0000024068DA73D0, file "ssl.py", line 1530>, <code object get_server_certificate at 0x0000024068E93B90, file "ssl.py", line 1543>, <code object get_protocol_name at 0x000002406945DA70, file "ssl.py", line 1565>, (None,))
+
+## co_names:
+('__doc__', 'sys', 'os', 'collections', 'namedtuple', 'enum', 'Enum', '_Enum', 'IntEnum', '_IntEnum', 'IntFlag', '_IntFlag', '_simple_enum', '_ssl', 'OPENSSL_VERSION_NUMBER', 'OPENSSL_VERSION_INFO', 'OPENSSL_VERSION', '_SSLContext', 'MemoryBIO', 'SSLSession', 'SSLError', 'SSLZeroReturnError', 'SSLWantReadError', 'SSLWantWriteError', 'SSLSyscallError', 'SSLEOFError', 'SSLCertVerificationError', 'txt2obj', '_txt2obj', 'nid2obj', '_nid2obj', 'RAND_status', 'RAND_add', 'RAND_bytes', 'RAND_pseudo_bytes', 'RAND_egd', 'ImportError', 'HAS_SNI', 'HAS_ECDH', 'HAS_NPN', 'HAS_ALPN', 'HAS_SSLv2', 'HAS_SSLv3', 'HAS_TLSv1', 'HAS_TLSv1_1', 'HAS_TLSv1_2', 'HAS_TLSv1_3', '_DEFAULT_CIPHERS', '_OPENSSL_API_VERSION', '_convert_', '__name__', '_SSLMethod', 'PROTOCOL_TLS', 'PROTOCOL_SSLv23', '__members__', 'items', '_PROTOCOL_NAMES', 'getattr', '_SSLv2_IF_EXISTS', 'TLSVersion', '_TLSContentType', '_TLSAlertType', '_TLSMessageType', 'platform', 'enum_certificates', 'enum_crls', 'socket', 'SOCK_STREAM', 'create_connection', 'SOL_SOCKET', 'SO_TYPE', '_GLOBAL_DEFAULT_TIMEOUT', '_socket', 'base64', 'errno', 'warnings', 'OSError', 'socket_error', 'CHANNEL_BINDING_TYPES', 'hasattr', 'HAS_NEVER_CHECK_COMMON_NAME', '_RESTRICTED_SERVER_CIPHERS', 'CertificateError', '_dnsname_match', '_inet_paton', '_ipaddress_match', 'match_hostname', 'DefaultVerifyPaths', 'get_default_verify_paths', '_ASN1Object', 'Purpose', 'SSLContext', 'SERVER_AUTH', 'create_default_context', 'CERT_NONE', '_create_unverified_context', '_create_default_https_context', '_create_stdlib_context', 'SSLObject', '_sslcopydoc', 'SSLSocket', 'sslsocket_class', 'sslobject_class', 'wrap_socket', 'cert_time_to_seconds', 'PEM_HEADER', 'PEM_FOOTER', 'DER_cert_to_PEM_cert', 'PEM_cert_to_DER_cert', 'PROTOCOL_TLS_CLIENT', 'get_server_certificate', 'get_protocol_name')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'This module provides some more Pythonic support for SSL.\n\nObject types:\n\n  SSLSocket -- subtype of socket.socket which does SSL over the socket\n\nExceptions:\n\n  SSLError -- exception raised for I/O errors\n\nFunctions:\n\n  cert_time_to_seconds -- convert time string used for certificate\n                          notBefore and notAfter functions to integer\n                          seconds past the Epoch (the time values\n                          returned from time.time())\n\n  get_server_certificate (addr, ssl_version, ca_certs, timeout) -- Retrieve the\n                          certificate from the server at the specified\n                          address and return it as a PEM-encoded string\n\n\nInteger constants:\n\nSSL_ERROR_ZERO_RETURN\nSSL_ERROR_WANT_READ\nSSL_ERROR_WANT_WRITE\nSSL_ERROR_WANT_X509_LOOKUP\nSSL_ERROR_SYSCALL\nSSL_ERROR_SSL\nSSL_ERROR_WANT_CONNECT\n\nSSL_ERROR_EOF\nSSL_ERROR_INVALID_ERROR_CODE\n\nThe following group define certificate requirements that one side is\nallowing/requiring from the other side:\n\nCERT_NONE - no certificates from the other side are required (or will\n            be looked at if provided)\nCERT_OPTIONAL - certificates are not required, but if provided will be\n                validated, and if validation fails, the connection will\n                also fail\nCERT_REQUIRED - certificates are required, and will be validated, and\n                if validation fails, the connection will also fail\n\nThe following constants identify various SSL protocol variants:\n\nPROTOCOL_SSLv2\nPROTOCOL_SSLv3\nPROTOCOL_SSLv23\nPROTOCOL_TLS\nPROTOCOL_TLS_CLIENT\nPROTOCOL_TLS_SERVER\nPROTOCOL_TLSv1\nPROTOCOL_TLSv1_1\nPROTOCOL_TLSv1_2\n\nThe following constants identify various SSL alert message descriptions as per\nhttp://www.iana.org/assignments/tls-parameters/tls-parameters.xml#tls-parameters-6\n\nALERT_DESCRIPTION_CLOSE_NOTIFY\nALERT_DESCRIPTION_UNEXPECTED_MESSAGE\nALERT_DESCRIPTION_BAD_RECORD_MAC\nALERT_DESCRIPTION_RECORD_OVERFLOW\nALERT_DESCRIPTION_DECOMPRESSION_FAILURE\nALERT_DESCRIPTION_HANDSHAKE_FAILURE\nALERT_DESCRIPTION_BAD_CERTIFICATE\nALERT_DESCRIPTION_UNSUPPORTED_CERTIFICATE\nALERT_DESCRIPTION_CERTIFICATE_REVOKED\nALERT_DESCRIPTION_CERTIFICATE_EXPIRED\nALERT_DESCRIPTION_CERTIFICATE_UNKNOWN\nALERT_DESCRIPTION_ILLEGAL_PARAMETER\nALERT_DESCRIPTION_UNKNOWN_CA\nALERT_DESCRIPTION_ACCESS_DENIED\nALERT_DESCRIPTION_DECODE_ERROR\nALERT_DESCRIPTION_DECRYPT_ERROR\nALERT_DESCRIPTION_PROTOCOL_VERSION\nALERT_DESCRIPTION_INSUFFICIENT_SECURITY\nALERT_DESCRIPTION_INTERNAL_ERROR\nALERT_DESCRIPTION_USER_CANCELLED\nALERT_DESCRIPTION_NO_RENEGOTIATION\nALERT_DESCRIPTION_UNSUPPORTED_EXTENSION\nALERT_DESCRIPTION_CERTIFICATE_UNOBTAINABLE\nALERT_DESCRIPTION_UNRECOGNIZED_NAME\nALERT_DESCRIPTION_BAD_CERTIFICATE_STATUS_RESPONSE\nALERT_DESCRIPTION_BAD_CERTIFICATE_HASH_VALUE\nALERT_DESCRIPTION_UNKNOWN_PSK_IDENTITY\n'
+   4: STORE_NAME           __doc__
+   6: LOAD_CONST           0
+   8: LOAD_CONST           None
+  10: IMPORT_NAME          sys
+  12: STORE_NAME           sys
+  14: LOAD_CONST           0
+  16: LOAD_CONST           None
+  18: IMPORT_NAME          os
+  20: STORE_NAME           os
+  22: LOAD_CONST           0
+  24: LOAD_CONST           ('namedtuple',)
+  26: IMPORT_NAME          collections
+  28: IMPORT_FROM          namedtuple
+  30: STORE_NAME           namedtuple
+  32: POP_TOP              
+  34: LOAD_CONST           0
+  36: LOAD_CONST           ('Enum', 'IntEnum', 'IntFlag')
+  38: IMPORT_NAME          enum
+  40: IMPORT_FROM          Enum
+  42: STORE_NAME           _Enum
+  44: IMPORT_FROM          IntEnum
+  46: STORE_NAME           _IntEnum
+  48: IMPORT_FROM          IntFlag
+  50: STORE_NAME           _IntFlag
+  52: POP_TOP              
+  54: LOAD_CONST           0
+  56: LOAD_CONST           ('_simple_enum',)
+  58: IMPORT_NAME          enum
+  60: IMPORT_FROM          _simple_enum
+  62: STORE_NAME           _simple_enum
+  64: POP_TOP              
+  66: LOAD_CONST           0
+  68: LOAD_CONST           None
+  70: IMPORT_NAME          _ssl
+  72: STORE_NAME           _ssl
+  74: LOAD_CONST           0
+  76: LOAD_CONST           ('OPENSSL_VERSION_NUMBER', 'OPENSSL_VERSION_INFO', 'OPENSSL_VERSION')
+  78: IMPORT_NAME          _ssl
+  80: IMPORT_FROM          OPENSSL_VERSION_NUMBER
+  82: STORE_NAME           OPENSSL_VERSION_NUMBER
+  84: IMPORT_FROM          OPENSSL_VERSION_INFO
+  86: STORE_NAME           OPENSSL_VERSION_INFO
+  88: IMPORT_FROM          OPENSSL_VERSION
+  90: STORE_NAME           OPENSSL_VERSION
+  92: POP_TOP              
+  94: LOAD_CONST           0
+  96: LOAD_CONST           ('_SSLContext', 'MemoryBIO', 'SSLSession')
+  98: IMPORT_NAME          _ssl
+ 100: IMPORT_FROM          _SSLContext
+ 102: STORE_NAME           _SSLContext
+ 104: IMPORT_FROM          MemoryBIO
+ 106: STORE_NAME           MemoryBIO
+ 108: IMPORT_FROM          SSLSession
+ 110: STORE_NAME           SSLSession
+ 112: POP_TOP              
+ 114: LOAD_CONST           0
+ 116: LOAD_CONST           ('SSLError', 'SSLZeroReturnError', 'SSLWantReadError', 'SSLWantWriteError', 'SSLSyscallError', 'SSLEOFError', 'SSLCertVerificationError')
+ 118: IMPORT_NAME          _ssl
+ 120: IMPORT_FROM          SSLError
+ 122: STORE_NAME           SSLError
+ 124: IMPORT_FROM          SSLZeroReturnError
+ 126: STORE_NAME           SSLZeroReturnError
+ 128: IMPORT_FROM          SSLWantReadError
+ 130: STORE_NAME           SSLWantReadError
+ 132: IMPORT_FROM          SSLWantWriteError
+ 134: STORE_NAME           SSLWantWriteError
+ 136: IMPORT_FROM          SSLSyscallError
+ 138: STORE_NAME           SSLSyscallError
+ 140: IMPORT_FROM          SSLEOFError
+ 142: STORE_NAME           SSLEOFError
+ 144: IMPORT_FROM          SSLCertVerificationError
+ 146: STORE_NAME           SSLCertVerificationError
+ 148: POP_TOP              
+ 150: LOAD_CONST           0
+ 152: LOAD_CONST           ('txt2obj', 'nid2obj')
+ 154: IMPORT_NAME          _ssl
+ 156: IMPORT_FROM          txt2obj
+ 158: STORE_NAME           _txt2obj
+ 160: IMPORT_FROM          nid2obj
+ 162: STORE_NAME           _nid2obj
+ 164: POP_TOP              
+ 166: LOAD_CONST           0
+ 168: LOAD_CONST           ('RAND_status', 'RAND_add', 'RAND_bytes', 'RAND_pseudo_bytes')
+ 170: IMPORT_NAME          _ssl
+ 172: IMPORT_FROM          RAND_status
+ 174: STORE_NAME           RAND_status
+ 176: IMPORT_FROM          RAND_add
+ 178: STORE_NAME           RAND_add
+ 180: IMPORT_FROM          RAND_bytes
+ 182: STORE_NAME           RAND_bytes
+ 184: IMPORT_FROM          RAND_pseudo_bytes
+ 186: STORE_NAME           RAND_pseudo_bytes
+ 188: POP_TOP              
+ 190: NOP                  
+ 192: LOAD_CONST           0
+ 194: LOAD_CONST           ('RAND_egd',)
+ 196: IMPORT_NAME          _ssl
+ 198: IMPORT_FROM          RAND_egd
+ 200: STORE_NAME           RAND_egd
+ 202: POP_TOP              
+ 204: JUMP_FORWARD         to 228
+ 206: PUSH_EXC_INFO        
+ 208: LOAD_NAME            ImportError
+ 210: CHECK_EXC_MATCH      
+ 212: POP_JUMP_FORWARD_IF_FALSE to 220
+ 214: POP_TOP              
+ 216: POP_EXCEPT           
+ 218: JUMP_FORWARD         to 228
+ 220: RERAISE              
+ 222: COPY                 
+ 224: POP_EXCEPT           
+ 226: RERAISE              
+ 228: LOAD_CONST           0
+ 230: LOAD_CONST           ('HAS_SNI', 'HAS_ECDH', 'HAS_NPN', 'HAS_ALPN', 'HAS_SSLv2', 'HAS_SSLv3', 'HAS_TLSv1', 'HAS_TLSv1_1', 'HAS_TLSv1_2', 'HAS_TLSv1_3')
+ 232: IMPORT_NAME          _ssl
+ 234: IMPORT_FROM          HAS_SNI
+ 236: STORE_NAME           HAS_SNI
+ 238: IMPORT_FROM          HAS_ECDH
+ 240: STORE_NAME           HAS_ECDH
+ 242: IMPORT_FROM          HAS_NPN
+ 244: STORE_NAME           HAS_NPN
+ 246: IMPORT_FROM          HAS_ALPN
+ 248: STORE_NAME           HAS_ALPN
+ 250: IMPORT_FROM          HAS_SSLv2
+ 252: STORE_NAME           HAS_SSLv2
+ 254: IMPORT_FROM          HAS_SSLv3
+ 256: STORE_NAME           HAS_SSLv3
+ 258: IMPORT_FROM          HAS_TLSv1
+ 260: STORE_NAME           HAS_TLSv1
+ 262: IMPORT_FROM          HAS_TLSv1_1
+ 264: STORE_NAME           HAS_TLSv1_1
+ 266: IMPORT_FROM          HAS_TLSv1_2
+ 268: STORE_NAME           HAS_TLSv1_2
+ 270: IMPORT_FROM          HAS_TLSv1_3
+ 272: STORE_NAME           HAS_TLSv1_3
+ 274: POP_TOP              
+ 276: LOAD_CONST           0
+ 278: LOAD_CONST           ('_DEFAULT_CIPHERS', '_OPENSSL_API_VERSION')
+ 280: IMPORT_NAME          _ssl
+ 282: IMPORT_FROM          _DEFAULT_CIPHERS
+ 284: STORE_NAME           _DEFAULT_CIPHERS
+ 286: IMPORT_FROM          _OPENSSL_API_VERSION
+ 288: STORE_NAME           _OPENSSL_API_VERSION
+ 290: POP_TOP              
+ 292: PUSH_NULL            
+ 294: LOAD_NAME            _IntEnum
+ 296: LOAD_ATTR            _convert_
+ 306: LOAD_CONST           '_SSLMethod'
+ 308: LOAD_NAME            __name__
+ 310: LOAD_CONST           <code object <lambda> at 0x000002406945F000, file "ssl.py", line 125>
+ 312: MAKE_FUNCTION        
+ 314: LOAD_NAME            _ssl
+ 316: KW_NAMES             
+ 318: PRECALL              
+ 322: CALL                 
+ 332: POP_TOP              
+ 334: PUSH_NULL            
+ 336: LOAD_NAME            _IntFlag
+ 338: LOAD_ATTR            _convert_
+ 348: LOAD_CONST           'Options'
+ 350: LOAD_NAME            __name__
+ 352: LOAD_CONST           <code object <lambda> at 0x000002406945D7A0, file "ssl.py", line 130>
+ 354: MAKE_FUNCTION        
+ 356: LOAD_NAME            _ssl
+ 358: KW_NAMES             
+ 360: PRECALL              
+ 364: CALL                 
+ 374: POP_TOP              
+ 376: PUSH_NULL            
+ 378: LOAD_NAME            _IntEnum
+ 380: LOAD_ATTR            _convert_
+ 390: LOAD_CONST           'AlertDescription'
+ 392: LOAD_NAME            __name__
+ 394: LOAD_CONST           <code object <lambda> at 0x000002406945EA60, file "ssl.py", line 135>
+ 396: MAKE_FUNCTION        
+ 398: LOAD_NAME            _ssl
+ 400: KW_NAMES             
+ 402: PRECALL              
+ 406: CALL                 
+ 416: POP_TOP              
+ 418: PUSH_NULL            
+ 420: LOAD_NAME            _IntEnum
+ 422: LOAD_ATTR            _convert_
+ 432: LOAD_CONST           'SSLErrorNumber'
+ 434: LOAD_NAME            __name__
+ 436: LOAD_CONST           <code object <lambda> at 0x000002406945D2F0, file "ssl.py", line 140>
+ 438: MAKE_FUNCTION        
+ 440: LOAD_NAME            _ssl
+ 442: KW_NAMES             
+ 444: PRECALL              
+ 448: CALL                 
+ 458: POP_TOP              
+ 460: PUSH_NULL            
+ 462: LOAD_NAME            _IntFlag
+ 464: LOAD_ATTR            _convert_
+ 474: LOAD_CONST           'VerifyFlags'
+ 476: LOAD_NAME            __name__
+ 478: LOAD_CONST           <code object <lambda> at 0x000002406945F690, file "ssl.py", line 145>
+ 480: MAKE_FUNCTION        
+ 482: LOAD_NAME            _ssl
+ 484: KW_NAMES             
+ 486: PRECALL              
+ 490: CALL                 
+ 500: POP_TOP              
+ 502: PUSH_NULL            
+ 504: LOAD_NAME            _IntEnum
+ 506: LOAD_ATTR            _convert_
+ 516: LOAD_CONST           'VerifyMode'
+ 518: LOAD_NAME            __name__
+ 520: LOAD_CONST           <code object <lambda> at 0x000002406945E970, file "ssl.py", line 150>
+ 522: MAKE_FUNCTION        
+ 524: LOAD_NAME            _ssl
+ 526: KW_NAMES             
+ 528: PRECALL              
+ 532: CALL                 
+ 542: POP_TOP              
+ 544: LOAD_NAME            _SSLMethod
+ 546: LOAD_ATTR            PROTOCOL_TLS
+ 556: COPY                 
+ 558: STORE_NAME           PROTOCOL_SSLv23
+ 560: LOAD_NAME            _SSLMethod
+ 562: STORE_ATTR           PROTOCOL_SSLv23
+ 572: LOAD_CONST           <code object <dictcomp> at 0x0000024069465DF0, file "ssl.py", line 154>
+ 574: MAKE_FUNCTION        
+ 576: LOAD_NAME            _SSLMethod
+ 578: LOAD_ATTR            __members__
+ 588: LOAD_METHOD          items
+ 610: PRECALL              
+ 614: CALL                 
+ 624: GET_ITER             
+ 626: PRECALL              
+ 630: CALL                 
+ 640: STORE_NAME           _PROTOCOL_NAMES
+ 642: PUSH_NULL            
+ 644: LOAD_NAME            getattr
+ 646: LOAD_NAME            _SSLMethod
+ 648: LOAD_CONST           'PROTOCOL_SSLv2'
+ 650: LOAD_CONST           None
+ 652: PRECALL              
+ 656: CALL                 
+ 666: STORE_NAME           _SSLv2_IF_EXISTS
+ 668: PUSH_NULL            
+ 670: LOAD_NAME            _simple_enum
+ 672: LOAD_NAME            _IntEnum
+ 674: PRECALL              
+ 678: CALL                 
+ 688: PUSH_NULL            
+ 690: LOAD_BUILD_CLASS     
+ 692: LOAD_CONST           <code object TLSVersion at 0x00000240693D2170, file "ssl.py", line 159>
+ 694: MAKE_FUNCTION        
+ 696: LOAD_CONST           'TLSVersion'
+ 698: PRECALL              
+ 702: CALL                 
+ 712: PRECALL              
+ 716: CALL                 
+ 726: STORE_NAME           TLSVersion
+ 728: PUSH_NULL            
+ 730: LOAD_NAME            _simple_enum
+ 732: LOAD_NAME            _IntEnum
+ 734: PRECALL              
+ 738: CALL                 
+ 748: PUSH_NULL            
+ 750: LOAD_BUILD_CLASS     
+ 752: LOAD_CONST           <code object _TLSContentType at 0x000002406945FC30, file "ssl.py", line 170>
+ 754: MAKE_FUNCTION        
+ 756: LOAD_CONST           '_TLSContentType'
+ 758: PRECALL              
+ 762: CALL                 
+ 772: PRECALL              
+ 776: CALL                 
+ 786: STORE_NAME           _TLSContentType
+ 788: PUSH_NULL            
+ 790: LOAD_NAME            _simple_enum
+ 792: LOAD_NAME            _IntEnum
+ 794: PRECALL              
+ 798: CALL                 
+ 808: PUSH_NULL            
+ 810: LOAD_BUILD_CLASS     
+ 812: LOAD_CONST           <code object _TLSAlertType at 0x00000240691C05B0, file "ssl.py", line 185>
+ 814: MAKE_FUNCTION        
+ 816: LOAD_CONST           '_TLSAlertType'
+ 818: PRECALL              
+ 822: CALL                 
+ 832: PRECALL              
+ 836: CALL                 
+ 846: STORE_NAME           _TLSAlertType
+ 848: PUSH_NULL            
+ 850: LOAD_NAME            _simple_enum
+ 852: LOAD_NAME            _IntEnum
+ 854: PRECALL              
+ 858: CALL                 
+ 868: PUSH_NULL            
+ 870: LOAD_BUILD_CLASS     
+ 872: LOAD_CONST           <code object _TLSMessageType at 0x00000240693D2D50, file "ssl.py", line 227>
+ 874: MAKE_FUNCTION        
+ 876: LOAD_CONST           '_TLSMessageType'
+ 878: PRECALL              
+ 882: CALL                 
+ 892: PRECALL              
+ 896: CALL                 
+ 906: STORE_NAME           _TLSMessageType
+ 908: LOAD_NAME            sys
+ 910: LOAD_ATTR            platform
+ 920: LOAD_CONST           'win32'
+ 922: COMPARE_OP           ==
+ 928: POP_JUMP_FORWARD_IF_FALSE to 946
+ 930: LOAD_CONST           0
+ 932: LOAD_CONST           ('enum_certificates', 'enum_crls')
+ 934: IMPORT_NAME          _ssl
+ 936: IMPORT_FROM          enum_certificates
+ 938: STORE_NAME           enum_certificates
+ 940: IMPORT_FROM          enum_crls
+ 942: STORE_NAME           enum_crls
+ 944: POP_TOP              
+ 946: LOAD_CONST           0
+ 948: LOAD_CONST           ('socket', 'SOCK_STREAM', 'create_connection')
+ 950: IMPORT_NAME          socket
+ 952: IMPORT_FROM          socket
+ 954: STORE_NAME           socket
+ 956: IMPORT_FROM          SOCK_STREAM
+ 958: STORE_NAME           SOCK_STREAM
+ 960: IMPORT_FROM          create_connection
+ 962: STORE_NAME           create_connection
+ 964: POP_TOP              
+ 966: LOAD_CONST           0
+ 968: LOAD_CONST           ('SOL_SOCKET', 'SO_TYPE', '_GLOBAL_DEFAULT_TIMEOUT')
+ 970: IMPORT_NAME          socket
+ 972: IMPORT_FROM          SOL_SOCKET
+ 974: STORE_NAME           SOL_SOCKET
+ 976: IMPORT_FROM          SO_TYPE
+ 978: STORE_NAME           SO_TYPE
+ 980: IMPORT_FROM          _GLOBAL_DEFAULT_TIMEOUT
+ 982: STORE_NAME           _GLOBAL_DEFAULT_TIMEOUT
+ 984: POP_TOP              
+ 986: LOAD_CONST           0
+ 988: LOAD_CONST           None
+ 990: IMPORT_NAME          socket
+ 992: STORE_NAME           _socket
+ 994: LOAD_CONST           0
+ 996: LOAD_CONST           None
+ 998: IMPORT_NAME          base64
+1000: STORE_NAME           base64
+1002: LOAD_CONST           0
+1004: LOAD_CONST           None
+1006: IMPORT_NAME          errno
+1008: STORE_NAME           errno
+1010: LOAD_CONST           0
+1012: LOAD_CONST           None
+1014: IMPORT_NAME          warnings
+1016: STORE_NAME           warnings
+1018: LOAD_NAME            OSError
+1020: STORE_NAME           socket_error
+1022: LOAD_CONST           'tls-unique'
+1024: BUILD_LIST           
+1026: STORE_NAME           CHANNEL_BINDING_TYPES
+1028: PUSH_NULL            
+1030: LOAD_NAME            hasattr
+1032: LOAD_NAME            _ssl
+1034: LOAD_CONST           'HOSTFLAG_NEVER_CHECK_SUBJECT'
+1036: PRECALL              
+1040: CALL                 
+1050: STORE_NAME           HAS_NEVER_CHECK_COMMON_NAME
+1052: LOAD_NAME            _DEFAULT_CIPHERS
+1054: STORE_NAME           _RESTRICTED_SERVER_CIPHERS
+1056: LOAD_NAME            SSLCertVerificationError
+1058: STORE_NAME           CertificateError
+1060: LOAD_CONST           <code object _dnsname_match at 0x000002406952CBA0, file "ssl.py", line 280>
+1062: MAKE_FUNCTION        
+1064: STORE_NAME           _dnsname_match
+1066: LOAD_CONST           <code object _inet_paton at 0x0000024068DA7150, file "ssl.py", line 329>
+1068: MAKE_FUNCTION        
+1070: STORE_NAME           _inet_paton
+1072: LOAD_CONST           <code object _ipaddress_match at 0x000002406944B330, file "ssl.py", line 364>
+1074: MAKE_FUNCTION        
+1076: STORE_NAME           _ipaddress_match
+1078: LOAD_CONST           <code object match_hostname at 0x0000024068D3EB50, file "ssl.py", line 376>
+1080: MAKE_FUNCTION        
+1082: STORE_NAME           match_hostname
+1084: PUSH_NULL            
+1086: LOAD_NAME            namedtuple
+1088: LOAD_CONST           'DefaultVerifyPaths'
+1090: LOAD_CONST           'cafile capath openssl_cafile_env openssl_cafile openssl_capath_env openssl_capath'
+1092: PRECALL              
+1096: CALL                 
+1106: STORE_NAME           DefaultVerifyPaths
+1108: LOAD_CONST           <code object get_default_verify_paths at 0x0000024068DB5390, file "ssl.py", line 442>
+1110: MAKE_FUNCTION        
+1112: STORE_NAME           get_default_verify_paths
+1114: PUSH_NULL            
+1116: LOAD_BUILD_CLASS     
+1118: LOAD_CONST           <code object _ASN1Object at 0x000002406941B2D0, file "ssl.py", line 456>
+1120: MAKE_FUNCTION        
+1122: LOAD_CONST           '_ASN1Object'
+1124: PUSH_NULL            
+1126: LOAD_NAME            namedtuple
+1128: LOAD_CONST           '_ASN1Object'
+1130: LOAD_CONST           'nid shortname longname oid'
+1132: PRECALL              
+1136: CALL                 
+1146: PRECALL              
+1150: CALL                 
+1160: STORE_NAME           _ASN1Object
+1162: PUSH_NULL            
+1164: LOAD_BUILD_CLASS     
+1166: LOAD_CONST           <code object Purpose at 0x0000024069467C90, file "ssl.py", line 477>
+1168: MAKE_FUNCTION        
+1170: LOAD_CONST           'Purpose'
+1172: LOAD_NAME            _ASN1Object
+1174: LOAD_NAME            _Enum
+1176: PRECALL              
+1180: CALL                 
+1190: STORE_NAME           Purpose
+1192: PUSH_NULL            
+1194: LOAD_BUILD_CLASS     
+1196: LOAD_CONST           <code object SSLContext at 0x000002406952D590, file "ssl.py", line 484>
+1198: MAKE_FUNCTION        
+1200: LOAD_CONST           'SSLContext'
+1202: LOAD_NAME            _SSLContext
+1204: PRECALL              
+1208: CALL                 
+1218: STORE_NAME           SSLContext
+1220: LOAD_NAME            Purpose
+1222: LOAD_ATTR            SERVER_AUTH
+1232: BUILD_TUPLE          
+1234: LOAD_CONST           None
+1236: LOAD_CONST           None
+1238: LOAD_CONST           None
+1240: LOAD_CONST           ('cafile', 'capath', 'cadata')
+1242: BUILD_CONST_KEY_MAP  
+1244: LOAD_CONST           <code object create_default_context at 0x0000024068BE4BC0, file "ssl.py", line 745>
+1246: MAKE_FUNCTION        defaults, kwdefaults
+1248: STORE_NAME           create_default_context
+1250: LOAD_CONST           (None,)
+1252: LOAD_NAME            CERT_NONE
+1254: LOAD_CONST           False
+1256: LOAD_NAME            Purpose
+1258: LOAD_ATTR            SERVER_AUTH
+1268: LOAD_CONST           None
+1270: LOAD_CONST           None
+1272: LOAD_CONST           None
+1274: LOAD_CONST           None
+1276: LOAD_CONST           None
+1278: LOAD_CONST           ('cert_reqs', 'check_hostname', 'purpose', 'certfile', 'keyfile', 'cafile', 'capath', 'cadata')
+1280: BUILD_CONST_KEY_MAP  
+1282: LOAD_CONST           <code object _create_unverified_context at 0x00000240663465B0, file "ssl.py", line 783>
+1284: MAKE_FUNCTION        defaults, kwdefaults
+1286: STORE_NAME           _create_unverified_context
+1288: LOAD_NAME            create_default_context
+1290: STORE_NAME           _create_default_https_context
+1292: LOAD_NAME            _create_unverified_context
+1294: STORE_NAME           _create_stdlib_context
+1296: PUSH_NULL            
+1298: LOAD_BUILD_CLASS     
+1300: LOAD_CONST           <code object SSLObject at 0x0000024069498230, file "ssl.py", line 845>
+1302: MAKE_FUNCTION        
+1304: LOAD_CONST           'SSLObject'
+1306: PRECALL              
+1310: CALL                 
+1320: STORE_NAME           SSLObject
+1322: LOAD_CONST           <code object _sslcopydoc at 0x000002406944A9A0, file "ssl.py", line 1000>
+1324: MAKE_FUNCTION        
+1326: STORE_NAME           _sslcopydoc
+1328: PUSH_NULL            
+1330: LOAD_BUILD_CLASS     
+1332: LOAD_CONST           <code object SSLSocket at 0x0000024068C2A5A0, file "ssl.py", line 1006>
+1334: MAKE_FUNCTION        
+1336: LOAD_CONST           'SSLSocket'
+1338: LOAD_NAME            socket
+1340: PRECALL              
+1344: CALL                 
+1354: STORE_NAME           SSLSocket
+1356: LOAD_NAME            SSLSocket
+1358: LOAD_NAME            SSLContext
+1360: STORE_ATTR           sslsocket_class
+1370: LOAD_NAME            SSLObject
+1372: LOAD_NAME            SSLContext
+1374: STORE_ATTR           sslobject_class
+1384: LOAD_CONST           None
+1386: LOAD_CONST           None
+1388: LOAD_CONST           False
+1390: LOAD_NAME            CERT_NONE
+1392: LOAD_NAME            PROTOCOL_TLS
+1394: LOAD_CONST           None
+1396: LOAD_CONST           True
+1398: LOAD_CONST           True
+1400: LOAD_CONST           None
+1402: BUILD_TUPLE          
+1404: LOAD_CONST           <code object wrap_socket at 0x0000024068C8EED0, file "ssl.py", line 1455>
+1406: MAKE_FUNCTION        defaults
+1408: STORE_NAME           wrap_socket
+1410: LOAD_CONST           <code object cert_time_to_seconds at 0x0000024069366AD0, file "ssl.py", line 1487>
+1412: MAKE_FUNCTION        
+1414: STORE_NAME           cert_time_to_seconds
+1416: LOAD_CONST           '-----BEGIN CERTIFICATE-----'
+1418: STORE_NAME           PEM_HEADER
+1420: LOAD_CONST           '-----END CERTIFICATE-----'
+1422: STORE_NAME           PEM_FOOTER
+1424: LOAD_CONST           <code object DER_cert_to_PEM_cert at 0x00000240691DB120, file "ssl.py", line 1520>
+1426: MAKE_FUNCTION        
+1428: STORE_NAME           DER_cert_to_PEM_cert
+1430: LOAD_CONST           <code object PEM_cert_to_DER_cert at 0x0000024068DA73D0, file "ssl.py", line 1530>
+1432: MAKE_FUNCTION        
+1434: STORE_NAME           PEM_cert_to_DER_cert
+1436: LOAD_NAME            PROTOCOL_TLS_CLIENT
+1438: LOAD_CONST           None
+1440: LOAD_NAME            _GLOBAL_DEFAULT_TIMEOUT
+1442: BUILD_TUPLE          
+1444: LOAD_CONST           <code object get_server_certificate at 0x0000024068E93B90, file "ssl.py", line 1543>
+1446: MAKE_FUNCTION        defaults
+1448: STORE_NAME           get_server_certificate
+1450: LOAD_CONST           <code object get_protocol_name at 0x000002406945DA70, file "ssl.py", line 1565>
+1452: MAKE_FUNCTION        
+1454: STORE_NAME           get_protocol_name
+1456: LOAD_CONST           None
+1458: RETURN_VALUE         

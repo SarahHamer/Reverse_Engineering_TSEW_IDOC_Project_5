@@ -1,0 +1,17 @@
+# Disassembly for threading.Barrier.broken
+# From module file: threading
+
+## co_consts:
+('Return True if the barrier is in a broken state.', -2)
+
+## co_names:
+('_state',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _state
+  14: LOAD_CONST           -2
+  16: COMPARE_OP           ==
+  22: RETURN_VALUE         

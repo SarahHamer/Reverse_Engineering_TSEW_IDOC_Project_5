@@ -1,0 +1,219 @@
+# Disassembly for inspect.getmodule
+# From module file: inspect
+
+## co_consts:
+('Return the module an object was defined in, or None if not found.', '__module__', None, '__file__', '__main__', '__name__', 'builtins')
+
+## co_names:
+('ismodule', 'hasattr', 'sys', 'modules', 'get', '__module__', 'modulesbyfile', 'getabsfile', 'TypeError', 'FileNotFoundError', 'copy', 'items', '__file__', '_filesbymodname', '__name__', 'os', 'path', 'realpath', 'getattr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + ismodule
+  14: LOAD_FAST            object
+  16: PRECALL              
+  20: CALL                 
+  30: POP_JUMP_FORWARD_IF_FALSE to 36
+  32: LOAD_FAST            object
+  34: RETURN_VALUE         
+  36: LOAD_GLOBAL          NULL + hasattr
+  48: LOAD_FAST            object
+  50: LOAD_CONST           '__module__'
+  52: PRECALL              
+  56: CALL                 
+  66: POP_JUMP_FORWARD_IF_FALSE to 140
+  68: LOAD_GLOBAL          sys
+  80: LOAD_ATTR            modules
+  90: LOAD_METHOD          get
+ 112: LOAD_FAST            object
+ 114: LOAD_ATTR            __module__
+ 124: PRECALL              
+ 128: CALL                 
+ 138: RETURN_VALUE         
+ 140: LOAD_FAST            _filename
+ 142: POP_JUMP_FORWARD_IF_NONE to 246
+ 144: LOAD_FAST            _filename
+ 146: LOAD_GLOBAL          modulesbyfile
+ 158: CONTAINS_OP          
+ 160: POP_JUMP_FORWARD_IF_FALSE to 246
+ 162: LOAD_GLOBAL          sys
+ 174: LOAD_ATTR            modules
+ 184: LOAD_METHOD          get
+ 206: LOAD_GLOBAL          modulesbyfile
+ 218: LOAD_FAST            _filename
+ 220: BINARY_SUBSCR        
+ 230: PRECALL              
+ 234: CALL                 
+ 244: RETURN_VALUE         
+ 246: NOP                  
+ 248: LOAD_GLOBAL          NULL + getabsfile
+ 260: LOAD_FAST            object
+ 262: LOAD_FAST            _filename
+ 264: PRECALL              
+ 268: CALL                 
+ 278: STORE_FAST           file
+ 280: JUMP_FORWARD         to 330
+ 282: PUSH_EXC_INFO        
+ 284: LOAD_GLOBAL          TypeError
+ 296: LOAD_GLOBAL          FileNotFoundError
+ 308: BUILD_TUPLE          
+ 310: CHECK_EXC_MATCH      
+ 312: POP_JUMP_FORWARD_IF_FALSE to 322
+ 314: POP_TOP              
+ 316: POP_EXCEPT           
+ 318: LOAD_CONST           None
+ 320: RETURN_VALUE         
+ 322: RERAISE              
+ 324: COPY                 
+ 326: POP_EXCEPT           
+ 328: RERAISE              
+ 330: LOAD_FAST            file
+ 332: LOAD_GLOBAL          modulesbyfile
+ 344: CONTAINS_OP          
+ 346: POP_JUMP_FORWARD_IF_FALSE to 432
+ 348: LOAD_GLOBAL          sys
+ 360: LOAD_ATTR            modules
+ 370: LOAD_METHOD          get
+ 392: LOAD_GLOBAL          modulesbyfile
+ 404: LOAD_FAST            file
+ 406: BINARY_SUBSCR        
+ 416: PRECALL              
+ 420: CALL                 
+ 430: RETURN_VALUE         
+ 432: LOAD_GLOBAL          sys
+ 444: LOAD_ATTR            modules
+ 454: LOAD_METHOD          copy
+ 476: PRECALL              
+ 480: CALL                 
+ 490: LOAD_METHOD          items
+ 512: PRECALL              
+ 516: CALL                 
+ 526: GET_ITER             
+ 528: FOR_ITER             to 838
+ 530: UNPACK_SEQUENCE      
+ 534: STORE_FAST           modname
+ 536: STORE_FAST           module
+ 538: LOAD_GLOBAL          NULL + ismodule
+ 550: LOAD_FAST            module
+ 552: PRECALL              
+ 556: CALL                 
+ 566: POP_JUMP_FORWARD_IF_FALSE to 836
+ 568: LOAD_GLOBAL          NULL + hasattr
+ 580: LOAD_FAST            module
+ 582: LOAD_CONST           '__file__'
+ 584: PRECALL              
+ 588: CALL                 
+ 598: POP_JUMP_FORWARD_IF_FALSE to 836
+ 600: LOAD_FAST            module
+ 602: LOAD_ATTR            __file__
+ 612: STORE_FAST           f
+ 614: LOAD_FAST            f
+ 616: LOAD_GLOBAL          _filesbymodname
+ 628: LOAD_METHOD          get
+ 650: LOAD_FAST            modname
+ 652: LOAD_CONST           None
+ 654: PRECALL              
+ 658: CALL                 
+ 668: COMPARE_OP           ==
+ 674: POP_JUMP_FORWARD_IF_FALSE to 678
+ 676: JUMP_BACKWARD        to 528
+ 678: LOAD_FAST            f
+ 680: LOAD_GLOBAL          _filesbymodname
+ 692: LOAD_FAST            modname
+ 694: STORE_SUBSCR         
+ 698: LOAD_GLOBAL          NULL + getabsfile
+ 710: LOAD_FAST            module
+ 712: PRECALL              
+ 716: CALL                 
+ 726: STORE_FAST           f
+ 728: LOAD_FAST            module
+ 730: LOAD_ATTR            __name__
+ 740: COPY                 
+ 742: LOAD_GLOBAL          modulesbyfile
+ 754: LOAD_FAST            f
+ 756: STORE_SUBSCR         
+ 760: LOAD_GLOBAL          modulesbyfile
+ 772: LOAD_GLOBAL          os
+ 784: LOAD_ATTR            path
+ 794: LOAD_METHOD          realpath
+ 816: LOAD_FAST            f
+ 818: PRECALL              
+ 822: CALL                 
+ 832: STORE_SUBSCR         
+ 836: JUMP_BACKWARD        to 528
+ 838: LOAD_FAST            file
+ 840: LOAD_GLOBAL          modulesbyfile
+ 852: CONTAINS_OP          
+ 854: POP_JUMP_FORWARD_IF_FALSE to 940
+ 856: LOAD_GLOBAL          sys
+ 868: LOAD_ATTR            modules
+ 878: LOAD_METHOD          get
+ 900: LOAD_GLOBAL          modulesbyfile
+ 912: LOAD_FAST            file
+ 914: BINARY_SUBSCR        
+ 924: PRECALL              
+ 928: CALL                 
+ 938: RETURN_VALUE         
+ 940: LOAD_GLOBAL          sys
+ 952: LOAD_ATTR            modules
+ 962: LOAD_CONST           '__main__'
+ 964: BINARY_SUBSCR        
+ 974: STORE_FAST           main
+ 976: LOAD_GLOBAL          NULL + hasattr
+ 988: LOAD_FAST            object
+ 990: LOAD_CONST           '__name__'
+ 992: PRECALL              
+ 996: CALL                 
+1006: POP_JUMP_FORWARD_IF_TRUE to 1012
+1008: LOAD_CONST           None
+1010: RETURN_VALUE         
+1012: LOAD_GLOBAL          NULL + hasattr
+1024: LOAD_FAST            main
+1026: LOAD_FAST            object
+1028: LOAD_ATTR            __name__
+1038: PRECALL              
+1042: CALL                 
+1052: POP_JUMP_FORWARD_IF_FALSE to 1108
+1054: LOAD_GLOBAL          NULL + getattr
+1066: LOAD_FAST            main
+1068: LOAD_FAST            object
+1070: LOAD_ATTR            __name__
+1080: PRECALL              
+1084: CALL                 
+1094: STORE_FAST           mainobject
+1096: LOAD_FAST            mainobject
+1098: LOAD_FAST            object
+1100: IS_OP                
+1102: POP_JUMP_FORWARD_IF_FALSE to 1108
+1104: LOAD_FAST            main
+1106: RETURN_VALUE         
+1108: LOAD_GLOBAL          sys
+1120: LOAD_ATTR            modules
+1130: LOAD_CONST           'builtins'
+1132: BINARY_SUBSCR        
+1142: STORE_FAST           builtin
+1144: LOAD_GLOBAL          NULL + hasattr
+1156: LOAD_FAST            builtin
+1158: LOAD_FAST            object
+1160: LOAD_ATTR            __name__
+1170: PRECALL              
+1174: CALL                 
+1184: POP_JUMP_FORWARD_IF_FALSE to 1240
+1186: LOAD_GLOBAL          NULL + getattr
+1198: LOAD_FAST            builtin
+1200: LOAD_FAST            object
+1202: LOAD_ATTR            __name__
+1212: PRECALL              
+1216: CALL                 
+1226: STORE_FAST           builtinobject
+1228: LOAD_FAST            builtinobject
+1230: LOAD_FAST            object
+1232: IS_OP                
+1234: POP_JUMP_FORWARD_IF_FALSE to 1244
+1236: LOAD_FAST            builtin
+1238: RETURN_VALUE         
+1240: LOAD_CONST           None
+1242: RETURN_VALUE         
+1244: LOAD_CONST           None
+1246: RETURN_VALUE         

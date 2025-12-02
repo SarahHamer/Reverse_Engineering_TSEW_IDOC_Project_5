@@ -1,0 +1,383 @@
+# Disassembly for subprocess
+# From module file: subprocess
+
+## co_consts:
+('Subprocesses with accessible I/O streams\n\nThis module allows you to spawn processes, connect to their\ninput/output/error pipes, and obtain their return codes.\n\nFor a complete description of this module see the Python documentation.\n\nMain API\n========\nrun(...): Runs a command, waits for it to complete, then returns a\n          CompletedProcess instance.\nPopen(...): A class for flexibly executing a command in a new process\n\nConstants\n---------\nDEVNULL: Special value that indicates that os.devnull should be used\nPIPE:    Special value that indicates a pipe should be created\nSTDOUT:  Special value that indicates that stderr should go to stdout\n\n\nOlder API\n=========\ncall(...): Runs a command, waits for it to complete, then returns\n    the return code.\ncheck_call(...): Same as call() but raises CalledProcessError()\n    if return code is not 0\ncheck_output(...): Same as check_call() but returns the contents of\n    stdout instead of a return code\ngetoutput(...): Runs a command in the shell, waits for it to complete,\n    then returns the output\ngetstatusoutput(...): Runs a command in the shell, waits for it to complete,\n    then returns a (exitcode, output) tuple\n', 0, None, ('monotonic',), ('Popen', 'PIPE', 'STDOUT', 'call', 'check_call', 'getstatusoutput', 'getoutput', 'check_output', 'run', 'CalledProcessError', 'DEVNULL', 'SubprocessError', 'TimeoutExpired', 'CompletedProcess'), True, False, frozenset({'wasi', 'emscripten'}), ('CREATE_NEW_CONSOLE', 'CREATE_NEW_PROCESS_GROUP', 'STD_INPUT_HANDLE', 'STD_OUTPUT_HANDLE', 'STD_ERROR_HANDLE', 'SW_HIDE', 'STARTF_USESTDHANDLES', 'STARTF_USESHOWWINDOW', 'ABOVE_NORMAL_PRIORITY_CLASS', 'BELOW_NORMAL_PRIORITY_CLASS', 'HIGH_PRIORITY_CLASS', 'IDLE_PRIORITY_CLASS', 'NORMAL_PRIORITY_CLASS', 'REALTIME_PRIORITY_CLASS', 'CREATE_NO_WINDOW', 'DETACHED_PROCESS', 'CREATE_DEFAULT_ERROR_MODE', 'CREATE_BREAKAWAY_FROM_JOB'), ('CREATE_NEW_CONSOLE', 'CREATE_NEW_PROCESS_GROUP', 'STD_INPUT_HANDLE', 'STD_OUTPUT_HANDLE', 'STD_ERROR_HANDLE', 'SW_HIDE', 'STARTF_USESTDHANDLES', 'STARTF_USESHOWWINDOW', 'STARTUPINFO', 'ABOVE_NORMAL_PRIORITY_CLASS', 'BELOW_NORMAL_PRIORITY_CLASS', 'HIGH_PRIORITY_CLASS', 'IDLE_PRIORITY_CLASS', 'NORMAL_PRIORITY_CLASS', 'REALTIME_PRIORITY_CLASS', 'CREATE_NO_WINDOW', 'DETACHED_PROCESS', 'CREATE_DEFAULT_ERROR_MODE', 'CREATE_BREAKAWAY_FROM_JOB'), ('fork_exec',), <code object SubprocessError at 0x0000024069495210, file "subprocess.py", line 123>, 'SubprocessError', <code object CalledProcessError at 0x000002406944B330, file "subprocess.py", line 126>, 'CalledProcessError', <code object TimeoutExpired at 0x000002406944A010, file "subprocess.py", line 163>, 'TimeoutExpired', <code object STARTUPINFO at 0x000002406945F3C0, file "subprocess.py", line 192>, 'STARTUPINFO', <code object Handle at 0x000002406945FE10, file "subprocess.py", line 215>, 'Handle', 'PIPE_BUF', 512, 'PollSelector', <code object _cleanup at 0x000002406943BDB0, file "subprocess.py", line 259>, <code object _cleanup at 0x000002406942CFD0, file "subprocess.py", line 268>, -1, -2, -3, <code object _optim_args_from_interpreter_flags at 0x00000240693D2630, file "subprocess.py", line 290>, <code object _args_from_interpreter_flags at 0x0000024068D5FCF0, file "subprocess.py", line 300>, <code object _text_encoding at 0x0000024069366AD0, file "subprocess.py", line 361>, ('timeout',), <code object call at 0x000002406921F840, file "subprocess.py", line 381>, <code object check_call at 0x00000240693AB5F0, file "subprocess.py", line 398>, <code object check_output at 0x000002406931FA30, file "subprocess.py", line 417>, <code object CompletedProcess at 0x00000240693EA530, file "subprocess.py", line 470>, 'CompletedProcess', ('input', 'capture_output', 'timeout', 'check'), <code object run at 0x0000024068C242C0, file "subprocess.py", line 506>, <code object list2cmdline at 0x0000024066347D50, file "subprocess.py", line 576>, ('encoding', 'errors'), <code object getstatusoutput at 0x00000240691E8AB0, file "subprocess.py", line 649>, <code object getoutput at 0x000002406945EB50, file "subprocess.py", line 681>, <code object _use_posix_spawn at 0x0000024068C30CB0, file "subprocess.py", line 695>, <code object Popen at 0x0000024068C06FF0, file "subprocess.py", line 749>, 'Popen')
+
+## co_names:
+('__doc__', 'builtins', 'errno', 'io', 'locale', 'os', 'time', 'signal', 'sys', 'threading', 'warnings', 'contextlib', 'monotonic', '_time', 'types', 'fcntl', 'ImportError', '__all__', 'msvcrt', '_mswindows', 'ModuleNotFoundError', 'platform', '_can_fork_exec', '_winapi', 'CREATE_NEW_CONSOLE', 'CREATE_NEW_PROCESS_GROUP', 'STD_INPUT_HANDLE', 'STD_OUTPUT_HANDLE', 'STD_ERROR_HANDLE', 'SW_HIDE', 'STARTF_USESTDHANDLES', 'STARTF_USESHOWWINDOW', 'ABOVE_NORMAL_PRIORITY_CLASS', 'BELOW_NORMAL_PRIORITY_CLASS', 'HIGH_PRIORITY_CLASS', 'IDLE_PRIORITY_CLASS', 'NORMAL_PRIORITY_CLASS', 'REALTIME_PRIORITY_CLASS', 'CREATE_NO_WINDOW', 'DETACHED_PROCESS', 'CREATE_DEFAULT_ERROR_MODE', 'CREATE_BREAKAWAY_FROM_JOB', 'extend', '_posixsubprocess', 'fork_exec', '_fork_exec', 'waitpid', '_waitpid', 'waitstatus_to_exitcode', '_waitstatus_to_exitcode', 'WIFSTOPPED', '_WIFSTOPPED', 'WSTOPSIG', '_WSTOPSIG', 'WNOHANG', '_WNOHANG', 'select', 'selectors', 'Exception', 'SubprocessError', 'CalledProcessError', 'TimeoutExpired', 'STARTUPINFO', 'int', 'Handle', 'getattr', '_PIPE_BUF', 'hasattr', 'PollSelector', '_PopenSelector', 'SelectSelector', '_active', '_cleanup', 'PIPE', 'STDOUT', 'DEVNULL', '_optim_args_from_interpreter_flags', '_args_from_interpreter_flags', '_text_encoding', 'call', 'check_call', 'check_output', 'object', 'CompletedProcess', 'run', 'list2cmdline', 'getstatusoutput', 'getoutput', '_use_posix_spawn', '_USE_POSIX_SPAWN', '_USE_VFORK', 'Popen')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'Subprocesses with accessible I/O streams\n\nThis module allows you to spawn processes, connect to their\ninput/output/error pipes, and obtain their return codes.\n\nFor a complete description of this module see the Python documentation.\n\nMain API\n========\nrun(...): Runs a command, waits for it to complete, then returns a\n          CompletedProcess instance.\nPopen(...): A class for flexibly executing a command in a new process\n\nConstants\n---------\nDEVNULL: Special value that indicates that os.devnull should be used\nPIPE:    Special value that indicates a pipe should be created\nSTDOUT:  Special value that indicates that stderr should go to stdout\n\n\nOlder API\n=========\ncall(...): Runs a command, waits for it to complete, then returns\n    the return code.\ncheck_call(...): Same as call() but raises CalledProcessError()\n    if return code is not 0\ncheck_output(...): Same as check_call() but returns the contents of\n    stdout instead of a return code\ngetoutput(...): Runs a command in the shell, waits for it to complete,\n    then returns the output\ngetstatusoutput(...): Runs a command in the shell, waits for it to complete,\n    then returns a (exitcode, output) tuple\n'
+   4: STORE_NAME           __doc__
+   6: LOAD_CONST           0
+   8: LOAD_CONST           None
+  10: IMPORT_NAME          builtins
+  12: STORE_NAME           builtins
+  14: LOAD_CONST           0
+  16: LOAD_CONST           None
+  18: IMPORT_NAME          errno
+  20: STORE_NAME           errno
+  22: LOAD_CONST           0
+  24: LOAD_CONST           None
+  26: IMPORT_NAME          io
+  28: STORE_NAME           io
+  30: LOAD_CONST           0
+  32: LOAD_CONST           None
+  34: IMPORT_NAME          locale
+  36: STORE_NAME           locale
+  38: LOAD_CONST           0
+  40: LOAD_CONST           None
+  42: IMPORT_NAME          os
+  44: STORE_NAME           os
+  46: LOAD_CONST           0
+  48: LOAD_CONST           None
+  50: IMPORT_NAME          time
+  52: STORE_NAME           time
+  54: LOAD_CONST           0
+  56: LOAD_CONST           None
+  58: IMPORT_NAME          signal
+  60: STORE_NAME           signal
+  62: LOAD_CONST           0
+  64: LOAD_CONST           None
+  66: IMPORT_NAME          sys
+  68: STORE_NAME           sys
+  70: LOAD_CONST           0
+  72: LOAD_CONST           None
+  74: IMPORT_NAME          threading
+  76: STORE_NAME           threading
+  78: LOAD_CONST           0
+  80: LOAD_CONST           None
+  82: IMPORT_NAME          warnings
+  84: STORE_NAME           warnings
+  86: LOAD_CONST           0
+  88: LOAD_CONST           None
+  90: IMPORT_NAME          contextlib
+  92: STORE_NAME           contextlib
+  94: LOAD_CONST           0
+  96: LOAD_CONST           ('monotonic',)
+  98: IMPORT_NAME          time
+ 100: IMPORT_FROM          monotonic
+ 102: STORE_NAME           _time
+ 104: POP_TOP              
+ 106: LOAD_CONST           0
+ 108: LOAD_CONST           None
+ 110: IMPORT_NAME          types
+ 112: STORE_NAME           types
+ 114: NOP                  
+ 116: LOAD_CONST           0
+ 118: LOAD_CONST           None
+ 120: IMPORT_NAME          fcntl
+ 122: STORE_NAME           fcntl
+ 124: JUMP_FORWARD         to 152
+ 126: PUSH_EXC_INFO        
+ 128: LOAD_NAME            ImportError
+ 130: CHECK_EXC_MATCH      
+ 132: POP_JUMP_FORWARD_IF_FALSE to 144
+ 134: POP_TOP              
+ 136: LOAD_CONST           None
+ 138: STORE_NAME           fcntl
+ 140: POP_EXCEPT           
+ 142: JUMP_FORWARD         to 152
+ 144: RERAISE              
+ 146: COPY                 
+ 148: POP_EXCEPT           
+ 150: RERAISE              
+ 152: BUILD_LIST           
+ 154: LOAD_CONST           ('Popen', 'PIPE', 'STDOUT', 'call', 'check_call', 'getstatusoutput', 'getoutput', 'check_output', 'run', 'CalledProcessError', 'DEVNULL', 'SubprocessError', 'TimeoutExpired', 'CompletedProcess')
+ 156: LIST_EXTEND          
+ 158: STORE_NAME           __all__
+ 160: NOP                  
+ 162: LOAD_CONST           0
+ 164: LOAD_CONST           None
+ 166: IMPORT_NAME          msvcrt
+ 168: STORE_NAME           msvcrt
+ 170: LOAD_CONST           True
+ 172: STORE_NAME           _mswindows
+ 174: JUMP_FORWARD         to 202
+ 176: PUSH_EXC_INFO        
+ 178: LOAD_NAME            ModuleNotFoundError
+ 180: CHECK_EXC_MATCH      
+ 182: POP_JUMP_FORWARD_IF_FALSE to 194
+ 184: POP_TOP              
+ 186: LOAD_CONST           False
+ 188: STORE_NAME           _mswindows
+ 190: POP_EXCEPT           
+ 192: JUMP_FORWARD         to 202
+ 194: RERAISE              
+ 196: COPY                 
+ 198: POP_EXCEPT           
+ 200: RERAISE              
+ 202: LOAD_NAME            sys
+ 204: LOAD_ATTR            platform
+ 214: LOAD_CONST           frozenset({'wasi', 'emscripten'})
+ 216: CONTAINS_OP          
+ 218: STORE_NAME           _can_fork_exec
+ 220: LOAD_NAME            _mswindows
+ 222: POP_JUMP_FORWARD_IF_FALSE to 360
+ 224: LOAD_CONST           0
+ 226: LOAD_CONST           None
+ 228: IMPORT_NAME          _winapi
+ 230: STORE_NAME           _winapi
+ 232: LOAD_CONST           0
+ 234: LOAD_CONST           ('CREATE_NEW_CONSOLE', 'CREATE_NEW_PROCESS_GROUP', 'STD_INPUT_HANDLE', 'STD_OUTPUT_HANDLE', 'STD_ERROR_HANDLE', 'SW_HIDE', 'STARTF_USESTDHANDLES', 'STARTF_USESHOWWINDOW', 'ABOVE_NORMAL_PRIORITY_CLASS', 'BELOW_NORMAL_PRIORITY_CLASS', 'HIGH_PRIORITY_CLASS', 'IDLE_PRIORITY_CLASS', 'NORMAL_PRIORITY_CLASS', 'REALTIME_PRIORITY_CLASS', 'CREATE_NO_WINDOW', 'DETACHED_PROCESS', 'CREATE_DEFAULT_ERROR_MODE', 'CREATE_BREAKAWAY_FROM_JOB')
+ 236: IMPORT_NAME          _winapi
+ 238: IMPORT_FROM          CREATE_NEW_CONSOLE
+ 240: STORE_NAME           CREATE_NEW_CONSOLE
+ 242: IMPORT_FROM          CREATE_NEW_PROCESS_GROUP
+ 244: STORE_NAME           CREATE_NEW_PROCESS_GROUP
+ 246: IMPORT_FROM          STD_INPUT_HANDLE
+ 248: STORE_NAME           STD_INPUT_HANDLE
+ 250: IMPORT_FROM          STD_OUTPUT_HANDLE
+ 252: STORE_NAME           STD_OUTPUT_HANDLE
+ 254: IMPORT_FROM          STD_ERROR_HANDLE
+ 256: STORE_NAME           STD_ERROR_HANDLE
+ 258: IMPORT_FROM          SW_HIDE
+ 260: STORE_NAME           SW_HIDE
+ 262: IMPORT_FROM          STARTF_USESTDHANDLES
+ 264: STORE_NAME           STARTF_USESTDHANDLES
+ 266: IMPORT_FROM          STARTF_USESHOWWINDOW
+ 268: STORE_NAME           STARTF_USESHOWWINDOW
+ 270: IMPORT_FROM          ABOVE_NORMAL_PRIORITY_CLASS
+ 272: STORE_NAME           ABOVE_NORMAL_PRIORITY_CLASS
+ 274: IMPORT_FROM          BELOW_NORMAL_PRIORITY_CLASS
+ 276: STORE_NAME           BELOW_NORMAL_PRIORITY_CLASS
+ 278: IMPORT_FROM          HIGH_PRIORITY_CLASS
+ 280: STORE_NAME           HIGH_PRIORITY_CLASS
+ 282: IMPORT_FROM          IDLE_PRIORITY_CLASS
+ 284: STORE_NAME           IDLE_PRIORITY_CLASS
+ 286: IMPORT_FROM          NORMAL_PRIORITY_CLASS
+ 288: STORE_NAME           NORMAL_PRIORITY_CLASS
+ 290: IMPORT_FROM          REALTIME_PRIORITY_CLASS
+ 292: STORE_NAME           REALTIME_PRIORITY_CLASS
+ 294: IMPORT_FROM          CREATE_NO_WINDOW
+ 296: STORE_NAME           CREATE_NO_WINDOW
+ 298: IMPORT_FROM          DETACHED_PROCESS
+ 300: STORE_NAME           DETACHED_PROCESS
+ 302: IMPORT_FROM          CREATE_DEFAULT_ERROR_MODE
+ 304: STORE_NAME           CREATE_DEFAULT_ERROR_MODE
+ 306: IMPORT_FROM          CREATE_BREAKAWAY_FROM_JOB
+ 308: STORE_NAME           CREATE_BREAKAWAY_FROM_JOB
+ 310: POP_TOP              
+ 312: LOAD_NAME            __all__
+ 314: LOAD_METHOD          extend
+ 336: BUILD_LIST           
+ 338: LOAD_CONST           ('CREATE_NEW_CONSOLE', 'CREATE_NEW_PROCESS_GROUP', 'STD_INPUT_HANDLE', 'STD_OUTPUT_HANDLE', 'STD_ERROR_HANDLE', 'SW_HIDE', 'STARTF_USESTDHANDLES', 'STARTF_USESHOWWINDOW', 'STARTUPINFO', 'ABOVE_NORMAL_PRIORITY_CLASS', 'BELOW_NORMAL_PRIORITY_CLASS', 'HIGH_PRIORITY_CLASS', 'IDLE_PRIORITY_CLASS', 'NORMAL_PRIORITY_CLASS', 'REALTIME_PRIORITY_CLASS', 'CREATE_NO_WINDOW', 'DETACHED_PROCESS', 'CREATE_DEFAULT_ERROR_MODE', 'CREATE_BREAKAWAY_FROM_JOB')
+ 340: LIST_EXTEND          
+ 342: PRECALL              
+ 346: CALL                 
+ 356: POP_TOP              
+ 358: JUMP_FORWARD         to 488
+ 360: LOAD_NAME            _can_fork_exec
+ 362: POP_JUMP_FORWARD_IF_FALSE to 448
+ 364: LOAD_CONST           0
+ 366: LOAD_CONST           ('fork_exec',)
+ 368: IMPORT_NAME          _posixsubprocess
+ 370: IMPORT_FROM          fork_exec
+ 372: STORE_NAME           _fork_exec
+ 374: POP_TOP              
+ 376: LOAD_NAME            os
+ 378: LOAD_ATTR            waitpid
+ 388: STORE_NAME           _waitpid
+ 390: LOAD_NAME            os
+ 392: LOAD_ATTR            waitstatus_to_exitcode
+ 402: STORE_NAME           _waitstatus_to_exitcode
+ 404: LOAD_NAME            os
+ 406: LOAD_ATTR            WIFSTOPPED
+ 416: STORE_NAME           _WIFSTOPPED
+ 418: LOAD_NAME            os
+ 420: LOAD_ATTR            WSTOPSIG
+ 430: STORE_NAME           _WSTOPSIG
+ 432: LOAD_NAME            os
+ 434: LOAD_ATTR            WNOHANG
+ 444: STORE_NAME           _WNOHANG
+ 446: JUMP_FORWARD         to 472
+ 448: LOAD_CONST           None
+ 450: STORE_NAME           _fork_exec
+ 452: LOAD_CONST           None
+ 454: STORE_NAME           _waitpid
+ 456: LOAD_CONST           None
+ 458: STORE_NAME           _waitstatus_to_exitcode
+ 460: LOAD_CONST           None
+ 462: STORE_NAME           _WIFSTOPPED
+ 464: LOAD_CONST           None
+ 466: STORE_NAME           _WSTOPSIG
+ 468: LOAD_CONST           None
+ 470: STORE_NAME           _WNOHANG
+ 472: LOAD_CONST           0
+ 474: LOAD_CONST           None
+ 476: IMPORT_NAME          select
+ 478: STORE_NAME           select
+ 480: LOAD_CONST           0
+ 482: LOAD_CONST           None
+ 484: IMPORT_NAME          selectors
+ 486: STORE_NAME           selectors
+ 488: PUSH_NULL            
+ 490: LOAD_BUILD_CLASS     
+ 492: LOAD_CONST           <code object SubprocessError at 0x0000024069495210, file "subprocess.py", line 123>
+ 494: MAKE_FUNCTION        
+ 496: LOAD_CONST           'SubprocessError'
+ 498: LOAD_NAME            Exception
+ 500: PRECALL              
+ 504: CALL                 
+ 514: STORE_NAME           SubprocessError
+ 516: PUSH_NULL            
+ 518: LOAD_BUILD_CLASS     
+ 520: LOAD_CONST           <code object CalledProcessError at 0x000002406944B330, file "subprocess.py", line 126>
+ 522: MAKE_FUNCTION        
+ 524: LOAD_CONST           'CalledProcessError'
+ 526: LOAD_NAME            SubprocessError
+ 528: PRECALL              
+ 532: CALL                 
+ 542: STORE_NAME           CalledProcessError
+ 544: PUSH_NULL            
+ 546: LOAD_BUILD_CLASS     
+ 548: LOAD_CONST           <code object TimeoutExpired at 0x000002406944A010, file "subprocess.py", line 163>
+ 550: MAKE_FUNCTION        
+ 552: LOAD_CONST           'TimeoutExpired'
+ 554: LOAD_NAME            SubprocessError
+ 556: PRECALL              
+ 560: CALL                 
+ 570: STORE_NAME           TimeoutExpired
+ 572: LOAD_NAME            _mswindows
+ 574: POP_JUMP_FORWARD_IF_FALSE to 632
+ 576: PUSH_NULL            
+ 578: LOAD_BUILD_CLASS     
+ 580: LOAD_CONST           <code object STARTUPINFO at 0x000002406945F3C0, file "subprocess.py", line 192>
+ 582: MAKE_FUNCTION        
+ 584: LOAD_CONST           'STARTUPINFO'
+ 586: PRECALL              
+ 590: CALL                 
+ 600: STORE_NAME           STARTUPINFO
+ 602: PUSH_NULL            
+ 604: LOAD_BUILD_CLASS     
+ 606: LOAD_CONST           <code object Handle at 0x000002406945FE10, file "subprocess.py", line 215>
+ 608: MAKE_FUNCTION        
+ 610: LOAD_CONST           'Handle'
+ 612: LOAD_NAME            int
+ 614: PRECALL              
+ 618: CALL                 
+ 628: STORE_NAME           Handle
+ 630: JUMP_FORWARD         to 712
+ 632: PUSH_NULL            
+ 634: LOAD_NAME            getattr
+ 636: LOAD_NAME            select
+ 638: LOAD_CONST           'PIPE_BUF'
+ 640: LOAD_CONST           512
+ 642: PRECALL              
+ 646: CALL                 
+ 656: STORE_NAME           _PIPE_BUF
+ 658: PUSH_NULL            
+ 660: LOAD_NAME            hasattr
+ 662: LOAD_NAME            selectors
+ 664: LOAD_CONST           'PollSelector'
+ 666: PRECALL              
+ 670: CALL                 
+ 680: POP_JUMP_FORWARD_IF_FALSE to 698
+ 682: LOAD_NAME            selectors
+ 684: LOAD_ATTR            PollSelector
+ 694: STORE_NAME           _PopenSelector
+ 696: JUMP_FORWARD         to 712
+ 698: LOAD_NAME            selectors
+ 700: LOAD_ATTR            SelectSelector
+ 710: STORE_NAME           _PopenSelector
+ 712: LOAD_NAME            _mswindows
+ 714: POP_JUMP_FORWARD_IF_FALSE to 728
+ 716: LOAD_CONST           None
+ 718: STORE_NAME           _active
+ 720: LOAD_CONST           <code object _cleanup at 0x000002406943BDB0, file "subprocess.py", line 259>
+ 722: MAKE_FUNCTION        
+ 724: STORE_NAME           _cleanup
+ 726: JUMP_FORWARD         to 738
+ 728: BUILD_LIST           
+ 730: STORE_NAME           _active
+ 732: LOAD_CONST           <code object _cleanup at 0x000002406942CFD0, file "subprocess.py", line 268>
+ 734: MAKE_FUNCTION        
+ 736: STORE_NAME           _cleanup
+ 738: LOAD_CONST           -1
+ 740: STORE_NAME           PIPE
+ 742: LOAD_CONST           -2
+ 744: STORE_NAME           STDOUT
+ 746: LOAD_CONST           -3
+ 748: STORE_NAME           DEVNULL
+ 750: LOAD_CONST           <code object _optim_args_from_interpreter_flags at 0x00000240693D2630, file "subprocess.py", line 290>
+ 752: MAKE_FUNCTION        
+ 754: STORE_NAME           _optim_args_from_interpreter_flags
+ 756: LOAD_CONST           <code object _args_from_interpreter_flags at 0x0000024068D5FCF0, file "subprocess.py", line 300>
+ 758: MAKE_FUNCTION        
+ 760: STORE_NAME           _args_from_interpreter_flags
+ 762: LOAD_CONST           <code object _text_encoding at 0x0000024069366AD0, file "subprocess.py", line 361>
+ 764: MAKE_FUNCTION        
+ 766: STORE_NAME           _text_encoding
+ 768: LOAD_CONST           None
+ 770: LOAD_CONST           ('timeout',)
+ 772: BUILD_CONST_KEY_MAP  
+ 774: LOAD_CONST           <code object call at 0x000002406921F840, file "subprocess.py", line 381>
+ 776: MAKE_FUNCTION        kwdefaults
+ 778: STORE_NAME           call
+ 780: LOAD_CONST           <code object check_call at 0x00000240693AB5F0, file "subprocess.py", line 398>
+ 782: MAKE_FUNCTION        
+ 784: STORE_NAME           check_call
+ 786: LOAD_CONST           None
+ 788: LOAD_CONST           ('timeout',)
+ 790: BUILD_CONST_KEY_MAP  
+ 792: LOAD_CONST           <code object check_output at 0x000002406931FA30, file "subprocess.py", line 417>
+ 794: MAKE_FUNCTION        kwdefaults
+ 796: STORE_NAME           check_output
+ 798: PUSH_NULL            
+ 800: LOAD_BUILD_CLASS     
+ 802: LOAD_CONST           <code object CompletedProcess at 0x00000240693EA530, file "subprocess.py", line 470>
+ 804: MAKE_FUNCTION        
+ 806: LOAD_CONST           'CompletedProcess'
+ 808: LOAD_NAME            object
+ 810: PRECALL              
+ 814: CALL                 
+ 824: STORE_NAME           CompletedProcess
+ 826: LOAD_CONST           None
+ 828: LOAD_CONST           False
+ 830: LOAD_CONST           None
+ 832: LOAD_CONST           False
+ 834: LOAD_CONST           ('input', 'capture_output', 'timeout', 'check')
+ 836: BUILD_CONST_KEY_MAP  
+ 838: LOAD_CONST           <code object run at 0x0000024068C242C0, file "subprocess.py", line 506>
+ 840: MAKE_FUNCTION        kwdefaults
+ 842: STORE_NAME           run
+ 844: LOAD_CONST           <code object list2cmdline at 0x0000024066347D50, file "subprocess.py", line 576>
+ 846: MAKE_FUNCTION        
+ 848: STORE_NAME           list2cmdline
+ 850: LOAD_CONST           None
+ 852: LOAD_CONST           None
+ 854: LOAD_CONST           ('encoding', 'errors')
+ 856: BUILD_CONST_KEY_MAP  
+ 858: LOAD_CONST           <code object getstatusoutput at 0x00000240691E8AB0, file "subprocess.py", line 649>
+ 860: MAKE_FUNCTION        kwdefaults
+ 862: STORE_NAME           getstatusoutput
+ 864: LOAD_CONST           None
+ 866: LOAD_CONST           None
+ 868: LOAD_CONST           ('encoding', 'errors')
+ 870: BUILD_CONST_KEY_MAP  
+ 872: LOAD_CONST           <code object getoutput at 0x000002406945EB50, file "subprocess.py", line 681>
+ 874: MAKE_FUNCTION        kwdefaults
+ 876: STORE_NAME           getoutput
+ 878: LOAD_CONST           <code object _use_posix_spawn at 0x0000024068C30CB0, file "subprocess.py", line 695>
+ 880: MAKE_FUNCTION        
+ 882: STORE_NAME           _use_posix_spawn
+ 884: PUSH_NULL            
+ 886: LOAD_NAME            _use_posix_spawn
+ 888: PRECALL              
+ 892: CALL                 
+ 902: STORE_NAME           _USE_POSIX_SPAWN
+ 904: LOAD_CONST           True
+ 906: STORE_NAME           _USE_VFORK
+ 908: PUSH_NULL            
+ 910: LOAD_BUILD_CLASS     
+ 912: LOAD_CONST           <code object Popen at 0x0000024068C06FF0, file "subprocess.py", line 749>
+ 914: MAKE_FUNCTION        
+ 916: LOAD_CONST           'Popen'
+ 918: PRECALL              
+ 922: CALL                 
+ 932: STORE_NAME           Popen
+ 934: LOAD_CONST           None
+ 936: RETURN_VALUE         

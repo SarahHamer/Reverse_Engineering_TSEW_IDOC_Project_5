@@ -1,0 +1,13 @@
+# Disassembly for shutil.rmtree.onerror
+# From module file: shutil
+
+## co_consts:
+(None,)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: RAISE_VARARGS        

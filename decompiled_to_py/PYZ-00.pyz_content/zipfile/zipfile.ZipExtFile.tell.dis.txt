@@ -1,0 +1,46 @@
+# Disassembly for zipfile.ZipExtFile.tell
+# From module file: zipfile
+
+## co_consts:
+(None, 'tell on closed file.', 'underlying stream is not seekable')
+
+## co_names:
+('closed', 'ValueError', '_seekable', 'io', 'UnsupportedOperation', '_orig_file_size', '_left', 'len', '_readbuffer', '_offset')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            closed
+  14: POP_JUMP_FORWARD_IF_FALSE to 46
+  16: LOAD_GLOBAL          NULL + ValueError
+  28: LOAD_CONST           'tell on closed file.'
+  30: PRECALL              
+  34: CALL                 
+  44: RAISE_VARARGS        
+  46: LOAD_FAST            self
+  48: LOAD_ATTR            _seekable
+  58: POP_JUMP_FORWARD_IF_TRUE to 100
+  60: LOAD_GLOBAL          NULL + io
+  72: LOAD_ATTR            UnsupportedOperation
+  82: LOAD_CONST           'underlying stream is not seekable'
+  84: PRECALL              
+  88: CALL                 
+  98: RAISE_VARARGS        
+ 100: LOAD_FAST            self
+ 102: LOAD_ATTR            _orig_file_size
+ 112: LOAD_FAST            self
+ 114: LOAD_ATTR            _left
+ 124: BINARY_OP            -
+ 128: LOAD_GLOBAL          NULL + len
+ 140: LOAD_FAST            self
+ 142: LOAD_ATTR            _readbuffer
+ 152: PRECALL              
+ 156: CALL                 
+ 166: BINARY_OP            -
+ 170: LOAD_FAST            self
+ 172: LOAD_ATTR            _offset
+ 182: BINARY_OP            +
+ 186: STORE_FAST           filepos
+ 188: LOAD_FAST            filepos
+ 190: RETURN_VALUE         

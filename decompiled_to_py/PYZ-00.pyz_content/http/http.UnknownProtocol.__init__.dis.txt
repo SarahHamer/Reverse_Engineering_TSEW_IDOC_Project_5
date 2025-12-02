@@ -1,0 +1,21 @@
+# Disassembly for http.UnknownProtocol.__init__
+# From module file: http.client
+
+## co_consts:
+(None,)
+
+## co_names:
+('args', 'version')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            version
+   4: BUILD_TUPLE          
+   6: LOAD_FAST            self
+   8: STORE_ATTR           args
+  18: LOAD_FAST            version
+  20: LOAD_FAST            self
+  22: STORE_ATTR           version
+  32: LOAD_CONST           None
+  34: RETURN_VALUE         

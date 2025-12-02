@@ -1,0 +1,114 @@
+# Disassembly for socket.socket.__repr__
+# From module file: socket
+
+## co_consts:
+('Wrap __repr__() to reveal the real class name and socket\n        address(es).\n        ', '_closed', False, '<%s.%s%s fd=%i, family=%s, type=%s, proto=%i', ' [closed]', '', ', laddr=%s', ', raddr=%s', '>')
+
+## co_names:
+('getattr', '__class__', '__module__', '__qualname__', 'fileno', 'family', 'type', 'proto', 'getsockname', 'str', 'error', 'AttributeError', 'getpeername')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + getattr
+  14: LOAD_FAST            self
+  16: LOAD_CONST           '_closed'
+  18: LOAD_CONST           False
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           closed
+  36: LOAD_CONST           '<%s.%s%s fd=%i, family=%s, type=%s, proto=%i'
+  38: LOAD_FAST            self
+  40: LOAD_ATTR            __class__
+  50: LOAD_ATTR            __module__
+  60: LOAD_FAST            self
+  62: LOAD_ATTR            __class__
+  72: LOAD_ATTR            __qualname__
+  82: LOAD_FAST            closed
+  84: POP_JUMP_FORWARD_IF_FALSE to 90
+  86: LOAD_CONST           ' [closed]'
+  88: JUMP_FORWARD         to 92
+  90: LOAD_CONST           ''
+  92: LOAD_FAST            self
+  94: LOAD_METHOD          fileno
+ 116: PRECALL              
+ 120: CALL                 
+ 130: LOAD_FAST            self
+ 132: LOAD_ATTR            family
+ 142: LOAD_FAST            self
+ 144: LOAD_ATTR            type
+ 154: LOAD_FAST            self
+ 156: LOAD_ATTR            proto
+ 166: BUILD_TUPLE          
+ 168: BINARY_OP            %
+ 172: STORE_FAST           s
+ 174: LOAD_FAST            closed
+ 176: POP_JUMP_FORWARD_IF_TRUE to 450
+ 178: NOP                  
+ 180: LOAD_FAST            self
+ 182: LOAD_METHOD          getsockname
+ 204: PRECALL              
+ 208: CALL                 
+ 218: STORE_FAST           laddr
+ 220: LOAD_FAST            laddr
+ 222: POP_JUMP_FORWARD_IF_FALSE to 266
+ 224: LOAD_FAST            s
+ 226: LOAD_CONST           ', laddr=%s'
+ 228: LOAD_GLOBAL          NULL + str
+ 240: LOAD_FAST            laddr
+ 242: PRECALL              
+ 246: CALL                 
+ 256: BINARY_OP            %
+ 260: BINARY_OP            +=
+ 264: STORE_FAST           s
+ 266: JUMP_FORWARD         to 314
+ 268: PUSH_EXC_INFO        
+ 270: LOAD_GLOBAL          error
+ 282: LOAD_GLOBAL          AttributeError
+ 294: BUILD_TUPLE          
+ 296: CHECK_EXC_MATCH      
+ 298: POP_JUMP_FORWARD_IF_FALSE to 306
+ 300: POP_TOP              
+ 302: POP_EXCEPT           
+ 304: JUMP_FORWARD         to 314
+ 306: RERAISE              
+ 308: COPY                 
+ 310: POP_EXCEPT           
+ 312: RERAISE              
+ 314: NOP                  
+ 316: LOAD_FAST            self
+ 318: LOAD_METHOD          getpeername
+ 340: PRECALL              
+ 344: CALL                 
+ 354: STORE_FAST           raddr
+ 356: LOAD_FAST            raddr
+ 358: POP_JUMP_FORWARD_IF_FALSE to 402
+ 360: LOAD_FAST            s
+ 362: LOAD_CONST           ', raddr=%s'
+ 364: LOAD_GLOBAL          NULL + str
+ 376: LOAD_FAST            raddr
+ 378: PRECALL              
+ 382: CALL                 
+ 392: BINARY_OP            %
+ 396: BINARY_OP            +=
+ 400: STORE_FAST           s
+ 402: JUMP_FORWARD         to 450
+ 404: PUSH_EXC_INFO        
+ 406: LOAD_GLOBAL          error
+ 418: LOAD_GLOBAL          AttributeError
+ 430: BUILD_TUPLE          
+ 432: CHECK_EXC_MATCH      
+ 434: POP_JUMP_FORWARD_IF_FALSE to 442
+ 436: POP_TOP              
+ 438: POP_EXCEPT           
+ 440: JUMP_FORWARD         to 450
+ 442: RERAISE              
+ 444: COPY                 
+ 446: POP_EXCEPT           
+ 448: RERAISE              
+ 450: LOAD_FAST            s
+ 452: LOAD_CONST           '>'
+ 454: BINARY_OP            +=
+ 458: STORE_FAST           s
+ 460: LOAD_FAST            s
+ 462: RETURN_VALUE         

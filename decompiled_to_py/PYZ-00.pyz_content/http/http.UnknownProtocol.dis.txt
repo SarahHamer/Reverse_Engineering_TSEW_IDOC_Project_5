@@ -1,0 +1,21 @@
+# Disassembly for http.UnknownProtocol
+# From module file: http.client
+
+## co_consts:
+('UnknownProtocol', <code object __init__ at 0x0000024069465530, file "http\client.py", line 1475>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'UnknownProtocol'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           <code object __init__ at 0x0000024069465530, file "http\client.py", line 1475>
+  12: MAKE_FUNCTION        
+  14: STORE_NAME           __init__
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         

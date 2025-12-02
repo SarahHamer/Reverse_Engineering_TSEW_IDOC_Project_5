@@ -1,0 +1,25 @@
+# Disassembly for _pydecimal.Context.clear_traps
+# From module file: _pydecimal
+
+## co_consts:
+('Reset all traps to zero', 0, None)
+
+## co_names:
+('traps',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            traps
+  14: GET_ITER             
+  16: FOR_ITER             to 42
+  18: STORE_FAST           flag
+  20: LOAD_CONST           0
+  22: LOAD_FAST            self
+  24: LOAD_ATTR            traps
+  34: LOAD_FAST            flag
+  36: STORE_SUBSCR         
+  40: JUMP_BACKWARD        to 16
+  42: LOAD_CONST           None
+  44: RETURN_VALUE         

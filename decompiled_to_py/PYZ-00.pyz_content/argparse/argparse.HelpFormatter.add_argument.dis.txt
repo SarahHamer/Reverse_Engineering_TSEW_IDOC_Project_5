@@ -1,0 +1,81 @@
+# Disassembly for argparse.HelpFormatter.add_argument
+# From module file: argparse
+
+## co_consts:
+(None,)
+
+## co_names:
+('help', 'SUPPRESS', '_format_action_invocation', '_iter_indented_subactions', 'append', 'max', 'map', 'len', '_current_indent', '_action_max_length', '_add_item', '_format_action')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            action
+   4: LOAD_ATTR            help
+  14: LOAD_GLOBAL          SUPPRESS
+  26: IS_OP                
+  28: POP_JUMP_FORWARD_IF_FALSE to 376
+  30: LOAD_FAST            self
+  32: LOAD_ATTR            _format_action_invocation
+  42: STORE_FAST           get_invocation
+  44: PUSH_NULL            
+  46: LOAD_FAST            get_invocation
+  48: LOAD_FAST            action
+  50: PRECALL              
+  54: CALL                 
+  64: BUILD_LIST           
+  66: STORE_FAST           invocations
+  68: LOAD_FAST            self
+  70: LOAD_METHOD          _iter_indented_subactions
+  92: LOAD_FAST            action
+  94: PRECALL              
+  98: CALL                 
+ 108: GET_ITER             
+ 110: FOR_ITER             to 176
+ 112: STORE_FAST           subaction
+ 114: LOAD_FAST            invocations
+ 116: LOAD_METHOD          append
+ 138: PUSH_NULL            
+ 140: LOAD_FAST            get_invocation
+ 142: LOAD_FAST            subaction
+ 144: PRECALL              
+ 148: CALL                 
+ 158: PRECALL              
+ 162: CALL                 
+ 172: POP_TOP              
+ 174: JUMP_BACKWARD        to 110
+ 176: LOAD_GLOBAL          NULL + max
+ 188: LOAD_GLOBAL          NULL + map
+ 200: LOAD_GLOBAL          len
+ 212: LOAD_FAST            invocations
+ 214: PRECALL              
+ 218: CALL                 
+ 228: PRECALL              
+ 232: CALL                 
+ 242: STORE_FAST           invocation_length
+ 244: LOAD_FAST            invocation_length
+ 246: LOAD_FAST            self
+ 248: LOAD_ATTR            _current_indent
+ 258: BINARY_OP            +
+ 262: STORE_FAST           action_length
+ 264: LOAD_GLOBAL          NULL + max
+ 276: LOAD_FAST            self
+ 278: LOAD_ATTR            _action_max_length
+ 288: LOAD_FAST            action_length
+ 290: PRECALL              
+ 294: CALL                 
+ 304: LOAD_FAST            self
+ 306: STORE_ATTR           _action_max_length
+ 316: LOAD_FAST            self
+ 318: LOAD_METHOD          _add_item
+ 340: LOAD_FAST            self
+ 342: LOAD_ATTR            _format_action
+ 352: LOAD_FAST            action
+ 354: BUILD_LIST           
+ 356: PRECALL              
+ 360: CALL                 
+ 370: POP_TOP              
+ 372: LOAD_CONST           None
+ 374: RETURN_VALUE         
+ 376: LOAD_CONST           None
+ 378: RETURN_VALUE         

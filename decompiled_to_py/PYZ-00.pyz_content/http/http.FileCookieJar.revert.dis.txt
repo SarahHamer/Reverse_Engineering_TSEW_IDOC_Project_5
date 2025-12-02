@@ -1,0 +1,86 @@
+# Disassembly for http.FileCookieJar.revert
+# From module file: http.cookiejar
+
+## co_consts:
+("Clear all cookies and reload cookies from a saved file.\n\n        Raises LoadError (or OSError) if reversion is not successful; the\n        object's state will not be altered if this happens.\n\n        ", None)
+
+## co_names:
+('filename', 'ValueError', 'MISSING_FILENAME_TEXT', '_cookies_lock', 'acquire', 'copy', 'deepcopy', '_cookies', 'load', 'OSError', 'release')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            filename
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 76
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            filename
+  18: POP_JUMP_FORWARD_IF_NONE to 36
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            filename
+  32: STORE_FAST           filename
+  34: JUMP_FORWARD         to 76
+  36: LOAD_GLOBAL          NULL + ValueError
+  48: LOAD_GLOBAL          MISSING_FILENAME_TEXT
+  60: PRECALL              
+  64: CALL                 
+  74: RAISE_VARARGS        
+  76: LOAD_FAST            self
+  78: LOAD_ATTR            _cookies_lock
+  88: LOAD_METHOD          acquire
+ 110: PRECALL              
+ 114: CALL                 
+ 124: POP_TOP              
+ 126: NOP                  
+ 128: LOAD_GLOBAL          NULL + copy
+ 140: LOAD_ATTR            deepcopy
+ 150: LOAD_FAST            self
+ 152: LOAD_ATTR            _cookies
+ 162: PRECALL              
+ 166: CALL                 
+ 176: STORE_FAST           old_state
+ 178: BUILD_MAP            
+ 180: LOAD_FAST            self
+ 182: STORE_ATTR           _cookies
+ 192: NOP                  
+ 194: LOAD_FAST            self
+ 196: LOAD_METHOD          load
+ 218: LOAD_FAST            filename
+ 220: LOAD_FAST            ignore_discard
+ 222: LOAD_FAST            ignore_expires
+ 224: PRECALL              
+ 228: CALL                 
+ 238: POP_TOP              
+ 240: JUMP_FORWARD         to 286
+ 242: PUSH_EXC_INFO        
+ 244: LOAD_GLOBAL          OSError
+ 256: CHECK_EXC_MATCH      
+ 258: POP_JUMP_FORWARD_IF_FALSE to 278
+ 260: POP_TOP              
+ 262: LOAD_FAST            old_state
+ 264: LOAD_FAST            self
+ 266: STORE_ATTR           _cookies
+ 276: RAISE_VARARGS        
+ 278: RERAISE              
+ 280: COPY                 
+ 282: POP_EXCEPT           
+ 284: RERAISE              
+ 286: NOP                  
+ 288: LOAD_FAST            self
+ 290: LOAD_ATTR            _cookies_lock
+ 300: LOAD_METHOD          release
+ 322: PRECALL              
+ 326: CALL                 
+ 336: POP_TOP              
+ 338: LOAD_CONST           None
+ 340: RETURN_VALUE         
+ 342: PUSH_EXC_INFO        
+ 344: LOAD_FAST            self
+ 346: LOAD_ATTR            _cookies_lock
+ 356: LOAD_METHOD          release
+ 378: PRECALL              
+ 382: CALL                 
+ 392: POP_TOP              
+ 394: RERAISE              
+ 396: COPY                 
+ 398: POP_EXCEPT           
+ 400: RERAISE              

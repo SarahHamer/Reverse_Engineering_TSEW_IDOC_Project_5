@@ -1,0 +1,136 @@
+# Disassembly for tempfile.NamedTemporaryFile
+# From module file: tempfile
+
+## co_consts:
+('Create and return a temporary file.\n    Arguments:\n    \'prefix\', \'suffix\', \'dir\' -- as for mkstemp.\n    \'mode\' -- the mode argument to io.open (default "w+b").\n    \'buffering\' -- the buffer size argument to io.open (default -1).\n    \'encoding\' -- the encoding argument to io.open (default None)\n    \'newline\' -- the newline argument to io.open (default None)\n    \'delete\' -- whether the file is deleted on close (default True).\n    \'errors\' -- the errors argument to io.open (default None)\n    The file is created as mkstemp() would do it.\n\n    Returns an object with a file-like interface; the name of the file\n    is accessible as its \'name\' attribute.  The file will be automatically\n    deleted when it is closed unless the \'delete\' argument is set to False.\n\n    On POSIX, NamedTemporaryFiles cannot be automatically deleted if\n    the creating process is terminated abruptly with a SIGKILL signal.\n    Windows can delete the file even in this case.\n    ', 'nt', 'b', None, <code object opener at 0x000002406945F0F0, file "tempfile.py", line 558>, ('buffering', 'newline', 'encoding', 'errors', 'opener'), 'buffer', 'raw')
+
+## co_names:
+('_sanitize_params', '_bin_openflags', '_os', 'name', 'O_TEMPORARY', '_io', 'text_encoding', 'open', 'getattr', '_TemporaryFileWrapper', 'close', 'unlink')
+
+## bytecode:
+
+   0: MAKE_CELL            suffix
+   2: MAKE_CELL            prefix
+   4: MAKE_CELL            dir
+   6: MAKE_CELL            flags
+   8: MAKE_CELL            name
+  10: MAKE_CELL            output_type
+  12: RESUME               
+  14: LOAD_GLOBAL          NULL + _sanitize_params
+  26: LOAD_DEREF           prefix
+  28: LOAD_DEREF           suffix
+  30: LOAD_DEREF           dir
+  32: PRECALL              
+  36: CALL                 
+  46: UNPACK_SEQUENCE      
+  50: STORE_DEREF          prefix
+  52: STORE_DEREF          suffix
+  54: STORE_DEREF          dir
+  56: STORE_DEREF          output_type
+  58: LOAD_GLOBAL          _bin_openflags
+  70: STORE_DEREF          flags
+  72: LOAD_GLOBAL          _os
+  84: LOAD_ATTR            name
+  94: LOAD_CONST           'nt'
+  96: COMPARE_OP           ==
+ 102: POP_JUMP_FORWARD_IF_FALSE to 138
+ 104: LOAD_FAST            delete
+ 106: POP_JUMP_FORWARD_IF_FALSE to 138
+ 108: LOAD_DEREF           flags
+ 110: LOAD_GLOBAL          _os
+ 122: LOAD_ATTR            O_TEMPORARY
+ 132: BINARY_OP            |=
+ 136: STORE_DEREF          flags
+ 138: LOAD_CONST           'b'
+ 140: LOAD_FAST            mode
+ 142: CONTAINS_OP          
+ 144: POP_JUMP_FORWARD_IF_FALSE to 186
+ 146: LOAD_GLOBAL          NULL + _io
+ 158: LOAD_ATTR            text_encoding
+ 168: LOAD_FAST            encoding
+ 170: PRECALL              
+ 174: CALL                 
+ 184: STORE_FAST           encoding
+ 186: LOAD_CONST           None
+ 188: STORE_DEREF          name
+ 190: LOAD_CLOSURE         dir
+ 192: LOAD_CLOSURE         flags
+ 194: LOAD_CLOSURE         name
+ 196: LOAD_CLOSURE         output_type
+ 198: LOAD_CLOSURE         prefix
+ 200: LOAD_CLOSURE         suffix
+ 202: BUILD_TUPLE          
+ 204: LOAD_CONST           <code object opener at 0x000002406945F0F0, file "tempfile.py", line 558>
+ 206: MAKE_FUNCTION        closure
+ 208: STORE_FAST           opener
+ 210: NOP                  
+ 212: LOAD_GLOBAL          NULL + _io
+ 224: LOAD_ATTR            open
+ 234: LOAD_DEREF           dir
+ 236: LOAD_FAST            mode
+ 238: LOAD_FAST            buffering
+ 240: LOAD_FAST            newline
+ 242: LOAD_FAST            encoding
+ 244: LOAD_FAST            errors
+ 246: LOAD_FAST            opener
+ 248: KW_NAMES             
+ 250: PRECALL              
+ 254: CALL                 
+ 264: STORE_FAST           file
+ 266: NOP                  
+ 268: LOAD_GLOBAL          NULL + getattr
+ 280: LOAD_FAST            file
+ 282: LOAD_CONST           'buffer'
+ 284: LOAD_FAST            file
+ 286: PRECALL              
+ 290: CALL                 
+ 300: STORE_FAST           raw
+ 302: LOAD_GLOBAL          NULL + getattr
+ 314: LOAD_FAST            raw
+ 316: LOAD_CONST           'raw'
+ 318: LOAD_FAST            raw
+ 320: PRECALL              
+ 324: CALL                 
+ 334: STORE_FAST           raw
+ 336: LOAD_DEREF           name
+ 338: LOAD_FAST            raw
+ 340: STORE_ATTR           name
+ 350: LOAD_GLOBAL          NULL + _TemporaryFileWrapper
+ 362: LOAD_FAST            file
+ 364: LOAD_DEREF           name
+ 366: LOAD_FAST            delete
+ 368: PRECALL              
+ 372: CALL                 
+ 382: RETURN_VALUE         
+ 384: PUSH_EXC_INFO        
+ 386: POP_TOP              
+ 388: LOAD_FAST            file
+ 390: LOAD_METHOD          close
+ 412: PRECALL              
+ 416: CALL                 
+ 426: POP_TOP              
+ 428: RAISE_VARARGS        
+ 430: COPY                 
+ 432: POP_EXCEPT           
+ 434: RERAISE              
+ 436: PUSH_EXC_INFO        
+ 438: POP_TOP              
+ 440: LOAD_DEREF           name
+ 442: POP_JUMP_FORWARD_IF_NONE to 520
+ 444: LOAD_GLOBAL          _os
+ 456: LOAD_ATTR            name
+ 466: LOAD_CONST           'nt'
+ 468: COMPARE_OP           ==
+ 474: POP_JUMP_FORWARD_IF_FALSE to 480
+ 476: LOAD_FAST            delete
+ 478: POP_JUMP_FORWARD_IF_TRUE to 520
+ 480: LOAD_GLOBAL          NULL + _os
+ 492: LOAD_ATTR            unlink
+ 502: LOAD_DEREF           name
+ 504: PRECALL              
+ 508: CALL                 
+ 518: POP_TOP              
+ 520: RAISE_VARARGS        
+ 522: COPY                 
+ 524: POP_EXCEPT           
+ 526: RERAISE              

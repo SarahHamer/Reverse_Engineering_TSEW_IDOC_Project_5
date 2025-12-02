@@ -1,0 +1,23 @@
+# Disassembly for importlib.<setcomp>
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+(':',)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_SET            
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 22
+   8: STORE_FAST           s
+  10: LOAD_CONST           ':'
+  12: LOAD_FAST            s
+  14: FORMAT_VALUE         
+  16: BUILD_STRING         
+  18: SET_ADD              
+  20: JUMP_BACKWARD        to 6
+  22: RETURN_VALUE         

@@ -1,0 +1,36 @@
+# Disassembly for argparse._CountAction.__call__
+# From module file: argparse
+
+## co_consts:
+(None, 0, 1)
+
+## co_names:
+('getattr', 'dest', 'setattr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + getattr
+  14: LOAD_FAST            namespace
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            dest
+  28: LOAD_CONST           None
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_FAST           count
+  46: LOAD_FAST            count
+  48: POP_JUMP_FORWARD_IF_NOT_NONE to 54
+  50: LOAD_CONST           0
+  52: STORE_FAST           count
+  54: LOAD_GLOBAL          NULL + setattr
+  66: LOAD_FAST            namespace
+  68: LOAD_FAST            self
+  70: LOAD_ATTR            dest
+  80: LOAD_FAST            count
+  82: LOAD_CONST           1
+  84: BINARY_OP            +
+  88: PRECALL              
+  92: CALL                 
+ 102: POP_TOP              
+ 104: LOAD_CONST           None
+ 106: RETURN_VALUE         

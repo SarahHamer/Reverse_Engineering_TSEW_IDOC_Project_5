@@ -1,0 +1,35 @@
+# Disassembly for typing.TypeVarTuple
+# From module file: typing
+
+## co_consts:
+('TypeVarTuple', "Type variable tuple.\n\n    Usage:\n\n      Ts = TypeVarTuple('Ts')  # Can be given any name\n\n    Just as a TypeVar (type variable) is a placeholder for a single type,\n    a TypeVarTuple is a placeholder for an *arbitrary* number of types. For\n    example, if we define a generic class using a TypeVarTuple:\n\n      class C(Generic[*Ts]): ...\n\n    Then we can parameterize that class with an arbitrary number of type\n    arguments:\n\n      C[int]       # Fine\n      C[int, str]  # Also fine\n      C[()]        # Even this is fine\n\n    For more details, see PEP 646.\n\n    Note that only TypeVarTuples defined in global scope can be pickled.\n    ", <code object __init__ at 0x000002406944B770, file "typing.py", line 1067>, <code object __iter__ at 0x00000240694664F0, file "typing.py", line 1075>, <code object __repr__ at 0x0000024069494920, file "typing.py", line 1078>, <code object __typing_subst__ at 0x0000024069467910, file "typing.py", line 1081>, <code object __typing_prepare_subst__ at 0x0000024068D071A0, file "typing.py", line 1084>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', '__iter__', '__repr__', '__typing_subst__', '__typing_prepare_subst__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'TypeVarTuple'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           "Type variable tuple.\n\n    Usage:\n\n      Ts = TypeVarTuple('Ts')  # Can be given any name\n\n    Just as a TypeVar (type variable) is a placeholder for a single type,\n    a TypeVarTuple is a placeholder for an *arbitrary* number of types. For\n    example, if we define a generic class using a TypeVarTuple:\n\n      class C(Generic[*Ts]): ...\n\n    Then we can parameterize that class with an arbitrary number of type\n    arguments:\n\n      C[int]       # Fine\n      C[int, str]  # Also fine\n      C[()]        # Even this is fine\n\n    For more details, see PEP 646.\n\n    Note that only TypeVarTuples defined in global scope can be pickled.\n    "
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object __init__ at 0x000002406944B770, file "typing.py", line 1067>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           __init__
+  20: LOAD_CONST           <code object __iter__ at 0x00000240694664F0, file "typing.py", line 1075>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           __iter__
+  26: LOAD_CONST           <code object __repr__ at 0x0000024069494920, file "typing.py", line 1078>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           __repr__
+  32: LOAD_CONST           <code object __typing_subst__ at 0x0000024069467910, file "typing.py", line 1081>
+  34: MAKE_FUNCTION        
+  36: STORE_NAME           __typing_subst__
+  38: LOAD_CONST           <code object __typing_prepare_subst__ at 0x0000024068D071A0, file "typing.py", line 1084>
+  40: MAKE_FUNCTION        
+  42: STORE_NAME           __typing_prepare_subst__
+  44: LOAD_CONST           None
+  46: RETURN_VALUE         

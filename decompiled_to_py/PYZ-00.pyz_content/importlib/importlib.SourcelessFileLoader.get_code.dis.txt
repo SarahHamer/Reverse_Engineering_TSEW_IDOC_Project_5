@@ -1,0 +1,51 @@
+# Disassembly for importlib.SourcelessFileLoader.get_code
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+(None, ('name', 'path'), 16, ('name', 'bytecode_path'))
+
+## co_names:
+('get_filename', 'get_data', '_classify_pyc', '_compile_bytecode', 'memoryview')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          get_filename
+  26: LOAD_FAST            fullname
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           path
+  44: LOAD_FAST            self
+  46: LOAD_METHOD          get_data
+  68: LOAD_FAST            path
+  70: PRECALL              
+  74: CALL                 
+  84: STORE_FAST           data
+  86: LOAD_FAST            fullname
+  88: LOAD_FAST            path
+  90: LOAD_CONST           ('name', 'path')
+  92: BUILD_CONST_KEY_MAP  
+  94: STORE_FAST           exc_details
+  96: LOAD_GLOBAL          NULL + _classify_pyc
+ 108: LOAD_FAST            data
+ 110: LOAD_FAST            fullname
+ 112: LOAD_FAST            exc_details
+ 114: PRECALL              
+ 118: CALL                 
+ 128: POP_TOP              
+ 130: LOAD_GLOBAL          NULL + _compile_bytecode
+ 142: LOAD_GLOBAL          NULL + memoryview
+ 154: LOAD_FAST            data
+ 156: PRECALL              
+ 160: CALL                 
+ 170: LOAD_CONST           16
+ 172: LOAD_CONST           None
+ 174: BUILD_SLICE          
+ 176: BINARY_SUBSCR        
+ 186: LOAD_FAST            fullname
+ 188: LOAD_FAST            path
+ 190: KW_NAMES             
+ 192: PRECALL              
+ 196: CALL                 
+ 206: RETURN_VALUE         

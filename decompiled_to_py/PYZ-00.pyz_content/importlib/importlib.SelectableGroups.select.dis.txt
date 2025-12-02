@@ -1,0 +1,26 @@
+# Disassembly for importlib.SelectableGroups.select
+# From module file: importlib.metadata
+
+## co_consts:
+(None, ())
+
+## co_names:
+('_all', 'select')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            params
+   4: POP_JUMP_FORWARD_IF_TRUE to 10
+   6: LOAD_FAST            self
+   8: RETURN_VALUE         
+  10: PUSH_NULL            
+  12: LOAD_FAST            self
+  14: LOAD_ATTR            _all
+  24: LOAD_ATTR            select
+  34: LOAD_CONST           ()
+  36: BUILD_MAP            
+  38: LOAD_FAST            params
+  40: DICT_MERGE           
+  42: CALL_FUNCTION_EX     
+  44: RETURN_VALUE         

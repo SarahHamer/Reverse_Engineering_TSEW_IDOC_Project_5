@@ -1,0 +1,19 @@
+# Disassembly for importlib._NamespacePath.__getitem__
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+(None,)
+
+## co_names:
+('_recalculate',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _recalculate
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_FAST            index
+  42: BINARY_SUBSCR        
+  52: RETURN_VALUE         

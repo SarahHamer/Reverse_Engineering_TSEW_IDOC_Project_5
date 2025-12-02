@@ -1,0 +1,116 @@
+# Disassembly for statistics._coerce
+# From module file: statistics
+
+## co_consts:
+('Coerce types T and S to a common type, or raise TypeError.\n\n    Coercion rules are currently an implementation detail. See the CoerceTest\n    test class in test_statistics for details.\n    ', 'initial type T is bool', "don't know how to coerce %s and %s")
+
+## co_names:
+('bool', 'int', 'issubclass', 'Fraction', 'float', 'TypeError', '__name__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            T
+   4: LOAD_GLOBAL          bool
+  16: IS_OP                
+  18: POP_JUMP_FORWARD_IF_TRUE to 40
+  20: LOAD_ASSERTION_ERROR 
+  22: LOAD_CONST           'initial type T is bool'
+  24: PRECALL              
+  28: CALL                 
+  38: RAISE_VARARGS        
+  40: LOAD_FAST            T
+  42: LOAD_FAST            S
+  44: IS_OP                
+  46: POP_JUMP_FORWARD_IF_FALSE to 52
+  48: LOAD_FAST            T
+  50: RETURN_VALUE         
+  52: LOAD_FAST            S
+  54: LOAD_GLOBAL          int
+  66: IS_OP                
+  68: POP_JUMP_FORWARD_IF_TRUE to 88
+  70: LOAD_FAST            S
+  72: LOAD_GLOBAL          bool
+  84: IS_OP                
+  86: POP_JUMP_FORWARD_IF_FALSE to 92
+  88: LOAD_FAST            T
+  90: RETURN_VALUE         
+  92: LOAD_FAST            T
+  94: LOAD_GLOBAL          int
+ 106: IS_OP                
+ 108: POP_JUMP_FORWARD_IF_FALSE to 114
+ 110: LOAD_FAST            S
+ 112: RETURN_VALUE         
+ 114: LOAD_GLOBAL          NULL + issubclass
+ 126: LOAD_FAST            S
+ 128: LOAD_FAST            T
+ 130: PRECALL              
+ 134: CALL                 
+ 144: POP_JUMP_FORWARD_IF_FALSE to 150
+ 146: LOAD_FAST            S
+ 148: RETURN_VALUE         
+ 150: LOAD_GLOBAL          NULL + issubclass
+ 162: LOAD_FAST            T
+ 164: LOAD_FAST            S
+ 166: PRECALL              
+ 170: CALL                 
+ 180: POP_JUMP_FORWARD_IF_FALSE to 186
+ 182: LOAD_FAST            T
+ 184: RETURN_VALUE         
+ 186: LOAD_GLOBAL          NULL + issubclass
+ 198: LOAD_FAST            T
+ 200: LOAD_GLOBAL          int
+ 212: PRECALL              
+ 216: CALL                 
+ 226: POP_JUMP_FORWARD_IF_FALSE to 232
+ 228: LOAD_FAST            S
+ 230: RETURN_VALUE         
+ 232: LOAD_GLOBAL          NULL + issubclass
+ 244: LOAD_FAST            S
+ 246: LOAD_GLOBAL          int
+ 258: PRECALL              
+ 262: CALL                 
+ 272: POP_JUMP_FORWARD_IF_FALSE to 278
+ 274: LOAD_FAST            T
+ 276: RETURN_VALUE         
+ 278: LOAD_GLOBAL          NULL + issubclass
+ 290: LOAD_FAST            T
+ 292: LOAD_GLOBAL          Fraction
+ 304: PRECALL              
+ 308: CALL                 
+ 318: POP_JUMP_FORWARD_IF_FALSE to 366
+ 320: LOAD_GLOBAL          NULL + issubclass
+ 332: LOAD_FAST            S
+ 334: LOAD_GLOBAL          float
+ 346: PRECALL              
+ 350: CALL                 
+ 360: POP_JUMP_FORWARD_IF_FALSE to 366
+ 362: LOAD_FAST            S
+ 364: RETURN_VALUE         
+ 366: LOAD_GLOBAL          NULL + issubclass
+ 378: LOAD_FAST            T
+ 380: LOAD_GLOBAL          float
+ 392: PRECALL              
+ 396: CALL                 
+ 406: POP_JUMP_FORWARD_IF_FALSE to 454
+ 408: LOAD_GLOBAL          NULL + issubclass
+ 420: LOAD_FAST            S
+ 422: LOAD_GLOBAL          Fraction
+ 434: PRECALL              
+ 438: CALL                 
+ 448: POP_JUMP_FORWARD_IF_FALSE to 454
+ 450: LOAD_FAST            T
+ 452: RETURN_VALUE         
+ 454: LOAD_CONST           "don't know how to coerce %s and %s"
+ 456: STORE_FAST           msg
+ 458: LOAD_GLOBAL          NULL + TypeError
+ 470: LOAD_FAST            msg
+ 472: LOAD_FAST            T
+ 474: LOAD_ATTR            __name__
+ 484: LOAD_FAST            S
+ 486: LOAD_ATTR            __name__
+ 496: BUILD_TUPLE          
+ 498: BINARY_OP            %
+ 502: PRECALL              
+ 506: CALL                 
+ 516: RAISE_VARARGS        

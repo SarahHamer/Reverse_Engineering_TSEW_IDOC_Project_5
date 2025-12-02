@@ -1,0 +1,22 @@
+# Disassembly for email._Accumulator.push
+# From module file: email.header
+
+## co_consts:
+(None,)
+
+## co_names:
+('append',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          append
+  26: LOAD_FAST            fws
+  28: LOAD_FAST            string
+  30: BUILD_TUPLE          
+  32: PRECALL              
+  36: CALL                 
+  46: POP_TOP              
+  48: LOAD_CONST           None
+  50: RETURN_VALUE         

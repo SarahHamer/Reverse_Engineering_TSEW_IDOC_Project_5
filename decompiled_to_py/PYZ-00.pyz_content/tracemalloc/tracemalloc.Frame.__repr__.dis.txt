@@ -1,0 +1,23 @@
+# Disassembly for tracemalloc.Frame.__repr__
+# From module file: tracemalloc
+
+## co_consts:
+(None, '<Frame filename=', ' lineno=', '>')
+
+## co_names:
+('filename', 'lineno')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '<Frame filename='
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            filename
+  16: FORMAT_VALUE         repr
+  18: LOAD_CONST           ' lineno='
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            lineno
+  32: FORMAT_VALUE         repr
+  34: LOAD_CONST           '>'
+  36: BUILD_STRING         
+  38: RETURN_VALUE         

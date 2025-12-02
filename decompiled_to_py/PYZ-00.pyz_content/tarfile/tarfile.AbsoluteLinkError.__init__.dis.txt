@@ -1,0 +1,30 @@
+# Disassembly for tarfile.AbsoluteLinkError.__init__
+# From module file: tarfile
+
+## co_consts:
+(None, ' is a link to an absolute path')
+
+## co_names:
+('tarinfo', 'super', '__init__', 'name')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_FAST            tarinfo
+   6: LOAD_FAST            self
+   8: STORE_ATTR           tarinfo
+  18: LOAD_GLOBAL          NULL + super
+  30: PRECALL              
+  34: CALL                 
+  44: LOAD_METHOD          __init__
+  66: LOAD_FAST            tarinfo
+  68: LOAD_ATTR            name
+  78: FORMAT_VALUE         repr
+  80: LOAD_CONST           ' is a link to an absolute path'
+  82: BUILD_STRING         
+  84: PRECALL              
+  88: CALL                 
+  98: POP_TOP              
+ 100: LOAD_CONST           None
+ 102: RETURN_VALUE         

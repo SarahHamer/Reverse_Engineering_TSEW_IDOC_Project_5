@@ -1,0 +1,22 @@
+# Disassembly for random.Random.lognormvariate
+# From module file: random
+
+## co_consts:
+("Log normal distribution.\n\n        If you take the natural logarithm of this distribution, you'll get a\n        normal distribution with mean mu and standard deviation sigma.\n        mu can have any value, and sigma must be greater than zero.\n\n        ",)
+
+## co_names:
+('_exp', 'normalvariate')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _exp
+  14: LOAD_FAST            self
+  16: LOAD_METHOD          normalvariate
+  38: LOAD_FAST            mu
+  40: LOAD_FAST            sigma
+  42: PRECALL              
+  46: CALL                 
+  56: PRECALL              
+  60: CALL                 
+  70: RETURN_VALUE         

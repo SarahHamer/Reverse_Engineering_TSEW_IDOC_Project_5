@@ -1,0 +1,17 @@
+# Disassembly for logging.NullHandler.createLock
+# From module file: logging
+
+## co_consts:
+(None,)
+
+## co_names:
+('lock',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: LOAD_FAST            self
+   6: STORE_ATTR           lock
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         

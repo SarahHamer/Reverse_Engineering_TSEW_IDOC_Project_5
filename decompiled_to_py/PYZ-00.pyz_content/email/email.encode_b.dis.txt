@@ -1,0 +1,22 @@
+# Disassembly for email.encode_b
+# From module file: email._encoded_words
+
+## co_consts:
+(None, 'ascii')
+
+## co_names:
+('base64', 'b64encode', 'decode')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + base64
+  14: LOAD_ATTR            b64encode
+  24: LOAD_FAST            bstring
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_METHOD          decode
+  62: LOAD_CONST           'ascii'
+  64: PRECALL              
+  68: CALL                 
+  78: RETURN_VALUE         

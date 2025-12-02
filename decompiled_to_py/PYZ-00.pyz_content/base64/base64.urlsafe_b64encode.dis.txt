@@ -1,0 +1,21 @@
+# Disassembly for base64.urlsafe_b64encode
+# From module file: base64
+
+## co_consts:
+("Encode bytes using the URL- and filesystem-safe Base64 alphabet.\n\n    Argument s is a bytes-like object to encode.  The result is returned as a\n    bytes object.  The alphabet uses '-' instead of '+' and '_' instead of\n    '/'.\n    ",)
+
+## co_names:
+('b64encode', 'translate', '_urlsafe_encode_translation')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + b64encode
+  14: LOAD_FAST            s
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_METHOD          translate
+  52: LOAD_GLOBAL          _urlsafe_encode_translation
+  64: PRECALL              
+  68: CALL                 
+  78: RETURN_VALUE         

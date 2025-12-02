@@ -1,0 +1,247 @@
+# Disassembly for email.get_angle_addr
+# From module file: email._header_value_parser
+
+## co_consts:
+(' angle-addr = [CFWS] "<" addr-spec ">" [CFWS] / obs-angle-addr\n        obs-angle-addr = [CFWS] "<" obs-route addr-spec ">" [CFWS]\n\n    ', 0, '<', "expected angle-addr but found '{}'", 'angle-addr-start', 1, None, '>', 'angle-addr-end', 'null addr-spec in angle-addr', 'obsolete route specification in angle-addr', "expected addr-spec or obs-route but found '{}'", "missing trailing '>' on angle-addr")
+
+## co_names:
+('AngleAddr', 'CFWS_LEADER', 'get_cfws', 'append', 'errors', 'HeaderParseError', 'format', 'ValueTerminal', 'defects', 'InvalidHeaderDefect', 'get_addr_spec', 'get_obs_route', 'ObsoleteHeaderDefect')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + AngleAddr
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           angle_addr
+  30: LOAD_FAST            value
+  32: LOAD_CONST           0
+  34: BINARY_SUBSCR        
+  44: LOAD_GLOBAL          CFWS_LEADER
+  56: CONTAINS_OP          
+  58: POP_JUMP_FORWARD_IF_FALSE to 138
+  60: LOAD_GLOBAL          NULL + get_cfws
+  72: LOAD_FAST            value
+  74: PRECALL              
+  78: CALL                 
+  88: UNPACK_SEQUENCE      
+  92: STORE_FAST           token
+  94: STORE_FAST           value
+  96: LOAD_FAST            angle_addr
+  98: LOAD_METHOD          append
+ 120: LOAD_FAST            token
+ 122: PRECALL              
+ 126: CALL                 
+ 136: POP_TOP              
+ 138: LOAD_FAST            value
+ 140: POP_JUMP_FORWARD_IF_FALSE to 166
+ 142: LOAD_FAST            value
+ 144: LOAD_CONST           0
+ 146: BINARY_SUBSCR        
+ 156: LOAD_CONST           '<'
+ 158: COMPARE_OP           !=
+ 164: POP_JUMP_FORWARD_IF_FALSE to 244
+ 166: LOAD_GLOBAL          NULL + errors
+ 178: LOAD_ATTR            HeaderParseError
+ 188: LOAD_CONST           "expected angle-addr but found '{}'"
+ 190: LOAD_METHOD          format
+ 212: LOAD_FAST            value
+ 214: PRECALL              
+ 218: CALL                 
+ 228: PRECALL              
+ 232: CALL                 
+ 242: RAISE_VARARGS        
+ 244: LOAD_FAST            angle_addr
+ 246: LOAD_METHOD          append
+ 268: LOAD_GLOBAL          NULL + ValueTerminal
+ 280: LOAD_CONST           '<'
+ 282: LOAD_CONST           'angle-addr-start'
+ 284: PRECALL              
+ 288: CALL                 
+ 298: PRECALL              
+ 302: CALL                 
+ 312: POP_TOP              
+ 314: LOAD_FAST            value
+ 316: LOAD_CONST           1
+ 318: LOAD_CONST           None
+ 320: BUILD_SLICE          
+ 322: BINARY_SUBSCR        
+ 332: STORE_FAST           value
+ 334: LOAD_FAST            value
+ 336: LOAD_CONST           0
+ 338: BINARY_SUBSCR        
+ 348: LOAD_CONST           '>'
+ 350: COMPARE_OP           ==
+ 356: POP_JUMP_FORWARD_IF_FALSE to 544
+ 358: LOAD_FAST            angle_addr
+ 360: LOAD_METHOD          append
+ 382: LOAD_GLOBAL          NULL + ValueTerminal
+ 394: LOAD_CONST           '>'
+ 396: LOAD_CONST           'angle-addr-end'
+ 398: PRECALL              
+ 402: CALL                 
+ 412: PRECALL              
+ 416: CALL                 
+ 426: POP_TOP              
+ 428: LOAD_FAST            angle_addr
+ 430: LOAD_ATTR            defects
+ 440: LOAD_METHOD          append
+ 462: LOAD_GLOBAL          NULL + errors
+ 474: LOAD_ATTR            InvalidHeaderDefect
+ 484: LOAD_CONST           'null addr-spec in angle-addr'
+ 486: PRECALL              
+ 490: CALL                 
+ 500: PRECALL              
+ 504: CALL                 
+ 514: POP_TOP              
+ 516: LOAD_FAST            value
+ 518: LOAD_CONST           1
+ 520: LOAD_CONST           None
+ 522: BUILD_SLICE          
+ 524: BINARY_SUBSCR        
+ 534: STORE_FAST           value
+ 536: LOAD_FAST            angle_addr
+ 538: LOAD_FAST            value
+ 540: BUILD_TUPLE          
+ 542: RETURN_VALUE         
+ 544: NOP                  
+ 546: LOAD_GLOBAL          NULL + get_addr_spec
+ 558: LOAD_FAST            value
+ 560: PRECALL              
+ 564: CALL                 
+ 574: UNPACK_SEQUENCE      
+ 578: STORE_FAST           token
+ 580: STORE_FAST           value
+ 582: JUMP_FORWARD         to 948
+ 584: PUSH_EXC_INFO        
+ 586: LOAD_GLOBAL          errors
+ 598: LOAD_ATTR            HeaderParseError
+ 608: CHECK_EXC_MATCH      
+ 610: POP_JUMP_FORWARD_IF_FALSE to 940
+ 612: POP_TOP              
+ 614: NOP                  
+ 616: LOAD_GLOBAL          NULL + get_obs_route
+ 628: LOAD_FAST            value
+ 630: PRECALL              
+ 634: CALL                 
+ 644: UNPACK_SEQUENCE      
+ 648: STORE_FAST           token
+ 650: STORE_FAST           value
+ 652: LOAD_FAST            angle_addr
+ 654: LOAD_ATTR            defects
+ 664: LOAD_METHOD          append
+ 686: LOAD_GLOBAL          NULL + errors
+ 698: LOAD_ATTR            ObsoleteHeaderDefect
+ 708: LOAD_CONST           'obsolete route specification in angle-addr'
+ 710: PRECALL              
+ 714: CALL                 
+ 724: PRECALL              
+ 728: CALL                 
+ 738: POP_TOP              
+ 740: JUMP_FORWARD         to 858
+ 742: PUSH_EXC_INFO        
+ 744: LOAD_GLOBAL          errors
+ 756: LOAD_ATTR            HeaderParseError
+ 766: CHECK_EXC_MATCH      
+ 768: POP_JUMP_FORWARD_IF_FALSE to 850
+ 770: POP_TOP              
+ 772: LOAD_GLOBAL          NULL + errors
+ 784: LOAD_ATTR            HeaderParseError
+ 794: LOAD_CONST           "expected addr-spec or obs-route but found '{}'"
+ 796: LOAD_METHOD          format
+ 818: LOAD_FAST            value
+ 820: PRECALL              
+ 824: CALL                 
+ 834: PRECALL              
+ 838: CALL                 
+ 848: RAISE_VARARGS        
+ 850: RERAISE              
+ 852: COPY                 
+ 854: POP_EXCEPT           
+ 856: RERAISE              
+ 858: LOAD_FAST            angle_addr
+ 860: LOAD_METHOD          append
+ 882: LOAD_FAST            token
+ 884: PRECALL              
+ 888: CALL                 
+ 898: POP_TOP              
+ 900: LOAD_GLOBAL          NULL + get_addr_spec
+ 912: LOAD_FAST            value
+ 914: PRECALL              
+ 918: CALL                 
+ 928: UNPACK_SEQUENCE      
+ 932: STORE_FAST           token
+ 934: STORE_FAST           value
+ 936: POP_EXCEPT           
+ 938: JUMP_FORWARD         to 948
+ 940: RERAISE              
+ 942: COPY                 
+ 944: POP_EXCEPT           
+ 946: RERAISE              
+ 948: LOAD_FAST            angle_addr
+ 950: LOAD_METHOD          append
+ 972: LOAD_FAST            token
+ 974: PRECALL              
+ 978: CALL                 
+ 988: POP_TOP              
+ 990: LOAD_FAST            value
+ 992: POP_JUMP_FORWARD_IF_FALSE to 1040
+ 994: LOAD_FAST            value
+ 996: LOAD_CONST           0
+ 998: BINARY_SUBSCR        
+1008: LOAD_CONST           '>'
+1010: COMPARE_OP           ==
+1016: POP_JUMP_FORWARD_IF_FALSE to 1040
+1018: LOAD_FAST            value
+1020: LOAD_CONST           1
+1022: LOAD_CONST           None
+1024: BUILD_SLICE          
+1026: BINARY_SUBSCR        
+1036: STORE_FAST           value
+1038: JUMP_FORWARD         to 1128
+1040: LOAD_FAST            angle_addr
+1042: LOAD_ATTR            defects
+1052: LOAD_METHOD          append
+1074: LOAD_GLOBAL          NULL + errors
+1086: LOAD_ATTR            InvalidHeaderDefect
+1096: LOAD_CONST           "missing trailing '>' on angle-addr"
+1098: PRECALL              
+1102: CALL                 
+1112: PRECALL              
+1116: CALL                 
+1126: POP_TOP              
+1128: LOAD_FAST            angle_addr
+1130: LOAD_METHOD          append
+1152: LOAD_GLOBAL          NULL + ValueTerminal
+1164: LOAD_CONST           '>'
+1166: LOAD_CONST           'angle-addr-end'
+1168: PRECALL              
+1172: CALL                 
+1182: PRECALL              
+1186: CALL                 
+1196: POP_TOP              
+1198: LOAD_FAST            value
+1200: POP_JUMP_FORWARD_IF_FALSE to 1310
+1202: LOAD_FAST            value
+1204: LOAD_CONST           0
+1206: BINARY_SUBSCR        
+1216: LOAD_GLOBAL          CFWS_LEADER
+1228: CONTAINS_OP          
+1230: POP_JUMP_FORWARD_IF_FALSE to 1310
+1232: LOAD_GLOBAL          NULL + get_cfws
+1244: LOAD_FAST            value
+1246: PRECALL              
+1250: CALL                 
+1260: UNPACK_SEQUENCE      
+1264: STORE_FAST           token
+1266: STORE_FAST           value
+1268: LOAD_FAST            angle_addr
+1270: LOAD_METHOD          append
+1292: LOAD_FAST            token
+1294: PRECALL              
+1298: CALL                 
+1308: POP_TOP              
+1310: LOAD_FAST            angle_addr
+1312: LOAD_FAST            value
+1314: BUILD_TUPLE          
+1316: RETURN_VALUE         

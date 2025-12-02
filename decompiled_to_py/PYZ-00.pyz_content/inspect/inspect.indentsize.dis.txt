@@ -1,0 +1,30 @@
+# Disassembly for inspect.indentsize
+# From module file: inspect
+
+## co_consts:
+('Return the indent size, in spaces, at the start of a line of text.',)
+
+## co_names:
+('expandtabs', 'len', 'lstrip')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            line
+   4: LOAD_METHOD          expandtabs
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           expline
+  42: LOAD_GLOBAL          NULL + len
+  54: LOAD_FAST            expline
+  56: PRECALL              
+  60: CALL                 
+  70: LOAD_GLOBAL          NULL + len
+  82: LOAD_FAST            expline
+  84: LOAD_METHOD          lstrip
+ 106: PRECALL              
+ 110: CALL                 
+ 120: PRECALL              
+ 124: CALL                 
+ 134: BINARY_OP            -
+ 138: RETURN_VALUE         

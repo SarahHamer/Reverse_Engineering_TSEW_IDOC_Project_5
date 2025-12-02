@@ -1,0 +1,23 @@
+# Disassembly for tracemalloc.Snapshot.__init__
+# From module file: tracemalloc
+
+## co_consts:
+(None,)
+
+## co_names:
+('_Traces', 'traces', 'traceback_limit')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _Traces
+  14: LOAD_FAST            traces
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_FAST            self
+  32: STORE_ATTR           traces
+  42: LOAD_FAST            traceback_limit
+  44: LOAD_FAST            self
+  46: STORE_ATTR           traceback_limit
+  56: LOAD_CONST           None
+  58: RETURN_VALUE         

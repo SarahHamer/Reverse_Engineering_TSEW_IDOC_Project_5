@@ -1,0 +1,25 @@
+# Disassembly for importlib.resources.TraversableResources.open_resource
+# From module file: importlib.resources.abc
+
+## co_consts:
+(None, 'rb')
+
+## co_names:
+('files', 'joinpath', 'open')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          files
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_METHOD          joinpath
+  62: LOAD_FAST            resource
+  64: PRECALL              
+  68: CALL                 
+  78: LOAD_METHOD          open
+ 100: LOAD_CONST           'rb'
+ 102: PRECALL              
+ 106: CALL                 
+ 116: RETURN_VALUE         

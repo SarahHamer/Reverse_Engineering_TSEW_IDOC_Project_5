@@ -1,0 +1,152 @@
+# Disassembly for email.get_group_list
+# From module file: email._header_value_parser
+
+## co_consts:
+(' group-list = mailbox-list / CFWS / obs-group-list\n        obs-group-list = 1*([CFWS] ",") [CFWS]\n\n    ', 'end of header before group-list', None, 0, 'end of header in group-list', ';', 'group-list with empty entries')
+
+## co_names:
+('GroupList', 'defects', 'append', 'errors', 'InvalidHeaderDefect', 'CFWS_LEADER', 'get_cfws', 'get_mailbox_list', 'len', 'all_mailboxes', 'extend', 'ObsoleteHeaderDefect')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + GroupList
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           group_list
+  30: LOAD_FAST            value
+  32: POP_JUMP_FORWARD_IF_TRUE to 130
+  34: LOAD_FAST            group_list
+  36: LOAD_ATTR            defects
+  46: LOAD_METHOD          append
+  68: LOAD_GLOBAL          NULL + errors
+  80: LOAD_ATTR            InvalidHeaderDefect
+  90: LOAD_CONST           'end of header before group-list'
+  92: PRECALL              
+  96: CALL                 
+ 106: PRECALL              
+ 110: CALL                 
+ 120: POP_TOP              
+ 122: LOAD_FAST            group_list
+ 124: LOAD_FAST            value
+ 126: BUILD_TUPLE          
+ 128: RETURN_VALUE         
+ 130: LOAD_CONST           None
+ 132: STORE_FAST           leader
+ 134: LOAD_FAST            value
+ 136: POP_JUMP_FORWARD_IF_FALSE to 420
+ 138: LOAD_FAST            value
+ 140: LOAD_CONST           0
+ 142: BINARY_SUBSCR        
+ 152: LOAD_GLOBAL          CFWS_LEADER
+ 164: CONTAINS_OP          
+ 166: POP_JUMP_FORWARD_IF_FALSE to 420
+ 168: LOAD_GLOBAL          NULL + get_cfws
+ 180: LOAD_FAST            value
+ 182: PRECALL              
+ 186: CALL                 
+ 196: UNPACK_SEQUENCE      
+ 200: STORE_FAST           leader
+ 202: STORE_FAST           value
+ 204: LOAD_FAST            value
+ 206: POP_JUMP_FORWARD_IF_TRUE to 346
+ 208: LOAD_FAST            group_list
+ 210: LOAD_ATTR            defects
+ 220: LOAD_METHOD          append
+ 242: LOAD_GLOBAL          NULL + errors
+ 254: LOAD_ATTR            InvalidHeaderDefect
+ 264: LOAD_CONST           'end of header in group-list'
+ 266: PRECALL              
+ 270: CALL                 
+ 280: PRECALL              
+ 284: CALL                 
+ 294: POP_TOP              
+ 296: LOAD_FAST            group_list
+ 298: LOAD_METHOD          append
+ 320: LOAD_FAST            leader
+ 322: PRECALL              
+ 326: CALL                 
+ 336: POP_TOP              
+ 338: LOAD_FAST            group_list
+ 340: LOAD_FAST            value
+ 342: BUILD_TUPLE          
+ 344: RETURN_VALUE         
+ 346: LOAD_FAST            value
+ 348: LOAD_CONST           0
+ 350: BINARY_SUBSCR        
+ 360: LOAD_CONST           ';'
+ 362: COMPARE_OP           ==
+ 368: POP_JUMP_FORWARD_IF_FALSE to 420
+ 370: LOAD_FAST            group_list
+ 372: LOAD_METHOD          append
+ 394: LOAD_FAST            leader
+ 396: PRECALL              
+ 400: CALL                 
+ 410: POP_TOP              
+ 412: LOAD_FAST            group_list
+ 414: LOAD_FAST            value
+ 416: BUILD_TUPLE          
+ 418: RETURN_VALUE         
+ 420: LOAD_GLOBAL          NULL + get_mailbox_list
+ 432: LOAD_FAST            value
+ 434: PRECALL              
+ 438: CALL                 
+ 448: UNPACK_SEQUENCE      
+ 452: STORE_FAST           token
+ 454: STORE_FAST           value
+ 456: LOAD_GLOBAL          NULL + len
+ 468: LOAD_FAST            token
+ 470: LOAD_ATTR            all_mailboxes
+ 480: PRECALL              
+ 484: CALL                 
+ 494: LOAD_CONST           0
+ 496: COMPARE_OP           ==
+ 502: POP_JUMP_FORWARD_IF_FALSE to 688
+ 504: LOAD_FAST            leader
+ 506: POP_JUMP_FORWARD_IF_NONE to 550
+ 508: LOAD_FAST            group_list
+ 510: LOAD_METHOD          append
+ 532: LOAD_FAST            leader
+ 534: PRECALL              
+ 538: CALL                 
+ 548: POP_TOP              
+ 550: LOAD_FAST            group_list
+ 552: LOAD_METHOD          extend
+ 574: LOAD_FAST            token
+ 576: PRECALL              
+ 580: CALL                 
+ 590: POP_TOP              
+ 592: LOAD_FAST            group_list
+ 594: LOAD_ATTR            defects
+ 604: LOAD_METHOD          append
+ 626: LOAD_GLOBAL          NULL + errors
+ 638: LOAD_ATTR            ObsoleteHeaderDefect
+ 648: LOAD_CONST           'group-list with empty entries'
+ 650: PRECALL              
+ 654: CALL                 
+ 664: PRECALL              
+ 668: CALL                 
+ 678: POP_TOP              
+ 680: LOAD_FAST            group_list
+ 682: LOAD_FAST            value
+ 684: BUILD_TUPLE          
+ 686: RETURN_VALUE         
+ 688: LOAD_FAST            leader
+ 690: POP_JUMP_FORWARD_IF_NONE to 708
+ 692: LOAD_FAST            leader
+ 694: BUILD_LIST           
+ 696: LOAD_FAST            token
+ 698: LOAD_CONST           None
+ 700: LOAD_CONST           0
+ 702: BUILD_SLICE          
+ 704: STORE_SUBSCR         
+ 708: LOAD_FAST            group_list
+ 710: LOAD_METHOD          append
+ 732: LOAD_FAST            token
+ 734: PRECALL              
+ 738: CALL                 
+ 748: POP_TOP              
+ 750: LOAD_FAST            group_list
+ 752: LOAD_FAST            value
+ 754: BUILD_TUPLE          
+ 756: RETURN_VALUE         

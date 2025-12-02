@@ -1,0 +1,107 @@
+# Disassembly for _pydecimal._format_number
+# From module file: _pydecimal
+
+## co_consts:
+("Format a number, given the following data:\n\n    is_negative: true if the number is negative, else false\n    intpart: string of digits that must appear before the decimal point\n    fracpart: string of digits that must come after the point\n    exp: exponent, as an integer\n    spec: dictionary resulting from parsing the format specifier\n\n    This function uses the information in spec to:\n      insert separators (decimal separator and thousands separators)\n      format the sign\n      format the exponent\n      add trailing '%' for the '%' type\n      zero-pad if necessary\n      fill and align if necessary\n    ", 'alt', 'decimal_point', 0, 'type', 'eE', 'E', 'e', ('E', 'e', 'G', 'g'), '{0}{1:+}', '%', 'zeropad', 'minimumwidth')
+
+## co_names:
+('_format_sign', 'format', 'len', '_insert_thousands_sep', '_format_align')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _format_sign
+  14: LOAD_FAST            is_negative
+  16: LOAD_FAST            spec
+  18: PRECALL              
+  22: CALL                 
+  32: STORE_FAST           sign
+  34: LOAD_FAST            fracpart
+  36: POP_JUMP_FORWARD_IF_TRUE to 54
+  38: LOAD_FAST            spec
+  40: LOAD_CONST           'alt'
+  42: BINARY_SUBSCR        
+  52: POP_JUMP_FORWARD_IF_FALSE to 76
+  54: LOAD_FAST            spec
+  56: LOAD_CONST           'decimal_point'
+  58: BINARY_SUBSCR        
+  68: LOAD_FAST            fracpart
+  70: BINARY_OP            +
+  74: STORE_FAST           fracpart
+  76: LOAD_FAST            exp
+  78: LOAD_CONST           0
+  80: COMPARE_OP           !=
+  86: POP_JUMP_FORWARD_IF_TRUE to 108
+  88: LOAD_FAST            spec
+  90: LOAD_CONST           'type'
+  92: BINARY_SUBSCR        
+ 102: LOAD_CONST           'eE'
+ 104: CONTAINS_OP          
+ 106: POP_JUMP_FORWARD_IF_FALSE to 196
+ 108: LOAD_CONST           'E'
+ 110: LOAD_CONST           'e'
+ 112: LOAD_CONST           'E'
+ 114: LOAD_CONST           'e'
+ 116: LOAD_CONST           ('E', 'e', 'G', 'g')
+ 118: BUILD_CONST_KEY_MAP  
+ 120: LOAD_FAST            spec
+ 122: LOAD_CONST           'type'
+ 124: BINARY_SUBSCR        
+ 134: BINARY_SUBSCR        
+ 144: STORE_FAST           echar
+ 146: LOAD_FAST            fracpart
+ 148: LOAD_CONST           '{0}{1:+}'
+ 150: LOAD_METHOD          format
+ 172: LOAD_FAST            echar
+ 174: LOAD_FAST            exp
+ 176: PRECALL              
+ 180: CALL                 
+ 190: BINARY_OP            +=
+ 194: STORE_FAST           fracpart
+ 196: LOAD_FAST            spec
+ 198: LOAD_CONST           'type'
+ 200: BINARY_SUBSCR        
+ 210: LOAD_CONST           '%'
+ 212: COMPARE_OP           ==
+ 218: POP_JUMP_FORWARD_IF_FALSE to 230
+ 220: LOAD_FAST            fracpart
+ 222: LOAD_CONST           '%'
+ 224: BINARY_OP            +=
+ 228: STORE_FAST           fracpart
+ 230: LOAD_FAST            spec
+ 232: LOAD_CONST           'zeropad'
+ 234: BINARY_SUBSCR        
+ 244: POP_JUMP_FORWARD_IF_FALSE to 328
+ 246: LOAD_FAST            spec
+ 248: LOAD_CONST           'minimumwidth'
+ 250: BINARY_SUBSCR        
+ 260: LOAD_GLOBAL          NULL + len
+ 272: LOAD_FAST            fracpart
+ 274: PRECALL              
+ 278: CALL                 
+ 288: BINARY_OP            -
+ 292: LOAD_GLOBAL          NULL + len
+ 304: LOAD_FAST            sign
+ 306: PRECALL              
+ 310: CALL                 
+ 320: BINARY_OP            -
+ 324: STORE_FAST           min_width
+ 326: JUMP_FORWARD         to 332
+ 328: LOAD_CONST           0
+ 330: STORE_FAST           min_width
+ 332: LOAD_GLOBAL          NULL + _insert_thousands_sep
+ 344: LOAD_FAST            intpart
+ 346: LOAD_FAST            spec
+ 348: LOAD_FAST            min_width
+ 350: PRECALL              
+ 354: CALL                 
+ 364: STORE_FAST           intpart
+ 366: LOAD_GLOBAL          NULL + _format_align
+ 378: LOAD_FAST            sign
+ 380: LOAD_FAST            intpart
+ 382: LOAD_FAST            fracpart
+ 384: BINARY_OP            +
+ 388: LOAD_FAST            spec
+ 390: PRECALL              
+ 394: CALL                 
+ 404: RETURN_VALUE         

@@ -1,0 +1,14 @@
+# Disassembly for logging.getLogRecordFactory
+# From module file: logging
+
+## co_consts:
+('\n    Return the factory to be used when instantiating a log record.\n    ',)
+
+## co_names:
+('_logRecordFactory',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _logRecordFactory
+  14: RETURN_VALUE         

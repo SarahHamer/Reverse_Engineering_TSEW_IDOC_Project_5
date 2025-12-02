@@ -1,0 +1,27 @@
+# Disassembly for _strptime.LocaleTime.__calc_date_time.<listcomp>
+# From module file: _strptime
+
+## co_consts:
+('%Z',)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 30
+   8: STORE_FAST           tz_values
+  10: LOAD_FAST            tz_values
+  12: GET_ITER             
+  14: FOR_ITER             to 28
+  16: STORE_FAST           tz
+  18: LOAD_FAST            tz
+  20: LOAD_CONST           '%Z'
+  22: BUILD_TUPLE          
+  24: LIST_APPEND          
+  26: JUMP_BACKWARD        to 14
+  28: JUMP_BACKWARD        to 6
+  30: RETURN_VALUE         

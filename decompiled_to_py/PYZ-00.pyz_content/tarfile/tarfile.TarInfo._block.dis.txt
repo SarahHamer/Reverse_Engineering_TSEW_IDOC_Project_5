@@ -1,0 +1,30 @@
+# Disassembly for tarfile.TarInfo._block
+# From module file: tarfile
+
+## co_consts:
+('Round up a byte count by BLOCKSIZE and return it,\n           e.g. _block(834) => 1024.\n        ', 1)
+
+## co_names:
+('divmod', 'BLOCKSIZE')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + divmod
+  14: LOAD_FAST            count
+  16: LOAD_GLOBAL          BLOCKSIZE
+  28: PRECALL              
+  32: CALL                 
+  42: UNPACK_SEQUENCE      
+  46: STORE_FAST           blocks
+  48: STORE_FAST           remainder
+  50: LOAD_FAST            remainder
+  52: POP_JUMP_FORWARD_IF_FALSE to 64
+  54: LOAD_FAST            blocks
+  56: LOAD_CONST           1
+  58: BINARY_OP            +=
+  62: STORE_FAST           blocks
+  64: LOAD_FAST            blocks
+  66: LOAD_GLOBAL          BLOCKSIZE
+  78: BINARY_OP            *
+  82: RETURN_VALUE         

@@ -1,0 +1,45 @@
+# Disassembly for email.AddressList.__add__
+# From module file: email._parseaddr
+
+## co_consts:
+(None,)
+
+## co_names:
+('AddressList', 'addresslist', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + AddressList
+  14: LOAD_CONST           None
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           newaddr
+  32: LOAD_FAST            self
+  34: LOAD_ATTR            addresslist
+  44: LOAD_CONST           None
+  46: LOAD_CONST           None
+  48: BUILD_SLICE          
+  50: BINARY_SUBSCR        
+  60: LOAD_FAST            newaddr
+  62: STORE_ATTR           addresslist
+  72: LOAD_FAST            other
+  74: LOAD_ATTR            addresslist
+  84: GET_ITER             
+  86: FOR_ITER             to 162
+  88: STORE_FAST           x
+  90: LOAD_FAST            x
+  92: LOAD_FAST            self
+  94: LOAD_ATTR            addresslist
+ 104: CONTAINS_OP          
+ 106: POP_JUMP_FORWARD_IF_FALSE to 160
+ 108: LOAD_FAST            newaddr
+ 110: LOAD_ATTR            addresslist
+ 120: LOAD_METHOD          append
+ 142: LOAD_FAST            x
+ 144: PRECALL              
+ 148: CALL                 
+ 158: POP_TOP              
+ 160: JUMP_BACKWARD        to 86
+ 162: LOAD_FAST            newaddr
+ 164: RETURN_VALUE         

@@ -1,0 +1,60 @@
+# Disassembly for importlib._register
+# From module file: importlib.abc
+
+## co_consts:
+(None,)
+
+## co_names:
+('register', '_frozen_importlib', 'getattr', '__name__', 'AttributeError', '_frozen_importlib_external')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            classes
+   4: GET_ITER             
+   6: FOR_ITER             to 250
+   8: STORE_FAST           cls
+  10: LOAD_FAST            abstract_cls
+  12: LOAD_METHOD          register
+  34: LOAD_FAST            cls
+  36: PRECALL              
+  40: CALL                 
+  50: POP_TOP              
+  52: LOAD_GLOBAL          _frozen_importlib
+  64: POP_JUMP_FORWARD_IF_NONE to 248
+  66: NOP                  
+  68: LOAD_GLOBAL          NULL + getattr
+  80: LOAD_GLOBAL          _frozen_importlib
+  92: LOAD_FAST            cls
+  94: LOAD_ATTR            __name__
+ 104: PRECALL              
+ 108: CALL                 
+ 118: STORE_FAST           frozen_cls
+ 120: JUMP_FORWARD         to 206
+ 122: PUSH_EXC_INFO        
+ 124: LOAD_GLOBAL          AttributeError
+ 136: CHECK_EXC_MATCH      
+ 138: POP_JUMP_FORWARD_IF_FALSE to 198
+ 140: POP_TOP              
+ 142: LOAD_GLOBAL          NULL + getattr
+ 154: LOAD_GLOBAL          _frozen_importlib_external
+ 166: LOAD_FAST            cls
+ 168: LOAD_ATTR            __name__
+ 178: PRECALL              
+ 182: CALL                 
+ 192: STORE_FAST           frozen_cls
+ 194: POP_EXCEPT           
+ 196: JUMP_FORWARD         to 206
+ 198: RERAISE              
+ 200: COPY                 
+ 202: POP_EXCEPT           
+ 204: RERAISE              
+ 206: LOAD_FAST            abstract_cls
+ 208: LOAD_METHOD          register
+ 230: LOAD_FAST            frozen_cls
+ 232: PRECALL              
+ 236: CALL                 
+ 246: POP_TOP              
+ 248: JUMP_BACKWARD        to 6
+ 250: LOAD_CONST           None
+ 252: RETURN_VALUE         

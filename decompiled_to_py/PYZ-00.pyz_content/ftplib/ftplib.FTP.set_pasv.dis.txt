@@ -1,0 +1,17 @@
+# Disassembly for ftplib.FTP.set_pasv
+# From module file: ftplib
+
+## co_consts:
+('Use passive or active mode for data transfers.\n        With a false argument, use the normal PORT mode,\n        With a true argument, use the PASV command.', None)
+
+## co_names:
+('passiveserver',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            val
+   4: LOAD_FAST            self
+   6: STORE_ATTR           passiveserver
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         

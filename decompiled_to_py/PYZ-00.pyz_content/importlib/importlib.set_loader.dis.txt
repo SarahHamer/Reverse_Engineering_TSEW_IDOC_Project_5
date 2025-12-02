@@ -1,0 +1,27 @@
+# Disassembly for importlib.set_loader
+# From module file: importlib.util
+
+## co_consts:
+('Set __loader__ on the returned module.\n\n    This function is deprecated.\n\n    ', <code object set_loader_wrapper at 0x00000240693AB4B0, file "importlib\util.py", line 170>)
+
+## co_names:
+('functools', 'wraps')
+
+## bytecode:
+
+   0: MAKE_CELL            fxn
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + functools
+  16: LOAD_ATTR            wraps
+  26: LOAD_DEREF           fxn
+  28: PRECALL              
+  32: CALL                 
+  42: LOAD_CLOSURE         fxn
+  44: BUILD_TUPLE          
+  46: LOAD_CONST           <code object set_loader_wrapper at 0x00000240693AB4B0, file "importlib\util.py", line 170>
+  48: MAKE_FUNCTION        closure
+  50: PRECALL              
+  54: CALL                 
+  64: STORE_FAST           set_loader_wrapper
+  66: LOAD_FAST            set_loader_wrapper
+  68: RETURN_VALUE         

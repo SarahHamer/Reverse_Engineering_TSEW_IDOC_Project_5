@@ -1,0 +1,15 @@
+# Disassembly for right.ColorButtons.get_visible
+# From module file: right
+
+## co_consts:
+(None,)
+
+## co_names:
+('active',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            active
+  14: RETURN_VALUE         

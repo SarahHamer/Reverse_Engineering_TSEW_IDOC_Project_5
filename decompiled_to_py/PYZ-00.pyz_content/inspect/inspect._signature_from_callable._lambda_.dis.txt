@@ -1,0 +1,25 @@
+# Disassembly for inspect._signature_from_callable.<lambda>
+# From module file: inspect
+
+## co_consts:
+(None, '__signature__')
+
+## co_names:
+('hasattr', 'isinstance', 'types', 'MethodType')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + hasattr
+  14: LOAD_FAST            f
+  16: LOAD_CONST           '__signature__'
+  18: PRECALL              
+  22: CALL                 
+  32: JUMP_IF_TRUE_OR_POP  to 84
+  34: LOAD_GLOBAL          NULL + isinstance
+  46: LOAD_FAST            f
+  48: LOAD_GLOBAL          types
+  60: LOAD_ATTR            MethodType
+  70: PRECALL              
+  74: CALL                 
+  84: RETURN_VALUE         

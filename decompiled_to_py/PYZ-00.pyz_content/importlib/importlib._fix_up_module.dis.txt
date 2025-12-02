@@ -1,0 +1,90 @@
+# Disassembly for importlib._fix_up_module
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+(None, '__loader__', '__spec__', ('loader',), '__file__', '__cached__')
+
+## co_names:
+('get', 'loader', 'SourcelessFileLoader', 'SourceFileLoader', 'spec_from_file_location', 'Exception')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            ns
+   4: LOAD_METHOD          get
+  26: LOAD_CONST           '__loader__'
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           loader
+  44: LOAD_FAST            ns
+  46: LOAD_METHOD          get
+  68: LOAD_CONST           '__spec__'
+  70: PRECALL              
+  74: CALL                 
+  84: STORE_FAST           spec
+  86: LOAD_FAST            loader
+  88: POP_JUMP_FORWARD_IF_TRUE to 188
+  90: LOAD_FAST            spec
+  92: POP_JUMP_FORWARD_IF_FALSE to 110
+  94: LOAD_FAST            spec
+  96: LOAD_ATTR            loader
+ 106: STORE_FAST           loader
+ 108: JUMP_FORWARD         to 188
+ 110: LOAD_FAST            pathname
+ 112: LOAD_FAST            cpathname
+ 114: COMPARE_OP           ==
+ 120: POP_JUMP_FORWARD_IF_FALSE to 156
+ 122: LOAD_GLOBAL          NULL + SourcelessFileLoader
+ 134: LOAD_FAST            name
+ 136: LOAD_FAST            pathname
+ 138: PRECALL              
+ 142: CALL                 
+ 152: STORE_FAST           loader
+ 154: JUMP_FORWARD         to 188
+ 156: LOAD_GLOBAL          NULL + SourceFileLoader
+ 168: LOAD_FAST            name
+ 170: LOAD_FAST            pathname
+ 172: PRECALL              
+ 176: CALL                 
+ 186: STORE_FAST           loader
+ 188: LOAD_FAST            spec
+ 190: POP_JUMP_FORWARD_IF_TRUE to 228
+ 192: LOAD_GLOBAL          NULL + spec_from_file_location
+ 204: LOAD_FAST            name
+ 206: LOAD_FAST            pathname
+ 208: LOAD_FAST            loader
+ 210: KW_NAMES             
+ 212: PRECALL              
+ 216: CALL                 
+ 226: STORE_FAST           spec
+ 228: NOP                  
+ 230: LOAD_FAST            spec
+ 232: LOAD_FAST            ns
+ 234: LOAD_CONST           '__spec__'
+ 236: STORE_SUBSCR         
+ 240: LOAD_FAST            loader
+ 242: LOAD_FAST            ns
+ 244: LOAD_CONST           '__loader__'
+ 246: STORE_SUBSCR         
+ 250: LOAD_FAST            pathname
+ 252: LOAD_FAST            ns
+ 254: LOAD_CONST           '__file__'
+ 256: STORE_SUBSCR         
+ 260: LOAD_FAST            cpathname
+ 262: LOAD_FAST            ns
+ 264: LOAD_CONST           '__cached__'
+ 266: STORE_SUBSCR         
+ 270: LOAD_CONST           None
+ 272: RETURN_VALUE         
+ 274: PUSH_EXC_INFO        
+ 276: LOAD_GLOBAL          Exception
+ 288: CHECK_EXC_MATCH      
+ 290: POP_JUMP_FORWARD_IF_FALSE to 300
+ 292: POP_TOP              
+ 294: POP_EXCEPT           
+ 296: LOAD_CONST           None
+ 298: RETURN_VALUE         
+ 300: RERAISE              
+ 302: COPY                 
+ 304: POP_EXCEPT           
+ 306: RERAISE              

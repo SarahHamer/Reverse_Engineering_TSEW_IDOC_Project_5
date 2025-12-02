@@ -1,0 +1,29 @@
+# Disassembly for signal.pthread_sigmask
+# From module file: signal
+
+## co_consts:
+(None, <code object <genexpr> at 0x00000240693EA430, file "signal.py", line 70>)
+
+## co_names:
+('_signal', 'pthread_sigmask', 'set')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _signal
+  14: LOAD_ATTR            pthread_sigmask
+  24: LOAD_FAST            how
+  26: LOAD_FAST            mask
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           sigs_set
+  44: LOAD_GLOBAL          NULL + set
+  56: LOAD_CONST           <code object <genexpr> at 0x00000240693EA430, file "signal.py", line 70>
+  58: MAKE_FUNCTION        
+  60: LOAD_FAST            sigs_set
+  62: GET_ITER             
+  64: PRECALL              
+  68: CALL                 
+  78: PRECALL              
+  82: CALL                 
+  92: RETURN_VALUE         

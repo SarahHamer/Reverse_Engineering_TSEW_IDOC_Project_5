@@ -1,0 +1,51 @@
+# Disassembly for email.ContentTypeHeader
+# From module file: email.headerregistry
+
+## co_consts:
+('ContentTypeHeader', <code object init at 0x00000240691E9E30, file "email\headerregistry.py", line 472>, <code object maintype at 0x0000024069496CE0, file "email\headerregistry.py", line 477>, <code object subtype at 0x0000024069494510, file "email\headerregistry.py", line 481>, <code object content_type at 0x00000240694657D0, file "email\headerregistry.py", line 485>)
+
+## co_names:
+('__name__', '__module__', '__qualname__', 'staticmethod', 'parser', 'parse_content_type_header', 'value_parser', 'init', 'property', 'maintype', 'subtype', 'content_type', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'ContentTypeHeader'
+  10: STORE_NAME           __qualname__
+  12: PUSH_NULL            
+  14: LOAD_NAME            staticmethod
+  16: LOAD_NAME            parser
+  18: LOAD_ATTR            parse_content_type_header
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_NAME           value_parser
+  44: LOAD_CLOSURE         __class__
+  46: BUILD_TUPLE          
+  48: LOAD_CONST           <code object init at 0x00000240691E9E30, file "email\headerregistry.py", line 472>
+  50: MAKE_FUNCTION        closure
+  52: STORE_NAME           init
+  54: LOAD_NAME            property
+  56: LOAD_CONST           <code object maintype at 0x0000024069496CE0, file "email\headerregistry.py", line 477>
+  58: MAKE_FUNCTION        
+  60: PRECALL              
+  64: CALL                 
+  74: STORE_NAME           maintype
+  76: LOAD_NAME            property
+  78: LOAD_CONST           <code object subtype at 0x0000024069494510, file "email\headerregistry.py", line 481>
+  80: MAKE_FUNCTION        
+  82: PRECALL              
+  86: CALL                 
+  96: STORE_NAME           subtype
+  98: LOAD_NAME            property
+ 100: LOAD_CONST           <code object content_type at 0x00000240694657D0, file "email\headerregistry.py", line 485>
+ 102: MAKE_FUNCTION        
+ 104: PRECALL              
+ 108: CALL                 
+ 118: STORE_NAME           content_type
+ 120: LOAD_CLOSURE         __class__
+ 122: COPY                 
+ 124: STORE_NAME           __classcell__
+ 126: RETURN_VALUE         

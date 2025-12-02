@@ -1,0 +1,164 @@
+# Disassembly for typing.Generic.__init_subclass__
+# From module file: typing
+
+## co_consts:
+(None, '__orig_bases__', 'Protocol', 'Cannot inherit from plain Generic', 'Cannot inherit from Generic[...] multiple times.', ', ', <code object <genexpr> at 0x0000024069CDC630, file "typing.py", line 1881>, <code object <genexpr> at 0x0000024069CF47B0, file "typing.py", line 1882>, 'Some type variables (', ') are not listed in Generic[', ']')
+
+## co_names:
+('super', '__init_subclass__', '__dict__', 'Generic', '__orig_bases__', '__bases__', '__name__', 'type', '_TypedDictMeta', 'TypeError', '_collect_parameters', 'isinstance', '_GenericAlias', '__origin__', '__parameters__', 'set', 'join', 'tuple')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: MAKE_CELL            gvarset
+   4: RESUME               
+   6: PUSH_NULL            
+   8: LOAD_GLOBAL          NULL + super
+  20: PRECALL              
+  24: CALL                 
+  34: LOAD_ATTR            __init_subclass__
+  44: LOAD_FAST            args
+  46: BUILD_MAP            
+  48: LOAD_FAST            kwargs
+  50: DICT_MERGE           
+  52: CALL_FUNCTION_EX     
+  54: POP_TOP              
+  56: BUILD_LIST           
+  58: STORE_FAST           tvars
+  60: LOAD_CONST           '__orig_bases__'
+  62: LOAD_FAST            cls
+  64: LOAD_ATTR            __dict__
+  74: CONTAINS_OP          
+  76: POP_JUMP_FORWARD_IF_FALSE to 108
+  78: LOAD_GLOBAL          Generic
+  90: LOAD_FAST            cls
+  92: LOAD_ATTR            __orig_bases__
+ 102: CONTAINS_OP          
+ 104: STORE_FAST           error
+ 106: JUMP_FORWARD         to 206
+ 108: LOAD_GLOBAL          Generic
+ 120: LOAD_FAST            cls
+ 122: LOAD_ATTR            __bases__
+ 132: CONTAINS_OP          
+ 134: JUMP_IF_FALSE_OR_POP to 204
+ 136: LOAD_FAST            cls
+ 138: LOAD_ATTR            __name__
+ 148: LOAD_CONST           'Protocol'
+ 150: COMPARE_OP           !=
+ 156: JUMP_IF_FALSE_OR_POP to 204
+ 158: LOAD_GLOBAL          NULL + type
+ 170: LOAD_FAST            cls
+ 172: PRECALL              
+ 176: CALL                 
+ 186: LOAD_GLOBAL          _TypedDictMeta
+ 198: COMPARE_OP           !=
+ 204: STORE_FAST           error
+ 206: LOAD_FAST            error
+ 208: POP_JUMP_FORWARD_IF_FALSE to 240
+ 210: LOAD_GLOBAL          NULL + TypeError
+ 222: LOAD_CONST           'Cannot inherit from plain Generic'
+ 224: PRECALL              
+ 228: CALL                 
+ 238: RAISE_VARARGS        
+ 240: LOAD_CONST           '__orig_bases__'
+ 242: LOAD_FAST            cls
+ 244: LOAD_ATTR            __dict__
+ 254: CONTAINS_OP          
+ 256: POP_JUMP_FORWARD_IF_FALSE to 692
+ 258: LOAD_GLOBAL          NULL + _collect_parameters
+ 270: LOAD_FAST            cls
+ 272: LOAD_ATTR            __orig_bases__
+ 282: PRECALL              
+ 286: CALL                 
+ 296: STORE_FAST           tvars
+ 298: LOAD_CONST           None
+ 300: STORE_FAST           gvars
+ 302: LOAD_FAST            cls
+ 304: LOAD_ATTR            __orig_bases__
+ 314: GET_ITER             
+ 316: FOR_ITER             to 440
+ 318: STORE_FAST           base
+ 320: LOAD_GLOBAL          NULL + isinstance
+ 332: LOAD_FAST            base
+ 334: LOAD_GLOBAL          _GenericAlias
+ 346: PRECALL              
+ 350: CALL                 
+ 360: POP_JUMP_FORWARD_IF_FALSE to 438
+ 362: LOAD_FAST            base
+ 364: LOAD_ATTR            __origin__
+ 374: LOAD_GLOBAL          Generic
+ 386: IS_OP                
+ 388: POP_JUMP_FORWARD_IF_FALSE to 438
+ 390: LOAD_FAST            gvars
+ 392: POP_JUMP_FORWARD_IF_NONE to 424
+ 394: LOAD_GLOBAL          NULL + TypeError
+ 406: LOAD_CONST           'Cannot inherit from Generic[...] multiple times.'
+ 408: PRECALL              
+ 412: CALL                 
+ 422: RAISE_VARARGS        
+ 424: LOAD_FAST            base
+ 426: LOAD_ATTR            __parameters__
+ 436: STORE_FAST           gvars
+ 438: JUMP_BACKWARD        to 316
+ 440: LOAD_FAST            gvars
+ 442: POP_JUMP_FORWARD_IF_NONE to 692
+ 444: LOAD_GLOBAL          NULL + set
+ 456: LOAD_FAST            tvars
+ 458: PRECALL              
+ 462: CALL                 
+ 472: STORE_FAST           tvarset
+ 474: LOAD_GLOBAL          NULL + set
+ 486: LOAD_FAST            gvars
+ 488: PRECALL              
+ 492: CALL                 
+ 502: STORE_DEREF          gvarset
+ 504: LOAD_FAST            tvarset
+ 506: LOAD_DEREF           gvarset
+ 508: COMPARE_OP           <=
+ 514: POP_JUMP_FORWARD_IF_TRUE to 688
+ 516: LOAD_CONST           ', '
+ 518: LOAD_METHOD          join
+ 540: LOAD_CLOSURE         gvarset
+ 542: BUILD_TUPLE          
+ 544: LOAD_CONST           <code object <genexpr> at 0x0000024069CDC630, file "typing.py", line 1881>
+ 546: MAKE_FUNCTION        closure
+ 548: LOAD_FAST            tvars
+ 550: GET_ITER             
+ 552: PRECALL              
+ 556: CALL                 
+ 566: PRECALL              
+ 570: CALL                 
+ 580: STORE_FAST           s_vars
+ 582: LOAD_CONST           ', '
+ 584: LOAD_METHOD          join
+ 606: LOAD_CONST           <code object <genexpr> at 0x0000024069CF47B0, file "typing.py", line 1882>
+ 608: MAKE_FUNCTION        
+ 610: LOAD_FAST            gvars
+ 612: GET_ITER             
+ 614: PRECALL              
+ 618: CALL                 
+ 628: PRECALL              
+ 632: CALL                 
+ 642: STORE_FAST           s_args
+ 644: LOAD_GLOBAL          NULL + TypeError
+ 656: LOAD_CONST           'Some type variables ('
+ 658: LOAD_FAST            s_vars
+ 660: FORMAT_VALUE         
+ 662: LOAD_CONST           ') are not listed in Generic['
+ 664: LOAD_FAST            s_args
+ 666: FORMAT_VALUE         
+ 668: LOAD_CONST           ']'
+ 670: BUILD_STRING         
+ 672: PRECALL              
+ 676: CALL                 
+ 686: RAISE_VARARGS        
+ 688: LOAD_FAST            gvars
+ 690: STORE_FAST           tvars
+ 692: LOAD_GLOBAL          NULL + tuple
+ 704: LOAD_FAST            tvars
+ 706: PRECALL              
+ 710: CALL                 
+ 720: LOAD_FAST            cls
+ 722: STORE_ATTR           __parameters__
+ 732: LOAD_CONST           None
+ 734: RETURN_VALUE         

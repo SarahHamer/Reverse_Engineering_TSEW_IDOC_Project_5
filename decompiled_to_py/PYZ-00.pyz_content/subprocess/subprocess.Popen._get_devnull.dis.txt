@@ -1,0 +1,31 @@
+# Disassembly for subprocess.Popen._get_devnull
+# From module file: subprocess
+
+## co_consts:
+(None, '_devnull')
+
+## co_names:
+('hasattr', 'os', 'open', 'devnull', 'O_RDWR', '_devnull')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + hasattr
+  14: LOAD_FAST            self
+  16: LOAD_CONST           '_devnull'
+  18: PRECALL              
+  22: CALL                 
+  32: POP_JUMP_FORWARD_IF_TRUE to 126
+  34: LOAD_GLOBAL          NULL + os
+  46: LOAD_ATTR            open
+  56: LOAD_GLOBAL          os
+  68: LOAD_ATTR            devnull
+  78: LOAD_GLOBAL          os
+  90: LOAD_ATTR            O_RDWR
+ 100: PRECALL              
+ 104: CALL                 
+ 114: LOAD_FAST            self
+ 116: STORE_ATTR           _devnull
+ 126: LOAD_FAST            self
+ 128: LOAD_ATTR            _devnull
+ 138: RETURN_VALUE         

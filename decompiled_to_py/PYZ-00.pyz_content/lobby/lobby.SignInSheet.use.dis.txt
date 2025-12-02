@@ -1,0 +1,23 @@
+# Disassembly for lobby.SignInSheet.use
+# From module file: lobby
+
+## co_consts:
+(None, True, 'You scribble your name on the sing in sheet.')
+
+## co_names:
+('signed', 'send_message')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           True
+   4: LOAD_FAST            self
+   6: STORE_ATTR           signed
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          send_message
+  40: LOAD_CONST           'You scribble your name on the sing in sheet.'
+  42: PRECALL              
+  46: CALL                 
+  56: POP_TOP              
+  58: LOAD_CONST           None
+  60: RETURN_VALUE         

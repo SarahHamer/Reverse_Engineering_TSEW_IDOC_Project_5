@@ -1,0 +1,461 @@
+# Disassembly for datetime.timedelta.__new__
+# From module file: datetime
+
+## co_consts:
+(None, 0, 7, 60, 3600, 1000, 86400.0, 0.0, 1.0, 86400, 2.0, 172800, 1000000.0, 2100000.0, 1000000, 259200, 3100000.0, 999999999, 'timedelta # of days is too large: %d', -1)
+
+## co_names:
+('isinstance', 'float', '_math', 'modf', 'int', 'abs', 'divmod', 'round', 'OverflowError', 'object', '__new__', '_days', '_seconds', '_microseconds', '_hashcode')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: COPY                 
+   6: STORE_FAST           d
+   8: COPY                 
+  10: STORE_FAST           s
+  12: STORE_FAST           us
+  14: LOAD_FAST            days
+  16: LOAD_FAST            weeks
+  18: LOAD_CONST           7
+  20: BINARY_OP            *
+  24: BINARY_OP            +=
+  28: STORE_FAST           days
+  30: LOAD_FAST            seconds
+  32: LOAD_FAST            minutes
+  34: LOAD_CONST           60
+  36: BINARY_OP            *
+  40: LOAD_FAST            hours
+  42: LOAD_CONST           3600
+  44: BINARY_OP            *
+  48: BINARY_OP            +
+  52: BINARY_OP            +=
+  56: STORE_FAST           seconds
+  58: LOAD_FAST            microseconds
+  60: LOAD_FAST            milliseconds
+  62: LOAD_CONST           1000
+  64: BINARY_OP            *
+  68: BINARY_OP            +=
+  72: STORE_FAST           microseconds
+  74: LOAD_GLOBAL          NULL + isinstance
+  86: LOAD_FAST            days
+  88: LOAD_GLOBAL          float
+ 100: PRECALL              
+ 104: CALL                 
+ 114: POP_JUMP_FORWARD_IF_FALSE to 360
+ 116: LOAD_GLOBAL          NULL + _math
+ 128: LOAD_ATTR            modf
+ 138: LOAD_FAST            days
+ 140: PRECALL              
+ 144: CALL                 
+ 154: UNPACK_SEQUENCE      
+ 158: STORE_FAST           dayfrac
+ 160: STORE_FAST           days
+ 162: LOAD_GLOBAL          NULL + _math
+ 174: LOAD_ATTR            modf
+ 184: LOAD_FAST            dayfrac
+ 186: LOAD_CONST           86400.0
+ 188: BINARY_OP            *
+ 192: PRECALL              
+ 196: CALL                 
+ 206: UNPACK_SEQUENCE      
+ 210: STORE_FAST           daysecondsfrac
+ 212: STORE_FAST           daysecondswhole
+ 214: LOAD_FAST            daysecondswhole
+ 216: LOAD_GLOBAL          NULL + int
+ 228: LOAD_FAST            daysecondswhole
+ 230: PRECALL              
+ 234: CALL                 
+ 244: COMPARE_OP           ==
+ 250: POP_JUMP_FORWARD_IF_TRUE to 256
+ 252: LOAD_ASSERTION_ERROR 
+ 254: RAISE_VARARGS        
+ 256: LOAD_GLOBAL          NULL + int
+ 268: LOAD_FAST            daysecondswhole
+ 270: PRECALL              
+ 274: CALL                 
+ 284: STORE_FAST           s
+ 286: LOAD_FAST            days
+ 288: LOAD_GLOBAL          NULL + int
+ 300: LOAD_FAST            days
+ 302: PRECALL              
+ 306: CALL                 
+ 316: COMPARE_OP           ==
+ 322: POP_JUMP_FORWARD_IF_TRUE to 328
+ 324: LOAD_ASSERTION_ERROR 
+ 326: RAISE_VARARGS        
+ 328: LOAD_GLOBAL          NULL + int
+ 340: LOAD_FAST            days
+ 342: PRECALL              
+ 346: CALL                 
+ 356: STORE_FAST           d
+ 358: JUMP_FORWARD         to 368
+ 360: LOAD_CONST           0.0
+ 362: STORE_FAST           daysecondsfrac
+ 364: LOAD_FAST            days
+ 366: STORE_FAST           d
+ 368: LOAD_GLOBAL          NULL + isinstance
+ 380: LOAD_FAST            daysecondsfrac
+ 382: LOAD_GLOBAL          float
+ 394: PRECALL              
+ 398: CALL                 
+ 408: POP_JUMP_FORWARD_IF_TRUE to 414
+ 410: LOAD_ASSERTION_ERROR 
+ 412: RAISE_VARARGS        
+ 414: LOAD_GLOBAL          NULL + abs
+ 426: LOAD_FAST            daysecondsfrac
+ 428: PRECALL              
+ 432: CALL                 
+ 442: LOAD_CONST           1.0
+ 444: COMPARE_OP           <=
+ 450: POP_JUMP_FORWARD_IF_TRUE to 456
+ 452: LOAD_ASSERTION_ERROR 
+ 454: RAISE_VARARGS        
+ 456: LOAD_GLOBAL          NULL + isinstance
+ 468: LOAD_FAST            d
+ 470: LOAD_GLOBAL          int
+ 482: PRECALL              
+ 486: CALL                 
+ 496: POP_JUMP_FORWARD_IF_TRUE to 502
+ 498: LOAD_ASSERTION_ERROR 
+ 500: RAISE_VARARGS        
+ 502: LOAD_GLOBAL          NULL + abs
+ 514: LOAD_FAST            s
+ 516: PRECALL              
+ 520: CALL                 
+ 530: LOAD_CONST           86400
+ 532: COMPARE_OP           <=
+ 538: POP_JUMP_FORWARD_IF_TRUE to 544
+ 540: LOAD_ASSERTION_ERROR 
+ 542: RAISE_VARARGS        
+ 544: LOAD_GLOBAL          NULL + isinstance
+ 556: LOAD_FAST            seconds
+ 558: LOAD_GLOBAL          float
+ 570: PRECALL              
+ 574: CALL                 
+ 584: POP_JUMP_FORWARD_IF_FALSE to 758
+ 586: LOAD_GLOBAL          NULL + _math
+ 598: LOAD_ATTR            modf
+ 608: LOAD_FAST            seconds
+ 610: PRECALL              
+ 614: CALL                 
+ 624: UNPACK_SEQUENCE      
+ 628: STORE_FAST           secondsfrac
+ 630: STORE_FAST           seconds
+ 632: LOAD_FAST            seconds
+ 634: LOAD_GLOBAL          NULL + int
+ 646: LOAD_FAST            seconds
+ 648: PRECALL              
+ 652: CALL                 
+ 662: COMPARE_OP           ==
+ 668: POP_JUMP_FORWARD_IF_TRUE to 674
+ 670: LOAD_ASSERTION_ERROR 
+ 672: RAISE_VARARGS        
+ 674: LOAD_GLOBAL          NULL + int
+ 686: LOAD_FAST            seconds
+ 688: PRECALL              
+ 692: CALL                 
+ 702: STORE_FAST           seconds
+ 704: LOAD_FAST            secondsfrac
+ 706: LOAD_FAST            daysecondsfrac
+ 708: BINARY_OP            +=
+ 712: STORE_FAST           secondsfrac
+ 714: LOAD_GLOBAL          NULL + abs
+ 726: LOAD_FAST            secondsfrac
+ 728: PRECALL              
+ 732: CALL                 
+ 742: LOAD_CONST           2.0
+ 744: COMPARE_OP           <=
+ 750: POP_JUMP_FORWARD_IF_TRUE to 756
+ 752: LOAD_ASSERTION_ERROR 
+ 754: RAISE_VARARGS        
+ 756: JUMP_FORWARD         to 762
+ 758: LOAD_FAST            daysecondsfrac
+ 760: STORE_FAST           secondsfrac
+ 762: LOAD_GLOBAL          NULL + isinstance
+ 774: LOAD_FAST            secondsfrac
+ 776: LOAD_GLOBAL          float
+ 788: PRECALL              
+ 792: CALL                 
+ 802: POP_JUMP_FORWARD_IF_TRUE to 808
+ 804: LOAD_ASSERTION_ERROR 
+ 806: RAISE_VARARGS        
+ 808: LOAD_GLOBAL          NULL + abs
+ 820: LOAD_FAST            secondsfrac
+ 822: PRECALL              
+ 826: CALL                 
+ 836: LOAD_CONST           2.0
+ 838: COMPARE_OP           <=
+ 844: POP_JUMP_FORWARD_IF_TRUE to 850
+ 846: LOAD_ASSERTION_ERROR 
+ 848: RAISE_VARARGS        
+ 850: LOAD_GLOBAL          NULL + isinstance
+ 862: LOAD_FAST            seconds
+ 864: LOAD_GLOBAL          int
+ 876: PRECALL              
+ 880: CALL                 
+ 890: POP_JUMP_FORWARD_IF_TRUE to 896
+ 892: LOAD_ASSERTION_ERROR 
+ 894: RAISE_VARARGS        
+ 896: LOAD_GLOBAL          NULL + divmod
+ 908: LOAD_FAST            seconds
+ 910: LOAD_CONST           86400
+ 912: PRECALL              
+ 916: CALL                 
+ 926: UNPACK_SEQUENCE      
+ 930: STORE_FAST           days
+ 932: STORE_FAST           seconds
+ 934: LOAD_FAST            d
+ 936: LOAD_FAST            days
+ 938: BINARY_OP            +=
+ 942: STORE_FAST           d
+ 944: LOAD_FAST            s
+ 946: LOAD_GLOBAL          NULL + int
+ 958: LOAD_FAST            seconds
+ 960: PRECALL              
+ 964: CALL                 
+ 974: BINARY_OP            +=
+ 978: STORE_FAST           s
+ 980: LOAD_GLOBAL          NULL + isinstance
+ 992: LOAD_FAST            s
+ 994: LOAD_GLOBAL          int
+1006: PRECALL              
+1010: CALL                 
+1020: POP_JUMP_FORWARD_IF_TRUE to 1026
+1022: LOAD_ASSERTION_ERROR 
+1024: RAISE_VARARGS        
+1026: LOAD_GLOBAL          NULL + abs
+1038: LOAD_FAST            s
+1040: PRECALL              
+1044: CALL                 
+1054: LOAD_CONST           172800
+1056: COMPARE_OP           <=
+1062: POP_JUMP_FORWARD_IF_TRUE to 1068
+1064: LOAD_ASSERTION_ERROR 
+1066: RAISE_VARARGS        
+1068: LOAD_FAST            secondsfrac
+1070: LOAD_CONST           1000000.0
+1072: BINARY_OP            *
+1076: STORE_FAST           usdouble
+1078: LOAD_GLOBAL          NULL + abs
+1090: LOAD_FAST            usdouble
+1092: PRECALL              
+1096: CALL                 
+1106: LOAD_CONST           2100000.0
+1108: COMPARE_OP           <
+1114: POP_JUMP_FORWARD_IF_TRUE to 1120
+1116: LOAD_ASSERTION_ERROR 
+1118: RAISE_VARARGS        
+1120: LOAD_GLOBAL          NULL + isinstance
+1132: LOAD_FAST            microseconds
+1134: LOAD_GLOBAL          float
+1146: PRECALL              
+1150: CALL                 
+1160: POP_JUMP_FORWARD_IF_FALSE to 1296
+1162: LOAD_GLOBAL          NULL + round
+1174: LOAD_FAST            microseconds
+1176: LOAD_FAST            usdouble
+1178: BINARY_OP            +
+1182: PRECALL              
+1186: CALL                 
+1196: STORE_FAST           microseconds
+1198: LOAD_GLOBAL          NULL + divmod
+1210: LOAD_FAST            microseconds
+1212: LOAD_CONST           1000000
+1214: PRECALL              
+1218: CALL                 
+1228: UNPACK_SEQUENCE      
+1232: STORE_FAST           seconds
+1234: STORE_FAST           microseconds
+1236: LOAD_GLOBAL          NULL + divmod
+1248: LOAD_FAST            seconds
+1250: LOAD_CONST           86400
+1252: PRECALL              
+1256: CALL                 
+1266: UNPACK_SEQUENCE      
+1270: STORE_FAST           days
+1272: STORE_FAST           seconds
+1274: LOAD_FAST            d
+1276: LOAD_FAST            days
+1278: BINARY_OP            +=
+1282: STORE_FAST           d
+1284: LOAD_FAST            s
+1286: LOAD_FAST            seconds
+1288: BINARY_OP            +=
+1292: STORE_FAST           s
+1294: JUMP_FORWARD         to 1458
+1296: LOAD_GLOBAL          NULL + int
+1308: LOAD_FAST            microseconds
+1310: PRECALL              
+1314: CALL                 
+1324: STORE_FAST           microseconds
+1326: LOAD_GLOBAL          NULL + divmod
+1338: LOAD_FAST            microseconds
+1340: LOAD_CONST           1000000
+1342: PRECALL              
+1346: CALL                 
+1356: UNPACK_SEQUENCE      
+1360: STORE_FAST           seconds
+1362: STORE_FAST           microseconds
+1364: LOAD_GLOBAL          NULL + divmod
+1376: LOAD_FAST            seconds
+1378: LOAD_CONST           86400
+1380: PRECALL              
+1384: CALL                 
+1394: UNPACK_SEQUENCE      
+1398: STORE_FAST           days
+1400: STORE_FAST           seconds
+1402: LOAD_FAST            d
+1404: LOAD_FAST            days
+1406: BINARY_OP            +=
+1410: STORE_FAST           d
+1412: LOAD_FAST            s
+1414: LOAD_FAST            seconds
+1416: BINARY_OP            +=
+1420: STORE_FAST           s
+1422: LOAD_GLOBAL          NULL + round
+1434: LOAD_FAST            microseconds
+1436: LOAD_FAST            usdouble
+1438: BINARY_OP            +
+1442: PRECALL              
+1446: CALL                 
+1456: STORE_FAST           microseconds
+1458: LOAD_GLOBAL          NULL + isinstance
+1470: LOAD_FAST            s
+1472: LOAD_GLOBAL          int
+1484: PRECALL              
+1488: CALL                 
+1498: POP_JUMP_FORWARD_IF_TRUE to 1504
+1500: LOAD_ASSERTION_ERROR 
+1502: RAISE_VARARGS        
+1504: LOAD_GLOBAL          NULL + isinstance
+1516: LOAD_FAST            microseconds
+1518: LOAD_GLOBAL          int
+1530: PRECALL              
+1534: CALL                 
+1544: POP_JUMP_FORWARD_IF_TRUE to 1550
+1546: LOAD_ASSERTION_ERROR 
+1548: RAISE_VARARGS        
+1550: LOAD_GLOBAL          NULL + abs
+1562: LOAD_FAST            s
+1564: PRECALL              
+1568: CALL                 
+1578: LOAD_CONST           259200
+1580: COMPARE_OP           <=
+1586: POP_JUMP_FORWARD_IF_TRUE to 1592
+1588: LOAD_ASSERTION_ERROR 
+1590: RAISE_VARARGS        
+1592: LOAD_GLOBAL          NULL + abs
+1604: LOAD_FAST            microseconds
+1606: PRECALL              
+1610: CALL                 
+1620: LOAD_CONST           3100000.0
+1622: COMPARE_OP           <
+1628: POP_JUMP_FORWARD_IF_TRUE to 1634
+1630: LOAD_ASSERTION_ERROR 
+1632: RAISE_VARARGS        
+1634: LOAD_GLOBAL          NULL + divmod
+1646: LOAD_FAST            microseconds
+1648: LOAD_CONST           1000000
+1650: PRECALL              
+1654: CALL                 
+1664: UNPACK_SEQUENCE      
+1668: STORE_FAST           seconds
+1670: STORE_FAST           us
+1672: LOAD_FAST            s
+1674: LOAD_FAST            seconds
+1676: BINARY_OP            +=
+1680: STORE_FAST           s
+1682: LOAD_GLOBAL          NULL + divmod
+1694: LOAD_FAST            s
+1696: LOAD_CONST           86400
+1698: PRECALL              
+1702: CALL                 
+1712: UNPACK_SEQUENCE      
+1716: STORE_FAST           days
+1718: STORE_FAST           s
+1720: LOAD_FAST            d
+1722: LOAD_FAST            days
+1724: BINARY_OP            +=
+1728: STORE_FAST           d
+1730: LOAD_GLOBAL          NULL + isinstance
+1742: LOAD_FAST            d
+1744: LOAD_GLOBAL          int
+1756: PRECALL              
+1760: CALL                 
+1770: POP_JUMP_FORWARD_IF_TRUE to 1776
+1772: LOAD_ASSERTION_ERROR 
+1774: RAISE_VARARGS        
+1776: LOAD_GLOBAL          NULL + isinstance
+1788: LOAD_FAST            s
+1790: LOAD_GLOBAL          int
+1802: PRECALL              
+1806: CALL                 
+1816: POP_JUMP_FORWARD_IF_FALSE to 1848
+1818: LOAD_CONST           0
+1820: LOAD_FAST            s
+1822: SWAP                 
+1824: COPY                 
+1826: COMPARE_OP           <=
+1832: POP_JUMP_FORWARD_IF_FALSE to 1846
+1834: LOAD_CONST           86400
+1836: COMPARE_OP           <
+1842: POP_JUMP_FORWARD_IF_TRUE to 1852
+1844: JUMP_FORWARD         to 1848
+1846: POP_TOP              
+1848: LOAD_ASSERTION_ERROR 
+1850: RAISE_VARARGS        
+1852: LOAD_GLOBAL          NULL + isinstance
+1864: LOAD_FAST            us
+1866: LOAD_GLOBAL          int
+1878: PRECALL              
+1882: CALL                 
+1892: POP_JUMP_FORWARD_IF_FALSE to 1924
+1894: LOAD_CONST           0
+1896: LOAD_FAST            us
+1898: SWAP                 
+1900: COPY                 
+1902: COMPARE_OP           <=
+1908: POP_JUMP_FORWARD_IF_FALSE to 1922
+1910: LOAD_CONST           1000000
+1912: COMPARE_OP           <
+1918: POP_JUMP_FORWARD_IF_TRUE to 1928
+1920: JUMP_FORWARD         to 1924
+1922: POP_TOP              
+1924: LOAD_ASSERTION_ERROR 
+1926: RAISE_VARARGS        
+1928: LOAD_GLOBAL          NULL + abs
+1940: LOAD_FAST            d
+1942: PRECALL              
+1946: CALL                 
+1956: LOAD_CONST           999999999
+1958: COMPARE_OP           >
+1964: POP_JUMP_FORWARD_IF_FALSE to 2002
+1966: LOAD_GLOBAL          NULL + OverflowError
+1978: LOAD_CONST           'timedelta # of days is too large: %d'
+1980: LOAD_FAST            d
+1982: BINARY_OP            %
+1986: PRECALL              
+1990: CALL                 
+2000: RAISE_VARARGS        
+2002: LOAD_GLOBAL          object
+2014: LOAD_METHOD          __new__
+2036: LOAD_FAST            cls
+2038: PRECALL              
+2042: CALL                 
+2052: STORE_FAST           self
+2054: LOAD_FAST            d
+2056: LOAD_FAST            self
+2058: STORE_ATTR           _days
+2068: LOAD_FAST            s
+2070: LOAD_FAST            self
+2072: STORE_ATTR           _seconds
+2082: LOAD_FAST            us
+2084: LOAD_FAST            self
+2086: STORE_ATTR           _microseconds
+2096: LOAD_CONST           -1
+2098: LOAD_FAST            self
+2100: STORE_ATTR           _hashcode
+2110: LOAD_FAST            self
+2112: RETURN_VALUE         

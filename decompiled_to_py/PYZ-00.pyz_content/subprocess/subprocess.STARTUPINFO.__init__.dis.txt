@@ -1,0 +1,36 @@
+# Disassembly for subprocess.STARTUPINFO.__init__
+# From module file: subprocess
+
+## co_consts:
+(None, 'handle_list')
+
+## co_names:
+('dwFlags', 'hStdInput', 'hStdOutput', 'hStdError', 'wShowWindow', 'lpAttributeList')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            dwFlags
+   4: LOAD_FAST            self
+   6: STORE_ATTR           dwFlags
+  16: LOAD_FAST            hStdInput
+  18: LOAD_FAST            self
+  20: STORE_ATTR           hStdInput
+  30: LOAD_FAST            hStdOutput
+  32: LOAD_FAST            self
+  34: STORE_ATTR           hStdOutput
+  44: LOAD_FAST            hStdError
+  46: LOAD_FAST            self
+  48: STORE_ATTR           hStdError
+  58: LOAD_FAST            wShowWindow
+  60: LOAD_FAST            self
+  62: STORE_ATTR           wShowWindow
+  72: LOAD_FAST            lpAttributeList
+  74: JUMP_IF_TRUE_OR_POP  to 82
+  76: LOAD_CONST           'handle_list'
+  78: BUILD_LIST           
+  80: BUILD_MAP            
+  82: LOAD_FAST            self
+  84: STORE_ATTR           lpAttributeList
+  94: LOAD_CONST           None
+  96: RETURN_VALUE         

@@ -1,0 +1,179 @@
+# Disassembly for base64.b85decode
+# From module file: base64
+
+## co_consts:
+('Decode the base85-encoded bytes-like object or ASCII string b\n\n    The result is returned as a bytes object.\n    ', None, 256, 5, b'~', '!I', 0, 85, 'bad base85 character at position %d', 'base85 overflow in hunk starting at byte %d', b'')
+
+## co_names:
+('_b85dec', 'enumerate', '_b85alphabet', '_bytes_from_decode_data', 'len', 'struct', 'Struct', 'pack', 'range', 'TypeError', 'ValueError', 'append', 'error', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _b85dec
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 100
+  16: LOAD_CONST           None
+  18: BUILD_LIST           
+  20: LOAD_CONST           256
+  22: BINARY_OP            *
+  26: STORE_GLOBAL         _b85dec
+  28: LOAD_GLOBAL          NULL + enumerate
+  40: LOAD_GLOBAL          _b85alphabet
+  52: PRECALL              
+  56: CALL                 
+  66: GET_ITER             
+  68: FOR_ITER             to 100
+  70: UNPACK_SEQUENCE      
+  74: STORE_FAST           i
+  76: STORE_FAST           c
+  78: LOAD_FAST            i
+  80: LOAD_GLOBAL          _b85dec
+  92: LOAD_FAST            c
+  94: STORE_SUBSCR         
+  98: JUMP_BACKWARD        to 68
+ 100: LOAD_GLOBAL          NULL + _bytes_from_decode_data
+ 112: LOAD_FAST            b
+ 114: PRECALL              
+ 118: CALL                 
+ 128: STORE_FAST           b
+ 130: LOAD_GLOBAL          NULL + len
+ 142: LOAD_FAST            b
+ 144: PRECALL              
+ 148: CALL                 
+ 158: UNARY_NEGATIVE       
+ 160: LOAD_CONST           5
+ 162: BINARY_OP            %
+ 166: STORE_FAST           padding
+ 168: LOAD_FAST            b
+ 170: LOAD_CONST           b'~'
+ 172: LOAD_FAST            padding
+ 174: BINARY_OP            *
+ 178: BINARY_OP            +
+ 182: STORE_FAST           b
+ 184: BUILD_LIST           
+ 186: STORE_FAST           out
+ 188: LOAD_GLOBAL          NULL + struct
+ 200: LOAD_ATTR            Struct
+ 210: LOAD_CONST           '!I'
+ 212: PRECALL              
+ 216: CALL                 
+ 226: LOAD_ATTR            pack
+ 236: STORE_FAST           packI
+ 238: LOAD_GLOBAL          NULL + range
+ 250: LOAD_CONST           0
+ 252: LOAD_GLOBAL          NULL + len
+ 264: LOAD_FAST            b
+ 266: PRECALL              
+ 270: CALL                 
+ 280: LOAD_CONST           5
+ 282: PRECALL              
+ 286: CALL                 
+ 296: GET_ITER             
+ 298: FOR_ITER             to 666
+ 300: STORE_FAST           i
+ 302: LOAD_FAST            b
+ 304: LOAD_FAST            i
+ 306: LOAD_FAST            i
+ 308: LOAD_CONST           5
+ 310: BINARY_OP            +
+ 314: BUILD_SLICE          
+ 316: BINARY_SUBSCR        
+ 326: STORE_FAST           chunk
+ 328: LOAD_CONST           0
+ 330: STORE_FAST           acc
+ 332: NOP                  
+ 334: LOAD_FAST            chunk
+ 336: GET_ITER             
+ 338: FOR_ITER             to 382
+ 340: STORE_FAST           c
+ 342: LOAD_FAST            acc
+ 344: LOAD_CONST           85
+ 346: BINARY_OP            *
+ 350: LOAD_GLOBAL          _b85dec
+ 362: LOAD_FAST            c
+ 364: BINARY_SUBSCR        
+ 374: BINARY_OP            +
+ 378: STORE_FAST           acc
+ 380: JUMP_BACKWARD        to 338
+ 382: JUMP_FORWARD         to 526
+ 384: PUSH_EXC_INFO        
+ 386: LOAD_GLOBAL          TypeError
+ 398: CHECK_EXC_MATCH      
+ 400: POP_JUMP_FORWARD_IF_FALSE to 518
+ 402: POP_TOP              
+ 404: LOAD_GLOBAL          NULL + enumerate
+ 416: LOAD_FAST            chunk
+ 418: PRECALL              
+ 422: CALL                 
+ 432: GET_ITER             
+ 434: FOR_ITER             to 516
+ 436: UNPACK_SEQUENCE      
+ 440: STORE_FAST           j
+ 442: STORE_FAST           c
+ 444: LOAD_GLOBAL          _b85dec
+ 456: LOAD_FAST            c
+ 458: BINARY_SUBSCR        
+ 468: POP_JUMP_FORWARD_IF_NOT_NONE to 514
+ 470: LOAD_GLOBAL          NULL + ValueError
+ 482: LOAD_CONST           'bad base85 character at position %d'
+ 484: LOAD_FAST            i
+ 486: LOAD_FAST            j
+ 488: BINARY_OP            +
+ 492: BINARY_OP            %
+ 496: PRECALL              
+ 500: CALL                 
+ 510: LOAD_CONST           None
+ 512: RAISE_VARARGS        
+ 514: JUMP_BACKWARD        to 434
+ 516: RAISE_VARARGS        
+ 518: RERAISE              
+ 520: COPY                 
+ 522: POP_EXCEPT           
+ 524: RERAISE              
+ 526: NOP                  
+ 528: LOAD_FAST            out
+ 530: LOAD_METHOD          append
+ 552: PUSH_NULL            
+ 554: LOAD_FAST            packI
+ 556: LOAD_FAST            acc
+ 558: PRECALL              
+ 562: CALL                 
+ 572: PRECALL              
+ 576: CALL                 
+ 586: POP_TOP              
+ 588: JUMP_BACKWARD        to 298
+ 590: PUSH_EXC_INFO        
+ 592: LOAD_GLOBAL          struct
+ 604: LOAD_ATTR            error
+ 614: CHECK_EXC_MATCH      
+ 616: POP_JUMP_FORWARD_IF_FALSE to 658
+ 618: POP_TOP              
+ 620: LOAD_GLOBAL          NULL + ValueError
+ 632: LOAD_CONST           'base85 overflow in hunk starting at byte %d'
+ 634: LOAD_FAST            i
+ 636: BINARY_OP            %
+ 640: PRECALL              
+ 644: CALL                 
+ 654: LOAD_CONST           None
+ 656: RAISE_VARARGS        
+ 658: RERAISE              
+ 660: COPY                 
+ 662: POP_EXCEPT           
+ 664: RERAISE              
+ 666: LOAD_CONST           b''
+ 668: LOAD_METHOD          join
+ 690: LOAD_FAST            out
+ 692: PRECALL              
+ 696: CALL                 
+ 706: STORE_FAST           result
+ 708: LOAD_FAST            padding
+ 710: POP_JUMP_FORWARD_IF_FALSE to 734
+ 712: LOAD_FAST            result
+ 714: LOAD_CONST           None
+ 716: LOAD_FAST            padding
+ 718: UNARY_NEGATIVE       
+ 720: BUILD_SLICE          
+ 722: BINARY_SUBSCR        
+ 732: STORE_FAST           result
+ 734: LOAD_FAST            result
+ 736: RETURN_VALUE         

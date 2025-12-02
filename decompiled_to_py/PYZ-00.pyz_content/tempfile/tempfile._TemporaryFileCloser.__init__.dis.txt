@@ -1,0 +1,23 @@
+# Disassembly for tempfile._TemporaryFileCloser.__init__
+# From module file: tempfile
+
+## co_consts:
+(None,)
+
+## co_names:
+('file', 'name', 'delete')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            file
+   4: LOAD_FAST            self
+   6: STORE_ATTR           file
+  16: LOAD_FAST            name
+  18: LOAD_FAST            self
+  20: STORE_ATTR           name
+  30: LOAD_FAST            delete
+  32: LOAD_FAST            self
+  34: STORE_ATTR           delete
+  44: LOAD_CONST           None
+  46: RETURN_VALUE         

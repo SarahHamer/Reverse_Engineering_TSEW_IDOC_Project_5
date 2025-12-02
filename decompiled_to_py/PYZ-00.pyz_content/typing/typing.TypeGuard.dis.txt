@@ -1,0 +1,28 @@
+# Disassembly for typing.TypeGuard
+# From module file: typing
+
+## co_consts:
+('Special typing construct for marking user-defined type guard functions.\n\n    ``TypeGuard`` can be used to annotate the return type of a user-defined\n    type guard function.  ``TypeGuard`` only accepts a single type argument.\n    At runtime, functions marked this way should return a boolean.\n\n    ``TypeGuard`` aims to benefit *type narrowing* -- a technique used by static\n    type checkers to determine a more precise type of an expression within a\n    program\'s code flow.  Usually type narrowing is done by analyzing\n    conditional code flow and applying the narrowing to a block of code.  The\n    conditional expression here is sometimes referred to as a "type guard".\n\n    Sometimes it would be convenient to use a user-defined boolean function\n    as a type guard.  Such a function should use ``TypeGuard[...]`` as its\n    return type to alert static type checkers to this intention.\n\n    Using  ``-> TypeGuard`` tells the static type checker that for a given\n    function:\n\n    1. The return value is a boolean.\n    2. If the return value is ``True``, the type of its argument\n       is the type inside ``TypeGuard``.\n\n       For example::\n\n           def is_str(val: Union[str, float]):\n               # "isinstance" type guard\n               if isinstance(val, str):\n                   # Type of ``val`` is narrowed to ``str``\n                   ...\n               else:\n                   # Else, type of ``val`` is narrowed to ``float``.\n                   ...\n\n    Strict type narrowing is not enforced -- ``TypeB`` need not be a narrower\n    form of ``TypeA`` (it can even be a wider form) and this may lead to\n    type-unsafe results.  The main reason is to allow for things like\n    narrowing ``List[object]`` to ``List[str]`` even though the latter is not\n    a subtype of the former, since ``List`` is invariant.  The responsibility of\n    writing type-safe type guards is left to the user.\n\n    ``TypeGuard`` also works with type variables.  For more information, see\n    PEP 647 (User-Defined Type Guards).\n    ', ' accepts only single type.')
+
+## co_names:
+('_type_check', '_GenericAlias')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _type_check
+  14: LOAD_FAST            parameters
+  16: LOAD_FAST            self
+  18: FORMAT_VALUE         
+  20: LOAD_CONST           ' accepts only single type.'
+  22: BUILD_STRING         
+  24: PRECALL              
+  28: CALL                 
+  38: STORE_FAST           item
+  40: LOAD_GLOBAL          NULL + _GenericAlias
+  52: LOAD_FAST            self
+  54: LOAD_FAST            item
+  56: BUILD_TUPLE          
+  58: PRECALL              
+  62: CALL                 
+  72: RETURN_VALUE         

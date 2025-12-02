@@ -1,0 +1,128 @@
+# Disassembly for lzma.LZMAFile.close
+# From module file: lzma
+
+## co_consts:
+('Flush and close the file.\n\n        May be called more than once without error. Once the file is\n        closed, any other operation on it will raise a ValueError.\n        ', None, False)
+
+## co_names:
+('_mode', '_MODE_CLOSED', '_MODE_READ', '_buffer', 'close', '_MODE_WRITE', '_fp', 'write', '_compressor', 'flush', '_closefp')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _mode
+  14: LOAD_GLOBAL          _MODE_CLOSED
+  26: COMPARE_OP           ==
+  32: POP_JUMP_FORWARD_IF_FALSE to 38
+  34: LOAD_CONST           None
+  36: RETURN_VALUE         
+  38: NOP                  
+  40: LOAD_FAST            self
+  42: LOAD_ATTR            _mode
+  52: LOAD_GLOBAL          _MODE_READ
+  64: COMPARE_OP           ==
+  70: POP_JUMP_FORWARD_IF_FALSE to 138
+  72: LOAD_FAST            self
+  74: LOAD_ATTR            _buffer
+  84: LOAD_METHOD          close
+ 106: PRECALL              
+ 110: CALL                 
+ 120: POP_TOP              
+ 122: LOAD_CONST           None
+ 124: LOAD_FAST            self
+ 126: STORE_ATTR           _buffer
+ 136: JUMP_FORWARD         to 282
+ 138: LOAD_FAST            self
+ 140: LOAD_ATTR            _mode
+ 150: LOAD_GLOBAL          _MODE_WRITE
+ 162: COMPARE_OP           ==
+ 168: POP_JUMP_FORWARD_IF_FALSE to 282
+ 170: LOAD_FAST            self
+ 172: LOAD_ATTR            _fp
+ 182: LOAD_METHOD          write
+ 204: LOAD_FAST            self
+ 206: LOAD_ATTR            _compressor
+ 216: LOAD_METHOD          flush
+ 238: PRECALL              
+ 242: CALL                 
+ 252: PRECALL              
+ 256: CALL                 
+ 266: POP_TOP              
+ 268: LOAD_CONST           None
+ 270: LOAD_FAST            self
+ 272: STORE_ATTR           _compressor
+ 282: NOP                  
+ 284: LOAD_FAST            self
+ 286: LOAD_ATTR            _closefp
+ 296: POP_JUMP_FORWARD_IF_FALSE to 348
+ 298: LOAD_FAST            self
+ 300: LOAD_ATTR            _fp
+ 310: LOAD_METHOD          close
+ 332: PRECALL              
+ 336: CALL                 
+ 346: POP_TOP              
+ 348: LOAD_CONST           None
+ 350: LOAD_FAST            self
+ 352: STORE_ATTR           _fp
+ 362: LOAD_CONST           False
+ 364: LOAD_FAST            self
+ 366: STORE_ATTR           _closefp
+ 376: LOAD_GLOBAL          _MODE_CLOSED
+ 388: LOAD_FAST            self
+ 390: STORE_ATTR           _mode
+ 400: LOAD_CONST           None
+ 402: RETURN_VALUE         
+ 404: PUSH_EXC_INFO        
+ 406: LOAD_CONST           None
+ 408: LOAD_FAST            self
+ 410: STORE_ATTR           _fp
+ 420: LOAD_CONST           False
+ 422: LOAD_FAST            self
+ 424: STORE_ATTR           _closefp
+ 434: LOAD_GLOBAL          _MODE_CLOSED
+ 446: LOAD_FAST            self
+ 448: STORE_ATTR           _mode
+ 458: RERAISE              
+ 460: COPY                 
+ 462: POP_EXCEPT           
+ 464: RERAISE              
+ 466: PUSH_EXC_INFO        
+ 468: NOP                  
+ 470: LOAD_FAST            self
+ 472: LOAD_ATTR            _closefp
+ 482: POP_JUMP_FORWARD_IF_FALSE to 534
+ 484: LOAD_FAST            self
+ 486: LOAD_ATTR            _fp
+ 496: LOAD_METHOD          close
+ 518: PRECALL              
+ 522: CALL                 
+ 532: POP_TOP              
+ 534: LOAD_CONST           None
+ 536: LOAD_FAST            self
+ 538: STORE_ATTR           _fp
+ 548: LOAD_CONST           False
+ 550: LOAD_FAST            self
+ 552: STORE_ATTR           _closefp
+ 562: LOAD_GLOBAL          _MODE_CLOSED
+ 574: LOAD_FAST            self
+ 576: STORE_ATTR           _mode
+ 586: JUMP_FORWARD         to 650
+ 588: PUSH_EXC_INFO        
+ 590: LOAD_CONST           None
+ 592: LOAD_FAST            self
+ 594: STORE_ATTR           _fp
+ 604: LOAD_CONST           False
+ 606: LOAD_FAST            self
+ 608: STORE_ATTR           _closefp
+ 618: LOAD_GLOBAL          _MODE_CLOSED
+ 630: LOAD_FAST            self
+ 632: STORE_ATTR           _mode
+ 642: RERAISE              
+ 644: COPY                 
+ 646: POP_EXCEPT           
+ 648: RERAISE              
+ 650: RERAISE              
+ 652: COPY                 
+ 654: POP_EXCEPT           
+ 656: RERAISE              

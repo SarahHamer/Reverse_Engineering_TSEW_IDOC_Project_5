@@ -1,0 +1,64 @@
+# Disassembly for zipfile.ZipFile._sanitize_windows_name
+# From module file: zipfile
+
+## co_consts:
+('Replace bad characters and remove trailing dots from parts.', ':<>|"?*', '_', <code object <genexpr> at 0x00000240693EAB30, file "zipfile.py", line 1693>, <code object <genexpr> at 0x0000024069CF26B0, file "zipfile.py", line 1695>)
+
+## co_names:
+('_windows_illegal_name_trans_table', 'str', 'maketrans', 'len', 'translate', 'split', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            cls
+   4: LOAD_ATTR            _windows_illegal_name_trans_table
+  14: STORE_FAST           table
+  16: LOAD_FAST            table
+  18: POP_JUMP_FORWARD_IF_TRUE to 124
+  20: LOAD_CONST           ':<>|"?*'
+  22: STORE_FAST           illegal
+  24: LOAD_GLOBAL          str
+  36: LOAD_METHOD          maketrans
+  58: LOAD_FAST            illegal
+  60: LOAD_CONST           '_'
+  62: LOAD_GLOBAL          NULL + len
+  74: LOAD_FAST            illegal
+  76: PRECALL              
+  80: CALL                 
+  90: BINARY_OP            *
+  94: PRECALL              
+  98: CALL                 
+ 108: STORE_FAST           table
+ 110: LOAD_FAST            table
+ 112: LOAD_FAST            cls
+ 114: STORE_ATTR           _windows_illegal_name_trans_table
+ 124: LOAD_FAST            arcname
+ 126: LOAD_METHOD          translate
+ 148: LOAD_FAST            table
+ 150: PRECALL              
+ 154: CALL                 
+ 164: STORE_FAST           arcname
+ 166: LOAD_CONST           <code object <genexpr> at 0x00000240693EAB30, file "zipfile.py", line 1693>
+ 168: MAKE_FUNCTION        
+ 170: LOAD_FAST            arcname
+ 172: LOAD_METHOD          split
+ 194: LOAD_FAST            pathsep
+ 196: PRECALL              
+ 200: CALL                 
+ 210: GET_ITER             
+ 212: PRECALL              
+ 216: CALL                 
+ 226: STORE_FAST           arcname
+ 228: LOAD_FAST            pathsep
+ 230: LOAD_METHOD          join
+ 252: LOAD_CONST           <code object <genexpr> at 0x0000024069CF26B0, file "zipfile.py", line 1695>
+ 254: MAKE_FUNCTION        
+ 256: LOAD_FAST            arcname
+ 258: GET_ITER             
+ 260: PRECALL              
+ 264: CALL                 
+ 274: PRECALL              
+ 278: CALL                 
+ 288: STORE_FAST           arcname
+ 290: LOAD_FAST            arcname
+ 292: RETURN_VALUE         

@@ -1,0 +1,58 @@
+# Disassembly for inspect.getmodulename
+# From module file: inspect
+
+## co_consts:
+('Return the module name for a given file, or None.', <code object <listcomp> at 0x0000024069CDC120, file "inspect.py", line 928>, None)
+
+## co_names:
+('os', 'path', 'basename', 'importlib', 'machinery', 'all_suffixes', 'sort', 'endswith')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          os
+  14: LOAD_ATTR            path
+  24: LOAD_METHOD          basename
+  46: LOAD_FAST            path
+  48: PRECALL              
+  52: CALL                 
+  62: STORE_FAST           fname
+  64: LOAD_CONST           <code object <listcomp> at 0x0000024069CDC120, file "inspect.py", line 928>
+  66: MAKE_FUNCTION        
+  68: LOAD_GLOBAL          importlib
+  80: LOAD_ATTR            machinery
+  90: LOAD_METHOD          all_suffixes
+ 112: PRECALL              
+ 116: CALL                 
+ 126: GET_ITER             
+ 128: PRECALL              
+ 132: CALL                 
+ 142: STORE_FAST           suffixes
+ 144: LOAD_FAST            suffixes
+ 146: LOAD_METHOD          sort
+ 168: PRECALL              
+ 172: CALL                 
+ 182: POP_TOP              
+ 184: LOAD_FAST            suffixes
+ 186: GET_ITER             
+ 188: FOR_ITER             to 266
+ 190: UNPACK_SEQUENCE      
+ 194: STORE_FAST           neglen
+ 196: STORE_FAST           suffix
+ 198: LOAD_FAST            fname
+ 200: LOAD_METHOD          endswith
+ 222: LOAD_FAST            suffix
+ 224: PRECALL              
+ 228: CALL                 
+ 238: POP_JUMP_FORWARD_IF_FALSE to 264
+ 240: LOAD_FAST            fname
+ 242: LOAD_CONST           None
+ 244: LOAD_FAST            neglen
+ 246: BUILD_SLICE          
+ 248: BINARY_SUBSCR        
+ 258: SWAP                 
+ 260: POP_TOP              
+ 262: RETURN_VALUE         
+ 264: JUMP_BACKWARD        to 188
+ 266: LOAD_CONST           None
+ 268: RETURN_VALUE         

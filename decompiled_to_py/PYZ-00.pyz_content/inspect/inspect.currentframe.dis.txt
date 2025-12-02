@@ -1,0 +1,26 @@
+# Disassembly for inspect.currentframe
+# From module file: inspect
+
+## co_consts:
+('Return the frame of the caller or None if this is not possible.', '_getframe', 1, None)
+
+## co_names:
+('hasattr', 'sys', '_getframe')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + hasattr
+  14: LOAD_GLOBAL          sys
+  26: LOAD_CONST           '_getframe'
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 84
+  44: LOAD_GLOBAL          NULL + sys
+  56: LOAD_ATTR            _getframe
+  66: LOAD_CONST           1
+  68: PRECALL              
+  72: CALL                 
+  82: JUMP_FORWARD         to 86
+  84: LOAD_CONST           None
+  86: RETURN_VALUE         

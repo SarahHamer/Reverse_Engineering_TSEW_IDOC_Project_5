@@ -1,0 +1,84 @@
+# Disassembly for typing._GenericAlias.__mro_entries__
+# From module file: typing
+
+## co_consts:
+(None, 'Cannot subclass ', (), 1)
+
+## co_names:
+('isinstance', '__origin__', '_SpecialForm', 'TypeError', '_name', 'super', '__mro_entries__', 'Generic', 'Protocol', 'index', '_BaseGenericAlias')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + isinstance
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            __origin__
+  28: LOAD_GLOBAL          _SpecialForm
+  40: PRECALL              
+  44: CALL                 
+  54: POP_JUMP_FORWARD_IF_FALSE to 92
+  56: LOAD_GLOBAL          NULL + TypeError
+  68: LOAD_CONST           'Cannot subclass '
+  70: LOAD_FAST            self
+  72: FORMAT_VALUE         repr
+  74: BUILD_STRING         
+  76: PRECALL              
+  80: CALL                 
+  90: RAISE_VARARGS        
+  92: LOAD_FAST            self
+  94: LOAD_ATTR            _name
+ 104: POP_JUMP_FORWARD_IF_FALSE to 172
+ 106: LOAD_GLOBAL          NULL + super
+ 118: PRECALL              
+ 122: CALL                 
+ 132: LOAD_METHOD          __mro_entries__
+ 154: LOAD_FAST            bases
+ 156: PRECALL              
+ 160: CALL                 
+ 170: RETURN_VALUE         
+ 172: LOAD_FAST            self
+ 174: LOAD_ATTR            __origin__
+ 184: LOAD_GLOBAL          Generic
+ 196: IS_OP                
+ 198: POP_JUMP_FORWARD_IF_FALSE to 352
+ 200: LOAD_GLOBAL          Protocol
+ 212: LOAD_FAST            bases
+ 214: CONTAINS_OP          
+ 216: POP_JUMP_FORWARD_IF_FALSE to 222
+ 218: LOAD_CONST           ()
+ 220: RETURN_VALUE         
+ 222: LOAD_FAST            bases
+ 224: LOAD_METHOD          index
+ 246: LOAD_FAST            self
+ 248: PRECALL              
+ 252: CALL                 
+ 262: STORE_FAST           i
+ 264: LOAD_FAST            bases
+ 266: LOAD_FAST            i
+ 268: LOAD_CONST           1
+ 270: BINARY_OP            +
+ 274: LOAD_CONST           None
+ 276: BUILD_SLICE          
+ 278: BINARY_SUBSCR        
+ 288: GET_ITER             
+ 290: FOR_ITER             to 352
+ 292: STORE_FAST           b
+ 294: LOAD_GLOBAL          NULL + isinstance
+ 306: LOAD_FAST            b
+ 308: LOAD_GLOBAL          _BaseGenericAlias
+ 320: PRECALL              
+ 324: CALL                 
+ 334: POP_JUMP_FORWARD_IF_FALSE to 350
+ 336: LOAD_FAST            b
+ 338: LOAD_FAST            self
+ 340: IS_OP                
+ 342: POP_JUMP_FORWARD_IF_FALSE to 350
+ 344: POP_TOP              
+ 346: LOAD_CONST           ()
+ 348: RETURN_VALUE         
+ 350: JUMP_BACKWARD        to 290
+ 352: LOAD_FAST            self
+ 354: LOAD_ATTR            __origin__
+ 364: BUILD_TUPLE          
+ 366: RETURN_VALUE         

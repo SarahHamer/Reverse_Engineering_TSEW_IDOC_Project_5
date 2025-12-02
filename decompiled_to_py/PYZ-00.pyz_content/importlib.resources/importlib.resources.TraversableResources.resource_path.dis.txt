@@ -1,0 +1,17 @@
+# Disassembly for importlib.resources.TraversableResources.resource_path
+# From module file: importlib.resources.abc
+
+## co_consts:
+(None,)
+
+## co_names:
+('FileNotFoundError',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + FileNotFoundError
+  14: LOAD_FAST            resource
+  16: PRECALL              
+  20: CALL                 
+  30: RAISE_VARARGS        

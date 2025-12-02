@@ -1,0 +1,115 @@
+# Disassembly for email.ContentManager._find_set_handler
+# From module file: email.contentmanager
+
+## co_consts:
+(None, '__module__', '', '.')
+
+## co_names:
+('type', '__mro__', 'set_handlers', '__qualname__', 'getattr', 'join', '__name__', 'KeyError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: STORE_FAST           full_path_for_error
+   6: LOAD_GLOBAL          NULL + type
+  18: LOAD_FAST            obj
+  20: PRECALL              
+  24: CALL                 
+  34: LOAD_ATTR            __mro__
+  44: GET_ITER             
+  46: FOR_ITER             to 368
+  48: STORE_FAST           typ
+  50: LOAD_FAST            typ
+  52: LOAD_FAST            self
+  54: LOAD_ATTR            set_handlers
+  64: CONTAINS_OP          
+  66: POP_JUMP_FORWARD_IF_FALSE to 98
+  68: LOAD_FAST            self
+  70: LOAD_ATTR            set_handlers
+  80: LOAD_FAST            typ
+  82: BINARY_SUBSCR        
+  92: SWAP                 
+  94: POP_TOP              
+  96: RETURN_VALUE         
+  98: LOAD_FAST            typ
+ 100: LOAD_ATTR            __qualname__
+ 110: STORE_FAST           qname
+ 112: LOAD_GLOBAL          NULL + getattr
+ 124: LOAD_FAST            typ
+ 126: LOAD_CONST           '__module__'
+ 128: LOAD_CONST           ''
+ 130: PRECALL              
+ 134: CALL                 
+ 144: STORE_FAST           modname
+ 146: LOAD_FAST            modname
+ 148: POP_JUMP_FORWARD_IF_FALSE to 196
+ 150: LOAD_CONST           '.'
+ 152: LOAD_METHOD          join
+ 174: LOAD_FAST            modname
+ 176: LOAD_FAST            qname
+ 178: BUILD_TUPLE          
+ 180: PRECALL              
+ 184: CALL                 
+ 194: JUMP_FORWARD         to 198
+ 196: LOAD_FAST            qname
+ 198: STORE_FAST           full_path
+ 200: LOAD_FAST            full_path_for_error
+ 202: POP_JUMP_FORWARD_IF_NOT_NONE to 208
+ 204: LOAD_FAST            full_path
+ 206: STORE_FAST           full_path_for_error
+ 208: LOAD_FAST            full_path
+ 210: LOAD_FAST            self
+ 212: LOAD_ATTR            set_handlers
+ 222: CONTAINS_OP          
+ 224: POP_JUMP_FORWARD_IF_FALSE to 256
+ 226: LOAD_FAST            self
+ 228: LOAD_ATTR            set_handlers
+ 238: LOAD_FAST            full_path
+ 240: BINARY_SUBSCR        
+ 250: SWAP                 
+ 252: POP_TOP              
+ 254: RETURN_VALUE         
+ 256: LOAD_FAST            qname
+ 258: LOAD_FAST            self
+ 260: LOAD_ATTR            set_handlers
+ 270: CONTAINS_OP          
+ 272: POP_JUMP_FORWARD_IF_FALSE to 304
+ 274: LOAD_FAST            self
+ 276: LOAD_ATTR            set_handlers
+ 286: LOAD_FAST            qname
+ 288: BINARY_SUBSCR        
+ 298: SWAP                 
+ 300: POP_TOP              
+ 302: RETURN_VALUE         
+ 304: LOAD_FAST            typ
+ 306: LOAD_ATTR            __name__
+ 316: STORE_FAST           name
+ 318: LOAD_FAST            name
+ 320: LOAD_FAST            self
+ 322: LOAD_ATTR            set_handlers
+ 332: CONTAINS_OP          
+ 334: POP_JUMP_FORWARD_IF_FALSE to 366
+ 336: LOAD_FAST            self
+ 338: LOAD_ATTR            set_handlers
+ 348: LOAD_FAST            name
+ 350: BINARY_SUBSCR        
+ 360: SWAP                 
+ 362: POP_TOP              
+ 364: RETURN_VALUE         
+ 366: JUMP_BACKWARD        to 46
+ 368: LOAD_CONST           None
+ 370: LOAD_FAST            self
+ 372: LOAD_ATTR            set_handlers
+ 382: CONTAINS_OP          
+ 384: POP_JUMP_FORWARD_IF_FALSE to 412
+ 386: LOAD_FAST            self
+ 388: LOAD_ATTR            set_handlers
+ 398: LOAD_CONST           None
+ 400: BINARY_SUBSCR        
+ 410: RETURN_VALUE         
+ 412: LOAD_GLOBAL          NULL + KeyError
+ 424: LOAD_FAST            full_path_for_error
+ 426: PRECALL              
+ 430: CALL                 
+ 440: RAISE_VARARGS        

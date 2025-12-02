@@ -1,0 +1,27 @@
+# Disassembly for http.MozillaCookieJar
+# From module file: http.cookiejar
+
+## co_consts:
+('MozillaCookieJar', "\n\n    WARNING: you may want to backup your browser's cookies file if you use\n    this class to save cookies.  I *think* it works, but there have been\n    bugs in the past!\n\n    This class differs from CookieJar only in the format it uses to save and\n    load cookies to and from a file.  This class uses the Mozilla/Netscape\n    `cookies.txt' format.  curl and lynx use this file format, too.\n\n    Don't expect cookies saved while the browser is running to be noticed by\n    the browser (in fact, Mozilla on unix will overwrite your saved cookies if\n    you change them on disk while it's running; on Windows, you probably can't\n    save at all while the browser is running).\n\n    Note that the Mozilla/Netscape format will downgrade RFC2965 cookies to\n    Netscape cookies on saving.\n\n    In particular, the cookie version and port number information is lost,\n    together with information about whether or not Path, Port and Discard were\n    specified by the Set-Cookie2 (or Set-Cookie) header, and whether or not the\n    domain as set in the HTTP header started with a dot (yes, I'm aware some\n    domains in Netscape files start with a dot and some don't -- trust me, you\n    really don't want to know any more about this).\n\n    Note that though Mozilla and Netscape use the same format, they use\n    slightly different headers.  The class saves cookies using the Netscape\n    header by default (Mozilla can cope with that).\n\n    ", <code object _really_load at 0x0000024068E12770, file "http\cookiejar.py", line 2014>, None, False, <code object save at 0x0000024066C3D1A0, file "http\cookiejar.py", line 2087>, (None, False, False))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '_really_load', 'save')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'MozillaCookieJar'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           "\n\n    WARNING: you may want to backup your browser's cookies file if you use\n    this class to save cookies.  I *think* it works, but there have been\n    bugs in the past!\n\n    This class differs from CookieJar only in the format it uses to save and\n    load cookies to and from a file.  This class uses the Mozilla/Netscape\n    `cookies.txt' format.  curl and lynx use this file format, too.\n\n    Don't expect cookies saved while the browser is running to be noticed by\n    the browser (in fact, Mozilla on unix will overwrite your saved cookies if\n    you change them on disk while it's running; on Windows, you probably can't\n    save at all while the browser is running).\n\n    Note that the Mozilla/Netscape format will downgrade RFC2965 cookies to\n    Netscape cookies on saving.\n\n    In particular, the cookie version and port number information is lost,\n    together with information about whether or not Path, Port and Discard were\n    specified by the Set-Cookie2 (or Set-Cookie) header, and whether or not the\n    domain as set in the HTTP header started with a dot (yes, I'm aware some\n    domains in Netscape files start with a dot and some don't -- trust me, you\n    really don't want to know any more about this).\n\n    Note that though Mozilla and Netscape use the same format, they use\n    slightly different headers.  The class saves cookies using the Netscape\n    header by default (Mozilla can cope with that).\n\n    "
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object _really_load at 0x0000024068E12770, file "http\cookiejar.py", line 2014>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           _really_load
+  20: LOAD_CONST           (None, False, False)
+  22: LOAD_CONST           <code object save at 0x0000024066C3D1A0, file "http\cookiejar.py", line 2087>
+  24: MAKE_FUNCTION        defaults
+  26: STORE_NAME           save
+  28: LOAD_CONST           None
+  30: RETURN_VALUE         

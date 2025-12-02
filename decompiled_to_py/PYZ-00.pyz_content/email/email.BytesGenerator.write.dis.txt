@@ -1,0 +1,26 @@
+# Disassembly for email.BytesGenerator.write
+# From module file: email.generator
+
+## co_consts:
+(None, 'ascii', 'surrogateescape')
+
+## co_names:
+('_fp', 'write', 'encode')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _fp
+  14: LOAD_METHOD          write
+  36: LOAD_FAST            s
+  38: LOAD_METHOD          encode
+  60: LOAD_CONST           'ascii'
+  62: LOAD_CONST           'surrogateescape'
+  64: PRECALL              
+  68: CALL                 
+  78: PRECALL              
+  82: CALL                 
+  92: POP_TOP              
+  94: LOAD_CONST           None
+  96: RETURN_VALUE         

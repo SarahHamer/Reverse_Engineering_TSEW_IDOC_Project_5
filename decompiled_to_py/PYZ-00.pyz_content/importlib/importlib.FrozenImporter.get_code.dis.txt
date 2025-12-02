@@ -1,0 +1,18 @@
+# Disassembly for importlib.FrozenImporter.get_code
+# From module file: importlib._bootstrap
+
+## co_consts:
+('Return the code object for the frozen module.',)
+
+## co_names:
+('_imp', 'get_frozen_object')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _imp
+  14: LOAD_METHOD          get_frozen_object
+  36: LOAD_FAST            fullname
+  38: PRECALL              
+  42: CALL                 
+  52: RETURN_VALUE         

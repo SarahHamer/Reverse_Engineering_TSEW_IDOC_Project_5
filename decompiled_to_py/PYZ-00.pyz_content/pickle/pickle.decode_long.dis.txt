@@ -1,0 +1,21 @@
+# Disassembly for pickle.decode_long
+# From module file: pickle
+
+## co_consts:
+('Decode a long from a two\'s complement little-endian binary string.\n\n    >>> decode_long(b\'\')\n    0\n    >>> decode_long(b"\\xff\\x00")\n    255\n    >>> decode_long(b"\\xff\\x7f")\n    32767\n    >>> decode_long(b"\\x00\\xff")\n    -256\n    >>> decode_long(b"\\x00\\x80")\n    -32768\n    >>> decode_long(b"\\x80")\n    -128\n    >>> decode_long(b"\\x7f")\n    127\n    ', 'little', True, ('byteorder', 'signed'))
+
+## co_names:
+('int', 'from_bytes')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          int
+  14: LOAD_METHOD          from_bytes
+  36: LOAD_FAST            data
+  38: LOAD_CONST           'little'
+  40: LOAD_CONST           True
+  42: KW_NAMES             
+  44: PRECALL              
+  48: CALL                 
+  58: RETURN_VALUE         

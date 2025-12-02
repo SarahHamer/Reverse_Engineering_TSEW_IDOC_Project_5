@@ -1,0 +1,154 @@
+# Disassembly for importlib._find_spec
+# From module file: importlib._bootstrap
+
+## co_consts:
+("Find a module's spec.", None, 'sys.meta_path is None, Python is likely shutting down', 'sys.meta_path is empty')
+
+## co_names:
+('sys', 'meta_path', 'ImportError', '_warnings', 'warn', 'ImportWarning', 'modules', '_ImportLockContext', 'find_spec', 'AttributeError', '_find_spec_legacy', '__spec__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          sys
+  14: LOAD_ATTR            meta_path
+  24: STORE_FAST           meta_path
+  26: LOAD_FAST            meta_path
+  28: POP_JUMP_FORWARD_IF_NOT_NONE to 60
+  30: LOAD_GLOBAL          NULL + ImportError
+  42: LOAD_CONST           'sys.meta_path is None, Python is likely shutting down'
+  44: PRECALL              
+  48: CALL                 
+  58: RAISE_VARARGS        
+  60: LOAD_FAST            meta_path
+  62: POP_JUMP_FORWARD_IF_TRUE to 128
+  64: LOAD_GLOBAL          _warnings
+  76: LOAD_METHOD          warn
+  98: LOAD_CONST           'sys.meta_path is empty'
+ 100: LOAD_GLOBAL          ImportWarning
+ 112: PRECALL              
+ 116: CALL                 
+ 126: POP_TOP              
+ 128: LOAD_FAST            name
+ 130: LOAD_GLOBAL          sys
+ 142: LOAD_ATTR            modules
+ 152: CONTAINS_OP          
+ 154: STORE_FAST           is_reload
+ 156: LOAD_FAST            meta_path
+ 158: GET_ITER             
+ 160: FOR_ITER             to 538
+ 162: STORE_FAST           finder
+ 164: LOAD_GLOBAL          NULL + _ImportLockContext
+ 176: PRECALL              
+ 180: CALL                 
+ 190: BEFORE_WITH          
+ 192: POP_TOP              
+ 194: NOP                  
+ 196: LOAD_FAST            finder
+ 198: LOAD_ATTR            find_spec
+ 208: STORE_FAST           find_spec
+ 210: PUSH_NULL            
+ 212: LOAD_FAST            find_spec
+ 214: LOAD_FAST            name
+ 216: LOAD_FAST            path
+ 218: LOAD_FAST            target
+ 220: PRECALL              
+ 224: CALL                 
+ 234: STORE_FAST           spec
+ 236: JUMP_FORWARD         to 334
+ 238: PUSH_EXC_INFO        
+ 240: LOAD_GLOBAL          AttributeError
+ 252: CHECK_EXC_MATCH      
+ 254: POP_JUMP_FORWARD_IF_FALSE to 326
+ 256: POP_TOP              
+ 258: LOAD_GLOBAL          NULL + _find_spec_legacy
+ 270: LOAD_FAST            finder
+ 272: LOAD_FAST            name
+ 274: LOAD_FAST            path
+ 276: PRECALL              
+ 280: CALL                 
+ 290: STORE_FAST           spec
+ 292: LOAD_FAST            spec
+ 294: POP_JUMP_FORWARD_IF_NOT_NONE to 322
+ 296: POP_EXCEPT           
+ 298: LOAD_CONST           None
+ 300: LOAD_CONST           None
+ 302: LOAD_CONST           None
+ 304: PRECALL              
+ 308: CALL                 
+ 318: POP_TOP              
+ 320: JUMP_BACKWARD        to 160
+ 322: POP_EXCEPT           
+ 324: JUMP_FORWARD         to 334
+ 326: RERAISE              
+ 328: COPY                 
+ 330: POP_EXCEPT           
+ 332: RERAISE              
+ 334: LOAD_CONST           None
+ 336: LOAD_CONST           None
+ 338: LOAD_CONST           None
+ 340: PRECALL              
+ 344: CALL                 
+ 354: POP_TOP              
+ 356: JUMP_FORWARD         to 380
+ 358: PUSH_EXC_INFO        
+ 360: WITH_EXCEPT_START    
+ 362: POP_JUMP_FORWARD_IF_TRUE to 372
+ 364: RERAISE              
+ 366: COPY                 
+ 368: POP_EXCEPT           
+ 370: RERAISE              
+ 372: POP_TOP              
+ 374: POP_EXCEPT           
+ 376: POP_TOP              
+ 378: POP_TOP              
+ 380: LOAD_FAST            spec
+ 382: POP_JUMP_FORWARD_IF_NONE to 536
+ 384: LOAD_FAST            is_reload
+ 386: POP_JUMP_FORWARD_IF_TRUE to 528
+ 388: LOAD_FAST            name
+ 390: LOAD_GLOBAL          sys
+ 402: LOAD_ATTR            modules
+ 412: CONTAINS_OP          
+ 414: POP_JUMP_FORWARD_IF_FALSE to 528
+ 416: LOAD_GLOBAL          sys
+ 428: LOAD_ATTR            modules
+ 438: LOAD_FAST            name
+ 440: BINARY_SUBSCR        
+ 450: STORE_FAST           module
+ 452: NOP                  
+ 454: LOAD_FAST            module
+ 456: LOAD_ATTR            __spec__
+ 466: STORE_FAST           __spec__
+ 468: LOAD_FAST            __spec__
+ 470: POP_JUMP_FORWARD_IF_NOT_NONE to 480
+ 472: LOAD_FAST            spec
+ 474: SWAP                 
+ 476: POP_TOP              
+ 478: RETURN_VALUE         
+ 480: LOAD_FAST            __spec__
+ 482: SWAP                 
+ 484: POP_TOP              
+ 486: RETURN_VALUE         
+ 488: PUSH_EXC_INFO        
+ 490: LOAD_GLOBAL          AttributeError
+ 502: CHECK_EXC_MATCH      
+ 504: POP_JUMP_FORWARD_IF_FALSE to 520
+ 506: POP_TOP              
+ 508: LOAD_FAST            spec
+ 510: SWAP                 
+ 512: POP_EXCEPT           
+ 514: SWAP                 
+ 516: POP_TOP              
+ 518: RETURN_VALUE         
+ 520: RERAISE              
+ 522: COPY                 
+ 524: POP_EXCEPT           
+ 526: RERAISE              
+ 528: LOAD_FAST            spec
+ 530: SWAP                 
+ 532: POP_TOP              
+ 534: RETURN_VALUE         
+ 536: JUMP_BACKWARD        to 160
+ 538: LOAD_CONST           None
+ 540: RETURN_VALUE         

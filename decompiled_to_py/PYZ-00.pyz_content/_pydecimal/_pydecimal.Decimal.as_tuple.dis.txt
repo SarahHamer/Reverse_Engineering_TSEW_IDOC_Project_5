@@ -1,0 +1,29 @@
+# Disassembly for _pydecimal.Decimal.as_tuple
+# From module file: _pydecimal
+
+## co_consts:
+('Represents the number as a triple tuple.\n\n        To show the internals exactly as they are.\n        ',)
+
+## co_names:
+('DecimalTuple', '_sign', 'tuple', 'map', 'int', '_int', '_exp')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + DecimalTuple
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            _sign
+  26: LOAD_GLOBAL          NULL + tuple
+  38: LOAD_GLOBAL          NULL + map
+  50: LOAD_GLOBAL          int
+  62: LOAD_FAST            self
+  64: LOAD_ATTR            _int
+  74: PRECALL              
+  78: CALL                 
+  88: PRECALL              
+  92: CALL                 
+ 102: LOAD_FAST            self
+ 104: LOAD_ATTR            _exp
+ 114: PRECALL              
+ 118: CALL                 
+ 128: RETURN_VALUE         

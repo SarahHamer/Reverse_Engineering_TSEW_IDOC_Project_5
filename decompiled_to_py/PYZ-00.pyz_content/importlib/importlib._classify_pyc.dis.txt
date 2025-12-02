@@ -1,0 +1,100 @@
+# Disassembly for importlib._classify_pyc
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Perform basic validity checking of a pyc header and return the flags field,\n    which determines how the pyc should be further validated against the source.\n\n    *data* is the contents of the pyc file. (Only the first 16 bytes are\n    required, though.)\n\n    *name* is the name of the module being imported. It is used for logging.\n\n    *exc_details* is a dictionary passed to ImportError if it raised for\n    improved debugging.\n\n    ImportError is raised when the magic number is incorrect or when the flags\n    field is invalid. EOFError is raised when the data is found to be truncated.\n\n    ', None, 4, 'bad magic number in ', ': ', '{}', 16, 'reached EOF while reading pyc header of ', 8, -4, 'invalid flags ', ' in ')
+
+## co_names:
+('MAGIC_NUMBER', '_bootstrap', '_verbose_message', 'ImportError', 'len', 'EOFError', '_unpack_uint32')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            data
+   4: LOAD_CONST           None
+   6: LOAD_CONST           4
+   8: BUILD_SLICE          
+  10: BINARY_SUBSCR        
+  20: STORE_FAST           magic
+  22: LOAD_FAST            magic
+  24: LOAD_GLOBAL          MAGIC_NUMBER
+  36: COMPARE_OP           !=
+  42: POP_JUMP_FORWARD_IF_FALSE to 140
+  44: LOAD_CONST           'bad magic number in '
+  46: LOAD_FAST            name
+  48: FORMAT_VALUE         repr
+  50: LOAD_CONST           ': '
+  52: LOAD_FAST            magic
+  54: FORMAT_VALUE         repr
+  56: BUILD_STRING         
+  58: STORE_FAST           message
+  60: LOAD_GLOBAL          _bootstrap
+  72: LOAD_METHOD          _verbose_message
+  94: LOAD_CONST           '{}'
+  96: LOAD_FAST            message
+  98: PRECALL              
+ 102: CALL                 
+ 112: POP_TOP              
+ 114: LOAD_GLOBAL          NULL + ImportError
+ 126: LOAD_FAST            message
+ 128: BUILD_TUPLE          
+ 130: BUILD_MAP            
+ 132: LOAD_FAST            exc_details
+ 134: DICT_MERGE           
+ 136: CALL_FUNCTION_EX     
+ 138: RAISE_VARARGS        
+ 140: LOAD_GLOBAL          NULL + len
+ 152: LOAD_FAST            data
+ 154: PRECALL              
+ 158: CALL                 
+ 168: LOAD_CONST           16
+ 170: COMPARE_OP           <
+ 176: POP_JUMP_FORWARD_IF_FALSE to 272
+ 178: LOAD_CONST           'reached EOF while reading pyc header of '
+ 180: LOAD_FAST            name
+ 182: FORMAT_VALUE         repr
+ 184: BUILD_STRING         
+ 186: STORE_FAST           message
+ 188: LOAD_GLOBAL          _bootstrap
+ 200: LOAD_METHOD          _verbose_message
+ 222: LOAD_CONST           '{}'
+ 224: LOAD_FAST            message
+ 226: PRECALL              
+ 230: CALL                 
+ 240: POP_TOP              
+ 242: LOAD_GLOBAL          NULL + EOFError
+ 254: LOAD_FAST            message
+ 256: PRECALL              
+ 260: CALL                 
+ 270: RAISE_VARARGS        
+ 272: LOAD_GLOBAL          NULL + _unpack_uint32
+ 284: LOAD_FAST            data
+ 286: LOAD_CONST           4
+ 288: LOAD_CONST           8
+ 290: BUILD_SLICE          
+ 292: BINARY_SUBSCR        
+ 302: PRECALL              
+ 306: CALL                 
+ 316: STORE_FAST           flags
+ 318: LOAD_FAST            flags
+ 320: LOAD_CONST           -4
+ 322: BINARY_OP            &
+ 326: POP_JUMP_FORWARD_IF_FALSE to 370
+ 328: LOAD_CONST           'invalid flags '
+ 330: LOAD_FAST            flags
+ 332: FORMAT_VALUE         repr
+ 334: LOAD_CONST           ' in '
+ 336: LOAD_FAST            name
+ 338: FORMAT_VALUE         repr
+ 340: BUILD_STRING         
+ 342: STORE_FAST           message
+ 344: LOAD_GLOBAL          NULL + ImportError
+ 356: LOAD_FAST            message
+ 358: BUILD_TUPLE          
+ 360: BUILD_MAP            
+ 362: LOAD_FAST            exc_details
+ 364: DICT_MERGE           
+ 366: CALL_FUNCTION_EX     
+ 368: RAISE_VARARGS        
+ 370: LOAD_FAST            flags
+ 372: RETURN_VALUE         

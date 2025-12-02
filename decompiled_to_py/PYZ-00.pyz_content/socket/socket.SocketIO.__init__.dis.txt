@@ -1,0 +1,59 @@
+# Disassembly for socket.SocketIO.__init__
+# From module file: socket
+
+## co_consts:
+(None, ('r', 'w', 'rw', 'rb', 'wb', 'rwb'), 'invalid mode: %r', 'b', 'r', 'w', False)
+
+## co_names:
+('ValueError', 'io', 'RawIOBase', '__init__', '_sock', '_mode', '_reading', '_writing', '_timeout_occurred')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            mode
+   4: LOAD_CONST           ('r', 'w', 'rw', 'rb', 'wb', 'rwb')
+   6: CONTAINS_OP          
+   8: POP_JUMP_FORWARD_IF_FALSE to 46
+  10: LOAD_GLOBAL          NULL + ValueError
+  22: LOAD_CONST           'invalid mode: %r'
+  24: LOAD_FAST            mode
+  26: BINARY_OP            %
+  30: PRECALL              
+  34: CALL                 
+  44: RAISE_VARARGS        
+  46: LOAD_GLOBAL          io
+  58: LOAD_ATTR            RawIOBase
+  68: LOAD_METHOD          __init__
+  90: LOAD_FAST            self
+  92: PRECALL              
+  96: CALL                 
+ 106: POP_TOP              
+ 108: LOAD_FAST            sock
+ 110: LOAD_FAST            self
+ 112: STORE_ATTR           _sock
+ 122: LOAD_CONST           'b'
+ 124: LOAD_FAST            mode
+ 126: CONTAINS_OP          
+ 128: POP_JUMP_FORWARD_IF_FALSE to 140
+ 130: LOAD_FAST            mode
+ 132: LOAD_CONST           'b'
+ 134: BINARY_OP            +=
+ 138: STORE_FAST           mode
+ 140: LOAD_FAST            mode
+ 142: LOAD_FAST            self
+ 144: STORE_ATTR           _mode
+ 154: LOAD_CONST           'r'
+ 156: LOAD_FAST            mode
+ 158: CONTAINS_OP          
+ 160: LOAD_FAST            self
+ 162: STORE_ATTR           _reading
+ 172: LOAD_CONST           'w'
+ 174: LOAD_FAST            mode
+ 176: CONTAINS_OP          
+ 178: LOAD_FAST            self
+ 180: STORE_ATTR           _writing
+ 190: LOAD_CONST           False
+ 192: LOAD_FAST            self
+ 194: STORE_ATTR           _timeout_occurred
+ 204: LOAD_CONST           None
+ 206: RETURN_VALUE         

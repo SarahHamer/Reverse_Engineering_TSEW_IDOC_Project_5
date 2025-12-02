@@ -1,0 +1,71 @@
+# Disassembly for threading._DummyThread.__init__
+# From module file: threading
+
+## co_consts:
+(None, 'Dummy-%d', True, ('name', 'daemon'))
+
+## co_names:
+('Thread', '__init__', '_newname', '_started', 'set', '_set_ident', '_HAVE_THREAD_NATIVE_ID', '_set_native_id', '_active_limbo_lock', '_active', '_ident')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          Thread
+  14: LOAD_METHOD          __init__
+  36: LOAD_FAST            self
+  38: LOAD_GLOBAL          NULL + _newname
+  50: LOAD_CONST           'Dummy-%d'
+  52: PRECALL              
+  56: CALL                 
+  66: LOAD_CONST           True
+  68: KW_NAMES             
+  70: PRECALL              
+  74: CALL                 
+  84: POP_TOP              
+  86: LOAD_FAST            self
+  88: LOAD_ATTR            _started
+  98: LOAD_METHOD          set
+ 120: PRECALL              
+ 124: CALL                 
+ 134: POP_TOP              
+ 136: LOAD_FAST            self
+ 138: LOAD_METHOD          _set_ident
+ 160: PRECALL              
+ 164: CALL                 
+ 174: POP_TOP              
+ 176: LOAD_GLOBAL          _HAVE_THREAD_NATIVE_ID
+ 188: POP_JUMP_FORWARD_IF_FALSE to 230
+ 190: LOAD_FAST            self
+ 192: LOAD_METHOD          _set_native_id
+ 214: PRECALL              
+ 218: CALL                 
+ 228: POP_TOP              
+ 230: LOAD_GLOBAL          _active_limbo_lock
+ 242: BEFORE_WITH          
+ 244: POP_TOP              
+ 246: LOAD_FAST            self
+ 248: LOAD_GLOBAL          _active
+ 260: LOAD_FAST            self
+ 262: LOAD_ATTR            _ident
+ 272: STORE_SUBSCR         
+ 276: LOAD_CONST           None
+ 278: LOAD_CONST           None
+ 280: LOAD_CONST           None
+ 282: PRECALL              
+ 286: CALL                 
+ 296: POP_TOP              
+ 298: LOAD_CONST           None
+ 300: RETURN_VALUE         
+ 302: PUSH_EXC_INFO        
+ 304: WITH_EXCEPT_START    
+ 306: POP_JUMP_FORWARD_IF_TRUE to 316
+ 308: RERAISE              
+ 310: COPY                 
+ 312: POP_EXCEPT           
+ 314: RERAISE              
+ 316: POP_TOP              
+ 318: POP_EXCEPT           
+ 320: POP_TOP              
+ 322: POP_TOP              
+ 324: LOAD_CONST           None
+ 326: RETURN_VALUE         

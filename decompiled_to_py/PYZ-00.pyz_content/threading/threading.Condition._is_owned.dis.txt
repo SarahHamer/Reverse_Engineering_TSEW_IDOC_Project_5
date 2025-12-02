@@ -1,0 +1,29 @@
+# Disassembly for threading.Condition._is_owned
+# From module file: threading
+
+## co_consts:
+(None, False, True)
+
+## co_names:
+('_lock', 'acquire', 'release')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _lock
+  14: LOAD_METHOD          acquire
+  36: LOAD_CONST           False
+  38: PRECALL              
+  42: CALL                 
+  52: POP_JUMP_FORWARD_IF_FALSE to 108
+  54: LOAD_FAST            self
+  56: LOAD_ATTR            _lock
+  66: LOAD_METHOD          release
+  88: PRECALL              
+  92: CALL                 
+ 102: POP_TOP              
+ 104: LOAD_CONST           False
+ 106: RETURN_VALUE         
+ 108: LOAD_CONST           True
+ 110: RETURN_VALUE         

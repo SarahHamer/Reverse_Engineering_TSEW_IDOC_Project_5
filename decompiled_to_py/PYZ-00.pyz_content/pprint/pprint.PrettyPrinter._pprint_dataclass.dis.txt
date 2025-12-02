@@ -1,0 +1,66 @@
+# Disassembly for pprint.PrettyPrinter._pprint_dataclass
+# From module file: pprint
+
+## co_consts:
+(None, 1, <code object <listcomp> at 0x000002406944B550, file "pprint.py", line 199>, '(', ')')
+
+## co_names:
+('__class__', '__name__', 'len', '_dataclasses', 'fields', 'write', '_format_namespace_items')
+
+## bytecode:
+
+   0: MAKE_CELL            object
+   2: RESUME               
+   4: LOAD_DEREF           object
+   6: LOAD_ATTR            __class__
+  16: LOAD_ATTR            __name__
+  26: STORE_FAST           cls_name
+  28: LOAD_FAST            indent
+  30: LOAD_GLOBAL          NULL + len
+  42: LOAD_FAST            cls_name
+  44: PRECALL              
+  48: CALL                 
+  58: LOAD_CONST           1
+  60: BINARY_OP            +
+  64: BINARY_OP            +=
+  68: STORE_FAST           indent
+  70: LOAD_CLOSURE         object
+  72: BUILD_TUPLE          
+  74: LOAD_CONST           <code object <listcomp> at 0x000002406944B550, file "pprint.py", line 199>
+  76: MAKE_FUNCTION        closure
+  78: LOAD_GLOBAL          NULL + _dataclasses
+  90: LOAD_ATTR            fields
+ 100: LOAD_DEREF           object
+ 102: PRECALL              
+ 106: CALL                 
+ 116: GET_ITER             
+ 118: PRECALL              
+ 122: CALL                 
+ 132: STORE_FAST           items
+ 134: LOAD_FAST            stream
+ 136: LOAD_METHOD          write
+ 158: LOAD_FAST            cls_name
+ 160: LOAD_CONST           '('
+ 162: BINARY_OP            +
+ 166: PRECALL              
+ 170: CALL                 
+ 180: POP_TOP              
+ 182: LOAD_FAST            self
+ 184: LOAD_METHOD          _format_namespace_items
+ 206: LOAD_FAST            items
+ 208: LOAD_FAST            stream
+ 210: LOAD_FAST            indent
+ 212: LOAD_FAST            allowance
+ 214: LOAD_FAST            context
+ 216: LOAD_FAST            level
+ 218: PRECALL              
+ 222: CALL                 
+ 232: POP_TOP              
+ 234: LOAD_FAST            stream
+ 236: LOAD_METHOD          write
+ 258: LOAD_CONST           ')'
+ 260: PRECALL              
+ 264: CALL                 
+ 274: POP_TOP              
+ 276: LOAD_CONST           None
+ 278: RETURN_VALUE         

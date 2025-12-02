@@ -1,0 +1,50 @@
+# Disassembly for logging.Handler.set_name
+# From module file: logging
+
+## co_consts:
+(None,)
+
+## co_names:
+('_acquireLock', '_name', '_handlers', '_releaseLock')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _acquireLock
+  14: PRECALL              
+  18: CALL                 
+  28: POP_TOP              
+  30: NOP                  
+  32: LOAD_FAST            self
+  34: LOAD_ATTR            _name
+  44: LOAD_GLOBAL          _handlers
+  56: CONTAINS_OP          
+  58: POP_JUMP_FORWARD_IF_FALSE to 86
+  60: LOAD_GLOBAL          _handlers
+  72: LOAD_FAST            self
+  74: LOAD_ATTR            _name
+  84: DELETE_SUBSCR        
+  86: LOAD_FAST            name
+  88: LOAD_FAST            self
+  90: STORE_ATTR           _name
+ 100: LOAD_FAST            name
+ 102: POP_JUMP_FORWARD_IF_FALSE to 124
+ 104: LOAD_FAST            self
+ 106: LOAD_GLOBAL          _handlers
+ 118: LOAD_FAST            name
+ 120: STORE_SUBSCR         
+ 124: LOAD_GLOBAL          NULL + _releaseLock
+ 136: PRECALL              
+ 140: CALL                 
+ 150: POP_TOP              
+ 152: LOAD_CONST           None
+ 154: RETURN_VALUE         
+ 156: PUSH_EXC_INFO        
+ 158: LOAD_GLOBAL          NULL + _releaseLock
+ 170: PRECALL              
+ 174: CALL                 
+ 184: POP_TOP              
+ 186: RERAISE              
+ 188: COPY                 
+ 190: POP_EXCEPT           
+ 192: RERAISE              

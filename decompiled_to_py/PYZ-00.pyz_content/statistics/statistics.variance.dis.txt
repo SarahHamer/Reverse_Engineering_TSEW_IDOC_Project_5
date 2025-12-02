@@ -1,0 +1,41 @@
+# Disassembly for statistics.variance
+# From module file: statistics
+
+## co_consts:
+('Return the sample variance of data.\n\n    data should be an iterable of Real-valued numbers, with at least two\n    values. The optional argument xbar, if given, should be the mean of\n    the data. If it is missing or None, the mean is automatically calculated.\n\n    Use this function when your data is a sample from a population. To\n    calculate the variance from the entire population, see ``pvariance``.\n\n    Examples:\n\n    >>> data = [2.75, 1.75, 1.25, 0.25, 0.5, 1.25, 3.5]\n    >>> variance(data)\n    1.3720238095238095\n\n    If you have already calculated the mean of your data, you can pass it as\n    the optional second argument ``xbar`` to avoid recalculating it:\n\n    >>> m = mean(data)\n    >>> variance(data, m)\n    1.3720238095238095\n\n    This function does not check that ``xbar`` is actually the mean of\n    ``data``. Giving arbitrary values for ``xbar`` may lead to invalid or\n    impossible results.\n\n    Decimals and Fractions are supported:\n\n    >>> from decimal import Decimal as D\n    >>> variance([D("27.5"), D("30.25"), D("30.25"), D("34.5"), D("41.75")])\n    Decimal(\'31.01875\')\n\n    >>> from fractions import Fraction as F\n    >>> variance([F(1, 6), F(1, 2), F(5, 3)])\n    Fraction(67, 108)\n\n    ', 2, 'variance requires at least two data points', 1)
+
+## co_names:
+('_ss', 'StatisticsError', '_convert')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _ss
+  14: LOAD_FAST            data
+  16: LOAD_FAST            xbar
+  18: PRECALL              
+  22: CALL                 
+  32: UNPACK_SEQUENCE      
+  36: STORE_FAST           T
+  38: STORE_FAST           ss
+  40: STORE_FAST           c
+  42: STORE_FAST           n
+  44: LOAD_FAST            n
+  46: LOAD_CONST           2
+  48: COMPARE_OP           <
+  54: POP_JUMP_FORWARD_IF_FALSE to 86
+  56: LOAD_GLOBAL          NULL + StatisticsError
+  68: LOAD_CONST           'variance requires at least two data points'
+  70: PRECALL              
+  74: CALL                 
+  84: RAISE_VARARGS        
+  86: LOAD_GLOBAL          NULL + _convert
+  98: LOAD_FAST            ss
+ 100: LOAD_FAST            n
+ 102: LOAD_CONST           1
+ 104: BINARY_OP            -
+ 108: BINARY_OP            /
+ 112: LOAD_FAST            T
+ 114: PRECALL              
+ 118: CALL                 
+ 128: RETURN_VALUE         

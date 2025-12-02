@@ -1,0 +1,149 @@
+# Disassembly for statistics.linear_regression
+# From module file: statistics
+
+## co_consts:
+('Slope and intercept for simple linear regression.\n\n    Return the slope and intercept of simple linear regression\n    parameters estimated using ordinary least squares. Simple linear\n    regression describes relationship between an independent variable\n    *x* and a dependent variable *y* in terms of a linear function:\n\n        y = slope * x + intercept + noise\n\n    where *slope* and *intercept* are the regression parameters that are\n    estimated, and noise represents the variability of the data that was\n    not explained by the linear regression (it is equal to the\n    difference between predicted and actual values of the dependent\n    variable).\n\n    The parameters are returned as a named tuple.\n\n    >>> x = [1, 2, 3, 4, 5]\n    >>> noise = NormalDist().samples(5, seed=42)\n    >>> y = [3 * x[i] + 2 + noise[i] for i in range(5)]\n    >>> linear_regression(x, y)  #doctest: +ELLIPSIS\n    LinearRegression(slope=3.09078914170..., intercept=1.75684970486...)\n\n    If *proportional* is true, the independent variable *x* and the\n    dependent variable *y* are assumed to be directly proportional.\n    The data is fit to a line passing through the origin.\n\n    Since the *intercept* will always be 0.0, the underlying linear\n    function simplifies to:\n\n        y = slope * x + noise\n\n    >>> y = [3 * x[i] + noise[i] for i in range(5)]\n    >>> linear_regression(x, y, proportional=True)  #doctest: +ELLIPSIS\n    LinearRegression(slope=3.02447542484..., intercept=0.0)\n\n    ', 'linear regression requires that both inputs have same number of data points', 2, 'linear regression requires at least two data points', <code object <genexpr> at 0x0000024069466DB0, file "statistics.py", line 1071>, <code object <genexpr> at 0x0000024069465A70, file "statistics.py", line 1072>, <code object <genexpr> at 0x0000024069CF0300, file "statistics.py", line 1076>, <code object <genexpr> at 0x0000024069CF03F0, file "statistics.py", line 1077>, 'x is constant', 0.0, ('slope', 'intercept'))
+
+## co_names:
+('len', 'StatisticsError', 'fsum', 'zip', 'ZeroDivisionError', 'LinearRegression')
+
+## bytecode:
+
+   0: MAKE_CELL            d
+   2: MAKE_CELL            xbar
+   4: MAKE_CELL            ybar
+   6: RESUME               
+   8: LOAD_GLOBAL          NULL + len
+  20: LOAD_FAST            x
+  22: PRECALL              
+  26: CALL                 
+  36: STORE_FAST           n
+  38: LOAD_GLOBAL          NULL + len
+  50: LOAD_FAST            y
+  52: PRECALL              
+  56: CALL                 
+  66: LOAD_FAST            n
+  68: COMPARE_OP           !=
+  74: POP_JUMP_FORWARD_IF_FALSE to 106
+  76: LOAD_GLOBAL          NULL + StatisticsError
+  88: LOAD_CONST           'linear regression requires that both inputs have same number of data points'
+  90: PRECALL              
+  94: CALL                 
+ 104: RAISE_VARARGS        
+ 106: LOAD_FAST            n
+ 108: LOAD_CONST           2
+ 110: COMPARE_OP           <
+ 116: POP_JUMP_FORWARD_IF_FALSE to 148
+ 118: LOAD_GLOBAL          NULL + StatisticsError
+ 130: LOAD_CONST           'linear regression requires at least two data points'
+ 132: PRECALL              
+ 136: CALL                 
+ 146: RAISE_VARARGS        
+ 148: LOAD_FAST            proportional
+ 150: POP_JUMP_FORWARD_IF_FALSE to 282
+ 152: LOAD_GLOBAL          NULL + fsum
+ 164: LOAD_CONST           <code object <genexpr> at 0x0000024069466DB0, file "statistics.py", line 1071>
+ 166: MAKE_FUNCTION        
+ 168: LOAD_GLOBAL          NULL + zip
+ 180: LOAD_FAST            x
+ 182: LOAD_FAST            y
+ 184: PRECALL              
+ 188: CALL                 
+ 198: GET_ITER             
+ 200: PRECALL              
+ 204: CALL                 
+ 214: PRECALL              
+ 218: CALL                 
+ 228: STORE_FAST           sxy
+ 230: LOAD_GLOBAL          NULL + fsum
+ 242: LOAD_CONST           <code object <genexpr> at 0x0000024069465A70, file "statistics.py", line 1072>
+ 244: MAKE_FUNCTION        
+ 246: LOAD_FAST            x
+ 248: GET_ITER             
+ 250: PRECALL              
+ 254: CALL                 
+ 264: PRECALL              
+ 268: CALL                 
+ 278: STORE_FAST           sxx
+ 280: JUMP_FORWARD         to 494
+ 282: LOAD_GLOBAL          NULL + fsum
+ 294: LOAD_FAST            x
+ 296: PRECALL              
+ 300: CALL                 
+ 310: LOAD_FAST            n
+ 312: BINARY_OP            /
+ 316: STORE_DEREF          xbar
+ 318: LOAD_GLOBAL          NULL + fsum
+ 330: LOAD_FAST            y
+ 332: PRECALL              
+ 336: CALL                 
+ 346: LOAD_FAST            n
+ 348: BINARY_OP            /
+ 352: STORE_DEREF          ybar
+ 354: LOAD_GLOBAL          NULL + fsum
+ 366: LOAD_CLOSURE         xbar
+ 368: LOAD_CLOSURE         ybar
+ 370: BUILD_TUPLE          
+ 372: LOAD_CONST           <code object <genexpr> at 0x0000024069CF0300, file "statistics.py", line 1076>
+ 374: MAKE_FUNCTION        closure
+ 376: LOAD_GLOBAL          NULL + zip
+ 388: LOAD_FAST            x
+ 390: LOAD_FAST            y
+ 392: PRECALL              
+ 396: CALL                 
+ 406: GET_ITER             
+ 408: PRECALL              
+ 412: CALL                 
+ 422: PRECALL              
+ 426: CALL                 
+ 436: STORE_FAST           sxy
+ 438: LOAD_GLOBAL          NULL + fsum
+ 450: LOAD_CLOSURE         d
+ 452: LOAD_CLOSURE         xbar
+ 454: BUILD_TUPLE          
+ 456: LOAD_CONST           <code object <genexpr> at 0x0000024069CF03F0, file "statistics.py", line 1077>
+ 458: MAKE_FUNCTION        closure
+ 460: LOAD_FAST            x
+ 462: GET_ITER             
+ 464: PRECALL              
+ 468: CALL                 
+ 478: PRECALL              
+ 482: CALL                 
+ 492: STORE_FAST           sxx
+ 494: NOP                  
+ 496: LOAD_FAST            sxy
+ 498: LOAD_FAST            sxx
+ 500: BINARY_OP            /
+ 504: STORE_FAST           slope
+ 506: JUMP_FORWARD         to 566
+ 508: PUSH_EXC_INFO        
+ 510: LOAD_GLOBAL          ZeroDivisionError
+ 522: CHECK_EXC_MATCH      
+ 524: POP_JUMP_FORWARD_IF_FALSE to 558
+ 526: POP_TOP              
+ 528: LOAD_GLOBAL          NULL + StatisticsError
+ 540: LOAD_CONST           'x is constant'
+ 542: PRECALL              
+ 546: CALL                 
+ 556: RAISE_VARARGS        
+ 558: RERAISE              
+ 560: COPY                 
+ 562: POP_EXCEPT           
+ 564: RERAISE              
+ 566: LOAD_FAST            proportional
+ 568: POP_JUMP_FORWARD_IF_FALSE to 574
+ 570: LOAD_CONST           0.0
+ 572: JUMP_FORWARD         to 588
+ 574: LOAD_DEREF           ybar
+ 576: LOAD_FAST            slope
+ 578: LOAD_DEREF           xbar
+ 580: BINARY_OP            *
+ 584: BINARY_OP            -
+ 588: STORE_FAST           intercept
+ 590: LOAD_GLOBAL          NULL + LinearRegression
+ 602: LOAD_FAST            slope
+ 604: LOAD_FAST            intercept
+ 606: KW_NAMES             
+ 608: PRECALL              
+ 612: CALL                 
+ 622: RETURN_VALUE         

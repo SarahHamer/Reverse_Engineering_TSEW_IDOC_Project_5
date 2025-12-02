@@ -1,0 +1,70 @@
+# Disassembly for datetime.time.__setstate
+# From module file: datetime
+
+## co_consts:
+(None, 'bad tzinfo state arg', 127, 1, 128, 0, 8)
+
+## co_names:
+('isinstance', '_tzinfo_class', 'TypeError', '_minute', '_second', '_fold', '_hour', '_microsecond', '_tzinfo')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            tzinfo
+   4: POP_JUMP_FORWARD_IF_NONE to 78
+   6: LOAD_GLOBAL          NULL + isinstance
+  18: LOAD_FAST            tzinfo
+  20: LOAD_GLOBAL          _tzinfo_class
+  32: PRECALL              
+  36: CALL                 
+  46: POP_JUMP_FORWARD_IF_TRUE to 78
+  48: LOAD_GLOBAL          NULL + TypeError
+  60: LOAD_CONST           'bad tzinfo state arg'
+  62: PRECALL              
+  66: CALL                 
+  76: RAISE_VARARGS        
+  78: LOAD_FAST            string
+  80: UNPACK_SEQUENCE      
+  84: STORE_FAST           h
+  86: LOAD_FAST            self
+  88: STORE_ATTR           _minute
+  98: LOAD_FAST            self
+ 100: STORE_ATTR           _second
+ 110: STORE_FAST           us1
+ 112: STORE_FAST           us2
+ 114: STORE_FAST           us3
+ 116: LOAD_FAST            h
+ 118: LOAD_CONST           127
+ 120: COMPARE_OP           >
+ 126: POP_JUMP_FORWARD_IF_FALSE to 164
+ 128: LOAD_CONST           1
+ 130: LOAD_FAST            self
+ 132: STORE_ATTR           _fold
+ 142: LOAD_FAST            h
+ 144: LOAD_CONST           128
+ 146: BINARY_OP            -
+ 150: LOAD_FAST            self
+ 152: STORE_ATTR           _hour
+ 162: JUMP_FORWARD         to 192
+ 164: LOAD_CONST           0
+ 166: LOAD_FAST            self
+ 168: STORE_ATTR           _fold
+ 178: LOAD_FAST            h
+ 180: LOAD_FAST            self
+ 182: STORE_ATTR           _hour
+ 192: LOAD_FAST            us1
+ 194: LOAD_CONST           8
+ 196: BINARY_OP            <<
+ 200: LOAD_FAST            us2
+ 202: BINARY_OP            |
+ 206: LOAD_CONST           8
+ 208: BINARY_OP            <<
+ 212: LOAD_FAST            us3
+ 214: BINARY_OP            |
+ 218: LOAD_FAST            self
+ 220: STORE_ATTR           _microsecond
+ 230: LOAD_FAST            tzinfo
+ 232: LOAD_FAST            self
+ 234: STORE_ATTR           _tzinfo
+ 244: LOAD_CONST           None
+ 246: RETURN_VALUE         

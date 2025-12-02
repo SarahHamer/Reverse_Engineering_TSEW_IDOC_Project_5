@@ -1,0 +1,34 @@
+# Disassembly for argparse.HelpFormatter._split_lines
+# From module file: argparse
+
+## co_consts:
+(None, ' ', 0)
+
+## co_names:
+('_whitespace_matcher', 'sub', 'strip', 'textwrap', 'wrap')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _whitespace_matcher
+  14: LOAD_METHOD          sub
+  36: LOAD_CONST           ' '
+  38: LOAD_FAST            text
+  40: PRECALL              
+  44: CALL                 
+  54: LOAD_METHOD          strip
+  76: PRECALL              
+  80: CALL                 
+  90: STORE_FAST           text
+  92: LOAD_CONST           0
+  94: LOAD_CONST           None
+  96: IMPORT_NAME          textwrap
+  98: STORE_FAST           textwrap
+ 100: LOAD_FAST            textwrap
+ 102: LOAD_METHOD          wrap
+ 124: LOAD_FAST            text
+ 126: LOAD_FAST            width
+ 128: PRECALL              
+ 132: CALL                 
+ 142: RETURN_VALUE         

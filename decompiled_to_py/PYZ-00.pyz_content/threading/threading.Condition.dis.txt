@@ -1,0 +1,63 @@
+# Disassembly for threading.Condition
+# From module file: threading
+
+## co_consts:
+('Condition', 'Class that implements a condition variable.\n\n    A condition variable allows one or more threads to wait until they are\n    notified by another thread.\n\n    If the lock argument is given and not None, it must be a Lock or RLock\n    object, and it is used as the underlying lock. Otherwise, a new RLock object\n    is created and used as the underlying lock.\n\n    ', None, <code object __init__ at 0x000002406931FA30, file "threading.py", line 236>, <code object _at_fork_reinit at 0x00000240693D3210, file "threading.py", line 260>, <code object __enter__ at 0x000002406945EF10, file "threading.py", line 264>, <code object __exit__ at 0x0000024069467670, file "threading.py", line 267>, <code object __repr__ at 0x00000240693EBA30, file "threading.py", line 270>, <code object _release_save at 0x000002406945EC40, file "threading.py", line 273>, <code object _acquire_restore at 0x000002406945F1E0, file "threading.py", line 276>, <code object _is_owned at 0x00000240693D23D0, file "threading.py", line 279>, <code object wait at 0x0000024066345EF0, file "threading.py", line 288>, <code object wait_for at 0x00000240691E9FB0, file "threading.py", line 336>, 1, <code object notify at 0x000002406931FC30, file "threading.py", line 359>, <code object notify_all at 0x000002406944ADE0, file "threading.py", line 389>, <code object notifyAll at 0x00000240693D36D0, file "threading.py", line 398>, (None,), (1,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', '_at_fork_reinit', '__enter__', '__exit__', '__repr__', '_release_save', '_acquire_restore', '_is_owned', 'wait', 'wait_for', 'notify', 'notify_all', 'notifyAll')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Condition'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Class that implements a condition variable.\n\n    A condition variable allows one or more threads to wait until they are\n    notified by another thread.\n\n    If the lock argument is given and not None, it must be a Lock or RLock\n    object, and it is used as the underlying lock. Otherwise, a new RLock object\n    is created and used as the underlying lock.\n\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           (None,)
+  16: LOAD_CONST           <code object __init__ at 0x000002406931FA30, file "threading.py", line 236>
+  18: MAKE_FUNCTION        defaults
+  20: STORE_NAME           __init__
+  22: LOAD_CONST           <code object _at_fork_reinit at 0x00000240693D3210, file "threading.py", line 260>
+  24: MAKE_FUNCTION        
+  26: STORE_NAME           _at_fork_reinit
+  28: LOAD_CONST           <code object __enter__ at 0x000002406945EF10, file "threading.py", line 264>
+  30: MAKE_FUNCTION        
+  32: STORE_NAME           __enter__
+  34: LOAD_CONST           <code object __exit__ at 0x0000024069467670, file "threading.py", line 267>
+  36: MAKE_FUNCTION        
+  38: STORE_NAME           __exit__
+  40: LOAD_CONST           <code object __repr__ at 0x00000240693EBA30, file "threading.py", line 270>
+  42: MAKE_FUNCTION        
+  44: STORE_NAME           __repr__
+  46: LOAD_CONST           <code object _release_save at 0x000002406945EC40, file "threading.py", line 273>
+  48: MAKE_FUNCTION        
+  50: STORE_NAME           _release_save
+  52: LOAD_CONST           <code object _acquire_restore at 0x000002406945F1E0, file "threading.py", line 276>
+  54: MAKE_FUNCTION        
+  56: STORE_NAME           _acquire_restore
+  58: LOAD_CONST           <code object _is_owned at 0x00000240693D23D0, file "threading.py", line 279>
+  60: MAKE_FUNCTION        
+  62: STORE_NAME           _is_owned
+  64: LOAD_CONST           (None,)
+  66: LOAD_CONST           <code object wait at 0x0000024066345EF0, file "threading.py", line 288>
+  68: MAKE_FUNCTION        defaults
+  70: STORE_NAME           wait
+  72: LOAD_CONST           (None,)
+  74: LOAD_CONST           <code object wait_for at 0x00000240691E9FB0, file "threading.py", line 336>
+  76: MAKE_FUNCTION        defaults
+  78: STORE_NAME           wait_for
+  80: LOAD_CONST           (1,)
+  82: LOAD_CONST           <code object notify at 0x000002406931FC30, file "threading.py", line 359>
+  84: MAKE_FUNCTION        defaults
+  86: STORE_NAME           notify
+  88: LOAD_CONST           <code object notify_all at 0x000002406944ADE0, file "threading.py", line 389>
+  90: MAKE_FUNCTION        
+  92: STORE_NAME           notify_all
+  94: LOAD_CONST           <code object notifyAll at 0x00000240693D36D0, file "threading.py", line 398>
+  96: MAKE_FUNCTION        
+  98: STORE_NAME           notifyAll
+ 100: LOAD_CONST           None
+ 102: RETURN_VALUE         

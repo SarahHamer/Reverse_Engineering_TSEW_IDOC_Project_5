@@ -1,0 +1,52 @@
+# Disassembly for pickle._Unpickler.load_additems
+# From module file: pickle
+
+## co_consts:
+(None, -1)
+
+## co_names:
+('pop_mark', 'stack', 'isinstance', 'set', 'update', 'add')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          pop_mark
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           items
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            stack
+  54: LOAD_CONST           -1
+  56: BINARY_SUBSCR        
+  66: STORE_FAST           set_obj
+  68: LOAD_GLOBAL          NULL + isinstance
+  80: LOAD_FAST            set_obj
+  82: LOAD_GLOBAL          set
+  94: PRECALL              
+  98: CALL                 
+ 108: POP_JUMP_FORWARD_IF_FALSE to 156
+ 110: LOAD_FAST            set_obj
+ 112: LOAD_METHOD          update
+ 134: LOAD_FAST            items
+ 136: PRECALL              
+ 140: CALL                 
+ 150: POP_TOP              
+ 152: LOAD_CONST           None
+ 154: RETURN_VALUE         
+ 156: LOAD_FAST            set_obj
+ 158: LOAD_ATTR            add
+ 168: STORE_FAST           add
+ 170: LOAD_FAST            items
+ 172: GET_ITER             
+ 174: FOR_ITER             to 202
+ 176: STORE_FAST           item
+ 178: PUSH_NULL            
+ 180: LOAD_FAST            add
+ 182: LOAD_FAST            item
+ 184: PRECALL              
+ 188: CALL                 
+ 198: POP_TOP              
+ 200: JUMP_BACKWARD        to 174
+ 202: LOAD_CONST           None
+ 204: RETURN_VALUE         

@@ -1,0 +1,31 @@
+# Disassembly for dataclasses.is_dataclass
+# From module file: dataclasses
+
+## co_consts:
+('Returns True if obj is a dataclass or an instance of a\n    dataclass.',)
+
+## co_names:
+('isinstance', 'type', 'hasattr', '_FIELDS')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            obj
+  16: LOAD_GLOBAL          type
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 48
+  44: LOAD_FAST            obj
+  46: JUMP_FORWARD         to 76
+  48: LOAD_GLOBAL          NULL + type
+  60: LOAD_FAST            obj
+  62: PRECALL              
+  66: CALL                 
+  76: STORE_FAST           cls
+  78: LOAD_GLOBAL          NULL + hasattr
+  90: LOAD_FAST            cls
+  92: LOAD_GLOBAL          _FIELDS
+ 104: PRECALL              
+ 108: CALL                 
+ 118: RETURN_VALUE         

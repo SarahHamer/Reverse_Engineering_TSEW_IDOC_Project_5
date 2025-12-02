@@ -1,0 +1,142 @@
+# Disassembly for email.parse_content_transfer_encoding_header
+# From module file: email._header_value_parser
+
+## co_consts:
+(' mechanism\n\n    ', 'Missing content transfer encoding', 'Expected content transfer encoding but found {!r}', 'Extra text after content transfer encoding', 0, 'misplaced-special', 1, None)
+
+## co_names:
+('ContentTransferEncoding', 'defects', 'append', 'errors', 'HeaderMissingRequiredValue', 'get_token', 'value', 'strip', 'lower', 'cte', 'HeaderParseError', 'InvalidHeaderDefect', 'format', 'PHRASE_ENDS', 'ValueTerminal', 'get_phrase')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + ContentTransferEncoding
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           cte_header
+  30: LOAD_FAST            value
+  32: POP_JUMP_FORWARD_IF_TRUE to 126
+  34: LOAD_FAST            cte_header
+  36: LOAD_ATTR            defects
+  46: LOAD_METHOD          append
+  68: LOAD_GLOBAL          NULL + errors
+  80: LOAD_ATTR            HeaderMissingRequiredValue
+  90: LOAD_CONST           'Missing content transfer encoding'
+  92: PRECALL              
+  96: CALL                 
+ 106: PRECALL              
+ 110: CALL                 
+ 120: POP_TOP              
+ 122: LOAD_FAST            cte_header
+ 124: RETURN_VALUE         
+ 126: NOP                  
+ 128: LOAD_GLOBAL          NULL + get_token
+ 140: LOAD_FAST            value
+ 142: PRECALL              
+ 146: CALL                 
+ 156: UNPACK_SEQUENCE      
+ 160: STORE_FAST           token
+ 162: STORE_FAST           value
+ 164: LOAD_FAST            cte_header
+ 166: LOAD_METHOD          append
+ 188: LOAD_FAST            token
+ 190: PRECALL              
+ 194: CALL                 
+ 204: POP_TOP              
+ 206: LOAD_FAST            token
+ 208: LOAD_ATTR            value
+ 218: LOAD_METHOD          strip
+ 240: PRECALL              
+ 244: CALL                 
+ 254: LOAD_METHOD          lower
+ 276: PRECALL              
+ 280: CALL                 
+ 290: LOAD_FAST            cte_header
+ 292: STORE_ATTR           cte
+ 302: JUMP_FORWARD         to 472
+ 304: PUSH_EXC_INFO        
+ 306: LOAD_GLOBAL          errors
+ 318: LOAD_ATTR            HeaderParseError
+ 328: CHECK_EXC_MATCH      
+ 330: POP_JUMP_FORWARD_IF_FALSE to 464
+ 332: POP_TOP              
+ 334: LOAD_FAST            cte_header
+ 336: LOAD_ATTR            defects
+ 346: LOAD_METHOD          append
+ 368: LOAD_GLOBAL          NULL + errors
+ 380: LOAD_ATTR            InvalidHeaderDefect
+ 390: LOAD_CONST           'Expected content transfer encoding but found {!r}'
+ 392: LOAD_METHOD          format
+ 414: LOAD_FAST            value
+ 416: PRECALL              
+ 420: CALL                 
+ 430: PRECALL              
+ 434: CALL                 
+ 444: PRECALL              
+ 448: CALL                 
+ 458: POP_TOP              
+ 460: POP_EXCEPT           
+ 462: JUMP_FORWARD         to 472
+ 464: RERAISE              
+ 466: COPY                 
+ 468: POP_EXCEPT           
+ 470: RERAISE              
+ 472: LOAD_FAST            value
+ 474: POP_JUMP_FORWARD_IF_TRUE to 480
+ 476: LOAD_FAST            cte_header
+ 478: RETURN_VALUE         
+ 480: LOAD_FAST            value
+ 482: POP_JUMP_FORWARD_IF_FALSE to 788
+ 484: LOAD_FAST            cte_header
+ 486: LOAD_ATTR            defects
+ 496: LOAD_METHOD          append
+ 518: LOAD_GLOBAL          NULL + errors
+ 530: LOAD_ATTR            InvalidHeaderDefect
+ 540: LOAD_CONST           'Extra text after content transfer encoding'
+ 542: PRECALL              
+ 546: CALL                 
+ 556: PRECALL              
+ 560: CALL                 
+ 570: POP_TOP              
+ 572: LOAD_FAST            value
+ 574: LOAD_CONST           0
+ 576: BINARY_SUBSCR        
+ 586: LOAD_GLOBAL          PHRASE_ENDS
+ 598: CONTAINS_OP          
+ 600: POP_JUMP_FORWARD_IF_FALSE to 706
+ 602: LOAD_FAST            cte_header
+ 604: LOAD_METHOD          append
+ 626: LOAD_GLOBAL          NULL + ValueTerminal
+ 638: LOAD_FAST            value
+ 640: LOAD_CONST           0
+ 642: BINARY_SUBSCR        
+ 652: LOAD_CONST           'misplaced-special'
+ 654: PRECALL              
+ 658: CALL                 
+ 668: PRECALL              
+ 672: CALL                 
+ 682: POP_TOP              
+ 684: LOAD_FAST            value
+ 686: LOAD_CONST           1
+ 688: LOAD_CONST           None
+ 690: BUILD_SLICE          
+ 692: BINARY_SUBSCR        
+ 702: STORE_FAST           value
+ 704: JUMP_FORWARD         to 784
+ 706: LOAD_GLOBAL          NULL + get_phrase
+ 718: LOAD_FAST            value
+ 720: PRECALL              
+ 724: CALL                 
+ 734: UNPACK_SEQUENCE      
+ 738: STORE_FAST           token
+ 740: STORE_FAST           value
+ 742: LOAD_FAST            cte_header
+ 744: LOAD_METHOD          append
+ 766: LOAD_FAST            token
+ 768: PRECALL              
+ 772: CALL                 
+ 782: POP_TOP              
+ 784: LOAD_FAST            value
+ 786: POP_JUMP_BACKWARD_IF_TRUE to 484
+ 788: LOAD_FAST            cte_header
+ 790: RETURN_VALUE         

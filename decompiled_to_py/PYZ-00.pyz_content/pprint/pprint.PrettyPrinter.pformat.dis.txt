@@ -1,0 +1,32 @@
+# Disassembly for pprint.PrettyPrinter.pformat
+# From module file: pprint
+
+## co_consts:
+(None, 0)
+
+## co_names:
+('_StringIO', '_format', 'getvalue')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _StringIO
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           sio
+  30: LOAD_FAST            self
+  32: LOAD_METHOD          _format
+  54: LOAD_FAST            object
+  56: LOAD_FAST            sio
+  58: LOAD_CONST           0
+  60: LOAD_CONST           0
+  62: BUILD_MAP            
+  64: LOAD_CONST           0
+  66: PRECALL              
+  70: CALL                 
+  80: POP_TOP              
+  82: LOAD_FAST            sio
+  84: LOAD_METHOD          getvalue
+ 106: PRECALL              
+ 110: CALL                 
+ 120: RETURN_VALUE         

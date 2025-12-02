@@ -1,0 +1,137 @@
+# Disassembly for tarfile.TarFile.gzopen
+# From module file: tarfile
+
+## co_consts:
+('Open gzip compressed tar archive name for reading or writing.\n           Appending is not allowed.\n        ', ('r', 'w', 'x'), "mode must be 'r', 'w' or 'x'", 0, ('GzipFile',), 'gzip module is not available', None, 'b', 'r', 'not a gzip file', False)
+
+## co_names:
+('ValueError', 'gzip', 'GzipFile', 'ImportError', 'CompressionError', 'OSError', 'ReadError', 'taropen', 'close', '_extfileobj')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            mode
+   4: LOAD_CONST           ('r', 'w', 'x')
+   6: CONTAINS_OP          
+   8: POP_JUMP_FORWARD_IF_FALSE to 40
+  10: LOAD_GLOBAL          NULL + ValueError
+  22: LOAD_CONST           "mode must be 'r', 'w' or 'x'"
+  24: PRECALL              
+  28: CALL                 
+  38: RAISE_VARARGS        
+  40: NOP                  
+  42: LOAD_CONST           0
+  44: LOAD_CONST           ('GzipFile',)
+  46: IMPORT_NAME          gzip
+  48: IMPORT_FROM          GzipFile
+  50: STORE_FAST           GzipFile
+  52: POP_TOP              
+  54: JUMP_FORWARD         to 116
+  56: PUSH_EXC_INFO        
+  58: LOAD_GLOBAL          ImportError
+  70: CHECK_EXC_MATCH      
+  72: POP_JUMP_FORWARD_IF_FALSE to 108
+  74: POP_TOP              
+  76: LOAD_GLOBAL          NULL + CompressionError
+  88: LOAD_CONST           'gzip module is not available'
+  90: PRECALL              
+  94: CALL                 
+ 104: LOAD_CONST           None
+ 106: RAISE_VARARGS        
+ 108: RERAISE              
+ 110: COPY                 
+ 112: POP_EXCEPT           
+ 114: RERAISE              
+ 116: NOP                  
+ 118: PUSH_NULL            
+ 120: LOAD_FAST            GzipFile
+ 122: LOAD_FAST            name
+ 124: LOAD_FAST            mode
+ 126: LOAD_CONST           'b'
+ 128: BINARY_OP            +
+ 132: LOAD_FAST            compresslevel
+ 134: LOAD_FAST            fileobj
+ 136: PRECALL              
+ 140: CALL                 
+ 150: STORE_FAST           fileobj
+ 152: JUMP_FORWARD         to 240
+ 154: PUSH_EXC_INFO        
+ 156: LOAD_GLOBAL          OSError
+ 168: CHECK_EXC_MATCH      
+ 170: POP_JUMP_FORWARD_IF_FALSE to 232
+ 172: STORE_FAST           e
+ 174: LOAD_FAST            fileobj
+ 176: POP_JUMP_FORWARD_IF_NONE to 222
+ 178: LOAD_FAST            mode
+ 180: LOAD_CONST           'r'
+ 182: COMPARE_OP           ==
+ 188: POP_JUMP_FORWARD_IF_FALSE to 222
+ 190: LOAD_GLOBAL          NULL + ReadError
+ 202: LOAD_CONST           'not a gzip file'
+ 204: PRECALL              
+ 208: CALL                 
+ 218: LOAD_FAST            e
+ 220: RAISE_VARARGS        
+ 222: RAISE_VARARGS        
+ 224: LOAD_CONST           None
+ 226: STORE_FAST           e
+ 228: DELETE_FAST          e
+ 230: RERAISE              
+ 232: RERAISE              
+ 234: COPY                 
+ 236: POP_EXCEPT           
+ 238: RERAISE              
+ 240: NOP                  
+ 242: PUSH_NULL            
+ 244: LOAD_FAST            cls
+ 246: LOAD_ATTR            taropen
+ 256: LOAD_FAST            name
+ 258: LOAD_FAST            mode
+ 260: LOAD_FAST            fileobj
+ 262: BUILD_TUPLE          
+ 264: BUILD_MAP            
+ 266: LOAD_FAST            kwargs
+ 268: DICT_MERGE           
+ 270: CALL_FUNCTION_EX     
+ 272: STORE_FAST           t
+ 274: JUMP_FORWARD         to 440
+ 276: PUSH_EXC_INFO        
+ 278: LOAD_GLOBAL          OSError
+ 290: CHECK_EXC_MATCH      
+ 292: POP_JUMP_FORWARD_IF_FALSE to 390
+ 294: STORE_FAST           e
+ 296: LOAD_FAST            fileobj
+ 298: LOAD_METHOD          close
+ 320: PRECALL              
+ 324: CALL                 
+ 334: POP_TOP              
+ 336: LOAD_FAST            mode
+ 338: LOAD_CONST           'r'
+ 340: COMPARE_OP           ==
+ 346: POP_JUMP_FORWARD_IF_FALSE to 380
+ 348: LOAD_GLOBAL          NULL + ReadError
+ 360: LOAD_CONST           'not a gzip file'
+ 362: PRECALL              
+ 366: CALL                 
+ 376: LOAD_FAST            e
+ 378: RAISE_VARARGS        
+ 380: RAISE_VARARGS        
+ 382: LOAD_CONST           None
+ 384: STORE_FAST           e
+ 386: DELETE_FAST          e
+ 388: RERAISE              
+ 390: POP_TOP              
+ 392: LOAD_FAST            fileobj
+ 394: LOAD_METHOD          close
+ 416: PRECALL              
+ 420: CALL                 
+ 430: POP_TOP              
+ 432: RAISE_VARARGS        
+ 434: COPY                 
+ 436: POP_EXCEPT           
+ 438: RERAISE              
+ 440: LOAD_CONST           False
+ 442: LOAD_FAST            t
+ 444: STORE_ATTR           _extfileobj
+ 454: LOAD_FAST            t
+ 456: RETURN_VALUE         

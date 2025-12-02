@@ -1,0 +1,20 @@
+# Disassembly for _pydecimal.Underflow
+# From module file: _pydecimal
+
+## co_consts:
+('Underflow', 'Numerical underflow with result rounded to 0.\n\n    This occurs and signals underflow if a result is inexact and the\n    adjusted exponent of the result would be smaller (more negative) than\n    the smallest value that can be handled by the implementation (the value\n    Emin).  That is, the result is both inexact and subnormal.\n\n    The result after an underflow will be a subnormal number rounded, if\n    necessary, so that its exponent is not less than Etiny.  This may result\n    in 0 with the sign of the intermediate result and an exponent of Etiny.\n\n    In all cases, Inexact, Rounded, and Subnormal will also be raised.\n    ', None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Underflow'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Numerical underflow with result rounded to 0.\n\n    This occurs and signals underflow if a result is inexact and the\n    adjusted exponent of the result would be smaller (more negative) than\n    the smallest value that can be handled by the implementation (the value\n    Emin).  That is, the result is both inexact and subnormal.\n\n    The result after an underflow will be a subnormal number rounded, if\n    necessary, so that its exponent is not less than Etiny.  This may result\n    in 0 with the sign of the intermediate result and an exponent of Etiny.\n\n    In all cases, Inexact, Rounded, and Subnormal will also be raised.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           None
+  16: RETURN_VALUE         

@@ -1,0 +1,58 @@
+# Disassembly for base64.b64decode
+# From module file: base64
+
+## co_consts:
+("Decode the Base64 encoded bytes-like object or ASCII string s.\n\n    Optional altchars must be a bytes-like object or ASCII string of length 2\n    which specifies the alternative alphabet used instead of the '+' and '/'\n    characters.\n\n    The result is returned as a bytes object.  A binascii.Error is raised if\n    s is incorrectly padded.\n\n    If validate is False (the default), characters that are neither in the\n    normal base-64 alphabet nor the alternative alphabet are discarded prior\n    to the padding check.  If validate is True, these non-alphabet characters\n    in the input result in a binascii.Error.\n    For more information about the strict base64 check, see:\n\n    https://docs.python.org/3.11/library/binascii.html#binascii.a2b_base64\n    ", None, 2, b'+/', ('strict_mode',))
+
+## co_names:
+('_bytes_from_decode_data', 'len', 'repr', 'translate', 'bytes', 'maketrans', 'binascii', 'a2b_base64')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _bytes_from_decode_data
+  14: LOAD_FAST            s
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           s
+  32: LOAD_FAST            altchars
+  34: POP_JUMP_FORWARD_IF_NONE to 242
+  36: LOAD_GLOBAL          NULL + _bytes_from_decode_data
+  48: LOAD_FAST            altchars
+  50: PRECALL              
+  54: CALL                 
+  64: STORE_FAST           altchars
+  66: LOAD_GLOBAL          NULL + len
+  78: LOAD_FAST            altchars
+  80: PRECALL              
+  84: CALL                 
+  94: LOAD_CONST           2
+  96: COMPARE_OP           ==
+ 102: POP_JUMP_FORWARD_IF_TRUE to 150
+ 104: LOAD_ASSERTION_ERROR 
+ 106: LOAD_GLOBAL          NULL + repr
+ 118: LOAD_FAST            altchars
+ 120: PRECALL              
+ 124: CALL                 
+ 134: PRECALL              
+ 138: CALL                 
+ 148: RAISE_VARARGS        
+ 150: LOAD_FAST            s
+ 152: LOAD_METHOD          translate
+ 174: LOAD_GLOBAL          bytes
+ 186: LOAD_METHOD          maketrans
+ 208: LOAD_FAST            altchars
+ 210: LOAD_CONST           b'+/'
+ 212: PRECALL              
+ 216: CALL                 
+ 226: PRECALL              
+ 230: CALL                 
+ 240: STORE_FAST           s
+ 242: LOAD_GLOBAL          NULL + binascii
+ 254: LOAD_ATTR            a2b_base64
+ 264: LOAD_FAST            s
+ 266: LOAD_FAST            validate
+ 268: KW_NAMES             
+ 270: PRECALL              
+ 274: CALL                 
+ 284: RETURN_VALUE         

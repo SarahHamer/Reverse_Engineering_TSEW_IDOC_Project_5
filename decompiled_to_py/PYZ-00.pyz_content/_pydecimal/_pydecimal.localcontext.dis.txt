@@ -1,0 +1,56 @@
+# Disassembly for _pydecimal.localcontext
+# From module file: _pydecimal
+
+## co_consts:
+('Return a context manager for a copy of the supplied context\n\n    Uses a copy of the current context if no context is specified\n    The returned context manager creates a local decimal context\n    in a with statement:\n        def sin(x):\n             with localcontext() as ctx:\n                 ctx.prec += 2\n                 # Rest of sin calculation algorithm\n                 # uses a precision 2 greater than normal\n             return +s  # Convert result to normal precision\n\n         def sin(x):\n             with localcontext(ExtendedContext):\n                 # Rest of sin calculation algorithm\n                 # uses the Extended Context from the\n                 # General Decimal Arithmetic Specification\n             return +s  # Convert result to normal context\n\n    >>> setcontext(DefaultContext)\n    >>> print(getcontext().prec)\n    28\n    >>> with localcontext():\n    ...     ctx = getcontext()\n    ...     ctx.prec += 2\n    ...     print(ctx.prec)\n    ...\n    30\n    >>> with localcontext(ExtendedContext):\n    ...     print(getcontext().prec)\n    ...\n    9\n    >>> print(getcontext().prec)\n    28\n    ', None, "'", "' is an invalid keyword argument for this function")
+
+## co_names:
+('getcontext', '_ContextManager', 'items', '_context_attributes', 'TypeError', 'setattr', 'new_context')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            ctx
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 34
+   6: LOAD_GLOBAL          NULL + getcontext
+  18: PRECALL              
+  22: CALL                 
+  32: STORE_FAST           ctx
+  34: LOAD_GLOBAL          NULL + _ContextManager
+  46: LOAD_FAST            ctx
+  48: PRECALL              
+  52: CALL                 
+  62: STORE_FAST           ctx_manager
+  64: LOAD_FAST            kwargs
+  66: LOAD_METHOD          items
+  88: PRECALL              
+  92: CALL                 
+ 102: GET_ITER             
+ 104: FOR_ITER             to 216
+ 106: UNPACK_SEQUENCE      
+ 110: STORE_FAST           key
+ 112: STORE_FAST           value
+ 114: LOAD_FAST            key
+ 116: LOAD_GLOBAL          _context_attributes
+ 128: CONTAINS_OP          
+ 130: POP_JUMP_FORWARD_IF_FALSE to 170
+ 132: LOAD_GLOBAL          NULL + TypeError
+ 144: LOAD_CONST           "'"
+ 146: LOAD_FAST            key
+ 148: FORMAT_VALUE         
+ 150: LOAD_CONST           "' is an invalid keyword argument for this function"
+ 152: BUILD_STRING         
+ 154: PRECALL              
+ 158: CALL                 
+ 168: RAISE_VARARGS        
+ 170: LOAD_GLOBAL          NULL + setattr
+ 182: LOAD_FAST            ctx_manager
+ 184: LOAD_ATTR            new_context
+ 194: LOAD_FAST            key
+ 196: LOAD_FAST            value
+ 198: PRECALL              
+ 202: CALL                 
+ 212: POP_TOP              
+ 214: JUMP_BACKWARD        to 104
+ 216: LOAD_FAST            ctx_manager
+ 218: RETURN_VALUE         

@@ -1,0 +1,100 @@
+# Disassembly for tarfile.nti
+# From module file: tarfile
+
+## co_consts:
+('Convert a number field to a python number.\n    ', 0, (128, 255), 1, 8, 255, 256, 'ascii', 'strict', '0', 'invalid header')
+
+## co_names:
+('range', 'len', 'nts', 'int', 'strip', 'ValueError', 'InvalidHeaderError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            s
+   4: LOAD_CONST           0
+   6: BINARY_SUBSCR        
+  16: LOAD_CONST           (128, 255)
+  18: CONTAINS_OP          
+  20: POP_JUMP_FORWARD_IF_FALSE to 208
+  22: LOAD_CONST           0
+  24: STORE_FAST           n
+  26: LOAD_GLOBAL          NULL + range
+  38: LOAD_GLOBAL          NULL + len
+  50: LOAD_FAST            s
+  52: PRECALL              
+  56: CALL                 
+  66: LOAD_CONST           1
+  68: BINARY_OP            -
+  72: PRECALL              
+  76: CALL                 
+  86: GET_ITER             
+  88: FOR_ITER             to 132
+  90: STORE_FAST           i
+  92: LOAD_FAST            n
+  94: LOAD_CONST           8
+  96: BINARY_OP            <<=
+ 100: STORE_FAST           n
+ 102: LOAD_FAST            n
+ 104: LOAD_FAST            s
+ 106: LOAD_FAST            i
+ 108: LOAD_CONST           1
+ 110: BINARY_OP            +
+ 114: BINARY_SUBSCR        
+ 124: BINARY_OP            +=
+ 128: STORE_FAST           n
+ 130: JUMP_BACKWARD        to 88
+ 132: LOAD_FAST            s
+ 134: LOAD_CONST           0
+ 136: BINARY_SUBSCR        
+ 146: LOAD_CONST           255
+ 148: COMPARE_OP           ==
+ 154: POP_JUMP_FORWARD_IF_FALSE to 206
+ 156: LOAD_CONST           256
+ 158: LOAD_GLOBAL          NULL + len
+ 170: LOAD_FAST            s
+ 172: PRECALL              
+ 176: CALL                 
+ 186: LOAD_CONST           1
+ 188: BINARY_OP            -
+ 192: BINARY_OP            **
+ 196: LOAD_FAST            n
+ 198: BINARY_OP            -
+ 202: UNARY_NEGATIVE       
+ 204: STORE_FAST           n
+ 206: JUMP_FORWARD         to 376
+ 208: NOP                  
+ 210: LOAD_GLOBAL          NULL + nts
+ 222: LOAD_FAST            s
+ 224: LOAD_CONST           'ascii'
+ 226: LOAD_CONST           'strict'
+ 228: PRECALL              
+ 232: CALL                 
+ 242: STORE_FAST           s
+ 244: LOAD_GLOBAL          NULL + int
+ 256: LOAD_FAST            s
+ 258: LOAD_METHOD          strip
+ 280: PRECALL              
+ 284: CALL                 
+ 294: JUMP_IF_TRUE_OR_POP  to 298
+ 296: LOAD_CONST           '0'
+ 298: LOAD_CONST           8
+ 300: PRECALL              
+ 304: CALL                 
+ 314: STORE_FAST           n
+ 316: JUMP_FORWARD         to 376
+ 318: PUSH_EXC_INFO        
+ 320: LOAD_GLOBAL          ValueError
+ 332: CHECK_EXC_MATCH      
+ 334: POP_JUMP_FORWARD_IF_FALSE to 368
+ 336: POP_TOP              
+ 338: LOAD_GLOBAL          NULL + InvalidHeaderError
+ 350: LOAD_CONST           'invalid header'
+ 352: PRECALL              
+ 356: CALL                 
+ 366: RAISE_VARARGS        
+ 368: RERAISE              
+ 370: COPY                 
+ 372: POP_EXCEPT           
+ 374: RERAISE              
+ 376: LOAD_FAST            n
+ 378: RETURN_VALUE         

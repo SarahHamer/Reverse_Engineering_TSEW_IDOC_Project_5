@@ -1,0 +1,24 @@
+# Disassembly for py_compile.main.<listcomp>
+# From module file: py_compile
+
+## co_consts:
+('\n',)
+
+## co_names:
+('rstrip',)
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 54
+   8: STORE_FAST           filename
+  10: LOAD_FAST            filename
+  12: LOAD_METHOD          rstrip
+  34: LOAD_CONST           '\n'
+  36: PRECALL              
+  40: CALL                 
+  50: LIST_APPEND          
+  52: JUMP_BACKWARD        to 6
+  54: RETURN_VALUE         

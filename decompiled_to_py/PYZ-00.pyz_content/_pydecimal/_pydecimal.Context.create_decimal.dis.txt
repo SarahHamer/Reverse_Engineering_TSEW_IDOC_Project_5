@@ -1,0 +1,73 @@
+# Disassembly for _pydecimal.Context.create_decimal
+# From module file: _pydecimal
+
+## co_consts:
+('Creates a new Decimal instance but using self as context.\n\n        This method implements the to-number operation of the\n        IBM Decimal specification.', '_', 'trailing or leading whitespace and underscores are not permitted.', ('context',), 'diagnostic info too long in NaN')
+
+## co_names:
+('isinstance', 'str', 'strip', '_raise_error', 'ConversionSyntax', 'Decimal', '_isnan', 'len', '_int', 'prec', 'clamp', '_fix')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            num
+  16: LOAD_GLOBAL          str
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 154
+  44: LOAD_FAST            num
+  46: LOAD_FAST            num
+  48: LOAD_METHOD          strip
+  70: PRECALL              
+  74: CALL                 
+  84: COMPARE_OP           !=
+  90: POP_JUMP_FORWARD_IF_TRUE to 100
+  92: LOAD_CONST           '_'
+  94: LOAD_FAST            num
+  96: CONTAINS_OP          
+  98: POP_JUMP_FORWARD_IF_FALSE to 154
+ 100: LOAD_FAST            self
+ 102: LOAD_METHOD          _raise_error
+ 124: LOAD_GLOBAL          ConversionSyntax
+ 136: LOAD_CONST           'trailing or leading whitespace and underscores are not permitted.'
+ 138: PRECALL              
+ 142: CALL                 
+ 152: RETURN_VALUE         
+ 154: LOAD_GLOBAL          NULL + Decimal
+ 166: LOAD_FAST            num
+ 168: LOAD_FAST            self
+ 170: KW_NAMES             
+ 172: PRECALL              
+ 176: CALL                 
+ 186: STORE_FAST           d
+ 188: LOAD_FAST            d
+ 190: LOAD_METHOD          _isnan
+ 212: PRECALL              
+ 216: CALL                 
+ 226: POP_JUMP_FORWARD_IF_FALSE to 356
+ 228: LOAD_GLOBAL          NULL + len
+ 240: LOAD_FAST            d
+ 242: LOAD_ATTR            _int
+ 252: PRECALL              
+ 256: CALL                 
+ 266: LOAD_FAST            self
+ 268: LOAD_ATTR            prec
+ 278: LOAD_FAST            self
+ 280: LOAD_ATTR            clamp
+ 290: BINARY_OP            -
+ 294: COMPARE_OP           >
+ 300: POP_JUMP_FORWARD_IF_FALSE to 356
+ 302: LOAD_FAST            self
+ 304: LOAD_METHOD          _raise_error
+ 326: LOAD_GLOBAL          ConversionSyntax
+ 338: LOAD_CONST           'diagnostic info too long in NaN'
+ 340: PRECALL              
+ 344: CALL                 
+ 354: RETURN_VALUE         
+ 356: LOAD_FAST            d
+ 358: LOAD_METHOD          _fix
+ 380: LOAD_FAST            self
+ 382: PRECALL              
+ 386: CALL                 
+ 396: RETURN_VALUE         

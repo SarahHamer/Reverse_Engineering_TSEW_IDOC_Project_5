@@ -1,0 +1,62 @@
+# Disassembly for importlib.FastPath
+# From module file: importlib.metadata
+
+## co_consts:
+('FastPath', "\n    Micro-optimized class for searching a path for\n    children.\n\n    >>> FastPath('').children()\n    ['...']\n    ", <code object __new__ at 0x00000240693EB830, file "importlib\metadata\__init__.py", line 788>, <code object __init__ at 0x00000240694963F0, file "importlib\metadata\__init__.py", line 792>, <code object joinpath at 0x000002406945D2F0, file "importlib\metadata\__init__.py", line 795>, <code object children at 0x00000240691DB2F0, file "importlib\metadata\__init__.py", line 798>, <code object zip_children at 0x00000240691E8AB0, file "importlib\metadata\__init__.py", line 805>, <code object search at 0x000002406941A8B0, file "importlib\metadata\__init__.py", line 812>, <code object mtime at 0x000002406942CFD0, file "importlib\metadata\__init__.py", line 815>, <code object lookup at 0x0000024069465B50, file "importlib\metadata\__init__.py", line 821>)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'functools', 'lru_cache', '__new__', '__init__', 'joinpath', 'children', 'zip_children', 'search', 'property', 'mtime', 'method_cache', 'lookup', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'FastPath'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           "\n    Micro-optimized class for searching a path for\n    children.\n\n    >>> FastPath('').children()\n    ['...']\n    "
+  14: STORE_NAME           __doc__
+  16: PUSH_NULL            
+  18: LOAD_NAME            functools
+  20: LOAD_ATTR            lru_cache
+  30: PRECALL              
+  34: CALL                 
+  44: LOAD_CLOSURE         __class__
+  46: BUILD_TUPLE          
+  48: LOAD_CONST           <code object __new__ at 0x00000240693EB830, file "importlib\metadata\__init__.py", line 788>
+  50: MAKE_FUNCTION        closure
+  52: PRECALL              
+  56: CALL                 
+  66: STORE_NAME           __new__
+  68: LOAD_CONST           <code object __init__ at 0x00000240694963F0, file "importlib\metadata\__init__.py", line 792>
+  70: MAKE_FUNCTION        
+  72: STORE_NAME           __init__
+  74: LOAD_CONST           <code object joinpath at 0x000002406945D2F0, file "importlib\metadata\__init__.py", line 795>
+  76: MAKE_FUNCTION        
+  78: STORE_NAME           joinpath
+  80: LOAD_CONST           <code object children at 0x00000240691DB2F0, file "importlib\metadata\__init__.py", line 798>
+  82: MAKE_FUNCTION        
+  84: STORE_NAME           children
+  86: LOAD_CONST           <code object zip_children at 0x00000240691E8AB0, file "importlib\metadata\__init__.py", line 805>
+  88: MAKE_FUNCTION        
+  90: STORE_NAME           zip_children
+  92: LOAD_CONST           <code object search at 0x000002406941A8B0, file "importlib\metadata\__init__.py", line 812>
+  94: MAKE_FUNCTION        
+  96: STORE_NAME           search
+  98: LOAD_NAME            property
+ 100: LOAD_CONST           <code object mtime at 0x000002406942CFD0, file "importlib\metadata\__init__.py", line 815>
+ 102: MAKE_FUNCTION        
+ 104: PRECALL              
+ 108: CALL                 
+ 118: STORE_NAME           mtime
+ 120: LOAD_NAME            method_cache
+ 122: LOAD_CONST           <code object lookup at 0x0000024069465B50, file "importlib\metadata\__init__.py", line 821>
+ 124: MAKE_FUNCTION        
+ 126: PRECALL              
+ 130: CALL                 
+ 140: STORE_NAME           lookup
+ 142: LOAD_CLOSURE         __class__
+ 144: COPY                 
+ 146: STORE_NAME           __classcell__
+ 148: RETURN_VALUE         

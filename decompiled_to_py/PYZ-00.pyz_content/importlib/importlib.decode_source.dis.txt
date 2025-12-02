@@ -1,0 +1,48 @@
+# Disassembly for importlib.decode_source
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Decode bytes representing source code and return the string.\n\n    Universal newline support is used in the decoding.\n    ', 0, None, True)
+
+## co_names:
+('tokenize', '_io', 'BytesIO', 'readline', 'detect_encoding', 'IncrementalNewlineDecoder', 'decode')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           None
+   6: IMPORT_NAME          tokenize
+   8: STORE_FAST           tokenize
+  10: LOAD_GLOBAL          NULL + _io
+  22: LOAD_ATTR            BytesIO
+  32: LOAD_FAST            source_bytes
+  34: PRECALL              
+  38: CALL                 
+  48: LOAD_ATTR            readline
+  58: STORE_FAST           source_bytes_readline
+  60: LOAD_FAST            tokenize
+  62: LOAD_METHOD          detect_encoding
+  84: LOAD_FAST            source_bytes_readline
+  86: PRECALL              
+  90: CALL                 
+ 100: STORE_FAST           encoding
+ 102: LOAD_GLOBAL          NULL + _io
+ 114: LOAD_ATTR            IncrementalNewlineDecoder
+ 124: LOAD_CONST           None
+ 126: LOAD_CONST           True
+ 128: PRECALL              
+ 132: CALL                 
+ 142: STORE_FAST           newline_decoder
+ 144: LOAD_FAST            newline_decoder
+ 146: LOAD_METHOD          decode
+ 168: LOAD_FAST            source_bytes
+ 170: LOAD_METHOD          decode
+ 192: LOAD_FAST            encoding
+ 194: LOAD_CONST           0
+ 196: BINARY_SUBSCR        
+ 206: PRECALL              
+ 210: CALL                 
+ 220: PRECALL              
+ 224: CALL                 
+ 234: RETURN_VALUE         

@@ -1,0 +1,94 @@
+# Disassembly for datetime.date.isocalendar
+# From module file: datetime
+
+## co_consts:
+("Return a named tuple containing ISO year, week number, and weekday.\n\n        The first ISO week of the year is the (Mon-Sun) week\n        containing the year's first Thursday; everything else derives\n        from that.\n\n        The first week is 1; Monday is 1 ... Sunday is 7.\n\n        ISO calendar algorithm taken from\n        http://www.phys.uu.nl/~vgent/calendar/isocalendar.htm\n        (used with permission)\n        ", 7, 0, 1, 52)
+
+## co_names:
+('_year', '_isoweek1monday', '_ymd2ord', '_month', '_day', 'divmod', '_IsoCalendarDate')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _year
+  14: STORE_FAST           year
+  16: LOAD_GLOBAL          NULL + _isoweek1monday
+  28: LOAD_FAST            year
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_FAST           week1monday
+  46: LOAD_GLOBAL          NULL + _ymd2ord
+  58: LOAD_FAST            self
+  60: LOAD_ATTR            _year
+  70: LOAD_FAST            self
+  72: LOAD_ATTR            _month
+  82: LOAD_FAST            self
+  84: LOAD_ATTR            _day
+  94: PRECALL              
+  98: CALL                 
+ 108: STORE_FAST           today
+ 110: LOAD_GLOBAL          NULL + divmod
+ 122: LOAD_FAST            today
+ 124: LOAD_FAST            week1monday
+ 126: BINARY_OP            -
+ 130: LOAD_CONST           7
+ 132: PRECALL              
+ 136: CALL                 
+ 146: UNPACK_SEQUENCE      
+ 150: STORE_FAST           week
+ 152: STORE_FAST           day
+ 154: LOAD_FAST            week
+ 156: LOAD_CONST           0
+ 158: COMPARE_OP           <
+ 164: POP_JUMP_FORWARD_IF_FALSE to 252
+ 166: LOAD_FAST            year
+ 168: LOAD_CONST           1
+ 170: BINARY_OP            -=
+ 174: STORE_FAST           year
+ 176: LOAD_GLOBAL          NULL + _isoweek1monday
+ 188: LOAD_FAST            year
+ 190: PRECALL              
+ 194: CALL                 
+ 204: STORE_FAST           week1monday
+ 206: LOAD_GLOBAL          NULL + divmod
+ 218: LOAD_FAST            today
+ 220: LOAD_FAST            week1monday
+ 222: BINARY_OP            -
+ 226: LOAD_CONST           7
+ 228: PRECALL              
+ 232: CALL                 
+ 242: UNPACK_SEQUENCE      
+ 246: STORE_FAST           week
+ 248: STORE_FAST           day
+ 250: JUMP_FORWARD         to 322
+ 252: LOAD_FAST            week
+ 254: LOAD_CONST           52
+ 256: COMPARE_OP           >=
+ 262: POP_JUMP_FORWARD_IF_FALSE to 322
+ 264: LOAD_FAST            today
+ 266: LOAD_GLOBAL          NULL + _isoweek1monday
+ 278: LOAD_FAST            year
+ 280: LOAD_CONST           1
+ 282: BINARY_OP            +
+ 286: PRECALL              
+ 290: CALL                 
+ 300: COMPARE_OP           >=
+ 306: POP_JUMP_FORWARD_IF_FALSE to 322
+ 308: LOAD_FAST            year
+ 310: LOAD_CONST           1
+ 312: BINARY_OP            +=
+ 316: STORE_FAST           year
+ 318: LOAD_CONST           0
+ 320: STORE_FAST           week
+ 322: LOAD_GLOBAL          NULL + _IsoCalendarDate
+ 334: LOAD_FAST            year
+ 336: LOAD_FAST            week
+ 338: LOAD_CONST           1
+ 340: BINARY_OP            +
+ 344: LOAD_FAST            day
+ 346: LOAD_CONST           1
+ 348: BINARY_OP            +
+ 352: PRECALL              
+ 356: CALL                 
+ 366: RETURN_VALUE         

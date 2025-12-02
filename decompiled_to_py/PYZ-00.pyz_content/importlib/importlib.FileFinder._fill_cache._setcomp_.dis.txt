@@ -1,0 +1,23 @@
+# Disassembly for importlib.FileFinder._fill_cache.<setcomp>
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+()
+
+## co_names:
+('lower',)
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_SET            
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 52
+   8: STORE_FAST           fn
+  10: LOAD_FAST            fn
+  12: LOAD_METHOD          lower
+  34: PRECALL              
+  38: CALL                 
+  48: SET_ADD              
+  50: JUMP_BACKWARD        to 6
+  52: RETURN_VALUE         

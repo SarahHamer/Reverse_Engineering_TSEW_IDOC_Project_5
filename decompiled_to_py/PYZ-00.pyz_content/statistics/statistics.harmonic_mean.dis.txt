@@ -1,0 +1,181 @@
+# Disassembly for statistics.harmonic_mean
+# From module file: statistics
+
+## co_consts:
+('Return the harmonic mean of data.\n\n    The harmonic mean is the reciprocal of the arithmetic mean of the\n    reciprocals of the data.  It can be used for averaging ratios or\n    rates, for example speeds.\n\n    Suppose a car travels 40 km/hr for 5 km and then speeds-up to\n    60 km/hr for another 5 km. What is the average speed?\n\n        >>> harmonic_mean([40, 60])\n        48.0\n\n    Suppose a car travels 40 km/hr for 5 km, and when traffic clears,\n    speeds-up to 60 km/hr for the remaining 30 km of the journey. What\n    is the average speed?\n\n        >>> harmonic_mean([40, 60], weights=[5, 30])\n        56.0\n\n    If ``data`` is empty, or any element is less than zero,\n    ``harmonic_mean`` will raise ``StatisticsError``.\n    ', 'harmonic mean does not support negative values', 1, 'harmonic_mean requires at least one data point', None, 0, 'unsupported type', 'Number of weights does not match data size', <code object <genexpr> at 0x0000024069465450, file "statistics.py", line 538>, <code object <genexpr> at 0x000002406945EB50, file "statistics.py", line 541>, 'Weighted sum must be positive')
+
+## co_names:
+('iter', 'list', 'len', 'StatisticsError', 'isinstance', 'numbers', 'Real', 'Decimal', 'TypeError', 'repeat', '_sum', '_fail_neg', 'zip', 'ZeroDivisionError', '_convert')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + iter
+  14: LOAD_FAST            data
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_FAST            data
+  32: IS_OP                
+  34: POP_JUMP_FORWARD_IF_FALSE to 66
+  36: LOAD_GLOBAL          NULL + list
+  48: LOAD_FAST            data
+  50: PRECALL              
+  54: CALL                 
+  64: STORE_FAST           data
+  66: LOAD_CONST           'harmonic mean does not support negative values'
+  68: STORE_FAST           errmsg
+  70: LOAD_GLOBAL          NULL + len
+  82: LOAD_FAST            data
+  84: PRECALL              
+  88: CALL                 
+  98: STORE_FAST           n
+ 100: LOAD_FAST            n
+ 102: LOAD_CONST           1
+ 104: COMPARE_OP           <
+ 110: POP_JUMP_FORWARD_IF_FALSE to 142
+ 112: LOAD_GLOBAL          NULL + StatisticsError
+ 124: LOAD_CONST           'harmonic_mean requires at least one data point'
+ 126: PRECALL              
+ 130: CALL                 
+ 140: RAISE_VARARGS        
+ 142: LOAD_FAST            n
+ 144: LOAD_CONST           1
+ 146: COMPARE_OP           ==
+ 152: POP_JUMP_FORWARD_IF_FALSE to 316
+ 154: LOAD_FAST            weights
+ 156: POP_JUMP_FORWARD_IF_NOT_NONE to 316
+ 158: LOAD_FAST            data
+ 160: LOAD_CONST           0
+ 162: BINARY_SUBSCR        
+ 172: STORE_FAST           x
+ 174: LOAD_GLOBAL          NULL + isinstance
+ 186: LOAD_FAST            x
+ 188: LOAD_GLOBAL          numbers
+ 200: LOAD_ATTR            Real
+ 210: LOAD_GLOBAL          Decimal
+ 222: BUILD_TUPLE          
+ 224: PRECALL              
+ 228: CALL                 
+ 238: POP_JUMP_FORWARD_IF_FALSE to 286
+ 240: LOAD_FAST            x
+ 242: LOAD_CONST           0
+ 244: COMPARE_OP           <
+ 250: POP_JUMP_FORWARD_IF_FALSE to 282
+ 252: LOAD_GLOBAL          NULL + StatisticsError
+ 264: LOAD_FAST            errmsg
+ 266: PRECALL              
+ 270: CALL                 
+ 280: RAISE_VARARGS        
+ 282: LOAD_FAST            x
+ 284: RETURN_VALUE         
+ 286: LOAD_GLOBAL          NULL + TypeError
+ 298: LOAD_CONST           'unsupported type'
+ 300: PRECALL              
+ 304: CALL                 
+ 314: RAISE_VARARGS        
+ 316: LOAD_FAST            weights
+ 318: POP_JUMP_FORWARD_IF_NOT_NONE to 358
+ 320: LOAD_GLOBAL          NULL + repeat
+ 332: LOAD_CONST           1
+ 334: LOAD_FAST            n
+ 336: PRECALL              
+ 340: CALL                 
+ 350: STORE_FAST           weights
+ 352: LOAD_FAST            n
+ 354: STORE_FAST           sum_weights
+ 356: JUMP_FORWARD         to 576
+ 358: LOAD_GLOBAL          NULL + iter
+ 370: LOAD_FAST            weights
+ 372: PRECALL              
+ 376: CALL                 
+ 386: LOAD_FAST            weights
+ 388: IS_OP                
+ 390: POP_JUMP_FORWARD_IF_FALSE to 422
+ 392: LOAD_GLOBAL          NULL + list
+ 404: LOAD_FAST            weights
+ 406: PRECALL              
+ 410: CALL                 
+ 420: STORE_FAST           weights
+ 422: LOAD_GLOBAL          NULL + len
+ 434: LOAD_FAST            weights
+ 436: PRECALL              
+ 440: CALL                 
+ 450: LOAD_FAST            n
+ 452: COMPARE_OP           !=
+ 458: POP_JUMP_FORWARD_IF_FALSE to 490
+ 460: LOAD_GLOBAL          NULL + StatisticsError
+ 472: LOAD_CONST           'Number of weights does not match data size'
+ 474: PRECALL              
+ 478: CALL                 
+ 488: RAISE_VARARGS        
+ 490: LOAD_GLOBAL          NULL + _sum
+ 502: LOAD_CONST           <code object <genexpr> at 0x0000024069465450, file "statistics.py", line 538>
+ 504: MAKE_FUNCTION        
+ 506: LOAD_GLOBAL          NULL + _fail_neg
+ 518: LOAD_FAST            weights
+ 520: LOAD_FAST            errmsg
+ 522: PRECALL              
+ 526: CALL                 
+ 536: GET_ITER             
+ 538: PRECALL              
+ 542: CALL                 
+ 552: PRECALL              
+ 556: CALL                 
+ 566: UNPACK_SEQUENCE      
+ 570: STORE_FAST           _
+ 572: STORE_FAST           sum_weights
+ 574: STORE_FAST           _
+ 576: NOP                  
+ 578: LOAD_GLOBAL          NULL + _fail_neg
+ 590: LOAD_FAST            data
+ 592: LOAD_FAST            errmsg
+ 594: PRECALL              
+ 598: CALL                 
+ 608: STORE_FAST           data
+ 610: LOAD_GLOBAL          NULL + _sum
+ 622: LOAD_CONST           <code object <genexpr> at 0x000002406945EB50, file "statistics.py", line 541>
+ 624: MAKE_FUNCTION        
+ 626: LOAD_GLOBAL          NULL + zip
+ 638: LOAD_FAST            weights
+ 640: LOAD_FAST            data
+ 642: PRECALL              
+ 646: CALL                 
+ 656: GET_ITER             
+ 658: PRECALL              
+ 662: CALL                 
+ 672: PRECALL              
+ 676: CALL                 
+ 686: UNPACK_SEQUENCE      
+ 690: STORE_FAST           T
+ 692: STORE_FAST           total
+ 694: STORE_FAST           count
+ 696: JUMP_FORWARD         to 732
+ 698: PUSH_EXC_INFO        
+ 700: LOAD_GLOBAL          ZeroDivisionError
+ 712: CHECK_EXC_MATCH      
+ 714: POP_JUMP_FORWARD_IF_FALSE to 724
+ 716: POP_TOP              
+ 718: POP_EXCEPT           
+ 720: LOAD_CONST           0
+ 722: RETURN_VALUE         
+ 724: RERAISE              
+ 726: COPY                 
+ 728: POP_EXCEPT           
+ 730: RERAISE              
+ 732: LOAD_FAST            total
+ 734: LOAD_CONST           0
+ 736: COMPARE_OP           <=
+ 742: POP_JUMP_FORWARD_IF_FALSE to 774
+ 744: LOAD_GLOBAL          NULL + StatisticsError
+ 756: LOAD_CONST           'Weighted sum must be positive'
+ 758: PRECALL              
+ 762: CALL                 
+ 772: RAISE_VARARGS        
+ 774: LOAD_GLOBAL          NULL + _convert
+ 786: LOAD_FAST            sum_weights
+ 788: LOAD_FAST            total
+ 790: BINARY_OP            /
+ 794: LOAD_FAST            T
+ 796: PRECALL              
+ 800: CALL                 
+ 810: RETURN_VALUE         

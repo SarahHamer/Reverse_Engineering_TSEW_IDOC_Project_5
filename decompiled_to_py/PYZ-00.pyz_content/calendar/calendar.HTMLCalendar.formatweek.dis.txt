@@ -1,0 +1,30 @@
+# Disassembly for calendar.HTMLCalendar.formatweek
+# From module file: calendar
+
+## co_consts:
+('\n        Return a complete week as a table row.\n        ', '', <code object <genexpr> at 0x000002406944ACD0, file "calendar.py", line 452>, '<tr>%s</tr>')
+
+## co_names:
+('join',)
+
+## bytecode:
+
+   0: MAKE_CELL            self
+   2: RESUME               
+   4: LOAD_CONST           ''
+   6: LOAD_METHOD          join
+  28: LOAD_CLOSURE         self
+  30: BUILD_TUPLE          
+  32: LOAD_CONST           <code object <genexpr> at 0x000002406944ACD0, file "calendar.py", line 452>
+  34: MAKE_FUNCTION        closure
+  36: LOAD_FAST            theweek
+  38: GET_ITER             
+  40: PRECALL              
+  44: CALL                 
+  54: PRECALL              
+  58: CALL                 
+  68: STORE_FAST           s
+  70: LOAD_CONST           '<tr>%s</tr>'
+  72: LOAD_FAST            s
+  74: BINARY_OP            %
+  78: RETURN_VALUE         

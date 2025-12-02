@@ -1,0 +1,15 @@
+# Disassembly for tracemalloc.Traceback.total_nframe
+# From module file: tracemalloc
+
+## co_consts:
+(None,)
+
+## co_names:
+('_total_nframe',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _total_nframe
+  14: RETURN_VALUE         

@@ -1,0 +1,30 @@
+# Disassembly for dataclasses._fields_in_init_order.<genexpr>
+# From module file: dataclasses
+
+## co_consts:
+(None,)
+
+## co_names:
+('init', 'kw_only')
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_FAST            .0
+   8: FOR_ITER             to 50
+  10: STORE_FAST           f
+  12: LOAD_FAST            f
+  14: LOAD_ATTR            init
+  24: POP_JUMP_BACKWARD_IF_FALSE to 8
+  26: LOAD_FAST            f
+  28: LOAD_ATTR            kw_only
+  38: POP_JUMP_BACKWARD_IF_FALSE to 8
+  40: LOAD_FAST            f
+  42: YIELD_VALUE          
+  44: RESUME               
+  46: POP_TOP              
+  48: JUMP_BACKWARD        to 8
+  50: LOAD_CONST           None
+  52: RETURN_VALUE         

@@ -1,0 +1,30 @@
+# Disassembly for argparse._StoreTrueAction
+# From module file: argparse
+
+## co_consts:
+('_StoreTrueAction', False, None, <code object __init__ at 0x0000024069419A10, file "argparse.py", line 984>, (False, False, None))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           '_StoreTrueAction'
+  10: STORE_NAME           __qualname__
+  12: NOP                  
+  14: NOP                  
+  16: NOP                  
+  18: LOAD_CONST           (False, False, None)
+  20: LOAD_CLOSURE         __class__
+  22: BUILD_TUPLE          
+  24: LOAD_CONST           <code object __init__ at 0x0000024069419A10, file "argparse.py", line 984>
+  26: MAKE_FUNCTION        defaults, closure
+  28: STORE_NAME           __init__
+  30: LOAD_CLOSURE         __class__
+  32: COPY                 
+  34: STORE_NAME           __classcell__
+  36: RETURN_VALUE         

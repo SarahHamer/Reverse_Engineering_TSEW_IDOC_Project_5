@@ -1,0 +1,14 @@
+# Disassembly for logging.BufferingFormatter.formatHeader
+# From module file: logging
+
+## co_consts:
+('\n        Return the header string for the specified records.\n        ', '')
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           ''
+   4: RETURN_VALUE         

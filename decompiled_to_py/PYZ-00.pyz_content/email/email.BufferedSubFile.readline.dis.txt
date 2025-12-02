@@ -1,0 +1,55 @@
+# Disassembly for email.BufferedSubFile.readline
+# From module file: email.feedparser
+
+## co_consts:
+(None, '')
+
+## co_names:
+('_lines', '_closed', 'NeedMoreData', 'popleft', 'reversed', '_eofstack', 'appendleft')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _lines
+  14: POP_JUMP_FORWARD_IF_TRUE to 48
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            _closed
+  28: POP_JUMP_FORWARD_IF_FALSE to 34
+  30: LOAD_CONST           ''
+  32: RETURN_VALUE         
+  34: LOAD_GLOBAL          NeedMoreData
+  46: RETURN_VALUE         
+  48: LOAD_FAST            self
+  50: LOAD_ATTR            _lines
+  60: LOAD_METHOD          popleft
+  82: PRECALL              
+  86: CALL                 
+  96: STORE_FAST           line
+  98: LOAD_GLOBAL          NULL + reversed
+ 110: LOAD_FAST            self
+ 112: LOAD_ATTR            _eofstack
+ 122: PRECALL              
+ 126: CALL                 
+ 136: GET_ITER             
+ 138: FOR_ITER             to 224
+ 140: STORE_FAST           ateof
+ 142: PUSH_NULL            
+ 144: LOAD_FAST            ateof
+ 146: LOAD_FAST            line
+ 148: PRECALL              
+ 152: CALL                 
+ 162: POP_JUMP_FORWARD_IF_FALSE to 222
+ 164: LOAD_FAST            self
+ 166: LOAD_ATTR            _lines
+ 176: LOAD_METHOD          appendleft
+ 198: LOAD_FAST            line
+ 200: PRECALL              
+ 204: CALL                 
+ 214: POP_TOP              
+ 216: POP_TOP              
+ 218: LOAD_CONST           ''
+ 220: RETURN_VALUE         
+ 222: JUMP_BACKWARD        to 138
+ 224: LOAD_FAST            line
+ 226: RETURN_VALUE         

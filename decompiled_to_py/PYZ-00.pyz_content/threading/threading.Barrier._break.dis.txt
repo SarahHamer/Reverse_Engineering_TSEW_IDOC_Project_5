@@ -1,0 +1,23 @@
+# Disassembly for threading.Barrier._break
+# From module file: threading
+
+## co_consts:
+(None, -2)
+
+## co_names:
+('_state', '_cond', 'notify_all')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           -2
+   4: LOAD_FAST            self
+   6: STORE_ATTR           _state
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            _cond
+  28: LOAD_METHOD          notify_all
+  50: PRECALL              
+  54: CALL                 
+  64: POP_TOP              
+  66: LOAD_CONST           None
+  68: RETURN_VALUE         

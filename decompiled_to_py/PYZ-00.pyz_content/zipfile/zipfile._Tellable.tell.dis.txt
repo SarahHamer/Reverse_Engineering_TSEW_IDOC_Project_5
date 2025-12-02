@@ -1,0 +1,15 @@
+# Disassembly for zipfile._Tellable.tell
+# From module file: zipfile
+
+## co_consts:
+(None,)
+
+## co_names:
+('offset',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            offset
+  14: RETURN_VALUE         

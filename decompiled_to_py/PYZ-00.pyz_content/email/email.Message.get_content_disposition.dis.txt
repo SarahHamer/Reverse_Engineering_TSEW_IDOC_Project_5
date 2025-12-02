@@ -1,0 +1,34 @@
+# Disassembly for email.Message.get_content_disposition
+# From module file: email.message
+
+## co_consts:
+("Return the message's content-disposition if it exists, or None.\n\n        The return values can be either 'inline', 'attachment' or None\n        according to the rfc2183.\n        ", 'content-disposition', None, 0)
+
+## co_names:
+('get', '_splitparam', 'lower')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          get
+  26: LOAD_CONST           'content-disposition'
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           value
+  44: LOAD_FAST            value
+  46: POP_JUMP_FORWARD_IF_NOT_NONE to 52
+  48: LOAD_CONST           None
+  50: RETURN_VALUE         
+  52: LOAD_GLOBAL          NULL + _splitparam
+  64: LOAD_FAST            value
+  66: PRECALL              
+  70: CALL                 
+  80: LOAD_CONST           0
+  82: BINARY_SUBSCR        
+  92: LOAD_METHOD          lower
+ 114: PRECALL              
+ 118: CALL                 
+ 128: STORE_FAST           c_d
+ 130: LOAD_FAST            c_d
+ 132: RETURN_VALUE         

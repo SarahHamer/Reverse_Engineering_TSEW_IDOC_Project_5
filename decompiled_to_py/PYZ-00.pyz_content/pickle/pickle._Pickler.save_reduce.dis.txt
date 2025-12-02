@@ -1,0 +1,343 @@
+# Disassembly for pickle._Pickler.save_reduce
+# From module file: pickle
+
+## co_consts:
+(None, 'args from save_reduce() must be a tuple', 'func from save_reduce() must be callable', '__name__', '', 2, '__newobj_ex__', '__new__', 'args[0] from {} args has no __new__', 'args[0] from {} args has the wrong class', 4, (), '__newobj__', 0, 'args[0] from __newobj__ args has no __new__', 'args[0] from __newobj__ args has the wrong class', 1)
+
+## co_names:
+('isinstance', 'tuple', 'PicklingError', 'callable', 'save', 'write', 'getattr', 'proto', 'hasattr', 'format', '__class__', 'NEWOBJ_EX', 'partial', '__new__', 'REDUCE', 'NEWOBJ', 'id', 'memo', 'POP', 'get', 'memoize', '_batch_appends', '_batch_setitems', 'BUILD', 'TUPLE2')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            args
+  16: LOAD_GLOBAL          tuple
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_TRUE to 74
+  44: LOAD_GLOBAL          NULL + PicklingError
+  56: LOAD_CONST           'args from save_reduce() must be a tuple'
+  58: PRECALL              
+  62: CALL                 
+  72: RAISE_VARARGS        
+  74: LOAD_GLOBAL          NULL + callable
+  86: LOAD_FAST            func
+  88: PRECALL              
+  92: CALL                 
+ 102: POP_JUMP_FORWARD_IF_TRUE to 134
+ 104: LOAD_GLOBAL          NULL + PicklingError
+ 116: LOAD_CONST           'func from save_reduce() must be callable'
+ 118: PRECALL              
+ 122: CALL                 
+ 132: RAISE_VARARGS        
+ 134: LOAD_FAST            self
+ 136: LOAD_ATTR            save
+ 146: STORE_FAST           save
+ 148: LOAD_FAST            self
+ 150: LOAD_ATTR            write
+ 160: STORE_FAST           write
+ 162: LOAD_GLOBAL          NULL + getattr
+ 174: LOAD_FAST            func
+ 176: LOAD_CONST           '__name__'
+ 178: LOAD_CONST           ''
+ 180: PRECALL              
+ 184: CALL                 
+ 194: STORE_FAST           func_name
+ 196: LOAD_FAST            self
+ 198: LOAD_ATTR            proto
+ 208: LOAD_CONST           2
+ 210: COMPARE_OP           >=
+ 216: POP_JUMP_FORWARD_IF_FALSE to 676
+ 218: LOAD_FAST            func_name
+ 220: LOAD_CONST           '__newobj_ex__'
+ 222: COMPARE_OP           ==
+ 228: POP_JUMP_FORWARD_IF_FALSE to 676
+ 230: LOAD_FAST            args
+ 232: UNPACK_SEQUENCE      
+ 236: STORE_FAST           cls
+ 238: STORE_FAST           args
+ 240: STORE_FAST           kwargs
+ 242: LOAD_GLOBAL          NULL + hasattr
+ 254: LOAD_FAST            cls
+ 256: LOAD_CONST           '__new__'
+ 258: PRECALL              
+ 262: CALL                 
+ 272: POP_JUMP_FORWARD_IF_TRUE to 342
+ 274: LOAD_GLOBAL          NULL + PicklingError
+ 286: LOAD_CONST           'args[0] from {} args has no __new__'
+ 288: LOAD_METHOD          format
+ 310: LOAD_FAST            func_name
+ 312: PRECALL              
+ 316: CALL                 
+ 326: PRECALL              
+ 330: CALL                 
+ 340: RAISE_VARARGS        
+ 342: LOAD_FAST            obj
+ 344: POP_JUMP_FORWARD_IF_NONE to 432
+ 346: LOAD_FAST            cls
+ 348: LOAD_FAST            obj
+ 350: LOAD_ATTR            __class__
+ 360: IS_OP                
+ 362: POP_JUMP_FORWARD_IF_FALSE to 432
+ 364: LOAD_GLOBAL          NULL + PicklingError
+ 376: LOAD_CONST           'args[0] from {} args has the wrong class'
+ 378: LOAD_METHOD          format
+ 400: LOAD_FAST            func_name
+ 402: PRECALL              
+ 406: CALL                 
+ 416: PRECALL              
+ 420: CALL                 
+ 430: RAISE_VARARGS        
+ 432: LOAD_FAST            self
+ 434: LOAD_ATTR            proto
+ 444: LOAD_CONST           4
+ 446: COMPARE_OP           >=
+ 452: POP_JUMP_FORWARD_IF_FALSE to 554
+ 454: PUSH_NULL            
+ 456: LOAD_FAST            save
+ 458: LOAD_FAST            cls
+ 460: PRECALL              
+ 464: CALL                 
+ 474: POP_TOP              
+ 476: PUSH_NULL            
+ 478: LOAD_FAST            save
+ 480: LOAD_FAST            args
+ 482: PRECALL              
+ 486: CALL                 
+ 496: POP_TOP              
+ 498: PUSH_NULL            
+ 500: LOAD_FAST            save
+ 502: LOAD_FAST            kwargs
+ 504: PRECALL              
+ 508: CALL                 
+ 518: POP_TOP              
+ 520: PUSH_NULL            
+ 522: LOAD_FAST            write
+ 524: LOAD_GLOBAL          NEWOBJ_EX
+ 536: PRECALL              
+ 540: CALL                 
+ 550: POP_TOP              
+ 552: JUMP_FORWARD         to 1014
+ 554: LOAD_GLOBAL          NULL + partial
+ 566: LOAD_FAST            cls
+ 568: LOAD_ATTR            __new__
+ 578: LOAD_FAST            cls
+ 580: BUILD_LIST           
+ 582: LOAD_FAST            args
+ 584: LIST_EXTEND          
+ 586: LIST_TO_TUPLE        
+ 588: BUILD_MAP            
+ 590: LOAD_FAST            kwargs
+ 592: DICT_MERGE           
+ 594: CALL_FUNCTION_EX     
+ 596: STORE_FAST           func
+ 598: PUSH_NULL            
+ 600: LOAD_FAST            save
+ 602: LOAD_FAST            func
+ 604: PRECALL              
+ 608: CALL                 
+ 618: POP_TOP              
+ 620: PUSH_NULL            
+ 622: LOAD_FAST            save
+ 624: LOAD_CONST           ()
+ 626: PRECALL              
+ 630: CALL                 
+ 640: POP_TOP              
+ 642: PUSH_NULL            
+ 644: LOAD_FAST            write
+ 646: LOAD_GLOBAL          REDUCE
+ 658: PRECALL              
+ 662: CALL                 
+ 672: POP_TOP              
+ 674: JUMP_FORWARD         to 1014
+ 676: LOAD_FAST            self
+ 678: LOAD_ATTR            proto
+ 688: LOAD_CONST           2
+ 690: COMPARE_OP           >=
+ 696: POP_JUMP_FORWARD_IF_FALSE to 938
+ 698: LOAD_FAST            func_name
+ 700: LOAD_CONST           '__newobj__'
+ 702: COMPARE_OP           ==
+ 708: POP_JUMP_FORWARD_IF_FALSE to 938
+ 710: LOAD_FAST            args
+ 712: LOAD_CONST           0
+ 714: BINARY_SUBSCR        
+ 724: STORE_FAST           cls
+ 726: LOAD_GLOBAL          NULL + hasattr
+ 738: LOAD_FAST            cls
+ 740: LOAD_CONST           '__new__'
+ 742: PRECALL              
+ 746: CALL                 
+ 756: POP_JUMP_FORWARD_IF_TRUE to 788
+ 758: LOAD_GLOBAL          NULL + PicklingError
+ 770: LOAD_CONST           'args[0] from __newobj__ args has no __new__'
+ 772: PRECALL              
+ 776: CALL                 
+ 786: RAISE_VARARGS        
+ 788: LOAD_FAST            obj
+ 790: POP_JUMP_FORWARD_IF_NONE to 840
+ 792: LOAD_FAST            cls
+ 794: LOAD_FAST            obj
+ 796: LOAD_ATTR            __class__
+ 806: IS_OP                
+ 808: POP_JUMP_FORWARD_IF_FALSE to 840
+ 810: LOAD_GLOBAL          NULL + PicklingError
+ 822: LOAD_CONST           'args[0] from __newobj__ args has the wrong class'
+ 824: PRECALL              
+ 828: CALL                 
+ 838: RAISE_VARARGS        
+ 840: LOAD_FAST            args
+ 842: LOAD_CONST           1
+ 844: LOAD_CONST           None
+ 846: BUILD_SLICE          
+ 848: BINARY_SUBSCR        
+ 858: STORE_FAST           args
+ 860: PUSH_NULL            
+ 862: LOAD_FAST            save
+ 864: LOAD_FAST            cls
+ 866: PRECALL              
+ 870: CALL                 
+ 880: POP_TOP              
+ 882: PUSH_NULL            
+ 884: LOAD_FAST            save
+ 886: LOAD_FAST            args
+ 888: PRECALL              
+ 892: CALL                 
+ 902: POP_TOP              
+ 904: PUSH_NULL            
+ 906: LOAD_FAST            write
+ 908: LOAD_GLOBAL          NEWOBJ
+ 920: PRECALL              
+ 924: CALL                 
+ 934: POP_TOP              
+ 936: JUMP_FORWARD         to 1014
+ 938: PUSH_NULL            
+ 940: LOAD_FAST            save
+ 942: LOAD_FAST            func
+ 944: PRECALL              
+ 948: CALL                 
+ 958: POP_TOP              
+ 960: PUSH_NULL            
+ 962: LOAD_FAST            save
+ 964: LOAD_FAST            args
+ 966: PRECALL              
+ 970: CALL                 
+ 980: POP_TOP              
+ 982: PUSH_NULL            
+ 984: LOAD_FAST            write
+ 986: LOAD_GLOBAL          REDUCE
+ 998: PRECALL              
+1002: CALL                 
+1012: POP_TOP              
+1014: LOAD_FAST            obj
+1016: POP_JUMP_FORWARD_IF_NONE to 1242
+1018: LOAD_GLOBAL          NULL + id
+1030: LOAD_FAST            obj
+1032: PRECALL              
+1036: CALL                 
+1046: LOAD_FAST            self
+1048: LOAD_ATTR            memo
+1058: CONTAINS_OP          
+1060: POP_JUMP_FORWARD_IF_FALSE to 1200
+1062: PUSH_NULL            
+1064: LOAD_FAST            write
+1066: LOAD_GLOBAL          POP
+1078: LOAD_FAST            self
+1080: LOAD_METHOD          get
+1102: LOAD_FAST            self
+1104: LOAD_ATTR            memo
+1114: LOAD_GLOBAL          NULL + id
+1126: LOAD_FAST            obj
+1128: PRECALL              
+1132: CALL                 
+1142: BINARY_SUBSCR        
+1152: LOAD_CONST           0
+1154: BINARY_SUBSCR        
+1164: PRECALL              
+1168: CALL                 
+1178: BINARY_OP            +
+1182: PRECALL              
+1186: CALL                 
+1196: POP_TOP              
+1198: JUMP_FORWARD         to 1242
+1200: LOAD_FAST            self
+1202: LOAD_METHOD          memoize
+1224: LOAD_FAST            obj
+1226: PRECALL              
+1230: CALL                 
+1240: POP_TOP              
+1242: LOAD_FAST            listitems
+1244: POP_JUMP_FORWARD_IF_NONE to 1288
+1246: LOAD_FAST            self
+1248: LOAD_METHOD          _batch_appends
+1270: LOAD_FAST            listitems
+1272: PRECALL              
+1276: CALL                 
+1286: POP_TOP              
+1288: LOAD_FAST            dictitems
+1290: POP_JUMP_FORWARD_IF_NONE to 1334
+1292: LOAD_FAST            self
+1294: LOAD_METHOD          _batch_setitems
+1316: LOAD_FAST            dictitems
+1318: PRECALL              
+1322: CALL                 
+1332: POP_TOP              
+1334: LOAD_FAST            state
+1336: POP_JUMP_FORWARD_IF_NONE to 1566
+1338: LOAD_FAST            state_setter
+1340: POP_JUMP_FORWARD_IF_NOT_NONE to 1400
+1342: PUSH_NULL            
+1344: LOAD_FAST            save
+1346: LOAD_FAST            state
+1348: PRECALL              
+1352: CALL                 
+1362: POP_TOP              
+1364: PUSH_NULL            
+1366: LOAD_FAST            write
+1368: LOAD_GLOBAL          BUILD
+1380: PRECALL              
+1384: CALL                 
+1394: POP_TOP              
+1396: LOAD_CONST           None
+1398: RETURN_VALUE         
+1400: PUSH_NULL            
+1402: LOAD_FAST            save
+1404: LOAD_FAST            state_setter
+1406: PRECALL              
+1410: CALL                 
+1420: POP_TOP              
+1422: PUSH_NULL            
+1424: LOAD_FAST            save
+1426: LOAD_FAST            obj
+1428: PRECALL              
+1432: CALL                 
+1442: POP_TOP              
+1444: PUSH_NULL            
+1446: LOAD_FAST            save
+1448: LOAD_FAST            state
+1450: PRECALL              
+1454: CALL                 
+1464: POP_TOP              
+1466: PUSH_NULL            
+1468: LOAD_FAST            write
+1470: LOAD_GLOBAL          TUPLE2
+1482: PRECALL              
+1486: CALL                 
+1496: POP_TOP              
+1498: PUSH_NULL            
+1500: LOAD_FAST            write
+1502: LOAD_GLOBAL          REDUCE
+1514: PRECALL              
+1518: CALL                 
+1528: POP_TOP              
+1530: PUSH_NULL            
+1532: LOAD_FAST            write
+1534: LOAD_GLOBAL          POP
+1546: PRECALL              
+1550: CALL                 
+1560: POP_TOP              
+1562: LOAD_CONST           None
+1564: RETURN_VALUE         
+1566: LOAD_CONST           None
+1568: RETURN_VALUE         

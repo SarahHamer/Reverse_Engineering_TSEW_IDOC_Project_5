@@ -1,0 +1,16 @@
+# Disassembly for _pydecimal.Decimal.is_finite
+# From module file: _pydecimal
+
+## co_consts:
+('Return True if self is finite; otherwise return False.\n\n        A Decimal instance is considered finite if it is neither\n        infinite nor a NaN.\n        ',)
+
+## co_names:
+('_is_special',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _is_special
+  14: UNARY_NOT            
+  16: RETURN_VALUE         

@@ -1,0 +1,22 @@
+# Disassembly for pickle._Unpickler.load_empty_set
+# From module file: pickle
+
+## co_consts:
+(None,)
+
+## co_names:
+('append', 'set')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          append
+  26: LOAD_GLOBAL          NULL + set
+  38: PRECALL              
+  42: CALL                 
+  52: PRECALL              
+  56: CALL                 
+  66: POP_TOP              
+  68: LOAD_CONST           None
+  70: RETURN_VALUE         

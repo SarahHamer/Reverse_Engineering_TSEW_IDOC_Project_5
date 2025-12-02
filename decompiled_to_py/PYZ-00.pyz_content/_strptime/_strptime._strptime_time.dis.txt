@@ -1,0 +1,31 @@
+# Disassembly for _strptime._strptime_time
+# From module file: _strptime
+
+## co_consts:
+('Return a time struct based on the input string and the\n    format string.', 0, None)
+
+## co_names:
+('_strptime', 'time', 'struct_time', '_STRUCT_TM_ITEMS')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _strptime
+  14: LOAD_FAST            data_string
+  16: LOAD_FAST            format
+  18: PRECALL              
+  22: CALL                 
+  32: LOAD_CONST           0
+  34: BINARY_SUBSCR        
+  44: STORE_FAST           tt
+  46: LOAD_GLOBAL          NULL + time
+  58: LOAD_ATTR            struct_time
+  68: LOAD_FAST            tt
+  70: LOAD_CONST           None
+  72: LOAD_GLOBAL          time
+  84: LOAD_ATTR            _STRUCT_TM_ITEMS
+  94: BUILD_SLICE          
+  96: BINARY_SUBSCR        
+ 106: PRECALL              
+ 110: CALL                 
+ 120: RETURN_VALUE         

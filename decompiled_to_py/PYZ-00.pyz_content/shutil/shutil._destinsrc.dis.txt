@@ -1,0 +1,60 @@
+# Disassembly for shutil._destinsrc
+# From module file: shutil
+
+## co_consts:
+(None,)
+
+## co_names:
+('os', 'path', 'abspath', 'endswith', 'sep', 'startswith')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          os
+  14: LOAD_ATTR            path
+  24: LOAD_METHOD          abspath
+  46: LOAD_FAST            src
+  48: PRECALL              
+  52: CALL                 
+  62: STORE_FAST           src
+  64: LOAD_GLOBAL          os
+  76: LOAD_ATTR            path
+  86: LOAD_METHOD          abspath
+ 108: LOAD_FAST            dst
+ 110: PRECALL              
+ 114: CALL                 
+ 124: STORE_FAST           dst
+ 126: LOAD_FAST            src
+ 128: LOAD_METHOD          endswith
+ 150: LOAD_GLOBAL          os
+ 162: LOAD_ATTR            path
+ 172: LOAD_ATTR            sep
+ 182: PRECALL              
+ 186: CALL                 
+ 196: POP_JUMP_FORWARD_IF_TRUE to 238
+ 198: LOAD_FAST            src
+ 200: LOAD_GLOBAL          os
+ 212: LOAD_ATTR            path
+ 222: LOAD_ATTR            sep
+ 232: BINARY_OP            +=
+ 236: STORE_FAST           src
+ 238: LOAD_FAST            dst
+ 240: LOAD_METHOD          endswith
+ 262: LOAD_GLOBAL          os
+ 274: LOAD_ATTR            path
+ 284: LOAD_ATTR            sep
+ 294: PRECALL              
+ 298: CALL                 
+ 308: POP_JUMP_FORWARD_IF_TRUE to 350
+ 310: LOAD_FAST            dst
+ 312: LOAD_GLOBAL          os
+ 324: LOAD_ATTR            path
+ 334: LOAD_ATTR            sep
+ 344: BINARY_OP            +=
+ 348: STORE_FAST           dst
+ 350: LOAD_FAST            dst
+ 352: LOAD_METHOD          startswith
+ 374: LOAD_FAST            src
+ 376: PRECALL              
+ 380: CALL                 
+ 390: RETURN_VALUE         

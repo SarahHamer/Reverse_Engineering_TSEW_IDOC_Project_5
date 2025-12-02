@@ -1,0 +1,32 @@
+# Disassembly for email._has_surrogates
+# From module file: email.utils
+
+## co_consts:
+('Return True if s contains surrogate-escaped binary data.', False, True)
+
+## co_names:
+('encode', 'UnicodeEncodeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            s
+   6: LOAD_METHOD          encode
+  28: PRECALL              
+  32: CALL                 
+  42: POP_TOP              
+  44: LOAD_CONST           False
+  46: RETURN_VALUE         
+  48: PUSH_EXC_INFO        
+  50: LOAD_GLOBAL          UnicodeEncodeError
+  62: CHECK_EXC_MATCH      
+  64: POP_JUMP_FORWARD_IF_FALSE to 74
+  66: POP_TOP              
+  68: POP_EXCEPT           
+  70: LOAD_CONST           True
+  72: RETURN_VALUE         
+  74: RERAISE              
+  76: COPY                 
+  78: POP_EXCEPT           
+  80: RERAISE              

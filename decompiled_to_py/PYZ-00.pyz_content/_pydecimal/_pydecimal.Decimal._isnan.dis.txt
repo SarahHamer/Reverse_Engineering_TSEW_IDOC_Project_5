@@ -1,0 +1,32 @@
+# Disassembly for _pydecimal.Decimal._isnan
+# From module file: _pydecimal
+
+## co_consts:
+('Returns whether the number is not actually one.\n\n        0 if a number\n        1 if NaN\n        2 if sNaN\n        ', 'n', 1, 'N', 2, 0)
+
+## co_names:
+('_is_special', '_exp')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _is_special
+  14: POP_JUMP_FORWARD_IF_FALSE to 62
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            _exp
+  28: STORE_FAST           exp
+  30: LOAD_FAST            exp
+  32: LOAD_CONST           'n'
+  34: COMPARE_OP           ==
+  40: POP_JUMP_FORWARD_IF_FALSE to 46
+  42: LOAD_CONST           1
+  44: RETURN_VALUE         
+  46: LOAD_FAST            exp
+  48: LOAD_CONST           'N'
+  50: COMPARE_OP           ==
+  56: POP_JUMP_FORWARD_IF_FALSE to 62
+  58: LOAD_CONST           2
+  60: RETURN_VALUE         
+  62: LOAD_CONST           0
+  64: RETURN_VALUE         

@@ -1,0 +1,24 @@
+# Disassembly for inspect.getclosurevars.<dictcomp>
+# From module file: inspect
+
+## co_consts:
+()
+
+## co_names:
+('cell_contents',)
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_MAP            
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 34
+   8: UNPACK_SEQUENCE      
+  12: STORE_FAST           var
+  14: STORE_FAST           cell
+  16: LOAD_FAST            var
+  18: LOAD_FAST            cell
+  20: LOAD_ATTR            cell_contents
+  30: MAP_ADD              
+  32: JUMP_BACKWARD        to 6
+  34: RETURN_VALUE         

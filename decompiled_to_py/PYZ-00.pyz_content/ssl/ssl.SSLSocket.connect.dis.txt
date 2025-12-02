@@ -1,0 +1,21 @@
+# Disassembly for ssl.SSLSocket.connect
+# From module file: ssl
+
+## co_consts:
+('Connects to remote ADDR, and then wraps the connection in\n        an SSL channel.', False, None)
+
+## co_names:
+('_real_connect',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _real_connect
+  26: LOAD_FAST            addr
+  28: LOAD_CONST           False
+  30: PRECALL              
+  34: CALL                 
+  44: POP_TOP              
+  46: LOAD_CONST           None
+  48: RETURN_VALUE         

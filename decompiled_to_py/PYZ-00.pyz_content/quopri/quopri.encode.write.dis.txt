@@ -1,0 +1,72 @@
+# Disassembly for quopri.encode.write
+# From module file: quopri
+
+## co_consts:
+(None, -1, b' \t', b'.')
+
+## co_names:
+('write', 'quote')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            s
+   4: POP_JUMP_FORWARD_IF_FALSE to 146
+   6: LOAD_FAST            s
+   8: LOAD_CONST           -1
+  10: LOAD_CONST           None
+  12: BUILD_SLICE          
+  14: BINARY_SUBSCR        
+  24: LOAD_CONST           b' \t'
+  26: CONTAINS_OP          
+  28: POP_JUMP_FORWARD_IF_FALSE to 146
+  30: LOAD_FAST            output
+  32: LOAD_METHOD          write
+  54: LOAD_FAST            s
+  56: LOAD_CONST           None
+  58: LOAD_CONST           -1
+  60: BUILD_SLICE          
+  62: BINARY_SUBSCR        
+  72: LOAD_GLOBAL          NULL + quote
+  84: LOAD_FAST            s
+  86: LOAD_CONST           -1
+  88: LOAD_CONST           None
+  90: BUILD_SLICE          
+  92: BINARY_SUBSCR        
+ 102: PRECALL              
+ 106: CALL                 
+ 116: BINARY_OP            +
+ 120: LOAD_FAST            lineEnd
+ 122: BINARY_OP            +
+ 126: PRECALL              
+ 130: CALL                 
+ 140: POP_TOP              
+ 142: LOAD_CONST           None
+ 144: RETURN_VALUE         
+ 146: LOAD_FAST            s
+ 148: LOAD_CONST           b'.'
+ 150: COMPARE_OP           ==
+ 156: POP_JUMP_FORWARD_IF_FALSE to 236
+ 158: LOAD_FAST            output
+ 160: LOAD_METHOD          write
+ 182: LOAD_GLOBAL          NULL + quote
+ 194: LOAD_FAST            s
+ 196: PRECALL              
+ 200: CALL                 
+ 210: LOAD_FAST            lineEnd
+ 212: BINARY_OP            +
+ 216: PRECALL              
+ 220: CALL                 
+ 230: POP_TOP              
+ 232: LOAD_CONST           None
+ 234: RETURN_VALUE         
+ 236: LOAD_FAST            output
+ 238: LOAD_METHOD          write
+ 260: LOAD_FAST            s
+ 262: LOAD_FAST            lineEnd
+ 264: BINARY_OP            +
+ 268: PRECALL              
+ 272: CALL                 
+ 282: POP_TOP              
+ 284: LOAD_CONST           None
+ 286: RETURN_VALUE         

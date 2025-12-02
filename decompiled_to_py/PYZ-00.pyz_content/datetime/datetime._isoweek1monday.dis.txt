@@ -1,0 +1,41 @@
+# Disassembly for datetime._isoweek1monday
+# From module file: datetime
+
+## co_consts:
+(None, 3, 1, 6, 7)
+
+## co_names:
+('_ymd2ord',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           3
+   4: STORE_FAST           THURSDAY
+   6: LOAD_GLOBAL          NULL + _ymd2ord
+  18: LOAD_FAST            year
+  20: LOAD_CONST           1
+  22: LOAD_CONST           1
+  24: PRECALL              
+  28: CALL                 
+  38: STORE_FAST           firstday
+  40: LOAD_FAST            firstday
+  42: LOAD_CONST           6
+  44: BINARY_OP            +
+  48: LOAD_CONST           7
+  50: BINARY_OP            %
+  54: STORE_FAST           firstweekday
+  56: LOAD_FAST            firstday
+  58: LOAD_FAST            firstweekday
+  60: BINARY_OP            -
+  64: STORE_FAST           week1monday
+  66: LOAD_FAST            firstweekday
+  68: LOAD_FAST            THURSDAY
+  70: COMPARE_OP           >
+  76: POP_JUMP_FORWARD_IF_FALSE to 88
+  78: LOAD_FAST            week1monday
+  80: LOAD_CONST           7
+  82: BINARY_OP            +=
+  86: STORE_FAST           week1monday
+  88: LOAD_FAST            week1monday
+  90: RETURN_VALUE         

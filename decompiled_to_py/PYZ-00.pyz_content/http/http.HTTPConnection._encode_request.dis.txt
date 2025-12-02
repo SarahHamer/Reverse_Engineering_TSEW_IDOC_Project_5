@@ -1,0 +1,18 @@
+# Disassembly for http.HTTPConnection._encode_request
+# From module file: http.client
+
+## co_consts:
+(None, 'ascii')
+
+## co_names:
+('encode',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            request
+   4: LOAD_METHOD          encode
+  26: LOAD_CONST           'ascii'
+  28: PRECALL              
+  32: CALL                 
+  42: RETURN_VALUE         

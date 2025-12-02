@@ -1,0 +1,20 @@
+# Disassembly for string.Formatter.format
+# From module file: string
+
+## co_consts:
+(None,)
+
+## co_names:
+('vformat',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          vformat
+  26: LOAD_FAST            format_string
+  28: LOAD_FAST            args
+  30: LOAD_FAST            kwargs
+  32: PRECALL              
+  36: CALL                 
+  46: RETURN_VALUE         

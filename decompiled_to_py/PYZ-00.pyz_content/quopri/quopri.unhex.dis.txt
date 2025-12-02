@@ -1,0 +1,106 @@
+# Disassembly for quopri.unhex
+# From module file: quopri
+
+## co_consts:
+('Get the integer value of a hexadecimal number.', 0, b'0', b'9', '0', b'a', b'f', 'a', 10, b'A', b'F', False, 'non-hex digit ', 16)
+
+## co_names:
+('bytes', 'ord', 'repr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: STORE_FAST           bits
+   6: LOAD_FAST            s
+   8: GET_ITER             
+  10: FOR_ITER             to 352
+  12: STORE_FAST           c
+  14: LOAD_GLOBAL          NULL + bytes
+  26: LOAD_FAST            c
+  28: BUILD_TUPLE          
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_FAST           c
+  46: LOAD_CONST           b'0'
+  48: LOAD_FAST            c
+  50: SWAP                 
+  52: COPY                 
+  54: COMPARE_OP           <=
+  60: POP_JUMP_FORWARD_IF_FALSE to 74
+  62: LOAD_CONST           b'9'
+  64: COMPARE_OP           <=
+  70: POP_JUMP_FORWARD_IF_FALSE to 110
+  72: JUMP_FORWARD         to 78
+  74: POP_TOP              
+  76: JUMP_FORWARD         to 110
+  78: LOAD_GLOBAL          NULL + ord
+  90: LOAD_CONST           '0'
+  92: PRECALL              
+  96: CALL                 
+ 106: STORE_FAST           i
+ 108: JUMP_FORWARD         to 302
+ 110: LOAD_CONST           b'a'
+ 112: LOAD_FAST            c
+ 114: SWAP                 
+ 116: COPY                 
+ 118: COMPARE_OP           <=
+ 124: POP_JUMP_FORWARD_IF_FALSE to 138
+ 126: LOAD_CONST           b'f'
+ 128: COMPARE_OP           <=
+ 134: POP_JUMP_FORWARD_IF_FALSE to 180
+ 136: JUMP_FORWARD         to 142
+ 138: POP_TOP              
+ 140: JUMP_FORWARD         to 180
+ 142: LOAD_GLOBAL          NULL + ord
+ 154: LOAD_CONST           'a'
+ 156: PRECALL              
+ 160: CALL                 
+ 170: LOAD_CONST           10
+ 172: BINARY_OP            -
+ 176: STORE_FAST           i
+ 178: JUMP_FORWARD         to 302
+ 180: LOAD_CONST           b'A'
+ 182: LOAD_FAST            c
+ 184: SWAP                 
+ 186: COPY                 
+ 188: COMPARE_OP           <=
+ 194: POP_JUMP_FORWARD_IF_FALSE to 208
+ 196: LOAD_CONST           b'F'
+ 198: COMPARE_OP           <=
+ 204: POP_JUMP_FORWARD_IF_FALSE to 250
+ 206: JUMP_FORWARD         to 212
+ 208: POP_TOP              
+ 210: JUMP_FORWARD         to 250
+ 212: LOAD_GLOBAL          NULL + ord
+ 224: LOAD_CONST           b'A'
+ 226: PRECALL              
+ 230: CALL                 
+ 240: LOAD_CONST           10
+ 242: BINARY_OP            -
+ 246: STORE_FAST           i
+ 248: JUMP_FORWARD         to 302
+ 250: LOAD_ASSERTION_ERROR 
+ 252: LOAD_CONST           'non-hex digit '
+ 254: LOAD_GLOBAL          NULL + repr
+ 266: LOAD_FAST            c
+ 268: PRECALL              
+ 272: CALL                 
+ 282: BINARY_OP            +
+ 286: PRECALL              
+ 290: CALL                 
+ 300: RAISE_VARARGS        
+ 302: LOAD_FAST            bits
+ 304: LOAD_CONST           16
+ 306: BINARY_OP            *
+ 310: LOAD_GLOBAL          NULL + ord
+ 322: LOAD_FAST            c
+ 324: PRECALL              
+ 328: CALL                 
+ 338: LOAD_FAST            i
+ 340: BINARY_OP            -
+ 344: BINARY_OP            +
+ 348: STORE_FAST           bits
+ 350: JUMP_BACKWARD        to 10
+ 352: LOAD_FAST            bits
+ 354: RETURN_VALUE         

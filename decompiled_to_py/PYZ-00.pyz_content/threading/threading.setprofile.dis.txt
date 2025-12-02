@@ -1,0 +1,16 @@
+# Disassembly for threading.setprofile
+# From module file: threading
+
+## co_consts:
+('Set a profile function for all threads started from the threading module.\n\n    The func will be passed to sys.setprofile() for each thread, before its\n    run() method is called.\n\n    ', None)
+
+## co_names:
+('_profile_hook',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            func
+   4: STORE_GLOBAL         _profile_hook
+   6: LOAD_CONST           None
+   8: RETURN_VALUE         

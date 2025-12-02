@@ -1,0 +1,32 @@
+# Disassembly for subprocess.STARTUPINFO
+# From module file: subprocess
+
+## co_consts:
+('STARTUPINFO', 0, None, ('dwFlags', 'hStdInput', 'hStdOutput', 'hStdError', 'wShowWindow', 'lpAttributeList'), <code object __init__ at 0x000002406941A1F0, file "subprocess.py", line 193>, <code object copy at 0x00000240691EA730, file "subprocess.py", line 202>)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', 'copy')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'STARTUPINFO'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           0
+  12: LOAD_CONST           None
+  14: LOAD_CONST           None
+  16: LOAD_CONST           None
+  18: LOAD_CONST           0
+  20: LOAD_CONST           None
+  22: LOAD_CONST           ('dwFlags', 'hStdInput', 'hStdOutput', 'hStdError', 'wShowWindow', 'lpAttributeList')
+  24: BUILD_CONST_KEY_MAP  
+  26: LOAD_CONST           <code object __init__ at 0x000002406941A1F0, file "subprocess.py", line 193>
+  28: MAKE_FUNCTION        kwdefaults
+  30: STORE_NAME           __init__
+  32: LOAD_CONST           <code object copy at 0x00000240691EA730, file "subprocess.py", line 202>
+  34: MAKE_FUNCTION        
+  36: STORE_NAME           copy
+  38: LOAD_CONST           None
+  40: RETURN_VALUE         

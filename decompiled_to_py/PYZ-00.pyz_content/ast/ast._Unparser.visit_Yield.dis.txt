@@ -1,0 +1,73 @@
+# Disassembly for ast._Unparser.visit_Yield
+# From module file: ast
+
+## co_consts:
+(None, 'yield', ' ')
+
+## co_names:
+('require_parens', '_Precedence', 'YIELD', 'write', 'value', 'set_precedence', 'ATOM', 'traverse')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          require_parens
+  26: LOAD_GLOBAL          _Precedence
+  38: LOAD_ATTR            YIELD
+  48: LOAD_FAST            node
+  50: PRECALL              
+  54: CALL                 
+  64: BEFORE_WITH          
+  66: POP_TOP              
+  68: LOAD_FAST            self
+  70: LOAD_METHOD          write
+  92: LOAD_CONST           'yield'
+  94: PRECALL              
+  98: CALL                 
+ 108: POP_TOP              
+ 110: LOAD_FAST            node
+ 112: LOAD_ATTR            value
+ 122: POP_JUMP_FORWARD_IF_FALSE to 292
+ 124: LOAD_FAST            self
+ 126: LOAD_METHOD          write
+ 148: LOAD_CONST           ' '
+ 150: PRECALL              
+ 154: CALL                 
+ 164: POP_TOP              
+ 166: LOAD_FAST            self
+ 168: LOAD_METHOD          set_precedence
+ 190: LOAD_GLOBAL          _Precedence
+ 202: LOAD_ATTR            ATOM
+ 212: LOAD_FAST            node
+ 214: LOAD_ATTR            value
+ 224: PRECALL              
+ 228: CALL                 
+ 238: POP_TOP              
+ 240: LOAD_FAST            self
+ 242: LOAD_METHOD          traverse
+ 264: LOAD_FAST            node
+ 266: LOAD_ATTR            value
+ 276: PRECALL              
+ 280: CALL                 
+ 290: POP_TOP              
+ 292: LOAD_CONST           None
+ 294: LOAD_CONST           None
+ 296: LOAD_CONST           None
+ 298: PRECALL              
+ 302: CALL                 
+ 312: POP_TOP              
+ 314: LOAD_CONST           None
+ 316: RETURN_VALUE         
+ 318: PUSH_EXC_INFO        
+ 320: WITH_EXCEPT_START    
+ 322: POP_JUMP_FORWARD_IF_TRUE to 332
+ 324: RERAISE              
+ 326: COPY                 
+ 328: POP_EXCEPT           
+ 330: RERAISE              
+ 332: POP_TOP              
+ 334: POP_EXCEPT           
+ 336: POP_TOP              
+ 338: POP_TOP              
+ 340: LOAD_CONST           None
+ 342: RETURN_VALUE         

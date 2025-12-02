@@ -1,0 +1,66 @@
+# Disassembly for ssl.SSLContext._msg_callback
+# From module file: ssl
+
+## co_consts:
+(None, '__call__', ' is not callable.', <code object inner at 0x0000024068E93350, file "ssl.py", line 691>)
+
+## co_names:
+('super', 'SSLContext', '_msg_callback', '__set__', 'hasattr', 'TypeError', 'user_function')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: MAKE_CELL            callback
+   4: RESUME               
+   6: LOAD_DEREF           callback
+   8: POP_JUMP_FORWARD_IF_NOT_NONE to 116
+  10: LOAD_GLOBAL          NULL + super
+  22: LOAD_GLOBAL          SSLContext
+  34: LOAD_GLOBAL          SSLContext
+  46: PRECALL              
+  50: CALL                 
+  60: LOAD_ATTR            _msg_callback
+  70: LOAD_METHOD          __set__
+  92: LOAD_FAST            self
+  94: LOAD_CONST           None
+  96: PRECALL              
+ 100: CALL                 
+ 110: POP_TOP              
+ 112: LOAD_CONST           None
+ 114: RETURN_VALUE         
+ 116: LOAD_GLOBAL          NULL + hasattr
+ 128: LOAD_DEREF           callback
+ 130: LOAD_CONST           '__call__'
+ 132: PRECALL              
+ 136: CALL                 
+ 146: POP_JUMP_FORWARD_IF_TRUE to 184
+ 148: LOAD_GLOBAL          NULL + TypeError
+ 160: LOAD_DEREF           callback
+ 162: FORMAT_VALUE         
+ 164: LOAD_CONST           ' is not callable.'
+ 166: BUILD_STRING         
+ 168: PRECALL              
+ 172: CALL                 
+ 182: RAISE_VARARGS        
+ 184: LOAD_CLOSURE         callback
+ 186: BUILD_TUPLE          
+ 188: LOAD_CONST           <code object inner at 0x0000024068E93350, file "ssl.py", line 691>
+ 190: MAKE_FUNCTION        closure
+ 192: STORE_FAST           inner
+ 194: LOAD_DEREF           callback
+ 196: LOAD_FAST            inner
+ 198: STORE_ATTR           user_function
+ 208: LOAD_GLOBAL          NULL + super
+ 220: LOAD_GLOBAL          SSLContext
+ 232: LOAD_GLOBAL          SSLContext
+ 244: PRECALL              
+ 248: CALL                 
+ 258: LOAD_ATTR            _msg_callback
+ 268: LOAD_METHOD          __set__
+ 290: LOAD_FAST            self
+ 292: LOAD_FAST            inner
+ 294: PRECALL              
+ 298: CALL                 
+ 308: POP_TOP              
+ 310: LOAD_CONST           None
+ 312: RETURN_VALUE         

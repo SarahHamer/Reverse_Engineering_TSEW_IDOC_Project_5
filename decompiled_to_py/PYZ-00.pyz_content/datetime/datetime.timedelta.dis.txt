@@ -1,0 +1,125 @@
+# Disassembly for datetime.timedelta
+# From module file: datetime
+
+## co_consts:
+('timedelta', 'Represent the difference between two datetime objects.\n\n    Supported operators:\n\n    - add, subtract timedelta\n    - unary plus, minus, abs\n    - compare to timedelta\n    - multiply, divide by int\n\n    In addition, datetime supports subtraction of two datetime objects\n    returning a timedelta, and addition or subtraction of a datetime\n    and a timedelta giving a datetime.\n\n    Representation: (days, seconds, microseconds).  Why?  Because I\n    felt like it.\n    ', ('_days', '_seconds', '_microseconds', '_hashcode'), 0, <code object __new__ at 0x0000024068E12890, file "datetime.py", line 592>, <code object __repr__ at 0x0000024068C8D8F0, file "datetime.py", line 693>, <code object __str__ at 0x000002406942E100, file "datetime.py", line 707>, <code object total_seconds at 0x00000240693EB230, file "datetime.py", line 719>, <code object days at 0x0000024069495F10, file "datetime.py", line 725>, <code object seconds at 0x00000240694957C0, file "datetime.py", line 730>, <code object microseconds at 0x0000024069495960, file "datetime.py", line 735>, <code object __add__ at 0x000002406921FC90, file "datetime.py", line 740>, <code object __sub__ at 0x000002406921FE00, file "datetime.py", line 751>, <code object __rsub__ at 0x00000240693EB330, file "datetime.py", line 760>, <code object __neg__ at 0x00000240693EB430, file "datetime.py", line 765>, <code object __pos__ at 0x000002406943BAB0, file "datetime.py", line 772>, <code object __abs__ at 0x0000024069465B50, file "datetime.py", line 775>, <code object __mul__ at 0x0000024068BF6C60, file "datetime.py", line 781>, <code object _to_microseconds at 0x00000240693EB530, file "datetime.py", line 796>, <code object __floordiv__ at 0x000002406947C990, file "datetime.py", line 800>, <code object __truediv__ at 0x0000024068D2FEA0, file "datetime.py", line 809>, <code object __mod__ at 0x000002406949C8D0, file "datetime.py", line 821>, <code object __divmod__ at 0x000002406942E290, file "datetime.py", line 827>, <code object __eq__ at 0x00000240693D2890, file "datetime.py", line 836>, <code object __le__ at 0x00000240693D29C0, file "datetime.py", line 842>, <code object __lt__ at 0x00000240693D3800, file "datetime.py", line 848>, <code object __ge__ at 0x00000240693D2D50, file "datetime.py", line 854>, <code object __gt__ at 0x00000240693D2E80, file "datetime.py", line 860>, <code object _cmp at 0x000002406922D140, file "datetime.py", line 866>, <code object __hash__ at 0x00000240693D3B90, file "datetime.py", line 870>, <code object __bool__ at 0x00000240693EB630, file "datetime.py", line 875>, <code object _getstate at 0x000002406945D4D0, file "datetime.py", line 882>, <code object __reduce__ at 0x000002406945D2F0, file "datetime.py", line 885>, None, (0, 0, 0, 0, 0, 0, 0))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__slots__', '__new__', '__repr__', '__str__', 'total_seconds', 'property', 'days', 'seconds', 'microseconds', '__add__', '__radd__', '__sub__', '__rsub__', '__neg__', '__pos__', '__abs__', '__mul__', '__rmul__', '_to_microseconds', '__floordiv__', '__truediv__', '__mod__', '__divmod__', '__eq__', '__le__', '__lt__', '__ge__', '__gt__', '_cmp', '__hash__', '__bool__', '_getstate', '__reduce__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'timedelta'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Represent the difference between two datetime objects.\n\n    Supported operators:\n\n    - add, subtract timedelta\n    - unary plus, minus, abs\n    - compare to timedelta\n    - multiply, divide by int\n\n    In addition, datetime supports subtraction of two datetime objects\n    returning a timedelta, and addition or subtraction of a datetime\n    and a timedelta giving a datetime.\n\n    Representation: (days, seconds, microseconds).  Why?  Because I\n    felt like it.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ('_days', '_seconds', '_microseconds', '_hashcode')
+  16: STORE_NAME           __slots__
+  18: NOP                  
+  20: NOP                  
+  22: LOAD_CONST           (0, 0, 0, 0, 0, 0, 0)
+  24: LOAD_CONST           <code object __new__ at 0x0000024068E12890, file "datetime.py", line 592>
+  26: MAKE_FUNCTION        defaults
+  28: STORE_NAME           __new__
+  30: LOAD_CONST           <code object __repr__ at 0x0000024068C8D8F0, file "datetime.py", line 693>
+  32: MAKE_FUNCTION        
+  34: STORE_NAME           __repr__
+  36: LOAD_CONST           <code object __str__ at 0x000002406942E100, file "datetime.py", line 707>
+  38: MAKE_FUNCTION        
+  40: STORE_NAME           __str__
+  42: LOAD_CONST           <code object total_seconds at 0x00000240693EB230, file "datetime.py", line 719>
+  44: MAKE_FUNCTION        
+  46: STORE_NAME           total_seconds
+  48: LOAD_NAME            property
+  50: LOAD_CONST           <code object days at 0x0000024069495F10, file "datetime.py", line 725>
+  52: MAKE_FUNCTION        
+  54: PRECALL              
+  58: CALL                 
+  68: STORE_NAME           days
+  70: LOAD_NAME            property
+  72: LOAD_CONST           <code object seconds at 0x00000240694957C0, file "datetime.py", line 730>
+  74: MAKE_FUNCTION        
+  76: PRECALL              
+  80: CALL                 
+  90: STORE_NAME           seconds
+  92: LOAD_NAME            property
+  94: LOAD_CONST           <code object microseconds at 0x0000024069495960, file "datetime.py", line 735>
+  96: MAKE_FUNCTION        
+  98: PRECALL              
+ 102: CALL                 
+ 112: STORE_NAME           microseconds
+ 114: LOAD_CONST           <code object __add__ at 0x000002406921FC90, file "datetime.py", line 740>
+ 116: MAKE_FUNCTION        
+ 118: STORE_NAME           __add__
+ 120: LOAD_NAME            __add__
+ 122: STORE_NAME           __radd__
+ 124: LOAD_CONST           <code object __sub__ at 0x000002406921FE00, file "datetime.py", line 751>
+ 126: MAKE_FUNCTION        
+ 128: STORE_NAME           __sub__
+ 130: LOAD_CONST           <code object __rsub__ at 0x00000240693EB330, file "datetime.py", line 760>
+ 132: MAKE_FUNCTION        
+ 134: STORE_NAME           __rsub__
+ 136: LOAD_CONST           <code object __neg__ at 0x00000240693EB430, file "datetime.py", line 765>
+ 138: MAKE_FUNCTION        
+ 140: STORE_NAME           __neg__
+ 142: LOAD_CONST           <code object __pos__ at 0x000002406943BAB0, file "datetime.py", line 772>
+ 144: MAKE_FUNCTION        
+ 146: STORE_NAME           __pos__
+ 148: LOAD_CONST           <code object __abs__ at 0x0000024069465B50, file "datetime.py", line 775>
+ 150: MAKE_FUNCTION        
+ 152: STORE_NAME           __abs__
+ 154: LOAD_CONST           <code object __mul__ at 0x0000024068BF6C60, file "datetime.py", line 781>
+ 156: MAKE_FUNCTION        
+ 158: STORE_NAME           __mul__
+ 160: LOAD_NAME            __mul__
+ 162: STORE_NAME           __rmul__
+ 164: LOAD_CONST           <code object _to_microseconds at 0x00000240693EB530, file "datetime.py", line 796>
+ 166: MAKE_FUNCTION        
+ 168: STORE_NAME           _to_microseconds
+ 170: LOAD_CONST           <code object __floordiv__ at 0x000002406947C990, file "datetime.py", line 800>
+ 172: MAKE_FUNCTION        
+ 174: STORE_NAME           __floordiv__
+ 176: LOAD_CONST           <code object __truediv__ at 0x0000024068D2FEA0, file "datetime.py", line 809>
+ 178: MAKE_FUNCTION        
+ 180: STORE_NAME           __truediv__
+ 182: LOAD_CONST           <code object __mod__ at 0x000002406949C8D0, file "datetime.py", line 821>
+ 184: MAKE_FUNCTION        
+ 186: STORE_NAME           __mod__
+ 188: LOAD_CONST           <code object __divmod__ at 0x000002406942E290, file "datetime.py", line 827>
+ 190: MAKE_FUNCTION        
+ 192: STORE_NAME           __divmod__
+ 194: LOAD_CONST           <code object __eq__ at 0x00000240693D2890, file "datetime.py", line 836>
+ 196: MAKE_FUNCTION        
+ 198: STORE_NAME           __eq__
+ 200: LOAD_CONST           <code object __le__ at 0x00000240693D29C0, file "datetime.py", line 842>
+ 202: MAKE_FUNCTION        
+ 204: STORE_NAME           __le__
+ 206: LOAD_CONST           <code object __lt__ at 0x00000240693D3800, file "datetime.py", line 848>
+ 208: MAKE_FUNCTION        
+ 210: STORE_NAME           __lt__
+ 212: LOAD_CONST           <code object __ge__ at 0x00000240693D2D50, file "datetime.py", line 854>
+ 214: MAKE_FUNCTION        
+ 216: STORE_NAME           __ge__
+ 218: LOAD_CONST           <code object __gt__ at 0x00000240693D2E80, file "datetime.py", line 860>
+ 220: MAKE_FUNCTION        
+ 222: STORE_NAME           __gt__
+ 224: LOAD_CONST           <code object _cmp at 0x000002406922D140, file "datetime.py", line 866>
+ 226: MAKE_FUNCTION        
+ 228: STORE_NAME           _cmp
+ 230: LOAD_CONST           <code object __hash__ at 0x00000240693D3B90, file "datetime.py", line 870>
+ 232: MAKE_FUNCTION        
+ 234: STORE_NAME           __hash__
+ 236: LOAD_CONST           <code object __bool__ at 0x00000240693EB630, file "datetime.py", line 875>
+ 238: MAKE_FUNCTION        
+ 240: STORE_NAME           __bool__
+ 242: LOAD_CONST           <code object _getstate at 0x000002406945D4D0, file "datetime.py", line 882>
+ 244: MAKE_FUNCTION        
+ 246: STORE_NAME           _getstate
+ 248: LOAD_CONST           <code object __reduce__ at 0x000002406945D2F0, file "datetime.py", line 885>
+ 250: MAKE_FUNCTION        
+ 252: STORE_NAME           __reduce__
+ 254: LOAD_CONST           None
+ 256: RETURN_VALUE         

@@ -1,0 +1,112 @@
+# Disassembly for breakroom.VendingMachine.use
+# From module file: breakroom
+
+## co_consts:
+(None, True, "It looks like a regular old vending machine.  It has a key pad for letters and numbers,\nbut the glass is scratched and dirty so you can't see what's in the machine to get.", 'You insert the dollar in to the vending machine.  Now you need to pick something.', 'Pick a letter', (('A', 'A'), ('B', 'B'), ('C', 'C'), ('D', 'D'), ('E', 'E'), ('F', 'F')), False, 'Pick a number', (('1', '1'), ('2', '2'), ('3', '3'), ('4', '4'), ('5', '5'), ('6', '6')), 'E', '5', "You hear cranks turning and then something metalic drop down.\nIt's a key.  You take the key.", 'You hear a buzz and it returns your dollar.', 'You press the buttons but nothing happens.  Maybe you need some money?')
+
+## co_names:
+('checked', 'send_message', 'world', 'player', 'get_child_by_type', 'Dollar', 'ask_option', 'remove_child', 'Key', 'set_parent')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            checked
+  14: POP_JUMP_FORWARD_IF_TRUE to 76
+  16: LOAD_CONST           True
+  18: LOAD_FAST            self
+  20: STORE_ATTR           checked
+  30: LOAD_FAST            self
+  32: LOAD_METHOD          send_message
+  54: LOAD_CONST           "It looks like a regular old vending machine.  It has a key pad for letters and numbers,\nbut the glass is scratched and dirty so you can't see what's in the machine to get."
+  56: PRECALL              
+  60: CALL                 
+  70: POP_TOP              
+  72: LOAD_CONST           None
+  74: RETURN_VALUE         
+  76: LOAD_FAST            self
+  78: LOAD_ATTR            world
+  88: LOAD_ATTR            player
+  98: LOAD_METHOD          get_child_by_type
+ 120: LOAD_GLOBAL          Dollar
+ 132: PRECALL              
+ 136: CALL                 
+ 146: STORE_FAST           dollar
+ 148: LOAD_FAST            dollar
+ 150: POP_JUMP_FORWARD_IF_NONE to 558
+ 152: LOAD_FAST            self
+ 154: LOAD_METHOD          send_message
+ 176: LOAD_CONST           'You insert the dollar in to the vending machine.  Now you need to pick something.'
+ 178: PRECALL              
+ 182: CALL                 
+ 192: POP_TOP              
+ 194: LOAD_FAST            self
+ 196: LOAD_METHOD          ask_option
+ 218: LOAD_CONST           'Pick a letter'
+ 220: BUILD_LIST           
+ 222: LOAD_CONST           (('A', 'A'), ('B', 'B'), ('C', 'C'), ('D', 'D'), ('E', 'E'), ('F', 'F'))
+ 224: LIST_EXTEND          
+ 226: LOAD_CONST           False
+ 228: PRECALL              
+ 232: CALL                 
+ 242: STORE_FAST           letter
+ 244: LOAD_FAST            self
+ 246: LOAD_METHOD          ask_option
+ 268: LOAD_CONST           'Pick a number'
+ 270: BUILD_LIST           
+ 272: LOAD_CONST           (('1', '1'), ('2', '2'), ('3', '3'), ('4', '4'), ('5', '5'), ('6', '6'))
+ 274: LIST_EXTEND          
+ 276: LOAD_CONST           False
+ 278: PRECALL              
+ 282: CALL                 
+ 292: STORE_FAST           number
+ 294: LOAD_FAST            letter
+ 296: LOAD_CONST           'E'
+ 298: COMPARE_OP           ==
+ 304: POP_JUMP_FORWARD_IF_FALSE to 512
+ 306: LOAD_FAST            number
+ 308: LOAD_CONST           '5'
+ 310: COMPARE_OP           ==
+ 316: POP_JUMP_FORWARD_IF_FALSE to 512
+ 318: LOAD_FAST            self
+ 320: LOAD_ATTR            world
+ 330: LOAD_ATTR            player
+ 340: LOAD_METHOD          remove_child
+ 362: LOAD_FAST            dollar
+ 364: PRECALL              
+ 368: CALL                 
+ 378: POP_TOP              
+ 380: LOAD_GLOBAL          NULL + Key
+ 392: PRECALL              
+ 396: CALL                 
+ 406: LOAD_METHOD          set_parent
+ 428: LOAD_FAST            self
+ 430: LOAD_ATTR            world
+ 440: LOAD_ATTR            player
+ 450: PRECALL              
+ 454: CALL                 
+ 464: POP_TOP              
+ 466: LOAD_FAST            self
+ 468: LOAD_METHOD          send_message
+ 490: LOAD_CONST           "You hear cranks turning and then something metalic drop down.\nIt's a key.  You take the key."
+ 492: PRECALL              
+ 496: CALL                 
+ 506: POP_TOP              
+ 508: LOAD_CONST           None
+ 510: RETURN_VALUE         
+ 512: LOAD_FAST            self
+ 514: LOAD_METHOD          send_message
+ 536: LOAD_CONST           'You hear a buzz and it returns your dollar.'
+ 538: PRECALL              
+ 542: CALL                 
+ 552: POP_TOP              
+ 554: LOAD_CONST           None
+ 556: RETURN_VALUE         
+ 558: LOAD_FAST            self
+ 560: LOAD_METHOD          send_message
+ 582: LOAD_CONST           'You press the buttons but nothing happens.  Maybe you need some money?'
+ 584: PRECALL              
+ 588: CALL                 
+ 598: POP_TOP              
+ 600: LOAD_CONST           None
+ 602: RETURN_VALUE         

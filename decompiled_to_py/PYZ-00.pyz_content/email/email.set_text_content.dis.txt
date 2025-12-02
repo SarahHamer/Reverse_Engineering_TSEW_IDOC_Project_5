@@ -1,0 +1,68 @@
+# Disassembly for email.set_text_content
+# From module file: email.contentmanager
+
+## co_consts:
+(None, 'text', 'charset', True, ('replace',), 'Content-Transfer-Encoding')
+
+## co_names:
+('_prepare_set', '_encode_text', 'policy', 'set_payload', 'set_param', 'email', 'charset', 'ALIASES', 'get', '_finalize_set')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _prepare_set
+  14: LOAD_FAST            msg
+  16: LOAD_CONST           'text'
+  18: LOAD_FAST            subtype
+  20: LOAD_FAST            headers
+  22: PRECALL              
+  26: CALL                 
+  36: POP_TOP              
+  38: LOAD_GLOBAL          NULL + _encode_text
+  50: LOAD_FAST            string
+  52: LOAD_FAST            charset
+  54: LOAD_FAST            cte
+  56: LOAD_FAST            msg
+  58: LOAD_ATTR            policy
+  68: PRECALL              
+  72: CALL                 
+  82: UNPACK_SEQUENCE      
+  86: STORE_FAST           cte
+  88: STORE_FAST           payload
+  90: LOAD_FAST            msg
+  92: LOAD_METHOD          set_payload
+ 114: LOAD_FAST            payload
+ 116: PRECALL              
+ 120: CALL                 
+ 130: POP_TOP              
+ 132: LOAD_FAST            msg
+ 134: LOAD_METHOD          set_param
+ 156: LOAD_CONST           'charset'
+ 158: LOAD_GLOBAL          email
+ 170: LOAD_ATTR            charset
+ 180: LOAD_ATTR            ALIASES
+ 190: LOAD_METHOD          get
+ 212: LOAD_FAST            charset
+ 214: LOAD_FAST            charset
+ 216: PRECALL              
+ 220: CALL                 
+ 230: LOAD_CONST           True
+ 232: KW_NAMES             
+ 234: PRECALL              
+ 238: CALL                 
+ 248: POP_TOP              
+ 250: LOAD_FAST            cte
+ 252: LOAD_FAST            msg
+ 254: LOAD_CONST           'Content-Transfer-Encoding'
+ 256: STORE_SUBSCR         
+ 260: LOAD_GLOBAL          NULL + _finalize_set
+ 272: LOAD_FAST            msg
+ 274: LOAD_FAST            disposition
+ 276: LOAD_FAST            filename
+ 278: LOAD_FAST            cid
+ 280: LOAD_FAST            params
+ 282: PRECALL              
+ 286: CALL                 
+ 296: POP_TOP              
+ 298: LOAD_CONST           None
+ 300: RETURN_VALUE         

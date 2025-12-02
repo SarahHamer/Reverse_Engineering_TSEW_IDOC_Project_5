@@ -1,0 +1,14 @@
+# Disassembly for typing.cast
+# From module file: typing
+
+## co_consts:
+("Cast a value to a type.\n\n    This returns the value unchanged.  To the type checker this\n    signals that the return value has the designated type, but at\n    runtime we intentionally don't check anything (we want this\n    to be as fast as possible).\n    ",)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            val
+   4: RETURN_VALUE         

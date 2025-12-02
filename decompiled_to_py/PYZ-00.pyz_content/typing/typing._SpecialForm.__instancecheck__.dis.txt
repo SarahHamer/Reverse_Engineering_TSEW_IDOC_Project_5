@@ -1,0 +1,20 @@
+# Disassembly for typing._SpecialForm.__instancecheck__
+# From module file: typing
+
+## co_consts:
+(None, ' cannot be used with isinstance()')
+
+## co_names:
+('TypeError',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + TypeError
+  14: LOAD_FAST            self
+  16: FORMAT_VALUE         
+  18: LOAD_CONST           ' cannot be used with isinstance()'
+  20: BUILD_STRING         
+  22: PRECALL              
+  26: CALL                 
+  36: RAISE_VARARGS        

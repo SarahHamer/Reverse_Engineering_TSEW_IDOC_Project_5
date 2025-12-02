@@ -1,0 +1,16 @@
+# Disassembly for email.Comment.comments
+# From module file: email._header_value_parser
+
+## co_consts:
+(None,)
+
+## co_names:
+('content',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            content
+  14: BUILD_LIST           
+  16: RETURN_VALUE         

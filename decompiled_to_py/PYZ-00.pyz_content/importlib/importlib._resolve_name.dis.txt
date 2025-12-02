@@ -1,0 +1,48 @@
+# Disassembly for importlib._resolve_name
+# From module file: importlib._bootstrap
+
+## co_consts:
+('Resolve a relative module name to an absolute one.', '.', 1, 'attempted relative import beyond top-level package', 0, '{}.{}')
+
+## co_names:
+('rsplit', 'len', 'ImportError', 'format')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            package
+   4: LOAD_METHOD          rsplit
+  26: LOAD_CONST           '.'
+  28: LOAD_FAST            level
+  30: LOAD_CONST           1
+  32: BINARY_OP            -
+  36: PRECALL              
+  40: CALL                 
+  50: STORE_FAST           bits
+  52: LOAD_GLOBAL          NULL + len
+  64: LOAD_FAST            bits
+  66: PRECALL              
+  70: CALL                 
+  80: LOAD_FAST            level
+  82: COMPARE_OP           <
+  88: POP_JUMP_FORWARD_IF_FALSE to 120
+  90: LOAD_GLOBAL          NULL + ImportError
+ 102: LOAD_CONST           'attempted relative import beyond top-level package'
+ 104: PRECALL              
+ 108: CALL                 
+ 118: RAISE_VARARGS        
+ 120: LOAD_FAST            bits
+ 122: LOAD_CONST           0
+ 124: BINARY_SUBSCR        
+ 134: STORE_FAST           base
+ 136: LOAD_FAST            name
+ 138: POP_JUMP_FORWARD_IF_FALSE to 184
+ 140: LOAD_CONST           '{}.{}'
+ 142: LOAD_METHOD          format
+ 164: LOAD_FAST            base
+ 166: LOAD_FAST            name
+ 168: PRECALL              
+ 172: CALL                 
+ 182: JUMP_FORWARD         to 186
+ 184: LOAD_FAST            base
+ 186: RETURN_VALUE         

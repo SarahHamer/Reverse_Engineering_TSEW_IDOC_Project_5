@@ -1,0 +1,84 @@
+# Disassembly for socket.recv_fds
+# From module file: socket
+
+## co_consts:
+(' recv_fds(sock, bufsize, maxfds[, flags]) -> (data, list of file\n        descriptors, msg_flags, address)\n\n        Receive up to maxfds file descriptors returning the message\n        data and a list containing the descriptors.\n        ', 'i', None)
+
+## co_names:
+('array', 'recvmsg', '_socket', 'CMSG_LEN', 'itemsize', 'SOL_SOCKET', 'SCM_RIGHTS', 'frombytes', 'len', 'list')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + array
+  14: LOAD_ATTR            array
+  24: LOAD_CONST           'i'
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           fds
+  42: LOAD_FAST            sock
+  44: LOAD_METHOD          recvmsg
+  66: LOAD_FAST            bufsize
+  68: LOAD_GLOBAL          NULL + _socket
+  80: LOAD_ATTR            CMSG_LEN
+  90: LOAD_FAST            maxfds
+  92: LOAD_FAST            fds
+  94: LOAD_ATTR            itemsize
+ 104: BINARY_OP            *
+ 108: PRECALL              
+ 112: CALL                 
+ 122: PRECALL              
+ 126: CALL                 
+ 136: UNPACK_SEQUENCE      
+ 140: STORE_FAST           msg
+ 142: STORE_FAST           ancdata
+ 144: STORE_FAST           flags
+ 146: STORE_FAST           addr
+ 148: LOAD_FAST            ancdata
+ 150: GET_ITER             
+ 152: FOR_ITER             to 362
+ 154: UNPACK_SEQUENCE      
+ 158: STORE_FAST           cmsg_level
+ 160: STORE_FAST           cmsg_type
+ 162: STORE_FAST           cmsg_data
+ 164: LOAD_FAST            cmsg_level
+ 166: LOAD_GLOBAL          _socket
+ 178: LOAD_ATTR            SOL_SOCKET
+ 188: COMPARE_OP           ==
+ 194: POP_JUMP_FORWARD_IF_FALSE to 360
+ 196: LOAD_FAST            cmsg_type
+ 198: LOAD_GLOBAL          _socket
+ 210: LOAD_ATTR            SCM_RIGHTS
+ 220: COMPARE_OP           ==
+ 226: POP_JUMP_FORWARD_IF_FALSE to 360
+ 228: LOAD_FAST            fds
+ 230: LOAD_METHOD          frombytes
+ 252: LOAD_FAST            cmsg_data
+ 254: LOAD_CONST           None
+ 256: LOAD_GLOBAL          NULL + len
+ 268: LOAD_FAST            cmsg_data
+ 270: PRECALL              
+ 274: CALL                 
+ 284: LOAD_GLOBAL          NULL + len
+ 296: LOAD_FAST            cmsg_data
+ 298: PRECALL              
+ 302: CALL                 
+ 312: LOAD_FAST            fds
+ 314: LOAD_ATTR            itemsize
+ 324: BINARY_OP            %
+ 328: BINARY_OP            -
+ 332: BUILD_SLICE          
+ 334: BINARY_SUBSCR        
+ 344: PRECALL              
+ 348: CALL                 
+ 358: POP_TOP              
+ 360: JUMP_BACKWARD        to 152
+ 362: LOAD_FAST            msg
+ 364: LOAD_GLOBAL          NULL + list
+ 376: LOAD_FAST            fds
+ 378: PRECALL              
+ 382: CALL                 
+ 392: LOAD_FAST            flags
+ 394: LOAD_FAST            addr
+ 396: BUILD_TUPLE          
+ 398: RETURN_VALUE         

@@ -1,0 +1,26 @@
+# Disassembly for _pydecimal._Log10Memoize
+# From module file: _pydecimal
+
+## co_consts:
+('_Log10Memoize', 'Class to compute, store, and allow retrieval of, digits of the\n    constant log(10) = 2.302585....  This constant is needed by\n    Decimal.ln, Decimal.log10, Decimal.exp and Decimal.__pow__.', <code object __init__ at 0x0000024069495550, file "_pydecimal.py", line 5868>, <code object getdigits at 0x0000024068D6EC60, file "_pydecimal.py", line 5871>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', 'getdigits')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_Log10Memoize'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Class to compute, store, and allow retrieval of, digits of the\n    constant log(10) = 2.302585....  This constant is needed by\n    Decimal.ln, Decimal.log10, Decimal.exp and Decimal.__pow__.'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object __init__ at 0x0000024069495550, file "_pydecimal.py", line 5868>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           __init__
+  20: LOAD_CONST           <code object getdigits at 0x0000024068D6EC60, file "_pydecimal.py", line 5871>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           getdigits
+  26: LOAD_CONST           None
+  28: RETURN_VALUE         

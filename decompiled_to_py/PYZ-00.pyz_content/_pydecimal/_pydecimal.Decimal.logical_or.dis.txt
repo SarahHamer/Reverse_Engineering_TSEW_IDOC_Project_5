@@ -1,0 +1,81 @@
+# Disassembly for _pydecimal.Decimal.logical_or
+# From module file: _pydecimal
+
+## co_consts:
+("Applies an 'or' operation between self and other's digits.", None, True, ('raiseit',), '', <code object <listcomp> at 0x00000240693D3A60, file "_pydecimal.py", line 3428>, 0, '0')
+
+## co_names:
+('getcontext', '_convert_other', '_islogical', '_raise_error', 'InvalidOperation', '_fill_logical', '_int', 'join', 'zip', '_dec_from_triple', 'lstrip')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            context
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 34
+   6: LOAD_GLOBAL          NULL + getcontext
+  18: PRECALL              
+  22: CALL                 
+  32: STORE_FAST           context
+  34: LOAD_GLOBAL          NULL + _convert_other
+  46: LOAD_FAST            other
+  48: LOAD_CONST           True
+  50: KW_NAMES             
+  52: PRECALL              
+  56: CALL                 
+  66: STORE_FAST           other
+  68: LOAD_FAST            self
+  70: LOAD_METHOD          _islogical
+  92: PRECALL              
+  96: CALL                 
+ 106: POP_JUMP_FORWARD_IF_FALSE to 148
+ 108: LOAD_FAST            other
+ 110: LOAD_METHOD          _islogical
+ 132: PRECALL              
+ 136: CALL                 
+ 146: POP_JUMP_FORWARD_IF_TRUE to 200
+ 148: LOAD_FAST            context
+ 150: LOAD_METHOD          _raise_error
+ 172: LOAD_GLOBAL          InvalidOperation
+ 184: PRECALL              
+ 188: CALL                 
+ 198: RETURN_VALUE         
+ 200: LOAD_FAST            self
+ 202: LOAD_METHOD          _fill_logical
+ 224: LOAD_FAST            context
+ 226: LOAD_FAST            self
+ 228: LOAD_ATTR            _int
+ 238: LOAD_FAST            other
+ 240: LOAD_ATTR            _int
+ 250: PRECALL              
+ 254: CALL                 
+ 264: UNPACK_SEQUENCE      
+ 268: STORE_FAST           opa
+ 270: STORE_FAST           opb
+ 272: LOAD_CONST           ''
+ 274: LOAD_METHOD          join
+ 296: LOAD_CONST           <code object <listcomp> at 0x00000240693D3A60, file "_pydecimal.py", line 3428>
+ 298: MAKE_FUNCTION        
+ 300: LOAD_GLOBAL          NULL + zip
+ 312: LOAD_FAST            opa
+ 314: LOAD_FAST            opb
+ 316: PRECALL              
+ 320: CALL                 
+ 330: GET_ITER             
+ 332: PRECALL              
+ 336: CALL                 
+ 346: PRECALL              
+ 350: CALL                 
+ 360: STORE_FAST           result
+ 362: LOAD_GLOBAL          NULL + _dec_from_triple
+ 374: LOAD_CONST           0
+ 376: LOAD_FAST            result
+ 378: LOAD_METHOD          lstrip
+ 400: LOAD_CONST           '0'
+ 402: PRECALL              
+ 406: CALL                 
+ 416: JUMP_IF_TRUE_OR_POP  to 420
+ 418: LOAD_CONST           '0'
+ 420: LOAD_CONST           0
+ 422: PRECALL              
+ 426: CALL                 
+ 436: RETURN_VALUE         

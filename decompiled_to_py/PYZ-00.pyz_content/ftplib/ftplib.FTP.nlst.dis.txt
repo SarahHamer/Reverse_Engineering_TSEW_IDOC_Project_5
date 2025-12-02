@@ -1,0 +1,37 @@
+# Disassembly for ftplib.FTP.nlst
+# From module file: ftplib
+
+## co_consts:
+('Return a list of files in a given directory (default the current).', 'NLST', ' ')
+
+## co_names:
+('retrlines', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'NLST'
+   4: STORE_FAST           cmd
+   6: LOAD_FAST            args
+   8: GET_ITER             
+  10: FOR_ITER             to 32
+  12: STORE_FAST           arg
+  14: LOAD_FAST            cmd
+  16: LOAD_CONST           ' '
+  18: LOAD_FAST            arg
+  20: BINARY_OP            +
+  24: BINARY_OP            +
+  28: STORE_FAST           cmd
+  30: JUMP_BACKWARD        to 10
+  32: BUILD_LIST           
+  34: STORE_FAST           files
+  36: LOAD_FAST            self
+  38: LOAD_METHOD          retrlines
+  60: LOAD_FAST            cmd
+  62: LOAD_FAST            files
+  64: LOAD_ATTR            append
+  74: PRECALL              
+  78: CALL                 
+  88: POP_TOP              
+  90: LOAD_FAST            files
+  92: RETURN_VALUE         

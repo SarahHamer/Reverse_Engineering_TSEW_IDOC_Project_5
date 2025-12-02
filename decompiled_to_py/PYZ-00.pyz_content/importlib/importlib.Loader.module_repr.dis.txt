@@ -1,0 +1,21 @@
+# Disassembly for importlib.Loader.module_repr
+# From module file: importlib._abc
+
+## co_consts:
+("Return a module's repr.\n\n        Used by the module type when the method does not raise\n        NotImplementedError.\n\n        This method is deprecated.\n\n        ", 'importlib.abc.Loader.module_repr() is deprecated and slated for removal in Python 3.12')
+
+## co_names:
+('warnings', 'warn', 'DeprecationWarning', 'NotImplementedError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + warnings
+  14: LOAD_ATTR            warn
+  24: LOAD_CONST           'importlib.abc.Loader.module_repr() is deprecated and slated for removal in Python 3.12'
+  26: LOAD_GLOBAL          DeprecationWarning
+  38: PRECALL              
+  42: CALL                 
+  52: POP_TOP              
+  54: LOAD_GLOBAL          NotImplementedError
+  66: RAISE_VARARGS        

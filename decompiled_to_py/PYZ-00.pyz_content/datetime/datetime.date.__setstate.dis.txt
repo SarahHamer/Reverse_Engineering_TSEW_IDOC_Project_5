@@ -1,0 +1,29 @@
+# Disassembly for datetime.date.__setstate
+# From module file: datetime
+
+## co_consts:
+(None, 256)
+
+## co_names:
+('_month', '_day', '_year')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            string
+   4: UNPACK_SEQUENCE      
+   8: STORE_FAST           yhi
+  10: STORE_FAST           ylo
+  12: LOAD_FAST            self
+  14: STORE_ATTR           _month
+  24: LOAD_FAST            self
+  26: STORE_ATTR           _day
+  36: LOAD_FAST            yhi
+  38: LOAD_CONST           256
+  40: BINARY_OP            *
+  44: LOAD_FAST            ylo
+  46: BINARY_OP            +
+  50: LOAD_FAST            self
+  52: STORE_ATTR           _year
+  62: LOAD_CONST           None
+  64: RETURN_VALUE         

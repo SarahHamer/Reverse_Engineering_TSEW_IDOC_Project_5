@@ -1,0 +1,89 @@
+# Disassembly for datetime.datetime.__hash__
+# From module file: datetime
+
+## co_consts:
+(None, -1, 0, ('fold',), 3600, 60)
+
+## co_names:
+('_hashcode', 'fold', 'replace', 'utcoffset', 'hash', '_getstate', '_ymd2ord', 'year', 'month', 'day', 'hour', 'minute', 'second', 'timedelta', 'microsecond')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _hashcode
+  14: LOAD_CONST           -1
+  16: COMPARE_OP           ==
+  22: POP_JUMP_FORWARD_IF_FALSE to 430
+  24: LOAD_FAST            self
+  26: LOAD_ATTR            fold
+  36: POP_JUMP_FORWARD_IF_FALSE to 84
+  38: LOAD_FAST            self
+  40: LOAD_METHOD          replace
+  62: LOAD_CONST           0
+  64: KW_NAMES             
+  66: PRECALL              
+  70: CALL                 
+  80: STORE_FAST           t
+  82: JUMP_FORWARD         to 88
+  84: LOAD_FAST            self
+  86: STORE_FAST           t
+  88: LOAD_FAST            t
+  90: LOAD_METHOD          utcoffset
+ 112: PRECALL              
+ 116: CALL                 
+ 126: STORE_FAST           tzoff
+ 128: LOAD_FAST            tzoff
+ 130: POP_JUMP_FORWARD_IF_NOT_NONE to 222
+ 132: LOAD_GLOBAL          NULL + hash
+ 144: LOAD_FAST            t
+ 146: LOAD_METHOD          _getstate
+ 168: PRECALL              
+ 172: CALL                 
+ 182: LOAD_CONST           0
+ 184: BINARY_SUBSCR        
+ 194: PRECALL              
+ 198: CALL                 
+ 208: LOAD_FAST            self
+ 210: STORE_ATTR           _hashcode
+ 220: JUMP_FORWARD         to 430
+ 222: LOAD_GLOBAL          NULL + _ymd2ord
+ 234: LOAD_FAST            self
+ 236: LOAD_ATTR            year
+ 246: LOAD_FAST            self
+ 248: LOAD_ATTR            month
+ 258: LOAD_FAST            self
+ 260: LOAD_ATTR            day
+ 270: PRECALL              
+ 274: CALL                 
+ 284: STORE_FAST           days
+ 286: LOAD_FAST            self
+ 288: LOAD_ATTR            hour
+ 298: LOAD_CONST           3600
+ 300: BINARY_OP            *
+ 304: LOAD_FAST            self
+ 306: LOAD_ATTR            minute
+ 316: LOAD_CONST           60
+ 318: BINARY_OP            *
+ 322: BINARY_OP            +
+ 326: LOAD_FAST            self
+ 328: LOAD_ATTR            second
+ 338: BINARY_OP            +
+ 342: STORE_FAST           seconds
+ 344: LOAD_GLOBAL          NULL + hash
+ 356: LOAD_GLOBAL          NULL + timedelta
+ 368: LOAD_FAST            days
+ 370: LOAD_FAST            seconds
+ 372: LOAD_FAST            self
+ 374: LOAD_ATTR            microsecond
+ 384: PRECALL              
+ 388: CALL                 
+ 398: LOAD_FAST            tzoff
+ 400: BINARY_OP            -
+ 404: PRECALL              
+ 408: CALL                 
+ 418: LOAD_FAST            self
+ 420: STORE_ATTR           _hashcode
+ 430: LOAD_FAST            self
+ 432: LOAD_ATTR            _hashcode
+ 442: RETURN_VALUE         

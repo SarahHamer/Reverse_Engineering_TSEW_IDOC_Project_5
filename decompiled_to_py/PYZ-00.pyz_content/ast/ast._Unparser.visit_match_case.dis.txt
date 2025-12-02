@@ -1,0 +1,75 @@
+# Disassembly for ast._Unparser.visit_match_case
+# From module file: ast
+
+## co_consts:
+(None, 'case ', ' if ')
+
+## co_names:
+('fill', 'traverse', 'pattern', 'guard', 'write', 'block', 'body')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          fill
+  26: LOAD_CONST           'case '
+  28: PRECALL              
+  32: CALL                 
+  42: POP_TOP              
+  44: LOAD_FAST            self
+  46: LOAD_METHOD          traverse
+  68: LOAD_FAST            node
+  70: LOAD_ATTR            pattern
+  80: PRECALL              
+  84: CALL                 
+  94: POP_TOP              
+  96: LOAD_FAST            node
+  98: LOAD_ATTR            guard
+ 108: POP_JUMP_FORWARD_IF_FALSE to 204
+ 110: LOAD_FAST            self
+ 112: LOAD_METHOD          write
+ 134: LOAD_CONST           ' if '
+ 136: PRECALL              
+ 140: CALL                 
+ 150: POP_TOP              
+ 152: LOAD_FAST            self
+ 154: LOAD_METHOD          traverse
+ 176: LOAD_FAST            node
+ 178: LOAD_ATTR            guard
+ 188: PRECALL              
+ 192: CALL                 
+ 202: POP_TOP              
+ 204: LOAD_FAST            self
+ 206: LOAD_METHOD          block
+ 228: PRECALL              
+ 232: CALL                 
+ 242: BEFORE_WITH          
+ 244: POP_TOP              
+ 246: LOAD_FAST            self
+ 248: LOAD_METHOD          traverse
+ 270: LOAD_FAST            node
+ 272: LOAD_ATTR            body
+ 282: PRECALL              
+ 286: CALL                 
+ 296: POP_TOP              
+ 298: LOAD_CONST           None
+ 300: LOAD_CONST           None
+ 302: LOAD_CONST           None
+ 304: PRECALL              
+ 308: CALL                 
+ 318: POP_TOP              
+ 320: LOAD_CONST           None
+ 322: RETURN_VALUE         
+ 324: PUSH_EXC_INFO        
+ 326: WITH_EXCEPT_START    
+ 328: POP_JUMP_FORWARD_IF_TRUE to 338
+ 330: RERAISE              
+ 332: COPY                 
+ 334: POP_EXCEPT           
+ 336: RERAISE              
+ 338: POP_TOP              
+ 340: POP_EXCEPT           
+ 342: POP_TOP              
+ 344: POP_TOP              
+ 346: LOAD_CONST           None
+ 348: RETURN_VALUE         

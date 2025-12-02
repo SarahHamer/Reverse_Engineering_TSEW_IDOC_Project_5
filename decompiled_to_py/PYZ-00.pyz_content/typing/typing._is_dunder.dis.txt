@@ -1,0 +1,24 @@
+# Disassembly for typing._is_dunder
+# From module file: typing
+
+## co_consts:
+(None, '__')
+
+## co_names:
+('startswith', 'endswith')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            attr
+   4: LOAD_METHOD          startswith
+  26: LOAD_CONST           '__'
+  28: PRECALL              
+  32: CALL                 
+  42: JUMP_IF_FALSE_OR_POP to 84
+  44: LOAD_FAST            attr
+  46: LOAD_METHOD          endswith
+  68: LOAD_CONST           '__'
+  70: PRECALL              
+  74: CALL                 
+  84: RETURN_VALUE         

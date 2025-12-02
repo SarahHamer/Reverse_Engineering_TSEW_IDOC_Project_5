@@ -1,0 +1,28 @@
+# Disassembly for tarfile.TarFile.getmembers
+# From module file: tarfile
+
+## co_consts:
+('Return the members of the archive as a list of TarInfo objects. The\n           list has the same order as the members in the archive.\n        ',)
+
+## co_names:
+('_check', '_loaded', '_load', 'members')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _check
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            _loaded
+  54: POP_JUMP_FORWARD_IF_TRUE to 96
+  56: LOAD_FAST            self
+  58: LOAD_METHOD          _load
+  80: PRECALL              
+  84: CALL                 
+  94: POP_TOP              
+  96: LOAD_FAST            self
+  98: LOAD_ATTR            members
+ 108: RETURN_VALUE         

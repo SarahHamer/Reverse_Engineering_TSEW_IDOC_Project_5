@@ -1,0 +1,34 @@
+# Disassembly for pickle._Unframer
+# From module file: pickle
+
+## co_consts:
+('_Unframer', None, <code object __init__ at 0x000002406945FF00, file "pickle.py", line 265>, <code object readinto at 0x0000024068DB4610, file "pickle.py", line 270>, <code object read at 0x00000240691A7BB0, file "pickle.py", line 287>, <code object readline at 0x00000240691F56F0, file "pickle.py", line 300>, <code object load_frame at 0x00000240691E8AB0, file "pickle.py", line 313>, (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', 'readinto', 'read', 'readline', 'load_frame')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_Unframer'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           (None,)
+  12: LOAD_CONST           <code object __init__ at 0x000002406945FF00, file "pickle.py", line 265>
+  14: MAKE_FUNCTION        defaults
+  16: STORE_NAME           __init__
+  18: LOAD_CONST           <code object readinto at 0x0000024068DB4610, file "pickle.py", line 270>
+  20: MAKE_FUNCTION        
+  22: STORE_NAME           readinto
+  24: LOAD_CONST           <code object read at 0x00000240691A7BB0, file "pickle.py", line 287>
+  26: MAKE_FUNCTION        
+  28: STORE_NAME           read
+  30: LOAD_CONST           <code object readline at 0x00000240691F56F0, file "pickle.py", line 300>
+  32: MAKE_FUNCTION        
+  34: STORE_NAME           readline
+  36: LOAD_CONST           <code object load_frame at 0x00000240691E8AB0, file "pickle.py", line 313>
+  38: MAKE_FUNCTION        
+  40: STORE_NAME           load_frame
+  42: LOAD_CONST           None
+  44: RETURN_VALUE         

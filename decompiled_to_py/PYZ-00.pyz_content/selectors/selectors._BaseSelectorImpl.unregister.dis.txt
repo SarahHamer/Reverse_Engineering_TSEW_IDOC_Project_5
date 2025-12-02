@@ -1,0 +1,46 @@
+# Disassembly for selectors._BaseSelectorImpl.unregister
+# From module file: selectors
+
+## co_consts:
+(None, '{!r} is not registered')
+
+## co_names:
+('_fd_to_key', 'pop', '_fileobj_lookup', 'KeyError', 'format')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            _fd_to_key
+  16: LOAD_METHOD          pop
+  38: LOAD_FAST            self
+  40: LOAD_METHOD          _fileobj_lookup
+  62: LOAD_FAST            fileobj
+  64: PRECALL              
+  68: CALL                 
+  78: PRECALL              
+  82: CALL                 
+  92: STORE_FAST           key
+  94: JUMP_FORWARD         to 194
+  96: PUSH_EXC_INFO        
+  98: LOAD_GLOBAL          KeyError
+ 110: CHECK_EXC_MATCH      
+ 112: POP_JUMP_FORWARD_IF_FALSE to 186
+ 114: POP_TOP              
+ 116: LOAD_GLOBAL          NULL + KeyError
+ 128: LOAD_CONST           '{!r} is not registered'
+ 130: LOAD_METHOD          format
+ 152: LOAD_FAST            fileobj
+ 154: PRECALL              
+ 158: CALL                 
+ 168: PRECALL              
+ 172: CALL                 
+ 182: LOAD_CONST           None
+ 184: RAISE_VARARGS        
+ 186: RERAISE              
+ 188: COPY                 
+ 190: POP_EXCEPT           
+ 192: RERAISE              
+ 194: LOAD_FAST            key
+ 196: RETURN_VALUE         

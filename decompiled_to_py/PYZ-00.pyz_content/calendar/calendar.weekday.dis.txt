@@ -1,0 +1,42 @@
+# Disassembly for calendar.weekday
+# From module file: calendar
+
+## co_consts:
+('Return weekday (0-6 ~ Mon-Sun) for year, month (1-12), day (1-31).', 2000, 400)
+
+## co_names:
+('datetime', 'MINYEAR', 'MAXYEAR', 'date', 'weekday')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          datetime
+  14: LOAD_ATTR            MINYEAR
+  24: LOAD_FAST            year
+  26: SWAP                 
+  28: COPY                 
+  30: COMPARE_OP           <=
+  36: POP_JUMP_FORWARD_IF_FALSE to 70
+  38: LOAD_GLOBAL          datetime
+  50: LOAD_ATTR            MAXYEAR
+  60: COMPARE_OP           <=
+  66: POP_JUMP_FORWARD_IF_TRUE to 88
+  68: JUMP_FORWARD         to 72
+  70: POP_TOP              
+  72: LOAD_CONST           2000
+  74: LOAD_FAST            year
+  76: LOAD_CONST           400
+  78: BINARY_OP            %
+  82: BINARY_OP            +
+  86: STORE_FAST           year
+  88: LOAD_GLOBAL          NULL + datetime
+ 100: LOAD_ATTR            date
+ 110: LOAD_FAST            year
+ 112: LOAD_FAST            month
+ 114: LOAD_FAST            day
+ 116: PRECALL              
+ 120: CALL                 
+ 130: LOAD_METHOD          weekday
+ 152: PRECALL              
+ 156: CALL                 
+ 166: RETURN_VALUE         

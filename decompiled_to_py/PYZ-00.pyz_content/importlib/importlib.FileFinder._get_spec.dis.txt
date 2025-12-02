@@ -1,0 +1,28 @@
+# Disassembly for importlib.FileFinder._get_spec
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+(None, ('loader', 'submodule_search_locations'))
+
+## co_names:
+('spec_from_file_location',)
+
+## bytecode:
+
+   0: RESUME               
+   2: PUSH_NULL            
+   4: LOAD_FAST            loader_class
+   6: LOAD_FAST            fullname
+   8: LOAD_FAST            path
+  10: PRECALL              
+  14: CALL                 
+  24: STORE_FAST           loader
+  26: LOAD_GLOBAL          NULL + spec_from_file_location
+  38: LOAD_FAST            fullname
+  40: LOAD_FAST            path
+  42: LOAD_FAST            loader
+  44: LOAD_FAST            smsl
+  46: KW_NAMES             
+  48: PRECALL              
+  52: CALL                 
+  62: RETURN_VALUE         

@@ -1,0 +1,36 @@
+# Disassembly for ast._Unparser.visit_Starred
+# From module file: ast
+
+## co_consts:
+(None, '*')
+
+## co_names:
+('write', 'set_precedence', '_Precedence', 'EXPR', 'value', 'traverse')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          write
+  26: LOAD_CONST           '*'
+  28: PRECALL              
+  32: CALL                 
+  42: POP_TOP              
+  44: LOAD_FAST            self
+  46: LOAD_METHOD          set_precedence
+  68: LOAD_GLOBAL          _Precedence
+  80: LOAD_ATTR            EXPR
+  90: LOAD_FAST            node
+  92: LOAD_ATTR            value
+ 102: PRECALL              
+ 106: CALL                 
+ 116: POP_TOP              
+ 118: LOAD_FAST            self
+ 120: LOAD_METHOD          traverse
+ 142: LOAD_FAST            node
+ 144: LOAD_ATTR            value
+ 154: PRECALL              
+ 158: CALL                 
+ 168: POP_TOP              
+ 170: LOAD_CONST           None
+ 172: RETURN_VALUE         

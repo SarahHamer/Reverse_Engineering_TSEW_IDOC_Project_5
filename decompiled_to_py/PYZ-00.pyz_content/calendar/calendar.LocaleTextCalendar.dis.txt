@@ -1,0 +1,38 @@
+# Disassembly for calendar.LocaleTextCalendar
+# From module file: calendar
+
+## co_consts:
+('LocaleTextCalendar', '\n    This class can be passed a locale name in the constructor and will return\n    month and weekday names in the specified locale.\n    ', 0, None, <code object __init__ at 0x00000240693D3800, file "calendar.py", line 579>, <code object formatweekday at 0x00000240691C1210, file "calendar.py", line 585>, True, <code object formatmonthname at 0x00000240691C14D0, file "calendar.py", line 589>, (0, None), (True,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', 'formatweekday', 'formatmonthname', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'LocaleTextCalendar'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           '\n    This class can be passed a locale name in the constructor and will return\n    month and weekday names in the specified locale.\n    '
+  14: STORE_NAME           __doc__
+  16: LOAD_CONST           (0, None)
+  18: LOAD_CONST           <code object __init__ at 0x00000240693D3800, file "calendar.py", line 579>
+  20: MAKE_FUNCTION        defaults
+  22: STORE_NAME           __init__
+  24: LOAD_CLOSURE         __class__
+  26: BUILD_TUPLE          
+  28: LOAD_CONST           <code object formatweekday at 0x00000240691C1210, file "calendar.py", line 585>
+  30: MAKE_FUNCTION        closure
+  32: STORE_NAME           formatweekday
+  34: LOAD_CONST           (True,)
+  36: LOAD_CLOSURE         __class__
+  38: BUILD_TUPLE          
+  40: LOAD_CONST           <code object formatmonthname at 0x00000240691C14D0, file "calendar.py", line 589>
+  42: MAKE_FUNCTION        defaults, closure
+  44: STORE_NAME           formatmonthname
+  46: LOAD_CLOSURE         __class__
+  48: COPY                 
+  50: STORE_NAME           __classcell__
+  52: RETURN_VALUE         

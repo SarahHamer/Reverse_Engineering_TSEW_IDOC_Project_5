@@ -1,0 +1,76 @@
+# Disassembly for py_compile.PyCompileError.__init__
+# From module file: py_compile
+
+## co_consts:
+(None, '', 'File "<string>"', 'File "%s"', 'Sorry: ', ': ')
+
+## co_names:
+('__name__', 'SyntaxError', 'join', 'traceback', 'format_exception_only', 'replace', 'Exception', '__init__', 'exc_type_name', 'exc_value', 'file', 'msg')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            exc_type
+   4: LOAD_ATTR            __name__
+  14: STORE_FAST           exc_type_name
+  16: LOAD_FAST            exc_type
+  18: LOAD_GLOBAL          SyntaxError
+  30: IS_OP                
+  32: POP_JUMP_FORWARD_IF_FALSE to 166
+  34: LOAD_CONST           ''
+  36: LOAD_METHOD          join
+  58: LOAD_GLOBAL          NULL + traceback
+  70: LOAD_ATTR            format_exception_only
+  80: LOAD_FAST            exc_type
+  82: LOAD_FAST            exc_value
+  84: PRECALL              
+  88: CALL                 
+  98: PRECALL              
+ 102: CALL                 
+ 112: STORE_FAST           tbtext
+ 114: LOAD_FAST            tbtext
+ 116: LOAD_METHOD          replace
+ 138: LOAD_CONST           'File "<string>"'
+ 140: LOAD_CONST           'File "%s"'
+ 142: LOAD_FAST            file
+ 144: BINARY_OP            %
+ 148: PRECALL              
+ 152: CALL                 
+ 162: STORE_FAST           errmsg
+ 164: JUMP_FORWARD         to 182
+ 166: LOAD_CONST           'Sorry: '
+ 168: LOAD_FAST            exc_type_name
+ 170: FORMAT_VALUE         str
+ 172: LOAD_CONST           ': '
+ 174: LOAD_FAST            exc_value
+ 176: FORMAT_VALUE         str
+ 178: BUILD_STRING         
+ 180: STORE_FAST           errmsg
+ 182: LOAD_GLOBAL          Exception
+ 194: LOAD_METHOD          __init__
+ 216: LOAD_FAST            self
+ 218: LOAD_FAST            msg
+ 220: JUMP_IF_TRUE_OR_POP  to 224
+ 222: LOAD_FAST            errmsg
+ 224: LOAD_FAST            exc_type_name
+ 226: LOAD_FAST            exc_value
+ 228: LOAD_FAST            file
+ 230: PRECALL              
+ 234: CALL                 
+ 244: POP_TOP              
+ 246: LOAD_FAST            exc_type_name
+ 248: LOAD_FAST            self
+ 250: STORE_ATTR           exc_type_name
+ 260: LOAD_FAST            exc_value
+ 262: LOAD_FAST            self
+ 264: STORE_ATTR           exc_value
+ 274: LOAD_FAST            file
+ 276: LOAD_FAST            self
+ 278: STORE_ATTR           file
+ 288: LOAD_FAST            msg
+ 290: JUMP_IF_TRUE_OR_POP  to 294
+ 292: LOAD_FAST            errmsg
+ 294: LOAD_FAST            self
+ 296: STORE_ATTR           msg
+ 306: LOAD_CONST           None
+ 308: RETURN_VALUE         

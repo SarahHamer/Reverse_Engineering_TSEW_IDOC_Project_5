@@ -1,0 +1,34 @@
+# Disassembly for threading.Semaphore.__init__
+# From module file: threading
+
+## co_consts:
+(None, 0, 'semaphore initial value must be >= 0')
+
+## co_names:
+('ValueError', 'Condition', 'Lock', '_cond', '_value')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            value
+   4: LOAD_CONST           0
+   6: COMPARE_OP           <
+  12: POP_JUMP_FORWARD_IF_FALSE to 44
+  14: LOAD_GLOBAL          NULL + ValueError
+  26: LOAD_CONST           'semaphore initial value must be >= 0'
+  28: PRECALL              
+  32: CALL                 
+  42: RAISE_VARARGS        
+  44: LOAD_GLOBAL          NULL + Condition
+  56: LOAD_GLOBAL          NULL + Lock
+  68: PRECALL              
+  72: CALL                 
+  82: PRECALL              
+  86: CALL                 
+  96: LOAD_FAST            self
+  98: STORE_ATTR           _cond
+ 108: LOAD_FAST            value
+ 110: LOAD_FAST            self
+ 112: STORE_ATTR           _value
+ 122: LOAD_CONST           None
+ 124: RETURN_VALUE         

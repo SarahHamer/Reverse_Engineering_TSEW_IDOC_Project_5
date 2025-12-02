@@ -1,0 +1,25 @@
+# Disassembly for email.Domain.domain
+# From module file: email._header_value_parser
+
+## co_consts:
+(None, '')
+
+## co_names:
+('join', 'super', 'value', 'split')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_CONST           ''
+   6: LOAD_METHOD          join
+  28: LOAD_GLOBAL          NULL + super
+  40: PRECALL              
+  44: CALL                 
+  54: LOAD_ATTR            value
+  64: LOAD_METHOD          split
+  86: PRECALL              
+  90: CALL                 
+ 100: PRECALL              
+ 104: CALL                 
+ 114: RETURN_VALUE         

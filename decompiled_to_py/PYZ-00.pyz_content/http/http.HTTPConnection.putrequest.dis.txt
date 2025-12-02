@@ -1,0 +1,242 @@
+# Disassembly for http.HTTPConnection.putrequest
+# From module file: http.client
+
+## co_consts:
+("Send a request to the server.\n\n        `method' specifies an HTTP request method, e.g. 'GET'.\n        `url' specifies the object being requested, e.g. '/index.html'.\n        `skip_host' if True does not add automatically a 'Host:' header\n        `skip_accept_encoding' if True does not add automatically an\n           'Accept-Encoding:' header\n        ", None, '/', ' ', 11, '', 'http', 'ascii', 'idna', 'Host', ':', 0, b'[', b']', 'Accept-Encoding', 'identity')
+
+## co_names:
+('_HTTPConnection__response', 'isclosed', '_HTTPConnection__state', '_CS_IDLE', '_CS_REQ_STARTED', 'CannotSendRequest', '_validate_method', '_method', '_validate_path', '_http_vsn_str', '_output', '_encode_request', '_http_vsn', 'startswith', 'urlsplit', 'encode', 'UnicodeEncodeError', 'putheader', '_tunnel_host', '_tunnel_port', 'host', 'port', 'find', 'default_port', 'decode')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _HTTPConnection__response
+  14: POP_JUMP_FORWARD_IF_FALSE to 80
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            _HTTPConnection__response
+  28: LOAD_METHOD          isclosed
+  50: PRECALL              
+  54: CALL                 
+  64: POP_JUMP_FORWARD_IF_FALSE to 80
+  66: LOAD_CONST           None
+  68: LOAD_FAST            self
+  70: STORE_ATTR           _HTTPConnection__response
+  80: LOAD_FAST            self
+  82: LOAD_ATTR            _HTTPConnection__state
+  92: LOAD_GLOBAL          _CS_IDLE
+ 104: COMPARE_OP           ==
+ 110: POP_JUMP_FORWARD_IF_FALSE to 138
+ 112: LOAD_GLOBAL          _CS_REQ_STARTED
+ 124: LOAD_FAST            self
+ 126: STORE_ATTR           _HTTPConnection__state
+ 136: JUMP_FORWARD         to 178
+ 138: LOAD_GLOBAL          NULL + CannotSendRequest
+ 150: LOAD_FAST            self
+ 152: LOAD_ATTR            _HTTPConnection__state
+ 162: PRECALL              
+ 166: CALL                 
+ 176: RAISE_VARARGS        
+ 178: LOAD_FAST            self
+ 180: LOAD_METHOD          _validate_method
+ 202: LOAD_FAST            method
+ 204: PRECALL              
+ 208: CALL                 
+ 218: POP_TOP              
+ 220: LOAD_FAST            method
+ 222: LOAD_FAST            self
+ 224: STORE_ATTR           _method
+ 234: LOAD_FAST            url
+ 236: JUMP_IF_TRUE_OR_POP  to 240
+ 238: LOAD_CONST           '/'
+ 240: STORE_FAST           url
+ 242: LOAD_FAST            self
+ 244: LOAD_METHOD          _validate_path
+ 266: LOAD_FAST            url
+ 268: PRECALL              
+ 272: CALL                 
+ 282: POP_TOP              
+ 284: LOAD_FAST            method
+ 286: FORMAT_VALUE         str
+ 288: LOAD_CONST           ' '
+ 290: LOAD_FAST            url
+ 292: FORMAT_VALUE         str
+ 294: LOAD_CONST           ' '
+ 296: LOAD_FAST            self
+ 298: LOAD_ATTR            _http_vsn_str
+ 308: FORMAT_VALUE         str
+ 310: BUILD_STRING         
+ 312: STORE_FAST           request
+ 314: LOAD_FAST            self
+ 316: LOAD_METHOD          _output
+ 338: LOAD_FAST            self
+ 340: LOAD_METHOD          _encode_request
+ 362: LOAD_FAST            request
+ 364: PRECALL              
+ 368: CALL                 
+ 378: PRECALL              
+ 382: CALL                 
+ 392: POP_TOP              
+ 394: LOAD_FAST            self
+ 396: LOAD_ATTR            _http_vsn
+ 406: LOAD_CONST           11
+ 408: COMPARE_OP           ==
+ 414: EXTENDED_ARG         
+ 416: POP_JUMP_FORWARD_IF_FALSE to 1160
+ 418: LOAD_FAST            skip_host
+ 420: EXTENDED_ARG         
+ 422: POP_JUMP_FORWARD_IF_TRUE to 1104
+ 424: LOAD_CONST           ''
+ 426: STORE_FAST           netloc
+ 428: LOAD_FAST            url
+ 430: LOAD_METHOD          startswith
+ 452: LOAD_CONST           'http'
+ 454: PRECALL              
+ 458: CALL                 
+ 468: POP_JUMP_FORWARD_IF_FALSE to 512
+ 470: LOAD_GLOBAL          NULL + urlsplit
+ 482: LOAD_FAST            url
+ 484: PRECALL              
+ 488: CALL                 
+ 498: UNPACK_SEQUENCE      
+ 502: STORE_FAST           nil
+ 504: STORE_FAST           netloc
+ 506: STORE_FAST           nil
+ 508: STORE_FAST           nil
+ 510: STORE_FAST           nil
+ 512: LOAD_FAST            netloc
+ 514: POP_JUMP_FORWARD_IF_FALSE to 682
+ 516: NOP                  
+ 518: LOAD_FAST            netloc
+ 520: LOAD_METHOD          encode
+ 542: LOAD_CONST           'ascii'
+ 544: PRECALL              
+ 548: CALL                 
+ 558: STORE_FAST           netloc_enc
+ 560: JUMP_FORWARD         to 636
+ 562: PUSH_EXC_INFO        
+ 564: LOAD_GLOBAL          UnicodeEncodeError
+ 576: CHECK_EXC_MATCH      
+ 578: POP_JUMP_FORWARD_IF_FALSE to 628
+ 580: POP_TOP              
+ 582: LOAD_FAST            netloc
+ 584: LOAD_METHOD          encode
+ 606: LOAD_CONST           'idna'
+ 608: PRECALL              
+ 612: CALL                 
+ 622: STORE_FAST           netloc_enc
+ 624: POP_EXCEPT           
+ 626: JUMP_FORWARD         to 636
+ 628: RERAISE              
+ 630: COPY                 
+ 632: POP_EXCEPT           
+ 634: RERAISE              
+ 636: LOAD_FAST            self
+ 638: LOAD_METHOD          putheader
+ 660: LOAD_CONST           'Host'
+ 662: LOAD_FAST            netloc_enc
+ 664: PRECALL              
+ 668: CALL                 
+ 678: POP_TOP              
+ 680: JUMP_FORWARD         to 1104
+ 682: LOAD_FAST            self
+ 684: LOAD_ATTR            _tunnel_host
+ 694: POP_JUMP_FORWARD_IF_FALSE to 726
+ 696: LOAD_FAST            self
+ 698: LOAD_ATTR            _tunnel_host
+ 708: STORE_FAST           host
+ 710: LOAD_FAST            self
+ 712: LOAD_ATTR            _tunnel_port
+ 722: STORE_FAST           port
+ 724: JUMP_FORWARD         to 754
+ 726: LOAD_FAST            self
+ 728: LOAD_ATTR            host
+ 738: STORE_FAST           host
+ 740: LOAD_FAST            self
+ 742: LOAD_ATTR            port
+ 752: STORE_FAST           port
+ 754: NOP                  
+ 756: LOAD_FAST            host
+ 758: LOAD_METHOD          encode
+ 780: LOAD_CONST           'ascii'
+ 782: PRECALL              
+ 786: CALL                 
+ 796: STORE_FAST           host_enc
+ 798: JUMP_FORWARD         to 874
+ 800: PUSH_EXC_INFO        
+ 802: LOAD_GLOBAL          UnicodeEncodeError
+ 814: CHECK_EXC_MATCH      
+ 816: POP_JUMP_FORWARD_IF_FALSE to 866
+ 818: POP_TOP              
+ 820: LOAD_FAST            host
+ 822: LOAD_METHOD          encode
+ 844: LOAD_CONST           'idna'
+ 846: PRECALL              
+ 850: CALL                 
+ 860: STORE_FAST           host_enc
+ 862: POP_EXCEPT           
+ 864: JUMP_FORWARD         to 874
+ 866: RERAISE              
+ 868: COPY                 
+ 870: POP_EXCEPT           
+ 872: RERAISE              
+ 874: LOAD_FAST            host
+ 876: LOAD_METHOD          find
+ 898: LOAD_CONST           ':'
+ 900: PRECALL              
+ 904: CALL                 
+ 914: LOAD_CONST           0
+ 916: COMPARE_OP           >=
+ 922: POP_JUMP_FORWARD_IF_FALSE to 940
+ 924: LOAD_CONST           b'['
+ 926: LOAD_FAST            host_enc
+ 928: BINARY_OP            +
+ 932: LOAD_CONST           b']'
+ 934: BINARY_OP            +
+ 938: STORE_FAST           host_enc
+ 940: LOAD_FAST            port
+ 942: LOAD_FAST            self
+ 944: LOAD_ATTR            default_port
+ 954: COMPARE_OP           ==
+ 960: POP_JUMP_FORWARD_IF_FALSE to 1008
+ 962: LOAD_FAST            self
+ 964: LOAD_METHOD          putheader
+ 986: LOAD_CONST           'Host'
+ 988: LOAD_FAST            host_enc
+ 990: PRECALL              
+ 994: CALL                 
+1004: POP_TOP              
+1006: JUMP_FORWARD         to 1104
+1008: LOAD_FAST            host_enc
+1010: LOAD_METHOD          decode
+1032: LOAD_CONST           'ascii'
+1034: PRECALL              
+1038: CALL                 
+1048: STORE_FAST           host_enc
+1050: LOAD_FAST            self
+1052: LOAD_METHOD          putheader
+1074: LOAD_CONST           'Host'
+1076: LOAD_FAST            host_enc
+1078: FORMAT_VALUE         str
+1080: LOAD_CONST           ':'
+1082: LOAD_FAST            port
+1084: FORMAT_VALUE         str
+1086: BUILD_STRING         
+1088: PRECALL              
+1092: CALL                 
+1102: POP_TOP              
+1104: LOAD_FAST            skip_accept_encoding
+1106: POP_JUMP_FORWARD_IF_TRUE to 1156
+1108: LOAD_FAST            self
+1110: LOAD_METHOD          putheader
+1132: LOAD_CONST           'Accept-Encoding'
+1134: LOAD_CONST           'identity'
+1136: PRECALL              
+1140: CALL                 
+1150: POP_TOP              
+1152: LOAD_CONST           None
+1154: RETURN_VALUE         
+1156: LOAD_CONST           None
+1158: RETURN_VALUE         
+1160: LOAD_CONST           None
+1162: RETURN_VALUE         

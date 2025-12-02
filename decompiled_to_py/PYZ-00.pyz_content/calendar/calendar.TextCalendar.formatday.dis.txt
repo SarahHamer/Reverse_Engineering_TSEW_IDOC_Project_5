@@ -1,0 +1,29 @@
+# Disassembly for calendar.TextCalendar.formatday
+# From module file: calendar
+
+## co_consts:
+('\n        Returns a formatted day.\n        ', 0, '', '%2i')
+
+## co_names:
+('center',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            day
+   4: LOAD_CONST           0
+   6: COMPARE_OP           ==
+  12: POP_JUMP_FORWARD_IF_FALSE to 20
+  14: LOAD_CONST           ''
+  16: STORE_FAST           s
+  18: JUMP_FORWARD         to 30
+  20: LOAD_CONST           '%2i'
+  22: LOAD_FAST            day
+  24: BINARY_OP            %
+  28: STORE_FAST           s
+  30: LOAD_FAST            s
+  32: LOAD_METHOD          center
+  54: LOAD_FAST            width
+  56: PRECALL              
+  60: CALL                 
+  70: RETURN_VALUE         

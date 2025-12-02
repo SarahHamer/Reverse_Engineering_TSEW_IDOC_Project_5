@@ -1,0 +1,22 @@
+# Disassembly for subprocess.Popen._filter_handle_list
+# From module file: subprocess
+
+## co_consts:
+('Filter out console handles that can\'t be used\n            in lpAttributeList["handle_list"] and make sure the list\n            isn\'t empty. This also removes duplicate handles.', <code object <setcomp> at 0x000002406941B090, file "subprocess.py", line 1430>)
+
+## co_names:
+('list',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + list
+  14: LOAD_CONST           <code object <setcomp> at 0x000002406941B090, file "subprocess.py", line 1430>
+  16: MAKE_FUNCTION        
+  18: LOAD_FAST            handle_list
+  20: GET_ITER             
+  22: PRECALL              
+  26: CALL                 
+  36: PRECALL              
+  40: CALL                 
+  50: RETURN_VALUE         

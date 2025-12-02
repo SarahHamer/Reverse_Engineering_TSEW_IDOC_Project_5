@@ -1,0 +1,38 @@
+# Disassembly for left.Left.handle_option_answer
+# From module file: left
+
+## co_consts:
+(None, 'B', 'You head back to the breakroom.', 'Breakroom')
+
+## co_names:
+('send_message', 'world', 'player', 'set_parent', 'rooms')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            value
+   4: LOAD_CONST           'B'
+   6: COMPARE_OP           ==
+  12: POP_JUMP_FORWARD_IF_FALSE to 154
+  14: LOAD_FAST            self
+  16: LOAD_METHOD          send_message
+  38: LOAD_CONST           'You head back to the breakroom.'
+  40: PRECALL              
+  44: CALL                 
+  54: POP_TOP              
+  56: LOAD_FAST            self
+  58: LOAD_ATTR            world
+  68: LOAD_ATTR            player
+  78: LOAD_METHOD          set_parent
+ 100: LOAD_FAST            self
+ 102: LOAD_ATTR            world
+ 112: LOAD_ATTR            rooms
+ 122: LOAD_CONST           'Breakroom'
+ 124: BINARY_SUBSCR        
+ 134: PRECALL              
+ 138: CALL                 
+ 148: POP_TOP              
+ 150: LOAD_CONST           None
+ 152: RETURN_VALUE         
+ 154: LOAD_CONST           None
+ 156: RETURN_VALUE         

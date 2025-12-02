@@ -1,0 +1,40 @@
+# Disassembly for typing.assert_never
+# From module file: typing
+
+## co_consts:
+('Statically assert that a line of code is unreachable.\n\n    Example::\n\n        def int_or_str(arg: int | str) -> None:\n            match arg:\n                case int():\n                    print("It\'s an int")\n                case str():\n                    print("It\'s a str")\n                case _:\n                    assert_never(arg)\n\n    If a type checker finds that a call to assert_never() is\n    reachable, it will emit an error.\n\n    At runtime, this throws an exception when called.\n    ', None, '...', 'Expected code to be unreachable, but got: ')
+
+## co_names:
+('repr', 'len', '_ASSERT_NEVER_REPR_MAX_LENGTH', 'AssertionError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + repr
+  14: LOAD_FAST            arg
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           value
+  32: LOAD_GLOBAL          NULL + len
+  44: LOAD_FAST            value
+  46: PRECALL              
+  50: CALL                 
+  60: LOAD_GLOBAL          _ASSERT_NEVER_REPR_MAX_LENGTH
+  72: COMPARE_OP           >
+  78: POP_JUMP_FORWARD_IF_FALSE to 116
+  80: LOAD_FAST            value
+  82: LOAD_CONST           None
+  84: LOAD_GLOBAL          _ASSERT_NEVER_REPR_MAX_LENGTH
+  96: BUILD_SLICE          
+  98: BINARY_SUBSCR        
+ 108: LOAD_CONST           '...'
+ 110: BINARY_OP            +
+ 114: STORE_FAST           value
+ 116: LOAD_GLOBAL          NULL + AssertionError
+ 128: LOAD_CONST           'Expected code to be unreachable, but got: '
+ 130: LOAD_FAST            value
+ 132: FORMAT_VALUE         
+ 134: BUILD_STRING         
+ 136: PRECALL              
+ 140: CALL                 
+ 150: RAISE_VARARGS        

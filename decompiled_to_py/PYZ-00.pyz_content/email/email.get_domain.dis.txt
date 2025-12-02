@@ -1,0 +1,209 @@
+# Disassembly for email.get_domain
+# From module file: email._header_value_parser
+
+## co_consts:
+(' domain = dot-atom / domain-literal / obs-domain\n        obs-domain = atom *("." atom))\n\n    ', None, 0, "expected domain but found '{}'", '[', '@', 'Invalid Domain', '.', 'domain is not a dot-atom (contains CFWS)', 'dot-atom', 1)
+
+## co_names:
+('Domain', 'CFWS_LEADER', 'get_cfws', 'errors', 'HeaderParseError', 'format', 'get_domain_literal', 'append', 'get_dot_atom', 'get_atom', 'defects', 'ObsoleteHeaderDefect', 'token_type', 'DOT')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + Domain
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           domain
+  30: LOAD_CONST           None
+  32: STORE_FAST           leader
+  34: LOAD_FAST            value
+  36: LOAD_CONST           0
+  38: BINARY_SUBSCR        
+  48: LOAD_GLOBAL          CFWS_LEADER
+  60: CONTAINS_OP          
+  62: POP_JUMP_FORWARD_IF_FALSE to 100
+  64: LOAD_GLOBAL          NULL + get_cfws
+  76: LOAD_FAST            value
+  78: PRECALL              
+  82: CALL                 
+  92: UNPACK_SEQUENCE      
+  96: STORE_FAST           leader
+  98: STORE_FAST           value
+ 100: LOAD_FAST            value
+ 102: POP_JUMP_FORWARD_IF_TRUE to 182
+ 104: LOAD_GLOBAL          NULL + errors
+ 116: LOAD_ATTR            HeaderParseError
+ 126: LOAD_CONST           "expected domain but found '{}'"
+ 128: LOAD_METHOD          format
+ 150: LOAD_FAST            value
+ 152: PRECALL              
+ 156: CALL                 
+ 166: PRECALL              
+ 170: CALL                 
+ 180: RAISE_VARARGS        
+ 182: LOAD_FAST            value
+ 184: LOAD_CONST           0
+ 186: BINARY_SUBSCR        
+ 196: LOAD_CONST           '['
+ 198: COMPARE_OP           ==
+ 204: POP_JUMP_FORWARD_IF_FALSE to 312
+ 206: LOAD_GLOBAL          NULL + get_domain_literal
+ 218: LOAD_FAST            value
+ 220: PRECALL              
+ 224: CALL                 
+ 234: UNPACK_SEQUENCE      
+ 238: STORE_FAST           token
+ 240: STORE_FAST           value
+ 242: LOAD_FAST            leader
+ 244: POP_JUMP_FORWARD_IF_NONE to 262
+ 246: LOAD_FAST            leader
+ 248: BUILD_LIST           
+ 250: LOAD_FAST            token
+ 252: LOAD_CONST           None
+ 254: LOAD_CONST           0
+ 256: BUILD_SLICE          
+ 258: STORE_SUBSCR         
+ 262: LOAD_FAST            domain
+ 264: LOAD_METHOD          append
+ 286: LOAD_FAST            token
+ 288: PRECALL              
+ 292: CALL                 
+ 302: POP_TOP              
+ 304: LOAD_FAST            domain
+ 306: LOAD_FAST            value
+ 308: BUILD_TUPLE          
+ 310: RETURN_VALUE         
+ 312: NOP                  
+ 314: LOAD_GLOBAL          NULL + get_dot_atom
+ 326: LOAD_FAST            value
+ 328: PRECALL              
+ 332: CALL                 
+ 342: UNPACK_SEQUENCE      
+ 346: STORE_FAST           token
+ 348: STORE_FAST           value
+ 350: JUMP_FORWARD         to 430
+ 352: PUSH_EXC_INFO        
+ 354: LOAD_GLOBAL          errors
+ 366: LOAD_ATTR            HeaderParseError
+ 376: CHECK_EXC_MATCH      
+ 378: POP_JUMP_FORWARD_IF_FALSE to 422
+ 380: POP_TOP              
+ 382: LOAD_GLOBAL          NULL + get_atom
+ 394: LOAD_FAST            value
+ 396: PRECALL              
+ 400: CALL                 
+ 410: UNPACK_SEQUENCE      
+ 414: STORE_FAST           token
+ 416: STORE_FAST           value
+ 418: POP_EXCEPT           
+ 420: JUMP_FORWARD         to 430
+ 422: RERAISE              
+ 424: COPY                 
+ 426: POP_EXCEPT           
+ 428: RERAISE              
+ 430: LOAD_FAST            value
+ 432: POP_JUMP_FORWARD_IF_FALSE to 498
+ 434: LOAD_FAST            value
+ 436: LOAD_CONST           0
+ 438: BINARY_SUBSCR        
+ 448: LOAD_CONST           '@'
+ 450: COMPARE_OP           ==
+ 456: POP_JUMP_FORWARD_IF_FALSE to 498
+ 458: LOAD_GLOBAL          NULL + errors
+ 470: LOAD_ATTR            HeaderParseError
+ 480: LOAD_CONST           'Invalid Domain'
+ 482: PRECALL              
+ 486: CALL                 
+ 496: RAISE_VARARGS        
+ 498: LOAD_FAST            leader
+ 500: POP_JUMP_FORWARD_IF_NONE to 518
+ 502: LOAD_FAST            leader
+ 504: BUILD_LIST           
+ 506: LOAD_FAST            token
+ 508: LOAD_CONST           None
+ 510: LOAD_CONST           0
+ 512: BUILD_SLICE          
+ 514: STORE_SUBSCR         
+ 518: LOAD_FAST            domain
+ 520: LOAD_METHOD          append
+ 542: LOAD_FAST            token
+ 544: PRECALL              
+ 548: CALL                 
+ 558: POP_TOP              
+ 560: LOAD_FAST            value
+ 562: POP_JUMP_FORWARD_IF_FALSE to 938
+ 564: LOAD_FAST            value
+ 566: LOAD_CONST           0
+ 568: BINARY_SUBSCR        
+ 578: LOAD_CONST           '.'
+ 580: COMPARE_OP           ==
+ 586: POP_JUMP_FORWARD_IF_FALSE to 938
+ 588: LOAD_FAST            domain
+ 590: LOAD_ATTR            defects
+ 600: LOAD_METHOD          append
+ 622: LOAD_GLOBAL          NULL + errors
+ 634: LOAD_ATTR            ObsoleteHeaderDefect
+ 644: LOAD_CONST           'domain is not a dot-atom (contains CFWS)'
+ 646: PRECALL              
+ 650: CALL                 
+ 660: PRECALL              
+ 664: CALL                 
+ 674: POP_TOP              
+ 676: LOAD_FAST            domain
+ 678: LOAD_CONST           0
+ 680: BINARY_SUBSCR        
+ 690: LOAD_ATTR            token_type
+ 700: LOAD_CONST           'dot-atom'
+ 702: COMPARE_OP           ==
+ 708: POP_JUMP_FORWARD_IF_FALSE to 736
+ 710: LOAD_FAST            domain
+ 712: LOAD_CONST           0
+ 714: BINARY_SUBSCR        
+ 724: LOAD_FAST            domain
+ 726: LOAD_CONST           None
+ 728: LOAD_CONST           None
+ 730: BUILD_SLICE          
+ 732: STORE_SUBSCR         
+ 736: LOAD_FAST            value
+ 738: POP_JUMP_FORWARD_IF_FALSE to 938
+ 740: LOAD_FAST            value
+ 742: LOAD_CONST           0
+ 744: BINARY_SUBSCR        
+ 754: LOAD_CONST           '.'
+ 756: COMPARE_OP           ==
+ 762: POP_JUMP_FORWARD_IF_FALSE to 938
+ 764: LOAD_FAST            domain
+ 766: LOAD_METHOD          append
+ 788: LOAD_GLOBAL          DOT
+ 800: PRECALL              
+ 804: CALL                 
+ 814: POP_TOP              
+ 816: LOAD_GLOBAL          NULL + get_atom
+ 828: LOAD_FAST            value
+ 830: LOAD_CONST           1
+ 832: LOAD_CONST           None
+ 834: BUILD_SLICE          
+ 836: BINARY_SUBSCR        
+ 846: PRECALL              
+ 850: CALL                 
+ 860: UNPACK_SEQUENCE      
+ 864: STORE_FAST           token
+ 866: STORE_FAST           value
+ 868: LOAD_FAST            domain
+ 870: LOAD_METHOD          append
+ 892: LOAD_FAST            token
+ 894: PRECALL              
+ 898: CALL                 
+ 908: POP_TOP              
+ 910: LOAD_FAST            value
+ 912: POP_JUMP_FORWARD_IF_FALSE to 938
+ 914: LOAD_FAST            value
+ 916: LOAD_CONST           0
+ 918: BINARY_SUBSCR        
+ 928: LOAD_CONST           '.'
+ 930: COMPARE_OP           ==
+ 936: POP_JUMP_BACKWARD_IF_TRUE to 764
+ 938: LOAD_FAST            domain
+ 940: LOAD_FAST            value
+ 942: BUILD_TUPLE          
+ 944: RETURN_VALUE         

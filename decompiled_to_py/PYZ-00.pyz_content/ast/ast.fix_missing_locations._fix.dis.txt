@@ -1,0 +1,107 @@
+# Disassembly for ast.fix_missing_locations._fix
+# From module file: ast
+
+## co_consts:
+(None, 'lineno', 'end_lineno', 'col_offset', 'end_col_offset')
+
+## co_names:
+('_attributes', 'hasattr', 'lineno', 'getattr', 'end_lineno', 'col_offset', 'end_col_offset', 'iter_child_nodes')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_CONST           'lineno'
+   6: LOAD_FAST            node
+   8: LOAD_ATTR            _attributes
+  18: CONTAINS_OP          
+  20: POP_JUMP_FORWARD_IF_FALSE to 84
+  22: LOAD_GLOBAL          NULL + hasattr
+  34: LOAD_FAST            node
+  36: LOAD_CONST           'lineno'
+  38: PRECALL              
+  42: CALL                 
+  52: POP_JUMP_FORWARD_IF_TRUE to 70
+  54: LOAD_FAST            lineno
+  56: LOAD_FAST            node
+  58: STORE_ATTR           lineno
+  68: JUMP_FORWARD         to 84
+  70: LOAD_FAST            node
+  72: LOAD_ATTR            lineno
+  82: STORE_FAST           lineno
+  84: LOAD_CONST           'end_lineno'
+  86: LOAD_FAST            node
+  88: LOAD_ATTR            _attributes
+  98: CONTAINS_OP          
+ 100: POP_JUMP_FORWARD_IF_FALSE to 166
+ 102: LOAD_GLOBAL          NULL + getattr
+ 114: LOAD_FAST            node
+ 116: LOAD_CONST           'end_lineno'
+ 118: LOAD_CONST           None
+ 120: PRECALL              
+ 124: CALL                 
+ 134: POP_JUMP_FORWARD_IF_NOT_NONE to 152
+ 136: LOAD_FAST            end_lineno
+ 138: LOAD_FAST            node
+ 140: STORE_ATTR           end_lineno
+ 150: JUMP_FORWARD         to 166
+ 152: LOAD_FAST            node
+ 154: LOAD_ATTR            end_lineno
+ 164: STORE_FAST           end_lineno
+ 166: LOAD_CONST           'col_offset'
+ 168: LOAD_FAST            node
+ 170: LOAD_ATTR            _attributes
+ 180: CONTAINS_OP          
+ 182: POP_JUMP_FORWARD_IF_FALSE to 246
+ 184: LOAD_GLOBAL          NULL + hasattr
+ 196: LOAD_FAST            node
+ 198: LOAD_CONST           'col_offset'
+ 200: PRECALL              
+ 204: CALL                 
+ 214: POP_JUMP_FORWARD_IF_TRUE to 232
+ 216: LOAD_FAST            col_offset
+ 218: LOAD_FAST            node
+ 220: STORE_ATTR           col_offset
+ 230: JUMP_FORWARD         to 246
+ 232: LOAD_FAST            node
+ 234: LOAD_ATTR            col_offset
+ 244: STORE_FAST           col_offset
+ 246: LOAD_CONST           'end_col_offset'
+ 248: LOAD_FAST            node
+ 250: LOAD_ATTR            _attributes
+ 260: CONTAINS_OP          
+ 262: POP_JUMP_FORWARD_IF_FALSE to 328
+ 264: LOAD_GLOBAL          NULL + getattr
+ 276: LOAD_FAST            node
+ 278: LOAD_CONST           'end_col_offset'
+ 280: LOAD_CONST           None
+ 282: PRECALL              
+ 286: CALL                 
+ 296: POP_JUMP_FORWARD_IF_NOT_NONE to 314
+ 298: LOAD_FAST            end_col_offset
+ 300: LOAD_FAST            node
+ 302: STORE_ATTR           end_col_offset
+ 312: JUMP_FORWARD         to 328
+ 314: LOAD_FAST            node
+ 316: LOAD_ATTR            end_col_offset
+ 326: STORE_FAST           end_col_offset
+ 328: LOAD_GLOBAL          NULL + iter_child_nodes
+ 340: LOAD_FAST            node
+ 342: PRECALL              
+ 346: CALL                 
+ 356: GET_ITER             
+ 358: FOR_ITER             to 394
+ 360: STORE_FAST           child
+ 362: PUSH_NULL            
+ 364: LOAD_DEREF           _fix
+ 366: LOAD_FAST            child
+ 368: LOAD_FAST            lineno
+ 370: LOAD_FAST            col_offset
+ 372: LOAD_FAST            end_lineno
+ 374: LOAD_FAST            end_col_offset
+ 376: PRECALL              
+ 380: CALL                 
+ 390: POP_TOP              
+ 392: JUMP_BACKWARD        to 358
+ 394: LOAD_CONST           None
+ 396: RETURN_VALUE         

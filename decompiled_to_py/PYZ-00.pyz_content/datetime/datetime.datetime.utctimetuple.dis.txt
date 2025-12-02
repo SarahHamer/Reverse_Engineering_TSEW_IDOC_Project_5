@@ -1,0 +1,52 @@
+# Disassembly for datetime.datetime.utctimetuple
+# From module file: datetime
+
+## co_consts:
+('Return UTC time tuple compatible with time.gmtime().', 0)
+
+## co_names:
+('utcoffset', 'year', 'month', 'day', 'hour', 'minute', 'second', '_build_struct_time')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          utcoffset
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           offset
+  42: LOAD_FAST            offset
+  44: POP_JUMP_FORWARD_IF_FALSE to 56
+  46: LOAD_FAST            self
+  48: LOAD_FAST            offset
+  50: BINARY_OP            -=
+  54: STORE_FAST           self
+  56: LOAD_FAST            self
+  58: LOAD_ATTR            year
+  68: LOAD_FAST            self
+  70: LOAD_ATTR            month
+  80: LOAD_FAST            self
+  82: LOAD_ATTR            day
+  92: STORE_FAST           d
+  94: STORE_FAST           m
+  96: STORE_FAST           y
+  98: LOAD_FAST            self
+ 100: LOAD_ATTR            hour
+ 110: LOAD_FAST            self
+ 112: LOAD_ATTR            minute
+ 122: LOAD_FAST            self
+ 124: LOAD_ATTR            second
+ 134: STORE_FAST           ss
+ 136: STORE_FAST           mm
+ 138: STORE_FAST           hh
+ 140: LOAD_GLOBAL          NULL + _build_struct_time
+ 152: LOAD_FAST            y
+ 154: LOAD_FAST            m
+ 156: LOAD_FAST            d
+ 158: LOAD_FAST            hh
+ 160: LOAD_FAST            mm
+ 162: LOAD_FAST            ss
+ 164: LOAD_CONST           0
+ 166: PRECALL              
+ 170: CALL                 
+ 180: RETURN_VALUE         

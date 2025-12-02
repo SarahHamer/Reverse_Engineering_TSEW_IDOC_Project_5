@@ -1,0 +1,29 @@
+# Disassembly for entities.Entity.__init__
+# From module file: entities
+
+## co_consts:
+(None, True)
+
+## co_names:
+('name', 'world', 'parent', 'children', 'first_look')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            name
+   4: LOAD_FAST            self
+   6: STORE_ATTR           name
+  16: LOAD_CONST           None
+  18: LOAD_FAST            self
+  20: STORE_ATTR           world
+  30: LOAD_CONST           None
+  32: LOAD_FAST            self
+  34: STORE_ATTR           parent
+  44: BUILD_LIST           
+  46: LOAD_FAST            self
+  48: STORE_ATTR           children
+  58: LOAD_CONST           True
+  60: LOAD_FAST            self
+  62: STORE_ATTR           first_look
+  72: LOAD_CONST           None
+  74: RETURN_VALUE         

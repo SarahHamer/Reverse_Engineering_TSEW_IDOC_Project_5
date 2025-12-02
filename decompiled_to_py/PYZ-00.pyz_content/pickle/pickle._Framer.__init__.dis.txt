@@ -1,0 +1,20 @@
+# Disassembly for pickle._Framer.__init__
+# From module file: pickle
+
+## co_consts:
+(None,)
+
+## co_names:
+('file_write', 'current_frame')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            file_write
+   4: LOAD_FAST            self
+   6: STORE_ATTR           file_write
+  16: LOAD_CONST           None
+  18: LOAD_FAST            self
+  20: STORE_ATTR           current_frame
+  30: LOAD_CONST           None
+  32: RETURN_VALUE         

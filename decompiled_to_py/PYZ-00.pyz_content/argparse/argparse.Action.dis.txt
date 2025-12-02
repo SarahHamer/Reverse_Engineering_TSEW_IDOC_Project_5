@@ -1,0 +1,42 @@
+# Disassembly for argparse.Action
+# From module file: argparse
+
+## co_consts:
+('Action', "Information about how to convert command line strings to Python objects.\n\n    Action objects are used by an ArgumentParser to represent the information\n    needed to parse a single argument from one or more strings from the\n    command line. The keyword arguments to the Action constructor are also\n    all attributes of Action instances.\n\n    Keyword Arguments:\n\n        - option_strings -- A list of command-line option strings which\n            should be associated with this action.\n\n        - dest -- The name of the attribute to hold the created object(s)\n\n        - nargs -- The number of command-line arguments that should be\n            consumed. By default, one argument will be consumed and a single\n            value will be produced.  Other values include:\n                - N (an integer) consumes N arguments (and produces a list)\n                - '?' consumes zero or one arguments\n                - '*' consumes zero or more arguments (and produces a list)\n                - '+' consumes one or more arguments (and produces a list)\n            Note that the difference between the default and nargs=1 is that\n            with the default, a single value will be produced, while with\n            nargs=1, a list containing a single value will be produced.\n\n        - const -- The value to be produced if the option is specified and the\n            option uses an action that takes no values.\n\n        - default -- The value to be produced if the option is not specified.\n\n        - type -- A callable that accepts a single string argument, and\n            returns the converted value.  The standard Python types str, int,\n            float, and complex are useful examples of such callables.  If None,\n            str is used.\n\n        - choices -- A container of values that should be allowed. If not None,\n            after a command-line argument has been converted to the appropriate\n            type, an exception will be raised if it is not a member of this\n            collection.\n\n        - required -- True if the action must always be specified at the\n            command line. This is only meaningful for optional command-line\n            arguments.\n\n        - help -- The help string describing the argument.\n\n        - metavar -- The name to be used for the option's argument with the\n            help string. If None, the 'dest' value will be used as the name.\n    ", None, False, <code object __init__ at 0x000002406922C030, file "argparse.py", line 841>, <code object _get_kwargs at 0x0000024069465C30, file "argparse.py", line 863>, <code object format_usage at 0x0000024069465D10, file "argparse.py", line 878>, <code object __call__ at 0x00000240693EAD30, file "argparse.py", line 881>, (None, None, None, None, None, False, None, None), (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', '_get_kwargs', 'format_usage', '__call__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Action'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           "Information about how to convert command line strings to Python objects.\n\n    Action objects are used by an ArgumentParser to represent the information\n    needed to parse a single argument from one or more strings from the\n    command line. The keyword arguments to the Action constructor are also\n    all attributes of Action instances.\n\n    Keyword Arguments:\n\n        - option_strings -- A list of command-line option strings which\n            should be associated with this action.\n\n        - dest -- The name of the attribute to hold the created object(s)\n\n        - nargs -- The number of command-line arguments that should be\n            consumed. By default, one argument will be consumed and a single\n            value will be produced.  Other values include:\n                - N (an integer) consumes N arguments (and produces a list)\n                - '?' consumes zero or one arguments\n                - '*' consumes zero or more arguments (and produces a list)\n                - '+' consumes one or more arguments (and produces a list)\n            Note that the difference between the default and nargs=1 is that\n            with the default, a single value will be produced, while with\n            nargs=1, a list containing a single value will be produced.\n\n        - const -- The value to be produced if the option is specified and the\n            option uses an action that takes no values.\n\n        - default -- The value to be produced if the option is not specified.\n\n        - type -- A callable that accepts a single string argument, and\n            returns the converted value.  The standard Python types str, int,\n            float, and complex are useful examples of such callables.  If None,\n            str is used.\n\n        - choices -- A container of values that should be allowed. If not None,\n            after a command-line argument has been converted to the appropriate\n            type, an exception will be raised if it is not a member of this\n            collection.\n\n        - required -- True if the action must always be specified at the\n            command line. This is only meaningful for optional command-line\n            arguments.\n\n        - help -- The help string describing the argument.\n\n        - metavar -- The name to be used for the option's argument with the\n            help string. If None, the 'dest' value will be used as the name.\n    "
+  12: STORE_NAME           __doc__
+  14: NOP                  
+  16: NOP                  
+  18: NOP                  
+  20: NOP                  
+  22: NOP                  
+  24: NOP                  
+  26: NOP                  
+  28: NOP                  
+  30: LOAD_CONST           (None, None, None, None, None, False, None, None)
+  32: LOAD_CONST           <code object __init__ at 0x000002406922C030, file "argparse.py", line 841>
+  34: MAKE_FUNCTION        defaults
+  36: STORE_NAME           __init__
+  38: LOAD_CONST           <code object _get_kwargs at 0x0000024069465C30, file "argparse.py", line 863>
+  40: MAKE_FUNCTION        
+  42: STORE_NAME           _get_kwargs
+  44: LOAD_CONST           <code object format_usage at 0x0000024069465D10, file "argparse.py", line 878>
+  46: MAKE_FUNCTION        
+  48: STORE_NAME           format_usage
+  50: LOAD_CONST           (None,)
+  52: LOAD_CONST           <code object __call__ at 0x00000240693EAD30, file "argparse.py", line 881>
+  54: MAKE_FUNCTION        defaults
+  56: STORE_NAME           __call__
+  58: LOAD_CONST           None
+  60: RETURN_VALUE         

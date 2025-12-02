@@ -1,0 +1,20 @@
+# Disassembly for importlib.FastPath.joinpath
+# From module file: importlib.metadata
+
+## co_consts:
+(None,)
+
+## co_names:
+('pathlib', 'Path', 'root')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + pathlib
+  14: LOAD_ATTR            Path
+  24: LOAD_FAST            self
+  26: LOAD_ATTR            root
+  36: LOAD_FAST            child
+  38: PRECALL              
+  42: CALL                 
+  52: RETURN_VALUE         

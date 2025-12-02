@@ -1,0 +1,56 @@
+# Disassembly for subprocess._cleanup
+# From module file: subprocess
+
+## co_consts:
+(None, ('_deadstate',))
+
+## co_names:
+('_active', '_internal_poll', 'sys', 'maxsize', 'remove', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _active
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 20
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         
+  20: LOAD_GLOBAL          _active
+  32: LOAD_CONST           None
+  34: LOAD_CONST           None
+  36: BUILD_SLICE          
+  38: BINARY_SUBSCR        
+  48: GET_ITER             
+  50: FOR_ITER             to 212
+  52: STORE_FAST           inst
+  54: LOAD_FAST            inst
+  56: LOAD_METHOD          _internal_poll
+  78: LOAD_GLOBAL          sys
+  90: LOAD_ATTR            maxsize
+ 100: KW_NAMES             
+ 102: PRECALL              
+ 106: CALL                 
+ 116: STORE_FAST           res
+ 118: LOAD_FAST            res
+ 120: POP_JUMP_FORWARD_IF_NONE to 210
+ 122: NOP                  
+ 124: LOAD_GLOBAL          _active
+ 136: LOAD_METHOD          remove
+ 158: LOAD_FAST            inst
+ 160: PRECALL              
+ 164: CALL                 
+ 174: POP_TOP              
+ 176: JUMP_BACKWARD        to 50
+ 178: PUSH_EXC_INFO        
+ 180: LOAD_GLOBAL          ValueError
+ 192: CHECK_EXC_MATCH      
+ 194: POP_JUMP_FORWARD_IF_FALSE to 202
+ 196: POP_TOP              
+ 198: POP_EXCEPT           
+ 200: JUMP_BACKWARD        to 50
+ 202: RERAISE              
+ 204: COPY                 
+ 206: POP_EXCEPT           
+ 208: RERAISE              
+ 210: JUMP_BACKWARD        to 50
+ 212: LOAD_CONST           None
+ 214: RETURN_VALUE         

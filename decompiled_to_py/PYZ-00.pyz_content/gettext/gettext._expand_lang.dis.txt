@@ -1,0 +1,175 @@
+# Disassembly for gettext._expand_lang
+# From module file: gettext
+
+## co_consts:
+(None, 0, 1, 2, 4, '@', '', '.', '_')
+
+## co_names:
+('locale', 'normalize', 'find', 'range', 'append', 'reverse')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           None
+   6: IMPORT_NAME          locale
+   8: STORE_FAST           locale
+  10: LOAD_FAST            locale
+  12: LOAD_METHOD          normalize
+  34: LOAD_FAST            loc
+  36: PRECALL              
+  40: CALL                 
+  50: STORE_FAST           loc
+  52: LOAD_CONST           1
+  54: STORE_FAST           COMPONENT_CODESET
+  56: LOAD_CONST           2
+  58: STORE_FAST           COMPONENT_TERRITORY
+  60: LOAD_CONST           4
+  62: STORE_FAST           COMPONENT_MODIFIER
+  64: LOAD_CONST           0
+  66: STORE_FAST           mask
+  68: LOAD_FAST            loc
+  70: LOAD_METHOD          find
+  92: LOAD_CONST           '@'
+  94: PRECALL              
+  98: CALL                 
+ 108: STORE_FAST           pos
+ 110: LOAD_FAST            pos
+ 112: LOAD_CONST           0
+ 114: COMPARE_OP           >=
+ 120: POP_JUMP_FORWARD_IF_FALSE to 174
+ 122: LOAD_FAST            loc
+ 124: LOAD_FAST            pos
+ 126: LOAD_CONST           None
+ 128: BUILD_SLICE          
+ 130: BINARY_SUBSCR        
+ 140: STORE_FAST           modifier
+ 142: LOAD_FAST            loc
+ 144: LOAD_CONST           None
+ 146: LOAD_FAST            pos
+ 148: BUILD_SLICE          
+ 150: BINARY_SUBSCR        
+ 160: STORE_FAST           loc
+ 162: LOAD_FAST            mask
+ 164: LOAD_FAST            COMPONENT_MODIFIER
+ 166: BINARY_OP            |=
+ 170: STORE_FAST           mask
+ 172: JUMP_FORWARD         to 178
+ 174: LOAD_CONST           ''
+ 176: STORE_FAST           modifier
+ 178: LOAD_FAST            loc
+ 180: LOAD_METHOD          find
+ 202: LOAD_CONST           '.'
+ 204: PRECALL              
+ 208: CALL                 
+ 218: STORE_FAST           pos
+ 220: LOAD_FAST            pos
+ 222: LOAD_CONST           0
+ 224: COMPARE_OP           >=
+ 230: POP_JUMP_FORWARD_IF_FALSE to 284
+ 232: LOAD_FAST            loc
+ 234: LOAD_FAST            pos
+ 236: LOAD_CONST           None
+ 238: BUILD_SLICE          
+ 240: BINARY_SUBSCR        
+ 250: STORE_FAST           codeset
+ 252: LOAD_FAST            loc
+ 254: LOAD_CONST           None
+ 256: LOAD_FAST            pos
+ 258: BUILD_SLICE          
+ 260: BINARY_SUBSCR        
+ 270: STORE_FAST           loc
+ 272: LOAD_FAST            mask
+ 274: LOAD_FAST            COMPONENT_CODESET
+ 276: BINARY_OP            |=
+ 280: STORE_FAST           mask
+ 282: JUMP_FORWARD         to 288
+ 284: LOAD_CONST           ''
+ 286: STORE_FAST           codeset
+ 288: LOAD_FAST            loc
+ 290: LOAD_METHOD          find
+ 312: LOAD_CONST           '_'
+ 314: PRECALL              
+ 318: CALL                 
+ 328: STORE_FAST           pos
+ 330: LOAD_FAST            pos
+ 332: LOAD_CONST           0
+ 334: COMPARE_OP           >=
+ 340: POP_JUMP_FORWARD_IF_FALSE to 394
+ 342: LOAD_FAST            loc
+ 344: LOAD_FAST            pos
+ 346: LOAD_CONST           None
+ 348: BUILD_SLICE          
+ 350: BINARY_SUBSCR        
+ 360: STORE_FAST           territory
+ 362: LOAD_FAST            loc
+ 364: LOAD_CONST           None
+ 366: LOAD_FAST            pos
+ 368: BUILD_SLICE          
+ 370: BINARY_SUBSCR        
+ 380: STORE_FAST           loc
+ 382: LOAD_FAST            mask
+ 384: LOAD_FAST            COMPONENT_TERRITORY
+ 386: BINARY_OP            |=
+ 390: STORE_FAST           mask
+ 392: JUMP_FORWARD         to 398
+ 394: LOAD_CONST           ''
+ 396: STORE_FAST           territory
+ 398: LOAD_FAST            loc
+ 400: STORE_FAST           language
+ 402: BUILD_LIST           
+ 404: STORE_FAST           ret
+ 406: LOAD_GLOBAL          NULL + range
+ 418: LOAD_FAST            mask
+ 420: LOAD_CONST           1
+ 422: BINARY_OP            +
+ 426: PRECALL              
+ 430: CALL                 
+ 440: GET_ITER             
+ 442: FOR_ITER             to 566
+ 444: STORE_FAST           i
+ 446: LOAD_FAST            i
+ 448: LOAD_FAST            mask
+ 450: UNARY_INVERT         
+ 452: BINARY_OP            &
+ 456: POP_JUMP_FORWARD_IF_TRUE to 564
+ 458: LOAD_FAST            language
+ 460: STORE_FAST           val
+ 462: LOAD_FAST            i
+ 464: LOAD_FAST            COMPONENT_TERRITORY
+ 466: BINARY_OP            &
+ 470: POP_JUMP_FORWARD_IF_FALSE to 482
+ 472: LOAD_FAST            val
+ 474: LOAD_FAST            territory
+ 476: BINARY_OP            +=
+ 480: STORE_FAST           val
+ 482: LOAD_FAST            i
+ 484: LOAD_FAST            COMPONENT_CODESET
+ 486: BINARY_OP            &
+ 490: POP_JUMP_FORWARD_IF_FALSE to 502
+ 492: LOAD_FAST            val
+ 494: LOAD_FAST            codeset
+ 496: BINARY_OP            +=
+ 500: STORE_FAST           val
+ 502: LOAD_FAST            i
+ 504: LOAD_FAST            COMPONENT_MODIFIER
+ 506: BINARY_OP            &
+ 510: POP_JUMP_FORWARD_IF_FALSE to 522
+ 512: LOAD_FAST            val
+ 514: LOAD_FAST            modifier
+ 516: BINARY_OP            +=
+ 520: STORE_FAST           val
+ 522: LOAD_FAST            ret
+ 524: LOAD_METHOD          append
+ 546: LOAD_FAST            val
+ 548: PRECALL              
+ 552: CALL                 
+ 562: POP_TOP              
+ 564: JUMP_BACKWARD        to 442
+ 566: LOAD_FAST            ret
+ 568: LOAD_METHOD          reverse
+ 590: PRECALL              
+ 594: CALL                 
+ 604: POP_TOP              
+ 606: LOAD_FAST            ret
+ 608: RETURN_VALUE         

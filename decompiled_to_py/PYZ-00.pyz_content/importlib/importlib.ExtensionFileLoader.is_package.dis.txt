@@ -1,0 +1,33 @@
+# Disassembly for importlib.ExtensionFileLoader.is_package
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Return True if the extension module is a package.', 1, <code object <genexpr> at 0x000002406945D6B0, file "importlib\_bootstrap_external.py", line 1248>)
+
+## co_names:
+('_path_split', 'path', 'any', 'EXTENSION_SUFFIXES')
+
+## bytecode:
+
+   0: MAKE_CELL            file_name
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + _path_split
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            path
+  28: PRECALL              
+  32: CALL                 
+  42: LOAD_CONST           1
+  44: BINARY_SUBSCR        
+  54: STORE_DEREF          file_name
+  56: LOAD_GLOBAL          NULL + any
+  68: LOAD_CLOSURE         file_name
+  70: BUILD_TUPLE          
+  72: LOAD_CONST           <code object <genexpr> at 0x000002406945D6B0, file "importlib\_bootstrap_external.py", line 1248>
+  74: MAKE_FUNCTION        closure
+  76: LOAD_GLOBAL          EXTENSION_SUFFIXES
+  88: GET_ITER             
+  90: PRECALL              
+  94: CALL                 
+ 104: PRECALL              
+ 108: CALL                 
+ 118: RETURN_VALUE         

@@ -1,0 +1,19 @@
+# Disassembly for stringprep.in_table_c8
+# From module file: stringprep
+
+## co_consts:
+(None,)
+
+## co_names:
+('ord', 'c8_set')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + ord
+  14: LOAD_FAST            code
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_GLOBAL          c8_set
+  42: CONTAINS_OP          
+  44: RETURN_VALUE         

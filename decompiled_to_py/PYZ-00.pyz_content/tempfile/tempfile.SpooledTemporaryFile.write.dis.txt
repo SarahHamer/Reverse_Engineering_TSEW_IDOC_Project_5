@@ -1,0 +1,29 @@
+# Disassembly for tempfile.SpooledTemporaryFile.write
+# From module file: tempfile
+
+## co_consts:
+(None,)
+
+## co_names:
+('_file', 'write', '_check')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _file
+  14: STORE_FAST           file
+  16: LOAD_FAST            file
+  18: LOAD_METHOD          write
+  40: LOAD_FAST            s
+  42: PRECALL              
+  46: CALL                 
+  56: STORE_FAST           rv
+  58: LOAD_FAST            self
+  60: LOAD_METHOD          _check
+  82: LOAD_FAST            file
+  84: PRECALL              
+  88: CALL                 
+  98: POP_TOP              
+ 100: LOAD_FAST            rv
+ 102: RETURN_VALUE         

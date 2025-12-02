@@ -1,0 +1,167 @@
+# Disassembly for dataclasses.make_dataclass
+# From module file: dataclasses
+
+## co_consts:
+("Return a new dynamically created dataclass.\n\n    The dataclass name will be 'cls_name'.  'fields' is an iterable\n    of either (name), (name, type) or (name, type, Field) objects. If type is\n    omitted, use the string 'typing.Any'.  Field objects are created by\n    the equivalent of calling 'field(name, type [, Field-info])'.::\n\n      C = make_dataclass('C', ['x', ('y', int), ('z', int, field(init=False))], bases=(Base,))\n\n    is equivalent to::\n\n      @dataclass\n      class C(Base):\n          x: 'typing.Any'\n          y: int\n          z: int = field(init=False)\n\n    For the bases and namespace parameters, see the builtin type() function.\n\n    The parameters init, repr, eq, order, unsafe_hash, and frozen are passed to\n    dataclass().\n    ", None, 'typing.Any', 2, 3, 'Invalid field: ', 'Field names must be valid identifiers: ', 'Field names must not be keywords: ', 'Field name duplicated: ', <code object exec_body_callback at 0x0000024069419B30, file "dataclasses.py", line 1437>, ('init', 'repr', 'eq', 'order', 'unsafe_hash', 'frozen', 'match_args', 'kw_only', 'slots', 'weakref_slot'))
+
+## co_names:
+('set', 'isinstance', 'str', 'len', 'TypeError', 'isidentifier', 'keyword', 'iskeyword', 'add', 'types', 'new_class', 'dataclass')
+
+## bytecode:
+
+   0: MAKE_CELL            namespace
+   2: MAKE_CELL            annotations
+   4: MAKE_CELL            defaults
+   6: RESUME               
+   8: LOAD_DEREF           namespace
+  10: POP_JUMP_FORWARD_IF_NOT_NONE to 16
+  12: BUILD_MAP            
+  14: STORE_DEREF          namespace
+  16: LOAD_GLOBAL          NULL + set
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           seen
+  44: BUILD_MAP            
+  46: STORE_DEREF          annotations
+  48: BUILD_MAP            
+  50: STORE_DEREF          defaults
+  52: LOAD_FAST            fields
+  54: GET_ITER             
+  56: FOR_ITER             to 552
+  58: STORE_FAST           item
+  60: LOAD_GLOBAL          NULL + isinstance
+  72: LOAD_FAST            item
+  74: LOAD_GLOBAL          str
+  86: PRECALL              
+  90: CALL                 
+ 100: POP_JUMP_FORWARD_IF_FALSE to 112
+ 102: LOAD_FAST            item
+ 104: STORE_FAST           name
+ 106: LOAD_CONST           'typing.Any'
+ 108: STORE_FAST           tp
+ 110: JUMP_FORWARD         to 260
+ 112: LOAD_GLOBAL          NULL + len
+ 124: LOAD_FAST            item
+ 126: PRECALL              
+ 130: CALL                 
+ 140: LOAD_CONST           2
+ 142: COMPARE_OP           ==
+ 148: POP_JUMP_FORWARD_IF_FALSE to 162
+ 150: LOAD_FAST            item
+ 152: UNPACK_SEQUENCE      
+ 156: STORE_FAST           name
+ 158: STORE_FAST           tp
+ 160: JUMP_FORWARD         to 260
+ 162: LOAD_GLOBAL          NULL + len
+ 174: LOAD_FAST            item
+ 176: PRECALL              
+ 180: CALL                 
+ 190: LOAD_CONST           3
+ 192: COMPARE_OP           ==
+ 198: POP_JUMP_FORWARD_IF_FALSE to 224
+ 200: LOAD_FAST            item
+ 202: UNPACK_SEQUENCE      
+ 206: STORE_FAST           name
+ 208: STORE_FAST           tp
+ 210: STORE_FAST           spec
+ 212: LOAD_FAST            spec
+ 214: LOAD_DEREF           defaults
+ 216: LOAD_FAST            name
+ 218: STORE_SUBSCR         
+ 222: JUMP_FORWARD         to 260
+ 224: LOAD_GLOBAL          NULL + TypeError
+ 236: LOAD_CONST           'Invalid field: '
+ 238: LOAD_FAST            item
+ 240: FORMAT_VALUE         repr
+ 242: BUILD_STRING         
+ 244: PRECALL              
+ 248: CALL                 
+ 258: RAISE_VARARGS        
+ 260: LOAD_GLOBAL          NULL + isinstance
+ 272: LOAD_FAST            name
+ 274: LOAD_GLOBAL          str
+ 286: PRECALL              
+ 290: CALL                 
+ 300: POP_JUMP_FORWARD_IF_FALSE to 342
+ 302: LOAD_FAST            name
+ 304: LOAD_METHOD          isidentifier
+ 326: PRECALL              
+ 330: CALL                 
+ 340: POP_JUMP_FORWARD_IF_TRUE to 378
+ 342: LOAD_GLOBAL          NULL + TypeError
+ 354: LOAD_CONST           'Field names must be valid identifiers: '
+ 356: LOAD_FAST            name
+ 358: FORMAT_VALUE         repr
+ 360: BUILD_STRING         
+ 362: PRECALL              
+ 366: CALL                 
+ 376: RAISE_VARARGS        
+ 378: LOAD_GLOBAL          NULL + keyword
+ 390: LOAD_ATTR            iskeyword
+ 400: LOAD_FAST            name
+ 402: PRECALL              
+ 406: CALL                 
+ 416: POP_JUMP_FORWARD_IF_FALSE to 454
+ 418: LOAD_GLOBAL          NULL + TypeError
+ 430: LOAD_CONST           'Field names must not be keywords: '
+ 432: LOAD_FAST            name
+ 434: FORMAT_VALUE         repr
+ 436: BUILD_STRING         
+ 438: PRECALL              
+ 442: CALL                 
+ 452: RAISE_VARARGS        
+ 454: LOAD_FAST            name
+ 456: LOAD_FAST            seen
+ 458: CONTAINS_OP          
+ 460: POP_JUMP_FORWARD_IF_FALSE to 498
+ 462: LOAD_GLOBAL          NULL + TypeError
+ 474: LOAD_CONST           'Field name duplicated: '
+ 476: LOAD_FAST            name
+ 478: FORMAT_VALUE         repr
+ 480: BUILD_STRING         
+ 482: PRECALL              
+ 486: CALL                 
+ 496: RAISE_VARARGS        
+ 498: LOAD_FAST            seen
+ 500: LOAD_METHOD          add
+ 522: LOAD_FAST            name
+ 524: PRECALL              
+ 528: CALL                 
+ 538: POP_TOP              
+ 540: LOAD_FAST            tp
+ 542: LOAD_DEREF           annotations
+ 544: LOAD_FAST            name
+ 546: STORE_SUBSCR         
+ 550: JUMP_BACKWARD        to 56
+ 552: LOAD_CLOSURE         annotations
+ 554: LOAD_CLOSURE         defaults
+ 556: LOAD_CLOSURE         namespace
+ 558: BUILD_TUPLE          
+ 560: LOAD_CONST           <code object exec_body_callback at 0x0000024069419B30, file "dataclasses.py", line 1437>
+ 562: MAKE_FUNCTION        closure
+ 564: STORE_FAST           exec_body_callback
+ 566: LOAD_GLOBAL          NULL + types
+ 578: LOAD_ATTR            new_class
+ 588: LOAD_FAST            cls_name
+ 590: LOAD_FAST            bases
+ 592: BUILD_MAP            
+ 594: LOAD_FAST            exec_body_callback
+ 596: PRECALL              
+ 600: CALL                 
+ 610: STORE_FAST           cls
+ 612: LOAD_GLOBAL          NULL + dataclass
+ 624: LOAD_FAST            cls
+ 626: LOAD_FAST            init
+ 628: LOAD_FAST            repr
+ 630: LOAD_FAST            eq
+ 632: LOAD_FAST            order
+ 634: LOAD_FAST            unsafe_hash
+ 636: LOAD_FAST            frozen
+ 638: LOAD_FAST            match_args
+ 640: LOAD_FAST            kw_only
+ 642: LOAD_FAST            slots
+ 644: LOAD_FAST            weakref_slot
+ 646: KW_NAMES             
+ 648: PRECALL              
+ 652: CALL                 
+ 662: RETURN_VALUE         

@@ -1,0 +1,18 @@
+# Disassembly for _compression.DecompressReader.seekable
+# From module file: _compression
+
+## co_consts:
+(None,)
+
+## co_names:
+('_fp', 'seekable')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _fp
+  14: LOAD_METHOD          seekable
+  36: PRECALL              
+  40: CALL                 
+  50: RETURN_VALUE         

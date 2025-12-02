@@ -1,0 +1,41 @@
+# Disassembly for _pydecimal.Context.power
+# From module file: _pydecimal
+
+## co_consts:
+("Raises a to the power of b, to modulo if given.\n\n        With two arguments, compute a**b.  If a is negative then b\n        must be integral.  The result will be inexact unless b is\n        integral and the result is finite and can be expressed exactly\n        in 'precision' digits.\n\n        With three arguments, compute (a**b) % modulo.  For the\n        three argument form, the following restrictions on the\n        arguments hold:\n\n         - all three arguments must be integral\n         - b must be nonnegative\n         - at least one of a or b must be nonzero\n         - modulo must be nonzero and have at most 'precision' digits\n\n        The result of pow(a, b, modulo) is identical to the result\n        that would be obtained by computing (a**b) % modulo with\n        unbounded precision, but is computed more efficiently.  It is\n        always exact.\n\n        >>> c = ExtendedContext.copy()\n        >>> c.Emin = -999\n        >>> c.Emax = 999\n        >>> c.power(Decimal('2'), Decimal('3'))\n        Decimal('8')\n        >>> c.power(Decimal('-2'), Decimal('3'))\n        Decimal('-8')\n        >>> c.power(Decimal('2'), Decimal('-3'))\n        Decimal('0.125')\n        >>> c.power(Decimal('1.7'), Decimal('8'))\n        Decimal('69.7575744')\n        >>> c.power(Decimal('10'), Decimal('0.301029996'))\n        Decimal('2.00000000')\n        >>> c.power(Decimal('Infinity'), Decimal('-1'))\n        Decimal('0')\n        >>> c.power(Decimal('Infinity'), Decimal('0'))\n        Decimal('1')\n        >>> c.power(Decimal('Infinity'), Decimal('1'))\n        Decimal('Infinity')\n        >>> c.power(Decimal('-Infinity'), Decimal('-1'))\n        Decimal('-0')\n        >>> c.power(Decimal('-Infinity'), Decimal('0'))\n        Decimal('1')\n        >>> c.power(Decimal('-Infinity'), Decimal('1'))\n        Decimal('-Infinity')\n        >>> c.power(Decimal('-Infinity'), Decimal('2'))\n        Decimal('Infinity')\n        >>> c.power(Decimal('0'), Decimal('0'))\n        Decimal('NaN')\n\n        >>> c.power(Decimal('3'), Decimal('7'), Decimal('16'))\n        Decimal('11')\n        >>> c.power(Decimal('-3'), Decimal('7'), Decimal('16'))\n        Decimal('-11')\n        >>> c.power(Decimal('-3'), Decimal('8'), Decimal('16'))\n        Decimal('1')\n        >>> c.power(Decimal('3'), Decimal('7'), Decimal('-16'))\n        Decimal('11')\n        >>> c.power(Decimal('23E12345'), Decimal('67E189'), Decimal('123456789'))\n        Decimal('11729830')\n        >>> c.power(Decimal('-0'), Decimal('17'), Decimal('1729'))\n        Decimal('-0')\n        >>> c.power(Decimal('-23'), Decimal('0'), Decimal('65537'))\n        Decimal('1')\n        >>> ExtendedContext.power(7, 7)\n        Decimal('823543')\n        >>> ExtendedContext.power(Decimal(7), 7)\n        Decimal('823543')\n        >>> ExtendedContext.power(7, Decimal(7), 2)\n        Decimal('1')\n        ", True, ('raiseit',), ('context',), 'Unable to convert %s to Decimal')
+
+## co_names:
+('_convert_other', '__pow__', 'NotImplemented', 'TypeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _convert_other
+  14: LOAD_FAST            a
+  16: LOAD_CONST           True
+  18: KW_NAMES             
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           a
+  36: LOAD_FAST            a
+  38: LOAD_METHOD          __pow__
+  60: LOAD_FAST            b
+  62: LOAD_FAST            modulo
+  64: LOAD_FAST            self
+  66: KW_NAMES             
+  68: PRECALL              
+  72: CALL                 
+  82: STORE_FAST           r
+  84: LOAD_FAST            r
+  86: LOAD_GLOBAL          NotImplemented
+  98: IS_OP                
+ 100: POP_JUMP_FORWARD_IF_FALSE to 138
+ 102: LOAD_GLOBAL          NULL + TypeError
+ 114: LOAD_CONST           'Unable to convert %s to Decimal'
+ 116: LOAD_FAST            b
+ 118: BINARY_OP            %
+ 122: PRECALL              
+ 126: CALL                 
+ 136: RAISE_VARARGS        
+ 138: LOAD_FAST            r
+ 140: RETURN_VALUE         

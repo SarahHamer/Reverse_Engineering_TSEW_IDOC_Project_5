@@ -1,0 +1,17 @@
+# Disassembly for _pydecimal.Decimal.is_infinite
+# From module file: _pydecimal
+
+## co_consts:
+('Return True if self is infinite; otherwise return False.', 'F')
+
+## co_names:
+('_exp',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _exp
+  14: LOAD_CONST           'F'
+  16: COMPARE_OP           ==
+  22: RETURN_VALUE         

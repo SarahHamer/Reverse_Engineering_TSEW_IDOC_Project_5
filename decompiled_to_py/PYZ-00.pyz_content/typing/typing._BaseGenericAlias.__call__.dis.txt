@@ -1,0 +1,57 @@
+# Disassembly for typing._BaseGenericAlias.__call__
+# From module file: typing
+
+## co_consts:
+(None, 'Type ', ' cannot be instantiated; use ', '() instead')
+
+## co_names:
+('_inst', 'TypeError', '_name', '__origin__', '__name__', '__orig_class__', 'AttributeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _inst
+  14: POP_JUMP_FORWARD_IF_TRUE to 90
+  16: LOAD_GLOBAL          NULL + TypeError
+  28: LOAD_CONST           'Type '
+  30: LOAD_FAST            self
+  32: LOAD_ATTR            _name
+  42: FORMAT_VALUE         
+  44: LOAD_CONST           ' cannot be instantiated; use '
+  46: LOAD_FAST            self
+  48: LOAD_ATTR            __origin__
+  58: LOAD_ATTR            __name__
+  68: FORMAT_VALUE         
+  70: LOAD_CONST           '() instead'
+  72: BUILD_STRING         
+  74: PRECALL              
+  78: CALL                 
+  88: RAISE_VARARGS        
+  90: PUSH_NULL            
+  92: LOAD_FAST            self
+  94: LOAD_ATTR            __origin__
+ 104: LOAD_FAST            args
+ 106: BUILD_MAP            
+ 108: LOAD_FAST            kwargs
+ 110: DICT_MERGE           
+ 112: CALL_FUNCTION_EX     
+ 114: STORE_FAST           result
+ 116: NOP                  
+ 118: LOAD_FAST            self
+ 120: LOAD_FAST            result
+ 122: STORE_ATTR           __orig_class__
+ 132: JUMP_FORWARD         to 166
+ 134: PUSH_EXC_INFO        
+ 136: LOAD_GLOBAL          AttributeError
+ 148: CHECK_EXC_MATCH      
+ 150: POP_JUMP_FORWARD_IF_FALSE to 158
+ 152: POP_TOP              
+ 154: POP_EXCEPT           
+ 156: JUMP_FORWARD         to 166
+ 158: RERAISE              
+ 160: COPY                 
+ 162: POP_EXCEPT           
+ 164: RERAISE              
+ 166: LOAD_FAST            result
+ 168: RETURN_VALUE         

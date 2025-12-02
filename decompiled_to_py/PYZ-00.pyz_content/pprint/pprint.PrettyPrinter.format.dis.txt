@@ -1,0 +1,21 @@
+# Disassembly for pprint.PrettyPrinter.format
+# From module file: pprint
+
+## co_consts:
+("Format object for a specific context, returning a string\n        and flags indicating whether the representation is 'readable'\n        and whether the object represents a recursive construct.\n        ",)
+
+## co_names:
+('_safe_repr',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _safe_repr
+  26: LOAD_FAST            object
+  28: LOAD_FAST            context
+  30: LOAD_FAST            maxlevels
+  32: LOAD_FAST            level
+  34: PRECALL              
+  38: CALL                 
+  48: RETURN_VALUE         

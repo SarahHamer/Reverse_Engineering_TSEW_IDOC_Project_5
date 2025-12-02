@@ -1,0 +1,17 @@
+# Disassembly for _pydecimal.Decimal.is_qnan
+# From module file: _pydecimal
+
+## co_consts:
+('Return True if self is a quiet NaN; otherwise return False.', 'n')
+
+## co_names:
+('_exp',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _exp
+  14: LOAD_CONST           'n'
+  16: COMPARE_OP           ==
+  22: RETURN_VALUE         

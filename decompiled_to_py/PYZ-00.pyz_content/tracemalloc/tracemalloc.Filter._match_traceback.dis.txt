@@ -1,0 +1,48 @@
+# Disassembly for tracemalloc.Filter._match_traceback
+# From module file: tracemalloc
+
+## co_consts:
+(None, <code object <genexpr> at 0x000002406944A9A0, file "tracemalloc.py", line 381>, 0)
+
+## co_names:
+('all_frames', 'any', 'inclusive', '_match_frame')
+
+## bytecode:
+
+   0: MAKE_CELL            self
+   2: RESUME               
+   4: LOAD_DEREF           self
+   6: LOAD_ATTR            all_frames
+  16: POP_JUMP_FORWARD_IF_FALSE to 102
+  18: LOAD_GLOBAL          NULL + any
+  30: LOAD_CLOSURE         self
+  32: BUILD_TUPLE          
+  34: LOAD_CONST           <code object <genexpr> at 0x000002406944A9A0, file "tracemalloc.py", line 381>
+  36: MAKE_FUNCTION        closure
+  38: LOAD_FAST            traceback
+  40: GET_ITER             
+  42: PRECALL              
+  46: CALL                 
+  56: PRECALL              
+  60: CALL                 
+  70: POP_JUMP_FORWARD_IF_FALSE to 86
+  72: LOAD_DEREF           self
+  74: LOAD_ATTR            inclusive
+  84: RETURN_VALUE         
+  86: LOAD_DEREF           self
+  88: LOAD_ATTR            inclusive
+  98: UNARY_NOT            
+ 100: RETURN_VALUE         
+ 102: LOAD_FAST            traceback
+ 104: LOAD_CONST           0
+ 106: BINARY_SUBSCR        
+ 116: UNPACK_SEQUENCE      
+ 120: STORE_FAST           filename
+ 122: STORE_FAST           lineno
+ 124: LOAD_DEREF           self
+ 126: LOAD_METHOD          _match_frame
+ 148: LOAD_FAST            filename
+ 150: LOAD_FAST            lineno
+ 152: PRECALL              
+ 156: CALL                 
+ 166: RETURN_VALUE         

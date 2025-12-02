@@ -1,0 +1,59 @@
+# Disassembly for email.Charset._get_encoder
+# From module file: email.charset
+
+## co_consts:
+(None,)
+
+## co_names:
+('header_encoding', 'BASE64', 'email', 'base64mime', 'QP', 'quoprimime', 'SHORTEST', 'header_length')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            header_encoding
+  14: LOAD_GLOBAL          BASE64
+  26: COMPARE_OP           ==
+  32: POP_JUMP_FORWARD_IF_FALSE to 58
+  34: LOAD_GLOBAL          email
+  46: LOAD_ATTR            base64mime
+  56: RETURN_VALUE         
+  58: LOAD_FAST            self
+  60: LOAD_ATTR            header_encoding
+  70: LOAD_GLOBAL          QP
+  82: COMPARE_OP           ==
+  88: POP_JUMP_FORWARD_IF_FALSE to 114
+  90: LOAD_GLOBAL          email
+ 102: LOAD_ATTR            quoprimime
+ 112: RETURN_VALUE         
+ 114: LOAD_FAST            self
+ 116: LOAD_ATTR            header_encoding
+ 126: LOAD_GLOBAL          SHORTEST
+ 138: COMPARE_OP           ==
+ 144: POP_JUMP_FORWARD_IF_FALSE to 330
+ 146: LOAD_GLOBAL          email
+ 158: LOAD_ATTR            base64mime
+ 168: LOAD_METHOD          header_length
+ 190: LOAD_FAST            header_bytes
+ 192: PRECALL              
+ 196: CALL                 
+ 206: STORE_FAST           len64
+ 208: LOAD_GLOBAL          email
+ 220: LOAD_ATTR            quoprimime
+ 230: LOAD_METHOD          header_length
+ 252: LOAD_FAST            header_bytes
+ 254: PRECALL              
+ 258: CALL                 
+ 268: STORE_FAST           lenqp
+ 270: LOAD_FAST            len64
+ 272: LOAD_FAST            lenqp
+ 274: COMPARE_OP           <
+ 280: POP_JUMP_FORWARD_IF_FALSE to 306
+ 282: LOAD_GLOBAL          email
+ 294: LOAD_ATTR            base64mime
+ 304: RETURN_VALUE         
+ 306: LOAD_GLOBAL          email
+ 318: LOAD_ATTR            quoprimime
+ 328: RETURN_VALUE         
+ 330: LOAD_CONST           None
+ 332: RETURN_VALUE         

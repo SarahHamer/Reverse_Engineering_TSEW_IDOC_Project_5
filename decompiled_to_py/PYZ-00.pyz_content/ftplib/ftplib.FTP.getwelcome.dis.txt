@@ -1,0 +1,29 @@
+# Disassembly for ftplib.FTP.getwelcome
+# From module file: ftplib
+
+## co_consts:
+('Get the welcome message from the server.\n        (this is read and squirreled away by connect())', '*welcome*')
+
+## co_names:
+('debugging', 'print', 'sanitize', 'welcome')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            debugging
+  14: POP_JUMP_FORWARD_IF_FALSE to 96
+  16: LOAD_GLOBAL          NULL + print
+  28: LOAD_CONST           '*welcome*'
+  30: LOAD_FAST            self
+  32: LOAD_METHOD          sanitize
+  54: LOAD_FAST            self
+  56: LOAD_ATTR            welcome
+  66: PRECALL              
+  70: CALL                 
+  80: PRECALL              
+  84: CALL                 
+  94: POP_TOP              
+  96: LOAD_FAST            self
+  98: LOAD_ATTR            welcome
+ 108: RETURN_VALUE         

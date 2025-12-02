@@ -1,0 +1,76 @@
+# Disassembly for typing._GenericAlias.__getitem__
+# From module file: typing
+
+## co_consts:
+(None, 'Cannot subscript already-subscripted ', ' is not a generic class', <code object <genexpr> at 0x000002406945ED30, file "typing.py", line 1406>)
+
+## co_names:
+('__origin__', 'Generic', 'Protocol', 'TypeError', '__parameters__', 'isinstance', 'tuple', '_unpack_args', '_determine_new_args', 'copy_with')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            __origin__
+  14: LOAD_GLOBAL          Generic
+  26: LOAD_GLOBAL          Protocol
+  38: BUILD_TUPLE          
+  40: CONTAINS_OP          
+  42: POP_JUMP_FORWARD_IF_FALSE to 80
+  44: LOAD_GLOBAL          NULL + TypeError
+  56: LOAD_CONST           'Cannot subscript already-subscripted '
+  58: LOAD_FAST            self
+  60: FORMAT_VALUE         
+  62: BUILD_STRING         
+  64: PRECALL              
+  68: CALL                 
+  78: RAISE_VARARGS        
+  80: LOAD_FAST            self
+  82: LOAD_ATTR            __parameters__
+  92: POP_JUMP_FORWARD_IF_TRUE to 130
+  94: LOAD_GLOBAL          NULL + TypeError
+ 106: LOAD_FAST            self
+ 108: FORMAT_VALUE         
+ 110: LOAD_CONST           ' is not a generic class'
+ 112: BUILD_STRING         
+ 114: PRECALL              
+ 118: CALL                 
+ 128: RAISE_VARARGS        
+ 130: LOAD_GLOBAL          NULL + isinstance
+ 142: LOAD_FAST            args
+ 144: LOAD_GLOBAL          tuple
+ 156: PRECALL              
+ 160: CALL                 
+ 170: POP_JUMP_FORWARD_IF_TRUE to 178
+ 172: LOAD_FAST            args
+ 174: BUILD_TUPLE          
+ 176: STORE_FAST           args
+ 178: LOAD_GLOBAL          NULL + tuple
+ 190: LOAD_CONST           <code object <genexpr> at 0x000002406945ED30, file "typing.py", line 1406>
+ 192: MAKE_FUNCTION        
+ 194: LOAD_FAST            args
+ 196: GET_ITER             
+ 198: PRECALL              
+ 202: CALL                 
+ 212: PRECALL              
+ 216: CALL                 
+ 226: STORE_FAST           args
+ 228: LOAD_GLOBAL          NULL + _unpack_args
+ 240: LOAD_FAST            args
+ 242: PRECALL              
+ 246: CALL                 
+ 256: STORE_FAST           args
+ 258: LOAD_FAST            self
+ 260: LOAD_METHOD          _determine_new_args
+ 282: LOAD_FAST            args
+ 284: PRECALL              
+ 288: CALL                 
+ 298: STORE_FAST           new_args
+ 300: LOAD_FAST            self
+ 302: LOAD_METHOD          copy_with
+ 324: LOAD_FAST            new_args
+ 326: PRECALL              
+ 330: CALL                 
+ 340: STORE_FAST           r
+ 342: LOAD_FAST            r
+ 344: RETURN_VALUE         

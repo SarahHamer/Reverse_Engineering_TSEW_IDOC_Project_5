@@ -1,0 +1,22 @@
+# Disassembly for email.MIMEPart.make_alternative
+# From module file: email.message
+
+## co_consts:
+(None, 'alternative', ('mixed',))
+
+## co_names:
+('_make_multipart',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _make_multipart
+  26: LOAD_CONST           'alternative'
+  28: LOAD_CONST           ('mixed',)
+  30: LOAD_FAST            boundary
+  32: PRECALL              
+  36: CALL                 
+  46: POP_TOP              
+  48: LOAD_CONST           None
+  50: RETURN_VALUE         

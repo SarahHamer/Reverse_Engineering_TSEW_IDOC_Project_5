@@ -1,0 +1,18 @@
+# Disassembly for importlib._path_stat
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Stat the path.\n\n    Made a separate function to make it easier to override in experiments\n    (e.g. cache stat results).\n\n    ',)
+
+## co_names:
+('_os', 'stat')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _os
+  14: LOAD_ATTR            stat
+  24: LOAD_FAST            path
+  26: PRECALL              
+  30: CALL                 
+  40: RETURN_VALUE         

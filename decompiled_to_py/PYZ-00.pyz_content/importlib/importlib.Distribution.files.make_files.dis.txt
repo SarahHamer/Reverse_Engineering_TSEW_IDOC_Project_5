@@ -1,0 +1,26 @@
+# Disassembly for importlib.Distribution.files.make_files
+# From module file: importlib.metadata
+
+## co_consts:
+(None,)
+
+## co_names:
+('list', 'starmap', 'csv', 'reader')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + list
+  16: LOAD_GLOBAL          NULL + starmap
+  28: LOAD_DEREF           make_file
+  30: LOAD_GLOBAL          NULL + csv
+  42: LOAD_ATTR            reader
+  52: LOAD_FAST            lines
+  54: PRECALL              
+  58: CALL                 
+  68: PRECALL              
+  72: CALL                 
+  82: PRECALL              
+  86: CALL                 
+  96: RETURN_VALUE         

@@ -1,0 +1,31 @@
+# Disassembly for email.Compat32.fold_binary
+# From module file: email._policybase
+
+## co_consts:
+('+\n        Headers are folded using the Header folding algorithm, which preserves\n        existing line breaks in the value, and wraps each resulting line to the\n        max_line_length.  If cte_type is 7bit, non-ascii binary data is CTE\n        encoded using the unknown-8bit charset.  Otherwise the original source\n        header is used, with its existing line breaks and/or binary data.\n\n        ', '7bit', ('sanitize',), 'ascii', 'surrogateescape')
+
+## co_names:
+('_fold', 'cte_type', 'encode')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _fold
+  26: LOAD_FAST            name
+  28: LOAD_FAST            value
+  30: LOAD_FAST            self
+  32: LOAD_ATTR            cte_type
+  42: LOAD_CONST           '7bit'
+  44: COMPARE_OP           ==
+  50: KW_NAMES             
+  52: PRECALL              
+  56: CALL                 
+  66: STORE_FAST           folded
+  68: LOAD_FAST            folded
+  70: LOAD_METHOD          encode
+  92: LOAD_CONST           'ascii'
+  94: LOAD_CONST           'surrogateescape'
+  96: PRECALL              
+ 100: CALL                 
+ 110: RETURN_VALUE         

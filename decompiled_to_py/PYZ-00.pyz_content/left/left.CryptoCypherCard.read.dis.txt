@@ -1,0 +1,93 @@
+# Disassembly for left.CryptoCypherCard.read
+# From module file: left
+
+## co_consts:
+(None, 'Cypher:', 0, 6, '|', 5, ' ', '=', '     ', '|\n')
+
+## co_names:
+('list', 'cypher', 'keys', 'range', 'len', 'send_message')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'Cypher:'
+   4: STORE_FAST           message
+   6: LOAD_GLOBAL          NULL + list
+  18: LOAD_GLOBAL          cypher
+  30: LOAD_METHOD          keys
+  52: PRECALL              
+  56: CALL                 
+  66: PRECALL              
+  70: CALL                 
+  80: STORE_FAST           cypher_keys
+  82: LOAD_GLOBAL          NULL + range
+  94: LOAD_CONST           0
+  96: LOAD_CONST           6
+  98: PRECALL              
+ 102: CALL                 
+ 112: GET_ITER             
+ 114: FOR_ITER             to 318
+ 116: STORE_FAST           row_num
+ 118: LOAD_CONST           '|'
+ 120: STORE_FAST           line
+ 122: LOAD_GLOBAL          NULL + range
+ 134: LOAD_CONST           0
+ 136: LOAD_CONST           5
+ 138: PRECALL              
+ 142: CALL                 
+ 152: GET_ITER             
+ 154: FOR_ITER             to 296
+ 156: STORE_FAST           col_num
+ 158: LOAD_FAST            row_num
+ 160: LOAD_CONST           5
+ 162: BINARY_OP            *
+ 166: LOAD_FAST            col_num
+ 168: BINARY_OP            +
+ 172: STORE_FAST           key_num
+ 174: LOAD_FAST            key_num
+ 176: LOAD_GLOBAL          NULL + len
+ 188: LOAD_FAST            cypher_keys
+ 190: PRECALL              
+ 194: CALL                 
+ 204: COMPARE_OP           <
+ 210: POP_JUMP_FORWARD_IF_FALSE to 284
+ 212: LOAD_FAST            line
+ 214: LOAD_CONST           ' '
+ 216: LOAD_GLOBAL          cypher
+ 228: LOAD_FAST            cypher_keys
+ 230: LOAD_FAST            key_num
+ 232: BINARY_SUBSCR        
+ 242: BINARY_SUBSCR        
+ 252: FORMAT_VALUE         str
+ 254: LOAD_CONST           '='
+ 256: LOAD_FAST            cypher_keys
+ 258: LOAD_FAST            key_num
+ 260: BINARY_SUBSCR        
+ 270: FORMAT_VALUE         str
+ 272: LOAD_CONST           ' '
+ 274: BUILD_STRING         
+ 276: BINARY_OP            +=
+ 280: STORE_FAST           line
+ 282: JUMP_BACKWARD        to 154
+ 284: LOAD_FAST            line
+ 286: LOAD_CONST           '     '
+ 288: BINARY_OP            +=
+ 292: STORE_FAST           line
+ 294: JUMP_BACKWARD        to 154
+ 296: LOAD_FAST            line
+ 298: LOAD_CONST           '|\n'
+ 300: BINARY_OP            +=
+ 304: STORE_FAST           line
+ 306: LOAD_FAST            message
+ 308: LOAD_FAST            line
+ 310: BINARY_OP            +=
+ 314: STORE_FAST           message
+ 316: JUMP_BACKWARD        to 114
+ 318: LOAD_FAST            self
+ 320: LOAD_METHOD          send_message
+ 342: LOAD_FAST            message
+ 344: PRECALL              
+ 348: CALL                 
+ 358: POP_TOP              
+ 360: LOAD_CONST           None
+ 362: RETURN_VALUE         

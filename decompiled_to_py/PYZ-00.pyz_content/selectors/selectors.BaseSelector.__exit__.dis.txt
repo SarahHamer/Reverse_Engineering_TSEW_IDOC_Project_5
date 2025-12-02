@@ -1,0 +1,19 @@
+# Disassembly for selectors.BaseSelector.__exit__
+# From module file: selectors
+
+## co_consts:
+(None,)
+
+## co_names:
+('close',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          close
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_CONST           None
+  44: RETURN_VALUE         

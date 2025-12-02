@@ -1,0 +1,20 @@
+# Disassembly for ssl.SSLObject.do_handshake
+# From module file: ssl
+
+## co_consts:
+('Start the SSL/TLS handshake.', None)
+
+## co_names:
+('_sslobj', 'do_handshake')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _sslobj
+  14: LOAD_METHOD          do_handshake
+  36: PRECALL              
+  40: CALL                 
+  50: POP_TOP              
+  52: LOAD_CONST           None
+  54: RETURN_VALUE         

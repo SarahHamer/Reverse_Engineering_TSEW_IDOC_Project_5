@@ -1,0 +1,46 @@
+# Disassembly for copy._keep_alive
+# From module file: copy
+
+## co_consts:
+('Keeps a reference to the object x in the memo.\n\n    Because we remember objects by their id, we have\n    to assure that possibly temporary objects are kept\n    alive by referencing them.\n    We store a reference at the id of the memo, which should\n    normally not be used unless someone tries to deepcopy\n    the memo itself...\n    ', None)
+
+## co_names:
+('id', 'append', 'KeyError')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            memo
+   6: LOAD_GLOBAL          NULL + id
+  18: LOAD_FAST            memo
+  20: PRECALL              
+  24: CALL                 
+  34: BINARY_SUBSCR        
+  44: LOAD_METHOD          append
+  66: LOAD_FAST            x
+  68: PRECALL              
+  72: CALL                 
+  82: POP_TOP              
+  84: LOAD_CONST           None
+  86: RETURN_VALUE         
+  88: PUSH_EXC_INFO        
+  90: LOAD_GLOBAL          KeyError
+ 102: CHECK_EXC_MATCH      
+ 104: POP_JUMP_FORWARD_IF_FALSE to 152
+ 106: POP_TOP              
+ 108: LOAD_FAST            x
+ 110: BUILD_LIST           
+ 112: LOAD_FAST            memo
+ 114: LOAD_GLOBAL          NULL + id
+ 126: LOAD_FAST            memo
+ 128: PRECALL              
+ 132: CALL                 
+ 142: STORE_SUBSCR         
+ 146: POP_EXCEPT           
+ 148: LOAD_CONST           None
+ 150: RETURN_VALUE         
+ 152: RERAISE              
+ 154: COPY                 
+ 156: POP_EXCEPT           
+ 158: RERAISE              

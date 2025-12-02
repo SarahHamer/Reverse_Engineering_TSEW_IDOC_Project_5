@@ -1,0 +1,19 @@
+# Disassembly for typing.ParamSpecArgs.__repr__
+# From module file: typing
+
+## co_consts:
+(None, '.args')
+
+## co_names:
+('__origin__', '__name__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            __origin__
+  14: LOAD_ATTR            __name__
+  24: FORMAT_VALUE         
+  26: LOAD_CONST           '.args'
+  28: BUILD_STRING         
+  30: RETURN_VALUE         

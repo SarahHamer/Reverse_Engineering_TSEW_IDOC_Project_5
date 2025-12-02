@@ -1,0 +1,106 @@
+# Disassembly for ssl.create_default_context
+# From module file: ssl
+
+## co_consts:
+('Create a SSLContext object with default settings.\n\n    NOTE: The protocol and settings may change anytime without prior\n          deprecation. The values represent a fair balance between maximum\n          compatibility and security.\n    ', True, 'keylog_filename', 'SSLKEYLOGFILE')
+
+## co_names:
+('isinstance', '_ASN1Object', 'TypeError', 'Purpose', 'SERVER_AUTH', 'SSLContext', 'PROTOCOL_TLS_CLIENT', 'CERT_REQUIRED', 'verify_mode', 'check_hostname', 'CLIENT_AUTH', 'PROTOCOL_TLS_SERVER', 'ValueError', 'load_verify_locations', 'CERT_NONE', 'load_default_certs', 'hasattr', 'os', 'environ', 'get', 'sys', 'flags', 'ignore_environment', 'keylog_filename')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            purpose
+  16: LOAD_GLOBAL          _ASN1Object
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_TRUE to 74
+  44: LOAD_GLOBAL          NULL + TypeError
+  56: LOAD_FAST            purpose
+  58: PRECALL              
+  62: CALL                 
+  72: RAISE_VARARGS        
+  74: LOAD_FAST            purpose
+  76: LOAD_GLOBAL          Purpose
+  88: LOAD_ATTR            SERVER_AUTH
+  98: COMPARE_OP           ==
+ 104: POP_JUMP_FORWARD_IF_FALSE to 186
+ 106: LOAD_GLOBAL          NULL + SSLContext
+ 118: LOAD_GLOBAL          PROTOCOL_TLS_CLIENT
+ 130: PRECALL              
+ 134: CALL                 
+ 144: STORE_FAST           context
+ 146: LOAD_GLOBAL          CERT_REQUIRED
+ 158: LOAD_FAST            context
+ 160: STORE_ATTR           verify_mode
+ 170: LOAD_CONST           True
+ 172: LOAD_FAST            context
+ 174: STORE_ATTR           check_hostname
+ 184: JUMP_FORWARD         to 290
+ 186: LOAD_FAST            purpose
+ 188: LOAD_GLOBAL          Purpose
+ 200: LOAD_ATTR            CLIENT_AUTH
+ 210: COMPARE_OP           ==
+ 216: POP_JUMP_FORWARD_IF_FALSE to 260
+ 218: LOAD_GLOBAL          NULL + SSLContext
+ 230: LOAD_GLOBAL          PROTOCOL_TLS_SERVER
+ 242: PRECALL              
+ 246: CALL                 
+ 256: STORE_FAST           context
+ 258: JUMP_FORWARD         to 290
+ 260: LOAD_GLOBAL          NULL + ValueError
+ 272: LOAD_FAST            purpose
+ 274: PRECALL              
+ 278: CALL                 
+ 288: RAISE_VARARGS        
+ 290: LOAD_FAST            cafile
+ 292: POP_JUMP_FORWARD_IF_TRUE to 302
+ 294: LOAD_FAST            capath
+ 296: POP_JUMP_FORWARD_IF_TRUE to 302
+ 298: LOAD_FAST            cadata
+ 300: POP_JUMP_FORWARD_IF_FALSE to 350
+ 302: LOAD_FAST            context
+ 304: LOAD_METHOD          load_verify_locations
+ 326: LOAD_FAST            cafile
+ 328: LOAD_FAST            capath
+ 330: LOAD_FAST            cadata
+ 332: PRECALL              
+ 336: CALL                 
+ 346: POP_TOP              
+ 348: JUMP_FORWARD         to 424
+ 350: LOAD_FAST            context
+ 352: LOAD_ATTR            verify_mode
+ 362: LOAD_GLOBAL          CERT_NONE
+ 374: COMPARE_OP           !=
+ 380: POP_JUMP_FORWARD_IF_FALSE to 424
+ 382: LOAD_FAST            context
+ 384: LOAD_METHOD          load_default_certs
+ 406: LOAD_FAST            purpose
+ 408: PRECALL              
+ 412: CALL                 
+ 422: POP_TOP              
+ 424: LOAD_GLOBAL          NULL + hasattr
+ 436: LOAD_FAST            context
+ 438: LOAD_CONST           'keylog_filename'
+ 440: PRECALL              
+ 444: CALL                 
+ 454: POP_JUMP_FORWARD_IF_FALSE to 570
+ 456: LOAD_GLOBAL          os
+ 468: LOAD_ATTR            environ
+ 478: LOAD_METHOD          get
+ 500: LOAD_CONST           'SSLKEYLOGFILE'
+ 502: PRECALL              
+ 506: CALL                 
+ 516: STORE_FAST           keylogfile
+ 518: LOAD_FAST            keylogfile
+ 520: POP_JUMP_FORWARD_IF_FALSE to 570
+ 522: LOAD_GLOBAL          sys
+ 534: LOAD_ATTR            flags
+ 544: LOAD_ATTR            ignore_environment
+ 554: POP_JUMP_FORWARD_IF_TRUE to 570
+ 556: LOAD_FAST            keylogfile
+ 558: LOAD_FAST            context
+ 560: STORE_ATTR           keylog_filename
+ 570: LOAD_FAST            context
+ 572: RETURN_VALUE         

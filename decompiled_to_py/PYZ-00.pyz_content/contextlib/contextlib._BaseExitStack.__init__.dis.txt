@@ -1,0 +1,19 @@
+# Disassembly for contextlib._BaseExitStack.__init__
+# From module file: contextlib
+
+## co_consts:
+(None,)
+
+## co_names:
+('deque', '_exit_callbacks')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + deque
+  14: PRECALL              
+  18: CALL                 
+  28: LOAD_FAST            self
+  30: STORE_ATTR           _exit_callbacks
+  40: LOAD_CONST           None
+  42: RETURN_VALUE         

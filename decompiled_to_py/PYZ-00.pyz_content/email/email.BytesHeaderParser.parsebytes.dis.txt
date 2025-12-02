@@ -1,0 +1,21 @@
+# Disassembly for email.BytesHeaderParser.parsebytes
+# From module file: email.parser
+
+## co_consts:
+(None, True, ('headersonly',))
+
+## co_names:
+('BytesParser', 'parsebytes')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          BytesParser
+  14: LOAD_METHOD          parsebytes
+  36: LOAD_FAST            self
+  38: LOAD_FAST            text
+  40: LOAD_CONST           True
+  42: KW_NAMES             
+  44: PRECALL              
+  48: CALL                 
+  58: RETURN_VALUE         

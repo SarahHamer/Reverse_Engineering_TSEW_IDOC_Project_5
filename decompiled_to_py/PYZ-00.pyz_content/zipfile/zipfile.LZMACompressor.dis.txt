@@ -1,0 +1,30 @@
+# Disassembly for zipfile.LZMACompressor
+# From module file: zipfile
+
+## co_consts:
+('LZMACompressor', <code object __init__ at 0x0000024069496180, file "zipfile.py", line 624>, <code object _init at 0x00000240691DABB0, file "zipfile.py", line 627>, <code object compress at 0x00000240691C1790, file "zipfile.py", line 634>, <code object flush at 0x00000240691C2810, file "zipfile.py", line 639>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', '_init', 'compress', 'flush')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'LZMACompressor'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           <code object __init__ at 0x0000024069496180, file "zipfile.py", line 624>
+  12: MAKE_FUNCTION        
+  14: STORE_NAME           __init__
+  16: LOAD_CONST           <code object _init at 0x00000240691DABB0, file "zipfile.py", line 627>
+  18: MAKE_FUNCTION        
+  20: STORE_NAME           _init
+  22: LOAD_CONST           <code object compress at 0x00000240691C1790, file "zipfile.py", line 634>
+  24: MAKE_FUNCTION        
+  26: STORE_NAME           compress
+  28: LOAD_CONST           <code object flush at 0x00000240691C2810, file "zipfile.py", line 639>
+  30: MAKE_FUNCTION        
+  32: STORE_NAME           flush
+  34: LOAD_CONST           None
+  36: RETURN_VALUE         

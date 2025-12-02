@@ -1,0 +1,16 @@
+# Disassembly for importlib._set_bootstrap_module
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+(None,)
+
+## co_names:
+('_bootstrap',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            _bootstrap_module
+   4: STORE_GLOBAL         _bootstrap
+   6: LOAD_CONST           None
+   8: RETURN_VALUE         

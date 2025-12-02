@@ -1,0 +1,36 @@
+# Disassembly for datetime.date.ctime
+# From module file: datetime
+
+## co_consts:
+('Return ctime() style string.', 7, '%s %s %2d 00:00:00 %04d')
+
+## co_names:
+('toordinal', '_DAYNAMES', '_MONTHNAMES', '_month', '_day', '_year')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          toordinal
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_CONST           7
+  42: BINARY_OP            %
+  46: JUMP_IF_TRUE_OR_POP  to 50
+  48: LOAD_CONST           7
+  50: STORE_FAST           weekday
+  52: LOAD_CONST           '%s %s %2d 00:00:00 %04d'
+  54: LOAD_GLOBAL          _DAYNAMES
+  66: LOAD_FAST            weekday
+  68: BINARY_SUBSCR        
+  78: LOAD_GLOBAL          _MONTHNAMES
+  90: LOAD_FAST            self
+  92: LOAD_ATTR            _month
+ 102: BINARY_SUBSCR        
+ 112: LOAD_FAST            self
+ 114: LOAD_ATTR            _day
+ 124: LOAD_FAST            self
+ 126: LOAD_ATTR            _year
+ 136: BUILD_TUPLE          
+ 138: BINARY_OP            %
+ 142: RETURN_VALUE         

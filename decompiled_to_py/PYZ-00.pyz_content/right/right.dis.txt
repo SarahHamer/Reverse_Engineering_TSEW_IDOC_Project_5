@@ -1,0 +1,117 @@
+# Disassembly for right
+# From module file: right
+
+## co_consts:
+(0, ('*',), 'Purple', 'yellow', ('name', 'compliment'), 'Red', 'green', 'Orange', 'blue', 'Blue', 'orange', 'Green', 'red', 'Yellow', 'purple', ('purple', 'red', 'orange', 'blue', 'green', 'yellow'), <code object ColorWheel at 0x00000240693AB5F0, file "right.py", line 14>, 'ColorWheel', <code object ColorButtons at 0x00000240691F39F0, file "right.py", line 46>, 'ColorButtons', <code object SheetMusicGuide at 0x00000240693AB230, file "right.py", line 93>, 'SheetMusicGuide', 'Mary Had a Little Lamb', 'E-D-C-D-E-E-E-D-D-D-E-G-G', '║---------│---------│---------│---------|\n║         │         │         │         |\n║---------│---------│---------│---------|\n║         │         │         │         |\n║---------│---------│---------│---------|\n║         │         │         │         |\n║---------│---------│---------│---O-O---|\n║         │         │         │         │\n║-O-------│-O-O-O---│---------│-O-------│\n    O   O             O O O              \n     -O-                                 ', ('name', 'notes', 'sheet'), 'Twinkle, Twinkle, Little Star', 'G-G-D-D-E-E-D-C-C-B-B-A-A-G', '║---------│---------│---------│---------|\n║         │ O O     │         │         |\n║-----O-O-│-----O---│---------│---------|\n║         │         │ O O     │         |\n║---------│---------│-----O-O-│---------|\n║         │         │         │ O O     |\n║-O-O-----│---------│---------│-----O---|\n║         │         │         │         │\n║---------│---------│---------│---------│', 'Camptown Races', 'D-D-B-D-E-D-B-B-A-B-A', '║---------│---------│---------│---------|\n║         │ O       │         │         |\n║-O-O---O-│---O-----│---------│---------|\n║         │         │         │         |\n║-----O---│-----O---│-O-------│-O-------|\n║         │         │   O     │   O     |\n║---------│---------│---------│---------|\n║         │         │         │         │\n║---------│---------│---------│---------│', ('M', 'T', 'C'), <code object MusicBook at 0x00000240693ABAF0, file "right.py", line 174>, 'MusicBook', <code object Piano at 0x00000240693A9570, file "right.py", line 196>, 'Piano', <code object Right at 0x00000240691F3B40, file "right.py", line 268>, 'Right', None)
+
+## co_names:
+('entities', 'colors', 'Item', 'ColorWheel', 'ColorButtons', 'SheetMusicGuide', 'songs', 'MusicBook', 'Piano', 'Room', 'Right')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           ('*',)
+   6: IMPORT_NAME          entities
+   8: IMPORT_STAR          
+  10: LOAD_CONST           'Purple'
+  12: LOAD_CONST           'yellow'
+  14: LOAD_CONST           ('name', 'compliment')
+  16: BUILD_CONST_KEY_MAP  
+  18: LOAD_CONST           'Red'
+  20: LOAD_CONST           'green'
+  22: LOAD_CONST           ('name', 'compliment')
+  24: BUILD_CONST_KEY_MAP  
+  26: LOAD_CONST           'Orange'
+  28: LOAD_CONST           'blue'
+  30: LOAD_CONST           ('name', 'compliment')
+  32: BUILD_CONST_KEY_MAP  
+  34: LOAD_CONST           'Blue'
+  36: LOAD_CONST           'orange'
+  38: LOAD_CONST           ('name', 'compliment')
+  40: BUILD_CONST_KEY_MAP  
+  42: LOAD_CONST           'Green'
+  44: LOAD_CONST           'red'
+  46: LOAD_CONST           ('name', 'compliment')
+  48: BUILD_CONST_KEY_MAP  
+  50: LOAD_CONST           'Yellow'
+  52: LOAD_CONST           'purple'
+  54: LOAD_CONST           ('name', 'compliment')
+  56: BUILD_CONST_KEY_MAP  
+  58: LOAD_CONST           ('purple', 'red', 'orange', 'blue', 'green', 'yellow')
+  60: BUILD_CONST_KEY_MAP  
+  62: STORE_GLOBAL         colors
+  64: PUSH_NULL            
+  66: LOAD_BUILD_CLASS     
+  68: LOAD_CONST           <code object ColorWheel at 0x00000240693AB5F0, file "right.py", line 14>
+  70: MAKE_FUNCTION        
+  72: LOAD_CONST           'ColorWheel'
+  74: LOAD_NAME            Item
+  76: PRECALL              
+  80: CALL                 
+  90: STORE_NAME           ColorWheel
+  92: PUSH_NULL            
+  94: LOAD_BUILD_CLASS     
+  96: LOAD_CONST           <code object ColorButtons at 0x00000240691F39F0, file "right.py", line 46>
+  98: MAKE_FUNCTION        
+ 100: LOAD_CONST           'ColorButtons'
+ 102: LOAD_NAME            Item
+ 104: PRECALL              
+ 108: CALL                 
+ 118: STORE_NAME           ColorButtons
+ 120: PUSH_NULL            
+ 122: LOAD_BUILD_CLASS     
+ 124: LOAD_CONST           <code object SheetMusicGuide at 0x00000240693AB230, file "right.py", line 93>
+ 126: MAKE_FUNCTION        
+ 128: LOAD_CONST           'SheetMusicGuide'
+ 130: LOAD_NAME            Item
+ 132: PRECALL              
+ 136: CALL                 
+ 146: STORE_NAME           SheetMusicGuide
+ 148: LOAD_CONST           'Mary Had a Little Lamb'
+ 150: LOAD_CONST           'E-D-C-D-E-E-E-D-D-D-E-G-G'
+ 152: LOAD_CONST           '║---------│---------│---------│---------|\n║         │         │         │         |\n║---------│---------│---------│---------|\n║         │         │         │         |\n║---------│---------│---------│---------|\n║         │         │         │         |\n║---------│---------│---------│---O-O---|\n║         │         │         │         │\n║-O-------│-O-O-O---│---------│-O-------│\n    O   O             O O O              \n     -O-                                 '
+ 154: LOAD_CONST           ('name', 'notes', 'sheet')
+ 156: BUILD_CONST_KEY_MAP  
+ 158: LOAD_CONST           'Twinkle, Twinkle, Little Star'
+ 160: LOAD_CONST           'G-G-D-D-E-E-D-C-C-B-B-A-A-G'
+ 162: LOAD_CONST           '║---------│---------│---------│---------|\n║         │ O O     │         │         |\n║-----O-O-│-----O---│---------│---------|\n║         │         │ O O     │         |\n║---------│---------│-----O-O-│---------|\n║         │         │         │ O O     |\n║-O-O-----│---------│---------│-----O---|\n║         │         │         │         │\n║---------│---------│---------│---------│'
+ 164: LOAD_CONST           ('name', 'notes', 'sheet')
+ 166: BUILD_CONST_KEY_MAP  
+ 168: LOAD_CONST           'Camptown Races'
+ 170: LOAD_CONST           'D-D-B-D-E-D-B-B-A-B-A'
+ 172: LOAD_CONST           '║---------│---------│---------│---------|\n║         │ O       │         │         |\n║-O-O---O-│---O-----│---------│---------|\n║         │         │         │         |\n║-----O---│-----O---│-O-------│-O-------|\n║         │         │   O     │   O     |\n║---------│---------│---------│---------|\n║         │         │         │         │\n║---------│---------│---------│---------│'
+ 174: LOAD_CONST           ('name', 'notes', 'sheet')
+ 176: BUILD_CONST_KEY_MAP  
+ 178: LOAD_CONST           ('M', 'T', 'C')
+ 180: BUILD_CONST_KEY_MAP  
+ 182: STORE_GLOBAL         songs
+ 184: PUSH_NULL            
+ 186: LOAD_BUILD_CLASS     
+ 188: LOAD_CONST           <code object MusicBook at 0x00000240693ABAF0, file "right.py", line 174>
+ 190: MAKE_FUNCTION        
+ 192: LOAD_CONST           'MusicBook'
+ 194: LOAD_NAME            Item
+ 196: PRECALL              
+ 200: CALL                 
+ 210: STORE_NAME           MusicBook
+ 212: PUSH_NULL            
+ 214: LOAD_BUILD_CLASS     
+ 216: LOAD_CONST           <code object Piano at 0x00000240693A9570, file "right.py", line 196>
+ 218: MAKE_FUNCTION        
+ 220: LOAD_CONST           'Piano'
+ 222: LOAD_NAME            Item
+ 224: PRECALL              
+ 228: CALL                 
+ 238: STORE_NAME           Piano
+ 240: PUSH_NULL            
+ 242: LOAD_BUILD_CLASS     
+ 244: LOAD_CONST           <code object Right at 0x00000240691F3B40, file "right.py", line 268>
+ 246: MAKE_FUNCTION        
+ 248: LOAD_CONST           'Right'
+ 250: LOAD_NAME            Room
+ 252: PRECALL              
+ 256: CALL                 
+ 266: STORE_NAME           Right
+ 268: LOAD_CONST           None
+ 270: RETURN_VALUE         

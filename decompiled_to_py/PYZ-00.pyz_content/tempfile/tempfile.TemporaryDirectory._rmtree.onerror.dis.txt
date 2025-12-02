@@ -1,0 +1,105 @@
+# Disassembly for tempfile.TemporaryDirectory._rmtree.onerror
+# From module file: tempfile
+
+## co_consts:
+(None, 0, <code object resetperms at 0x00000240693AA970, file "tempfile.py", line 865>, ('ignore_errors',))
+
+## co_names:
+('issubclass', 'PermissionError', '_os', 'path', 'dirname', 'unlink', 'IsADirectoryError', '_rmtree', 'FileNotFoundError')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + issubclass
+  16: LOAD_FAST            exc_info
+  18: LOAD_CONST           0
+  20: BINARY_SUBSCR        
+  30: LOAD_GLOBAL          PermissionError
+  42: PRECALL              
+  46: CALL                 
+  56: POP_JUMP_FORWARD_IF_FALSE to 356
+  58: LOAD_CONST           <code object resetperms at 0x00000240693AA970, file "tempfile.py", line 865>
+  60: MAKE_FUNCTION        
+  62: STORE_FAST           resetperms
+  64: NOP                  
+  66: LOAD_FAST            path
+  68: LOAD_DEREF           name
+  70: COMPARE_OP           !=
+  76: POP_JUMP_FORWARD_IF_FALSE to 158
+  78: PUSH_NULL            
+  80: LOAD_FAST            resetperms
+  82: LOAD_GLOBAL          _os
+  94: LOAD_ATTR            path
+ 104: LOAD_METHOD          dirname
+ 126: LOAD_FAST            path
+ 128: PRECALL              
+ 132: CALL                 
+ 142: PRECALL              
+ 146: CALL                 
+ 156: POP_TOP              
+ 158: PUSH_NULL            
+ 160: LOAD_FAST            resetperms
+ 162: LOAD_FAST            path
+ 164: PRECALL              
+ 168: CALL                 
+ 178: POP_TOP              
+ 180: NOP                  
+ 182: LOAD_GLOBAL          NULL + _os
+ 194: LOAD_ATTR            unlink
+ 204: LOAD_FAST            path
+ 206: PRECALL              
+ 210: CALL                 
+ 220: POP_TOP              
+ 222: LOAD_CONST           None
+ 224: RETURN_VALUE         
+ 226: PUSH_EXC_INFO        
+ 228: LOAD_GLOBAL          IsADirectoryError
+ 240: LOAD_GLOBAL          PermissionError
+ 252: BUILD_TUPLE          
+ 254: CHECK_EXC_MATCH      
+ 256: POP_JUMP_FORWARD_IF_FALSE to 310
+ 258: POP_TOP              
+ 260: LOAD_DEREF           cls
+ 262: LOAD_METHOD          _rmtree
+ 284: LOAD_FAST            path
+ 286: LOAD_DEREF           ignore_errors
+ 288: KW_NAMES             
+ 290: PRECALL              
+ 294: CALL                 
+ 304: POP_TOP              
+ 306: POP_EXCEPT           
+ 308: JUMP_FORWARD         to 318
+ 310: RERAISE              
+ 312: COPY                 
+ 314: POP_EXCEPT           
+ 316: RERAISE              
+ 318: LOAD_CONST           None
+ 320: RETURN_VALUE         
+ 322: PUSH_EXC_INFO        
+ 324: LOAD_GLOBAL          FileNotFoundError
+ 336: CHECK_EXC_MATCH      
+ 338: POP_JUMP_FORWARD_IF_FALSE to 348
+ 340: POP_TOP              
+ 342: POP_EXCEPT           
+ 344: LOAD_CONST           None
+ 346: RETURN_VALUE         
+ 348: RERAISE              
+ 350: COPY                 
+ 352: POP_EXCEPT           
+ 354: RERAISE              
+ 356: LOAD_GLOBAL          NULL + issubclass
+ 368: LOAD_FAST            exc_info
+ 370: LOAD_CONST           0
+ 372: BINARY_SUBSCR        
+ 382: LOAD_GLOBAL          FileNotFoundError
+ 394: PRECALL              
+ 398: CALL                 
+ 408: POP_JUMP_FORWARD_IF_FALSE to 414
+ 410: LOAD_CONST           None
+ 412: RETURN_VALUE         
+ 414: LOAD_DEREF           ignore_errors
+ 416: POP_JUMP_FORWARD_IF_TRUE to 420
+ 418: RAISE_VARARGS        
+ 420: LOAD_CONST           None
+ 422: RETURN_VALUE         

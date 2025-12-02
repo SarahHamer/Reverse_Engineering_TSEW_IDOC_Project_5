@@ -1,0 +1,23 @@
+# Disassembly for ftplib.FTP_TLS.prot_c
+# From module file: ftplib
+
+## co_consts:
+('Set up clear text data connection.', 'PROT C', False)
+
+## co_names:
+('voidcmd', '_prot_p')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          voidcmd
+  26: LOAD_CONST           'PROT C'
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           resp
+  44: LOAD_CONST           False
+  46: LOAD_FAST            self
+  48: STORE_ATTR           _prot_p
+  58: LOAD_FAST            resp
+  60: RETURN_VALUE         

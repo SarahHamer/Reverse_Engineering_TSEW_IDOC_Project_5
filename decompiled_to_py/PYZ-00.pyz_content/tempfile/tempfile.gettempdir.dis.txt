@@ -1,0 +1,20 @@
+# Disassembly for tempfile.gettempdir
+# From module file: tempfile
+
+## co_consts:
+('Returns tempfile.tempdir as str.',)
+
+## co_names:
+('_os', 'fsdecode', '_gettempdir')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _os
+  14: LOAD_ATTR            fsdecode
+  24: LOAD_GLOBAL          NULL + _gettempdir
+  36: PRECALL              
+  40: CALL                 
+  50: PRECALL              
+  54: CALL                 
+  64: RETURN_VALUE         

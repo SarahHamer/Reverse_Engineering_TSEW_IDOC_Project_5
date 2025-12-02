@@ -1,0 +1,83 @@
+# Disassembly for tarfile.TarInfo.create_gnu_header
+# From module file: tarfile
+
+## co_consts:
+('Return the object as a GNU header block sequence.\n        ', 'magic', b'', 'linkname', 'name')
+
+## co_names:
+('GNU_MAGIC', 'len', 'encode', 'LENGTH_LINK', '_create_gnu_long_header', 'GNUTYPE_LONGLINK', 'LENGTH_NAME', 'GNUTYPE_LONGNAME', '_create_header', 'GNU_FORMAT')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          GNU_MAGIC
+  14: LOAD_FAST            info
+  16: LOAD_CONST           'magic'
+  18: STORE_SUBSCR         
+  22: LOAD_CONST           b''
+  24: STORE_FAST           buf
+  26: LOAD_GLOBAL          NULL + len
+  38: LOAD_FAST            info
+  40: LOAD_CONST           'linkname'
+  42: BINARY_SUBSCR        
+  52: LOAD_METHOD          encode
+  74: LOAD_FAST            encoding
+  76: LOAD_FAST            errors
+  78: PRECALL              
+  82: CALL                 
+  92: PRECALL              
+  96: CALL                 
+ 106: LOAD_GLOBAL          LENGTH_LINK
+ 118: COMPARE_OP           >
+ 124: POP_JUMP_FORWARD_IF_FALSE to 202
+ 126: LOAD_FAST            buf
+ 128: LOAD_FAST            self
+ 130: LOAD_METHOD          _create_gnu_long_header
+ 152: LOAD_FAST            info
+ 154: LOAD_CONST           'linkname'
+ 156: BINARY_SUBSCR        
+ 166: LOAD_GLOBAL          GNUTYPE_LONGLINK
+ 178: LOAD_FAST            encoding
+ 180: LOAD_FAST            errors
+ 182: PRECALL              
+ 186: CALL                 
+ 196: BINARY_OP            +=
+ 200: STORE_FAST           buf
+ 202: LOAD_GLOBAL          NULL + len
+ 214: LOAD_FAST            info
+ 216: LOAD_CONST           'name'
+ 218: BINARY_SUBSCR        
+ 228: LOAD_METHOD          encode
+ 250: LOAD_FAST            encoding
+ 252: LOAD_FAST            errors
+ 254: PRECALL              
+ 258: CALL                 
+ 268: PRECALL              
+ 272: CALL                 
+ 282: LOAD_GLOBAL          LENGTH_NAME
+ 294: COMPARE_OP           >
+ 300: POP_JUMP_FORWARD_IF_FALSE to 378
+ 302: LOAD_FAST            buf
+ 304: LOAD_FAST            self
+ 306: LOAD_METHOD          _create_gnu_long_header
+ 328: LOAD_FAST            info
+ 330: LOAD_CONST           'name'
+ 332: BINARY_SUBSCR        
+ 342: LOAD_GLOBAL          GNUTYPE_LONGNAME
+ 354: LOAD_FAST            encoding
+ 356: LOAD_FAST            errors
+ 358: PRECALL              
+ 362: CALL                 
+ 372: BINARY_OP            +=
+ 376: STORE_FAST           buf
+ 378: LOAD_FAST            buf
+ 380: LOAD_FAST            self
+ 382: LOAD_METHOD          _create_header
+ 404: LOAD_FAST            info
+ 406: LOAD_GLOBAL          GNU_FORMAT
+ 418: LOAD_FAST            encoding
+ 420: LOAD_FAST            errors
+ 422: PRECALL              
+ 426: CALL                 
+ 436: BINARY_OP            +
+ 440: RETURN_VALUE         

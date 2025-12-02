@@ -1,0 +1,14 @@
+# Disassembly for importlib.resources.ResourceReader.resource_path
+# From module file: importlib.resources.abc
+
+## co_consts:
+("Return the file system path to the specified resource.\n\n        The 'resource' argument is expected to represent only a file name.\n        If the resource does not exist on the file system, raise\n        FileNotFoundError.\n        ",)
+
+## co_names:
+('FileNotFoundError',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          FileNotFoundError
+  14: RAISE_VARARGS        

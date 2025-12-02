@@ -1,0 +1,19 @@
+# Disassembly for inspect.getmembers
+# From module file: inspect
+
+## co_consts:
+('Return all members of an object as (name, value) pairs sorted by name.\n    Optionally, only return members that satisfy a given predicate.',)
+
+## co_names:
+('_getmembers', 'getattr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _getmembers
+  14: LOAD_FAST            object
+  16: LOAD_FAST            predicate
+  18: LOAD_GLOBAL          getattr
+  30: PRECALL              
+  34: CALL                 
+  44: RETURN_VALUE         

@@ -1,0 +1,433 @@
+# Disassembly for subprocess.Popen._communicate
+# From module file: subprocess
+
+## co_consts:
+(None, 0, True, ('skip_check_and_raise',), '_check_timeout(..., skip_check_and_raise=True) failed to raise TimeoutExpired.', 32768, ('timeout',), b'')
+
+## co_names:
+('stdin', '_communication_started', 'flush', 'BrokenPipeError', 'close', '_fileobj2output', 'stdout', 'stderr', '_save_input', '_input', 'memoryview', '_PopenSelector', 'register', 'selectors', 'EVENT_WRITE', 'closed', 'EVENT_READ', 'get_map', '_remaining_time', '_check_timeout', 'RuntimeError', 'select', 'fileobj', '_input_offset', '_PIPE_BUF', 'os', 'write', 'fd', 'len', 'unregister', 'read', 'append', 'wait', 'join', 'text_mode', '_translate_newlines', 'encoding', 'errors')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            stdin
+  14: POP_JUMP_FORWARD_IF_FALSE to 206
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            _communication_started
+  28: POP_JUMP_FORWARD_IF_TRUE to 206
+  30: NOP                  
+  32: LOAD_FAST            self
+  34: LOAD_ATTR            stdin
+  44: LOAD_METHOD          flush
+  66: PRECALL              
+  70: CALL                 
+  80: POP_TOP              
+  82: JUMP_FORWARD         to 116
+  84: PUSH_EXC_INFO        
+  86: LOAD_GLOBAL          BrokenPipeError
+  98: CHECK_EXC_MATCH      
+ 100: POP_JUMP_FORWARD_IF_FALSE to 108
+ 102: POP_TOP              
+ 104: POP_EXCEPT           
+ 106: JUMP_FORWARD         to 116
+ 108: RERAISE              
+ 110: COPY                 
+ 112: POP_EXCEPT           
+ 114: RERAISE              
+ 116: LOAD_FAST            input
+ 118: POP_JUMP_FORWARD_IF_TRUE to 206
+ 120: NOP                  
+ 122: LOAD_FAST            self
+ 124: LOAD_ATTR            stdin
+ 134: LOAD_METHOD          close
+ 156: PRECALL              
+ 160: CALL                 
+ 170: POP_TOP              
+ 172: JUMP_FORWARD         to 206
+ 174: PUSH_EXC_INFO        
+ 176: LOAD_GLOBAL          BrokenPipeError
+ 188: CHECK_EXC_MATCH      
+ 190: POP_JUMP_FORWARD_IF_FALSE to 198
+ 192: POP_TOP              
+ 194: POP_EXCEPT           
+ 196: JUMP_FORWARD         to 206
+ 198: RERAISE              
+ 200: COPY                 
+ 202: POP_EXCEPT           
+ 204: RERAISE              
+ 206: LOAD_CONST           None
+ 208: STORE_FAST           stdout
+ 210: LOAD_CONST           None
+ 212: STORE_FAST           stderr
+ 214: LOAD_FAST            self
+ 216: LOAD_ATTR            _communication_started
+ 226: POP_JUMP_FORWARD_IF_TRUE to 330
+ 228: BUILD_MAP            
+ 230: LOAD_FAST            self
+ 232: STORE_ATTR           _fileobj2output
+ 242: LOAD_FAST            self
+ 244: LOAD_ATTR            stdout
+ 254: POP_JUMP_FORWARD_IF_FALSE to 286
+ 256: BUILD_LIST           
+ 258: LOAD_FAST            self
+ 260: LOAD_ATTR            _fileobj2output
+ 270: LOAD_FAST            self
+ 272: LOAD_ATTR            stdout
+ 282: STORE_SUBSCR         
+ 286: LOAD_FAST            self
+ 288: LOAD_ATTR            stderr
+ 298: POP_JUMP_FORWARD_IF_FALSE to 330
+ 300: BUILD_LIST           
+ 302: LOAD_FAST            self
+ 304: LOAD_ATTR            _fileobj2output
+ 314: LOAD_FAST            self
+ 316: LOAD_ATTR            stderr
+ 326: STORE_SUBSCR         
+ 330: LOAD_FAST            self
+ 332: LOAD_ATTR            stdout
+ 342: POP_JUMP_FORWARD_IF_FALSE to 380
+ 344: LOAD_FAST            self
+ 346: LOAD_ATTR            _fileobj2output
+ 356: LOAD_FAST            self
+ 358: LOAD_ATTR            stdout
+ 368: BINARY_SUBSCR        
+ 378: STORE_FAST           stdout
+ 380: LOAD_FAST            self
+ 382: LOAD_ATTR            stderr
+ 392: POP_JUMP_FORWARD_IF_FALSE to 430
+ 394: LOAD_FAST            self
+ 396: LOAD_ATTR            _fileobj2output
+ 406: LOAD_FAST            self
+ 408: LOAD_ATTR            stderr
+ 418: BINARY_SUBSCR        
+ 428: STORE_FAST           stderr
+ 430: LOAD_FAST            self
+ 432: LOAD_METHOD          _save_input
+ 454: LOAD_FAST            input
+ 456: PRECALL              
+ 460: CALL                 
+ 470: POP_TOP              
+ 472: LOAD_FAST            self
+ 474: LOAD_ATTR            _input
+ 484: POP_JUMP_FORWARD_IF_FALSE to 526
+ 486: LOAD_GLOBAL          NULL + memoryview
+ 498: LOAD_FAST            self
+ 500: LOAD_ATTR            _input
+ 510: PRECALL              
+ 514: CALL                 
+ 524: STORE_FAST           input_view
+ 526: LOAD_GLOBAL          NULL + _PopenSelector
+ 538: PRECALL              
+ 542: CALL                 
+ 552: BEFORE_WITH          
+ 554: STORE_FAST           selector
+ 556: LOAD_FAST            self
+ 558: LOAD_ATTR            stdin
+ 568: POP_JUMP_FORWARD_IF_FALSE to 648
+ 570: LOAD_FAST            input
+ 572: POP_JUMP_FORWARD_IF_FALSE to 648
+ 574: LOAD_FAST            selector
+ 576: LOAD_METHOD          register
+ 598: LOAD_FAST            self
+ 600: LOAD_ATTR            stdin
+ 610: LOAD_GLOBAL          selectors
+ 622: LOAD_ATTR            EVENT_WRITE
+ 632: PRECALL              
+ 636: CALL                 
+ 646: POP_TOP              
+ 648: LOAD_FAST            self
+ 650: LOAD_ATTR            stdout
+ 660: POP_JUMP_FORWARD_IF_FALSE to 760
+ 662: LOAD_FAST            self
+ 664: LOAD_ATTR            stdout
+ 674: LOAD_ATTR            closed
+ 684: POP_JUMP_FORWARD_IF_TRUE to 760
+ 686: LOAD_FAST            selector
+ 688: LOAD_METHOD          register
+ 710: LOAD_FAST            self
+ 712: LOAD_ATTR            stdout
+ 722: LOAD_GLOBAL          selectors
+ 734: LOAD_ATTR            EVENT_READ
+ 744: PRECALL              
+ 748: CALL                 
+ 758: POP_TOP              
+ 760: LOAD_FAST            self
+ 762: LOAD_ATTR            stderr
+ 772: POP_JUMP_FORWARD_IF_FALSE to 872
+ 774: LOAD_FAST            self
+ 776: LOAD_ATTR            stderr
+ 786: LOAD_ATTR            closed
+ 796: POP_JUMP_FORWARD_IF_TRUE to 872
+ 798: LOAD_FAST            selector
+ 800: LOAD_METHOD          register
+ 822: LOAD_FAST            self
+ 824: LOAD_ATTR            stderr
+ 834: LOAD_GLOBAL          selectors
+ 846: LOAD_ATTR            EVENT_READ
+ 856: PRECALL              
+ 860: CALL                 
+ 870: POP_TOP              
+ 872: LOAD_FAST            selector
+ 874: LOAD_METHOD          get_map
+ 896: PRECALL              
+ 900: CALL                 
+ 910: EXTENDED_ARG         
+ 912: POP_JUMP_FORWARD_IF_FALSE to 1942
+ 914: LOAD_FAST            self
+ 916: LOAD_METHOD          _remaining_time
+ 938: LOAD_FAST            endtime
+ 940: PRECALL              
+ 944: CALL                 
+ 954: STORE_FAST           timeout
+ 956: LOAD_FAST            timeout
+ 958: POP_JUMP_FORWARD_IF_NONE to 1054
+ 960: LOAD_FAST            timeout
+ 962: LOAD_CONST           0
+ 964: COMPARE_OP           <
+ 970: POP_JUMP_FORWARD_IF_FALSE to 1054
+ 972: LOAD_FAST            self
+ 974: LOAD_METHOD          _check_timeout
+ 996: LOAD_FAST            endtime
+ 998: LOAD_FAST            orig_timeout
+1000: LOAD_FAST            stdout
+1002: LOAD_FAST            stderr
+1004: LOAD_CONST           True
+1006: KW_NAMES             
+1008: PRECALL              
+1012: CALL                 
+1022: POP_TOP              
+1024: LOAD_GLOBAL          NULL + RuntimeError
+1036: LOAD_CONST           '_check_timeout(..., skip_check_and_raise=True) failed to raise TimeoutExpired.'
+1038: PRECALL              
+1042: CALL                 
+1052: RAISE_VARARGS        
+1054: LOAD_FAST            selector
+1056: LOAD_METHOD          select
+1078: LOAD_FAST            timeout
+1080: PRECALL              
+1084: CALL                 
+1094: STORE_FAST           ready
+1096: LOAD_FAST            self
+1098: LOAD_METHOD          _check_timeout
+1120: LOAD_FAST            endtime
+1122: LOAD_FAST            orig_timeout
+1124: LOAD_FAST            stdout
+1126: LOAD_FAST            stderr
+1128: PRECALL              
+1132: CALL                 
+1142: POP_TOP              
+1144: LOAD_FAST            ready
+1146: GET_ITER             
+1148: EXTENDED_ARG         
+1150: FOR_ITER             to 1900
+1152: UNPACK_SEQUENCE      
+1156: STORE_FAST           key
+1158: STORE_FAST           events
+1160: LOAD_FAST            key
+1162: LOAD_ATTR            fileobj
+1172: LOAD_FAST            self
+1174: LOAD_ATTR            stdin
+1184: IS_OP                
+1186: POP_JUMP_FORWARD_IF_FALSE to 1622
+1188: LOAD_FAST            input_view
+1190: LOAD_FAST            self
+1192: LOAD_ATTR            _input_offset
+1202: LOAD_FAST            self
+1204: LOAD_ATTR            _input_offset
+1214: LOAD_GLOBAL          _PIPE_BUF
+1226: BINARY_OP            +
+1230: BUILD_SLICE          
+1232: BINARY_SUBSCR        
+1242: STORE_FAST           chunk
+1244: NOP                  
+1246: LOAD_FAST            self
+1248: COPY                 
+1250: LOAD_ATTR            _input_offset
+1260: LOAD_GLOBAL          NULL + os
+1272: LOAD_ATTR            write
+1282: LOAD_FAST            key
+1284: LOAD_ATTR            fd
+1294: LOAD_FAST            chunk
+1296: PRECALL              
+1300: CALL                 
+1310: BINARY_OP            +=
+1314: SWAP                 
+1316: STORE_ATTR           _input_offset
+1326: LOAD_FAST            self
+1328: LOAD_ATTR            _input_offset
+1338: LOAD_GLOBAL          NULL + len
+1350: LOAD_FAST            self
+1352: LOAD_ATTR            _input
+1362: PRECALL              
+1366: CALL                 
+1376: COMPARE_OP           >=
+1382: POP_JUMP_FORWARD_IF_FALSE to 1486
+1384: LOAD_FAST            selector
+1386: LOAD_METHOD          unregister
+1408: LOAD_FAST            key
+1410: LOAD_ATTR            fileobj
+1420: PRECALL              
+1424: CALL                 
+1434: POP_TOP              
+1436: LOAD_FAST            key
+1438: LOAD_ATTR            fileobj
+1448: LOAD_METHOD          close
+1470: PRECALL              
+1474: CALL                 
+1484: POP_TOP              
+1486: JUMP_BACKWARD        to 1148
+1488: PUSH_EXC_INFO        
+1490: LOAD_GLOBAL          BrokenPipeError
+1502: CHECK_EXC_MATCH      
+1504: POP_JUMP_FORWARD_IF_FALSE to 1614
+1506: POP_TOP              
+1508: LOAD_FAST            selector
+1510: LOAD_METHOD          unregister
+1532: LOAD_FAST            key
+1534: LOAD_ATTR            fileobj
+1544: PRECALL              
+1548: CALL                 
+1558: POP_TOP              
+1560: LOAD_FAST            key
+1562: LOAD_ATTR            fileobj
+1572: LOAD_METHOD          close
+1594: PRECALL              
+1598: CALL                 
+1608: POP_TOP              
+1610: POP_EXCEPT           
+1612: JUMP_BACKWARD        to 1148
+1614: RERAISE              
+1616: COPY                 
+1618: POP_EXCEPT           
+1620: RERAISE              
+1622: LOAD_FAST            key
+1624: LOAD_ATTR            fileobj
+1634: LOAD_FAST            self
+1636: LOAD_ATTR            stdout
+1646: LOAD_FAST            self
+1648: LOAD_ATTR            stderr
+1658: BUILD_TUPLE          
+1660: CONTAINS_OP          
+1662: POP_JUMP_FORWARD_IF_FALSE to 1896
+1664: LOAD_GLOBAL          NULL + os
+1676: LOAD_ATTR            read
+1686: LOAD_FAST            key
+1688: LOAD_ATTR            fd
+1698: LOAD_CONST           32768
+1700: PRECALL              
+1704: CALL                 
+1714: STORE_FAST           data
+1716: LOAD_FAST            data
+1718: POP_JUMP_FORWARD_IF_TRUE to 1822
+1720: LOAD_FAST            selector
+1722: LOAD_METHOD          unregister
+1744: LOAD_FAST            key
+1746: LOAD_ATTR            fileobj
+1756: PRECALL              
+1760: CALL                 
+1770: POP_TOP              
+1772: LOAD_FAST            key
+1774: LOAD_ATTR            fileobj
+1784: LOAD_METHOD          close
+1806: PRECALL              
+1810: CALL                 
+1820: POP_TOP              
+1822: LOAD_FAST            self
+1824: LOAD_ATTR            _fileobj2output
+1834: LOAD_FAST            key
+1836: LOAD_ATTR            fileobj
+1846: BINARY_SUBSCR        
+1856: LOAD_METHOD          append
+1878: LOAD_FAST            data
+1880: PRECALL              
+1884: CALL                 
+1894: POP_TOP              
+1896: EXTENDED_ARG         
+1898: JUMP_BACKWARD        to 1148
+1900: LOAD_FAST            selector
+1902: LOAD_METHOD          get_map
+1924: PRECALL              
+1928: CALL                 
+1938: EXTENDED_ARG         
+1940: POP_JUMP_BACKWARD_IF_TRUE to 914
+1942: LOAD_CONST           None
+1944: LOAD_CONST           None
+1946: LOAD_CONST           None
+1948: PRECALL              
+1952: CALL                 
+1962: POP_TOP              
+1964: JUMP_FORWARD         to 1988
+1966: PUSH_EXC_INFO        
+1968: WITH_EXCEPT_START    
+1970: POP_JUMP_FORWARD_IF_TRUE to 1980
+1972: RERAISE              
+1974: COPY                 
+1976: POP_EXCEPT           
+1978: RERAISE              
+1980: POP_TOP              
+1982: POP_EXCEPT           
+1984: POP_TOP              
+1986: POP_TOP              
+1988: LOAD_FAST            self
+1990: LOAD_METHOD          wait
+2012: LOAD_FAST            self
+2014: LOAD_METHOD          _remaining_time
+2036: LOAD_FAST            endtime
+2038: PRECALL              
+2042: CALL                 
+2052: KW_NAMES             
+2054: PRECALL              
+2058: CALL                 
+2068: POP_TOP              
+2070: LOAD_FAST            stdout
+2072: POP_JUMP_FORWARD_IF_NONE to 2116
+2074: LOAD_CONST           b''
+2076: LOAD_METHOD          join
+2098: LOAD_FAST            stdout
+2100: PRECALL              
+2104: CALL                 
+2114: STORE_FAST           stdout
+2116: LOAD_FAST            stderr
+2118: POP_JUMP_FORWARD_IF_NONE to 2162
+2120: LOAD_CONST           b''
+2122: LOAD_METHOD          join
+2144: LOAD_FAST            stderr
+2146: PRECALL              
+2150: CALL                 
+2160: STORE_FAST           stderr
+2162: LOAD_FAST            self
+2164: LOAD_ATTR            text_mode
+2174: POP_JUMP_FORWARD_IF_FALSE to 2356
+2176: LOAD_FAST            stdout
+2178: POP_JUMP_FORWARD_IF_NONE to 2266
+2180: LOAD_FAST            self
+2182: LOAD_METHOD          _translate_newlines
+2204: LOAD_FAST            stdout
+2206: LOAD_FAST            self
+2208: LOAD_ATTR            stdout
+2218: LOAD_ATTR            encoding
+2228: LOAD_FAST            self
+2230: LOAD_ATTR            stdout
+2240: LOAD_ATTR            errors
+2250: PRECALL              
+2254: CALL                 
+2264: STORE_FAST           stdout
+2266: LOAD_FAST            stderr
+2268: POP_JUMP_FORWARD_IF_NONE to 2356
+2270: LOAD_FAST            self
+2272: LOAD_METHOD          _translate_newlines
+2294: LOAD_FAST            stderr
+2296: LOAD_FAST            self
+2298: LOAD_ATTR            stderr
+2308: LOAD_ATTR            encoding
+2318: LOAD_FAST            self
+2320: LOAD_ATTR            stderr
+2330: LOAD_ATTR            errors
+2340: PRECALL              
+2344: CALL                 
+2354: STORE_FAST           stderr
+2356: LOAD_FAST            stdout
+2358: LOAD_FAST            stderr
+2360: BUILD_TUPLE          
+2362: RETURN_VALUE         

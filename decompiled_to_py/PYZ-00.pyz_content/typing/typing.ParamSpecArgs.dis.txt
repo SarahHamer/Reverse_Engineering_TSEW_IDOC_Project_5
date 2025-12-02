@@ -1,0 +1,29 @@
+# Disassembly for typing.ParamSpecArgs
+# From module file: typing
+
+## co_consts:
+('ParamSpecArgs', 'The args for a ParamSpec object.\n\n    Given a ParamSpec object P, P.args is an instance of ParamSpecArgs.\n\n    ParamSpecArgs objects have a reference back to their ParamSpec:\n\n       P.args.__origin__ is P\n\n    This type is meant for runtime introspection and has no special meaning to\n    static type checkers.\n    ', <code object __init__ at 0x0000024069496590, file "typing.py", line 1133>, <code object __repr__ at 0x0000024069466410, file "typing.py", line 1136>, <code object __eq__ at 0x000002406941A8B0, file "typing.py", line 1139>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', '__repr__', '__eq__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'ParamSpecArgs'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'The args for a ParamSpec object.\n\n    Given a ParamSpec object P, P.args is an instance of ParamSpecArgs.\n\n    ParamSpecArgs objects have a reference back to their ParamSpec:\n\n       P.args.__origin__ is P\n\n    This type is meant for runtime introspection and has no special meaning to\n    static type checkers.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object __init__ at 0x0000024069496590, file "typing.py", line 1133>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           __init__
+  20: LOAD_CONST           <code object __repr__ at 0x0000024069466410, file "typing.py", line 1136>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           __repr__
+  26: LOAD_CONST           <code object __eq__ at 0x000002406941A8B0, file "typing.py", line 1139>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           __eq__
+  32: LOAD_CONST           None
+  34: RETURN_VALUE         

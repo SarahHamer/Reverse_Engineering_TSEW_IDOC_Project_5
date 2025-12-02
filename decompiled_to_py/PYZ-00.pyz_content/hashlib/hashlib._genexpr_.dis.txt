@@ -1,0 +1,26 @@
+# Disassembly for hashlib.<genexpr>
+# From module file: hashlib
+
+## co_consts:
+(54, None)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_FAST            .0
+   8: FOR_ITER             to 28
+  10: STORE_FAST           x
+  12: LOAD_FAST            x
+  14: LOAD_CONST           54
+  16: BINARY_OP            ^
+  20: YIELD_VALUE          
+  22: RESUME               
+  24: POP_TOP              
+  26: JUMP_BACKWARD        to 8
+  28: LOAD_CONST           None
+  30: RETURN_VALUE         

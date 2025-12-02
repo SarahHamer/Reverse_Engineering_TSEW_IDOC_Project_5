@@ -1,0 +1,140 @@
+# Disassembly for argparse.ArgumentParser.add_subparsers
+# From module file: argparse
+
+## co_consts:
+(None, 'cannot have multiple subparser arguments', 'parser_class', 'title', 'description', 'subcommands', 'prog', '', 'parsers', 'option_strings', ())
+
+## co_names:
+('_subparsers', 'error', '_', 'setdefault', 'type', 'pop', 'add_argument_group', '_positionals', 'get', '_get_formatter', '_get_positional_actions', '_mutually_exclusive_groups', 'add_usage', 'usage', 'format_help', 'strip', '_pop_action_class', '_add_action')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _subparsers
+  14: POP_JUMP_FORWARD_IF_NONE to 84
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          error
+  40: LOAD_GLOBAL          NULL + _
+  52: LOAD_CONST           'cannot have multiple subparser arguments'
+  54: PRECALL              
+  58: CALL                 
+  68: PRECALL              
+  72: CALL                 
+  82: POP_TOP              
+  84: LOAD_FAST            kwargs
+  86: LOAD_METHOD          setdefault
+ 108: LOAD_CONST           'parser_class'
+ 110: LOAD_GLOBAL          NULL + type
+ 122: LOAD_FAST            self
+ 124: PRECALL              
+ 128: CALL                 
+ 138: PRECALL              
+ 142: CALL                 
+ 152: POP_TOP              
+ 154: LOAD_CONST           'title'
+ 156: LOAD_FAST            kwargs
+ 158: CONTAINS_OP          
+ 160: POP_JUMP_FORWARD_IF_TRUE to 170
+ 162: LOAD_CONST           'description'
+ 164: LOAD_FAST            kwargs
+ 166: CONTAINS_OP          
+ 168: POP_JUMP_FORWARD_IF_FALSE to 366
+ 170: LOAD_GLOBAL          NULL + _
+ 182: LOAD_FAST            kwargs
+ 184: LOAD_METHOD          pop
+ 206: LOAD_CONST           'title'
+ 208: LOAD_CONST           'subcommands'
+ 210: PRECALL              
+ 214: CALL                 
+ 224: PRECALL              
+ 228: CALL                 
+ 238: STORE_FAST           title
+ 240: LOAD_GLOBAL          NULL + _
+ 252: LOAD_FAST            kwargs
+ 254: LOAD_METHOD          pop
+ 276: LOAD_CONST           'description'
+ 278: LOAD_CONST           None
+ 280: PRECALL              
+ 284: CALL                 
+ 294: PRECALL              
+ 298: CALL                 
+ 308: STORE_FAST           description
+ 310: LOAD_FAST            self
+ 312: LOAD_METHOD          add_argument_group
+ 334: LOAD_FAST            title
+ 336: LOAD_FAST            description
+ 338: PRECALL              
+ 342: CALL                 
+ 352: LOAD_FAST            self
+ 354: STORE_ATTR           _subparsers
+ 364: JUMP_FORWARD         to 390
+ 366: LOAD_FAST            self
+ 368: LOAD_ATTR            _positionals
+ 378: LOAD_FAST            self
+ 380: STORE_ATTR           _subparsers
+ 390: LOAD_FAST            kwargs
+ 392: LOAD_METHOD          get
+ 414: LOAD_CONST           'prog'
+ 416: PRECALL              
+ 420: CALL                 
+ 430: POP_JUMP_FORWARD_IF_NOT_NONE to 666
+ 432: LOAD_FAST            self
+ 434: LOAD_METHOD          _get_formatter
+ 456: PRECALL              
+ 460: CALL                 
+ 470: STORE_FAST           formatter
+ 472: LOAD_FAST            self
+ 474: LOAD_METHOD          _get_positional_actions
+ 496: PRECALL              
+ 500: CALL                 
+ 510: STORE_FAST           positionals
+ 512: LOAD_FAST            self
+ 514: LOAD_ATTR            _mutually_exclusive_groups
+ 524: STORE_FAST           groups
+ 526: LOAD_FAST            formatter
+ 528: LOAD_METHOD          add_usage
+ 550: LOAD_FAST            self
+ 552: LOAD_ATTR            usage
+ 562: LOAD_FAST            positionals
+ 564: LOAD_FAST            groups
+ 566: LOAD_CONST           ''
+ 568: PRECALL              
+ 572: CALL                 
+ 582: POP_TOP              
+ 584: LOAD_FAST            formatter
+ 586: LOAD_METHOD          format_help
+ 608: PRECALL              
+ 612: CALL                 
+ 622: LOAD_METHOD          strip
+ 644: PRECALL              
+ 648: CALL                 
+ 658: LOAD_FAST            kwargs
+ 660: LOAD_CONST           'prog'
+ 662: STORE_SUBSCR         
+ 666: LOAD_FAST            self
+ 668: LOAD_METHOD          _pop_action_class
+ 690: LOAD_FAST            kwargs
+ 692: LOAD_CONST           'parsers'
+ 694: PRECALL              
+ 698: CALL                 
+ 708: STORE_FAST           parsers_class
+ 710: PUSH_NULL            
+ 712: LOAD_FAST            parsers_class
+ 714: LOAD_CONST           ()
+ 716: LOAD_CONST           'option_strings'
+ 718: BUILD_LIST           
+ 720: BUILD_MAP            
+ 722: LOAD_FAST            kwargs
+ 724: DICT_MERGE           
+ 726: CALL_FUNCTION_EX     
+ 728: STORE_FAST           action
+ 730: LOAD_FAST            self
+ 732: LOAD_ATTR            _subparsers
+ 742: LOAD_METHOD          _add_action
+ 764: LOAD_FAST            action
+ 766: PRECALL              
+ 770: CALL                 
+ 780: POP_TOP              
+ 782: LOAD_FAST            action
+ 784: RETURN_VALUE         

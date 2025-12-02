@@ -1,0 +1,28 @@
+# Disassembly for contextlib.aclosing.__aexit__
+# From module file: contextlib
+
+## co_consts:
+(None,)
+
+## co_names:
+('thing', 'aclose')
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            thing
+  18: LOAD_METHOD          aclose
+  40: PRECALL              
+  44: CALL                 
+  54: GET_AWAITABLE        
+  56: LOAD_CONST           None
+  58: SEND                 to 66
+  60: YIELD_VALUE          
+  62: RESUME               
+  64: JUMP_BACKWARD_NO_INTERRUPT to 58
+  66: POP_TOP              
+  68: LOAD_CONST           None
+  70: RETURN_VALUE         

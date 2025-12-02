@@ -1,0 +1,15 @@
+# Disassembly for importlib.resources.SpecLoaderAdapter.<lambda>
+# From module file: importlib.resources._adapters
+
+## co_consts:
+(None,)
+
+## co_names:
+('loader',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            spec
+   4: LOAD_ATTR            loader
+  14: RETURN_VALUE         

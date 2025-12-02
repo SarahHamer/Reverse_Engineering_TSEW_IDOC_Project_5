@@ -1,0 +1,41 @@
+# Disassembly for ftplib.FTP_TLS.ntransfercmd
+# From module file: ftplib
+
+## co_consts:
+(None, ('server_hostname',))
+
+## co_names:
+('super', 'ntransfercmd', '_prot_p', 'context', 'wrap_socket', 'host')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + super
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_METHOD          ntransfercmd
+  52: LOAD_FAST            cmd
+  54: LOAD_FAST            rest
+  56: PRECALL              
+  60: CALL                 
+  70: UNPACK_SEQUENCE      
+  74: STORE_FAST           conn
+  76: STORE_FAST           size
+  78: LOAD_FAST            self
+  80: LOAD_ATTR            _prot_p
+  90: POP_JUMP_FORWARD_IF_FALSE to 158
+  92: LOAD_FAST            self
+  94: LOAD_ATTR            context
+ 104: LOAD_METHOD          wrap_socket
+ 126: LOAD_FAST            conn
+ 128: LOAD_FAST            self
+ 130: LOAD_ATTR            host
+ 140: KW_NAMES             
+ 142: PRECALL              
+ 146: CALL                 
+ 156: STORE_FAST           conn
+ 158: LOAD_FAST            conn
+ 160: LOAD_FAST            size
+ 162: BUILD_TUPLE          
+ 164: RETURN_VALUE         

@@ -1,0 +1,17 @@
+# Disassembly for tarfile._FileInFile.close
+# From module file: tarfile
+
+## co_consts:
+(None, True)
+
+## co_names:
+('closed',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           True
+   4: LOAD_FAST            self
+   6: STORE_ATTR           closed
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         

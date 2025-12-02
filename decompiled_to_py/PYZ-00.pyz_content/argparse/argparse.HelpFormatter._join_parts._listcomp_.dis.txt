@@ -1,0 +1,26 @@
+# Disassembly for argparse.HelpFormatter._join_parts.<listcomp>
+# From module file: argparse
+
+## co_consts:
+()
+
+## co_names:
+('SUPPRESS',)
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 38
+   8: STORE_FAST           part
+  10: LOAD_FAST            part
+  12: POP_JUMP_FORWARD_IF_FALSE to 36
+  14: LOAD_FAST            part
+  16: LOAD_GLOBAL          SUPPRESS
+  28: IS_OP                
+  30: POP_JUMP_BACKWARD_IF_FALSE to 6
+  32: LOAD_FAST            part
+  34: LIST_APPEND          
+  36: JUMP_BACKWARD        to 6
+  38: RETURN_VALUE         

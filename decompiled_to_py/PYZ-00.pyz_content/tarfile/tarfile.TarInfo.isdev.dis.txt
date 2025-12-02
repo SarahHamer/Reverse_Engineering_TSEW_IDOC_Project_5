@@ -1,0 +1,20 @@
+# Disassembly for tarfile.TarInfo.isdev
+# From module file: tarfile
+
+## co_consts:
+('Return True if it is one of character device, block device or FIFO.',)
+
+## co_names:
+('type', 'CHRTYPE', 'BLKTYPE', 'FIFOTYPE')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            type
+  14: LOAD_GLOBAL          CHRTYPE
+  26: LOAD_GLOBAL          BLKTYPE
+  38: LOAD_GLOBAL          FIFOTYPE
+  50: BUILD_TUPLE          
+  52: CONTAINS_OP          
+  54: RETURN_VALUE         

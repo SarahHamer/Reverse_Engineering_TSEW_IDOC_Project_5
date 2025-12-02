@@ -1,0 +1,25 @@
+# Disassembly for argparse.HelpFormatter._Section.format_help.<listcomp>
+# From module file: argparse
+
+## co_consts:
+()
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 28
+   8: UNPACK_SEQUENCE      
+  12: STORE_FAST           func
+  14: STORE_FAST           args
+  16: PUSH_NULL            
+  18: LOAD_FAST            func
+  20: LOAD_FAST            args
+  22: CALL_FUNCTION_EX     
+  24: LIST_APPEND          
+  26: JUMP_BACKWARD        to 6
+  28: RETURN_VALUE         

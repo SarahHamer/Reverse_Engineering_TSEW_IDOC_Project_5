@@ -1,0 +1,26 @@
+# Disassembly for shlex.shlex.__next__
+# From module file: shlex
+
+## co_consts:
+(None,)
+
+## co_names:
+('get_token', 'eof', 'StopIteration')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          get_token
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           token
+  42: LOAD_FAST            token
+  44: LOAD_FAST            self
+  46: LOAD_ATTR            eof
+  56: COMPARE_OP           ==
+  62: POP_JUMP_FORWARD_IF_FALSE to 78
+  64: LOAD_GLOBAL          StopIteration
+  76: RAISE_VARARGS        
+  78: LOAD_FAST            token
+  80: RETURN_VALUE         

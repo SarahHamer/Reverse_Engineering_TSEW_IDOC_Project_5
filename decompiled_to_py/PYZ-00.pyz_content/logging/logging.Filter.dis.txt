@@ -1,0 +1,27 @@
+# Disassembly for logging.Filter
+# From module file: logging
+
+## co_consts:
+('Filter', '\n    Filter instances are used to perform arbitrary filtering of LogRecords.\n\n    Loggers and Handlers can optionally use Filter instances to filter\n    records as desired. The base filter class only allows events which are\n    below a certain point in the logger hierarchy. For example, a filter\n    initialized with "A.B" will allow events logged by loggers "A.B",\n    "A.B.C", "A.B.C.D", "A.B.D" etc. but not "A.BB", "B.A.B" etc. If\n    initialized with the empty string, all events are passed.\n    ', '', <code object __init__ at 0x00000240693EA430, file "logging\__init__.py", line 764>, <code object filter at 0x00000240691E8DB0, file "logging\__init__.py", line 775>, None, ('',))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', 'filter')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Filter'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           '\n    Filter instances are used to perform arbitrary filtering of LogRecords.\n\n    Loggers and Handlers can optionally use Filter instances to filter\n    records as desired. The base filter class only allows events which are\n    below a certain point in the logger hierarchy. For example, a filter\n    initialized with "A.B" will allow events logged by loggers "A.B",\n    "A.B.C", "A.B.C.D", "A.B.D" etc. but not "A.BB", "B.A.B" etc. If\n    initialized with the empty string, all events are passed.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ('',)
+  16: LOAD_CONST           <code object __init__ at 0x00000240693EA430, file "logging\__init__.py", line 764>
+  18: MAKE_FUNCTION        defaults
+  20: STORE_NAME           __init__
+  22: LOAD_CONST           <code object filter at 0x00000240691E8DB0, file "logging\__init__.py", line 775>
+  24: MAKE_FUNCTION        
+  26: STORE_NAME           filter
+  28: LOAD_CONST           None
+  30: RETURN_VALUE         

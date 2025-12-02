@@ -1,0 +1,36 @@
+# Disassembly for _pydecimal.Decimal.adjusted
+# From module file: _pydecimal
+
+## co_consts:
+('Return the adjusted exponent of self', 1, 0)
+
+## co_names:
+('_exp', 'len', '_int', 'TypeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            _exp
+  16: LOAD_GLOBAL          NULL + len
+  28: LOAD_FAST            self
+  30: LOAD_ATTR            _int
+  40: PRECALL              
+  44: CALL                 
+  54: BINARY_OP            +
+  58: LOAD_CONST           1
+  60: BINARY_OP            -
+  64: RETURN_VALUE         
+  66: PUSH_EXC_INFO        
+  68: LOAD_GLOBAL          TypeError
+  80: CHECK_EXC_MATCH      
+  82: POP_JUMP_FORWARD_IF_FALSE to 92
+  84: POP_TOP              
+  86: POP_EXCEPT           
+  88: LOAD_CONST           0
+  90: RETURN_VALUE         
+  92: RERAISE              
+  94: COPY                 
+  96: POP_EXCEPT           
+  98: RERAISE              

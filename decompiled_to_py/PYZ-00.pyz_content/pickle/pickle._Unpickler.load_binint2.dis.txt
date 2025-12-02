@@ -1,0 +1,30 @@
+# Disassembly for pickle._Unpickler.load_binint2
+# From module file: pickle
+
+## co_consts:
+(None, '<H', 2, 0)
+
+## co_names:
+('append', 'unpack', 'read')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          append
+  26: LOAD_GLOBAL          NULL + unpack
+  38: LOAD_CONST           '<H'
+  40: LOAD_FAST            self
+  42: LOAD_METHOD          read
+  64: LOAD_CONST           2
+  66: PRECALL              
+  70: CALL                 
+  80: PRECALL              
+  84: CALL                 
+  94: LOAD_CONST           0
+  96: BINARY_SUBSCR        
+ 106: PRECALL              
+ 110: CALL                 
+ 120: POP_TOP              
+ 122: LOAD_CONST           None
+ 124: RETURN_VALUE         

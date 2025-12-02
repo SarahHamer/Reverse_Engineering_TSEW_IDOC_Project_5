@@ -1,0 +1,18 @@
+# Disassembly for contextlib._BaseExitStack._create_exit_wrapper
+# From module file: contextlib
+
+## co_consts:
+(None,)
+
+## co_names:
+('MethodType',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + MethodType
+  14: LOAD_FAST            cm_exit
+  16: LOAD_FAST            cm
+  18: PRECALL              
+  22: CALL                 
+  32: RETURN_VALUE         

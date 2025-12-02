@@ -1,0 +1,42 @@
+# Disassembly for http.request_path
+# From module file: http.cookiejar
+
+## co_consts:
+('Path component of request-URI, as defined by RFC 2965.', '/')
+
+## co_names:
+('get_full_url', 'urllib', 'parse', 'urlsplit', 'escape_path', 'path', 'startswith')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            request
+   4: LOAD_METHOD          get_full_url
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           url
+  42: LOAD_GLOBAL          urllib
+  54: LOAD_ATTR            parse
+  64: LOAD_METHOD          urlsplit
+  86: LOAD_FAST            url
+  88: PRECALL              
+  92: CALL                 
+ 102: STORE_FAST           parts
+ 104: LOAD_GLOBAL          NULL + escape_path
+ 116: LOAD_FAST            parts
+ 118: LOAD_ATTR            path
+ 128: PRECALL              
+ 132: CALL                 
+ 142: STORE_FAST           path
+ 144: LOAD_FAST            path
+ 146: LOAD_METHOD          startswith
+ 168: LOAD_CONST           '/'
+ 170: PRECALL              
+ 174: CALL                 
+ 184: POP_JUMP_FORWARD_IF_TRUE to 196
+ 186: LOAD_CONST           '/'
+ 188: LOAD_FAST            path
+ 190: BINARY_OP            +
+ 194: STORE_FAST           path
+ 196: LOAD_FAST            path
+ 198: RETURN_VALUE         

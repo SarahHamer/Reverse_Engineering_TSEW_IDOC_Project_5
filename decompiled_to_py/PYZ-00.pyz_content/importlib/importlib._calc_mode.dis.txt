@@ -1,0 +1,39 @@
+# Disassembly for importlib._calc_mode
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Calculate the mode permissions for a bytecode file.', 438, 128)
+
+## co_names:
+('_path_stat', 'st_mode', 'OSError')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_GLOBAL          NULL + _path_stat
+  16: LOAD_FAST            path
+  18: PRECALL              
+  22: CALL                 
+  32: LOAD_ATTR            st_mode
+  42: STORE_FAST           mode
+  44: JUMP_FORWARD         to 82
+  46: PUSH_EXC_INFO        
+  48: LOAD_GLOBAL          OSError
+  60: CHECK_EXC_MATCH      
+  62: POP_JUMP_FORWARD_IF_FALSE to 74
+  64: POP_TOP              
+  66: LOAD_CONST           438
+  68: STORE_FAST           mode
+  70: POP_EXCEPT           
+  72: JUMP_FORWARD         to 82
+  74: RERAISE              
+  76: COPY                 
+  78: POP_EXCEPT           
+  80: RERAISE              
+  82: LOAD_FAST            mode
+  84: LOAD_CONST           128
+  86: BINARY_OP            |=
+  90: STORE_FAST           mode
+  92: LOAD_FAST            mode
+  94: RETURN_VALUE         

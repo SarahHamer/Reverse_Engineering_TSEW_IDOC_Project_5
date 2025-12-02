@@ -1,0 +1,42 @@
+# Disassembly for http.CookieJar._cookies_from_attrs_set
+# From module file: http.cookiejar
+
+## co_consts:
+(None,)
+
+## co_names:
+('_normalized_cookie_tuples', '_cookie_from_cookie_tuple', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _normalized_cookie_tuples
+  26: LOAD_FAST            attrs_set
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           cookie_tuples
+  44: BUILD_LIST           
+  46: STORE_FAST           cookies
+  48: LOAD_FAST            cookie_tuples
+  50: GET_ITER             
+  52: FOR_ITER             to 148
+  54: STORE_FAST           tup
+  56: LOAD_FAST            self
+  58: LOAD_METHOD          _cookie_from_cookie_tuple
+  80: LOAD_FAST            tup
+  82: LOAD_FAST            request
+  84: PRECALL              
+  88: CALL                 
+  98: STORE_FAST           cookie
+ 100: LOAD_FAST            cookie
+ 102: POP_JUMP_FORWARD_IF_FALSE to 146
+ 104: LOAD_FAST            cookies
+ 106: LOAD_METHOD          append
+ 128: LOAD_FAST            cookie
+ 130: PRECALL              
+ 134: CALL                 
+ 144: POP_TOP              
+ 146: JUMP_BACKWARD        to 52
+ 148: LOAD_FAST            cookies
+ 150: RETURN_VALUE         

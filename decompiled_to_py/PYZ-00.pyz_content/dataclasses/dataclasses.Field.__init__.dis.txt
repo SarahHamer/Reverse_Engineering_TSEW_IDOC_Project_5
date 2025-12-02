@@ -1,0 +1,55 @@
+# Disassembly for dataclasses.Field.__init__
+# From module file: dataclasses
+
+## co_consts:
+(None,)
+
+## co_names:
+('name', 'type', 'default', 'default_factory', 'init', 'repr', 'hash', 'compare', '_EMPTY_METADATA', 'types', 'MappingProxyType', 'metadata', 'kw_only', '_field_type')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: LOAD_FAST            self
+   6: STORE_ATTR           name
+  16: LOAD_CONST           None
+  18: LOAD_FAST            self
+  20: STORE_ATTR           type
+  30: LOAD_FAST            default
+  32: LOAD_FAST            self
+  34: STORE_ATTR           default
+  44: LOAD_FAST            default_factory
+  46: LOAD_FAST            self
+  48: STORE_ATTR           default_factory
+  58: LOAD_FAST            init
+  60: LOAD_FAST            self
+  62: STORE_ATTR           init
+  72: LOAD_FAST            repr
+  74: LOAD_FAST            self
+  76: STORE_ATTR           repr
+  86: LOAD_FAST            hash
+  88: LOAD_FAST            self
+  90: STORE_ATTR           hash
+ 100: LOAD_FAST            compare
+ 102: LOAD_FAST            self
+ 104: STORE_ATTR           compare
+ 114: LOAD_FAST            metadata
+ 116: POP_JUMP_FORWARD_IF_NOT_NONE to 132
+ 118: LOAD_GLOBAL          _EMPTY_METADATA
+ 130: JUMP_FORWARD         to 170
+ 132: LOAD_GLOBAL          NULL + types
+ 144: LOAD_ATTR            MappingProxyType
+ 154: LOAD_FAST            metadata
+ 156: PRECALL              
+ 160: CALL                 
+ 170: LOAD_FAST            self
+ 172: STORE_ATTR           metadata
+ 182: LOAD_FAST            kw_only
+ 184: LOAD_FAST            self
+ 186: STORE_ATTR           kw_only
+ 196: LOAD_CONST           None
+ 198: LOAD_FAST            self
+ 200: STORE_ATTR           _field_type
+ 210: LOAD_CONST           None
+ 212: RETURN_VALUE         

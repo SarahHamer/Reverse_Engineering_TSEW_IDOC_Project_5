@@ -1,0 +1,108 @@
+# Disassembly for importlib._find_and_load
+# From module file: importlib._bootstrap
+
+## co_consts:
+('Find and load the module.', '__spec__', None, '_initializing', False, 'import of {} halted; None in sys.modules', ('name',))
+
+## co_names:
+('sys', 'modules', 'get', '_NEEDS_LOADING', 'getattr', '_ModuleLockManager', '_find_and_load_unlocked', '_lock_unlock_module', 'format', 'ModuleNotFoundError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          sys
+  14: LOAD_ATTR            modules
+  24: LOAD_METHOD          get
+  46: LOAD_FAST            name
+  48: LOAD_GLOBAL          _NEEDS_LOADING
+  60: PRECALL              
+  64: CALL                 
+  74: STORE_FAST           module
+  76: LOAD_FAST            module
+  78: LOAD_GLOBAL          _NEEDS_LOADING
+  90: IS_OP                
+  92: POP_JUMP_FORWARD_IF_TRUE to 158
+  94: LOAD_GLOBAL          NULL + getattr
+ 106: LOAD_GLOBAL          NULL + getattr
+ 118: LOAD_FAST            module
+ 120: LOAD_CONST           '__spec__'
+ 122: LOAD_CONST           None
+ 124: PRECALL              
+ 128: CALL                 
+ 138: LOAD_CONST           '_initializing'
+ 140: LOAD_CONST           False
+ 142: PRECALL              
+ 146: CALL                 
+ 156: POP_JUMP_FORWARD_IF_FALSE to 416
+ 158: LOAD_GLOBAL          NULL + _ModuleLockManager
+ 170: LOAD_FAST            name
+ 172: PRECALL              
+ 176: CALL                 
+ 186: BEFORE_WITH          
+ 188: POP_TOP              
+ 190: LOAD_GLOBAL          sys
+ 202: LOAD_ATTR            modules
+ 212: LOAD_METHOD          get
+ 234: LOAD_FAST            name
+ 236: LOAD_GLOBAL          _NEEDS_LOADING
+ 248: PRECALL              
+ 252: CALL                 
+ 262: STORE_FAST           module
+ 264: LOAD_FAST            module
+ 266: LOAD_GLOBAL          _NEEDS_LOADING
+ 278: IS_OP                
+ 280: POP_JUMP_FORWARD_IF_FALSE to 338
+ 282: LOAD_GLOBAL          NULL + _find_and_load_unlocked
+ 294: LOAD_FAST            name
+ 296: LOAD_FAST            import_
+ 298: PRECALL              
+ 302: CALL                 
+ 312: SWAP                 
+ 314: LOAD_CONST           None
+ 316: LOAD_CONST           None
+ 318: LOAD_CONST           None
+ 320: PRECALL              
+ 324: CALL                 
+ 334: POP_TOP              
+ 336: RETURN_VALUE         
+ 338: NOP                  
+ 340: LOAD_CONST           None
+ 342: LOAD_CONST           None
+ 344: LOAD_CONST           None
+ 346: PRECALL              
+ 350: CALL                 
+ 360: POP_TOP              
+ 362: JUMP_FORWARD         to 386
+ 364: PUSH_EXC_INFO        
+ 366: WITH_EXCEPT_START    
+ 368: POP_JUMP_FORWARD_IF_TRUE to 378
+ 370: RERAISE              
+ 372: COPY                 
+ 374: POP_EXCEPT           
+ 376: RERAISE              
+ 378: POP_TOP              
+ 380: POP_EXCEPT           
+ 382: POP_TOP              
+ 384: POP_TOP              
+ 386: LOAD_GLOBAL          NULL + _lock_unlock_module
+ 398: LOAD_FAST            name
+ 400: PRECALL              
+ 404: CALL                 
+ 414: POP_TOP              
+ 416: LOAD_FAST            module
+ 418: POP_JUMP_FORWARD_IF_NOT_NONE to 496
+ 420: LOAD_CONST           'import of {} halted; None in sys.modules'
+ 422: LOAD_METHOD          format
+ 444: LOAD_FAST            name
+ 446: PRECALL              
+ 450: CALL                 
+ 460: STORE_FAST           message
+ 462: LOAD_GLOBAL          NULL + ModuleNotFoundError
+ 474: LOAD_FAST            message
+ 476: LOAD_FAST            name
+ 478: KW_NAMES             
+ 480: PRECALL              
+ 484: CALL                 
+ 494: RAISE_VARARGS        
+ 496: LOAD_FAST            module
+ 498: RETURN_VALUE         

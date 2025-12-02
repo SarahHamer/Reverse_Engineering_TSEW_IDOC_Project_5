@@ -1,0 +1,44 @@
+# Disassembly for argparse.Action.__init__
+# From module file: argparse
+
+## co_consts:
+(None,)
+
+## co_names:
+('option_strings', 'dest', 'nargs', 'const', 'default', 'type', 'choices', 'required', 'help', 'metavar')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            option_strings
+   4: LOAD_FAST            self
+   6: STORE_ATTR           option_strings
+  16: LOAD_FAST            dest
+  18: LOAD_FAST            self
+  20: STORE_ATTR           dest
+  30: LOAD_FAST            nargs
+  32: LOAD_FAST            self
+  34: STORE_ATTR           nargs
+  44: LOAD_FAST            const
+  46: LOAD_FAST            self
+  48: STORE_ATTR           const
+  58: LOAD_FAST            default
+  60: LOAD_FAST            self
+  62: STORE_ATTR           default
+  72: LOAD_FAST            type
+  74: LOAD_FAST            self
+  76: STORE_ATTR           type
+  86: LOAD_FAST            choices
+  88: LOAD_FAST            self
+  90: STORE_ATTR           choices
+ 100: LOAD_FAST            required
+ 102: LOAD_FAST            self
+ 104: STORE_ATTR           required
+ 114: LOAD_FAST            help
+ 116: LOAD_FAST            self
+ 118: STORE_ATTR           help
+ 128: LOAD_FAST            metavar
+ 130: LOAD_FAST            self
+ 132: STORE_ATTR           metavar
+ 142: LOAD_CONST           None
+ 144: RETURN_VALUE         

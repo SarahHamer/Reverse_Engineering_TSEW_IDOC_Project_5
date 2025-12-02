@@ -1,0 +1,41 @@
+# Disassembly for _pydecimal.Decimal._isinteger
+# From module file: _pydecimal
+
+## co_consts:
+('Returns whether self is an integer', False, 0, True, None, '0')
+
+## co_names:
+('_is_special', '_exp', '_int', 'len')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _is_special
+  14: POP_JUMP_FORWARD_IF_FALSE to 20
+  16: LOAD_CONST           False
+  18: RETURN_VALUE         
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            _exp
+  32: LOAD_CONST           0
+  34: COMPARE_OP           >=
+  40: POP_JUMP_FORWARD_IF_FALSE to 46
+  42: LOAD_CONST           True
+  44: RETURN_VALUE         
+  46: LOAD_FAST            self
+  48: LOAD_ATTR            _int
+  58: LOAD_FAST            self
+  60: LOAD_ATTR            _exp
+  70: LOAD_CONST           None
+  72: BUILD_SLICE          
+  74: BINARY_SUBSCR        
+  84: STORE_FAST           rest
+  86: LOAD_FAST            rest
+  88: LOAD_CONST           '0'
+  90: LOAD_GLOBAL          NULL + len
+ 102: LOAD_FAST            rest
+ 104: PRECALL              
+ 108: CALL                 
+ 118: BINARY_OP            *
+ 122: COMPARE_OP           ==
+ 128: RETURN_VALUE         

@@ -1,0 +1,54 @@
+# Disassembly for zipfile.FastLookup.namelist
+# From module file: zipfile
+
+## co_consts:
+(None,)
+
+## co_names:
+('contextlib', 'suppress', 'AttributeError', '_FastLookup__names', 'super', 'FastLookup', 'namelist')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + contextlib
+  16: LOAD_ATTR            suppress
+  26: LOAD_GLOBAL          AttributeError
+  38: PRECALL              
+  42: CALL                 
+  52: BEFORE_WITH          
+  54: POP_TOP              
+  56: LOAD_FAST            self
+  58: LOAD_ATTR            _FastLookup__names
+  68: SWAP                 
+  70: LOAD_CONST           None
+  72: LOAD_CONST           None
+  74: LOAD_CONST           None
+  76: PRECALL              
+  80: CALL                 
+  90: POP_TOP              
+  92: RETURN_VALUE         
+  94: PUSH_EXC_INFO        
+  96: WITH_EXCEPT_START    
+  98: POP_JUMP_FORWARD_IF_TRUE to 108
+ 100: RERAISE              
+ 102: COPY                 
+ 104: POP_EXCEPT           
+ 106: RERAISE              
+ 108: POP_TOP              
+ 110: POP_EXCEPT           
+ 112: POP_TOP              
+ 114: POP_TOP              
+ 116: LOAD_GLOBAL          NULL + super
+ 128: LOAD_GLOBAL          FastLookup
+ 140: LOAD_FAST            self
+ 142: PRECALL              
+ 146: CALL                 
+ 156: LOAD_METHOD          namelist
+ 178: PRECALL              
+ 182: CALL                 
+ 192: LOAD_FAST            self
+ 194: STORE_ATTR           _FastLookup__names
+ 204: LOAD_FAST            self
+ 206: LOAD_ATTR            _FastLookup__names
+ 216: RETURN_VALUE         

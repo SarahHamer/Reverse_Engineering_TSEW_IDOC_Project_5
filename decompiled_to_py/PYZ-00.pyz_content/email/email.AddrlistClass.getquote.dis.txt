@@ -1,0 +1,20 @@
+# Disassembly for email.AddrlistClass.getquote
+# From module file: email._parseaddr
+
+## co_consts:
+("Get a quote-delimited fragment from self's field.", '"', '"\r', False)
+
+## co_names:
+('getdelimited',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          getdelimited
+  26: LOAD_CONST           '"'
+  28: LOAD_CONST           '"\r'
+  30: LOAD_CONST           False
+  32: PRECALL              
+  36: CALL                 
+  46: RETURN_VALUE         

@@ -1,0 +1,30 @@
+# Disassembly for importlib.ExecutionLoader
+# From module file: importlib.abc
+
+## co_consts:
+('ExecutionLoader', 'Abstract base class for loaders that wish to support the execution of\n    modules as scripts.\n\n    This ABC represents one of the optional protocols specified in PEP 302.\n\n    ', <code object get_filename at 0x0000024069495550, file "importlib\abc.py", line 239>, <code object get_code at 0x000002406942CFD0, file "importlib\abc.py", line 248>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'abc', 'abstractmethod', 'get_filename', 'get_code')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'ExecutionLoader'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Abstract base class for loaders that wish to support the execution of\n    modules as scripts.\n\n    This ABC represents one of the optional protocols specified in PEP 302.\n\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_NAME            abc
+  16: LOAD_ATTR            abstractmethod
+  26: LOAD_CONST           <code object get_filename at 0x0000024069495550, file "importlib\abc.py", line 239>
+  28: MAKE_FUNCTION        
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_NAME           get_filename
+  46: LOAD_CONST           <code object get_code at 0x000002406942CFD0, file "importlib\abc.py", line 248>
+  48: MAKE_FUNCTION        
+  50: STORE_NAME           get_code
+  52: LOAD_CONST           None
+  54: RETURN_VALUE         

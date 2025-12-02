@@ -1,0 +1,27 @@
+# Disassembly for datetime.timedelta.__bool__
+# From module file: datetime
+
+## co_consts:
+(None, 0)
+
+## co_names:
+('_days', '_seconds', '_microseconds')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _days
+  14: LOAD_CONST           0
+  16: COMPARE_OP           !=
+  22: JUMP_IF_TRUE_OR_POP  to 66
+  24: LOAD_FAST            self
+  26: LOAD_ATTR            _seconds
+  36: LOAD_CONST           0
+  38: COMPARE_OP           !=
+  44: JUMP_IF_TRUE_OR_POP  to 66
+  46: LOAD_FAST            self
+  48: LOAD_ATTR            _microseconds
+  58: LOAD_CONST           0
+  60: COMPARE_OP           !=
+  66: RETURN_VALUE         

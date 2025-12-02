@@ -1,0 +1,62 @@
+# Disassembly for zipfile._check_compression
+# From module file: zipfile
+
+## co_consts:
+(None, 'Compression requires the (missing) zlib module', 'Compression requires the (missing) bz2 module', 'Compression requires the (missing) lzma module', 'That compression method is not supported')
+
+## co_names:
+('ZIP_STORED', 'ZIP_DEFLATED', 'zlib', 'RuntimeError', 'ZIP_BZIP2', 'bz2', 'ZIP_LZMA', 'lzma', 'NotImplementedError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            compression
+   4: LOAD_GLOBAL          ZIP_STORED
+  16: COMPARE_OP           ==
+  22: POP_JUMP_FORWARD_IF_FALSE to 28
+  24: LOAD_CONST           None
+  26: RETURN_VALUE         
+  28: LOAD_FAST            compression
+  30: LOAD_GLOBAL          ZIP_DEFLATED
+  42: COMPARE_OP           ==
+  48: POP_JUMP_FORWARD_IF_FALSE to 98
+  50: LOAD_GLOBAL          zlib
+  62: POP_JUMP_FORWARD_IF_TRUE to 94
+  64: LOAD_GLOBAL          NULL + RuntimeError
+  76: LOAD_CONST           'Compression requires the (missing) zlib module'
+  78: PRECALL              
+  82: CALL                 
+  92: RAISE_VARARGS        
+  94: LOAD_CONST           None
+  96: RETURN_VALUE         
+  98: LOAD_FAST            compression
+ 100: LOAD_GLOBAL          ZIP_BZIP2
+ 112: COMPARE_OP           ==
+ 118: POP_JUMP_FORWARD_IF_FALSE to 168
+ 120: LOAD_GLOBAL          bz2
+ 132: POP_JUMP_FORWARD_IF_TRUE to 164
+ 134: LOAD_GLOBAL          NULL + RuntimeError
+ 146: LOAD_CONST           'Compression requires the (missing) bz2 module'
+ 148: PRECALL              
+ 152: CALL                 
+ 162: RAISE_VARARGS        
+ 164: LOAD_CONST           None
+ 166: RETURN_VALUE         
+ 168: LOAD_FAST            compression
+ 170: LOAD_GLOBAL          ZIP_LZMA
+ 182: COMPARE_OP           ==
+ 188: POP_JUMP_FORWARD_IF_FALSE to 238
+ 190: LOAD_GLOBAL          lzma
+ 202: POP_JUMP_FORWARD_IF_TRUE to 234
+ 204: LOAD_GLOBAL          NULL + RuntimeError
+ 216: LOAD_CONST           'Compression requires the (missing) lzma module'
+ 218: PRECALL              
+ 222: CALL                 
+ 232: RAISE_VARARGS        
+ 234: LOAD_CONST           None
+ 236: RETURN_VALUE         
+ 238: LOAD_GLOBAL          NULL + NotImplementedError
+ 250: LOAD_CONST           'That compression method is not supported'
+ 252: PRECALL              
+ 256: CALL                 
+ 266: RAISE_VARARGS        

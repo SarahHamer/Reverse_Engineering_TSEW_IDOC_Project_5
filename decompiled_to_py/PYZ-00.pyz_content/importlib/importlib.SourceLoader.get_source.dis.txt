@@ -1,0 +1,52 @@
+# Disassembly for importlib.SourceLoader.get_source
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Concrete implementation of InspectLoader.get_source.', 'source not available through get_data()', ('name',), None)
+
+## co_names:
+('get_filename', 'get_data', 'OSError', 'ImportError', 'decode_source')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          get_filename
+  26: LOAD_FAST            fullname
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           path
+  44: NOP                  
+  46: LOAD_FAST            self
+  48: LOAD_METHOD          get_data
+  70: LOAD_FAST            path
+  72: PRECALL              
+  76: CALL                 
+  86: STORE_FAST           source_bytes
+  88: JUMP_FORWARD         to 162
+  90: PUSH_EXC_INFO        
+  92: LOAD_GLOBAL          OSError
+ 104: CHECK_EXC_MATCH      
+ 106: POP_JUMP_FORWARD_IF_FALSE to 154
+ 108: STORE_FAST           exc
+ 110: LOAD_GLOBAL          NULL + ImportError
+ 122: LOAD_CONST           'source not available through get_data()'
+ 124: LOAD_FAST            fullname
+ 126: KW_NAMES             
+ 128: PRECALL              
+ 132: CALL                 
+ 142: LOAD_FAST            exc
+ 144: RAISE_VARARGS        
+ 146: LOAD_CONST           None
+ 148: STORE_FAST           exc
+ 150: DELETE_FAST          exc
+ 152: RERAISE              
+ 154: RERAISE              
+ 156: COPY                 
+ 158: POP_EXCEPT           
+ 160: RERAISE              
+ 162: LOAD_GLOBAL          NULL + decode_source
+ 174: LOAD_FAST            source_bytes
+ 176: PRECALL              
+ 180: CALL                 
+ 190: RETURN_VALUE         

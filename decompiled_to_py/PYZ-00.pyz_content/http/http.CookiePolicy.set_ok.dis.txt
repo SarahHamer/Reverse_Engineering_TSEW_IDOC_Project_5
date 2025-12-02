@@ -1,0 +1,16 @@
+# Disassembly for http.CookiePolicy.set_ok
+# From module file: http.cookiejar
+
+## co_consts:
+('Return true if (and only if) cookie should be accepted from server.\n\n        Currently, pre-expired cookies never get this far -- the CookieJar\n        class deletes such cookies itself.\n\n        ',)
+
+## co_names:
+('NotImplementedError',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + NotImplementedError
+  14: PRECALL              
+  18: CALL                 
+  28: RAISE_VARARGS        

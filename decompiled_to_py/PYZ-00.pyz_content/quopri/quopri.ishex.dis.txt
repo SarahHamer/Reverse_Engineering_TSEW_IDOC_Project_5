@@ -1,0 +1,56 @@
+# Disassembly for quopri.ishex
+# From module file: quopri
+
+## co_consts:
+("Return true if the byte ordinal 'c' is a hexadecimal digit in ASCII.", b'0', b'9', b'a', b'f', b'A', b'F')
+
+## co_names:
+('isinstance', 'bytes')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            c
+  16: LOAD_GLOBAL          bytes
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_TRUE to 48
+  44: LOAD_ASSERTION_ERROR 
+  46: RAISE_VARARGS        
+  48: LOAD_CONST           b'0'
+  50: LOAD_FAST            c
+  52: SWAP                 
+  54: COPY                 
+  56: COMPARE_OP           <=
+  62: JUMP_IF_FALSE_OR_POP to 74
+  64: LOAD_CONST           b'9'
+  66: COMPARE_OP           <=
+  72: JUMP_FORWARD         to 78
+  74: SWAP                 
+  76: POP_TOP              
+  78: JUMP_IF_TRUE_OR_POP  to 142
+  80: LOAD_CONST           b'a'
+  82: LOAD_FAST            c
+  84: SWAP                 
+  86: COPY                 
+  88: COMPARE_OP           <=
+  94: JUMP_IF_FALSE_OR_POP to 106
+  96: LOAD_CONST           b'f'
+  98: COMPARE_OP           <=
+ 104: JUMP_FORWARD         to 110
+ 106: SWAP                 
+ 108: POP_TOP              
+ 110: JUMP_IF_TRUE_OR_POP  to 142
+ 112: LOAD_CONST           b'A'
+ 114: LOAD_FAST            c
+ 116: SWAP                 
+ 118: COPY                 
+ 120: COMPARE_OP           <=
+ 126: JUMP_IF_FALSE_OR_POP to 138
+ 128: LOAD_CONST           b'F'
+ 130: COMPARE_OP           <=
+ 136: JUMP_FORWARD         to 142
+ 138: SWAP                 
+ 140: POP_TOP              
+ 142: RETURN_VALUE         

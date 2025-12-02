@@ -1,0 +1,40 @@
+# Disassembly for ftplib.FTP_TLS.ccc
+# From module file: ftplib
+
+## co_consts:
+('Switch back to a clear-text control connection.', 'not using TLS', 'CCC')
+
+## co_names:
+('isinstance', 'sock', 'ssl', 'SSLSocket', 'ValueError', 'voidcmd', 'unwrap')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            sock
+  26: LOAD_GLOBAL          ssl
+  38: LOAD_ATTR            SSLSocket
+  48: PRECALL              
+  52: CALL                 
+  62: POP_JUMP_FORWARD_IF_TRUE to 94
+  64: LOAD_GLOBAL          NULL + ValueError
+  76: LOAD_CONST           'not using TLS'
+  78: PRECALL              
+  82: CALL                 
+  92: RAISE_VARARGS        
+  94: LOAD_FAST            self
+  96: LOAD_METHOD          voidcmd
+ 118: LOAD_CONST           'CCC'
+ 120: PRECALL              
+ 124: CALL                 
+ 134: STORE_FAST           resp
+ 136: LOAD_FAST            self
+ 138: LOAD_ATTR            sock
+ 148: LOAD_METHOD          unwrap
+ 170: PRECALL              
+ 174: CALL                 
+ 184: LOAD_FAST            self
+ 186: STORE_ATTR           sock
+ 196: LOAD_FAST            resp
+ 198: RETURN_VALUE         

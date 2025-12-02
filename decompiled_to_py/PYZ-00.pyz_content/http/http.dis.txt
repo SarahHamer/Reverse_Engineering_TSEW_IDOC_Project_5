@@ -1,0 +1,392 @@
+# Disassembly for http
+# From module file: http.cookiejar
+
+## co_consts:
+("HTTP cookie handling for web clients.\n\nThis module has (now fairly distant) origins in Gisle Aas' Perl module\nHTTP::Cookies, from the libwww-perl library.\n\nDocstrings, comments and debug strings in this code refer to the\nattributes of the HTTP cookie system as cookie-attributes, to distinguish\nthem clearly from Python attributes.\n\nClass diagram (note that BSDDBCookieJar and the MSIE* classes are not\ndistributed with the Python standard library, but are available from\nhttp://wwwsearch.sf.net/):\n\n                        CookieJar____\n                        /     \\      \\\n            FileCookieJar      \\      \\\n             /    |   \\         \\      \\\n MozillaCookieJar | LWPCookieJar \\      \\\n                  |               |      \\\n                  |   ---MSIEBase |       \\\n                  |  /      |     |        \\\n                  | /   MSIEDBCookieJar BSDDBCookieJar\n                  |/\n               MSIECookieJar\n\n", ('Cookie', 'CookieJar', 'CookiePolicy', 'DefaultCookiePolicy', 'FileCookieJar', 'LWPCookieJar', 'LoadError', 'MozillaCookieJar'), 0, None, ('timegm',), False, <code object _debug at 0x00000240693D35A0, file "http\cookiejar.py", line 44>, 'HTTPOnly', '#HttpOnly_', '#( Netscape)? HTTP Cookie File', 'a filename was not supplied (nor was the CookieJar instance initialised with one)', '# Netscape HTTP Cookie File\n# http://curl.haxx.se/rfc/cookie_spec.html\n# This is a generated file!  Do not edit.\n\n', <code object _warn_unhandled_exception at 0x000002406942E100, file "http\cookiejar.py", line 66>, 1970, <code object _timegm at 0x0000024069CD8570, file "http\cookiejar.py", line 81>, ('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'), ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'), <code object <listcomp> at 0x000002406945F960, file "http\cookiejar.py", line 92>, <code object time2isoz at 0x000002406942DAC0, file "http\cookiejar.py", line 94>, <code object time2netscape at 0x0000024069365770, file "http\cookiejar.py", line 113>, ('GMT', 'UTC', 'UT', 'Z'), '^([-+])?(\\d\\d?):?(\\d\\d)?$', <code object offset_from_tz_string at 0x0000024068E210C0, file "http\cookiejar.py", line 136>, <code object _str2time at 0x0000024068D03690, file "http\cookiejar.py", line 150>, '^[SMTWF][a-z][a-z], (\\d\\d) ([JFMASOND][a-z][a-z]) (\\d\\d\\d\\d) (\\d\\d):(\\d\\d):(\\d\\d) GMT$', '^(?:Sun|Mon|Tue|Wed|Thu|Fri|Sat)[a-z]*,?\\s*', '^\n    (\\d\\d?)            # day\n       (?:\\s+|[-\\/])\n    (\\w+)              # month\n        (?:\\s+|[-\\/])\n    (\\d+)              # year\n    (?:\n          (?:\\s+|:)    # separator before clock\n       (\\d\\d?):(\\d\\d)  # hour:min\n       (?::(\\d\\d))?    # optional seconds\n    )?                 # optional clock\n       \\s*\n    (?:\n       ([-+]?\\d{2,4}|(?![APap][Mm]\\b)[A-Za-z]+) # timezone\n       \\s*\n    )?\n    (?:\n       \\(\\w+\\)         # ASCII representation of timezone in parens.\n       \\s*\n    )?$', <code object http2time at 0x0000024068DCC020, file "http\cookiejar.py", line 232>, '^\n    (\\d{4})              # year\n       [-\\/]?\n    (\\d\\d?)              # numerical month\n       [-\\/]?\n    (\\d\\d?)              # day\n   (?:\n         (?:\\s+|[-:Tt])  # separator before clock\n      (\\d\\d?):?(\\d\\d)    # hour:min\n      (?::?(\\d\\d(?:\\.\\d*)?))?  # optional seconds (and fractional)\n   )?                    # optional clock\n      \\s*\n   (?:\n      ([-+]?\\d\\d?:?(:?\\d\\d)?\n       |Z|z)             # timezone  (Z is "zero meridian", i.e. GMT)\n      \\s*\n   )?$', <code object iso2time at 0x00000240691F5550, file "http\cookiejar.py", line 306>, <code object unmatched at 0x00000240693D2D50, file "http\cookiejar.py", line 339>, '^\\s*([^=\\s;,]+)', '^\\s*=\\s*\\"([^\\"\\\\]*(?:\\\\.[^\\"\\\\]*)*)\\"', '^\\s*=\\s*([^\\s;,]*)', '\\\\(.)', <code object split_header_words at 0x0000024068E17000, file "http\cookiejar.py", line 348>, '([\\"\\\\])', <code object join_header_words at 0x0000024069498030, file "http\cookiejar.py", line 434>, <code object strip_quotes at 0x00000240693AA470, file "http\cookiejar.py", line 459>, <code object parse_ns_headers at 0x0000024068B39060, file "http\cookiejar.py", line 466>, '\\.\\d+$', <code object is_HDN at 0x00000240693AB5F0, file "http\cookiejar.py", line 535>, <code object domain_match at 0x0000024069366310, file "http\cookiejar.py", line 550>, <code object liberal_is_HDN at 0x00000240693EB330, file "http\cookiejar.py", line 589>, <code object user_domain_match at 0x00000240691DB2F0, file "http\cookiejar.py", line 599>, ':\\d+$', <code object request_host at 0x00000240691DB120, file "http\cookiejar.py", line 620>, <code object eff_request_host at 0x00000240691C09D0, file "http\cookiejar.py", line 636>, <code object request_path at 0x00000240691E8AB0, file "http\cookiejar.py", line 647>, <code object request_port at 0x000002406942CFD0, file "http\cookiejar.py", line 657>, "%/;:@&=+$,!~*'()", '%([0-9a-fA-F][0-9a-fA-F])', <code object uppercase_escaped_char at 0x000002406944A230, file "http\cookiejar.py", line 675>, <code object escape_path at 0x000002406922D530, file "http\cookiejar.py", line 677>, <code object reach at 0x00000240691EABB0, file "http\cookiejar.py", line 691>, <code object is_third_party at 0x00000240693D2E80, file "http\cookiejar.py", line 726>, <code object Cookie at 0x00000240693EA530, file "http\cookiejar.py", line 743>, 'Cookie', <code object CookiePolicy at 0x000002406945E6A0, file "http\cookiejar.py", line 841>, 'CookiePolicy', <code object DefaultCookiePolicy at 0x000002406942D160, file "http\cookiejar.py", line 874>, 'DefaultCookiePolicy', <code object deepvalues at 0x00000240691E8DB0, file "http\cookiejar.py", line 1227>, <code object Absent at 0x0000024069494370, file "http\cookiejar.py", line 1244>, 'Absent', <code object CookieJar at 0x0000024068E21940, file "http\cookiejar.py", line 1246>, 'CookieJar', <code object LoadError at 0x00000240694968D0, file "http\cookiejar.py", line 1774>, 'LoadError', <code object FileCookieJar at 0x000002406945DA70, file "http\cookiejar.py", line 1776>, 'FileCookieJar', <code object lwp_cookie_str at 0x0000024068E13940, file "http\cookiejar.py", line 1831>, <code object LWPCookieJar at 0x0000024069467E50, file "http\cookiejar.py", line 1859>, 'LWPCookieJar', <code object MozillaCookieJar at 0x0000024069466DB0, file "http\cookiejar.py", line 1982>, 'MozillaCookieJar', (None,))
+
+## co_names:
+('__doc__', '__all__', 'os', 'copy', 'datetime', 're', 'time', 'urllib.parse', 'urllib', 'urllib.request', 'threading', '_threading', 'http.client', 'http', 'calendar', 'timegm', 'debug', 'logger', '_debug', 'HTTPONLY_ATTR', 'HTTPONLY_PREFIX', 'str', 'client', 'HTTP_PORT', 'DEFAULT_HTTP_PORT', 'compile', 'NETSCAPE_MAGIC_RGX', 'MISSING_FILENAME_TEXT', 'NETSCAPE_HEADER_TEXT', '_warn_unhandled_exception', 'EPOCH_YEAR', '_timegm', 'DAYS', 'MONTHS', 'MONTHS_LOWER', 'time2isoz', 'time2netscape', 'UTC_ZONES', 'ASCII', 'TIMEZONE_RE', 'offset_from_tz_string', '_str2time', 'STRICT_DATE_RE', 'I', 'WEEKDAY_RE', 'X', 'LOOSE_HTTP_DATE_RE', 'http2time', 'ISO_DATE_RE', 'iso2time', 'unmatched', 'HEADER_TOKEN_RE', 'HEADER_QUOTED_VALUE_RE', 'HEADER_VALUE_RE', 'HEADER_ESCAPE_RE', 'split_header_words', 'HEADER_JOIN_ESCAPE_RE', 'join_header_words', 'strip_quotes', 'parse_ns_headers', 'IPV4_RE', 'is_HDN', 'domain_match', 'liberal_is_HDN', 'user_domain_match', 'cut_port_re', 'request_host', 'eff_request_host', 'request_path', 'request_port', 'HTTP_PATH_SAFE', 'ESCAPED_CHAR_RE', 'uppercase_escaped_char', 'escape_path', 'reach', 'is_third_party', 'Cookie', 'CookiePolicy', 'DefaultCookiePolicy', 'deepvalues', 'Absent', 'CookieJar', 'OSError', 'LoadError', 'FileCookieJar', 'lwp_cookie_str', 'LWPCookieJar', 'MozillaCookieJar')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           "HTTP cookie handling for web clients.\n\nThis module has (now fairly distant) origins in Gisle Aas' Perl module\nHTTP::Cookies, from the libwww-perl library.\n\nDocstrings, comments and debug strings in this code refer to the\nattributes of the HTTP cookie system as cookie-attributes, to distinguish\nthem clearly from Python attributes.\n\nClass diagram (note that BSDDBCookieJar and the MSIE* classes are not\ndistributed with the Python standard library, but are available from\nhttp://wwwsearch.sf.net/):\n\n                        CookieJar____\n                        /     \\      \\\n            FileCookieJar      \\      \\\n             /    |   \\         \\      \\\n MozillaCookieJar | LWPCookieJar \\      \\\n                  |               |      \\\n                  |   ---MSIEBase |       \\\n                  |  /      |     |        \\\n                  | /   MSIEDBCookieJar BSDDBCookieJar\n                  |/\n               MSIECookieJar\n\n"
+   4: STORE_NAME           __doc__
+   6: BUILD_LIST           
+   8: LOAD_CONST           ('Cookie', 'CookieJar', 'CookiePolicy', 'DefaultCookiePolicy', 'FileCookieJar', 'LWPCookieJar', 'LoadError', 'MozillaCookieJar')
+  10: LIST_EXTEND          
+  12: STORE_NAME           __all__
+  14: LOAD_CONST           0
+  16: LOAD_CONST           None
+  18: IMPORT_NAME          os
+  20: STORE_NAME           os
+  22: LOAD_CONST           0
+  24: LOAD_CONST           None
+  26: IMPORT_NAME          copy
+  28: STORE_NAME           copy
+  30: LOAD_CONST           0
+  32: LOAD_CONST           None
+  34: IMPORT_NAME          datetime
+  36: STORE_NAME           datetime
+  38: LOAD_CONST           0
+  40: LOAD_CONST           None
+  42: IMPORT_NAME          re
+  44: STORE_NAME           re
+  46: LOAD_CONST           0
+  48: LOAD_CONST           None
+  50: IMPORT_NAME          time
+  52: STORE_NAME           time
+  54: LOAD_CONST           0
+  56: LOAD_CONST           None
+  58: IMPORT_NAME          urllib.parse
+  60: STORE_NAME           urllib
+  62: LOAD_CONST           0
+  64: LOAD_CONST           None
+  66: IMPORT_NAME          urllib.request
+  68: STORE_NAME           urllib
+  70: LOAD_CONST           0
+  72: LOAD_CONST           None
+  74: IMPORT_NAME          threading
+  76: STORE_NAME           _threading
+  78: LOAD_CONST           0
+  80: LOAD_CONST           None
+  82: IMPORT_NAME          http.client
+  84: STORE_NAME           http
+  86: LOAD_CONST           0
+  88: LOAD_CONST           ('timegm',)
+  90: IMPORT_NAME          calendar
+  92: IMPORT_FROM          timegm
+  94: STORE_NAME           timegm
+  96: POP_TOP              
+  98: LOAD_CONST           False
+ 100: STORE_NAME           debug
+ 102: LOAD_CONST           None
+ 104: STORE_GLOBAL         logger
+ 106: LOAD_CONST           <code object _debug at 0x00000240693D35A0, file "http\cookiejar.py", line 44>
+ 108: MAKE_FUNCTION        
+ 110: STORE_NAME           _debug
+ 112: LOAD_CONST           'HTTPOnly'
+ 114: STORE_NAME           HTTPONLY_ATTR
+ 116: LOAD_CONST           '#HttpOnly_'
+ 118: STORE_NAME           HTTPONLY_PREFIX
+ 120: PUSH_NULL            
+ 122: LOAD_NAME            str
+ 124: LOAD_NAME            http
+ 126: LOAD_ATTR            client
+ 136: LOAD_ATTR            HTTP_PORT
+ 146: PRECALL              
+ 150: CALL                 
+ 160: STORE_NAME           DEFAULT_HTTP_PORT
+ 162: PUSH_NULL            
+ 164: LOAD_NAME            re
+ 166: LOAD_ATTR            compile
+ 176: LOAD_CONST           '#( Netscape)? HTTP Cookie File'
+ 178: PRECALL              
+ 182: CALL                 
+ 192: STORE_NAME           NETSCAPE_MAGIC_RGX
+ 194: LOAD_CONST           'a filename was not supplied (nor was the CookieJar instance initialised with one)'
+ 196: STORE_NAME           MISSING_FILENAME_TEXT
+ 198: LOAD_CONST           '# Netscape HTTP Cookie File\n# http://curl.haxx.se/rfc/cookie_spec.html\n# This is a generated file!  Do not edit.\n\n'
+ 200: STORE_NAME           NETSCAPE_HEADER_TEXT
+ 202: LOAD_CONST           <code object _warn_unhandled_exception at 0x000002406942E100, file "http\cookiejar.py", line 66>
+ 204: MAKE_FUNCTION        
+ 206: STORE_NAME           _warn_unhandled_exception
+ 208: LOAD_CONST           1970
+ 210: STORE_NAME           EPOCH_YEAR
+ 212: LOAD_CONST           <code object _timegm at 0x0000024069CD8570, file "http\cookiejar.py", line 81>
+ 214: MAKE_FUNCTION        
+ 216: STORE_NAME           _timegm
+ 218: BUILD_LIST           
+ 220: LOAD_CONST           ('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun')
+ 222: LIST_EXTEND          
+ 224: STORE_NAME           DAYS
+ 226: BUILD_LIST           
+ 228: LOAD_CONST           ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')
+ 230: LIST_EXTEND          
+ 232: STORE_NAME           MONTHS
+ 234: LOAD_CONST           <code object <listcomp> at 0x000002406945F960, file "http\cookiejar.py", line 92>
+ 236: MAKE_FUNCTION        
+ 238: LOAD_NAME            MONTHS
+ 240: GET_ITER             
+ 242: PRECALL              
+ 246: CALL                 
+ 256: STORE_NAME           MONTHS_LOWER
+ 258: LOAD_CONST           (None,)
+ 260: LOAD_CONST           <code object time2isoz at 0x000002406942DAC0, file "http\cookiejar.py", line 94>
+ 262: MAKE_FUNCTION        defaults
+ 264: STORE_NAME           time2isoz
+ 266: LOAD_CONST           (None,)
+ 268: LOAD_CONST           <code object time2netscape at 0x0000024069365770, file "http\cookiejar.py", line 113>
+ 270: MAKE_FUNCTION        defaults
+ 272: STORE_NAME           time2netscape
+ 274: LOAD_CONST           None
+ 276: LOAD_CONST           None
+ 278: LOAD_CONST           None
+ 280: LOAD_CONST           None
+ 282: LOAD_CONST           ('GMT', 'UTC', 'UT', 'Z')
+ 284: BUILD_CONST_KEY_MAP  
+ 286: STORE_NAME           UTC_ZONES
+ 288: PUSH_NULL            
+ 290: LOAD_NAME            re
+ 292: LOAD_ATTR            compile
+ 302: LOAD_CONST           '^([-+])?(\\d\\d?):?(\\d\\d)?$'
+ 304: LOAD_NAME            re
+ 306: LOAD_ATTR            ASCII
+ 316: PRECALL              
+ 320: CALL                 
+ 330: STORE_NAME           TIMEZONE_RE
+ 332: LOAD_CONST           <code object offset_from_tz_string at 0x0000024068E210C0, file "http\cookiejar.py", line 136>
+ 334: MAKE_FUNCTION        
+ 336: STORE_NAME           offset_from_tz_string
+ 338: LOAD_CONST           <code object _str2time at 0x0000024068D03690, file "http\cookiejar.py", line 150>
+ 340: MAKE_FUNCTION        
+ 342: STORE_NAME           _str2time
+ 344: PUSH_NULL            
+ 346: LOAD_NAME            re
+ 348: LOAD_ATTR            compile
+ 358: LOAD_CONST           '^[SMTWF][a-z][a-z], (\\d\\d) ([JFMASOND][a-z][a-z]) (\\d\\d\\d\\d) (\\d\\d):(\\d\\d):(\\d\\d) GMT$'
+ 360: LOAD_NAME            re
+ 362: LOAD_ATTR            ASCII
+ 372: PRECALL              
+ 376: CALL                 
+ 386: STORE_NAME           STRICT_DATE_RE
+ 388: PUSH_NULL            
+ 390: LOAD_NAME            re
+ 392: LOAD_ATTR            compile
+ 402: LOAD_CONST           '^(?:Sun|Mon|Tue|Wed|Thu|Fri|Sat)[a-z]*,?\\s*'
+ 404: LOAD_NAME            re
+ 406: LOAD_ATTR            I
+ 416: LOAD_NAME            re
+ 418: LOAD_ATTR            ASCII
+ 428: BINARY_OP            |
+ 432: PRECALL              
+ 436: CALL                 
+ 446: STORE_NAME           WEEKDAY_RE
+ 448: PUSH_NULL            
+ 450: LOAD_NAME            re
+ 452: LOAD_ATTR            compile
+ 462: LOAD_CONST           '^\n    (\\d\\d?)            # day\n       (?:\\s+|[-\\/])\n    (\\w+)              # month\n        (?:\\s+|[-\\/])\n    (\\d+)              # year\n    (?:\n          (?:\\s+|:)    # separator before clock\n       (\\d\\d?):(\\d\\d)  # hour:min\n       (?::(\\d\\d))?    # optional seconds\n    )?                 # optional clock\n       \\s*\n    (?:\n       ([-+]?\\d{2,4}|(?![APap][Mm]\\b)[A-Za-z]+) # timezone\n       \\s*\n    )?\n    (?:\n       \\(\\w+\\)         # ASCII representation of timezone in parens.\n       \\s*\n    )?$'
+ 464: LOAD_NAME            re
+ 466: LOAD_ATTR            X
+ 476: LOAD_NAME            re
+ 478: LOAD_ATTR            ASCII
+ 488: BINARY_OP            |
+ 492: PRECALL              
+ 496: CALL                 
+ 506: STORE_NAME           LOOSE_HTTP_DATE_RE
+ 508: LOAD_CONST           <code object http2time at 0x0000024068DCC020, file "http\cookiejar.py", line 232>
+ 510: MAKE_FUNCTION        
+ 512: STORE_NAME           http2time
+ 514: PUSH_NULL            
+ 516: LOAD_NAME            re
+ 518: LOAD_ATTR            compile
+ 528: LOAD_CONST           '^\n    (\\d{4})              # year\n       [-\\/]?\n    (\\d\\d?)              # numerical month\n       [-\\/]?\n    (\\d\\d?)              # day\n   (?:\n         (?:\\s+|[-:Tt])  # separator before clock\n      (\\d\\d?):?(\\d\\d)    # hour:min\n      (?::?(\\d\\d(?:\\.\\d*)?))?  # optional seconds (and fractional)\n   )?                    # optional clock\n      \\s*\n   (?:\n      ([-+]?\\d\\d?:?(:?\\d\\d)?\n       |Z|z)             # timezone  (Z is "zero meridian", i.e. GMT)\n      \\s*\n   )?$'
+ 530: LOAD_NAME            re
+ 532: LOAD_ATTR            X
+ 542: LOAD_NAME            re
+ 544: LOAD_ATTR            ASCII
+ 554: BINARY_OP            |
+ 558: PRECALL              
+ 562: CALL                 
+ 572: STORE_NAME           ISO_DATE_RE
+ 574: LOAD_CONST           <code object iso2time at 0x00000240691F5550, file "http\cookiejar.py", line 306>
+ 576: MAKE_FUNCTION        
+ 578: STORE_NAME           iso2time
+ 580: LOAD_CONST           <code object unmatched at 0x00000240693D2D50, file "http\cookiejar.py", line 339>
+ 582: MAKE_FUNCTION        
+ 584: STORE_NAME           unmatched
+ 586: PUSH_NULL            
+ 588: LOAD_NAME            re
+ 590: LOAD_ATTR            compile
+ 600: LOAD_CONST           '^\\s*([^=\\s;,]+)'
+ 602: PRECALL              
+ 606: CALL                 
+ 616: STORE_NAME           HEADER_TOKEN_RE
+ 618: PUSH_NULL            
+ 620: LOAD_NAME            re
+ 622: LOAD_ATTR            compile
+ 632: LOAD_CONST           '^\\s*=\\s*\\"([^\\"\\\\]*(?:\\\\.[^\\"\\\\]*)*)\\"'
+ 634: PRECALL              
+ 638: CALL                 
+ 648: STORE_NAME           HEADER_QUOTED_VALUE_RE
+ 650: PUSH_NULL            
+ 652: LOAD_NAME            re
+ 654: LOAD_ATTR            compile
+ 664: LOAD_CONST           '^\\s*=\\s*([^\\s;,]*)'
+ 666: PRECALL              
+ 670: CALL                 
+ 680: STORE_NAME           HEADER_VALUE_RE
+ 682: PUSH_NULL            
+ 684: LOAD_NAME            re
+ 686: LOAD_ATTR            compile
+ 696: LOAD_CONST           '\\\\(.)'
+ 698: PRECALL              
+ 702: CALL                 
+ 712: STORE_NAME           HEADER_ESCAPE_RE
+ 714: LOAD_CONST           <code object split_header_words at 0x0000024068E17000, file "http\cookiejar.py", line 348>
+ 716: MAKE_FUNCTION        
+ 718: STORE_NAME           split_header_words
+ 720: PUSH_NULL            
+ 722: LOAD_NAME            re
+ 724: LOAD_ATTR            compile
+ 734: LOAD_CONST           '([\\"\\\\])'
+ 736: PRECALL              
+ 740: CALL                 
+ 750: STORE_NAME           HEADER_JOIN_ESCAPE_RE
+ 752: LOAD_CONST           <code object join_header_words at 0x0000024069498030, file "http\cookiejar.py", line 434>
+ 754: MAKE_FUNCTION        
+ 756: STORE_NAME           join_header_words
+ 758: LOAD_CONST           <code object strip_quotes at 0x00000240693AA470, file "http\cookiejar.py", line 459>
+ 760: MAKE_FUNCTION        
+ 762: STORE_NAME           strip_quotes
+ 764: LOAD_CONST           <code object parse_ns_headers at 0x0000024068B39060, file "http\cookiejar.py", line 466>
+ 766: MAKE_FUNCTION        
+ 768: STORE_NAME           parse_ns_headers
+ 770: PUSH_NULL            
+ 772: LOAD_NAME            re
+ 774: LOAD_ATTR            compile
+ 784: LOAD_CONST           '\\.\\d+$'
+ 786: LOAD_NAME            re
+ 788: LOAD_ATTR            ASCII
+ 798: PRECALL              
+ 802: CALL                 
+ 812: STORE_NAME           IPV4_RE
+ 814: LOAD_CONST           <code object is_HDN at 0x00000240693AB5F0, file "http\cookiejar.py", line 535>
+ 816: MAKE_FUNCTION        
+ 818: STORE_NAME           is_HDN
+ 820: LOAD_CONST           <code object domain_match at 0x0000024069366310, file "http\cookiejar.py", line 550>
+ 822: MAKE_FUNCTION        
+ 824: STORE_NAME           domain_match
+ 826: LOAD_CONST           <code object liberal_is_HDN at 0x00000240693EB330, file "http\cookiejar.py", line 589>
+ 828: MAKE_FUNCTION        
+ 830: STORE_NAME           liberal_is_HDN
+ 832: LOAD_CONST           <code object user_domain_match at 0x00000240691DB2F0, file "http\cookiejar.py", line 599>
+ 834: MAKE_FUNCTION        
+ 836: STORE_NAME           user_domain_match
+ 838: PUSH_NULL            
+ 840: LOAD_NAME            re
+ 842: LOAD_ATTR            compile
+ 852: LOAD_CONST           ':\\d+$'
+ 854: LOAD_NAME            re
+ 856: LOAD_ATTR            ASCII
+ 866: PRECALL              
+ 870: CALL                 
+ 880: STORE_NAME           cut_port_re
+ 882: LOAD_CONST           <code object request_host at 0x00000240691DB120, file "http\cookiejar.py", line 620>
+ 884: MAKE_FUNCTION        
+ 886: STORE_NAME           request_host
+ 888: LOAD_CONST           <code object eff_request_host at 0x00000240691C09D0, file "http\cookiejar.py", line 636>
+ 890: MAKE_FUNCTION        
+ 892: STORE_NAME           eff_request_host
+ 894: LOAD_CONST           <code object request_path at 0x00000240691E8AB0, file "http\cookiejar.py", line 647>
+ 896: MAKE_FUNCTION        
+ 898: STORE_NAME           request_path
+ 900: LOAD_CONST           <code object request_port at 0x000002406942CFD0, file "http\cookiejar.py", line 657>
+ 902: MAKE_FUNCTION        
+ 904: STORE_NAME           request_port
+ 906: LOAD_CONST           "%/;:@&=+$,!~*'()"
+ 908: STORE_NAME           HTTP_PATH_SAFE
+ 910: PUSH_NULL            
+ 912: LOAD_NAME            re
+ 914: LOAD_ATTR            compile
+ 924: LOAD_CONST           '%([0-9a-fA-F][0-9a-fA-F])'
+ 926: PRECALL              
+ 930: CALL                 
+ 940: STORE_NAME           ESCAPED_CHAR_RE
+ 942: LOAD_CONST           <code object uppercase_escaped_char at 0x000002406944A230, file "http\cookiejar.py", line 675>
+ 944: MAKE_FUNCTION        
+ 946: STORE_NAME           uppercase_escaped_char
+ 948: LOAD_CONST           <code object escape_path at 0x000002406922D530, file "http\cookiejar.py", line 677>
+ 950: MAKE_FUNCTION        
+ 952: STORE_NAME           escape_path
+ 954: LOAD_CONST           <code object reach at 0x00000240691EABB0, file "http\cookiejar.py", line 691>
+ 956: MAKE_FUNCTION        
+ 958: STORE_NAME           reach
+ 960: LOAD_CONST           <code object is_third_party at 0x00000240693D2E80, file "http\cookiejar.py", line 726>
+ 962: MAKE_FUNCTION        
+ 964: STORE_NAME           is_third_party
+ 966: PUSH_NULL            
+ 968: LOAD_BUILD_CLASS     
+ 970: LOAD_CONST           <code object Cookie at 0x00000240693EA530, file "http\cookiejar.py", line 743>
+ 972: MAKE_FUNCTION        
+ 974: LOAD_CONST           'Cookie'
+ 976: PRECALL              
+ 980: CALL                 
+ 990: STORE_NAME           Cookie
+ 992: PUSH_NULL            
+ 994: LOAD_BUILD_CLASS     
+ 996: LOAD_CONST           <code object CookiePolicy at 0x000002406945E6A0, file "http\cookiejar.py", line 841>
+ 998: MAKE_FUNCTION        
+1000: LOAD_CONST           'CookiePolicy'
+1002: PRECALL              
+1006: CALL                 
+1016: STORE_NAME           CookiePolicy
+1018: PUSH_NULL            
+1020: LOAD_BUILD_CLASS     
+1022: LOAD_CONST           <code object DefaultCookiePolicy at 0x000002406942D160, file "http\cookiejar.py", line 874>
+1024: MAKE_FUNCTION        
+1026: LOAD_CONST           'DefaultCookiePolicy'
+1028: LOAD_NAME            CookiePolicy
+1030: PRECALL              
+1034: CALL                 
+1044: STORE_NAME           DefaultCookiePolicy
+1046: LOAD_CONST           <code object deepvalues at 0x00000240691E8DB0, file "http\cookiejar.py", line 1227>
+1048: MAKE_FUNCTION        
+1050: STORE_NAME           deepvalues
+1052: PUSH_NULL            
+1054: LOAD_BUILD_CLASS     
+1056: LOAD_CONST           <code object Absent at 0x0000024069494370, file "http\cookiejar.py", line 1244>
+1058: MAKE_FUNCTION        
+1060: LOAD_CONST           'Absent'
+1062: PRECALL              
+1066: CALL                 
+1076: STORE_NAME           Absent
+1078: PUSH_NULL            
+1080: LOAD_BUILD_CLASS     
+1082: LOAD_CONST           <code object CookieJar at 0x0000024068E21940, file "http\cookiejar.py", line 1246>
+1084: MAKE_FUNCTION        
+1086: LOAD_CONST           'CookieJar'
+1088: PRECALL              
+1092: CALL                 
+1102: STORE_NAME           CookieJar
+1104: PUSH_NULL            
+1106: LOAD_BUILD_CLASS     
+1108: LOAD_CONST           <code object LoadError at 0x00000240694968D0, file "http\cookiejar.py", line 1774>
+1110: MAKE_FUNCTION        
+1112: LOAD_CONST           'LoadError'
+1114: LOAD_NAME            OSError
+1116: PRECALL              
+1120: CALL                 
+1130: STORE_NAME           LoadError
+1132: PUSH_NULL            
+1134: LOAD_BUILD_CLASS     
+1136: LOAD_CONST           <code object FileCookieJar at 0x000002406945DA70, file "http\cookiejar.py", line 1776>
+1138: MAKE_FUNCTION        
+1140: LOAD_CONST           'FileCookieJar'
+1142: LOAD_NAME            CookieJar
+1144: PRECALL              
+1148: CALL                 
+1158: STORE_NAME           FileCookieJar
+1160: LOAD_CONST           <code object lwp_cookie_str at 0x0000024068E13940, file "http\cookiejar.py", line 1831>
+1162: MAKE_FUNCTION        
+1164: STORE_NAME           lwp_cookie_str
+1166: PUSH_NULL            
+1168: LOAD_BUILD_CLASS     
+1170: LOAD_CONST           <code object LWPCookieJar at 0x0000024069467E50, file "http\cookiejar.py", line 1859>
+1172: MAKE_FUNCTION        
+1174: LOAD_CONST           'LWPCookieJar'
+1176: LOAD_NAME            FileCookieJar
+1178: PRECALL              
+1182: CALL                 
+1192: STORE_NAME           LWPCookieJar
+1194: PUSH_NULL            
+1196: LOAD_BUILD_CLASS     
+1198: LOAD_CONST           <code object MozillaCookieJar at 0x0000024069466DB0, file "http\cookiejar.py", line 1982>
+1200: MAKE_FUNCTION        
+1202: LOAD_CONST           'MozillaCookieJar'
+1204: LOAD_NAME            FileCookieJar
+1206: PRECALL              
+1210: CALL                 
+1220: STORE_NAME           MozillaCookieJar
+1222: LOAD_CONST           None
+1224: RETURN_VALUE         

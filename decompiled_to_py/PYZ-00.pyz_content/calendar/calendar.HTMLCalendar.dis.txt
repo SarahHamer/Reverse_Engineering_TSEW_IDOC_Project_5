@@ -1,0 +1,64 @@
+# Disassembly for calendar.HTMLCalendar
+# From module file: calendar
+
+## co_consts:
+('HTMLCalendar', '\n    This calendar returns complete HTML pages.\n    ', ('mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'), 'noday', 'month', 'year', <code object formatday at 0x00000240693EA830, file "calendar.py", line 438>, <code object formatweek at 0x000002406944ADE0, file "calendar.py", line 448>, <code object formatweekday at 0x00000240693EAB30, file "calendar.py", line 455>, <code object formatweekheader at 0x00000240693D2890, file "calendar.py", line 462>, True, <code object formatmonthname at 0x000002406941AE50, file "calendar.py", line 469>, <code object formatmonth at 0x0000024068D32B40, file "calendar.py", line 480>, 3, <code object formatyear at 0x0000024068DC3480, file "calendar.py", line 500>, 'calendar.css', None, <code object formatyearpage at 0x0000024068D2F960, file "calendar.py", line 524>, (True,), (3,), (3, 'calendar.css', None))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'cssclasses', 'cssclasses_weekday_head', 'cssclass_noday', 'cssclass_month_head', 'cssclass_month', 'cssclass_year_head', 'cssclass_year', 'formatday', 'formatweek', 'formatweekday', 'formatweekheader', 'formatmonthname', 'formatmonth', 'formatyear', 'formatyearpage')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'HTMLCalendar'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           '\n    This calendar returns complete HTML pages.\n    '
+  12: STORE_NAME           __doc__
+  14: BUILD_LIST           
+  16: LOAD_CONST           ('mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun')
+  18: LIST_EXTEND          
+  20: STORE_NAME           cssclasses
+  22: LOAD_NAME            cssclasses
+  24: STORE_NAME           cssclasses_weekday_head
+  26: LOAD_CONST           'noday'
+  28: STORE_NAME           cssclass_noday
+  30: LOAD_CONST           'month'
+  32: STORE_NAME           cssclass_month_head
+  34: LOAD_CONST           'month'
+  36: STORE_NAME           cssclass_month
+  38: LOAD_CONST           'year'
+  40: STORE_NAME           cssclass_year_head
+  42: LOAD_CONST           'year'
+  44: STORE_NAME           cssclass_year
+  46: LOAD_CONST           <code object formatday at 0x00000240693EA830, file "calendar.py", line 438>
+  48: MAKE_FUNCTION        
+  50: STORE_NAME           formatday
+  52: LOAD_CONST           <code object formatweek at 0x000002406944ADE0, file "calendar.py", line 448>
+  54: MAKE_FUNCTION        
+  56: STORE_NAME           formatweek
+  58: LOAD_CONST           <code object formatweekday at 0x00000240693EAB30, file "calendar.py", line 455>
+  60: MAKE_FUNCTION        
+  62: STORE_NAME           formatweekday
+  64: LOAD_CONST           <code object formatweekheader at 0x00000240693D2890, file "calendar.py", line 462>
+  66: MAKE_FUNCTION        
+  68: STORE_NAME           formatweekheader
+  70: LOAD_CONST           (True,)
+  72: LOAD_CONST           <code object formatmonthname at 0x000002406941AE50, file "calendar.py", line 469>
+  74: MAKE_FUNCTION        defaults
+  76: STORE_NAME           formatmonthname
+  78: LOAD_CONST           (True,)
+  80: LOAD_CONST           <code object formatmonth at 0x0000024068D32B40, file "calendar.py", line 480>
+  82: MAKE_FUNCTION        defaults
+  84: STORE_NAME           formatmonth
+  86: LOAD_CONST           (3,)
+  88: LOAD_CONST           <code object formatyear at 0x0000024068DC3480, file "calendar.py", line 500>
+  90: MAKE_FUNCTION        defaults
+  92: STORE_NAME           formatyear
+  94: LOAD_CONST           (3, 'calendar.css', None)
+  96: LOAD_CONST           <code object formatyearpage at 0x0000024068D2F960, file "calendar.py", line 524>
+  98: MAKE_FUNCTION        defaults
+ 100: STORE_NAME           formatyearpage
+ 102: LOAD_CONST           None
+ 104: RETURN_VALUE         

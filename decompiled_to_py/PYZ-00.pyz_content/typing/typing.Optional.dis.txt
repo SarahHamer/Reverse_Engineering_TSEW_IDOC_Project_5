@@ -1,0 +1,30 @@
+# Disassembly for typing.Optional
+# From module file: typing
+
+## co_consts:
+('Optional[X] is equivalent to Union[X, None].', ' requires a single type.', None)
+
+## co_names:
+('_type_check', 'Union', 'type')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _type_check
+  14: LOAD_FAST            parameters
+  16: LOAD_FAST            self
+  18: FORMAT_VALUE         
+  20: LOAD_CONST           ' requires a single type.'
+  22: BUILD_STRING         
+  24: PRECALL              
+  28: CALL                 
+  38: STORE_FAST           arg
+  40: LOAD_GLOBAL          Union
+  52: LOAD_FAST            arg
+  54: LOAD_GLOBAL          NULL + type
+  66: LOAD_CONST           None
+  68: PRECALL              
+  72: CALL                 
+  82: BUILD_TUPLE          
+  84: BINARY_SUBSCR        
+  94: RETURN_VALUE         

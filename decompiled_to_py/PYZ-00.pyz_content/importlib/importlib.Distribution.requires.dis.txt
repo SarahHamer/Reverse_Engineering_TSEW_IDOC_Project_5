@@ -1,0 +1,29 @@
+# Disassembly for importlib.Distribution.requires
+# From module file: importlib.metadata
+
+## co_consts:
+('Generated requirements specified for this Distribution',)
+
+## co_names:
+('_read_dist_info_reqs', '_read_egg_info_reqs', 'list')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _read_dist_info_reqs
+  26: PRECALL              
+  30: CALL                 
+  40: JUMP_IF_TRUE_OR_POP  to 80
+  42: LOAD_FAST            self
+  44: LOAD_METHOD          _read_egg_info_reqs
+  66: PRECALL              
+  70: CALL                 
+  80: STORE_FAST           reqs
+  82: LOAD_FAST            reqs
+  84: JUMP_IF_FALSE_OR_POP to 114
+  86: LOAD_GLOBAL          NULL + list
+  98: LOAD_FAST            reqs
+ 100: PRECALL              
+ 104: CALL                 
+ 114: RETURN_VALUE         

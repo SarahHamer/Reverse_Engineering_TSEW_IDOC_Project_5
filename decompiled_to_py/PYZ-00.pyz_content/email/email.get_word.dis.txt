@@ -1,0 +1,86 @@
+# Disassembly for email.get_word
+# From module file: email._header_value_parser
+
+## co_consts:
+("word = atom / quoted-string\n\n    Either atom or quoted-string may start with CFWS.  We have to peel off this\n    CFWS first to determine which type of word to parse.  Afterward we splice\n    the leading CFWS, if any, into the parsed sub-token.\n\n    If neither an atom or a quoted-string is found before the next special, a\n    HeaderParseError is raised.\n\n    The token returned is either an Atom or a QuotedString, as appropriate.\n    This means the 'word' level of the formal grammar is not represented in the\n    parse tree; this is because having that extra layer when manipulating the\n    parse tree is more confusing than it is helpful.\n\n    ", 0, None, "Expected 'atom' or 'quoted-string' but found nothing.", '"', "Expected 'atom' or 'quoted-string' but found '{}'")
+
+## co_names:
+('CFWS_LEADER', 'get_cfws', 'errors', 'HeaderParseError', 'get_quoted_string', 'SPECIALS', 'format', 'get_atom')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            value
+   4: LOAD_CONST           0
+   6: BINARY_SUBSCR        
+  16: LOAD_GLOBAL          CFWS_LEADER
+  28: CONTAINS_OP          
+  30: POP_JUMP_FORWARD_IF_FALSE to 70
+  32: LOAD_GLOBAL          NULL + get_cfws
+  44: LOAD_FAST            value
+  46: PRECALL              
+  50: CALL                 
+  60: UNPACK_SEQUENCE      
+  64: STORE_FAST           leader
+  66: STORE_FAST           value
+  68: JUMP_FORWARD         to 74
+  70: LOAD_CONST           None
+  72: STORE_FAST           leader
+  74: LOAD_FAST            value
+  76: POP_JUMP_FORWARD_IF_TRUE to 118
+  78: LOAD_GLOBAL          NULL + errors
+  90: LOAD_ATTR            HeaderParseError
+ 100: LOAD_CONST           "Expected 'atom' or 'quoted-string' but found nothing."
+ 102: PRECALL              
+ 106: CALL                 
+ 116: RAISE_VARARGS        
+ 118: LOAD_FAST            value
+ 120: LOAD_CONST           0
+ 122: BINARY_SUBSCR        
+ 132: LOAD_CONST           '"'
+ 134: COMPARE_OP           ==
+ 140: POP_JUMP_FORWARD_IF_FALSE to 180
+ 142: LOAD_GLOBAL          NULL + get_quoted_string
+ 154: LOAD_FAST            value
+ 156: PRECALL              
+ 160: CALL                 
+ 170: UNPACK_SEQUENCE      
+ 174: STORE_FAST           token
+ 176: STORE_FAST           value
+ 178: JUMP_FORWARD         to 324
+ 180: LOAD_FAST            value
+ 182: LOAD_CONST           0
+ 184: BINARY_SUBSCR        
+ 194: LOAD_GLOBAL          SPECIALS
+ 206: CONTAINS_OP          
+ 208: POP_JUMP_FORWARD_IF_FALSE to 288
+ 210: LOAD_GLOBAL          NULL + errors
+ 222: LOAD_ATTR            HeaderParseError
+ 232: LOAD_CONST           "Expected 'atom' or 'quoted-string' but found '{}'"
+ 234: LOAD_METHOD          format
+ 256: LOAD_FAST            value
+ 258: PRECALL              
+ 262: CALL                 
+ 272: PRECALL              
+ 276: CALL                 
+ 286: RAISE_VARARGS        
+ 288: LOAD_GLOBAL          NULL + get_atom
+ 300: LOAD_FAST            value
+ 302: PRECALL              
+ 306: CALL                 
+ 316: UNPACK_SEQUENCE      
+ 320: STORE_FAST           token
+ 322: STORE_FAST           value
+ 324: LOAD_FAST            leader
+ 326: POP_JUMP_FORWARD_IF_NONE to 344
+ 328: LOAD_FAST            leader
+ 330: BUILD_LIST           
+ 332: LOAD_FAST            token
+ 334: LOAD_CONST           None
+ 336: LOAD_CONST           0
+ 338: BUILD_SLICE          
+ 340: STORE_SUBSCR         
+ 344: LOAD_FAST            token
+ 346: LOAD_FAST            value
+ 348: BUILD_TUPLE          
+ 350: RETURN_VALUE         

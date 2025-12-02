@@ -1,0 +1,48 @@
+# Disassembly for http.HTTPResponse.getheader
+# From module file: http.client
+
+## co_consts:
+('Returns the value of the header matching *name*.\n\n        If there are multiple matching headers, the values are\n        combined into a single string separated by commas and spaces.\n\n        If no matching header is found, returns *default* or None if\n        the *default* is not specified.\n\n        If the headers are unknown, raises http.client.ResponseNotReady.\n\n        ', None, '__iter__', ', ')
+
+## co_names:
+('headers', 'ResponseNotReady', 'get_all', 'isinstance', 'str', 'hasattr', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            headers
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 44
+  16: LOAD_GLOBAL          NULL + ResponseNotReady
+  28: PRECALL              
+  32: CALL                 
+  42: RAISE_VARARGS        
+  44: LOAD_FAST            self
+  46: LOAD_ATTR            headers
+  56: LOAD_METHOD          get_all
+  78: LOAD_FAST            name
+  80: PRECALL              
+  84: CALL                 
+  94: JUMP_IF_TRUE_OR_POP  to 98
+  96: LOAD_FAST            default
+  98: STORE_FAST           headers
+ 100: LOAD_GLOBAL          NULL + isinstance
+ 112: LOAD_FAST            headers
+ 114: LOAD_GLOBAL          str
+ 126: PRECALL              
+ 130: CALL                 
+ 140: POP_JUMP_FORWARD_IF_TRUE to 174
+ 142: LOAD_GLOBAL          NULL + hasattr
+ 154: LOAD_FAST            headers
+ 156: LOAD_CONST           '__iter__'
+ 158: PRECALL              
+ 162: CALL                 
+ 172: POP_JUMP_FORWARD_IF_TRUE to 178
+ 174: LOAD_FAST            headers
+ 176: RETURN_VALUE         
+ 178: LOAD_CONST           ', '
+ 180: LOAD_METHOD          join
+ 202: LOAD_FAST            headers
+ 204: PRECALL              
+ 208: CALL                 
+ 218: RETURN_VALUE         

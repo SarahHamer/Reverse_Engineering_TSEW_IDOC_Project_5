@@ -1,0 +1,29 @@
+# Disassembly for ssl.SSLContext.wrap_bio
+# From module file: ssl
+
+## co_consts:
+(None, ('server_side', 'server_hostname', 'session', 'context'))
+
+## co_names:
+('sslobject_class', '_create', '_encode_hostname')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            sslobject_class
+  14: LOAD_METHOD          _create
+  36: LOAD_FAST            incoming
+  38: LOAD_FAST            outgoing
+  40: LOAD_FAST            server_side
+  42: LOAD_FAST            self
+  44: LOAD_METHOD          _encode_hostname
+  66: LOAD_FAST            server_hostname
+  68: PRECALL              
+  72: CALL                 
+  82: LOAD_FAST            session
+  84: LOAD_FAST            self
+  86: KW_NAMES             
+  88: PRECALL              
+  92: CALL                 
+ 102: RETURN_VALUE         

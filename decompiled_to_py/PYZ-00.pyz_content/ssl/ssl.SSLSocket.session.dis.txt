@@ -1,0 +1,26 @@
+# Disassembly for ssl.SSLSocket.session
+# From module file: ssl
+
+## co_consts:
+(None,)
+
+## co_names:
+('_session', '_sslobj', 'session')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            session
+   4: LOAD_FAST            self
+   6: STORE_ATTR           _session
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            _sslobj
+  28: POP_JUMP_FORWARD_IF_NONE to 58
+  30: LOAD_FAST            session
+  32: LOAD_FAST            self
+  34: LOAD_ATTR            _sslobj
+  44: STORE_ATTR           session
+  54: LOAD_CONST           None
+  56: RETURN_VALUE         
+  58: LOAD_CONST           None
+  60: RETURN_VALUE         

@@ -1,0 +1,166 @@
+# Disassembly for email.MIMEPart._find_body
+# From module file: email.message
+
+## co_consts:
+(None, '/', 'text', 'multipart', 'related', 'start', 'content-id', 0)
+
+## co_names:
+('is_attachment', 'get_content_type', 'split', 'index', 'is_multipart', 'iter_parts', '_find_body', 'get_param', 'get_payload')
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_FAST            part
+   8: LOAD_METHOD          is_attachment
+  30: PRECALL              
+  34: CALL                 
+  44: POP_JUMP_FORWARD_IF_FALSE to 50
+  46: LOAD_CONST           None
+  48: RETURN_VALUE         
+  50: LOAD_FAST            part
+  52: LOAD_METHOD          get_content_type
+  74: PRECALL              
+  78: CALL                 
+  88: LOAD_METHOD          split
+ 110: LOAD_CONST           '/'
+ 112: PRECALL              
+ 116: CALL                 
+ 126: UNPACK_SEQUENCE      
+ 130: STORE_FAST           maintype
+ 132: STORE_FAST           subtype
+ 134: LOAD_FAST            maintype
+ 136: LOAD_CONST           'text'
+ 138: COMPARE_OP           ==
+ 144: POP_JUMP_FORWARD_IF_FALSE to 208
+ 146: LOAD_FAST            subtype
+ 148: LOAD_FAST            preferencelist
+ 150: CONTAINS_OP          
+ 152: POP_JUMP_FORWARD_IF_FALSE to 204
+ 154: LOAD_FAST            preferencelist
+ 156: LOAD_METHOD          index
+ 178: LOAD_FAST            subtype
+ 180: PRECALL              
+ 184: CALL                 
+ 194: LOAD_FAST            part
+ 196: BUILD_TUPLE          
+ 198: YIELD_VALUE          
+ 200: RESUME               
+ 202: POP_TOP              
+ 204: LOAD_CONST           None
+ 206: RETURN_VALUE         
+ 208: LOAD_FAST            maintype
+ 210: LOAD_CONST           'multipart'
+ 212: COMPARE_OP           !=
+ 218: POP_JUMP_FORWARD_IF_TRUE to 260
+ 220: LOAD_FAST            self
+ 222: LOAD_METHOD          is_multipart
+ 244: PRECALL              
+ 248: CALL                 
+ 258: POP_JUMP_FORWARD_IF_TRUE to 264
+ 260: LOAD_CONST           None
+ 262: RETURN_VALUE         
+ 264: LOAD_FAST            subtype
+ 266: LOAD_CONST           'related'
+ 268: COMPARE_OP           !=
+ 274: POP_JUMP_FORWARD_IF_FALSE to 382
+ 276: LOAD_FAST            part
+ 278: LOAD_METHOD          iter_parts
+ 300: PRECALL              
+ 304: CALL                 
+ 314: GET_ITER             
+ 316: FOR_ITER             to 378
+ 318: STORE_FAST           subpart
+ 320: LOAD_FAST            self
+ 322: LOAD_METHOD          _find_body
+ 344: LOAD_FAST            subpart
+ 346: LOAD_FAST            preferencelist
+ 348: PRECALL              
+ 352: CALL                 
+ 362: GET_YIELD_FROM_ITER  
+ 364: LOAD_CONST           None
+ 366: SEND                 to 374
+ 368: YIELD_VALUE          
+ 370: RESUME               
+ 372: JUMP_BACKWARD_NO_INTERRUPT to 366
+ 374: POP_TOP              
+ 376: JUMP_BACKWARD        to 316
+ 378: LOAD_CONST           None
+ 380: RETURN_VALUE         
+ 382: LOAD_CONST           'related'
+ 384: LOAD_FAST            preferencelist
+ 386: CONTAINS_OP          
+ 388: POP_JUMP_FORWARD_IF_FALSE to 440
+ 390: LOAD_FAST            preferencelist
+ 392: LOAD_METHOD          index
+ 414: LOAD_CONST           'related'
+ 416: PRECALL              
+ 420: CALL                 
+ 430: LOAD_FAST            part
+ 432: BUILD_TUPLE          
+ 434: YIELD_VALUE          
+ 436: RESUME               
+ 438: POP_TOP              
+ 440: LOAD_CONST           None
+ 442: STORE_FAST           candidate
+ 444: LOAD_FAST            part
+ 446: LOAD_METHOD          get_param
+ 468: LOAD_CONST           'start'
+ 470: PRECALL              
+ 474: CALL                 
+ 484: STORE_FAST           start
+ 486: LOAD_FAST            start
+ 488: POP_JUMP_FORWARD_IF_FALSE to 568
+ 490: LOAD_FAST            part
+ 492: LOAD_METHOD          iter_parts
+ 514: PRECALL              
+ 518: CALL                 
+ 528: GET_ITER             
+ 530: FOR_ITER             to 568
+ 532: STORE_FAST           subpart
+ 534: LOAD_FAST            subpart
+ 536: LOAD_CONST           'content-id'
+ 538: BINARY_SUBSCR        
+ 548: LOAD_FAST            start
+ 550: COMPARE_OP           ==
+ 556: POP_JUMP_FORWARD_IF_FALSE to 566
+ 558: LOAD_FAST            subpart
+ 560: STORE_FAST           candidate
+ 562: POP_TOP              
+ 564: JUMP_FORWARD         to 568
+ 566: JUMP_BACKWARD        to 530
+ 568: LOAD_FAST            candidate
+ 570: POP_JUMP_FORWARD_IF_NOT_NONE to 636
+ 572: LOAD_FAST            part
+ 574: LOAD_METHOD          get_payload
+ 596: PRECALL              
+ 600: CALL                 
+ 610: STORE_FAST           subparts
+ 612: LOAD_FAST            subparts
+ 614: POP_JUMP_FORWARD_IF_FALSE to 632
+ 616: LOAD_FAST            subparts
+ 618: LOAD_CONST           0
+ 620: BINARY_SUBSCR        
+ 630: JUMP_FORWARD         to 634
+ 632: LOAD_CONST           None
+ 634: STORE_FAST           candidate
+ 636: LOAD_FAST            candidate
+ 638: POP_JUMP_FORWARD_IF_NONE to 700
+ 640: LOAD_FAST            self
+ 642: LOAD_METHOD          _find_body
+ 664: LOAD_FAST            candidate
+ 666: LOAD_FAST            preferencelist
+ 668: PRECALL              
+ 672: CALL                 
+ 682: GET_YIELD_FROM_ITER  
+ 684: LOAD_CONST           None
+ 686: SEND                 to 694
+ 688: YIELD_VALUE          
+ 690: RESUME               
+ 692: JUMP_BACKWARD_NO_INTERRUPT to 686
+ 694: POP_TOP              
+ 696: LOAD_CONST           None
+ 698: RETURN_VALUE         
+ 700: LOAD_CONST           None
+ 702: RETURN_VALUE         

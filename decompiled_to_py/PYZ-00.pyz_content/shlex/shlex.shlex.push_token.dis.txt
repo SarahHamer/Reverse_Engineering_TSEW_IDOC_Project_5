@@ -1,0 +1,36 @@
+# Disassembly for shlex.shlex.push_token
+# From module file: shlex
+
+## co_consts:
+('Push a token onto the stack popped by the get_token method', 1, 'shlex: pushing token ', None)
+
+## co_names:
+('debug', 'print', 'repr', 'pushback', 'appendleft')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            debug
+  14: LOAD_CONST           1
+  16: COMPARE_OP           >=
+  22: POP_JUMP_FORWARD_IF_FALSE to 86
+  24: LOAD_GLOBAL          NULL + print
+  36: LOAD_CONST           'shlex: pushing token '
+  38: LOAD_GLOBAL          NULL + repr
+  50: LOAD_FAST            tok
+  52: PRECALL              
+  56: CALL                 
+  66: BINARY_OP            +
+  70: PRECALL              
+  74: CALL                 
+  84: POP_TOP              
+  86: LOAD_FAST            self
+  88: LOAD_ATTR            pushback
+  98: LOAD_METHOD          appendleft
+ 120: LOAD_FAST            tok
+ 122: PRECALL              
+ 126: CALL                 
+ 136: POP_TOP              
+ 138: LOAD_CONST           None
+ 140: RETURN_VALUE         

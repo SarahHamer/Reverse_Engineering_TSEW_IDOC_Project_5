@@ -1,0 +1,135 @@
+# Disassembly for http.http2time
+# From module file: http.cookiejar
+
+## co_consts:
+('Returns time in seconds since epoch of time represented by a string.\n\n    Return value is an integer.\n\n    None is returned if the format of str is unrecognized, the time is outside\n    the representable range, or the timezone string is not recognized.  If the\n    string contains no timezone, UTC is assumed.\n\n    The timezone in the string may be numerical (like "-0800" or "+0100") or a\n    string timezone (like "UTC", "GMT", "BST" or "EST").  Currently, only the\n    timezone strings equivalent to UTC (zero offset) are known to the function.\n\n    The function loosely parses the following formats:\n\n    Wed, 09 Feb 1994 22:23:32 GMT       -- HTTP format\n    Tuesday, 08-Feb-94 14:15:29 GMT     -- old rfc850 HTTP format\n    Tuesday, 08-Feb-1994 14:15:29 GMT   -- broken rfc850 HTTP format\n    09 Feb 1994 22:23:32 GMT            -- HTTP format (no weekday)\n    08-Feb-94 14:15:29 GMT              -- rfc850 format (no weekday)\n    08-Feb-1994 14:15:29 GMT            -- broken rfc850 format (no weekday)\n\n    The parser ignores leading and trailing whitespace.  The time may be\n    absent.\n\n    If the year is given with only 2 digits, the function will select the\n    century that makes the year closest to the current date.\n\n    ', 1, 2, 0, 3, 4, 5, '', None, 7)
+
+## co_names:
+('STRICT_DATE_RE', 'search', 'groups', 'MONTHS_LOWER', 'index', 'lower', 'int', 'float', '_timegm', 'lstrip', 'WEEKDAY_RE', 'sub', 'LOOSE_HTTP_DATE_RE', '_str2time')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          STRICT_DATE_RE
+  14: LOAD_METHOD          search
+  36: LOAD_FAST            text
+  38: PRECALL              
+  42: CALL                 
+  52: STORE_FAST           m
+  54: LOAD_FAST            m
+  56: POP_JUMP_FORWARD_IF_FALSE to 440
+  58: LOAD_FAST            m
+  60: LOAD_METHOD          groups
+  82: PRECALL              
+  86: CALL                 
+  96: STORE_FAST           g
+  98: LOAD_GLOBAL          MONTHS_LOWER
+ 110: LOAD_METHOD          index
+ 132: LOAD_FAST            g
+ 134: LOAD_CONST           1
+ 136: BINARY_SUBSCR        
+ 146: LOAD_METHOD          lower
+ 168: PRECALL              
+ 172: CALL                 
+ 182: PRECALL              
+ 186: CALL                 
+ 196: LOAD_CONST           1
+ 198: BINARY_OP            +
+ 202: STORE_FAST           mon
+ 204: LOAD_GLOBAL          NULL + int
+ 216: LOAD_FAST            g
+ 218: LOAD_CONST           2
+ 220: BINARY_SUBSCR        
+ 230: PRECALL              
+ 234: CALL                 
+ 244: LOAD_FAST            mon
+ 246: LOAD_GLOBAL          NULL + int
+ 258: LOAD_FAST            g
+ 260: LOAD_CONST           0
+ 262: BINARY_SUBSCR        
+ 272: PRECALL              
+ 276: CALL                 
+ 286: LOAD_GLOBAL          NULL + int
+ 298: LOAD_FAST            g
+ 300: LOAD_CONST           3
+ 302: BINARY_SUBSCR        
+ 312: PRECALL              
+ 316: CALL                 
+ 326: LOAD_GLOBAL          NULL + int
+ 338: LOAD_FAST            g
+ 340: LOAD_CONST           4
+ 342: BINARY_SUBSCR        
+ 352: PRECALL              
+ 356: CALL                 
+ 366: LOAD_GLOBAL          NULL + float
+ 378: LOAD_FAST            g
+ 380: LOAD_CONST           5
+ 382: BINARY_SUBSCR        
+ 392: PRECALL              
+ 396: CALL                 
+ 406: BUILD_TUPLE          
+ 408: STORE_FAST           tt
+ 410: LOAD_GLOBAL          NULL + _timegm
+ 422: LOAD_FAST            tt
+ 424: PRECALL              
+ 428: CALL                 
+ 438: RETURN_VALUE         
+ 440: LOAD_FAST            text
+ 442: LOAD_METHOD          lstrip
+ 464: PRECALL              
+ 468: CALL                 
+ 478: STORE_FAST           text
+ 480: LOAD_GLOBAL          WEEKDAY_RE
+ 492: LOAD_METHOD          sub
+ 514: LOAD_CONST           ''
+ 516: LOAD_FAST            text
+ 518: LOAD_CONST           1
+ 520: PRECALL              
+ 524: CALL                 
+ 534: STORE_FAST           text
+ 536: LOAD_CONST           None
+ 538: BUILD_LIST           
+ 540: LOAD_CONST           7
+ 542: BINARY_OP            *
+ 546: UNPACK_SEQUENCE      
+ 550: STORE_FAST           day
+ 552: STORE_FAST           mon
+ 554: STORE_FAST           yr
+ 556: STORE_FAST           hr
+ 558: STORE_FAST           min
+ 560: STORE_FAST           sec
+ 562: STORE_FAST           tz
+ 564: LOAD_GLOBAL          LOOSE_HTTP_DATE_RE
+ 576: LOAD_METHOD          search
+ 598: LOAD_FAST            text
+ 600: PRECALL              
+ 604: CALL                 
+ 614: STORE_FAST           m
+ 616: LOAD_FAST            m
+ 618: POP_JUMP_FORWARD_IF_NONE to 678
+ 620: LOAD_FAST            m
+ 622: LOAD_METHOD          groups
+ 644: PRECALL              
+ 648: CALL                 
+ 658: UNPACK_SEQUENCE      
+ 662: STORE_FAST           day
+ 664: STORE_FAST           mon
+ 666: STORE_FAST           yr
+ 668: STORE_FAST           hr
+ 670: STORE_FAST           min
+ 672: STORE_FAST           sec
+ 674: STORE_FAST           tz
+ 676: JUMP_FORWARD         to 682
+ 678: LOAD_CONST           None
+ 680: RETURN_VALUE         
+ 682: LOAD_GLOBAL          NULL + _str2time
+ 694: LOAD_FAST            day
+ 696: LOAD_FAST            mon
+ 698: LOAD_FAST            yr
+ 700: LOAD_FAST            hr
+ 702: LOAD_FAST            min
+ 704: LOAD_FAST            sec
+ 706: LOAD_FAST            tz
+ 708: PRECALL              
+ 712: CALL                 
+ 722: RETURN_VALUE         

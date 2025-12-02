@@ -1,0 +1,172 @@
+# Disassembly for datetime._ord2ymd
+# From module file: datetime
+
+## co_consts:
+('ordinal -> (year, month, day), considering 01-Jan-0001 as day 1.', 1, 400, 365, 100, 4, 0, 12, 31, 3, 24, 50, 5, 2)
+
+## co_names:
+('divmod', '_DI400Y', '_DI100Y', '_DI4Y', '_is_leap', '_DAYS_BEFORE_MONTH', '_DAYS_IN_MONTH', '_days_in_month')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            n
+   4: LOAD_CONST           1
+   6: BINARY_OP            -=
+  10: STORE_FAST           n
+  12: LOAD_GLOBAL          NULL + divmod
+  24: LOAD_FAST            n
+  26: LOAD_GLOBAL          _DI400Y
+  38: PRECALL              
+  42: CALL                 
+  52: UNPACK_SEQUENCE      
+  56: STORE_FAST           n400
+  58: STORE_FAST           n
+  60: LOAD_FAST            n400
+  62: LOAD_CONST           400
+  64: BINARY_OP            *
+  68: LOAD_CONST           1
+  70: BINARY_OP            +
+  74: STORE_FAST           year
+  76: LOAD_GLOBAL          NULL + divmod
+  88: LOAD_FAST            n
+  90: LOAD_GLOBAL          _DI100Y
+ 102: PRECALL              
+ 106: CALL                 
+ 116: UNPACK_SEQUENCE      
+ 120: STORE_FAST           n100
+ 122: STORE_FAST           n
+ 124: LOAD_GLOBAL          NULL + divmod
+ 136: LOAD_FAST            n
+ 138: LOAD_GLOBAL          _DI4Y
+ 150: PRECALL              
+ 154: CALL                 
+ 164: UNPACK_SEQUENCE      
+ 168: STORE_FAST           n4
+ 170: STORE_FAST           n
+ 172: LOAD_GLOBAL          NULL + divmod
+ 184: LOAD_FAST            n
+ 186: LOAD_CONST           365
+ 188: PRECALL              
+ 192: CALL                 
+ 202: UNPACK_SEQUENCE      
+ 206: STORE_FAST           n1
+ 208: STORE_FAST           n
+ 210: LOAD_FAST            year
+ 212: LOAD_FAST            n100
+ 214: LOAD_CONST           100
+ 216: BINARY_OP            *
+ 220: LOAD_FAST            n4
+ 222: LOAD_CONST           4
+ 224: BINARY_OP            *
+ 228: BINARY_OP            +
+ 232: LOAD_FAST            n1
+ 234: BINARY_OP            +
+ 238: BINARY_OP            +=
+ 242: STORE_FAST           year
+ 244: LOAD_FAST            n1
+ 246: LOAD_CONST           4
+ 248: COMPARE_OP           ==
+ 254: POP_JUMP_FORWARD_IF_TRUE to 268
+ 256: LOAD_FAST            n100
+ 258: LOAD_CONST           4
+ 260: COMPARE_OP           ==
+ 266: POP_JUMP_FORWARD_IF_FALSE to 300
+ 268: LOAD_FAST            n
+ 270: LOAD_CONST           0
+ 272: COMPARE_OP           ==
+ 278: POP_JUMP_FORWARD_IF_TRUE to 284
+ 280: LOAD_ASSERTION_ERROR 
+ 282: RAISE_VARARGS        
+ 284: LOAD_FAST            year
+ 286: LOAD_CONST           1
+ 288: BINARY_OP            -
+ 292: LOAD_CONST           12
+ 294: LOAD_CONST           31
+ 296: BUILD_TUPLE          
+ 298: RETURN_VALUE         
+ 300: LOAD_FAST            n1
+ 302: LOAD_CONST           3
+ 304: COMPARE_OP           ==
+ 310: JUMP_IF_FALSE_OR_POP to 334
+ 312: LOAD_FAST            n4
+ 314: LOAD_CONST           24
+ 316: COMPARE_OP           !=
+ 322: JUMP_IF_TRUE_OR_POP  to 334
+ 324: LOAD_FAST            n100
+ 326: LOAD_CONST           3
+ 328: COMPARE_OP           ==
+ 334: STORE_FAST           leapyear
+ 336: LOAD_FAST            leapyear
+ 338: LOAD_GLOBAL          NULL + _is_leap
+ 350: LOAD_FAST            year
+ 352: PRECALL              
+ 356: CALL                 
+ 366: COMPARE_OP           ==
+ 372: POP_JUMP_FORWARD_IF_TRUE to 378
+ 374: LOAD_ASSERTION_ERROR 
+ 376: RAISE_VARARGS        
+ 378: LOAD_FAST            n
+ 380: LOAD_CONST           50
+ 382: BINARY_OP            +
+ 386: LOAD_CONST           5
+ 388: BINARY_OP            >>
+ 392: STORE_FAST           month
+ 394: LOAD_GLOBAL          _DAYS_BEFORE_MONTH
+ 406: LOAD_FAST            month
+ 408: BINARY_SUBSCR        
+ 418: LOAD_FAST            month
+ 420: LOAD_CONST           2
+ 422: COMPARE_OP           >
+ 428: JUMP_IF_FALSE_OR_POP to 432
+ 430: LOAD_FAST            leapyear
+ 432: BINARY_OP            +
+ 436: STORE_FAST           preceding
+ 438: LOAD_FAST            preceding
+ 440: LOAD_FAST            n
+ 442: COMPARE_OP           >
+ 448: POP_JUMP_FORWARD_IF_FALSE to 510
+ 450: LOAD_FAST            month
+ 452: LOAD_CONST           1
+ 454: BINARY_OP            -=
+ 458: STORE_FAST           month
+ 460: LOAD_FAST            preceding
+ 462: LOAD_GLOBAL          _DAYS_IN_MONTH
+ 474: LOAD_FAST            month
+ 476: BINARY_SUBSCR        
+ 486: LOAD_FAST            month
+ 488: LOAD_CONST           2
+ 490: COMPARE_OP           ==
+ 496: JUMP_IF_FALSE_OR_POP to 500
+ 498: LOAD_FAST            leapyear
+ 500: BINARY_OP            +
+ 504: BINARY_OP            -=
+ 508: STORE_FAST           preceding
+ 510: LOAD_FAST            n
+ 512: LOAD_FAST            preceding
+ 514: BINARY_OP            -=
+ 518: STORE_FAST           n
+ 520: LOAD_CONST           0
+ 522: LOAD_FAST            n
+ 524: SWAP                 
+ 526: COPY                 
+ 528: COMPARE_OP           <=
+ 534: POP_JUMP_FORWARD_IF_FALSE to 576
+ 536: LOAD_GLOBAL          NULL + _days_in_month
+ 548: LOAD_FAST            year
+ 550: LOAD_FAST            month
+ 552: PRECALL              
+ 556: CALL                 
+ 566: COMPARE_OP           <
+ 572: POP_JUMP_FORWARD_IF_TRUE to 582
+ 574: JUMP_FORWARD         to 578
+ 576: POP_TOP              
+ 578: LOAD_ASSERTION_ERROR 
+ 580: RAISE_VARARGS        
+ 582: LOAD_FAST            year
+ 584: LOAD_FAST            month
+ 586: LOAD_FAST            n
+ 588: LOAD_CONST           1
+ 590: BINARY_OP            +
+ 594: BUILD_TUPLE          
+ 596: RETURN_VALUE         

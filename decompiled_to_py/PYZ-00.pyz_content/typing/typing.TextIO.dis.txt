@@ -1,0 +1,91 @@
+# Disassembly for typing.TextIO
+# From module file: typing
+
+## co_consts:
+('TextIO', 'Typed version of the return of open() in text mode.', (), 'return', <code object buffer at 0x0000024069CC9E30, file "typing.py", line 3319>, <code object encoding at 0x0000024069CC9EF0, file "typing.py", line 3324>, <code object errors at 0x0000024069CC9FB0, file "typing.py", line 3329>, <code object line_buffering at 0x0000024069CCA070, file "typing.py", line 3334>, <code object newlines at 0x0000024069CCA130, file "typing.py", line 3339>, <code object __enter__ at 0x0000024069CCA1F0, file "typing.py", line 3344>, None, ('return', 'TextIO'))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__slots__', 'property', 'abstractmethod', 'BinaryIO', 'buffer', 'str', 'encoding', 'Optional', 'errors', 'bool', 'line_buffering', 'Any', 'newlines', '__enter__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'TextIO'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Typed version of the return of open() in text mode.'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ()
+  16: STORE_NAME           __slots__
+  18: LOAD_NAME            property
+  20: LOAD_NAME            abstractmethod
+  22: LOAD_CONST           'return'
+  24: LOAD_NAME            BinaryIO
+  26: BUILD_TUPLE          
+  28: LOAD_CONST           <code object buffer at 0x0000024069CC9E30, file "typing.py", line 3319>
+  30: MAKE_FUNCTION        annotations
+  32: PRECALL              
+  36: CALL                 
+  46: PRECALL              
+  50: CALL                 
+  60: STORE_NAME           buffer
+  62: LOAD_NAME            property
+  64: LOAD_NAME            abstractmethod
+  66: LOAD_CONST           'return'
+  68: LOAD_NAME            str
+  70: BUILD_TUPLE          
+  72: LOAD_CONST           <code object encoding at 0x0000024069CC9EF0, file "typing.py", line 3324>
+  74: MAKE_FUNCTION        annotations
+  76: PRECALL              
+  80: CALL                 
+  90: PRECALL              
+  94: CALL                 
+ 104: STORE_NAME           encoding
+ 106: LOAD_NAME            property
+ 108: LOAD_NAME            abstractmethod
+ 110: LOAD_CONST           'return'
+ 112: LOAD_NAME            Optional
+ 114: LOAD_NAME            str
+ 116: BINARY_SUBSCR        
+ 126: BUILD_TUPLE          
+ 128: LOAD_CONST           <code object errors at 0x0000024069CC9FB0, file "typing.py", line 3329>
+ 130: MAKE_FUNCTION        annotations
+ 132: PRECALL              
+ 136: CALL                 
+ 146: PRECALL              
+ 150: CALL                 
+ 160: STORE_NAME           errors
+ 162: LOAD_NAME            property
+ 164: LOAD_NAME            abstractmethod
+ 166: LOAD_CONST           'return'
+ 168: LOAD_NAME            bool
+ 170: BUILD_TUPLE          
+ 172: LOAD_CONST           <code object line_buffering at 0x0000024069CCA070, file "typing.py", line 3334>
+ 174: MAKE_FUNCTION        annotations
+ 176: PRECALL              
+ 180: CALL                 
+ 190: PRECALL              
+ 194: CALL                 
+ 204: STORE_NAME           line_buffering
+ 206: LOAD_NAME            property
+ 208: LOAD_NAME            abstractmethod
+ 210: LOAD_CONST           'return'
+ 212: LOAD_NAME            Any
+ 214: BUILD_TUPLE          
+ 216: LOAD_CONST           <code object newlines at 0x0000024069CCA130, file "typing.py", line 3339>
+ 218: MAKE_FUNCTION        annotations
+ 220: PRECALL              
+ 224: CALL                 
+ 234: PRECALL              
+ 238: CALL                 
+ 248: STORE_NAME           newlines
+ 250: LOAD_NAME            abstractmethod
+ 252: LOAD_CONST           ('return', 'TextIO')
+ 254: LOAD_CONST           <code object __enter__ at 0x0000024069CCA1F0, file "typing.py", line 3344>
+ 256: MAKE_FUNCTION        annotations
+ 258: PRECALL              
+ 262: CALL                 
+ 272: STORE_NAME           __enter__
+ 274: LOAD_CONST           None
+ 276: RETURN_VALUE         

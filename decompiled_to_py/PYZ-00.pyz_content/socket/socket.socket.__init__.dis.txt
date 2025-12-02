@@ -1,0 +1,51 @@
+# Disassembly for socket.socket.__init__
+# From module file: socket
+
+## co_consts:
+(None, -1, 0, False)
+
+## co_names:
+('AF_INET', 'SOCK_STREAM', '_socket', 'socket', '__init__', '_io_refs', '_closed')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            fileno
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 74
+   6: LOAD_FAST            family
+   8: LOAD_CONST           -1
+  10: COMPARE_OP           ==
+  16: POP_JUMP_FORWARD_IF_FALSE to 32
+  18: LOAD_GLOBAL          AF_INET
+  30: STORE_FAST           family
+  32: LOAD_FAST            type
+  34: LOAD_CONST           -1
+  36: COMPARE_OP           ==
+  42: POP_JUMP_FORWARD_IF_FALSE to 58
+  44: LOAD_GLOBAL          SOCK_STREAM
+  56: STORE_FAST           type
+  58: LOAD_FAST            proto
+  60: LOAD_CONST           -1
+  62: COMPARE_OP           ==
+  68: POP_JUMP_FORWARD_IF_FALSE to 74
+  70: LOAD_CONST           0
+  72: STORE_FAST           proto
+  74: LOAD_GLOBAL          _socket
+  86: LOAD_ATTR            socket
+  96: LOAD_METHOD          __init__
+ 118: LOAD_FAST            self
+ 120: LOAD_FAST            family
+ 122: LOAD_FAST            type
+ 124: LOAD_FAST            proto
+ 126: LOAD_FAST            fileno
+ 128: PRECALL              
+ 132: CALL                 
+ 142: POP_TOP              
+ 144: LOAD_CONST           0
+ 146: LOAD_FAST            self
+ 148: STORE_ATTR           _io_refs
+ 158: LOAD_CONST           False
+ 160: LOAD_FAST            self
+ 162: STORE_ATTR           _closed
+ 172: LOAD_CONST           None
+ 174: RETURN_VALUE         

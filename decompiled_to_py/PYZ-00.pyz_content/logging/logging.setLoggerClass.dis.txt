@@ -1,0 +1,34 @@
+# Disassembly for logging.setLoggerClass
+# From module file: logging
+
+## co_consts:
+('\n    Set the class to be used when instantiating a logger. The class should\n    define __init__() such that only a name argument is required, and the\n    __init__() should call Logger.__init__()\n    ', 'logger not derived from logging.Logger: ', None)
+
+## co_names:
+('Logger', 'issubclass', 'TypeError', '__name__', '_loggerClass')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            klass
+   4: LOAD_GLOBAL          Logger
+  16: COMPARE_OP           !=
+  22: POP_JUMP_FORWARD_IF_FALSE to 112
+  24: LOAD_GLOBAL          NULL + issubclass
+  36: LOAD_FAST            klass
+  38: LOAD_GLOBAL          Logger
+  50: PRECALL              
+  54: CALL                 
+  64: POP_JUMP_FORWARD_IF_TRUE to 112
+  66: LOAD_GLOBAL          NULL + TypeError
+  78: LOAD_CONST           'logger not derived from logging.Logger: '
+  80: LOAD_FAST            klass
+  82: LOAD_ATTR            __name__
+  92: BINARY_OP            +
+  96: PRECALL              
+ 100: CALL                 
+ 110: RAISE_VARARGS        
+ 112: LOAD_FAST            klass
+ 114: STORE_GLOBAL         _loggerClass
+ 116: LOAD_CONST           None
+ 118: RETURN_VALUE         

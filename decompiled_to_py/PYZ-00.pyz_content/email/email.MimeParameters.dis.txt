@@ -1,0 +1,31 @@
+# Disassembly for email.MimeParameters
+# From module file: email._header_value_parser
+
+## co_consts:
+('MimeParameters', 'mime-parameters', False, <code object params at 0x0000024068E11050, file "email\_header_value_parser.py", line 726>, <code object __str__ at 0x000002406934F120, file "email\_header_value_parser.py", line 796>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', 'token_type', 'syntactic_break', 'property', 'params', '__str__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'MimeParameters'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'mime-parameters'
+  12: STORE_NAME           token_type
+  14: LOAD_CONST           False
+  16: STORE_NAME           syntactic_break
+  18: LOAD_NAME            property
+  20: LOAD_CONST           <code object params at 0x0000024068E11050, file "email\_header_value_parser.py", line 726>
+  22: MAKE_FUNCTION        
+  24: PRECALL              
+  28: CALL                 
+  38: STORE_NAME           params
+  40: LOAD_CONST           <code object __str__ at 0x000002406934F120, file "email\_header_value_parser.py", line 796>
+  42: MAKE_FUNCTION        
+  44: STORE_NAME           __str__
+  46: LOAD_CONST           None
+  48: RETURN_VALUE         

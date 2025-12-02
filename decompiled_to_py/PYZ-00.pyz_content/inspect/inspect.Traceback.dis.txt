@@ -1,0 +1,32 @@
+# Disassembly for inspect.Traceback
+# From module file: inspect
+
+## co_consts:
+('Traceback', None, ('positions',), <code object __new__ at 0x000002406941AAF0, file "inspect.py", line 1640>, <code object __repr__ at 0x00000240693D3B90, file "inspect.py", line 1645>)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__new__', '__repr__', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'Traceback'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           None
+  14: LOAD_CONST           ('positions',)
+  16: BUILD_CONST_KEY_MAP  
+  18: LOAD_CLOSURE         __class__
+  20: BUILD_TUPLE          
+  22: LOAD_CONST           <code object __new__ at 0x000002406941AAF0, file "inspect.py", line 1640>
+  24: MAKE_FUNCTION        kwdefaults, closure
+  26: STORE_NAME           __new__
+  28: LOAD_CONST           <code object __repr__ at 0x00000240693D3B90, file "inspect.py", line 1645>
+  30: MAKE_FUNCTION        
+  32: STORE_NAME           __repr__
+  34: LOAD_CLOSURE         __class__
+  36: COPY                 
+  38: STORE_NAME           __classcell__
+  40: RETURN_VALUE         

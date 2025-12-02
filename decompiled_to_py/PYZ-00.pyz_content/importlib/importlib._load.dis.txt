@@ -1,0 +1,44 @@
+# Disassembly for importlib._load
+# From module file: importlib._bootstrap
+
+## co_consts:
+("Return a new module object, loaded by the spec's loader.\n\n    The module is not added to its parent.\n\n    If a module is already in sys.modules, that existing module gets\n    clobbered.\n\n    ", None)
+
+## co_names:
+('_ModuleLockManager', 'name', '_load_unlocked')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _ModuleLockManager
+  14: LOAD_FAST            spec
+  16: LOAD_ATTR            name
+  26: PRECALL              
+  30: CALL                 
+  40: BEFORE_WITH          
+  42: POP_TOP              
+  44: LOAD_GLOBAL          NULL + _load_unlocked
+  56: LOAD_FAST            spec
+  58: PRECALL              
+  62: CALL                 
+  72: SWAP                 
+  74: LOAD_CONST           None
+  76: LOAD_CONST           None
+  78: LOAD_CONST           None
+  80: PRECALL              
+  84: CALL                 
+  94: POP_TOP              
+  96: RETURN_VALUE         
+  98: PUSH_EXC_INFO        
+ 100: WITH_EXCEPT_START    
+ 102: POP_JUMP_FORWARD_IF_TRUE to 112
+ 104: RERAISE              
+ 106: COPY                 
+ 108: POP_EXCEPT           
+ 110: RERAISE              
+ 112: POP_TOP              
+ 114: POP_EXCEPT           
+ 116: POP_TOP              
+ 118: POP_TOP              
+ 120: LOAD_CONST           None
+ 122: RETURN_VALUE         

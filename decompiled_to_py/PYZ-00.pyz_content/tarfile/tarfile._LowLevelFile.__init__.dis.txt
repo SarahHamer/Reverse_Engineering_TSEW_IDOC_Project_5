@@ -1,0 +1,49 @@
+# Disassembly for tarfile._LowLevelFile.__init__
+# From module file: tarfile
+
+## co_consts:
+(None, ('r', 'w'), 'O_BINARY', 438)
+
+## co_names:
+('os', 'O_RDONLY', 'O_WRONLY', 'O_CREAT', 'O_TRUNC', 'hasattr', 'O_BINARY', 'open', 'fd')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          os
+  14: LOAD_ATTR            O_RDONLY
+  24: LOAD_GLOBAL          os
+  36: LOAD_ATTR            O_WRONLY
+  46: LOAD_GLOBAL          os
+  58: LOAD_ATTR            O_CREAT
+  68: BINARY_OP            |
+  72: LOAD_GLOBAL          os
+  84: LOAD_ATTR            O_TRUNC
+  94: BINARY_OP            |
+  98: LOAD_CONST           ('r', 'w')
+ 100: BUILD_CONST_KEY_MAP  
+ 102: LOAD_FAST            mode
+ 104: BINARY_SUBSCR        
+ 114: STORE_FAST           mode
+ 116: LOAD_GLOBAL          NULL + hasattr
+ 128: LOAD_GLOBAL          os
+ 140: LOAD_CONST           'O_BINARY'
+ 142: PRECALL              
+ 146: CALL                 
+ 156: POP_JUMP_FORWARD_IF_FALSE to 188
+ 158: LOAD_FAST            mode
+ 160: LOAD_GLOBAL          os
+ 172: LOAD_ATTR            O_BINARY
+ 182: BINARY_OP            |=
+ 186: STORE_FAST           mode
+ 188: LOAD_GLOBAL          NULL + os
+ 200: LOAD_ATTR            open
+ 210: LOAD_FAST            name
+ 212: LOAD_FAST            mode
+ 214: LOAD_CONST           438
+ 216: PRECALL              
+ 220: CALL                 
+ 230: LOAD_FAST            self
+ 232: STORE_ATTR           fd
+ 242: LOAD_CONST           None
+ 244: RETURN_VALUE         

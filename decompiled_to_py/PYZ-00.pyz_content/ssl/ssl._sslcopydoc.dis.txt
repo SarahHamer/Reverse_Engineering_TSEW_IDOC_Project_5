@@ -1,0 +1,23 @@
+# Disassembly for ssl._sslcopydoc
+# From module file: ssl
+
+## co_consts:
+('Copy docstring from SSLObject to SSLSocket',)
+
+## co_names:
+('getattr', 'SSLObject', '__name__', '__doc__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + getattr
+  14: LOAD_GLOBAL          SSLObject
+  26: LOAD_FAST            func
+  28: LOAD_ATTR            __name__
+  38: PRECALL              
+  42: CALL                 
+  52: LOAD_ATTR            __doc__
+  62: LOAD_FAST            func
+  64: STORE_ATTR           __doc__
+  74: LOAD_FAST            func
+  76: RETURN_VALUE         

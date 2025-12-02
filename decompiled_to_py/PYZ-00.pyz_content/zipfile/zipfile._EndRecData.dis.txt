@@ -1,0 +1,210 @@
+# Disassembly for zipfile._EndRecData
+# From module file: zipfile
+
+## co_consts:
+('Return data from the "End of Central Directory" record, or None.\n\n    The data is a list of the nine items in the ZIP "End of central dir"\n    record followed by a tenth item, the file seek offset of this record.', 0, 2, None, 4, -2, b'\x00\x00', b'', 65536)
+
+## co_names:
+('seek', 'tell', 'sizeEndCentDir', 'OSError', 'read', 'len', 'stringEndArchive', 'struct', 'unpack', 'structEndArchive', 'list', 'append', '_EndRecData64', 'max', 'rfind', '_ECD_COMMENT_SIZE')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            fpin
+   4: LOAD_METHOD          seek
+  26: LOAD_CONST           0
+  28: LOAD_CONST           2
+  30: PRECALL              
+  34: CALL                 
+  44: POP_TOP              
+  46: LOAD_FAST            fpin
+  48: LOAD_METHOD          tell
+  70: PRECALL              
+  74: CALL                 
+  84: STORE_FAST           filesize
+  86: NOP                  
+  88: LOAD_FAST            fpin
+  90: LOAD_METHOD          seek
+ 112: LOAD_GLOBAL          sizeEndCentDir
+ 124: UNARY_NEGATIVE       
+ 126: LOAD_CONST           2
+ 128: PRECALL              
+ 132: CALL                 
+ 142: POP_TOP              
+ 144: JUMP_FORWARD         to 180
+ 146: PUSH_EXC_INFO        
+ 148: LOAD_GLOBAL          OSError
+ 160: CHECK_EXC_MATCH      
+ 162: POP_JUMP_FORWARD_IF_FALSE to 172
+ 164: POP_TOP              
+ 166: POP_EXCEPT           
+ 168: LOAD_CONST           None
+ 170: RETURN_VALUE         
+ 172: RERAISE              
+ 174: COPY                 
+ 176: POP_EXCEPT           
+ 178: RERAISE              
+ 180: LOAD_FAST            fpin
+ 182: LOAD_METHOD          read
+ 204: PRECALL              
+ 208: CALL                 
+ 218: STORE_FAST           data
+ 220: LOAD_GLOBAL          NULL + len
+ 232: LOAD_FAST            data
+ 234: PRECALL              
+ 238: CALL                 
+ 248: LOAD_GLOBAL          sizeEndCentDir
+ 260: COMPARE_OP           ==
+ 266: POP_JUMP_FORWARD_IF_FALSE to 562
+ 268: LOAD_FAST            data
+ 270: LOAD_CONST           0
+ 272: LOAD_CONST           4
+ 274: BUILD_SLICE          
+ 276: BINARY_SUBSCR        
+ 286: LOAD_GLOBAL          stringEndArchive
+ 298: COMPARE_OP           ==
+ 304: POP_JUMP_FORWARD_IF_FALSE to 562
+ 306: LOAD_FAST            data
+ 308: LOAD_CONST           -2
+ 310: LOAD_CONST           None
+ 312: BUILD_SLICE          
+ 314: BINARY_SUBSCR        
+ 324: LOAD_CONST           b'\x00\x00'
+ 326: COMPARE_OP           ==
+ 332: POP_JUMP_FORWARD_IF_FALSE to 562
+ 334: LOAD_GLOBAL          NULL + struct
+ 346: LOAD_ATTR            unpack
+ 356: LOAD_GLOBAL          structEndArchive
+ 368: LOAD_FAST            data
+ 370: PRECALL              
+ 374: CALL                 
+ 384: STORE_FAST           endrec
+ 386: LOAD_GLOBAL          NULL + list
+ 398: LOAD_FAST            endrec
+ 400: PRECALL              
+ 404: CALL                 
+ 414: STORE_FAST           endrec
+ 416: LOAD_FAST            endrec
+ 418: LOAD_METHOD          append
+ 440: LOAD_CONST           b''
+ 442: PRECALL              
+ 446: CALL                 
+ 456: POP_TOP              
+ 458: LOAD_FAST            endrec
+ 460: LOAD_METHOD          append
+ 482: LOAD_FAST            filesize
+ 484: LOAD_GLOBAL          sizeEndCentDir
+ 496: BINARY_OP            -
+ 500: PRECALL              
+ 504: CALL                 
+ 514: POP_TOP              
+ 516: LOAD_GLOBAL          NULL + _EndRecData64
+ 528: LOAD_FAST            fpin
+ 530: LOAD_GLOBAL          sizeEndCentDir
+ 542: UNARY_NEGATIVE       
+ 544: LOAD_FAST            endrec
+ 546: PRECALL              
+ 550: CALL                 
+ 560: RETURN_VALUE         
+ 562: LOAD_GLOBAL          NULL + max
+ 574: LOAD_FAST            filesize
+ 576: LOAD_CONST           65536
+ 578: BINARY_OP            -
+ 582: LOAD_GLOBAL          sizeEndCentDir
+ 594: BINARY_OP            -
+ 598: LOAD_CONST           0
+ 600: PRECALL              
+ 604: CALL                 
+ 614: STORE_FAST           maxCommentStart
+ 616: LOAD_FAST            fpin
+ 618: LOAD_METHOD          seek
+ 640: LOAD_FAST            maxCommentStart
+ 642: LOAD_CONST           0
+ 644: PRECALL              
+ 648: CALL                 
+ 658: POP_TOP              
+ 660: LOAD_FAST            fpin
+ 662: LOAD_METHOD          read
+ 684: PRECALL              
+ 688: CALL                 
+ 698: STORE_FAST           data
+ 700: LOAD_FAST            data
+ 702: LOAD_METHOD          rfind
+ 724: LOAD_GLOBAL          stringEndArchive
+ 736: PRECALL              
+ 740: CALL                 
+ 750: STORE_FAST           start
+ 752: LOAD_FAST            start
+ 754: LOAD_CONST           0
+ 756: COMPARE_OP           >=
+ 762: POP_JUMP_FORWARD_IF_FALSE to 1150
+ 764: LOAD_FAST            data
+ 766: LOAD_FAST            start
+ 768: LOAD_FAST            start
+ 770: LOAD_GLOBAL          sizeEndCentDir
+ 782: BINARY_OP            +
+ 786: BUILD_SLICE          
+ 788: BINARY_SUBSCR        
+ 798: STORE_FAST           recData
+ 800: LOAD_GLOBAL          NULL + len
+ 812: LOAD_FAST            recData
+ 814: PRECALL              
+ 818: CALL                 
+ 828: LOAD_GLOBAL          sizeEndCentDir
+ 840: COMPARE_OP           !=
+ 846: POP_JUMP_FORWARD_IF_FALSE to 852
+ 848: LOAD_CONST           None
+ 850: RETURN_VALUE         
+ 852: LOAD_GLOBAL          NULL + list
+ 864: LOAD_GLOBAL          NULL + struct
+ 876: LOAD_ATTR            unpack
+ 886: LOAD_GLOBAL          structEndArchive
+ 898: LOAD_FAST            recData
+ 900: PRECALL              
+ 904: CALL                 
+ 914: PRECALL              
+ 918: CALL                 
+ 928: STORE_FAST           endrec
+ 930: LOAD_FAST            endrec
+ 932: LOAD_GLOBAL          _ECD_COMMENT_SIZE
+ 944: BINARY_SUBSCR        
+ 954: STORE_FAST           commentSize
+ 956: LOAD_FAST            data
+ 958: LOAD_FAST            start
+ 960: LOAD_GLOBAL          sizeEndCentDir
+ 972: BINARY_OP            +
+ 976: LOAD_FAST            start
+ 978: LOAD_GLOBAL          sizeEndCentDir
+ 990: BINARY_OP            +
+ 994: LOAD_FAST            commentSize
+ 996: BINARY_OP            +
+1000: BUILD_SLICE          
+1002: BINARY_SUBSCR        
+1012: STORE_FAST           comment
+1014: LOAD_FAST            endrec
+1016: LOAD_METHOD          append
+1038: LOAD_FAST            comment
+1040: PRECALL              
+1044: CALL                 
+1054: POP_TOP              
+1056: LOAD_FAST            endrec
+1058: LOAD_METHOD          append
+1080: LOAD_FAST            maxCommentStart
+1082: LOAD_FAST            start
+1084: BINARY_OP            +
+1088: PRECALL              
+1092: CALL                 
+1102: POP_TOP              
+1104: LOAD_GLOBAL          NULL + _EndRecData64
+1116: LOAD_FAST            fpin
+1118: LOAD_FAST            maxCommentStart
+1120: LOAD_FAST            start
+1122: BINARY_OP            +
+1126: LOAD_FAST            filesize
+1128: BINARY_OP            -
+1132: LOAD_FAST            endrec
+1134: PRECALL              
+1138: CALL                 
+1148: RETURN_VALUE         
+1150: LOAD_CONST           None
+1152: RETURN_VALUE         

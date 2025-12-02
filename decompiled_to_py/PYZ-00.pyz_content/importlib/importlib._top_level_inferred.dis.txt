@@ -1,0 +1,23 @@
+# Disassembly for importlib._top_level_inferred
+# From module file: importlib.metadata
+
+## co_consts:
+(None, <code object <setcomp> at 0x00000240691C0B30, file "importlib\metadata\__init__.py", line 1084>)
+
+## co_names:
+('always_iterable', 'files')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           <code object <setcomp> at 0x00000240691C0B30, file "importlib\metadata\__init__.py", line 1084>
+   4: MAKE_FUNCTION        
+   6: LOAD_GLOBAL          NULL + always_iterable
+  18: LOAD_FAST            dist
+  20: LOAD_ATTR            files
+  30: PRECALL              
+  34: CALL                 
+  44: GET_ITER             
+  46: PRECALL              
+  50: CALL                 
+  60: RETURN_VALUE         

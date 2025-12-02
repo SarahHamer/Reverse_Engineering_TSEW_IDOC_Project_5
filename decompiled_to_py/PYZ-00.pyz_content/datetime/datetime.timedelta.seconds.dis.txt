@@ -1,0 +1,15 @@
+# Disassembly for datetime.timedelta.seconds
+# From module file: datetime
+
+## co_consts:
+('seconds',)
+
+## co_names:
+('_seconds',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _seconds
+  14: RETURN_VALUE         

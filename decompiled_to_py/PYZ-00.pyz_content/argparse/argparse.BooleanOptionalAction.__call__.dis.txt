@@ -1,0 +1,34 @@
+# Disassembly for argparse.BooleanOptionalAction.__call__
+# From module file: argparse
+
+## co_consts:
+(None, '--no-')
+
+## co_names:
+('option_strings', 'setattr', 'dest', 'startswith')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            option_string
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            option_strings
+  16: CONTAINS_OP          
+  18: POP_JUMP_FORWARD_IF_FALSE to 108
+  20: LOAD_GLOBAL          NULL + setattr
+  32: LOAD_FAST            namespace
+  34: LOAD_FAST            self
+  36: LOAD_ATTR            dest
+  46: LOAD_FAST            option_string
+  48: LOAD_METHOD          startswith
+  70: LOAD_CONST           '--no-'
+  72: PRECALL              
+  76: CALL                 
+  86: UNARY_NOT            
+  88: PRECALL              
+  92: CALL                 
+ 102: POP_TOP              
+ 104: LOAD_CONST           None
+ 106: RETURN_VALUE         
+ 108: LOAD_CONST           None
+ 110: RETURN_VALUE         

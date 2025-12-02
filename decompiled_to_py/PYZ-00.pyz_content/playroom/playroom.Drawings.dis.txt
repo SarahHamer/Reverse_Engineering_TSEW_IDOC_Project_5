@@ -1,0 +1,56 @@
+# Disassembly for playroom.Drawings
+# From module file: playroom
+
+## co_consts:
+('Drawings', <code object __init__ at 0x000002406944A340, file "playroom.py", line 5>, 'return', <code object get_description at 0x000002406943B0F0, file "playroom.py", line 9>, None, <code object get_options at 0x00000240693EA230, file "playroom.py", line 12>, <code object check at 0x00000240693EAF30, file "playroom.py", line 17>, ('Drawings',))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', 'str', 'get_description', 'list', 'typing', 'Union', 'Callable', 'get_options', 'check', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'Drawings'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           ('Drawings',)
+  14: LOAD_CLOSURE         __class__
+  16: BUILD_TUPLE          
+  18: LOAD_CONST           <code object __init__ at 0x000002406944A340, file "playroom.py", line 5>
+  20: MAKE_FUNCTION        defaults, closure
+  22: STORE_NAME           __init__
+  24: LOAD_CONST           'return'
+  26: LOAD_NAME            str
+  28: BUILD_TUPLE          
+  30: LOAD_CONST           <code object get_description at 0x000002406943B0F0, file "playroom.py", line 9>
+  32: MAKE_FUNCTION        annotations
+  34: STORE_NAME           get_description
+  36: LOAD_CONST           'return'
+  38: LOAD_NAME            list
+  40: LOAD_NAME            typing
+  42: LOAD_ATTR            Union
+  52: LOAD_NAME            str
+  54: LOAD_NAME            typing
+  56: LOAD_ATTR            Callable
+  66: BUILD_LIST           
+  68: LOAD_CONST           None
+  70: BUILD_TUPLE          
+  72: BINARY_SUBSCR        
+  82: BUILD_TUPLE          
+  84: BINARY_SUBSCR        
+  94: LOAD_NAME            str
+  96: BUILD_TUPLE          
+  98: BINARY_SUBSCR        
+ 108: BUILD_TUPLE          
+ 110: LOAD_CONST           <code object get_options at 0x00000240693EA230, file "playroom.py", line 12>
+ 112: MAKE_FUNCTION        annotations
+ 114: STORE_NAME           get_options
+ 116: LOAD_CONST           <code object check at 0x00000240693EAF30, file "playroom.py", line 17>
+ 118: MAKE_FUNCTION        
+ 120: STORE_NAME           check
+ 122: LOAD_CLOSURE         __class__
+ 124: COPY                 
+ 126: STORE_NAME           __classcell__
+ 128: RETURN_VALUE         

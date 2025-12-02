@@ -1,0 +1,14 @@
+# Disassembly for importlib.ExtensionFileLoader.get_source
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Return None as extension modules have no source code.', None)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: RETURN_VALUE         

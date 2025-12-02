@@ -1,0 +1,38 @@
+# Disassembly for tempfile.SpooledTemporaryFile.__del__
+# From module file: tempfile
+
+## co_consts:
+(None, 'Unclosed file {!r}', 2, ('stacklevel', 'source'))
+
+## co_names:
+('closed', '_warnings', 'warn', 'format', 'ResourceWarning', 'close')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            closed
+  14: POP_JUMP_FORWARD_IF_TRUE to 156
+  16: LOAD_GLOBAL          NULL + _warnings
+  28: LOAD_ATTR            warn
+  38: LOAD_CONST           'Unclosed file {!r}'
+  40: LOAD_METHOD          format
+  62: LOAD_FAST            self
+  64: PRECALL              
+  68: CALL                 
+  78: LOAD_GLOBAL          ResourceWarning
+  90: LOAD_CONST           2
+  92: LOAD_FAST            self
+  94: KW_NAMES             
+  96: PRECALL              
+ 100: CALL                 
+ 110: POP_TOP              
+ 112: LOAD_FAST            self
+ 114: LOAD_METHOD          close
+ 136: PRECALL              
+ 140: CALL                 
+ 150: POP_TOP              
+ 152: LOAD_CONST           None
+ 154: RETURN_VALUE         
+ 156: LOAD_CONST           None
+ 158: RETURN_VALUE         

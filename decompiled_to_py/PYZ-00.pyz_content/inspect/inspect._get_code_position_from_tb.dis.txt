@@ -1,0 +1,25 @@
+# Disassembly for inspect._get_code_position_from_tb
+# From module file: inspect
+
+## co_consts:
+(None,)
+
+## co_names:
+('tb_frame', 'f_code', 'tb_lasti', '_get_code_position')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            tb
+   4: LOAD_ATTR            tb_frame
+  14: LOAD_ATTR            f_code
+  24: LOAD_FAST            tb
+  26: LOAD_ATTR            tb_lasti
+  36: STORE_FAST           instruction_index
+  38: STORE_FAST           code
+  40: LOAD_GLOBAL          NULL + _get_code_position
+  52: LOAD_FAST            code
+  54: LOAD_FAST            instruction_index
+  56: PRECALL              
+  60: CALL                 
+  70: RETURN_VALUE         

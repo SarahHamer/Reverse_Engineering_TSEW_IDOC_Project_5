@@ -1,0 +1,17 @@
+# Disassembly for _pydecimal.Decimal.is_snan
+# From module file: _pydecimal
+
+## co_consts:
+('Return True if self is a signaling NaN; otherwise return False.', 'N')
+
+## co_names:
+('_exp',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _exp
+  14: LOAD_CONST           'N'
+  16: COMPARE_OP           ==
+  22: RETURN_VALUE         

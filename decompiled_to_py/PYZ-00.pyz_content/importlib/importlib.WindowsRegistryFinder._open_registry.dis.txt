@@ -1,0 +1,40 @@
+# Disassembly for importlib.WindowsRegistryFinder._open_registry
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+(None,)
+
+## co_names:
+('winreg', 'OpenKey', 'HKEY_CURRENT_USER', 'OSError', 'HKEY_LOCAL_MACHINE')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_GLOBAL          NULL + winreg
+  16: LOAD_ATTR            OpenKey
+  26: LOAD_GLOBAL          winreg
+  38: LOAD_ATTR            HKEY_CURRENT_USER
+  48: LOAD_FAST            key
+  50: PRECALL              
+  54: CALL                 
+  64: RETURN_VALUE         
+  66: PUSH_EXC_INFO        
+  68: LOAD_GLOBAL          OSError
+  80: CHECK_EXC_MATCH      
+  82: POP_JUMP_FORWARD_IF_FALSE to 152
+  84: POP_TOP              
+  86: LOAD_GLOBAL          NULL + winreg
+  98: LOAD_ATTR            OpenKey
+ 108: LOAD_GLOBAL          winreg
+ 120: LOAD_ATTR            HKEY_LOCAL_MACHINE
+ 130: LOAD_FAST            key
+ 132: PRECALL              
+ 136: CALL                 
+ 146: SWAP                 
+ 148: POP_EXCEPT           
+ 150: RETURN_VALUE         
+ 152: RERAISE              
+ 154: COPY                 
+ 156: POP_EXCEPT           
+ 158: RERAISE              

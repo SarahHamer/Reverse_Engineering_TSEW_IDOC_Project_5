@@ -1,0 +1,59 @@
+# Disassembly for hashlib.__hash_new
+# From module file: hashlib
+
+## co_consts:
+("new(name, data=b'') - Return a new hashing object using the named algorithm;\n    optionally initialized with data (which must be a bytes-like object).\n    ",)
+
+## co_names:
+('__block_openssl_constructor', '__get_builtin_constructor', '_hashlib', 'new', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            name
+   4: LOAD_GLOBAL          __block_openssl_constructor
+  16: CONTAINS_OP          
+  18: POP_JUMP_FORWARD_IF_FALSE to 64
+  20: PUSH_NULL            
+  22: LOAD_GLOBAL          NULL + __get_builtin_constructor
+  34: LOAD_FAST            name
+  36: PRECALL              
+  40: CALL                 
+  50: LOAD_FAST            data
+  52: BUILD_TUPLE          
+  54: BUILD_MAP            
+  56: LOAD_FAST            kwargs
+  58: DICT_MERGE           
+  60: CALL_FUNCTION_EX     
+  62: RETURN_VALUE         
+  64: NOP                  
+  66: LOAD_GLOBAL          NULL + _hashlib
+  78: LOAD_ATTR            new
+  88: LOAD_FAST            name
+  90: LOAD_FAST            data
+  92: BUILD_TUPLE          
+  94: BUILD_MAP            
+  96: LOAD_FAST            kwargs
+  98: DICT_MERGE           
+ 100: CALL_FUNCTION_EX     
+ 102: RETURN_VALUE         
+ 104: PUSH_EXC_INFO        
+ 106: LOAD_GLOBAL          ValueError
+ 118: CHECK_EXC_MATCH      
+ 120: POP_JUMP_FORWARD_IF_FALSE to 176
+ 122: POP_TOP              
+ 124: PUSH_NULL            
+ 126: LOAD_GLOBAL          NULL + __get_builtin_constructor
+ 138: LOAD_FAST            name
+ 140: PRECALL              
+ 144: CALL                 
+ 154: LOAD_FAST            data
+ 156: PRECALL              
+ 160: CALL                 
+ 170: SWAP                 
+ 172: POP_EXCEPT           
+ 174: RETURN_VALUE         
+ 176: RERAISE              
+ 178: COPY                 
+ 180: POP_EXCEPT           
+ 182: RERAISE              

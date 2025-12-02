@@ -1,0 +1,66 @@
+# Disassembly for pickle.encode_long
+# From module file: pickle
+
+## co_consts:
+("Encode a long to a two's complement little-endian binary string.\n    Note that 0 is a special case, returning an empty string, to save a\n    byte in the LONG1 pickling context.\n\n    >>> encode_long(0)\n    b''\n    >>> encode_long(255)\n    b'\\xff\\x00'\n    >>> encode_long(32767)\n    b'\\xff\\x7f'\n    >>> encode_long(-256)\n    b'\\x00\\xff'\n    >>> encode_long(-32768)\n    b'\\x00\\x80'\n    >>> encode_long(-128)\n    b'\\x80'\n    >>> encode_long(127)\n    b'\\x7f'\n    >>>\n    ", 0, b'', 3, 1, 'little', True, ('byteorder', 'signed'), -1, 255, -2, 128, None)
+
+## co_names:
+('bit_length', 'to_bytes')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            x
+   4: LOAD_CONST           0
+   6: COMPARE_OP           ==
+  12: POP_JUMP_FORWARD_IF_FALSE to 18
+  14: LOAD_CONST           b''
+  16: RETURN_VALUE         
+  18: LOAD_FAST            x
+  20: LOAD_METHOD          bit_length
+  42: PRECALL              
+  46: CALL                 
+  56: LOAD_CONST           3
+  58: BINARY_OP            >>
+  62: LOAD_CONST           1
+  64: BINARY_OP            +
+  68: STORE_FAST           nbytes
+  70: LOAD_FAST            x
+  72: LOAD_METHOD          to_bytes
+  94: LOAD_FAST            nbytes
+  96: LOAD_CONST           'little'
+  98: LOAD_CONST           True
+ 100: KW_NAMES             
+ 102: PRECALL              
+ 106: CALL                 
+ 116: STORE_FAST           result
+ 118: LOAD_FAST            x
+ 120: LOAD_CONST           0
+ 122: COMPARE_OP           <
+ 128: POP_JUMP_FORWARD_IF_FALSE to 216
+ 130: LOAD_FAST            nbytes
+ 132: LOAD_CONST           1
+ 134: COMPARE_OP           >
+ 140: POP_JUMP_FORWARD_IF_FALSE to 216
+ 142: LOAD_FAST            result
+ 144: LOAD_CONST           -1
+ 146: BINARY_SUBSCR        
+ 156: LOAD_CONST           255
+ 158: COMPARE_OP           ==
+ 164: POP_JUMP_FORWARD_IF_FALSE to 216
+ 166: LOAD_FAST            result
+ 168: LOAD_CONST           -2
+ 170: BINARY_SUBSCR        
+ 180: LOAD_CONST           128
+ 182: BINARY_OP            &
+ 186: LOAD_CONST           0
+ 188: COMPARE_OP           !=
+ 194: POP_JUMP_FORWARD_IF_FALSE to 216
+ 196: LOAD_FAST            result
+ 198: LOAD_CONST           None
+ 200: LOAD_CONST           -1
+ 202: BUILD_SLICE          
+ 204: BINARY_SUBSCR        
+ 214: STORE_FAST           result
+ 216: LOAD_FAST            result
+ 218: RETURN_VALUE         

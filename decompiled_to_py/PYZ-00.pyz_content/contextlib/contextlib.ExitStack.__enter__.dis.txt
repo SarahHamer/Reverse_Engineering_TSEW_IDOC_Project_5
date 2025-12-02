@@ -1,0 +1,14 @@
+# Disassembly for contextlib.ExitStack.__enter__
+# From module file: contextlib
+
+## co_consts:
+(None,)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: RETURN_VALUE         

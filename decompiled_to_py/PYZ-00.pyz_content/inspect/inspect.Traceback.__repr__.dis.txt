@@ -1,0 +1,29 @@
+# Disassembly for inspect.Traceback.__repr__
+# From module file: inspect
+
+## co_consts:
+(None, 'Traceback(filename={!r}, lineno={!r}, function={!r}, code_context={!r}, index={!r}, positions={!r})')
+
+## co_names:
+('format', 'filename', 'lineno', 'function', 'code_context', 'index', 'positions')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'Traceback(filename={!r}, lineno={!r}, function={!r}, code_context={!r}, index={!r}, positions={!r})'
+   4: LOAD_METHOD          format
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            filename
+  38: LOAD_FAST            self
+  40: LOAD_ATTR            lineno
+  50: LOAD_FAST            self
+  52: LOAD_ATTR            function
+  62: LOAD_FAST            self
+  64: LOAD_ATTR            code_context
+  74: LOAD_FAST            self
+  76: LOAD_ATTR            index
+  86: LOAD_FAST            self
+  88: LOAD_ATTR            positions
+  98: PRECALL              
+ 102: CALL                 
+ 112: RETURN_VALUE         

@@ -1,0 +1,33 @@
+# Disassembly for _pydecimal.Decimal.is_subnormal
+# From module file: _pydecimal
+
+## co_consts:
+('Return True if self is subnormal; otherwise return False.', False)
+
+## co_names:
+('_is_special', 'getcontext', 'adjusted', 'Emin')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _is_special
+  14: POP_JUMP_FORWARD_IF_TRUE to 20
+  16: LOAD_FAST            self
+  18: POP_JUMP_FORWARD_IF_TRUE to 24
+  20: LOAD_CONST           False
+  22: RETURN_VALUE         
+  24: LOAD_FAST            context
+  26: POP_JUMP_FORWARD_IF_NOT_NONE to 56
+  28: LOAD_GLOBAL          NULL + getcontext
+  40: PRECALL              
+  44: CALL                 
+  54: STORE_FAST           context
+  56: LOAD_FAST            self
+  58: LOAD_METHOD          adjusted
+  80: PRECALL              
+  84: CALL                 
+  94: LOAD_FAST            context
+  96: LOAD_ATTR            Emin
+ 106: COMPARE_OP           <
+ 112: RETURN_VALUE         

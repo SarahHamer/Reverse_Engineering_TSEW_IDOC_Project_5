@@ -1,0 +1,39 @@
+# Disassembly for statistics.pvariance
+# From module file: statistics
+
+## co_consts:
+('Return the population variance of ``data``.\n\n    data should be a sequence or iterable of Real-valued numbers, with at least one\n    value. The optional argument mu, if given, should be the mean of\n    the data. If it is missing or None, the mean is automatically calculated.\n\n    Use this function to calculate the variance from the entire population.\n    To estimate the variance from a sample, the ``variance`` function is\n    usually a better choice.\n\n    Examples:\n\n    >>> data = [0.0, 0.25, 0.25, 1.25, 1.5, 1.75, 2.75, 3.25]\n    >>> pvariance(data)\n    1.25\n\n    If you have already calculated the mean of the data, you can pass it as\n    the optional second argument to avoid recalculating it:\n\n    >>> mu = mean(data)\n    >>> pvariance(data, mu)\n    1.25\n\n    Decimals and Fractions are supported:\n\n    >>> from decimal import Decimal as D\n    >>> pvariance([D("27.5"), D("30.25"), D("30.25"), D("34.5"), D("41.75")])\n    Decimal(\'24.815\')\n\n    >>> from fractions import Fraction as F\n    >>> pvariance([F(1, 4), F(5, 4), F(1, 2)])\n    Fraction(13, 72)\n\n    ', 1, 'pvariance requires at least one data point')
+
+## co_names:
+('_ss', 'StatisticsError', '_convert')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _ss
+  14: LOAD_FAST            data
+  16: LOAD_FAST            mu
+  18: PRECALL              
+  22: CALL                 
+  32: UNPACK_SEQUENCE      
+  36: STORE_FAST           T
+  38: STORE_FAST           ss
+  40: STORE_FAST           c
+  42: STORE_FAST           n
+  44: LOAD_FAST            n
+  46: LOAD_CONST           1
+  48: COMPARE_OP           <
+  54: POP_JUMP_FORWARD_IF_FALSE to 86
+  56: LOAD_GLOBAL          NULL + StatisticsError
+  68: LOAD_CONST           'pvariance requires at least one data point'
+  70: PRECALL              
+  74: CALL                 
+  84: RAISE_VARARGS        
+  86: LOAD_GLOBAL          NULL + _convert
+  98: LOAD_FAST            ss
+ 100: LOAD_FAST            n
+ 102: BINARY_OP            /
+ 106: LOAD_FAST            T
+ 108: PRECALL              
+ 112: CALL                 
+ 122: RETURN_VALUE         

@@ -1,0 +1,33 @@
+# Disassembly for gettext.NullTranslations.npgettext
+# From module file: gettext
+
+## co_consts:
+(None, 1)
+
+## co_names:
+('_fallback', 'npgettext')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _fallback
+  14: POP_JUMP_FORWARD_IF_FALSE to 74
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            _fallback
+  28: LOAD_METHOD          npgettext
+  50: LOAD_FAST            context
+  52: LOAD_FAST            msgid1
+  54: LOAD_FAST            msgid2
+  56: LOAD_FAST            n
+  58: PRECALL              
+  62: CALL                 
+  72: RETURN_VALUE         
+  74: LOAD_FAST            n
+  76: LOAD_CONST           1
+  78: COMPARE_OP           ==
+  84: POP_JUMP_FORWARD_IF_FALSE to 90
+  86: LOAD_FAST            msgid1
+  88: RETURN_VALUE         
+  90: LOAD_FAST            msgid2
+  92: RETURN_VALUE         

@@ -1,0 +1,98 @@
+# Disassembly for email.formataddr
+# From module file: email.utils
+
+## co_consts:
+("The inverse of parseaddr(), this takes a 2-tuple of the form\n    (realname, email_address) and returns the string value suitable\n    for an RFC 2822 From, To or Cc header.\n\n    If the first element of pair is false, then the second element is\n    returned unmodified.\n\n    The optional charset is the character set that is used to encode\n    realname in case realname is not ASCII safe.  Can be an instance of str or\n    a Charset-like object which has a header_encode method.  Default is\n    'utf-8'.\n    ", 'ascii', '', '"', '\\\\\\g<0>', ' <', '>')
+
+## co_names:
+('encode', 'specialsre', 'search', 'escapesre', 'sub', 'UnicodeEncodeError', 'isinstance', 'str', 'Charset', 'header_encode')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            pair
+   4: UNPACK_SEQUENCE      
+   8: STORE_FAST           name
+  10: STORE_FAST           address
+  12: LOAD_FAST            address
+  14: LOAD_METHOD          encode
+  36: LOAD_CONST           'ascii'
+  38: PRECALL              
+  42: CALL                 
+  52: POP_TOP              
+  54: LOAD_FAST            name
+  56: POP_JUMP_FORWARD_IF_FALSE to 402
+  58: NOP                  
+  60: LOAD_FAST            name
+  62: LOAD_METHOD          encode
+  84: LOAD_CONST           'ascii'
+  86: PRECALL              
+  90: CALL                 
+ 100: POP_TOP              
+ 102: LOAD_CONST           ''
+ 104: STORE_FAST           quotes
+ 106: LOAD_GLOBAL          specialsre
+ 118: LOAD_METHOD          search
+ 140: LOAD_FAST            name
+ 142: PRECALL              
+ 146: CALL                 
+ 156: POP_JUMP_FORWARD_IF_FALSE to 162
+ 158: LOAD_CONST           '"'
+ 160: STORE_FAST           quotes
+ 162: LOAD_GLOBAL          escapesre
+ 174: LOAD_METHOD          sub
+ 196: LOAD_CONST           '\\\\\\g<0>'
+ 198: LOAD_FAST            name
+ 200: PRECALL              
+ 204: CALL                 
+ 214: STORE_FAST           name
+ 216: LOAD_FAST            quotes
+ 218: FORMAT_VALUE         str
+ 220: LOAD_FAST            name
+ 222: FORMAT_VALUE         str
+ 224: LOAD_FAST            quotes
+ 226: FORMAT_VALUE         str
+ 228: LOAD_CONST           ' <'
+ 230: LOAD_FAST            address
+ 232: FORMAT_VALUE         str
+ 234: LOAD_CONST           '>'
+ 236: BUILD_STRING         
+ 238: RETURN_VALUE         
+ 240: PUSH_EXC_INFO        
+ 242: LOAD_GLOBAL          UnicodeEncodeError
+ 254: CHECK_EXC_MATCH      
+ 256: POP_JUMP_FORWARD_IF_FALSE to 394
+ 258: POP_TOP              
+ 260: LOAD_GLOBAL          NULL + isinstance
+ 272: LOAD_FAST            charset
+ 274: LOAD_GLOBAL          str
+ 286: PRECALL              
+ 290: CALL                 
+ 300: POP_JUMP_FORWARD_IF_FALSE to 332
+ 302: LOAD_GLOBAL          NULL + Charset
+ 314: LOAD_FAST            charset
+ 316: PRECALL              
+ 320: CALL                 
+ 330: STORE_FAST           charset
+ 332: LOAD_FAST            charset
+ 334: LOAD_METHOD          header_encode
+ 356: LOAD_FAST            name
+ 358: PRECALL              
+ 362: CALL                 
+ 372: STORE_FAST           encoded_name
+ 374: LOAD_FAST            encoded_name
+ 376: FORMAT_VALUE         str
+ 378: LOAD_CONST           ' <'
+ 380: LOAD_FAST            address
+ 382: FORMAT_VALUE         str
+ 384: LOAD_CONST           '>'
+ 386: BUILD_STRING         
+ 388: SWAP                 
+ 390: POP_EXCEPT           
+ 392: RETURN_VALUE         
+ 394: RERAISE              
+ 396: COPY                 
+ 398: POP_EXCEPT           
+ 400: RERAISE              
+ 402: LOAD_FAST            address
+ 404: RETURN_VALUE         

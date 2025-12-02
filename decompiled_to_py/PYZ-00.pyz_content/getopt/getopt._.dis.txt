@@ -1,0 +1,14 @@
+# Disassembly for getopt._
+# From module file: getopt
+
+## co_consts:
+(None,)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            s
+   4: RETURN_VALUE         

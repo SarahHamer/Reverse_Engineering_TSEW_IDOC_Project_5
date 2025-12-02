@@ -1,0 +1,200 @@
+# Disassembly for socket.create_server
+# From module file: socket
+
+## co_consts:
+("Convenience function which creates a SOCK_STREAM type socket\n    bound to *address* (a 2-tuple (host, port)) and return the socket\n    object.\n\n    *family* should be either AF_INET or AF_INET6.\n    *backlog* is the queue size passed to socket.listen().\n    *reuse_port* dictates whether to use the SO_REUSEPORT socket option.\n    *dualstack_ipv6*: if true and the platform supports it, it will\n    create an AF_INET6 socket able to accept both IPv4 or IPv6\n    connections. When false it will explicitly disable this option on\n    platforms that enable it by default (e.g. Linux).\n\n    >>> with create_server(('', 8000)) as server:\n    ...     while True:\n    ...         conn, addr = server.accept()\n    ...         # handle new connection\n    ", 'SO_REUSEPORT', 'SO_REUSEPORT not supported on this platform', 'dualstack_ipv6 not supported on this platform', 'dualstack_ipv6 requires AF_INET6 family', ('nt', 'cygwin'), 'SO_REUSEADDR', 1, 0, 'IPV6_V6ONLY', 'IPPROTO_IPV6', ' (while attempting to bind on address ', ')', None)
+
+## co_names:
+('hasattr', '_socket', 'ValueError', 'has_dualstack_ipv6', 'AF_INET6', 'socket', 'SOCK_STREAM', 'os', 'name', 'setsockopt', 'SOL_SOCKET', 'SO_REUSEADDR', 'error', 'SO_REUSEPORT', 'has_ipv6', 'IPPROTO_IPV6', 'IPV6_V6ONLY', 'bind', 'strerror', 'errno', 'listen', 'close')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            reuse_port
+   4: POP_JUMP_FORWARD_IF_FALSE to 78
+   6: LOAD_GLOBAL          NULL + hasattr
+  18: LOAD_GLOBAL          _socket
+  30: LOAD_CONST           'SO_REUSEPORT'
+  32: PRECALL              
+  36: CALL                 
+  46: POP_JUMP_FORWARD_IF_TRUE to 78
+  48: LOAD_GLOBAL          NULL + ValueError
+  60: LOAD_CONST           'SO_REUSEPORT not supported on this platform'
+  62: PRECALL              
+  66: CALL                 
+  76: RAISE_VARARGS        
+  78: LOAD_FAST            dualstack_ipv6
+  80: POP_JUMP_FORWARD_IF_FALSE to 192
+  82: LOAD_GLOBAL          NULL + has_dualstack_ipv6
+  94: PRECALL              
+  98: CALL                 
+ 108: POP_JUMP_FORWARD_IF_TRUE to 140
+ 110: LOAD_GLOBAL          NULL + ValueError
+ 122: LOAD_CONST           'dualstack_ipv6 not supported on this platform'
+ 124: PRECALL              
+ 128: CALL                 
+ 138: RAISE_VARARGS        
+ 140: LOAD_FAST            family
+ 142: LOAD_GLOBAL          AF_INET6
+ 154: COMPARE_OP           !=
+ 160: POP_JUMP_FORWARD_IF_FALSE to 192
+ 162: LOAD_GLOBAL          NULL + ValueError
+ 174: LOAD_CONST           'dualstack_ipv6 requires AF_INET6 family'
+ 176: PRECALL              
+ 180: CALL                 
+ 190: RAISE_VARARGS        
+ 192: LOAD_GLOBAL          NULL + socket
+ 204: LOAD_FAST            family
+ 206: LOAD_GLOBAL          SOCK_STREAM
+ 218: PRECALL              
+ 222: CALL                 
+ 232: STORE_FAST           sock
+ 234: NOP                  
+ 236: LOAD_GLOBAL          os
+ 248: LOAD_ATTR            name
+ 258: LOAD_CONST           ('nt', 'cygwin')
+ 260: CONTAINS_OP          
+ 262: POP_JUMP_FORWARD_IF_FALSE to 408
+ 264: LOAD_GLOBAL          NULL + hasattr
+ 276: LOAD_GLOBAL          _socket
+ 288: LOAD_CONST           'SO_REUSEADDR'
+ 290: PRECALL              
+ 294: CALL                 
+ 304: POP_JUMP_FORWARD_IF_FALSE to 408
+ 306: NOP                  
+ 308: LOAD_FAST            sock
+ 310: LOAD_METHOD          setsockopt
+ 332: LOAD_GLOBAL          SOL_SOCKET
+ 344: LOAD_GLOBAL          SO_REUSEADDR
+ 356: LOAD_CONST           1
+ 358: PRECALL              
+ 362: CALL                 
+ 372: POP_TOP              
+ 374: JUMP_FORWARD         to 408
+ 376: PUSH_EXC_INFO        
+ 378: LOAD_GLOBAL          error
+ 390: CHECK_EXC_MATCH      
+ 392: POP_JUMP_FORWARD_IF_FALSE to 400
+ 394: POP_TOP              
+ 396: POP_EXCEPT           
+ 398: JUMP_FORWARD         to 408
+ 400: RERAISE              
+ 402: COPY                 
+ 404: POP_EXCEPT           
+ 406: RERAISE              
+ 408: LOAD_FAST            reuse_port
+ 410: POP_JUMP_FORWARD_IF_FALSE to 478
+ 412: LOAD_FAST            sock
+ 414: LOAD_METHOD          setsockopt
+ 436: LOAD_GLOBAL          SOL_SOCKET
+ 448: LOAD_GLOBAL          SO_REUSEPORT
+ 460: LOAD_CONST           1
+ 462: PRECALL              
+ 466: CALL                 
+ 476: POP_TOP              
+ 478: LOAD_GLOBAL          has_ipv6
+ 490: POP_JUMP_FORWARD_IF_FALSE to 736
+ 492: LOAD_FAST            family
+ 494: LOAD_GLOBAL          AF_INET6
+ 506: COMPARE_OP           ==
+ 512: POP_JUMP_FORWARD_IF_FALSE to 736
+ 514: LOAD_FAST            dualstack_ipv6
+ 516: POP_JUMP_FORWARD_IF_FALSE to 586
+ 518: LOAD_FAST            sock
+ 520: LOAD_METHOD          setsockopt
+ 542: LOAD_GLOBAL          IPPROTO_IPV6
+ 554: LOAD_GLOBAL          IPV6_V6ONLY
+ 566: LOAD_CONST           0
+ 568: PRECALL              
+ 572: CALL                 
+ 582: POP_TOP              
+ 584: JUMP_FORWARD         to 736
+ 586: LOAD_GLOBAL          NULL + hasattr
+ 598: LOAD_GLOBAL          _socket
+ 610: LOAD_CONST           'IPV6_V6ONLY'
+ 612: PRECALL              
+ 616: CALL                 
+ 626: POP_JUMP_FORWARD_IF_FALSE to 736
+ 628: LOAD_GLOBAL          NULL + hasattr
+ 640: LOAD_GLOBAL          _socket
+ 652: LOAD_CONST           'IPPROTO_IPV6'
+ 654: PRECALL              
+ 658: CALL                 
+ 668: POP_JUMP_FORWARD_IF_FALSE to 736
+ 670: LOAD_FAST            sock
+ 672: LOAD_METHOD          setsockopt
+ 694: LOAD_GLOBAL          IPPROTO_IPV6
+ 706: LOAD_GLOBAL          IPV6_V6ONLY
+ 718: LOAD_CONST           1
+ 720: PRECALL              
+ 724: CALL                 
+ 734: POP_TOP              
+ 736: NOP                  
+ 738: LOAD_FAST            sock
+ 740: LOAD_METHOD          bind
+ 762: LOAD_FAST            address
+ 764: PRECALL              
+ 768: CALL                 
+ 778: POP_TOP              
+ 780: JUMP_FORWARD         to 888
+ 782: PUSH_EXC_INFO        
+ 784: LOAD_GLOBAL          error
+ 796: CHECK_EXC_MATCH      
+ 798: POP_JUMP_FORWARD_IF_FALSE to 880
+ 800: STORE_FAST           err
+ 802: LOAD_FAST            err
+ 804: LOAD_ATTR            strerror
+ 814: FORMAT_VALUE         str
+ 816: LOAD_CONST           ' (while attempting to bind on address '
+ 818: LOAD_FAST            address
+ 820: FORMAT_VALUE         repr
+ 822: LOAD_CONST           ')'
+ 824: BUILD_STRING         
+ 826: STORE_FAST           msg
+ 828: LOAD_GLOBAL          NULL + error
+ 840: LOAD_FAST            err
+ 842: LOAD_ATTR            errno
+ 852: LOAD_FAST            msg
+ 854: PRECALL              
+ 858: CALL                 
+ 868: LOAD_CONST           None
+ 870: RAISE_VARARGS        
+ 872: LOAD_CONST           None
+ 874: STORE_FAST           err
+ 876: DELETE_FAST          err
+ 878: RERAISE              
+ 880: RERAISE              
+ 882: COPY                 
+ 884: POP_EXCEPT           
+ 886: RERAISE              
+ 888: LOAD_FAST            backlog
+ 890: POP_JUMP_FORWARD_IF_NOT_NONE to 934
+ 892: LOAD_FAST            sock
+ 894: LOAD_METHOD          listen
+ 916: PRECALL              
+ 920: CALL                 
+ 930: POP_TOP              
+ 932: JUMP_FORWARD         to 976
+ 934: LOAD_FAST            sock
+ 936: LOAD_METHOD          listen
+ 958: LOAD_FAST            backlog
+ 960: PRECALL              
+ 964: CALL                 
+ 974: POP_TOP              
+ 976: LOAD_FAST            sock
+ 978: RETURN_VALUE         
+ 980: PUSH_EXC_INFO        
+ 982: LOAD_GLOBAL          error
+ 994: CHECK_EXC_MATCH      
+ 996: POP_JUMP_FORWARD_IF_FALSE to 1042
+ 998: POP_TOP              
+1000: LOAD_FAST            sock
+1002: LOAD_METHOD          close
+1024: PRECALL              
+1028: CALL                 
+1038: POP_TOP              
+1040: RAISE_VARARGS        
+1042: RERAISE              
+1044: COPY                 
+1046: POP_EXCEPT           
+1048: RERAISE              

@@ -1,0 +1,90 @@
+# Disassembly for ast._Unparser.visit_Constant
+# From module file: ast
+
+## co_consts:
+(None, '(', ')', Ellipsis, '...', 'u')
+
+## co_names:
+('value', 'isinstance', 'tuple', 'delimit', 'items_view', '_write_constant', 'write', 'kind')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            node
+   4: LOAD_ATTR            value
+  14: STORE_FAST           value
+  16: LOAD_GLOBAL          NULL + isinstance
+  28: LOAD_FAST            value
+  30: LOAD_GLOBAL          tuple
+  42: PRECALL              
+  46: CALL                 
+  56: POP_JUMP_FORWARD_IF_FALSE to 210
+  58: LOAD_FAST            self
+  60: LOAD_METHOD          delimit
+  82: LOAD_CONST           '('
+  84: LOAD_CONST           ')'
+  86: PRECALL              
+  90: CALL                 
+ 100: BEFORE_WITH          
+ 102: POP_TOP              
+ 104: LOAD_FAST            self
+ 106: LOAD_METHOD          items_view
+ 128: LOAD_FAST            self
+ 130: LOAD_ATTR            _write_constant
+ 140: LOAD_FAST            value
+ 142: PRECALL              
+ 146: CALL                 
+ 156: POP_TOP              
+ 158: LOAD_CONST           None
+ 160: LOAD_CONST           None
+ 162: LOAD_CONST           None
+ 164: PRECALL              
+ 168: CALL                 
+ 178: POP_TOP              
+ 180: LOAD_CONST           None
+ 182: RETURN_VALUE         
+ 184: PUSH_EXC_INFO        
+ 186: WITH_EXCEPT_START    
+ 188: POP_JUMP_FORWARD_IF_TRUE to 198
+ 190: RERAISE              
+ 192: COPY                 
+ 194: POP_EXCEPT           
+ 196: RERAISE              
+ 198: POP_TOP              
+ 200: POP_EXCEPT           
+ 202: POP_TOP              
+ 204: POP_TOP              
+ 206: LOAD_CONST           None
+ 208: RETURN_VALUE         
+ 210: LOAD_FAST            value
+ 212: LOAD_CONST           Ellipsis
+ 214: IS_OP                
+ 216: POP_JUMP_FORWARD_IF_FALSE to 264
+ 218: LOAD_FAST            self
+ 220: LOAD_METHOD          write
+ 242: LOAD_CONST           '...'
+ 244: PRECALL              
+ 248: CALL                 
+ 258: POP_TOP              
+ 260: LOAD_CONST           None
+ 262: RETURN_VALUE         
+ 264: LOAD_FAST            node
+ 266: LOAD_ATTR            kind
+ 276: LOAD_CONST           'u'
+ 278: COMPARE_OP           ==
+ 284: POP_JUMP_FORWARD_IF_FALSE to 328
+ 286: LOAD_FAST            self
+ 288: LOAD_METHOD          write
+ 310: LOAD_CONST           'u'
+ 312: PRECALL              
+ 316: CALL                 
+ 326: POP_TOP              
+ 328: LOAD_FAST            self
+ 330: LOAD_METHOD          _write_constant
+ 352: LOAD_FAST            node
+ 354: LOAD_ATTR            value
+ 364: PRECALL              
+ 368: CALL                 
+ 378: POP_TOP              
+ 380: LOAD_CONST           None
+ 382: RETURN_VALUE         

@@ -1,0 +1,43 @@
+# Disassembly for pickle._Unpickler.load_proto
+# From module file: pickle
+
+## co_consts:
+(None, 1, 0, 'unsupported pickle protocol: %d')
+
+## co_names:
+('read', 'HIGHEST_PROTOCOL', 'ValueError', 'proto')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          read
+  26: LOAD_CONST           1
+  28: PRECALL              
+  32: CALL                 
+  42: LOAD_CONST           0
+  44: BINARY_SUBSCR        
+  54: STORE_FAST           proto
+  56: LOAD_CONST           0
+  58: LOAD_FAST            proto
+  60: SWAP                 
+  62: COPY                 
+  64: COMPARE_OP           <=
+  70: POP_JUMP_FORWARD_IF_FALSE to 94
+  72: LOAD_GLOBAL          HIGHEST_PROTOCOL
+  84: COMPARE_OP           <=
+  90: POP_JUMP_FORWARD_IF_TRUE to 132
+  92: JUMP_FORWARD         to 96
+  94: POP_TOP              
+  96: LOAD_GLOBAL          NULL + ValueError
+ 108: LOAD_CONST           'unsupported pickle protocol: %d'
+ 110: LOAD_FAST            proto
+ 112: BINARY_OP            %
+ 116: PRECALL              
+ 120: CALL                 
+ 130: RAISE_VARARGS        
+ 132: LOAD_FAST            proto
+ 134: LOAD_FAST            self
+ 136: STORE_ATTR           proto
+ 146: LOAD_CONST           None
+ 148: RETURN_VALUE         

@@ -1,0 +1,50 @@
+# Disassembly for datetime.date._cmp
+# From module file: datetime
+
+## co_consts:
+(None,)
+
+## co_names:
+('isinstance', 'date', '_year', '_month', '_day', '_cmp')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            other
+  16: LOAD_GLOBAL          date
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_TRUE to 48
+  44: LOAD_ASSERTION_ERROR 
+  46: RAISE_VARARGS        
+  48: LOAD_FAST            self
+  50: LOAD_ATTR            _year
+  60: LOAD_FAST            self
+  62: LOAD_ATTR            _month
+  72: LOAD_FAST            self
+  74: LOAD_ATTR            _day
+  84: STORE_FAST           d
+  86: STORE_FAST           m
+  88: STORE_FAST           y
+  90: LOAD_FAST            other
+  92: LOAD_ATTR            _year
+ 102: LOAD_FAST            other
+ 104: LOAD_ATTR            _month
+ 114: LOAD_FAST            other
+ 116: LOAD_ATTR            _day
+ 126: STORE_FAST           d2
+ 128: STORE_FAST           m2
+ 130: STORE_FAST           y2
+ 132: LOAD_GLOBAL          NULL + _cmp
+ 144: LOAD_FAST            y
+ 146: LOAD_FAST            m
+ 148: LOAD_FAST            d
+ 150: BUILD_TUPLE          
+ 152: LOAD_FAST            y2
+ 154: LOAD_FAST            m2
+ 156: LOAD_FAST            d2
+ 158: BUILD_TUPLE          
+ 160: PRECALL              
+ 164: CALL                 
+ 174: RETURN_VALUE         

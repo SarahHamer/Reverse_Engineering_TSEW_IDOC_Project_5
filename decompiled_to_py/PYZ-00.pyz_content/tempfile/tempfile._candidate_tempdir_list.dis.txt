@@ -1,0 +1,102 @@
+# Disassembly for tempfile._candidate_tempdir_list
+# From module file: tempfile
+
+## co_consts:
+('Generate a list of candidate temporary directories which\n    _get_default_tempdir will try.', ('TMPDIR', 'TEMP', 'TMP'), 'nt', '~\\AppData\\Local\\Temp', '%SYSTEMROOT%\\Temp', 'c:\\temp', 'c:\\tmp', '\\temp', '\\tmp', ('/tmp', '/var/tmp', '/usr/tmp'))
+
+## co_names:
+('_os', 'getenv', 'append', 'name', 'extend', 'path', 'expanduser', 'expandvars', 'getcwd', 'AttributeError', 'OSError', 'curdir')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           dirlist
+   6: LOAD_CONST           ('TMPDIR', 'TEMP', 'TMP')
+   8: GET_ITER             
+  10: FOR_ITER             to 102
+  12: STORE_FAST           envname
+  14: LOAD_GLOBAL          NULL + _os
+  26: LOAD_ATTR            getenv
+  36: LOAD_FAST            envname
+  38: PRECALL              
+  42: CALL                 
+  52: STORE_FAST           dirname
+  54: LOAD_FAST            dirname
+  56: POP_JUMP_FORWARD_IF_FALSE to 100
+  58: LOAD_FAST            dirlist
+  60: LOAD_METHOD          append
+  82: LOAD_FAST            dirname
+  84: PRECALL              
+  88: CALL                 
+  98: POP_TOP              
+ 100: JUMP_BACKWARD        to 10
+ 102: LOAD_GLOBAL          _os
+ 114: LOAD_ATTR            name
+ 124: LOAD_CONST           'nt'
+ 126: COMPARE_OP           ==
+ 132: POP_JUMP_FORWARD_IF_FALSE to 306
+ 134: LOAD_FAST            dirlist
+ 136: LOAD_METHOD          extend
+ 158: LOAD_GLOBAL          _os
+ 170: LOAD_ATTR            path
+ 180: LOAD_METHOD          expanduser
+ 202: LOAD_CONST           '~\\AppData\\Local\\Temp'
+ 204: PRECALL              
+ 208: CALL                 
+ 218: LOAD_GLOBAL          _os
+ 230: LOAD_ATTR            path
+ 240: LOAD_METHOD          expandvars
+ 262: LOAD_CONST           '%SYSTEMROOT%\\Temp'
+ 264: PRECALL              
+ 268: CALL                 
+ 278: LOAD_CONST           'c:\\temp'
+ 280: LOAD_CONST           'c:\\tmp'
+ 282: LOAD_CONST           '\\temp'
+ 284: LOAD_CONST           '\\tmp'
+ 286: BUILD_LIST           
+ 288: PRECALL              
+ 292: CALL                 
+ 302: POP_TOP              
+ 304: JUMP_FORWARD         to 352
+ 306: LOAD_FAST            dirlist
+ 308: LOAD_METHOD          extend
+ 330: BUILD_LIST           
+ 332: LOAD_CONST           ('/tmp', '/var/tmp', '/usr/tmp')
+ 334: LIST_EXTEND          
+ 336: PRECALL              
+ 340: CALL                 
+ 350: POP_TOP              
+ 352: NOP                  
+ 354: LOAD_FAST            dirlist
+ 356: LOAD_METHOD          append
+ 378: LOAD_GLOBAL          NULL + _os
+ 390: LOAD_ATTR            getcwd
+ 400: PRECALL              
+ 404: CALL                 
+ 414: PRECALL              
+ 418: CALL                 
+ 428: POP_TOP              
+ 430: JUMP_FORWARD         to 540
+ 432: PUSH_EXC_INFO        
+ 434: LOAD_GLOBAL          AttributeError
+ 446: LOAD_GLOBAL          OSError
+ 458: BUILD_TUPLE          
+ 460: CHECK_EXC_MATCH      
+ 462: POP_JUMP_FORWARD_IF_FALSE to 532
+ 464: POP_TOP              
+ 466: LOAD_FAST            dirlist
+ 468: LOAD_METHOD          append
+ 490: LOAD_GLOBAL          _os
+ 502: LOAD_ATTR            curdir
+ 512: PRECALL              
+ 516: CALL                 
+ 526: POP_TOP              
+ 528: POP_EXCEPT           
+ 530: JUMP_FORWARD         to 540
+ 532: RERAISE              
+ 534: COPY                 
+ 536: POP_EXCEPT           
+ 538: RERAISE              
+ 540: LOAD_FAST            dirlist
+ 542: RETURN_VALUE         

@@ -1,0 +1,86 @@
+# Disassembly for importlib._get_module_lock
+# From module file: importlib._bootstrap
+
+## co_consts:
+('Get or create the module lock for a given module name.\n\n    Acquire/release internally the global import lock to protect\n    _module_locks.', None, <code object cb at 0x000002406934F120, file "importlib\_bootstrap.py", line 198>)
+
+## co_names:
+('_imp', 'acquire_lock', '_module_locks', 'KeyError', '_thread', '_DummyModuleLock', '_ModuleLock', '_weakref', 'ref', 'release_lock')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _imp
+  14: LOAD_METHOD          acquire_lock
+  36: PRECALL              
+  40: CALL                 
+  50: POP_TOP              
+  52: NOP                  
+  54: NOP                  
+  56: LOAD_GLOBAL          NULL + _module_locks
+  68: LOAD_FAST            name
+  70: BINARY_SUBSCR        
+  80: PRECALL              
+  84: CALL                 
+  94: STORE_FAST           lock
+  96: JUMP_FORWARD         to 134
+  98: PUSH_EXC_INFO        
+ 100: LOAD_GLOBAL          KeyError
+ 112: CHECK_EXC_MATCH      
+ 114: POP_JUMP_FORWARD_IF_FALSE to 126
+ 116: POP_TOP              
+ 118: LOAD_CONST           None
+ 120: STORE_FAST           lock
+ 122: POP_EXCEPT           
+ 124: JUMP_FORWARD         to 134
+ 126: RERAISE              
+ 128: COPY                 
+ 130: POP_EXCEPT           
+ 132: RERAISE              
+ 134: LOAD_FAST            lock
+ 136: POP_JUMP_FORWARD_IF_NOT_NONE to 294
+ 138: LOAD_GLOBAL          _thread
+ 150: POP_JUMP_FORWARD_IF_NOT_NONE to 184
+ 152: LOAD_GLOBAL          NULL + _DummyModuleLock
+ 164: LOAD_FAST            name
+ 166: PRECALL              
+ 170: CALL                 
+ 180: STORE_FAST           lock
+ 182: JUMP_FORWARD         to 214
+ 184: LOAD_GLOBAL          NULL + _ModuleLock
+ 196: LOAD_FAST            name
+ 198: PRECALL              
+ 202: CALL                 
+ 212: STORE_FAST           lock
+ 214: LOAD_FAST            name
+ 216: BUILD_TUPLE          
+ 218: LOAD_CONST           <code object cb at 0x000002406934F120, file "importlib\_bootstrap.py", line 198>
+ 220: MAKE_FUNCTION        defaults
+ 222: STORE_FAST           cb
+ 224: LOAD_GLOBAL          _weakref
+ 236: LOAD_METHOD          ref
+ 258: LOAD_FAST            lock
+ 260: LOAD_FAST            cb
+ 262: PRECALL              
+ 266: CALL                 
+ 276: LOAD_GLOBAL          _module_locks
+ 288: LOAD_FAST            name
+ 290: STORE_SUBSCR         
+ 294: LOAD_GLOBAL          _imp
+ 306: LOAD_METHOD          release_lock
+ 328: PRECALL              
+ 332: CALL                 
+ 342: POP_TOP              
+ 344: JUMP_FORWARD         to 406
+ 346: PUSH_EXC_INFO        
+ 348: LOAD_GLOBAL          _imp
+ 360: LOAD_METHOD          release_lock
+ 382: PRECALL              
+ 386: CALL                 
+ 396: POP_TOP              
+ 398: RERAISE              
+ 400: COPY                 
+ 402: POP_EXCEPT           
+ 404: RERAISE              
+ 406: LOAD_FAST            lock
+ 408: RETURN_VALUE         

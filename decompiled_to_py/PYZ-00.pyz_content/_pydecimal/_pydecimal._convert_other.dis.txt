@@ -1,0 +1,56 @@
+# Disassembly for _pydecimal._convert_other
+# From module file: _pydecimal
+
+## co_consts:
+("Convert other to Decimal.\n\n    Verifies that it's ok to use in an implicit construction.\n    If allow_float is true, allow conversion from float;  this\n    is used in the comparison methods (__eq__ and friends).\n\n    ", 'Unable to convert %s to Decimal')
+
+## co_names:
+('isinstance', 'Decimal', 'int', 'float', 'from_float', 'TypeError', 'NotImplemented')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            other
+  16: LOAD_GLOBAL          Decimal
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 48
+  44: LOAD_FAST            other
+  46: RETURN_VALUE         
+  48: LOAD_GLOBAL          NULL + isinstance
+  60: LOAD_FAST            other
+  62: LOAD_GLOBAL          int
+  74: PRECALL              
+  78: CALL                 
+  88: POP_JUMP_FORWARD_IF_FALSE to 120
+  90: LOAD_GLOBAL          NULL + Decimal
+ 102: LOAD_FAST            other
+ 104: PRECALL              
+ 108: CALL                 
+ 118: RETURN_VALUE         
+ 120: LOAD_FAST            allow_float
+ 122: POP_JUMP_FORWARD_IF_FALSE to 218
+ 124: LOAD_GLOBAL          NULL + isinstance
+ 136: LOAD_FAST            other
+ 138: LOAD_GLOBAL          float
+ 150: PRECALL              
+ 154: CALL                 
+ 164: POP_JUMP_FORWARD_IF_FALSE to 218
+ 166: LOAD_GLOBAL          Decimal
+ 178: LOAD_METHOD          from_float
+ 200: LOAD_FAST            other
+ 202: PRECALL              
+ 206: CALL                 
+ 216: RETURN_VALUE         
+ 218: LOAD_FAST            raiseit
+ 220: POP_JUMP_FORWARD_IF_FALSE to 258
+ 222: LOAD_GLOBAL          NULL + TypeError
+ 234: LOAD_CONST           'Unable to convert %s to Decimal'
+ 236: LOAD_FAST            other
+ 238: BINARY_OP            %
+ 242: PRECALL              
+ 246: CALL                 
+ 256: RAISE_VARARGS        
+ 258: LOAD_GLOBAL          NotImplemented
+ 270: RETURN_VALUE         

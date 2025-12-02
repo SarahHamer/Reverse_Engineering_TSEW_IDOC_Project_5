@@ -1,0 +1,47 @@
+# Disassembly for importlib._path_split
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Replacement for os.path.split().', <code object <genexpr> at 0x00000240693EA530, file "importlib\_bootstrap_external.py", line 134>, 0, '', None, 1)
+
+## co_names:
+('max', 'path_separators')
+
+## bytecode:
+
+   0: MAKE_CELL            path
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + max
+  16: LOAD_CLOSURE         path
+  18: BUILD_TUPLE          
+  20: LOAD_CONST           <code object <genexpr> at 0x00000240693EA530, file "importlib\_bootstrap_external.py", line 134>
+  22: MAKE_FUNCTION        closure
+  24: LOAD_GLOBAL          path_separators
+  36: GET_ITER             
+  38: PRECALL              
+  42: CALL                 
+  52: PRECALL              
+  56: CALL                 
+  66: STORE_FAST           i
+  68: LOAD_FAST            i
+  70: LOAD_CONST           0
+  72: COMPARE_OP           <
+  78: POP_JUMP_FORWARD_IF_FALSE to 88
+  80: LOAD_CONST           ''
+  82: LOAD_DEREF           path
+  84: BUILD_TUPLE          
+  86: RETURN_VALUE         
+  88: LOAD_DEREF           path
+  90: LOAD_CONST           None
+  92: LOAD_FAST            i
+  94: BUILD_SLICE          
+  96: BINARY_SUBSCR        
+ 106: LOAD_DEREF           path
+ 108: LOAD_FAST            i
+ 110: LOAD_CONST           1
+ 112: BINARY_OP            +
+ 116: LOAD_CONST           None
+ 118: BUILD_SLICE          
+ 120: BINARY_SUBSCR        
+ 130: BUILD_TUPLE          
+ 132: RETURN_VALUE         

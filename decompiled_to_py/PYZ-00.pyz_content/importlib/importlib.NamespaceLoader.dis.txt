@@ -1,0 +1,48 @@
+# Disassembly for importlib.NamespaceLoader
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('NamespaceLoader', <code object __init__ at 0x000002406945DC50, file "importlib\_bootstrap_external.py", line 1337>, <code object module_repr at 0x00000240693D29C0, file "importlib\_bootstrap_external.py", line 1340>, <code object is_package at 0x0000024069CC80F0, file "importlib\_bootstrap_external.py", line 1351>, <code object get_source at 0x0000024069CC81B0, file "importlib\_bootstrap_external.py", line 1354>, <code object get_code at 0x00000240694672F0, file "importlib\_bootstrap_external.py", line 1357>, <code object create_module at 0x0000024069CC8270, file "importlib\_bootstrap_external.py", line 1360>, <code object exec_module at 0x0000024069CC83F0, file "importlib\_bootstrap_external.py", line 1363>, <code object load_module at 0x00000240693D3CC0, file "importlib\_bootstrap_external.py", line 1366>, <code object get_resource_reader at 0x000002406945EF10, file "importlib\_bootstrap_external.py", line 1378>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', 'staticmethod', 'module_repr', 'is_package', 'get_source', 'get_code', 'create_module', 'exec_module', 'load_module', 'get_resource_reader')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'NamespaceLoader'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           <code object __init__ at 0x000002406945DC50, file "importlib\_bootstrap_external.py", line 1337>
+  12: MAKE_FUNCTION        
+  14: STORE_NAME           __init__
+  16: LOAD_NAME            staticmethod
+  18: LOAD_CONST           <code object module_repr at 0x00000240693D29C0, file "importlib\_bootstrap_external.py", line 1340>
+  20: MAKE_FUNCTION        
+  22: PRECALL              
+  26: CALL                 
+  36: STORE_NAME           module_repr
+  38: LOAD_CONST           <code object is_package at 0x0000024069CC80F0, file "importlib\_bootstrap_external.py", line 1351>
+  40: MAKE_FUNCTION        
+  42: STORE_NAME           is_package
+  44: LOAD_CONST           <code object get_source at 0x0000024069CC81B0, file "importlib\_bootstrap_external.py", line 1354>
+  46: MAKE_FUNCTION        
+  48: STORE_NAME           get_source
+  50: LOAD_CONST           <code object get_code at 0x00000240694672F0, file "importlib\_bootstrap_external.py", line 1357>
+  52: MAKE_FUNCTION        
+  54: STORE_NAME           get_code
+  56: LOAD_CONST           <code object create_module at 0x0000024069CC8270, file "importlib\_bootstrap_external.py", line 1360>
+  58: MAKE_FUNCTION        
+  60: STORE_NAME           create_module
+  62: LOAD_CONST           <code object exec_module at 0x0000024069CC83F0, file "importlib\_bootstrap_external.py", line 1363>
+  64: MAKE_FUNCTION        
+  66: STORE_NAME           exec_module
+  68: LOAD_CONST           <code object load_module at 0x00000240693D3CC0, file "importlib\_bootstrap_external.py", line 1366>
+  70: MAKE_FUNCTION        
+  72: STORE_NAME           load_module
+  74: LOAD_CONST           <code object get_resource_reader at 0x000002406945EF10, file "importlib\_bootstrap_external.py", line 1378>
+  76: MAKE_FUNCTION        
+  78: STORE_NAME           get_resource_reader
+  80: LOAD_CONST           None
+  82: RETURN_VALUE         

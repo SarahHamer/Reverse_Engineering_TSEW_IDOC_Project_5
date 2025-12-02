@@ -1,0 +1,166 @@
+# Disassembly for zipfile.ZipExtFile._read1
+# From module file: zipfile
+
+## co_consts:
+(None, 0, b'', True)
+
+## co_names:
+('_eof', '_compress_type', 'ZIP_DEFLATED', '_decompressor', 'unconsumed_tail', 'len', '_read2', 'ZIP_STORED', '_compress_left', 'max', 'MIN_READ_SIZE', 'decompress', 'eof', 'flush', '_left', '_update_crc')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _eof
+  14: POP_JUMP_FORWARD_IF_TRUE to 28
+  16: LOAD_FAST            n
+  18: LOAD_CONST           0
+  20: COMPARE_OP           <=
+  26: POP_JUMP_FORWARD_IF_FALSE to 32
+  28: LOAD_CONST           b''
+  30: RETURN_VALUE         
+  32: LOAD_FAST            self
+  34: LOAD_ATTR            _compress_type
+  44: LOAD_GLOBAL          ZIP_DEFLATED
+  56: COMPARE_OP           ==
+  62: POP_JUMP_FORWARD_IF_FALSE to 208
+  64: LOAD_FAST            self
+  66: LOAD_ATTR            _decompressor
+  76: LOAD_ATTR            unconsumed_tail
+  86: STORE_FAST           data
+  88: LOAD_FAST            n
+  90: LOAD_GLOBAL          NULL + len
+ 102: LOAD_FAST            data
+ 104: PRECALL              
+ 108: CALL                 
+ 118: COMPARE_OP           >
+ 124: POP_JUMP_FORWARD_IF_FALSE to 206
+ 126: LOAD_FAST            data
+ 128: LOAD_FAST            self
+ 130: LOAD_METHOD          _read2
+ 152: LOAD_FAST            n
+ 154: LOAD_GLOBAL          NULL + len
+ 166: LOAD_FAST            data
+ 168: PRECALL              
+ 172: CALL                 
+ 182: BINARY_OP            -
+ 186: PRECALL              
+ 190: CALL                 
+ 200: BINARY_OP            +=
+ 204: STORE_FAST           data
+ 206: JUMP_FORWARD         to 250
+ 208: LOAD_FAST            self
+ 210: LOAD_METHOD          _read2
+ 232: LOAD_FAST            n
+ 234: PRECALL              
+ 238: CALL                 
+ 248: STORE_FAST           data
+ 250: LOAD_FAST            self
+ 252: LOAD_ATTR            _compress_type
+ 262: LOAD_GLOBAL          ZIP_STORED
+ 274: COMPARE_OP           ==
+ 280: POP_JUMP_FORWARD_IF_FALSE to 316
+ 282: LOAD_FAST            self
+ 284: LOAD_ATTR            _compress_left
+ 294: LOAD_CONST           0
+ 296: COMPARE_OP           <=
+ 302: LOAD_FAST            self
+ 304: STORE_ATTR           _eof
+ 314: JUMP_FORWARD         to 706
+ 316: LOAD_FAST            self
+ 318: LOAD_ATTR            _compress_type
+ 328: LOAD_GLOBAL          ZIP_DEFLATED
+ 340: COMPARE_OP           ==
+ 346: POP_JUMP_FORWARD_IF_FALSE to 598
+ 348: LOAD_GLOBAL          NULL + max
+ 360: LOAD_FAST            n
+ 362: LOAD_FAST            self
+ 364: LOAD_ATTR            MIN_READ_SIZE
+ 374: PRECALL              
+ 378: CALL                 
+ 388: STORE_FAST           n
+ 390: LOAD_FAST            self
+ 392: LOAD_ATTR            _decompressor
+ 402: LOAD_METHOD          decompress
+ 424: LOAD_FAST            data
+ 426: LOAD_FAST            n
+ 428: PRECALL              
+ 432: CALL                 
+ 442: STORE_FAST           data
+ 444: LOAD_FAST            self
+ 446: LOAD_ATTR            _decompressor
+ 456: LOAD_ATTR            eof
+ 466: JUMP_IF_TRUE_OR_POP  to 514
+ 468: LOAD_FAST            self
+ 470: LOAD_ATTR            _compress_left
+ 480: LOAD_CONST           0
+ 482: COMPARE_OP           <=
+ 488: JUMP_IF_FALSE_OR_POP to 514
+ 490: LOAD_FAST            self
+ 492: LOAD_ATTR            _decompressor
+ 502: LOAD_ATTR            unconsumed_tail
+ 512: UNARY_NOT            
+ 514: LOAD_FAST            self
+ 516: STORE_ATTR           _eof
+ 526: LOAD_FAST            self
+ 528: LOAD_ATTR            _eof
+ 538: POP_JUMP_FORWARD_IF_FALSE to 596
+ 540: LOAD_FAST            data
+ 542: LOAD_FAST            self
+ 544: LOAD_ATTR            _decompressor
+ 554: LOAD_METHOD          flush
+ 576: PRECALL              
+ 580: CALL                 
+ 590: BINARY_OP            +=
+ 594: STORE_FAST           data
+ 596: JUMP_FORWARD         to 706
+ 598: LOAD_FAST            self
+ 600: LOAD_ATTR            _decompressor
+ 610: LOAD_METHOD          decompress
+ 632: LOAD_FAST            data
+ 634: PRECALL              
+ 638: CALL                 
+ 648: STORE_FAST           data
+ 650: LOAD_FAST            self
+ 652: LOAD_ATTR            _decompressor
+ 662: LOAD_ATTR            eof
+ 672: JUMP_IF_TRUE_OR_POP  to 694
+ 674: LOAD_FAST            self
+ 676: LOAD_ATTR            _compress_left
+ 686: LOAD_CONST           0
+ 688: COMPARE_OP           <=
+ 694: LOAD_FAST            self
+ 696: STORE_ATTR           _eof
+ 706: LOAD_FAST            data
+ 708: LOAD_CONST           None
+ 710: LOAD_FAST            self
+ 712: LOAD_ATTR            _left
+ 722: BUILD_SLICE          
+ 724: BINARY_SUBSCR        
+ 734: STORE_FAST           data
+ 736: LOAD_FAST            self
+ 738: COPY                 
+ 740: LOAD_ATTR            _left
+ 750: LOAD_GLOBAL          NULL + len
+ 762: LOAD_FAST            data
+ 764: PRECALL              
+ 768: CALL                 
+ 778: BINARY_OP            -=
+ 782: SWAP                 
+ 784: STORE_ATTR           _left
+ 794: LOAD_FAST            self
+ 796: LOAD_ATTR            _left
+ 806: LOAD_CONST           0
+ 808: COMPARE_OP           <=
+ 814: POP_JUMP_FORWARD_IF_FALSE to 830
+ 816: LOAD_CONST           True
+ 818: LOAD_FAST            self
+ 820: STORE_ATTR           _eof
+ 830: LOAD_FAST            self
+ 832: LOAD_METHOD          _update_crc
+ 854: LOAD_FAST            data
+ 856: PRECALL              
+ 860: CALL                 
+ 870: POP_TOP              
+ 872: LOAD_FAST            data
+ 874: RETURN_VALUE         

@@ -1,0 +1,40 @@
+# Disassembly for ast._Unparser._write_str_avoiding_backslashes
+# From module file: ast
+
+## co_consts:
+('Write string literal value with a best effort attempt to avoid backslashes.', ('quote_types',), 0, None)
+
+## co_names:
+('_str_literal_helper', 'write')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _str_literal_helper
+  26: LOAD_FAST            string
+  28: LOAD_FAST            quote_types
+  30: KW_NAMES             
+  32: PRECALL              
+  36: CALL                 
+  46: UNPACK_SEQUENCE      
+  50: STORE_FAST           string
+  52: STORE_FAST           quote_types
+  54: LOAD_FAST            quote_types
+  56: LOAD_CONST           0
+  58: BINARY_SUBSCR        
+  68: STORE_FAST           quote_type
+  70: LOAD_FAST            self
+  72: LOAD_METHOD          write
+  94: LOAD_FAST            quote_type
+  96: FORMAT_VALUE         
+  98: LOAD_FAST            string
+ 100: FORMAT_VALUE         
+ 102: LOAD_FAST            quote_type
+ 104: FORMAT_VALUE         
+ 106: BUILD_STRING         
+ 108: PRECALL              
+ 112: CALL                 
+ 122: POP_TOP              
+ 124: LOAD_CONST           None
+ 126: RETURN_VALUE         

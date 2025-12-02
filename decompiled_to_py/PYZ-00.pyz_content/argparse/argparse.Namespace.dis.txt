@@ -1,0 +1,29 @@
+# Disassembly for argparse.Namespace
+# From module file: argparse
+
+## co_consts:
+('Namespace', 'Simple object for storing attributes.\n\n    Implements equality by attribute names and values, and provides a simple\n    string representation.\n    ', <code object __init__ at 0x00000240693EB430, file "argparse.py", line 1322>, <code object __eq__ at 0x00000240693AA6F0, file "argparse.py", line 1326>, <code object __contains__ at 0x0000024069494780, file "argparse.py", line 1331>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', '__eq__', '__contains__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Namespace'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Simple object for storing attributes.\n\n    Implements equality by attribute names and values, and provides a simple\n    string representation.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object __init__ at 0x00000240693EB430, file "argparse.py", line 1322>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           __init__
+  20: LOAD_CONST           <code object __eq__ at 0x00000240693AA6F0, file "argparse.py", line 1326>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           __eq__
+  26: LOAD_CONST           <code object __contains__ at 0x0000024069494780, file "argparse.py", line 1331>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           __contains__
+  32: LOAD_CONST           None
+  34: RETURN_VALUE         

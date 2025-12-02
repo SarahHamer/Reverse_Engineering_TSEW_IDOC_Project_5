@@ -1,0 +1,69 @@
+# Disassembly for email.collapse_rfc2231_value
+# From module file: email.utils
+
+## co_consts:
+(None, 3, 'raw-unicode-escape')
+
+## co_names:
+('isinstance', 'tuple', 'len', 'unquote', 'bytes', 'str', 'LookupError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            value
+  16: LOAD_GLOBAL          tuple
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 82
+  44: LOAD_GLOBAL          NULL + len
+  56: LOAD_FAST            value
+  58: PRECALL              
+  62: CALL                 
+  72: LOAD_CONST           3
+  74: COMPARE_OP           !=
+  80: POP_JUMP_FORWARD_IF_FALSE to 112
+  82: LOAD_GLOBAL          NULL + unquote
+  94: LOAD_FAST            value
+  96: PRECALL              
+ 100: CALL                 
+ 110: RETURN_VALUE         
+ 112: LOAD_FAST            value
+ 114: UNPACK_SEQUENCE      
+ 118: STORE_FAST           charset
+ 120: STORE_FAST           language
+ 122: STORE_FAST           text
+ 124: LOAD_FAST            charset
+ 126: POP_JUMP_FORWARD_IF_NOT_NONE to 132
+ 128: LOAD_FAST            fallback_charset
+ 130: STORE_FAST           charset
+ 132: LOAD_GLOBAL          NULL + bytes
+ 144: LOAD_FAST            text
+ 146: LOAD_CONST           'raw-unicode-escape'
+ 148: PRECALL              
+ 152: CALL                 
+ 162: STORE_FAST           rawbytes
+ 164: NOP                  
+ 166: LOAD_GLOBAL          NULL + str
+ 178: LOAD_FAST            rawbytes
+ 180: LOAD_FAST            charset
+ 182: LOAD_FAST            errors
+ 184: PRECALL              
+ 188: CALL                 
+ 198: RETURN_VALUE         
+ 200: PUSH_EXC_INFO        
+ 202: LOAD_GLOBAL          LookupError
+ 214: CHECK_EXC_MATCH      
+ 216: POP_JUMP_FORWARD_IF_FALSE to 254
+ 218: POP_TOP              
+ 220: LOAD_GLOBAL          NULL + unquote
+ 232: LOAD_FAST            text
+ 234: PRECALL              
+ 238: CALL                 
+ 248: SWAP                 
+ 250: POP_EXCEPT           
+ 252: RETURN_VALUE         
+ 254: RERAISE              
+ 256: COPY                 
+ 258: POP_EXCEPT           
+ 260: RERAISE              

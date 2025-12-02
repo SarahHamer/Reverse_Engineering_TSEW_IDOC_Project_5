@@ -1,0 +1,25 @@
+# Disassembly for typing._BaseGenericAlias.__dir__.<listcomp>
+# From module file: typing
+
+## co_consts:
+()
+
+## co_names:
+('_is_dunder',)
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 46
+   8: STORE_FAST           attr
+  10: LOAD_GLOBAL          NULL + _is_dunder
+  22: LOAD_FAST            attr
+  24: PRECALL              
+  28: CALL                 
+  38: POP_JUMP_BACKWARD_IF_TRUE to 6
+  40: LOAD_FAST            attr
+  42: LIST_APPEND          
+  44: JUMP_BACKWARD        to 6
+  46: RETURN_VALUE         

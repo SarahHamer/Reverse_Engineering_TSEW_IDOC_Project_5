@@ -1,0 +1,85 @@
+# Disassembly for ftplib.parse257
+# From module file: ftplib
+
+## co_consts:
+("Parse the '257' response for a MKD or PWD request.\n    This is a response to a MKD or PWD request: a directory name.\n    Returns the directoryname in the 257 reply.", None, 3, '257', 5, ' "', '', 1, '"')
+
+## co_names:
+('error_reply', 'len')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            resp
+   4: LOAD_CONST           None
+   6: LOAD_CONST           3
+   8: BUILD_SLICE          
+  10: BINARY_SUBSCR        
+  20: LOAD_CONST           '257'
+  22: COMPARE_OP           !=
+  28: POP_JUMP_FORWARD_IF_FALSE to 60
+  30: LOAD_GLOBAL          NULL + error_reply
+  42: LOAD_FAST            resp
+  44: PRECALL              
+  48: CALL                 
+  58: RAISE_VARARGS        
+  60: LOAD_FAST            resp
+  62: LOAD_CONST           3
+  64: LOAD_CONST           5
+  66: BUILD_SLICE          
+  68: BINARY_SUBSCR        
+  78: LOAD_CONST           ' "'
+  80: COMPARE_OP           !=
+  86: POP_JUMP_FORWARD_IF_FALSE to 92
+  88: LOAD_CONST           ''
+  90: RETURN_VALUE         
+  92: LOAD_CONST           ''
+  94: STORE_FAST           dirname
+  96: LOAD_CONST           5
+  98: STORE_FAST           i
+ 100: LOAD_GLOBAL          NULL + len
+ 112: LOAD_FAST            resp
+ 114: PRECALL              
+ 118: CALL                 
+ 128: STORE_FAST           n
+ 130: LOAD_FAST            i
+ 132: LOAD_FAST            n
+ 134: COMPARE_OP           <
+ 140: POP_JUMP_FORWARD_IF_FALSE to 250
+ 142: LOAD_FAST            resp
+ 144: LOAD_FAST            i
+ 146: BINARY_SUBSCR        
+ 156: STORE_FAST           c
+ 158: LOAD_FAST            i
+ 160: LOAD_CONST           1
+ 162: BINARY_OP            +
+ 166: STORE_FAST           i
+ 168: LOAD_FAST            c
+ 170: LOAD_CONST           '"'
+ 172: COMPARE_OP           ==
+ 178: POP_JUMP_FORWARD_IF_FALSE to 228
+ 180: LOAD_FAST            i
+ 182: LOAD_FAST            n
+ 184: COMPARE_OP           >=
+ 190: POP_JUMP_FORWARD_IF_TRUE to 216
+ 192: LOAD_FAST            resp
+ 194: LOAD_FAST            i
+ 196: BINARY_SUBSCR        
+ 206: LOAD_CONST           '"'
+ 208: COMPARE_OP           !=
+ 214: POP_JUMP_FORWARD_IF_FALSE to 218
+ 216: JUMP_FORWARD         to 250
+ 218: LOAD_FAST            i
+ 220: LOAD_CONST           1
+ 222: BINARY_OP            +
+ 226: STORE_FAST           i
+ 228: LOAD_FAST            dirname
+ 230: LOAD_FAST            c
+ 232: BINARY_OP            +
+ 236: STORE_FAST           dirname
+ 238: LOAD_FAST            i
+ 240: LOAD_FAST            n
+ 242: COMPARE_OP           <
+ 248: POP_JUMP_BACKWARD_IF_TRUE to 142
+ 250: LOAD_FAST            dirname
+ 252: RETURN_VALUE         

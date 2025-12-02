@@ -1,0 +1,30 @@
+# Disassembly for pickle._Unpickler.load_float
+# From module file: pickle
+
+## co_consts:
+(None, -1)
+
+## co_names:
+('append', 'float', 'readline')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          append
+  26: LOAD_GLOBAL          NULL + float
+  38: LOAD_FAST            self
+  40: LOAD_METHOD          readline
+  62: PRECALL              
+  66: CALL                 
+  76: LOAD_CONST           None
+  78: LOAD_CONST           -1
+  80: BUILD_SLICE          
+  82: BINARY_SUBSCR        
+  92: PRECALL              
+  96: CALL                 
+ 106: PRECALL              
+ 110: CALL                 
+ 120: POP_TOP              
+ 122: LOAD_CONST           None
+ 124: RETURN_VALUE         

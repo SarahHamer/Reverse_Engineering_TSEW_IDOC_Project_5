@@ -1,0 +1,26 @@
+# Disassembly for dataclasses._init_fn.<dictcomp>
+# From module file: dataclasses
+
+## co_consts:
+('_type_',)
+
+## co_names:
+('name', 'type')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_MAP            
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 44
+   8: STORE_FAST           f
+  10: LOAD_CONST           '_type_'
+  12: LOAD_FAST            f
+  14: LOAD_ATTR            name
+  24: FORMAT_VALUE         
+  26: BUILD_STRING         
+  28: LOAD_FAST            f
+  30: LOAD_ATTR            type
+  40: MAP_ADD              
+  42: JUMP_BACKWARD        to 6
+  44: RETURN_VALUE         

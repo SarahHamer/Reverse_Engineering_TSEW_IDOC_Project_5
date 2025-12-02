@@ -1,0 +1,35 @@
+# Disassembly for tarfile.ExFileObject.__init__
+# From module file: tarfile
+
+## co_consts:
+(None,)
+
+## co_names:
+('_FileInFile', 'fileobj', 'offset_data', 'size', 'sparse', 'super', '__init__')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + _FileInFile
+  16: LOAD_FAST            tarfile
+  18: LOAD_ATTR            fileobj
+  28: LOAD_FAST            tarinfo
+  30: LOAD_ATTR            offset_data
+  40: LOAD_FAST            tarinfo
+  42: LOAD_ATTR            size
+  52: LOAD_FAST            tarinfo
+  54: LOAD_ATTR            sparse
+  64: PRECALL              
+  68: CALL                 
+  78: STORE_FAST           fileobj
+  80: LOAD_GLOBAL          NULL + super
+  92: PRECALL              
+  96: CALL                 
+ 106: LOAD_METHOD          __init__
+ 128: LOAD_FAST            fileobj
+ 130: PRECALL              
+ 134: CALL                 
+ 144: POP_TOP              
+ 146: LOAD_CONST           None
+ 148: RETURN_VALUE         

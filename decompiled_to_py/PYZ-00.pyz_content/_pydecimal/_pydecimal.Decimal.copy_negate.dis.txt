@@ -1,0 +1,37 @@
+# Disassembly for _pydecimal.Decimal.copy_negate
+# From module file: _pydecimal
+
+## co_consts:
+('Returns a copy with the sign inverted.', 0, 1)
+
+## co_names:
+('_sign', '_dec_from_triple', '_int', '_exp', '_is_special')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _sign
+  14: POP_JUMP_FORWARD_IF_FALSE to 82
+  16: LOAD_GLOBAL          NULL + _dec_from_triple
+  28: LOAD_CONST           0
+  30: LOAD_FAST            self
+  32: LOAD_ATTR            _int
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            _exp
+  54: LOAD_FAST            self
+  56: LOAD_ATTR            _is_special
+  66: PRECALL              
+  70: CALL                 
+  80: RETURN_VALUE         
+  82: LOAD_GLOBAL          NULL + _dec_from_triple
+  94: LOAD_CONST           1
+  96: LOAD_FAST            self
+  98: LOAD_ATTR            _int
+ 108: LOAD_FAST            self
+ 110: LOAD_ATTR            _exp
+ 120: LOAD_FAST            self
+ 122: LOAD_ATTR            _is_special
+ 132: PRECALL              
+ 136: CALL                 
+ 146: RETURN_VALUE         

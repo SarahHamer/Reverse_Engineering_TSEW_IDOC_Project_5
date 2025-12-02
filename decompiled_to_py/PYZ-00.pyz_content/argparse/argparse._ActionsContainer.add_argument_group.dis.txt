@@ -1,0 +1,32 @@
+# Disassembly for argparse._ActionsContainer.add_argument_group
+# From module file: argparse
+
+## co_consts:
+(None,)
+
+## co_names:
+('_ArgumentGroup', '_action_groups', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _ArgumentGroup
+  14: LOAD_FAST            self
+  16: BUILD_LIST           
+  18: LOAD_FAST            args
+  20: LIST_EXTEND          
+  22: LIST_TO_TUPLE        
+  24: BUILD_MAP            
+  26: LOAD_FAST            kwargs
+  28: DICT_MERGE           
+  30: CALL_FUNCTION_EX     
+  32: STORE_FAST           group
+  34: LOAD_FAST            self
+  36: LOAD_ATTR            _action_groups
+  46: LOAD_METHOD          append
+  68: LOAD_FAST            group
+  70: PRECALL              
+  74: CALL                 
+  84: POP_TOP              
+  86: LOAD_FAST            group
+  88: RETURN_VALUE         

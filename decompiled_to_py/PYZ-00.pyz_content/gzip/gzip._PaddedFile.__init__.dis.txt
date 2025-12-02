@@ -1,0 +1,29 @@
+# Disassembly for gzip._PaddedFile.__init__
+# From module file: gzip
+
+## co_consts:
+(None, 0)
+
+## co_names:
+('_buffer', 'len', '_length', 'file', '_read')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            prepend
+   4: LOAD_FAST            self
+   6: STORE_ATTR           _buffer
+  16: LOAD_GLOBAL          NULL + len
+  28: LOAD_FAST            prepend
+  30: PRECALL              
+  34: CALL                 
+  44: LOAD_FAST            self
+  46: STORE_ATTR           _length
+  56: LOAD_FAST            f
+  58: LOAD_FAST            self
+  60: STORE_ATTR           file
+  70: LOAD_CONST           0
+  72: LOAD_FAST            self
+  74: STORE_ATTR           _read
+  84: LOAD_CONST           None
+  86: RETURN_VALUE         

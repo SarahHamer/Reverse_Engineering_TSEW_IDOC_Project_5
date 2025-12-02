@@ -1,0 +1,247 @@
+# Disassembly for shutil.which
+# From module file: shutil
+
+## co_consts:
+('Given a command, mode, and a PATH string, return the path which\n    conforms to the given mode on the PATH, or None if there is no such\n    file.\n\n    `mode` defaults to os.F_OK | os.X_OK. `path` defaults to the result\n    of os.environ.get("PATH"), or can be overridden with a custom search\n    path.\n\n    ', None, 'PATH', 'CS_PATH', 'win32', 0, 'PATHEXT', <code object <listcomp> at 0x0000024069495B00, file "shutil.py", line 1504>, <code object <listcomp> at 0x000002406945FE10, file "shutil.py", line 1507>, <code object <genexpr> at 0x000002406922D680, file "shutil.py", line 1512>, <code object <listcomp> at 0x0000024069466090, file "shutil.py", line 1515>)
+
+## co_names:
+('os', 'path', 'dirname', '_access_check', 'isinstance', 'bytes', 'environ', 'get', 'confstr', 'AttributeError', 'ValueError', 'defpath', 'fsencode', 'split', 'pathsep', 'fsdecode', 'sys', 'platform', 'curdir', 'insert', 'getenv', '_WIN_DEFAULT_PATHEXT', 'any', 'set', 'normcase', 'add', 'join')
+
+## bytecode:
+
+   0: MAKE_CELL            cmd
+   2: RESUME               
+   4: LOAD_GLOBAL          os
+  16: LOAD_ATTR            path
+  26: LOAD_METHOD          dirname
+  48: LOAD_DEREF           cmd
+  50: PRECALL              
+  54: CALL                 
+  64: POP_JUMP_FORWARD_IF_FALSE to 106
+  66: LOAD_GLOBAL          NULL + _access_check
+  78: LOAD_DEREF           cmd
+  80: LOAD_FAST            mode
+  82: PRECALL              
+  86: CALL                 
+  96: POP_JUMP_FORWARD_IF_FALSE to 102
+  98: LOAD_DEREF           cmd
+ 100: RETURN_VALUE         
+ 102: LOAD_CONST           None
+ 104: RETURN_VALUE         
+ 106: LOAD_GLOBAL          NULL + isinstance
+ 118: LOAD_DEREF           cmd
+ 120: LOAD_GLOBAL          bytes
+ 132: PRECALL              
+ 136: CALL                 
+ 146: STORE_FAST           use_bytes
+ 148: LOAD_FAST            path
+ 150: POP_JUMP_FORWARD_IF_NOT_NONE to 334
+ 152: LOAD_GLOBAL          os
+ 164: LOAD_ATTR            environ
+ 174: LOAD_METHOD          get
+ 196: LOAD_CONST           'PATH'
+ 198: LOAD_CONST           None
+ 200: PRECALL              
+ 204: CALL                 
+ 214: STORE_FAST           path
+ 216: LOAD_FAST            path
+ 218: POP_JUMP_FORWARD_IF_NOT_NONE to 334
+ 220: NOP                  
+ 222: LOAD_GLOBAL          NULL + os
+ 234: LOAD_ATTR            confstr
+ 244: LOAD_CONST           'CS_PATH'
+ 246: PRECALL              
+ 250: CALL                 
+ 260: STORE_FAST           path
+ 262: JUMP_FORWARD         to 334
+ 264: PUSH_EXC_INFO        
+ 266: LOAD_GLOBAL          AttributeError
+ 278: LOAD_GLOBAL          ValueError
+ 290: BUILD_TUPLE          
+ 292: CHECK_EXC_MATCH      
+ 294: POP_JUMP_FORWARD_IF_FALSE to 326
+ 296: POP_TOP              
+ 298: LOAD_GLOBAL          os
+ 310: LOAD_ATTR            defpath
+ 320: STORE_FAST           path
+ 322: POP_EXCEPT           
+ 324: JUMP_FORWARD         to 334
+ 326: RERAISE              
+ 328: COPY                 
+ 330: POP_EXCEPT           
+ 332: RERAISE              
+ 334: LOAD_FAST            path
+ 336: POP_JUMP_FORWARD_IF_TRUE to 342
+ 338: LOAD_CONST           None
+ 340: RETURN_VALUE         
+ 342: LOAD_FAST            use_bytes
+ 344: POP_JUMP_FORWARD_IF_FALSE to 486
+ 346: LOAD_GLOBAL          NULL + os
+ 358: LOAD_ATTR            fsencode
+ 368: LOAD_FAST            path
+ 370: PRECALL              
+ 374: CALL                 
+ 384: STORE_FAST           path
+ 386: LOAD_FAST            path
+ 388: LOAD_METHOD          split
+ 410: LOAD_GLOBAL          NULL + os
+ 422: LOAD_ATTR            fsencode
+ 432: LOAD_GLOBAL          os
+ 444: LOAD_ATTR            pathsep
+ 454: PRECALL              
+ 458: CALL                 
+ 468: PRECALL              
+ 472: CALL                 
+ 482: STORE_FAST           path
+ 484: JUMP_FORWARD         to 588
+ 486: LOAD_GLOBAL          NULL + os
+ 498: LOAD_ATTR            fsdecode
+ 508: LOAD_FAST            path
+ 510: PRECALL              
+ 514: CALL                 
+ 524: STORE_FAST           path
+ 526: LOAD_FAST            path
+ 528: LOAD_METHOD          split
+ 550: LOAD_GLOBAL          os
+ 562: LOAD_ATTR            pathsep
+ 572: PRECALL              
+ 576: CALL                 
+ 586: STORE_FAST           path
+ 588: LOAD_GLOBAL          sys
+ 600: LOAD_ATTR            platform
+ 610: LOAD_CONST           'win32'
+ 612: COMPARE_OP           ==
+ 618: POP_JUMP_FORWARD_IF_FALSE to 996
+ 620: LOAD_GLOBAL          os
+ 632: LOAD_ATTR            curdir
+ 642: STORE_FAST           curdir
+ 644: LOAD_FAST            use_bytes
+ 646: POP_JUMP_FORWARD_IF_FALSE to 688
+ 648: LOAD_GLOBAL          NULL + os
+ 660: LOAD_ATTR            fsencode
+ 670: LOAD_FAST            curdir
+ 672: PRECALL              
+ 676: CALL                 
+ 686: STORE_FAST           curdir
+ 688: LOAD_FAST            curdir
+ 690: LOAD_FAST            path
+ 692: CONTAINS_OP          
+ 694: POP_JUMP_FORWARD_IF_FALSE to 740
+ 696: LOAD_FAST            path
+ 698: LOAD_METHOD          insert
+ 720: LOAD_CONST           0
+ 722: LOAD_FAST            curdir
+ 724: PRECALL              
+ 728: CALL                 
+ 738: POP_TOP              
+ 740: LOAD_GLOBAL          NULL + os
+ 752: LOAD_ATTR            getenv
+ 762: LOAD_CONST           'PATHEXT'
+ 764: PRECALL              
+ 768: CALL                 
+ 778: JUMP_IF_TRUE_OR_POP  to 792
+ 780: LOAD_GLOBAL          _WIN_DEFAULT_PATHEXT
+ 792: STORE_FAST           pathext_source
+ 794: LOAD_CONST           <code object <listcomp> at 0x0000024069495B00, file "shutil.py", line 1504>
+ 796: MAKE_FUNCTION        
+ 798: LOAD_FAST            pathext_source
+ 800: LOAD_METHOD          split
+ 822: LOAD_GLOBAL          os
+ 834: LOAD_ATTR            pathsep
+ 844: PRECALL              
+ 848: CALL                 
+ 858: GET_ITER             
+ 860: PRECALL              
+ 864: CALL                 
+ 874: STORE_FAST           pathext
+ 876: LOAD_FAST            use_bytes
+ 878: POP_JUMP_FORWARD_IF_FALSE to 904
+ 880: LOAD_CONST           <code object <listcomp> at 0x000002406945FE10, file "shutil.py", line 1507>
+ 882: MAKE_FUNCTION        
+ 884: LOAD_FAST            pathext
+ 886: GET_ITER             
+ 888: PRECALL              
+ 892: CALL                 
+ 902: STORE_FAST           pathext
+ 904: LOAD_GLOBAL          NULL + any
+ 916: LOAD_CLOSURE         cmd
+ 918: BUILD_TUPLE          
+ 920: LOAD_CONST           <code object <genexpr> at 0x000002406922D680, file "shutil.py", line 1512>
+ 922: MAKE_FUNCTION        closure
+ 924: LOAD_FAST            pathext
+ 926: GET_ITER             
+ 928: PRECALL              
+ 932: CALL                 
+ 942: PRECALL              
+ 946: CALL                 
+ 956: POP_JUMP_FORWARD_IF_FALSE to 966
+ 958: LOAD_DEREF           cmd
+ 960: BUILD_LIST           
+ 962: STORE_FAST           files
+ 964: JUMP_FORWARD         to 1002
+ 966: LOAD_CLOSURE         cmd
+ 968: BUILD_TUPLE          
+ 970: LOAD_CONST           <code object <listcomp> at 0x0000024069466090, file "shutil.py", line 1515>
+ 972: MAKE_FUNCTION        closure
+ 974: LOAD_FAST            pathext
+ 976: GET_ITER             
+ 978: PRECALL              
+ 982: CALL                 
+ 992: STORE_FAST           files
+ 994: JUMP_FORWARD         to 1002
+ 996: LOAD_DEREF           cmd
+ 998: BUILD_LIST           
+1000: STORE_FAST           files
+1002: LOAD_GLOBAL          NULL + set
+1014: PRECALL              
+1018: CALL                 
+1028: STORE_FAST           seen
+1030: LOAD_FAST            path
+1032: GET_ITER             
+1034: FOR_ITER             to 1270
+1036: STORE_FAST           dir
+1038: LOAD_GLOBAL          os
+1050: LOAD_ATTR            path
+1060: LOAD_METHOD          normcase
+1082: LOAD_FAST            dir
+1084: PRECALL              
+1088: CALL                 
+1098: STORE_FAST           normdir
+1100: LOAD_FAST            normdir
+1102: LOAD_FAST            seen
+1104: CONTAINS_OP          
+1106: POP_JUMP_FORWARD_IF_FALSE to 1268
+1108: LOAD_FAST            seen
+1110: LOAD_METHOD          add
+1132: LOAD_FAST            normdir
+1134: PRECALL              
+1138: CALL                 
+1148: POP_TOP              
+1150: LOAD_FAST            files
+1152: GET_ITER             
+1154: FOR_ITER             to 1268
+1156: STORE_FAST           thefile
+1158: LOAD_GLOBAL          os
+1170: LOAD_ATTR            path
+1180: LOAD_METHOD          join
+1202: LOAD_FAST            dir
+1204: LOAD_FAST            thefile
+1206: PRECALL              
+1210: CALL                 
+1220: STORE_FAST           name
+1222: LOAD_GLOBAL          NULL + _access_check
+1234: LOAD_FAST            name
+1236: LOAD_FAST            mode
+1238: PRECALL              
+1242: CALL                 
+1252: POP_JUMP_FORWARD_IF_FALSE to 1266
+1254: LOAD_FAST            name
+1256: SWAP                 
+1258: POP_TOP              
+1260: SWAP                 
+1262: POP_TOP              
+1264: RETURN_VALUE         
+1266: JUMP_BACKWARD        to 1154
+1268: JUMP_BACKWARD        to 1034
+1270: LOAD_CONST           None
+1272: RETURN_VALUE         

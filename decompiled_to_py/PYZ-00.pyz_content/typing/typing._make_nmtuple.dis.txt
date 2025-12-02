@@ -1,0 +1,45 @@
+# Disassembly for typing._make_nmtuple
+# From module file: typing
+
+## co_consts:
+(None, <code object <listcomp> at 0x0000024069494780, file "typing.py", line 2856>, <code object <dictcomp> at 0x0000024069CDCC30, file "typing.py", line 2857>, ('defaults', 'module'))
+
+## co_names:
+('collections', 'namedtuple', '__annotations__', '__new__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           <code object <listcomp> at 0x0000024069494780, file "typing.py", line 2856>
+   4: MAKE_FUNCTION        
+   6: LOAD_FAST            types
+   8: GET_ITER             
+  10: PRECALL              
+  14: CALL                 
+  24: STORE_FAST           fields
+  26: LOAD_CONST           <code object <dictcomp> at 0x0000024069CDCC30, file "typing.py", line 2857>
+  28: MAKE_FUNCTION        
+  30: LOAD_FAST            types
+  32: GET_ITER             
+  34: PRECALL              
+  38: CALL                 
+  48: STORE_FAST           types
+  50: LOAD_GLOBAL          NULL + collections
+  62: LOAD_ATTR            namedtuple
+  72: LOAD_FAST            name
+  74: LOAD_FAST            fields
+  76: LOAD_FAST            defaults
+  78: LOAD_FAST            module
+  80: KW_NAMES             
+  82: PRECALL              
+  86: CALL                 
+  96: STORE_FAST           nm_tpl
+  98: LOAD_FAST            types
+ 100: COPY                 
+ 102: LOAD_FAST            nm_tpl
+ 104: STORE_ATTR           __annotations__
+ 114: LOAD_FAST            nm_tpl
+ 116: LOAD_ATTR            __new__
+ 126: STORE_ATTR           __annotations__
+ 136: LOAD_FAST            nm_tpl
+ 138: RETURN_VALUE         

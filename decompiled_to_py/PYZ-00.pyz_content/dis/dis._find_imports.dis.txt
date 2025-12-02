@@ -1,0 +1,116 @@
+# Disassembly for dis._find_imports
+# From module file: dis
+
+## co_consts:
+('Find import statements in the code\n\n    Generate triplets (name, level, fromlist) where\n    name is the imported module and level, fromlist are\n    the corresponding args to __import__.\n    ', 'IMPORT_NAME', 'LOAD_CONST', <code object <listcomp> at 0x000002406945D4D0, file "dis.py", line 663>, 2, 1, 0, None)
+
+## co_names:
+('opmap', 'co_consts', 'co_names', '_unpack_opargs', 'co_code', 'enumerate', 'hasconst', '_get_const_value')
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_GLOBAL          opmap
+  18: LOAD_CONST           'IMPORT_NAME'
+  20: BINARY_SUBSCR        
+  30: STORE_FAST           IMPORT_NAME
+  32: LOAD_GLOBAL          opmap
+  44: LOAD_CONST           'LOAD_CONST'
+  46: BINARY_SUBSCR        
+  56: STORE_FAST           LOAD_CONST
+  58: LOAD_FAST            co
+  60: LOAD_ATTR            co_consts
+  70: STORE_FAST           consts
+  72: LOAD_FAST            co
+  74: LOAD_ATTR            co_names
+  84: STORE_FAST           names
+  86: LOAD_CONST           <code object <listcomp> at 0x000002406945D4D0, file "dis.py", line 663>
+  88: MAKE_FUNCTION        
+  90: LOAD_GLOBAL          NULL + _unpack_opargs
+ 102: LOAD_FAST            co
+ 104: LOAD_ATTR            co_code
+ 114: PRECALL              
+ 118: CALL                 
+ 128: GET_ITER             
+ 130: PRECALL              
+ 134: CALL                 
+ 144: STORE_FAST           opargs
+ 146: LOAD_GLOBAL          NULL + enumerate
+ 158: LOAD_FAST            opargs
+ 160: PRECALL              
+ 164: CALL                 
+ 174: GET_ITER             
+ 176: FOR_ITER             to 464
+ 178: UNPACK_SEQUENCE      
+ 182: STORE_FAST           i
+ 184: UNPACK_SEQUENCE      
+ 188: STORE_FAST           op
+ 190: STORE_FAST           oparg
+ 192: LOAD_FAST            op
+ 194: LOAD_FAST            IMPORT_NAME
+ 196: COMPARE_OP           ==
+ 202: POP_JUMP_FORWARD_IF_FALSE to 462
+ 204: LOAD_FAST            i
+ 206: LOAD_CONST           2
+ 208: COMPARE_OP           >=
+ 214: POP_JUMP_FORWARD_IF_FALSE to 462
+ 216: LOAD_FAST            opargs
+ 218: LOAD_FAST            i
+ 220: LOAD_CONST           1
+ 222: BINARY_OP            -
+ 226: BINARY_SUBSCR        
+ 236: STORE_FAST           from_op
+ 238: LOAD_FAST            opargs
+ 240: LOAD_FAST            i
+ 242: LOAD_CONST           2
+ 244: BINARY_OP            -
+ 248: BINARY_SUBSCR        
+ 258: STORE_FAST           level_op
+ 260: LOAD_FAST            from_op
+ 262: LOAD_CONST           0
+ 264: BINARY_SUBSCR        
+ 274: LOAD_GLOBAL          hasconst
+ 286: CONTAINS_OP          
+ 288: POP_JUMP_FORWARD_IF_FALSE to 462
+ 290: LOAD_FAST            level_op
+ 292: LOAD_CONST           0
+ 294: BINARY_SUBSCR        
+ 304: LOAD_GLOBAL          hasconst
+ 316: CONTAINS_OP          
+ 318: POP_JUMP_FORWARD_IF_FALSE to 462
+ 320: LOAD_GLOBAL          NULL + _get_const_value
+ 332: LOAD_FAST            level_op
+ 334: LOAD_CONST           0
+ 336: BINARY_SUBSCR        
+ 346: LOAD_FAST            level_op
+ 348: LOAD_CONST           1
+ 350: BINARY_SUBSCR        
+ 360: LOAD_FAST            consts
+ 362: PRECALL              
+ 366: CALL                 
+ 376: STORE_FAST           level
+ 378: LOAD_GLOBAL          NULL + _get_const_value
+ 390: LOAD_FAST            from_op
+ 392: LOAD_CONST           0
+ 394: BINARY_SUBSCR        
+ 404: LOAD_FAST            from_op
+ 406: LOAD_CONST           1
+ 408: BINARY_SUBSCR        
+ 418: LOAD_FAST            consts
+ 420: PRECALL              
+ 424: CALL                 
+ 434: STORE_FAST           fromlist
+ 436: LOAD_FAST            names
+ 438: LOAD_FAST            oparg
+ 440: BINARY_SUBSCR        
+ 450: LOAD_FAST            level
+ 452: LOAD_FAST            fromlist
+ 454: BUILD_TUPLE          
+ 456: YIELD_VALUE          
+ 458: RESUME               
+ 460: POP_TOP              
+ 462: JUMP_BACKWARD        to 176
+ 464: LOAD_CONST           None
+ 466: RETURN_VALUE         

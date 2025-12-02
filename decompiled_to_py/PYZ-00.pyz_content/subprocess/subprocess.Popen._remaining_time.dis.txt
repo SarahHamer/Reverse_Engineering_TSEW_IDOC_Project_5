@@ -1,0 +1,22 @@
+# Disassembly for subprocess.Popen._remaining_time
+# From module file: subprocess
+
+## co_consts:
+('Convenience for _communicate when computing timeouts.', None)
+
+## co_names:
+('_time',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            endtime
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 10
+   6: LOAD_CONST           None
+   8: RETURN_VALUE         
+  10: LOAD_FAST            endtime
+  12: LOAD_GLOBAL          NULL + _time
+  24: PRECALL              
+  28: CALL                 
+  38: BINARY_OP            -
+  42: RETURN_VALUE         

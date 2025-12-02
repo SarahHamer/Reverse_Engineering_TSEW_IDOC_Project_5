@@ -1,0 +1,15 @@
+# Disassembly for inspect.Parameter.default
+# From module file: inspect
+
+## co_consts:
+(None,)
+
+## co_names:
+('_default',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _default
+  14: RETURN_VALUE         

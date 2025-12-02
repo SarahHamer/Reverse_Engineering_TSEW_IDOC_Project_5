@@ -1,0 +1,54 @@
+# Disassembly for contextlib._BaseExitStack
+# From module file: contextlib
+
+## co_consts:
+('_BaseExitStack', 'A base class for ExitStack and AsyncExitStack.', <code object _create_exit_wrapper at 0x0000024069465610, file "contextlib.py", line 450>, <code object _create_cb_wrapper at 0x0000024069467BB0, file "contextlib.py", line 454>, <code object __init__ at 0x000002406945DE30, file "contextlib.py", line 460>, <code object pop_all at 0x00000240693D2C20, file "contextlib.py", line 463>, <code object push at 0x000002406949C8D0, file "contextlib.py", line 470>, <code object enter_context at 0x00000240691F63F0, file "contextlib.py", line 490>, <code object callback at 0x000002406941AF70, file "contextlib.py", line 509>, <code object _push_cm_exit at 0x000002406941A670, file "contextlib.py", line 522>, True, <code object _push_exit_callback at 0x00000240693EA530, file "contextlib.py", line 527>, None, (True,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'staticmethod', '_create_exit_wrapper', '_create_cb_wrapper', '__init__', 'pop_all', 'push', 'enter_context', 'callback', '_push_cm_exit', '_push_exit_callback')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_BaseExitStack'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'A base class for ExitStack and AsyncExitStack.'
+  12: STORE_NAME           __doc__
+  14: LOAD_NAME            staticmethod
+  16: LOAD_CONST           <code object _create_exit_wrapper at 0x0000024069465610, file "contextlib.py", line 450>
+  18: MAKE_FUNCTION        
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_NAME           _create_exit_wrapper
+  36: LOAD_NAME            staticmethod
+  38: LOAD_CONST           <code object _create_cb_wrapper at 0x0000024069467BB0, file "contextlib.py", line 454>
+  40: MAKE_FUNCTION        
+  42: PRECALL              
+  46: CALL                 
+  56: STORE_NAME           _create_cb_wrapper
+  58: LOAD_CONST           <code object __init__ at 0x000002406945DE30, file "contextlib.py", line 460>
+  60: MAKE_FUNCTION        
+  62: STORE_NAME           __init__
+  64: LOAD_CONST           <code object pop_all at 0x00000240693D2C20, file "contextlib.py", line 463>
+  66: MAKE_FUNCTION        
+  68: STORE_NAME           pop_all
+  70: LOAD_CONST           <code object push at 0x000002406949C8D0, file "contextlib.py", line 470>
+  72: MAKE_FUNCTION        
+  74: STORE_NAME           push
+  76: LOAD_CONST           <code object enter_context at 0x00000240691F63F0, file "contextlib.py", line 490>
+  78: MAKE_FUNCTION        
+  80: STORE_NAME           enter_context
+  82: LOAD_CONST           <code object callback at 0x000002406941AF70, file "contextlib.py", line 509>
+  84: MAKE_FUNCTION        
+  86: STORE_NAME           callback
+  88: LOAD_CONST           <code object _push_cm_exit at 0x000002406941A670, file "contextlib.py", line 522>
+  90: MAKE_FUNCTION        
+  92: STORE_NAME           _push_cm_exit
+  94: LOAD_CONST           (True,)
+  96: LOAD_CONST           <code object _push_exit_callback at 0x00000240693EA530, file "contextlib.py", line 527>
+  98: MAKE_FUNCTION        defaults
+ 100: STORE_NAME           _push_exit_callback
+ 102: LOAD_CONST           None
+ 104: RETURN_VALUE         

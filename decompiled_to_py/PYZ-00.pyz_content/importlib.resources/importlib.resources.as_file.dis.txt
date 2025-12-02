@@ -1,0 +1,21 @@
+# Disassembly for importlib.resources.as_file
+# From module file: importlib.resources._common
+
+## co_consts:
+('\n    Given a Traversable object, return that object as a\n    path on the local file system in a context manager.\n    ', ('suffix',))
+
+## co_names:
+('_tempfile', 'read_bytes', 'name')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _tempfile
+  14: LOAD_FAST            path
+  16: LOAD_ATTR            read_bytes
+  26: LOAD_FAST            path
+  28: LOAD_ATTR            name
+  38: KW_NAMES             
+  40: PRECALL              
+  44: CALL                 
+  54: RETURN_VALUE         

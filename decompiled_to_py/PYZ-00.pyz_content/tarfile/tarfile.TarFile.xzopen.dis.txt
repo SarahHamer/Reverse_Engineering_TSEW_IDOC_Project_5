@@ -1,0 +1,113 @@
+# Disassembly for tarfile.TarFile.xzopen
+# From module file: tarfile
+
+## co_consts:
+('Open lzma compressed tar archive name for reading or writing.\n           Appending is not allowed.\n        ', ('r', 'w', 'x'), "mode must be 'r', 'w' or 'x'", 0, ('LZMAFile', 'LZMAError'), 'lzma module is not available', None, ('preset',), 'r', 'not an lzma file', False)
+
+## co_names:
+('ValueError', 'lzma', 'LZMAFile', 'LZMAError', 'ImportError', 'CompressionError', 'taropen', 'EOFError', 'close', 'ReadError', '_extfileobj')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            mode
+   4: LOAD_CONST           ('r', 'w', 'x')
+   6: CONTAINS_OP          
+   8: POP_JUMP_FORWARD_IF_FALSE to 40
+  10: LOAD_GLOBAL          NULL + ValueError
+  22: LOAD_CONST           "mode must be 'r', 'w' or 'x'"
+  24: PRECALL              
+  28: CALL                 
+  38: RAISE_VARARGS        
+  40: NOP                  
+  42: LOAD_CONST           0
+  44: LOAD_CONST           ('LZMAFile', 'LZMAError')
+  46: IMPORT_NAME          lzma
+  48: IMPORT_FROM          LZMAFile
+  50: STORE_FAST           LZMAFile
+  52: IMPORT_FROM          LZMAError
+  54: STORE_FAST           LZMAError
+  56: POP_TOP              
+  58: JUMP_FORWARD         to 120
+  60: PUSH_EXC_INFO        
+  62: LOAD_GLOBAL          ImportError
+  74: CHECK_EXC_MATCH      
+  76: POP_JUMP_FORWARD_IF_FALSE to 112
+  78: POP_TOP              
+  80: LOAD_GLOBAL          NULL + CompressionError
+  92: LOAD_CONST           'lzma module is not available'
+  94: PRECALL              
+  98: CALL                 
+ 108: LOAD_CONST           None
+ 110: RAISE_VARARGS        
+ 112: RERAISE              
+ 114: COPY                 
+ 116: POP_EXCEPT           
+ 118: RERAISE              
+ 120: PUSH_NULL            
+ 122: LOAD_FAST            LZMAFile
+ 124: LOAD_FAST            fileobj
+ 126: JUMP_IF_TRUE_OR_POP  to 130
+ 128: LOAD_FAST            name
+ 130: LOAD_FAST            mode
+ 132: LOAD_FAST            preset
+ 134: KW_NAMES             
+ 136: PRECALL              
+ 140: CALL                 
+ 150: STORE_FAST           fileobj
+ 152: NOP                  
+ 154: PUSH_NULL            
+ 156: LOAD_FAST            cls
+ 158: LOAD_ATTR            taropen
+ 168: LOAD_FAST            name
+ 170: LOAD_FAST            mode
+ 172: LOAD_FAST            fileobj
+ 174: BUILD_TUPLE          
+ 176: BUILD_MAP            
+ 178: LOAD_FAST            kwargs
+ 180: DICT_MERGE           
+ 182: CALL_FUNCTION_EX     
+ 184: STORE_FAST           t
+ 186: JUMP_FORWARD         to 356
+ 188: PUSH_EXC_INFO        
+ 190: LOAD_FAST            LZMAError
+ 192: LOAD_GLOBAL          EOFError
+ 204: BUILD_TUPLE          
+ 206: CHECK_EXC_MATCH      
+ 208: POP_JUMP_FORWARD_IF_FALSE to 306
+ 210: STORE_FAST           e
+ 212: LOAD_FAST            fileobj
+ 214: LOAD_METHOD          close
+ 236: PRECALL              
+ 240: CALL                 
+ 250: POP_TOP              
+ 252: LOAD_FAST            mode
+ 254: LOAD_CONST           'r'
+ 256: COMPARE_OP           ==
+ 262: POP_JUMP_FORWARD_IF_FALSE to 296
+ 264: LOAD_GLOBAL          NULL + ReadError
+ 276: LOAD_CONST           'not an lzma file'
+ 278: PRECALL              
+ 282: CALL                 
+ 292: LOAD_FAST            e
+ 294: RAISE_VARARGS        
+ 296: RAISE_VARARGS        
+ 298: LOAD_CONST           None
+ 300: STORE_FAST           e
+ 302: DELETE_FAST          e
+ 304: RERAISE              
+ 306: POP_TOP              
+ 308: LOAD_FAST            fileobj
+ 310: LOAD_METHOD          close
+ 332: PRECALL              
+ 336: CALL                 
+ 346: POP_TOP              
+ 348: RAISE_VARARGS        
+ 350: COPY                 
+ 352: POP_EXCEPT           
+ 354: RERAISE              
+ 356: LOAD_CONST           False
+ 358: LOAD_FAST            t
+ 360: STORE_ATTR           _extfileobj
+ 370: LOAD_FAST            t
+ 372: RETURN_VALUE         

@@ -1,0 +1,15 @@
+# Disassembly for datetime.time.minute
+# From module file: datetime
+
+## co_consts:
+('minute (0-59)',)
+
+## co_names:
+('_minute',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _minute
+  14: RETURN_VALUE         

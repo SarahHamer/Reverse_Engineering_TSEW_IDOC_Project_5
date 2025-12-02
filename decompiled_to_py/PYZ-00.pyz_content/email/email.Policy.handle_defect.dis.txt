@@ -1,0 +1,26 @@
+# Disassembly for email.Policy.handle_defect
+# From module file: email._policybase
+
+## co_consts:
+('Based on policy, either raise defect or call register_defect.\n\n            handle_defect(obj, defect)\n\n        defect should be a Defect subclass, but in any case must be an\n        Exception subclass.  obj is the object on which the defect should be\n        registered if it is not raised.  If the raise_on_defect is True, the\n        defect is raised as an error, otherwise the object and the defect are\n        passed to register_defect.\n\n        This method is intended to be called by parsers that discover defects.\n        The email package parsers always call it with Defect instances.\n\n        ', None)
+
+## co_names:
+('raise_on_defect', 'register_defect')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            raise_on_defect
+  14: POP_JUMP_FORWARD_IF_FALSE to 20
+  16: LOAD_FAST            defect
+  18: RAISE_VARARGS        
+  20: LOAD_FAST            self
+  22: LOAD_METHOD          register_defect
+  44: LOAD_FAST            obj
+  46: LOAD_FAST            defect
+  48: PRECALL              
+  52: CALL                 
+  62: POP_TOP              
+  64: LOAD_CONST           None
+  66: RETURN_VALUE         

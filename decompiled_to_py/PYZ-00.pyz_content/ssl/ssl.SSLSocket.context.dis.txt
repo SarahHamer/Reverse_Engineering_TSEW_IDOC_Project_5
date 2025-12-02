@@ -1,0 +1,21 @@
+# Disassembly for ssl.SSLSocket.context
+# From module file: ssl
+
+## co_consts:
+(None,)
+
+## co_names:
+('_context', '_sslobj', 'context')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            ctx
+   4: LOAD_FAST            self
+   6: STORE_ATTR           _context
+  16: LOAD_FAST            ctx
+  18: LOAD_FAST            self
+  20: LOAD_ATTR            _sslobj
+  30: STORE_ATTR           context
+  40: LOAD_CONST           None
+  42: RETURN_VALUE         

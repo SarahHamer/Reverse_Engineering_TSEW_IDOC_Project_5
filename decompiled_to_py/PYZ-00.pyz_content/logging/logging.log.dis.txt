@@ -1,0 +1,39 @@
+# Disassembly for logging.log
+# From module file: logging
+
+## co_consts:
+("\n    Log 'msg % args' with the integer severity 'level' on the root logger. If\n    the logger has no handlers, call basicConfig() to add a console handler\n    with a pre-defined format.\n    ", 0, None)
+
+## co_names:
+('len', 'root', 'handlers', 'basicConfig', 'log')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + len
+  14: LOAD_GLOBAL          root
+  26: LOAD_ATTR            handlers
+  36: PRECALL              
+  40: CALL                 
+  50: LOAD_CONST           0
+  52: COMPARE_OP           ==
+  58: POP_JUMP_FORWARD_IF_FALSE to 88
+  60: LOAD_GLOBAL          NULL + basicConfig
+  72: PRECALL              
+  76: CALL                 
+  86: POP_TOP              
+  88: LOAD_GLOBAL          NULL + root
+ 100: LOAD_ATTR            log
+ 110: LOAD_FAST            level
+ 112: LOAD_FAST            msg
+ 114: BUILD_LIST           
+ 116: LOAD_FAST            args
+ 118: LIST_EXTEND          
+ 120: LIST_TO_TUPLE        
+ 122: BUILD_MAP            
+ 124: LOAD_FAST            kwargs
+ 126: DICT_MERGE           
+ 128: CALL_FUNCTION_EX     
+ 130: POP_TOP              
+ 132: LOAD_CONST           None
+ 134: RETURN_VALUE         

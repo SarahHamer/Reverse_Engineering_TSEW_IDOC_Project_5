@@ -1,0 +1,18 @@
+# Disassembly for ssl.SSLObject.cipher
+# From module file: ssl
+
+## co_consts:
+('Return the currently selected cipher as a 3-tuple ``(name,\n        ssl_version, secret_bits)``.',)
+
+## co_names:
+('_sslobj', 'cipher')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _sslobj
+  14: LOAD_METHOD          cipher
+  36: PRECALL              
+  40: CALL                 
+  50: RETURN_VALUE         

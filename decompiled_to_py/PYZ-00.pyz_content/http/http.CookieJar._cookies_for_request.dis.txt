@@ -1,0 +1,36 @@
+# Disassembly for http.CookieJar._cookies_for_request
+# From module file: http.cookiejar
+
+## co_consts:
+('Return a list of cookies to be returned to server.',)
+
+## co_names:
+('_cookies', 'keys', 'extend', '_cookies_for_domain')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           cookies
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            _cookies
+  18: LOAD_METHOD          keys
+  40: PRECALL              
+  44: CALL                 
+  54: GET_ITER             
+  56: FOR_ITER             to 144
+  58: STORE_FAST           domain
+  60: LOAD_FAST            cookies
+  62: LOAD_METHOD          extend
+  84: LOAD_FAST            self
+  86: LOAD_METHOD          _cookies_for_domain
+ 108: LOAD_FAST            domain
+ 110: LOAD_FAST            request
+ 112: PRECALL              
+ 116: CALL                 
+ 126: PRECALL              
+ 130: CALL                 
+ 140: POP_TOP              
+ 142: JUMP_BACKWARD        to 56
+ 144: LOAD_FAST            cookies
+ 146: RETURN_VALUE         

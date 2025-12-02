@@ -1,0 +1,98 @@
+# Disassembly for tarfile.TarFile.close
+# From module file: tarfile
+
+## co_consts:
+('Close the TarFile. In write-mode, two finishing zero blocks are\n           appended to the archive.\n        ', None, True, ('a', 'w', 'x'), 2, 0)
+
+## co_names:
+('closed', 'mode', 'fileobj', 'write', 'NUL', 'BLOCKSIZE', 'offset', 'divmod', 'RECORDSIZE', '_extfileobj', 'close')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            closed
+  14: POP_JUMP_FORWARD_IF_FALSE to 20
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         
+  20: LOAD_CONST           True
+  22: LOAD_FAST            self
+  24: STORE_ATTR           closed
+  34: NOP                  
+  36: LOAD_FAST            self
+  38: LOAD_ATTR            mode
+  48: LOAD_CONST           ('a', 'w', 'x')
+  50: CONTAINS_OP          
+  52: POP_JUMP_FORWARD_IF_FALSE to 340
+  54: LOAD_FAST            self
+  56: LOAD_ATTR            fileobj
+  66: LOAD_METHOD          write
+  88: LOAD_GLOBAL          NUL
+ 100: LOAD_GLOBAL          BLOCKSIZE
+ 112: LOAD_CONST           2
+ 114: BINARY_OP            *
+ 118: BINARY_OP            *
+ 122: PRECALL              
+ 126: CALL                 
+ 136: POP_TOP              
+ 138: LOAD_FAST            self
+ 140: COPY                 
+ 142: LOAD_ATTR            offset
+ 152: LOAD_GLOBAL          BLOCKSIZE
+ 164: LOAD_CONST           2
+ 166: BINARY_OP            *
+ 170: BINARY_OP            +=
+ 174: SWAP                 
+ 176: STORE_ATTR           offset
+ 186: LOAD_GLOBAL          NULL + divmod
+ 198: LOAD_FAST            self
+ 200: LOAD_ATTR            offset
+ 210: LOAD_GLOBAL          RECORDSIZE
+ 222: PRECALL              
+ 226: CALL                 
+ 236: UNPACK_SEQUENCE      
+ 240: STORE_FAST           blocks
+ 242: STORE_FAST           remainder
+ 244: LOAD_FAST            remainder
+ 246: LOAD_CONST           0
+ 248: COMPARE_OP           >
+ 254: POP_JUMP_FORWARD_IF_FALSE to 340
+ 256: LOAD_FAST            self
+ 258: LOAD_ATTR            fileobj
+ 268: LOAD_METHOD          write
+ 290: LOAD_GLOBAL          NUL
+ 302: LOAD_GLOBAL          RECORDSIZE
+ 314: LOAD_FAST            remainder
+ 316: BINARY_OP            -
+ 320: BINARY_OP            *
+ 324: PRECALL              
+ 328: CALL                 
+ 338: POP_TOP              
+ 340: LOAD_FAST            self
+ 342: LOAD_ATTR            _extfileobj
+ 352: POP_JUMP_FORWARD_IF_TRUE to 408
+ 354: LOAD_FAST            self
+ 356: LOAD_ATTR            fileobj
+ 366: LOAD_METHOD          close
+ 388: PRECALL              
+ 392: CALL                 
+ 402: POP_TOP              
+ 404: LOAD_CONST           None
+ 406: RETURN_VALUE         
+ 408: LOAD_CONST           None
+ 410: RETURN_VALUE         
+ 412: PUSH_EXC_INFO        
+ 414: LOAD_FAST            self
+ 416: LOAD_ATTR            _extfileobj
+ 426: POP_JUMP_FORWARD_IF_TRUE to 480
+ 428: LOAD_FAST            self
+ 430: LOAD_ATTR            fileobj
+ 440: LOAD_METHOD          close
+ 462: PRECALL              
+ 466: CALL                 
+ 476: POP_TOP              
+ 478: RERAISE              
+ 480: RERAISE              
+ 482: COPY                 
+ 484: POP_EXCEPT           
+ 486: RERAISE              

@@ -1,0 +1,28 @@
+# Disassembly for contextlib.AsyncContextDecorator.__call__
+# From module file: contextlib
+
+## co_consts:
+(None, <code object inner at 0x00000240691C1BB0, file "contextlib.py", line 94>)
+
+## co_names:
+('wraps',)
+
+## bytecode:
+
+   0: MAKE_CELL            self
+   2: MAKE_CELL            func
+   4: RESUME               
+   6: LOAD_GLOBAL          NULL + wraps
+  18: LOAD_DEREF           func
+  20: PRECALL              
+  24: CALL                 
+  34: LOAD_CLOSURE         func
+  36: LOAD_CLOSURE         self
+  38: BUILD_TUPLE          
+  40: LOAD_CONST           <code object inner at 0x00000240691C1BB0, file "contextlib.py", line 94>
+  42: MAKE_FUNCTION        closure
+  44: PRECALL              
+  48: CALL                 
+  58: STORE_FAST           inner
+  60: LOAD_FAST            inner
+  62: RETURN_VALUE         

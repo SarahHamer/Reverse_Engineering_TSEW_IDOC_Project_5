@@ -1,0 +1,32 @@
+# Disassembly for signal._int_to_enum
+# From module file: signal
+
+## co_consts:
+("Convert a numeric value to an IntEnum member.\n    If it's not a known member, return the numeric value itself.\n    ",)
+
+## co_names:
+('ValueError',)
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: PUSH_NULL            
+   6: LOAD_FAST            enum_klass
+   8: LOAD_FAST            value
+  10: PRECALL              
+  14: CALL                 
+  24: RETURN_VALUE         
+  26: PUSH_EXC_INFO        
+  28: LOAD_GLOBAL          ValueError
+  40: CHECK_EXC_MATCH      
+  42: POP_JUMP_FORWARD_IF_FALSE to 54
+  44: POP_TOP              
+  46: LOAD_FAST            value
+  48: SWAP                 
+  50: POP_EXCEPT           
+  52: RETURN_VALUE         
+  54: RERAISE              
+  56: COPY                 
+  58: POP_EXCEPT           
+  60: RERAISE              

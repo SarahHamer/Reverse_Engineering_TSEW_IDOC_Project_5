@@ -1,0 +1,114 @@
+# Disassembly for dataclasses._field_init
+# From module file: dataclasses
+
+## co_consts:
+(None, '_dflt_', '() if ', ' is _HAS_DEFAULT_FACTORY else ', '()')
+
+## co_names:
+('name', 'default_factory', 'MISSING', 'init', 'default', '_field_type', '_FIELD_INITVAR', '_field_assign')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '_dflt_'
+   4: LOAD_FAST            f
+   6: LOAD_ATTR            name
+  16: FORMAT_VALUE         
+  18: BUILD_STRING         
+  20: STORE_FAST           default_name
+  22: LOAD_FAST            f
+  24: LOAD_ATTR            default_factory
+  34: LOAD_GLOBAL          MISSING
+  46: IS_OP                
+  48: POP_JUMP_FORWARD_IF_FALSE to 158
+  50: LOAD_FAST            f
+  52: LOAD_ATTR            init
+  62: POP_JUMP_FORWARD_IF_FALSE to 126
+  64: LOAD_FAST            f
+  66: LOAD_ATTR            default_factory
+  76: LOAD_FAST            globals
+  78: LOAD_FAST            default_name
+  80: STORE_SUBSCR         
+  84: LOAD_FAST            default_name
+  86: FORMAT_VALUE         
+  88: LOAD_CONST           '() if '
+  90: LOAD_FAST            f
+  92: LOAD_ATTR            name
+ 102: FORMAT_VALUE         
+ 104: LOAD_CONST           ' is _HAS_DEFAULT_FACTORY else '
+ 106: LOAD_FAST            f
+ 108: LOAD_ATTR            name
+ 118: FORMAT_VALUE         
+ 120: BUILD_STRING         
+ 122: STORE_FAST           value
+ 124: JUMP_FORWARD         to 342
+ 126: LOAD_FAST            f
+ 128: LOAD_ATTR            default_factory
+ 138: LOAD_FAST            globals
+ 140: LOAD_FAST            default_name
+ 142: STORE_SUBSCR         
+ 146: LOAD_FAST            default_name
+ 148: FORMAT_VALUE         
+ 150: LOAD_CONST           '()'
+ 152: BUILD_STRING         
+ 154: STORE_FAST           value
+ 156: JUMP_FORWARD         to 342
+ 158: LOAD_FAST            f
+ 160: LOAD_ATTR            init
+ 170: POP_JUMP_FORWARD_IF_FALSE to 280
+ 172: LOAD_FAST            f
+ 174: LOAD_ATTR            default
+ 184: LOAD_GLOBAL          MISSING
+ 196: IS_OP                
+ 198: POP_JUMP_FORWARD_IF_FALSE to 216
+ 200: LOAD_FAST            f
+ 202: LOAD_ATTR            name
+ 212: STORE_FAST           value
+ 214: JUMP_FORWARD         to 342
+ 216: LOAD_FAST            f
+ 218: LOAD_ATTR            default
+ 228: LOAD_GLOBAL          MISSING
+ 240: IS_OP                
+ 242: POP_JUMP_FORWARD_IF_FALSE to 278
+ 244: LOAD_FAST            f
+ 246: LOAD_ATTR            default
+ 256: LOAD_FAST            globals
+ 258: LOAD_FAST            default_name
+ 260: STORE_SUBSCR         
+ 264: LOAD_FAST            f
+ 266: LOAD_ATTR            name
+ 276: STORE_FAST           value
+ 278: JUMP_FORWARD         to 342
+ 280: LOAD_FAST            slots
+ 282: POP_JUMP_FORWARD_IF_FALSE to 338
+ 284: LOAD_FAST            f
+ 286: LOAD_ATTR            default
+ 296: LOAD_GLOBAL          MISSING
+ 308: IS_OP                
+ 310: POP_JUMP_FORWARD_IF_FALSE to 338
+ 312: LOAD_FAST            f
+ 314: LOAD_ATTR            default
+ 324: LOAD_FAST            globals
+ 326: LOAD_FAST            default_name
+ 328: STORE_SUBSCR         
+ 332: LOAD_FAST            default_name
+ 334: STORE_FAST           value
+ 336: JUMP_FORWARD         to 342
+ 338: LOAD_CONST           None
+ 340: RETURN_VALUE         
+ 342: LOAD_FAST            f
+ 344: LOAD_ATTR            _field_type
+ 354: LOAD_GLOBAL          _FIELD_INITVAR
+ 366: IS_OP                
+ 368: POP_JUMP_FORWARD_IF_FALSE to 374
+ 370: LOAD_CONST           None
+ 372: RETURN_VALUE         
+ 374: LOAD_GLOBAL          NULL + _field_assign
+ 386: LOAD_FAST            frozen
+ 388: LOAD_FAST            f
+ 390: LOAD_ATTR            name
+ 400: LOAD_FAST            value
+ 402: LOAD_FAST            self_name
+ 404: PRECALL              
+ 408: CALL                 
+ 418: RETURN_VALUE         

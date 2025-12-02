@@ -1,0 +1,216 @@
+# Disassembly for pprint.PrettyPrinter
+# From module file: pprint
+
+## co_consts:
+('PrettyPrinter', 1, 80, None, False, True, ('compact', 'sort_dicts', 'underscore_numbers'), <code object __init__ at 0x0000024068E232C0, file "pprint.py", line 107>, <code object pprint at 0x00000240691F23A0, file "pprint.py", line 151>, <code object pformat at 0x00000240693AA0B0, file "pprint.py", line 156>, <code object isrecursive at 0x00000240693EA530, file "pprint.py", line 161>, <code object isreadable at 0x00000240693EA730, file "pprint.py", line 164>, <code object _format at 0x0000024068C2A5A0, file "pprint.py", line 168>, <code object _pprint_dataclass at 0x00000240691DBA30, file "pprint.py", line 196>, <code object _pprint_dict at 0x0000024068C8EED0, file "pprint.py", line 206>, <code object _pprint_ordered_dict at 0x0000024068D6CE50, file "pprint.py", line 223>, <code object _pprint_list at 0x00000240691F3B40, file "pprint.py", line 236>, <code object _pprint_tuple at 0x00000240691F5890, file "pprint.py", line 244>, <code object _pprint_set at 0x0000024068D30140, file "pprint.py", line 253>, <code object _pprint_str at 0x0000024068D5FCF0, file "pprint.py", line 273>, <code object _pprint_bytes at 0x000002406931F630, file "pprint.py", line 324>, <code object _pprint_bytearray at 0x00000240691C2C30, file "pprint.py", line 345>, <code object _pprint_mappingproxy at 0x00000240691E8AB0, file "pprint.py", line 354>, <code object _pprint_simplenamespace at 0x000002406931FA30, file "pprint.py", line 362>, <code object _format_dict_items at 0x0000024068C8D8F0, file "pprint.py", line 377>, <code object _format_namespace_items at 0x0000024068C8F100, file "pprint.py", line 394>, <code object _format_items at 0x0000024068C9FCA0, file "pprint.py", line 413>, <code object _repr at 0x00000240691F13E0, file "pprint.py", line 454>, <code object format at 0x000002406945CF30, file "pprint.py", line 463>, <code object _pprint_default_dict at 0x0000024068C5ABD0, file "pprint.py", line 470>, <code object _pprint_counter at 0x0000024066C25920, file "pprint.py", line 483>, <code object _pprint_chain_map at 0x0000024068DBFDA0, file "pprint.py", line 499>, <code object _pprint_deque at 0x0000024068B3E350, file "pprint.py", line 516>, <code object _pprint_user_dict at 0x000002406944A450, file "pprint.py", line 536>, <code object _pprint_user_list at 0x0000024069449F00, file "pprint.py", line 541>, <code object _pprint_user_string at 0x000002406944BDD0, file "pprint.py", line 546>, <code object _safe_repr at 0x00000240695F22C0, file "pprint.py", line 551>, (1, 80, None, None))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', 'pprint', 'pformat', 'isrecursive', 'isreadable', '_format', '_pprint_dataclass', '_dispatch', '_pprint_dict', 'dict', '__repr__', '_pprint_ordered_dict', '_collections', 'OrderedDict', '_pprint_list', 'list', '_pprint_tuple', 'tuple', '_pprint_set', 'set', 'frozenset', '_pprint_str', 'str', '_pprint_bytes', 'bytes', '_pprint_bytearray', 'bytearray', '_pprint_mappingproxy', '_types', 'MappingProxyType', '_pprint_simplenamespace', 'SimpleNamespace', '_format_dict_items', '_format_namespace_items', '_format_items', '_repr', 'format', '_pprint_default_dict', 'defaultdict', '_pprint_counter', 'Counter', '_pprint_chain_map', 'ChainMap', '_pprint_deque', 'deque', '_pprint_user_dict', 'UserDict', '_pprint_user_list', 'UserList', '_pprint_user_string', 'UserString', '_safe_repr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'PrettyPrinter'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           (1, 80, None, None)
+  12: LOAD_CONST           False
+  14: LOAD_CONST           True
+  16: LOAD_CONST           False
+  18: LOAD_CONST           ('compact', 'sort_dicts', 'underscore_numbers')
+  20: BUILD_CONST_KEY_MAP  
+  22: LOAD_CONST           <code object __init__ at 0x0000024068E232C0, file "pprint.py", line 107>
+  24: MAKE_FUNCTION        defaults, kwdefaults
+  26: STORE_NAME           __init__
+  28: LOAD_CONST           <code object pprint at 0x00000240691F23A0, file "pprint.py", line 151>
+  30: MAKE_FUNCTION        
+  32: STORE_NAME           pprint
+  34: LOAD_CONST           <code object pformat at 0x00000240693AA0B0, file "pprint.py", line 156>
+  36: MAKE_FUNCTION        
+  38: STORE_NAME           pformat
+  40: LOAD_CONST           <code object isrecursive at 0x00000240693EA530, file "pprint.py", line 161>
+  42: MAKE_FUNCTION        
+  44: STORE_NAME           isrecursive
+  46: LOAD_CONST           <code object isreadable at 0x00000240693EA730, file "pprint.py", line 164>
+  48: MAKE_FUNCTION        
+  50: STORE_NAME           isreadable
+  52: LOAD_CONST           <code object _format at 0x0000024068C2A5A0, file "pprint.py", line 168>
+  54: MAKE_FUNCTION        
+  56: STORE_NAME           _format
+  58: LOAD_CONST           <code object _pprint_dataclass at 0x00000240691DBA30, file "pprint.py", line 196>
+  60: MAKE_FUNCTION        
+  62: STORE_NAME           _pprint_dataclass
+  64: BUILD_MAP            
+  66: STORE_NAME           _dispatch
+  68: LOAD_CONST           <code object _pprint_dict at 0x0000024068C8EED0, file "pprint.py", line 206>
+  70: MAKE_FUNCTION        
+  72: STORE_NAME           _pprint_dict
+  74: LOAD_NAME            _pprint_dict
+  76: LOAD_NAME            _dispatch
+  78: LOAD_NAME            dict
+  80: LOAD_ATTR            __repr__
+  90: STORE_SUBSCR         
+  94: LOAD_CONST           <code object _pprint_ordered_dict at 0x0000024068D6CE50, file "pprint.py", line 223>
+  96: MAKE_FUNCTION        
+  98: STORE_NAME           _pprint_ordered_dict
+ 100: LOAD_NAME            _pprint_ordered_dict
+ 102: LOAD_NAME            _dispatch
+ 104: LOAD_NAME            _collections
+ 106: LOAD_ATTR            OrderedDict
+ 116: LOAD_ATTR            __repr__
+ 126: STORE_SUBSCR         
+ 130: LOAD_CONST           <code object _pprint_list at 0x00000240691F3B40, file "pprint.py", line 236>
+ 132: MAKE_FUNCTION        
+ 134: STORE_NAME           _pprint_list
+ 136: LOAD_NAME            _pprint_list
+ 138: LOAD_NAME            _dispatch
+ 140: LOAD_NAME            list
+ 142: LOAD_ATTR            __repr__
+ 152: STORE_SUBSCR         
+ 156: LOAD_CONST           <code object _pprint_tuple at 0x00000240691F5890, file "pprint.py", line 244>
+ 158: MAKE_FUNCTION        
+ 160: STORE_NAME           _pprint_tuple
+ 162: LOAD_NAME            _pprint_tuple
+ 164: LOAD_NAME            _dispatch
+ 166: LOAD_NAME            tuple
+ 168: LOAD_ATTR            __repr__
+ 178: STORE_SUBSCR         
+ 182: LOAD_CONST           <code object _pprint_set at 0x0000024068D30140, file "pprint.py", line 253>
+ 184: MAKE_FUNCTION        
+ 186: STORE_NAME           _pprint_set
+ 188: LOAD_NAME            _pprint_set
+ 190: LOAD_NAME            _dispatch
+ 192: LOAD_NAME            set
+ 194: LOAD_ATTR            __repr__
+ 204: STORE_SUBSCR         
+ 208: LOAD_NAME            _pprint_set
+ 210: LOAD_NAME            _dispatch
+ 212: LOAD_NAME            frozenset
+ 214: LOAD_ATTR            __repr__
+ 224: STORE_SUBSCR         
+ 228: LOAD_CONST           <code object _pprint_str at 0x0000024068D5FCF0, file "pprint.py", line 273>
+ 230: MAKE_FUNCTION        
+ 232: STORE_NAME           _pprint_str
+ 234: LOAD_NAME            _pprint_str
+ 236: LOAD_NAME            _dispatch
+ 238: LOAD_NAME            str
+ 240: LOAD_ATTR            __repr__
+ 250: STORE_SUBSCR         
+ 254: LOAD_CONST           <code object _pprint_bytes at 0x000002406931F630, file "pprint.py", line 324>
+ 256: MAKE_FUNCTION        
+ 258: STORE_NAME           _pprint_bytes
+ 260: LOAD_NAME            _pprint_bytes
+ 262: LOAD_NAME            _dispatch
+ 264: LOAD_NAME            bytes
+ 266: LOAD_ATTR            __repr__
+ 276: STORE_SUBSCR         
+ 280: LOAD_CONST           <code object _pprint_bytearray at 0x00000240691C2C30, file "pprint.py", line 345>
+ 282: MAKE_FUNCTION        
+ 284: STORE_NAME           _pprint_bytearray
+ 286: LOAD_NAME            _pprint_bytearray
+ 288: LOAD_NAME            _dispatch
+ 290: LOAD_NAME            bytearray
+ 292: LOAD_ATTR            __repr__
+ 302: STORE_SUBSCR         
+ 306: LOAD_CONST           <code object _pprint_mappingproxy at 0x00000240691E8AB0, file "pprint.py", line 354>
+ 308: MAKE_FUNCTION        
+ 310: STORE_NAME           _pprint_mappingproxy
+ 312: LOAD_NAME            _pprint_mappingproxy
+ 314: LOAD_NAME            _dispatch
+ 316: LOAD_NAME            _types
+ 318: LOAD_ATTR            MappingProxyType
+ 328: LOAD_ATTR            __repr__
+ 338: STORE_SUBSCR         
+ 342: LOAD_CONST           <code object _pprint_simplenamespace at 0x000002406931FA30, file "pprint.py", line 362>
+ 344: MAKE_FUNCTION        
+ 346: STORE_NAME           _pprint_simplenamespace
+ 348: LOAD_NAME            _pprint_simplenamespace
+ 350: LOAD_NAME            _dispatch
+ 352: LOAD_NAME            _types
+ 354: LOAD_ATTR            SimpleNamespace
+ 364: LOAD_ATTR            __repr__
+ 374: STORE_SUBSCR         
+ 378: LOAD_CONST           <code object _format_dict_items at 0x0000024068C8D8F0, file "pprint.py", line 377>
+ 380: MAKE_FUNCTION        
+ 382: STORE_NAME           _format_dict_items
+ 384: LOAD_CONST           <code object _format_namespace_items at 0x0000024068C8F100, file "pprint.py", line 394>
+ 386: MAKE_FUNCTION        
+ 388: STORE_NAME           _format_namespace_items
+ 390: LOAD_CONST           <code object _format_items at 0x0000024068C9FCA0, file "pprint.py", line 413>
+ 392: MAKE_FUNCTION        
+ 394: STORE_NAME           _format_items
+ 396: LOAD_CONST           <code object _repr at 0x00000240691F13E0, file "pprint.py", line 454>
+ 398: MAKE_FUNCTION        
+ 400: STORE_NAME           _repr
+ 402: LOAD_CONST           <code object format at 0x000002406945CF30, file "pprint.py", line 463>
+ 404: MAKE_FUNCTION        
+ 406: STORE_NAME           format
+ 408: LOAD_CONST           <code object _pprint_default_dict at 0x0000024068C5ABD0, file "pprint.py", line 470>
+ 410: MAKE_FUNCTION        
+ 412: STORE_NAME           _pprint_default_dict
+ 414: LOAD_NAME            _pprint_default_dict
+ 416: LOAD_NAME            _dispatch
+ 418: LOAD_NAME            _collections
+ 420: LOAD_ATTR            defaultdict
+ 430: LOAD_ATTR            __repr__
+ 440: STORE_SUBSCR         
+ 444: LOAD_CONST           <code object _pprint_counter at 0x0000024066C25920, file "pprint.py", line 483>
+ 446: MAKE_FUNCTION        
+ 448: STORE_NAME           _pprint_counter
+ 450: LOAD_NAME            _pprint_counter
+ 452: LOAD_NAME            _dispatch
+ 454: LOAD_NAME            _collections
+ 456: LOAD_ATTR            Counter
+ 466: LOAD_ATTR            __repr__
+ 476: STORE_SUBSCR         
+ 480: LOAD_CONST           <code object _pprint_chain_map at 0x0000024068DBFDA0, file "pprint.py", line 499>
+ 482: MAKE_FUNCTION        
+ 484: STORE_NAME           _pprint_chain_map
+ 486: LOAD_NAME            _pprint_chain_map
+ 488: LOAD_NAME            _dispatch
+ 490: LOAD_NAME            _collections
+ 492: LOAD_ATTR            ChainMap
+ 502: LOAD_ATTR            __repr__
+ 512: STORE_SUBSCR         
+ 516: LOAD_CONST           <code object _pprint_deque at 0x0000024068B3E350, file "pprint.py", line 516>
+ 518: MAKE_FUNCTION        
+ 520: STORE_NAME           _pprint_deque
+ 522: LOAD_NAME            _pprint_deque
+ 524: LOAD_NAME            _dispatch
+ 526: LOAD_NAME            _collections
+ 528: LOAD_ATTR            deque
+ 538: LOAD_ATTR            __repr__
+ 548: STORE_SUBSCR         
+ 552: LOAD_CONST           <code object _pprint_user_dict at 0x000002406944A450, file "pprint.py", line 536>
+ 554: MAKE_FUNCTION        
+ 556: STORE_NAME           _pprint_user_dict
+ 558: LOAD_NAME            _pprint_user_dict
+ 560: LOAD_NAME            _dispatch
+ 562: LOAD_NAME            _collections
+ 564: LOAD_ATTR            UserDict
+ 574: LOAD_ATTR            __repr__
+ 584: STORE_SUBSCR         
+ 588: LOAD_CONST           <code object _pprint_user_list at 0x0000024069449F00, file "pprint.py", line 541>
+ 590: MAKE_FUNCTION        
+ 592: STORE_NAME           _pprint_user_list
+ 594: LOAD_NAME            _pprint_user_list
+ 596: LOAD_NAME            _dispatch
+ 598: LOAD_NAME            _collections
+ 600: LOAD_ATTR            UserList
+ 610: LOAD_ATTR            __repr__
+ 620: STORE_SUBSCR         
+ 624: LOAD_CONST           <code object _pprint_user_string at 0x000002406944BDD0, file "pprint.py", line 546>
+ 626: MAKE_FUNCTION        
+ 628: STORE_NAME           _pprint_user_string
+ 630: LOAD_NAME            _pprint_user_string
+ 632: LOAD_NAME            _dispatch
+ 634: LOAD_NAME            _collections
+ 636: LOAD_ATTR            UserString
+ 646: LOAD_ATTR            __repr__
+ 656: STORE_SUBSCR         
+ 660: LOAD_CONST           <code object _safe_repr at 0x00000240695F22C0, file "pprint.py", line 551>
+ 662: MAKE_FUNCTION        
+ 664: STORE_NAME           _safe_repr
+ 666: LOAD_CONST           None
+ 668: RETURN_VALUE         

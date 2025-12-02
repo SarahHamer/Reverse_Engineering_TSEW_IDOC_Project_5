@@ -1,0 +1,23 @@
+# Disassembly for email.BaseHeader.init
+# From module file: email.headerregistry
+
+## co_consts:
+(None,)
+
+## co_names:
+('_name', '_parse_tree', '_defects')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            name
+   4: LOAD_FAST            self
+   6: STORE_ATTR           _name
+  16: LOAD_FAST            parse_tree
+  18: LOAD_FAST            self
+  20: STORE_ATTR           _parse_tree
+  30: LOAD_FAST            defects
+  32: LOAD_FAST            self
+  34: STORE_ATTR           _defects
+  44: LOAD_CONST           None
+  46: RETURN_VALUE         

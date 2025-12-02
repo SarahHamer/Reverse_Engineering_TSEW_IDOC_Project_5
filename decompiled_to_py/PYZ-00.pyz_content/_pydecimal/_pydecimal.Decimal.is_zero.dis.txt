@@ -1,0 +1,21 @@
+# Disassembly for _pydecimal.Decimal.is_zero
+# From module file: _pydecimal
+
+## co_consts:
+('Return True if self is a zero; otherwise return False.', '0')
+
+## co_names:
+('_is_special', '_int')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _is_special
+  14: UNARY_NOT            
+  16: JUMP_IF_FALSE_OR_POP to 38
+  18: LOAD_FAST            self
+  20: LOAD_ATTR            _int
+  30: LOAD_CONST           '0'
+  32: COMPARE_OP           ==
+  38: RETURN_VALUE         

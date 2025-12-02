@@ -1,0 +1,24 @@
+# Disassembly for ast._Unparser.set_precedence
+# From module file: ast
+
+## co_consts:
+(None,)
+
+## co_names:
+('_precedences',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            nodes
+   4: GET_ITER             
+   6: FOR_ITER             to 32
+   8: STORE_FAST           node
+  10: LOAD_FAST            precedence
+  12: LOAD_FAST            self
+  14: LOAD_ATTR            _precedences
+  24: LOAD_FAST            node
+  26: STORE_SUBSCR         
+  30: JUMP_BACKWARD        to 6
+  32: LOAD_CONST           None
+  34: RETURN_VALUE         

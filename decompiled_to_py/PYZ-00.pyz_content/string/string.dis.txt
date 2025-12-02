@@ -1,0 +1,91 @@
+# Disassembly for string
+# From module file: string
+
+## co_consts:
+('A collection of string constants.\n\nPublic module variables:\n\nwhitespace -- a string containing all ASCII whitespace\nascii_lowercase -- a string containing all ASCII lowercase letters\nascii_uppercase -- a string containing all ASCII uppercase letters\nascii_letters -- a string containing all ASCII letters\ndigits -- a string containing all ASCII decimal digits\nhexdigits -- a string containing all ASCII hexadecimal digits\noctdigits -- a string containing all ASCII octal digits\npunctuation -- a string containing all ASCII punctuation characters\nprintable -- a string containing all ASCII characters considered printable\n\n', ('ascii_letters', 'ascii_lowercase', 'ascii_uppercase', 'capwords', 'digits', 'hexdigits', 'octdigits', 'printable', 'punctuation', 'whitespace', 'Formatter', 'Template'), 0, None, ' \t\n\r\x0b\x0c', 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '0123456789', 'abcdef', 'ABCDEF', '01234567', '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~', <code object capwords at 0x00000240693AB5F0, file "string.py", line 37>, ('ChainMap',), <code object Template at 0x000002406941A0D0, file "string.py", line 57>, 'Template', <code object Formatter at 0x00000240693EB830, file "string.py", line 188>, 'Formatter', (None,))
+
+## co_names:
+('__doc__', '__all__', '_string', 'whitespace', 'ascii_lowercase', 'ascii_uppercase', 'ascii_letters', 'digits', 'hexdigits', 'octdigits', 'punctuation', 'printable', 'capwords', 're', '_re', 'collections', 'ChainMap', '_ChainMap', '_sentinel_dict', 'Template', '__init_subclass__', 'Formatter')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'A collection of string constants.\n\nPublic module variables:\n\nwhitespace -- a string containing all ASCII whitespace\nascii_lowercase -- a string containing all ASCII lowercase letters\nascii_uppercase -- a string containing all ASCII uppercase letters\nascii_letters -- a string containing all ASCII letters\ndigits -- a string containing all ASCII decimal digits\nhexdigits -- a string containing all ASCII hexadecimal digits\noctdigits -- a string containing all ASCII octal digits\npunctuation -- a string containing all ASCII punctuation characters\nprintable -- a string containing all ASCII characters considered printable\n\n'
+   4: STORE_NAME           __doc__
+   6: BUILD_LIST           
+   8: LOAD_CONST           ('ascii_letters', 'ascii_lowercase', 'ascii_uppercase', 'capwords', 'digits', 'hexdigits', 'octdigits', 'printable', 'punctuation', 'whitespace', 'Formatter', 'Template')
+  10: LIST_EXTEND          
+  12: STORE_NAME           __all__
+  14: LOAD_CONST           0
+  16: LOAD_CONST           None
+  18: IMPORT_NAME          _string
+  20: STORE_NAME           _string
+  22: LOAD_CONST           ' \t\n\r\x0b\x0c'
+  24: STORE_NAME           whitespace
+  26: LOAD_CONST           'abcdefghijklmnopqrstuvwxyz'
+  28: STORE_NAME           ascii_lowercase
+  30: LOAD_CONST           'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  32: STORE_NAME           ascii_uppercase
+  34: LOAD_NAME            ascii_lowercase
+  36: LOAD_NAME            ascii_uppercase
+  38: BINARY_OP            +
+  42: STORE_NAME           ascii_letters
+  44: LOAD_CONST           '0123456789'
+  46: STORE_NAME           digits
+  48: LOAD_NAME            digits
+  50: LOAD_CONST           'abcdef'
+  52: BINARY_OP            +
+  56: LOAD_CONST           'ABCDEF'
+  58: BINARY_OP            +
+  62: STORE_NAME           hexdigits
+  64: LOAD_CONST           '01234567'
+  66: STORE_NAME           octdigits
+  68: LOAD_CONST           '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+  70: STORE_NAME           punctuation
+  72: LOAD_NAME            digits
+  74: LOAD_NAME            ascii_letters
+  76: BINARY_OP            +
+  80: LOAD_NAME            punctuation
+  82: BINARY_OP            +
+  86: LOAD_NAME            whitespace
+  88: BINARY_OP            +
+  92: STORE_NAME           printable
+  94: LOAD_CONST           (None,)
+  96: LOAD_CONST           <code object capwords at 0x00000240693AB5F0, file "string.py", line 37>
+  98: MAKE_FUNCTION        defaults
+ 100: STORE_NAME           capwords
+ 102: LOAD_CONST           0
+ 104: LOAD_CONST           None
+ 106: IMPORT_NAME          re
+ 108: STORE_NAME           _re
+ 110: LOAD_CONST           0
+ 112: LOAD_CONST           ('ChainMap',)
+ 114: IMPORT_NAME          collections
+ 116: IMPORT_FROM          ChainMap
+ 118: STORE_NAME           _ChainMap
+ 120: POP_TOP              
+ 122: BUILD_MAP            
+ 124: STORE_NAME           _sentinel_dict
+ 126: PUSH_NULL            
+ 128: LOAD_BUILD_CLASS     
+ 130: LOAD_CONST           <code object Template at 0x000002406941A0D0, file "string.py", line 57>
+ 132: MAKE_FUNCTION        
+ 134: LOAD_CONST           'Template'
+ 136: PRECALL              
+ 140: CALL                 
+ 150: STORE_NAME           Template
+ 152: LOAD_NAME            Template
+ 154: LOAD_METHOD          __init_subclass__
+ 176: PRECALL              
+ 180: CALL                 
+ 190: POP_TOP              
+ 192: PUSH_NULL            
+ 194: LOAD_BUILD_CLASS     
+ 196: LOAD_CONST           <code object Formatter at 0x00000240693EB830, file "string.py", line 188>
+ 198: MAKE_FUNCTION        
+ 200: LOAD_CONST           'Formatter'
+ 202: PRECALL              
+ 206: CALL                 
+ 216: STORE_NAME           Formatter
+ 218: LOAD_CONST           None
+ 220: RETURN_VALUE         

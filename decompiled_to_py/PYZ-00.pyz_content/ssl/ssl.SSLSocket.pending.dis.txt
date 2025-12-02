@@ -1,0 +1,28 @@
+# Disassembly for ssl.SSLSocket.pending
+# From module file: ssl
+
+## co_consts:
+(None, 0)
+
+## co_names:
+('_checkClosed', '_sslobj', 'pending')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _checkClosed
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            _sslobj
+  54: POP_JUMP_FORWARD_IF_NONE to 106
+  56: LOAD_FAST            self
+  58: LOAD_ATTR            _sslobj
+  68: LOAD_METHOD          pending
+  90: PRECALL              
+  94: CALL                 
+ 104: RETURN_VALUE         
+ 106: LOAD_CONST           0
+ 108: RETURN_VALUE         

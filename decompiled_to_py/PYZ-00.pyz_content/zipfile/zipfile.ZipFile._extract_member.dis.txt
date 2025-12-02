@@ -1,0 +1,222 @@
+# Disassembly for zipfile.ZipFile._extract_member
+# From module file: zipfile
+
+## co_consts:
+("Extract the ZipInfo object 'member' to a physical\n           file on the path targetpath.\n        ", '/', 1, '', <code object <genexpr> at 0x0000024069CF2790, file "zipfile.py", line 1715>, '\\', ('pwd',), 'wb', None)
+
+## co_names:
+('isinstance', 'ZipInfo', 'getinfo', 'filename', 'replace', 'os', 'path', 'sep', 'altsep', 'splitdrive', 'curdir', 'pardir', 'join', 'split', '_sanitize_windows_name', 'normpath', 'dirname', 'exists', 'makedirs', 'is_dir', 'isdir', 'mkdir', 'open', 'shutil', 'copyfileobj')
+
+## bytecode:
+
+   0: MAKE_CELL            invalid_path_parts
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + isinstance
+  16: LOAD_FAST            member
+  18: LOAD_GLOBAL          ZipInfo
+  30: PRECALL              
+  34: CALL                 
+  44: POP_JUMP_FORWARD_IF_TRUE to 88
+  46: LOAD_FAST            self
+  48: LOAD_METHOD          getinfo
+  70: LOAD_FAST            member
+  72: PRECALL              
+  76: CALL                 
+  86: STORE_FAST           member
+  88: LOAD_FAST            member
+  90: LOAD_ATTR            filename
+ 100: LOAD_METHOD          replace
+ 122: LOAD_CONST           '/'
+ 124: LOAD_GLOBAL          os
+ 136: LOAD_ATTR            path
+ 146: LOAD_ATTR            sep
+ 156: PRECALL              
+ 160: CALL                 
+ 170: STORE_FAST           arcname
+ 172: LOAD_GLOBAL          os
+ 184: LOAD_ATTR            path
+ 194: LOAD_ATTR            altsep
+ 204: POP_JUMP_FORWARD_IF_FALSE to 310
+ 206: LOAD_FAST            arcname
+ 208: LOAD_METHOD          replace
+ 230: LOAD_GLOBAL          os
+ 242: LOAD_ATTR            path
+ 252: LOAD_ATTR            altsep
+ 262: LOAD_GLOBAL          os
+ 274: LOAD_ATTR            path
+ 284: LOAD_ATTR            sep
+ 294: PRECALL              
+ 298: CALL                 
+ 308: STORE_FAST           arcname
+ 310: LOAD_GLOBAL          os
+ 322: LOAD_ATTR            path
+ 332: LOAD_METHOD          splitdrive
+ 354: LOAD_FAST            arcname
+ 356: PRECALL              
+ 360: CALL                 
+ 370: LOAD_CONST           1
+ 372: BINARY_SUBSCR        
+ 382: STORE_FAST           arcname
+ 384: LOAD_CONST           ''
+ 386: LOAD_GLOBAL          os
+ 398: LOAD_ATTR            path
+ 408: LOAD_ATTR            curdir
+ 418: LOAD_GLOBAL          os
+ 430: LOAD_ATTR            path
+ 440: LOAD_ATTR            pardir
+ 450: BUILD_TUPLE          
+ 452: STORE_DEREF          invalid_path_parts
+ 454: LOAD_GLOBAL          os
+ 466: LOAD_ATTR            path
+ 476: LOAD_ATTR            sep
+ 486: LOAD_METHOD          join
+ 508: LOAD_CLOSURE         invalid_path_parts
+ 510: BUILD_TUPLE          
+ 512: LOAD_CONST           <code object <genexpr> at 0x0000024069CF2790, file "zipfile.py", line 1715>
+ 514: MAKE_FUNCTION        closure
+ 516: LOAD_FAST            arcname
+ 518: LOAD_METHOD          split
+ 540: LOAD_GLOBAL          os
+ 552: LOAD_ATTR            path
+ 562: LOAD_ATTR            sep
+ 572: PRECALL              
+ 576: CALL                 
+ 586: GET_ITER             
+ 588: PRECALL              
+ 592: CALL                 
+ 602: PRECALL              
+ 606: CALL                 
+ 616: STORE_FAST           arcname
+ 618: LOAD_GLOBAL          os
+ 630: LOAD_ATTR            path
+ 640: LOAD_ATTR            sep
+ 650: LOAD_CONST           '\\'
+ 652: COMPARE_OP           ==
+ 658: POP_JUMP_FORWARD_IF_FALSE to 734
+ 660: LOAD_FAST            self
+ 662: LOAD_METHOD          _sanitize_windows_name
+ 684: LOAD_FAST            arcname
+ 686: LOAD_GLOBAL          os
+ 698: LOAD_ATTR            path
+ 708: LOAD_ATTR            sep
+ 718: PRECALL              
+ 722: CALL                 
+ 732: STORE_FAST           arcname
+ 734: LOAD_GLOBAL          os
+ 746: LOAD_ATTR            path
+ 756: LOAD_METHOD          join
+ 778: LOAD_FAST            targetpath
+ 780: LOAD_FAST            arcname
+ 782: PRECALL              
+ 786: CALL                 
+ 796: STORE_FAST           targetpath
+ 798: LOAD_GLOBAL          os
+ 810: LOAD_ATTR            path
+ 820: LOAD_METHOD          normpath
+ 842: LOAD_FAST            targetpath
+ 844: PRECALL              
+ 848: CALL                 
+ 858: STORE_FAST           targetpath
+ 860: LOAD_GLOBAL          os
+ 872: LOAD_ATTR            path
+ 882: LOAD_METHOD          dirname
+ 904: LOAD_FAST            targetpath
+ 906: PRECALL              
+ 910: CALL                 
+ 920: STORE_FAST           upperdirs
+ 922: LOAD_FAST            upperdirs
+ 924: POP_JUMP_FORWARD_IF_FALSE to 1028
+ 926: LOAD_GLOBAL          os
+ 938: LOAD_ATTR            path
+ 948: LOAD_METHOD          exists
+ 970: LOAD_FAST            upperdirs
+ 972: PRECALL              
+ 976: CALL                 
+ 986: POP_JUMP_FORWARD_IF_TRUE to 1028
+ 988: LOAD_GLOBAL          NULL + os
+1000: LOAD_ATTR            makedirs
+1010: LOAD_FAST            upperdirs
+1012: PRECALL              
+1016: CALL                 
+1026: POP_TOP              
+1028: LOAD_FAST            member
+1030: LOAD_METHOD          is_dir
+1052: PRECALL              
+1056: CALL                 
+1066: POP_JUMP_FORWARD_IF_FALSE to 1174
+1068: LOAD_GLOBAL          os
+1080: LOAD_ATTR            path
+1090: LOAD_METHOD          isdir
+1112: LOAD_FAST            targetpath
+1114: PRECALL              
+1118: CALL                 
+1128: POP_JUMP_FORWARD_IF_TRUE to 1170
+1130: LOAD_GLOBAL          NULL + os
+1142: LOAD_ATTR            mkdir
+1152: LOAD_FAST            targetpath
+1154: PRECALL              
+1158: CALL                 
+1168: POP_TOP              
+1170: LOAD_FAST            targetpath
+1172: RETURN_VALUE         
+1174: LOAD_FAST            self
+1176: LOAD_METHOD          open
+1198: LOAD_FAST            member
+1200: LOAD_FAST            pwd
+1202: KW_NAMES             
+1204: PRECALL              
+1208: CALL                 
+1218: BEFORE_WITH          
+1220: STORE_FAST           source
+1222: LOAD_GLOBAL          NULL + open
+1234: LOAD_FAST            targetpath
+1236: LOAD_CONST           'wb'
+1238: PRECALL              
+1242: CALL                 
+1252: BEFORE_WITH          
+1254: STORE_FAST           target
+1256: LOAD_GLOBAL          NULL + shutil
+1268: LOAD_ATTR            copyfileobj
+1278: LOAD_FAST            source
+1280: LOAD_FAST            target
+1282: PRECALL              
+1286: CALL                 
+1296: POP_TOP              
+1298: LOAD_CONST           None
+1300: LOAD_CONST           None
+1302: LOAD_CONST           None
+1304: PRECALL              
+1308: CALL                 
+1318: POP_TOP              
+1320: JUMP_FORWARD         to 1344
+1322: PUSH_EXC_INFO        
+1324: WITH_EXCEPT_START    
+1326: POP_JUMP_FORWARD_IF_TRUE to 1336
+1328: RERAISE              
+1330: COPY                 
+1332: POP_EXCEPT           
+1334: RERAISE              
+1336: POP_TOP              
+1338: POP_EXCEPT           
+1340: POP_TOP              
+1342: POP_TOP              
+1344: LOAD_CONST           None
+1346: LOAD_CONST           None
+1348: LOAD_CONST           None
+1350: PRECALL              
+1354: CALL                 
+1364: POP_TOP              
+1366: JUMP_FORWARD         to 1390
+1368: PUSH_EXC_INFO        
+1370: WITH_EXCEPT_START    
+1372: POP_JUMP_FORWARD_IF_TRUE to 1382
+1374: RERAISE              
+1376: COPY                 
+1378: POP_EXCEPT           
+1380: RERAISE              
+1382: POP_TOP              
+1384: POP_EXCEPT           
+1386: POP_TOP              
+1388: POP_TOP              
+1390: LOAD_FAST            targetpath
+1392: RETURN_VALUE         

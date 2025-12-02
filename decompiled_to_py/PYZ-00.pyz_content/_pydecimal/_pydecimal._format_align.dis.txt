@@ -1,0 +1,106 @@
+# Disassembly for _pydecimal._format_align
+# From module file: _pydecimal
+
+## co_consts:
+("Given an unpadded, non-aligned numeric string 'body' and sign\n    string 'sign', add padding and alignment conforming to the given\n    format specifier dictionary 'spec' (as produced by\n    parse_format_specifier).\n\n    ", 'minimumwidth', 'fill', 'align', '<', '>', '=', '^', 2, None, 'Unrecognised alignment field')
+
+## co_names:
+('len', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            spec
+   4: LOAD_CONST           'minimumwidth'
+   6: BINARY_SUBSCR        
+  16: STORE_FAST           minimumwidth
+  18: LOAD_FAST            spec
+  20: LOAD_CONST           'fill'
+  22: BINARY_SUBSCR        
+  32: STORE_FAST           fill
+  34: LOAD_FAST            fill
+  36: LOAD_FAST            minimumwidth
+  38: LOAD_GLOBAL          NULL + len
+  50: LOAD_FAST            sign
+  52: PRECALL              
+  56: CALL                 
+  66: BINARY_OP            -
+  70: LOAD_GLOBAL          NULL + len
+  82: LOAD_FAST            body
+  84: PRECALL              
+  88: CALL                 
+  98: BINARY_OP            -
+ 102: BINARY_OP            *
+ 106: STORE_FAST           padding
+ 108: LOAD_FAST            spec
+ 110: LOAD_CONST           'align'
+ 112: BINARY_SUBSCR        
+ 122: STORE_FAST           align
+ 124: LOAD_FAST            align
+ 126: LOAD_CONST           '<'
+ 128: COMPARE_OP           ==
+ 134: POP_JUMP_FORWARD_IF_FALSE to 154
+ 136: LOAD_FAST            sign
+ 138: LOAD_FAST            body
+ 140: BINARY_OP            +
+ 144: LOAD_FAST            padding
+ 146: BINARY_OP            +
+ 150: STORE_FAST           result
+ 152: JUMP_FORWARD         to 348
+ 154: LOAD_FAST            align
+ 156: LOAD_CONST           '>'
+ 158: COMPARE_OP           ==
+ 164: POP_JUMP_FORWARD_IF_FALSE to 184
+ 166: LOAD_FAST            padding
+ 168: LOAD_FAST            sign
+ 170: BINARY_OP            +
+ 174: LOAD_FAST            body
+ 176: BINARY_OP            +
+ 180: STORE_FAST           result
+ 182: JUMP_FORWARD         to 348
+ 184: LOAD_FAST            align
+ 186: LOAD_CONST           '='
+ 188: COMPARE_OP           ==
+ 194: POP_JUMP_FORWARD_IF_FALSE to 214
+ 196: LOAD_FAST            sign
+ 198: LOAD_FAST            padding
+ 200: BINARY_OP            +
+ 204: LOAD_FAST            body
+ 206: BINARY_OP            +
+ 210: STORE_FAST           result
+ 212: JUMP_FORWARD         to 348
+ 214: LOAD_FAST            align
+ 216: LOAD_CONST           '^'
+ 218: COMPARE_OP           ==
+ 224: POP_JUMP_FORWARD_IF_FALSE to 318
+ 226: LOAD_GLOBAL          NULL + len
+ 238: LOAD_FAST            padding
+ 240: PRECALL              
+ 244: CALL                 
+ 254: LOAD_CONST           2
+ 256: BINARY_OP            //
+ 260: STORE_FAST           half
+ 262: LOAD_FAST            padding
+ 264: LOAD_CONST           None
+ 266: LOAD_FAST            half
+ 268: BUILD_SLICE          
+ 270: BINARY_SUBSCR        
+ 280: LOAD_FAST            sign
+ 282: BINARY_OP            +
+ 286: LOAD_FAST            body
+ 288: BINARY_OP            +
+ 292: LOAD_FAST            padding
+ 294: LOAD_FAST            half
+ 296: LOAD_CONST           None
+ 298: BUILD_SLICE          
+ 300: BINARY_SUBSCR        
+ 310: BINARY_OP            +
+ 314: STORE_FAST           result
+ 316: JUMP_FORWARD         to 348
+ 318: LOAD_GLOBAL          NULL + ValueError
+ 330: LOAD_CONST           'Unrecognised alignment field'
+ 332: PRECALL              
+ 336: CALL                 
+ 346: RAISE_VARARGS        
+ 348: LOAD_FAST            result
+ 350: RETURN_VALUE         

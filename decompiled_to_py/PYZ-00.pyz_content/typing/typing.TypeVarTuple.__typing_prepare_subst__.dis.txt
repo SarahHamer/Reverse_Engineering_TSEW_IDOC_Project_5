@@ -1,0 +1,208 @@
+# Disassembly for typing.TypeVarTuple.__typing_prepare_subst__
+# From module file: typing
+
+## co_consts:
+(None, 1, 'More than one TypeVarTuple parameter in ', '__typing_unpacked_tuple_args__', 2, -1, Ellipsis, 'More than one unpacked arbitrary-length tuple argument', 0, 'Too few arguments for ', '; actual ', ', expected at least ')
+
+## co_names:
+('__parameters__', 'index', 'isinstance', 'TypeVarTuple', 'TypeError', 'len', 'enumerate', 'type', 'getattr', 'min', 'tuple')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            alias
+   4: LOAD_ATTR            __parameters__
+  14: STORE_FAST           params
+  16: LOAD_FAST            params
+  18: LOAD_METHOD          index
+  40: LOAD_FAST            self
+  42: PRECALL              
+  46: CALL                 
+  56: STORE_FAST           typevartuple_index
+  58: LOAD_FAST            params
+  60: LOAD_FAST            typevartuple_index
+  62: LOAD_CONST           1
+  64: BINARY_OP            +
+  68: LOAD_CONST           None
+  70: BUILD_SLICE          
+  72: BINARY_SUBSCR        
+  82: GET_ITER             
+  84: FOR_ITER             to 168
+  86: STORE_FAST           param
+  88: LOAD_GLOBAL          NULL + isinstance
+ 100: LOAD_FAST            param
+ 102: LOAD_GLOBAL          TypeVarTuple
+ 114: PRECALL              
+ 118: CALL                 
+ 128: POP_JUMP_FORWARD_IF_FALSE to 166
+ 130: LOAD_GLOBAL          NULL + TypeError
+ 142: LOAD_CONST           'More than one TypeVarTuple parameter in '
+ 144: LOAD_FAST            alias
+ 146: FORMAT_VALUE         
+ 148: BUILD_STRING         
+ 150: PRECALL              
+ 154: CALL                 
+ 164: RAISE_VARARGS        
+ 166: JUMP_BACKWARD        to 84
+ 168: LOAD_GLOBAL          NULL + len
+ 180: LOAD_FAST            args
+ 182: PRECALL              
+ 186: CALL                 
+ 196: STORE_FAST           alen
+ 198: LOAD_GLOBAL          NULL + len
+ 210: LOAD_FAST            params
+ 212: PRECALL              
+ 216: CALL                 
+ 226: STORE_FAST           plen
+ 228: LOAD_FAST            typevartuple_index
+ 230: STORE_FAST           left
+ 232: LOAD_FAST            plen
+ 234: LOAD_FAST            typevartuple_index
+ 236: BINARY_OP            -
+ 240: LOAD_CONST           1
+ 242: BINARY_OP            -
+ 246: STORE_FAST           right
+ 248: LOAD_CONST           None
+ 250: STORE_FAST           var_tuple_index
+ 252: LOAD_CONST           None
+ 254: STORE_FAST           fillarg
+ 256: LOAD_GLOBAL          NULL + enumerate
+ 268: LOAD_FAST            args
+ 270: PRECALL              
+ 274: CALL                 
+ 284: GET_ITER             
+ 286: FOR_ITER             to 490
+ 288: UNPACK_SEQUENCE      
+ 292: STORE_FAST           k
+ 294: STORE_FAST           arg
+ 296: LOAD_GLOBAL          NULL + isinstance
+ 308: LOAD_FAST            arg
+ 310: LOAD_GLOBAL          type
+ 322: PRECALL              
+ 326: CALL                 
+ 336: POP_JUMP_FORWARD_IF_TRUE to 488
+ 338: LOAD_GLOBAL          NULL + getattr
+ 350: LOAD_FAST            arg
+ 352: LOAD_CONST           '__typing_unpacked_tuple_args__'
+ 354: LOAD_CONST           None
+ 356: PRECALL              
+ 360: CALL                 
+ 370: STORE_FAST           subargs
+ 372: LOAD_FAST            subargs
+ 374: POP_JUMP_FORWARD_IF_FALSE to 488
+ 376: LOAD_GLOBAL          NULL + len
+ 388: LOAD_FAST            subargs
+ 390: PRECALL              
+ 394: CALL                 
+ 404: LOAD_CONST           2
+ 406: COMPARE_OP           ==
+ 412: POP_JUMP_FORWARD_IF_FALSE to 488
+ 414: LOAD_FAST            subargs
+ 416: LOAD_CONST           -1
+ 418: BINARY_SUBSCR        
+ 428: LOAD_CONST           Ellipsis
+ 430: IS_OP                
+ 432: POP_JUMP_FORWARD_IF_FALSE to 488
+ 434: LOAD_FAST            var_tuple_index
+ 436: POP_JUMP_FORWARD_IF_NONE to 468
+ 438: LOAD_GLOBAL          NULL + TypeError
+ 450: LOAD_CONST           'More than one unpacked arbitrary-length tuple argument'
+ 452: PRECALL              
+ 456: CALL                 
+ 466: RAISE_VARARGS        
+ 468: LOAD_FAST            k
+ 470: STORE_FAST           var_tuple_index
+ 472: LOAD_FAST            subargs
+ 474: LOAD_CONST           0
+ 476: BINARY_SUBSCR        
+ 486: STORE_FAST           fillarg
+ 488: JUMP_BACKWARD        to 286
+ 490: LOAD_FAST            var_tuple_index
+ 492: POP_JUMP_FORWARD_IF_NONE to 572
+ 494: LOAD_GLOBAL          NULL + min
+ 506: LOAD_FAST            left
+ 508: LOAD_FAST            var_tuple_index
+ 510: PRECALL              
+ 514: CALL                 
+ 524: STORE_FAST           left
+ 526: LOAD_GLOBAL          NULL + min
+ 538: LOAD_FAST            right
+ 540: LOAD_FAST            alen
+ 542: LOAD_FAST            var_tuple_index
+ 544: BINARY_OP            -
+ 548: LOAD_CONST           1
+ 550: BINARY_OP            -
+ 554: PRECALL              
+ 558: CALL                 
+ 568: STORE_FAST           right
+ 570: JUMP_FORWARD         to 644
+ 572: LOAD_FAST            left
+ 574: LOAD_FAST            right
+ 576: BINARY_OP            +
+ 580: LOAD_FAST            alen
+ 582: COMPARE_OP           >
+ 588: POP_JUMP_FORWARD_IF_FALSE to 644
+ 590: LOAD_GLOBAL          NULL + TypeError
+ 602: LOAD_CONST           'Too few arguments for '
+ 604: LOAD_FAST            alias
+ 606: FORMAT_VALUE         
+ 608: LOAD_CONST           '; actual '
+ 610: LOAD_FAST            alen
+ 612: FORMAT_VALUE         
+ 614: LOAD_CONST           ', expected at least '
+ 616: LOAD_FAST            plen
+ 618: LOAD_CONST           1
+ 620: BINARY_OP            -
+ 624: FORMAT_VALUE         
+ 626: BUILD_STRING         
+ 628: PRECALL              
+ 632: CALL                 
+ 642: RAISE_VARARGS        
+ 644: BUILD_LIST           
+ 646: LOAD_FAST            args
+ 648: LOAD_CONST           None
+ 650: LOAD_FAST            left
+ 652: BUILD_SLICE          
+ 654: BINARY_SUBSCR        
+ 664: LIST_EXTEND          
+ 666: LOAD_FAST            fillarg
+ 668: BUILD_LIST           
+ 670: LOAD_FAST            typevartuple_index
+ 672: LOAD_FAST            left
+ 674: BINARY_OP            -
+ 678: BINARY_OP            *
+ 682: LIST_EXTEND          
+ 684: LOAD_GLOBAL          NULL + tuple
+ 696: LOAD_FAST            args
+ 698: LOAD_FAST            left
+ 700: LOAD_FAST            alen
+ 702: LOAD_FAST            right
+ 704: BINARY_OP            -
+ 708: BUILD_SLICE          
+ 710: BINARY_SUBSCR        
+ 720: PRECALL              
+ 724: CALL                 
+ 734: LIST_APPEND          
+ 736: LOAD_FAST            fillarg
+ 738: BUILD_LIST           
+ 740: LOAD_FAST            plen
+ 742: LOAD_FAST            right
+ 744: BINARY_OP            -
+ 748: LOAD_FAST            left
+ 750: BINARY_OP            -
+ 754: LOAD_FAST            typevartuple_index
+ 756: BINARY_OP            -
+ 760: LOAD_CONST           1
+ 762: BINARY_OP            -
+ 766: BINARY_OP            *
+ 770: LIST_EXTEND          
+ 772: LOAD_FAST            args
+ 774: LOAD_FAST            alen
+ 776: LOAD_FAST            right
+ 778: BINARY_OP            -
+ 782: LOAD_CONST           None
+ 784: BUILD_SLICE          
+ 786: BINARY_SUBSCR        
+ 796: LIST_EXTEND          
+ 798: LIST_TO_TUPLE        
+ 800: RETURN_VALUE         

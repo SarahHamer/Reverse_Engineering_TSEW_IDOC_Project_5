@@ -1,0 +1,34 @@
+# Disassembly for email._Accumulator.__len__.<genexpr>
+# From module file: email.header
+
+## co_consts:
+(None,)
+
+## co_names:
+('len',)
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_FAST            .0
+   8: FOR_ITER             to 86
+  10: UNPACK_SEQUENCE      
+  14: STORE_FAST           fws
+  16: STORE_FAST           part
+  18: LOAD_GLOBAL          NULL + len
+  30: LOAD_FAST            fws
+  32: PRECALL              
+  36: CALL                 
+  46: LOAD_GLOBAL          NULL + len
+  58: LOAD_FAST            part
+  60: PRECALL              
+  64: CALL                 
+  74: BINARY_OP            +
+  78: YIELD_VALUE          
+  80: RESUME               
+  82: POP_TOP              
+  84: JUMP_BACKWARD        to 8
+  86: LOAD_CONST           None
+  88: RETURN_VALUE         

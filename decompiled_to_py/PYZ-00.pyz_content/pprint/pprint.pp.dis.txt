@@ -1,0 +1,27 @@
+# Disassembly for pprint.pp
+# From module file: pprint
+
+## co_consts:
+('Pretty-print a Python object', 'sort_dicts', None)
+
+## co_names:
+('pprint',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + pprint
+  14: LOAD_FAST            object
+  16: BUILD_LIST           
+  18: LOAD_FAST            args
+  20: LIST_EXTEND          
+  22: LIST_TO_TUPLE        
+  24: LOAD_CONST           'sort_dicts'
+  26: LOAD_FAST            sort_dicts
+  28: BUILD_MAP            
+  30: LOAD_FAST            kwargs
+  32: DICT_MERGE           
+  34: CALL_FUNCTION_EX     
+  36: POP_TOP              
+  38: LOAD_CONST           None
+  40: RETURN_VALUE         

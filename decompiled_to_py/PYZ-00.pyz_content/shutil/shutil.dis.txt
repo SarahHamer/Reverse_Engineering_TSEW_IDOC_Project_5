@@ -1,0 +1,642 @@
+# Disassembly for shutil
+# From module file: shutil
+
+## co_consts:
+("Utility functions for copying and archiving files and directory trees.\n\nXXX The functions here don't copy the resource fork or other metadata on Mac.\n\n", 0, None, True, False, 'nt', 'posix', 1048576, 65536, 'sendfile', 'linux', '_fcopyfile', '.COM;.EXE;.BAT;.CMD;.VBS;.JS;.WS;.MSC', ('copyfileobj', 'copyfile', 'copymode', 'copystat', 'copy', 'copy2', 'copytree', 'move', 'rmtree', 'Error', 'SpecialFileError', 'ExecError', 'make_archive', 'get_archive_formats', 'register_archive_format', 'unregister_archive_format', 'get_unpack_formats', 'register_unpack_format', 'unregister_unpack_format', 'unpack_archive', 'ignore_patterns', 'chown', 'which', 'get_terminal_size', 'SameFileError'), <code object Error at 0x00000240694941D0, file "shutil.py", line 61>, 'Error', <code object SameFileError at 0x0000024069495D70, file "shutil.py", line 64>, 'SameFileError', <code object SpecialFileError at 0x00000240694960B0, file "shutil.py", line 67>, 'SpecialFileError', <code object ExecError at 0x00000240694957C0, file "shutil.py", line 71>, 'ExecError', <code object ReadError at 0x0000024069495210, file "shutil.py", line 74>, 'ReadError', <code object RegistryError at 0x0000024069494FA0, file "shutil.py", line 77>, 'RegistryError', <code object _GiveupOnFastCopy at 0x0000024069496180, file "shutil.py", line 81>, '_GiveupOnFastCopy', <code object _fastcopy_fcopyfile at 0x0000024068DB5390, file "shutil.py", line 86>, <code object _fastcopy_sendfile at 0x0000024068CE0C60, file "shutil.py", line 106>, <code object _copyfileobj_readinto at 0x000002406931F630, file "shutil.py", line 170>, <code object copyfileobj at 0x000002406941AAF0, file "shutil.py", line 189>, <code object _samefile at 0x0000024068DD4960, file "shutil.py", line 202>, <code object _stat at 0x00000240693AB9B0, file "shutil.py", line 220>, <code object _islink at 0x00000240691C1FD0, file "shutil.py", line 223>, ('follow_symlinks',), <code object copyfile at 0x0000024068D5FCF0, file "shutil.py", line 226>, <code object copymode at 0x0000024068DB4610, file "shutil.py", line 290>, 'listxattr', <code object _copyxattr at 0x0000024068DA7150, file "shutil.py", line 312>, <code object _copyxattr at 0x000002406943B930, file "shutil.py", line 336>, <code object copystat at 0x0000024068CA0B80, file "shutil.py", line 339>, <code object copy at 0x0000024069CDC030, file "shutil.py", line 405>, <code object copy2 at 0x0000024069CDC1F0, file "shutil.py", line 423>, <code object ignore_patterns at 0x0000024069494370, file "shutil.py", line 440>, <code object _copytree at 0x00000240695F2270, file "shutil.py", line 452>, <code object copytree at 0x000002406942CFD0, file "shutil.py", line 518>, 'st_file_attributes', <code object _rmtree_isdir at 0x000002406942E100, file "shutil.py", line 570>, <code object _rmtree_islink at 0x000002406942E740, file "shutil.py", line 579>, <code object _rmtree_isdir at 0x000002406944AAB0, file "shutil.py", line 588>, <code object _rmtree_islink at 0x00000240693EAF30, file "shutil.py", line 594>, <code object _rmtree_unsafe at 0x0000024066C3F220, file "shutil.py", line 598>, <code object _rmtree_safe_fd at 0x0000024068E117B0, file "shutil.py", line 629>, ('dir_fd',), <code object rmtree at 0x0000024068E12470, file "shutil.py", line 690>, <code object _basename at 0x000002406942D160, file "shutil.py", line 765>, <code object move at 0x0000024068D35160, file "shutil.py", line 783>, <code object _destinsrc at 0x0000024068D6D2F0, file "shutil.py", line 849>, <code object _is_immutable at 0x00000240693AA470, file "shutil.py", line 858>, <code object _get_gid at 0x00000240691F23A0, file "shutil.py", line 863>, <code object _get_uid at 0x00000240691F3B40, file "shutil.py", line 881>, 'gzip', <code object _make_tarball at 0x0000024068E49090, file "shutil.py", line 899>, <code object _make_zipfile at 0x00000240695B6430, file "shutil.py", line 969>, 'tar', ('compress', None), 'uncompressed tar file', ('compress', 'gzip'), "gzip'ed tar-file", 'gztar', 'ZIP file', 'zip', ('compress', 'bzip2'), "bzip2'ed tar-file", 'bztar', ('compress', 'xz'), "xz'ed tar-file", 'xztar', <code object get_archive_formats at 0x00000240693D23D0, file "shutil.py", line 1049>, '', <code object register_archive_format at 0x000002406931FA30, file "shutil.py", line 1059>, <code object unregister_archive_format at 0x0000024069494780, file "shutil.py", line 1080>, <code object make_archive at 0x0000024068E4A1D0, file "shutil.py", line 1083>, <code object get_unpack_formats at 0x00000240693D2C20, file "shutil.py", line 1147>, <code object _check_unpack_options at 0x000002406934F7E0, file "shutil.py", line 1158>, <code object register_unpack_format at 0x000002406944A010, file "shutil.py", line 1176>, <code object unregister_unpack_format at 0x0000024069495E40, file "shutil.py", line 1198>, <code object _ensure_directory at 0x000002406949C8D0, file "shutil.py", line 1202>, <code object _unpack_zipfile at 0x0000024068C28200, file "shutil.py", line 1208>, ('filter',), <code object _unpack_tarfile at 0x0000024069CDC3B0, file "shutil.py", line 1238>, '.tar', '.zip', ('tar', 'zip'), '.tar.gz', '.tgz', '.tar.bz2', '.tbz2', '.tar.xz', '.txz', <code object _find_unpack_format at 0x000002406922D7D0, file "shutil.py", line 1274>, <code object unpack_archive at 0x0000024068BFEA30, file "shutil.py", line 1281>, 'statvfs', 'disk_usage', 'usage', 'total used free', 'Total space in bytes', 'Used space in bytes', 'Free space in bytes', <code object disk_usage at 0x000002406949CBB0, file "shutil.py", line 1338>, <code object disk_usage at 0x000002406941A310, file "shutil.py", line 1355>, <code object chown at 0x0000024066C26880, file "shutil.py", line 1366>, (80, 24), <code object get_terminal_size at 0x0000024068DE6180, file "shutil.py", line 1398>, <code object _access_check at 0x000002406949D730, file "shutil.py", line 1447>, <code object which at 0x00000240695B6B30, file "shutil.py", line 1452>, (0,), (False,), (False, None), ('gzip', 0, 0, None, None, None, None), (0, 0, None, None, None, None), (None, ''), (None, None, 0, 0, None, None, None), (None, None), ((80, 24),))
+
+## co_names:
+('__doc__', 'os', 'sys', 'stat', 'fnmatch', 'collections', 'errno', 'zlib', '_ZLIB_SUPPORTED', 'ImportError', 'bz2', '_BZ2_SUPPORTED', 'lzma', '_LZMA_SUPPORTED', 'name', '_WINDOWS', 'posix', 'nt', 'COPY_BUFSIZE', 'hasattr', 'platform', 'startswith', '_USE_CP_SENDFILE', '_HAS_FCOPYFILE', '_WIN_DEFAULT_PATHEXT', '__all__', 'OSError', 'Error', 'SameFileError', 'SpecialFileError', 'ExecError', 'ReadError', 'Exception', 'RegistryError', '_GiveupOnFastCopy', '_fastcopy_fcopyfile', '_fastcopy_sendfile', '_copyfileobj_readinto', 'copyfileobj', '_samefile', '_stat', '_islink', 'copyfile', 'copymode', '_copyxattr', 'copystat', 'copy', 'copy2', 'ignore_patterns', '_copytree', 'copytree', 'stat_result', '_rmtree_isdir', '_rmtree_islink', '_rmtree_unsafe', '_rmtree_safe_fd', 'open', 'unlink', 'rmdir', 'supports_dir_fd', 'scandir', 'supports_fd', 'supports_follow_symlinks', '_use_fd_functions', 'rmtree', 'avoids_symlink_attacks', '_basename', 'move', '_destinsrc', '_is_immutable', '_get_gid', '_get_uid', '_make_tarball', '_make_zipfile', '_ARCHIVE_FORMATS', 'get_archive_formats', 'register_archive_format', 'unregister_archive_format', 'make_archive', 'get_unpack_formats', '_check_unpack_options', 'register_unpack_format', 'unregister_unpack_format', '_ensure_directory', '_unpack_zipfile', '_unpack_tarfile', '_UNPACK_FORMATS', '_find_unpack_format', 'unpack_archive', 'append', 'namedtuple', '_ntuple_diskusage', 'total', 'used', 'free', 'disk_usage', 'chown', 'get_terminal_size', '_access_check', 'F_OK', 'X_OK', 'which')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           "Utility functions for copying and archiving files and directory trees.\n\nXXX The functions here don't copy the resource fork or other metadata on Mac.\n\n"
+   4: STORE_NAME           __doc__
+   6: LOAD_CONST           0
+   8: LOAD_CONST           None
+  10: IMPORT_NAME          os
+  12: STORE_NAME           os
+  14: LOAD_CONST           0
+  16: LOAD_CONST           None
+  18: IMPORT_NAME          sys
+  20: STORE_NAME           sys
+  22: LOAD_CONST           0
+  24: LOAD_CONST           None
+  26: IMPORT_NAME          stat
+  28: STORE_NAME           stat
+  30: LOAD_CONST           0
+  32: LOAD_CONST           None
+  34: IMPORT_NAME          fnmatch
+  36: STORE_NAME           fnmatch
+  38: LOAD_CONST           0
+  40: LOAD_CONST           None
+  42: IMPORT_NAME          collections
+  44: STORE_NAME           collections
+  46: LOAD_CONST           0
+  48: LOAD_CONST           None
+  50: IMPORT_NAME          errno
+  52: STORE_NAME           errno
+  54: NOP                  
+  56: LOAD_CONST           0
+  58: LOAD_CONST           None
+  60: IMPORT_NAME          zlib
+  62: STORE_NAME           zlib
+  64: DELETE_NAME          zlib
+  66: LOAD_CONST           True
+  68: STORE_NAME           _ZLIB_SUPPORTED
+  70: JUMP_FORWARD         to 98
+  72: PUSH_EXC_INFO        
+  74: LOAD_NAME            ImportError
+  76: CHECK_EXC_MATCH      
+  78: POP_JUMP_FORWARD_IF_FALSE to 90
+  80: POP_TOP              
+  82: LOAD_CONST           False
+  84: STORE_NAME           _ZLIB_SUPPORTED
+  86: POP_EXCEPT           
+  88: JUMP_FORWARD         to 98
+  90: RERAISE              
+  92: COPY                 
+  94: POP_EXCEPT           
+  96: RERAISE              
+  98: NOP                  
+ 100: LOAD_CONST           0
+ 102: LOAD_CONST           None
+ 104: IMPORT_NAME          bz2
+ 106: STORE_NAME           bz2
+ 108: DELETE_NAME          bz2
+ 110: LOAD_CONST           True
+ 112: STORE_NAME           _BZ2_SUPPORTED
+ 114: JUMP_FORWARD         to 142
+ 116: PUSH_EXC_INFO        
+ 118: LOAD_NAME            ImportError
+ 120: CHECK_EXC_MATCH      
+ 122: POP_JUMP_FORWARD_IF_FALSE to 134
+ 124: POP_TOP              
+ 126: LOAD_CONST           False
+ 128: STORE_NAME           _BZ2_SUPPORTED
+ 130: POP_EXCEPT           
+ 132: JUMP_FORWARD         to 142
+ 134: RERAISE              
+ 136: COPY                 
+ 138: POP_EXCEPT           
+ 140: RERAISE              
+ 142: NOP                  
+ 144: LOAD_CONST           0
+ 146: LOAD_CONST           None
+ 148: IMPORT_NAME          lzma
+ 150: STORE_NAME           lzma
+ 152: DELETE_NAME          lzma
+ 154: LOAD_CONST           True
+ 156: STORE_NAME           _LZMA_SUPPORTED
+ 158: JUMP_FORWARD         to 186
+ 160: PUSH_EXC_INFO        
+ 162: LOAD_NAME            ImportError
+ 164: CHECK_EXC_MATCH      
+ 166: POP_JUMP_FORWARD_IF_FALSE to 178
+ 168: POP_TOP              
+ 170: LOAD_CONST           False
+ 172: STORE_NAME           _LZMA_SUPPORTED
+ 174: POP_EXCEPT           
+ 176: JUMP_FORWARD         to 186
+ 178: RERAISE              
+ 180: COPY                 
+ 182: POP_EXCEPT           
+ 184: RERAISE              
+ 186: LOAD_NAME            os
+ 188: LOAD_ATTR            name
+ 198: LOAD_CONST           'nt'
+ 200: COMPARE_OP           ==
+ 206: STORE_NAME           _WINDOWS
+ 208: LOAD_CONST           None
+ 210: COPY                 
+ 212: STORE_NAME           posix
+ 214: STORE_NAME           nt
+ 216: LOAD_NAME            os
+ 218: LOAD_ATTR            name
+ 228: LOAD_CONST           'posix'
+ 230: COMPARE_OP           ==
+ 236: POP_JUMP_FORWARD_IF_FALSE to 248
+ 238: LOAD_CONST           0
+ 240: LOAD_CONST           None
+ 242: IMPORT_NAME          posix
+ 244: STORE_NAME           posix
+ 246: JUMP_FORWARD         to 260
+ 248: LOAD_NAME            _WINDOWS
+ 250: POP_JUMP_FORWARD_IF_FALSE to 260
+ 252: LOAD_CONST           0
+ 254: LOAD_CONST           None
+ 256: IMPORT_NAME          nt
+ 258: STORE_NAME           nt
+ 260: LOAD_NAME            _WINDOWS
+ 262: POP_JUMP_FORWARD_IF_FALSE to 268
+ 264: LOAD_CONST           1048576
+ 266: JUMP_FORWARD         to 270
+ 268: LOAD_CONST           65536
+ 270: STORE_NAME           COPY_BUFSIZE
+ 272: PUSH_NULL            
+ 274: LOAD_NAME            hasattr
+ 276: LOAD_NAME            os
+ 278: LOAD_CONST           'sendfile'
+ 280: PRECALL              
+ 284: CALL                 
+ 294: JUMP_IF_FALSE_OR_POP to 346
+ 296: LOAD_NAME            sys
+ 298: LOAD_ATTR            platform
+ 308: LOAD_METHOD          startswith
+ 330: LOAD_CONST           'linux'
+ 332: PRECALL              
+ 336: CALL                 
+ 346: STORE_GLOBAL         _USE_CP_SENDFILE
+ 348: LOAD_NAME            posix
+ 350: JUMP_IF_FALSE_OR_POP to 374
+ 352: PUSH_NULL            
+ 354: LOAD_NAME            hasattr
+ 356: LOAD_NAME            posix
+ 358: LOAD_CONST           '_fcopyfile'
+ 360: PRECALL              
+ 364: CALL                 
+ 374: STORE_NAME           _HAS_FCOPYFILE
+ 376: LOAD_CONST           '.COM;.EXE;.BAT;.CMD;.VBS;.JS;.WS;.MSC'
+ 378: STORE_NAME           _WIN_DEFAULT_PATHEXT
+ 380: BUILD_LIST           
+ 382: LOAD_CONST           ('copyfileobj', 'copyfile', 'copymode', 'copystat', 'copy', 'copy2', 'copytree', 'move', 'rmtree', 'Error', 'SpecialFileError', 'ExecError', 'make_archive', 'get_archive_formats', 'register_archive_format', 'unregister_archive_format', 'get_unpack_formats', 'register_unpack_format', 'unregister_unpack_format', 'unpack_archive', 'ignore_patterns', 'chown', 'which', 'get_terminal_size', 'SameFileError')
+ 384: LIST_EXTEND          
+ 386: STORE_NAME           __all__
+ 388: PUSH_NULL            
+ 390: LOAD_BUILD_CLASS     
+ 392: LOAD_CONST           <code object Error at 0x00000240694941D0, file "shutil.py", line 61>
+ 394: MAKE_FUNCTION        
+ 396: LOAD_CONST           'Error'
+ 398: LOAD_NAME            OSError
+ 400: PRECALL              
+ 404: CALL                 
+ 414: STORE_NAME           Error
+ 416: PUSH_NULL            
+ 418: LOAD_BUILD_CLASS     
+ 420: LOAD_CONST           <code object SameFileError at 0x0000024069495D70, file "shutil.py", line 64>
+ 422: MAKE_FUNCTION        
+ 424: LOAD_CONST           'SameFileError'
+ 426: LOAD_NAME            Error
+ 428: PRECALL              
+ 432: CALL                 
+ 442: STORE_NAME           SameFileError
+ 444: PUSH_NULL            
+ 446: LOAD_BUILD_CLASS     
+ 448: LOAD_CONST           <code object SpecialFileError at 0x00000240694960B0, file "shutil.py", line 67>
+ 450: MAKE_FUNCTION        
+ 452: LOAD_CONST           'SpecialFileError'
+ 454: LOAD_NAME            OSError
+ 456: PRECALL              
+ 460: CALL                 
+ 470: STORE_NAME           SpecialFileError
+ 472: PUSH_NULL            
+ 474: LOAD_BUILD_CLASS     
+ 476: LOAD_CONST           <code object ExecError at 0x00000240694957C0, file "shutil.py", line 71>
+ 478: MAKE_FUNCTION        
+ 480: LOAD_CONST           'ExecError'
+ 482: LOAD_NAME            OSError
+ 484: PRECALL              
+ 488: CALL                 
+ 498: STORE_NAME           ExecError
+ 500: PUSH_NULL            
+ 502: LOAD_BUILD_CLASS     
+ 504: LOAD_CONST           <code object ReadError at 0x0000024069495210, file "shutil.py", line 74>
+ 506: MAKE_FUNCTION        
+ 508: LOAD_CONST           'ReadError'
+ 510: LOAD_NAME            OSError
+ 512: PRECALL              
+ 516: CALL                 
+ 526: STORE_NAME           ReadError
+ 528: PUSH_NULL            
+ 530: LOAD_BUILD_CLASS     
+ 532: LOAD_CONST           <code object RegistryError at 0x0000024069494FA0, file "shutil.py", line 77>
+ 534: MAKE_FUNCTION        
+ 536: LOAD_CONST           'RegistryError'
+ 538: LOAD_NAME            Exception
+ 540: PRECALL              
+ 544: CALL                 
+ 554: STORE_NAME           RegistryError
+ 556: PUSH_NULL            
+ 558: LOAD_BUILD_CLASS     
+ 560: LOAD_CONST           <code object _GiveupOnFastCopy at 0x0000024069496180, file "shutil.py", line 81>
+ 562: MAKE_FUNCTION        
+ 564: LOAD_CONST           '_GiveupOnFastCopy'
+ 566: LOAD_NAME            Exception
+ 568: PRECALL              
+ 572: CALL                 
+ 582: STORE_NAME           _GiveupOnFastCopy
+ 584: LOAD_CONST           <code object _fastcopy_fcopyfile at 0x0000024068DB5390, file "shutil.py", line 86>
+ 586: MAKE_FUNCTION        
+ 588: STORE_NAME           _fastcopy_fcopyfile
+ 590: LOAD_CONST           <code object _fastcopy_sendfile at 0x0000024068CE0C60, file "shutil.py", line 106>
+ 592: MAKE_FUNCTION        
+ 594: STORE_NAME           _fastcopy_sendfile
+ 596: LOAD_NAME            COPY_BUFSIZE
+ 598: BUILD_TUPLE          
+ 600: LOAD_CONST           <code object _copyfileobj_readinto at 0x000002406931F630, file "shutil.py", line 170>
+ 602: MAKE_FUNCTION        defaults
+ 604: STORE_NAME           _copyfileobj_readinto
+ 606: LOAD_CONST           (0,)
+ 608: LOAD_CONST           <code object copyfileobj at 0x000002406941AAF0, file "shutil.py", line 189>
+ 610: MAKE_FUNCTION        defaults
+ 612: STORE_NAME           copyfileobj
+ 614: LOAD_CONST           <code object _samefile at 0x0000024068DD4960, file "shutil.py", line 202>
+ 616: MAKE_FUNCTION        
+ 618: STORE_NAME           _samefile
+ 620: LOAD_CONST           <code object _stat at 0x00000240693AB9B0, file "shutil.py", line 220>
+ 622: MAKE_FUNCTION        
+ 624: STORE_NAME           _stat
+ 626: LOAD_CONST           <code object _islink at 0x00000240691C1FD0, file "shutil.py", line 223>
+ 628: MAKE_FUNCTION        
+ 630: STORE_NAME           _islink
+ 632: LOAD_CONST           True
+ 634: LOAD_CONST           ('follow_symlinks',)
+ 636: BUILD_CONST_KEY_MAP  
+ 638: LOAD_CONST           <code object copyfile at 0x0000024068D5FCF0, file "shutil.py", line 226>
+ 640: MAKE_FUNCTION        kwdefaults
+ 642: STORE_NAME           copyfile
+ 644: LOAD_CONST           True
+ 646: LOAD_CONST           ('follow_symlinks',)
+ 648: BUILD_CONST_KEY_MAP  
+ 650: LOAD_CONST           <code object copymode at 0x0000024068DB4610, file "shutil.py", line 290>
+ 652: MAKE_FUNCTION        kwdefaults
+ 654: STORE_NAME           copymode
+ 656: PUSH_NULL            
+ 658: LOAD_NAME            hasattr
+ 660: LOAD_NAME            os
+ 662: LOAD_CONST           'listxattr'
+ 664: PRECALL              
+ 668: CALL                 
+ 678: POP_JUMP_FORWARD_IF_FALSE to 694
+ 680: LOAD_CONST           True
+ 682: LOAD_CONST           ('follow_symlinks',)
+ 684: BUILD_CONST_KEY_MAP  
+ 686: LOAD_CONST           <code object _copyxattr at 0x0000024068DA7150, file "shutil.py", line 312>
+ 688: MAKE_FUNCTION        kwdefaults
+ 690: STORE_NAME           _copyxattr
+ 692: JUMP_FORWARD         to 700
+ 694: LOAD_CONST           <code object _copyxattr at 0x000002406943B930, file "shutil.py", line 336>
+ 696: MAKE_FUNCTION        
+ 698: STORE_NAME           _copyxattr
+ 700: LOAD_CONST           True
+ 702: LOAD_CONST           ('follow_symlinks',)
+ 704: BUILD_CONST_KEY_MAP  
+ 706: LOAD_CONST           <code object copystat at 0x0000024068CA0B80, file "shutil.py", line 339>
+ 708: MAKE_FUNCTION        kwdefaults
+ 710: STORE_NAME           copystat
+ 712: LOAD_CONST           True
+ 714: LOAD_CONST           ('follow_symlinks',)
+ 716: BUILD_CONST_KEY_MAP  
+ 718: LOAD_CONST           <code object copy at 0x0000024069CDC030, file "shutil.py", line 405>
+ 720: MAKE_FUNCTION        kwdefaults
+ 722: STORE_NAME           copy
+ 724: LOAD_CONST           True
+ 726: LOAD_CONST           ('follow_symlinks',)
+ 728: BUILD_CONST_KEY_MAP  
+ 730: LOAD_CONST           <code object copy2 at 0x0000024069CDC1F0, file "shutil.py", line 423>
+ 732: MAKE_FUNCTION        kwdefaults
+ 734: STORE_NAME           copy2
+ 736: LOAD_CONST           <code object ignore_patterns at 0x0000024069494370, file "shutil.py", line 440>
+ 738: MAKE_FUNCTION        
+ 740: STORE_NAME           ignore_patterns
+ 742: NOP                  
+ 744: LOAD_CONST           (False,)
+ 746: LOAD_CONST           <code object _copytree at 0x00000240695F2270, file "shutil.py", line 452>
+ 748: MAKE_FUNCTION        defaults
+ 750: STORE_NAME           _copytree
+ 752: LOAD_CONST           False
+ 754: LOAD_CONST           None
+ 756: LOAD_NAME            copy2
+ 758: LOAD_CONST           False
+ 760: LOAD_CONST           False
+ 762: BUILD_TUPLE          
+ 764: LOAD_CONST           <code object copytree at 0x000002406942CFD0, file "shutil.py", line 518>
+ 766: MAKE_FUNCTION        defaults
+ 768: STORE_NAME           copytree
+ 770: PUSH_NULL            
+ 772: LOAD_NAME            hasattr
+ 774: LOAD_NAME            os
+ 776: LOAD_ATTR            stat_result
+ 786: LOAD_CONST           'st_file_attributes'
+ 788: PRECALL              
+ 792: CALL                 
+ 802: POP_JUMP_FORWARD_IF_FALSE to 818
+ 804: LOAD_CONST           <code object _rmtree_isdir at 0x000002406942E100, file "shutil.py", line 570>
+ 806: MAKE_FUNCTION        
+ 808: STORE_NAME           _rmtree_isdir
+ 810: LOAD_CONST           <code object _rmtree_islink at 0x000002406942E740, file "shutil.py", line 579>
+ 812: MAKE_FUNCTION        
+ 814: STORE_NAME           _rmtree_islink
+ 816: JUMP_FORWARD         to 830
+ 818: LOAD_CONST           <code object _rmtree_isdir at 0x000002406944AAB0, file "shutil.py", line 588>
+ 820: MAKE_FUNCTION        
+ 822: STORE_NAME           _rmtree_isdir
+ 824: LOAD_CONST           <code object _rmtree_islink at 0x00000240693EAF30, file "shutil.py", line 594>
+ 826: MAKE_FUNCTION        
+ 828: STORE_NAME           _rmtree_islink
+ 830: LOAD_CONST           <code object _rmtree_unsafe at 0x0000024066C3F220, file "shutil.py", line 598>
+ 832: MAKE_FUNCTION        
+ 834: STORE_NAME           _rmtree_unsafe
+ 836: LOAD_CONST           <code object _rmtree_safe_fd at 0x0000024068E117B0, file "shutil.py", line 629>
+ 838: MAKE_FUNCTION        
+ 840: STORE_NAME           _rmtree_safe_fd
+ 842: LOAD_NAME            os
+ 844: LOAD_ATTR            open
+ 854: LOAD_NAME            os
+ 856: LOAD_ATTR            stat
+ 866: LOAD_NAME            os
+ 868: LOAD_ATTR            unlink
+ 878: LOAD_NAME            os
+ 880: LOAD_ATTR            rmdir
+ 890: BUILD_SET            
+ 892: LOAD_NAME            os
+ 894: LOAD_ATTR            supports_dir_fd
+ 904: COMPARE_OP           <=
+ 910: JUMP_IF_FALSE_OR_POP to 966
+ 912: LOAD_NAME            os
+ 914: LOAD_ATTR            scandir
+ 924: LOAD_NAME            os
+ 926: LOAD_ATTR            supports_fd
+ 936: CONTAINS_OP          
+ 938: JUMP_IF_FALSE_OR_POP to 966
+ 940: LOAD_NAME            os
+ 942: LOAD_ATTR            stat
+ 952: LOAD_NAME            os
+ 954: LOAD_ATTR            supports_follow_symlinks
+ 964: CONTAINS_OP          
+ 966: STORE_NAME           _use_fd_functions
+ 968: LOAD_CONST           (False, None)
+ 970: LOAD_CONST           None
+ 972: LOAD_CONST           ('dir_fd',)
+ 974: BUILD_CONST_KEY_MAP  
+ 976: LOAD_CONST           <code object rmtree at 0x0000024068E12470, file "shutil.py", line 690>
+ 978: MAKE_FUNCTION        defaults, kwdefaults
+ 980: STORE_NAME           rmtree
+ 982: LOAD_NAME            _use_fd_functions
+ 984: LOAD_NAME            rmtree
+ 986: STORE_ATTR           avoids_symlink_attacks
+ 996: LOAD_CONST           <code object _basename at 0x000002406942D160, file "shutil.py", line 765>
+ 998: MAKE_FUNCTION        
+1000: STORE_NAME           _basename
+1002: LOAD_NAME            copy2
+1004: BUILD_TUPLE          
+1006: LOAD_CONST           <code object move at 0x0000024068D35160, file "shutil.py", line 783>
+1008: MAKE_FUNCTION        defaults
+1010: STORE_NAME           move
+1012: LOAD_CONST           <code object _destinsrc at 0x0000024068D6D2F0, file "shutil.py", line 849>
+1014: MAKE_FUNCTION        
+1016: STORE_NAME           _destinsrc
+1018: LOAD_CONST           <code object _is_immutable at 0x00000240693AA470, file "shutil.py", line 858>
+1020: MAKE_FUNCTION        
+1022: STORE_NAME           _is_immutable
+1024: LOAD_CONST           <code object _get_gid at 0x00000240691F23A0, file "shutil.py", line 863>
+1026: MAKE_FUNCTION        
+1028: STORE_NAME           _get_gid
+1030: LOAD_CONST           <code object _get_uid at 0x00000240691F3B40, file "shutil.py", line 881>
+1032: MAKE_FUNCTION        
+1034: STORE_NAME           _get_uid
+1036: NOP                  
+1038: NOP                  
+1040: LOAD_CONST           ('gzip', 0, 0, None, None, None, None)
+1042: LOAD_CONST           <code object _make_tarball at 0x0000024068E49090, file "shutil.py", line 899>
+1044: MAKE_FUNCTION        defaults
+1046: STORE_NAME           _make_tarball
+1048: NOP                  
+1050: NOP                  
+1052: LOAD_CONST           (0, 0, None, None, None, None)
+1054: LOAD_CONST           <code object _make_zipfile at 0x00000240695B6430, file "shutil.py", line 969>
+1056: MAKE_FUNCTION        defaults
+1058: STORE_NAME           _make_zipfile
+1060: LOAD_CONST           'tar'
+1062: LOAD_NAME            _make_tarball
+1064: LOAD_CONST           ('compress', None)
+1066: BUILD_LIST           
+1068: LOAD_CONST           'uncompressed tar file'
+1070: LOAD_CONST           True
+1072: BUILD_TUPLE          
+1074: BUILD_MAP            
+1076: STORE_NAME           _ARCHIVE_FORMATS
+1078: LOAD_NAME            _ZLIB_SUPPORTED
+1080: POP_JUMP_FORWARD_IF_FALSE to 1120
+1082: LOAD_NAME            _make_tarball
+1084: LOAD_CONST           ('compress', 'gzip')
+1086: BUILD_LIST           
+1088: LOAD_CONST           "gzip'ed tar-file"
+1090: LOAD_CONST           True
+1092: BUILD_TUPLE          
+1094: LOAD_NAME            _ARCHIVE_FORMATS
+1096: LOAD_CONST           'gztar'
+1098: STORE_SUBSCR         
+1102: LOAD_NAME            _make_zipfile
+1104: BUILD_LIST           
+1106: LOAD_CONST           'ZIP file'
+1108: LOAD_CONST           True
+1110: BUILD_TUPLE          
+1112: LOAD_NAME            _ARCHIVE_FORMATS
+1114: LOAD_CONST           'zip'
+1116: STORE_SUBSCR         
+1120: LOAD_NAME            _BZ2_SUPPORTED
+1122: POP_JUMP_FORWARD_IF_FALSE to 1144
+1124: LOAD_NAME            _make_tarball
+1126: LOAD_CONST           ('compress', 'bzip2')
+1128: BUILD_LIST           
+1130: LOAD_CONST           "bzip2'ed tar-file"
+1132: LOAD_CONST           True
+1134: BUILD_TUPLE          
+1136: LOAD_NAME            _ARCHIVE_FORMATS
+1138: LOAD_CONST           'bztar'
+1140: STORE_SUBSCR         
+1144: LOAD_NAME            _LZMA_SUPPORTED
+1146: POP_JUMP_FORWARD_IF_FALSE to 1168
+1148: LOAD_NAME            _make_tarball
+1150: LOAD_CONST           ('compress', 'xz')
+1152: BUILD_LIST           
+1154: LOAD_CONST           "xz'ed tar-file"
+1156: LOAD_CONST           True
+1158: BUILD_TUPLE          
+1160: LOAD_NAME            _ARCHIVE_FORMATS
+1162: LOAD_CONST           'xztar'
+1164: STORE_SUBSCR         
+1168: LOAD_CONST           <code object get_archive_formats at 0x00000240693D23D0, file "shutil.py", line 1049>
+1170: MAKE_FUNCTION        
+1172: STORE_NAME           get_archive_formats
+1174: LOAD_CONST           (None, '')
+1176: LOAD_CONST           <code object register_archive_format at 0x000002406931FA30, file "shutil.py", line 1059>
+1178: MAKE_FUNCTION        defaults
+1180: STORE_NAME           register_archive_format
+1182: LOAD_CONST           <code object unregister_archive_format at 0x0000024069494780, file "shutil.py", line 1080>
+1184: MAKE_FUNCTION        
+1186: STORE_NAME           unregister_archive_format
+1188: NOP                  
+1190: NOP                  
+1192: LOAD_CONST           (None, None, 0, 0, None, None, None)
+1194: LOAD_CONST           <code object make_archive at 0x0000024068E4A1D0, file "shutil.py", line 1083>
+1196: MAKE_FUNCTION        defaults
+1198: STORE_NAME           make_archive
+1200: LOAD_CONST           <code object get_unpack_formats at 0x00000240693D2C20, file "shutil.py", line 1147>
+1202: MAKE_FUNCTION        
+1204: STORE_NAME           get_unpack_formats
+1206: LOAD_CONST           <code object _check_unpack_options at 0x000002406934F7E0, file "shutil.py", line 1158>
+1208: MAKE_FUNCTION        
+1210: STORE_NAME           _check_unpack_options
+1212: NOP                  
+1214: NOP                  
+1216: LOAD_CONST           (None, '')
+1218: LOAD_CONST           <code object register_unpack_format at 0x000002406944A010, file "shutil.py", line 1176>
+1220: MAKE_FUNCTION        defaults
+1222: STORE_NAME           register_unpack_format
+1224: LOAD_CONST           <code object unregister_unpack_format at 0x0000024069495E40, file "shutil.py", line 1198>
+1226: MAKE_FUNCTION        
+1228: STORE_NAME           unregister_unpack_format
+1230: LOAD_CONST           <code object _ensure_directory at 0x000002406949C8D0, file "shutil.py", line 1202>
+1232: MAKE_FUNCTION        
+1234: STORE_NAME           _ensure_directory
+1236: LOAD_CONST           <code object _unpack_zipfile at 0x0000024068C28200, file "shutil.py", line 1208>
+1238: MAKE_FUNCTION        
+1240: STORE_NAME           _unpack_zipfile
+1242: LOAD_CONST           None
+1244: LOAD_CONST           ('filter',)
+1246: BUILD_CONST_KEY_MAP  
+1248: LOAD_CONST           <code object _unpack_tarfile at 0x0000024069CDC3B0, file "shutil.py", line 1238>
+1250: MAKE_FUNCTION        kwdefaults
+1252: STORE_NAME           _unpack_tarfile
+1254: LOAD_CONST           '.tar'
+1256: BUILD_LIST           
+1258: LOAD_NAME            _unpack_tarfile
+1260: BUILD_LIST           
+1262: LOAD_CONST           'uncompressed tar file'
+1264: BUILD_TUPLE          
+1266: LOAD_CONST           '.zip'
+1268: BUILD_LIST           
+1270: LOAD_NAME            _unpack_zipfile
+1272: BUILD_LIST           
+1274: LOAD_CONST           'ZIP file'
+1276: BUILD_TUPLE          
+1278: LOAD_CONST           ('tar', 'zip')
+1280: BUILD_CONST_KEY_MAP  
+1282: STORE_NAME           _UNPACK_FORMATS
+1284: LOAD_NAME            _ZLIB_SUPPORTED
+1286: POP_JUMP_FORWARD_IF_FALSE to 1310
+1288: LOAD_CONST           '.tar.gz'
+1290: LOAD_CONST           '.tgz'
+1292: BUILD_LIST           
+1294: LOAD_NAME            _unpack_tarfile
+1296: BUILD_LIST           
+1298: LOAD_CONST           "gzip'ed tar-file"
+1300: BUILD_TUPLE          
+1302: LOAD_NAME            _UNPACK_FORMATS
+1304: LOAD_CONST           'gztar'
+1306: STORE_SUBSCR         
+1310: LOAD_NAME            _BZ2_SUPPORTED
+1312: POP_JUMP_FORWARD_IF_FALSE to 1336
+1314: LOAD_CONST           '.tar.bz2'
+1316: LOAD_CONST           '.tbz2'
+1318: BUILD_LIST           
+1320: LOAD_NAME            _unpack_tarfile
+1322: BUILD_LIST           
+1324: LOAD_CONST           "bzip2'ed tar-file"
+1326: BUILD_TUPLE          
+1328: LOAD_NAME            _UNPACK_FORMATS
+1330: LOAD_CONST           'bztar'
+1332: STORE_SUBSCR         
+1336: LOAD_NAME            _LZMA_SUPPORTED
+1338: POP_JUMP_FORWARD_IF_FALSE to 1362
+1340: LOAD_CONST           '.tar.xz'
+1342: LOAD_CONST           '.txz'
+1344: BUILD_LIST           
+1346: LOAD_NAME            _unpack_tarfile
+1348: BUILD_LIST           
+1350: LOAD_CONST           "xz'ed tar-file"
+1352: BUILD_TUPLE          
+1354: LOAD_NAME            _UNPACK_FORMATS
+1356: LOAD_CONST           'xztar'
+1358: STORE_SUBSCR         
+1362: LOAD_CONST           <code object _find_unpack_format at 0x000002406922D7D0, file "shutil.py", line 1274>
+1364: MAKE_FUNCTION        
+1366: STORE_NAME           _find_unpack_format
+1368: LOAD_CONST           (None, None)
+1370: LOAD_CONST           None
+1372: LOAD_CONST           ('filter',)
+1374: BUILD_CONST_KEY_MAP  
+1376: LOAD_CONST           <code object unpack_archive at 0x0000024068BFEA30, file "shutil.py", line 1281>
+1378: MAKE_FUNCTION        defaults, kwdefaults
+1380: STORE_NAME           unpack_archive
+1382: PUSH_NULL            
+1384: LOAD_NAME            hasattr
+1386: LOAD_NAME            os
+1388: LOAD_CONST           'statvfs'
+1390: PRECALL              
+1394: CALL                 
+1404: POP_JUMP_FORWARD_IF_FALSE to 1562
+1406: LOAD_NAME            __all__
+1408: LOAD_METHOD          append
+1430: LOAD_CONST           'disk_usage'
+1432: PRECALL              
+1436: CALL                 
+1446: POP_TOP              
+1448: PUSH_NULL            
+1450: LOAD_NAME            collections
+1452: LOAD_ATTR            namedtuple
+1462: LOAD_CONST           'usage'
+1464: LOAD_CONST           'total used free'
+1466: PRECALL              
+1470: CALL                 
+1480: STORE_NAME           _ntuple_diskusage
+1482: LOAD_CONST           'Total space in bytes'
+1484: LOAD_NAME            _ntuple_diskusage
+1486: LOAD_ATTR            total
+1496: STORE_ATTR           __doc__
+1506: LOAD_CONST           'Used space in bytes'
+1508: LOAD_NAME            _ntuple_diskusage
+1510: LOAD_ATTR            used
+1520: STORE_ATTR           __doc__
+1530: LOAD_CONST           'Free space in bytes'
+1532: LOAD_NAME            _ntuple_diskusage
+1534: LOAD_ATTR            free
+1544: STORE_ATTR           __doc__
+1554: LOAD_CONST           <code object disk_usage at 0x000002406949CBB0, file "shutil.py", line 1338>
+1556: MAKE_FUNCTION        
+1558: STORE_NAME           disk_usage
+1560: JUMP_FORWARD         to 1648
+1562: LOAD_NAME            _WINDOWS
+1564: POP_JUMP_FORWARD_IF_FALSE to 1648
+1566: LOAD_NAME            __all__
+1568: LOAD_METHOD          append
+1590: LOAD_CONST           'disk_usage'
+1592: PRECALL              
+1596: CALL                 
+1606: POP_TOP              
+1608: PUSH_NULL            
+1610: LOAD_NAME            collections
+1612: LOAD_ATTR            namedtuple
+1622: LOAD_CONST           'usage'
+1624: LOAD_CONST           'total used free'
+1626: PRECALL              
+1630: CALL                 
+1640: STORE_NAME           _ntuple_diskusage
+1642: LOAD_CONST           <code object disk_usage at 0x000002406941A310, file "shutil.py", line 1355>
+1644: MAKE_FUNCTION        
+1646: STORE_NAME           disk_usage
+1648: LOAD_CONST           (None, None)
+1650: LOAD_CONST           <code object chown at 0x0000024066C26880, file "shutil.py", line 1366>
+1652: MAKE_FUNCTION        defaults
+1654: STORE_NAME           chown
+1656: LOAD_CONST           ((80, 24),)
+1658: LOAD_CONST           <code object get_terminal_size at 0x0000024068DE6180, file "shutil.py", line 1398>
+1660: MAKE_FUNCTION        defaults
+1662: STORE_NAME           get_terminal_size
+1664: LOAD_CONST           <code object _access_check at 0x000002406949D730, file "shutil.py", line 1447>
+1666: MAKE_FUNCTION        
+1668: STORE_NAME           _access_check
+1670: LOAD_NAME            os
+1672: LOAD_ATTR            F_OK
+1682: LOAD_NAME            os
+1684: LOAD_ATTR            X_OK
+1694: BINARY_OP            |
+1698: LOAD_CONST           None
+1700: BUILD_TUPLE          
+1702: LOAD_CONST           <code object which at 0x00000240695B6B30, file "shutil.py", line 1452>
+1704: MAKE_FUNCTION        defaults
+1706: STORE_NAME           which
+1708: LOAD_CONST           None
+1710: RETURN_VALUE         

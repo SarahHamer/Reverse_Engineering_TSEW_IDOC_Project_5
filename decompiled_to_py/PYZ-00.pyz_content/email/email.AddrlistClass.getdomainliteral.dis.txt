@@ -1,0 +1,22 @@
+# Disassembly for email.AddrlistClass.getdomainliteral
+# From module file: email._parseaddr
+
+## co_consts:
+('Parse an RFC 2822 domain-literal.', '[%s]', '[', ']\r', False)
+
+## co_names:
+('getdelimited',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '[%s]'
+   4: LOAD_FAST            self
+   6: LOAD_METHOD          getdelimited
+  28: LOAD_CONST           '['
+  30: LOAD_CONST           ']\r'
+  32: LOAD_CONST           False
+  34: PRECALL              
+  38: CALL                 
+  48: BINARY_OP            %
+  52: RETURN_VALUE         

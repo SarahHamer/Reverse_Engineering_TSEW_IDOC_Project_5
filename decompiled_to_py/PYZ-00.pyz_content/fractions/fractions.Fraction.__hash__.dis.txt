@@ -1,0 +1,67 @@
+# Disassembly for fractions.Fraction.__hash__
+# From module file: fractions
+
+## co_consts:
+('hash(self)', -1, 0, -2)
+
+## co_names:
+('pow', '_denominator', '_PyHASH_MODULUS', 'hash', 'abs', '_numerator', 'ValueError', '_PyHASH_INF')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_GLOBAL          NULL + pow
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            _denominator
+  28: LOAD_CONST           -1
+  30: LOAD_GLOBAL          _PyHASH_MODULUS
+  42: PRECALL              
+  46: CALL                 
+  56: STORE_FAST           dinv
+  58: LOAD_GLOBAL          NULL + hash
+  70: LOAD_GLOBAL          NULL + hash
+  82: LOAD_GLOBAL          NULL + abs
+  94: LOAD_FAST            self
+  96: LOAD_ATTR            _numerator
+ 106: PRECALL              
+ 110: CALL                 
+ 120: PRECALL              
+ 124: CALL                 
+ 134: LOAD_FAST            dinv
+ 136: BINARY_OP            *
+ 140: PRECALL              
+ 144: CALL                 
+ 154: STORE_FAST           hash_
+ 156: JUMP_FORWARD         to 204
+ 158: PUSH_EXC_INFO        
+ 160: LOAD_GLOBAL          ValueError
+ 172: CHECK_EXC_MATCH      
+ 174: POP_JUMP_FORWARD_IF_FALSE to 196
+ 176: POP_TOP              
+ 178: LOAD_GLOBAL          _PyHASH_INF
+ 190: STORE_FAST           hash_
+ 192: POP_EXCEPT           
+ 194: JUMP_FORWARD         to 204
+ 196: RERAISE              
+ 198: COPY                 
+ 200: POP_EXCEPT           
+ 202: RERAISE              
+ 204: LOAD_FAST            self
+ 206: LOAD_ATTR            _numerator
+ 216: LOAD_CONST           0
+ 218: COMPARE_OP           >=
+ 224: POP_JUMP_FORWARD_IF_FALSE to 230
+ 226: LOAD_FAST            hash_
+ 228: JUMP_FORWARD         to 234
+ 230: LOAD_FAST            hash_
+ 232: UNARY_NEGATIVE       
+ 234: STORE_FAST           result
+ 236: LOAD_FAST            result
+ 238: LOAD_CONST           -1
+ 240: COMPARE_OP           ==
+ 246: POP_JUMP_FORWARD_IF_FALSE to 252
+ 248: LOAD_CONST           -2
+ 250: JUMP_FORWARD         to 254
+ 252: LOAD_FAST            result
+ 254: RETURN_VALUE         

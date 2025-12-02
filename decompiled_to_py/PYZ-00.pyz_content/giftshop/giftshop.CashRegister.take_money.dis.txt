@@ -1,0 +1,35 @@
+# Disassembly for giftshop.CashRegister.take_money
+# From module file: giftshop
+
+## co_consts:
+(None, True, 'You take the dollar.')
+
+## co_names:
+('money_taken', 'world', 'player', 'send_message', 'Dollar', 'set_parent')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           True
+   4: LOAD_FAST            self
+   6: STORE_ATTR           money_taken
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            world
+  28: LOAD_ATTR            player
+  38: LOAD_METHOD          send_message
+  60: LOAD_CONST           'You take the dollar.'
+  62: PRECALL              
+  66: CALL                 
+  76: POP_TOP              
+  78: LOAD_GLOBAL          NULL + Dollar
+  90: PRECALL              
+  94: CALL                 
+ 104: LOAD_METHOD          set_parent
+ 126: LOAD_FAST            self
+ 128: LOAD_ATTR            world
+ 138: LOAD_ATTR            player
+ 148: PRECALL              
+ 152: CALL                 
+ 162: POP_TOP              
+ 164: LOAD_CONST           None
+ 166: RETURN_VALUE         

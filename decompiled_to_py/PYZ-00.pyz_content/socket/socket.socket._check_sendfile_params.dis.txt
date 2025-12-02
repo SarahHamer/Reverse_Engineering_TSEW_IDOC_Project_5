@@ -1,0 +1,70 @@
+# Disassembly for socket.socket._check_sendfile_params
+# From module file: socket
+
+## co_consts:
+(None, 'b', 'mode', 'file should be opened in binary mode', 'only SOCK_STREAM type sockets are supported', 'count must be a positive integer (got {!r})', 0)
+
+## co_names:
+('getattr', 'ValueError', 'type', 'SOCK_STREAM', 'isinstance', 'int', 'TypeError', 'format')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'b'
+   4: LOAD_GLOBAL          NULL + getattr
+  16: LOAD_FAST            file
+  18: LOAD_CONST           'mode'
+  20: LOAD_CONST           'b'
+  22: PRECALL              
+  26: CALL                 
+  36: CONTAINS_OP          
+  38: POP_JUMP_FORWARD_IF_FALSE to 70
+  40: LOAD_GLOBAL          NULL + ValueError
+  52: LOAD_CONST           'file should be opened in binary mode'
+  54: PRECALL              
+  58: CALL                 
+  68: RAISE_VARARGS        
+  70: LOAD_FAST            self
+  72: LOAD_ATTR            type
+  82: LOAD_GLOBAL          SOCK_STREAM
+  94: BINARY_OP            &
+  98: POP_JUMP_FORWARD_IF_TRUE to 130
+ 100: LOAD_GLOBAL          NULL + ValueError
+ 112: LOAD_CONST           'only SOCK_STREAM type sockets are supported'
+ 114: PRECALL              
+ 118: CALL                 
+ 128: RAISE_VARARGS        
+ 130: LOAD_FAST            count
+ 132: POP_JUMP_FORWARD_IF_NONE to 324
+ 134: LOAD_GLOBAL          NULL + isinstance
+ 146: LOAD_FAST            count
+ 148: LOAD_GLOBAL          int
+ 160: PRECALL              
+ 164: CALL                 
+ 174: POP_JUMP_FORWARD_IF_TRUE to 244
+ 176: LOAD_GLOBAL          NULL + TypeError
+ 188: LOAD_CONST           'count must be a positive integer (got {!r})'
+ 190: LOAD_METHOD          format
+ 212: LOAD_FAST            count
+ 214: PRECALL              
+ 218: CALL                 
+ 228: PRECALL              
+ 232: CALL                 
+ 242: RAISE_VARARGS        
+ 244: LOAD_FAST            count
+ 246: LOAD_CONST           0
+ 248: COMPARE_OP           <=
+ 254: POP_JUMP_FORWARD_IF_FALSE to 328
+ 256: LOAD_GLOBAL          NULL + ValueError
+ 268: LOAD_CONST           'count must be a positive integer (got {!r})'
+ 270: LOAD_METHOD          format
+ 292: LOAD_FAST            count
+ 294: PRECALL              
+ 298: CALL                 
+ 308: PRECALL              
+ 312: CALL                 
+ 322: RAISE_VARARGS        
+ 324: LOAD_CONST           None
+ 326: RETURN_VALUE         
+ 328: LOAD_CONST           None
+ 330: RETURN_VALUE         

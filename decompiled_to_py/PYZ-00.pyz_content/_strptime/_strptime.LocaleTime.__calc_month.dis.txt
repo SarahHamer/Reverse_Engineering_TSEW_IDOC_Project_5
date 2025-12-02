@@ -1,0 +1,40 @@
+# Disassembly for _strptime.LocaleTime.__calc_month
+# From module file: _strptime
+
+## co_consts:
+(None, <code object <listcomp> at 0x000002406944A780, file "_strptime.py", line 90>, 13, <code object <listcomp> at 0x000002406944B220, file "_strptime.py", line 91>)
+
+## co_names:
+('range', 'a_month', 'f_month')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           <code object <listcomp> at 0x000002406944A780, file "_strptime.py", line 90>
+   4: MAKE_FUNCTION        
+   6: LOAD_GLOBAL          NULL + range
+  18: LOAD_CONST           13
+  20: PRECALL              
+  24: CALL                 
+  34: GET_ITER             
+  36: PRECALL              
+  40: CALL                 
+  50: STORE_FAST           a_month
+  52: LOAD_CONST           <code object <listcomp> at 0x000002406944B220, file "_strptime.py", line 91>
+  54: MAKE_FUNCTION        
+  56: LOAD_GLOBAL          NULL + range
+  68: LOAD_CONST           13
+  70: PRECALL              
+  74: CALL                 
+  84: GET_ITER             
+  86: PRECALL              
+  90: CALL                 
+ 100: STORE_FAST           f_month
+ 102: LOAD_FAST            a_month
+ 104: LOAD_FAST            self
+ 106: STORE_ATTR           a_month
+ 116: LOAD_FAST            f_month
+ 118: LOAD_FAST            self
+ 120: STORE_ATTR           f_month
+ 130: LOAD_CONST           None
+ 132: RETURN_VALUE         

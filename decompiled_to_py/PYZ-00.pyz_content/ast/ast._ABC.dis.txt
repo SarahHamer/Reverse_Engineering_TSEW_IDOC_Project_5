@@ -1,0 +1,24 @@
+# Disassembly for ast._ABC
+# From module file: ast
+
+## co_consts:
+('_ABC', <code object __init__ at 0x0000024069495620, file "ast.py", line 528>, <code object __instancecheck__ at 0x0000024069365F30, file "ast.py", line 531>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', '__instancecheck__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_ABC'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           <code object __init__ at 0x0000024069495620, file "ast.py", line 528>
+  12: MAKE_FUNCTION        
+  14: STORE_NAME           __init__
+  16: LOAD_CONST           <code object __instancecheck__ at 0x0000024069365F30, file "ast.py", line 531>
+  18: MAKE_FUNCTION        
+  20: STORE_NAME           __instancecheck__
+  22: LOAD_CONST           None
+  24: RETURN_VALUE         

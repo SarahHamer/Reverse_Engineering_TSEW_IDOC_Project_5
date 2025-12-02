@@ -1,0 +1,216 @@
+# Disassembly for player.Player.ask_option
+# From module file: player
+
+## co_consts:
+(None, '\n', 1, '', '[', '] ', '[look] To look around.\n', '[look at $item] To look at an item with the name $item.\n', '[inv] For inventory.\n', '[quit] To give up.\n', False, 'quit', True, 'Giving up are we?  Well come back to $world soon.', 'look', 'look at ', 7, 'inv', 0, 'Invalid option.')
+
+## co_names:
+('isinstance', 'str', 'len', 'lower', 'ask', 'world', 'game_over', 'look', 'startswith', 'look_at', 'strip', 'show_inventory', 'send_message')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            prompt
+   4: LOAD_CONST           '\n'
+   6: BINARY_OP            +=
+  10: STORE_FAST           prompt
+  12: LOAD_CONST           1
+  14: STORE_FAST           option_num
+  16: BUILD_MAP            
+  18: STORE_FAST           option_values
+  20: LOAD_FAST            options
+  22: GET_ITER             
+  24: FOR_ITER             to 236
+  26: UNPACK_SEQUENCE      
+  30: STORE_FAST           value
+  32: STORE_FAST           message
+  34: LOAD_CONST           ''
+  36: STORE_FAST           key
+  38: LOAD_GLOBAL          NULL + isinstance
+  50: LOAD_FAST            value
+  52: LOAD_GLOBAL          str
+  64: PRECALL              
+  68: CALL                 
+  78: POP_JUMP_FORWARD_IF_FALSE to 160
+  80: LOAD_GLOBAL          NULL + len
+  92: LOAD_FAST            value
+  94: PRECALL              
+  98: CALL                 
+ 108: LOAD_CONST           1
+ 110: COMPARE_OP           ==
+ 116: POP_JUMP_FORWARD_IF_FALSE to 160
+ 118: LOAD_FAST            value
+ 120: LOAD_METHOD          lower
+ 142: PRECALL              
+ 146: CALL                 
+ 156: STORE_FAST           key
+ 158: JUMP_FORWARD         to 200
+ 160: LOAD_GLOBAL          NULL + str
+ 172: LOAD_FAST            option_num
+ 174: PRECALL              
+ 178: CALL                 
+ 188: STORE_FAST           key
+ 190: LOAD_FAST            option_num
+ 192: LOAD_CONST           1
+ 194: BINARY_OP            +=
+ 198: STORE_FAST           option_num
+ 200: LOAD_FAST            value
+ 202: LOAD_FAST            option_values
+ 204: LOAD_FAST            key
+ 206: STORE_SUBSCR         
+ 210: LOAD_FAST            prompt
+ 212: LOAD_CONST           '['
+ 214: LOAD_FAST            key
+ 216: FORMAT_VALUE         str
+ 218: LOAD_CONST           '] '
+ 220: LOAD_FAST            message
+ 222: FORMAT_VALUE         str
+ 224: LOAD_CONST           '\n'
+ 226: BUILD_STRING         
+ 228: BINARY_OP            +=
+ 232: STORE_FAST           prompt
+ 234: JUMP_BACKWARD        to 24
+ 236: LOAD_FAST            include_defaults
+ 238: POP_JUMP_FORWARD_IF_FALSE to 280
+ 240: LOAD_FAST            prompt
+ 242: LOAD_CONST           '[look] To look around.\n'
+ 244: BINARY_OP            +=
+ 248: STORE_FAST           prompt
+ 250: LOAD_FAST            prompt
+ 252: LOAD_CONST           '[look at $item] To look at an item with the name $item.\n'
+ 254: BINARY_OP            +=
+ 258: STORE_FAST           prompt
+ 260: LOAD_FAST            prompt
+ 262: LOAD_CONST           '[inv] For inventory.\n'
+ 264: BINARY_OP            +=
+ 268: STORE_FAST           prompt
+ 270: LOAD_FAST            prompt
+ 272: LOAD_CONST           '[quit] To give up.\n'
+ 274: BINARY_OP            +=
+ 278: STORE_FAST           prompt
+ 280: LOAD_CONST           False
+ 282: STORE_FAST           done
+ 284: LOAD_FAST            done
+ 286: EXTENDED_ARG         
+ 288: POP_JUMP_FORWARD_IF_TRUE to 1002
+ 290: LOAD_FAST            self
+ 292: LOAD_METHOD          ask
+ 314: LOAD_FAST            prompt
+ 316: BUILD_LIST           
+ 318: LOAD_FAST            include_defaults
+ 320: PRECALL              
+ 324: CALL                 
+ 334: STORE_FAST           response
+ 336: LOAD_FAST            response
+ 338: LOAD_METHOD          lower
+ 360: PRECALL              
+ 364: CALL                 
+ 374: LOAD_CONST           'quit'
+ 376: COMPARE_OP           ==
+ 382: POP_JUMP_FORWARD_IF_FALSE to 446
+ 384: LOAD_CONST           True
+ 386: STORE_FAST           done
+ 388: LOAD_FAST            self
+ 390: LOAD_ATTR            world
+ 400: LOAD_METHOD          game_over
+ 422: LOAD_CONST           False
+ 424: LOAD_CONST           'Giving up are we?  Well come back to $world soon.'
+ 426: PRECALL              
+ 430: CALL                 
+ 440: POP_TOP              
+ 442: EXTENDED_ARG         
+ 444: JUMP_FORWARD         to 992
+ 446: LOAD_FAST            response
+ 448: LOAD_METHOD          lower
+ 470: PRECALL              
+ 474: CALL                 
+ 484: LOAD_CONST           'look'
+ 486: COMPARE_OP           ==
+ 492: POP_JUMP_FORWARD_IF_FALSE to 536
+ 494: LOAD_FAST            self
+ 496: LOAD_METHOD          look
+ 518: PRECALL              
+ 522: CALL                 
+ 532: POP_TOP              
+ 534: JUMP_FORWARD         to 992
+ 536: LOAD_FAST            response
+ 538: LOAD_METHOD          lower
+ 560: PRECALL              
+ 564: CALL                 
+ 574: LOAD_METHOD          startswith
+ 596: LOAD_CONST           'look at '
+ 598: PRECALL              
+ 602: CALL                 
+ 612: POP_JUMP_FORWARD_IF_FALSE to 710
+ 614: LOAD_FAST            self
+ 616: LOAD_METHOD          look_at
+ 638: LOAD_FAST            response
+ 640: LOAD_CONST           7
+ 642: LOAD_CONST           None
+ 644: BUILD_SLICE          
+ 646: BINARY_SUBSCR        
+ 656: LOAD_METHOD          strip
+ 678: PRECALL              
+ 682: CALL                 
+ 692: PRECALL              
+ 696: CALL                 
+ 706: POP_TOP              
+ 708: JUMP_FORWARD         to 992
+ 710: LOAD_FAST            response
+ 712: LOAD_METHOD          lower
+ 734: PRECALL              
+ 738: CALL                 
+ 748: LOAD_CONST           'inv'
+ 750: COMPARE_OP           ==
+ 756: POP_JUMP_FORWARD_IF_FALSE to 800
+ 758: LOAD_FAST            self
+ 760: LOAD_METHOD          show_inventory
+ 782: PRECALL              
+ 786: CALL                 
+ 796: POP_TOP              
+ 798: JUMP_FORWARD         to 992
+ 800: LOAD_FAST            response
+ 802: LOAD_CONST           0
+ 804: LOAD_CONST           1
+ 806: BUILD_SLICE          
+ 808: BINARY_SUBSCR        
+ 818: LOAD_METHOD          lower
+ 840: PRECALL              
+ 844: CALL                 
+ 854: STORE_FAST           ch
+ 856: LOAD_FAST            ch
+ 858: LOAD_FAST            option_values
+ 860: CONTAINS_OP          
+ 862: POP_JUMP_FORWARD_IF_FALSE to 950
+ 864: LOAD_FAST            option_values
+ 866: LOAD_FAST            ch
+ 868: BINARY_SUBSCR        
+ 878: STORE_FAST           value
+ 880: LOAD_GLOBAL          NULL + isinstance
+ 892: LOAD_FAST            value
+ 894: LOAD_GLOBAL          str
+ 906: PRECALL              
+ 910: CALL                 
+ 920: POP_JUMP_FORWARD_IF_FALSE to 926
+ 922: LOAD_FAST            value
+ 924: RETURN_VALUE         
+ 926: PUSH_NULL            
+ 928: LOAD_FAST            value
+ 930: PRECALL              
+ 934: CALL                 
+ 944: POP_TOP              
+ 946: LOAD_CONST           ''
+ 948: RETURN_VALUE         
+ 950: LOAD_FAST            self
+ 952: LOAD_METHOD          send_message
+ 974: LOAD_CONST           'Invalid option.'
+ 976: PRECALL              
+ 980: CALL                 
+ 990: POP_TOP              
+ 992: LOAD_FAST            done
+ 994: EXTENDED_ARG         
+ 996: POP_JUMP_BACKWARD_IF_FALSE to 290
+ 998: LOAD_CONST           None
+1000: RETURN_VALUE         
+1002: LOAD_CONST           None
+1004: RETURN_VALUE         

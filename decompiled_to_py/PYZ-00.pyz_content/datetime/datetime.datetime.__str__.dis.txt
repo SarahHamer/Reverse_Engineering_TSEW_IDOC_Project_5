@@ -1,0 +1,19 @@
+# Disassembly for datetime.datetime.__str__
+# From module file: datetime
+
+## co_consts:
+('Convert to string, for str().', ' ', ('sep',))
+
+## co_names:
+('isoformat',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          isoformat
+  26: LOAD_CONST           ' '
+  28: KW_NAMES             
+  30: PRECALL              
+  34: CALL                 
+  44: RETURN_VALUE         

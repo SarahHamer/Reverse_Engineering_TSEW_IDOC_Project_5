@@ -1,0 +1,35 @@
+# Disassembly for ast._Unparser.visit_Module
+# From module file: ast
+
+## co_consts:
+(None, <code object <dictcomp> at 0x000002406945F780, file "ast.py", line 829>)
+
+## co_names:
+('type_ignores', '_type_ignores', '_write_docstring_and_traverse_body', 'clear')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           <code object <dictcomp> at 0x000002406945F780, file "ast.py", line 829>
+   4: MAKE_FUNCTION        
+   6: LOAD_FAST            node
+   8: LOAD_ATTR            type_ignores
+  18: GET_ITER             
+  20: PRECALL              
+  24: CALL                 
+  34: LOAD_FAST            self
+  36: STORE_ATTR           _type_ignores
+  46: LOAD_FAST            self
+  48: LOAD_METHOD          _write_docstring_and_traverse_body
+  70: LOAD_FAST            node
+  72: PRECALL              
+  76: CALL                 
+  86: POP_TOP              
+  88: LOAD_FAST            self
+  90: LOAD_ATTR            _type_ignores
+ 100: LOAD_METHOD          clear
+ 122: PRECALL              
+ 126: CALL                 
+ 136: POP_TOP              
+ 138: LOAD_CONST           None
+ 140: RETURN_VALUE         

@@ -1,0 +1,14 @@
+# Disassembly for numbers.Complex.__complex__
+# From module file: numbers
+
+## co_consts:
+('Return a builtin complex instance. Called for complex(self).', None)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: RETURN_VALUE         

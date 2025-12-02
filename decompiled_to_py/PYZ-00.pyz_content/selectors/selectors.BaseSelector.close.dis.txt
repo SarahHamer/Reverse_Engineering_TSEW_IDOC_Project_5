@@ -1,0 +1,14 @@
+# Disassembly for selectors.BaseSelector.close
+# From module file: selectors
+
+## co_consts:
+('Close the selector.\n\n        This must be called to make sure that any underlying resource is freed.\n        ', None)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: RETURN_VALUE         

@@ -1,0 +1,29 @@
+# Disassembly for inspect.Parameter.__reduce__
+# From module file: inspect
+
+## co_consts:
+(None, ('_default', '_annotation'))
+
+## co_names:
+('type', '_name', '_kind', '_default', '_annotation')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + type
+  14: LOAD_FAST            self
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_FAST            self
+  32: LOAD_ATTR            _name
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            _kind
+  54: BUILD_TUPLE          
+  56: LOAD_FAST            self
+  58: LOAD_ATTR            _default
+  68: LOAD_FAST            self
+  70: LOAD_ATTR            _annotation
+  80: LOAD_CONST           ('_default', '_annotation')
+  82: BUILD_CONST_KEY_MAP  
+  84: BUILD_TUPLE          
+  86: RETURN_VALUE         

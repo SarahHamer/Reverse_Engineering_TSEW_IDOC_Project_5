@@ -1,0 +1,55 @@
+# Disassembly for importlib._NamespacePath
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('_NamespacePath', "Represents a namespace package's path.  It uses the module name\n    to find its parent module, and from there it looks up the parent's\n    __path__.  When this changes, the module's own path is recomputed,\n    using path_finder.  For top-level modules, the parent module's path\n    is sys.path.", 0, <code object __init__ at 0x000002406922CAB0, file "importlib\_bootstrap_external.py", line 1276>, <code object _find_parent_path_names at 0x000002406944B220, file "importlib\_bootstrap_external.py", line 1283>, <code object _get_parent_path at 0x00000240693D30E0, file "importlib\_bootstrap_external.py", line 1293>, <code object _recalculate at 0x000002406947CB70, file "importlib\_bootstrap_external.py", line 1297>, <code object __iter__ at 0x00000240693EAE30, file "importlib\_bootstrap_external.py", line 1311>, <code object __getitem__ at 0x000002406945FC30, file "importlib\_bootstrap_external.py", line 1314>, <code object __setitem__ at 0x0000024069467590, file "importlib\_bootstrap_external.py", line 1317>, <code object __len__ at 0x00000240693EAA30, file "importlib\_bootstrap_external.py", line 1320>, <code object __repr__ at 0x000002406945FE10, file "importlib\_bootstrap_external.py", line 1323>, <code object __contains__ at 0x000002406945D5C0, file "importlib\_bootstrap_external.py", line 1326>, <code object append at 0x00000240693EB630, file "importlib\_bootstrap_external.py", line 1329>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '_epoch', '__init__', '_find_parent_path_names', '_get_parent_path', '_recalculate', '__iter__', '__getitem__', '__setitem__', '__len__', '__repr__', '__contains__', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_NamespacePath'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           "Represents a namespace package's path.  It uses the module name\n    to find its parent module, and from there it looks up the parent's\n    __path__.  When this changes, the module's own path is recomputed,\n    using path_finder.  For top-level modules, the parent module's path\n    is sys.path."
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           0
+  16: STORE_NAME           _epoch
+  18: LOAD_CONST           <code object __init__ at 0x000002406922CAB0, file "importlib\_bootstrap_external.py", line 1276>
+  20: MAKE_FUNCTION        
+  22: STORE_NAME           __init__
+  24: LOAD_CONST           <code object _find_parent_path_names at 0x000002406944B220, file "importlib\_bootstrap_external.py", line 1283>
+  26: MAKE_FUNCTION        
+  28: STORE_NAME           _find_parent_path_names
+  30: LOAD_CONST           <code object _get_parent_path at 0x00000240693D30E0, file "importlib\_bootstrap_external.py", line 1293>
+  32: MAKE_FUNCTION        
+  34: STORE_NAME           _get_parent_path
+  36: LOAD_CONST           <code object _recalculate at 0x000002406947CB70, file "importlib\_bootstrap_external.py", line 1297>
+  38: MAKE_FUNCTION        
+  40: STORE_NAME           _recalculate
+  42: LOAD_CONST           <code object __iter__ at 0x00000240693EAE30, file "importlib\_bootstrap_external.py", line 1311>
+  44: MAKE_FUNCTION        
+  46: STORE_NAME           __iter__
+  48: LOAD_CONST           <code object __getitem__ at 0x000002406945FC30, file "importlib\_bootstrap_external.py", line 1314>
+  50: MAKE_FUNCTION        
+  52: STORE_NAME           __getitem__
+  54: LOAD_CONST           <code object __setitem__ at 0x0000024069467590, file "importlib\_bootstrap_external.py", line 1317>
+  56: MAKE_FUNCTION        
+  58: STORE_NAME           __setitem__
+  60: LOAD_CONST           <code object __len__ at 0x00000240693EAA30, file "importlib\_bootstrap_external.py", line 1320>
+  62: MAKE_FUNCTION        
+  64: STORE_NAME           __len__
+  66: LOAD_CONST           <code object __repr__ at 0x000002406945FE10, file "importlib\_bootstrap_external.py", line 1323>
+  68: MAKE_FUNCTION        
+  70: STORE_NAME           __repr__
+  72: LOAD_CONST           <code object __contains__ at 0x000002406945D5C0, file "importlib\_bootstrap_external.py", line 1326>
+  74: MAKE_FUNCTION        
+  76: STORE_NAME           __contains__
+  78: LOAD_CONST           <code object append at 0x00000240693EB630, file "importlib\_bootstrap_external.py", line 1329>
+  80: MAKE_FUNCTION        
+  82: STORE_NAME           append
+  84: LOAD_CONST           None
+  86: RETURN_VALUE         

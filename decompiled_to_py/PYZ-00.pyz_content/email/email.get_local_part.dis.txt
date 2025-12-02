@@ -1,0 +1,210 @@
+# Disassembly for email.get_local_part
+# From module file: email._header_value_parser
+
+## co_consts:
+(' local-part = dot-atom / quoted-string / obs-local-part\n\n    ', None, 0, "expected local-part but found '{}'", '\\', 'invalid-obs-local-part', 'local-part is not dot-atom, quoted-string, or obs-local-part', 'local-part is not a dot-atom (contains CFWS)', 'ascii', 'local-part contains non-ASCII characters)')
+
+## co_names:
+('LocalPart', 'CFWS_LEADER', 'get_cfws', 'errors', 'HeaderParseError', 'format', 'get_dot_atom', 'get_word', 'PHRASE_ENDS', 'TokenList', 'append', 'get_obs_local_part', 'str', 'token_type', 'defects', 'InvalidHeaderDefect', 'ObsoleteHeaderDefect', 'value', 'encode', 'UnicodeEncodeError', 'NonASCIILocalPartDefect')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + LocalPart
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           local_part
+  30: LOAD_CONST           None
+  32: STORE_FAST           leader
+  34: LOAD_FAST            value
+  36: LOAD_CONST           0
+  38: BINARY_SUBSCR        
+  48: LOAD_GLOBAL          CFWS_LEADER
+  60: CONTAINS_OP          
+  62: POP_JUMP_FORWARD_IF_FALSE to 100
+  64: LOAD_GLOBAL          NULL + get_cfws
+  76: LOAD_FAST            value
+  78: PRECALL              
+  82: CALL                 
+  92: UNPACK_SEQUENCE      
+  96: STORE_FAST           leader
+  98: STORE_FAST           value
+ 100: LOAD_FAST            value
+ 102: POP_JUMP_FORWARD_IF_TRUE to 182
+ 104: LOAD_GLOBAL          NULL + errors
+ 116: LOAD_ATTR            HeaderParseError
+ 126: LOAD_CONST           "expected local-part but found '{}'"
+ 128: LOAD_METHOD          format
+ 150: LOAD_FAST            value
+ 152: PRECALL              
+ 156: CALL                 
+ 166: PRECALL              
+ 170: CALL                 
+ 180: RAISE_VARARGS        
+ 182: NOP                  
+ 184: LOAD_GLOBAL          NULL + get_dot_atom
+ 196: LOAD_FAST            value
+ 198: PRECALL              
+ 202: CALL                 
+ 212: UNPACK_SEQUENCE      
+ 216: STORE_FAST           token
+ 218: STORE_FAST           value
+ 220: JUMP_FORWARD         to 430
+ 222: PUSH_EXC_INFO        
+ 224: LOAD_GLOBAL          errors
+ 236: LOAD_ATTR            HeaderParseError
+ 246: CHECK_EXC_MATCH      
+ 248: POP_JUMP_FORWARD_IF_FALSE to 422
+ 250: POP_TOP              
+ 252: NOP                  
+ 254: LOAD_GLOBAL          NULL + get_word
+ 266: LOAD_FAST            value
+ 268: PRECALL              
+ 272: CALL                 
+ 282: UNPACK_SEQUENCE      
+ 286: STORE_FAST           token
+ 288: STORE_FAST           value
+ 290: JUMP_FORWARD         to 418
+ 292: PUSH_EXC_INFO        
+ 294: LOAD_GLOBAL          errors
+ 306: LOAD_ATTR            HeaderParseError
+ 316: CHECK_EXC_MATCH      
+ 318: POP_JUMP_FORWARD_IF_FALSE to 410
+ 320: POP_TOP              
+ 322: LOAD_FAST            value
+ 324: LOAD_CONST           0
+ 326: BINARY_SUBSCR        
+ 336: LOAD_CONST           '\\'
+ 338: COMPARE_OP           !=
+ 344: POP_JUMP_FORWARD_IF_FALSE to 378
+ 346: LOAD_FAST            value
+ 348: LOAD_CONST           0
+ 350: BINARY_SUBSCR        
+ 360: LOAD_GLOBAL          PHRASE_ENDS
+ 372: CONTAINS_OP          
+ 374: POP_JUMP_FORWARD_IF_FALSE to 378
+ 376: RAISE_VARARGS        
+ 378: LOAD_GLOBAL          NULL + TokenList
+ 390: PRECALL              
+ 394: CALL                 
+ 404: STORE_FAST           token
+ 406: POP_EXCEPT           
+ 408: JUMP_FORWARD         to 418
+ 410: RERAISE              
+ 412: COPY                 
+ 414: POP_EXCEPT           
+ 416: RERAISE              
+ 418: POP_EXCEPT           
+ 420: JUMP_FORWARD         to 430
+ 422: RERAISE              
+ 424: COPY                 
+ 426: POP_EXCEPT           
+ 428: RERAISE              
+ 430: LOAD_FAST            leader
+ 432: POP_JUMP_FORWARD_IF_NONE to 450
+ 434: LOAD_FAST            leader
+ 436: BUILD_LIST           
+ 438: LOAD_FAST            token
+ 440: LOAD_CONST           None
+ 442: LOAD_CONST           0
+ 444: BUILD_SLICE          
+ 446: STORE_SUBSCR         
+ 450: LOAD_FAST            local_part
+ 452: LOAD_METHOD          append
+ 474: LOAD_FAST            token
+ 476: PRECALL              
+ 480: CALL                 
+ 490: POP_TOP              
+ 492: LOAD_FAST            value
+ 494: POP_JUMP_FORWARD_IF_FALSE to 828
+ 496: LOAD_FAST            value
+ 498: LOAD_CONST           0
+ 500: BINARY_SUBSCR        
+ 510: LOAD_CONST           '\\'
+ 512: COMPARE_OP           ==
+ 518: POP_JUMP_FORWARD_IF_TRUE to 550
+ 520: LOAD_FAST            value
+ 522: LOAD_CONST           0
+ 524: BINARY_SUBSCR        
+ 534: LOAD_GLOBAL          PHRASE_ENDS
+ 546: CONTAINS_OP          
+ 548: POP_JUMP_FORWARD_IF_FALSE to 828
+ 550: LOAD_GLOBAL          NULL + get_obs_local_part
+ 562: LOAD_GLOBAL          NULL + str
+ 574: LOAD_FAST            local_part
+ 576: PRECALL              
+ 580: CALL                 
+ 590: LOAD_FAST            value
+ 592: BINARY_OP            +
+ 596: PRECALL              
+ 600: CALL                 
+ 610: UNPACK_SEQUENCE      
+ 614: STORE_FAST           obs_local_part
+ 616: STORE_FAST           value
+ 618: LOAD_FAST            obs_local_part
+ 620: LOAD_ATTR            token_type
+ 630: LOAD_CONST           'invalid-obs-local-part'
+ 632: COMPARE_OP           ==
+ 638: POP_JUMP_FORWARD_IF_FALSE to 730
+ 640: LOAD_FAST            local_part
+ 642: LOAD_ATTR            defects
+ 652: LOAD_METHOD          append
+ 674: LOAD_GLOBAL          NULL + errors
+ 686: LOAD_ATTR            InvalidHeaderDefect
+ 696: LOAD_CONST           'local-part is not dot-atom, quoted-string, or obs-local-part'
+ 698: PRECALL              
+ 702: CALL                 
+ 712: PRECALL              
+ 716: CALL                 
+ 726: POP_TOP              
+ 728: JUMP_FORWARD         to 818
+ 730: LOAD_FAST            local_part
+ 732: LOAD_ATTR            defects
+ 742: LOAD_METHOD          append
+ 764: LOAD_GLOBAL          NULL + errors
+ 776: LOAD_ATTR            ObsoleteHeaderDefect
+ 786: LOAD_CONST           'local-part is not a dot-atom (contains CFWS)'
+ 788: PRECALL              
+ 792: CALL                 
+ 802: PRECALL              
+ 806: CALL                 
+ 816: POP_TOP              
+ 818: LOAD_FAST            obs_local_part
+ 820: LOAD_FAST            local_part
+ 822: LOAD_CONST           0
+ 824: STORE_SUBSCR         
+ 828: NOP                  
+ 830: LOAD_FAST            local_part
+ 832: LOAD_ATTR            value
+ 842: LOAD_METHOD          encode
+ 864: LOAD_CONST           'ascii'
+ 866: PRECALL              
+ 870: CALL                 
+ 880: POP_TOP              
+ 882: JUMP_FORWARD         to 1004
+ 884: PUSH_EXC_INFO        
+ 886: LOAD_GLOBAL          UnicodeEncodeError
+ 898: CHECK_EXC_MATCH      
+ 900: POP_JUMP_FORWARD_IF_FALSE to 996
+ 902: POP_TOP              
+ 904: LOAD_FAST            local_part
+ 906: LOAD_ATTR            defects
+ 916: LOAD_METHOD          append
+ 938: LOAD_GLOBAL          NULL + errors
+ 950: LOAD_ATTR            NonASCIILocalPartDefect
+ 960: LOAD_CONST           'local-part contains non-ASCII characters)'
+ 962: PRECALL              
+ 966: CALL                 
+ 976: PRECALL              
+ 980: CALL                 
+ 990: POP_TOP              
+ 992: POP_EXCEPT           
+ 994: JUMP_FORWARD         to 1004
+ 996: RERAISE              
+ 998: COPY                 
+1000: POP_EXCEPT           
+1002: RERAISE              
+1004: LOAD_FAST            local_part
+1006: LOAD_FAST            value
+1008: BUILD_TUPLE          
+1010: RETURN_VALUE         

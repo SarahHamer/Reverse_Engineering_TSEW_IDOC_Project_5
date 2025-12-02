@@ -1,0 +1,18 @@
+# Disassembly for gettext.textdomain
+# From module file: gettext
+
+## co_consts:
+(None,)
+
+## co_names:
+('_current_domain',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            domain
+   4: POP_JUMP_FORWARD_IF_NONE to 10
+   6: LOAD_FAST            domain
+   8: STORE_GLOBAL         _current_domain
+  10: LOAD_GLOBAL          _current_domain
+  22: RETURN_VALUE         

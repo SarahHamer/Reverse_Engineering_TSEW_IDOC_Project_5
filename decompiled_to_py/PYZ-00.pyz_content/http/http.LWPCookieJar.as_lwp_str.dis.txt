@@ -1,0 +1,59 @@
+# Disassembly for http.LWPCookieJar.as_lwp_str
+# From module file: http.cookiejar
+
+## co_consts:
+('Return cookies as a string of "\\n"-separated "Set-Cookie3" headers.\n\n        ignore_discard and ignore_expires: see docstring for FileCookieJar.save\n\n        ', 'Set-Cookie3: %s', '\n', '')
+
+## co_names:
+('time', 'discard', 'is_expired', 'append', 'lwp_cookie_str', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + time
+  14: LOAD_ATTR            time
+  24: PRECALL              
+  28: CALL                 
+  38: STORE_FAST           now
+  40: BUILD_LIST           
+  42: STORE_FAST           r
+  44: LOAD_FAST            self
+  46: GET_ITER             
+  48: FOR_ITER             to 196
+  50: STORE_FAST           cookie
+  52: LOAD_FAST            ignore_discard
+  54: POP_JUMP_FORWARD_IF_TRUE to 72
+  56: LOAD_FAST            cookie
+  58: LOAD_ATTR            discard
+  68: POP_JUMP_FORWARD_IF_FALSE to 72
+  70: JUMP_BACKWARD        to 48
+  72: LOAD_FAST            ignore_expires
+  74: POP_JUMP_FORWARD_IF_TRUE to 120
+  76: LOAD_FAST            cookie
+  78: LOAD_METHOD          is_expired
+ 100: LOAD_FAST            now
+ 102: PRECALL              
+ 106: CALL                 
+ 116: POP_JUMP_FORWARD_IF_FALSE to 120
+ 118: JUMP_BACKWARD        to 48
+ 120: LOAD_FAST            r
+ 122: LOAD_METHOD          append
+ 144: LOAD_CONST           'Set-Cookie3: %s'
+ 146: LOAD_GLOBAL          NULL + lwp_cookie_str
+ 158: LOAD_FAST            cookie
+ 160: PRECALL              
+ 164: CALL                 
+ 174: BINARY_OP            %
+ 178: PRECALL              
+ 182: CALL                 
+ 192: POP_TOP              
+ 194: JUMP_BACKWARD        to 48
+ 196: LOAD_CONST           '\n'
+ 198: LOAD_METHOD          join
+ 220: LOAD_FAST            r
+ 222: LOAD_CONST           ''
+ 224: BUILD_LIST           
+ 226: BINARY_OP            +
+ 230: PRECALL              
+ 234: CALL                 
+ 244: RETURN_VALUE         

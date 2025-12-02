@@ -1,0 +1,106 @@
+# Disassembly for zipfile.LZMADecompressor.decompress
+# From module file: zipfile
+
+## co_consts:
+(None, 4, b'', '<H', 2, ('filters',))
+
+## co_names:
+('_decomp', '_unconsumed', 'len', 'struct', 'unpack', 'lzma', 'LZMADecompressor', 'FORMAT_RAW', '_decode_filter_properties', 'FILTER_LZMA1', 'decompress', 'eof')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _decomp
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 436
+  16: LOAD_FAST            self
+  18: COPY                 
+  20: LOAD_ATTR            _unconsumed
+  30: LOAD_FAST            data
+  32: BINARY_OP            +=
+  36: SWAP                 
+  38: STORE_ATTR           _unconsumed
+  48: LOAD_GLOBAL          NULL + len
+  60: LOAD_FAST            self
+  62: LOAD_ATTR            _unconsumed
+  72: PRECALL              
+  76: CALL                 
+  86: LOAD_CONST           4
+  88: COMPARE_OP           <=
+  94: POP_JUMP_FORWARD_IF_FALSE to 100
+  96: LOAD_CONST           b''
+  98: RETURN_VALUE         
+ 100: LOAD_GLOBAL          NULL + struct
+ 112: LOAD_ATTR            unpack
+ 122: LOAD_CONST           '<H'
+ 124: LOAD_FAST            self
+ 126: LOAD_ATTR            _unconsumed
+ 136: LOAD_CONST           2
+ 138: LOAD_CONST           4
+ 140: BUILD_SLICE          
+ 142: BINARY_SUBSCR        
+ 152: PRECALL              
+ 156: CALL                 
+ 166: UNPACK_SEQUENCE      
+ 170: STORE_FAST           psize
+ 172: LOAD_GLOBAL          NULL + len
+ 184: LOAD_FAST            self
+ 186: LOAD_ATTR            _unconsumed
+ 196: PRECALL              
+ 200: CALL                 
+ 210: LOAD_CONST           4
+ 212: LOAD_FAST            psize
+ 214: BINARY_OP            +
+ 218: COMPARE_OP           <=
+ 224: POP_JUMP_FORWARD_IF_FALSE to 230
+ 226: LOAD_CONST           b''
+ 228: RETURN_VALUE         
+ 230: LOAD_GLOBAL          NULL + lzma
+ 242: LOAD_ATTR            LZMADecompressor
+ 252: LOAD_GLOBAL          lzma
+ 264: LOAD_ATTR            FORMAT_RAW
+ 274: LOAD_GLOBAL          NULL + lzma
+ 286: LOAD_ATTR            _decode_filter_properties
+ 296: LOAD_GLOBAL          lzma
+ 308: LOAD_ATTR            FILTER_LZMA1
+ 318: LOAD_FAST            self
+ 320: LOAD_ATTR            _unconsumed
+ 330: LOAD_CONST           4
+ 332: LOAD_CONST           4
+ 334: LOAD_FAST            psize
+ 336: BINARY_OP            +
+ 340: BUILD_SLICE          
+ 342: BINARY_SUBSCR        
+ 352: PRECALL              
+ 356: CALL                 
+ 366: BUILD_LIST           
+ 368: KW_NAMES             
+ 370: PRECALL              
+ 374: CALL                 
+ 384: LOAD_FAST            self
+ 386: STORE_ATTR           _decomp
+ 396: LOAD_FAST            self
+ 398: LOAD_ATTR            _unconsumed
+ 408: LOAD_CONST           4
+ 410: LOAD_FAST            psize
+ 412: BINARY_OP            +
+ 416: LOAD_CONST           None
+ 418: BUILD_SLICE          
+ 420: BINARY_SUBSCR        
+ 430: STORE_FAST           data
+ 432: LOAD_FAST            self
+ 434: DELETE_ATTR          _unconsumed
+ 436: LOAD_FAST            self
+ 438: LOAD_ATTR            _decomp
+ 448: LOAD_METHOD          decompress
+ 470: LOAD_FAST            data
+ 472: PRECALL              
+ 476: CALL                 
+ 486: STORE_FAST           result
+ 488: LOAD_FAST            self
+ 490: LOAD_ATTR            _decomp
+ 500: LOAD_ATTR            eof
+ 510: LOAD_FAST            self
+ 512: STORE_ATTR           eof
+ 522: LOAD_FAST            result
+ 524: RETURN_VALUE         

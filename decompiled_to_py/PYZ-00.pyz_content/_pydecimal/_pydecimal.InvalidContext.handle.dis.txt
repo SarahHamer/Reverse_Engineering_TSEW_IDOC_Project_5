@@ -1,0 +1,14 @@
+# Disassembly for _pydecimal.InvalidContext.handle
+# From module file: _pydecimal
+
+## co_consts:
+(None,)
+
+## co_names:
+('_NaN',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _NaN
+  14: RETURN_VALUE         

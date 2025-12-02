@@ -1,0 +1,65 @@
+# Disassembly for tarfile.TarFile._get_filter_function
+# From module file: tarfile
+
+## co_consts:
+(None, 'String names are not supported for TarFile.extraction_filter. Use a function such as tarfile.data_filter directly.', 'filter ', ' not found')
+
+## co_names:
+('extraction_filter', 'fully_trusted_filter', 'isinstance', 'str', 'TypeError', 'callable', '_NAMED_FILTERS', 'KeyError', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            filter
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 114
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            extraction_filter
+  18: STORE_FAST           filter
+  20: LOAD_FAST            filter
+  22: POP_JUMP_FORWARD_IF_NOT_NONE to 38
+  24: LOAD_GLOBAL          fully_trusted_filter
+  36: RETURN_VALUE         
+  38: LOAD_GLOBAL          NULL + isinstance
+  50: LOAD_FAST            filter
+  52: LOAD_GLOBAL          str
+  64: PRECALL              
+  68: CALL                 
+  78: POP_JUMP_FORWARD_IF_FALSE to 110
+  80: LOAD_GLOBAL          NULL + TypeError
+  92: LOAD_CONST           'String names are not supported for TarFile.extraction_filter. Use a function such as tarfile.data_filter directly.'
+  94: PRECALL              
+  98: CALL                 
+ 108: RAISE_VARARGS        
+ 110: LOAD_FAST            filter
+ 112: RETURN_VALUE         
+ 114: LOAD_GLOBAL          NULL + callable
+ 126: LOAD_FAST            filter
+ 128: PRECALL              
+ 132: CALL                 
+ 142: POP_JUMP_FORWARD_IF_FALSE to 148
+ 144: LOAD_FAST            filter
+ 146: RETURN_VALUE         
+ 148: NOP                  
+ 150: LOAD_GLOBAL          _NAMED_FILTERS
+ 162: LOAD_FAST            filter
+ 164: BINARY_SUBSCR        
+ 174: RETURN_VALUE         
+ 176: PUSH_EXC_INFO        
+ 178: LOAD_GLOBAL          KeyError
+ 190: CHECK_EXC_MATCH      
+ 192: POP_JUMP_FORWARD_IF_FALSE to 236
+ 194: POP_TOP              
+ 196: LOAD_GLOBAL          NULL + ValueError
+ 208: LOAD_CONST           'filter '
+ 210: LOAD_FAST            filter
+ 212: FORMAT_VALUE         repr
+ 214: LOAD_CONST           ' not found'
+ 216: BUILD_STRING         
+ 218: PRECALL              
+ 222: CALL                 
+ 232: LOAD_CONST           None
+ 234: RAISE_VARARGS        
+ 236: RERAISE              
+ 238: COPY                 
+ 240: POP_EXCEPT           
+ 242: RERAISE              

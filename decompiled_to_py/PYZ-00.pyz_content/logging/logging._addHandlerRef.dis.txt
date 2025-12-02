@@ -1,0 +1,43 @@
+# Disassembly for logging._addHandlerRef
+# From module file: logging
+
+## co_consts:
+('\n    Add a handler to the internal cleanup list using a weak reference.\n    ', None)
+
+## co_names:
+('_acquireLock', '_handlerList', 'append', 'weakref', 'ref', '_removeHandlerRef', '_releaseLock')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _acquireLock
+  14: PRECALL              
+  18: CALL                 
+  28: POP_TOP              
+  30: NOP                  
+  32: LOAD_GLOBAL          _handlerList
+  44: LOAD_METHOD          append
+  66: LOAD_GLOBAL          NULL + weakref
+  78: LOAD_ATTR            ref
+  88: LOAD_FAST            handler
+  90: LOAD_GLOBAL          _removeHandlerRef
+ 102: PRECALL              
+ 106: CALL                 
+ 116: PRECALL              
+ 120: CALL                 
+ 130: POP_TOP              
+ 132: LOAD_GLOBAL          NULL + _releaseLock
+ 144: PRECALL              
+ 148: CALL                 
+ 158: POP_TOP              
+ 160: LOAD_CONST           None
+ 162: RETURN_VALUE         
+ 164: PUSH_EXC_INFO        
+ 166: LOAD_GLOBAL          NULL + _releaseLock
+ 178: PRECALL              
+ 182: CALL                 
+ 192: POP_TOP              
+ 194: RERAISE              
+ 196: COPY                 
+ 198: POP_EXCEPT           
+ 200: RERAISE              

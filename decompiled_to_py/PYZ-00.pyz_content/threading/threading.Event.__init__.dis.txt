@@ -1,0 +1,25 @@
+# Disassembly for threading.Event.__init__
+# From module file: threading
+
+## co_consts:
+(None, False)
+
+## co_names:
+('Condition', 'Lock', '_cond', '_flag')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + Condition
+  14: LOAD_GLOBAL          NULL + Lock
+  26: PRECALL              
+  30: CALL                 
+  40: PRECALL              
+  44: CALL                 
+  54: LOAD_FAST            self
+  56: STORE_ATTR           _cond
+  66: LOAD_CONST           False
+  68: LOAD_FAST            self
+  70: STORE_ATTR           _flag
+  80: LOAD_CONST           None
+  82: RETURN_VALUE         

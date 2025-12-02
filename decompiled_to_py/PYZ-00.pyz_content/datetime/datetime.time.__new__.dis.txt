@@ -1,0 +1,136 @@
+# Disassembly for datetime.time.__new__
+# From module file: datetime
+
+## co_consts:
+('Constructor.\n\n        Arguments:\n\n        hour, minute (required)\n        second, microsecond (default to zero)\n        tzinfo (default to None)\n        fold (keyword only, default to zero)\n        ', 6, 0, 1, 127, 24, 'latin1', "Failed to encode latin1 string when unpickling a time object. pickle.load(data, encoding='latin1') is assumed.", None, -1)
+
+## co_names:
+('isinstance', 'bytes', 'str', 'len', 'ord', 'encode', 'UnicodeEncodeError', 'ValueError', 'object', '__new__', '_time__setstate', '_hashcode', '_check_time_fields', '_check_tzinfo_arg', '_hour', '_minute', '_second', '_microsecond', '_tzinfo', '_fold')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            hour
+  16: LOAD_GLOBAL          bytes
+  28: LOAD_GLOBAL          str
+  40: BUILD_TUPLE          
+  42: PRECALL              
+  46: CALL                 
+  56: POP_JUMP_FORWARD_IF_FALSE to 420
+  58: LOAD_GLOBAL          NULL + len
+  70: LOAD_FAST            hour
+  72: PRECALL              
+  76: CALL                 
+  86: LOAD_CONST           6
+  88: COMPARE_OP           ==
+  94: POP_JUMP_FORWARD_IF_FALSE to 420
+  96: LOAD_GLOBAL          NULL + ord
+ 108: LOAD_FAST            hour
+ 110: LOAD_CONST           0
+ 112: LOAD_CONST           1
+ 114: BUILD_SLICE          
+ 116: BINARY_SUBSCR        
+ 126: PRECALL              
+ 130: CALL                 
+ 140: LOAD_CONST           127
+ 142: BINARY_OP            &
+ 146: LOAD_CONST           24
+ 148: COMPARE_OP           <
+ 154: POP_JUMP_FORWARD_IF_FALSE to 420
+ 156: LOAD_GLOBAL          NULL + isinstance
+ 168: LOAD_FAST            hour
+ 170: LOAD_GLOBAL          str
+ 182: PRECALL              
+ 186: CALL                 
+ 196: POP_JUMP_FORWARD_IF_FALSE to 302
+ 198: NOP                  
+ 200: LOAD_FAST            hour
+ 202: LOAD_METHOD          encode
+ 224: LOAD_CONST           'latin1'
+ 226: PRECALL              
+ 230: CALL                 
+ 240: STORE_FAST           hour
+ 242: JUMP_FORWARD         to 302
+ 244: PUSH_EXC_INFO        
+ 246: LOAD_GLOBAL          UnicodeEncodeError
+ 258: CHECK_EXC_MATCH      
+ 260: POP_JUMP_FORWARD_IF_FALSE to 294
+ 262: POP_TOP              
+ 264: LOAD_GLOBAL          NULL + ValueError
+ 276: LOAD_CONST           "Failed to encode latin1 string when unpickling a time object. pickle.load(data, encoding='latin1') is assumed."
+ 278: PRECALL              
+ 282: CALL                 
+ 292: RAISE_VARARGS        
+ 294: RERAISE              
+ 296: COPY                 
+ 298: POP_EXCEPT           
+ 300: RERAISE              
+ 302: LOAD_GLOBAL          object
+ 314: LOAD_METHOD          __new__
+ 336: LOAD_FAST            cls
+ 338: PRECALL              
+ 342: CALL                 
+ 352: STORE_FAST           self
+ 354: LOAD_FAST            self
+ 356: LOAD_METHOD          _time__setstate
+ 378: LOAD_FAST            hour
+ 380: LOAD_FAST            minute
+ 382: JUMP_IF_TRUE_OR_POP  to 386
+ 384: LOAD_CONST           None
+ 386: PRECALL              
+ 390: CALL                 
+ 400: POP_TOP              
+ 402: LOAD_CONST           -1
+ 404: LOAD_FAST            self
+ 406: STORE_ATTR           _hashcode
+ 416: LOAD_FAST            self
+ 418: RETURN_VALUE         
+ 420: LOAD_GLOBAL          NULL + _check_time_fields
+ 432: LOAD_FAST            hour
+ 434: LOAD_FAST            minute
+ 436: LOAD_FAST            second
+ 438: LOAD_FAST            microsecond
+ 440: LOAD_FAST            fold
+ 442: PRECALL              
+ 446: CALL                 
+ 456: UNPACK_SEQUENCE      
+ 460: STORE_FAST           hour
+ 462: STORE_FAST           minute
+ 464: STORE_FAST           second
+ 466: STORE_FAST           microsecond
+ 468: STORE_FAST           fold
+ 470: LOAD_GLOBAL          NULL + _check_tzinfo_arg
+ 482: LOAD_FAST            tzinfo
+ 484: PRECALL              
+ 488: CALL                 
+ 498: POP_TOP              
+ 500: LOAD_GLOBAL          object
+ 512: LOAD_METHOD          __new__
+ 534: LOAD_FAST            cls
+ 536: PRECALL              
+ 540: CALL                 
+ 550: STORE_FAST           self
+ 552: LOAD_FAST            hour
+ 554: LOAD_FAST            self
+ 556: STORE_ATTR           _hour
+ 566: LOAD_FAST            minute
+ 568: LOAD_FAST            self
+ 570: STORE_ATTR           _minute
+ 580: LOAD_FAST            second
+ 582: LOAD_FAST            self
+ 584: STORE_ATTR           _second
+ 594: LOAD_FAST            microsecond
+ 596: LOAD_FAST            self
+ 598: STORE_ATTR           _microsecond
+ 608: LOAD_FAST            tzinfo
+ 610: LOAD_FAST            self
+ 612: STORE_ATTR           _tzinfo
+ 622: LOAD_CONST           -1
+ 624: LOAD_FAST            self
+ 626: STORE_ATTR           _hashcode
+ 636: LOAD_FAST            fold
+ 638: LOAD_FAST            self
+ 640: STORE_ATTR           _fold
+ 650: LOAD_FAST            self
+ 652: RETURN_VALUE         

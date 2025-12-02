@@ -1,0 +1,69 @@
+# Disassembly for http.DefaultCookiePolicy.__init__
+# From module file: http.cookiejar
+
+## co_consts:
+('Constructor arguments should be passed as keyword arguments only.', None, ())
+
+## co_names:
+('netscape', 'rfc2965', 'rfc2109_as_netscape', 'hide_cookie2', 'strict_domain', 'strict_rfc2965_unverifiable', 'strict_ns_unverifiable', 'strict_ns_domain', 'strict_ns_set_initial_dollar', 'strict_ns_set_path', 'secure_protocols', 'tuple', '_blocked_domains', '_allowed_domains')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            netscape
+   4: LOAD_FAST            self
+   6: STORE_ATTR           netscape
+  16: LOAD_FAST            rfc2965
+  18: LOAD_FAST            self
+  20: STORE_ATTR           rfc2965
+  30: LOAD_FAST            rfc2109_as_netscape
+  32: LOAD_FAST            self
+  34: STORE_ATTR           rfc2109_as_netscape
+  44: LOAD_FAST            hide_cookie2
+  46: LOAD_FAST            self
+  48: STORE_ATTR           hide_cookie2
+  58: LOAD_FAST            strict_domain
+  60: LOAD_FAST            self
+  62: STORE_ATTR           strict_domain
+  72: LOAD_FAST            strict_rfc2965_unverifiable
+  74: LOAD_FAST            self
+  76: STORE_ATTR           strict_rfc2965_unverifiable
+  86: LOAD_FAST            strict_ns_unverifiable
+  88: LOAD_FAST            self
+  90: STORE_ATTR           strict_ns_unverifiable
+ 100: LOAD_FAST            strict_ns_domain
+ 102: LOAD_FAST            self
+ 104: STORE_ATTR           strict_ns_domain
+ 114: LOAD_FAST            strict_ns_set_initial_dollar
+ 116: LOAD_FAST            self
+ 118: STORE_ATTR           strict_ns_set_initial_dollar
+ 128: LOAD_FAST            strict_ns_set_path
+ 130: LOAD_FAST            self
+ 132: STORE_ATTR           strict_ns_set_path
+ 142: LOAD_FAST            secure_protocols
+ 144: LOAD_FAST            self
+ 146: STORE_ATTR           secure_protocols
+ 156: LOAD_FAST            blocked_domains
+ 158: POP_JUMP_FORWARD_IF_NONE to 202
+ 160: LOAD_GLOBAL          NULL + tuple
+ 172: LOAD_FAST            blocked_domains
+ 174: PRECALL              
+ 178: CALL                 
+ 188: LOAD_FAST            self
+ 190: STORE_ATTR           _blocked_domains
+ 200: JUMP_FORWARD         to 216
+ 202: LOAD_CONST           ()
+ 204: LOAD_FAST            self
+ 206: STORE_ATTR           _blocked_domains
+ 216: LOAD_FAST            allowed_domains
+ 218: POP_JUMP_FORWARD_IF_NONE to 250
+ 220: LOAD_GLOBAL          NULL + tuple
+ 232: LOAD_FAST            allowed_domains
+ 234: PRECALL              
+ 238: CALL                 
+ 248: STORE_FAST           allowed_domains
+ 250: LOAD_FAST            allowed_domains
+ 252: LOAD_FAST            self
+ 254: STORE_ATTR           _allowed_domains
+ 264: LOAD_CONST           None
+ 266: RETURN_VALUE         

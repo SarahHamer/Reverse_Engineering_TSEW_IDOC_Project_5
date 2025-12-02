@@ -1,0 +1,17 @@
+# Disassembly for email.NameAddr.local_part
+# From module file: email._header_value_parser
+
+## co_consts:
+(None, -1)
+
+## co_names:
+('local_part',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_CONST           -1
+   6: BINARY_SUBSCR        
+  16: LOAD_ATTR            local_part
+  26: RETURN_VALUE         

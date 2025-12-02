@@ -1,0 +1,21 @@
+# Disassembly for ast._Unparser.write
+# From module file: ast
+
+## co_consts:
+('Add new source parts', None)
+
+## co_names:
+('_source', 'extend')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _source
+  14: LOAD_METHOD          extend
+  36: LOAD_FAST            text
+  38: PRECALL              
+  42: CALL                 
+  52: POP_TOP              
+  54: LOAD_CONST           None
+  56: RETURN_VALUE         

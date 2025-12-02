@@ -1,0 +1,45 @@
+# Disassembly for email.get_display_name
+# From module file: email._header_value_parser
+
+## co_consts:
+(" display-name = phrase\n\n    Because this is simply a name-rule, we don't return a display-name\n    token containing a phrase, but rather a display-name token with\n    the content of the phrase.\n\n    ", None)
+
+## co_names:
+('DisplayName', 'get_phrase', 'extend', 'defects')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + DisplayName
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           display_name
+  30: LOAD_GLOBAL          NULL + get_phrase
+  42: LOAD_FAST            value
+  44: PRECALL              
+  48: CALL                 
+  58: UNPACK_SEQUENCE      
+  62: STORE_FAST           token
+  64: STORE_FAST           value
+  66: LOAD_FAST            display_name
+  68: LOAD_METHOD          extend
+  90: LOAD_FAST            token
+  92: LOAD_CONST           None
+  94: LOAD_CONST           None
+  96: BUILD_SLICE          
+  98: BINARY_SUBSCR        
+ 108: PRECALL              
+ 112: CALL                 
+ 122: POP_TOP              
+ 124: LOAD_FAST            token
+ 126: LOAD_ATTR            defects
+ 136: LOAD_CONST           None
+ 138: LOAD_CONST           None
+ 140: BUILD_SLICE          
+ 142: BINARY_SUBSCR        
+ 152: LOAD_FAST            display_name
+ 154: STORE_ATTR           defects
+ 164: LOAD_FAST            display_name
+ 166: LOAD_FAST            value
+ 168: BUILD_TUPLE          
+ 170: RETURN_VALUE         

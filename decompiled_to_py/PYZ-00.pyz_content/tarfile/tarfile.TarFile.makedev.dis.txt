@@ -1,0 +1,69 @@
+# Disassembly for tarfile.TarFile.makedev
+# From module file: tarfile
+
+## co_consts:
+('Make a character or block device called targetpath.\n        ', 'mknod', 'makedev', 'special devices not supported by system', None, 384)
+
+## co_names:
+('hasattr', 'os', 'ExtractError', 'mode', 'isblk', 'stat', 'S_IFBLK', 'S_IFCHR', 'mknod', 'makedev', 'devmajor', 'devminor')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + hasattr
+  14: LOAD_GLOBAL          os
+  26: LOAD_CONST           'mknod'
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 86
+  44: LOAD_GLOBAL          NULL + hasattr
+  56: LOAD_GLOBAL          os
+  68: LOAD_CONST           'makedev'
+  70: PRECALL              
+  74: CALL                 
+  84: POP_JUMP_FORWARD_IF_TRUE to 116
+  86: LOAD_GLOBAL          NULL + ExtractError
+  98: LOAD_CONST           'special devices not supported by system'
+ 100: PRECALL              
+ 104: CALL                 
+ 114: RAISE_VARARGS        
+ 116: LOAD_FAST            tarinfo
+ 118: LOAD_ATTR            mode
+ 128: STORE_FAST           mode
+ 130: LOAD_FAST            mode
+ 132: POP_JUMP_FORWARD_IF_NOT_NONE to 138
+ 134: LOAD_CONST           384
+ 136: STORE_FAST           mode
+ 138: LOAD_FAST            tarinfo
+ 140: LOAD_METHOD          isblk
+ 162: PRECALL              
+ 166: CALL                 
+ 176: POP_JUMP_FORWARD_IF_FALSE to 210
+ 178: LOAD_FAST            mode
+ 180: LOAD_GLOBAL          stat
+ 192: LOAD_ATTR            S_IFBLK
+ 202: BINARY_OP            |=
+ 206: STORE_FAST           mode
+ 208: JUMP_FORWARD         to 240
+ 210: LOAD_FAST            mode
+ 212: LOAD_GLOBAL          stat
+ 224: LOAD_ATTR            S_IFCHR
+ 234: BINARY_OP            |=
+ 238: STORE_FAST           mode
+ 240: LOAD_GLOBAL          NULL + os
+ 252: LOAD_ATTR            mknod
+ 262: LOAD_FAST            targetpath
+ 264: LOAD_FAST            mode
+ 266: LOAD_GLOBAL          NULL + os
+ 278: LOAD_ATTR            makedev
+ 288: LOAD_FAST            tarinfo
+ 290: LOAD_ATTR            devmajor
+ 300: LOAD_FAST            tarinfo
+ 302: LOAD_ATTR            devminor
+ 312: PRECALL              
+ 316: CALL                 
+ 326: PRECALL              
+ 330: CALL                 
+ 340: POP_TOP              
+ 342: LOAD_CONST           None
+ 344: RETURN_VALUE         

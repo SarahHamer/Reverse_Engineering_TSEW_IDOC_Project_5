@@ -1,0 +1,102 @@
+# Disassembly for getopt.long_has_args
+# From module file: getopt
+
+## co_consts:
+(None, <code object <listcomp> at 0x00000240693EBA30, file "getopt.py", line 172>, 'option --%s not recognized', False, '=', True, 1, 'option --%s not a unique prefix', 0, -1)
+
+## co_names:
+('GetoptError', '_', 'len', 'endswith')
+
+## bytecode:
+
+   0: MAKE_CELL            opt
+   2: RESUME               
+   4: LOAD_CLOSURE         opt
+   6: BUILD_TUPLE          
+   8: LOAD_CONST           <code object <listcomp> at 0x00000240693EBA30, file "getopt.py", line 172>
+  10: MAKE_FUNCTION        closure
+  12: LOAD_FAST            longopts
+  14: GET_ITER             
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           possibilities
+  32: LOAD_FAST            possibilities
+  34: POP_JUMP_FORWARD_IF_TRUE to 100
+  36: LOAD_GLOBAL          NULL + GetoptError
+  48: LOAD_GLOBAL          NULL + _
+  60: LOAD_CONST           'option --%s not recognized'
+  62: PRECALL              
+  66: CALL                 
+  76: LOAD_DEREF           opt
+  78: BINARY_OP            %
+  82: LOAD_DEREF           opt
+  84: PRECALL              
+  88: CALL                 
+  98: RAISE_VARARGS        
+ 100: LOAD_DEREF           opt
+ 102: LOAD_FAST            possibilities
+ 104: CONTAINS_OP          
+ 106: POP_JUMP_FORWARD_IF_FALSE to 116
+ 108: LOAD_CONST           False
+ 110: LOAD_DEREF           opt
+ 112: BUILD_TUPLE          
+ 114: RETURN_VALUE         
+ 116: LOAD_DEREF           opt
+ 118: LOAD_CONST           '='
+ 120: BINARY_OP            +
+ 124: LOAD_FAST            possibilities
+ 126: CONTAINS_OP          
+ 128: POP_JUMP_FORWARD_IF_FALSE to 138
+ 130: LOAD_CONST           True
+ 132: LOAD_DEREF           opt
+ 134: BUILD_TUPLE          
+ 136: RETURN_VALUE         
+ 138: LOAD_GLOBAL          NULL + len
+ 150: LOAD_FAST            possibilities
+ 152: PRECALL              
+ 156: CALL                 
+ 166: LOAD_CONST           1
+ 168: COMPARE_OP           >
+ 174: POP_JUMP_FORWARD_IF_FALSE to 240
+ 176: LOAD_GLOBAL          NULL + GetoptError
+ 188: LOAD_GLOBAL          NULL + _
+ 200: LOAD_CONST           'option --%s not a unique prefix'
+ 202: PRECALL              
+ 206: CALL                 
+ 216: LOAD_DEREF           opt
+ 218: BINARY_OP            %
+ 222: LOAD_DEREF           opt
+ 224: PRECALL              
+ 228: CALL                 
+ 238: RAISE_VARARGS        
+ 240: LOAD_GLOBAL          NULL + len
+ 252: LOAD_FAST            possibilities
+ 254: PRECALL              
+ 258: CALL                 
+ 268: LOAD_CONST           1
+ 270: COMPARE_OP           ==
+ 276: POP_JUMP_FORWARD_IF_TRUE to 282
+ 278: LOAD_ASSERTION_ERROR 
+ 280: RAISE_VARARGS        
+ 282: LOAD_FAST            possibilities
+ 284: LOAD_CONST           0
+ 286: BINARY_SUBSCR        
+ 296: STORE_FAST           unique_match
+ 298: LOAD_FAST            unique_match
+ 300: LOAD_METHOD          endswith
+ 322: LOAD_CONST           '='
+ 324: PRECALL              
+ 328: CALL                 
+ 338: STORE_FAST           has_arg
+ 340: LOAD_FAST            has_arg
+ 342: POP_JUMP_FORWARD_IF_FALSE to 364
+ 344: LOAD_FAST            unique_match
+ 346: LOAD_CONST           None
+ 348: LOAD_CONST           -1
+ 350: BUILD_SLICE          
+ 352: BINARY_SUBSCR        
+ 362: STORE_FAST           unique_match
+ 364: LOAD_FAST            has_arg
+ 366: LOAD_FAST            unique_match
+ 368: BUILD_TUPLE          
+ 370: RETURN_VALUE         

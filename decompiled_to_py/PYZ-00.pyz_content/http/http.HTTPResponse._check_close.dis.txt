@@ -1,0 +1,77 @@
+# Disassembly for http.HTTPResponse._check_close
+# From module file: http.client
+
+## co_consts:
+(None, 'connection', 11, 'close', True, False, 'keep-alive', 'proxy-connection')
+
+## co_names:
+('headers', 'get', 'version', 'lower')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            headers
+  14: LOAD_METHOD          get
+  36: LOAD_CONST           'connection'
+  38: PRECALL              
+  42: CALL                 
+  52: STORE_FAST           conn
+  54: LOAD_FAST            self
+  56: LOAD_ATTR            version
+  66: LOAD_CONST           11
+  68: COMPARE_OP           ==
+  74: POP_JUMP_FORWARD_IF_FALSE to 132
+  76: LOAD_FAST            conn
+  78: POP_JUMP_FORWARD_IF_FALSE to 128
+  80: LOAD_CONST           'close'
+  82: LOAD_FAST            conn
+  84: LOAD_METHOD          lower
+ 106: PRECALL              
+ 110: CALL                 
+ 120: CONTAINS_OP          
+ 122: POP_JUMP_FORWARD_IF_FALSE to 128
+ 124: LOAD_CONST           True
+ 126: RETURN_VALUE         
+ 128: LOAD_CONST           False
+ 130: RETURN_VALUE         
+ 132: LOAD_FAST            self
+ 134: LOAD_ATTR            headers
+ 144: LOAD_METHOD          get
+ 166: LOAD_CONST           'keep-alive'
+ 168: PRECALL              
+ 172: CALL                 
+ 182: POP_JUMP_FORWARD_IF_FALSE to 188
+ 184: LOAD_CONST           False
+ 186: RETURN_VALUE         
+ 188: LOAD_FAST            conn
+ 190: POP_JUMP_FORWARD_IF_FALSE to 240
+ 192: LOAD_CONST           'keep-alive'
+ 194: LOAD_FAST            conn
+ 196: LOAD_METHOD          lower
+ 218: PRECALL              
+ 222: CALL                 
+ 232: CONTAINS_OP          
+ 234: POP_JUMP_FORWARD_IF_FALSE to 240
+ 236: LOAD_CONST           False
+ 238: RETURN_VALUE         
+ 240: LOAD_FAST            self
+ 242: LOAD_ATTR            headers
+ 252: LOAD_METHOD          get
+ 274: LOAD_CONST           'proxy-connection'
+ 276: PRECALL              
+ 280: CALL                 
+ 290: STORE_FAST           pconn
+ 292: LOAD_FAST            pconn
+ 294: POP_JUMP_FORWARD_IF_FALSE to 344
+ 296: LOAD_CONST           'keep-alive'
+ 298: LOAD_FAST            pconn
+ 300: LOAD_METHOD          lower
+ 322: PRECALL              
+ 326: CALL                 
+ 336: CONTAINS_OP          
+ 338: POP_JUMP_FORWARD_IF_FALSE to 344
+ 340: LOAD_CONST           False
+ 342: RETURN_VALUE         
+ 344: LOAD_CONST           True
+ 346: RETURN_VALUE         

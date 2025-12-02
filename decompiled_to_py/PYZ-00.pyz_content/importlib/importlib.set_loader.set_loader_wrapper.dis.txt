@@ -1,0 +1,46 @@
+# Disassembly for importlib.set_loader.set_loader_wrapper
+# From module file: importlib.util
+
+## co_consts:
+(None, 'The import system now takes care of this automatically; this decorator is slated for removal in Python 3.12', 2, ('stacklevel',), '__loader__')
+
+## co_names:
+('warnings', 'warn', 'DeprecationWarning', 'getattr', '__loader__')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + warnings
+  16: LOAD_ATTR            warn
+  26: LOAD_CONST           'The import system now takes care of this automatically; this decorator is slated for removal in Python 3.12'
+  28: LOAD_GLOBAL          DeprecationWarning
+  40: LOAD_CONST           2
+  42: KW_NAMES             
+  44: PRECALL              
+  48: CALL                 
+  58: POP_TOP              
+  60: PUSH_NULL            
+  62: LOAD_DEREF           fxn
+  64: LOAD_FAST            self
+  66: BUILD_LIST           
+  68: LOAD_FAST            args
+  70: LIST_EXTEND          
+  72: LIST_TO_TUPLE        
+  74: BUILD_MAP            
+  76: LOAD_FAST            kwargs
+  78: DICT_MERGE           
+  80: CALL_FUNCTION_EX     
+  82: STORE_FAST           module
+  84: LOAD_GLOBAL          NULL + getattr
+  96: LOAD_FAST            module
+  98: LOAD_CONST           '__loader__'
+ 100: LOAD_CONST           None
+ 102: PRECALL              
+ 106: CALL                 
+ 116: POP_JUMP_FORWARD_IF_NOT_NONE to 132
+ 118: LOAD_FAST            self
+ 120: LOAD_FAST            module
+ 122: STORE_ATTR           __loader__
+ 132: LOAD_FAST            module
+ 134: RETURN_VALUE         

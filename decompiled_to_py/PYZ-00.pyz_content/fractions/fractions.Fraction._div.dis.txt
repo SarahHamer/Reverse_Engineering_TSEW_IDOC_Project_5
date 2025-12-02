@@ -1,0 +1,88 @@
+# Disassembly for fractions.Fraction._div
+# From module file: fractions
+
+## co_consts:
+('a / b', 1, 0, False, ('_normalize',))
+
+## co_names:
+('numerator', 'denominator', 'math', 'gcd', 'Fraction')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            a
+   4: LOAD_ATTR            numerator
+  14: LOAD_FAST            a
+  16: LOAD_ATTR            denominator
+  26: STORE_FAST           da
+  28: STORE_FAST           na
+  30: LOAD_FAST            b
+  32: LOAD_ATTR            numerator
+  42: LOAD_FAST            b
+  44: LOAD_ATTR            denominator
+  54: STORE_FAST           db
+  56: STORE_FAST           nb
+  58: LOAD_GLOBAL          NULL + math
+  70: LOAD_ATTR            gcd
+  80: LOAD_FAST            na
+  82: LOAD_FAST            nb
+  84: PRECALL              
+  88: CALL                 
+  98: STORE_FAST           g1
+ 100: LOAD_FAST            g1
+ 102: LOAD_CONST           1
+ 104: COMPARE_OP           >
+ 110: POP_JUMP_FORWARD_IF_FALSE to 132
+ 112: LOAD_FAST            na
+ 114: LOAD_FAST            g1
+ 116: BINARY_OP            //=
+ 120: STORE_FAST           na
+ 122: LOAD_FAST            nb
+ 124: LOAD_FAST            g1
+ 126: BINARY_OP            //=
+ 130: STORE_FAST           nb
+ 132: LOAD_GLOBAL          NULL + math
+ 144: LOAD_ATTR            gcd
+ 154: LOAD_FAST            db
+ 156: LOAD_FAST            da
+ 158: PRECALL              
+ 162: CALL                 
+ 172: STORE_FAST           g2
+ 174: LOAD_FAST            g2
+ 176: LOAD_CONST           1
+ 178: COMPARE_OP           >
+ 184: POP_JUMP_FORWARD_IF_FALSE to 206
+ 186: LOAD_FAST            da
+ 188: LOAD_FAST            g2
+ 190: BINARY_OP            //=
+ 194: STORE_FAST           da
+ 196: LOAD_FAST            db
+ 198: LOAD_FAST            g2
+ 200: BINARY_OP            //=
+ 204: STORE_FAST           db
+ 206: LOAD_FAST            na
+ 208: LOAD_FAST            db
+ 210: BINARY_OP            *
+ 214: LOAD_FAST            nb
+ 216: LOAD_FAST            da
+ 218: BINARY_OP            *
+ 222: STORE_FAST           d
+ 224: STORE_FAST           n
+ 226: LOAD_FAST            d
+ 228: LOAD_CONST           0
+ 230: COMPARE_OP           <
+ 236: POP_JUMP_FORWARD_IF_FALSE to 250
+ 238: LOAD_FAST            n
+ 240: UNARY_NEGATIVE       
+ 242: LOAD_FAST            d
+ 244: UNARY_NEGATIVE       
+ 246: STORE_FAST           d
+ 248: STORE_FAST           n
+ 250: LOAD_GLOBAL          NULL + Fraction
+ 262: LOAD_FAST            n
+ 264: LOAD_FAST            d
+ 266: LOAD_CONST           False
+ 268: KW_NAMES             
+ 270: PRECALL              
+ 274: CALL                 
+ 284: RETURN_VALUE         

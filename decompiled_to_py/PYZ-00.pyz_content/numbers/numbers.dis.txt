@@ -1,0 +1,92 @@
+# Disassembly for numbers
+# From module file: numbers
+
+## co_consts:
+('Abstract Base Classes (ABCs) for numbers, according to PEP 3141.\n\nTODO: Fill out more detailed documentation on the operators.', 0, ('ABCMeta', 'abstractmethod'), ('Number', 'Complex', 'Real', 'Rational', 'Integral'), <code object Number at 0x0000024069466A30, file "numbers.py", line 12>, 'Number', ('metaclass',), <code object Complex at 0x0000024068E1ECD0, file "numbers.py", line 32>, 'Complex', <code object Real at 0x0000024068BF6C60, file "numbers.py", line 147>, 'Real', <code object Rational at 0x000002406941A430, file "numbers.py", line 267>, 'Rational', <code object Integral at 0x0000024068C8D8F0, file "numbers.py", line 294>, 'Integral', None)
+
+## co_names:
+('__doc__', 'abc', 'ABCMeta', 'abstractmethod', '__all__', 'Number', 'Complex', 'register', 'complex', 'Real', 'float', 'Rational', 'Integral', 'int')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'Abstract Base Classes (ABCs) for numbers, according to PEP 3141.\n\nTODO: Fill out more detailed documentation on the operators.'
+   4: STORE_NAME           __doc__
+   6: LOAD_CONST           0
+   8: LOAD_CONST           ('ABCMeta', 'abstractmethod')
+  10: IMPORT_NAME          abc
+  12: IMPORT_FROM          ABCMeta
+  14: STORE_NAME           ABCMeta
+  16: IMPORT_FROM          abstractmethod
+  18: STORE_NAME           abstractmethod
+  20: POP_TOP              
+  22: BUILD_LIST           
+  24: LOAD_CONST           ('Number', 'Complex', 'Real', 'Rational', 'Integral')
+  26: LIST_EXTEND          
+  28: STORE_NAME           __all__
+  30: PUSH_NULL            
+  32: LOAD_BUILD_CLASS     
+  34: LOAD_CONST           <code object Number at 0x0000024069466A30, file "numbers.py", line 12>
+  36: MAKE_FUNCTION        
+  38: LOAD_CONST           'Number'
+  40: LOAD_NAME            ABCMeta
+  42: KW_NAMES             
+  44: PRECALL              
+  48: CALL                 
+  58: STORE_NAME           Number
+  60: PUSH_NULL            
+  62: LOAD_BUILD_CLASS     
+  64: LOAD_CONST           <code object Complex at 0x0000024068E1ECD0, file "numbers.py", line 32>
+  66: MAKE_FUNCTION        
+  68: LOAD_CONST           'Complex'
+  70: LOAD_NAME            Number
+  72: PRECALL              
+  76: CALL                 
+  86: STORE_NAME           Complex
+  88: LOAD_NAME            Complex
+  90: LOAD_METHOD          register
+ 112: LOAD_NAME            complex
+ 114: PRECALL              
+ 118: CALL                 
+ 128: POP_TOP              
+ 130: PUSH_NULL            
+ 132: LOAD_BUILD_CLASS     
+ 134: LOAD_CONST           <code object Real at 0x0000024068BF6C60, file "numbers.py", line 147>
+ 136: MAKE_FUNCTION        
+ 138: LOAD_CONST           'Real'
+ 140: LOAD_NAME            Complex
+ 142: PRECALL              
+ 146: CALL                 
+ 156: STORE_NAME           Real
+ 158: LOAD_NAME            Real
+ 160: LOAD_METHOD          register
+ 182: LOAD_NAME            float
+ 184: PRECALL              
+ 188: CALL                 
+ 198: POP_TOP              
+ 200: PUSH_NULL            
+ 202: LOAD_BUILD_CLASS     
+ 204: LOAD_CONST           <code object Rational at 0x000002406941A430, file "numbers.py", line 267>
+ 206: MAKE_FUNCTION        
+ 208: LOAD_CONST           'Rational'
+ 210: LOAD_NAME            Real
+ 212: PRECALL              
+ 216: CALL                 
+ 226: STORE_NAME           Rational
+ 228: PUSH_NULL            
+ 230: LOAD_BUILD_CLASS     
+ 232: LOAD_CONST           <code object Integral at 0x0000024068C8D8F0, file "numbers.py", line 294>
+ 234: MAKE_FUNCTION        
+ 236: LOAD_CONST           'Integral'
+ 238: LOAD_NAME            Rational
+ 240: PRECALL              
+ 244: CALL                 
+ 254: STORE_NAME           Integral
+ 256: LOAD_NAME            Integral
+ 258: LOAD_METHOD          register
+ 280: LOAD_NAME            int
+ 282: PRECALL              
+ 286: CALL                 
+ 296: POP_TOP              
+ 298: LOAD_CONST           None
+ 300: RETURN_VALUE         

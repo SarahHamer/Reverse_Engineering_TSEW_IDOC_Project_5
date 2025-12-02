@@ -1,0 +1,195 @@
+# Disassembly for importlib._find_and_load_unlocked
+# From module file: importlib._bootstrap
+
+## co_consts:
+(None, '.', 0, '; {!r} is not a package', ('name',), 2, 'Cannot set an attribute on ', ' for child module ')
+
+## co_names:
+('rpartition', 'sys', 'modules', '_call_with_frames_removed', '__path__', 'AttributeError', '_ERR_MSG', 'format', 'ModuleNotFoundError', '__spec__', '_find_spec', '_uninitialized_submodules', 'append', '_load_unlocked', 'pop', 'setattr', '_warnings', 'warn', 'ImportWarning')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: STORE_FAST           path
+   6: LOAD_FAST            name
+   8: LOAD_METHOD          rpartition
+  30: LOAD_CONST           '.'
+  32: PRECALL              
+  36: CALL                 
+  46: LOAD_CONST           0
+  48: BINARY_SUBSCR        
+  58: STORE_FAST           parent
+  60: LOAD_CONST           None
+  62: STORE_FAST           parent_spec
+  64: LOAD_FAST            parent
+  66: POP_JUMP_FORWARD_IF_FALSE to 438
+  68: LOAD_FAST            parent
+  70: LOAD_GLOBAL          sys
+  82: LOAD_ATTR            modules
+  92: CONTAINS_OP          
+  94: POP_JUMP_FORWARD_IF_FALSE to 128
+  96: LOAD_GLOBAL          NULL + _call_with_frames_removed
+ 108: LOAD_FAST            import_
+ 110: LOAD_FAST            parent
+ 112: PRECALL              
+ 116: CALL                 
+ 126: POP_TOP              
+ 128: LOAD_FAST            name
+ 130: LOAD_GLOBAL          sys
+ 142: LOAD_ATTR            modules
+ 152: CONTAINS_OP          
+ 154: POP_JUMP_FORWARD_IF_FALSE to 192
+ 156: LOAD_GLOBAL          sys
+ 168: LOAD_ATTR            modules
+ 178: LOAD_FAST            name
+ 180: BINARY_SUBSCR        
+ 190: RETURN_VALUE         
+ 192: LOAD_GLOBAL          sys
+ 204: LOAD_ATTR            modules
+ 214: LOAD_FAST            parent
+ 216: BINARY_SUBSCR        
+ 226: STORE_FAST           parent_module
+ 228: NOP                  
+ 230: LOAD_FAST            parent_module
+ 232: LOAD_ATTR            __path__
+ 242: STORE_FAST           path
+ 244: JUMP_FORWARD         to 370
+ 246: PUSH_EXC_INFO        
+ 248: LOAD_GLOBAL          AttributeError
+ 260: CHECK_EXC_MATCH      
+ 262: POP_JUMP_FORWARD_IF_FALSE to 362
+ 264: POP_TOP              
+ 266: LOAD_GLOBAL          _ERR_MSG
+ 278: LOAD_CONST           '; {!r} is not a package'
+ 280: BINARY_OP            +
+ 284: LOAD_METHOD          format
+ 306: LOAD_FAST            name
+ 308: LOAD_FAST            parent
+ 310: PRECALL              
+ 314: CALL                 
+ 324: STORE_FAST           msg
+ 326: LOAD_GLOBAL          NULL + ModuleNotFoundError
+ 338: LOAD_FAST            msg
+ 340: LOAD_FAST            name
+ 342: KW_NAMES             
+ 344: PRECALL              
+ 348: CALL                 
+ 358: LOAD_CONST           None
+ 360: RAISE_VARARGS        
+ 362: RERAISE              
+ 364: COPY                 
+ 366: POP_EXCEPT           
+ 368: RERAISE              
+ 370: LOAD_FAST            parent_module
+ 372: LOAD_ATTR            __spec__
+ 382: STORE_FAST           parent_spec
+ 384: LOAD_FAST            name
+ 386: LOAD_METHOD          rpartition
+ 408: LOAD_CONST           '.'
+ 410: PRECALL              
+ 414: CALL                 
+ 424: LOAD_CONST           2
+ 426: BINARY_SUBSCR        
+ 436: STORE_FAST           child
+ 438: LOAD_GLOBAL          NULL + _find_spec
+ 450: LOAD_FAST            name
+ 452: LOAD_FAST            path
+ 454: PRECALL              
+ 458: CALL                 
+ 468: STORE_FAST           spec
+ 470: LOAD_FAST            spec
+ 472: POP_JUMP_FORWARD_IF_NOT_NONE to 556
+ 474: LOAD_GLOBAL          NULL + ModuleNotFoundError
+ 486: LOAD_GLOBAL          _ERR_MSG
+ 498: LOAD_METHOD          format
+ 520: LOAD_FAST            name
+ 522: PRECALL              
+ 526: CALL                 
+ 536: LOAD_FAST            name
+ 538: KW_NAMES             
+ 540: PRECALL              
+ 544: CALL                 
+ 554: RAISE_VARARGS        
+ 556: LOAD_FAST            parent_spec
+ 558: POP_JUMP_FORWARD_IF_FALSE to 612
+ 560: LOAD_FAST            parent_spec
+ 562: LOAD_ATTR            _uninitialized_submodules
+ 572: LOAD_METHOD          append
+ 594: LOAD_FAST            child
+ 596: PRECALL              
+ 600: CALL                 
+ 610: POP_TOP              
+ 612: NOP                  
+ 614: LOAD_GLOBAL          NULL + _load_unlocked
+ 626: LOAD_FAST            spec
+ 628: PRECALL              
+ 632: CALL                 
+ 642: STORE_FAST           module
+ 644: LOAD_FAST            parent_spec
+ 646: POP_JUMP_FORWARD_IF_FALSE to 698
+ 648: LOAD_FAST            parent_spec
+ 650: LOAD_ATTR            _uninitialized_submodules
+ 660: LOAD_METHOD          pop
+ 682: PRECALL              
+ 686: CALL                 
+ 696: POP_TOP              
+ 698: JUMP_FORWARD         to 766
+ 700: PUSH_EXC_INFO        
+ 702: LOAD_FAST            parent_spec
+ 704: POP_JUMP_FORWARD_IF_FALSE to 758
+ 706: LOAD_FAST            parent_spec
+ 708: LOAD_ATTR            _uninitialized_submodules
+ 718: LOAD_METHOD          pop
+ 740: PRECALL              
+ 744: CALL                 
+ 754: POP_TOP              
+ 756: RERAISE              
+ 758: RERAISE              
+ 760: COPY                 
+ 762: POP_EXCEPT           
+ 764: RERAISE              
+ 766: LOAD_FAST            parent
+ 768: POP_JUMP_FORWARD_IF_FALSE to 956
+ 770: LOAD_GLOBAL          sys
+ 782: LOAD_ATTR            modules
+ 792: LOAD_FAST            parent
+ 794: BINARY_SUBSCR        
+ 804: STORE_FAST           parent_module
+ 806: NOP                  
+ 808: LOAD_GLOBAL          NULL + setattr
+ 820: LOAD_FAST            parent_module
+ 822: LOAD_FAST            child
+ 824: LOAD_FAST            module
+ 826: PRECALL              
+ 830: CALL                 
+ 840: POP_TOP              
+ 842: JUMP_FORWARD         to 956
+ 844: PUSH_EXC_INFO        
+ 846: LOAD_GLOBAL          AttributeError
+ 858: CHECK_EXC_MATCH      
+ 860: POP_JUMP_FORWARD_IF_FALSE to 948
+ 862: POP_TOP              
+ 864: LOAD_CONST           'Cannot set an attribute on '
+ 866: LOAD_FAST            parent
+ 868: FORMAT_VALUE         repr
+ 870: LOAD_CONST           ' for child module '
+ 872: LOAD_FAST            child
+ 874: FORMAT_VALUE         repr
+ 876: BUILD_STRING         
+ 878: STORE_FAST           msg
+ 880: LOAD_GLOBAL          _warnings
+ 892: LOAD_METHOD          warn
+ 914: LOAD_FAST            msg
+ 916: LOAD_GLOBAL          ImportWarning
+ 928: PRECALL              
+ 932: CALL                 
+ 942: POP_TOP              
+ 944: POP_EXCEPT           
+ 946: JUMP_FORWARD         to 956
+ 948: RERAISE              
+ 950: COPY                 
+ 952: POP_EXCEPT           
+ 954: RERAISE              
+ 956: LOAD_FAST            module
+ 958: RETURN_VALUE         

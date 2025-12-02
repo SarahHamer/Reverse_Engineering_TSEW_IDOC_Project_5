@@ -1,0 +1,15 @@
+# Disassembly for http.DefaultCookiePolicy.blocked_domains
+# From module file: http.cookiejar
+
+## co_consts:
+('Return the sequence of blocked domains (as a tuple).',)
+
+## co_names:
+('_blocked_domains',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _blocked_domains
+  14: RETURN_VALUE         

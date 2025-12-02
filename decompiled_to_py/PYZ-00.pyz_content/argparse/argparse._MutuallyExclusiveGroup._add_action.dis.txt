@@ -1,0 +1,41 @@
+# Disassembly for argparse._MutuallyExclusiveGroup._add_action
+# From module file: argparse
+
+## co_consts:
+(None, 'mutually exclusive arguments must be optional')
+
+## co_names:
+('required', '_', 'ValueError', '_container', '_add_action', '_group_actions', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            action
+   4: LOAD_ATTR            required
+  14: POP_JUMP_FORWARD_IF_FALSE to 76
+  16: LOAD_GLOBAL          NULL + _
+  28: LOAD_CONST           'mutually exclusive arguments must be optional'
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_FAST           msg
+  46: LOAD_GLOBAL          NULL + ValueError
+  58: LOAD_FAST            msg
+  60: PRECALL              
+  64: CALL                 
+  74: RAISE_VARARGS        
+  76: LOAD_FAST            self
+  78: LOAD_ATTR            _container
+  88: LOAD_METHOD          _add_action
+ 110: LOAD_FAST            action
+ 112: PRECALL              
+ 116: CALL                 
+ 126: STORE_FAST           action
+ 128: LOAD_FAST            self
+ 130: LOAD_ATTR            _group_actions
+ 140: LOAD_METHOD          append
+ 162: LOAD_FAST            action
+ 164: PRECALL              
+ 168: CALL                 
+ 178: POP_TOP              
+ 180: LOAD_FAST            action
+ 182: RETURN_VALUE         

@@ -1,0 +1,28 @@
+# Disassembly for _threading_local._localimpl.__init__
+# From module file: _threading_local
+
+## co_consts:
+(None, '_threading_local._localimpl.')
+
+## co_names:
+('str', 'id', 'key', 'dicts')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '_threading_local._localimpl.'
+   4: LOAD_GLOBAL          NULL + str
+  16: LOAD_GLOBAL          NULL + id
+  28: LOAD_FAST            self
+  30: PRECALL              
+  34: CALL                 
+  44: PRECALL              
+  48: CALL                 
+  58: BINARY_OP            +
+  62: LOAD_FAST            self
+  64: STORE_ATTR           key
+  74: BUILD_MAP            
+  76: LOAD_FAST            self
+  78: STORE_ATTR           dicts
+  88: LOAD_CONST           None
+  90: RETURN_VALUE         

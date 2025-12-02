@@ -1,0 +1,126 @@
+# Disassembly for tempfile._mkstemp_inner
+# From module file: tempfile
+
+## co_consts:
+('Code common to mkstemp, TemporaryFile, and NamedTemporaryFile.', 'tempfile.mkstemp', 384, 'nt', 'No usable temporary file name found')
+
+## co_names:
+('_os', 'path', 'abspath', '_get_candidate_names', 'bytes', 'map', 'fsencode', 'range', 'TMP_MAX', 'next', 'join', '_sys', 'audit', 'open', 'FileExistsError', 'PermissionError', 'name', 'isdir', 'access', 'W_OK', '_errno', 'EEXIST')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _os
+  14: LOAD_ATTR            path
+  24: LOAD_METHOD          abspath
+  46: LOAD_FAST            dir
+  48: PRECALL              
+  52: CALL                 
+  62: STORE_FAST           dir
+  64: LOAD_GLOBAL          NULL + _get_candidate_names
+  76: PRECALL              
+  80: CALL                 
+  90: STORE_FAST           names
+  92: LOAD_FAST            output_type
+  94: LOAD_GLOBAL          bytes
+ 106: IS_OP                
+ 108: POP_JUMP_FORWARD_IF_FALSE to 162
+ 110: LOAD_GLOBAL          NULL + map
+ 122: LOAD_GLOBAL          _os
+ 134: LOAD_ATTR            fsencode
+ 144: LOAD_FAST            names
+ 146: PRECALL              
+ 150: CALL                 
+ 160: STORE_FAST           names
+ 162: LOAD_GLOBAL          NULL + range
+ 174: LOAD_GLOBAL          TMP_MAX
+ 186: PRECALL              
+ 190: CALL                 
+ 200: GET_ITER             
+ 202: FOR_ITER             to 626
+ 204: STORE_FAST           seq
+ 206: LOAD_GLOBAL          NULL + next
+ 218: LOAD_FAST            names
+ 220: PRECALL              
+ 224: CALL                 
+ 234: STORE_FAST           name
+ 236: LOAD_GLOBAL          _os
+ 248: LOAD_ATTR            path
+ 258: LOAD_METHOD          join
+ 280: LOAD_FAST            dir
+ 282: LOAD_FAST            pre
+ 284: LOAD_FAST            name
+ 286: BINARY_OP            +
+ 290: LOAD_FAST            suf
+ 292: BINARY_OP            +
+ 296: PRECALL              
+ 300: CALL                 
+ 310: STORE_FAST           file
+ 312: LOAD_GLOBAL          NULL + _sys
+ 324: LOAD_ATTR            audit
+ 334: LOAD_CONST           'tempfile.mkstemp'
+ 336: LOAD_FAST            file
+ 338: PRECALL              
+ 342: CALL                 
+ 352: POP_TOP              
+ 354: NOP                  
+ 356: LOAD_GLOBAL          NULL + _os
+ 368: LOAD_ATTR            open
+ 378: LOAD_FAST            file
+ 380: LOAD_FAST            flags
+ 382: LOAD_CONST           384
+ 384: PRECALL              
+ 388: CALL                 
+ 398: STORE_FAST           fd
+ 400: JUMP_FORWARD         to 614
+ 402: PUSH_EXC_INFO        
+ 404: LOAD_GLOBAL          FileExistsError
+ 416: CHECK_EXC_MATCH      
+ 418: POP_JUMP_FORWARD_IF_FALSE to 426
+ 420: POP_TOP              
+ 422: POP_EXCEPT           
+ 424: JUMP_BACKWARD        to 202
+ 426: LOAD_GLOBAL          PermissionError
+ 438: CHECK_EXC_MATCH      
+ 440: POP_JUMP_FORWARD_IF_FALSE to 606
+ 442: POP_TOP              
+ 444: LOAD_GLOBAL          _os
+ 456: LOAD_ATTR            name
+ 466: LOAD_CONST           'nt'
+ 468: COMPARE_OP           ==
+ 474: POP_JUMP_FORWARD_IF_FALSE to 604
+ 476: LOAD_GLOBAL          _os
+ 488: LOAD_ATTR            path
+ 498: LOAD_METHOD          isdir
+ 520: LOAD_FAST            dir
+ 522: PRECALL              
+ 526: CALL                 
+ 536: POP_JUMP_FORWARD_IF_FALSE to 604
+ 538: LOAD_GLOBAL          NULL + _os
+ 550: LOAD_ATTR            access
+ 560: LOAD_FAST            dir
+ 562: LOAD_GLOBAL          _os
+ 574: LOAD_ATTR            W_OK
+ 584: PRECALL              
+ 588: CALL                 
+ 598: POP_JUMP_FORWARD_IF_FALSE to 604
+ 600: POP_EXCEPT           
+ 602: JUMP_BACKWARD        to 202
+ 604: RAISE_VARARGS        
+ 606: RERAISE              
+ 608: COPY                 
+ 610: POP_EXCEPT           
+ 612: RERAISE              
+ 614: LOAD_FAST            fd
+ 616: LOAD_FAST            file
+ 618: BUILD_TUPLE          
+ 620: SWAP                 
+ 622: POP_TOP              
+ 624: RETURN_VALUE         
+ 626: LOAD_GLOBAL          NULL + FileExistsError
+ 638: LOAD_GLOBAL          _errno
+ 650: LOAD_ATTR            EEXIST
+ 660: LOAD_CONST           'No usable temporary file name found'
+ 662: PRECALL              
+ 666: CALL                 
+ 676: RAISE_VARARGS        

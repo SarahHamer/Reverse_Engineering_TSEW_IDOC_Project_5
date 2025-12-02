@@ -1,0 +1,33 @@
+# Disassembly for shlex._print_tokens
+# From module file: shlex
+
+## co_consts:
+(None, 1, 'Token: ')
+
+## co_names:
+('get_token', 'print', 'repr')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            lexer
+   6: LOAD_METHOD          get_token
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           tt
+  44: LOAD_FAST            tt
+  46: POP_JUMP_FORWARD_IF_TRUE to 52
+  48: LOAD_CONST           None
+  50: RETURN_VALUE         
+  52: LOAD_GLOBAL          NULL + print
+  64: LOAD_CONST           'Token: '
+  66: LOAD_GLOBAL          NULL + repr
+  78: LOAD_FAST            tt
+  80: PRECALL              
+  84: CALL                 
+  94: BINARY_OP            +
+  98: PRECALL              
+ 102: CALL                 
+ 112: POP_TOP              
+ 114: JUMP_BACKWARD        to 4

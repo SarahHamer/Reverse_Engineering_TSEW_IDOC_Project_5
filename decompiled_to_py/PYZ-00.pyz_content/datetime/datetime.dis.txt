@@ -1,0 +1,498 @@
+# Disassembly for datetime
+# From module file: datetime
+
+## co_consts:
+('Concrete date/time and related types.\n\nSee http://www.iana.org/time-zones/repository/tz-link.html for\ntime zone and DST data sources.\n', ('date', 'datetime', 'time', 'timedelta', 'timezone', 'tzinfo', 'MINYEAR', 'MAXYEAR', 'UTC'), 0, None, ('index',), <code object _cmp at 0x00000240694657D0, file "datetime.py", line 16>, 1, 9999, 3652059, (-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31), -1, <code object _is_leap at 0x000002406945E100, file "datetime.py", line 42>, <code object _days_before_year at 0x00000240693EA730, file "datetime.py", line 46>, <code object _days_in_month at 0x00000240693AA470, file "datetime.py", line 51>, <code object _days_before_month at 0x00000240693A9570, file "datetime.py", line 58>, <code object _ymd2ord at 0x000002406942CB20, file "datetime.py", line 63>, 401, 101, 5, 1461, 4, 25, <code object _ord2ymd at 0x0000024068C54340, file "datetime.py", line 88>, (None, 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'), (None, 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'), <code object _build_struct_time at 0x00000240691F39F0, file "datetime.py", line 156>, 'auto', <code object _format_time at 0x00000240691E9E30, file "datetime.py", line 161>, <code object _format_offset at 0x000002406947C5D0, file "datetime.py", line 182>, <code object _wrap_strftime at 0x0000024068D00780, file "datetime.py", line 201>, <code object _is_ascii_digit at 0x0000024069427C50, file "datetime.py", line 265>, <code object _find_isoformat_datetime_separator at 0x0000024066C27550, file "datetime.py", line 268>, <code object _parse_isoformat_date at 0x0000024066346FD0, file "datetime.py", line 325>, (100000, 10000, 1000, 100, 10), <code object _parse_hh_mm_ss_ff at 0x0000024068C359B0, file "datetime.py", line 364>, <code object _parse_isoformat_time at 0x0000024068C233C0, file "datetime.py", line 412>, <code object _isoweek_to_gregorian at 0x0000024068DA7150, file "datetime.py", line 459>, <code object _check_tzname at 0x00000240693D23D0, file "datetime.py", line 492>, <code object _check_utc_offset at 0x0000024069498030, file "datetime.py", line 503>, <code object _check_date_fields at 0x0000024068BD4E80, file "datetime.py", line 515>, <code object _check_time_fields at 0x0000024068E1B4C0, file "datetime.py", line 528>, <code object _check_tzinfo_arg at 0x000002406944B330, file "datetime.py", line 545>, <code object _cmperror at 0x00000240693D3DF0, file "datetime.py", line 549>, <code object _divide_and_round at 0x00000240693AAAB0, file "datetime.py", line 553>, <code object timedelta at 0x00000240694981F0, file "datetime.py", line 573>, 'timedelta', -999999999, 999999999, 23, 59, 999999, ('days', 'hours', 'minutes', 'seconds', 'microseconds'), ('microseconds',), <code object date at 0x0000024068C8F100, file "datetime.py", line 893>, 'date', 12, 31, ('days',), <code object tzinfo at 0x000002406945D5C0, file "datetime.py", line 1223>, 'tzinfo', <code object IsoCalendarDate at 0x00000240693D3A60, file "datetime.py", line 1284>, 'IsoCalendarDate', <code object time at 0x0000024069592D70, file "datetime.py", line 1315>, 'time', <code object datetime at 0x0000024068DE2750, file "datetime.py", line 1669>, 'datetime', <code object _isoweek1monday at 0x0000024069419D70, file "datetime.py", line 2285>, <code object timezone at 0x000002406949DB80, file "datetime.py", line 2297>, 'timezone', ('hours', 'minutes'), 1970, ('tzinfo',), ('*',), ('__doc__',), ('auto',))
+
+## co_names:
+('__doc__', '__all__', 'time', '_time', 'math', '_math', 'sys', 'operator', 'index', '_index', '_cmp', 'MINYEAR', 'MAXYEAR', '_MAXORDINAL', '_DAYS_IN_MONTH', '_DAYS_BEFORE_MONTH', 'dbm', 'dim', 'append', '_is_leap', '_days_before_year', '_days_in_month', '_days_before_month', '_ymd2ord', '_DI400Y', '_DI100Y', '_DI4Y', '_ord2ymd', '_MONTHNAMES', '_DAYNAMES', '_build_struct_time', '_format_time', '_format_offset', '_wrap_strftime', '_is_ascii_digit', '_find_isoformat_datetime_separator', '_parse_isoformat_date', '_FRACTION_CORRECTION', '_parse_hh_mm_ss_ff', '_parse_isoformat_time', '_isoweek_to_gregorian', '_check_tzname', '_check_utc_offset', '_check_date_fields', '_check_time_fields', '_check_tzinfo_arg', '_cmperror', '_divide_and_round', 'timedelta', 'min', 'max', 'resolution', 'date', '_date_class', 'tzinfo', 'tuple', 'IsoCalendarDate', '_IsoCalendarDate', '_tzinfo_class', '_time_class', 'datetime', '_isoweek1monday', 'timezone', '_create', 'UTC', 'utc', '_EPOCH', '_datetime', 'ImportError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'Concrete date/time and related types.\n\nSee http://www.iana.org/time-zones/repository/tz-link.html for\ntime zone and DST data sources.\n'
+   4: STORE_NAME           __doc__
+   6: LOAD_CONST           ('date', 'datetime', 'time', 'timedelta', 'timezone', 'tzinfo', 'MINYEAR', 'MAXYEAR', 'UTC')
+   8: STORE_NAME           __all__
+  10: LOAD_CONST           0
+  12: LOAD_CONST           None
+  14: IMPORT_NAME          time
+  16: STORE_NAME           _time
+  18: LOAD_CONST           0
+  20: LOAD_CONST           None
+  22: IMPORT_NAME          math
+  24: STORE_NAME           _math
+  26: LOAD_CONST           0
+  28: LOAD_CONST           None
+  30: IMPORT_NAME          sys
+  32: STORE_NAME           sys
+  34: LOAD_CONST           0
+  36: LOAD_CONST           ('index',)
+  38: IMPORT_NAME          operator
+  40: IMPORT_FROM          index
+  42: STORE_NAME           _index
+  44: POP_TOP              
+  46: LOAD_CONST           <code object _cmp at 0x00000240694657D0, file "datetime.py", line 16>
+  48: MAKE_FUNCTION        
+  50: STORE_NAME           _cmp
+  52: LOAD_CONST           1
+  54: STORE_NAME           MINYEAR
+  56: LOAD_CONST           9999
+  58: STORE_NAME           MAXYEAR
+  60: LOAD_CONST           3652059
+  62: STORE_NAME           _MAXORDINAL
+  64: BUILD_LIST           
+  66: LOAD_CONST           (-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
+  68: LIST_EXTEND          
+  70: STORE_NAME           _DAYS_IN_MONTH
+  72: LOAD_CONST           -1
+  74: BUILD_LIST           
+  76: STORE_NAME           _DAYS_BEFORE_MONTH
+  78: LOAD_CONST           0
+  80: STORE_NAME           dbm
+  82: LOAD_NAME            _DAYS_IN_MONTH
+  84: LOAD_CONST           1
+  86: LOAD_CONST           None
+  88: BUILD_SLICE          
+  90: BINARY_SUBSCR        
+ 100: GET_ITER             
+ 102: FOR_ITER             to 160
+ 104: STORE_NAME           dim
+ 106: LOAD_NAME            _DAYS_BEFORE_MONTH
+ 108: LOAD_METHOD          append
+ 130: LOAD_NAME            dbm
+ 132: PRECALL              
+ 136: CALL                 
+ 146: POP_TOP              
+ 148: LOAD_NAME            dbm
+ 150: LOAD_NAME            dim
+ 152: BINARY_OP            +=
+ 156: STORE_NAME           dbm
+ 158: JUMP_BACKWARD        to 102
+ 160: DELETE_NAME          dbm
+ 162: DELETE_NAME          dim
+ 164: LOAD_CONST           <code object _is_leap at 0x000002406945E100, file "datetime.py", line 42>
+ 166: MAKE_FUNCTION        
+ 168: STORE_NAME           _is_leap
+ 170: LOAD_CONST           <code object _days_before_year at 0x00000240693EA730, file "datetime.py", line 46>
+ 172: MAKE_FUNCTION        
+ 174: STORE_NAME           _days_before_year
+ 176: LOAD_CONST           <code object _days_in_month at 0x00000240693AA470, file "datetime.py", line 51>
+ 178: MAKE_FUNCTION        
+ 180: STORE_NAME           _days_in_month
+ 182: LOAD_CONST           <code object _days_before_month at 0x00000240693A9570, file "datetime.py", line 58>
+ 184: MAKE_FUNCTION        
+ 186: STORE_NAME           _days_before_month
+ 188: LOAD_CONST           <code object _ymd2ord at 0x000002406942CB20, file "datetime.py", line 63>
+ 190: MAKE_FUNCTION        
+ 192: STORE_NAME           _ymd2ord
+ 194: PUSH_NULL            
+ 196: LOAD_NAME            _days_before_year
+ 198: LOAD_CONST           401
+ 200: PRECALL              
+ 204: CALL                 
+ 214: STORE_NAME           _DI400Y
+ 216: PUSH_NULL            
+ 218: LOAD_NAME            _days_before_year
+ 220: LOAD_CONST           101
+ 222: PRECALL              
+ 226: CALL                 
+ 236: STORE_NAME           _DI100Y
+ 238: PUSH_NULL            
+ 240: LOAD_NAME            _days_before_year
+ 242: LOAD_CONST           5
+ 244: PRECALL              
+ 248: CALL                 
+ 258: STORE_NAME           _DI4Y
+ 260: LOAD_NAME            _DI4Y
+ 262: LOAD_CONST           1461
+ 264: COMPARE_OP           ==
+ 270: POP_JUMP_FORWARD_IF_TRUE to 276
+ 272: LOAD_ASSERTION_ERROR 
+ 274: RAISE_VARARGS        
+ 276: LOAD_NAME            _DI400Y
+ 278: LOAD_CONST           4
+ 280: LOAD_NAME            _DI100Y
+ 282: BINARY_OP            *
+ 286: LOAD_CONST           1
+ 288: BINARY_OP            +
+ 292: COMPARE_OP           ==
+ 298: POP_JUMP_FORWARD_IF_TRUE to 304
+ 300: LOAD_ASSERTION_ERROR 
+ 302: RAISE_VARARGS        
+ 304: LOAD_NAME            _DI100Y
+ 306: LOAD_CONST           25
+ 308: LOAD_NAME            _DI4Y
+ 310: BINARY_OP            *
+ 314: LOAD_CONST           1
+ 316: BINARY_OP            -
+ 320: COMPARE_OP           ==
+ 326: POP_JUMP_FORWARD_IF_TRUE to 332
+ 328: LOAD_ASSERTION_ERROR 
+ 330: RAISE_VARARGS        
+ 332: LOAD_CONST           <code object _ord2ymd at 0x0000024068C54340, file "datetime.py", line 88>
+ 334: MAKE_FUNCTION        
+ 336: STORE_NAME           _ord2ymd
+ 338: BUILD_LIST           
+ 340: LOAD_CONST           (None, 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')
+ 342: LIST_EXTEND          
+ 344: STORE_NAME           _MONTHNAMES
+ 346: BUILD_LIST           
+ 348: LOAD_CONST           (None, 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun')
+ 350: LIST_EXTEND          
+ 352: STORE_NAME           _DAYNAMES
+ 354: LOAD_CONST           <code object _build_struct_time at 0x00000240691F39F0, file "datetime.py", line 156>
+ 356: MAKE_FUNCTION        
+ 358: STORE_NAME           _build_struct_time
+ 360: LOAD_CONST           ('auto',)
+ 362: LOAD_CONST           <code object _format_time at 0x00000240691E9E30, file "datetime.py", line 161>
+ 364: MAKE_FUNCTION        defaults
+ 366: STORE_NAME           _format_time
+ 368: LOAD_CONST           <code object _format_offset at 0x000002406947C5D0, file "datetime.py", line 182>
+ 370: MAKE_FUNCTION        
+ 372: STORE_NAME           _format_offset
+ 374: LOAD_CONST           <code object _wrap_strftime at 0x0000024068D00780, file "datetime.py", line 201>
+ 376: MAKE_FUNCTION        
+ 378: STORE_NAME           _wrap_strftime
+ 380: LOAD_CONST           <code object _is_ascii_digit at 0x0000024069427C50, file "datetime.py", line 265>
+ 382: MAKE_FUNCTION        
+ 384: STORE_NAME           _is_ascii_digit
+ 386: LOAD_CONST           <code object _find_isoformat_datetime_separator at 0x0000024066C27550, file "datetime.py", line 268>
+ 388: MAKE_FUNCTION        
+ 390: STORE_NAME           _find_isoformat_datetime_separator
+ 392: LOAD_CONST           <code object _parse_isoformat_date at 0x0000024066346FD0, file "datetime.py", line 325>
+ 394: MAKE_FUNCTION        
+ 396: STORE_NAME           _parse_isoformat_date
+ 398: BUILD_LIST           
+ 400: LOAD_CONST           (100000, 10000, 1000, 100, 10)
+ 402: LIST_EXTEND          
+ 404: STORE_NAME           _FRACTION_CORRECTION
+ 406: LOAD_CONST           <code object _parse_hh_mm_ss_ff at 0x0000024068C359B0, file "datetime.py", line 364>
+ 408: MAKE_FUNCTION        
+ 410: STORE_NAME           _parse_hh_mm_ss_ff
+ 412: LOAD_CONST           <code object _parse_isoformat_time at 0x0000024068C233C0, file "datetime.py", line 412>
+ 414: MAKE_FUNCTION        
+ 416: STORE_NAME           _parse_isoformat_time
+ 418: LOAD_CONST           <code object _isoweek_to_gregorian at 0x0000024068DA7150, file "datetime.py", line 459>
+ 420: MAKE_FUNCTION        
+ 422: STORE_NAME           _isoweek_to_gregorian
+ 424: LOAD_CONST           <code object _check_tzname at 0x00000240693D23D0, file "datetime.py", line 492>
+ 426: MAKE_FUNCTION        
+ 428: STORE_NAME           _check_tzname
+ 430: LOAD_CONST           <code object _check_utc_offset at 0x0000024069498030, file "datetime.py", line 503>
+ 432: MAKE_FUNCTION        
+ 434: STORE_NAME           _check_utc_offset
+ 436: LOAD_CONST           <code object _check_date_fields at 0x0000024068BD4E80, file "datetime.py", line 515>
+ 438: MAKE_FUNCTION        
+ 440: STORE_NAME           _check_date_fields
+ 442: LOAD_CONST           <code object _check_time_fields at 0x0000024068E1B4C0, file "datetime.py", line 528>
+ 444: MAKE_FUNCTION        
+ 446: STORE_NAME           _check_time_fields
+ 448: LOAD_CONST           <code object _check_tzinfo_arg at 0x000002406944B330, file "datetime.py", line 545>
+ 450: MAKE_FUNCTION        
+ 452: STORE_NAME           _check_tzinfo_arg
+ 454: LOAD_CONST           <code object _cmperror at 0x00000240693D3DF0, file "datetime.py", line 549>
+ 456: MAKE_FUNCTION        
+ 458: STORE_NAME           _cmperror
+ 460: LOAD_CONST           <code object _divide_and_round at 0x00000240693AAAB0, file "datetime.py", line 553>
+ 462: MAKE_FUNCTION        
+ 464: STORE_NAME           _divide_and_round
+ 466: PUSH_NULL            
+ 468: LOAD_BUILD_CLASS     
+ 470: LOAD_CONST           <code object timedelta at 0x00000240694981F0, file "datetime.py", line 573>
+ 472: MAKE_FUNCTION        
+ 474: LOAD_CONST           'timedelta'
+ 476: PRECALL              
+ 480: CALL                 
+ 490: STORE_NAME           timedelta
+ 492: PUSH_NULL            
+ 494: LOAD_NAME            timedelta
+ 496: LOAD_CONST           -999999999
+ 498: PRECALL              
+ 502: CALL                 
+ 512: LOAD_NAME            timedelta
+ 514: STORE_ATTR           min
+ 524: PUSH_NULL            
+ 526: LOAD_NAME            timedelta
+ 528: LOAD_CONST           999999999
+ 530: LOAD_CONST           23
+ 532: LOAD_CONST           59
+ 534: LOAD_CONST           59
+ 536: LOAD_CONST           999999
+ 538: KW_NAMES             
+ 540: PRECALL              
+ 544: CALL                 
+ 554: LOAD_NAME            timedelta
+ 556: STORE_ATTR           max
+ 566: PUSH_NULL            
+ 568: LOAD_NAME            timedelta
+ 570: LOAD_CONST           1
+ 572: KW_NAMES             
+ 574: PRECALL              
+ 578: CALL                 
+ 588: LOAD_NAME            timedelta
+ 590: STORE_ATTR           resolution
+ 600: PUSH_NULL            
+ 602: LOAD_BUILD_CLASS     
+ 604: LOAD_CONST           <code object date at 0x0000024068C8F100, file "datetime.py", line 893>
+ 606: MAKE_FUNCTION        
+ 608: LOAD_CONST           'date'
+ 610: PRECALL              
+ 614: CALL                 
+ 624: STORE_NAME           date
+ 626: LOAD_NAME            date
+ 628: STORE_NAME           _date_class
+ 630: PUSH_NULL            
+ 632: LOAD_NAME            date
+ 634: LOAD_CONST           1
+ 636: LOAD_CONST           1
+ 638: LOAD_CONST           1
+ 640: PRECALL              
+ 644: CALL                 
+ 654: LOAD_NAME            date
+ 656: STORE_ATTR           min
+ 666: PUSH_NULL            
+ 668: LOAD_NAME            date
+ 670: LOAD_CONST           9999
+ 672: LOAD_CONST           12
+ 674: LOAD_CONST           31
+ 676: PRECALL              
+ 680: CALL                 
+ 690: LOAD_NAME            date
+ 692: STORE_ATTR           max
+ 702: PUSH_NULL            
+ 704: LOAD_NAME            timedelta
+ 706: LOAD_CONST           1
+ 708: KW_NAMES             
+ 710: PRECALL              
+ 714: CALL                 
+ 724: LOAD_NAME            date
+ 726: STORE_ATTR           resolution
+ 736: PUSH_NULL            
+ 738: LOAD_BUILD_CLASS     
+ 740: LOAD_CONST           <code object tzinfo at 0x000002406945D5C0, file "datetime.py", line 1223>
+ 742: MAKE_FUNCTION        
+ 744: LOAD_CONST           'tzinfo'
+ 746: PRECALL              
+ 750: CALL                 
+ 760: STORE_NAME           tzinfo
+ 762: PUSH_NULL            
+ 764: LOAD_BUILD_CLASS     
+ 766: LOAD_CONST           <code object IsoCalendarDate at 0x00000240693D3A60, file "datetime.py", line 1284>
+ 768: MAKE_FUNCTION        
+ 770: LOAD_CONST           'IsoCalendarDate'
+ 772: LOAD_NAME            tuple
+ 774: PRECALL              
+ 778: CALL                 
+ 788: STORE_NAME           IsoCalendarDate
+ 790: LOAD_NAME            IsoCalendarDate
+ 792: STORE_NAME           _IsoCalendarDate
+ 794: DELETE_NAME          IsoCalendarDate
+ 796: LOAD_NAME            tzinfo
+ 798: STORE_NAME           _tzinfo_class
+ 800: PUSH_NULL            
+ 802: LOAD_BUILD_CLASS     
+ 804: LOAD_CONST           <code object time at 0x0000024069592D70, file "datetime.py", line 1315>
+ 806: MAKE_FUNCTION        
+ 808: LOAD_CONST           'time'
+ 810: PRECALL              
+ 814: CALL                 
+ 824: STORE_NAME           time
+ 826: LOAD_NAME            time
+ 828: STORE_NAME           _time_class
+ 830: PUSH_NULL            
+ 832: LOAD_NAME            time
+ 834: LOAD_CONST           0
+ 836: LOAD_CONST           0
+ 838: LOAD_CONST           0
+ 840: PRECALL              
+ 844: CALL                 
+ 854: LOAD_NAME            time
+ 856: STORE_ATTR           min
+ 866: PUSH_NULL            
+ 868: LOAD_NAME            time
+ 870: LOAD_CONST           23
+ 872: LOAD_CONST           59
+ 874: LOAD_CONST           59
+ 876: LOAD_CONST           999999
+ 878: PRECALL              
+ 882: CALL                 
+ 892: LOAD_NAME            time
+ 894: STORE_ATTR           max
+ 904: PUSH_NULL            
+ 906: LOAD_NAME            timedelta
+ 908: LOAD_CONST           1
+ 910: KW_NAMES             
+ 912: PRECALL              
+ 916: CALL                 
+ 926: LOAD_NAME            time
+ 928: STORE_ATTR           resolution
+ 938: PUSH_NULL            
+ 940: LOAD_BUILD_CLASS     
+ 942: LOAD_CONST           <code object datetime at 0x0000024068DE2750, file "datetime.py", line 1669>
+ 944: MAKE_FUNCTION        
+ 946: LOAD_CONST           'datetime'
+ 948: LOAD_NAME            date
+ 950: PRECALL              
+ 954: CALL                 
+ 964: STORE_NAME           datetime
+ 966: PUSH_NULL            
+ 968: LOAD_NAME            datetime
+ 970: LOAD_CONST           1
+ 972: LOAD_CONST           1
+ 974: LOAD_CONST           1
+ 976: PRECALL              
+ 980: CALL                 
+ 990: LOAD_NAME            datetime
+ 992: STORE_ATTR           min
+1002: PUSH_NULL            
+1004: LOAD_NAME            datetime
+1006: LOAD_CONST           9999
+1008: LOAD_CONST           12
+1010: LOAD_CONST           31
+1012: LOAD_CONST           23
+1014: LOAD_CONST           59
+1016: LOAD_CONST           59
+1018: LOAD_CONST           999999
+1020: PRECALL              
+1024: CALL                 
+1034: LOAD_NAME            datetime
+1036: STORE_ATTR           max
+1046: PUSH_NULL            
+1048: LOAD_NAME            timedelta
+1050: LOAD_CONST           1
+1052: KW_NAMES             
+1054: PRECALL              
+1058: CALL                 
+1068: LOAD_NAME            datetime
+1070: STORE_ATTR           resolution
+1080: LOAD_CONST           <code object _isoweek1monday at 0x0000024069419D70, file "datetime.py", line 2285>
+1082: MAKE_FUNCTION        
+1084: STORE_NAME           _isoweek1monday
+1086: PUSH_NULL            
+1088: LOAD_BUILD_CLASS     
+1090: LOAD_CONST           <code object timezone at 0x000002406949DB80, file "datetime.py", line 2297>
+1092: MAKE_FUNCTION        
+1094: LOAD_CONST           'timezone'
+1096: LOAD_NAME            tzinfo
+1098: PRECALL              
+1102: CALL                 
+1112: STORE_NAME           timezone
+1114: LOAD_NAME            timezone
+1116: LOAD_METHOD          _create
+1138: PUSH_NULL            
+1140: LOAD_NAME            timedelta
+1142: LOAD_CONST           0
+1144: PRECALL              
+1148: CALL                 
+1158: PRECALL              
+1162: CALL                 
+1172: COPY                 
+1174: STORE_NAME           UTC
+1176: LOAD_NAME            timezone
+1178: STORE_ATTR           utc
+1188: LOAD_NAME            timezone
+1190: LOAD_METHOD          _create
+1212: PUSH_NULL            
+1214: LOAD_NAME            timedelta
+1216: LOAD_CONST           23
+1218: LOAD_CONST           59
+1220: KW_NAMES             
+1222: PRECALL              
+1226: CALL                 
+1236: UNARY_NEGATIVE       
+1238: PRECALL              
+1242: CALL                 
+1252: LOAD_NAME            timezone
+1254: STORE_ATTR           min
+1264: LOAD_NAME            timezone
+1266: LOAD_METHOD          _create
+1288: PUSH_NULL            
+1290: LOAD_NAME            timedelta
+1292: LOAD_CONST           23
+1294: LOAD_CONST           59
+1296: KW_NAMES             
+1298: PRECALL              
+1302: CALL                 
+1312: PRECALL              
+1316: CALL                 
+1326: LOAD_NAME            timezone
+1328: STORE_ATTR           max
+1338: PUSH_NULL            
+1340: LOAD_NAME            datetime
+1342: LOAD_CONST           1970
+1344: LOAD_CONST           1
+1346: LOAD_CONST           1
+1348: LOAD_NAME            timezone
+1350: LOAD_ATTR            utc
+1360: KW_NAMES             
+1362: PRECALL              
+1366: CALL                 
+1376: STORE_NAME           _EPOCH
+1378: NOP                  
+1380: LOAD_CONST           0
+1382: LOAD_CONST           ('*',)
+1384: IMPORT_NAME          _datetime
+1386: IMPORT_STAR          
+1388: DELETE_NAME          _DAYNAMES
+1390: DELETE_NAME          _DAYS_BEFORE_MONTH
+1392: DELETE_NAME          _DAYS_IN_MONTH
+1394: DELETE_NAME          _DI100Y
+1396: DELETE_NAME          _DI400Y
+1398: DELETE_NAME          _DI4Y
+1400: DELETE_NAME          _EPOCH
+1402: DELETE_NAME          _MAXORDINAL
+1404: DELETE_NAME          _MONTHNAMES
+1406: DELETE_NAME          _build_struct_time
+1408: DELETE_NAME          _check_date_fields
+1410: DELETE_NAME          _check_time_fields
+1412: DELETE_NAME          _check_tzinfo_arg
+1414: DELETE_NAME          _check_tzname
+1416: DELETE_NAME          _check_utc_offset
+1418: DELETE_NAME          _cmp
+1420: DELETE_NAME          _cmperror
+1422: DELETE_NAME          _date_class
+1424: DELETE_NAME          _days_before_month
+1426: DELETE_NAME          _days_before_year
+1428: DELETE_NAME          _days_in_month
+1430: DELETE_NAME          _format_time
+1432: DELETE_NAME          _format_offset
+1434: DELETE_NAME          _index
+1436: DELETE_NAME          _is_leap
+1438: DELETE_NAME          _isoweek1monday
+1440: DELETE_NAME          _math
+1442: DELETE_NAME          _ord2ymd
+1444: DELETE_NAME          _time
+1446: DELETE_NAME          _time_class
+1448: DELETE_NAME          _tzinfo_class
+1450: DELETE_NAME          _wrap_strftime
+1452: DELETE_NAME          _ymd2ord
+1454: DELETE_NAME          _divide_and_round
+1456: DELETE_NAME          _parse_isoformat_date
+1458: DELETE_NAME          _parse_isoformat_time
+1460: DELETE_NAME          _parse_hh_mm_ss_ff
+1462: DELETE_NAME          _IsoCalendarDate
+1464: DELETE_NAME          _isoweek_to_gregorian
+1466: DELETE_NAME          _find_isoformat_datetime_separator
+1468: DELETE_NAME          _FRACTION_CORRECTION
+1470: DELETE_NAME          _is_ascii_digit
+1472: LOAD_CONST           0
+1474: LOAD_CONST           ('__doc__',)
+1476: IMPORT_NAME          _datetime
+1478: IMPORT_FROM          __doc__
+1480: STORE_NAME           __doc__
+1482: POP_TOP              
+1484: LOAD_CONST           None
+1486: RETURN_VALUE         
+1488: PUSH_EXC_INFO        
+1490: LOAD_NAME            ImportError
+1492: CHECK_EXC_MATCH      
+1494: POP_JUMP_FORWARD_IF_FALSE to 1504
+1496: POP_TOP              
+1498: POP_EXCEPT           
+1500: LOAD_CONST           None
+1502: RETURN_VALUE         
+1504: RERAISE              
+1506: COPY                 
+1508: POP_EXCEPT           
+1510: RERAISE              

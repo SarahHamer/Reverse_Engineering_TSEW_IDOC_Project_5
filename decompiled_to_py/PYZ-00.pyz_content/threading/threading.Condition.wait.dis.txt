@@ -1,0 +1,137 @@
+# Disassembly for threading.Condition.wait
+# From module file: threading
+
+## co_consts:
+('Wait until notified or until a timeout occurs.\n\n        If the calling thread has not acquired the lock when this method is\n        called, a RuntimeError is raised.\n\n        This method releases the underlying lock, and then blocks until it is\n        awakened by a notify() or notify_all() call for the same condition\n        variable in another thread, or until the optional timeout occurs. Once\n        awakened or timed out, it re-acquires the lock and returns.\n\n        When the timeout argument is present and not None, it should be a\n        floating point number specifying a timeout for the operation in seconds\n        (or fractions thereof).\n\n        When the underlying lock is an RLock, it is not released using its\n        release() method, since this may not actually unlock the lock when it\n        was acquired multiple times recursively. Instead, an internal interface\n        of the RLock class is used, which really unlocks it even when it has\n        been recursively acquired several times. Another internal interface is\n        then used to restore the recursion level when the lock is reacquired.\n\n        ', 'cannot wait on un-acquired lock', False, None, True, 0)
+
+## co_names:
+('_is_owned', 'RuntimeError', '_allocate_lock', 'acquire', '_waiters', 'append', '_release_save', '_acquire_restore', 'remove', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _is_owned
+  26: PRECALL              
+  30: CALL                 
+  40: POP_JUMP_FORWARD_IF_TRUE to 72
+  42: LOAD_GLOBAL          NULL + RuntimeError
+  54: LOAD_CONST           'cannot wait on un-acquired lock'
+  56: PRECALL              
+  60: CALL                 
+  70: RAISE_VARARGS        
+  72: LOAD_GLOBAL          NULL + _allocate_lock
+  84: PRECALL              
+  88: CALL                 
+  98: STORE_FAST           waiter
+ 100: LOAD_FAST            waiter
+ 102: LOAD_METHOD          acquire
+ 124: PRECALL              
+ 128: CALL                 
+ 138: POP_TOP              
+ 140: LOAD_FAST            self
+ 142: LOAD_ATTR            _waiters
+ 152: LOAD_METHOD          append
+ 174: LOAD_FAST            waiter
+ 176: PRECALL              
+ 180: CALL                 
+ 190: POP_TOP              
+ 192: LOAD_FAST            self
+ 194: LOAD_METHOD          _release_save
+ 216: PRECALL              
+ 220: CALL                 
+ 230: STORE_FAST           saved_state
+ 232: LOAD_CONST           False
+ 234: STORE_FAST           gotit
+ 236: NOP                  
+ 238: LOAD_FAST            timeout
+ 240: POP_JUMP_FORWARD_IF_NOT_NONE to 288
+ 242: LOAD_FAST            waiter
+ 244: LOAD_METHOD          acquire
+ 266: PRECALL              
+ 270: CALL                 
+ 280: POP_TOP              
+ 282: LOAD_CONST           True
+ 284: STORE_FAST           gotit
+ 286: JUMP_FORWARD         to 388
+ 288: LOAD_FAST            timeout
+ 290: LOAD_CONST           0
+ 292: COMPARE_OP           >
+ 298: POP_JUMP_FORWARD_IF_FALSE to 346
+ 300: LOAD_FAST            waiter
+ 302: LOAD_METHOD          acquire
+ 324: LOAD_CONST           True
+ 326: LOAD_FAST            timeout
+ 328: PRECALL              
+ 332: CALL                 
+ 342: STORE_FAST           gotit
+ 344: JUMP_FORWARD         to 388
+ 346: LOAD_FAST            waiter
+ 348: LOAD_METHOD          acquire
+ 370: LOAD_CONST           False
+ 372: PRECALL              
+ 376: CALL                 
+ 386: STORE_FAST           gotit
+ 388: LOAD_FAST            gotit
+ 390: LOAD_FAST            self
+ 392: LOAD_METHOD          _acquire_restore
+ 414: LOAD_FAST            saved_state
+ 416: PRECALL              
+ 420: CALL                 
+ 430: POP_TOP              
+ 432: LOAD_FAST            gotit
+ 434: POP_JUMP_FORWARD_IF_TRUE to 524
+ 436: NOP                  
+ 438: LOAD_FAST            self
+ 440: LOAD_ATTR            _waiters
+ 450: LOAD_METHOD          remove
+ 472: LOAD_FAST            waiter
+ 474: PRECALL              
+ 478: CALL                 
+ 488: POP_TOP              
+ 490: RETURN_VALUE         
+ 492: PUSH_EXC_INFO        
+ 494: LOAD_GLOBAL          ValueError
+ 506: CHECK_EXC_MATCH      
+ 508: POP_JUMP_FORWARD_IF_FALSE to 516
+ 510: POP_TOP              
+ 512: POP_EXCEPT           
+ 514: RETURN_VALUE         
+ 516: RERAISE              
+ 518: COPY                 
+ 520: POP_EXCEPT           
+ 522: RERAISE              
+ 524: RETURN_VALUE         
+ 526: PUSH_EXC_INFO        
+ 528: LOAD_FAST            self
+ 530: LOAD_METHOD          _acquire_restore
+ 552: LOAD_FAST            saved_state
+ 554: PRECALL              
+ 558: CALL                 
+ 568: POP_TOP              
+ 570: LOAD_FAST            gotit
+ 572: POP_JUMP_FORWARD_IF_TRUE to 662
+ 574: NOP                  
+ 576: LOAD_FAST            self
+ 578: LOAD_ATTR            _waiters
+ 588: LOAD_METHOD          remove
+ 610: LOAD_FAST            waiter
+ 612: PRECALL              
+ 616: CALL                 
+ 626: POP_TOP              
+ 628: RERAISE              
+ 630: PUSH_EXC_INFO        
+ 632: LOAD_GLOBAL          ValueError
+ 644: CHECK_EXC_MATCH      
+ 646: POP_JUMP_FORWARD_IF_FALSE to 654
+ 648: POP_TOP              
+ 650: POP_EXCEPT           
+ 652: RERAISE              
+ 654: RERAISE              
+ 656: COPY                 
+ 658: POP_EXCEPT           
+ 660: RERAISE              
+ 662: RERAISE              
+ 664: COPY                 
+ 666: POP_EXCEPT           
+ 668: RERAISE              

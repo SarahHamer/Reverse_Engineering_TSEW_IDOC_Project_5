@@ -1,0 +1,59 @@
+# Disassembly for importlib._code_to_hash_pyc
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Produce the data for a hash-based pyc.', 1, 8)
+
+## co_names:
+('bytearray', 'MAGIC_NUMBER', 'extend', '_pack_uint32', 'len', 'marshal', 'dumps')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + bytearray
+  14: LOAD_GLOBAL          MAGIC_NUMBER
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           data
+  42: LOAD_CONST           1
+  44: LOAD_FAST            checked
+  46: LOAD_CONST           1
+  48: BINARY_OP            <<
+  52: BINARY_OP            |
+  56: STORE_FAST           flags
+  58: LOAD_FAST            data
+  60: LOAD_METHOD          extend
+  82: LOAD_GLOBAL          NULL + _pack_uint32
+  94: LOAD_FAST            flags
+  96: PRECALL              
+ 100: CALL                 
+ 110: PRECALL              
+ 114: CALL                 
+ 124: POP_TOP              
+ 126: LOAD_GLOBAL          NULL + len
+ 138: LOAD_FAST            source_hash
+ 140: PRECALL              
+ 144: CALL                 
+ 154: LOAD_CONST           8
+ 156: COMPARE_OP           ==
+ 162: POP_JUMP_FORWARD_IF_TRUE to 168
+ 164: LOAD_ASSERTION_ERROR 
+ 166: RAISE_VARARGS        
+ 168: LOAD_FAST            data
+ 170: LOAD_METHOD          extend
+ 192: LOAD_FAST            source_hash
+ 194: PRECALL              
+ 198: CALL                 
+ 208: POP_TOP              
+ 210: LOAD_FAST            data
+ 212: LOAD_METHOD          extend
+ 234: LOAD_GLOBAL          NULL + marshal
+ 246: LOAD_ATTR            dumps
+ 256: LOAD_FAST            code
+ 258: PRECALL              
+ 262: CALL                 
+ 272: PRECALL              
+ 276: CALL                 
+ 286: POP_TOP              
+ 288: LOAD_FAST            data
+ 290: RETURN_VALUE         

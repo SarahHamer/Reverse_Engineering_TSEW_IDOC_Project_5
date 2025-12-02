@@ -1,0 +1,44 @@
+# Disassembly for email.ContentTypeHeader.init
+# From module file: email.headerregistry
+
+## co_consts:
+(None,)
+
+## co_names:
+('super', 'init', 'utils', '_sanitize', '_parse_tree', 'maintype', '_maintype', 'subtype', '_subtype')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: PUSH_NULL            
+   6: LOAD_GLOBAL          NULL + super
+  18: PRECALL              
+  22: CALL                 
+  32: LOAD_ATTR            init
+  42: LOAD_FAST            args
+  44: BUILD_MAP            
+  46: LOAD_FAST            kw
+  48: DICT_MERGE           
+  50: CALL_FUNCTION_EX     
+  52: POP_TOP              
+  54: LOAD_GLOBAL          NULL + utils
+  66: LOAD_ATTR            _sanitize
+  76: LOAD_FAST            self
+  78: LOAD_ATTR            _parse_tree
+  88: LOAD_ATTR            maintype
+  98: PRECALL              
+ 102: CALL                 
+ 112: LOAD_FAST            self
+ 114: STORE_ATTR           _maintype
+ 124: LOAD_GLOBAL          NULL + utils
+ 136: LOAD_ATTR            _sanitize
+ 146: LOAD_FAST            self
+ 148: LOAD_ATTR            _parse_tree
+ 158: LOAD_ATTR            subtype
+ 168: PRECALL              
+ 172: CALL                 
+ 182: LOAD_FAST            self
+ 184: STORE_ATTR           _subtype
+ 194: LOAD_CONST           None
+ 196: RETURN_VALUE         

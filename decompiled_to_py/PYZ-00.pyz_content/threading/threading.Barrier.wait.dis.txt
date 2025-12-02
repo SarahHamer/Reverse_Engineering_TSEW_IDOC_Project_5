@@ -1,0 +1,107 @@
+# Disassembly for threading.Barrier.wait
+# From module file: threading
+
+## co_consts:
+("Wait for the barrier.\n\n        When the specified number of threads have started waiting, they are all\n        simultaneously awoken. If an 'action' was provided for the barrier, one\n        of the threads will have executed that callback prior to returning.\n        Returns an individual index number from 0 to 'parties-1'.\n\n        ", None, 1)
+
+## co_names:
+('_timeout', '_cond', '_enter', '_count', '_parties', '_release', '_wait', '_exit')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            timeout
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 20
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            _timeout
+  18: STORE_FAST           timeout
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            _cond
+  32: BEFORE_WITH          
+  34: POP_TOP              
+  36: LOAD_FAST            self
+  38: LOAD_METHOD          _enter
+  60: PRECALL              
+  64: CALL                 
+  74: POP_TOP              
+  76: LOAD_FAST            self
+  78: LOAD_ATTR            _count
+  88: STORE_FAST           index
+  90: LOAD_FAST            self
+  92: COPY                 
+  94: LOAD_ATTR            _count
+ 104: LOAD_CONST           1
+ 106: BINARY_OP            +=
+ 110: SWAP                 
+ 112: STORE_ATTR           _count
+ 122: NOP                  
+ 124: LOAD_FAST            index
+ 126: LOAD_CONST           1
+ 128: BINARY_OP            +
+ 132: LOAD_FAST            self
+ 134: LOAD_ATTR            _parties
+ 144: COMPARE_OP           ==
+ 150: POP_JUMP_FORWARD_IF_FALSE to 194
+ 152: LOAD_FAST            self
+ 154: LOAD_METHOD          _release
+ 176: PRECALL              
+ 180: CALL                 
+ 190: POP_TOP              
+ 192: JUMP_FORWARD         to 236
+ 194: LOAD_FAST            self
+ 196: LOAD_METHOD          _wait
+ 218: LOAD_FAST            timeout
+ 220: PRECALL              
+ 224: CALL                 
+ 234: POP_TOP              
+ 236: LOAD_FAST            index
+ 238: LOAD_FAST            self
+ 240: COPY                 
+ 242: LOAD_ATTR            _count
+ 252: LOAD_CONST           1
+ 254: BINARY_OP            -=
+ 258: SWAP                 
+ 260: STORE_ATTR           _count
+ 270: LOAD_FAST            self
+ 272: LOAD_METHOD          _exit
+ 294: PRECALL              
+ 298: CALL                 
+ 308: POP_TOP              
+ 310: SWAP                 
+ 312: LOAD_CONST           None
+ 314: LOAD_CONST           None
+ 316: LOAD_CONST           None
+ 318: PRECALL              
+ 322: CALL                 
+ 332: POP_TOP              
+ 334: RETURN_VALUE         
+ 336: PUSH_EXC_INFO        
+ 338: LOAD_FAST            self
+ 340: COPY                 
+ 342: LOAD_ATTR            _count
+ 352: LOAD_CONST           1
+ 354: BINARY_OP            -=
+ 358: SWAP                 
+ 360: STORE_ATTR           _count
+ 370: LOAD_FAST            self
+ 372: LOAD_METHOD          _exit
+ 394: PRECALL              
+ 398: CALL                 
+ 408: POP_TOP              
+ 410: RERAISE              
+ 412: COPY                 
+ 414: POP_EXCEPT           
+ 416: RERAISE              
+ 418: PUSH_EXC_INFO        
+ 420: WITH_EXCEPT_START    
+ 422: POP_JUMP_FORWARD_IF_TRUE to 432
+ 424: RERAISE              
+ 426: COPY                 
+ 428: POP_EXCEPT           
+ 430: RERAISE              
+ 432: POP_TOP              
+ 434: POP_EXCEPT           
+ 436: POP_TOP              
+ 438: POP_TOP              
+ 440: LOAD_CONST           None
+ 442: RETURN_VALUE         

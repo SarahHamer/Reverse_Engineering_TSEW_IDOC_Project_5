@@ -1,0 +1,17 @@
+# Disassembly for textwrap.indent.predicate
+# From module file: textwrap
+
+## co_consts:
+(None,)
+
+## co_names:
+('strip',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            line
+   4: LOAD_METHOD          strip
+  26: PRECALL              
+  30: CALL                 
+  40: RETURN_VALUE         

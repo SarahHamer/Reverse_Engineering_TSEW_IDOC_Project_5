@@ -1,0 +1,38 @@
+# Disassembly for datetime.date.replace
+# From module file: datetime
+
+## co_consts:
+('Return a new date with new values for the specified fields.',)
+
+## co_names:
+('_year', '_month', '_day', 'type')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            year
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 20
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            _year
+  18: STORE_FAST           year
+  20: LOAD_FAST            month
+  22: POP_JUMP_FORWARD_IF_NOT_NONE to 38
+  24: LOAD_FAST            self
+  26: LOAD_ATTR            _month
+  36: STORE_FAST           month
+  38: LOAD_FAST            day
+  40: POP_JUMP_FORWARD_IF_NOT_NONE to 56
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            _day
+  54: STORE_FAST           day
+  56: PUSH_NULL            
+  58: LOAD_GLOBAL          NULL + type
+  70: LOAD_FAST            self
+  72: PRECALL              
+  76: CALL                 
+  86: LOAD_FAST            year
+  88: LOAD_FAST            month
+  90: LOAD_FAST            day
+  92: PRECALL              
+  96: CALL                 
+ 106: RETURN_VALUE         

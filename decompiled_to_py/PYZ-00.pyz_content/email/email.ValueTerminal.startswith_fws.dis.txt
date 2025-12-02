@@ -1,0 +1,14 @@
+# Disassembly for email.ValueTerminal.startswith_fws
+# From module file: email._header_value_parser
+
+## co_consts:
+(None, False)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           False
+   4: RETURN_VALUE         

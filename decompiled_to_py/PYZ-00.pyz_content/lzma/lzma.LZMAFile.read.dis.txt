@@ -1,0 +1,24 @@
+# Disassembly for lzma.LZMAFile.read
+# From module file: lzma
+
+## co_consts:
+('Read up to size uncompressed bytes from the file.\n\n        If size is negative or omitted, read until EOF is reached.\n        Returns b"" if the file is already at EOF.\n        ',)
+
+## co_names:
+('_check_can_read', '_buffer', 'read')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _check_can_read
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            _buffer
+  54: LOAD_METHOD          read
+  76: LOAD_FAST            size
+  78: PRECALL              
+  82: CALL                 
+  92: RETURN_VALUE         

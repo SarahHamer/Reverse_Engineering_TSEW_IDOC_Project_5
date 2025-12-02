@@ -1,0 +1,16 @@
+# Disassembly for ssl.SSLObject.server_hostname
+# From module file: ssl
+
+## co_consts:
+('The currently set server hostname (for SNI), or ``None`` if no\n        server hostname is set.',)
+
+## co_names:
+('_sslobj', 'server_hostname')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _sslobj
+  14: LOAD_ATTR            server_hostname
+  24: RETURN_VALUE         

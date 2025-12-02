@@ -1,0 +1,25 @@
+# Disassembly for gettext.bindtextdomain
+# From module file: gettext
+
+## co_consts:
+(None,)
+
+## co_names:
+('_localedirs', 'get', '_default_localedir')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            localedir
+   4: POP_JUMP_FORWARD_IF_NONE to 26
+   6: LOAD_FAST            localedir
+   8: LOAD_GLOBAL          _localedirs
+  20: LOAD_FAST            domain
+  22: STORE_SUBSCR         
+  26: LOAD_GLOBAL          _localedirs
+  38: LOAD_METHOD          get
+  60: LOAD_FAST            domain
+  62: LOAD_GLOBAL          _default_localedir
+  74: PRECALL              
+  78: CALL                 
+  88: RETURN_VALUE         

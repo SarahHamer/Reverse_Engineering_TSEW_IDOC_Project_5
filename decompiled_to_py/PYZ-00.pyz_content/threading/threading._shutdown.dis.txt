@@ -1,0 +1,117 @@
+# Disassembly for threading._shutdown
+# From module file: threading
+
+## co_consts:
+('\n    Wait until the Python thread state of all non-daemon threads get deleted.\n    ', None, True)
+
+## co_names:
+('_main_thread', '_is_stopped', '_SHUTTING_DOWN', 'reversed', '_threading_atexits', 'ident', 'get_ident', '_tstate_lock', 'locked', 'release', '_stop', '_shutdown_locks_lock', 'list', '_shutdown_locks', 'clear', 'acquire')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _main_thread
+  14: LOAD_ATTR            _is_stopped
+  24: POP_JUMP_FORWARD_IF_FALSE to 30
+  26: LOAD_CONST           None
+  28: RETURN_VALUE         
+  30: LOAD_CONST           True
+  32: STORE_GLOBAL         _SHUTTING_DOWN
+  34: LOAD_GLOBAL          NULL + reversed
+  46: LOAD_GLOBAL          _threading_atexits
+  58: PRECALL              
+  62: CALL                 
+  72: GET_ITER             
+  74: FOR_ITER             to 100
+  76: STORE_FAST           atexit_call
+  78: PUSH_NULL            
+  80: LOAD_FAST            atexit_call
+  82: PRECALL              
+  86: CALL                 
+  96: POP_TOP              
+  98: JUMP_BACKWARD        to 74
+ 100: LOAD_GLOBAL          _main_thread
+ 112: LOAD_ATTR            ident
+ 122: LOAD_GLOBAL          NULL + get_ident
+ 134: PRECALL              
+ 138: CALL                 
+ 148: COMPARE_OP           ==
+ 154: POP_JUMP_FORWARD_IF_FALSE to 324
+ 156: LOAD_GLOBAL          _main_thread
+ 168: LOAD_ATTR            _tstate_lock
+ 178: STORE_FAST           tlock
+ 180: LOAD_FAST            tlock
+ 182: POP_JUMP_FORWARD_IF_NOT_NONE to 188
+ 184: LOAD_ASSERTION_ERROR 
+ 186: RAISE_VARARGS        
+ 188: LOAD_FAST            tlock
+ 190: LOAD_METHOD          locked
+ 212: PRECALL              
+ 216: CALL                 
+ 226: POP_JUMP_FORWARD_IF_TRUE to 232
+ 228: LOAD_ASSERTION_ERROR 
+ 230: RAISE_VARARGS        
+ 232: LOAD_FAST            tlock
+ 234: LOAD_METHOD          release
+ 256: PRECALL              
+ 260: CALL                 
+ 270: POP_TOP              
+ 272: LOAD_GLOBAL          _main_thread
+ 284: LOAD_METHOD          _stop
+ 306: PRECALL              
+ 310: CALL                 
+ 320: POP_TOP              
+ 322: JUMP_FORWARD         to 326
+ 324: NOP                  
+ 326: NOP                  
+ 328: LOAD_GLOBAL          _shutdown_locks_lock
+ 340: BEFORE_WITH          
+ 342: POP_TOP              
+ 344: LOAD_GLOBAL          NULL + list
+ 356: LOAD_GLOBAL          _shutdown_locks
+ 368: PRECALL              
+ 372: CALL                 
+ 382: STORE_FAST           locks
+ 384: LOAD_GLOBAL          _shutdown_locks
+ 396: LOAD_METHOD          clear
+ 418: PRECALL              
+ 422: CALL                 
+ 432: POP_TOP              
+ 434: LOAD_CONST           None
+ 436: LOAD_CONST           None
+ 438: LOAD_CONST           None
+ 440: PRECALL              
+ 444: CALL                 
+ 454: POP_TOP              
+ 456: JUMP_FORWARD         to 480
+ 458: PUSH_EXC_INFO        
+ 460: WITH_EXCEPT_START    
+ 462: POP_JUMP_FORWARD_IF_TRUE to 472
+ 464: RERAISE              
+ 466: COPY                 
+ 468: POP_EXCEPT           
+ 470: RERAISE              
+ 472: POP_TOP              
+ 474: POP_EXCEPT           
+ 476: POP_TOP              
+ 478: POP_TOP              
+ 480: LOAD_FAST            locks
+ 482: POP_JUMP_FORWARD_IF_TRUE to 488
+ 484: LOAD_CONST           None
+ 486: RETURN_VALUE         
+ 488: LOAD_FAST            locks
+ 490: GET_ITER             
+ 492: FOR_ITER             to 578
+ 494: STORE_FAST           lock
+ 496: LOAD_FAST            lock
+ 498: LOAD_METHOD          acquire
+ 520: PRECALL              
+ 524: CALL                 
+ 534: POP_TOP              
+ 536: LOAD_FAST            lock
+ 538: LOAD_METHOD          release
+ 560: PRECALL              
+ 564: CALL                 
+ 574: POP_TOP              
+ 576: JUMP_BACKWARD        to 492
+ 578: JUMP_BACKWARD        to 328

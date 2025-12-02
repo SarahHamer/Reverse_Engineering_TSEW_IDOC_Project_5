@@ -1,0 +1,31 @@
+# Disassembly for ssl.SSLSocket.verify_client_post_handshake
+# From module file: ssl
+
+## co_consts:
+(None, 'No SSL wrapper around ')
+
+## co_names:
+('_sslobj', 'verify_client_post_handshake', 'ValueError', 'str')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _sslobj
+  14: POP_JUMP_FORWARD_IF_FALSE to 66
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            _sslobj
+  28: LOAD_METHOD          verify_client_post_handshake
+  50: PRECALL              
+  54: CALL                 
+  64: RETURN_VALUE         
+  66: LOAD_GLOBAL          NULL + ValueError
+  78: LOAD_CONST           'No SSL wrapper around '
+  80: LOAD_GLOBAL          NULL + str
+  92: LOAD_FAST            self
+  94: PRECALL              
+  98: CALL                 
+ 108: BINARY_OP            +
+ 112: PRECALL              
+ 116: CALL                 
+ 126: RAISE_VARARGS        

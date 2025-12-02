@@ -1,0 +1,91 @@
+# Disassembly for gzip._GzipReader._read_eof
+# From module file: gzip
+
+## co_consts:
+(None, '<II', 8, 'CRC check failed ', ' != ', 4294967295, 'Incorrect length of data produced', b'\x00', 1)
+
+## co_names:
+('struct', 'unpack', '_read_exact', '_fp', '_crc', 'BadGzipFile', 'hex', '_stream_size', 'read', 'prepend')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + struct
+  14: LOAD_ATTR            unpack
+  24: LOAD_CONST           '<II'
+  26: LOAD_GLOBAL          NULL + _read_exact
+  38: LOAD_FAST            self
+  40: LOAD_ATTR            _fp
+  50: LOAD_CONST           8
+  52: PRECALL              
+  56: CALL                 
+  66: PRECALL              
+  70: CALL                 
+  80: UNPACK_SEQUENCE      
+  84: STORE_FAST           crc32
+  86: STORE_FAST           isize
+  88: LOAD_FAST            crc32
+  90: LOAD_FAST            self
+  92: LOAD_ATTR            _crc
+ 102: COMPARE_OP           !=
+ 108: POP_JUMP_FORWARD_IF_FALSE to 214
+ 110: LOAD_GLOBAL          NULL + BadGzipFile
+ 122: LOAD_CONST           'CRC check failed '
+ 124: LOAD_GLOBAL          NULL + hex
+ 136: LOAD_FAST            crc32
+ 138: PRECALL              
+ 142: CALL                 
+ 152: FORMAT_VALUE         str
+ 154: LOAD_CONST           ' != '
+ 156: LOAD_GLOBAL          NULL + hex
+ 168: LOAD_FAST            self
+ 170: LOAD_ATTR            _crc
+ 180: PRECALL              
+ 184: CALL                 
+ 194: FORMAT_VALUE         str
+ 196: BUILD_STRING         
+ 198: PRECALL              
+ 202: CALL                 
+ 212: RAISE_VARARGS        
+ 214: LOAD_FAST            isize
+ 216: LOAD_FAST            self
+ 218: LOAD_ATTR            _stream_size
+ 228: LOAD_CONST           4294967295
+ 230: BINARY_OP            &
+ 234: COMPARE_OP           !=
+ 240: POP_JUMP_FORWARD_IF_FALSE to 272
+ 242: LOAD_GLOBAL          NULL + BadGzipFile
+ 254: LOAD_CONST           'Incorrect length of data produced'
+ 256: PRECALL              
+ 260: CALL                 
+ 270: RAISE_VARARGS        
+ 272: LOAD_CONST           b'\x00'
+ 274: STORE_FAST           c
+ 276: LOAD_FAST            c
+ 278: LOAD_CONST           b'\x00'
+ 280: COMPARE_OP           ==
+ 286: POP_JUMP_FORWARD_IF_FALSE to 352
+ 288: LOAD_FAST            self
+ 290: LOAD_ATTR            _fp
+ 300: LOAD_METHOD          read
+ 322: LOAD_CONST           1
+ 324: PRECALL              
+ 328: CALL                 
+ 338: STORE_FAST           c
+ 340: LOAD_FAST            c
+ 342: LOAD_CONST           b'\x00'
+ 344: COMPARE_OP           ==
+ 350: POP_JUMP_BACKWARD_IF_TRUE to 288
+ 352: LOAD_FAST            c
+ 354: POP_JUMP_FORWARD_IF_FALSE to 412
+ 356: LOAD_FAST            self
+ 358: LOAD_ATTR            _fp
+ 368: LOAD_METHOD          prepend
+ 390: LOAD_FAST            c
+ 392: PRECALL              
+ 396: CALL                 
+ 406: POP_TOP              
+ 408: LOAD_CONST           None
+ 410: RETURN_VALUE         
+ 412: LOAD_CONST           None
+ 414: RETURN_VALUE         

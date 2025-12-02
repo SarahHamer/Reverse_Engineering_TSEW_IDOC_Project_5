@@ -1,0 +1,329 @@
+# Disassembly for zipfile.ZipFile.__init__
+# From module file: zipfile
+
+## co_consts:
+("Open the ZIP file with mode read 'r', write 'w', exclusive create 'x',\n        or append 'a'.", ('r', 'w', 'x', 'a'), "ZipFile requires mode 'r', 'w', 'x', or 'a'", False, 0, None, b'', 'r', 'metadata_encoding is only supported for reading files', 'rb', 'w+b', 'x+b', 'r+b', 'wb', 'xb', ('r', 'w', 'x', 'a', 'r+b', 'w+b', 'x+b'), True, 1, 'name', ('w', 'x'), 'a', 2, "Mode must be 'r', 'w', 'x', or 'a'")
+
+## co_names:
+('ValueError', '_check_compression', '_allowZip64', '_didModify', 'debug', 'NameToInfo', 'filelist', 'compression', 'compresslevel', 'mode', 'pwd', '_comment', '_strict_timestamps', 'metadata_encoding', 'isinstance', 'os', 'PathLike', 'fspath', 'str', '_filePassed', 'filename', 'io', 'open', 'fp', 'OSError', 'getattr', '_fileRefCnt', 'threading', 'RLock', '_lock', '_seekable', '_writing', '_RealGetContents', 'tell', 'start_dir', 'seek', 'AttributeError', '_Tellable', 'BadZipFile', '_fpclose')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            mode
+   4: LOAD_CONST           ('r', 'w', 'x', 'a')
+   6: CONTAINS_OP          
+   8: POP_JUMP_FORWARD_IF_FALSE to 40
+  10: LOAD_GLOBAL          NULL + ValueError
+  22: LOAD_CONST           "ZipFile requires mode 'r', 'w', 'x', or 'a'"
+  24: PRECALL              
+  28: CALL                 
+  38: RAISE_VARARGS        
+  40: LOAD_GLOBAL          NULL + _check_compression
+  52: LOAD_FAST            compression
+  54: PRECALL              
+  58: CALL                 
+  68: POP_TOP              
+  70: LOAD_FAST            allowZip64
+  72: LOAD_FAST            self
+  74: STORE_ATTR           _allowZip64
+  84: LOAD_CONST           False
+  86: LOAD_FAST            self
+  88: STORE_ATTR           _didModify
+  98: LOAD_CONST           0
+ 100: LOAD_FAST            self
+ 102: STORE_ATTR           debug
+ 112: BUILD_MAP            
+ 114: LOAD_FAST            self
+ 116: STORE_ATTR           NameToInfo
+ 126: BUILD_LIST           
+ 128: LOAD_FAST            self
+ 130: STORE_ATTR           filelist
+ 140: LOAD_FAST            compression
+ 142: LOAD_FAST            self
+ 144: STORE_ATTR           compression
+ 154: LOAD_FAST            compresslevel
+ 156: LOAD_FAST            self
+ 158: STORE_ATTR           compresslevel
+ 168: LOAD_FAST            mode
+ 170: LOAD_FAST            self
+ 172: STORE_ATTR           mode
+ 182: LOAD_CONST           None
+ 184: LOAD_FAST            self
+ 186: STORE_ATTR           pwd
+ 196: LOAD_CONST           b''
+ 198: LOAD_FAST            self
+ 200: STORE_ATTR           _comment
+ 210: LOAD_FAST            strict_timestamps
+ 212: LOAD_FAST            self
+ 214: STORE_ATTR           _strict_timestamps
+ 224: LOAD_FAST            metadata_encoding
+ 226: LOAD_FAST            self
+ 228: STORE_ATTR           metadata_encoding
+ 238: LOAD_FAST            self
+ 240: LOAD_ATTR            metadata_encoding
+ 250: POP_JUMP_FORWARD_IF_FALSE to 294
+ 252: LOAD_FAST            mode
+ 254: LOAD_CONST           'r'
+ 256: COMPARE_OP           !=
+ 262: POP_JUMP_FORWARD_IF_FALSE to 294
+ 264: LOAD_GLOBAL          NULL + ValueError
+ 276: LOAD_CONST           'metadata_encoding is only supported for reading files'
+ 278: PRECALL              
+ 282: CALL                 
+ 292: RAISE_VARARGS        
+ 294: LOAD_GLOBAL          NULL + isinstance
+ 306: LOAD_FAST            file
+ 308: LOAD_GLOBAL          os
+ 320: LOAD_ATTR            PathLike
+ 330: PRECALL              
+ 334: CALL                 
+ 344: POP_JUMP_FORWARD_IF_FALSE to 386
+ 346: LOAD_GLOBAL          NULL + os
+ 358: LOAD_ATTR            fspath
+ 368: LOAD_FAST            file
+ 370: PRECALL              
+ 374: CALL                 
+ 384: STORE_FAST           file
+ 386: LOAD_GLOBAL          NULL + isinstance
+ 398: LOAD_FAST            file
+ 400: LOAD_GLOBAL          str
+ 412: PRECALL              
+ 416: CALL                 
+ 426: POP_JUMP_FORWARD_IF_FALSE to 610
+ 428: LOAD_CONST           0
+ 430: LOAD_FAST            self
+ 432: STORE_ATTR           _filePassed
+ 442: LOAD_FAST            file
+ 444: LOAD_FAST            self
+ 446: STORE_ATTR           filename
+ 456: LOAD_CONST           'rb'
+ 458: LOAD_CONST           'w+b'
+ 460: LOAD_CONST           'x+b'
+ 462: LOAD_CONST           'r+b'
+ 464: LOAD_CONST           'w+b'
+ 466: LOAD_CONST           'wb'
+ 468: LOAD_CONST           'xb'
+ 470: LOAD_CONST           ('r', 'w', 'x', 'a', 'r+b', 'w+b', 'x+b')
+ 472: BUILD_CONST_KEY_MAP  
+ 474: STORE_FAST           modeDict
+ 476: LOAD_FAST            modeDict
+ 478: LOAD_FAST            mode
+ 480: BINARY_SUBSCR        
+ 490: STORE_FAST           filemode
+ 492: NOP                  
+ 494: NOP                  
+ 496: LOAD_GLOBAL          NULL + io
+ 508: LOAD_ATTR            open
+ 518: LOAD_FAST            file
+ 520: LOAD_FAST            filemode
+ 522: PRECALL              
+ 526: CALL                 
+ 536: LOAD_FAST            self
+ 538: STORE_ATTR           fp
+ 548: JUMP_FORWARD         to 608
+ 550: PUSH_EXC_INFO        
+ 552: LOAD_GLOBAL          OSError
+ 564: CHECK_EXC_MATCH      
+ 566: POP_JUMP_FORWARD_IF_FALSE to 600
+ 568: POP_TOP              
+ 570: LOAD_FAST            filemode
+ 572: LOAD_FAST            modeDict
+ 574: CONTAINS_OP          
+ 576: POP_JUMP_FORWARD_IF_FALSE to 598
+ 578: LOAD_FAST            modeDict
+ 580: LOAD_FAST            filemode
+ 582: BINARY_SUBSCR        
+ 592: STORE_FAST           filemode
+ 594: POP_EXCEPT           
+ 596: JUMP_BACKWARD        to 492
+ 598: RAISE_VARARGS        
+ 600: RERAISE              
+ 602: COPY                 
+ 604: POP_EXCEPT           
+ 606: RERAISE              
+ 608: JUMP_FORWARD         to 682
+ 610: LOAD_CONST           1
+ 612: LOAD_FAST            self
+ 614: STORE_ATTR           _filePassed
+ 624: LOAD_FAST            file
+ 626: LOAD_FAST            self
+ 628: STORE_ATTR           fp
+ 638: LOAD_GLOBAL          NULL + getattr
+ 650: LOAD_FAST            file
+ 652: LOAD_CONST           'name'
+ 654: LOAD_CONST           None
+ 656: PRECALL              
+ 660: CALL                 
+ 670: LOAD_FAST            self
+ 672: STORE_ATTR           filename
+ 682: LOAD_CONST           1
+ 684: LOAD_FAST            self
+ 686: STORE_ATTR           _fileRefCnt
+ 696: LOAD_GLOBAL          NULL + threading
+ 708: LOAD_ATTR            RLock
+ 718: PRECALL              
+ 722: CALL                 
+ 732: LOAD_FAST            self
+ 734: STORE_ATTR           _lock
+ 744: LOAD_CONST           True
+ 746: LOAD_FAST            self
+ 748: STORE_ATTR           _seekable
+ 758: LOAD_CONST           False
+ 760: LOAD_FAST            self
+ 762: STORE_ATTR           _writing
+ 772: NOP                  
+ 774: LOAD_FAST            mode
+ 776: LOAD_CONST           'r'
+ 778: COMPARE_OP           ==
+ 784: POP_JUMP_FORWARD_IF_FALSE to 830
+ 786: LOAD_FAST            self
+ 788: LOAD_METHOD          _RealGetContents
+ 810: PRECALL              
+ 814: CALL                 
+ 824: POP_TOP              
+ 826: LOAD_CONST           None
+ 828: RETURN_VALUE         
+ 830: LOAD_FAST            mode
+ 832: LOAD_CONST           ('w', 'x')
+ 834: CONTAINS_OP          
+ 836: POP_JUMP_FORWARD_IF_FALSE to 1170
+ 838: LOAD_CONST           True
+ 840: LOAD_FAST            self
+ 842: STORE_ATTR           _didModify
+ 852: NOP                  
+ 854: LOAD_FAST            self
+ 856: LOAD_ATTR            fp
+ 866: LOAD_METHOD          tell
+ 888: PRECALL              
+ 892: CALL                 
+ 902: LOAD_FAST            self
+ 904: STORE_ATTR           start_dir
+ 914: NOP                  
+ 916: LOAD_FAST            self
+ 918: LOAD_ATTR            fp
+ 928: LOAD_METHOD          seek
+ 950: LOAD_FAST            self
+ 952: LOAD_ATTR            start_dir
+ 962: PRECALL              
+ 966: CALL                 
+ 976: POP_TOP              
+ 978: LOAD_CONST           None
+ 980: RETURN_VALUE         
+ 982: PUSH_EXC_INFO        
+ 984: LOAD_GLOBAL          AttributeError
+ 996: LOAD_GLOBAL          OSError
+1008: BUILD_TUPLE          
+1010: CHECK_EXC_MATCH      
+1012: POP_JUMP_FORWARD_IF_FALSE to 1036
+1014: POP_TOP              
+1016: LOAD_CONST           False
+1018: LOAD_FAST            self
+1020: STORE_ATTR           _seekable
+1030: POP_EXCEPT           
+1032: LOAD_CONST           None
+1034: RETURN_VALUE         
+1036: RERAISE              
+1038: COPY                 
+1040: POP_EXCEPT           
+1042: RERAISE              
+1044: PUSH_EXC_INFO        
+1046: LOAD_GLOBAL          AttributeError
+1058: LOAD_GLOBAL          OSError
+1070: BUILD_TUPLE          
+1072: CHECK_EXC_MATCH      
+1074: POP_JUMP_FORWARD_IF_FALSE to 1162
+1076: POP_TOP              
+1078: LOAD_GLOBAL          NULL + _Tellable
+1090: LOAD_FAST            self
+1092: LOAD_ATTR            fp
+1102: PRECALL              
+1106: CALL                 
+1116: LOAD_FAST            self
+1118: STORE_ATTR           fp
+1128: LOAD_CONST           0
+1130: LOAD_FAST            self
+1132: STORE_ATTR           start_dir
+1142: LOAD_CONST           False
+1144: LOAD_FAST            self
+1146: STORE_ATTR           _seekable
+1156: POP_EXCEPT           
+1158: LOAD_CONST           None
+1160: RETURN_VALUE         
+1162: RERAISE              
+1164: COPY                 
+1166: POP_EXCEPT           
+1168: RERAISE              
+1170: LOAD_FAST            mode
+1172: LOAD_CONST           'a'
+1174: COMPARE_OP           ==
+1180: POP_JUMP_FORWARD_IF_FALSE to 1452
+1182: NOP                  
+1184: LOAD_FAST            self
+1186: LOAD_METHOD          _RealGetContents
+1208: PRECALL              
+1212: CALL                 
+1222: POP_TOP              
+1224: LOAD_FAST            self
+1226: LOAD_ATTR            fp
+1236: LOAD_METHOD          seek
+1258: LOAD_FAST            self
+1260: LOAD_ATTR            start_dir
+1270: PRECALL              
+1274: CALL                 
+1284: POP_TOP              
+1286: LOAD_CONST           None
+1288: RETURN_VALUE         
+1290: PUSH_EXC_INFO        
+1292: LOAD_GLOBAL          BadZipFile
+1304: CHECK_EXC_MATCH      
+1306: POP_JUMP_FORWARD_IF_FALSE to 1444
+1308: POP_TOP              
+1310: LOAD_FAST            self
+1312: LOAD_ATTR            fp
+1322: LOAD_METHOD          seek
+1344: LOAD_CONST           0
+1346: LOAD_CONST           2
+1348: PRECALL              
+1352: CALL                 
+1362: POP_TOP              
+1364: LOAD_CONST           True
+1366: LOAD_FAST            self
+1368: STORE_ATTR           _didModify
+1378: LOAD_FAST            self
+1380: LOAD_ATTR            fp
+1390: LOAD_METHOD          tell
+1412: PRECALL              
+1416: CALL                 
+1426: LOAD_FAST            self
+1428: STORE_ATTR           start_dir
+1438: POP_EXCEPT           
+1440: LOAD_CONST           None
+1442: RETURN_VALUE         
+1444: RERAISE              
+1446: COPY                 
+1448: POP_EXCEPT           
+1450: RERAISE              
+1452: LOAD_GLOBAL          NULL + ValueError
+1464: LOAD_CONST           "Mode must be 'r', 'w', 'x', or 'a'"
+1466: PRECALL              
+1470: CALL                 
+1480: RAISE_VARARGS        
+1482: PUSH_EXC_INFO        
+1484: POP_TOP              
+1486: LOAD_FAST            self
+1488: LOAD_ATTR            fp
+1498: STORE_FAST           fp
+1500: LOAD_CONST           None
+1502: LOAD_FAST            self
+1504: STORE_ATTR           fp
+1514: LOAD_FAST            self
+1516: LOAD_METHOD          _fpclose
+1538: LOAD_FAST            fp
+1540: PRECALL              
+1544: CALL                 
+1554: POP_TOP              
+1556: RAISE_VARARGS        
+1558: COPY                 
+1560: POP_EXCEPT           
+1562: RERAISE              

@@ -1,0 +1,111 @@
+# Disassembly for typing.no_type_check
+# From module file: typing
+
+## co_consts:
+('Decorator to indicate that annotations are not type hints.\n\n    The argument must be a class or function; if it is a class, it\n    applies recursively to all methods and classes defined in that class\n    (but not to methods defined in its superclasses or subclasses).\n\n    This mutates the function(s) or class(es) in place.\n    ', '__qualname__', '.', '__module__', None, True)
+
+## co_names:
+('isinstance', 'type', 'dir', 'getattr', 'hasattr', '__qualname__', '__name__', '__module__', 'types', 'FunctionType', '__no_type_check__', 'MethodType', '__func__', 'no_type_check', 'TypeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            arg
+  16: LOAD_GLOBAL          type
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 464
+  44: LOAD_GLOBAL          NULL + dir
+  56: LOAD_FAST            arg
+  58: PRECALL              
+  62: CALL                 
+  72: GET_ITER             
+  74: FOR_ITER             to 464
+  76: STORE_FAST           key
+  78: LOAD_GLOBAL          NULL + getattr
+  90: LOAD_FAST            arg
+  92: LOAD_FAST            key
+  94: PRECALL              
+  98: CALL                 
+ 108: STORE_FAST           obj
+ 110: LOAD_GLOBAL          NULL + hasattr
+ 122: LOAD_FAST            obj
+ 124: LOAD_CONST           '__qualname__'
+ 126: PRECALL              
+ 130: CALL                 
+ 140: POP_JUMP_FORWARD_IF_FALSE to 246
+ 142: LOAD_FAST            obj
+ 144: LOAD_ATTR            __qualname__
+ 154: LOAD_FAST            arg
+ 156: LOAD_ATTR            __qualname__
+ 166: FORMAT_VALUE         
+ 168: LOAD_CONST           '.'
+ 170: LOAD_FAST            obj
+ 172: LOAD_ATTR            __name__
+ 182: FORMAT_VALUE         
+ 184: BUILD_STRING         
+ 186: COMPARE_OP           !=
+ 192: POP_JUMP_FORWARD_IF_TRUE to 246
+ 194: LOAD_GLOBAL          NULL + getattr
+ 206: LOAD_FAST            obj
+ 208: LOAD_CONST           '__module__'
+ 210: LOAD_CONST           None
+ 212: PRECALL              
+ 216: CALL                 
+ 226: LOAD_FAST            arg
+ 228: LOAD_ATTR            __module__
+ 238: COMPARE_OP           !=
+ 244: POP_JUMP_FORWARD_IF_FALSE to 248
+ 246: JUMP_BACKWARD        to 74
+ 248: LOAD_GLOBAL          NULL + isinstance
+ 260: LOAD_FAST            obj
+ 262: LOAD_GLOBAL          types
+ 274: LOAD_ATTR            FunctionType
+ 284: PRECALL              
+ 288: CALL                 
+ 298: POP_JUMP_FORWARD_IF_FALSE to 314
+ 300: LOAD_CONST           True
+ 302: LOAD_FAST            obj
+ 304: STORE_ATTR           __no_type_check__
+ 314: LOAD_GLOBAL          NULL + isinstance
+ 326: LOAD_FAST            obj
+ 328: LOAD_GLOBAL          types
+ 340: LOAD_ATTR            MethodType
+ 350: PRECALL              
+ 354: CALL                 
+ 364: POP_JUMP_FORWARD_IF_FALSE to 390
+ 366: LOAD_CONST           True
+ 368: LOAD_FAST            obj
+ 370: LOAD_ATTR            __func__
+ 380: STORE_ATTR           __no_type_check__
+ 390: LOAD_GLOBAL          NULL + isinstance
+ 402: LOAD_FAST            obj
+ 404: LOAD_GLOBAL          type
+ 416: PRECALL              
+ 420: CALL                 
+ 430: POP_JUMP_FORWARD_IF_FALSE to 462
+ 432: LOAD_GLOBAL          NULL + no_type_check
+ 444: LOAD_FAST            obj
+ 446: PRECALL              
+ 450: CALL                 
+ 460: POP_TOP              
+ 462: JUMP_BACKWARD        to 74
+ 464: NOP                  
+ 466: LOAD_CONST           True
+ 468: LOAD_FAST            arg
+ 470: STORE_ATTR           __no_type_check__
+ 480: JUMP_FORWARD         to 514
+ 482: PUSH_EXC_INFO        
+ 484: LOAD_GLOBAL          TypeError
+ 496: CHECK_EXC_MATCH      
+ 498: POP_JUMP_FORWARD_IF_FALSE to 506
+ 500: POP_TOP              
+ 502: POP_EXCEPT           
+ 504: JUMP_FORWARD         to 514
+ 506: RERAISE              
+ 508: COPY                 
+ 510: POP_EXCEPT           
+ 512: RERAISE              
+ 514: LOAD_FAST            arg
+ 516: RETURN_VALUE         

@@ -1,0 +1,53 @@
+# Disassembly for _pydecimal.Decimal.__abs__
+# From module file: _pydecimal
+
+## co_consts:
+("Returns the absolute value of self.\n\n        If the keyword argument 'round' is false, do not round.  The\n        expression self.__abs__(round=False) is equivalent to\n        self.copy_abs().\n        ", ('context',))
+
+## co_names:
+('copy_abs', '_is_special', '_check_nans', '_sign', '__neg__', '__pos__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            round
+   4: POP_JUMP_FORWARD_IF_TRUE to 46
+   6: LOAD_FAST            self
+   8: LOAD_METHOD          copy_abs
+  30: PRECALL              
+  34: CALL                 
+  44: RETURN_VALUE         
+  46: LOAD_FAST            self
+  48: LOAD_ATTR            _is_special
+  58: POP_JUMP_FORWARD_IF_FALSE to 112
+  60: LOAD_FAST            self
+  62: LOAD_METHOD          _check_nans
+  84: LOAD_FAST            context
+  86: KW_NAMES             
+  88: PRECALL              
+  92: CALL                 
+ 102: STORE_FAST           ans
+ 104: LOAD_FAST            ans
+ 106: POP_JUMP_FORWARD_IF_FALSE to 112
+ 108: LOAD_FAST            ans
+ 110: RETURN_VALUE         
+ 112: LOAD_FAST            self
+ 114: LOAD_ATTR            _sign
+ 124: POP_JUMP_FORWARD_IF_FALSE to 172
+ 126: LOAD_FAST            self
+ 128: LOAD_METHOD          __neg__
+ 150: LOAD_FAST            context
+ 152: KW_NAMES             
+ 154: PRECALL              
+ 158: CALL                 
+ 168: STORE_FAST           ans
+ 170: JUMP_FORWARD         to 216
+ 172: LOAD_FAST            self
+ 174: LOAD_METHOD          __pos__
+ 196: LOAD_FAST            context
+ 198: KW_NAMES             
+ 200: PRECALL              
+ 204: CALL                 
+ 214: STORE_FAST           ans
+ 216: LOAD_FAST            ans
+ 218: RETURN_VALUE         

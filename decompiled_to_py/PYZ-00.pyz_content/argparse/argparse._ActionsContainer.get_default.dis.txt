@@ -1,0 +1,39 @@
+# Disassembly for argparse._ActionsContainer.get_default
+# From module file: argparse
+
+## co_consts:
+(None,)
+
+## co_names:
+('_actions', 'dest', 'default', '_defaults', 'get')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _actions
+  14: GET_ITER             
+  16: FOR_ITER             to 76
+  18: STORE_FAST           action
+  20: LOAD_FAST            action
+  22: LOAD_ATTR            dest
+  32: LOAD_FAST            dest
+  34: COMPARE_OP           ==
+  40: POP_JUMP_FORWARD_IF_FALSE to 74
+  42: LOAD_FAST            action
+  44: LOAD_ATTR            default
+  54: POP_JUMP_FORWARD_IF_NONE to 74
+  56: LOAD_FAST            action
+  58: LOAD_ATTR            default
+  68: SWAP                 
+  70: POP_TOP              
+  72: RETURN_VALUE         
+  74: JUMP_BACKWARD        to 16
+  76: LOAD_FAST            self
+  78: LOAD_ATTR            _defaults
+  88: LOAD_METHOD          get
+ 110: LOAD_FAST            dest
+ 112: LOAD_CONST           None
+ 114: PRECALL              
+ 118: CALL                 
+ 128: RETURN_VALUE         

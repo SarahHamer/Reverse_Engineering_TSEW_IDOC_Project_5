@@ -1,0 +1,29 @@
+# Disassembly for dataclasses.InitVar
+# From module file: dataclasses
+
+## co_consts:
+('InitVar', ('type',), <code object __init__ at 0x0000024069495480, file "dataclasses.py", line 249>, <code object __repr__ at 0x00000240693AA5B0, file "dataclasses.py", line 252>, <code object __class_getitem__ at 0x00000240694658B0, file "dataclasses.py", line 260>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__slots__', '__init__', '__repr__', '__class_getitem__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'InitVar'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           ('type',)
+  12: STORE_NAME           __slots__
+  14: LOAD_CONST           <code object __init__ at 0x0000024069495480, file "dataclasses.py", line 249>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           __init__
+  20: LOAD_CONST           <code object __repr__ at 0x00000240693AA5B0, file "dataclasses.py", line 252>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           __repr__
+  26: LOAD_CONST           <code object __class_getitem__ at 0x00000240694658B0, file "dataclasses.py", line 260>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           __class_getitem__
+  32: LOAD_CONST           None
+  34: RETURN_VALUE         

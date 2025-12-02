@@ -1,0 +1,59 @@
+# Disassembly for inspect.getblock
+# From module file: inspect
+
+## co_consts:
+('Extract the block of code at the top of the given list of lines.', None)
+
+## co_names:
+('BlockFinder', 'tokenize', 'generate_tokens', 'iter', '__next__', 'tokeneater', 'EndOfBlock', 'IndentationError', 'last')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + BlockFinder
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           blockfinder
+  30: NOP                  
+  32: LOAD_GLOBAL          NULL + tokenize
+  44: LOAD_ATTR            generate_tokens
+  54: LOAD_GLOBAL          NULL + iter
+  66: LOAD_FAST            lines
+  68: PRECALL              
+  72: CALL                 
+  82: LOAD_ATTR            __next__
+  92: PRECALL              
+  96: CALL                 
+ 106: STORE_FAST           tokens
+ 108: LOAD_FAST            tokens
+ 110: GET_ITER             
+ 112: FOR_ITER             to 138
+ 114: STORE_FAST           _token
+ 116: PUSH_NULL            
+ 118: LOAD_FAST            blockfinder
+ 120: LOAD_ATTR            tokeneater
+ 130: LOAD_FAST            _token
+ 132: CALL_FUNCTION_EX     
+ 134: POP_TOP              
+ 136: JUMP_BACKWARD        to 112
+ 138: JUMP_FORWARD         to 186
+ 140: PUSH_EXC_INFO        
+ 142: LOAD_GLOBAL          EndOfBlock
+ 154: LOAD_GLOBAL          IndentationError
+ 166: BUILD_TUPLE          
+ 168: CHECK_EXC_MATCH      
+ 170: POP_JUMP_FORWARD_IF_FALSE to 178
+ 172: POP_TOP              
+ 174: POP_EXCEPT           
+ 176: JUMP_FORWARD         to 186
+ 178: RERAISE              
+ 180: COPY                 
+ 182: POP_EXCEPT           
+ 184: RERAISE              
+ 186: LOAD_FAST            lines
+ 188: LOAD_CONST           None
+ 190: LOAD_FAST            blockfinder
+ 192: LOAD_ATTR            last
+ 202: BUILD_SLICE          
+ 204: BINARY_SUBSCR        
+ 214: RETURN_VALUE         

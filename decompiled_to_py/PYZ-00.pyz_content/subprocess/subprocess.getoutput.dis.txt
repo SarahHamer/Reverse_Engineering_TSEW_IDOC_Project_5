@@ -1,0 +1,22 @@
+# Disassembly for subprocess.getoutput
+# From module file: subprocess
+
+## co_consts:
+("Return output (stdout or stderr) of executing cmd in a shell.\n\n    Like getstatusoutput(), except the exit status is ignored and the return\n    value is a string containing the command's output.  Example:\n\n    >>> import subprocess\n    >>> subprocess.getoutput('ls /bin/ls')\n    '/bin/ls'\n    ", ('encoding', 'errors'), 1)
+
+## co_names:
+('getstatusoutput',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + getstatusoutput
+  14: LOAD_FAST            cmd
+  16: LOAD_FAST            encoding
+  18: LOAD_FAST            errors
+  20: KW_NAMES             
+  22: PRECALL              
+  26: CALL                 
+  36: LOAD_CONST           1
+  38: BINARY_SUBSCR        
+  48: RETURN_VALUE         

@@ -1,0 +1,48 @@
+# Disassembly for email.body_line_iterator
+# From module file: email.iterators
+
+## co_consts:
+('Iterate over the parts, returning string payloads line-by-line.\n\n    Optional decode (default False) is passed through to .get_payload().\n    ', ('decode',), None)
+
+## co_names:
+('walk', 'get_payload', 'isinstance', 'str', 'StringIO')
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_FAST            msg
+   8: LOAD_METHOD          walk
+  30: PRECALL              
+  34: CALL                 
+  44: GET_ITER             
+  46: FOR_ITER             to 180
+  48: STORE_FAST           subpart
+  50: LOAD_FAST            subpart
+  52: LOAD_METHOD          get_payload
+  74: LOAD_FAST            decode
+  76: KW_NAMES             
+  78: PRECALL              
+  82: CALL                 
+  92: STORE_FAST           payload
+  94: LOAD_GLOBAL          NULL + isinstance
+ 106: LOAD_FAST            payload
+ 108: LOAD_GLOBAL          str
+ 120: PRECALL              
+ 124: CALL                 
+ 134: POP_JUMP_FORWARD_IF_FALSE to 178
+ 136: LOAD_GLOBAL          NULL + StringIO
+ 148: LOAD_FAST            payload
+ 150: PRECALL              
+ 154: CALL                 
+ 164: GET_YIELD_FROM_ITER  
+ 166: LOAD_CONST           None
+ 168: SEND                 to 176
+ 170: YIELD_VALUE          
+ 172: RESUME               
+ 174: JUMP_BACKWARD_NO_INTERRUPT to 168
+ 176: POP_TOP              
+ 178: JUMP_BACKWARD        to 46
+ 180: LOAD_CONST           None
+ 182: RETURN_VALUE         

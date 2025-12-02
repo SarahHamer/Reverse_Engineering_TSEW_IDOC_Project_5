@@ -1,0 +1,35 @@
+# Disassembly for logging.currentframe
+# From module file: logging
+
+## co_consts:
+("Return the frame object for the caller's stack frame.", 2)
+
+## co_names:
+('Exception', 'sys', 'exc_info', 'tb_frame', 'f_back')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_GLOBAL          Exception
+  16: RAISE_VARARGS        
+  18: PUSH_EXC_INFO        
+  20: LOAD_GLOBAL          Exception
+  32: CHECK_EXC_MATCH      
+  34: POP_JUMP_FORWARD_IF_FALSE to 112
+  36: POP_TOP              
+  38: LOAD_GLOBAL          NULL + sys
+  50: LOAD_ATTR            exc_info
+  60: PRECALL              
+  64: CALL                 
+  74: LOAD_CONST           2
+  76: BINARY_SUBSCR        
+  86: LOAD_ATTR            tb_frame
+  96: LOAD_ATTR            f_back
+ 106: SWAP                 
+ 108: POP_EXCEPT           
+ 110: RETURN_VALUE         
+ 112: RERAISE              
+ 114: COPY                 
+ 116: POP_EXCEPT           
+ 118: RERAISE              

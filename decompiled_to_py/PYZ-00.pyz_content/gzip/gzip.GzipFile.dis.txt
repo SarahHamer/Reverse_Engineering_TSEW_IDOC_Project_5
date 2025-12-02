@@ -1,0 +1,106 @@
+# Disassembly for gzip.GzipFile
+# From module file: gzip
+
+## co_consts:
+('GzipFile', 'The GzipFile class simulates most of the methods of a file object with\n    the exception of the truncate() method.\n\n    This class only supports opening files in binary mode. If you need to open a\n    compressed file in text mode, use the gzip.open() function.\n\n    ', None, <code object __init__ at 0x0000024066CE7CA0, file "gzip.py", line 134>, <code object filename at 0x000002406921FC90, file "gzip.py", line 215>, <code object mtime at 0x0000024069466330, file "gzip.py", line 223>, <code object __repr__ at 0x00000240691F23A0, file "gzip.py", line 228>, <code object _init_write at 0x00000240693AA5B0, file "gzip.py", line 232>, <code object _write_gzip_header at 0x0000024068D3EB50, file "gzip.py", line 240>, <code object write at 0x0000024068C0BAE0, file "gzip.py", line 272>, -1, <code object read at 0x000002406921FE00, file "gzip.py", line 296>, <code object read1 at 0x000002406942D930, file "gzip.py", line 303>, <code object peek at 0x000002406949CD20, file "gzip.py", line 316>, <code object closed at 0x0000024069496800, file "gzip.py", line 323>, <code object close at 0x0000024068C07AF0, file "gzip.py", line 327>, <code object flush at 0x00000240691F56F0, file "gzip.py", line 346>, <code object fileno at 0x000002406945FF00, file "gzip.py", line 353>, <code object rewind at 0x00000240693D29C0, file "gzip.py", line 361>, <code object readable at 0x0000024069466090, file "gzip.py", line 368>, <code object writable at 0x0000024069466A30, file "gzip.py", line 371>, <code object seekable at 0x000002406943BC30, file "gzip.py", line 374>, <code object seek at 0x0000024068C06230, file "gzip.py", line 377>, <code object readline at 0x0000024069419110, file "gzip.py", line 397>, (-1,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'myfileobj', '_COMPRESS_LEVEL_BEST', '__init__', 'property', 'filename', 'mtime', '__repr__', '_init_write', '_write_gzip_header', 'write', 'read', 'read1', 'peek', 'closed', 'close', 'zlib', 'Z_SYNC_FLUSH', 'flush', 'fileno', 'rewind', 'readable', 'writable', 'seekable', 'io', 'SEEK_SET', 'seek', 'readline')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'GzipFile'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'The GzipFile class simulates most of the methods of a file object with\n    the exception of the truncate() method.\n\n    This class only supports opening files in binary mode. If you need to open a\n    compressed file in text mode, use the gzip.open() function.\n\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           None
+  16: STORE_NAME           myfileobj
+  18: LOAD_CONST           None
+  20: LOAD_CONST           None
+  22: LOAD_NAME            _COMPRESS_LEVEL_BEST
+  24: LOAD_CONST           None
+  26: LOAD_CONST           None
+  28: BUILD_TUPLE          
+  30: LOAD_CONST           <code object __init__ at 0x0000024066CE7CA0, file "gzip.py", line 134>
+  32: MAKE_FUNCTION        defaults
+  34: STORE_NAME           __init__
+  36: LOAD_NAME            property
+  38: LOAD_CONST           <code object filename at 0x000002406921FC90, file "gzip.py", line 215>
+  40: MAKE_FUNCTION        
+  42: PRECALL              
+  46: CALL                 
+  56: STORE_NAME           filename
+  58: LOAD_NAME            property
+  60: LOAD_CONST           <code object mtime at 0x0000024069466330, file "gzip.py", line 223>
+  62: MAKE_FUNCTION        
+  64: PRECALL              
+  68: CALL                 
+  78: STORE_NAME           mtime
+  80: LOAD_CONST           <code object __repr__ at 0x00000240691F23A0, file "gzip.py", line 228>
+  82: MAKE_FUNCTION        
+  84: STORE_NAME           __repr__
+  86: LOAD_CONST           <code object _init_write at 0x00000240693AA5B0, file "gzip.py", line 232>
+  88: MAKE_FUNCTION        
+  90: STORE_NAME           _init_write
+  92: LOAD_CONST           <code object _write_gzip_header at 0x0000024068D3EB50, file "gzip.py", line 240>
+  94: MAKE_FUNCTION        
+  96: STORE_NAME           _write_gzip_header
+  98: LOAD_CONST           <code object write at 0x0000024068C0BAE0, file "gzip.py", line 272>
+ 100: MAKE_FUNCTION        
+ 102: STORE_NAME           write
+ 104: LOAD_CONST           (-1,)
+ 106: LOAD_CONST           <code object read at 0x000002406921FE00, file "gzip.py", line 296>
+ 108: MAKE_FUNCTION        defaults
+ 110: STORE_NAME           read
+ 112: LOAD_CONST           (-1,)
+ 114: LOAD_CONST           <code object read1 at 0x000002406942D930, file "gzip.py", line 303>
+ 116: MAKE_FUNCTION        defaults
+ 118: STORE_NAME           read1
+ 120: LOAD_CONST           <code object peek at 0x000002406949CD20, file "gzip.py", line 316>
+ 122: MAKE_FUNCTION        
+ 124: STORE_NAME           peek
+ 126: LOAD_NAME            property
+ 128: LOAD_CONST           <code object closed at 0x0000024069496800, file "gzip.py", line 323>
+ 130: MAKE_FUNCTION        
+ 132: PRECALL              
+ 136: CALL                 
+ 146: STORE_NAME           closed
+ 148: LOAD_CONST           <code object close at 0x0000024068C07AF0, file "gzip.py", line 327>
+ 150: MAKE_FUNCTION        
+ 152: STORE_NAME           close
+ 154: LOAD_NAME            zlib
+ 156: LOAD_ATTR            Z_SYNC_FLUSH
+ 166: BUILD_TUPLE          
+ 168: LOAD_CONST           <code object flush at 0x00000240691F56F0, file "gzip.py", line 346>
+ 170: MAKE_FUNCTION        defaults
+ 172: STORE_NAME           flush
+ 174: LOAD_CONST           <code object fileno at 0x000002406945FF00, file "gzip.py", line 353>
+ 176: MAKE_FUNCTION        
+ 178: STORE_NAME           fileno
+ 180: LOAD_CONST           <code object rewind at 0x00000240693D29C0, file "gzip.py", line 361>
+ 182: MAKE_FUNCTION        
+ 184: STORE_NAME           rewind
+ 186: LOAD_CONST           <code object readable at 0x0000024069466090, file "gzip.py", line 368>
+ 188: MAKE_FUNCTION        
+ 190: STORE_NAME           readable
+ 192: LOAD_CONST           <code object writable at 0x0000024069466A30, file "gzip.py", line 371>
+ 194: MAKE_FUNCTION        
+ 196: STORE_NAME           writable
+ 198: LOAD_CONST           <code object seekable at 0x000002406943BC30, file "gzip.py", line 374>
+ 200: MAKE_FUNCTION        
+ 202: STORE_NAME           seekable
+ 204: LOAD_NAME            io
+ 206: LOAD_ATTR            SEEK_SET
+ 216: BUILD_TUPLE          
+ 218: LOAD_CONST           <code object seek at 0x0000024068C06230, file "gzip.py", line 377>
+ 220: MAKE_FUNCTION        defaults
+ 222: STORE_NAME           seek
+ 224: LOAD_CONST           (-1,)
+ 226: LOAD_CONST           <code object readline at 0x0000024069419110, file "gzip.py", line 397>
+ 228: MAKE_FUNCTION        defaults
+ 230: STORE_NAME           readline
+ 232: LOAD_CONST           None
+ 234: RETURN_VALUE         

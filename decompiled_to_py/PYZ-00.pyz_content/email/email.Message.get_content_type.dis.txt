@@ -1,0 +1,54 @@
+# Disassembly for email.Message.get_content_type
+# From module file: email.message
+
+## co_consts:
+("Return the message's content type.\n\n        The returned string is coerced to lower case of the form\n        `maintype/subtype'.  If there was no Content-Type header in the\n        message, the default type as given by get_default_type() will be\n        returned.  Since according to RFC 2045, messages always have a default\n        type this will always return a value.\n\n        RFC 2045 defines a message's default type to be text/plain unless it\n        appears inside a multipart/digest container, in which case it would be\n        message/rfc822.\n        ", 'content-type', 0, '/', 1, 'text/plain')
+
+## co_names:
+('object', 'get', 'get_default_type', '_splitparam', 'lower', 'count')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + object
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           missing
+  30: LOAD_FAST            self
+  32: LOAD_METHOD          get
+  54: LOAD_CONST           'content-type'
+  56: LOAD_FAST            missing
+  58: PRECALL              
+  62: CALL                 
+  72: STORE_FAST           value
+  74: LOAD_FAST            value
+  76: LOAD_FAST            missing
+  78: IS_OP                
+  80: POP_JUMP_FORWARD_IF_FALSE to 122
+  82: LOAD_FAST            self
+  84: LOAD_METHOD          get_default_type
+ 106: PRECALL              
+ 110: CALL                 
+ 120: RETURN_VALUE         
+ 122: LOAD_GLOBAL          NULL + _splitparam
+ 134: LOAD_FAST            value
+ 136: PRECALL              
+ 140: CALL                 
+ 150: LOAD_CONST           0
+ 152: BINARY_SUBSCR        
+ 162: LOAD_METHOD          lower
+ 184: PRECALL              
+ 188: CALL                 
+ 198: STORE_FAST           ctype
+ 200: LOAD_FAST            ctype
+ 202: LOAD_METHOD          count
+ 224: LOAD_CONST           '/'
+ 226: PRECALL              
+ 230: CALL                 
+ 240: LOAD_CONST           1
+ 242: COMPARE_OP           !=
+ 248: POP_JUMP_FORWARD_IF_FALSE to 254
+ 250: LOAD_CONST           'text/plain'
+ 252: RETURN_VALUE         
+ 254: LOAD_FAST            ctype
+ 256: RETURN_VALUE         

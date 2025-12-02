@@ -1,0 +1,20 @@
+# Disassembly for importlib.resources.CompatibilityFiles.ChildPath.joinpath
+# From module file: importlib.resources._adapters
+
+## co_consts:
+(None,)
+
+## co_names:
+('CompatibilityFiles', 'OrphanPath', 'name')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          CompatibilityFiles
+  14: LOAD_METHOD          OrphanPath
+  36: LOAD_FAST            self
+  38: LOAD_ATTR            name
+  48: LOAD_FAST            other
+  50: PRECALL              
+  54: CALL                 
+  64: RETURN_VALUE         

@@ -1,0 +1,18 @@
+# Disassembly for typing.is_typeddict
+# From module file: typing
+
+## co_consts:
+('Check if an annotation is a TypedDict class.\n\n    For example::\n\n        class Film(TypedDict):\n            title: str\n            year: int\n\n        is_typeddict(Film)              # => True\n        is_typeddict(Union[list, str])  # => False\n    ',)
+
+## co_names:
+('isinstance', '_TypedDictMeta')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            tp
+  16: LOAD_GLOBAL          _TypedDictMeta
+  28: PRECALL              
+  32: CALL                 
+  42: RETURN_VALUE         

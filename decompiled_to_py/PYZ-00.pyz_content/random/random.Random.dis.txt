@@ -1,0 +1,137 @@
+# Disassembly for random.Random
+# From module file: random
+
+## co_consts:
+('Random', "Random number generator base class used by bound module functions.\n\n    Used to instantiate instances of Random to get generators that don't\n    share state.\n\n    Class Random can also be subclassed if you want to use a different basic\n    generator of your own devising: in that case, override the following\n    methods:  random(), seed(), getstate(), and setstate().\n    Optionally, implement a getrandbits() method so that randrange()\n    can cover arbitrarily large ranges.\n\n    ", 3, None, <code object __init__ at 0x00000240693EA230, file "random.py", line 119>, 2, <code object seed at 0x0000024068E721F0, file "random.py", line 128>, <code object getstate at 0x000002406941A0D0, file "random.py", line 166>, <code object setstate at 0x0000024068D6E7C0, file "random.py", line 170>, <code object __getstate__ at 0x000002406945CF30, file "random.py", line 203>, <code object __setstate__ at 0x000002406945D6B0, file "random.py", line 206>, <code object __reduce__ at 0x00000240693EA730, file "random.py", line 209>, <code object __init_subclass__ at 0x00000240691F13E0, file "random.py", line 215>, <code object _randbelow_with_getrandbits at 0x00000240693AA0B0, file "random.py", line 235>, 1, <code object _randbelow_without_getrandbits at 0x000002406934F480, file "random.py", line 245>, <code object randbytes at 0x000002406941AC10, file "random.py", line 277>, <code object randrange at 0x0000024068D60190, file "random.py", line 284>, <code object randint at 0x000002406945EB50, file "random.py", line 358>, <code object choice at 0x000002406922D680, file "random.py", line 367>, <code object shuffle at 0x000002406921FB20, file "random.py", line 376>, ('counts',), <code object sample at 0x00000240695F2140, file "random.py", line 385>, ('cum_weights', 'k'), <code object choices at 0x0000024068B39060, file "random.py", line 480>, <code object uniform at 0x00000240693EB530, file "random.py", line 520>, 0.0, 1.0, <code object triangular at 0x000002406942CFD0, file "random.py", line 524>, <code object normalvariate at 0x000002406921F9B0, file "random.py", line 544>, <code object gauss at 0x00000240691DBA30, file "random.py", line 565>, <code object lognormvariate at 0x00000240693EB430, file "random.py", line 603>, <code object expovariate at 0x000002406944A010, file "random.py", line 613>, <code object vonmisesvariate at 0x0000024068E7F7B0, file "random.py", line 630>, <code object gammavariate at 0x0000024068E3E2E0, file "random.py", line 672>, <code object betavariate at 0x00000240693D23D0, file "random.py", line 737>, <code object paretovariate at 0x00000240693EAF30, file "random.py", line 764>, <code object weibullvariate at 0x000002406941B090, file "random.py", line 771>, (None,), (None, 2), (0.0, 1.0, None), (0.0, 1.0))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'VERSION', '__init__', 'seed', 'getstate', 'setstate', '__getstate__', '__setstate__', '__reduce__', '__init_subclass__', '_randbelow_with_getrandbits', 'BPF', '_randbelow_without_getrandbits', '_randbelow', 'randbytes', '_ONE', 'randrange', 'randint', 'choice', 'shuffle', 'sample', 'choices', 'uniform', 'triangular', 'normalvariate', 'gauss', 'lognormvariate', 'expovariate', 'vonmisesvariate', 'gammavariate', 'betavariate', 'paretovariate', 'weibullvariate', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'Random'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           "Random number generator base class used by bound module functions.\n\n    Used to instantiate instances of Random to get generators that don't\n    share state.\n\n    Class Random can also be subclassed if you want to use a different basic\n    generator of your own devising: in that case, override the following\n    methods:  random(), seed(), getstate(), and setstate().\n    Optionally, implement a getrandbits() method so that randrange()\n    can cover arbitrarily large ranges.\n\n    "
+  14: STORE_NAME           __doc__
+  16: LOAD_CONST           3
+  18: STORE_NAME           VERSION
+  20: LOAD_CONST           (None,)
+  22: LOAD_CONST           <code object __init__ at 0x00000240693EA230, file "random.py", line 119>
+  24: MAKE_FUNCTION        defaults
+  26: STORE_NAME           __init__
+  28: LOAD_CONST           (None, 2)
+  30: LOAD_CLOSURE         __class__
+  32: BUILD_TUPLE          
+  34: LOAD_CONST           <code object seed at 0x0000024068E721F0, file "random.py", line 128>
+  36: MAKE_FUNCTION        defaults, closure
+  38: STORE_NAME           seed
+  40: LOAD_CLOSURE         __class__
+  42: BUILD_TUPLE          
+  44: LOAD_CONST           <code object getstate at 0x000002406941A0D0, file "random.py", line 166>
+  46: MAKE_FUNCTION        closure
+  48: STORE_NAME           getstate
+  50: LOAD_CLOSURE         __class__
+  52: BUILD_TUPLE          
+  54: LOAD_CONST           <code object setstate at 0x0000024068D6E7C0, file "random.py", line 170>
+  56: MAKE_FUNCTION        closure
+  58: STORE_NAME           setstate
+  60: LOAD_CONST           <code object __getstate__ at 0x000002406945CF30, file "random.py", line 203>
+  62: MAKE_FUNCTION        
+  64: STORE_NAME           __getstate__
+  66: LOAD_CONST           <code object __setstate__ at 0x000002406945D6B0, file "random.py", line 206>
+  68: MAKE_FUNCTION        
+  70: STORE_NAME           __setstate__
+  72: LOAD_CONST           <code object __reduce__ at 0x00000240693EA730, file "random.py", line 209>
+  74: MAKE_FUNCTION        
+  76: STORE_NAME           __reduce__
+  78: LOAD_CONST           <code object __init_subclass__ at 0x00000240691F13E0, file "random.py", line 215>
+  80: MAKE_FUNCTION        
+  82: STORE_NAME           __init_subclass__
+  84: LOAD_CONST           <code object _randbelow_with_getrandbits at 0x00000240693AA0B0, file "random.py", line 235>
+  86: MAKE_FUNCTION        
+  88: STORE_NAME           _randbelow_with_getrandbits
+  90: LOAD_CONST           1
+  92: LOAD_NAME            BPF
+  94: BINARY_OP            <<
+  98: BUILD_TUPLE          
+ 100: LOAD_CONST           <code object _randbelow_without_getrandbits at 0x000002406934F480, file "random.py", line 245>
+ 102: MAKE_FUNCTION        defaults
+ 104: STORE_NAME           _randbelow_without_getrandbits
+ 106: LOAD_NAME            _randbelow_with_getrandbits
+ 108: STORE_NAME           _randbelow
+ 110: LOAD_CONST           <code object randbytes at 0x000002406941AC10, file "random.py", line 277>
+ 112: MAKE_FUNCTION        
+ 114: STORE_NAME           randbytes
+ 116: LOAD_CONST           None
+ 118: LOAD_NAME            _ONE
+ 120: BUILD_TUPLE          
+ 122: LOAD_CONST           <code object randrange at 0x0000024068D60190, file "random.py", line 284>
+ 124: MAKE_FUNCTION        defaults
+ 126: STORE_NAME           randrange
+ 128: LOAD_CONST           <code object randint at 0x000002406945EB50, file "random.py", line 358>
+ 130: MAKE_FUNCTION        
+ 132: STORE_NAME           randint
+ 134: LOAD_CONST           <code object choice at 0x000002406922D680, file "random.py", line 367>
+ 136: MAKE_FUNCTION        
+ 138: STORE_NAME           choice
+ 140: LOAD_CONST           <code object shuffle at 0x000002406921FB20, file "random.py", line 376>
+ 142: MAKE_FUNCTION        
+ 144: STORE_NAME           shuffle
+ 146: LOAD_CONST           None
+ 148: LOAD_CONST           ('counts',)
+ 150: BUILD_CONST_KEY_MAP  
+ 152: LOAD_CONST           <code object sample at 0x00000240695F2140, file "random.py", line 385>
+ 154: MAKE_FUNCTION        kwdefaults
+ 156: STORE_NAME           sample
+ 158: LOAD_CONST           (None,)
+ 160: LOAD_CONST           None
+ 162: LOAD_CONST           1
+ 164: LOAD_CONST           ('cum_weights', 'k')
+ 166: BUILD_CONST_KEY_MAP  
+ 168: LOAD_CONST           <code object choices at 0x0000024068B39060, file "random.py", line 480>
+ 170: MAKE_FUNCTION        defaults, kwdefaults
+ 172: STORE_NAME           choices
+ 174: LOAD_CONST           <code object uniform at 0x00000240693EB530, file "random.py", line 520>
+ 176: MAKE_FUNCTION        
+ 178: STORE_NAME           uniform
+ 180: LOAD_CONST           (0.0, 1.0, None)
+ 182: LOAD_CONST           <code object triangular at 0x000002406942CFD0, file "random.py", line 524>
+ 184: MAKE_FUNCTION        defaults
+ 186: STORE_NAME           triangular
+ 188: LOAD_CONST           (0.0, 1.0)
+ 190: LOAD_CONST           <code object normalvariate at 0x000002406921F9B0, file "random.py", line 544>
+ 192: MAKE_FUNCTION        defaults
+ 194: STORE_NAME           normalvariate
+ 196: LOAD_CONST           (0.0, 1.0)
+ 198: LOAD_CONST           <code object gauss at 0x00000240691DBA30, file "random.py", line 565>
+ 200: MAKE_FUNCTION        defaults
+ 202: STORE_NAME           gauss
+ 204: LOAD_CONST           <code object lognormvariate at 0x00000240693EB430, file "random.py", line 603>
+ 206: MAKE_FUNCTION        
+ 208: STORE_NAME           lognormvariate
+ 210: LOAD_CONST           <code object expovariate at 0x000002406944A010, file "random.py", line 613>
+ 212: MAKE_FUNCTION        
+ 214: STORE_NAME           expovariate
+ 216: LOAD_CONST           <code object vonmisesvariate at 0x0000024068E7F7B0, file "random.py", line 630>
+ 218: MAKE_FUNCTION        
+ 220: STORE_NAME           vonmisesvariate
+ 222: LOAD_CONST           <code object gammavariate at 0x0000024068E3E2E0, file "random.py", line 672>
+ 224: MAKE_FUNCTION        
+ 226: STORE_NAME           gammavariate
+ 228: LOAD_CONST           <code object betavariate at 0x00000240693D23D0, file "random.py", line 737>
+ 230: MAKE_FUNCTION        
+ 232: STORE_NAME           betavariate
+ 234: LOAD_CONST           <code object paretovariate at 0x00000240693EAF30, file "random.py", line 764>
+ 236: MAKE_FUNCTION        
+ 238: STORE_NAME           paretovariate
+ 240: LOAD_CONST           <code object weibullvariate at 0x000002406941B090, file "random.py", line 771>
+ 242: MAKE_FUNCTION        
+ 244: STORE_NAME           weibullvariate
+ 246: LOAD_CLOSURE         __class__
+ 248: COPY                 
+ 250: STORE_NAME           __classcell__
+ 252: RETURN_VALUE         

@@ -1,0 +1,14 @@
+# Disassembly for typing.IO.readlines
+# From module file: typing
+
+## co_consts:
+(None,)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: RETURN_VALUE         

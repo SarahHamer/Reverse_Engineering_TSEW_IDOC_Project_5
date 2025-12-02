@@ -1,0 +1,536 @@
+# Disassembly for logging
+# From module file: logging
+
+## co_consts:
+("\nLogging package for Python. Based on PEP 282 and comments thereto in\ncomp.lang.python.\n\nCopyright (C) 2001-2019 Vinay Sajip. All Rights Reserved.\n\nTo use, simply 'import logging' and log away!\n", 0, None, ('GenericAlias',), ('Template',), ('Formatter',), ('BASIC_FORMAT', 'BufferingFormatter', 'CRITICAL', 'DEBUG', 'ERROR', 'FATAL', 'FileHandler', 'Filter', 'Formatter', 'Handler', 'INFO', 'LogRecord', 'Logger', 'LoggerAdapter', 'NOTSET', 'NullHandler', 'StreamHandler', 'WARN', 'WARNING', 'addLevelName', 'basicConfig', 'captureWarnings', 'critical', 'debug', 'disable', 'error', 'exception', 'fatal', 'getLevelName', 'getLogger', 'getLoggerClass', 'info', 'log', 'makeLogRecord', 'setLoggerClass', 'shutdown', 'warn', 'warning', 'getLogRecordFactory', 'setLogRecordFactory', 'lastResort', 'raiseExceptions', 'getLevelNamesMapping'), 'Vinay Sajip <vinay_sajip@red-dove.com>', 'production', '0.5.1.2', '07 February 2010', True, 50, 40, 30, 20, 10, 'CRITICAL', 'ERROR', 'WARNING', 'INFO', 'DEBUG', 'NOTSET', ('CRITICAL', 'FATAL', 'ERROR', 'WARN', 'WARNING', 'INFO', 'DEBUG', 'NOTSET'), <code object getLevelNamesMapping at 0x000002406945D890, file "logging\__init__.py", line 120>, <code object getLevelName at 0x00000240693AB230, file "logging\__init__.py", line 123>, <code object addLevelName at 0x000002406922D680, file "logging\__init__.py", line 150>, '_getframe', <code object <lambda> at 0x000002406945FF00, file "logging\__init__.py", line 164>, <code object currentframe at 0x00000240693D2760, file "logging\__init__.py", line 166>, <code object _is_internal_frame at 0x00000240693ABAF0, file "logging\__init__.py", line 194>, <code object _checkLevel at 0x000002406942E100, file "logging\__init__.py", line 202>, <code object _acquireLock at 0x000002406944A230, file "logging\__init__.py", line 228>, <code object _releaseLock at 0x000002406944AAB0, file "logging\__init__.py", line 237>, 'register_at_fork', <code object _register_at_fork_reinit_lock at 0x000002406943B7B0, file "logging\__init__.py", line 248>, <code object _register_at_fork_reinit_lock at 0x00000240691C18F0, file "logging\__init__.py", line 256>, <code object _after_at_fork_child_reinit_locks at 0x00000240693D3B90, file "logging\__init__.py", line 263>, ('before', 'after_in_child', 'after_in_parent'), <code object LogRecord at 0x0000024069467130, file "logging\__init__.py", line 280>, 'LogRecord', <code object setLogRecordFactory at 0x0000024069495620, file "logging\__init__.py", line 385>, <code object getLogRecordFactory at 0x00000240694952E0, file "logging\__init__.py", line 395>, <code object makeLogRecord at 0x000002406941A790, file "logging\__init__.py", line 402>, <code object PercentStyle at 0x00000240693D2170, file "logging\__init__.py", line 421>, 'PercentStyle', <code object StrFormatStyle at 0x00000240693D2630, file "logging\__init__.py", line 454>, 'StrFormatStyle', <code object StringTemplateStyle at 0x00000240693EB730, file "logging\__init__.py", line 488>, 'StringTemplateStyle', '%(levelname)s:%(name)s:%(message)s', '{levelname}:{name}:{message}', '${levelname}:${name}:${message}', ('%', '{', '$'), <code object Formatter at 0x000002406941B2D0, file "logging\__init__.py", line 531>, 'Formatter', <code object BufferingFormatter at 0x000002406945EB50, file "logging\__init__.py", line 711>, 'BufferingFormatter', <code object Filter at 0x0000024069465990, file "logging\__init__.py", line 753>, 'Filter', <code object Filterer at 0x000002406945F000, file "logging\__init__.py", line 790>, 'Filterer', <code object _removeHandlerRef at 0x00000240691F5D70, file "logging\__init__.py", line 845>, <code object _addHandlerRef at 0x000002406942E290, file "logging\__init__.py", line 863>, <code object Handler at 0x000002406922D530, file "logging\__init__.py", line 873>, 'Handler', <code object StreamHandler at 0x000002406944B440, file "logging\__init__.py", line 1067>, 'StreamHandler', <code object FileHandler at 0x000002406945E970, file "logging\__init__.py", line 1152>, 'FileHandler', <code object _StderrHandler at 0x000002406945FC30, file "logging\__init__.py", line 1237>, '_StderrHandler', <code object PlaceHolder at 0x0000024069466090, file "logging\__init__.py", line 1261>, 'PlaceHolder', <code object setLoggerClass at 0x00000240693D30E0, file "logging\__init__.py", line 1284>, <code object getLoggerClass at 0x0000024069495D70, file "logging\__init__.py", line 1297>, <code object Manager at 0x00000240693D3CC0, file "logging\__init__.py", line 1303>, 'Manager', <code object Logger at 0x000002406949CBB0, file "logging\__init__.py", line 1432>, 'Logger', <code object RootLogger at 0x00000240694666B0, file "logging\__init__.py", line 1786>, 'RootLogger', <code object LoggerAdapter at 0x00000240691F6250, file "logging\__init__.py", line 1803>, 'LoggerAdapter', <code object basicConfig at 0x0000024068BBFE90, file "logging\__init__.py", line 1953>, <code object getLogger at 0x00000240691C2EF0, file "logging\__init__.py", line 2081>, <code object critical at 0x00000240693AA970, file "logging\__init__.py", line 2091>, <code object fatal at 0x0000024069467D70, file "logging\__init__.py", line 2101>, <code object error at 0x00000240693AB4B0, file "logging\__init__.py", line 2107>, ('exc_info',), <code object exception at 0x0000024069CDC300, file "logging\__init__.py", line 2117>, <code object warning at 0x00000240693ABC30, file "logging\__init__.py", line 2125>, <code object warn at 0x000002406941AD30, file "logging\__init__.py", line 2135>, <code object info at 0x00000240693AAFB0, file "logging\__init__.py", line 2140>, <code object debug at 0x00000240693AABF0, file "logging\__init__.py", line 2150>, <code object log at 0x00000240693AAD30, file "logging\__init__.py", line 2160>, <code object disable at 0x000002406941A670, file "logging\__init__.py", line 2170>, <code object shutdown at 0x0000024068DB6A10, file "logging\__init__.py", line 2177>, <code object NullHandler at 0x0000024069CDC5D0, file "logging\__init__.py", line 2213>, 'NullHandler', <code object _showwarning at 0x0000024069365F30, file "logging\__init__.py", line 2239>, <code object captureWarnings at 0x000002406922CEA0, file "logging\__init__.py", line 2259>, (None,), (None, None))
+
+## co_names:
+('__doc__', 'sys', 'os', 'time', 'io', 're', 'traceback', 'warnings', 'weakref', 'collections.abc', 'collections', 'types', 'GenericAlias', 'string', 'Template', 'Formatter', 'StrFormatter', '__all__', 'threading', '__author__', '__status__', '__version__', '__date__', '_startTime', 'raiseExceptions', 'logThreads', 'logMultiprocessing', 'logProcesses', 'CRITICAL', 'FATAL', 'ERROR', 'WARNING', 'WARN', 'INFO', 'DEBUG', 'NOTSET', '_levelToName', '_nameToLevel', 'getLevelNamesMapping', 'getLevelName', 'addLevelName', 'hasattr', 'currentframe', 'path', 'normcase', '__code__', 'co_filename', '_srcfile', '_is_internal_frame', '_checkLevel', 'RLock', '_lock', '_acquireLock', '_releaseLock', '_register_at_fork_reinit_lock', 'WeakSet', '_at_fork_reinit_lock_weakset', '_after_at_fork_child_reinit_locks', 'register_at_fork', 'object', 'LogRecord', '_logRecordFactory', 'setLogRecordFactory', 'getLogRecordFactory', 'makeLogRecord', '_str_formatter', 'PercentStyle', 'StrFormatStyle', 'StringTemplateStyle', 'BASIC_FORMAT', '_STYLES', '_defaultFormatter', 'BufferingFormatter', 'Filter', 'Filterer', 'WeakValueDictionary', '_handlers', '_handlerList', '_removeHandlerRef', '_addHandlerRef', 'Handler', 'StreamHandler', 'FileHandler', '_StderrHandler', '_defaultLastResort', 'lastResort', 'PlaceHolder', 'setLoggerClass', 'getLoggerClass', 'Manager', 'Logger', 'RootLogger', '_loggerClass', 'LoggerAdapter', 'root', 'manager', 'basicConfig', 'getLogger', 'critical', 'fatal', 'error', 'exception', 'warning', 'warn', 'info', 'debug', 'log', 'disable', 'shutdown', 'atexit', 'register', 'NullHandler', '_warnings_showwarning', '_showwarning', 'captureWarnings')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           "\nLogging package for Python. Based on PEP 282 and comments thereto in\ncomp.lang.python.\n\nCopyright (C) 2001-2019 Vinay Sajip. All Rights Reserved.\n\nTo use, simply 'import logging' and log away!\n"
+   4: STORE_NAME           __doc__
+   6: LOAD_CONST           0
+   8: LOAD_CONST           None
+  10: IMPORT_NAME          sys
+  12: STORE_NAME           sys
+  14: LOAD_CONST           0
+  16: LOAD_CONST           None
+  18: IMPORT_NAME          os
+  20: STORE_NAME           os
+  22: LOAD_CONST           0
+  24: LOAD_CONST           None
+  26: IMPORT_NAME          time
+  28: STORE_NAME           time
+  30: LOAD_CONST           0
+  32: LOAD_CONST           None
+  34: IMPORT_NAME          io
+  36: STORE_NAME           io
+  38: LOAD_CONST           0
+  40: LOAD_CONST           None
+  42: IMPORT_NAME          re
+  44: STORE_NAME           re
+  46: LOAD_CONST           0
+  48: LOAD_CONST           None
+  50: IMPORT_NAME          traceback
+  52: STORE_NAME           traceback
+  54: LOAD_CONST           0
+  56: LOAD_CONST           None
+  58: IMPORT_NAME          warnings
+  60: STORE_NAME           warnings
+  62: LOAD_CONST           0
+  64: LOAD_CONST           None
+  66: IMPORT_NAME          weakref
+  68: STORE_NAME           weakref
+  70: LOAD_CONST           0
+  72: LOAD_CONST           None
+  74: IMPORT_NAME          collections.abc
+  76: STORE_NAME           collections
+  78: LOAD_CONST           0
+  80: LOAD_CONST           ('GenericAlias',)
+  82: IMPORT_NAME          types
+  84: IMPORT_FROM          GenericAlias
+  86: STORE_NAME           GenericAlias
+  88: POP_TOP              
+  90: LOAD_CONST           0
+  92: LOAD_CONST           ('Template',)
+  94: IMPORT_NAME          string
+  96: IMPORT_FROM          Template
+  98: STORE_NAME           Template
+ 100: POP_TOP              
+ 102: LOAD_CONST           0
+ 104: LOAD_CONST           ('Formatter',)
+ 106: IMPORT_NAME          string
+ 108: IMPORT_FROM          Formatter
+ 110: STORE_NAME           StrFormatter
+ 112: POP_TOP              
+ 114: BUILD_LIST           
+ 116: LOAD_CONST           ('BASIC_FORMAT', 'BufferingFormatter', 'CRITICAL', 'DEBUG', 'ERROR', 'FATAL', 'FileHandler', 'Filter', 'Formatter', 'Handler', 'INFO', 'LogRecord', 'Logger', 'LoggerAdapter', 'NOTSET', 'NullHandler', 'StreamHandler', 'WARN', 'WARNING', 'addLevelName', 'basicConfig', 'captureWarnings', 'critical', 'debug', 'disable', 'error', 'exception', 'fatal', 'getLevelName', 'getLogger', 'getLoggerClass', 'info', 'log', 'makeLogRecord', 'setLoggerClass', 'shutdown', 'warn', 'warning', 'getLogRecordFactory', 'setLogRecordFactory', 'lastResort', 'raiseExceptions', 'getLevelNamesMapping')
+ 118: LIST_EXTEND          
+ 120: STORE_NAME           __all__
+ 122: LOAD_CONST           0
+ 124: LOAD_CONST           None
+ 126: IMPORT_NAME          threading
+ 128: STORE_NAME           threading
+ 130: LOAD_CONST           'Vinay Sajip <vinay_sajip@red-dove.com>'
+ 132: STORE_NAME           __author__
+ 134: LOAD_CONST           'production'
+ 136: STORE_NAME           __status__
+ 138: LOAD_CONST           '0.5.1.2'
+ 140: STORE_NAME           __version__
+ 142: LOAD_CONST           '07 February 2010'
+ 144: STORE_NAME           __date__
+ 146: PUSH_NULL            
+ 148: LOAD_NAME            time
+ 150: LOAD_ATTR            time
+ 160: PRECALL              
+ 164: CALL                 
+ 174: STORE_NAME           _startTime
+ 176: LOAD_CONST           True
+ 178: STORE_NAME           raiseExceptions
+ 180: LOAD_CONST           True
+ 182: STORE_NAME           logThreads
+ 184: LOAD_CONST           True
+ 186: STORE_NAME           logMultiprocessing
+ 188: LOAD_CONST           True
+ 190: STORE_NAME           logProcesses
+ 192: LOAD_CONST           50
+ 194: STORE_NAME           CRITICAL
+ 196: LOAD_NAME            CRITICAL
+ 198: STORE_NAME           FATAL
+ 200: LOAD_CONST           40
+ 202: STORE_NAME           ERROR
+ 204: LOAD_CONST           30
+ 206: STORE_NAME           WARNING
+ 208: LOAD_NAME            WARNING
+ 210: STORE_NAME           WARN
+ 212: LOAD_CONST           20
+ 214: STORE_NAME           INFO
+ 216: LOAD_CONST           10
+ 218: STORE_NAME           DEBUG
+ 220: LOAD_CONST           0
+ 222: STORE_NAME           NOTSET
+ 224: LOAD_NAME            CRITICAL
+ 226: LOAD_CONST           'CRITICAL'
+ 228: LOAD_NAME            ERROR
+ 230: LOAD_CONST           'ERROR'
+ 232: LOAD_NAME            WARNING
+ 234: LOAD_CONST           'WARNING'
+ 236: LOAD_NAME            INFO
+ 238: LOAD_CONST           'INFO'
+ 240: LOAD_NAME            DEBUG
+ 242: LOAD_CONST           'DEBUG'
+ 244: LOAD_NAME            NOTSET
+ 246: LOAD_CONST           'NOTSET'
+ 248: BUILD_MAP            
+ 250: STORE_NAME           _levelToName
+ 252: LOAD_NAME            CRITICAL
+ 254: LOAD_NAME            FATAL
+ 256: LOAD_NAME            ERROR
+ 258: LOAD_NAME            WARNING
+ 260: LOAD_NAME            WARNING
+ 262: LOAD_NAME            INFO
+ 264: LOAD_NAME            DEBUG
+ 266: LOAD_NAME            NOTSET
+ 268: LOAD_CONST           ('CRITICAL', 'FATAL', 'ERROR', 'WARN', 'WARNING', 'INFO', 'DEBUG', 'NOTSET')
+ 270: BUILD_CONST_KEY_MAP  
+ 272: STORE_NAME           _nameToLevel
+ 274: LOAD_CONST           <code object getLevelNamesMapping at 0x000002406945D890, file "logging\__init__.py", line 120>
+ 276: MAKE_FUNCTION        
+ 278: STORE_NAME           getLevelNamesMapping
+ 280: LOAD_CONST           <code object getLevelName at 0x00000240693AB230, file "logging\__init__.py", line 123>
+ 282: MAKE_FUNCTION        
+ 284: STORE_NAME           getLevelName
+ 286: LOAD_CONST           <code object addLevelName at 0x000002406922D680, file "logging\__init__.py", line 150>
+ 288: MAKE_FUNCTION        
+ 290: STORE_NAME           addLevelName
+ 292: PUSH_NULL            
+ 294: LOAD_NAME            hasattr
+ 296: LOAD_NAME            sys
+ 298: LOAD_CONST           '_getframe'
+ 300: PRECALL              
+ 304: CALL                 
+ 314: POP_JUMP_FORWARD_IF_FALSE to 324
+ 316: LOAD_CONST           <code object <lambda> at 0x000002406945FF00, file "logging\__init__.py", line 164>
+ 318: MAKE_FUNCTION        
+ 320: STORE_NAME           currentframe
+ 322: JUMP_FORWARD         to 330
+ 324: LOAD_CONST           <code object currentframe at 0x00000240693D2760, file "logging\__init__.py", line 166>
+ 326: MAKE_FUNCTION        
+ 328: STORE_NAME           currentframe
+ 330: LOAD_NAME            os
+ 332: LOAD_ATTR            path
+ 342: LOAD_METHOD          normcase
+ 364: LOAD_NAME            addLevelName
+ 366: LOAD_ATTR            __code__
+ 376: LOAD_ATTR            co_filename
+ 386: PRECALL              
+ 390: CALL                 
+ 400: STORE_NAME           _srcfile
+ 402: LOAD_CONST           <code object _is_internal_frame at 0x00000240693ABAF0, file "logging\__init__.py", line 194>
+ 404: MAKE_FUNCTION        
+ 406: STORE_NAME           _is_internal_frame
+ 408: LOAD_CONST           <code object _checkLevel at 0x000002406942E100, file "logging\__init__.py", line 202>
+ 410: MAKE_FUNCTION        
+ 412: STORE_NAME           _checkLevel
+ 414: PUSH_NULL            
+ 416: LOAD_NAME            threading
+ 418: LOAD_ATTR            RLock
+ 428: PRECALL              
+ 432: CALL                 
+ 442: STORE_NAME           _lock
+ 444: LOAD_CONST           <code object _acquireLock at 0x000002406944A230, file "logging\__init__.py", line 228>
+ 446: MAKE_FUNCTION        
+ 448: STORE_NAME           _acquireLock
+ 450: LOAD_CONST           <code object _releaseLock at 0x000002406944AAB0, file "logging\__init__.py", line 237>
+ 452: MAKE_FUNCTION        
+ 454: STORE_NAME           _releaseLock
+ 456: PUSH_NULL            
+ 458: LOAD_NAME            hasattr
+ 460: LOAD_NAME            os
+ 462: LOAD_CONST           'register_at_fork'
+ 464: PRECALL              
+ 468: CALL                 
+ 478: POP_JUMP_FORWARD_IF_TRUE to 488
+ 480: LOAD_CONST           <code object _register_at_fork_reinit_lock at 0x000002406943B7B0, file "logging\__init__.py", line 248>
+ 482: MAKE_FUNCTION        
+ 484: STORE_NAME           _register_at_fork_reinit_lock
+ 486: JUMP_FORWARD         to 568
+ 488: PUSH_NULL            
+ 490: LOAD_NAME            weakref
+ 492: LOAD_ATTR            WeakSet
+ 502: PRECALL              
+ 506: CALL                 
+ 516: STORE_NAME           _at_fork_reinit_lock_weakset
+ 518: LOAD_CONST           <code object _register_at_fork_reinit_lock at 0x00000240691C18F0, file "logging\__init__.py", line 256>
+ 520: MAKE_FUNCTION        
+ 522: STORE_NAME           _register_at_fork_reinit_lock
+ 524: LOAD_CONST           <code object _after_at_fork_child_reinit_locks at 0x00000240693D3B90, file "logging\__init__.py", line 263>
+ 526: MAKE_FUNCTION        
+ 528: STORE_NAME           _after_at_fork_child_reinit_locks
+ 530: PUSH_NULL            
+ 532: LOAD_NAME            os
+ 534: LOAD_ATTR            register_at_fork
+ 544: LOAD_NAME            _acquireLock
+ 546: LOAD_NAME            _after_at_fork_child_reinit_locks
+ 548: LOAD_NAME            _releaseLock
+ 550: KW_NAMES             
+ 552: PRECALL              
+ 556: CALL                 
+ 566: POP_TOP              
+ 568: PUSH_NULL            
+ 570: LOAD_BUILD_CLASS     
+ 572: LOAD_CONST           <code object LogRecord at 0x0000024069467130, file "logging\__init__.py", line 280>
+ 574: MAKE_FUNCTION        
+ 576: LOAD_CONST           'LogRecord'
+ 578: LOAD_NAME            object
+ 580: PRECALL              
+ 584: CALL                 
+ 594: STORE_NAME           LogRecord
+ 596: LOAD_NAME            LogRecord
+ 598: STORE_GLOBAL         _logRecordFactory
+ 600: LOAD_CONST           <code object setLogRecordFactory at 0x0000024069495620, file "logging\__init__.py", line 385>
+ 602: MAKE_FUNCTION        
+ 604: STORE_NAME           setLogRecordFactory
+ 606: LOAD_CONST           <code object getLogRecordFactory at 0x00000240694952E0, file "logging\__init__.py", line 395>
+ 608: MAKE_FUNCTION        
+ 610: STORE_NAME           getLogRecordFactory
+ 612: LOAD_CONST           <code object makeLogRecord at 0x000002406941A790, file "logging\__init__.py", line 402>
+ 614: MAKE_FUNCTION        
+ 616: STORE_NAME           makeLogRecord
+ 618: PUSH_NULL            
+ 620: LOAD_NAME            StrFormatter
+ 622: PRECALL              
+ 626: CALL                 
+ 636: STORE_NAME           _str_formatter
+ 638: DELETE_NAME          StrFormatter
+ 640: PUSH_NULL            
+ 642: LOAD_BUILD_CLASS     
+ 644: LOAD_CONST           <code object PercentStyle at 0x00000240693D2170, file "logging\__init__.py", line 421>
+ 646: MAKE_FUNCTION        
+ 648: LOAD_CONST           'PercentStyle'
+ 650: LOAD_NAME            object
+ 652: PRECALL              
+ 656: CALL                 
+ 666: STORE_NAME           PercentStyle
+ 668: PUSH_NULL            
+ 670: LOAD_BUILD_CLASS     
+ 672: LOAD_CONST           <code object StrFormatStyle at 0x00000240693D2630, file "logging\__init__.py", line 454>
+ 674: MAKE_FUNCTION        
+ 676: LOAD_CONST           'StrFormatStyle'
+ 678: LOAD_NAME            PercentStyle
+ 680: PRECALL              
+ 684: CALL                 
+ 694: STORE_NAME           StrFormatStyle
+ 696: PUSH_NULL            
+ 698: LOAD_BUILD_CLASS     
+ 700: LOAD_CONST           <code object StringTemplateStyle at 0x00000240693EB730, file "logging\__init__.py", line 488>
+ 702: MAKE_FUNCTION        
+ 704: LOAD_CONST           'StringTemplateStyle'
+ 706: LOAD_NAME            PercentStyle
+ 708: PRECALL              
+ 712: CALL                 
+ 722: STORE_NAME           StringTemplateStyle
+ 724: LOAD_CONST           '%(levelname)s:%(name)s:%(message)s'
+ 726: STORE_NAME           BASIC_FORMAT
+ 728: LOAD_NAME            PercentStyle
+ 730: LOAD_NAME            BASIC_FORMAT
+ 732: BUILD_TUPLE          
+ 734: LOAD_NAME            StrFormatStyle
+ 736: LOAD_CONST           '{levelname}:{name}:{message}'
+ 738: BUILD_TUPLE          
+ 740: LOAD_NAME            StringTemplateStyle
+ 742: LOAD_CONST           '${levelname}:${name}:${message}'
+ 744: BUILD_TUPLE          
+ 746: LOAD_CONST           ('%', '{', '$')
+ 748: BUILD_CONST_KEY_MAP  
+ 750: STORE_NAME           _STYLES
+ 752: PUSH_NULL            
+ 754: LOAD_BUILD_CLASS     
+ 756: LOAD_CONST           <code object Formatter at 0x000002406941B2D0, file "logging\__init__.py", line 531>
+ 758: MAKE_FUNCTION        
+ 760: LOAD_CONST           'Formatter'
+ 762: LOAD_NAME            object
+ 764: PRECALL              
+ 768: CALL                 
+ 778: STORE_NAME           Formatter
+ 780: PUSH_NULL            
+ 782: LOAD_NAME            Formatter
+ 784: PRECALL              
+ 788: CALL                 
+ 798: STORE_NAME           _defaultFormatter
+ 800: PUSH_NULL            
+ 802: LOAD_BUILD_CLASS     
+ 804: LOAD_CONST           <code object BufferingFormatter at 0x000002406945EB50, file "logging\__init__.py", line 711>
+ 806: MAKE_FUNCTION        
+ 808: LOAD_CONST           'BufferingFormatter'
+ 810: LOAD_NAME            object
+ 812: PRECALL              
+ 816: CALL                 
+ 826: STORE_NAME           BufferingFormatter
+ 828: PUSH_NULL            
+ 830: LOAD_BUILD_CLASS     
+ 832: LOAD_CONST           <code object Filter at 0x0000024069465990, file "logging\__init__.py", line 753>
+ 834: MAKE_FUNCTION        
+ 836: LOAD_CONST           'Filter'
+ 838: LOAD_NAME            object
+ 840: PRECALL              
+ 844: CALL                 
+ 854: STORE_NAME           Filter
+ 856: PUSH_NULL            
+ 858: LOAD_BUILD_CLASS     
+ 860: LOAD_CONST           <code object Filterer at 0x000002406945F000, file "logging\__init__.py", line 790>
+ 862: MAKE_FUNCTION        
+ 864: LOAD_CONST           'Filterer'
+ 866: LOAD_NAME            object
+ 868: PRECALL              
+ 872: CALL                 
+ 882: STORE_NAME           Filterer
+ 884: PUSH_NULL            
+ 886: LOAD_NAME            weakref
+ 888: LOAD_ATTR            WeakValueDictionary
+ 898: PRECALL              
+ 902: CALL                 
+ 912: STORE_NAME           _handlers
+ 914: BUILD_LIST           
+ 916: STORE_NAME           _handlerList
+ 918: LOAD_CONST           <code object _removeHandlerRef at 0x00000240691F5D70, file "logging\__init__.py", line 845>
+ 920: MAKE_FUNCTION        
+ 922: STORE_NAME           _removeHandlerRef
+ 924: LOAD_CONST           <code object _addHandlerRef at 0x000002406942E290, file "logging\__init__.py", line 863>
+ 926: MAKE_FUNCTION        
+ 928: STORE_NAME           _addHandlerRef
+ 930: PUSH_NULL            
+ 932: LOAD_BUILD_CLASS     
+ 934: LOAD_CONST           <code object Handler at 0x000002406922D530, file "logging\__init__.py", line 873>
+ 936: MAKE_FUNCTION        
+ 938: LOAD_CONST           'Handler'
+ 940: LOAD_NAME            Filterer
+ 942: PRECALL              
+ 946: CALL                 
+ 956: STORE_NAME           Handler
+ 958: PUSH_NULL            
+ 960: LOAD_BUILD_CLASS     
+ 962: LOAD_CONST           <code object StreamHandler at 0x000002406944B440, file "logging\__init__.py", line 1067>
+ 964: MAKE_FUNCTION        
+ 966: LOAD_CONST           'StreamHandler'
+ 968: LOAD_NAME            Handler
+ 970: PRECALL              
+ 974: CALL                 
+ 984: STORE_NAME           StreamHandler
+ 986: PUSH_NULL            
+ 988: LOAD_BUILD_CLASS     
+ 990: LOAD_CONST           <code object FileHandler at 0x000002406945E970, file "logging\__init__.py", line 1152>
+ 992: MAKE_FUNCTION        
+ 994: LOAD_CONST           'FileHandler'
+ 996: LOAD_NAME            StreamHandler
+ 998: PRECALL              
+1002: CALL                 
+1012: STORE_NAME           FileHandler
+1014: PUSH_NULL            
+1016: LOAD_BUILD_CLASS     
+1018: LOAD_CONST           <code object _StderrHandler at 0x000002406945FC30, file "logging\__init__.py", line 1237>
+1020: MAKE_FUNCTION        
+1022: LOAD_CONST           '_StderrHandler'
+1024: LOAD_NAME            StreamHandler
+1026: PRECALL              
+1030: CALL                 
+1040: STORE_NAME           _StderrHandler
+1042: PUSH_NULL            
+1044: LOAD_NAME            _StderrHandler
+1046: LOAD_NAME            WARNING
+1048: PRECALL              
+1052: CALL                 
+1062: STORE_NAME           _defaultLastResort
+1064: LOAD_NAME            _defaultLastResort
+1066: STORE_NAME           lastResort
+1068: PUSH_NULL            
+1070: LOAD_BUILD_CLASS     
+1072: LOAD_CONST           <code object PlaceHolder at 0x0000024069466090, file "logging\__init__.py", line 1261>
+1074: MAKE_FUNCTION        
+1076: LOAD_CONST           'PlaceHolder'
+1078: LOAD_NAME            object
+1080: PRECALL              
+1084: CALL                 
+1094: STORE_NAME           PlaceHolder
+1096: LOAD_CONST           <code object setLoggerClass at 0x00000240693D30E0, file "logging\__init__.py", line 1284>
+1098: MAKE_FUNCTION        
+1100: STORE_NAME           setLoggerClass
+1102: LOAD_CONST           <code object getLoggerClass at 0x0000024069495D70, file "logging\__init__.py", line 1297>
+1104: MAKE_FUNCTION        
+1106: STORE_NAME           getLoggerClass
+1108: PUSH_NULL            
+1110: LOAD_BUILD_CLASS     
+1112: LOAD_CONST           <code object Manager at 0x00000240693D3CC0, file "logging\__init__.py", line 1303>
+1114: MAKE_FUNCTION        
+1116: LOAD_CONST           'Manager'
+1118: LOAD_NAME            object
+1120: PRECALL              
+1124: CALL                 
+1134: STORE_NAME           Manager
+1136: PUSH_NULL            
+1138: LOAD_BUILD_CLASS     
+1140: LOAD_CONST           <code object Logger at 0x000002406949CBB0, file "logging\__init__.py", line 1432>
+1142: MAKE_FUNCTION        
+1144: LOAD_CONST           'Logger'
+1146: LOAD_NAME            Filterer
+1148: PRECALL              
+1152: CALL                 
+1162: STORE_NAME           Logger
+1164: PUSH_NULL            
+1166: LOAD_BUILD_CLASS     
+1168: LOAD_CONST           <code object RootLogger at 0x00000240694666B0, file "logging\__init__.py", line 1786>
+1170: MAKE_FUNCTION        
+1172: LOAD_CONST           'RootLogger'
+1174: LOAD_NAME            Logger
+1176: PRECALL              
+1180: CALL                 
+1190: STORE_NAME           RootLogger
+1192: LOAD_NAME            Logger
+1194: STORE_GLOBAL         _loggerClass
+1196: PUSH_NULL            
+1198: LOAD_BUILD_CLASS     
+1200: LOAD_CONST           <code object LoggerAdapter at 0x00000240691F6250, file "logging\__init__.py", line 1803>
+1202: MAKE_FUNCTION        
+1204: LOAD_CONST           'LoggerAdapter'
+1206: LOAD_NAME            object
+1208: PRECALL              
+1212: CALL                 
+1222: STORE_NAME           LoggerAdapter
+1224: PUSH_NULL            
+1226: LOAD_NAME            RootLogger
+1228: LOAD_NAME            WARNING
+1230: PRECALL              
+1234: CALL                 
+1244: STORE_NAME           root
+1246: LOAD_NAME            root
+1248: LOAD_NAME            Logger
+1250: STORE_ATTR           root
+1260: PUSH_NULL            
+1262: LOAD_NAME            Manager
+1264: LOAD_NAME            Logger
+1266: LOAD_ATTR            root
+1276: PRECALL              
+1280: CALL                 
+1290: LOAD_NAME            Logger
+1292: STORE_ATTR           manager
+1302: LOAD_CONST           <code object basicConfig at 0x0000024068BBFE90, file "logging\__init__.py", line 1953>
+1304: MAKE_FUNCTION        
+1306: STORE_NAME           basicConfig
+1308: LOAD_CONST           (None,)
+1310: LOAD_CONST           <code object getLogger at 0x00000240691C2EF0, file "logging\__init__.py", line 2081>
+1312: MAKE_FUNCTION        defaults
+1314: STORE_NAME           getLogger
+1316: LOAD_CONST           <code object critical at 0x00000240693AA970, file "logging\__init__.py", line 2091>
+1318: MAKE_FUNCTION        
+1320: STORE_NAME           critical
+1322: LOAD_CONST           <code object fatal at 0x0000024069467D70, file "logging\__init__.py", line 2101>
+1324: MAKE_FUNCTION        
+1326: STORE_NAME           fatal
+1328: LOAD_CONST           <code object error at 0x00000240693AB4B0, file "logging\__init__.py", line 2107>
+1330: MAKE_FUNCTION        
+1332: STORE_NAME           error
+1334: LOAD_CONST           True
+1336: LOAD_CONST           ('exc_info',)
+1338: BUILD_CONST_KEY_MAP  
+1340: LOAD_CONST           <code object exception at 0x0000024069CDC300, file "logging\__init__.py", line 2117>
+1342: MAKE_FUNCTION        kwdefaults
+1344: STORE_NAME           exception
+1346: LOAD_CONST           <code object warning at 0x00000240693ABC30, file "logging\__init__.py", line 2125>
+1348: MAKE_FUNCTION        
+1350: STORE_NAME           warning
+1352: LOAD_CONST           <code object warn at 0x000002406941AD30, file "logging\__init__.py", line 2135>
+1354: MAKE_FUNCTION        
+1356: STORE_NAME           warn
+1358: LOAD_CONST           <code object info at 0x00000240693AAFB0, file "logging\__init__.py", line 2140>
+1360: MAKE_FUNCTION        
+1362: STORE_NAME           info
+1364: LOAD_CONST           <code object debug at 0x00000240693AABF0, file "logging\__init__.py", line 2150>
+1366: MAKE_FUNCTION        
+1368: STORE_NAME           debug
+1370: LOAD_CONST           <code object log at 0x00000240693AAD30, file "logging\__init__.py", line 2160>
+1372: MAKE_FUNCTION        
+1374: STORE_NAME           log
+1376: LOAD_NAME            CRITICAL
+1378: BUILD_TUPLE          
+1380: LOAD_CONST           <code object disable at 0x000002406941A670, file "logging\__init__.py", line 2170>
+1382: MAKE_FUNCTION        defaults
+1384: STORE_NAME           disable
+1386: LOAD_NAME            _handlerList
+1388: BUILD_TUPLE          
+1390: LOAD_CONST           <code object shutdown at 0x0000024068DB6A10, file "logging\__init__.py", line 2177>
+1392: MAKE_FUNCTION        defaults
+1394: STORE_NAME           shutdown
+1396: LOAD_CONST           0
+1398: LOAD_CONST           None
+1400: IMPORT_NAME          atexit
+1402: STORE_NAME           atexit
+1404: PUSH_NULL            
+1406: LOAD_NAME            atexit
+1408: LOAD_ATTR            register
+1418: LOAD_NAME            shutdown
+1420: PRECALL              
+1424: CALL                 
+1434: POP_TOP              
+1436: PUSH_NULL            
+1438: LOAD_BUILD_CLASS     
+1440: LOAD_CONST           <code object NullHandler at 0x0000024069CDC5D0, file "logging\__init__.py", line 2213>
+1442: MAKE_FUNCTION        
+1444: LOAD_CONST           'NullHandler'
+1446: LOAD_NAME            Handler
+1448: PRECALL              
+1452: CALL                 
+1462: STORE_NAME           NullHandler
+1464: LOAD_CONST           None
+1466: STORE_GLOBAL         _warnings_showwarning
+1468: LOAD_CONST           (None, None)
+1470: LOAD_CONST           <code object _showwarning at 0x0000024069365F30, file "logging\__init__.py", line 2239>
+1472: MAKE_FUNCTION        defaults
+1474: STORE_NAME           _showwarning
+1476: LOAD_CONST           <code object captureWarnings at 0x000002406922CEA0, file "logging\__init__.py", line 2259>
+1478: MAKE_FUNCTION        
+1480: STORE_NAME           captureWarnings
+1482: LOAD_CONST           None
+1484: RETURN_VALUE         

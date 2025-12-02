@@ -1,0 +1,32 @@
+# Disassembly for importlib.ExtensionFileLoader.create_module
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Create an uninitialized extension module', 'extension module {!r} loaded from {!r}')
+
+## co_names:
+('_bootstrap', '_call_with_frames_removed', '_imp', 'create_dynamic', '_verbose_message', 'name', 'path')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _bootstrap
+  14: LOAD_METHOD          _call_with_frames_removed
+  36: LOAD_GLOBAL          _imp
+  48: LOAD_ATTR            create_dynamic
+  58: LOAD_FAST            spec
+  60: PRECALL              
+  64: CALL                 
+  74: STORE_FAST           module
+  76: LOAD_GLOBAL          _bootstrap
+  88: LOAD_METHOD          _verbose_message
+ 110: LOAD_CONST           'extension module {!r} loaded from {!r}'
+ 112: LOAD_FAST            spec
+ 114: LOAD_ATTR            name
+ 124: LOAD_FAST            self
+ 126: LOAD_ATTR            path
+ 136: PRECALL              
+ 140: CALL                 
+ 150: POP_TOP              
+ 152: LOAD_FAST            module
+ 154: RETURN_VALUE         

@@ -1,0 +1,25 @@
+# Disassembly for importlib.FileHash.__init__
+# From module file: importlib.metadata
+
+## co_consts:
+(None, '=')
+
+## co_names:
+('partition', 'mode', 'value')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            spec
+   4: LOAD_METHOD          partition
+  26: LOAD_CONST           '='
+  28: PRECALL              
+  32: CALL                 
+  42: UNPACK_SEQUENCE      
+  46: LOAD_FAST            self
+  48: STORE_ATTR           mode
+  58: STORE_FAST           _
+  60: LOAD_FAST            self
+  62: STORE_ATTR           value
+  72: LOAD_CONST           None
+  74: RETURN_VALUE         

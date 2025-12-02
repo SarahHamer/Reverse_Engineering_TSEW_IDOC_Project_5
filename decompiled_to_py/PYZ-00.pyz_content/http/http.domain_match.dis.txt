@@ -1,0 +1,72 @@
+# Disassembly for http.domain_match
+# From module file: http.cookiejar
+
+## co_consts:
+("Return True if domain A domain-matches domain B, according to RFC 2965.\n\n    A and B may be host domain names or IP addresses.\n\n    RFC 2965, section 1:\n\n    Host names can be specified either as an IP address or a HDN string.\n    Sometimes we compare one host name with another.  (Such comparisons SHALL\n    be case-insensitive.)  Host A's name domain-matches host B's if\n\n         *  their host name strings string-compare equal; or\n\n         * A is a HDN string and has the form NB, where N is a non-empty\n            name string, B has the form .B', and B' is a HDN string.  (So,\n            x.y.com domain-matches .Y.com but not Y.com.)\n\n    Note that domain-match is not a commutative operation: a.b.c.com\n    domain-matches .c.com, but not the reverse.\n\n    ", True, False, -1, 0, '.', 1, None)
+
+## co_names:
+('lower', 'is_HDN', 'rfind', 'startswith')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            A
+   4: LOAD_METHOD          lower
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           A
+  42: LOAD_FAST            B
+  44: LOAD_METHOD          lower
+  66: PRECALL              
+  70: CALL                 
+  80: STORE_FAST           B
+  82: LOAD_FAST            A
+  84: LOAD_FAST            B
+  86: COMPARE_OP           ==
+  92: POP_JUMP_FORWARD_IF_FALSE to 98
+  94: LOAD_CONST           True
+  96: RETURN_VALUE         
+  98: LOAD_GLOBAL          NULL + is_HDN
+ 110: LOAD_FAST            A
+ 112: PRECALL              
+ 116: CALL                 
+ 126: POP_JUMP_FORWARD_IF_TRUE to 132
+ 128: LOAD_CONST           False
+ 130: RETURN_VALUE         
+ 132: LOAD_FAST            A
+ 134: LOAD_METHOD          rfind
+ 156: LOAD_FAST            B
+ 158: PRECALL              
+ 162: CALL                 
+ 172: STORE_FAST           i
+ 174: LOAD_FAST            i
+ 176: LOAD_CONST           -1
+ 178: COMPARE_OP           ==
+ 184: POP_JUMP_FORWARD_IF_TRUE to 198
+ 186: LOAD_FAST            i
+ 188: LOAD_CONST           0
+ 190: COMPARE_OP           ==
+ 196: POP_JUMP_FORWARD_IF_FALSE to 202
+ 198: LOAD_CONST           False
+ 200: RETURN_VALUE         
+ 202: LOAD_FAST            B
+ 204: LOAD_METHOD          startswith
+ 226: LOAD_CONST           '.'
+ 228: PRECALL              
+ 232: CALL                 
+ 242: POP_JUMP_FORWARD_IF_TRUE to 248
+ 244: LOAD_CONST           False
+ 246: RETURN_VALUE         
+ 248: LOAD_GLOBAL          NULL + is_HDN
+ 260: LOAD_FAST            B
+ 262: LOAD_CONST           1
+ 264: LOAD_CONST           None
+ 266: BUILD_SLICE          
+ 268: BINARY_SUBSCR        
+ 278: PRECALL              
+ 282: CALL                 
+ 292: POP_JUMP_FORWARD_IF_TRUE to 298
+ 294: LOAD_CONST           False
+ 296: RETURN_VALUE         
+ 298: LOAD_CONST           True
+ 300: RETURN_VALUE         

@@ -1,0 +1,75 @@
+# Disassembly for base64._bytes_from_decode_data
+# From module file: base64
+
+## co_consts:
+(None, 'ascii', 'string argument should contain only ASCII characters', 'argument should be a bytes-like object or ASCII string, not %r')
+
+## co_names:
+('isinstance', 'str', 'encode', 'UnicodeEncodeError', 'ValueError', 'bytes_types', 'memoryview', 'tobytes', 'TypeError', '__class__', '__name__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            s
+  16: LOAD_GLOBAL          str
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 146
+  44: NOP                  
+  46: LOAD_FAST            s
+  48: LOAD_METHOD          encode
+  70: LOAD_CONST           'ascii'
+  72: PRECALL              
+  76: CALL                 
+  86: RETURN_VALUE         
+  88: PUSH_EXC_INFO        
+  90: LOAD_GLOBAL          UnicodeEncodeError
+ 102: CHECK_EXC_MATCH      
+ 104: POP_JUMP_FORWARD_IF_FALSE to 138
+ 106: POP_TOP              
+ 108: LOAD_GLOBAL          NULL + ValueError
+ 120: LOAD_CONST           'string argument should contain only ASCII characters'
+ 122: PRECALL              
+ 126: CALL                 
+ 136: RAISE_VARARGS        
+ 138: RERAISE              
+ 140: COPY                 
+ 142: POP_EXCEPT           
+ 144: RERAISE              
+ 146: LOAD_GLOBAL          NULL + isinstance
+ 158: LOAD_FAST            s
+ 160: LOAD_GLOBAL          bytes_types
+ 172: PRECALL              
+ 176: CALL                 
+ 186: POP_JUMP_FORWARD_IF_FALSE to 192
+ 188: LOAD_FAST            s
+ 190: RETURN_VALUE         
+ 192: NOP                  
+ 194: LOAD_GLOBAL          NULL + memoryview
+ 206: LOAD_FAST            s
+ 208: PRECALL              
+ 212: CALL                 
+ 222: LOAD_METHOD          tobytes
+ 244: PRECALL              
+ 248: CALL                 
+ 258: RETURN_VALUE         
+ 260: PUSH_EXC_INFO        
+ 262: LOAD_GLOBAL          TypeError
+ 274: CHECK_EXC_MATCH      
+ 276: POP_JUMP_FORWARD_IF_FALSE to 338
+ 278: POP_TOP              
+ 280: LOAD_GLOBAL          NULL + TypeError
+ 292: LOAD_CONST           'argument should be a bytes-like object or ASCII string, not %r'
+ 294: LOAD_FAST            s
+ 296: LOAD_ATTR            __class__
+ 306: LOAD_ATTR            __name__
+ 316: BINARY_OP            %
+ 320: PRECALL              
+ 324: CALL                 
+ 334: LOAD_CONST           None
+ 336: RAISE_VARARGS        
+ 338: RERAISE              
+ 340: COPY                 
+ 342: POP_EXCEPT           
+ 344: RERAISE              

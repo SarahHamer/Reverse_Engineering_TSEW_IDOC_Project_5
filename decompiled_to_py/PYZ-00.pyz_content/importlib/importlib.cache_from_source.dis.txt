@@ -1,0 +1,188 @@
+# Disassembly for importlib.cache_from_source
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+("Given the path to a .py file, return the path to its .pyc file.\n\n    The .py file does not need to exist; this simply returns the path to the\n    .pyc file calculated as if the .py file were imported.\n\n    The 'optimization' parameter controls the presumed optimization level of\n    the bytecode file. If 'optimization' is not None, the string representation\n    of the argument is taken and verified to be alphanumeric (else ValueError\n    is raised).\n\n    The debug_override parameter is deprecated. If debug_override is not None,\n    a True value is the same as setting 'optimization' to the empty string\n    while a False value is equivalent to setting 'optimization' to '1'.\n\n    If sys.implementation.cache_tag is None then NotImplementedError is raised.\n\n    ", None, "the debug_override parameter is deprecated; use 'optimization' instead", 'debug_override or optimization must be set to None', '', 1, '.', 'sys.implementation.cache_tag is None', 0, '{!r} is not alphanumeric', '{}.{}{}', ':', 2)
+
+## co_names:
+('_warnings', 'warn', 'DeprecationWarning', 'TypeError', '_os', 'fspath', '_path_split', 'rpartition', 'sys', 'implementation', 'cache_tag', 'NotImplementedError', 'join', 'flags', 'optimize', 'str', 'isalnum', 'ValueError', 'format', '_OPT', 'BYTECODE_SUFFIXES', 'pycache_prefix', '_path_isabs', '_path_join', 'getcwd', 'path_separators', 'lstrip', '_PYCACHE')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            debug_override
+   4: POP_JUMP_FORWARD_IF_NONE to 108
+   6: LOAD_GLOBAL          NULL + _warnings
+  18: LOAD_ATTR            warn
+  28: LOAD_CONST           "the debug_override parameter is deprecated; use 'optimization' instead"
+  30: LOAD_GLOBAL          DeprecationWarning
+  42: PRECALL              
+  46: CALL                 
+  56: POP_TOP              
+  58: LOAD_FAST            optimization
+  60: POP_JUMP_FORWARD_IF_NONE to 96
+  62: LOAD_CONST           'debug_override or optimization must be set to None'
+  64: STORE_FAST           message
+  66: LOAD_GLOBAL          NULL + TypeError
+  78: LOAD_FAST            message
+  80: PRECALL              
+  84: CALL                 
+  94: RAISE_VARARGS        
+  96: LOAD_FAST            debug_override
+  98: POP_JUMP_FORWARD_IF_FALSE to 104
+ 100: LOAD_CONST           ''
+ 102: JUMP_FORWARD         to 106
+ 104: LOAD_CONST           1
+ 106: STORE_FAST           optimization
+ 108: LOAD_GLOBAL          NULL + _os
+ 120: LOAD_ATTR            fspath
+ 130: LOAD_FAST            path
+ 132: PRECALL              
+ 136: CALL                 
+ 146: STORE_FAST           path
+ 148: LOAD_GLOBAL          NULL + _path_split
+ 160: LOAD_FAST            path
+ 162: PRECALL              
+ 166: CALL                 
+ 176: UNPACK_SEQUENCE      
+ 180: STORE_FAST           head
+ 182: STORE_FAST           tail
+ 184: LOAD_FAST            tail
+ 186: LOAD_METHOD          rpartition
+ 208: LOAD_CONST           '.'
+ 210: PRECALL              
+ 214: CALL                 
+ 224: UNPACK_SEQUENCE      
+ 228: STORE_FAST           base
+ 230: STORE_FAST           sep
+ 232: STORE_FAST           rest
+ 234: LOAD_GLOBAL          sys
+ 246: LOAD_ATTR            implementation
+ 256: LOAD_ATTR            cache_tag
+ 266: STORE_FAST           tag
+ 268: LOAD_FAST            tag
+ 270: POP_JUMP_FORWARD_IF_NOT_NONE to 302
+ 272: LOAD_GLOBAL          NULL + NotImplementedError
+ 284: LOAD_CONST           'sys.implementation.cache_tag is None'
+ 286: PRECALL              
+ 290: CALL                 
+ 300: RAISE_VARARGS        
+ 302: LOAD_CONST           ''
+ 304: LOAD_METHOD          join
+ 326: LOAD_FAST            base
+ 328: POP_JUMP_FORWARD_IF_FALSE to 334
+ 330: LOAD_FAST            base
+ 332: JUMP_FORWARD         to 336
+ 334: LOAD_FAST            rest
+ 336: LOAD_FAST            sep
+ 338: LOAD_FAST            tag
+ 340: BUILD_LIST           
+ 342: PRECALL              
+ 346: CALL                 
+ 356: STORE_FAST           almost_filename
+ 358: LOAD_FAST            optimization
+ 360: POP_JUMP_FORWARD_IF_NOT_NONE to 444
+ 362: LOAD_GLOBAL          sys
+ 374: LOAD_ATTR            flags
+ 384: LOAD_ATTR            optimize
+ 394: LOAD_CONST           0
+ 396: COMPARE_OP           ==
+ 402: POP_JUMP_FORWARD_IF_FALSE to 410
+ 404: LOAD_CONST           ''
+ 406: STORE_FAST           optimization
+ 408: JUMP_FORWARD         to 444
+ 410: LOAD_GLOBAL          sys
+ 422: LOAD_ATTR            flags
+ 432: LOAD_ATTR            optimize
+ 442: STORE_FAST           optimization
+ 444: LOAD_GLOBAL          NULL + str
+ 456: LOAD_FAST            optimization
+ 458: PRECALL              
+ 462: CALL                 
+ 472: STORE_FAST           optimization
+ 474: LOAD_FAST            optimization
+ 476: LOAD_CONST           ''
+ 478: COMPARE_OP           !=
+ 484: POP_JUMP_FORWARD_IF_FALSE to 650
+ 486: LOAD_FAST            optimization
+ 488: LOAD_METHOD          isalnum
+ 510: PRECALL              
+ 514: CALL                 
+ 524: POP_JUMP_FORWARD_IF_TRUE to 594
+ 526: LOAD_GLOBAL          NULL + ValueError
+ 538: LOAD_CONST           '{!r} is not alphanumeric'
+ 540: LOAD_METHOD          format
+ 562: LOAD_FAST            optimization
+ 564: PRECALL              
+ 568: CALL                 
+ 578: PRECALL              
+ 582: CALL                 
+ 592: RAISE_VARARGS        
+ 594: LOAD_CONST           '{}.{}{}'
+ 596: LOAD_METHOD          format
+ 618: LOAD_FAST            almost_filename
+ 620: LOAD_GLOBAL          _OPT
+ 632: LOAD_FAST            optimization
+ 634: PRECALL              
+ 638: CALL                 
+ 648: STORE_FAST           almost_filename
+ 650: LOAD_FAST            almost_filename
+ 652: LOAD_GLOBAL          BYTECODE_SUFFIXES
+ 664: LOAD_CONST           0
+ 666: BINARY_SUBSCR        
+ 676: BINARY_OP            +
+ 680: STORE_FAST           filename
+ 682: LOAD_GLOBAL          sys
+ 694: LOAD_ATTR            pycache_prefix
+ 704: POP_JUMP_FORWARD_IF_NONE to 978
+ 706: LOAD_GLOBAL          NULL + _path_isabs
+ 718: LOAD_FAST            head
+ 720: PRECALL              
+ 724: CALL                 
+ 734: POP_JUMP_FORWARD_IF_TRUE to 802
+ 736: LOAD_GLOBAL          NULL + _path_join
+ 748: LOAD_GLOBAL          NULL + _os
+ 760: LOAD_ATTR            getcwd
+ 770: PRECALL              
+ 774: CALL                 
+ 784: LOAD_FAST            head
+ 786: PRECALL              
+ 790: CALL                 
+ 800: STORE_FAST           head
+ 802: LOAD_FAST            head
+ 804: LOAD_CONST           1
+ 806: BINARY_SUBSCR        
+ 816: LOAD_CONST           ':'
+ 818: COMPARE_OP           ==
+ 824: POP_JUMP_FORWARD_IF_FALSE to 876
+ 826: LOAD_FAST            head
+ 828: LOAD_CONST           0
+ 830: BINARY_SUBSCR        
+ 840: LOAD_GLOBAL          path_separators
+ 852: CONTAINS_OP          
+ 854: POP_JUMP_FORWARD_IF_FALSE to 876
+ 856: LOAD_FAST            head
+ 858: LOAD_CONST           2
+ 860: LOAD_CONST           None
+ 862: BUILD_SLICE          
+ 864: BINARY_SUBSCR        
+ 874: STORE_FAST           head
+ 876: LOAD_GLOBAL          NULL + _path_join
+ 888: LOAD_GLOBAL          sys
+ 900: LOAD_ATTR            pycache_prefix
+ 910: LOAD_FAST            head
+ 912: LOAD_METHOD          lstrip
+ 934: LOAD_GLOBAL          path_separators
+ 946: PRECALL              
+ 950: CALL                 
+ 960: LOAD_FAST            filename
+ 962: PRECALL              
+ 966: CALL                 
+ 976: RETURN_VALUE         
+ 978: LOAD_GLOBAL          NULL + _path_join
+ 990: LOAD_FAST            head
+ 992: LOAD_GLOBAL          _PYCACHE
+1004: LOAD_FAST            filename
+1006: PRECALL              
+1010: CALL                 
+1020: RETURN_VALUE         

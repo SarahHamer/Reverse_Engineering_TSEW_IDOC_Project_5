@@ -1,0 +1,112 @@
+# Disassembly for argparse.HelpFormatter
+# From module file: argparse
+
+## co_consts:
+('HelpFormatter', 'Formatter for generating usage messages and argument help strings.\n\n    Only the name of this class is considered a public API. All the methods\n    provided by the class are considered an implementation detail.\n    ', 2, 24, None, <code object __init__ at 0x0000024068DA9450, file "argparse.py", line 164>, <code object _indent at 0x000002406944A010, file "argparse.py", line 195>, <code object _dedent at 0x00000240693AA1F0, file "argparse.py", line 199>, <code object _Section at 0x0000024069465530, file "argparse.py", line 204>, '_Section', <code object _add_item at 0x00000240693EA530, file "argparse.py", line 235>, <code object start_section at 0x000002406921F840, file "argparse.py", line 241>, <code object end_section at 0x000002406944A340, file "argparse.py", line 247>, <code object add_text at 0x0000024069419590, file "argparse.py", line 251>, <code object add_usage at 0x00000240694196B0, file "argparse.py", line 255>, <code object add_argument at 0x0000024068DB4610, file "argparse.py", line 260>, <code object add_arguments at 0x00000240693EA730, file "argparse.py", line 278>, <code object format_help at 0x00000240691C02F0, file "argparse.py", line 285>, <code object _join_parts at 0x00000240693EA830, file "argparse.py", line 292>, <code object _format_usage at 0x0000024069502B50, file "argparse.py", line 297>, <code object _format_actions_usage at 0x0000024068E0E010, file "argparse.py", line 393>, <code object _format_text at 0x00000240691E87B0, file "argparse.py", line 506>, <code object _format_action at 0x0000024068D3EB50, file "argparse.py", line 513>, <code object _format_action_invocation at 0x0000024068E94370, file "argparse.py", line 561>, <code object _metavar_formatter at 0x00000240691F23A0, file "argparse.py", line 585>, <code object _format_args at 0x0000024068DD2390, file "argparse.py", line 601>, <code object _expand_help at 0x0000024068E1DE30, file "argparse.py", line 629>, <code object _iter_indented_subactions at 0x000002406921F9B0, file "argparse.py", line 642>, <code object _split_lines at 0x00000240691F39F0, file "argparse.py", line 652>, <code object _fill_text at 0x00000240691F3B40, file "argparse.py", line 659>, <code object _get_help_string at 0x0000024069427D20, file "argparse.py", line 666>, <code object _get_default_metavar_for_optional at 0x000002406945D890, file "argparse.py", line 669>, <code object _get_default_metavar_for_positional at 0x0000024069427DF0, file "argparse.py", line 672>, (2, 24, None), (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', '_indent', '_dedent', 'object', '_Section', '_add_item', 'start_section', 'end_section', 'add_text', 'add_usage', 'add_argument', 'add_arguments', 'format_help', '_join_parts', '_format_usage', '_format_actions_usage', '_format_text', '_format_action', '_format_action_invocation', '_metavar_formatter', '_format_args', '_expand_help', '_iter_indented_subactions', '_split_lines', '_fill_text', '_get_help_string', '_get_default_metavar_for_optional', '_get_default_metavar_for_positional')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'HelpFormatter'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Formatter for generating usage messages and argument help strings.\n\n    Only the name of this class is considered a public API. All the methods\n    provided by the class are considered an implementation detail.\n    '
+  12: STORE_NAME           __doc__
+  14: NOP                  
+  16: NOP                  
+  18: NOP                  
+  20: LOAD_CONST           (2, 24, None)
+  22: LOAD_CONST           <code object __init__ at 0x0000024068DA9450, file "argparse.py", line 164>
+  24: MAKE_FUNCTION        defaults
+  26: STORE_NAME           __init__
+  28: LOAD_CONST           <code object _indent at 0x000002406944A010, file "argparse.py", line 195>
+  30: MAKE_FUNCTION        
+  32: STORE_NAME           _indent
+  34: LOAD_CONST           <code object _dedent at 0x00000240693AA1F0, file "argparse.py", line 199>
+  36: MAKE_FUNCTION        
+  38: STORE_NAME           _dedent
+  40: PUSH_NULL            
+  42: LOAD_BUILD_CLASS     
+  44: LOAD_CONST           <code object _Section at 0x0000024069465530, file "argparse.py", line 204>
+  46: MAKE_FUNCTION        
+  48: LOAD_CONST           '_Section'
+  50: LOAD_NAME            object
+  52: PRECALL              
+  56: CALL                 
+  66: STORE_NAME           _Section
+  68: LOAD_CONST           <code object _add_item at 0x00000240693EA530, file "argparse.py", line 235>
+  70: MAKE_FUNCTION        
+  72: STORE_NAME           _add_item
+  74: LOAD_CONST           <code object start_section at 0x000002406921F840, file "argparse.py", line 241>
+  76: MAKE_FUNCTION        
+  78: STORE_NAME           start_section
+  80: LOAD_CONST           <code object end_section at 0x000002406944A340, file "argparse.py", line 247>
+  82: MAKE_FUNCTION        
+  84: STORE_NAME           end_section
+  86: LOAD_CONST           <code object add_text at 0x0000024069419590, file "argparse.py", line 251>
+  88: MAKE_FUNCTION        
+  90: STORE_NAME           add_text
+  92: LOAD_CONST           (None,)
+  94: LOAD_CONST           <code object add_usage at 0x00000240694196B0, file "argparse.py", line 255>
+  96: MAKE_FUNCTION        defaults
+  98: STORE_NAME           add_usage
+ 100: LOAD_CONST           <code object add_argument at 0x0000024068DB4610, file "argparse.py", line 260>
+ 102: MAKE_FUNCTION        
+ 104: STORE_NAME           add_argument
+ 106: LOAD_CONST           <code object add_arguments at 0x00000240693EA730, file "argparse.py", line 278>
+ 108: MAKE_FUNCTION        
+ 110: STORE_NAME           add_arguments
+ 112: LOAD_CONST           <code object format_help at 0x00000240691C02F0, file "argparse.py", line 285>
+ 114: MAKE_FUNCTION        
+ 116: STORE_NAME           format_help
+ 118: LOAD_CONST           <code object _join_parts at 0x00000240693EA830, file "argparse.py", line 292>
+ 120: MAKE_FUNCTION        
+ 122: STORE_NAME           _join_parts
+ 124: LOAD_CONST           <code object _format_usage at 0x0000024069502B50, file "argparse.py", line 297>
+ 126: MAKE_FUNCTION        
+ 128: STORE_NAME           _format_usage
+ 130: LOAD_CONST           <code object _format_actions_usage at 0x0000024068E0E010, file "argparse.py", line 393>
+ 132: MAKE_FUNCTION        
+ 134: STORE_NAME           _format_actions_usage
+ 136: LOAD_CONST           <code object _format_text at 0x00000240691E87B0, file "argparse.py", line 506>
+ 138: MAKE_FUNCTION        
+ 140: STORE_NAME           _format_text
+ 142: LOAD_CONST           <code object _format_action at 0x0000024068D3EB50, file "argparse.py", line 513>
+ 144: MAKE_FUNCTION        
+ 146: STORE_NAME           _format_action
+ 148: LOAD_CONST           <code object _format_action_invocation at 0x0000024068E94370, file "argparse.py", line 561>
+ 150: MAKE_FUNCTION        
+ 152: STORE_NAME           _format_action_invocation
+ 154: LOAD_CONST           <code object _metavar_formatter at 0x00000240691F23A0, file "argparse.py", line 585>
+ 156: MAKE_FUNCTION        
+ 158: STORE_NAME           _metavar_formatter
+ 160: LOAD_CONST           <code object _format_args at 0x0000024068DD2390, file "argparse.py", line 601>
+ 162: MAKE_FUNCTION        
+ 164: STORE_NAME           _format_args
+ 166: LOAD_CONST           <code object _expand_help at 0x0000024068E1DE30, file "argparse.py", line 629>
+ 168: MAKE_FUNCTION        
+ 170: STORE_NAME           _expand_help
+ 172: LOAD_CONST           <code object _iter_indented_subactions at 0x000002406921F9B0, file "argparse.py", line 642>
+ 174: MAKE_FUNCTION        
+ 176: STORE_NAME           _iter_indented_subactions
+ 178: LOAD_CONST           <code object _split_lines at 0x00000240691F39F0, file "argparse.py", line 652>
+ 180: MAKE_FUNCTION        
+ 182: STORE_NAME           _split_lines
+ 184: LOAD_CONST           <code object _fill_text at 0x00000240691F3B40, file "argparse.py", line 659>
+ 186: MAKE_FUNCTION        
+ 188: STORE_NAME           _fill_text
+ 190: LOAD_CONST           <code object _get_help_string at 0x0000024069427D20, file "argparse.py", line 666>
+ 192: MAKE_FUNCTION        
+ 194: STORE_NAME           _get_help_string
+ 196: LOAD_CONST           <code object _get_default_metavar_for_optional at 0x000002406945D890, file "argparse.py", line 669>
+ 198: MAKE_FUNCTION        
+ 200: STORE_NAME           _get_default_metavar_for_optional
+ 202: LOAD_CONST           <code object _get_default_metavar_for_positional at 0x0000024069427DF0, file "argparse.py", line 672>
+ 204: MAKE_FUNCTION        
+ 206: STORE_NAME           _get_default_metavar_for_positional
+ 208: LOAD_CONST           None
+ 210: RETURN_VALUE         

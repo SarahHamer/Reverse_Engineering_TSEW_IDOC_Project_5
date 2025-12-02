@@ -1,0 +1,27 @@
+# Disassembly for email.MIMEPart.is_attachment
+# From module file: email.message
+
+## co_consts:
+(None, 'content-disposition', False, 'attachment')
+
+## co_names:
+('get', 'content_disposition')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          get
+  26: LOAD_CONST           'content-disposition'
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           c_d
+  44: LOAD_FAST            c_d
+  46: POP_JUMP_FORWARD_IF_NOT_NONE to 52
+  48: LOAD_CONST           False
+  50: JUMP_FORWARD         to 72
+  52: LOAD_FAST            c_d
+  54: LOAD_ATTR            content_disposition
+  64: LOAD_CONST           'attachment'
+  66: COMPARE_OP           ==
+  72: RETURN_VALUE         

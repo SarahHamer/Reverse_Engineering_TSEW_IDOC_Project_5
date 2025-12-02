@@ -1,0 +1,15 @@
+# Disassembly for email.Address.username
+# From module file: email.headerregistry
+
+## co_consts:
+(None,)
+
+## co_names:
+('_username',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _username
+  14: RETURN_VALUE         

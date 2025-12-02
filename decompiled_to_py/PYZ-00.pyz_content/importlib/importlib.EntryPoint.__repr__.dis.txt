@@ -1,0 +1,27 @@
+# Disassembly for importlib.EntryPoint.__repr__
+# From module file: importlib.metadata
+
+## co_consts:
+(None, 'EntryPoint(name=', ', value=', ', group=', ')')
+
+## co_names:
+('name', 'value', 'group')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'EntryPoint(name='
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            name
+  16: FORMAT_VALUE         repr
+  18: LOAD_CONST           ', value='
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            value
+  32: FORMAT_VALUE         repr
+  34: LOAD_CONST           ', group='
+  36: LOAD_FAST            self
+  38: LOAD_ATTR            group
+  48: FORMAT_VALUE         repr
+  50: LOAD_CONST           ')'
+  52: BUILD_STRING         
+  54: RETURN_VALUE         

@@ -1,0 +1,22 @@
+# Disassembly for importlib.FileFinder.path_hook
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('A class method which returns a closure to use on sys.path_hook\n        which will return an instance using the specified loaders and the path\n        called on the closure.\n\n        If the path called on the closure is not a directory, ImportError is\n        raised.\n\n        ', <code object path_hook_for_FileFinder at 0x000002406944ACD0, file "importlib\_bootstrap_external.py", line 1696>)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: MAKE_CELL            cls
+   2: MAKE_CELL            loader_details
+   4: RESUME               
+   6: LOAD_CLOSURE         cls
+   8: LOAD_CLOSURE         loader_details
+  10: BUILD_TUPLE          
+  12: LOAD_CONST           <code object path_hook_for_FileFinder at 0x000002406944ACD0, file "importlib\_bootstrap_external.py", line 1696>
+  14: MAKE_FUNCTION        closure
+  16: STORE_FAST           path_hook_for_FileFinder
+  18: LOAD_FAST            path_hook_for_FileFinder
+  20: RETURN_VALUE         

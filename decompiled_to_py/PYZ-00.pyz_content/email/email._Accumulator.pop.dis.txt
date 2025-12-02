@@ -1,0 +1,29 @@
+# Disassembly for email._Accumulator.pop
+# From module file: email.header
+
+## co_consts:
+(None, 0, ('', ''))
+
+## co_names:
+('part_count', 'super', 'pop')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_FAST            self
+   6: LOAD_METHOD          part_count
+  28: PRECALL              
+  32: CALL                 
+  42: LOAD_CONST           0
+  44: COMPARE_OP           ==
+  50: POP_JUMP_FORWARD_IF_FALSE to 56
+  52: LOAD_CONST           ('', '')
+  54: RETURN_VALUE         
+  56: LOAD_GLOBAL          NULL + super
+  68: PRECALL              
+  72: CALL                 
+  82: LOAD_METHOD          pop
+ 104: PRECALL              
+ 108: CALL                 
+ 118: RETURN_VALUE         

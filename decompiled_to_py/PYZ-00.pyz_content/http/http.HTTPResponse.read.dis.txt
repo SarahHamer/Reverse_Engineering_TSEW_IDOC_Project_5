@@ -1,0 +1,135 @@
+# Disassembly for http.HTTPResponse.read
+# From module file: http.client
+
+## co_consts:
+('Read and return the response body, or up to the next amt bytes.', None, b'', 'HEAD', 0)
+
+## co_names:
+('fp', '_method', '_close_conn', 'chunked', '_read_chunked', 'length', 'read', 'len', '_safe_read', 'IncompleteRead')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            fp
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 20
+  16: LOAD_CONST           b''
+  18: RETURN_VALUE         
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            _method
+  32: LOAD_CONST           'HEAD'
+  34: COMPARE_OP           ==
+  40: POP_JUMP_FORWARD_IF_FALSE to 86
+  42: LOAD_FAST            self
+  44: LOAD_METHOD          _close_conn
+  66: PRECALL              
+  70: CALL                 
+  80: POP_TOP              
+  82: LOAD_CONST           b''
+  84: RETURN_VALUE         
+  86: LOAD_FAST            self
+  88: LOAD_ATTR            chunked
+  98: POP_JUMP_FORWARD_IF_FALSE to 142
+ 100: LOAD_FAST            self
+ 102: LOAD_METHOD          _read_chunked
+ 124: LOAD_FAST            amt
+ 126: PRECALL              
+ 130: CALL                 
+ 140: RETURN_VALUE         
+ 142: LOAD_FAST            amt
+ 144: POP_JUMP_FORWARD_IF_NONE to 428
+ 146: LOAD_FAST            self
+ 148: LOAD_ATTR            length
+ 158: POP_JUMP_FORWARD_IF_NONE to 196
+ 160: LOAD_FAST            amt
+ 162: LOAD_FAST            self
+ 164: LOAD_ATTR            length
+ 174: COMPARE_OP           >
+ 180: POP_JUMP_FORWARD_IF_FALSE to 196
+ 182: LOAD_FAST            self
+ 184: LOAD_ATTR            length
+ 194: STORE_FAST           amt
+ 196: LOAD_FAST            self
+ 198: LOAD_ATTR            fp
+ 208: LOAD_METHOD          read
+ 230: LOAD_FAST            amt
+ 232: PRECALL              
+ 236: CALL                 
+ 246: STORE_FAST           s
+ 248: LOAD_FAST            s
+ 250: POP_JUMP_FORWARD_IF_TRUE to 298
+ 252: LOAD_FAST            amt
+ 254: POP_JUMP_FORWARD_IF_FALSE to 298
+ 256: LOAD_FAST            self
+ 258: LOAD_METHOD          _close_conn
+ 280: PRECALL              
+ 284: CALL                 
+ 294: POP_TOP              
+ 296: JUMP_FORWARD         to 424
+ 298: LOAD_FAST            self
+ 300: LOAD_ATTR            length
+ 310: POP_JUMP_FORWARD_IF_NONE to 424
+ 312: LOAD_FAST            self
+ 314: COPY                 
+ 316: LOAD_ATTR            length
+ 326: LOAD_GLOBAL          NULL + len
+ 338: LOAD_FAST            s
+ 340: PRECALL              
+ 344: CALL                 
+ 354: BINARY_OP            -=
+ 358: SWAP                 
+ 360: STORE_ATTR           length
+ 370: LOAD_FAST            self
+ 372: LOAD_ATTR            length
+ 382: POP_JUMP_FORWARD_IF_TRUE to 424
+ 384: LOAD_FAST            self
+ 386: LOAD_METHOD          _close_conn
+ 408: PRECALL              
+ 412: CALL                 
+ 422: POP_TOP              
+ 424: LOAD_FAST            s
+ 426: RETURN_VALUE         
+ 428: LOAD_FAST            self
+ 430: LOAD_ATTR            length
+ 440: POP_JUMP_FORWARD_IF_NOT_NONE to 494
+ 442: LOAD_FAST            self
+ 444: LOAD_ATTR            fp
+ 454: LOAD_METHOD          read
+ 476: PRECALL              
+ 480: CALL                 
+ 490: STORE_FAST           s
+ 492: JUMP_FORWARD         to 634
+ 494: NOP                  
+ 496: LOAD_FAST            self
+ 498: LOAD_METHOD          _safe_read
+ 520: LOAD_FAST            self
+ 522: LOAD_ATTR            length
+ 532: PRECALL              
+ 536: CALL                 
+ 546: STORE_FAST           s
+ 548: JUMP_FORWARD         to 620
+ 550: PUSH_EXC_INFO        
+ 552: LOAD_GLOBAL          IncompleteRead
+ 564: CHECK_EXC_MATCH      
+ 566: POP_JUMP_FORWARD_IF_FALSE to 612
+ 568: POP_TOP              
+ 570: LOAD_FAST            self
+ 572: LOAD_METHOD          _close_conn
+ 594: PRECALL              
+ 598: CALL                 
+ 608: POP_TOP              
+ 610: RAISE_VARARGS        
+ 612: RERAISE              
+ 614: COPY                 
+ 616: POP_EXCEPT           
+ 618: RERAISE              
+ 620: LOAD_CONST           0
+ 622: LOAD_FAST            self
+ 624: STORE_ATTR           length
+ 634: LOAD_FAST            self
+ 636: LOAD_METHOD          _close_conn
+ 658: PRECALL              
+ 662: CALL                 
+ 672: POP_TOP              
+ 674: LOAD_FAST            s
+ 676: RETURN_VALUE         

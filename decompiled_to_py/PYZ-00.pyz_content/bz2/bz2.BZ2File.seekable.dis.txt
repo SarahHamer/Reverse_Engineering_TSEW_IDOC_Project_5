@@ -1,0 +1,23 @@
+# Disassembly for bz2.BZ2File.seekable
+# From module file: bz2
+
+## co_consts:
+('Return whether the file supports seeking.',)
+
+## co_names:
+('readable', '_buffer', 'seekable')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          readable
+  26: PRECALL              
+  30: CALL                 
+  40: JUMP_IF_FALSE_OR_POP to 90
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            _buffer
+  54: LOAD_METHOD          seekable
+  76: PRECALL              
+  80: CALL                 
+  90: RETURN_VALUE         

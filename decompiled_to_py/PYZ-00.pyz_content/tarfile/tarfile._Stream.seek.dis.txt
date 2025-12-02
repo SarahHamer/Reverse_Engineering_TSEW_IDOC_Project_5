@@ -1,0 +1,61 @@
+# Disassembly for tarfile._Stream.seek
+# From module file: tarfile
+
+## co_consts:
+("Set the stream's file pointer to pos. Negative seeking\n           is forbidden.\n        ", 0, 'seeking backwards is not allowed')
+
+## co_names:
+('pos', 'divmod', 'bufsize', 'range', 'read', 'StreamError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            pos
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            pos
+  16: BINARY_OP            -
+  20: LOAD_CONST           0
+  22: COMPARE_OP           >=
+  28: POP_JUMP_FORWARD_IF_FALSE to 226
+  30: LOAD_GLOBAL          NULL + divmod
+  42: LOAD_FAST            pos
+  44: LOAD_FAST            self
+  46: LOAD_ATTR            pos
+  56: BINARY_OP            -
+  60: LOAD_FAST            self
+  62: LOAD_ATTR            bufsize
+  72: PRECALL              
+  76: CALL                 
+  86: UNPACK_SEQUENCE      
+  90: STORE_FAST           blocks
+  92: STORE_FAST           remainder
+  94: LOAD_GLOBAL          NULL + range
+ 106: LOAD_FAST            blocks
+ 108: PRECALL              
+ 112: CALL                 
+ 122: GET_ITER             
+ 124: FOR_ITER             to 182
+ 126: STORE_FAST           i
+ 128: LOAD_FAST            self
+ 130: LOAD_METHOD          read
+ 152: LOAD_FAST            self
+ 154: LOAD_ATTR            bufsize
+ 164: PRECALL              
+ 168: CALL                 
+ 178: POP_TOP              
+ 180: JUMP_BACKWARD        to 124
+ 182: LOAD_FAST            self
+ 184: LOAD_METHOD          read
+ 206: LOAD_FAST            remainder
+ 208: PRECALL              
+ 212: CALL                 
+ 222: POP_TOP              
+ 224: JUMP_FORWARD         to 256
+ 226: LOAD_GLOBAL          NULL + StreamError
+ 238: LOAD_CONST           'seeking backwards is not allowed'
+ 240: PRECALL              
+ 244: CALL                 
+ 254: RAISE_VARARGS        
+ 256: LOAD_FAST            self
+ 258: LOAD_ATTR            pos
+ 268: RETURN_VALUE         

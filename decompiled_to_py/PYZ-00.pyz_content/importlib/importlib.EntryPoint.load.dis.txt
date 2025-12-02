@@ -1,0 +1,53 @@
+# Disassembly for importlib.EntryPoint.load
+# From module file: importlib.metadata
+
+## co_consts:
+('Load the entry point from its definition. If only a module\n        is indicated by the value, return that module. Otherwise,\n        return the named object.\n        ', 'module', None, 'attr', '', '.')
+
+## co_names:
+('pattern', 'match', 'value', 'import_module', 'group', 'filter', 'split', 'functools', 'reduce', 'getattr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            pattern
+  14: LOAD_METHOD          match
+  36: LOAD_FAST            self
+  38: LOAD_ATTR            value
+  48: PRECALL              
+  52: CALL                 
+  62: STORE_FAST           match
+  64: LOAD_GLOBAL          NULL + import_module
+  76: LOAD_FAST            match
+  78: LOAD_METHOD          group
+ 100: LOAD_CONST           'module'
+ 102: PRECALL              
+ 106: CALL                 
+ 116: PRECALL              
+ 120: CALL                 
+ 130: STORE_FAST           module
+ 132: LOAD_GLOBAL          NULL + filter
+ 144: LOAD_CONST           None
+ 146: LOAD_FAST            match
+ 148: LOAD_METHOD          group
+ 170: LOAD_CONST           'attr'
+ 172: PRECALL              
+ 176: CALL                 
+ 186: JUMP_IF_TRUE_OR_POP  to 190
+ 188: LOAD_CONST           ''
+ 190: LOAD_METHOD          split
+ 212: LOAD_CONST           '.'
+ 214: PRECALL              
+ 218: CALL                 
+ 228: PRECALL              
+ 232: CALL                 
+ 242: STORE_FAST           attrs
+ 244: LOAD_GLOBAL          NULL + functools
+ 256: LOAD_ATTR            reduce
+ 266: LOAD_GLOBAL          getattr
+ 278: LOAD_FAST            attrs
+ 280: LOAD_FAST            module
+ 282: PRECALL              
+ 286: CALL                 
+ 296: RETURN_VALUE         

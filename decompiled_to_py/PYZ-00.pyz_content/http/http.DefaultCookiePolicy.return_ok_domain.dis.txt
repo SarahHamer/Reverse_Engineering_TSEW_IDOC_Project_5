@@ -1,0 +1,106 @@
+# Disassembly for http.DefaultCookiePolicy.return_ok_domain
+# From module file: http.cookiejar
+
+## co_consts:
+(None, '.', 0, '   cookie with unspecified domain does not string-compare equal to request domain', False, '   effective request-host name %s does not domain-match RFC 2965 cookie domain %s', '   request-host %s does not match Netscape cookie domain %s', True)
+
+## co_names:
+('eff_request_host', 'domain', 'startswith', 'version', 'strict_ns_domain', 'DomainStrictNonDomain', 'domain_specified', '_debug', 'domain_match', 'endswith')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + eff_request_host
+  14: LOAD_FAST            request
+  16: PRECALL              
+  20: CALL                 
+  30: UNPACK_SEQUENCE      
+  34: STORE_FAST           req_host
+  36: STORE_FAST           erhn
+  38: LOAD_FAST            cookie
+  40: LOAD_ATTR            domain
+  50: STORE_FAST           domain
+  52: LOAD_FAST            domain
+  54: POP_JUMP_FORWARD_IF_FALSE to 110
+  56: LOAD_FAST            domain
+  58: LOAD_METHOD          startswith
+  80: LOAD_CONST           '.'
+  82: PRECALL              
+  86: CALL                 
+  96: POP_JUMP_FORWARD_IF_TRUE to 110
+  98: LOAD_CONST           '.'
+ 100: LOAD_FAST            domain
+ 102: BINARY_OP            +
+ 106: STORE_FAST           dotdomain
+ 108: JUMP_FORWARD         to 114
+ 110: LOAD_FAST            domain
+ 112: STORE_FAST           dotdomain
+ 114: LOAD_FAST            cookie
+ 116: LOAD_ATTR            version
+ 126: LOAD_CONST           0
+ 128: COMPARE_OP           ==
+ 134: POP_JUMP_FORWARD_IF_FALSE to 226
+ 136: LOAD_FAST            self
+ 138: LOAD_ATTR            strict_ns_domain
+ 148: LOAD_FAST            self
+ 150: LOAD_ATTR            DomainStrictNonDomain
+ 160: BINARY_OP            &
+ 164: POP_JUMP_FORWARD_IF_FALSE to 226
+ 166: LOAD_FAST            cookie
+ 168: LOAD_ATTR            domain_specified
+ 178: POP_JUMP_FORWARD_IF_TRUE to 226
+ 180: LOAD_FAST            domain
+ 182: LOAD_FAST            erhn
+ 184: COMPARE_OP           !=
+ 190: POP_JUMP_FORWARD_IF_FALSE to 226
+ 192: LOAD_GLOBAL          NULL + _debug
+ 204: LOAD_CONST           '   cookie with unspecified domain does not string-compare equal to request domain'
+ 206: PRECALL              
+ 210: CALL                 
+ 220: POP_TOP              
+ 222: LOAD_CONST           False
+ 224: RETURN_VALUE         
+ 226: LOAD_FAST            cookie
+ 228: LOAD_ATTR            version
+ 238: LOAD_CONST           0
+ 240: COMPARE_OP           >
+ 246: POP_JUMP_FORWARD_IF_FALSE to 318
+ 248: LOAD_GLOBAL          NULL + domain_match
+ 260: LOAD_FAST            erhn
+ 262: LOAD_FAST            domain
+ 264: PRECALL              
+ 268: CALL                 
+ 278: POP_JUMP_FORWARD_IF_TRUE to 318
+ 280: LOAD_GLOBAL          NULL + _debug
+ 292: LOAD_CONST           '   effective request-host name %s does not domain-match RFC 2965 cookie domain %s'
+ 294: LOAD_FAST            erhn
+ 296: LOAD_FAST            domain
+ 298: PRECALL              
+ 302: CALL                 
+ 312: POP_TOP              
+ 314: LOAD_CONST           False
+ 316: RETURN_VALUE         
+ 318: LOAD_FAST            cookie
+ 320: LOAD_ATTR            version
+ 330: LOAD_CONST           0
+ 332: COMPARE_OP           ==
+ 338: POP_JUMP_FORWARD_IF_FALSE to 426
+ 340: LOAD_CONST           '.'
+ 342: LOAD_FAST            erhn
+ 344: BINARY_OP            +
+ 348: LOAD_METHOD          endswith
+ 370: LOAD_FAST            dotdomain
+ 372: PRECALL              
+ 376: CALL                 
+ 386: POP_JUMP_FORWARD_IF_TRUE to 426
+ 388: LOAD_GLOBAL          NULL + _debug
+ 400: LOAD_CONST           '   request-host %s does not match Netscape cookie domain %s'
+ 402: LOAD_FAST            req_host
+ 404: LOAD_FAST            domain
+ 406: PRECALL              
+ 410: CALL                 
+ 420: POP_TOP              
+ 422: LOAD_CONST           False
+ 424: RETURN_VALUE         
+ 426: LOAD_CONST           True
+ 428: RETURN_VALUE         

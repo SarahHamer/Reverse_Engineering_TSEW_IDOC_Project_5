@@ -1,0 +1,30 @@
+# Disassembly for importlib.Distribution._read_files_egginfo
+# From module file: importlib.metadata
+
+## co_consts:
+('\n        SOURCES.txt might contain literal commas, so wrap each line\n        in quotes.\n        ', 'SOURCES.txt', '"{}"')
+
+## co_names:
+('read_text', 'map', 'format', 'splitlines')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          read_text
+  26: LOAD_CONST           'SOURCES.txt'
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           text
+  44: LOAD_FAST            text
+  46: JUMP_IF_FALSE_OR_POP to 124
+  48: LOAD_GLOBAL          NULL + map
+  60: LOAD_CONST           '"{}"'
+  62: LOAD_ATTR            format
+  72: LOAD_FAST            text
+  74: LOAD_METHOD          splitlines
+  96: PRECALL              
+ 100: CALL                 
+ 110: PRECALL              
+ 114: CALL                 
+ 124: RETURN_VALUE         

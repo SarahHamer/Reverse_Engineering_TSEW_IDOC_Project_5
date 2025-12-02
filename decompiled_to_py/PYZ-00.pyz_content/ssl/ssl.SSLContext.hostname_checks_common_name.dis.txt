@@ -1,0 +1,14 @@
+# Disassembly for ssl.SSLContext.hostname_checks_common_name
+# From module file: ssl
+
+## co_consts:
+(None, True)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           True
+   4: RETURN_VALUE         

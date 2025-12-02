@@ -1,0 +1,131 @@
+# Disassembly for email.Generator.flatten
+# From module file: email.generator
+
+## co_consts:
+("Print the message object tree rooted at msg to the output file\n        specified when the Generator instance was created.\n\n        unixfrom is a flag that forces the printing of a Unix From_ delimiter\n        before the first object in the message tree.  If the original message\n        has no From_ delimiter, a `standard' one is crafted.  By default, this\n        is False to inhibit the printing of any From_ delimiter.\n\n        Note that for subobjects, no From_ line is printed.\n\n        linesep specifies the characters used to indicate a new line in\n        the output.  The default value is determined by the policy specified\n        when the Generator instance was created or, if none was specified,\n        from the policy associated with the msg.\n\n        ", None, ('linesep',), ('max_line_length',), '', 'From nobody ')
+
+## co_names:
+('policy', 'clone', 'maxheaderlen', 'linesep', '_NL', '_encode', '_encoded_NL', '_EMPTY', '_encoded_EMPTY', 'get_unixfrom', 'time', 'ctime', 'write', '_write')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            policy
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 30
+  16: LOAD_FAST            msg
+  18: LOAD_ATTR            policy
+  28: JUMP_FORWARD         to 42
+  30: LOAD_FAST            self
+  32: LOAD_ATTR            policy
+  42: STORE_FAST           policy
+  44: LOAD_FAST            linesep
+  46: POP_JUMP_FORWARD_IF_NONE to 92
+  48: LOAD_FAST            policy
+  50: LOAD_METHOD          clone
+  72: LOAD_FAST            linesep
+  74: KW_NAMES             
+  76: PRECALL              
+  80: CALL                 
+  90: STORE_FAST           policy
+  92: LOAD_FAST            self
+  94: LOAD_ATTR            maxheaderlen
+ 104: POP_JUMP_FORWARD_IF_NONE to 160
+ 106: LOAD_FAST            policy
+ 108: LOAD_METHOD          clone
+ 130: LOAD_FAST            self
+ 132: LOAD_ATTR            maxheaderlen
+ 142: KW_NAMES             
+ 144: PRECALL              
+ 148: CALL                 
+ 158: STORE_FAST           policy
+ 160: LOAD_FAST            policy
+ 162: LOAD_ATTR            linesep
+ 172: LOAD_FAST            self
+ 174: STORE_ATTR           _NL
+ 184: LOAD_FAST            self
+ 186: LOAD_METHOD          _encode
+ 208: LOAD_FAST            self
+ 210: LOAD_ATTR            _NL
+ 220: PRECALL              
+ 224: CALL                 
+ 234: LOAD_FAST            self
+ 236: STORE_ATTR           _encoded_NL
+ 246: LOAD_CONST           ''
+ 248: LOAD_FAST            self
+ 250: STORE_ATTR           _EMPTY
+ 260: LOAD_FAST            self
+ 262: LOAD_METHOD          _encode
+ 284: LOAD_FAST            self
+ 286: LOAD_ATTR            _EMPTY
+ 296: PRECALL              
+ 300: CALL                 
+ 310: LOAD_FAST            self
+ 312: STORE_ATTR           _encoded_EMPTY
+ 322: LOAD_FAST            self
+ 324: LOAD_ATTR            policy
+ 334: STORE_FAST           old_gen_policy
+ 336: LOAD_FAST            msg
+ 338: LOAD_ATTR            policy
+ 348: STORE_FAST           old_msg_policy
+ 350: NOP                  
+ 352: LOAD_FAST            policy
+ 354: LOAD_FAST            self
+ 356: STORE_ATTR           policy
+ 366: LOAD_FAST            policy
+ 368: LOAD_FAST            msg
+ 370: STORE_ATTR           policy
+ 380: LOAD_FAST            unixfrom
+ 382: POP_JUMP_FORWARD_IF_FALSE to 566
+ 384: LOAD_FAST            msg
+ 386: LOAD_METHOD          get_unixfrom
+ 408: PRECALL              
+ 412: CALL                 
+ 422: STORE_FAST           ufrom
+ 424: LOAD_FAST            ufrom
+ 426: POP_JUMP_FORWARD_IF_TRUE to 508
+ 428: LOAD_CONST           'From nobody '
+ 430: LOAD_GLOBAL          NULL + time
+ 442: LOAD_ATTR            ctime
+ 452: LOAD_GLOBAL          NULL + time
+ 464: LOAD_ATTR            time
+ 474: PRECALL              
+ 478: CALL                 
+ 488: PRECALL              
+ 492: CALL                 
+ 502: BINARY_OP            +
+ 506: STORE_FAST           ufrom
+ 508: LOAD_FAST            self
+ 510: LOAD_METHOD          write
+ 532: LOAD_FAST            ufrom
+ 534: LOAD_FAST            self
+ 536: LOAD_ATTR            _NL
+ 546: BINARY_OP            +
+ 550: PRECALL              
+ 554: CALL                 
+ 564: POP_TOP              
+ 566: LOAD_FAST            self
+ 568: LOAD_METHOD          _write
+ 590: LOAD_FAST            msg
+ 592: PRECALL              
+ 596: CALL                 
+ 606: POP_TOP              
+ 608: LOAD_FAST            old_gen_policy
+ 610: LOAD_FAST            self
+ 612: STORE_ATTR           policy
+ 622: LOAD_FAST            old_msg_policy
+ 624: LOAD_FAST            msg
+ 626: STORE_ATTR           policy
+ 636: LOAD_CONST           None
+ 638: RETURN_VALUE         
+ 640: PUSH_EXC_INFO        
+ 642: LOAD_FAST            old_gen_policy
+ 644: LOAD_FAST            self
+ 646: STORE_ATTR           policy
+ 656: LOAD_FAST            old_msg_policy
+ 658: LOAD_FAST            msg
+ 660: STORE_ATTR           policy
+ 670: RERAISE              
+ 672: COPY                 
+ 674: POP_EXCEPT           
+ 676: RERAISE              

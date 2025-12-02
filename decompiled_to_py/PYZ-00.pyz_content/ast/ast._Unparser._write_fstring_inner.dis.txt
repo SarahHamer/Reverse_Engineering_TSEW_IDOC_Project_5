@@ -1,0 +1,88 @@
+# Disassembly for ast._Unparser._write_fstring_inner
+# From module file: ast
+
+## co_consts:
+(None, '{', '{{', '}', '}}', 'Unexpected node inside JoinedStr, ')
+
+## co_names:
+('isinstance', 'JoinedStr', 'values', '_write_fstring_inner', 'Constant', 'value', 'str', 'replace', 'write', 'FormattedValue', 'visit_FormattedValue', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            node
+  16: LOAD_GLOBAL          JoinedStr
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 110
+  44: LOAD_FAST            node
+  46: LOAD_ATTR            values
+  56: GET_ITER             
+  58: FOR_ITER             to 106
+  60: STORE_FAST           value
+  62: LOAD_FAST            self
+  64: LOAD_METHOD          _write_fstring_inner
+  86: LOAD_FAST            value
+  88: PRECALL              
+  92: CALL                 
+ 102: POP_TOP              
+ 104: JUMP_BACKWARD        to 58
+ 106: LOAD_CONST           None
+ 108: RETURN_VALUE         
+ 110: LOAD_GLOBAL          NULL + isinstance
+ 122: LOAD_FAST            node
+ 124: LOAD_GLOBAL          Constant
+ 136: PRECALL              
+ 140: CALL                 
+ 150: POP_JUMP_FORWARD_IF_FALSE to 344
+ 152: LOAD_GLOBAL          NULL + isinstance
+ 164: LOAD_FAST            node
+ 166: LOAD_ATTR            value
+ 176: LOAD_GLOBAL          str
+ 188: PRECALL              
+ 192: CALL                 
+ 202: POP_JUMP_FORWARD_IF_FALSE to 344
+ 204: LOAD_FAST            node
+ 206: LOAD_ATTR            value
+ 216: LOAD_METHOD          replace
+ 238: LOAD_CONST           '{'
+ 240: LOAD_CONST           '{{'
+ 242: PRECALL              
+ 246: CALL                 
+ 256: LOAD_METHOD          replace
+ 278: LOAD_CONST           '}'
+ 280: LOAD_CONST           '}}'
+ 282: PRECALL              
+ 286: CALL                 
+ 296: STORE_FAST           value
+ 298: LOAD_FAST            self
+ 300: LOAD_METHOD          write
+ 322: LOAD_FAST            value
+ 324: PRECALL              
+ 328: CALL                 
+ 338: POP_TOP              
+ 340: LOAD_CONST           None
+ 342: RETURN_VALUE         
+ 344: LOAD_GLOBAL          NULL + isinstance
+ 356: LOAD_FAST            node
+ 358: LOAD_GLOBAL          FormattedValue
+ 370: PRECALL              
+ 374: CALL                 
+ 384: POP_JUMP_FORWARD_IF_FALSE to 432
+ 386: LOAD_FAST            self
+ 388: LOAD_METHOD          visit_FormattedValue
+ 410: LOAD_FAST            node
+ 412: PRECALL              
+ 416: CALL                 
+ 426: POP_TOP              
+ 428: LOAD_CONST           None
+ 430: RETURN_VALUE         
+ 432: LOAD_GLOBAL          NULL + ValueError
+ 444: LOAD_CONST           'Unexpected node inside JoinedStr, '
+ 446: LOAD_FAST            node
+ 448: FORMAT_VALUE         repr
+ 450: BUILD_STRING         
+ 452: PRECALL              
+ 456: CALL                 
+ 466: RAISE_VARARGS        

@@ -1,0 +1,59 @@
+# Disassembly for subprocess.call
+# From module file: subprocess
+
+## co_consts:
+('Run command with arguments.  Wait for command to complete or\n    timeout, then return the returncode attribute.\n\n    The arguments are the same as for the Popen constructor.  Example:\n\n    retcode = call(["ls", "-l"])\n    ', ('timeout',), None)
+
+## co_names:
+('Popen', 'wait', 'kill')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + Popen
+  14: LOAD_FAST            popenargs
+  16: BUILD_MAP            
+  18: LOAD_FAST            kwargs
+  20: DICT_MERGE           
+  22: CALL_FUNCTION_EX     
+  24: BEFORE_WITH          
+  26: STORE_FAST           p
+  28: NOP                  
+  30: LOAD_FAST            p
+  32: LOAD_METHOD          wait
+  54: LOAD_FAST            timeout
+  56: KW_NAMES             
+  58: PRECALL              
+  62: CALL                 
+  72: SWAP                 
+  74: LOAD_CONST           None
+  76: LOAD_CONST           None
+  78: LOAD_CONST           None
+  80: PRECALL              
+  84: CALL                 
+  94: POP_TOP              
+  96: RETURN_VALUE         
+  98: PUSH_EXC_INFO        
+ 100: POP_TOP              
+ 102: LOAD_FAST            p
+ 104: LOAD_METHOD          kill
+ 126: PRECALL              
+ 130: CALL                 
+ 140: POP_TOP              
+ 142: RAISE_VARARGS        
+ 144: COPY                 
+ 146: POP_EXCEPT           
+ 148: RERAISE              
+ 150: PUSH_EXC_INFO        
+ 152: WITH_EXCEPT_START    
+ 154: POP_JUMP_FORWARD_IF_TRUE to 164
+ 156: RERAISE              
+ 158: COPY                 
+ 160: POP_EXCEPT           
+ 162: RERAISE              
+ 164: POP_TOP              
+ 166: POP_EXCEPT           
+ 168: POP_TOP              
+ 170: POP_TOP              
+ 172: LOAD_CONST           None
+ 174: RETURN_VALUE         

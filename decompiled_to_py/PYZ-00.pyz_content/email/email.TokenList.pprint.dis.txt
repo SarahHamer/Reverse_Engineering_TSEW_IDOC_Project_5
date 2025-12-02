@@ -1,0 +1,24 @@
+# Disassembly for email.TokenList.pprint
+# From module file: email._header_value_parser
+
+## co_consts:
+(None, ('indent',))
+
+## co_names:
+('print', 'ppstr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + print
+  14: LOAD_FAST            self
+  16: LOAD_METHOD          ppstr
+  38: LOAD_FAST            indent
+  40: KW_NAMES             
+  42: PRECALL              
+  46: CALL                 
+  56: PRECALL              
+  60: CALL                 
+  70: POP_TOP              
+  72: LOAD_CONST           None
+  74: RETURN_VALUE         

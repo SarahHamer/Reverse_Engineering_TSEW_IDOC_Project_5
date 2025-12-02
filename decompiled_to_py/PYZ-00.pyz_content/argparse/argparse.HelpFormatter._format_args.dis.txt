@@ -1,0 +1,162 @@
+# Disassembly for argparse.HelpFormatter._format_args
+# From module file: argparse
+
+## co_consts:
+(None, '%s', 1, '[%s]', 2, '[%s [%s ...]]', '[%s ...]', '%s [%s ...]', '...', '%s ...', '', <code object <listcomp> at 0x0000024069427B80, file "argparse.py", line 623>, 'invalid nargs value', ' ')
+
+## co_names:
+('_metavar_formatter', 'nargs', 'OPTIONAL', 'ZERO_OR_MORE', 'len', 'ONE_OR_MORE', 'REMAINDER', 'PARSER', 'SUPPRESS', 'range', 'TypeError', 'ValueError', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _metavar_formatter
+  26: LOAD_FAST            action
+  28: LOAD_FAST            default_metavar
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_FAST           get_metavar
+  46: LOAD_FAST            action
+  48: LOAD_ATTR            nargs
+  58: POP_JUMP_FORWARD_IF_NOT_NONE to 92
+  60: LOAD_CONST           '%s'
+  62: PUSH_NULL            
+  64: LOAD_FAST            get_metavar
+  66: LOAD_CONST           1
+  68: PRECALL              
+  72: CALL                 
+  82: BINARY_OP            %
+  86: STORE_FAST           result
+  88: EXTENDED_ARG         
+  90: JUMP_FORWARD         to 672
+  92: LOAD_FAST            action
+  94: LOAD_ATTR            nargs
+ 104: LOAD_GLOBAL          OPTIONAL
+ 116: COMPARE_OP           ==
+ 122: POP_JUMP_FORWARD_IF_FALSE to 156
+ 124: LOAD_CONST           '[%s]'
+ 126: PUSH_NULL            
+ 128: LOAD_FAST            get_metavar
+ 130: LOAD_CONST           1
+ 132: PRECALL              
+ 136: CALL                 
+ 146: BINARY_OP            %
+ 150: STORE_FAST           result
+ 152: EXTENDED_ARG         
+ 154: JUMP_FORWARD         to 672
+ 156: LOAD_FAST            action
+ 158: LOAD_ATTR            nargs
+ 168: LOAD_GLOBAL          ZERO_OR_MORE
+ 180: COMPARE_OP           ==
+ 186: POP_JUMP_FORWARD_IF_FALSE to 272
+ 188: PUSH_NULL            
+ 190: LOAD_FAST            get_metavar
+ 192: LOAD_CONST           1
+ 194: PRECALL              
+ 198: CALL                 
+ 208: STORE_FAST           metavar
+ 210: LOAD_GLOBAL          NULL + len
+ 222: LOAD_FAST            metavar
+ 224: PRECALL              
+ 228: CALL                 
+ 238: LOAD_CONST           2
+ 240: COMPARE_OP           ==
+ 246: POP_JUMP_FORWARD_IF_FALSE to 260
+ 248: LOAD_CONST           '[%s [%s ...]]'
+ 250: LOAD_FAST            metavar
+ 252: BINARY_OP            %
+ 256: STORE_FAST           result
+ 258: JUMP_FORWARD         to 672
+ 260: LOAD_CONST           '[%s ...]'
+ 262: LOAD_FAST            metavar
+ 264: BINARY_OP            %
+ 268: STORE_FAST           result
+ 270: JUMP_FORWARD         to 672
+ 272: LOAD_FAST            action
+ 274: LOAD_ATTR            nargs
+ 284: LOAD_GLOBAL          ONE_OR_MORE
+ 296: COMPARE_OP           ==
+ 302: POP_JUMP_FORWARD_IF_FALSE to 334
+ 304: LOAD_CONST           '%s [%s ...]'
+ 306: PUSH_NULL            
+ 308: LOAD_FAST            get_metavar
+ 310: LOAD_CONST           2
+ 312: PRECALL              
+ 316: CALL                 
+ 326: BINARY_OP            %
+ 330: STORE_FAST           result
+ 332: JUMP_FORWARD         to 672
+ 334: LOAD_FAST            action
+ 336: LOAD_ATTR            nargs
+ 346: LOAD_GLOBAL          REMAINDER
+ 358: COMPARE_OP           ==
+ 364: POP_JUMP_FORWARD_IF_FALSE to 372
+ 366: LOAD_CONST           '...'
+ 368: STORE_FAST           result
+ 370: JUMP_FORWARD         to 672
+ 372: LOAD_FAST            action
+ 374: LOAD_ATTR            nargs
+ 384: LOAD_GLOBAL          PARSER
+ 396: COMPARE_OP           ==
+ 402: POP_JUMP_FORWARD_IF_FALSE to 434
+ 404: LOAD_CONST           '%s ...'
+ 406: PUSH_NULL            
+ 408: LOAD_FAST            get_metavar
+ 410: LOAD_CONST           1
+ 412: PRECALL              
+ 416: CALL                 
+ 426: BINARY_OP            %
+ 430: STORE_FAST           result
+ 432: JUMP_FORWARD         to 672
+ 434: LOAD_FAST            action
+ 436: LOAD_ATTR            nargs
+ 446: LOAD_GLOBAL          SUPPRESS
+ 458: COMPARE_OP           ==
+ 464: POP_JUMP_FORWARD_IF_FALSE to 472
+ 466: LOAD_CONST           ''
+ 468: STORE_FAST           result
+ 470: JUMP_FORWARD         to 672
+ 472: NOP                  
+ 474: LOAD_CONST           <code object <listcomp> at 0x0000024069427B80, file "argparse.py", line 623>
+ 476: MAKE_FUNCTION        
+ 478: LOAD_GLOBAL          NULL + range
+ 490: LOAD_FAST            action
+ 492: LOAD_ATTR            nargs
+ 502: PRECALL              
+ 506: CALL                 
+ 516: GET_ITER             
+ 518: PRECALL              
+ 522: CALL                 
+ 532: STORE_FAST           formats
+ 534: JUMP_FORWARD         to 596
+ 536: PUSH_EXC_INFO        
+ 538: LOAD_GLOBAL          TypeError
+ 550: CHECK_EXC_MATCH      
+ 552: POP_JUMP_FORWARD_IF_FALSE to 588
+ 554: POP_TOP              
+ 556: LOAD_GLOBAL          NULL + ValueError
+ 568: LOAD_CONST           'invalid nargs value'
+ 570: PRECALL              
+ 574: CALL                 
+ 584: LOAD_CONST           None
+ 586: RAISE_VARARGS        
+ 588: RERAISE              
+ 590: COPY                 
+ 592: POP_EXCEPT           
+ 594: RERAISE              
+ 596: LOAD_CONST           ' '
+ 598: LOAD_METHOD          join
+ 620: LOAD_FAST            formats
+ 622: PRECALL              
+ 626: CALL                 
+ 636: PUSH_NULL            
+ 638: LOAD_FAST            get_metavar
+ 640: LOAD_FAST            action
+ 642: LOAD_ATTR            nargs
+ 652: PRECALL              
+ 656: CALL                 
+ 666: BINARY_OP            %
+ 670: STORE_FAST           result
+ 672: LOAD_FAST            result
+ 674: RETURN_VALUE         

@@ -1,0 +1,29 @@
+# Disassembly for email.header_length.<genexpr>
+# From module file: email.quoprimime
+
+## co_consts:
+(None,)
+
+## co_names:
+('len', '_QUOPRI_HEADER_MAP')
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_FAST            .0
+   8: FOR_ITER             to 70
+  10: STORE_FAST           octet
+  12: LOAD_GLOBAL          NULL + len
+  24: LOAD_GLOBAL          _QUOPRI_HEADER_MAP
+  36: LOAD_FAST            octet
+  38: BINARY_SUBSCR        
+  48: PRECALL              
+  52: CALL                 
+  62: YIELD_VALUE          
+  64: RESUME               
+  66: POP_TOP              
+  68: JUMP_BACKWARD        to 8
+  70: LOAD_CONST           None
+  72: RETURN_VALUE         

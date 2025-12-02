@@ -1,0 +1,18 @@
+# Disassembly for dataclasses._KW_ONLY_TYPE
+# From module file: dataclasses
+
+## co_consts:
+('_KW_ONLY_TYPE', None)
+
+## co_names:
+('__name__', '__module__', '__qualname__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_KW_ONLY_TYPE'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           None
+  12: RETURN_VALUE         

@@ -1,0 +1,32 @@
+# Disassembly for tarfile._StreamProxy
+# From module file: tarfile
+
+## co_consts:
+('_StreamProxy', "Small proxy class that enables transparent compression\n       detection for the Stream interface (mode 'r|*').\n    ", <code object __init__ at 0x0000024069419E90, file "tarfile.py", line 579>, <code object read at 0x000002406945FC30, file "tarfile.py", line 583>, <code object getcomptype at 0x00000240691E8F30, file "tarfile.py", line 587>, <code object close at 0x000002406945DE30, file "tarfile.py", line 597>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', 'read', 'getcomptype', 'close')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_StreamProxy'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           "Small proxy class that enables transparent compression\n       detection for the Stream interface (mode 'r|*').\n    "
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object __init__ at 0x0000024069419E90, file "tarfile.py", line 579>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           __init__
+  20: LOAD_CONST           <code object read at 0x000002406945FC30, file "tarfile.py", line 583>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           read
+  26: LOAD_CONST           <code object getcomptype at 0x00000240691E8F30, file "tarfile.py", line 587>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           getcomptype
+  32: LOAD_CONST           <code object close at 0x000002406945DE30, file "tarfile.py", line 597>
+  34: MAKE_FUNCTION        
+  36: STORE_NAME           close
+  38: LOAD_CONST           None
+  40: RETURN_VALUE         

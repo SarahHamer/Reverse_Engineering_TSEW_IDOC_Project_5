@@ -1,0 +1,40 @@
+# Disassembly for tempfile.TemporaryDirectory.cleanup
+# From module file: tempfile
+
+## co_consts:
+(None, ('ignore_errors',))
+
+## co_names:
+('_finalizer', 'detach', '_os', 'path', 'exists', 'name', '_rmtree', '_ignore_cleanup_errors')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _finalizer
+  14: LOAD_METHOD          detach
+  36: PRECALL              
+  40: CALL                 
+  50: POP_JUMP_FORWARD_IF_TRUE to 124
+  52: LOAD_GLOBAL          _os
+  64: LOAD_ATTR            path
+  74: LOAD_METHOD          exists
+  96: LOAD_FAST            self
+  98: LOAD_ATTR            name
+ 108: PRECALL              
+ 112: CALL                 
+ 122: POP_JUMP_FORWARD_IF_FALSE to 194
+ 124: LOAD_FAST            self
+ 126: LOAD_METHOD          _rmtree
+ 148: LOAD_FAST            self
+ 150: LOAD_ATTR            name
+ 160: LOAD_FAST            self
+ 162: LOAD_ATTR            _ignore_cleanup_errors
+ 172: KW_NAMES             
+ 174: PRECALL              
+ 178: CALL                 
+ 188: POP_TOP              
+ 190: LOAD_CONST           None
+ 192: RETURN_VALUE         
+ 194: LOAD_CONST           None
+ 196: RETURN_VALUE         

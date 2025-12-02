@@ -1,0 +1,55 @@
+# Disassembly for importlib.resources.MultiplexedPath
+# From module file: importlib.resources.readers
+
+## co_consts:
+('MultiplexedPath', '\n    Given a series of Traversable objects, implement a merged\n    version of the interface across all objects. Useful for\n    namespace packages which may be multihomed at a single\n    name.\n    ', <code object __init__ at 0x00000240691A7BB0, file "importlib\resources\readers.py", line 61>, <code object iterdir at 0x00000240693D2E80, file "importlib\resources\readers.py", line 69>, <code object read_bytes at 0x0000024069465990, file "importlib\resources\readers.py", line 73>, <code object read_text at 0x00000240694665D0, file "importlib\resources\readers.py", line 76>, <code object is_dir at 0x000002406943B570, file "importlib\resources\readers.py", line 79>, <code object is_file at 0x000002406943B930, file "importlib\resources\readers.py", line 82>, <code object joinpath at 0x00000240693D3DF0, file "importlib\resources\readers.py", line 85>, <code object open at 0x0000024069465450, file "importlib\resources\readers.py", line 95>, <code object name at 0x00000240694657D0, file "importlib\resources\readers.py", line 98>, <code object __repr__ at 0x000002406944AEF0, file "importlib\resources\readers.py", line 102>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', 'iterdir', 'read_bytes', 'read_text', 'is_dir', 'is_file', 'joinpath', '__truediv__', 'open', 'property', 'name', '__repr__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'MultiplexedPath'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           '\n    Given a series of Traversable objects, implement a merged\n    version of the interface across all objects. Useful for\n    namespace packages which may be multihomed at a single\n    name.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object __init__ at 0x00000240691A7BB0, file "importlib\resources\readers.py", line 61>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           __init__
+  20: LOAD_CONST           <code object iterdir at 0x00000240693D2E80, file "importlib\resources\readers.py", line 69>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           iterdir
+  26: LOAD_CONST           <code object read_bytes at 0x0000024069465990, file "importlib\resources\readers.py", line 73>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           read_bytes
+  32: LOAD_CONST           <code object read_text at 0x00000240694665D0, file "importlib\resources\readers.py", line 76>
+  34: MAKE_FUNCTION        
+  36: STORE_NAME           read_text
+  38: LOAD_CONST           <code object is_dir at 0x000002406943B570, file "importlib\resources\readers.py", line 79>
+  40: MAKE_FUNCTION        
+  42: STORE_NAME           is_dir
+  44: LOAD_CONST           <code object is_file at 0x000002406943B930, file "importlib\resources\readers.py", line 82>
+  46: MAKE_FUNCTION        
+  48: STORE_NAME           is_file
+  50: LOAD_CONST           <code object joinpath at 0x00000240693D3DF0, file "importlib\resources\readers.py", line 85>
+  52: MAKE_FUNCTION        
+  54: STORE_NAME           joinpath
+  56: LOAD_NAME            joinpath
+  58: STORE_NAME           __truediv__
+  60: LOAD_CONST           <code object open at 0x0000024069465450, file "importlib\resources\readers.py", line 95>
+  62: MAKE_FUNCTION        
+  64: STORE_NAME           open
+  66: LOAD_NAME            property
+  68: LOAD_CONST           <code object name at 0x00000240694657D0, file "importlib\resources\readers.py", line 98>
+  70: MAKE_FUNCTION        
+  72: PRECALL              
+  76: CALL                 
+  86: STORE_NAME           name
+  88: LOAD_CONST           <code object __repr__ at 0x000002406944AEF0, file "importlib\resources\readers.py", line 102>
+  90: MAKE_FUNCTION        
+  92: STORE_NAME           __repr__
+  94: LOAD_CONST           None
+  96: RETURN_VALUE         

@@ -1,0 +1,39 @@
+# Disassembly for threading._register_atexit
+# From module file: threading
+
+## co_consts:
+('CPython internal: register *func* to be called before joining threads.\n\n    The registered *func* is called with its arguments just before all\n    non-daemon threads are joined in `_shutdown()`. It provides a similar\n    purpose to `atexit.register()`, but its functions are called prior to\n    threading shutdown instead of interpreter shutdown.\n\n    For similarity to atexit, the registered functions are called in reverse.\n    ', "can't register atexit after shutdown", None)
+
+## co_names:
+('_SHUTTING_DOWN', 'RuntimeError', 'functools', 'partial', '_threading_atexits', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _SHUTTING_DOWN
+  14: POP_JUMP_FORWARD_IF_FALSE to 46
+  16: LOAD_GLOBAL          NULL + RuntimeError
+  28: LOAD_CONST           "can't register atexit after shutdown"
+  30: PRECALL              
+  34: CALL                 
+  44: RAISE_VARARGS        
+  46: LOAD_GLOBAL          NULL + functools
+  58: LOAD_ATTR            partial
+  68: LOAD_FAST            func
+  70: BUILD_LIST           
+  72: LOAD_FAST            arg
+  74: LIST_EXTEND          
+  76: LIST_TO_TUPLE        
+  78: BUILD_MAP            
+  80: LOAD_FAST            kwargs
+  82: DICT_MERGE           
+  84: CALL_FUNCTION_EX     
+  86: STORE_FAST           call
+  88: LOAD_GLOBAL          _threading_atexits
+ 100: LOAD_METHOD          append
+ 122: LOAD_FAST            call
+ 124: PRECALL              
+ 128: CALL                 
+ 138: POP_TOP              
+ 140: LOAD_CONST           None
+ 142: RETURN_VALUE         

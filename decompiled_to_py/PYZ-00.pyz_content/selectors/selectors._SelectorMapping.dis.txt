@@ -1,0 +1,32 @@
+# Disassembly for selectors._SelectorMapping
+# From module file: selectors
+
+## co_consts:
+('_SelectorMapping', 'Mapping of file objects to selector keys.', <code object __init__ at 0x00000240694941D0, file "selectors.py", line 63>, <code object __len__ at 0x000002406945D7A0, file "selectors.py", line 66>, <code object __getitem__ at 0x00000240691E8AB0, file "selectors.py", line 69>, <code object __iter__ at 0x000002406945D6B0, file "selectors.py", line 76>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', '__len__', '__getitem__', '__iter__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_SelectorMapping'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Mapping of file objects to selector keys.'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object __init__ at 0x00000240694941D0, file "selectors.py", line 63>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           __init__
+  20: LOAD_CONST           <code object __len__ at 0x000002406945D7A0, file "selectors.py", line 66>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           __len__
+  26: LOAD_CONST           <code object __getitem__ at 0x00000240691E8AB0, file "selectors.py", line 69>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           __getitem__
+  32: LOAD_CONST           <code object __iter__ at 0x000002406945D6B0, file "selectors.py", line 76>
+  34: MAKE_FUNCTION        
+  36: STORE_NAME           __iter__
+  38: LOAD_CONST           None
+  40: RETURN_VALUE         

@@ -1,0 +1,18 @@
+# Disassembly for importlib.PathDistribution.locate_file
+# From module file: importlib.metadata
+
+## co_consts:
+(None,)
+
+## co_names:
+('_path', 'parent')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _path
+  14: LOAD_ATTR            parent
+  24: LOAD_FAST            path
+  26: BINARY_OP            /
+  30: RETURN_VALUE         

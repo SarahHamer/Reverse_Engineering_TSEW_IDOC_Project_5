@@ -1,0 +1,33 @@
+# Disassembly for email.DateHeader.init
+# From module file: email.headerregistry
+
+## co_consts:
+(None, 'datetime')
+
+## co_names:
+('pop', '_datetime', 'super', 'init')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_FAST            kw
+   6: LOAD_METHOD          pop
+  28: LOAD_CONST           'datetime'
+  30: PRECALL              
+  34: CALL                 
+  44: LOAD_FAST            self
+  46: STORE_ATTR           _datetime
+  56: PUSH_NULL            
+  58: LOAD_GLOBAL          NULL + super
+  70: PRECALL              
+  74: CALL                 
+  84: LOAD_ATTR            init
+  94: LOAD_FAST            args
+  96: BUILD_MAP            
+  98: LOAD_FAST            kw
+ 100: DICT_MERGE           
+ 102: CALL_FUNCTION_EX     
+ 104: POP_TOP              
+ 106: LOAD_CONST           None
+ 108: RETURN_VALUE         

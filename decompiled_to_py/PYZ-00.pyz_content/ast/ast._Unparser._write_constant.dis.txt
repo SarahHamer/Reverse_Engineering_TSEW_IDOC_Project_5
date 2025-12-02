@@ -1,0 +1,76 @@
+# Disassembly for ast._Unparser._write_constant
+# From module file: ast
+
+## co_consts:
+(None, 'inf', 'nan', '(', '-', ')')
+
+## co_names:
+('isinstance', 'float', 'complex', 'write', 'repr', 'replace', '_INFSTR', '_avoid_backslashes', 'str', '_write_str_avoiding_backslashes')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            value
+  16: LOAD_GLOBAL          float
+  28: LOAD_GLOBAL          complex
+  40: BUILD_TUPLE          
+  42: PRECALL              
+  46: CALL                 
+  56: POP_JUMP_FORWARD_IF_FALSE to 254
+  58: LOAD_FAST            self
+  60: LOAD_METHOD          write
+  82: LOAD_GLOBAL          NULL + repr
+  94: LOAD_FAST            value
+  96: PRECALL              
+ 100: CALL                 
+ 110: LOAD_METHOD          replace
+ 132: LOAD_CONST           'inf'
+ 134: LOAD_GLOBAL          _INFSTR
+ 146: PRECALL              
+ 150: CALL                 
+ 160: LOAD_METHOD          replace
+ 182: LOAD_CONST           'nan'
+ 184: LOAD_CONST           '('
+ 186: LOAD_GLOBAL          _INFSTR
+ 198: FORMAT_VALUE         
+ 200: LOAD_CONST           '-'
+ 202: LOAD_GLOBAL          _INFSTR
+ 214: FORMAT_VALUE         
+ 216: LOAD_CONST           ')'
+ 218: BUILD_STRING         
+ 220: PRECALL              
+ 224: CALL                 
+ 234: PRECALL              
+ 238: CALL                 
+ 248: POP_TOP              
+ 250: LOAD_CONST           None
+ 252: RETURN_VALUE         
+ 254: LOAD_FAST            self
+ 256: LOAD_ATTR            _avoid_backslashes
+ 266: POP_JUMP_FORWARD_IF_FALSE to 356
+ 268: LOAD_GLOBAL          NULL + isinstance
+ 280: LOAD_FAST            value
+ 282: LOAD_GLOBAL          str
+ 294: PRECALL              
+ 298: CALL                 
+ 308: POP_JUMP_FORWARD_IF_FALSE to 356
+ 310: LOAD_FAST            self
+ 312: LOAD_METHOD          _write_str_avoiding_backslashes
+ 334: LOAD_FAST            value
+ 336: PRECALL              
+ 340: CALL                 
+ 350: POP_TOP              
+ 352: LOAD_CONST           None
+ 354: RETURN_VALUE         
+ 356: LOAD_FAST            self
+ 358: LOAD_METHOD          write
+ 380: LOAD_GLOBAL          NULL + repr
+ 392: LOAD_FAST            value
+ 394: PRECALL              
+ 398: CALL                 
+ 408: PRECALL              
+ 412: CALL                 
+ 422: POP_TOP              
+ 424: LOAD_CONST           None
+ 426: RETURN_VALUE         

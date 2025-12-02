@@ -1,0 +1,31 @@
+# Disassembly for contextlib.chdir.__enter__
+# From module file: contextlib
+
+## co_consts:
+(None,)
+
+## co_names:
+('_old_cwd', 'append', 'os', 'getcwd', 'chdir', 'path')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _old_cwd
+  14: LOAD_METHOD          append
+  36: LOAD_GLOBAL          NULL + os
+  48: LOAD_ATTR            getcwd
+  58: PRECALL              
+  62: CALL                 
+  72: PRECALL              
+  76: CALL                 
+  86: POP_TOP              
+  88: LOAD_GLOBAL          NULL + os
+ 100: LOAD_ATTR            chdir
+ 110: LOAD_FAST            self
+ 112: LOAD_ATTR            path
+ 122: PRECALL              
+ 126: CALL                 
+ 136: POP_TOP              
+ 138: LOAD_CONST           None
+ 140: RETURN_VALUE         

@@ -1,0 +1,59 @@
+# Disassembly for statistics.stdev
+# From module file: statistics
+
+## co_consts:
+('Return the square root of the sample variance.\n\n    See ``variance`` for arguments and other details.\n\n    >>> stdev([1.5, 2.5, 2.5, 2.75, 3.25, 4.75])\n    1.0810874155219827\n\n    ', 2, 'stdev requires at least two data points', 1)
+
+## co_names:
+('_ss', 'StatisticsError', 'issubclass', 'Decimal', '_decimal_sqrt_of_frac', 'numerator', 'denominator', '_float_sqrt_of_frac')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _ss
+  14: LOAD_FAST            data
+  16: LOAD_FAST            xbar
+  18: PRECALL              
+  22: CALL                 
+  32: UNPACK_SEQUENCE      
+  36: STORE_FAST           T
+  38: STORE_FAST           ss
+  40: STORE_FAST           c
+  42: STORE_FAST           n
+  44: LOAD_FAST            n
+  46: LOAD_CONST           2
+  48: COMPARE_OP           <
+  54: POP_JUMP_FORWARD_IF_FALSE to 86
+  56: LOAD_GLOBAL          NULL + StatisticsError
+  68: LOAD_CONST           'stdev requires at least two data points'
+  70: PRECALL              
+  74: CALL                 
+  84: RAISE_VARARGS        
+  86: LOAD_FAST            ss
+  88: LOAD_FAST            n
+  90: LOAD_CONST           1
+  92: BINARY_OP            -
+  96: BINARY_OP            /
+ 100: STORE_FAST           mss
+ 102: LOAD_GLOBAL          NULL + issubclass
+ 114: LOAD_FAST            T
+ 116: LOAD_GLOBAL          Decimal
+ 128: PRECALL              
+ 132: CALL                 
+ 142: POP_JUMP_FORWARD_IF_FALSE to 196
+ 144: LOAD_GLOBAL          NULL + _decimal_sqrt_of_frac
+ 156: LOAD_FAST            mss
+ 158: LOAD_ATTR            numerator
+ 168: LOAD_FAST            mss
+ 170: LOAD_ATTR            denominator
+ 180: PRECALL              
+ 184: CALL                 
+ 194: RETURN_VALUE         
+ 196: LOAD_GLOBAL          NULL + _float_sqrt_of_frac
+ 208: LOAD_FAST            mss
+ 210: LOAD_ATTR            numerator
+ 220: LOAD_FAST            mss
+ 222: LOAD_ATTR            denominator
+ 232: PRECALL              
+ 236: CALL                 
+ 246: RETURN_VALUE         

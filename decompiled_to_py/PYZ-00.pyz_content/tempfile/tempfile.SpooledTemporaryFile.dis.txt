@@ -1,0 +1,151 @@
+# Disassembly for tempfile.SpooledTemporaryFile
+# From module file: tempfile
+
+## co_consts:
+('SpooledTemporaryFile', 'Temporary file wrapper, specialized to switch from BytesIO\n    or StringIO to a real file when it exceeds a certain size or\n    when a fileno is needed.\n    ', False, 0, 'w+b', -1, None, ('errors',), <code object __init__ at 0x00000240691A7D70, file "tempfile.py", line 672>, <code object _check at 0x000002406922D530, file "tempfile.py", line 691>, <code object rollover at 0x0000024068E1DBC0, file "tempfile.py", line 697>, <code object __enter__ at 0x00000240693EB230, file "tempfile.py", line 718>, <code object __exit__ at 0x000002406945D5C0, file "tempfile.py", line 723>, <code object __iter__ at 0x000002406945D7A0, file "tempfile.py", line 727>, <code object __del__ at 0x00000240691C0DF0, file "tempfile.py", line 730>, <code object close at 0x000002406945F2D0, file "tempfile.py", line 740>, <code object closed at 0x00000240694658B0, file "tempfile.py", line 743>, <code object encoding at 0x0000024069467750, file "tempfile.py", line 747>, <code object errors at 0x0000024069466250, file "tempfile.py", line 751>, <code object fileno at 0x000002406941AE50, file "tempfile.py", line 755>, <code object flush at 0x000002406945DF20, file "tempfile.py", line 759>, <code object isatty at 0x000002406945F870, file "tempfile.py", line 762>, <code object mode at 0x000002406944AAB0, file "tempfile.py", line 765>, <code object name at 0x00000240693EA730, file "tempfile.py", line 772>, <code object newlines at 0x0000024069467830, file "tempfile.py", line 779>, <code object readable at 0x000002406945D4D0, file "tempfile.py", line 783>, <code object read at 0x00000240694665D0, file "tempfile.py", line 786>, <code object read1 at 0x0000024069467AD0, file "tempfile.py", line 789>, <code object readinto at 0x000002406945F5A0, file "tempfile.py", line 792>, <code object readinto1 at 0x000002406945FA50, file "tempfile.py", line 795>, <code object readline at 0x0000024069465C30, file "tempfile.py", line 798>, <code object readlines at 0x0000024069467590, file "tempfile.py", line 801>, <code object seekable at 0x000002406945FB40, file "tempfile.py", line 804>, <code object seek at 0x00000240694672F0, file "tempfile.py", line 807>, <code object tell at 0x000002406945E1F0, file "tempfile.py", line 810>, <code object truncate at 0x000002406949D730, file "tempfile.py", line 813>, <code object writable at 0x000002406945D980, file "tempfile.py", line 821>, <code object write at 0x0000024069419110, file "tempfile.py", line 824>, <code object writelines at 0x000002406941A8B0, file "tempfile.py", line 830>, <code object detach at 0x000002406945EE20, file "tempfile.py", line 836>, (0, 'w+b', -1, None, None, None, None, None), (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '_rolled', '__init__', 'classmethod', '_types', 'GenericAlias', '__class_getitem__', '_check', 'rollover', '__enter__', '__exit__', '__iter__', '__del__', 'close', 'property', 'closed', 'encoding', 'errors', 'fileno', 'flush', 'isatty', 'mode', 'name', 'newlines', 'readable', 'read', 'read1', 'readinto', 'readinto1', 'readline', 'readlines', 'seekable', 'seek', 'tell', 'truncate', 'writable', 'write', 'writelines', 'detach')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'SpooledTemporaryFile'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Temporary file wrapper, specialized to switch from BytesIO\n    or StringIO to a real file when it exceeds a certain size or\n    when a fileno is needed.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           False
+  16: STORE_NAME           _rolled
+  18: NOP                  
+  20: NOP                  
+  22: NOP                  
+  24: LOAD_CONST           (0, 'w+b', -1, None, None, None, None, None)
+  26: LOAD_CONST           None
+  28: LOAD_CONST           ('errors',)
+  30: BUILD_CONST_KEY_MAP  
+  32: LOAD_CONST           <code object __init__ at 0x00000240691A7D70, file "tempfile.py", line 672>
+  34: MAKE_FUNCTION        defaults, kwdefaults
+  36: STORE_NAME           __init__
+  38: PUSH_NULL            
+  40: LOAD_NAME            classmethod
+  42: LOAD_NAME            _types
+  44: LOAD_ATTR            GenericAlias
+  54: PRECALL              
+  58: CALL                 
+  68: STORE_NAME           __class_getitem__
+  70: LOAD_CONST           <code object _check at 0x000002406922D530, file "tempfile.py", line 691>
+  72: MAKE_FUNCTION        
+  74: STORE_NAME           _check
+  76: LOAD_CONST           <code object rollover at 0x0000024068E1DBC0, file "tempfile.py", line 697>
+  78: MAKE_FUNCTION        
+  80: STORE_NAME           rollover
+  82: LOAD_CONST           <code object __enter__ at 0x00000240693EB230, file "tempfile.py", line 718>
+  84: MAKE_FUNCTION        
+  86: STORE_NAME           __enter__
+  88: LOAD_CONST           <code object __exit__ at 0x000002406945D5C0, file "tempfile.py", line 723>
+  90: MAKE_FUNCTION        
+  92: STORE_NAME           __exit__
+  94: LOAD_CONST           <code object __iter__ at 0x000002406945D7A0, file "tempfile.py", line 727>
+  96: MAKE_FUNCTION        
+  98: STORE_NAME           __iter__
+ 100: LOAD_CONST           <code object __del__ at 0x00000240691C0DF0, file "tempfile.py", line 730>
+ 102: MAKE_FUNCTION        
+ 104: STORE_NAME           __del__
+ 106: LOAD_CONST           <code object close at 0x000002406945F2D0, file "tempfile.py", line 740>
+ 108: MAKE_FUNCTION        
+ 110: STORE_NAME           close
+ 112: LOAD_NAME            property
+ 114: LOAD_CONST           <code object closed at 0x00000240694658B0, file "tempfile.py", line 743>
+ 116: MAKE_FUNCTION        
+ 118: PRECALL              
+ 122: CALL                 
+ 132: STORE_NAME           closed
+ 134: LOAD_NAME            property
+ 136: LOAD_CONST           <code object encoding at 0x0000024069467750, file "tempfile.py", line 747>
+ 138: MAKE_FUNCTION        
+ 140: PRECALL              
+ 144: CALL                 
+ 154: STORE_NAME           encoding
+ 156: LOAD_NAME            property
+ 158: LOAD_CONST           <code object errors at 0x0000024069466250, file "tempfile.py", line 751>
+ 160: MAKE_FUNCTION        
+ 162: PRECALL              
+ 166: CALL                 
+ 176: STORE_NAME           errors
+ 178: LOAD_CONST           <code object fileno at 0x000002406941AE50, file "tempfile.py", line 755>
+ 180: MAKE_FUNCTION        
+ 182: STORE_NAME           fileno
+ 184: LOAD_CONST           <code object flush at 0x000002406945DF20, file "tempfile.py", line 759>
+ 186: MAKE_FUNCTION        
+ 188: STORE_NAME           flush
+ 190: LOAD_CONST           <code object isatty at 0x000002406945F870, file "tempfile.py", line 762>
+ 192: MAKE_FUNCTION        
+ 194: STORE_NAME           isatty
+ 196: LOAD_NAME            property
+ 198: LOAD_CONST           <code object mode at 0x000002406944AAB0, file "tempfile.py", line 765>
+ 200: MAKE_FUNCTION        
+ 202: PRECALL              
+ 206: CALL                 
+ 216: STORE_NAME           mode
+ 218: LOAD_NAME            property
+ 220: LOAD_CONST           <code object name at 0x00000240693EA730, file "tempfile.py", line 772>
+ 222: MAKE_FUNCTION        
+ 224: PRECALL              
+ 228: CALL                 
+ 238: STORE_NAME           name
+ 240: LOAD_NAME            property
+ 242: LOAD_CONST           <code object newlines at 0x0000024069467830, file "tempfile.py", line 779>
+ 244: MAKE_FUNCTION        
+ 246: PRECALL              
+ 250: CALL                 
+ 260: STORE_NAME           newlines
+ 262: LOAD_CONST           <code object readable at 0x000002406945D4D0, file "tempfile.py", line 783>
+ 264: MAKE_FUNCTION        
+ 266: STORE_NAME           readable
+ 268: LOAD_CONST           <code object read at 0x00000240694665D0, file "tempfile.py", line 786>
+ 270: MAKE_FUNCTION        
+ 272: STORE_NAME           read
+ 274: LOAD_CONST           <code object read1 at 0x0000024069467AD0, file "tempfile.py", line 789>
+ 276: MAKE_FUNCTION        
+ 278: STORE_NAME           read1
+ 280: LOAD_CONST           <code object readinto at 0x000002406945F5A0, file "tempfile.py", line 792>
+ 282: MAKE_FUNCTION        
+ 284: STORE_NAME           readinto
+ 286: LOAD_CONST           <code object readinto1 at 0x000002406945FA50, file "tempfile.py", line 795>
+ 288: MAKE_FUNCTION        
+ 290: STORE_NAME           readinto1
+ 292: LOAD_CONST           <code object readline at 0x0000024069465C30, file "tempfile.py", line 798>
+ 294: MAKE_FUNCTION        
+ 296: STORE_NAME           readline
+ 298: LOAD_CONST           <code object readlines at 0x0000024069467590, file "tempfile.py", line 801>
+ 300: MAKE_FUNCTION        
+ 302: STORE_NAME           readlines
+ 304: LOAD_CONST           <code object seekable at 0x000002406945FB40, file "tempfile.py", line 804>
+ 306: MAKE_FUNCTION        
+ 308: STORE_NAME           seekable
+ 310: LOAD_CONST           <code object seek at 0x00000240694672F0, file "tempfile.py", line 807>
+ 312: MAKE_FUNCTION        
+ 314: STORE_NAME           seek
+ 316: LOAD_CONST           <code object tell at 0x000002406945E1F0, file "tempfile.py", line 810>
+ 318: MAKE_FUNCTION        
+ 320: STORE_NAME           tell
+ 322: LOAD_CONST           (None,)
+ 324: LOAD_CONST           <code object truncate at 0x000002406949D730, file "tempfile.py", line 813>
+ 326: MAKE_FUNCTION        defaults
+ 328: STORE_NAME           truncate
+ 330: LOAD_CONST           <code object writable at 0x000002406945D980, file "tempfile.py", line 821>
+ 332: MAKE_FUNCTION        
+ 334: STORE_NAME           writable
+ 336: LOAD_CONST           <code object write at 0x0000024069419110, file "tempfile.py", line 824>
+ 338: MAKE_FUNCTION        
+ 340: STORE_NAME           write
+ 342: LOAD_CONST           <code object writelines at 0x000002406941A8B0, file "tempfile.py", line 830>
+ 344: MAKE_FUNCTION        
+ 346: STORE_NAME           writelines
+ 348: LOAD_CONST           <code object detach at 0x000002406945EE20, file "tempfile.py", line 836>
+ 350: MAKE_FUNCTION        
+ 352: STORE_NAME           detach
+ 354: LOAD_CONST           None
+ 356: RETURN_VALUE         

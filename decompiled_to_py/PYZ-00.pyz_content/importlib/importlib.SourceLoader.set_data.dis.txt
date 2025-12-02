@@ -1,0 +1,14 @@
+# Disassembly for importlib.SourceLoader.set_data
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Optional method which writes data (bytes) to a file path (a str).\n\n        Implementing this method allows for the writing of bytecode files.\n        ', None)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: RETURN_VALUE         

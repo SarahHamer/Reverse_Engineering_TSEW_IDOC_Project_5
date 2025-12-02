@@ -1,0 +1,55 @@
+# Disassembly for pickle._Pickler.memoize
+# From module file: pickle
+
+## co_consts:
+('Store an object in the memo.', None)
+
+## co_names:
+('fast', 'id', 'memo', 'len', 'write', 'put')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            fast
+  14: POP_JUMP_FORWARD_IF_FALSE to 20
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         
+  20: LOAD_GLOBAL          NULL + id
+  32: LOAD_FAST            obj
+  34: PRECALL              
+  38: CALL                 
+  48: LOAD_FAST            self
+  50: LOAD_ATTR            memo
+  60: CONTAINS_OP          
+  62: POP_JUMP_FORWARD_IF_TRUE to 68
+  64: LOAD_ASSERTION_ERROR 
+  66: RAISE_VARARGS        
+  68: LOAD_GLOBAL          NULL + len
+  80: LOAD_FAST            self
+  82: LOAD_ATTR            memo
+  92: PRECALL              
+  96: CALL                 
+ 106: STORE_FAST           idx
+ 108: LOAD_FAST            self
+ 110: LOAD_METHOD          write
+ 132: LOAD_FAST            self
+ 134: LOAD_METHOD          put
+ 156: LOAD_FAST            idx
+ 158: PRECALL              
+ 162: CALL                 
+ 172: PRECALL              
+ 176: CALL                 
+ 186: POP_TOP              
+ 188: LOAD_FAST            idx
+ 190: LOAD_FAST            obj
+ 192: BUILD_TUPLE          
+ 194: LOAD_FAST            self
+ 196: LOAD_ATTR            memo
+ 206: LOAD_GLOBAL          NULL + id
+ 218: LOAD_FAST            obj
+ 220: PRECALL              
+ 224: CALL                 
+ 234: STORE_SUBSCR         
+ 238: LOAD_CONST           None
+ 240: RETURN_VALUE         

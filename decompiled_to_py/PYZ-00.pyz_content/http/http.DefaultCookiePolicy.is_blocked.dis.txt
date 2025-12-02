@@ -1,0 +1,29 @@
+# Disassembly for http.DefaultCookiePolicy.is_blocked
+# From module file: http.cookiejar
+
+## co_consts:
+(None, True, False)
+
+## co_names:
+('_blocked_domains', 'user_domain_match')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _blocked_domains
+  14: GET_ITER             
+  16: FOR_ITER             to 60
+  18: STORE_FAST           blocked_domain
+  20: LOAD_GLOBAL          NULL + user_domain_match
+  32: LOAD_FAST            domain
+  34: LOAD_FAST            blocked_domain
+  36: PRECALL              
+  40: CALL                 
+  50: POP_JUMP_FORWARD_IF_FALSE to 58
+  52: POP_TOP              
+  54: LOAD_CONST           True
+  56: RETURN_VALUE         
+  58: JUMP_BACKWARD        to 16
+  60: LOAD_CONST           False
+  62: RETURN_VALUE         

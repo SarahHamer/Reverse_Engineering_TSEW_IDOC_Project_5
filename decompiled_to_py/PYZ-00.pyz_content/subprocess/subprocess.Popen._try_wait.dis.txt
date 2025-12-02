@@ -1,0 +1,44 @@
+# Disassembly for subprocess.Popen._try_wait
+# From module file: subprocess
+
+## co_consts:
+('All callers to this function MUST hold self._waitpid_lock.', 0)
+
+## co_names:
+('os', 'waitpid', 'pid', 'ChildProcessError')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_GLOBAL          NULL + os
+  16: LOAD_ATTR            waitpid
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            pid
+  38: LOAD_FAST            wait_flags
+  40: PRECALL              
+  44: CALL                 
+  54: UNPACK_SEQUENCE      
+  58: STORE_FAST           pid
+  60: STORE_FAST           sts
+  62: JUMP_FORWARD         to 114
+  64: PUSH_EXC_INFO        
+  66: LOAD_GLOBAL          ChildProcessError
+  78: CHECK_EXC_MATCH      
+  80: POP_JUMP_FORWARD_IF_FALSE to 106
+  82: POP_TOP              
+  84: LOAD_FAST            self
+  86: LOAD_ATTR            pid
+  96: STORE_FAST           pid
+  98: LOAD_CONST           0
+ 100: STORE_FAST           sts
+ 102: POP_EXCEPT           
+ 104: JUMP_FORWARD         to 114
+ 106: RERAISE              
+ 108: COPY                 
+ 110: POP_EXCEPT           
+ 112: RERAISE              
+ 114: LOAD_FAST            pid
+ 116: LOAD_FAST            sts
+ 118: BUILD_TUPLE          
+ 120: RETURN_VALUE         

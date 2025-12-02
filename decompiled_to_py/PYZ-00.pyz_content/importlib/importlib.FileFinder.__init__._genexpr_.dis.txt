@@ -1,0 +1,27 @@
+# Disassembly for importlib.FileFinder.__init__.<genexpr>
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+(None,)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RETURN_GENERATOR     
+   4: POP_TOP              
+   6: RESUME               
+   8: LOAD_FAST            .0
+  10: FOR_ITER             to 28
+  12: STORE_FAST           suffix
+  14: LOAD_FAST            suffix
+  16: LOAD_DEREF           loader
+  18: BUILD_TUPLE          
+  20: YIELD_VALUE          
+  22: RESUME               
+  24: POP_TOP              
+  26: JUMP_BACKWARD        to 10
+  28: LOAD_CONST           None
+  30: RETURN_VALUE         

@@ -1,0 +1,41 @@
+# Disassembly for pickle._Unframer.load_frame
+# From module file: pickle
+
+## co_consts:
+(None, b'', 'beginning of a new frame before end of current frame')
+
+## co_names:
+('current_frame', 'read', 'UnpicklingError', 'io', 'BytesIO', 'file_read')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            current_frame
+  14: POP_JUMP_FORWARD_IF_FALSE to 104
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            current_frame
+  28: LOAD_METHOD          read
+  50: PRECALL              
+  54: CALL                 
+  64: LOAD_CONST           b''
+  66: COMPARE_OP           !=
+  72: POP_JUMP_FORWARD_IF_FALSE to 104
+  74: LOAD_GLOBAL          NULL + UnpicklingError
+  86: LOAD_CONST           'beginning of a new frame before end of current frame'
+  88: PRECALL              
+  92: CALL                 
+ 102: RAISE_VARARGS        
+ 104: LOAD_GLOBAL          NULL + io
+ 116: LOAD_ATTR            BytesIO
+ 126: LOAD_FAST            self
+ 128: LOAD_METHOD          file_read
+ 150: LOAD_FAST            frame_size
+ 152: PRECALL              
+ 156: CALL                 
+ 166: PRECALL              
+ 170: CALL                 
+ 180: LOAD_FAST            self
+ 182: STORE_ATTR           current_frame
+ 192: LOAD_CONST           None
+ 194: RETURN_VALUE         

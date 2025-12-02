@@ -1,0 +1,93 @@
+# Disassembly for email.get_extended_attribute
+# From module file: email._header_value_parser
+
+## co_consts:
+(' [CFWS] 1*extended_attrtext [CFWS]\n\n    This is like the non-extended version except we allow % characters, so that\n    we can pick up an encoded value as a single string.\n\n    ', 0, "expected token but found '{}'")
+
+## co_names:
+('Attribute', 'CFWS_LEADER', 'get_cfws', 'append', 'EXTENDED_ATTRIBUTE_ENDS', 'errors', 'HeaderParseError', 'format', 'get_extended_attrtext')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + Attribute
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           attribute
+  30: LOAD_FAST            value
+  32: POP_JUMP_FORWARD_IF_FALSE to 142
+  34: LOAD_FAST            value
+  36: LOAD_CONST           0
+  38: BINARY_SUBSCR        
+  48: LOAD_GLOBAL          CFWS_LEADER
+  60: CONTAINS_OP          
+  62: POP_JUMP_FORWARD_IF_FALSE to 142
+  64: LOAD_GLOBAL          NULL + get_cfws
+  76: LOAD_FAST            value
+  78: PRECALL              
+  82: CALL                 
+  92: UNPACK_SEQUENCE      
+  96: STORE_FAST           token
+  98: STORE_FAST           value
+ 100: LOAD_FAST            attribute
+ 102: LOAD_METHOD          append
+ 124: LOAD_FAST            token
+ 126: PRECALL              
+ 130: CALL                 
+ 140: POP_TOP              
+ 142: LOAD_FAST            value
+ 144: POP_JUMP_FORWARD_IF_FALSE to 254
+ 146: LOAD_FAST            value
+ 148: LOAD_CONST           0
+ 150: BINARY_SUBSCR        
+ 160: LOAD_GLOBAL          EXTENDED_ATTRIBUTE_ENDS
+ 172: CONTAINS_OP          
+ 174: POP_JUMP_FORWARD_IF_FALSE to 254
+ 176: LOAD_GLOBAL          NULL + errors
+ 188: LOAD_ATTR            HeaderParseError
+ 198: LOAD_CONST           "expected token but found '{}'"
+ 200: LOAD_METHOD          format
+ 222: LOAD_FAST            value
+ 224: PRECALL              
+ 228: CALL                 
+ 238: PRECALL              
+ 242: CALL                 
+ 252: RAISE_VARARGS        
+ 254: LOAD_GLOBAL          NULL + get_extended_attrtext
+ 266: LOAD_FAST            value
+ 268: PRECALL              
+ 272: CALL                 
+ 282: UNPACK_SEQUENCE      
+ 286: STORE_FAST           token
+ 288: STORE_FAST           value
+ 290: LOAD_FAST            attribute
+ 292: LOAD_METHOD          append
+ 314: LOAD_FAST            token
+ 316: PRECALL              
+ 320: CALL                 
+ 330: POP_TOP              
+ 332: LOAD_FAST            value
+ 334: POP_JUMP_FORWARD_IF_FALSE to 444
+ 336: LOAD_FAST            value
+ 338: LOAD_CONST           0
+ 340: BINARY_SUBSCR        
+ 350: LOAD_GLOBAL          CFWS_LEADER
+ 362: CONTAINS_OP          
+ 364: POP_JUMP_FORWARD_IF_FALSE to 444
+ 366: LOAD_GLOBAL          NULL + get_cfws
+ 378: LOAD_FAST            value
+ 380: PRECALL              
+ 384: CALL                 
+ 394: UNPACK_SEQUENCE      
+ 398: STORE_FAST           token
+ 400: STORE_FAST           value
+ 402: LOAD_FAST            attribute
+ 404: LOAD_METHOD          append
+ 426: LOAD_FAST            token
+ 428: PRECALL              
+ 432: CALL                 
+ 442: POP_TOP              
+ 444: LOAD_FAST            attribute
+ 446: LOAD_FAST            value
+ 448: BUILD_TUPLE          
+ 450: RETURN_VALUE         

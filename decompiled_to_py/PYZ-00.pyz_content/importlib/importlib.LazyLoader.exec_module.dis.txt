@@ -1,0 +1,45 @@
+# Disassembly for importlib.LazyLoader.exec_module
+# From module file: importlib.util
+
+## co_consts:
+('Make the module load lazily.', '__dict__', '__class__', None)
+
+## co_names:
+('loader', '__spec__', '__loader__', '__dict__', 'copy', '__class__', 'loader_state', '_LazyModule')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            loader
+  14: LOAD_FAST            module
+  16: LOAD_ATTR            __spec__
+  26: STORE_ATTR           loader
+  36: LOAD_FAST            self
+  38: LOAD_ATTR            loader
+  48: LOAD_FAST            module
+  50: STORE_ATTR           __loader__
+  60: BUILD_MAP            
+  62: STORE_FAST           loader_state
+  64: LOAD_FAST            module
+  66: LOAD_ATTR            __dict__
+  76: LOAD_METHOD          copy
+  98: PRECALL              
+ 102: CALL                 
+ 112: LOAD_FAST            loader_state
+ 114: LOAD_CONST           '__dict__'
+ 116: STORE_SUBSCR         
+ 120: LOAD_FAST            module
+ 122: LOAD_ATTR            __class__
+ 132: LOAD_FAST            loader_state
+ 134: LOAD_CONST           '__class__'
+ 136: STORE_SUBSCR         
+ 140: LOAD_FAST            loader_state
+ 142: LOAD_FAST            module
+ 144: LOAD_ATTR            __spec__
+ 154: STORE_ATTR           loader_state
+ 164: LOAD_GLOBAL          _LazyModule
+ 176: LOAD_FAST            module
+ 178: STORE_ATTR           __class__
+ 188: LOAD_CONST           None
+ 190: RETURN_VALUE         

@@ -1,0 +1,14 @@
+# Disassembly for numbers.Real.imag
+# From module file: numbers
+
+## co_consts:
+('Real numbers have no imaginary component.', 0)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: RETURN_VALUE         

@@ -1,0 +1,98 @@
+# Disassembly for dataclasses._create_fn
+# From module file: dataclasses
+
+## co_consts:
+(None, '', '_return_type', '->_return_type', ',', '\n', <code object <genexpr> at 0x0000024069467830, file "dataclasses.py", line 425>, ' def ', '(', ')', ':\n', ', ', 'def __create_fn__(', '):\n', '\n return ', '__create_fn__', ())
+
+## co_names:
+('MISSING', 'join', 'keys', 'exec')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            locals
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 10
+   6: BUILD_MAP            
+   8: STORE_FAST           locals
+  10: LOAD_CONST           ''
+  12: STORE_FAST           return_annotation
+  14: LOAD_FAST            return_type
+  16: LOAD_GLOBAL          MISSING
+  28: IS_OP                
+  30: POP_JUMP_FORWARD_IF_FALSE to 46
+  32: LOAD_FAST            return_type
+  34: LOAD_FAST            locals
+  36: LOAD_CONST           '_return_type'
+  38: STORE_SUBSCR         
+  42: LOAD_CONST           '->_return_type'
+  44: STORE_FAST           return_annotation
+  46: LOAD_CONST           ','
+  48: LOAD_METHOD          join
+  70: LOAD_FAST            args
+  72: PRECALL              
+  76: CALL                 
+  86: STORE_FAST           args
+  88: LOAD_CONST           '\n'
+  90: LOAD_METHOD          join
+ 112: LOAD_CONST           <code object <genexpr> at 0x0000024069467830, file "dataclasses.py", line 425>
+ 114: MAKE_FUNCTION        
+ 116: LOAD_FAST            body
+ 118: GET_ITER             
+ 120: PRECALL              
+ 124: CALL                 
+ 134: PRECALL              
+ 138: CALL                 
+ 148: STORE_FAST           body
+ 150: LOAD_CONST           ' def '
+ 152: LOAD_FAST            name
+ 154: FORMAT_VALUE         
+ 156: LOAD_CONST           '('
+ 158: LOAD_FAST            args
+ 160: FORMAT_VALUE         
+ 162: LOAD_CONST           ')'
+ 164: LOAD_FAST            return_annotation
+ 166: FORMAT_VALUE         
+ 168: LOAD_CONST           ':\n'
+ 170: LOAD_FAST            body
+ 172: FORMAT_VALUE         
+ 174: BUILD_STRING         
+ 176: STORE_FAST           txt
+ 178: LOAD_CONST           ', '
+ 180: LOAD_METHOD          join
+ 202: LOAD_FAST            locals
+ 204: LOAD_METHOD          keys
+ 226: PRECALL              
+ 230: CALL                 
+ 240: PRECALL              
+ 244: CALL                 
+ 254: STORE_FAST           local_vars
+ 256: LOAD_CONST           'def __create_fn__('
+ 258: LOAD_FAST            local_vars
+ 260: FORMAT_VALUE         
+ 262: LOAD_CONST           '):\n'
+ 264: LOAD_FAST            txt
+ 266: FORMAT_VALUE         
+ 268: LOAD_CONST           '\n return '
+ 270: LOAD_FAST            name
+ 272: FORMAT_VALUE         
+ 274: BUILD_STRING         
+ 276: STORE_FAST           txt
+ 278: BUILD_MAP            
+ 280: STORE_FAST           ns
+ 282: LOAD_GLOBAL          NULL + exec
+ 294: LOAD_FAST            txt
+ 296: LOAD_FAST            globals
+ 298: LOAD_FAST            ns
+ 300: PRECALL              
+ 304: CALL                 
+ 314: POP_TOP              
+ 316: PUSH_NULL            
+ 318: LOAD_FAST            ns
+ 320: LOAD_CONST           '__create_fn__'
+ 322: BINARY_SUBSCR        
+ 332: LOAD_CONST           ()
+ 334: BUILD_MAP            
+ 336: LOAD_FAST            locals
+ 338: DICT_MERGE           
+ 340: CALL_FUNCTION_EX     
+ 342: RETURN_VALUE         

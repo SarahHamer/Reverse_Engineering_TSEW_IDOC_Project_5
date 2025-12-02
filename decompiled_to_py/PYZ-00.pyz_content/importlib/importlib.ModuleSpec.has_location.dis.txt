@@ -1,0 +1,20 @@
+# Disassembly for importlib.ModuleSpec.has_location
+# From module file: importlib._bootstrap
+
+## co_consts:
+(None,)
+
+## co_names:
+('bool', '_set_fileattr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + bool
+  14: LOAD_FAST            value
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_FAST            self
+  32: STORE_ATTR           _set_fileattr
+  42: LOAD_CONST           None
+  44: RETURN_VALUE         

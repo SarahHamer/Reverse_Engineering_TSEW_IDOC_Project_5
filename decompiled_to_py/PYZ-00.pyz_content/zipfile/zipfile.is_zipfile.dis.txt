@@ -1,0 +1,72 @@
+# Disassembly for zipfile.is_zipfile
+# From module file: zipfile
+
+## co_consts:
+('Quickly see if a file is a ZIP file by checking the magic number.\n\n    The filename argument may be a file or file-like object too.\n    ', False, 'read', ('fp',), 'rb', None)
+
+## co_names:
+('hasattr', '_check_zipfile', 'open', 'OSError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           False
+   4: STORE_FAST           result
+   6: NOP                  
+   8: LOAD_GLOBAL          NULL + hasattr
+  20: LOAD_FAST            filename
+  22: LOAD_CONST           'read'
+  24: PRECALL              
+  28: CALL                 
+  38: POP_JUMP_FORWARD_IF_FALSE to 74
+  40: LOAD_GLOBAL          NULL + _check_zipfile
+  52: LOAD_FAST            filename
+  54: KW_NAMES             
+  56: PRECALL              
+  60: CALL                 
+  70: STORE_FAST           result
+  72: JUMP_FORWARD         to 184
+  74: LOAD_GLOBAL          NULL + open
+  86: LOAD_FAST            filename
+  88: LOAD_CONST           'rb'
+  90: PRECALL              
+  94: CALL                 
+ 104: BEFORE_WITH          
+ 106: STORE_FAST           fp
+ 108: LOAD_GLOBAL          NULL + _check_zipfile
+ 120: LOAD_FAST            fp
+ 122: PRECALL              
+ 126: CALL                 
+ 136: STORE_FAST           result
+ 138: LOAD_CONST           None
+ 140: LOAD_CONST           None
+ 142: LOAD_CONST           None
+ 144: PRECALL              
+ 148: CALL                 
+ 158: POP_TOP              
+ 160: JUMP_FORWARD         to 184
+ 162: PUSH_EXC_INFO        
+ 164: WITH_EXCEPT_START    
+ 166: POP_JUMP_FORWARD_IF_TRUE to 176
+ 168: RERAISE              
+ 170: COPY                 
+ 172: POP_EXCEPT           
+ 174: RERAISE              
+ 176: POP_TOP              
+ 178: POP_EXCEPT           
+ 180: POP_TOP              
+ 182: POP_TOP              
+ 184: JUMP_FORWARD         to 218
+ 186: PUSH_EXC_INFO        
+ 188: LOAD_GLOBAL          OSError
+ 200: CHECK_EXC_MATCH      
+ 202: POP_JUMP_FORWARD_IF_FALSE to 210
+ 204: POP_TOP              
+ 206: POP_EXCEPT           
+ 208: JUMP_FORWARD         to 218
+ 210: RERAISE              
+ 212: COPY                 
+ 214: POP_EXCEPT           
+ 216: RERAISE              
+ 218: LOAD_FAST            result
+ 220: RETURN_VALUE         

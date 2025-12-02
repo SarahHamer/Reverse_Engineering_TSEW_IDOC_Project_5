@@ -1,0 +1,56 @@
+# Disassembly for importlib.metadata.always_iterable
+# From module file: importlib.metadata._itertools
+
+## co_consts:
+("If *obj* is iterable, return an iterator over its items::\n\n        >>> obj = (1, 2, 3)\n        >>> list(always_iterable(obj))\n        [1, 2, 3]\n\n    If *obj* is not iterable, return a one-item iterable containing *obj*::\n\n        >>> obj = 1\n        >>> list(always_iterable(obj))\n        [1]\n\n    If *obj* is ``None``, return an empty iterable:\n\n        >>> obj = None\n        >>> list(always_iterable(None))\n        []\n\n    By default, binary and text strings are not considered iterable::\n\n        >>> obj = 'foo'\n        >>> list(always_iterable(obj))\n        ['foo']\n\n    If *base_type* is set, objects for which ``isinstance(obj, base_type)``\n    returns ``True`` won't be considered iterable.\n\n        >>> obj = {'a': 1}\n        >>> list(always_iterable(obj))  # Iterate over the dict's keys\n        ['a']\n        >>> list(always_iterable(obj, base_type=dict))  # Treat dicts as a unit\n        [{'a': 1}]\n\n    Set *base_type* to ``None`` to avoid any special handling and treat objects\n    Python considers iterable as iterable:\n\n        >>> obj = 'foo'\n        >>> list(always_iterable(obj, base_type=None))\n        ['f', 'o', 'o']\n    ", None, ())
+
+## co_names:
+('iter', 'isinstance', 'TypeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            obj
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 36
+   6: LOAD_GLOBAL          NULL + iter
+  18: LOAD_CONST           ()
+  20: PRECALL              
+  24: CALL                 
+  34: RETURN_VALUE         
+  36: LOAD_FAST            base_type
+  38: POP_JUMP_FORWARD_IF_NONE to 104
+  40: LOAD_GLOBAL          NULL + isinstance
+  52: LOAD_FAST            obj
+  54: LOAD_FAST            base_type
+  56: PRECALL              
+  60: CALL                 
+  70: POP_JUMP_FORWARD_IF_FALSE to 104
+  72: LOAD_GLOBAL          NULL + iter
+  84: LOAD_FAST            obj
+  86: BUILD_TUPLE          
+  88: PRECALL              
+  92: CALL                 
+ 102: RETURN_VALUE         
+ 104: NOP                  
+ 106: LOAD_GLOBAL          NULL + iter
+ 118: LOAD_FAST            obj
+ 120: PRECALL              
+ 124: CALL                 
+ 134: RETURN_VALUE         
+ 136: PUSH_EXC_INFO        
+ 138: LOAD_GLOBAL          TypeError
+ 150: CHECK_EXC_MATCH      
+ 152: POP_JUMP_FORWARD_IF_FALSE to 192
+ 154: POP_TOP              
+ 156: LOAD_GLOBAL          NULL + iter
+ 168: LOAD_FAST            obj
+ 170: BUILD_TUPLE          
+ 172: PRECALL              
+ 176: CALL                 
+ 186: SWAP                 
+ 188: POP_EXCEPT           
+ 190: RETURN_VALUE         
+ 192: RERAISE              
+ 194: COPY                 
+ 196: POP_EXCEPT           
+ 198: RERAISE              

@@ -1,0 +1,19 @@
+# Disassembly for _pydecimal.Decimal.__repr__
+# From module file: _pydecimal
+
+## co_consts:
+('Represents the number as an instance of Decimal.', "Decimal('%s')")
+
+## co_names:
+('str',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           "Decimal('%s')"
+   4: LOAD_GLOBAL          NULL + str
+  16: LOAD_FAST            self
+  18: PRECALL              
+  22: CALL                 
+  32: BINARY_OP            %
+  36: RETURN_VALUE         

@@ -1,0 +1,135 @@
+# Disassembly for email.decode
+# From module file: email._encoded_words
+
+## co_consts:
+("Decode encoded word and return (string, charset, lang, defects) tuple.\n\n    An RFC 2047/2243 encoded word has the form:\n\n        =?charset*lang?cte?encoded_string?=\n\n    where '*lang' may be omitted but the other parts may not be.\n\n    This function expects exactly such a string (that is, it does not check the\n    syntax and may raise errors if the string is not well formed), and returns\n    the encoded_string decoded first from its Content Transfer Encoding and\n    then from the resulting bytes into unicode using the specified charset.  If\n    the cte-decoded string does not successfully decode using the specified\n    character set, a defect is added to the defects list and the unknown octets\n    are replaced by the unicode 'unknown' character \\uFDFF.\n\n    The specified charset and language are returned.  The default for language,\n    which is rarely if ever encountered, is the empty string.\n\n    ", '?', '*', 'ascii', 'surrogateescape', 'Encoded word contains bytes not decodable using ', ' charset', 'unknown-8bit', 'Unknown charset ', ' in encoded word; decoded as unknown bytes')
+
+## co_names:
+('split', 'partition', 'lower', 'encode', '_cte_decoders', 'decode', 'UnicodeDecodeError', 'append', 'errors', 'UndecodableBytesDefect', 'LookupError', 'UnicodeEncodeError', 'CharsetError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            ew
+   4: LOAD_METHOD          split
+  26: LOAD_CONST           '?'
+  28: PRECALL              
+  32: CALL                 
+  42: UNPACK_SEQUENCE      
+  46: STORE_FAST           _
+  48: STORE_FAST           charset
+  50: STORE_FAST           cte
+  52: STORE_FAST           cte_string
+  54: STORE_FAST           _
+  56: LOAD_FAST            charset
+  58: LOAD_METHOD          partition
+  80: LOAD_CONST           '*'
+  82: PRECALL              
+  86: CALL                 
+  96: UNPACK_SEQUENCE      
+ 100: STORE_FAST           charset
+ 102: STORE_FAST           _
+ 104: STORE_FAST           lang
+ 106: LOAD_FAST            cte
+ 108: LOAD_METHOD          lower
+ 130: PRECALL              
+ 134: CALL                 
+ 144: STORE_FAST           cte
+ 146: LOAD_FAST            cte_string
+ 148: LOAD_METHOD          encode
+ 170: LOAD_CONST           'ascii'
+ 172: LOAD_CONST           'surrogateescape'
+ 174: PRECALL              
+ 178: CALL                 
+ 188: STORE_FAST           bstring
+ 190: LOAD_GLOBAL          NULL + _cte_decoders
+ 202: LOAD_FAST            cte
+ 204: BINARY_SUBSCR        
+ 214: LOAD_FAST            bstring
+ 216: PRECALL              
+ 220: CALL                 
+ 230: UNPACK_SEQUENCE      
+ 234: STORE_FAST           bstring
+ 236: STORE_FAST           defects
+ 238: NOP                  
+ 240: LOAD_FAST            bstring
+ 242: LOAD_METHOD          decode
+ 264: LOAD_FAST            charset
+ 266: PRECALL              
+ 270: CALL                 
+ 280: STORE_FAST           string
+ 282: JUMP_FORWARD         to 660
+ 284: PUSH_EXC_INFO        
+ 286: LOAD_GLOBAL          UnicodeDecodeError
+ 298: CHECK_EXC_MATCH      
+ 300: POP_JUMP_FORWARD_IF_FALSE to 438
+ 302: POP_TOP              
+ 304: LOAD_FAST            defects
+ 306: LOAD_METHOD          append
+ 328: LOAD_GLOBAL          NULL + errors
+ 340: LOAD_ATTR            UndecodableBytesDefect
+ 350: LOAD_CONST           'Encoded word contains bytes not decodable using '
+ 352: LOAD_FAST            charset
+ 354: FORMAT_VALUE         repr
+ 356: LOAD_CONST           ' charset'
+ 358: BUILD_STRING         
+ 360: PRECALL              
+ 364: CALL                 
+ 374: PRECALL              
+ 378: CALL                 
+ 388: POP_TOP              
+ 390: LOAD_FAST            bstring
+ 392: LOAD_METHOD          decode
+ 414: LOAD_FAST            charset
+ 416: LOAD_CONST           'surrogateescape'
+ 418: PRECALL              
+ 422: CALL                 
+ 432: STORE_FAST           string
+ 434: POP_EXCEPT           
+ 436: JUMP_FORWARD         to 660
+ 438: LOAD_GLOBAL          LookupError
+ 450: LOAD_GLOBAL          UnicodeEncodeError
+ 462: BUILD_TUPLE          
+ 464: CHECK_EXC_MATCH      
+ 466: POP_JUMP_FORWARD_IF_FALSE to 652
+ 468: POP_TOP              
+ 470: LOAD_FAST            bstring
+ 472: LOAD_METHOD          decode
+ 494: LOAD_CONST           'ascii'
+ 496: LOAD_CONST           'surrogateescape'
+ 498: PRECALL              
+ 502: CALL                 
+ 512: STORE_FAST           string
+ 514: LOAD_FAST            charset
+ 516: LOAD_METHOD          lower
+ 538: PRECALL              
+ 542: CALL                 
+ 552: LOAD_CONST           'unknown-8bit'
+ 554: COMPARE_OP           !=
+ 560: POP_JUMP_FORWARD_IF_FALSE to 648
+ 562: LOAD_FAST            defects
+ 564: LOAD_METHOD          append
+ 586: LOAD_GLOBAL          NULL + errors
+ 598: LOAD_ATTR            CharsetError
+ 608: LOAD_CONST           'Unknown charset '
+ 610: LOAD_FAST            charset
+ 612: FORMAT_VALUE         repr
+ 614: LOAD_CONST           ' in encoded word; decoded as unknown bytes'
+ 616: BUILD_STRING         
+ 618: PRECALL              
+ 622: CALL                 
+ 632: PRECALL              
+ 636: CALL                 
+ 646: POP_TOP              
+ 648: POP_EXCEPT           
+ 650: JUMP_FORWARD         to 660
+ 652: RERAISE              
+ 654: COPY                 
+ 656: POP_EXCEPT           
+ 658: RERAISE              
+ 660: LOAD_FAST            string
+ 662: LOAD_FAST            charset
+ 664: LOAD_FAST            lang
+ 666: LOAD_FAST            defects
+ 668: BUILD_TUPLE          
+ 670: RETURN_VALUE         

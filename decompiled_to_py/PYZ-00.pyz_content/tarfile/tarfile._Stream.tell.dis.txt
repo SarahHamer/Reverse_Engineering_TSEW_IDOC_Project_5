@@ -1,0 +1,15 @@
+# Disassembly for tarfile._Stream.tell
+# From module file: tarfile
+
+## co_consts:
+("Return the stream's file pointer position.\n        ",)
+
+## co_names:
+('pos',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            pos
+  14: RETURN_VALUE         

@@ -1,0 +1,63 @@
+# Disassembly for email.EmailPolicy
+# From module file: email.policy
+
+## co_consts:
+('EmailPolicy', "+\n    PROVISIONAL\n\n    The API extensions enabled by this policy are currently provisional.\n    Refer to the documentation for details.\n\n    This policy adds new header parsing and folding algorithms.  Instead of\n    simple strings, headers are custom objects with custom attributes\n    depending on the type of the field.  The folding algorithm fully\n    implements RFCs 2047 and 5322.\n\n    In addition to the settable attributes listed above that apply to\n    all Policies, this policy adds the following additional attributes:\n\n    utf8                -- if False (the default) message headers will be\n                           serialized as ASCII, using encoded words to encode\n                           any non-ASCII characters in the source strings.  If\n                           True, the message headers will be serialized using\n                           utf8 and will not contain encoded words (see RFC\n                           6532 for more on this serialization format).\n\n    refold_source       -- if the value for a header in the Message object\n                           came from the parsing of some source, this attribute\n                           indicates whether or not a generator should refold\n                           that value when transforming the message back into\n                           stream form.  The possible values are:\n\n                           none  -- all source values use original folding\n                           long  -- source values that have any line that is\n                                    longer than max_line_length will be\n                                    refolded\n                           all  -- all values are refolded.\n\n                           The default is 'long'.\n\n    header_factory      -- a callable that takes two arguments, 'name' and\n                           'value', where 'name' is a header field name and\n                           'value' is an unfolded header field value, and\n                           returns a string-like object that represents that\n                           header.  A default header_factory is provided that\n                           understands some of the RFC5322 header field types.\n                           (Currently address fields and date fields have\n                           special treatment, while all other fields are\n                           treated as unstructured.  This list will be\n                           completed before the extension is marked stable.)\n\n    content_manager     -- an object with at least two methods: get_content\n                           and set_content.  When the get_content or\n                           set_content method of a Message object is called,\n                           it calls the corresponding method of this object,\n                           passing it the message object as its first argument,\n                           and any arguments or keywords that were passed to\n                           it as additional arguments.  The default\n                           content_manager is\n                           :data:`~email.contentmanager.raw_data_manager`.\n\n    ", False, 'long', <code object __init__ at 0x00000240691F3B40, file "email\policy.py", line 93>, <code object header_max_count at 0x0000024069465DF0, file "email\policy.py", line 100>, <code object header_source_parse at 0x000002406942E100, file "email\policy.py", line 118>, <code object header_store_parse at 0x0000024068BF59D0, file "email\policy.py", line 131>, <code object header_fetch_parse at 0x000002406921F840, file "email\policy.py", line 150>, <code object fold at 0x000002406945FF00, file "email\policy.py", line 165>, <code object fold_binary at 0x00000240693AAAB0, file "email\policy.py", line 186>, <code object _fold at 0x0000024068B79230, file "email\policy.py", line 204>, (False,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'EmailMessage', 'message_factory', 'utf8', 'refold_source', 'HeaderRegistry', 'header_factory', 'raw_data_manager', 'content_manager', '__init__', 'header_max_count', 'header_source_parse', 'header_store_parse', 'header_fetch_parse', 'fold', 'fold_binary', '_fold', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'EmailPolicy'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           "+\n    PROVISIONAL\n\n    The API extensions enabled by this policy are currently provisional.\n    Refer to the documentation for details.\n\n    This policy adds new header parsing and folding algorithms.  Instead of\n    simple strings, headers are custom objects with custom attributes\n    depending on the type of the field.  The folding algorithm fully\n    implements RFCs 2047 and 5322.\n\n    In addition to the settable attributes listed above that apply to\n    all Policies, this policy adds the following additional attributes:\n\n    utf8                -- if False (the default) message headers will be\n                           serialized as ASCII, using encoded words to encode\n                           any non-ASCII characters in the source strings.  If\n                           True, the message headers will be serialized using\n                           utf8 and will not contain encoded words (see RFC\n                           6532 for more on this serialization format).\n\n    refold_source       -- if the value for a header in the Message object\n                           came from the parsing of some source, this attribute\n                           indicates whether or not a generator should refold\n                           that value when transforming the message back into\n                           stream form.  The possible values are:\n\n                           none  -- all source values use original folding\n                           long  -- source values that have any line that is\n                                    longer than max_line_length will be\n                                    refolded\n                           all  -- all values are refolded.\n\n                           The default is 'long'.\n\n    header_factory      -- a callable that takes two arguments, 'name' and\n                           'value', where 'name' is a header field name and\n                           'value' is an unfolded header field value, and\n                           returns a string-like object that represents that\n                           header.  A default header_factory is provided that\n                           understands some of the RFC5322 header field types.\n                           (Currently address fields and date fields have\n                           special treatment, while all other fields are\n                           treated as unstructured.  This list will be\n                           completed before the extension is marked stable.)\n\n    content_manager     -- an object with at least two methods: get_content\n                           and set_content.  When the get_content or\n                           set_content method of a Message object is called,\n                           it calls the corresponding method of this object,\n                           passing it the message object as its first argument,\n                           and any arguments or keywords that were passed to\n                           it as additional arguments.  The default\n                           content_manager is\n                           :data:`~email.contentmanager.raw_data_manager`.\n\n    "
+  14: STORE_NAME           __doc__
+  16: LOAD_NAME            EmailMessage
+  18: STORE_NAME           message_factory
+  20: LOAD_CONST           False
+  22: STORE_NAME           utf8
+  24: LOAD_CONST           'long'
+  26: STORE_NAME           refold_source
+  28: PUSH_NULL            
+  30: LOAD_NAME            HeaderRegistry
+  32: PRECALL              
+  36: CALL                 
+  46: STORE_NAME           header_factory
+  48: LOAD_NAME            raw_data_manager
+  50: STORE_NAME           content_manager
+  52: LOAD_CLOSURE         __class__
+  54: BUILD_TUPLE          
+  56: LOAD_CONST           <code object __init__ at 0x00000240691F3B40, file "email\policy.py", line 93>
+  58: MAKE_FUNCTION        closure
+  60: STORE_NAME           __init__
+  62: LOAD_CONST           <code object header_max_count at 0x0000024069465DF0, file "email\policy.py", line 100>
+  64: MAKE_FUNCTION        
+  66: STORE_NAME           header_max_count
+  68: LOAD_CONST           <code object header_source_parse at 0x000002406942E100, file "email\policy.py", line 118>
+  70: MAKE_FUNCTION        
+  72: STORE_NAME           header_source_parse
+  74: LOAD_CONST           <code object header_store_parse at 0x0000024068BF59D0, file "email\policy.py", line 131>
+  76: MAKE_FUNCTION        
+  78: STORE_NAME           header_store_parse
+  80: LOAD_CONST           <code object header_fetch_parse at 0x000002406921F840, file "email\policy.py", line 150>
+  82: MAKE_FUNCTION        
+  84: STORE_NAME           header_fetch_parse
+  86: LOAD_CONST           <code object fold at 0x000002406945FF00, file "email\policy.py", line 165>
+  88: MAKE_FUNCTION        
+  90: STORE_NAME           fold
+  92: LOAD_CONST           <code object fold_binary at 0x00000240693AAAB0, file "email\policy.py", line 186>
+  94: MAKE_FUNCTION        
+  96: STORE_NAME           fold_binary
+  98: LOAD_CONST           (False,)
+ 100: LOAD_CONST           <code object _fold at 0x0000024068B79230, file "email\policy.py", line 204>
+ 102: MAKE_FUNCTION        defaults
+ 104: STORE_NAME           _fold
+ 106: LOAD_CLOSURE         __class__
+ 108: COPY                 
+ 110: STORE_NAME           __classcell__
+ 112: RETURN_VALUE         

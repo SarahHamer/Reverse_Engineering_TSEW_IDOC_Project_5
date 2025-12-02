@@ -1,0 +1,39 @@
+# Disassembly for shutil._basename
+# From module file: shutil
+
+## co_consts:
+("A basename() variant which first strips the trailing slash, if present.\n    Thus we always get the last component of the path, even for directories.\n\n    path: Union[PathLike, str]\n\n    e.g.\n    >>> os.path.basename('/bar/foo')\n    'foo'\n    >>> os.path.basename('/bar/foo/')\n    ''\n    >>> _basename('/bar/foo/')\n    'foo'\n    ", '')
+
+## co_names:
+('os', 'fspath', 'path', 'sep', 'altsep', 'basename', 'rstrip')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + os
+  14: LOAD_ATTR            fspath
+  24: LOAD_FAST            path
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           path
+  42: LOAD_GLOBAL          os
+  54: LOAD_ATTR            path
+  64: LOAD_ATTR            sep
+  74: LOAD_GLOBAL          os
+  86: LOAD_ATTR            path
+  96: LOAD_ATTR            altsep
+ 106: JUMP_IF_TRUE_OR_POP  to 110
+ 108: LOAD_CONST           ''
+ 110: BINARY_OP            +
+ 114: STORE_FAST           sep
+ 116: LOAD_GLOBAL          os
+ 128: LOAD_ATTR            path
+ 138: LOAD_METHOD          basename
+ 160: LOAD_FAST            path
+ 162: LOAD_METHOD          rstrip
+ 184: LOAD_FAST            sep
+ 186: PRECALL              
+ 190: CALL                 
+ 200: PRECALL              
+ 204: CALL                 
+ 214: RETURN_VALUE         

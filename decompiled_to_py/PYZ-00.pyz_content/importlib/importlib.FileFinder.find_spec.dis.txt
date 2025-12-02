@@ -1,0 +1,220 @@
+# Disassembly for importlib.FileFinder.find_spec
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Try to find a spec for the specified module.\n\n        Returns the matching spec, or None if not found.\n        ', False, '.', 2, -1, '__init__', None, 'trying {}', ('verbosity',), 'possible namespace for {}')
+
+## co_names:
+('rpartition', '_path_stat', 'path', '_os', 'getcwd', 'st_mtime', 'OSError', '_path_mtime', '_fill_cache', '_relax_case', '_relaxed_path_cache', 'lower', '_path_cache', '_path_join', '_loaders', '_path_isfile', '_get_spec', '_path_isdir', 'ValueError', '_bootstrap', '_verbose_message', 'ModuleSpec', 'submodule_search_locations')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           False
+   4: STORE_FAST           is_namespace
+   6: LOAD_FAST            fullname
+   8: LOAD_METHOD          rpartition
+  30: LOAD_CONST           '.'
+  32: PRECALL              
+  36: CALL                 
+  46: LOAD_CONST           2
+  48: BINARY_SUBSCR        
+  58: STORE_FAST           tail_module
+  60: NOP                  
+  62: LOAD_GLOBAL          NULL + _path_stat
+  74: LOAD_FAST            self
+  76: LOAD_ATTR            path
+  86: JUMP_IF_TRUE_OR_POP  to 124
+  88: LOAD_GLOBAL          NULL + _os
+ 100: LOAD_ATTR            getcwd
+ 110: PRECALL              
+ 114: CALL                 
+ 124: PRECALL              
+ 128: CALL                 
+ 138: LOAD_ATTR            st_mtime
+ 148: STORE_FAST           mtime
+ 150: JUMP_FORWARD         to 188
+ 152: PUSH_EXC_INFO        
+ 154: LOAD_GLOBAL          OSError
+ 166: CHECK_EXC_MATCH      
+ 168: POP_JUMP_FORWARD_IF_FALSE to 180
+ 170: POP_TOP              
+ 172: LOAD_CONST           -1
+ 174: STORE_FAST           mtime
+ 176: POP_EXCEPT           
+ 178: JUMP_FORWARD         to 188
+ 180: RERAISE              
+ 182: COPY                 
+ 184: POP_EXCEPT           
+ 186: RERAISE              
+ 188: LOAD_FAST            mtime
+ 190: LOAD_FAST            self
+ 192: LOAD_ATTR            _path_mtime
+ 202: COMPARE_OP           !=
+ 208: POP_JUMP_FORWARD_IF_FALSE to 264
+ 210: LOAD_FAST            self
+ 212: LOAD_METHOD          _fill_cache
+ 234: PRECALL              
+ 238: CALL                 
+ 248: POP_TOP              
+ 250: LOAD_FAST            mtime
+ 252: LOAD_FAST            self
+ 254: STORE_ATTR           _path_mtime
+ 264: LOAD_GLOBAL          NULL + _relax_case
+ 276: PRECALL              
+ 280: CALL                 
+ 290: POP_JUMP_FORWARD_IF_FALSE to 348
+ 292: LOAD_FAST            self
+ 294: LOAD_ATTR            _relaxed_path_cache
+ 304: STORE_FAST           cache
+ 306: LOAD_FAST            tail_module
+ 308: LOAD_METHOD          lower
+ 330: PRECALL              
+ 334: CALL                 
+ 344: STORE_FAST           cache_module
+ 346: JUMP_FORWARD         to 366
+ 348: LOAD_FAST            self
+ 350: LOAD_ATTR            _path_cache
+ 360: STORE_FAST           cache
+ 362: LOAD_FAST            tail_module
+ 364: STORE_FAST           cache_module
+ 366: LOAD_FAST            cache_module
+ 368: LOAD_FAST            cache
+ 370: CONTAINS_OP          
+ 372: POP_JUMP_FORWARD_IF_FALSE to 600
+ 374: LOAD_GLOBAL          NULL + _path_join
+ 386: LOAD_FAST            self
+ 388: LOAD_ATTR            path
+ 398: LOAD_FAST            tail_module
+ 400: PRECALL              
+ 404: CALL                 
+ 414: STORE_FAST           base_path
+ 416: LOAD_FAST            self
+ 418: LOAD_ATTR            _loaders
+ 428: GET_ITER             
+ 430: FOR_ITER             to 570
+ 432: UNPACK_SEQUENCE      
+ 436: STORE_FAST           suffix
+ 438: STORE_FAST           loader_class
+ 440: LOAD_CONST           '__init__'
+ 442: LOAD_FAST            suffix
+ 444: BINARY_OP            +
+ 448: STORE_FAST           init_filename
+ 450: LOAD_GLOBAL          NULL + _path_join
+ 462: LOAD_FAST            base_path
+ 464: LOAD_FAST            init_filename
+ 466: PRECALL              
+ 470: CALL                 
+ 480: STORE_FAST           full_path
+ 482: LOAD_GLOBAL          NULL + _path_isfile
+ 494: LOAD_FAST            full_path
+ 496: PRECALL              
+ 500: CALL                 
+ 510: POP_JUMP_FORWARD_IF_FALSE to 568
+ 512: LOAD_FAST            self
+ 514: LOAD_METHOD          _get_spec
+ 536: LOAD_FAST            loader_class
+ 538: LOAD_FAST            fullname
+ 540: LOAD_FAST            full_path
+ 542: LOAD_FAST            base_path
+ 544: BUILD_LIST           
+ 546: LOAD_FAST            target
+ 548: PRECALL              
+ 552: CALL                 
+ 562: SWAP                 
+ 564: POP_TOP              
+ 566: RETURN_VALUE         
+ 568: JUMP_BACKWARD        to 430
+ 570: LOAD_GLOBAL          NULL + _path_isdir
+ 582: LOAD_FAST            base_path
+ 584: PRECALL              
+ 588: CALL                 
+ 598: STORE_FAST           is_namespace
+ 600: LOAD_FAST            self
+ 602: LOAD_ATTR            _loaders
+ 612: GET_ITER             
+ 614: FOR_ITER             to 870
+ 616: UNPACK_SEQUENCE      
+ 620: STORE_FAST           suffix
+ 622: STORE_FAST           loader_class
+ 624: NOP                  
+ 626: LOAD_GLOBAL          NULL + _path_join
+ 638: LOAD_FAST            self
+ 640: LOAD_ATTR            path
+ 650: LOAD_FAST            tail_module
+ 652: LOAD_FAST            suffix
+ 654: BINARY_OP            +
+ 658: PRECALL              
+ 662: CALL                 
+ 672: STORE_FAST           full_path
+ 674: JUMP_FORWARD         to 712
+ 676: PUSH_EXC_INFO        
+ 678: LOAD_GLOBAL          ValueError
+ 690: CHECK_EXC_MATCH      
+ 692: POP_JUMP_FORWARD_IF_FALSE to 704
+ 694: POP_TOP              
+ 696: POP_EXCEPT           
+ 698: POP_TOP              
+ 700: LOAD_CONST           None
+ 702: RETURN_VALUE         
+ 704: RERAISE              
+ 706: COPY                 
+ 708: POP_EXCEPT           
+ 710: RERAISE              
+ 712: LOAD_GLOBAL          _bootstrap
+ 724: LOAD_METHOD          _verbose_message
+ 746: LOAD_CONST           'trying {}'
+ 748: LOAD_FAST            full_path
+ 750: LOAD_CONST           2
+ 752: KW_NAMES             
+ 754: PRECALL              
+ 758: CALL                 
+ 768: POP_TOP              
+ 770: LOAD_FAST            cache_module
+ 772: LOAD_FAST            suffix
+ 774: BINARY_OP            +
+ 778: LOAD_FAST            cache
+ 780: CONTAINS_OP          
+ 782: POP_JUMP_FORWARD_IF_FALSE to 868
+ 784: LOAD_GLOBAL          NULL + _path_isfile
+ 796: LOAD_FAST            full_path
+ 798: PRECALL              
+ 802: CALL                 
+ 812: POP_JUMP_FORWARD_IF_FALSE to 868
+ 814: LOAD_FAST            self
+ 816: LOAD_METHOD          _get_spec
+ 838: LOAD_FAST            loader_class
+ 840: LOAD_FAST            fullname
+ 842: LOAD_FAST            full_path
+ 844: LOAD_CONST           None
+ 846: LOAD_FAST            target
+ 848: PRECALL              
+ 852: CALL                 
+ 862: SWAP                 
+ 864: POP_TOP              
+ 866: RETURN_VALUE         
+ 868: JUMP_BACKWARD        to 614
+ 870: LOAD_FAST            is_namespace
+ 872: POP_JUMP_FORWARD_IF_FALSE to 1002
+ 874: LOAD_GLOBAL          _bootstrap
+ 886: LOAD_METHOD          _verbose_message
+ 908: LOAD_CONST           'possible namespace for {}'
+ 910: LOAD_FAST            base_path
+ 912: PRECALL              
+ 916: CALL                 
+ 926: POP_TOP              
+ 928: LOAD_GLOBAL          _bootstrap
+ 940: LOAD_METHOD          ModuleSpec
+ 962: LOAD_FAST            fullname
+ 964: LOAD_CONST           None
+ 966: PRECALL              
+ 970: CALL                 
+ 980: STORE_FAST           spec
+ 982: LOAD_FAST            base_path
+ 984: BUILD_LIST           
+ 986: LOAD_FAST            spec
+ 988: STORE_ATTR           submodule_search_locations
+ 998: LOAD_FAST            spec
+1000: RETURN_VALUE         
+1002: LOAD_CONST           None
+1004: RETURN_VALUE         

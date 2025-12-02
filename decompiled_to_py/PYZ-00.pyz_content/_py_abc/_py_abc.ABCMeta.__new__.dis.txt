@@ -1,0 +1,102 @@
+# Disassembly for _py_abc.ABCMeta.__new__
+# From module file: _py_abc
+
+## co_consts:
+(None, <code object <setcomp> at 0x00000240693EA530, file "_py_abc.py", line 38>, '__abstractmethods__', '__isabstractmethod__', False)
+
+## co_names:
+('super', '__new__', 'items', 'getattr', 'set', 'add', 'frozenset', '__abstractmethods__', 'WeakSet', '_abc_registry', '_abc_cache', '_abc_negative_cache', 'ABCMeta', '_abc_invalidation_counter', '_abc_negative_cache_version')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: PUSH_NULL            
+   6: LOAD_GLOBAL          NULL + super
+  18: PRECALL              
+  22: CALL                 
+  32: LOAD_ATTR            __new__
+  42: LOAD_FAST            mcls
+  44: LOAD_FAST            name
+  46: LOAD_FAST            bases
+  48: LOAD_FAST            namespace
+  50: BUILD_TUPLE          
+  52: BUILD_MAP            
+  54: LOAD_FAST            kwargs
+  56: DICT_MERGE           
+  58: CALL_FUNCTION_EX     
+  60: STORE_FAST           cls
+  62: LOAD_CONST           <code object <setcomp> at 0x00000240693EA530, file "_py_abc.py", line 38>
+  64: MAKE_FUNCTION        
+  66: LOAD_FAST            namespace
+  68: LOAD_METHOD          items
+  90: PRECALL              
+  94: CALL                 
+ 104: GET_ITER             
+ 106: PRECALL              
+ 110: CALL                 
+ 120: STORE_FAST           abstracts
+ 122: LOAD_FAST            bases
+ 124: GET_ITER             
+ 126: FOR_ITER             to 306
+ 128: STORE_FAST           base
+ 130: LOAD_GLOBAL          NULL + getattr
+ 142: LOAD_FAST            base
+ 144: LOAD_CONST           '__abstractmethods__'
+ 146: LOAD_GLOBAL          NULL + set
+ 158: PRECALL              
+ 162: CALL                 
+ 172: PRECALL              
+ 176: CALL                 
+ 186: GET_ITER             
+ 188: FOR_ITER             to 304
+ 190: STORE_FAST           name
+ 192: LOAD_GLOBAL          NULL + getattr
+ 204: LOAD_FAST            cls
+ 206: LOAD_FAST            name
+ 208: LOAD_CONST           None
+ 210: PRECALL              
+ 214: CALL                 
+ 224: STORE_FAST           value
+ 226: LOAD_GLOBAL          NULL + getattr
+ 238: LOAD_FAST            value
+ 240: LOAD_CONST           '__isabstractmethod__'
+ 242: LOAD_CONST           False
+ 244: PRECALL              
+ 248: CALL                 
+ 258: POP_JUMP_FORWARD_IF_FALSE to 302
+ 260: LOAD_FAST            abstracts
+ 262: LOAD_METHOD          add
+ 284: LOAD_FAST            name
+ 286: PRECALL              
+ 290: CALL                 
+ 300: POP_TOP              
+ 302: JUMP_BACKWARD        to 188
+ 304: JUMP_BACKWARD        to 126
+ 306: LOAD_GLOBAL          NULL + frozenset
+ 318: LOAD_FAST            abstracts
+ 320: PRECALL              
+ 324: CALL                 
+ 334: LOAD_FAST            cls
+ 336: STORE_ATTR           __abstractmethods__
+ 346: LOAD_GLOBAL          NULL + WeakSet
+ 358: PRECALL              
+ 362: CALL                 
+ 372: LOAD_FAST            cls
+ 374: STORE_ATTR           _abc_registry
+ 384: LOAD_GLOBAL          NULL + WeakSet
+ 396: PRECALL              
+ 400: CALL                 
+ 410: LOAD_FAST            cls
+ 412: STORE_ATTR           _abc_cache
+ 422: LOAD_GLOBAL          NULL + WeakSet
+ 434: PRECALL              
+ 438: CALL                 
+ 448: LOAD_FAST            cls
+ 450: STORE_ATTR           _abc_negative_cache
+ 460: LOAD_GLOBAL          ABCMeta
+ 472: LOAD_ATTR            _abc_invalidation_counter
+ 482: LOAD_FAST            cls
+ 484: STORE_ATTR           _abc_negative_cache_version
+ 494: LOAD_FAST            cls
+ 496: RETURN_VALUE         

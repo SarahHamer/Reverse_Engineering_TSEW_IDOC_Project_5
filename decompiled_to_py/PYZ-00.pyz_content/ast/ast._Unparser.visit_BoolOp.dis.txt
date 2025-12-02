@@ -1,0 +1,82 @@
+# Disassembly for ast._Unparser.visit_BoolOp
+# From module file: ast
+
+## co_consts:
+(None, <code object increasing_level_traverse at 0x0000024069CF4030, file "ast.py", line 1451>, ' ', <code object <lambda> at 0x0000024069CE4F30, file "ast.py", line 1459>)
+
+## co_names:
+('boolops', 'op', '__class__', '__name__', 'boolop_precedence', 'require_parens', 'interleave', 'values')
+
+## bytecode:
+
+   0: MAKE_CELL            self
+   2: MAKE_CELL            operator_precedence
+   4: MAKE_CELL            s
+   6: RESUME               
+   8: LOAD_DEREF           self
+  10: LOAD_ATTR            boolops
+  20: LOAD_FAST            node
+  22: LOAD_ATTR            op
+  32: LOAD_ATTR            __class__
+  42: LOAD_ATTR            __name__
+  52: BINARY_SUBSCR        
+  62: STORE_FAST           operator
+  64: LOAD_DEREF           self
+  66: LOAD_ATTR            boolop_precedence
+  76: LOAD_FAST            operator
+  78: BINARY_SUBSCR        
+  88: STORE_DEREF          operator_precedence
+  90: LOAD_CLOSURE         operator_precedence
+  92: LOAD_CLOSURE         self
+  94: BUILD_TUPLE          
+  96: LOAD_CONST           <code object increasing_level_traverse at 0x0000024069CF4030, file "ast.py", line 1451>
+  98: MAKE_FUNCTION        closure
+ 100: STORE_FAST           increasing_level_traverse
+ 102: LOAD_DEREF           self
+ 104: LOAD_METHOD          require_parens
+ 126: LOAD_DEREF           operator_precedence
+ 128: LOAD_FAST            node
+ 130: PRECALL              
+ 134: CALL                 
+ 144: BEFORE_WITH          
+ 146: POP_TOP              
+ 148: LOAD_CONST           ' '
+ 150: LOAD_FAST            operator
+ 152: FORMAT_VALUE         
+ 154: LOAD_CONST           ' '
+ 156: BUILD_STRING         
+ 158: STORE_DEREF          s
+ 160: LOAD_DEREF           self
+ 162: LOAD_METHOD          interleave
+ 184: LOAD_CLOSURE         s
+ 186: LOAD_CLOSURE         self
+ 188: BUILD_TUPLE          
+ 190: LOAD_CONST           <code object <lambda> at 0x0000024069CE4F30, file "ast.py", line 1459>
+ 192: MAKE_FUNCTION        closure
+ 194: LOAD_FAST            increasing_level_traverse
+ 196: LOAD_FAST            node
+ 198: LOAD_ATTR            values
+ 208: PRECALL              
+ 212: CALL                 
+ 222: POP_TOP              
+ 224: LOAD_CONST           None
+ 226: LOAD_CONST           None
+ 228: LOAD_CONST           None
+ 230: PRECALL              
+ 234: CALL                 
+ 244: POP_TOP              
+ 246: LOAD_CONST           None
+ 248: RETURN_VALUE         
+ 250: PUSH_EXC_INFO        
+ 252: WITH_EXCEPT_START    
+ 254: POP_JUMP_FORWARD_IF_TRUE to 264
+ 256: RERAISE              
+ 258: COPY                 
+ 260: POP_EXCEPT           
+ 262: RERAISE              
+ 264: POP_TOP              
+ 266: POP_EXCEPT           
+ 268: POP_TOP              
+ 270: POP_TOP              
+ 272: LOAD_CONST           None
+ 274: RETURN_VALUE         

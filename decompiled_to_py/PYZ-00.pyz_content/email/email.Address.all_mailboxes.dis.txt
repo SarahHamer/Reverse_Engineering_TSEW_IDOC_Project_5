@@ -1,0 +1,41 @@
+# Disassembly for email.Address.all_mailboxes
+# From module file: email._header_value_parser
+
+## co_consts:
+(None, 0, 'mailbox', 'invalid-mailbox')
+
+## co_names:
+('token_type', 'all_mailboxes')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_CONST           0
+   6: BINARY_SUBSCR        
+  16: LOAD_ATTR            token_type
+  26: LOAD_CONST           'mailbox'
+  28: COMPARE_OP           ==
+  34: POP_JUMP_FORWARD_IF_FALSE to 54
+  36: LOAD_FAST            self
+  38: LOAD_CONST           0
+  40: BINARY_SUBSCR        
+  50: BUILD_LIST           
+  52: RETURN_VALUE         
+  54: LOAD_FAST            self
+  56: LOAD_CONST           0
+  58: BINARY_SUBSCR        
+  68: LOAD_ATTR            token_type
+  78: LOAD_CONST           'invalid-mailbox'
+  80: COMPARE_OP           ==
+  86: POP_JUMP_FORWARD_IF_FALSE to 106
+  88: LOAD_FAST            self
+  90: LOAD_CONST           0
+  92: BINARY_SUBSCR        
+ 102: BUILD_LIST           
+ 104: RETURN_VALUE         
+ 106: LOAD_FAST            self
+ 108: LOAD_CONST           0
+ 110: BINARY_SUBSCR        
+ 120: LOAD_ATTR            all_mailboxes
+ 130: RETURN_VALUE         

@@ -1,0 +1,57 @@
+# Disassembly for ast.copy_location
+# From module file: ast
+
+## co_consts:
+('\n    Copy source location (`lineno`, `col_offset`, `end_lineno`, and `end_col_offset`\n    attributes) from *old_node* to *new_node* if possible, and return *new_node*.\n    ', ('lineno', 'col_offset', 'end_lineno', 'end_col_offset'), None, 'end_')
+
+## co_names:
+('_attributes', 'getattr', 'hasattr', 'startswith', 'setattr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           ('lineno', 'col_offset', 'end_lineno', 'end_col_offset')
+   4: GET_ITER             
+   6: FOR_ITER             to 194
+   8: STORE_FAST           attr
+  10: LOAD_FAST            attr
+  12: LOAD_FAST            old_node
+  14: LOAD_ATTR            _attributes
+  24: CONTAINS_OP          
+  26: POP_JUMP_FORWARD_IF_FALSE to 192
+  28: LOAD_FAST            attr
+  30: LOAD_FAST            new_node
+  32: LOAD_ATTR            _attributes
+  42: CONTAINS_OP          
+  44: POP_JUMP_FORWARD_IF_FALSE to 192
+  46: LOAD_GLOBAL          NULL + getattr
+  58: LOAD_FAST            old_node
+  60: LOAD_FAST            attr
+  62: LOAD_CONST           None
+  64: PRECALL              
+  68: CALL                 
+  78: STORE_FAST           value
+  80: LOAD_FAST            value
+  82: POP_JUMP_FORWARD_IF_NOT_NONE to 158
+  84: LOAD_GLOBAL          NULL + hasattr
+  96: LOAD_FAST            old_node
+  98: LOAD_FAST            attr
+ 100: PRECALL              
+ 104: CALL                 
+ 114: POP_JUMP_FORWARD_IF_FALSE to 192
+ 116: LOAD_FAST            attr
+ 118: LOAD_METHOD          startswith
+ 140: LOAD_CONST           'end_'
+ 142: PRECALL              
+ 146: CALL                 
+ 156: POP_JUMP_FORWARD_IF_FALSE to 192
+ 158: LOAD_GLOBAL          NULL + setattr
+ 170: LOAD_FAST            new_node
+ 172: LOAD_FAST            attr
+ 174: LOAD_FAST            value
+ 176: PRECALL              
+ 180: CALL                 
+ 190: POP_TOP              
+ 192: JUMP_BACKWARD        to 6
+ 194: LOAD_FAST            new_node
+ 196: RETURN_VALUE         

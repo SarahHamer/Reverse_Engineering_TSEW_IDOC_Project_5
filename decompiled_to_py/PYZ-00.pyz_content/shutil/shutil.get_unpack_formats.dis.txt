@@ -1,0 +1,29 @@
+# Disassembly for shutil.get_unpack_formats
+# From module file: shutil
+
+## co_consts:
+('Returns a list of supported formats for unpacking.\n\n    Each element of the returned sequence is a tuple\n    (name, extensions, description)\n    ', <code object <listcomp> at 0x000002406945E970, file "shutil.py", line 1153>)
+
+## co_names:
+('_UNPACK_FORMATS', 'items', 'sort')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           <code object <listcomp> at 0x000002406945E970, file "shutil.py", line 1153>
+   4: MAKE_FUNCTION        
+   6: LOAD_GLOBAL          _UNPACK_FORMATS
+  18: LOAD_METHOD          items
+  40: PRECALL              
+  44: CALL                 
+  54: GET_ITER             
+  56: PRECALL              
+  60: CALL                 
+  70: STORE_FAST           formats
+  72: LOAD_FAST            formats
+  74: LOAD_METHOD          sort
+  96: PRECALL              
+ 100: CALL                 
+ 110: POP_TOP              
+ 112: LOAD_FAST            formats
+ 114: RETURN_VALUE         

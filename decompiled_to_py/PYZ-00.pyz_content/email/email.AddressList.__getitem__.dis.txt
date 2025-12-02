@@ -1,0 +1,17 @@
+# Disassembly for email.AddressList.__getitem__
+# From module file: email._parseaddr
+
+## co_consts:
+(None,)
+
+## co_names:
+('addresslist',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            addresslist
+  14: LOAD_FAST            index
+  16: BINARY_SUBSCR        
+  26: RETURN_VALUE         

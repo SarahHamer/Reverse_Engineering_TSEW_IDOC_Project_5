@@ -1,0 +1,124 @@
+# Disassembly for http.HTTPConnection.getresponse
+# From module file: http.client
+
+## co_consts:
+('Get the response from the server.\n\n        If the HTTPConnection is in the correct state, returns an\n        instance of HTTPResponse or of whatever object is returned by\n        the response_class variable.\n\n        If a request has not been sent or if a previous response has\n        not be handled, ResponseNotReady is raised.  If the HTTP\n        response indicates that the connection should be closed, then\n        it will be closed before the response is returned.  When the\n        connection is closed, the underlying socket is closed.\n        ', None, 0, ('method',))
+
+## co_names:
+('_HTTPConnection__response', 'isclosed', '_HTTPConnection__state', '_CS_REQ_SENT', 'ResponseNotReady', 'debuglevel', 'response_class', 'sock', '_method', 'begin', 'ConnectionError', 'close', 'will_close', '_UNKNOWN', '_CS_IDLE')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _HTTPConnection__response
+  14: POP_JUMP_FORWARD_IF_FALSE to 80
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            _HTTPConnection__response
+  28: LOAD_METHOD          isclosed
+  50: PRECALL              
+  54: CALL                 
+  64: POP_JUMP_FORWARD_IF_FALSE to 80
+  66: LOAD_CONST           None
+  68: LOAD_FAST            self
+  70: STORE_ATTR           _HTTPConnection__response
+  80: LOAD_FAST            self
+  82: LOAD_ATTR            _HTTPConnection__state
+  92: LOAD_GLOBAL          _CS_REQ_SENT
+ 104: COMPARE_OP           !=
+ 110: POP_JUMP_FORWARD_IF_TRUE to 126
+ 112: LOAD_FAST            self
+ 114: LOAD_ATTR            _HTTPConnection__response
+ 124: POP_JUMP_FORWARD_IF_FALSE to 166
+ 126: LOAD_GLOBAL          NULL + ResponseNotReady
+ 138: LOAD_FAST            self
+ 140: LOAD_ATTR            _HTTPConnection__state
+ 150: PRECALL              
+ 154: CALL                 
+ 164: RAISE_VARARGS        
+ 166: LOAD_FAST            self
+ 168: LOAD_ATTR            debuglevel
+ 178: LOAD_CONST           0
+ 180: COMPARE_OP           >
+ 186: POP_JUMP_FORWARD_IF_FALSE to 268
+ 188: LOAD_FAST            self
+ 190: LOAD_METHOD          response_class
+ 212: LOAD_FAST            self
+ 214: LOAD_ATTR            sock
+ 224: LOAD_FAST            self
+ 226: LOAD_ATTR            debuglevel
+ 236: LOAD_FAST            self
+ 238: LOAD_ATTR            _method
+ 248: KW_NAMES             
+ 250: PRECALL              
+ 254: CALL                 
+ 264: STORE_FAST           response
+ 266: JUMP_FORWARD         to 334
+ 268: LOAD_FAST            self
+ 270: LOAD_METHOD          response_class
+ 292: LOAD_FAST            self
+ 294: LOAD_ATTR            sock
+ 304: LOAD_FAST            self
+ 306: LOAD_ATTR            _method
+ 316: KW_NAMES             
+ 318: PRECALL              
+ 322: CALL                 
+ 332: STORE_FAST           response
+ 334: NOP                  
+ 336: NOP                  
+ 338: LOAD_FAST            response
+ 340: LOAD_METHOD          begin
+ 362: PRECALL              
+ 366: CALL                 
+ 376: POP_TOP              
+ 378: JUMP_FORWARD         to 450
+ 380: PUSH_EXC_INFO        
+ 382: LOAD_GLOBAL          ConnectionError
+ 394: CHECK_EXC_MATCH      
+ 396: POP_JUMP_FORWARD_IF_FALSE to 442
+ 398: POP_TOP              
+ 400: LOAD_FAST            self
+ 402: LOAD_METHOD          close
+ 424: PRECALL              
+ 428: CALL                 
+ 438: POP_TOP              
+ 440: RAISE_VARARGS        
+ 442: RERAISE              
+ 444: COPY                 
+ 446: POP_EXCEPT           
+ 448: RERAISE              
+ 450: LOAD_FAST            response
+ 452: LOAD_ATTR            will_close
+ 462: LOAD_GLOBAL          _UNKNOWN
+ 474: COMPARE_OP           !=
+ 480: POP_JUMP_FORWARD_IF_TRUE to 486
+ 482: LOAD_ASSERTION_ERROR 
+ 484: RAISE_VARARGS        
+ 486: LOAD_GLOBAL          _CS_IDLE
+ 498: LOAD_FAST            self
+ 500: STORE_ATTR           _HTTPConnection__state
+ 510: LOAD_FAST            response
+ 512: LOAD_ATTR            will_close
+ 522: POP_JUMP_FORWARD_IF_FALSE to 566
+ 524: LOAD_FAST            self
+ 526: LOAD_METHOD          close
+ 548: PRECALL              
+ 552: CALL                 
+ 562: POP_TOP              
+ 564: JUMP_FORWARD         to 580
+ 566: LOAD_FAST            response
+ 568: LOAD_FAST            self
+ 570: STORE_ATTR           _HTTPConnection__response
+ 580: LOAD_FAST            response
+ 582: RETURN_VALUE         
+ 584: PUSH_EXC_INFO        
+ 586: POP_TOP              
+ 588: LOAD_FAST            response
+ 590: LOAD_METHOD          close
+ 612: PRECALL              
+ 616: CALL                 
+ 626: POP_TOP              
+ 628: RAISE_VARARGS        
+ 630: COPY                 
+ 632: POP_EXCEPT           
+ 634: RERAISE              

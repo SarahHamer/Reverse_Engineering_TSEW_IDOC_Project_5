@@ -1,0 +1,23 @@
+# Disassembly for importlib._path_join
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Replacement for os.path.join().', <code object <listcomp> at 0x00000240693EA730, file "importlib\_bootstrap_external.py", line 128>)
+
+## co_names:
+('path_sep', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          path_sep
+  14: LOAD_METHOD          join
+  36: LOAD_CONST           <code object <listcomp> at 0x00000240693EA730, file "importlib\_bootstrap_external.py", line 128>
+  38: MAKE_FUNCTION        
+  40: LOAD_FAST            path_parts
+  42: GET_ITER             
+  44: PRECALL              
+  48: CALL                 
+  58: PRECALL              
+  62: CALL                 
+  72: RETURN_VALUE         

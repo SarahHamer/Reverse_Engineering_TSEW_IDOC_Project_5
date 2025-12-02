@@ -1,0 +1,38 @@
+# Disassembly for typing._UnpackGenericAlias.__typing_is_unpacked_typevartuple__
+# From module file: typing
+
+## co_consts:
+(None, 1, 0)
+
+## co_names:
+('__origin__', 'Unpack', 'len', '__args__', 'isinstance', 'TypeVarTuple')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            __origin__
+  14: LOAD_GLOBAL          Unpack
+  26: IS_OP                
+  28: POP_JUMP_FORWARD_IF_TRUE to 34
+  30: LOAD_ASSERTION_ERROR 
+  32: RAISE_VARARGS        
+  34: LOAD_GLOBAL          NULL + len
+  46: LOAD_FAST            self
+  48: LOAD_ATTR            __args__
+  58: PRECALL              
+  62: CALL                 
+  72: LOAD_CONST           1
+  74: COMPARE_OP           ==
+  80: POP_JUMP_FORWARD_IF_TRUE to 86
+  82: LOAD_ASSERTION_ERROR 
+  84: RAISE_VARARGS        
+  86: LOAD_GLOBAL          NULL + isinstance
+  98: LOAD_FAST            self
+ 100: LOAD_ATTR            __args__
+ 110: LOAD_CONST           0
+ 112: BINARY_SUBSCR        
+ 122: LOAD_GLOBAL          TypeVarTuple
+ 134: PRECALL              
+ 138: CALL                 
+ 148: RETURN_VALUE         

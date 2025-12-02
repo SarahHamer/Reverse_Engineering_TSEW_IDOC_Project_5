@@ -1,0 +1,28 @@
+# Disassembly for logging.StreamHandler.__init__
+# From module file: logging
+
+## co_consts:
+('\n        Initialize the handler.\n\n        If stream is not specified, sys.stderr is used.\n        ', None)
+
+## co_names:
+('Handler', '__init__', 'sys', 'stderr', 'stream')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          Handler
+  14: LOAD_METHOD          __init__
+  36: LOAD_FAST            self
+  38: PRECALL              
+  42: CALL                 
+  52: POP_TOP              
+  54: LOAD_FAST            stream
+  56: POP_JUMP_FORWARD_IF_NOT_NONE to 82
+  58: LOAD_GLOBAL          sys
+  70: LOAD_ATTR            stderr
+  80: STORE_FAST           stream
+  82: LOAD_FAST            stream
+  84: LOAD_FAST            self
+  86: STORE_ATTR           stream
+  96: LOAD_CONST           None
+  98: RETURN_VALUE         

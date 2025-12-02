@@ -1,0 +1,91 @@
+# Disassembly for email.Charset.body_encode
+# From module file: email.charset
+
+## co_consts:
+('Body-encode a string by converting it first to bytes.\n\n        The type of encoding (base64 or quoted-printable) will be based on\n        self.body_encoding.  If body_encoding is None, we assume the\n        output charset is a 7bit encoding, so re-encoding the decoded\n        string using the ascii codec produces the correct string version\n        of the content.\n        ', 'latin1', 'ascii')
+
+## co_names:
+('body_encoding', 'BASE64', 'isinstance', 'str', 'encode', 'output_charset', 'email', 'base64mime', 'body_encode', 'QP', 'decode', 'quoprimime')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            string
+   4: POP_JUMP_FORWARD_IF_TRUE to 10
+   6: LOAD_FAST            string
+   8: RETURN_VALUE         
+  10: LOAD_FAST            self
+  12: LOAD_ATTR            body_encoding
+  22: LOAD_GLOBAL          BASE64
+  34: IS_OP                
+  36: POP_JUMP_FORWARD_IF_FALSE to 194
+  38: LOAD_GLOBAL          NULL + isinstance
+  50: LOAD_FAST            string
+  52: LOAD_GLOBAL          str
+  64: PRECALL              
+  68: CALL                 
+  78: POP_JUMP_FORWARD_IF_FALSE to 132
+  80: LOAD_FAST            string
+  82: LOAD_METHOD          encode
+ 104: LOAD_FAST            self
+ 106: LOAD_ATTR            output_charset
+ 116: PRECALL              
+ 120: CALL                 
+ 130: STORE_FAST           string
+ 132: LOAD_GLOBAL          email
+ 144: LOAD_ATTR            base64mime
+ 154: LOAD_METHOD          body_encode
+ 176: LOAD_FAST            string
+ 178: PRECALL              
+ 182: CALL                 
+ 192: RETURN_VALUE         
+ 194: LOAD_FAST            self
+ 196: LOAD_ATTR            body_encoding
+ 206: LOAD_GLOBAL          QP
+ 218: IS_OP                
+ 220: POP_JUMP_FORWARD_IF_FALSE to 420
+ 222: LOAD_GLOBAL          NULL + isinstance
+ 234: LOAD_FAST            string
+ 236: LOAD_GLOBAL          str
+ 248: PRECALL              
+ 252: CALL                 
+ 262: POP_JUMP_FORWARD_IF_FALSE to 316
+ 264: LOAD_FAST            string
+ 266: LOAD_METHOD          encode
+ 288: LOAD_FAST            self
+ 290: LOAD_ATTR            output_charset
+ 300: PRECALL              
+ 304: CALL                 
+ 314: STORE_FAST           string
+ 316: LOAD_FAST            string
+ 318: LOAD_METHOD          decode
+ 340: LOAD_CONST           'latin1'
+ 342: PRECALL              
+ 346: CALL                 
+ 356: STORE_FAST           string
+ 358: LOAD_GLOBAL          email
+ 370: LOAD_ATTR            quoprimime
+ 380: LOAD_METHOD          body_encode
+ 402: LOAD_FAST            string
+ 404: PRECALL              
+ 408: CALL                 
+ 418: RETURN_VALUE         
+ 420: LOAD_GLOBAL          NULL + isinstance
+ 432: LOAD_FAST            string
+ 434: LOAD_GLOBAL          str
+ 446: PRECALL              
+ 450: CALL                 
+ 460: POP_JUMP_FORWARD_IF_FALSE to 552
+ 462: LOAD_FAST            string
+ 464: LOAD_METHOD          encode
+ 486: LOAD_FAST            self
+ 488: LOAD_ATTR            output_charset
+ 498: PRECALL              
+ 502: CALL                 
+ 512: LOAD_METHOD          decode
+ 534: LOAD_CONST           'ascii'
+ 536: PRECALL              
+ 540: CALL                 
+ 550: STORE_FAST           string
+ 552: LOAD_FAST            string
+ 554: RETURN_VALUE         

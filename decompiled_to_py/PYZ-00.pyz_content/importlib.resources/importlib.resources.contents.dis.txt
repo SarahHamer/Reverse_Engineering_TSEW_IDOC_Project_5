@@ -1,0 +1,26 @@
+# Disassembly for importlib.resources.contents
+# From module file: importlib.resources._legacy
+
+## co_consts:
+('Return an iterable of entries in `package`.\n\n    Note that not all entries are resources.  Specifically, directories are\n    not considered resources.  Use `is_resource()` on each entry returned here\n    to check if it is a resource or not.\n    ', <code object <listcomp> at 0x0000024069465610, file "importlib\resources\_legacy.py", line 92>)
+
+## co_names:
+('_common', 'files', 'iterdir')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           <code object <listcomp> at 0x0000024069465610, file "importlib\resources\_legacy.py", line 92>
+   4: MAKE_FUNCTION        
+   6: LOAD_GLOBAL          NULL + _common
+  18: LOAD_ATTR            files
+  28: LOAD_FAST            package
+  30: PRECALL              
+  34: CALL                 
+  44: LOAD_METHOD          iterdir
+  66: PRECALL              
+  70: CALL                 
+  80: GET_ITER             
+  82: PRECALL              
+  86: CALL                 
+  96: RETURN_VALUE         

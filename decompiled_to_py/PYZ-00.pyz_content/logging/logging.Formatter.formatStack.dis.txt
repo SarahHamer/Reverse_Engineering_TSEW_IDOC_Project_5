@@ -1,0 +1,14 @@
+# Disassembly for logging.Formatter.formatStack
+# From module file: logging
+
+## co_consts:
+('\n        This method is provided as an extension point for specialized\n        formatting of stack information.\n\n        The input data is a string as returned from a call to\n        :func:`traceback.print_stack`, but with the last trailing newline\n        removed.\n\n        The base implementation just returns the value passed in.\n        ',)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            stack_info
+   4: RETURN_VALUE         

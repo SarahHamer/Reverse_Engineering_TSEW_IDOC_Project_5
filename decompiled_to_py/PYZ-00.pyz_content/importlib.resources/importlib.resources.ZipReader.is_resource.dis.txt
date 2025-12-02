@@ -1,0 +1,31 @@
+# Disassembly for importlib.resources.ZipReader.is_resource
+# From module file: importlib.resources.readers
+
+## co_consts:
+(None,)
+
+## co_names:
+('files', 'joinpath', 'is_file', 'exists')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          files
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_METHOD          joinpath
+  62: LOAD_FAST            path
+  64: PRECALL              
+  68: CALL                 
+  78: STORE_FAST           target
+  80: LOAD_FAST            target
+  82: LOAD_METHOD          is_file
+ 104: PRECALL              
+ 108: CALL                 
+ 118: JUMP_IF_FALSE_OR_POP to 158
+ 120: LOAD_FAST            target
+ 122: LOAD_METHOD          exists
+ 144: PRECALL              
+ 148: CALL                 
+ 158: RETURN_VALUE         

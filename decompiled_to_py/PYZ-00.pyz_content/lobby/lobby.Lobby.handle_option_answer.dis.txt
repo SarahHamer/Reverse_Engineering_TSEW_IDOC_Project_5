@@ -1,0 +1,99 @@
+# Disassembly for lobby.Lobby.handle_option_answer
+# From module file: lobby
+
+## co_consts:
+(None, 'X', 'You walk through the open door and everything goes white!', 'Playroom', "The exit is locked.  You shake the door as hard as you can, but it doesn't open.\nYou don't see any lock, lever, or anything else to open it.", 'F', 'You head forward through the door.', 'Breakroom', 'L', 'You head through the left door.', 'Gift Shop')
+
+## co_names:
+('is_opened', 'send_message', 'world', 'player', 'set_parent', 'rooms')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            value
+   4: COPY                 
+   6: LOAD_CONST           'X'
+   8: COMPARE_OP           ==
+  14: POP_JUMP_FORWARD_IF_FALSE to 218
+  16: POP_TOP              
+  18: LOAD_FAST            self
+  20: LOAD_ATTR            is_opened
+  30: POP_JUMP_FORWARD_IF_FALSE to 172
+  32: LOAD_FAST            self
+  34: LOAD_METHOD          send_message
+  56: LOAD_CONST           'You walk through the open door and everything goes white!'
+  58: PRECALL              
+  62: CALL                 
+  72: POP_TOP              
+  74: LOAD_FAST            self
+  76: LOAD_ATTR            world
+  86: LOAD_ATTR            player
+  96: LOAD_METHOD          set_parent
+ 118: LOAD_FAST            self
+ 120: LOAD_ATTR            world
+ 130: LOAD_ATTR            rooms
+ 140: LOAD_CONST           'Playroom'
+ 142: BINARY_SUBSCR        
+ 152: PRECALL              
+ 156: CALL                 
+ 166: POP_TOP              
+ 168: LOAD_CONST           None
+ 170: RETURN_VALUE         
+ 172: LOAD_FAST            self
+ 174: LOAD_METHOD          send_message
+ 196: LOAD_CONST           "The exit is locked.  You shake the door as hard as you can, but it doesn't open.\nYou don't see any lock, lever, or anything else to open it."
+ 198: PRECALL              
+ 202: CALL                 
+ 212: POP_TOP              
+ 214: LOAD_CONST           None
+ 216: RETURN_VALUE         
+ 218: COPY                 
+ 220: LOAD_CONST           'F'
+ 222: COMPARE_OP           ==
+ 228: POP_JUMP_FORWARD_IF_FALSE to 372
+ 230: POP_TOP              
+ 232: LOAD_FAST            self
+ 234: LOAD_METHOD          send_message
+ 256: LOAD_CONST           'You head forward through the door.'
+ 258: PRECALL              
+ 262: CALL                 
+ 272: POP_TOP              
+ 274: LOAD_FAST            self
+ 276: LOAD_ATTR            world
+ 286: LOAD_ATTR            player
+ 296: LOAD_METHOD          set_parent
+ 318: LOAD_FAST            self
+ 320: LOAD_ATTR            world
+ 330: LOAD_ATTR            rooms
+ 340: LOAD_CONST           'Breakroom'
+ 342: BINARY_SUBSCR        
+ 352: PRECALL              
+ 356: CALL                 
+ 366: POP_TOP              
+ 368: LOAD_CONST           None
+ 370: RETURN_VALUE         
+ 372: LOAD_CONST           'L'
+ 374: COMPARE_OP           ==
+ 380: POP_JUMP_FORWARD_IF_FALSE to 522
+ 382: LOAD_FAST            self
+ 384: LOAD_METHOD          send_message
+ 406: LOAD_CONST           'You head through the left door.'
+ 408: PRECALL              
+ 412: CALL                 
+ 422: POP_TOP              
+ 424: LOAD_FAST            self
+ 426: LOAD_ATTR            world
+ 436: LOAD_ATTR            player
+ 446: LOAD_METHOD          set_parent
+ 468: LOAD_FAST            self
+ 470: LOAD_ATTR            world
+ 480: LOAD_ATTR            rooms
+ 490: LOAD_CONST           'Gift Shop'
+ 492: BINARY_SUBSCR        
+ 502: PRECALL              
+ 506: CALL                 
+ 516: POP_TOP              
+ 518: LOAD_CONST           None
+ 520: RETURN_VALUE         
+ 522: LOAD_CONST           None
+ 524: RETURN_VALUE         

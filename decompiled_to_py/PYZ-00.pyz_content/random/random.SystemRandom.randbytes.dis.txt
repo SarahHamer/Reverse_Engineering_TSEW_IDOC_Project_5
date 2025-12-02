@@ -1,0 +1,17 @@
+# Disassembly for random.SystemRandom.randbytes
+# From module file: random
+
+## co_consts:
+('Generate n random bytes.',)
+
+## co_names:
+('_urandom',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _urandom
+  14: LOAD_FAST            n
+  16: PRECALL              
+  20: CALL                 
+  30: RETURN_VALUE         

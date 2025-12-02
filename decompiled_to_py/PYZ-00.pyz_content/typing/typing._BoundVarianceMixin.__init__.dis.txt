@@ -1,0 +1,49 @@
+# Disassembly for typing._BoundVarianceMixin.__init__
+# From module file: typing
+
+## co_consts:
+("Used to setup TypeVars and ParamSpec's bound, covariant and\n        contravariant attributes.\n        ", 'Bivariant types are not supported.', 'Bound must be a type.', None)
+
+## co_names:
+('ValueError', 'bool', '__covariant__', '__contravariant__', '_type_check', '__bound__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            covariant
+   4: POP_JUMP_FORWARD_IF_FALSE to 40
+   6: LOAD_FAST            contravariant
+   8: POP_JUMP_FORWARD_IF_FALSE to 40
+  10: LOAD_GLOBAL          NULL + ValueError
+  22: LOAD_CONST           'Bivariant types are not supported.'
+  24: PRECALL              
+  28: CALL                 
+  38: RAISE_VARARGS        
+  40: LOAD_GLOBAL          NULL + bool
+  52: LOAD_FAST            covariant
+  54: PRECALL              
+  58: CALL                 
+  68: LOAD_FAST            self
+  70: STORE_ATTR           __covariant__
+  80: LOAD_GLOBAL          NULL + bool
+  92: LOAD_FAST            contravariant
+  94: PRECALL              
+  98: CALL                 
+ 108: LOAD_FAST            self
+ 110: STORE_ATTR           __contravariant__
+ 120: LOAD_FAST            bound
+ 122: POP_JUMP_FORWARD_IF_FALSE to 170
+ 124: LOAD_GLOBAL          NULL + _type_check
+ 136: LOAD_FAST            bound
+ 138: LOAD_CONST           'Bound must be a type.'
+ 140: PRECALL              
+ 144: CALL                 
+ 154: LOAD_FAST            self
+ 156: STORE_ATTR           __bound__
+ 166: LOAD_CONST           None
+ 168: RETURN_VALUE         
+ 170: LOAD_CONST           None
+ 172: LOAD_FAST            self
+ 174: STORE_ATTR           __bound__
+ 184: LOAD_CONST           None
+ 186: RETURN_VALUE         

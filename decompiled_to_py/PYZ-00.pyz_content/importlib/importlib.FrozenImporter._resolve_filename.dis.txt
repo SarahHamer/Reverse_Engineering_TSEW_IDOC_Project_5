@@ -1,0 +1,119 @@
+# Disassembly for importlib.FrozenImporter._resolve_filename
+# From module file: importlib._bootstrap
+
+## co_consts:
+(None, '_stdlib_dir', (None, None), 'win32', '\\', '/', '<', 1, '.__init__', False, '.', '__init__.py', '.py')
+
+## co_names:
+('getattr', 'sys', '_SEP', 'AttributeError', 'platform', 'startswith', 'replace', '_stdlib_dir')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            fullname
+   4: POP_JUMP_FORWARD_IF_FALSE to 50
+   6: LOAD_GLOBAL          NULL + getattr
+  18: LOAD_GLOBAL          sys
+  30: LOAD_CONST           '_stdlib_dir'
+  32: LOAD_CONST           None
+  34: PRECALL              
+  38: CALL                 
+  48: POP_JUMP_FORWARD_IF_TRUE to 54
+  50: LOAD_CONST           (None, None)
+  52: RETURN_VALUE         
+  54: NOP                  
+  56: LOAD_FAST            cls
+  58: LOAD_ATTR            _SEP
+  68: STORE_FAST           sep
+  70: JUMP_FORWARD         to 158
+  72: PUSH_EXC_INFO        
+  74: LOAD_GLOBAL          AttributeError
+  86: CHECK_EXC_MATCH      
+  88: POP_JUMP_FORWARD_IF_FALSE to 150
+  90: POP_TOP              
+  92: LOAD_GLOBAL          sys
+ 104: LOAD_ATTR            platform
+ 114: LOAD_CONST           'win32'
+ 116: COMPARE_OP           ==
+ 122: POP_JUMP_FORWARD_IF_FALSE to 128
+ 124: LOAD_CONST           '\\'
+ 126: JUMP_FORWARD         to 130
+ 128: LOAD_CONST           '/'
+ 130: COPY                 
+ 132: STORE_FAST           sep
+ 134: LOAD_FAST            cls
+ 136: STORE_ATTR           _SEP
+ 146: POP_EXCEPT           
+ 148: JUMP_FORWARD         to 158
+ 150: RERAISE              
+ 152: COPY                 
+ 154: POP_EXCEPT           
+ 156: RERAISE              
+ 158: LOAD_FAST            fullname
+ 160: LOAD_FAST            alias
+ 162: COMPARE_OP           !=
+ 168: POP_JUMP_FORWARD_IF_FALSE to 252
+ 170: LOAD_FAST            fullname
+ 172: LOAD_METHOD          startswith
+ 194: LOAD_CONST           '<'
+ 196: PRECALL              
+ 200: CALL                 
+ 210: POP_JUMP_FORWARD_IF_FALSE to 248
+ 212: LOAD_FAST            fullname
+ 214: LOAD_CONST           1
+ 216: LOAD_CONST           None
+ 218: BUILD_SLICE          
+ 220: BINARY_SUBSCR        
+ 230: STORE_FAST           fullname
+ 232: LOAD_FAST            ispkg
+ 234: POP_JUMP_FORWARD_IF_TRUE to 246
+ 236: LOAD_FAST            fullname
+ 238: FORMAT_VALUE         
+ 240: LOAD_CONST           '.__init__'
+ 242: BUILD_STRING         
+ 244: STORE_FAST           fullname
+ 246: JUMP_FORWARD         to 252
+ 248: LOAD_CONST           False
+ 250: STORE_FAST           ispkg
+ 252: LOAD_FAST            fullname
+ 254: LOAD_METHOD          replace
+ 276: LOAD_CONST           '.'
+ 278: LOAD_FAST            sep
+ 280: PRECALL              
+ 284: CALL                 
+ 294: STORE_FAST           relfile
+ 296: LOAD_FAST            ispkg
+ 298: POP_JUMP_FORWARD_IF_FALSE to 352
+ 300: LOAD_GLOBAL          sys
+ 312: LOAD_ATTR            _stdlib_dir
+ 322: FORMAT_VALUE         
+ 324: LOAD_FAST            sep
+ 326: FORMAT_VALUE         
+ 328: LOAD_FAST            relfile
+ 330: FORMAT_VALUE         
+ 332: BUILD_STRING         
+ 334: STORE_FAST           pkgdir
+ 336: LOAD_FAST            pkgdir
+ 338: FORMAT_VALUE         
+ 340: LOAD_FAST            sep
+ 342: FORMAT_VALUE         
+ 344: LOAD_CONST           '__init__.py'
+ 346: BUILD_STRING         
+ 348: STORE_FAST           filename
+ 350: JUMP_FORWARD         to 394
+ 352: LOAD_CONST           None
+ 354: STORE_FAST           pkgdir
+ 356: LOAD_GLOBAL          sys
+ 368: LOAD_ATTR            _stdlib_dir
+ 378: FORMAT_VALUE         
+ 380: LOAD_FAST            sep
+ 382: FORMAT_VALUE         
+ 384: LOAD_FAST            relfile
+ 386: FORMAT_VALUE         
+ 388: LOAD_CONST           '.py'
+ 390: BUILD_STRING         
+ 392: STORE_FAST           filename
+ 394: LOAD_FAST            filename
+ 396: LOAD_FAST            pkgdir
+ 398: BUILD_TUPLE          
+ 400: RETURN_VALUE         

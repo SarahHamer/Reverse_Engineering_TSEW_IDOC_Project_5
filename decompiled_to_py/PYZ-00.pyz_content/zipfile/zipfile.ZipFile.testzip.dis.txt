@@ -1,0 +1,79 @@
+# Disassembly for zipfile.ZipFile.testzip
+# From module file: zipfile
+
+## co_consts:
+('Read all the files and check the CRC.', 1048576, 'r', None)
+
+## co_names:
+('filelist', 'open', 'filename', 'read', 'BadZipFile')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           1048576
+   4: STORE_FAST           chunk_size
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            filelist
+  18: GET_ITER             
+  20: FOR_ITER             to 266
+  22: STORE_FAST           zinfo
+  24: NOP                  
+  26: LOAD_FAST            self
+  28: LOAD_METHOD          open
+  50: LOAD_FAST            zinfo
+  52: LOAD_ATTR            filename
+  62: LOAD_CONST           'r'
+  64: PRECALL              
+  68: CALL                 
+  78: BEFORE_WITH          
+  80: STORE_FAST           f
+  82: LOAD_FAST            f
+  84: LOAD_METHOD          read
+ 106: LOAD_FAST            chunk_size
+ 108: PRECALL              
+ 112: CALL                 
+ 122: POP_JUMP_FORWARD_IF_FALSE to 168
+ 124: NOP                  
+ 126: LOAD_FAST            f
+ 128: LOAD_METHOD          read
+ 150: LOAD_FAST            chunk_size
+ 152: PRECALL              
+ 156: CALL                 
+ 166: POP_JUMP_BACKWARD_IF_TRUE to 124
+ 168: LOAD_CONST           None
+ 170: LOAD_CONST           None
+ 172: LOAD_CONST           None
+ 174: PRECALL              
+ 178: CALL                 
+ 188: POP_TOP              
+ 190: JUMP_FORWARD         to 214
+ 192: PUSH_EXC_INFO        
+ 194: WITH_EXCEPT_START    
+ 196: POP_JUMP_FORWARD_IF_TRUE to 206
+ 198: RERAISE              
+ 200: COPY                 
+ 202: POP_EXCEPT           
+ 204: RERAISE              
+ 206: POP_TOP              
+ 208: POP_EXCEPT           
+ 210: POP_TOP              
+ 212: POP_TOP              
+ 214: JUMP_BACKWARD        to 20
+ 216: PUSH_EXC_INFO        
+ 218: LOAD_GLOBAL          BadZipFile
+ 230: CHECK_EXC_MATCH      
+ 232: POP_JUMP_FORWARD_IF_FALSE to 258
+ 234: POP_TOP              
+ 236: LOAD_FAST            zinfo
+ 238: LOAD_ATTR            filename
+ 248: SWAP                 
+ 250: POP_EXCEPT           
+ 252: SWAP                 
+ 254: POP_TOP              
+ 256: RETURN_VALUE         
+ 258: RERAISE              
+ 260: COPY                 
+ 262: POP_EXCEPT           
+ 264: RERAISE              
+ 266: LOAD_CONST           None
+ 268: RETURN_VALUE         

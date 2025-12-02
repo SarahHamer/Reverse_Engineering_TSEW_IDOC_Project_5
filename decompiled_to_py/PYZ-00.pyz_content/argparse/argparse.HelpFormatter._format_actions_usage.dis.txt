@@ -1,0 +1,434 @@
+# Disassembly for argparse.HelpFormatter._format_actions_usage
+# From module file: argparse
+
+## co_consts:
+(None, 'empty group ', 0, 1, ' [', '[', ']', ' (', '(', ')', '|', -1, ' ', '[%s]', True, ('reverse',), <code object <listcomp> at 0x00000240694279E0, file "argparse.py", line 493>, '[\\[(]', '[\\])]', '(%s) ', '\\1', ' (%s)', ' *', '')
+
+## co_names:
+('set', '_group_actions', 'ValueError', 'index', 'len', 'add', 'help', 'SUPPRESS', 'required', 'range', 'enumerate', 'append', 'get', 'pop', 'option_strings', '_get_default_metavar_for_positional', '_format_args', 'nargs', 'format_usage', '_get_default_metavar_for_optional', 'sorted', 'join', '_re', 'sub', 'strip')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + set
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           group_actions
+  30: BUILD_MAP            
+  32: STORE_FAST           inserts
+  34: LOAD_FAST            groups
+  36: GET_ITER             
+  38: EXTENDED_ARG         
+  40: FOR_ITER             to 690
+  42: STORE_FAST           group
+  44: LOAD_FAST            group
+  46: LOAD_ATTR            _group_actions
+  56: POP_JUMP_FORWARD_IF_TRUE to 94
+  58: LOAD_GLOBAL          NULL + ValueError
+  70: LOAD_CONST           'empty group '
+  72: LOAD_FAST            group
+  74: FORMAT_VALUE         
+  76: BUILD_STRING         
+  78: PRECALL              
+  82: CALL                 
+  92: RAISE_VARARGS        
+  94: NOP                  
+  96: LOAD_FAST            actions
+  98: LOAD_METHOD          index
+ 120: LOAD_FAST            group
+ 122: LOAD_ATTR            _group_actions
+ 132: LOAD_CONST           0
+ 134: BINARY_SUBSCR        
+ 144: PRECALL              
+ 148: CALL                 
+ 158: STORE_FAST           start
+ 160: LOAD_GLOBAL          NULL + len
+ 172: LOAD_FAST            group
+ 174: LOAD_ATTR            _group_actions
+ 184: PRECALL              
+ 188: CALL                 
+ 198: STORE_FAST           group_action_count
+ 200: LOAD_FAST            start
+ 202: LOAD_FAST            group_action_count
+ 204: BINARY_OP            +
+ 208: STORE_FAST           end
+ 210: LOAD_FAST            actions
+ 212: LOAD_FAST            start
+ 214: LOAD_FAST            end
+ 216: BUILD_SLICE          
+ 218: BINARY_SUBSCR        
+ 228: LOAD_FAST            group
+ 230: LOAD_ATTR            _group_actions
+ 240: COMPARE_OP           ==
+ 246: POP_JUMP_FORWARD_IF_FALSE to 652
+ 248: LOAD_CONST           0
+ 250: STORE_FAST           suppressed_actions_count
+ 252: LOAD_FAST            group
+ 254: LOAD_ATTR            _group_actions
+ 264: GET_ITER             
+ 266: FOR_ITER             to 352
+ 268: STORE_FAST           action
+ 270: LOAD_FAST            group_actions
+ 272: LOAD_METHOD          add
+ 294: LOAD_FAST            action
+ 296: PRECALL              
+ 300: CALL                 
+ 310: POP_TOP              
+ 312: LOAD_FAST            action
+ 314: LOAD_ATTR            help
+ 324: LOAD_GLOBAL          SUPPRESS
+ 336: IS_OP                
+ 338: POP_JUMP_FORWARD_IF_FALSE to 350
+ 340: LOAD_FAST            suppressed_actions_count
+ 342: LOAD_CONST           1
+ 344: BINARY_OP            +=
+ 348: STORE_FAST           suppressed_actions_count
+ 350: JUMP_BACKWARD        to 266
+ 352: LOAD_FAST            group_action_count
+ 354: LOAD_FAST            suppressed_actions_count
+ 356: BINARY_OP            -
+ 360: STORE_FAST           exposed_actions_count
+ 362: LOAD_FAST            group
+ 364: LOAD_ATTR            required
+ 374: POP_JUMP_FORWARD_IF_TRUE to 482
+ 376: LOAD_FAST            start
+ 378: LOAD_FAST            inserts
+ 380: CONTAINS_OP          
+ 382: POP_JUMP_FORWARD_IF_FALSE to 418
+ 384: LOAD_FAST            inserts
+ 386: LOAD_FAST            start
+ 388: COPY                 
+ 390: COPY                 
+ 392: BINARY_SUBSCR        
+ 402: LOAD_CONST           ' ['
+ 404: BINARY_OP            +=
+ 408: SWAP                 
+ 410: SWAP                 
+ 412: STORE_SUBSCR         
+ 416: JUMP_FORWARD         to 428
+ 418: LOAD_CONST           '['
+ 420: LOAD_FAST            inserts
+ 422: LOAD_FAST            start
+ 424: STORE_SUBSCR         
+ 428: LOAD_FAST            end
+ 430: LOAD_FAST            inserts
+ 432: CONTAINS_OP          
+ 434: POP_JUMP_FORWARD_IF_FALSE to 470
+ 436: LOAD_FAST            inserts
+ 438: LOAD_FAST            end
+ 440: COPY                 
+ 442: COPY                 
+ 444: BINARY_SUBSCR        
+ 454: LOAD_CONST           ']'
+ 456: BINARY_OP            +=
+ 460: SWAP                 
+ 462: SWAP                 
+ 464: STORE_SUBSCR         
+ 468: JUMP_FORWARD         to 598
+ 470: LOAD_CONST           ']'
+ 472: LOAD_FAST            inserts
+ 474: LOAD_FAST            end
+ 476: STORE_SUBSCR         
+ 480: JUMP_FORWARD         to 598
+ 482: LOAD_FAST            exposed_actions_count
+ 484: LOAD_CONST           1
+ 486: COMPARE_OP           >
+ 492: POP_JUMP_FORWARD_IF_FALSE to 598
+ 494: LOAD_FAST            start
+ 496: LOAD_FAST            inserts
+ 498: CONTAINS_OP          
+ 500: POP_JUMP_FORWARD_IF_FALSE to 536
+ 502: LOAD_FAST            inserts
+ 504: LOAD_FAST            start
+ 506: COPY                 
+ 508: COPY                 
+ 510: BINARY_SUBSCR        
+ 520: LOAD_CONST           ' ('
+ 522: BINARY_OP            +=
+ 526: SWAP                 
+ 528: SWAP                 
+ 530: STORE_SUBSCR         
+ 534: JUMP_FORWARD         to 546
+ 536: LOAD_CONST           '('
+ 538: LOAD_FAST            inserts
+ 540: LOAD_FAST            start
+ 542: STORE_SUBSCR         
+ 546: LOAD_FAST            end
+ 548: LOAD_FAST            inserts
+ 550: CONTAINS_OP          
+ 552: POP_JUMP_FORWARD_IF_FALSE to 588
+ 554: LOAD_FAST            inserts
+ 556: LOAD_FAST            end
+ 558: COPY                 
+ 560: COPY                 
+ 562: BINARY_SUBSCR        
+ 572: LOAD_CONST           ')'
+ 574: BINARY_OP            +=
+ 578: SWAP                 
+ 580: SWAP                 
+ 582: STORE_SUBSCR         
+ 586: JUMP_FORWARD         to 598
+ 588: LOAD_CONST           ')'
+ 590: LOAD_FAST            inserts
+ 592: LOAD_FAST            end
+ 594: STORE_SUBSCR         
+ 598: LOAD_GLOBAL          NULL + range
+ 610: LOAD_FAST            start
+ 612: LOAD_CONST           1
+ 614: BINARY_OP            +
+ 618: LOAD_FAST            end
+ 620: PRECALL              
+ 624: CALL                 
+ 634: GET_ITER             
+ 636: FOR_ITER             to 652
+ 638: STORE_FAST           i
+ 640: LOAD_CONST           '|'
+ 642: LOAD_FAST            inserts
+ 644: LOAD_FAST            i
+ 646: STORE_SUBSCR         
+ 650: JUMP_BACKWARD        to 636
+ 652: EXTENDED_ARG         
+ 654: JUMP_BACKWARD        to 38
+ 656: PUSH_EXC_INFO        
+ 658: LOAD_GLOBAL          ValueError
+ 670: CHECK_EXC_MATCH      
+ 672: POP_JUMP_FORWARD_IF_FALSE to 682
+ 674: POP_TOP              
+ 676: POP_EXCEPT           
+ 678: EXTENDED_ARG         
+ 680: JUMP_BACKWARD        to 38
+ 682: RERAISE              
+ 684: COPY                 
+ 686: POP_EXCEPT           
+ 688: RERAISE              
+ 690: BUILD_LIST           
+ 692: STORE_FAST           parts
+ 694: LOAD_GLOBAL          NULL + enumerate
+ 706: LOAD_FAST            actions
+ 708: PRECALL              
+ 712: CALL                 
+ 722: GET_ITER             
+ 724: EXTENDED_ARG         
+ 726: FOR_ITER             to 1494
+ 728: UNPACK_SEQUENCE      
+ 732: STORE_FAST           i
+ 734: STORE_FAST           action
+ 736: LOAD_FAST            action
+ 738: LOAD_ATTR            help
+ 748: LOAD_GLOBAL          SUPPRESS
+ 760: IS_OP                
+ 762: POP_JUMP_FORWARD_IF_FALSE to 1006
+ 764: LOAD_FAST            parts
+ 766: LOAD_METHOD          append
+ 788: LOAD_CONST           None
+ 790: PRECALL              
+ 794: CALL                 
+ 804: POP_TOP              
+ 806: LOAD_FAST            inserts
+ 808: LOAD_METHOD          get
+ 830: LOAD_FAST            i
+ 832: PRECALL              
+ 836: CALL                 
+ 846: LOAD_CONST           '|'
+ 848: COMPARE_OP           ==
+ 854: POP_JUMP_FORWARD_IF_FALSE to 900
+ 856: LOAD_FAST            inserts
+ 858: LOAD_METHOD          pop
+ 880: LOAD_FAST            i
+ 882: PRECALL              
+ 886: CALL                 
+ 896: POP_TOP              
+ 898: JUMP_BACKWARD        to 724
+ 900: LOAD_FAST            inserts
+ 902: LOAD_METHOD          get
+ 924: LOAD_FAST            i
+ 926: LOAD_CONST           1
+ 928: BINARY_OP            +
+ 932: PRECALL              
+ 936: CALL                 
+ 946: LOAD_CONST           '|'
+ 948: COMPARE_OP           ==
+ 954: POP_JUMP_FORWARD_IF_FALSE to 1004
+ 956: LOAD_FAST            inserts
+ 958: LOAD_METHOD          pop
+ 980: LOAD_FAST            i
+ 982: LOAD_CONST           1
+ 984: BINARY_OP            +
+ 988: PRECALL              
+ 992: CALL                 
+1002: POP_TOP              
+1004: JUMP_BACKWARD        to 724
+1006: LOAD_FAST            action
+1008: LOAD_ATTR            option_strings
+1018: POP_JUMP_FORWARD_IF_TRUE to 1226
+1020: LOAD_FAST            self
+1022: LOAD_METHOD          _get_default_metavar_for_positional
+1044: LOAD_FAST            action
+1046: PRECALL              
+1050: CALL                 
+1060: STORE_FAST           default
+1062: LOAD_FAST            self
+1064: LOAD_METHOD          _format_args
+1086: LOAD_FAST            action
+1088: LOAD_FAST            default
+1090: PRECALL              
+1094: CALL                 
+1104: STORE_FAST           part
+1106: LOAD_FAST            action
+1108: LOAD_FAST            group_actions
+1110: CONTAINS_OP          
+1112: POP_JUMP_FORWARD_IF_FALSE to 1182
+1114: LOAD_FAST            part
+1116: LOAD_CONST           0
+1118: BINARY_SUBSCR        
+1128: LOAD_CONST           '['
+1130: COMPARE_OP           ==
+1136: POP_JUMP_FORWARD_IF_FALSE to 1182
+1138: LOAD_FAST            part
+1140: LOAD_CONST           -1
+1142: BINARY_SUBSCR        
+1152: LOAD_CONST           ']'
+1154: COMPARE_OP           ==
+1160: POP_JUMP_FORWARD_IF_FALSE to 1182
+1162: LOAD_FAST            part
+1164: LOAD_CONST           1
+1166: LOAD_CONST           -1
+1168: BUILD_SLICE          
+1170: BINARY_SUBSCR        
+1180: STORE_FAST           part
+1182: LOAD_FAST            parts
+1184: LOAD_METHOD          append
+1206: LOAD_FAST            part
+1208: PRECALL              
+1212: CALL                 
+1222: POP_TOP              
+1224: JUMP_BACKWARD        to 724
+1226: LOAD_FAST            action
+1228: LOAD_ATTR            option_strings
+1238: LOAD_CONST           0
+1240: BINARY_SUBSCR        
+1250: STORE_FAST           option_string
+1252: LOAD_FAST            action
+1254: LOAD_ATTR            nargs
+1264: LOAD_CONST           0
+1266: COMPARE_OP           ==
+1272: POP_JUMP_FORWARD_IF_FALSE to 1316
+1274: LOAD_FAST            action
+1276: LOAD_METHOD          format_usage
+1298: PRECALL              
+1302: CALL                 
+1312: STORE_FAST           part
+1314: JUMP_FORWARD         to 1416
+1316: LOAD_FAST            self
+1318: LOAD_METHOD          _get_default_metavar_for_optional
+1340: LOAD_FAST            action
+1342: PRECALL              
+1346: CALL                 
+1356: STORE_FAST           default
+1358: LOAD_FAST            self
+1360: LOAD_METHOD          _format_args
+1382: LOAD_FAST            action
+1384: LOAD_FAST            default
+1386: PRECALL              
+1390: CALL                 
+1400: STORE_FAST           args_string
+1402: LOAD_FAST            option_string
+1404: FORMAT_VALUE         str
+1406: LOAD_CONST           ' '
+1408: LOAD_FAST            args_string
+1410: FORMAT_VALUE         str
+1412: BUILD_STRING         
+1414: STORE_FAST           part
+1416: LOAD_FAST            action
+1418: LOAD_ATTR            required
+1428: POP_JUMP_FORWARD_IF_TRUE to 1448
+1430: LOAD_FAST            action
+1432: LOAD_FAST            group_actions
+1434: CONTAINS_OP          
+1436: POP_JUMP_FORWARD_IF_FALSE to 1448
+1438: LOAD_CONST           '[%s]'
+1440: LOAD_FAST            part
+1442: BINARY_OP            %
+1446: STORE_FAST           part
+1448: LOAD_FAST            parts
+1450: LOAD_METHOD          append
+1472: LOAD_FAST            part
+1474: PRECALL              
+1478: CALL                 
+1488: POP_TOP              
+1490: EXTENDED_ARG         
+1492: JUMP_BACKWARD        to 724
+1494: LOAD_GLOBAL          NULL + sorted
+1506: LOAD_FAST            inserts
+1508: LOAD_CONST           True
+1510: KW_NAMES             
+1512: PRECALL              
+1516: CALL                 
+1526: GET_ITER             
+1528: FOR_ITER             to 1562
+1530: STORE_FAST           i
+1532: LOAD_FAST            inserts
+1534: LOAD_FAST            i
+1536: BINARY_SUBSCR        
+1546: BUILD_LIST           
+1548: LOAD_FAST            parts
+1550: LOAD_FAST            i
+1552: LOAD_FAST            i
+1554: BUILD_SLICE          
+1556: STORE_SUBSCR         
+1560: JUMP_BACKWARD        to 1528
+1562: LOAD_CONST           ' '
+1564: LOAD_METHOD          join
+1586: LOAD_CONST           <code object <listcomp> at 0x00000240694279E0, file "argparse.py", line 493>
+1588: MAKE_FUNCTION        
+1590: LOAD_FAST            parts
+1592: GET_ITER             
+1594: PRECALL              
+1598: CALL                 
+1608: PRECALL              
+1612: CALL                 
+1622: STORE_FAST           text
+1624: LOAD_CONST           '[\\[(]'
+1626: STORE_FAST           open
+1628: LOAD_CONST           '[\\])]'
+1630: STORE_FAST           close
+1632: LOAD_GLOBAL          NULL + _re
+1644: LOAD_ATTR            sub
+1654: LOAD_CONST           '(%s) '
+1656: LOAD_FAST            open
+1658: BINARY_OP            %
+1662: LOAD_CONST           '\\1'
+1664: LOAD_FAST            text
+1666: PRECALL              
+1670: CALL                 
+1680: STORE_FAST           text
+1682: LOAD_GLOBAL          NULL + _re
+1694: LOAD_ATTR            sub
+1704: LOAD_CONST           ' (%s)'
+1706: LOAD_FAST            close
+1708: BINARY_OP            %
+1712: LOAD_CONST           '\\1'
+1714: LOAD_FAST            text
+1716: PRECALL              
+1720: CALL                 
+1730: STORE_FAST           text
+1732: LOAD_GLOBAL          NULL + _re
+1744: LOAD_ATTR            sub
+1754: LOAD_FAST            open
+1756: FORMAT_VALUE         str
+1758: LOAD_CONST           ' *'
+1760: LOAD_FAST            close
+1762: FORMAT_VALUE         str
+1764: BUILD_STRING         
+1766: LOAD_CONST           ''
+1768: LOAD_FAST            text
+1770: PRECALL              
+1774: CALL                 
+1784: STORE_FAST           text
+1786: LOAD_FAST            text
+1788: LOAD_METHOD          strip
+1810: PRECALL              
+1814: CALL                 
+1824: STORE_FAST           text
+1826: LOAD_FAST            text
+1828: RETURN_VALUE         

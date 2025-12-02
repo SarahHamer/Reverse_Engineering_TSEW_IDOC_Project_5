@@ -1,0 +1,38 @@
+# Disassembly for email.Value.stripped_value
+# From module file: email._header_value_parser
+
+## co_consts:
+(None, 0, 'cfws', 1, ('quoted-string', 'attribute', 'extended-attribute'))
+
+## co_names:
+('token_type', 'endswith', 'stripped_value', 'value')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_CONST           0
+   6: BINARY_SUBSCR        
+  16: STORE_FAST           token
+  18: LOAD_FAST            token
+  20: LOAD_ATTR            token_type
+  30: LOAD_CONST           'cfws'
+  32: COMPARE_OP           ==
+  38: POP_JUMP_FORWARD_IF_FALSE to 56
+  40: LOAD_FAST            self
+  42: LOAD_CONST           1
+  44: BINARY_SUBSCR        
+  54: STORE_FAST           token
+  56: LOAD_FAST            token
+  58: LOAD_ATTR            token_type
+  68: LOAD_METHOD          endswith
+  90: LOAD_CONST           ('quoted-string', 'attribute', 'extended-attribute')
+  92: PRECALL              
+  96: CALL                 
+ 106: POP_JUMP_FORWARD_IF_FALSE to 122
+ 108: LOAD_FAST            token
+ 110: LOAD_ATTR            stripped_value
+ 120: RETURN_VALUE         
+ 122: LOAD_FAST            self
+ 124: LOAD_ATTR            value
+ 134: RETURN_VALUE         

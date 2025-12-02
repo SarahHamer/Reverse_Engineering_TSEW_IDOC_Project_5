@@ -1,0 +1,15 @@
+# Disassembly for threading.Event.is_set
+# From module file: threading
+
+## co_consts:
+('Return true if and only if the internal flag is true.',)
+
+## co_names:
+('_flag',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _flag
+  14: RETURN_VALUE         

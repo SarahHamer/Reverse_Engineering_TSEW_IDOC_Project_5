@@ -1,0 +1,14 @@
+# Disassembly for right.MusicBook.get_description
+# From module file: right
+
+## co_consts:
+(None, 'A music book is on the piano.')
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'A music book is on the piano.'
+   4: RETURN_VALUE         

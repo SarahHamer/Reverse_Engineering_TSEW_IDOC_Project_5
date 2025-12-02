@@ -1,0 +1,22 @@
+# Disassembly for email.DotAtomText
+# From module file: email._header_value_parser
+
+## co_consts:
+('DotAtomText', 'dot-atom-text', True, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', 'token_type', 'as_ew_allowed')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'DotAtomText'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'dot-atom-text'
+  12: STORE_NAME           token_type
+  14: LOAD_CONST           True
+  16: STORE_NAME           as_ew_allowed
+  18: LOAD_CONST           None
+  20: RETURN_VALUE         

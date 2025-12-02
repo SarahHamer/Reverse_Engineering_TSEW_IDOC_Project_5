@@ -1,0 +1,174 @@
+# Disassembly for http.CookieJar._cookie_attrs
+# From module file: http.cookiejar
+
+## co_consts:
+('Return a list of cookie-attributes to be returned to server.\n\n        like [\'foo="bar"; $Path="/"\', ...]\n\n        The $Version attribute is also added when appropriate (currently only\n        once per request).\n\n        ', <code object <lambda> at 0x000002406945EA60, file "http\cookiejar.py", line 1307>, True, ('key', 'reverse'), False, 0, '$Version=%s', None, '\\\\\\1', '=', '$Path="%s"', '.', 1, '$Domain="%s"', '$Port', '="%s"')
+
+## co_names:
+('sort', 'version', 'append', 'value', 'non_word_re', 'search', 'quote_re', 'sub', 'name', 'path_specified', 'path', 'domain', 'startswith', 'domain_initial_dot', 'port', 'port_specified')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            cookies
+   4: LOAD_METHOD          sort
+  26: LOAD_CONST           <code object <lambda> at 0x000002406945EA60, file "http\cookiejar.py", line 1307>
+  28: MAKE_FUNCTION        
+  30: LOAD_CONST           True
+  32: KW_NAMES             
+  34: PRECALL              
+  38: CALL                 
+  48: POP_TOP              
+  50: LOAD_CONST           False
+  52: STORE_FAST           version_set
+  54: BUILD_LIST           
+  56: STORE_FAST           attrs
+  58: LOAD_FAST            cookies
+  60: GET_ITER             
+  62: EXTENDED_ARG         
+  64: FOR_ITER             to 826
+  66: STORE_FAST           cookie
+  68: LOAD_FAST            cookie
+  70: LOAD_ATTR            version
+  80: STORE_FAST           version
+  82: LOAD_FAST            version_set
+  84: POP_JUMP_FORWARD_IF_TRUE to 150
+  86: LOAD_CONST           True
+  88: STORE_FAST           version_set
+  90: LOAD_FAST            version
+  92: LOAD_CONST           0
+  94: COMPARE_OP           >
+ 100: POP_JUMP_FORWARD_IF_FALSE to 150
+ 102: LOAD_FAST            attrs
+ 104: LOAD_METHOD          append
+ 126: LOAD_CONST           '$Version=%s'
+ 128: LOAD_FAST            version
+ 130: BINARY_OP            %
+ 134: PRECALL              
+ 138: CALL                 
+ 148: POP_TOP              
+ 150: LOAD_FAST            cookie
+ 152: LOAD_ATTR            value
+ 162: POP_JUMP_FORWARD_IF_NONE to 304
+ 164: LOAD_FAST            self
+ 166: LOAD_ATTR            non_word_re
+ 176: LOAD_METHOD          search
+ 198: LOAD_FAST            cookie
+ 200: LOAD_ATTR            value
+ 210: PRECALL              
+ 214: CALL                 
+ 224: POP_JUMP_FORWARD_IF_FALSE to 304
+ 226: LOAD_FAST            version
+ 228: LOAD_CONST           0
+ 230: COMPARE_OP           >
+ 236: POP_JUMP_FORWARD_IF_FALSE to 304
+ 238: LOAD_FAST            self
+ 240: LOAD_ATTR            quote_re
+ 250: LOAD_METHOD          sub
+ 272: LOAD_CONST           '\\\\\\1'
+ 274: LOAD_FAST            cookie
+ 276: LOAD_ATTR            value
+ 286: PRECALL              
+ 290: CALL                 
+ 300: STORE_FAST           value
+ 302: JUMP_FORWARD         to 318
+ 304: LOAD_FAST            cookie
+ 306: LOAD_ATTR            value
+ 316: STORE_FAST           value
+ 318: LOAD_FAST            cookie
+ 320: LOAD_ATTR            value
+ 330: POP_JUMP_FORWARD_IF_NOT_NONE to 386
+ 332: LOAD_FAST            attrs
+ 334: LOAD_METHOD          append
+ 356: LOAD_FAST            cookie
+ 358: LOAD_ATTR            name
+ 368: PRECALL              
+ 372: CALL                 
+ 382: POP_TOP              
+ 384: JUMP_FORWARD         to 448
+ 386: LOAD_FAST            attrs
+ 388: LOAD_METHOD          append
+ 410: LOAD_FAST            cookie
+ 412: LOAD_ATTR            name
+ 422: FORMAT_VALUE         str
+ 424: LOAD_CONST           '='
+ 426: LOAD_FAST            value
+ 428: FORMAT_VALUE         str
+ 430: BUILD_STRING         
+ 432: PRECALL              
+ 436: CALL                 
+ 446: POP_TOP              
+ 448: LOAD_FAST            version
+ 450: LOAD_CONST           0
+ 452: COMPARE_OP           >
+ 458: POP_JUMP_FORWARD_IF_FALSE to 822
+ 460: LOAD_FAST            cookie
+ 462: LOAD_ATTR            path_specified
+ 472: POP_JUMP_FORWARD_IF_FALSE to 532
+ 474: LOAD_FAST            attrs
+ 476: LOAD_METHOD          append
+ 498: LOAD_CONST           '$Path="%s"'
+ 500: LOAD_FAST            cookie
+ 502: LOAD_ATTR            path
+ 512: BINARY_OP            %
+ 516: PRECALL              
+ 520: CALL                 
+ 530: POP_TOP              
+ 532: LOAD_FAST            cookie
+ 534: LOAD_ATTR            domain
+ 544: LOAD_METHOD          startswith
+ 566: LOAD_CONST           '.'
+ 568: PRECALL              
+ 572: CALL                 
+ 582: POP_JUMP_FORWARD_IF_FALSE to 722
+ 584: LOAD_FAST            cookie
+ 586: LOAD_ATTR            domain
+ 596: STORE_FAST           domain
+ 598: LOAD_FAST            cookie
+ 600: LOAD_ATTR            domain_initial_dot
+ 610: POP_JUMP_FORWARD_IF_TRUE to 674
+ 612: LOAD_FAST            domain
+ 614: LOAD_METHOD          startswith
+ 636: LOAD_CONST           '.'
+ 638: PRECALL              
+ 642: CALL                 
+ 652: POP_JUMP_FORWARD_IF_FALSE to 674
+ 654: LOAD_FAST            domain
+ 656: LOAD_CONST           1
+ 658: LOAD_CONST           None
+ 660: BUILD_SLICE          
+ 662: BINARY_SUBSCR        
+ 672: STORE_FAST           domain
+ 674: LOAD_FAST            attrs
+ 676: LOAD_METHOD          append
+ 698: LOAD_CONST           '$Domain="%s"'
+ 700: LOAD_FAST            domain
+ 702: BINARY_OP            %
+ 706: PRECALL              
+ 710: CALL                 
+ 720: POP_TOP              
+ 722: LOAD_FAST            cookie
+ 724: LOAD_ATTR            port
+ 734: POP_JUMP_FORWARD_IF_NONE to 822
+ 736: LOAD_CONST           '$Port'
+ 738: STORE_FAST           p
+ 740: LOAD_FAST            cookie
+ 742: LOAD_ATTR            port_specified
+ 752: POP_JUMP_FORWARD_IF_FALSE to 780
+ 754: LOAD_FAST            p
+ 756: LOAD_CONST           '="%s"'
+ 758: LOAD_FAST            cookie
+ 760: LOAD_ATTR            port
+ 770: BINARY_OP            %
+ 774: BINARY_OP            +
+ 778: STORE_FAST           p
+ 780: LOAD_FAST            attrs
+ 782: LOAD_METHOD          append
+ 804: LOAD_FAST            p
+ 806: PRECALL              
+ 810: CALL                 
+ 820: POP_TOP              
+ 822: EXTENDED_ARG         
+ 824: JUMP_BACKWARD        to 62
+ 826: LOAD_FAST            attrs
+ 828: RETURN_VALUE         

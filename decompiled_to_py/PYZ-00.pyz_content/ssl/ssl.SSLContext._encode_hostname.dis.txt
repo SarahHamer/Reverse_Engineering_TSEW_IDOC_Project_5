@@ -1,0 +1,38 @@
+# Disassembly for ssl.SSLContext._encode_hostname
+# From module file: ssl
+
+## co_consts:
+(None, 'idna', 'ascii')
+
+## co_names:
+('isinstance', 'str', 'encode', 'decode')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            hostname
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 10
+   6: LOAD_CONST           None
+   8: RETURN_VALUE         
+  10: LOAD_GLOBAL          NULL + isinstance
+  22: LOAD_FAST            hostname
+  24: LOAD_GLOBAL          str
+  36: PRECALL              
+  40: CALL                 
+  50: POP_JUMP_FORWARD_IF_FALSE to 132
+  52: LOAD_FAST            hostname
+  54: LOAD_METHOD          encode
+  76: LOAD_CONST           'idna'
+  78: PRECALL              
+  82: CALL                 
+  92: LOAD_METHOD          decode
+ 114: LOAD_CONST           'ascii'
+ 116: PRECALL              
+ 120: CALL                 
+ 130: RETURN_VALUE         
+ 132: LOAD_FAST            hostname
+ 134: LOAD_METHOD          decode
+ 156: LOAD_CONST           'ascii'
+ 158: PRECALL              
+ 162: CALL                 
+ 172: RETURN_VALUE         

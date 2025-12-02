@@ -1,0 +1,35 @@
+# Disassembly for typing._type_convert
+# From module file: typing
+
+## co_consts:
+('For converting None to type(None), and strings to ForwardRef.', None, ('module', 'is_class'))
+
+## co_names:
+('type', 'isinstance', 'str', 'ForwardRef')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            arg
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 36
+   6: LOAD_GLOBAL          NULL + type
+  18: LOAD_CONST           None
+  20: PRECALL              
+  24: CALL                 
+  34: RETURN_VALUE         
+  36: LOAD_GLOBAL          NULL + isinstance
+  48: LOAD_FAST            arg
+  50: LOAD_GLOBAL          str
+  62: PRECALL              
+  66: CALL                 
+  76: POP_JUMP_FORWARD_IF_FALSE to 114
+  78: LOAD_GLOBAL          NULL + ForwardRef
+  90: LOAD_FAST            arg
+  92: LOAD_FAST            module
+  94: LOAD_FAST            allow_special_forms
+  96: KW_NAMES             
+  98: PRECALL              
+ 102: CALL                 
+ 112: RETURN_VALUE         
+ 114: LOAD_FAST            arg
+ 116: RETURN_VALUE         

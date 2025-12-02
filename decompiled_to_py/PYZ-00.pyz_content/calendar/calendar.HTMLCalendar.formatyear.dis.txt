@@ -1,0 +1,128 @@
+# Disassembly for calendar.HTMLCalendar.formatyear
+# From module file: calendar
+
+## co_consts:
+('\n        Return a formatted year as a table of tables.\n        ', 1, '<table border="0" cellpadding="0" cellspacing="0" class="%s">', '\n', '<tr><th colspan="%d" class="%s">%s</th></tr>', 12, 13, '<tr>', '<td>', False, ('withyear',), '</td>', '</tr>', '</table>', '')
+
+## co_names:
+('append', 'max', 'cssclass_year', 'cssclass_year_head', 'range', 'January', 'min', 'formatmonth', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           v
+   6: LOAD_FAST            v
+   8: LOAD_ATTR            append
+  18: STORE_FAST           a
+  20: LOAD_GLOBAL          NULL + max
+  32: LOAD_FAST            width
+  34: LOAD_CONST           1
+  36: PRECALL              
+  40: CALL                 
+  50: STORE_FAST           width
+  52: PUSH_NULL            
+  54: LOAD_FAST            a
+  56: LOAD_CONST           '<table border="0" cellpadding="0" cellspacing="0" class="%s">'
+  58: LOAD_FAST            self
+  60: LOAD_ATTR            cssclass_year
+  70: BINARY_OP            %
+  74: PRECALL              
+  78: CALL                 
+  88: POP_TOP              
+  90: PUSH_NULL            
+  92: LOAD_FAST            a
+  94: LOAD_CONST           '\n'
+  96: PRECALL              
+ 100: CALL                 
+ 110: POP_TOP              
+ 112: PUSH_NULL            
+ 114: LOAD_FAST            a
+ 116: LOAD_CONST           '<tr><th colspan="%d" class="%s">%s</th></tr>'
+ 118: LOAD_FAST            width
+ 120: LOAD_FAST            self
+ 122: LOAD_ATTR            cssclass_year_head
+ 132: LOAD_FAST            theyear
+ 134: BUILD_TUPLE          
+ 136: BINARY_OP            %
+ 140: PRECALL              
+ 144: CALL                 
+ 154: POP_TOP              
+ 156: LOAD_GLOBAL          NULL + range
+ 168: LOAD_GLOBAL          January
+ 180: LOAD_GLOBAL          January
+ 192: LOAD_CONST           12
+ 194: BINARY_OP            +
+ 198: LOAD_FAST            width
+ 200: PRECALL              
+ 204: CALL                 
+ 214: GET_ITER             
+ 216: FOR_ITER             to 452
+ 218: STORE_FAST           i
+ 220: LOAD_GLOBAL          NULL + range
+ 232: LOAD_FAST            i
+ 234: LOAD_GLOBAL          NULL + min
+ 246: LOAD_FAST            i
+ 248: LOAD_FAST            width
+ 250: BINARY_OP            +
+ 254: LOAD_CONST           13
+ 256: PRECALL              
+ 260: CALL                 
+ 270: PRECALL              
+ 274: CALL                 
+ 284: STORE_FAST           months
+ 286: PUSH_NULL            
+ 288: LOAD_FAST            a
+ 290: LOAD_CONST           '<tr>'
+ 292: PRECALL              
+ 296: CALL                 
+ 306: POP_TOP              
+ 308: LOAD_FAST            months
+ 310: GET_ITER             
+ 312: FOR_ITER             to 428
+ 314: STORE_FAST           m
+ 316: PUSH_NULL            
+ 318: LOAD_FAST            a
+ 320: LOAD_CONST           '<td>'
+ 322: PRECALL              
+ 326: CALL                 
+ 336: POP_TOP              
+ 338: PUSH_NULL            
+ 340: LOAD_FAST            a
+ 342: LOAD_FAST            self
+ 344: LOAD_METHOD          formatmonth
+ 366: LOAD_FAST            theyear
+ 368: LOAD_FAST            m
+ 370: LOAD_CONST           False
+ 372: KW_NAMES             
+ 374: PRECALL              
+ 378: CALL                 
+ 388: PRECALL              
+ 392: CALL                 
+ 402: POP_TOP              
+ 404: PUSH_NULL            
+ 406: LOAD_FAST            a
+ 408: LOAD_CONST           '</td>'
+ 410: PRECALL              
+ 414: CALL                 
+ 424: POP_TOP              
+ 426: JUMP_BACKWARD        to 312
+ 428: PUSH_NULL            
+ 430: LOAD_FAST            a
+ 432: LOAD_CONST           '</tr>'
+ 434: PRECALL              
+ 438: CALL                 
+ 448: POP_TOP              
+ 450: JUMP_BACKWARD        to 216
+ 452: PUSH_NULL            
+ 454: LOAD_FAST            a
+ 456: LOAD_CONST           '</table>'
+ 458: PRECALL              
+ 462: CALL                 
+ 472: POP_TOP              
+ 474: LOAD_CONST           ''
+ 476: LOAD_METHOD          join
+ 498: LOAD_FAST            v
+ 500: PRECALL              
+ 504: CALL                 
+ 514: RETURN_VALUE         

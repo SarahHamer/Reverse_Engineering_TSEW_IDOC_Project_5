@@ -1,0 +1,18 @@
+# Disassembly for zipfile.Path.stem
+# From module file: zipfile
+
+## co_consts:
+(None,)
+
+## co_names:
+('_base', 'stem')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _base
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_ATTR            stem
+  50: RETURN_VALUE         

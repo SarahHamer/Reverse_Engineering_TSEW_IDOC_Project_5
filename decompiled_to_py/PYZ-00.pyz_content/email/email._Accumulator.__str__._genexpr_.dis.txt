@@ -1,0 +1,32 @@
+# Disassembly for email._Accumulator.__str__.<genexpr>
+# From module file: email.header
+
+## co_consts:
+(None,)
+
+## co_names:
+('EMPTYSTRING', 'join')
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_FAST            .0
+   8: FOR_ITER             to 80
+  10: UNPACK_SEQUENCE      
+  14: STORE_FAST           fws
+  16: STORE_FAST           part
+  18: LOAD_GLOBAL          EMPTYSTRING
+  30: LOAD_METHOD          join
+  52: LOAD_FAST            fws
+  54: LOAD_FAST            part
+  56: BUILD_TUPLE          
+  58: PRECALL              
+  62: CALL                 
+  72: YIELD_VALUE          
+  74: RESUME               
+  76: POP_TOP              
+  78: JUMP_BACKWARD        to 8
+  80: LOAD_CONST           None
+  82: RETURN_VALUE         

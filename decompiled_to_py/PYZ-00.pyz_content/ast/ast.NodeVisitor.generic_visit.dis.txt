@@ -1,0 +1,60 @@
+# Disassembly for ast.NodeVisitor.generic_visit
+# From module file: ast
+
+## co_consts:
+('Called if no explicit visitor function exists for a node.', None)
+
+## co_names:
+('iter_fields', 'isinstance', 'list', 'AST', 'visit')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + iter_fields
+  14: LOAD_FAST            node
+  16: PRECALL              
+  20: CALL                 
+  30: GET_ITER             
+  32: FOR_ITER             to 266
+  34: UNPACK_SEQUENCE      
+  38: STORE_FAST           field
+  40: STORE_FAST           value
+  42: LOAD_GLOBAL          NULL + isinstance
+  54: LOAD_FAST            value
+  56: LOAD_GLOBAL          list
+  68: PRECALL              
+  72: CALL                 
+  82: POP_JUMP_FORWARD_IF_FALSE to 180
+  84: LOAD_FAST            value
+  86: GET_ITER             
+  88: FOR_ITER             to 178
+  90: STORE_FAST           item
+  92: LOAD_GLOBAL          NULL + isinstance
+ 104: LOAD_FAST            item
+ 106: LOAD_GLOBAL          AST
+ 118: PRECALL              
+ 122: CALL                 
+ 132: POP_JUMP_FORWARD_IF_FALSE to 176
+ 134: LOAD_FAST            self
+ 136: LOAD_METHOD          visit
+ 158: LOAD_FAST            item
+ 160: PRECALL              
+ 164: CALL                 
+ 174: POP_TOP              
+ 176: JUMP_BACKWARD        to 88
+ 178: JUMP_BACKWARD        to 32
+ 180: LOAD_GLOBAL          NULL + isinstance
+ 192: LOAD_FAST            value
+ 194: LOAD_GLOBAL          AST
+ 206: PRECALL              
+ 210: CALL                 
+ 220: POP_JUMP_FORWARD_IF_FALSE to 264
+ 222: LOAD_FAST            self
+ 224: LOAD_METHOD          visit
+ 246: LOAD_FAST            value
+ 248: PRECALL              
+ 252: CALL                 
+ 262: POP_TOP              
+ 264: JUMP_BACKWARD        to 32
+ 266: LOAD_CONST           None
+ 268: RETURN_VALUE         

@@ -1,0 +1,122 @@
+# Disassembly for calendar.HTMLCalendar.formatyearpage
+# From module file: calendar
+
+## co_consts:
+('\n        Return a formatted year as a complete HTML page.\n        ', None, '<?xml version="1.0" encoding="%s"?>\n', '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">\n', '<html>\n', '<head>\n', '<meta http-equiv="Content-Type" content="text/html; charset=%s" />\n', '<link rel="stylesheet" type="text/css" href="%s" />\n', '<title>Calendar for %d</title>\n', '</head>\n', '<body>\n', '</body>\n', '</html>\n', '', 'xmlcharrefreplace')
+
+## co_names:
+('sys', 'getdefaultencoding', 'append', 'formatyear', 'join', 'encode')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            encoding
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 44
+   6: LOAD_GLOBAL          NULL + sys
+  18: LOAD_ATTR            getdefaultencoding
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           encoding
+  44: BUILD_LIST           
+  46: STORE_FAST           v
+  48: LOAD_FAST            v
+  50: LOAD_ATTR            append
+  60: STORE_FAST           a
+  62: PUSH_NULL            
+  64: LOAD_FAST            a
+  66: LOAD_CONST           '<?xml version="1.0" encoding="%s"?>\n'
+  68: LOAD_FAST            encoding
+  70: BINARY_OP            %
+  74: PRECALL              
+  78: CALL                 
+  88: POP_TOP              
+  90: PUSH_NULL            
+  92: LOAD_FAST            a
+  94: LOAD_CONST           '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">\n'
+  96: PRECALL              
+ 100: CALL                 
+ 110: POP_TOP              
+ 112: PUSH_NULL            
+ 114: LOAD_FAST            a
+ 116: LOAD_CONST           '<html>\n'
+ 118: PRECALL              
+ 122: CALL                 
+ 132: POP_TOP              
+ 134: PUSH_NULL            
+ 136: LOAD_FAST            a
+ 138: LOAD_CONST           '<head>\n'
+ 140: PRECALL              
+ 144: CALL                 
+ 154: POP_TOP              
+ 156: PUSH_NULL            
+ 158: LOAD_FAST            a
+ 160: LOAD_CONST           '<meta http-equiv="Content-Type" content="text/html; charset=%s" />\n'
+ 162: LOAD_FAST            encoding
+ 164: BINARY_OP            %
+ 168: PRECALL              
+ 172: CALL                 
+ 182: POP_TOP              
+ 184: LOAD_FAST            css
+ 186: POP_JUMP_FORWARD_IF_NONE to 216
+ 188: PUSH_NULL            
+ 190: LOAD_FAST            a
+ 192: LOAD_CONST           '<link rel="stylesheet" type="text/css" href="%s" />\n'
+ 194: LOAD_FAST            css
+ 196: BINARY_OP            %
+ 200: PRECALL              
+ 204: CALL                 
+ 214: POP_TOP              
+ 216: PUSH_NULL            
+ 218: LOAD_FAST            a
+ 220: LOAD_CONST           '<title>Calendar for %d</title>\n'
+ 222: LOAD_FAST            theyear
+ 224: BINARY_OP            %
+ 228: PRECALL              
+ 232: CALL                 
+ 242: POP_TOP              
+ 244: PUSH_NULL            
+ 246: LOAD_FAST            a
+ 248: LOAD_CONST           '</head>\n'
+ 250: PRECALL              
+ 254: CALL                 
+ 264: POP_TOP              
+ 266: PUSH_NULL            
+ 268: LOAD_FAST            a
+ 270: LOAD_CONST           '<body>\n'
+ 272: PRECALL              
+ 276: CALL                 
+ 286: POP_TOP              
+ 288: PUSH_NULL            
+ 290: LOAD_FAST            a
+ 292: LOAD_FAST            self
+ 294: LOAD_METHOD          formatyear
+ 316: LOAD_FAST            theyear
+ 318: LOAD_FAST            width
+ 320: PRECALL              
+ 324: CALL                 
+ 334: PRECALL              
+ 338: CALL                 
+ 348: POP_TOP              
+ 350: PUSH_NULL            
+ 352: LOAD_FAST            a
+ 354: LOAD_CONST           '</body>\n'
+ 356: PRECALL              
+ 360: CALL                 
+ 370: POP_TOP              
+ 372: PUSH_NULL            
+ 374: LOAD_FAST            a
+ 376: LOAD_CONST           '</html>\n'
+ 378: PRECALL              
+ 382: CALL                 
+ 392: POP_TOP              
+ 394: LOAD_CONST           ''
+ 396: LOAD_METHOD          join
+ 418: LOAD_FAST            v
+ 420: PRECALL              
+ 424: CALL                 
+ 434: LOAD_METHOD          encode
+ 456: LOAD_FAST            encoding
+ 458: LOAD_CONST           'xmlcharrefreplace'
+ 460: PRECALL              
+ 464: CALL                 
+ 474: RETURN_VALUE         

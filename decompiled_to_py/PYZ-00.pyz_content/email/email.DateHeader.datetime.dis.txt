@@ -1,0 +1,15 @@
+# Disassembly for email.DateHeader.datetime
+# From module file: email.headerregistry
+
+## co_consts:
+(None,)
+
+## co_names:
+('_datetime',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _datetime
+  14: RETURN_VALUE         

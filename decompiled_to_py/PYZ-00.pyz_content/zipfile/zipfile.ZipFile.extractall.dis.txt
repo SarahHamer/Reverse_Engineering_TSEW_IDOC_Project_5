@@ -1,0 +1,48 @@
+# Disassembly for zipfile.ZipFile.extractall
+# From module file: zipfile
+
+## co_consts:
+("Extract all members from the archive to the current working\n           directory. `path' specifies a different directory to extract to.\n           `members' is optional and must be a subset of the list returned\n           by namelist().\n        ", None)
+
+## co_names:
+('namelist', 'os', 'getcwd', 'fspath', '_extract_member')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            members
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 46
+   6: LOAD_FAST            self
+   8: LOAD_METHOD          namelist
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_FAST           members
+  46: LOAD_FAST            path
+  48: POP_JUMP_FORWARD_IF_NOT_NONE to 90
+  50: LOAD_GLOBAL          NULL + os
+  62: LOAD_ATTR            getcwd
+  72: PRECALL              
+  76: CALL                 
+  86: STORE_FAST           path
+  88: JUMP_FORWARD         to 130
+  90: LOAD_GLOBAL          NULL + os
+ 102: LOAD_ATTR            fspath
+ 112: LOAD_FAST            path
+ 114: PRECALL              
+ 118: CALL                 
+ 128: STORE_FAST           path
+ 130: LOAD_FAST            members
+ 132: GET_ITER             
+ 134: FOR_ITER             to 186
+ 136: STORE_FAST           zipinfo
+ 138: LOAD_FAST            self
+ 140: LOAD_METHOD          _extract_member
+ 162: LOAD_FAST            zipinfo
+ 164: LOAD_FAST            path
+ 166: LOAD_FAST            pwd
+ 168: PRECALL              
+ 172: CALL                 
+ 182: POP_TOP              
+ 184: JUMP_BACKWARD        to 134
+ 186: LOAD_CONST           None
+ 188: RETURN_VALUE         

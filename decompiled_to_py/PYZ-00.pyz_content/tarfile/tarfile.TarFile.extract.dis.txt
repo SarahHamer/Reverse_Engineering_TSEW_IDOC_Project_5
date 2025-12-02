@@ -1,0 +1,41 @@
+# Disassembly for tarfile.TarFile.extract
+# From module file: tarfile
+
+## co_consts:
+("Extract a member from the archive to the current working directory,\n           using its full name. Its file information is extracted as accurately\n           as possible. `member' may be a filename or a TarInfo object. You can\n           specify a different directory using `path'. File attributes (owner,\n           mtime, mode) are set unless `set_attrs' is False. If `numeric_owner`\n           is True, only the numbers for user/group names are used and not\n           the names.\n\n           The `filter` function will be called before extraction.\n           It can return a changed TarInfo or None to skip the member.\n           String names of common filters are accepted.\n        ", None)
+
+## co_names:
+('_get_filter_function', '_get_extract_tarinfo', '_extract_one')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _get_filter_function
+  26: LOAD_FAST            filter
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           filter_function
+  44: LOAD_FAST            self
+  46: LOAD_METHOD          _get_extract_tarinfo
+  68: LOAD_FAST            member
+  70: LOAD_FAST            filter_function
+  72: LOAD_FAST            path
+  74: PRECALL              
+  78: CALL                 
+  88: STORE_FAST           tarinfo
+  90: LOAD_FAST            tarinfo
+  92: POP_JUMP_FORWARD_IF_NONE to 146
+  94: LOAD_FAST            self
+  96: LOAD_METHOD          _extract_one
+ 118: LOAD_FAST            tarinfo
+ 120: LOAD_FAST            path
+ 122: LOAD_FAST            set_attrs
+ 124: LOAD_FAST            numeric_owner
+ 126: PRECALL              
+ 130: CALL                 
+ 140: POP_TOP              
+ 142: LOAD_CONST           None
+ 144: RETURN_VALUE         
+ 146: LOAD_CONST           None
+ 148: RETURN_VALUE         

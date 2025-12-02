@@ -1,0 +1,38 @@
+# Disassembly for datetime.timezone.fromutc
+# From module file: datetime
+
+## co_consts:
+(None, 'fromutc: dt.tzinfo is not self', 'fromutc() argument must be a datetime instance or None')
+
+## co_names:
+('isinstance', 'datetime', 'tzinfo', 'ValueError', '_offset', 'TypeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            dt
+  16: LOAD_GLOBAL          datetime
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 112
+  44: LOAD_FAST            dt
+  46: LOAD_ATTR            tzinfo
+  56: LOAD_FAST            self
+  58: IS_OP                
+  60: POP_JUMP_FORWARD_IF_FALSE to 92
+  62: LOAD_GLOBAL          NULL + ValueError
+  74: LOAD_CONST           'fromutc: dt.tzinfo is not self'
+  76: PRECALL              
+  80: CALL                 
+  90: RAISE_VARARGS        
+  92: LOAD_FAST            dt
+  94: LOAD_FAST            self
+  96: LOAD_ATTR            _offset
+ 106: BINARY_OP            +
+ 110: RETURN_VALUE         
+ 112: LOAD_GLOBAL          NULL + TypeError
+ 124: LOAD_CONST           'fromutc() argument must be a datetime instance or None'
+ 126: PRECALL              
+ 130: CALL                 
+ 140: RAISE_VARARGS        

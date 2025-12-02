@@ -1,0 +1,110 @@
+# Disassembly for base64._85encode
+# From module file: base64
+
+## co_consts:
+(None, 4, b'\x00', '!%dI', <code object <listcomp> at 0x00000240693AA470, file "base64.py", line 314>, -1, b'z', 0, 5, b'')
+
+## co_names:
+('isinstance', 'bytes_types', 'memoryview', 'tobytes', 'len', 'struct', 'Struct', 'unpack', 'join')
+
+## bytecode:
+
+   0: MAKE_CELL            chars
+   2: MAKE_CELL            chars2
+   4: MAKE_CELL            foldnuls
+   6: MAKE_CELL            foldspaces
+   8: RESUME               
+  10: LOAD_GLOBAL          NULL + isinstance
+  22: LOAD_FAST            b
+  24: LOAD_GLOBAL          bytes_types
+  36: PRECALL              
+  40: CALL                 
+  50: POP_JUMP_FORWARD_IF_TRUE to 118
+  52: LOAD_GLOBAL          NULL + memoryview
+  64: LOAD_FAST            b
+  66: PRECALL              
+  70: CALL                 
+  80: LOAD_METHOD          tobytes
+ 102: PRECALL              
+ 106: CALL                 
+ 116: STORE_FAST           b
+ 118: LOAD_GLOBAL          NULL + len
+ 130: LOAD_FAST            b
+ 132: PRECALL              
+ 136: CALL                 
+ 146: UNARY_NEGATIVE       
+ 148: LOAD_CONST           4
+ 150: BINARY_OP            %
+ 154: STORE_FAST           padding
+ 156: LOAD_FAST            padding
+ 158: POP_JUMP_FORWARD_IF_FALSE to 176
+ 160: LOAD_FAST            b
+ 162: LOAD_CONST           b'\x00'
+ 164: LOAD_FAST            padding
+ 166: BINARY_OP            *
+ 170: BINARY_OP            +
+ 174: STORE_FAST           b
+ 176: LOAD_GLOBAL          NULL + struct
+ 188: LOAD_ATTR            Struct
+ 198: LOAD_CONST           '!%dI'
+ 200: LOAD_GLOBAL          NULL + len
+ 212: LOAD_FAST            b
+ 214: PRECALL              
+ 218: CALL                 
+ 228: LOAD_CONST           4
+ 230: BINARY_OP            //
+ 234: BINARY_OP            %
+ 238: PRECALL              
+ 242: CALL                 
+ 252: LOAD_METHOD          unpack
+ 274: LOAD_FAST            b
+ 276: PRECALL              
+ 280: CALL                 
+ 290: STORE_FAST           words
+ 292: LOAD_CLOSURE         chars
+ 294: LOAD_CLOSURE         chars2
+ 296: LOAD_CLOSURE         foldnuls
+ 298: LOAD_CLOSURE         foldspaces
+ 300: BUILD_TUPLE          
+ 302: LOAD_CONST           <code object <listcomp> at 0x00000240693AA470, file "base64.py", line 314>
+ 304: MAKE_FUNCTION        closure
+ 306: LOAD_FAST            words
+ 308: GET_ITER             
+ 310: PRECALL              
+ 314: CALL                 
+ 324: STORE_FAST           chunks
+ 326: LOAD_FAST            padding
+ 328: POP_JUMP_FORWARD_IF_FALSE to 426
+ 330: LOAD_FAST            pad
+ 332: POP_JUMP_FORWARD_IF_TRUE to 426
+ 334: LOAD_FAST            chunks
+ 336: LOAD_CONST           -1
+ 338: BINARY_SUBSCR        
+ 348: LOAD_CONST           b'z'
+ 350: COMPARE_OP           ==
+ 356: POP_JUMP_FORWARD_IF_FALSE to 386
+ 358: LOAD_DEREF           chars
+ 360: LOAD_CONST           0
+ 362: BINARY_SUBSCR        
+ 372: LOAD_CONST           5
+ 374: BINARY_OP            *
+ 378: LOAD_FAST            chunks
+ 380: LOAD_CONST           -1
+ 382: STORE_SUBSCR         
+ 386: LOAD_FAST            chunks
+ 388: LOAD_CONST           -1
+ 390: BINARY_SUBSCR        
+ 400: LOAD_CONST           None
+ 402: LOAD_FAST            padding
+ 404: UNARY_NEGATIVE       
+ 406: BUILD_SLICE          
+ 408: BINARY_SUBSCR        
+ 418: LOAD_FAST            chunks
+ 420: LOAD_CONST           -1
+ 422: STORE_SUBSCR         
+ 426: LOAD_CONST           b''
+ 428: LOAD_METHOD          join
+ 450: LOAD_FAST            chunks
+ 452: PRECALL              
+ 456: CALL                 
+ 466: RETURN_VALUE         

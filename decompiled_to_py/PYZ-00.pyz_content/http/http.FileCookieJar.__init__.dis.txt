@@ -1,0 +1,38 @@
+# Disassembly for http.FileCookieJar.__init__
+# From module file: http.cookiejar
+
+## co_consts:
+('\n        Cookies are NOT loaded from the named file until either the .load() or\n        .revert() method is called.\n\n        ', None)
+
+## co_names:
+('CookieJar', '__init__', 'os', 'fspath', 'filename', 'bool', 'delayload')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          CookieJar
+  14: LOAD_METHOD          __init__
+  36: LOAD_FAST            self
+  38: LOAD_FAST            policy
+  40: PRECALL              
+  44: CALL                 
+  54: POP_TOP              
+  56: LOAD_FAST            filename
+  58: POP_JUMP_FORWARD_IF_NONE to 100
+  60: LOAD_GLOBAL          NULL + os
+  72: LOAD_ATTR            fspath
+  82: LOAD_FAST            filename
+  84: PRECALL              
+  88: CALL                 
+  98: STORE_FAST           filename
+ 100: LOAD_FAST            filename
+ 102: LOAD_FAST            self
+ 104: STORE_ATTR           filename
+ 114: LOAD_GLOBAL          NULL + bool
+ 126: LOAD_FAST            delayload
+ 128: PRECALL              
+ 132: CALL                 
+ 142: LOAD_FAST            self
+ 144: STORE_ATTR           delayload
+ 154: LOAD_CONST           None
+ 156: RETURN_VALUE         

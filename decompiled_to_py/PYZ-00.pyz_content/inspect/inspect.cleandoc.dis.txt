@@ -1,0 +1,148 @@
+# Disassembly for inspect.cleandoc
+# From module file: inspect
+
+## co_consts:
+('Clean up indentation from docstrings.\n\n    Any whitespace that can be uniformly removed from the second line\n    onwards is removed.', '\n', 1, None, 0, -1)
+
+## co_names:
+('expandtabs', 'split', 'sys', 'maxsize', 'len', 'lstrip', 'min', 'range', 'pop', 'join', 'UnicodeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            doc
+   6: LOAD_METHOD          expandtabs
+  28: PRECALL              
+  32: CALL                 
+  42: LOAD_METHOD          split
+  64: LOAD_CONST           '\n'
+  66: PRECALL              
+  70: CALL                 
+  80: STORE_FAST           lines
+  82: LOAD_GLOBAL          sys
+  94: LOAD_ATTR            maxsize
+ 104: STORE_FAST           margin
+ 106: LOAD_FAST            lines
+ 108: LOAD_CONST           1
+ 110: LOAD_CONST           None
+ 112: BUILD_SLICE          
+ 114: BINARY_SUBSCR        
+ 124: GET_ITER             
+ 126: FOR_ITER             to 270
+ 128: STORE_FAST           line
+ 130: LOAD_GLOBAL          NULL + len
+ 142: LOAD_FAST            line
+ 144: LOAD_METHOD          lstrip
+ 166: PRECALL              
+ 170: CALL                 
+ 180: PRECALL              
+ 184: CALL                 
+ 194: STORE_FAST           content
+ 196: LOAD_FAST            content
+ 198: POP_JUMP_FORWARD_IF_FALSE to 268
+ 200: LOAD_GLOBAL          NULL + len
+ 212: LOAD_FAST            line
+ 214: PRECALL              
+ 218: CALL                 
+ 228: LOAD_FAST            content
+ 230: BINARY_OP            -
+ 234: STORE_FAST           indent
+ 236: LOAD_GLOBAL          NULL + min
+ 248: LOAD_FAST            margin
+ 250: LOAD_FAST            indent
+ 252: PRECALL              
+ 256: CALL                 
+ 266: STORE_FAST           margin
+ 268: JUMP_BACKWARD        to 126
+ 270: LOAD_FAST            lines
+ 272: POP_JUMP_FORWARD_IF_FALSE to 332
+ 274: LOAD_FAST            lines
+ 276: LOAD_CONST           0
+ 278: BINARY_SUBSCR        
+ 288: LOAD_METHOD          lstrip
+ 310: PRECALL              
+ 314: CALL                 
+ 324: LOAD_FAST            lines
+ 326: LOAD_CONST           0
+ 328: STORE_SUBSCR         
+ 332: LOAD_FAST            margin
+ 334: LOAD_GLOBAL          sys
+ 346: LOAD_ATTR            maxsize
+ 356: COMPARE_OP           <
+ 362: POP_JUMP_FORWARD_IF_FALSE to 466
+ 364: LOAD_GLOBAL          NULL + range
+ 376: LOAD_CONST           1
+ 378: LOAD_GLOBAL          NULL + len
+ 390: LOAD_FAST            lines
+ 392: PRECALL              
+ 396: CALL                 
+ 406: PRECALL              
+ 410: CALL                 
+ 420: GET_ITER             
+ 422: FOR_ITER             to 466
+ 424: STORE_FAST           i
+ 426: LOAD_FAST            lines
+ 428: LOAD_FAST            i
+ 430: BINARY_SUBSCR        
+ 440: LOAD_FAST            margin
+ 442: LOAD_CONST           None
+ 444: BUILD_SLICE          
+ 446: BINARY_SUBSCR        
+ 456: LOAD_FAST            lines
+ 458: LOAD_FAST            i
+ 460: STORE_SUBSCR         
+ 464: JUMP_BACKWARD        to 422
+ 466: LOAD_FAST            lines
+ 468: POP_JUMP_FORWARD_IF_FALSE to 546
+ 470: LOAD_FAST            lines
+ 472: LOAD_CONST           -1
+ 474: BINARY_SUBSCR        
+ 484: POP_JUMP_FORWARD_IF_TRUE to 546
+ 486: LOAD_FAST            lines
+ 488: LOAD_METHOD          pop
+ 510: PRECALL              
+ 514: CALL                 
+ 524: POP_TOP              
+ 526: LOAD_FAST            lines
+ 528: POP_JUMP_FORWARD_IF_FALSE to 546
+ 530: LOAD_FAST            lines
+ 532: LOAD_CONST           -1
+ 534: BINARY_SUBSCR        
+ 544: POP_JUMP_BACKWARD_IF_FALSE to 486
+ 546: LOAD_FAST            lines
+ 548: POP_JUMP_FORWARD_IF_FALSE to 628
+ 550: LOAD_FAST            lines
+ 552: LOAD_CONST           0
+ 554: BINARY_SUBSCR        
+ 564: POP_JUMP_FORWARD_IF_TRUE to 628
+ 566: LOAD_FAST            lines
+ 568: LOAD_METHOD          pop
+ 590: LOAD_CONST           0
+ 592: PRECALL              
+ 596: CALL                 
+ 606: POP_TOP              
+ 608: LOAD_FAST            lines
+ 610: POP_JUMP_FORWARD_IF_FALSE to 628
+ 612: LOAD_FAST            lines
+ 614: LOAD_CONST           0
+ 616: BINARY_SUBSCR        
+ 626: POP_JUMP_BACKWARD_IF_FALSE to 566
+ 628: LOAD_CONST           '\n'
+ 630: LOAD_METHOD          join
+ 652: LOAD_FAST            lines
+ 654: PRECALL              
+ 658: CALL                 
+ 668: RETURN_VALUE         
+ 670: PUSH_EXC_INFO        
+ 672: LOAD_GLOBAL          UnicodeError
+ 684: CHECK_EXC_MATCH      
+ 686: POP_JUMP_FORWARD_IF_FALSE to 696
+ 688: POP_TOP              
+ 690: POP_EXCEPT           
+ 692: LOAD_CONST           None
+ 694: RETURN_VALUE         
+ 696: RERAISE              
+ 698: COPY                 
+ 700: POP_EXCEPT           
+ 702: RERAISE              

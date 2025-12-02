@@ -1,0 +1,28 @@
+# Disassembly for contextvars
+# From module file: contextvars
+
+## co_consts:
+(0, ('Context', 'ContextVar', 'Token', 'copy_context'), None)
+
+## co_names:
+('_contextvars', 'Context', 'ContextVar', 'Token', 'copy_context', '__all__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           ('Context', 'ContextVar', 'Token', 'copy_context')
+   6: IMPORT_NAME          _contextvars
+   8: IMPORT_FROM          Context
+  10: STORE_NAME           Context
+  12: IMPORT_FROM          ContextVar
+  14: STORE_NAME           ContextVar
+  16: IMPORT_FROM          Token
+  18: STORE_NAME           Token
+  20: IMPORT_FROM          copy_context
+  22: STORE_NAME           copy_context
+  24: POP_TOP              
+  26: LOAD_CONST           ('Context', 'ContextVar', 'Token', 'copy_context')
+  28: STORE_NAME           __all__
+  30: LOAD_CONST           None
+  32: RETURN_VALUE         

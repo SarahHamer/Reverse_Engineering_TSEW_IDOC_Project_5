@@ -1,0 +1,24 @@
+# Disassembly for csv.DictWriter.writerows
+# From module file: csv
+
+## co_consts:
+(None,)
+
+## co_names:
+('writer', 'writerows', 'map', '_dict_to_list')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            writer
+  14: LOAD_METHOD          writerows
+  36: LOAD_GLOBAL          NULL + map
+  48: LOAD_FAST            self
+  50: LOAD_ATTR            _dict_to_list
+  60: LOAD_FAST            rowdicts
+  62: PRECALL              
+  66: CALL                 
+  76: PRECALL              
+  80: CALL                 
+  90: RETURN_VALUE         

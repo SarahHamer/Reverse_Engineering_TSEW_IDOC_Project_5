@@ -1,0 +1,19 @@
+# Disassembly for http.Cookie.set_nonstandard_attr
+# From module file: http.cookiejar
+
+## co_consts:
+(None,)
+
+## co_names:
+('_rest',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            value
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            _rest
+  16: LOAD_FAST            name
+  18: STORE_SUBSCR         
+  22: LOAD_CONST           None
+  24: RETURN_VALUE         

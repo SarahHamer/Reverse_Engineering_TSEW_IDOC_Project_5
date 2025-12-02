@@ -1,0 +1,27 @@
+# Disassembly for _pydecimal.Context.remainder_near
+# From module file: _pydecimal
+
+## co_consts:
+('Returns to be "a - b * n", where n is the integer nearest the exact\n        value of "x / b" (if two integers are equally near then the even one\n        is chosen).  If the result is equal to 0 then its sign will be the\n        sign of a.\n\n        This operation will fail under the same conditions as integer division\n        (that is, if integer division on the same two operands would fail, the\n        remainder cannot be calculated).\n\n        >>> ExtendedContext.remainder_near(Decimal(\'2.1\'), Decimal(\'3\'))\n        Decimal(\'-0.9\')\n        >>> ExtendedContext.remainder_near(Decimal(\'10\'), Decimal(\'6\'))\n        Decimal(\'-2\')\n        >>> ExtendedContext.remainder_near(Decimal(\'10\'), Decimal(\'3\'))\n        Decimal(\'1\')\n        >>> ExtendedContext.remainder_near(Decimal(\'-10\'), Decimal(\'3\'))\n        Decimal(\'-1\')\n        >>> ExtendedContext.remainder_near(Decimal(\'10.2\'), Decimal(\'1\'))\n        Decimal(\'0.2\')\n        >>> ExtendedContext.remainder_near(Decimal(\'10\'), Decimal(\'0.3\'))\n        Decimal(\'0.1\')\n        >>> ExtendedContext.remainder_near(Decimal(\'3.6\'), Decimal(\'1.3\'))\n        Decimal(\'-0.3\')\n        >>> ExtendedContext.remainder_near(3, 11)\n        Decimal(\'3\')\n        >>> ExtendedContext.remainder_near(Decimal(3), 11)\n        Decimal(\'3\')\n        >>> ExtendedContext.remainder_near(3, Decimal(11))\n        Decimal(\'3\')\n        ', True, ('raiseit',), ('context',))
+
+## co_names:
+('_convert_other', 'remainder_near')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _convert_other
+  14: LOAD_FAST            a
+  16: LOAD_CONST           True
+  18: KW_NAMES             
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           a
+  36: LOAD_FAST            a
+  38: LOAD_METHOD          remainder_near
+  60: LOAD_FAST            b
+  62: LOAD_FAST            self
+  64: KW_NAMES             
+  66: PRECALL              
+  70: CALL                 
+  80: RETURN_VALUE         

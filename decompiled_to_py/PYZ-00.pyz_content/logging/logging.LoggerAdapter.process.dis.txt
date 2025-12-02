@@ -1,0 +1,21 @@
+# Disassembly for logging.LoggerAdapter.process
+# From module file: logging
+
+## co_consts:
+("\n        Process the logging message and keyword arguments passed in to\n        a logging call to insert contextual information. You can either\n        manipulate the message itself, the keyword args or both. Return\n        the message and kwargs modified (or not) to suit your needs.\n\n        Normally, you'll only need to override this one method in a\n        LoggerAdapter subclass for your specific needs.\n        ", 'extra')
+
+## co_names:
+('extra',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            extra
+  14: LOAD_FAST            kwargs
+  16: LOAD_CONST           'extra'
+  18: STORE_SUBSCR         
+  22: LOAD_FAST            msg
+  24: LOAD_FAST            kwargs
+  26: BUILD_TUPLE          
+  28: RETURN_VALUE         

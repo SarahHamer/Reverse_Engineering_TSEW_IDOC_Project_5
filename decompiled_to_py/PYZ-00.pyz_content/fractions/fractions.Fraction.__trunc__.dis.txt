@@ -1,0 +1,31 @@
+# Disassembly for fractions.Fraction.__trunc__
+# From module file: fractions
+
+## co_consts:
+('math.trunc(a)', 0)
+
+## co_names:
+('_numerator', '_denominator')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            a
+   4: LOAD_ATTR            _numerator
+  14: LOAD_CONST           0
+  16: COMPARE_OP           <
+  22: POP_JUMP_FORWARD_IF_FALSE to 58
+  24: LOAD_FAST            a
+  26: LOAD_ATTR            _numerator
+  36: UNARY_NEGATIVE       
+  38: LOAD_FAST            a
+  40: LOAD_ATTR            _denominator
+  50: BINARY_OP            //
+  54: UNARY_NEGATIVE       
+  56: RETURN_VALUE         
+  58: LOAD_FAST            a
+  60: LOAD_ATTR            _numerator
+  70: LOAD_FAST            a
+  72: LOAD_ATTR            _denominator
+  82: BINARY_OP            //
+  86: RETURN_VALUE         

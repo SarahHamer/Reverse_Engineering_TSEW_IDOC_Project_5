@@ -1,0 +1,52 @@
+# Disassembly for importlib.FastPath.mtime
+# From module file: importlib.metadata
+
+## co_consts:
+(None,)
+
+## co_names:
+('suppress', 'OSError', 'os', 'stat', 'root', 'st_mtime', 'lookup', 'cache_clear')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + suppress
+  14: LOAD_GLOBAL          OSError
+  26: PRECALL              
+  30: CALL                 
+  40: BEFORE_WITH          
+  42: POP_TOP              
+  44: LOAD_GLOBAL          NULL + os
+  56: LOAD_ATTR            stat
+  66: LOAD_FAST            self
+  68: LOAD_ATTR            root
+  78: PRECALL              
+  82: CALL                 
+  92: LOAD_ATTR            st_mtime
+ 102: SWAP                 
+ 104: LOAD_CONST           None
+ 106: LOAD_CONST           None
+ 108: LOAD_CONST           None
+ 110: PRECALL              
+ 114: CALL                 
+ 124: POP_TOP              
+ 126: RETURN_VALUE         
+ 128: PUSH_EXC_INFO        
+ 130: WITH_EXCEPT_START    
+ 132: POP_JUMP_FORWARD_IF_TRUE to 142
+ 134: RERAISE              
+ 136: COPY                 
+ 138: POP_EXCEPT           
+ 140: RERAISE              
+ 142: POP_TOP              
+ 144: POP_EXCEPT           
+ 146: POP_TOP              
+ 148: POP_TOP              
+ 150: LOAD_FAST            self
+ 152: LOAD_ATTR            lookup
+ 162: LOAD_METHOD          cache_clear
+ 184: PRECALL              
+ 188: CALL                 
+ 198: POP_TOP              
+ 200: LOAD_CONST           None
+ 202: RETURN_VALUE         

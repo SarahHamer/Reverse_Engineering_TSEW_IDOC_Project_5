@@ -1,0 +1,61 @@
+# Disassembly for email._encode_base64
+# From module file: email.contentmanager
+
+## co_consts:
+(None, 4, 3, 0, 'ascii', '')
+
+## co_names:
+('range', 'len', 'append', 'binascii', 'b2a_base64', 'decode', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           encoded_lines
+   6: LOAD_FAST            max_line_length
+   8: LOAD_CONST           4
+  10: BINARY_OP            //
+  14: LOAD_CONST           3
+  16: BINARY_OP            *
+  20: STORE_FAST           unencoded_bytes_per_line
+  22: LOAD_GLOBAL          NULL + range
+  34: LOAD_CONST           0
+  36: LOAD_GLOBAL          NULL + len
+  48: LOAD_FAST            data
+  50: PRECALL              
+  54: CALL                 
+  64: LOAD_FAST            unencoded_bytes_per_line
+  66: PRECALL              
+  70: CALL                 
+  80: GET_ITER             
+  82: FOR_ITER             to 230
+  84: STORE_FAST           i
+  86: LOAD_FAST            data
+  88: LOAD_FAST            i
+  90: LOAD_FAST            i
+  92: LOAD_FAST            unencoded_bytes_per_line
+  94: BINARY_OP            +
+  98: BUILD_SLICE          
+ 100: BINARY_SUBSCR        
+ 110: STORE_FAST           thisline
+ 112: LOAD_FAST            encoded_lines
+ 114: LOAD_METHOD          append
+ 136: LOAD_GLOBAL          NULL + binascii
+ 148: LOAD_ATTR            b2a_base64
+ 158: LOAD_FAST            thisline
+ 160: PRECALL              
+ 164: CALL                 
+ 174: LOAD_METHOD          decode
+ 196: LOAD_CONST           'ascii'
+ 198: PRECALL              
+ 202: CALL                 
+ 212: PRECALL              
+ 216: CALL                 
+ 226: POP_TOP              
+ 228: JUMP_BACKWARD        to 82
+ 230: LOAD_CONST           ''
+ 232: LOAD_METHOD          join
+ 254: LOAD_FAST            encoded_lines
+ 256: PRECALL              
+ 260: CALL                 
+ 270: RETURN_VALUE         

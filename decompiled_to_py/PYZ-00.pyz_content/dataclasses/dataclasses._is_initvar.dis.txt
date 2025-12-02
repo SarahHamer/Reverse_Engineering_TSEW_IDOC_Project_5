@@ -1,0 +1,25 @@
+# Disassembly for dataclasses._is_initvar
+# From module file: dataclasses
+
+## co_consts:
+(None,)
+
+## co_names:
+('InitVar', 'type')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            a_type
+   4: LOAD_FAST            dataclasses
+   6: LOAD_ATTR            InitVar
+  16: IS_OP                
+  18: JUMP_IF_TRUE_OR_POP  to 62
+  20: LOAD_GLOBAL          NULL + type
+  32: LOAD_FAST            a_type
+  34: PRECALL              
+  38: CALL                 
+  48: LOAD_FAST            dataclasses
+  50: LOAD_ATTR            InitVar
+  60: IS_OP                
+  62: RETURN_VALUE         

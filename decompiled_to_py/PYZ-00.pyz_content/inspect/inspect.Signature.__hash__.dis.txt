@@ -1,0 +1,36 @@
+# Disassembly for inspect.Signature.__hash__
+# From module file: inspect
+
+## co_consts:
+(None,)
+
+## co_names:
+('_hash_basis', 'frozenset', 'values', 'hash')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _hash_basis
+  26: PRECALL              
+  30: CALL                 
+  40: UNPACK_SEQUENCE      
+  44: STORE_FAST           params
+  46: STORE_FAST           kwo_params
+  48: STORE_FAST           return_annotation
+  50: LOAD_GLOBAL          NULL + frozenset
+  62: LOAD_FAST            kwo_params
+  64: LOAD_METHOD          values
+  86: PRECALL              
+  90: CALL                 
+ 100: PRECALL              
+ 104: CALL                 
+ 114: STORE_FAST           kwo_params
+ 116: LOAD_GLOBAL          NULL + hash
+ 128: LOAD_FAST            params
+ 130: LOAD_FAST            kwo_params
+ 132: LOAD_FAST            return_annotation
+ 134: BUILD_TUPLE          
+ 136: PRECALL              
+ 140: CALL                 
+ 150: RETURN_VALUE         

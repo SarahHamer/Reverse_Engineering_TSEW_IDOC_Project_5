@@ -1,0 +1,28 @@
+# Disassembly for typing._Immutable
+# From module file: typing
+
+## co_consts:
+('_Immutable', 'Mixin to indicate that object should not be copied.', (), <code object __copy__ at 0x000002406943ABB0, file "typing.py", line 414>, <code object __deepcopy__ at 0x000002406943BF30, file "typing.py", line 417>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__slots__', '__copy__', '__deepcopy__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_Immutable'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Mixin to indicate that object should not be copied.'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ()
+  16: STORE_NAME           __slots__
+  18: LOAD_CONST           <code object __copy__ at 0x000002406943ABB0, file "typing.py", line 414>
+  20: MAKE_FUNCTION        
+  22: STORE_NAME           __copy__
+  24: LOAD_CONST           <code object __deepcopy__ at 0x000002406943BF30, file "typing.py", line 417>
+  26: MAKE_FUNCTION        
+  28: STORE_NAME           __deepcopy__
+  30: LOAD_CONST           None
+  32: RETURN_VALUE         

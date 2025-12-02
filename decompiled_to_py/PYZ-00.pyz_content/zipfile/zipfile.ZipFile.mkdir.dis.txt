@@ -1,0 +1,180 @@
+# Disassembly for zipfile.ZipFile.mkdir
+# From module file: zipfile
+
+## co_consts:
+('Creates a directory inside the zip archive.', 'The given ZipInfo does not describe a directory', '/', 0, 16384, 65535, 16, 'Expected type str or ZipInfo', True, False, None)
+
+## co_names:
+('isinstance', 'ZipInfo', 'is_dir', 'ValueError', 'str', 'endswith', 'compress_size', 'CRC', 'external_attr', 'file_size', 'TypeError', '_lock', '_seekable', 'fp', 'seek', 'start_dir', 'tell', 'header_offset', 'compress_type', 'ZIP_LZMA', 'flag_bits', '_MASK_COMPRESS_OPTION_1', '_writecheck', '_didModify', 'filelist', 'append', 'NameToInfo', 'filename', 'write', 'FileHeader')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            zinfo_or_directory_name
+  16: LOAD_GLOBAL          ZipInfo
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 120
+  44: LOAD_FAST            zinfo_or_directory_name
+  46: STORE_FAST           zinfo
+  48: LOAD_FAST            zinfo
+  50: LOAD_METHOD          is_dir
+  72: PRECALL              
+  76: CALL                 
+  86: POP_JUMP_FORWARD_IF_TRUE to 118
+  88: LOAD_GLOBAL          NULL + ValueError
+ 100: LOAD_CONST           'The given ZipInfo does not describe a directory'
+ 102: PRECALL              
+ 106: CALL                 
+ 116: RAISE_VARARGS        
+ 118: JUMP_FORWARD         to 386
+ 120: LOAD_GLOBAL          NULL + isinstance
+ 132: LOAD_FAST            zinfo_or_directory_name
+ 134: LOAD_GLOBAL          str
+ 146: PRECALL              
+ 150: CALL                 
+ 160: POP_JUMP_FORWARD_IF_FALSE to 356
+ 162: LOAD_FAST            zinfo_or_directory_name
+ 164: STORE_FAST           directory_name
+ 166: LOAD_FAST            directory_name
+ 168: LOAD_METHOD          endswith
+ 190: LOAD_CONST           '/'
+ 192: PRECALL              
+ 196: CALL                 
+ 206: POP_JUMP_FORWARD_IF_TRUE to 218
+ 208: LOAD_FAST            directory_name
+ 210: LOAD_CONST           '/'
+ 212: BINARY_OP            +=
+ 216: STORE_FAST           directory_name
+ 218: LOAD_GLOBAL          NULL + ZipInfo
+ 230: LOAD_FAST            directory_name
+ 232: PRECALL              
+ 236: CALL                 
+ 246: STORE_FAST           zinfo
+ 248: LOAD_CONST           0
+ 250: LOAD_FAST            zinfo
+ 252: STORE_ATTR           compress_size
+ 262: LOAD_CONST           0
+ 264: LOAD_FAST            zinfo
+ 266: STORE_ATTR           CRC
+ 276: LOAD_CONST           16384
+ 278: LOAD_FAST            mode
+ 280: BINARY_OP            |
+ 284: LOAD_CONST           65535
+ 286: BINARY_OP            &
+ 290: LOAD_CONST           16
+ 292: BINARY_OP            <<
+ 296: LOAD_FAST            zinfo
+ 298: STORE_ATTR           external_attr
+ 308: LOAD_CONST           0
+ 310: LOAD_FAST            zinfo
+ 312: STORE_ATTR           file_size
+ 322: LOAD_FAST            zinfo
+ 324: COPY                 
+ 326: LOAD_ATTR            external_attr
+ 336: LOAD_CONST           16
+ 338: BINARY_OP            |=
+ 342: SWAP                 
+ 344: STORE_ATTR           external_attr
+ 354: JUMP_FORWARD         to 386
+ 356: LOAD_GLOBAL          NULL + TypeError
+ 368: LOAD_CONST           'Expected type str or ZipInfo'
+ 370: PRECALL              
+ 374: CALL                 
+ 384: RAISE_VARARGS        
+ 386: LOAD_FAST            self
+ 388: LOAD_ATTR            _lock
+ 398: BEFORE_WITH          
+ 400: POP_TOP              
+ 402: LOAD_FAST            self
+ 404: LOAD_ATTR            _seekable
+ 414: POP_JUMP_FORWARD_IF_FALSE to 478
+ 416: LOAD_FAST            self
+ 418: LOAD_ATTR            fp
+ 428: LOAD_METHOD          seek
+ 450: LOAD_FAST            self
+ 452: LOAD_ATTR            start_dir
+ 462: PRECALL              
+ 466: CALL                 
+ 476: POP_TOP              
+ 478: LOAD_FAST            self
+ 480: LOAD_ATTR            fp
+ 490: LOAD_METHOD          tell
+ 512: PRECALL              
+ 516: CALL                 
+ 526: LOAD_FAST            zinfo
+ 528: STORE_ATTR           header_offset
+ 538: LOAD_FAST            zinfo
+ 540: LOAD_ATTR            compress_type
+ 550: LOAD_GLOBAL          ZIP_LZMA
+ 562: COMPARE_OP           ==
+ 568: POP_JUMP_FORWARD_IF_FALSE to 612
+ 570: LOAD_FAST            zinfo
+ 572: COPY                 
+ 574: LOAD_ATTR            flag_bits
+ 584: LOAD_GLOBAL          _MASK_COMPRESS_OPTION_1
+ 596: BINARY_OP            |=
+ 600: SWAP                 
+ 602: STORE_ATTR           flag_bits
+ 612: LOAD_FAST            self
+ 614: LOAD_METHOD          _writecheck
+ 636: LOAD_FAST            zinfo
+ 638: PRECALL              
+ 642: CALL                 
+ 652: POP_TOP              
+ 654: LOAD_CONST           True
+ 656: LOAD_FAST            self
+ 658: STORE_ATTR           _didModify
+ 668: LOAD_FAST            self
+ 670: LOAD_ATTR            filelist
+ 680: LOAD_METHOD          append
+ 702: LOAD_FAST            zinfo
+ 704: PRECALL              
+ 708: CALL                 
+ 718: POP_TOP              
+ 720: LOAD_FAST            zinfo
+ 722: LOAD_FAST            self
+ 724: LOAD_ATTR            NameToInfo
+ 734: LOAD_FAST            zinfo
+ 736: LOAD_ATTR            filename
+ 746: STORE_SUBSCR         
+ 750: LOAD_FAST            self
+ 752: LOAD_ATTR            fp
+ 762: LOAD_METHOD          write
+ 784: LOAD_FAST            zinfo
+ 786: LOAD_METHOD          FileHeader
+ 808: LOAD_CONST           False
+ 810: PRECALL              
+ 814: CALL                 
+ 824: PRECALL              
+ 828: CALL                 
+ 838: POP_TOP              
+ 840: LOAD_FAST            self
+ 842: LOAD_ATTR            fp
+ 852: LOAD_METHOD          tell
+ 874: PRECALL              
+ 878: CALL                 
+ 888: LOAD_FAST            self
+ 890: STORE_ATTR           start_dir
+ 900: LOAD_CONST           None
+ 902: LOAD_CONST           None
+ 904: LOAD_CONST           None
+ 906: PRECALL              
+ 910: CALL                 
+ 920: POP_TOP              
+ 922: LOAD_CONST           None
+ 924: RETURN_VALUE         
+ 926: PUSH_EXC_INFO        
+ 928: WITH_EXCEPT_START    
+ 930: POP_JUMP_FORWARD_IF_TRUE to 940
+ 932: RERAISE              
+ 934: COPY                 
+ 936: POP_EXCEPT           
+ 938: RERAISE              
+ 940: POP_TOP              
+ 942: POP_EXCEPT           
+ 944: POP_TOP              
+ 946: POP_TOP              
+ 948: LOAD_CONST           None
+ 950: RETURN_VALUE         

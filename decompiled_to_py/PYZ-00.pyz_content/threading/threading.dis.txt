@@ -1,0 +1,435 @@
+# Disassembly for threading
+# From module file: threading
+
+## co_consts:
+("Thread module emulating a subset of Java's threading model.", 0, None, ('monotonic',), ('WeakSet',), ('islice', 'count'), ('deque',), ('get_ident', 'active_count', 'Condition', 'current_thread', 'enumerate', 'main_thread', 'TIMEOUT_MAX', 'Event', 'Lock', 'RLock', 'Semaphore', 'BoundedSemaphore', 'Thread', 'Barrier', 'BrokenBarrierError', 'Timer', 'ThreadError', 'setprofile', 'settrace', 'local', 'stack_size', 'excepthook', 'ExceptHookArgs', 'gettrace', 'getprofile'), True, 'get_native_id', False, <code object setprofile at 0x0000024069495210, file "threading.py", line 58>, <code object getprofile at 0x00000240694941D0, file "threading.py", line 68>, <code object settrace at 0x00000240694960B0, file "threading.py", line 72>, <code object gettrace at 0x0000024069494850, file "threading.py", line 82>, <code object RLock at 0x00000240693EA230, file "threading.py", line 90>, <code object _RLock at 0x000002406944AAB0, file "threading.py", line 103>, '_RLock', <code object Condition at 0x000002406941A310, file "threading.py", line 224>, 'Condition', <code object Semaphore at 0x00000240693EAF30, file "threading.py", line 410>, 'Semaphore', <code object BoundedSemaphore at 0x0000024069466250, file "threading.py", line 498>, 'BoundedSemaphore', <code object Event at 0x00000240693EB230, file "threading.py", line 544>, 'Event', <code object Barrier at 0x000002406922D680, file "threading.py", line 637>, 'Barrier', <code object BrokenBarrierError at 0x0000024069494ED0, file "threading.py", line 798>, 'BrokenBarrierError', 1, <code object _newname at 0x0000024069467590, file "threading.py", line 804>, <code object _maintain_shutdown_locks at 0x000002406941AE50, file "threading.py", line 822>, <code object Thread at 0x0000024069365B50, file "threading.py", line 838>, 'Thread', ('_excepthook', '_ExceptHookArgs'), ('print_exception',), ('namedtuple',), 'ExceptHookArgs', 'exc_type exc_value exc_traceback thread', <code object ExceptHookArgs at 0x0000024069495890, file "threading.py", line 1279>, <code object excepthook at 0x0000024068DB6590, file "threading.py", line 1282>, <code object _make_invoke_excepthook at 0x00000240691EA130, file "threading.py", line 1317>, <code object Timer at 0x00000240694672F0, file "threading.py", line 1370>, 'Timer', <code object _MainThread at 0x0000024069496A70, file "threading.py", line 1400>, '_MainThread', <code object _DummyThread at 0x0000024069465990, file "threading.py", line 1421>, '_DummyThread', <code object current_thread at 0x00000240693D3340, file "threading.py", line 1446>, <code object currentThread at 0x000002406941A1F0, file "threading.py", line 1458>, <code object active_count at 0x000002406922D3E0, file "threading.py", line 1469>, <code object activeCount at 0x000002406941A550, file "threading.py", line 1479>, <code object _enumerate at 0x00000240691C2EF0, file "threading.py", line 1490>, <code object enumerate at 0x00000240691F56F0, file "threading.py", line 1494>, <code object _register_atexit at 0x000002406922CC00, file "threading.py", line 1509>, ('stack_size',), <code object _shutdown at 0x0000024068DE6180, file "threading.py", line 1534>, <code object main_thread at 0x0000024069495F10, file "threading.py", line 1590>, ('_local',), ('local',), <code object _after_fork at 0x0000024068E410A0, file "threading.py", line 1607>, 'register_at_fork', ('after_in_child',))
+
+## co_names:
+('__doc__', 'os', '_os', 'sys', '_sys', '_thread', 'functools', 'time', 'monotonic', '_time', '_weakrefset', 'WeakSet', 'itertools', 'islice', '_islice', 'count', '_count', '_collections', 'deque', '_deque', 'ImportError', 'collections', '__all__', 'start_new_thread', '_start_new_thread', 'allocate_lock', '_allocate_lock', '_set_sentinel', 'get_ident', 'get_native_id', '_HAVE_THREAD_NATIVE_ID', 'append', 'AttributeError', 'error', 'ThreadError', 'RLock', '_CRLock', 'TIMEOUT_MAX', '_profile_hook', '_trace_hook', 'setprofile', 'getprofile', 'settrace', 'gettrace', 'Lock', '_RLock', '_PyRLock', 'Condition', 'Semaphore', 'BoundedSemaphore', 'Event', 'Barrier', 'RuntimeError', 'BrokenBarrierError', '__next__', '_counter', '_newname', '_active_limbo_lock', '_active', '_limbo', '_dangling', '_shutdown_locks_lock', 'set', '_shutdown_locks', '_maintain_shutdown_locks', 'Thread', '_excepthook', 'excepthook', '_ExceptHookArgs', 'ExceptHookArgs', 'traceback', 'print_exception', '_print_exception', 'namedtuple', '__excepthook__', '_make_invoke_excepthook', 'Timer', '_MainThread', '_DummyThread', 'current_thread', 'currentThread', 'active_count', 'activeCount', '_enumerate', 'enumerate', '_threading_atexits', '_SHUTTING_DOWN', '_register_atexit', 'stack_size', '_main_thread', '_shutdown', 'main_thread', '_local', 'local', '_threading_local', '_after_fork', 'hasattr', 'register_at_fork')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           "Thread module emulating a subset of Java's threading model."
+   4: STORE_NAME           __doc__
+   6: LOAD_CONST           0
+   8: LOAD_CONST           None
+  10: IMPORT_NAME          os
+  12: STORE_NAME           _os
+  14: LOAD_CONST           0
+  16: LOAD_CONST           None
+  18: IMPORT_NAME          sys
+  20: STORE_NAME           _sys
+  22: LOAD_CONST           0
+  24: LOAD_CONST           None
+  26: IMPORT_NAME          _thread
+  28: STORE_NAME           _thread
+  30: LOAD_CONST           0
+  32: LOAD_CONST           None
+  34: IMPORT_NAME          functools
+  36: STORE_NAME           functools
+  38: LOAD_CONST           0
+  40: LOAD_CONST           ('monotonic',)
+  42: IMPORT_NAME          time
+  44: IMPORT_FROM          monotonic
+  46: STORE_NAME           _time
+  48: POP_TOP              
+  50: LOAD_CONST           0
+  52: LOAD_CONST           ('WeakSet',)
+  54: IMPORT_NAME          _weakrefset
+  56: IMPORT_FROM          WeakSet
+  58: STORE_NAME           WeakSet
+  60: POP_TOP              
+  62: LOAD_CONST           0
+  64: LOAD_CONST           ('islice', 'count')
+  66: IMPORT_NAME          itertools
+  68: IMPORT_FROM          islice
+  70: STORE_NAME           _islice
+  72: IMPORT_FROM          count
+  74: STORE_NAME           _count
+  76: POP_TOP              
+  78: NOP                  
+  80: LOAD_CONST           0
+  82: LOAD_CONST           ('deque',)
+  84: IMPORT_NAME          _collections
+  86: IMPORT_FROM          deque
+  88: STORE_NAME           _deque
+  90: POP_TOP              
+  92: JUMP_FORWARD         to 128
+  94: PUSH_EXC_INFO        
+  96: LOAD_NAME            ImportError
+  98: CHECK_EXC_MATCH      
+ 100: POP_JUMP_FORWARD_IF_FALSE to 120
+ 102: POP_TOP              
+ 104: LOAD_CONST           0
+ 106: LOAD_CONST           ('deque',)
+ 108: IMPORT_NAME          collections
+ 110: IMPORT_FROM          deque
+ 112: STORE_NAME           _deque
+ 114: POP_TOP              
+ 116: POP_EXCEPT           
+ 118: JUMP_FORWARD         to 128
+ 120: RERAISE              
+ 122: COPY                 
+ 124: POP_EXCEPT           
+ 126: RERAISE              
+ 128: BUILD_LIST           
+ 130: LOAD_CONST           ('get_ident', 'active_count', 'Condition', 'current_thread', 'enumerate', 'main_thread', 'TIMEOUT_MAX', 'Event', 'Lock', 'RLock', 'Semaphore', 'BoundedSemaphore', 'Thread', 'Barrier', 'BrokenBarrierError', 'Timer', 'ThreadError', 'setprofile', 'settrace', 'local', 'stack_size', 'excepthook', 'ExceptHookArgs', 'gettrace', 'getprofile')
+ 132: LIST_EXTEND          
+ 134: STORE_NAME           __all__
+ 136: LOAD_NAME            _thread
+ 138: LOAD_ATTR            start_new_thread
+ 148: STORE_NAME           _start_new_thread
+ 150: LOAD_NAME            _thread
+ 152: LOAD_ATTR            allocate_lock
+ 162: STORE_NAME           _allocate_lock
+ 164: LOAD_NAME            _thread
+ 166: LOAD_ATTR            _set_sentinel
+ 176: STORE_NAME           _set_sentinel
+ 178: LOAD_NAME            _thread
+ 180: LOAD_ATTR            get_ident
+ 190: STORE_NAME           get_ident
+ 192: NOP                  
+ 194: LOAD_NAME            _thread
+ 196: LOAD_ATTR            get_native_id
+ 206: STORE_NAME           get_native_id
+ 208: LOAD_CONST           True
+ 210: STORE_NAME           _HAVE_THREAD_NATIVE_ID
+ 212: LOAD_NAME            __all__
+ 214: LOAD_METHOD          append
+ 236: LOAD_CONST           'get_native_id'
+ 238: PRECALL              
+ 242: CALL                 
+ 252: POP_TOP              
+ 254: JUMP_FORWARD         to 282
+ 256: PUSH_EXC_INFO        
+ 258: LOAD_NAME            AttributeError
+ 260: CHECK_EXC_MATCH      
+ 262: POP_JUMP_FORWARD_IF_FALSE to 274
+ 264: POP_TOP              
+ 266: LOAD_CONST           False
+ 268: STORE_NAME           _HAVE_THREAD_NATIVE_ID
+ 270: POP_EXCEPT           
+ 272: JUMP_FORWARD         to 282
+ 274: RERAISE              
+ 276: COPY                 
+ 278: POP_EXCEPT           
+ 280: RERAISE              
+ 282: LOAD_NAME            _thread
+ 284: LOAD_ATTR            error
+ 294: STORE_NAME           ThreadError
+ 296: NOP                  
+ 298: LOAD_NAME            _thread
+ 300: LOAD_ATTR            RLock
+ 310: STORE_NAME           _CRLock
+ 312: JUMP_FORWARD         to 340
+ 314: PUSH_EXC_INFO        
+ 316: LOAD_NAME            AttributeError
+ 318: CHECK_EXC_MATCH      
+ 320: POP_JUMP_FORWARD_IF_FALSE to 332
+ 322: POP_TOP              
+ 324: LOAD_CONST           None
+ 326: STORE_NAME           _CRLock
+ 328: POP_EXCEPT           
+ 330: JUMP_FORWARD         to 340
+ 332: RERAISE              
+ 334: COPY                 
+ 336: POP_EXCEPT           
+ 338: RERAISE              
+ 340: LOAD_NAME            _thread
+ 342: LOAD_ATTR            TIMEOUT_MAX
+ 352: STORE_NAME           TIMEOUT_MAX
+ 354: DELETE_NAME          _thread
+ 356: LOAD_CONST           None
+ 358: STORE_GLOBAL         _profile_hook
+ 360: LOAD_CONST           None
+ 362: STORE_GLOBAL         _trace_hook
+ 364: LOAD_CONST           <code object setprofile at 0x0000024069495210, file "threading.py", line 58>
+ 366: MAKE_FUNCTION        
+ 368: STORE_NAME           setprofile
+ 370: LOAD_CONST           <code object getprofile at 0x00000240694941D0, file "threading.py", line 68>
+ 372: MAKE_FUNCTION        
+ 374: STORE_NAME           getprofile
+ 376: LOAD_CONST           <code object settrace at 0x00000240694960B0, file "threading.py", line 72>
+ 378: MAKE_FUNCTION        
+ 380: STORE_NAME           settrace
+ 382: LOAD_CONST           <code object gettrace at 0x0000024069494850, file "threading.py", line 82>
+ 384: MAKE_FUNCTION        
+ 386: STORE_NAME           gettrace
+ 388: LOAD_NAME            _allocate_lock
+ 390: STORE_NAME           Lock
+ 392: LOAD_CONST           <code object RLock at 0x00000240693EA230, file "threading.py", line 90>
+ 394: MAKE_FUNCTION        
+ 396: STORE_NAME           RLock
+ 398: PUSH_NULL            
+ 400: LOAD_BUILD_CLASS     
+ 402: LOAD_CONST           <code object _RLock at 0x000002406944AAB0, file "threading.py", line 103>
+ 404: MAKE_FUNCTION        
+ 406: LOAD_CONST           '_RLock'
+ 408: PRECALL              
+ 412: CALL                 
+ 422: STORE_NAME           _RLock
+ 424: LOAD_NAME            _RLock
+ 426: STORE_NAME           _PyRLock
+ 428: PUSH_NULL            
+ 430: LOAD_BUILD_CLASS     
+ 432: LOAD_CONST           <code object Condition at 0x000002406941A310, file "threading.py", line 224>
+ 434: MAKE_FUNCTION        
+ 436: LOAD_CONST           'Condition'
+ 438: PRECALL              
+ 442: CALL                 
+ 452: STORE_NAME           Condition
+ 454: PUSH_NULL            
+ 456: LOAD_BUILD_CLASS     
+ 458: LOAD_CONST           <code object Semaphore at 0x00000240693EAF30, file "threading.py", line 410>
+ 460: MAKE_FUNCTION        
+ 462: LOAD_CONST           'Semaphore'
+ 464: PRECALL              
+ 468: CALL                 
+ 478: STORE_NAME           Semaphore
+ 480: PUSH_NULL            
+ 482: LOAD_BUILD_CLASS     
+ 484: LOAD_CONST           <code object BoundedSemaphore at 0x0000024069466250, file "threading.py", line 498>
+ 486: MAKE_FUNCTION        
+ 488: LOAD_CONST           'BoundedSemaphore'
+ 490: LOAD_NAME            Semaphore
+ 492: PRECALL              
+ 496: CALL                 
+ 506: STORE_NAME           BoundedSemaphore
+ 508: PUSH_NULL            
+ 510: LOAD_BUILD_CLASS     
+ 512: LOAD_CONST           <code object Event at 0x00000240693EB230, file "threading.py", line 544>
+ 514: MAKE_FUNCTION        
+ 516: LOAD_CONST           'Event'
+ 518: PRECALL              
+ 522: CALL                 
+ 532: STORE_NAME           Event
+ 534: PUSH_NULL            
+ 536: LOAD_BUILD_CLASS     
+ 538: LOAD_CONST           <code object Barrier at 0x000002406922D680, file "threading.py", line 637>
+ 540: MAKE_FUNCTION        
+ 542: LOAD_CONST           'Barrier'
+ 544: PRECALL              
+ 548: CALL                 
+ 558: STORE_NAME           Barrier
+ 560: PUSH_NULL            
+ 562: LOAD_BUILD_CLASS     
+ 564: LOAD_CONST           <code object BrokenBarrierError at 0x0000024069494ED0, file "threading.py", line 798>
+ 566: MAKE_FUNCTION        
+ 568: LOAD_CONST           'BrokenBarrierError'
+ 570: LOAD_NAME            RuntimeError
+ 572: PRECALL              
+ 576: CALL                 
+ 586: STORE_NAME           BrokenBarrierError
+ 588: PUSH_NULL            
+ 590: LOAD_NAME            _count
+ 592: LOAD_CONST           1
+ 594: PRECALL              
+ 598: CALL                 
+ 608: LOAD_ATTR            __next__
+ 618: STORE_NAME           _counter
+ 620: LOAD_CONST           <code object _newname at 0x0000024069467590, file "threading.py", line 804>
+ 622: MAKE_FUNCTION        
+ 624: STORE_NAME           _newname
+ 626: PUSH_NULL            
+ 628: LOAD_NAME            RLock
+ 630: PRECALL              
+ 634: CALL                 
+ 644: STORE_GLOBAL         _active_limbo_lock
+ 646: BUILD_MAP            
+ 648: STORE_NAME           _active
+ 650: BUILD_MAP            
+ 652: STORE_NAME           _limbo
+ 654: PUSH_NULL            
+ 656: LOAD_NAME            WeakSet
+ 658: PRECALL              
+ 662: CALL                 
+ 672: STORE_NAME           _dangling
+ 674: PUSH_NULL            
+ 676: LOAD_NAME            _allocate_lock
+ 678: PRECALL              
+ 682: CALL                 
+ 692: STORE_GLOBAL         _shutdown_locks_lock
+ 694: PUSH_NULL            
+ 696: LOAD_NAME            set
+ 698: PRECALL              
+ 702: CALL                 
+ 712: STORE_GLOBAL         _shutdown_locks
+ 714: LOAD_CONST           <code object _maintain_shutdown_locks at 0x000002406941AE50, file "threading.py", line 822>
+ 716: MAKE_FUNCTION        
+ 718: STORE_NAME           _maintain_shutdown_locks
+ 720: PUSH_NULL            
+ 722: LOAD_BUILD_CLASS     
+ 724: LOAD_CONST           <code object Thread at 0x0000024069365B50, file "threading.py", line 838>
+ 726: MAKE_FUNCTION        
+ 728: LOAD_CONST           'Thread'
+ 730: PRECALL              
+ 734: CALL                 
+ 744: STORE_NAME           Thread
+ 746: NOP                  
+ 748: LOAD_CONST           0
+ 750: LOAD_CONST           ('_excepthook', '_ExceptHookArgs')
+ 752: IMPORT_NAME          _thread
+ 754: IMPORT_FROM          _excepthook
+ 756: STORE_GLOBAL         excepthook
+ 758: IMPORT_FROM          _ExceptHookArgs
+ 760: STORE_NAME           ExceptHookArgs
+ 762: POP_TOP              
+ 764: JUMP_FORWARD         to 848
+ 766: PUSH_EXC_INFO        
+ 768: LOAD_NAME            ImportError
+ 770: CHECK_EXC_MATCH      
+ 772: POP_JUMP_FORWARD_IF_FALSE to 840
+ 774: POP_TOP              
+ 776: LOAD_CONST           0
+ 778: LOAD_CONST           ('print_exception',)
+ 780: IMPORT_NAME          traceback
+ 782: IMPORT_FROM          print_exception
+ 784: STORE_NAME           _print_exception
+ 786: POP_TOP              
+ 788: LOAD_CONST           0
+ 790: LOAD_CONST           ('namedtuple',)
+ 792: IMPORT_NAME          collections
+ 794: IMPORT_FROM          namedtuple
+ 796: STORE_NAME           namedtuple
+ 798: POP_TOP              
+ 800: PUSH_NULL            
+ 802: LOAD_NAME            namedtuple
+ 804: LOAD_CONST           'ExceptHookArgs'
+ 806: LOAD_CONST           'exc_type exc_value exc_traceback thread'
+ 808: PRECALL              
+ 812: CALL                 
+ 822: STORE_NAME           _ExceptHookArgs
+ 824: LOAD_CONST           <code object ExceptHookArgs at 0x0000024069495890, file "threading.py", line 1279>
+ 826: MAKE_FUNCTION        
+ 828: STORE_NAME           ExceptHookArgs
+ 830: LOAD_CONST           <code object excepthook at 0x0000024068DB6590, file "threading.py", line 1282>
+ 832: MAKE_FUNCTION        
+ 834: STORE_GLOBAL         excepthook
+ 836: POP_EXCEPT           
+ 838: JUMP_FORWARD         to 848
+ 840: RERAISE              
+ 842: COPY                 
+ 844: POP_EXCEPT           
+ 846: RERAISE              
+ 848: LOAD_GLOBAL          excepthook
+ 860: STORE_NAME           __excepthook__
+ 862: LOAD_CONST           <code object _make_invoke_excepthook at 0x00000240691EA130, file "threading.py", line 1317>
+ 864: MAKE_FUNCTION        
+ 866: STORE_NAME           _make_invoke_excepthook
+ 868: PUSH_NULL            
+ 870: LOAD_BUILD_CLASS     
+ 872: LOAD_CONST           <code object Timer at 0x00000240694672F0, file "threading.py", line 1370>
+ 874: MAKE_FUNCTION        
+ 876: LOAD_CONST           'Timer'
+ 878: LOAD_NAME            Thread
+ 880: PRECALL              
+ 884: CALL                 
+ 894: STORE_NAME           Timer
+ 896: PUSH_NULL            
+ 898: LOAD_BUILD_CLASS     
+ 900: LOAD_CONST           <code object _MainThread at 0x0000024069496A70, file "threading.py", line 1400>
+ 902: MAKE_FUNCTION        
+ 904: LOAD_CONST           '_MainThread'
+ 906: LOAD_NAME            Thread
+ 908: PRECALL              
+ 912: CALL                 
+ 922: STORE_NAME           _MainThread
+ 924: PUSH_NULL            
+ 926: LOAD_BUILD_CLASS     
+ 928: LOAD_CONST           <code object _DummyThread at 0x0000024069465990, file "threading.py", line 1421>
+ 930: MAKE_FUNCTION        
+ 932: LOAD_CONST           '_DummyThread'
+ 934: LOAD_NAME            Thread
+ 936: PRECALL              
+ 940: CALL                 
+ 950: STORE_NAME           _DummyThread
+ 952: LOAD_CONST           <code object current_thread at 0x00000240693D3340, file "threading.py", line 1446>
+ 954: MAKE_FUNCTION        
+ 956: STORE_NAME           current_thread
+ 958: LOAD_CONST           <code object currentThread at 0x000002406941A1F0, file "threading.py", line 1458>
+ 960: MAKE_FUNCTION        
+ 962: STORE_NAME           currentThread
+ 964: LOAD_CONST           <code object active_count at 0x000002406922D3E0, file "threading.py", line 1469>
+ 966: MAKE_FUNCTION        
+ 968: STORE_NAME           active_count
+ 970: LOAD_CONST           <code object activeCount at 0x000002406941A550, file "threading.py", line 1479>
+ 972: MAKE_FUNCTION        
+ 974: STORE_NAME           activeCount
+ 976: LOAD_CONST           <code object _enumerate at 0x00000240691C2EF0, file "threading.py", line 1490>
+ 978: MAKE_FUNCTION        
+ 980: STORE_NAME           _enumerate
+ 982: LOAD_CONST           <code object enumerate at 0x00000240691F56F0, file "threading.py", line 1494>
+ 984: MAKE_FUNCTION        
+ 986: STORE_NAME           enumerate
+ 988: BUILD_LIST           
+ 990: STORE_NAME           _threading_atexits
+ 992: LOAD_CONST           False
+ 994: STORE_GLOBAL         _SHUTTING_DOWN
+ 996: LOAD_CONST           <code object _register_atexit at 0x000002406922CC00, file "threading.py", line 1509>
+ 998: MAKE_FUNCTION        
+1000: STORE_NAME           _register_atexit
+1002: LOAD_CONST           0
+1004: LOAD_CONST           ('stack_size',)
+1006: IMPORT_NAME          _thread
+1008: IMPORT_FROM          stack_size
+1010: STORE_NAME           stack_size
+1012: POP_TOP              
+1014: PUSH_NULL            
+1016: LOAD_NAME            _MainThread
+1018: PRECALL              
+1022: CALL                 
+1032: STORE_GLOBAL         _main_thread
+1034: LOAD_CONST           <code object _shutdown at 0x0000024068DE6180, file "threading.py", line 1534>
+1036: MAKE_FUNCTION        
+1038: STORE_NAME           _shutdown
+1040: LOAD_CONST           <code object main_thread at 0x0000024069495F10, file "threading.py", line 1590>
+1042: MAKE_FUNCTION        
+1044: STORE_NAME           main_thread
+1046: NOP                  
+1048: LOAD_CONST           0
+1050: LOAD_CONST           ('_local',)
+1052: IMPORT_NAME          _thread
+1054: IMPORT_FROM          _local
+1056: STORE_NAME           local
+1058: POP_TOP              
+1060: JUMP_FORWARD         to 1096
+1062: PUSH_EXC_INFO        
+1064: LOAD_NAME            ImportError
+1066: CHECK_EXC_MATCH      
+1068: POP_JUMP_FORWARD_IF_FALSE to 1088
+1070: POP_TOP              
+1072: LOAD_CONST           0
+1074: LOAD_CONST           ('local',)
+1076: IMPORT_NAME          _threading_local
+1078: IMPORT_FROM          local
+1080: STORE_NAME           local
+1082: POP_TOP              
+1084: POP_EXCEPT           
+1086: JUMP_FORWARD         to 1096
+1088: RERAISE              
+1090: COPY                 
+1092: POP_EXCEPT           
+1094: RERAISE              
+1096: LOAD_CONST           <code object _after_fork at 0x0000024068E410A0, file "threading.py", line 1607>
+1098: MAKE_FUNCTION        
+1100: STORE_NAME           _after_fork
+1102: PUSH_NULL            
+1104: LOAD_NAME            hasattr
+1106: LOAD_NAME            _os
+1108: LOAD_CONST           'register_at_fork'
+1110: PRECALL              
+1114: CALL                 
+1124: POP_JUMP_FORWARD_IF_FALSE to 1164
+1126: PUSH_NULL            
+1128: LOAD_NAME            _os
+1130: LOAD_ATTR            register_at_fork
+1140: LOAD_NAME            _after_fork
+1142: KW_NAMES             
+1144: PRECALL              
+1148: CALL                 
+1158: POP_TOP              
+1160: LOAD_CONST           None
+1162: RETURN_VALUE         
+1164: LOAD_CONST           None
+1166: RETURN_VALUE         

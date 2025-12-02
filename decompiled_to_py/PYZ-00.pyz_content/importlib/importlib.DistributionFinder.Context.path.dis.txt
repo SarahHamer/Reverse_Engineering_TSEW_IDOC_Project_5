@@ -1,0 +1,23 @@
+# Disassembly for importlib.DistributionFinder.Context.path
+# From module file: importlib.metadata
+
+## co_consts:
+('\n            The sequence of directory path that a distribution finder\n            should search.\n\n            Typically refers to Python installed package paths such as\n            "site-packages" directories and defaults to ``sys.path``.\n            ', 'path')
+
+## co_names:
+('vars', 'get', 'sys', 'path')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + vars
+  14: LOAD_FAST            self
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_METHOD          get
+  52: LOAD_CONST           'path'
+  54: LOAD_GLOBAL          sys
+  66: LOAD_ATTR            path
+  76: PRECALL              
+  80: CALL                 
+  90: RETURN_VALUE         

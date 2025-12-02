@@ -1,0 +1,23 @@
+# Disassembly for playroom.Drawings.check
+# From module file: playroom
+
+## co_consts:
+(None, True, "You check out all of the crayon drawings on the walls.\nYou see 4 drawings of people in suits and lab coats.  They have names on them:\n --- Hank Little\n --- Barbara James\n --- Chuck Huitt\n --- Emily Johnson\n\nYou remember!  Those are your brothers and sisters Hank, Barbara, Chuck, and Emily!\n\nAll of you would play together and make up names and pretend you all worked together.\nThey were never as imaginative as you, so would always use their real first names.\n\nThis makes you smile.\n\nYou also see a crayon drawing of someone in a flannel jacket.  It says:\n --- Employee of the month - $player\n --- aka - Sam Heart\n\nThat's you!  You remember!\nYour name is Sam Heart!\n\nYou feel the emotion and tears welling up.\n\nWhat is happening?")
+
+## co_names:
+('checked', 'send_message')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           True
+   4: LOAD_FAST            self
+   6: STORE_ATTR           checked
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          send_message
+  40: LOAD_CONST           "You check out all of the crayon drawings on the walls.\nYou see 4 drawings of people in suits and lab coats.  They have names on them:\n --- Hank Little\n --- Barbara James\n --- Chuck Huitt\n --- Emily Johnson\n\nYou remember!  Those are your brothers and sisters Hank, Barbara, Chuck, and Emily!\n\nAll of you would play together and make up names and pretend you all worked together.\nThey were never as imaginative as you, so would always use their real first names.\n\nThis makes you smile.\n\nYou also see a crayon drawing of someone in a flannel jacket.  It says:\n --- Employee of the month - $player\n --- aka - Sam Heart\n\nThat's you!  You remember!\nYour name is Sam Heart!\n\nYou feel the emotion and tears welling up.\n\nWhat is happening?"
+  42: PRECALL              
+  46: CALL                 
+  56: POP_TOP              
+  58: LOAD_CONST           None
+  60: RETURN_VALUE         

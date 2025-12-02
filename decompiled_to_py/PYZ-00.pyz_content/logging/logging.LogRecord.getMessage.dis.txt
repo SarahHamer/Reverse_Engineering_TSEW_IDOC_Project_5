@@ -1,0 +1,28 @@
+# Disassembly for logging.LogRecord.getMessage
+# From module file: logging
+
+## co_consts:
+('\n        Return the message for this LogRecord.\n\n        Return the message for this LogRecord after merging any user-supplied\n        arguments with the message.\n        ',)
+
+## co_names:
+('str', 'msg', 'args')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + str
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            msg
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           msg
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            args
+  54: POP_JUMP_FORWARD_IF_FALSE to 76
+  56: LOAD_FAST            msg
+  58: LOAD_FAST            self
+  60: LOAD_ATTR            args
+  70: BINARY_OP            %
+  74: STORE_FAST           msg
+  76: LOAD_FAST            msg
+  78: RETURN_VALUE         

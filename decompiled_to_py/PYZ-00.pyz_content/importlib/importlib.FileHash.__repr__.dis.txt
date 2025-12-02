@@ -1,0 +1,23 @@
+# Disassembly for importlib.FileHash.__repr__
+# From module file: importlib.metadata
+
+## co_consts:
+(None, '<FileHash mode: ', ' value: ', '>')
+
+## co_names:
+('mode', 'value')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '<FileHash mode: '
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            mode
+  16: FORMAT_VALUE         
+  18: LOAD_CONST           ' value: '
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            value
+  32: FORMAT_VALUE         
+  34: LOAD_CONST           '>'
+  36: BUILD_STRING         
+  38: RETURN_VALUE         

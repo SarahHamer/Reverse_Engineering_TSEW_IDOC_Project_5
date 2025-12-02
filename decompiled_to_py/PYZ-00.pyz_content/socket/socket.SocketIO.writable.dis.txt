@@ -1,0 +1,23 @@
+# Disassembly for socket.SocketIO.writable
+# From module file: socket
+
+## co_consts:
+('True if the SocketIO is open for writing.\n        ', 'I/O operation on closed socket.')
+
+## co_names:
+('closed', 'ValueError', '_writing')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            closed
+  14: POP_JUMP_FORWARD_IF_FALSE to 46
+  16: LOAD_GLOBAL          NULL + ValueError
+  28: LOAD_CONST           'I/O operation on closed socket.'
+  30: PRECALL              
+  34: CALL                 
+  44: RAISE_VARARGS        
+  46: LOAD_FAST            self
+  48: LOAD_ATTR            _writing
+  58: RETURN_VALUE         

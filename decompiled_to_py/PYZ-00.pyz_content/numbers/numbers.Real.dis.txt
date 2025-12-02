@@ -1,0 +1,113 @@
+# Disassembly for numbers.Real
+# From module file: numbers
+
+## co_consts:
+('Real', 'To Complex, Real adds the operations that work on real numbers.\n\n    In short, those are: a conversion to float, trunc(), divmod,\n    %, <, <=, >, and >=.\n\n    Real also provides defaults for the derived operations.\n    ', (), <code object __float__ at 0x0000024069494510, file "numbers.py", line 158>, <code object __trunc__ at 0x0000024069494780, file "numbers.py", line 165>, <code object __floor__ at 0x00000240694945E0, file "numbers.py", line 178>, <code object __ceil__ at 0x0000024069495E40, file "numbers.py", line 183>, None, <code object __round__ at 0x0000024069496CE0, file "numbers.py", line 188>, <code object __divmod__ at 0x0000024069494ED0, file "numbers.py", line 197>, <code object __rdivmod__ at 0x0000024069495B00, file "numbers.py", line 205>, <code object __floordiv__ at 0x00000240694949F0, file "numbers.py", line 213>, <code object __rfloordiv__ at 0x0000024069496590, file "numbers.py", line 218>, <code object __mod__ at 0x00000240694968D0, file "numbers.py", line 223>, <code object __rmod__ at 0x0000024069495890, file "numbers.py", line 228>, <code object __lt__ at 0x00000240694969A0, file "numbers.py", line 233>, <code object __le__ at 0x0000024069496A70, file "numbers.py", line 240>, <code object __complex__ at 0x00000240693EAF30, file "numbers.py", line 246>, <code object real at 0x000002406943B7B0, file "numbers.py", line 250>, <code object imag at 0x000002406943B0F0, file "numbers.py", line 255>, <code object conjugate at 0x000002406943B6F0, file "numbers.py", line 260>, (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__slots__', 'abstractmethod', '__float__', '__trunc__', '__floor__', '__ceil__', '__round__', '__divmod__', '__rdivmod__', '__floordiv__', '__rfloordiv__', '__mod__', '__rmod__', '__lt__', '__le__', '__complex__', 'property', 'real', 'imag', 'conjugate')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Real'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'To Complex, Real adds the operations that work on real numbers.\n\n    In short, those are: a conversion to float, trunc(), divmod,\n    %, <, <=, >, and >=.\n\n    Real also provides defaults for the derived operations.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ()
+  16: STORE_NAME           __slots__
+  18: LOAD_NAME            abstractmethod
+  20: LOAD_CONST           <code object __float__ at 0x0000024069494510, file "numbers.py", line 158>
+  22: MAKE_FUNCTION        
+  24: PRECALL              
+  28: CALL                 
+  38: STORE_NAME           __float__
+  40: LOAD_NAME            abstractmethod
+  42: LOAD_CONST           <code object __trunc__ at 0x0000024069494780, file "numbers.py", line 165>
+  44: MAKE_FUNCTION        
+  46: PRECALL              
+  50: CALL                 
+  60: STORE_NAME           __trunc__
+  62: LOAD_NAME            abstractmethod
+  64: LOAD_CONST           <code object __floor__ at 0x00000240694945E0, file "numbers.py", line 178>
+  66: MAKE_FUNCTION        
+  68: PRECALL              
+  72: CALL                 
+  82: STORE_NAME           __floor__
+  84: LOAD_NAME            abstractmethod
+  86: LOAD_CONST           <code object __ceil__ at 0x0000024069495E40, file "numbers.py", line 183>
+  88: MAKE_FUNCTION        
+  90: PRECALL              
+  94: CALL                 
+ 104: STORE_NAME           __ceil__
+ 106: LOAD_NAME            abstractmethod
+ 108: LOAD_CONST           (None,)
+ 110: LOAD_CONST           <code object __round__ at 0x0000024069496CE0, file "numbers.py", line 188>
+ 112: MAKE_FUNCTION        defaults
+ 114: PRECALL              
+ 118: CALL                 
+ 128: STORE_NAME           __round__
+ 130: LOAD_CONST           <code object __divmod__ at 0x0000024069494ED0, file "numbers.py", line 197>
+ 132: MAKE_FUNCTION        
+ 134: STORE_NAME           __divmod__
+ 136: LOAD_CONST           <code object __rdivmod__ at 0x0000024069495B00, file "numbers.py", line 205>
+ 138: MAKE_FUNCTION        
+ 140: STORE_NAME           __rdivmod__
+ 142: LOAD_NAME            abstractmethod
+ 144: LOAD_CONST           <code object __floordiv__ at 0x00000240694949F0, file "numbers.py", line 213>
+ 146: MAKE_FUNCTION        
+ 148: PRECALL              
+ 152: CALL                 
+ 162: STORE_NAME           __floordiv__
+ 164: LOAD_NAME            abstractmethod
+ 166: LOAD_CONST           <code object __rfloordiv__ at 0x0000024069496590, file "numbers.py", line 218>
+ 168: MAKE_FUNCTION        
+ 170: PRECALL              
+ 174: CALL                 
+ 184: STORE_NAME           __rfloordiv__
+ 186: LOAD_NAME            abstractmethod
+ 188: LOAD_CONST           <code object __mod__ at 0x00000240694968D0, file "numbers.py", line 223>
+ 190: MAKE_FUNCTION        
+ 192: PRECALL              
+ 196: CALL                 
+ 206: STORE_NAME           __mod__
+ 208: LOAD_NAME            abstractmethod
+ 210: LOAD_CONST           <code object __rmod__ at 0x0000024069495890, file "numbers.py", line 228>
+ 212: MAKE_FUNCTION        
+ 214: PRECALL              
+ 218: CALL                 
+ 228: STORE_NAME           __rmod__
+ 230: LOAD_NAME            abstractmethod
+ 232: LOAD_CONST           <code object __lt__ at 0x00000240694969A0, file "numbers.py", line 233>
+ 234: MAKE_FUNCTION        
+ 236: PRECALL              
+ 240: CALL                 
+ 250: STORE_NAME           __lt__
+ 252: LOAD_NAME            abstractmethod
+ 254: LOAD_CONST           <code object __le__ at 0x0000024069496A70, file "numbers.py", line 240>
+ 256: MAKE_FUNCTION        
+ 258: PRECALL              
+ 262: CALL                 
+ 272: STORE_NAME           __le__
+ 274: LOAD_CONST           <code object __complex__ at 0x00000240693EAF30, file "numbers.py", line 246>
+ 276: MAKE_FUNCTION        
+ 278: STORE_NAME           __complex__
+ 280: LOAD_NAME            property
+ 282: LOAD_CONST           <code object real at 0x000002406943B7B0, file "numbers.py", line 250>
+ 284: MAKE_FUNCTION        
+ 286: PRECALL              
+ 290: CALL                 
+ 300: STORE_NAME           real
+ 302: LOAD_NAME            property
+ 304: LOAD_CONST           <code object imag at 0x000002406943B0F0, file "numbers.py", line 255>
+ 306: MAKE_FUNCTION        
+ 308: PRECALL              
+ 312: CALL                 
+ 322: STORE_NAME           imag
+ 324: LOAD_CONST           <code object conjugate at 0x000002406943B6F0, file "numbers.py", line 260>
+ 326: MAKE_FUNCTION        
+ 328: STORE_NAME           conjugate
+ 330: LOAD_CONST           None
+ 332: RETURN_VALUE         

@@ -1,0 +1,47 @@
+# Disassembly for zipfile._ZipDecrypter.update_keys
+# From module file: zipfile
+
+## co_consts:
+(None, 255, 4294967295, 134775813, 1, 24)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: PUSH_NULL            
+   6: LOAD_DEREF           crc32
+   8: LOAD_FAST            c
+  10: LOAD_DEREF           key0
+  12: PRECALL              
+  16: CALL                 
+  26: STORE_DEREF          key0
+  28: LOAD_DEREF           key1
+  30: LOAD_DEREF           key0
+  32: LOAD_CONST           255
+  34: BINARY_OP            &
+  38: BINARY_OP            +
+  42: LOAD_CONST           4294967295
+  44: BINARY_OP            &
+  48: STORE_DEREF          key1
+  50: LOAD_DEREF           key1
+  52: LOAD_CONST           134775813
+  54: BINARY_OP            *
+  58: LOAD_CONST           1
+  60: BINARY_OP            +
+  64: LOAD_CONST           4294967295
+  66: BINARY_OP            &
+  70: STORE_DEREF          key1
+  72: PUSH_NULL            
+  74: LOAD_DEREF           crc32
+  76: LOAD_DEREF           key1
+  78: LOAD_CONST           24
+  80: BINARY_OP            >>
+  84: LOAD_DEREF           key2
+  86: PRECALL              
+  90: CALL                 
+ 100: STORE_DEREF          key2
+ 102: LOAD_CONST           None
+ 104: RETURN_VALUE         

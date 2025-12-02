@@ -1,0 +1,36 @@
+# Disassembly for _pydecimal._rshift_nearest
+# From module file: _pydecimal
+
+## co_consts:
+('Given an integer x and a nonnegative integer shift, return closest\n    integer to x / 2**shift; use round-to-even in case of a tie.\n\n    ', 1, 2)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           1
+   4: LOAD_FAST            shift
+   6: BINARY_OP            <<
+  10: LOAD_FAST            x
+  12: LOAD_FAST            shift
+  14: BINARY_OP            >>
+  18: STORE_FAST           q
+  20: STORE_FAST           b
+  22: LOAD_FAST            q
+  24: LOAD_CONST           2
+  26: LOAD_FAST            x
+  28: LOAD_FAST            b
+  30: LOAD_CONST           1
+  32: BINARY_OP            -
+  36: BINARY_OP            &
+  40: BINARY_OP            *
+  44: LOAD_FAST            q
+  46: LOAD_CONST           1
+  48: BINARY_OP            &
+  52: BINARY_OP            +
+  56: LOAD_FAST            b
+  58: COMPARE_OP           >
+  64: BINARY_OP            +
+  68: RETURN_VALUE         

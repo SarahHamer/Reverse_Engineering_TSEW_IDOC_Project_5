@@ -1,0 +1,59 @@
+# Disassembly for gettext._tokenize
+# From module file: gettext
+
+## co_consts:
+(None, 'WHITESPACES', 'INVALID', 'invalid token in plural form: %s', '')
+
+## co_names:
+('re', 'finditer', '_token_pattern', 'lastgroup', 'group', 'ValueError')
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_GLOBAL          NULL + re
+  18: LOAD_ATTR            finditer
+  28: LOAD_GLOBAL          _token_pattern
+  40: LOAD_FAST            plural
+  42: PRECALL              
+  46: CALL                 
+  56: GET_ITER             
+  58: FOR_ITER             to 190
+  60: STORE_FAST           mo
+  62: LOAD_FAST            mo
+  64: LOAD_ATTR            lastgroup
+  74: STORE_FAST           kind
+  76: LOAD_FAST            kind
+  78: LOAD_CONST           'WHITESPACES'
+  80: COMPARE_OP           ==
+  86: POP_JUMP_FORWARD_IF_FALSE to 90
+  88: JUMP_BACKWARD        to 58
+  90: LOAD_FAST            mo
+  92: LOAD_METHOD          group
+ 114: LOAD_FAST            kind
+ 116: PRECALL              
+ 120: CALL                 
+ 130: STORE_FAST           value
+ 132: LOAD_FAST            kind
+ 134: LOAD_CONST           'INVALID'
+ 136: COMPARE_OP           ==
+ 142: POP_JUMP_FORWARD_IF_FALSE to 180
+ 144: LOAD_GLOBAL          NULL + ValueError
+ 156: LOAD_CONST           'invalid token in plural form: %s'
+ 158: LOAD_FAST            value
+ 160: BINARY_OP            %
+ 164: PRECALL              
+ 168: CALL                 
+ 178: RAISE_VARARGS        
+ 180: LOAD_FAST            value
+ 182: YIELD_VALUE          
+ 184: RESUME               
+ 186: POP_TOP              
+ 188: JUMP_BACKWARD        to 58
+ 190: LOAD_CONST           ''
+ 192: YIELD_VALUE          
+ 194: RESUME               
+ 196: POP_TOP              
+ 198: LOAD_CONST           None
+ 200: RETURN_VALUE         

@@ -1,0 +1,22 @@
+# Disassembly for datetime.datetime.date
+# From module file: datetime
+
+## co_consts:
+('Return the date part.',)
+
+## co_names:
+('date', '_year', '_month', '_day')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + date
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            _year
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            _month
+  38: LOAD_FAST            self
+  40: LOAD_ATTR            _day
+  50: PRECALL              
+  54: CALL                 
+  64: RETURN_VALUE         

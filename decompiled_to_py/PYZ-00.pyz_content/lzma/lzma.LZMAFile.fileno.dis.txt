@@ -1,0 +1,23 @@
+# Disassembly for lzma.LZMAFile.fileno
+# From module file: lzma
+
+## co_consts:
+('Return the file descriptor for the underlying file.',)
+
+## co_names:
+('_check_not_closed', '_fp', 'fileno')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _check_not_closed
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            _fp
+  54: LOAD_METHOD          fileno
+  76: PRECALL              
+  80: CALL                 
+  90: RETURN_VALUE         

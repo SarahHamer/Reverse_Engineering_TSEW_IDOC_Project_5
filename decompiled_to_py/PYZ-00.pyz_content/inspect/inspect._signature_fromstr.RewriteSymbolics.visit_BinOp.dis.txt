@@ -1,0 +1,98 @@
+# Disassembly for inspect._signature_fromstr.RewriteSymbolics.visit_BinOp
+# From module file: inspect
+
+## co_consts:
+(None,)
+
+## co_names:
+('visit', 'left', 'right', 'isinstance', 'ast', 'Constant', 'ValueError', 'op', 'Add', 'value', 'Sub', 'BitOr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          visit
+  26: LOAD_FAST            node
+  28: LOAD_ATTR            left
+  38: PRECALL              
+  42: CALL                 
+  52: STORE_FAST           left
+  54: LOAD_FAST            self
+  56: LOAD_METHOD          visit
+  78: LOAD_FAST            node
+  80: LOAD_ATTR            right
+  90: PRECALL              
+  94: CALL                 
+ 104: STORE_FAST           right
+ 106: LOAD_GLOBAL          NULL + isinstance
+ 118: LOAD_FAST            left
+ 120: LOAD_GLOBAL          ast
+ 132: LOAD_ATTR            Constant
+ 142: PRECALL              
+ 146: CALL                 
+ 156: POP_JUMP_FORWARD_IF_FALSE to 210
+ 158: LOAD_GLOBAL          NULL + isinstance
+ 170: LOAD_FAST            right
+ 172: LOAD_GLOBAL          ast
+ 184: LOAD_ATTR            Constant
+ 194: PRECALL              
+ 198: CALL                 
+ 208: POP_JUMP_FORWARD_IF_TRUE to 224
+ 210: LOAD_GLOBAL          ValueError
+ 222: RAISE_VARARGS        
+ 224: LOAD_GLOBAL          NULL + isinstance
+ 236: LOAD_FAST            node
+ 238: LOAD_ATTR            op
+ 248: LOAD_GLOBAL          ast
+ 260: LOAD_ATTR            Add
+ 270: PRECALL              
+ 274: CALL                 
+ 284: POP_JUMP_FORWARD_IF_FALSE to 352
+ 286: LOAD_GLOBAL          NULL + ast
+ 298: LOAD_ATTR            Constant
+ 308: LOAD_FAST            left
+ 310: LOAD_ATTR            value
+ 320: LOAD_FAST            right
+ 322: LOAD_ATTR            value
+ 332: BINARY_OP            +
+ 336: PRECALL              
+ 340: CALL                 
+ 350: RETURN_VALUE         
+ 352: LOAD_GLOBAL          NULL + isinstance
+ 364: LOAD_FAST            node
+ 366: LOAD_ATTR            op
+ 376: LOAD_GLOBAL          ast
+ 388: LOAD_ATTR            Sub
+ 398: PRECALL              
+ 402: CALL                 
+ 412: POP_JUMP_FORWARD_IF_FALSE to 480
+ 414: LOAD_GLOBAL          NULL + ast
+ 426: LOAD_ATTR            Constant
+ 436: LOAD_FAST            left
+ 438: LOAD_ATTR            value
+ 448: LOAD_FAST            right
+ 450: LOAD_ATTR            value
+ 460: BINARY_OP            -
+ 464: PRECALL              
+ 468: CALL                 
+ 478: RETURN_VALUE         
+ 480: LOAD_GLOBAL          NULL + isinstance
+ 492: LOAD_FAST            node
+ 494: LOAD_ATTR            op
+ 504: LOAD_GLOBAL          ast
+ 516: LOAD_ATTR            BitOr
+ 526: PRECALL              
+ 530: CALL                 
+ 540: POP_JUMP_FORWARD_IF_FALSE to 608
+ 542: LOAD_GLOBAL          NULL + ast
+ 554: LOAD_ATTR            Constant
+ 564: LOAD_FAST            left
+ 566: LOAD_ATTR            value
+ 576: LOAD_FAST            right
+ 578: LOAD_ATTR            value
+ 588: BINARY_OP            |
+ 592: PRECALL              
+ 596: CALL                 
+ 606: RETURN_VALUE         
+ 608: LOAD_GLOBAL          ValueError
+ 620: RAISE_VARARGS        

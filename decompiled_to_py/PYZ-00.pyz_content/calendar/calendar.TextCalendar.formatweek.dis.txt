@@ -1,0 +1,28 @@
+# Disassembly for calendar.TextCalendar.formatweek
+# From module file: calendar
+
+## co_consts:
+('\n        Returns a single week in a string (no newline).\n        ', ' ', <code object <genexpr> at 0x000002406944A670, file "calendar.py", line 321>)
+
+## co_names:
+('join',)
+
+## bytecode:
+
+   0: MAKE_CELL            self
+   2: MAKE_CELL            width
+   4: RESUME               
+   6: LOAD_CONST           ' '
+   8: LOAD_METHOD          join
+  30: LOAD_CLOSURE         self
+  32: LOAD_CLOSURE         width
+  34: BUILD_TUPLE          
+  36: LOAD_CONST           <code object <genexpr> at 0x000002406944A670, file "calendar.py", line 321>
+  38: MAKE_FUNCTION        closure
+  40: LOAD_FAST            theweek
+  42: GET_ITER             
+  44: PRECALL              
+  48: CALL                 
+  58: PRECALL              
+  62: CALL                 
+  72: RETURN_VALUE         

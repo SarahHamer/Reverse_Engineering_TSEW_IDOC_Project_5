@@ -1,0 +1,21 @@
+# Disassembly for argparse._ActionsContainer._remove_action
+# From module file: argparse
+
+## co_consts:
+(None,)
+
+## co_names:
+('_actions', 'remove')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _actions
+  14: LOAD_METHOD          remove
+  36: LOAD_FAST            action
+  38: PRECALL              
+  42: CALL                 
+  52: POP_TOP              
+  54: LOAD_CONST           None
+  56: RETURN_VALUE         

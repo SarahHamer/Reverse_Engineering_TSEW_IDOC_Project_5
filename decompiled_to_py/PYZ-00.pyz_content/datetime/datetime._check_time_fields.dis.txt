@@ -1,0 +1,117 @@
+# Disassembly for datetime._check_time_fields
+# From module file: datetime
+
+## co_consts:
+(None, 0, 23, 'hour must be in 0..23', 59, 'minute must be in 0..59', 'second must be in 0..59', 999999, 'microsecond must be in 0..999999', (0, 1), 'fold must be either 0 or 1')
+
+## co_names:
+('_index', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _index
+  14: LOAD_FAST            hour
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           hour
+  32: LOAD_GLOBAL          NULL + _index
+  44: LOAD_FAST            minute
+  46: PRECALL              
+  50: CALL                 
+  60: STORE_FAST           minute
+  62: LOAD_GLOBAL          NULL + _index
+  74: LOAD_FAST            second
+  76: PRECALL              
+  80: CALL                 
+  90: STORE_FAST           second
+  92: LOAD_GLOBAL          NULL + _index
+ 104: LOAD_FAST            microsecond
+ 106: PRECALL              
+ 110: CALL                 
+ 120: STORE_FAST           microsecond
+ 122: LOAD_CONST           0
+ 124: LOAD_FAST            hour
+ 126: SWAP                 
+ 128: COPY                 
+ 130: COMPARE_OP           <=
+ 136: POP_JUMP_FORWARD_IF_FALSE to 150
+ 138: LOAD_CONST           23
+ 140: COMPARE_OP           <=
+ 146: POP_JUMP_FORWARD_IF_TRUE to 184
+ 148: JUMP_FORWARD         to 152
+ 150: POP_TOP              
+ 152: LOAD_GLOBAL          NULL + ValueError
+ 164: LOAD_CONST           'hour must be in 0..23'
+ 166: LOAD_FAST            hour
+ 168: PRECALL              
+ 172: CALL                 
+ 182: RAISE_VARARGS        
+ 184: LOAD_CONST           0
+ 186: LOAD_FAST            minute
+ 188: SWAP                 
+ 190: COPY                 
+ 192: COMPARE_OP           <=
+ 198: POP_JUMP_FORWARD_IF_FALSE to 212
+ 200: LOAD_CONST           59
+ 202: COMPARE_OP           <=
+ 208: POP_JUMP_FORWARD_IF_TRUE to 246
+ 210: JUMP_FORWARD         to 214
+ 212: POP_TOP              
+ 214: LOAD_GLOBAL          NULL + ValueError
+ 226: LOAD_CONST           'minute must be in 0..59'
+ 228: LOAD_FAST            minute
+ 230: PRECALL              
+ 234: CALL                 
+ 244: RAISE_VARARGS        
+ 246: LOAD_CONST           0
+ 248: LOAD_FAST            second
+ 250: SWAP                 
+ 252: COPY                 
+ 254: COMPARE_OP           <=
+ 260: POP_JUMP_FORWARD_IF_FALSE to 274
+ 262: LOAD_CONST           59
+ 264: COMPARE_OP           <=
+ 270: POP_JUMP_FORWARD_IF_TRUE to 308
+ 272: JUMP_FORWARD         to 276
+ 274: POP_TOP              
+ 276: LOAD_GLOBAL          NULL + ValueError
+ 288: LOAD_CONST           'second must be in 0..59'
+ 290: LOAD_FAST            second
+ 292: PRECALL              
+ 296: CALL                 
+ 306: RAISE_VARARGS        
+ 308: LOAD_CONST           0
+ 310: LOAD_FAST            microsecond
+ 312: SWAP                 
+ 314: COPY                 
+ 316: COMPARE_OP           <=
+ 322: POP_JUMP_FORWARD_IF_FALSE to 336
+ 324: LOAD_CONST           999999
+ 326: COMPARE_OP           <=
+ 332: POP_JUMP_FORWARD_IF_TRUE to 370
+ 334: JUMP_FORWARD         to 338
+ 336: POP_TOP              
+ 338: LOAD_GLOBAL          NULL + ValueError
+ 350: LOAD_CONST           'microsecond must be in 0..999999'
+ 352: LOAD_FAST            microsecond
+ 354: PRECALL              
+ 358: CALL                 
+ 368: RAISE_VARARGS        
+ 370: LOAD_FAST            fold
+ 372: LOAD_CONST           (0, 1)
+ 374: CONTAINS_OP          
+ 376: POP_JUMP_FORWARD_IF_FALSE to 410
+ 378: LOAD_GLOBAL          NULL + ValueError
+ 390: LOAD_CONST           'fold must be either 0 or 1'
+ 392: LOAD_FAST            fold
+ 394: PRECALL              
+ 398: CALL                 
+ 408: RAISE_VARARGS        
+ 410: LOAD_FAST            hour
+ 412: LOAD_FAST            minute
+ 414: LOAD_FAST            second
+ 416: LOAD_FAST            microsecond
+ 418: LOAD_FAST            fold
+ 420: BUILD_TUPLE          
+ 422: RETURN_VALUE         

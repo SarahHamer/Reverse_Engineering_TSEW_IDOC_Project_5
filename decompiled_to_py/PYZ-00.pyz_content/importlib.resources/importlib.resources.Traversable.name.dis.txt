@@ -1,0 +1,14 @@
+# Disassembly for importlib.resources.Traversable.name
+# From module file: importlib.resources.abc
+
+## co_consts:
+('\n        The base name of this object without any parent references.\n        ', None)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: RETURN_VALUE         

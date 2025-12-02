@@ -1,0 +1,171 @@
+# Disassembly for argparse.ArgumentParser.__init__
+# From module file: argparse
+
+## co_consts:
+(None, ('description', 'prefix_chars', 'argument_default', 'conflict_handler'), 0, 'positional arguments', 'options', <code object identity at 0x000002406943B570, file "argparse.py", line 1777>, 'type', '-', 'h', 2, 'help', 'show this help message and exit', ('action', 'default', 'help'))
+
+## co_names:
+('super', 'ArgumentParser', '__init__', '_os', 'path', 'basename', '_sys', 'argv', 'prog', 'usage', 'epilog', 'formatter_class', 'fromfile_prefix_chars', 'add_help', 'allow_abbrev', 'exit_on_error', 'add_argument_group', '_', '_positionals', '_optionals', '_subparsers', 'register', 'add_argument', 'SUPPRESS', '_add_container_actions', '_defaults', 'update', 'AttributeError')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + super
+  16: LOAD_GLOBAL          ArgumentParser
+  28: LOAD_FAST            self
+  30: PRECALL              
+  34: CALL                 
+  44: LOAD_ATTR            __init__
+  54: STORE_FAST           superinit
+  56: PUSH_NULL            
+  58: LOAD_FAST            superinit
+  60: LOAD_FAST            description
+  62: LOAD_FAST            prefix_chars
+  64: LOAD_FAST            argument_default
+  66: LOAD_FAST            conflict_handler
+  68: KW_NAMES             
+  70: PRECALL              
+  74: CALL                 
+  84: POP_TOP              
+  86: LOAD_FAST            prog
+  88: POP_JUMP_FORWARD_IF_NOT_NONE to 184
+  90: LOAD_GLOBAL          _os
+ 102: LOAD_ATTR            path
+ 112: LOAD_METHOD          basename
+ 134: LOAD_GLOBAL          _sys
+ 146: LOAD_ATTR            argv
+ 156: LOAD_CONST           0
+ 158: BINARY_SUBSCR        
+ 168: PRECALL              
+ 172: CALL                 
+ 182: STORE_FAST           prog
+ 184: LOAD_FAST            prog
+ 186: LOAD_FAST            self
+ 188: STORE_ATTR           prog
+ 198: LOAD_FAST            usage
+ 200: LOAD_FAST            self
+ 202: STORE_ATTR           usage
+ 212: LOAD_FAST            epilog
+ 214: LOAD_FAST            self
+ 216: STORE_ATTR           epilog
+ 226: LOAD_FAST            formatter_class
+ 228: LOAD_FAST            self
+ 230: STORE_ATTR           formatter_class
+ 240: LOAD_FAST            fromfile_prefix_chars
+ 242: LOAD_FAST            self
+ 244: STORE_ATTR           fromfile_prefix_chars
+ 254: LOAD_FAST            add_help
+ 256: LOAD_FAST            self
+ 258: STORE_ATTR           add_help
+ 268: LOAD_FAST            allow_abbrev
+ 270: LOAD_FAST            self
+ 272: STORE_ATTR           allow_abbrev
+ 282: LOAD_FAST            exit_on_error
+ 284: LOAD_FAST            self
+ 286: STORE_ATTR           exit_on_error
+ 296: LOAD_FAST            self
+ 298: LOAD_ATTR            add_argument_group
+ 308: STORE_FAST           add_group
+ 310: PUSH_NULL            
+ 312: LOAD_FAST            add_group
+ 314: LOAD_GLOBAL          NULL + _
+ 326: LOAD_CONST           'positional arguments'
+ 328: PRECALL              
+ 332: CALL                 
+ 342: PRECALL              
+ 346: CALL                 
+ 356: LOAD_FAST            self
+ 358: STORE_ATTR           _positionals
+ 368: PUSH_NULL            
+ 370: LOAD_FAST            add_group
+ 372: LOAD_GLOBAL          NULL + _
+ 384: LOAD_CONST           'options'
+ 386: PRECALL              
+ 390: CALL                 
+ 400: PRECALL              
+ 404: CALL                 
+ 414: LOAD_FAST            self
+ 416: STORE_ATTR           _optionals
+ 426: LOAD_CONST           None
+ 428: LOAD_FAST            self
+ 430: STORE_ATTR           _subparsers
+ 440: LOAD_CONST           <code object identity at 0x000002406943B570, file "argparse.py", line 1777>
+ 442: MAKE_FUNCTION        
+ 444: STORE_FAST           identity
+ 446: LOAD_FAST            self
+ 448: LOAD_METHOD          register
+ 470: LOAD_CONST           'type'
+ 472: LOAD_CONST           None
+ 474: LOAD_FAST            identity
+ 476: PRECALL              
+ 480: CALL                 
+ 490: POP_TOP              
+ 492: LOAD_CONST           '-'
+ 494: LOAD_FAST            prefix_chars
+ 496: CONTAINS_OP          
+ 498: POP_JUMP_FORWARD_IF_FALSE to 504
+ 500: LOAD_CONST           '-'
+ 502: JUMP_FORWARD         to 518
+ 504: LOAD_FAST            prefix_chars
+ 506: LOAD_CONST           0
+ 508: BINARY_SUBSCR        
+ 518: STORE_FAST           default_prefix
+ 520: LOAD_FAST            self
+ 522: LOAD_ATTR            add_help
+ 532: POP_JUMP_FORWARD_IF_FALSE to 640
+ 534: LOAD_FAST            self
+ 536: LOAD_METHOD          add_argument
+ 558: LOAD_FAST            default_prefix
+ 560: LOAD_CONST           'h'
+ 562: BINARY_OP            +
+ 566: LOAD_FAST            default_prefix
+ 568: LOAD_CONST           2
+ 570: BINARY_OP            *
+ 574: LOAD_CONST           'help'
+ 576: BINARY_OP            +
+ 580: LOAD_CONST           'help'
+ 582: LOAD_GLOBAL          SUPPRESS
+ 594: LOAD_GLOBAL          NULL + _
+ 606: LOAD_CONST           'show this help message and exit'
+ 608: PRECALL              
+ 612: CALL                 
+ 622: KW_NAMES             
+ 624: PRECALL              
+ 628: CALL                 
+ 638: POP_TOP              
+ 640: LOAD_FAST            parents
+ 642: GET_ITER             
+ 644: FOR_ITER             to 792
+ 646: STORE_FAST           parent
+ 648: LOAD_FAST            self
+ 650: LOAD_METHOD          _add_container_actions
+ 672: LOAD_FAST            parent
+ 674: PRECALL              
+ 678: CALL                 
+ 688: POP_TOP              
+ 690: NOP                  
+ 692: LOAD_FAST            parent
+ 694: LOAD_ATTR            _defaults
+ 704: STORE_FAST           defaults
+ 706: LOAD_FAST            self
+ 708: LOAD_ATTR            _defaults
+ 718: LOAD_METHOD          update
+ 740: LOAD_FAST            defaults
+ 742: PRECALL              
+ 746: CALL                 
+ 756: POP_TOP              
+ 758: JUMP_BACKWARD        to 644
+ 760: PUSH_EXC_INFO        
+ 762: LOAD_GLOBAL          AttributeError
+ 774: CHECK_EXC_MATCH      
+ 776: POP_JUMP_FORWARD_IF_FALSE to 784
+ 778: POP_TOP              
+ 780: POP_EXCEPT           
+ 782: JUMP_BACKWARD        to 644
+ 784: RERAISE              
+ 786: COPY                 
+ 788: POP_EXCEPT           
+ 790: RERAISE              
+ 792: LOAD_CONST           None
+ 794: RETURN_VALUE         

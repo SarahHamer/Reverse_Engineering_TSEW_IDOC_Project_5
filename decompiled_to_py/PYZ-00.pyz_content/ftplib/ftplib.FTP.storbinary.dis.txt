@@ -1,0 +1,87 @@
+# Disassembly for ftplib.FTP.storbinary
+# From module file: ftplib
+
+## co_consts:
+('Store a file in binary mode.  A new port is created for you.\n\n        Args:\n          cmd: A STOR command.\n          fp: A file-like object with a read(num_bytes) method.\n          blocksize: The maximum data size to read from fp and send over\n                     the connection at once.  [default: 8192]\n          callback: An optional single parameter callable that is called on\n                    each block of data after it is sent.  [default: None]\n          rest: Passed to transfercmd().  [default: None]\n\n        Returns:\n          The response code.\n        ', 'TYPE I', 1, None)
+
+## co_names:
+('voidcmd', 'transfercmd', 'read', 'sendall', '_SSLSocket', 'isinstance', 'unwrap', 'voidresp')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          voidcmd
+  26: LOAD_CONST           'TYPE I'
+  28: PRECALL              
+  32: CALL                 
+  42: POP_TOP              
+  44: LOAD_FAST            self
+  46: LOAD_METHOD          transfercmd
+  68: LOAD_FAST            cmd
+  70: LOAD_FAST            rest
+  72: PRECALL              
+  76: CALL                 
+  86: BEFORE_WITH          
+  88: STORE_FAST           conn
+  90: NOP                  
+  92: LOAD_FAST            fp
+  94: LOAD_METHOD          read
+ 116: LOAD_FAST            blocksize
+ 118: PRECALL              
+ 122: CALL                 
+ 132: STORE_FAST           buf
+ 134: LOAD_FAST            buf
+ 136: POP_JUMP_FORWARD_IF_TRUE to 140
+ 138: JUMP_FORWARD         to 210
+ 140: LOAD_FAST            conn
+ 142: LOAD_METHOD          sendall
+ 164: LOAD_FAST            buf
+ 166: PRECALL              
+ 170: CALL                 
+ 180: POP_TOP              
+ 182: LOAD_FAST            callback
+ 184: POP_JUMP_FORWARD_IF_FALSE to 208
+ 186: PUSH_NULL            
+ 188: LOAD_FAST            callback
+ 190: LOAD_FAST            buf
+ 192: PRECALL              
+ 196: CALL                 
+ 206: POP_TOP              
+ 208: JUMP_BACKWARD        to 92
+ 210: LOAD_GLOBAL          _SSLSocket
+ 222: POP_JUMP_FORWARD_IF_NONE to 306
+ 224: LOAD_GLOBAL          NULL + isinstance
+ 236: LOAD_FAST            conn
+ 238: LOAD_GLOBAL          _SSLSocket
+ 250: PRECALL              
+ 254: CALL                 
+ 264: POP_JUMP_FORWARD_IF_FALSE to 306
+ 266: LOAD_FAST            conn
+ 268: LOAD_METHOD          unwrap
+ 290: PRECALL              
+ 294: CALL                 
+ 304: POP_TOP              
+ 306: LOAD_CONST           None
+ 308: LOAD_CONST           None
+ 310: LOAD_CONST           None
+ 312: PRECALL              
+ 316: CALL                 
+ 326: POP_TOP              
+ 328: JUMP_FORWARD         to 352
+ 330: PUSH_EXC_INFO        
+ 332: WITH_EXCEPT_START    
+ 334: POP_JUMP_FORWARD_IF_TRUE to 344
+ 336: RERAISE              
+ 338: COPY                 
+ 340: POP_EXCEPT           
+ 342: RERAISE              
+ 344: POP_TOP              
+ 346: POP_EXCEPT           
+ 348: POP_TOP              
+ 350: POP_TOP              
+ 352: LOAD_FAST            self
+ 354: LOAD_METHOD          voidresp
+ 376: PRECALL              
+ 380: CALL                 
+ 390: RETURN_VALUE         

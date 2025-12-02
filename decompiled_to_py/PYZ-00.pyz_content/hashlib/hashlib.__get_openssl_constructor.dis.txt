@@ -1,0 +1,57 @@
+# Disassembly for hashlib.__get_openssl_constructor
+# From module file: hashlib
+
+## co_consts:
+(None, 'openssl_', False, ('usedforsecurity',))
+
+## co_names:
+('__block_openssl_constructor', '__get_builtin_constructor', 'getattr', '_hashlib', 'AttributeError', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            name
+   4: LOAD_GLOBAL          __block_openssl_constructor
+  16: CONTAINS_OP          
+  18: POP_JUMP_FORWARD_IF_FALSE to 50
+  20: LOAD_GLOBAL          NULL + __get_builtin_constructor
+  32: LOAD_FAST            name
+  34: PRECALL              
+  38: CALL                 
+  48: RETURN_VALUE         
+  50: NOP                  
+  52: LOAD_GLOBAL          NULL + getattr
+  64: LOAD_GLOBAL          _hashlib
+  76: LOAD_CONST           'openssl_'
+  78: LOAD_FAST            name
+  80: BINARY_OP            +
+  84: PRECALL              
+  88: CALL                 
+  98: STORE_FAST           f
+ 100: PUSH_NULL            
+ 102: LOAD_FAST            f
+ 104: LOAD_CONST           False
+ 106: KW_NAMES             
+ 108: PRECALL              
+ 112: CALL                 
+ 122: POP_TOP              
+ 124: LOAD_FAST            f
+ 126: RETURN_VALUE         
+ 128: PUSH_EXC_INFO        
+ 130: LOAD_GLOBAL          AttributeError
+ 142: LOAD_GLOBAL          ValueError
+ 154: BUILD_TUPLE          
+ 156: CHECK_EXC_MATCH      
+ 158: POP_JUMP_FORWARD_IF_FALSE to 196
+ 160: POP_TOP              
+ 162: LOAD_GLOBAL          NULL + __get_builtin_constructor
+ 174: LOAD_FAST            name
+ 176: PRECALL              
+ 180: CALL                 
+ 190: SWAP                 
+ 192: POP_EXCEPT           
+ 194: RETURN_VALUE         
+ 196: RERAISE              
+ 198: COPY                 
+ 200: POP_EXCEPT           
+ 202: RERAISE              

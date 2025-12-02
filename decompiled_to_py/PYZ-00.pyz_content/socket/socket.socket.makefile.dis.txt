@@ -1,0 +1,160 @@
+# Disassembly for socket.socket.makefile
+# From module file: socket
+
+## co_consts:
+("makefile(...) -> an I/O stream connected to the socket\n\n        The arguments are as for io.open() after the filename, except the only\n        supported mode values are 'r' (default), 'w' and 'b'.\n        ", frozenset({'b', 'r', 'w'}), 'invalid mode ', ' (only r, w, b allowed)', 'w', 'r', 'b', '', 1, None, -1, 0, 'unbuffered streams must be binary')
+
+## co_names:
+('set', 'ValueError', 'SocketIO', '_io_refs', 'io', 'DEFAULT_BUFFER_SIZE', 'BufferedRWPair', 'BufferedReader', 'BufferedWriter', 'text_encoding', 'TextIOWrapper', 'mode')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + set
+  14: LOAD_FAST            mode
+  16: PRECALL              
+  20: CALL                 
+  30: BUILD_SET            
+  32: LOAD_CONST           frozenset({'b', 'r', 'w'})
+  34: SET_UPDATE           
+  36: COMPARE_OP           <=
+  42: POP_JUMP_FORWARD_IF_TRUE to 82
+  44: LOAD_GLOBAL          NULL + ValueError
+  56: LOAD_CONST           'invalid mode '
+  58: LOAD_FAST            mode
+  60: FORMAT_VALUE         repr
+  62: LOAD_CONST           ' (only r, w, b allowed)'
+  64: BUILD_STRING         
+  66: PRECALL              
+  70: CALL                 
+  80: RAISE_VARARGS        
+  82: LOAD_CONST           'w'
+  84: LOAD_FAST            mode
+  86: CONTAINS_OP          
+  88: STORE_FAST           writing
+  90: LOAD_CONST           'r'
+  92: LOAD_FAST            mode
+  94: CONTAINS_OP          
+  96: JUMP_IF_TRUE_OR_POP  to 102
+  98: LOAD_FAST            writing
+ 100: UNARY_NOT            
+ 102: STORE_FAST           reading
+ 104: LOAD_FAST            reading
+ 106: POP_JUMP_FORWARD_IF_TRUE to 116
+ 108: LOAD_FAST            writing
+ 110: POP_JUMP_FORWARD_IF_TRUE to 116
+ 112: LOAD_ASSERTION_ERROR 
+ 114: RAISE_VARARGS        
+ 116: LOAD_CONST           'b'
+ 118: LOAD_FAST            mode
+ 120: CONTAINS_OP          
+ 122: STORE_FAST           binary
+ 124: LOAD_CONST           ''
+ 126: STORE_FAST           rawmode
+ 128: LOAD_FAST            reading
+ 130: POP_JUMP_FORWARD_IF_FALSE to 142
+ 132: LOAD_FAST            rawmode
+ 134: LOAD_CONST           'r'
+ 136: BINARY_OP            +=
+ 140: STORE_FAST           rawmode
+ 142: LOAD_FAST            writing
+ 144: POP_JUMP_FORWARD_IF_FALSE to 156
+ 146: LOAD_FAST            rawmode
+ 148: LOAD_CONST           'w'
+ 150: BINARY_OP            +=
+ 154: STORE_FAST           rawmode
+ 156: LOAD_GLOBAL          NULL + SocketIO
+ 168: LOAD_FAST            self
+ 170: LOAD_FAST            rawmode
+ 172: PRECALL              
+ 176: CALL                 
+ 186: STORE_FAST           raw
+ 188: LOAD_FAST            self
+ 190: COPY                 
+ 192: LOAD_ATTR            _io_refs
+ 202: LOAD_CONST           1
+ 204: BINARY_OP            +=
+ 208: SWAP                 
+ 210: STORE_ATTR           _io_refs
+ 220: LOAD_FAST            buffering
+ 222: POP_JUMP_FORWARD_IF_NOT_NONE to 228
+ 224: LOAD_CONST           -1
+ 226: STORE_FAST           buffering
+ 228: LOAD_FAST            buffering
+ 230: LOAD_CONST           0
+ 232: COMPARE_OP           <
+ 238: POP_JUMP_FORWARD_IF_FALSE to 264
+ 240: LOAD_GLOBAL          io
+ 252: LOAD_ATTR            DEFAULT_BUFFER_SIZE
+ 262: STORE_FAST           buffering
+ 264: LOAD_FAST            buffering
+ 266: LOAD_CONST           0
+ 268: COMPARE_OP           ==
+ 274: POP_JUMP_FORWARD_IF_FALSE to 314
+ 276: LOAD_FAST            binary
+ 278: POP_JUMP_FORWARD_IF_TRUE to 310
+ 280: LOAD_GLOBAL          NULL + ValueError
+ 292: LOAD_CONST           'unbuffered streams must be binary'
+ 294: PRECALL              
+ 298: CALL                 
+ 308: RAISE_VARARGS        
+ 310: LOAD_FAST            raw
+ 312: RETURN_VALUE         
+ 314: LOAD_FAST            reading
+ 316: POP_JUMP_FORWARD_IF_FALSE to 368
+ 318: LOAD_FAST            writing
+ 320: POP_JUMP_FORWARD_IF_FALSE to 368
+ 322: LOAD_GLOBAL          NULL + io
+ 334: LOAD_ATTR            BufferedRWPair
+ 344: LOAD_FAST            raw
+ 346: LOAD_FAST            raw
+ 348: LOAD_FAST            buffering
+ 350: PRECALL              
+ 354: CALL                 
+ 364: STORE_FAST           buffer
+ 366: JUMP_FORWARD         to 466
+ 368: LOAD_FAST            reading
+ 370: POP_JUMP_FORWARD_IF_FALSE to 416
+ 372: LOAD_GLOBAL          NULL + io
+ 384: LOAD_ATTR            BufferedReader
+ 394: LOAD_FAST            raw
+ 396: LOAD_FAST            buffering
+ 398: PRECALL              
+ 402: CALL                 
+ 412: STORE_FAST           buffer
+ 414: JUMP_FORWARD         to 466
+ 416: LOAD_FAST            writing
+ 418: POP_JUMP_FORWARD_IF_TRUE to 424
+ 420: LOAD_ASSERTION_ERROR 
+ 422: RAISE_VARARGS        
+ 424: LOAD_GLOBAL          NULL + io
+ 436: LOAD_ATTR            BufferedWriter
+ 446: LOAD_FAST            raw
+ 448: LOAD_FAST            buffering
+ 450: PRECALL              
+ 454: CALL                 
+ 464: STORE_FAST           buffer
+ 466: LOAD_FAST            binary
+ 468: POP_JUMP_FORWARD_IF_FALSE to 474
+ 470: LOAD_FAST            buffer
+ 472: RETURN_VALUE         
+ 474: LOAD_GLOBAL          NULL + io
+ 486: LOAD_ATTR            text_encoding
+ 496: LOAD_FAST            encoding
+ 498: PRECALL              
+ 502: CALL                 
+ 512: STORE_FAST           encoding
+ 514: LOAD_GLOBAL          NULL + io
+ 526: LOAD_ATTR            TextIOWrapper
+ 536: LOAD_FAST            buffer
+ 538: LOAD_FAST            encoding
+ 540: LOAD_FAST            errors
+ 542: LOAD_FAST            newline
+ 544: PRECALL              
+ 548: CALL                 
+ 558: STORE_FAST           text
+ 560: LOAD_FAST            mode
+ 562: LOAD_FAST            text
+ 564: STORE_ATTR           mode
+ 574: LOAD_FAST            text
+ 576: RETURN_VALUE         

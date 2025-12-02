@@ -1,0 +1,26 @@
+# Disassembly for importlib.NamespaceLoader.module_repr
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Return repr for the module.\n\n        The method is deprecated.  The import machinery does the job itself.\n\n        ', 'NamespaceLoader.module_repr() is deprecated and slated for removal in Python 3.12', '<module {!r} (namespace)>')
+
+## co_names:
+('_warnings', 'warn', 'DeprecationWarning', 'format', '__name__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _warnings
+  14: LOAD_ATTR            warn
+  24: LOAD_CONST           'NamespaceLoader.module_repr() is deprecated and slated for removal in Python 3.12'
+  26: LOAD_GLOBAL          DeprecationWarning
+  38: PRECALL              
+  42: CALL                 
+  52: POP_TOP              
+  54: LOAD_CONST           '<module {!r} (namespace)>'
+  56: LOAD_METHOD          format
+  78: LOAD_FAST            module
+  80: LOAD_ATTR            __name__
+  90: PRECALL              
+  94: CALL                 
+ 104: RETURN_VALUE         

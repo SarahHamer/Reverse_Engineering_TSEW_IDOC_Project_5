@@ -1,0 +1,20 @@
+# Disassembly for logging.Handler.setLevel
+# From module file: logging
+
+## co_consts:
+('\n        Set the logging level of this handler.  level must be an int or a str.\n        ', None)
+
+## co_names:
+('_checkLevel', 'level')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _checkLevel
+  14: LOAD_FAST            level
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_FAST            self
+  32: STORE_ATTR           level
+  42: LOAD_CONST           None
+  44: RETURN_VALUE         

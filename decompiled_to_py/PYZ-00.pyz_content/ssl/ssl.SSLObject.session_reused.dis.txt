@@ -1,0 +1,16 @@
+# Disassembly for ssl.SSLObject.session_reused
+# From module file: ssl
+
+## co_consts:
+('Was the client session reused during handshake',)
+
+## co_names:
+('_sslobj', 'session_reused')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _sslobj
+  14: LOAD_ATTR            session_reused
+  24: RETURN_VALUE         

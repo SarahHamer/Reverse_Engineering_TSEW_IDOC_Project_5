@@ -1,0 +1,116 @@
+# Disassembly for email.Charset.__init__
+# From module file: email.charset
+
+## co_consts:
+(None, 'ascii')
+
+## co_names:
+('isinstance', 'str', 'encode', 'UnicodeError', 'errors', 'CharsetError', 'lower', 'ALIASES', 'get', 'input_charset', 'CHARSETS', 'SHORTEST', 'BASE64', 'header_encoding', 'body_encoding', 'output_charset', 'CODEC_MAP', 'input_codec', 'output_codec')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_GLOBAL          NULL + isinstance
+  16: LOAD_FAST            input_charset
+  18: LOAD_GLOBAL          str
+  30: PRECALL              
+  34: CALL                 
+  44: POP_JUMP_FORWARD_IF_FALSE to 90
+  46: LOAD_FAST            input_charset
+  48: LOAD_METHOD          encode
+  70: LOAD_CONST           'ascii'
+  72: PRECALL              
+  76: CALL                 
+  86: POP_TOP              
+  88: JUMP_FORWARD         to 122
+  90: LOAD_GLOBAL          NULL + str
+ 102: LOAD_FAST            input_charset
+ 104: LOAD_CONST           'ascii'
+ 106: PRECALL              
+ 110: CALL                 
+ 120: STORE_FAST           input_charset
+ 122: JUMP_FORWARD         to 192
+ 124: PUSH_EXC_INFO        
+ 126: LOAD_GLOBAL          UnicodeError
+ 138: CHECK_EXC_MATCH      
+ 140: POP_JUMP_FORWARD_IF_FALSE to 184
+ 142: POP_TOP              
+ 144: LOAD_GLOBAL          NULL + errors
+ 156: LOAD_ATTR            CharsetError
+ 166: LOAD_FAST            input_charset
+ 168: PRECALL              
+ 172: CALL                 
+ 182: RAISE_VARARGS        
+ 184: RERAISE              
+ 186: COPY                 
+ 188: POP_EXCEPT           
+ 190: RERAISE              
+ 192: LOAD_FAST            input_charset
+ 194: LOAD_METHOD          lower
+ 216: PRECALL              
+ 220: CALL                 
+ 230: STORE_FAST           input_charset
+ 232: LOAD_GLOBAL          ALIASES
+ 244: LOAD_METHOD          get
+ 266: LOAD_FAST            input_charset
+ 268: LOAD_FAST            input_charset
+ 270: PRECALL              
+ 274: CALL                 
+ 284: LOAD_FAST            self
+ 286: STORE_ATTR           input_charset
+ 296: LOAD_GLOBAL          CHARSETS
+ 308: LOAD_METHOD          get
+ 330: LOAD_FAST            self
+ 332: LOAD_ATTR            input_charset
+ 342: LOAD_GLOBAL          SHORTEST
+ 354: LOAD_GLOBAL          BASE64
+ 366: LOAD_CONST           None
+ 368: BUILD_TUPLE          
+ 370: PRECALL              
+ 374: CALL                 
+ 384: UNPACK_SEQUENCE      
+ 388: STORE_FAST           henc
+ 390: STORE_FAST           benc
+ 392: STORE_FAST           conv
+ 394: LOAD_FAST            conv
+ 396: POP_JUMP_FORWARD_IF_TRUE to 412
+ 398: LOAD_FAST            self
+ 400: LOAD_ATTR            input_charset
+ 410: STORE_FAST           conv
+ 412: LOAD_FAST            henc
+ 414: LOAD_FAST            self
+ 416: STORE_ATTR           header_encoding
+ 426: LOAD_FAST            benc
+ 428: LOAD_FAST            self
+ 430: STORE_ATTR           body_encoding
+ 440: LOAD_GLOBAL          ALIASES
+ 452: LOAD_METHOD          get
+ 474: LOAD_FAST            conv
+ 476: LOAD_FAST            conv
+ 478: PRECALL              
+ 482: CALL                 
+ 492: LOAD_FAST            self
+ 494: STORE_ATTR           output_charset
+ 504: LOAD_GLOBAL          CODEC_MAP
+ 516: LOAD_METHOD          get
+ 538: LOAD_FAST            self
+ 540: LOAD_ATTR            input_charset
+ 550: LOAD_FAST            self
+ 552: LOAD_ATTR            input_charset
+ 562: PRECALL              
+ 566: CALL                 
+ 576: LOAD_FAST            self
+ 578: STORE_ATTR           input_codec
+ 588: LOAD_GLOBAL          CODEC_MAP
+ 600: LOAD_METHOD          get
+ 622: LOAD_FAST            self
+ 624: LOAD_ATTR            output_charset
+ 634: LOAD_FAST            self
+ 636: LOAD_ATTR            output_charset
+ 646: PRECALL              
+ 650: CALL                 
+ 660: LOAD_FAST            self
+ 662: STORE_ATTR           output_codec
+ 672: LOAD_CONST           None
+ 674: RETURN_VALUE         

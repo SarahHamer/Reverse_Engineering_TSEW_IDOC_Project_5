@@ -1,0 +1,35 @@
+# Disassembly for socket.SocketIO.close
+# From module file: socket
+
+## co_consts:
+("Close the SocketIO object.  This doesn't close the underlying\n        socket, except if all references to it have disappeared.\n        ", None)
+
+## co_names:
+('closed', 'io', 'RawIOBase', 'close', '_sock', '_decref_socketios')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            closed
+  14: POP_JUMP_FORWARD_IF_FALSE to 20
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         
+  20: LOAD_GLOBAL          io
+  32: LOAD_ATTR            RawIOBase
+  42: LOAD_METHOD          close
+  64: LOAD_FAST            self
+  66: PRECALL              
+  70: CALL                 
+  80: POP_TOP              
+  82: LOAD_FAST            self
+  84: LOAD_ATTR            _sock
+  94: LOAD_METHOD          _decref_socketios
+ 116: PRECALL              
+ 120: CALL                 
+ 130: POP_TOP              
+ 132: LOAD_CONST           None
+ 134: LOAD_FAST            self
+ 136: STORE_ATTR           _sock
+ 146: LOAD_CONST           None
+ 148: RETURN_VALUE         

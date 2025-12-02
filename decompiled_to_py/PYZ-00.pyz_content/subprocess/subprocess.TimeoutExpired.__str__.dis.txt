@@ -1,0 +1,23 @@
+# Disassembly for subprocess.TimeoutExpired.__str__
+# From module file: subprocess
+
+## co_consts:
+(None, "Command '", "' timed out after ", ' seconds')
+
+## co_names:
+('cmd', 'timeout')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           "Command '"
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            cmd
+  16: FORMAT_VALUE         str
+  18: LOAD_CONST           "' timed out after "
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            timeout
+  32: FORMAT_VALUE         str
+  34: LOAD_CONST           ' seconds'
+  36: BUILD_STRING         
+  38: RETURN_VALUE         

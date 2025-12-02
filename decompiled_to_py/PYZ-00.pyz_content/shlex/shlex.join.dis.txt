@@ -1,0 +1,23 @@
+# Disassembly for shlex.join
+# From module file: shlex
+
+## co_consts:
+('Return a shell-escaped string from *split_command*.', ' ', <code object <genexpr> at 0x000002406945DE30, file "shlex.py", line 320>)
+
+## co_names:
+('join',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           ' '
+   4: LOAD_METHOD          join
+  26: LOAD_CONST           <code object <genexpr> at 0x000002406945DE30, file "shlex.py", line 320>
+  28: MAKE_FUNCTION        
+  30: LOAD_FAST            split_command
+  32: GET_ITER             
+  34: PRECALL              
+  38: CALL                 
+  48: PRECALL              
+  52: CALL                 
+  62: RETURN_VALUE         

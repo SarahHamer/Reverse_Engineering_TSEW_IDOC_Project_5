@@ -1,0 +1,64 @@
+# Disassembly for _pydecimal._decimal_lshift_exact
+# From module file: _pydecimal
+
+## co_consts:
+(" Given integers n and e, return n * 10**e if it's an integer, else None.\n\n    The computation is designed to avoid computing large powers of 10\n    unnecessarily.\n\n    >>> _decimal_lshift_exact(3, 4)\n    30000\n    >>> _decimal_lshift_exact(300, -999999999)  # returns None\n\n    ", 0, 10, '0', None)
+
+## co_names:
+('str', 'abs', 'len', 'rstrip')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            n
+   4: LOAD_CONST           0
+   6: COMPARE_OP           ==
+  12: POP_JUMP_FORWARD_IF_FALSE to 18
+  14: LOAD_CONST           0
+  16: RETURN_VALUE         
+  18: LOAD_FAST            e
+  20: LOAD_CONST           0
+  22: COMPARE_OP           >=
+  28: POP_JUMP_FORWARD_IF_FALSE to 46
+  30: LOAD_FAST            n
+  32: LOAD_CONST           10
+  34: LOAD_FAST            e
+  36: BINARY_OP            **
+  40: BINARY_OP            *
+  44: RETURN_VALUE         
+  46: LOAD_GLOBAL          NULL + str
+  58: LOAD_GLOBAL          NULL + abs
+  70: LOAD_FAST            n
+  72: PRECALL              
+  76: CALL                 
+  86: PRECALL              
+  90: CALL                 
+ 100: STORE_FAST           str_n
+ 102: LOAD_GLOBAL          NULL + len
+ 114: LOAD_FAST            str_n
+ 116: PRECALL              
+ 120: CALL                 
+ 130: LOAD_GLOBAL          NULL + len
+ 142: LOAD_FAST            str_n
+ 144: LOAD_METHOD          rstrip
+ 166: LOAD_CONST           '0'
+ 168: PRECALL              
+ 172: CALL                 
+ 182: PRECALL              
+ 186: CALL                 
+ 196: BINARY_OP            -
+ 200: STORE_FAST           val_n
+ 202: LOAD_FAST            val_n
+ 204: LOAD_FAST            e
+ 206: UNARY_NEGATIVE       
+ 208: COMPARE_OP           <
+ 214: POP_JUMP_FORWARD_IF_FALSE to 220
+ 216: LOAD_CONST           None
+ 218: JUMP_FORWARD         to 236
+ 220: LOAD_FAST            n
+ 222: LOAD_CONST           10
+ 224: LOAD_FAST            e
+ 226: UNARY_NEGATIVE       
+ 228: BINARY_OP            **
+ 232: BINARY_OP            //
+ 236: RETURN_VALUE         

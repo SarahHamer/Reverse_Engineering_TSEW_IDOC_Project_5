@@ -1,0 +1,36 @@
+# Disassembly for logging.Logger.__reduce__
+# From module file: logging
+
+## co_consts:
+(None, 0, 'logger cannot be pickled')
+
+## co_names:
+('getLogger', 'name', 'pickle', 'PicklingError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + getLogger
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            name
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_FAST            self
+  42: IS_OP                
+  44: POP_JUMP_FORWARD_IF_FALSE to 96
+  46: LOAD_CONST           0
+  48: LOAD_CONST           None
+  50: IMPORT_NAME          pickle
+  52: STORE_FAST           pickle
+  54: LOAD_FAST            pickle
+  56: LOAD_METHOD          PicklingError
+  78: LOAD_CONST           'logger cannot be pickled'
+  80: PRECALL              
+  84: CALL                 
+  94: RAISE_VARARGS        
+  96: LOAD_GLOBAL          getLogger
+ 108: LOAD_FAST            self
+ 110: LOAD_ATTR            name
+ 120: BUILD_TUPLE          
+ 122: BUILD_TUPLE          
+ 124: RETURN_VALUE         

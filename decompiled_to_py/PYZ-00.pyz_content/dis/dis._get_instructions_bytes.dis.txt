@@ -1,0 +1,441 @@
+# Disassembly for dis._get_instructions_bytes
+# From module file: dis
+
+## co_consts:
+("Iterate over the instructions in a bytecode string.\n\n    Generates a sequence of Instruction namedtuples giving the details of each\n    opcode.  Additional information about the code's runtime environment\n    (e.g. variable names, co_consts) can be specified using optional\n    arguments.\n\n    ", (), None, '', 2, 1, 'NULL + ', 'to ', 3, 4, ', ', 'with format', <code object <genexpr> at 0x000002406945E3D0, file "dis.py", line 488>, 0, ': ', 'CACHE', False)
+
+## co_names:
+('iter', '__getitem__', 'set', 'findlabels', 'range', 'add', '_unpack_opargs', 'get', 'Positions', 'next', '_deoptop', 'hasconst', '_get_const_info', 'hasname', 'LOAD_GLOBAL', '_get_name_info', 'hasjabs', 'repr', 'hasjrel', '_is_backward_jump', 'haslocal', 'hasfree', 'hascompare', 'cmp_op', 'FORMAT_VALUE', 'FORMAT_VALUE_CONVERTERS', 'bool', 'MAKE_FUNCTION', 'join', 'enumerate', 'MAKE_FUNCTION_FLAGS', 'BINARY_OP', '_nb_ops', 'Instruction', '_all_opname', '_inline_cache_entries', '_cache_format', 'opname', 'items', 'int', 'from_bytes', 'sys', 'byteorder', 'CACHE')
+
+## bytecode:
+
+   0: MAKE_CELL            arg
+   2: RETURN_GENERATOR     
+   4: POP_TOP              
+   6: RESUME               
+   8: LOAD_FAST            co_positions
+  10: JUMP_IF_TRUE_OR_POP  to 40
+  12: LOAD_GLOBAL          NULL + iter
+  24: LOAD_CONST           ()
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           co_positions
+  42: LOAD_FAST            names
+  44: POP_JUMP_FORWARD_IF_NOT_NONE to 50
+  46: LOAD_CONST           None
+  48: JUMP_FORWARD         to 62
+  50: LOAD_FAST            names
+  52: LOAD_ATTR            __getitem__
+  62: STORE_FAST           get_name
+  64: LOAD_GLOBAL          NULL + set
+  76: LOAD_GLOBAL          NULL + findlabels
+  88: LOAD_FAST            code
+  90: PRECALL              
+  94: CALL                 
+ 104: PRECALL              
+ 108: CALL                 
+ 118: STORE_FAST           labels
+ 120: LOAD_FAST            exception_entries
+ 122: GET_ITER             
+ 124: FOR_ITER             to 222
+ 126: UNPACK_SEQUENCE      
+ 130: STORE_FAST           start
+ 132: STORE_FAST           end
+ 134: STORE_FAST           target
+ 136: STORE_FAST           _
+ 138: STORE_FAST           _
+ 140: LOAD_GLOBAL          NULL + range
+ 152: LOAD_FAST            start
+ 154: LOAD_FAST            end
+ 156: PRECALL              
+ 160: CALL                 
+ 170: GET_ITER             
+ 172: FOR_ITER             to 220
+ 174: STORE_FAST           i
+ 176: LOAD_FAST            labels
+ 178: LOAD_METHOD          add
+ 200: LOAD_FAST            target
+ 202: PRECALL              
+ 206: CALL                 
+ 216: POP_TOP              
+ 218: JUMP_BACKWARD        to 172
+ 220: JUMP_BACKWARD        to 124
+ 222: LOAD_CONST           None
+ 224: STORE_FAST           starts_line
+ 226: LOAD_GLOBAL          NULL + _unpack_opargs
+ 238: LOAD_FAST            code
+ 240: PRECALL              
+ 244: CALL                 
+ 254: GET_ITER             
+ 256: EXTENDED_ARG         
+ 258: FOR_ITER             to 1860
+ 260: UNPACK_SEQUENCE      
+ 264: STORE_FAST           offset
+ 266: STORE_FAST           op
+ 268: STORE_DEREF          arg
+ 270: LOAD_FAST            linestarts
+ 272: POP_JUMP_FORWARD_IF_NONE to 332
+ 274: LOAD_FAST            linestarts
+ 276: LOAD_METHOD          get
+ 298: LOAD_FAST            offset
+ 300: LOAD_CONST           None
+ 302: PRECALL              
+ 306: CALL                 
+ 316: STORE_FAST           starts_line
+ 318: LOAD_FAST            starts_line
+ 320: POP_JUMP_FORWARD_IF_NONE to 332
+ 322: LOAD_FAST            starts_line
+ 324: LOAD_FAST            line_offset
+ 326: BINARY_OP            +=
+ 330: STORE_FAST           starts_line
+ 332: LOAD_FAST            offset
+ 334: LOAD_FAST            labels
+ 336: CONTAINS_OP          
+ 338: STORE_FAST           is_jump_target
+ 340: LOAD_CONST           None
+ 342: STORE_FAST           argval
+ 344: LOAD_CONST           ''
+ 346: STORE_FAST           argrepr
+ 348: LOAD_GLOBAL          NULL + Positions
+ 360: LOAD_GLOBAL          NULL + next
+ 372: LOAD_FAST            co_positions
+ 374: LOAD_CONST           ()
+ 376: PRECALL              
+ 380: CALL                 
+ 390: CALL_FUNCTION_EX     
+ 392: STORE_FAST           positions
+ 394: LOAD_GLOBAL          NULL + _deoptop
+ 406: LOAD_FAST            op
+ 408: PRECALL              
+ 412: CALL                 
+ 422: STORE_FAST           deop
+ 424: LOAD_DEREF           arg
+ 426: EXTENDED_ARG         
+ 428: POP_JUMP_FORWARD_IF_NONE to 1284
+ 430: LOAD_DEREF           arg
+ 432: STORE_FAST           argval
+ 434: LOAD_FAST            deop
+ 436: LOAD_GLOBAL          hasconst
+ 448: CONTAINS_OP          
+ 450: POP_JUMP_FORWARD_IF_FALSE to 496
+ 452: LOAD_GLOBAL          NULL + _get_const_info
+ 464: LOAD_FAST            deop
+ 466: LOAD_DEREF           arg
+ 468: LOAD_FAST            co_consts
+ 470: PRECALL              
+ 474: CALL                 
+ 484: UNPACK_SEQUENCE      
+ 488: STORE_FAST           argval
+ 490: STORE_FAST           argrepr
+ 492: EXTENDED_ARG         
+ 494: JUMP_FORWARD         to 1284
+ 496: LOAD_FAST            deop
+ 498: LOAD_GLOBAL          hasname
+ 510: CONTAINS_OP          
+ 512: POP_JUMP_FORWARD_IF_FALSE to 650
+ 514: LOAD_FAST            deop
+ 516: LOAD_GLOBAL          LOAD_GLOBAL
+ 528: COMPARE_OP           ==
+ 534: POP_JUMP_FORWARD_IF_FALSE to 608
+ 536: LOAD_GLOBAL          NULL + _get_name_info
+ 548: LOAD_DEREF           arg
+ 550: LOAD_CONST           2
+ 552: BINARY_OP            //
+ 556: LOAD_FAST            get_name
+ 558: PRECALL              
+ 562: CALL                 
+ 572: UNPACK_SEQUENCE      
+ 576: STORE_FAST           argval
+ 578: STORE_FAST           argrepr
+ 580: LOAD_DEREF           arg
+ 582: LOAD_CONST           1
+ 584: BINARY_OP            &
+ 588: POP_JUMP_FORWARD_IF_FALSE to 604
+ 590: LOAD_FAST            argrepr
+ 592: POP_JUMP_FORWARD_IF_FALSE to 604
+ 594: LOAD_CONST           'NULL + '
+ 596: LOAD_FAST            argrepr
+ 598: BINARY_OP            +
+ 602: STORE_FAST           argrepr
+ 604: EXTENDED_ARG         
+ 606: JUMP_FORWARD         to 1284
+ 608: LOAD_GLOBAL          NULL + _get_name_info
+ 620: LOAD_DEREF           arg
+ 622: LOAD_FAST            get_name
+ 624: PRECALL              
+ 628: CALL                 
+ 638: UNPACK_SEQUENCE      
+ 642: STORE_FAST           argval
+ 644: STORE_FAST           argrepr
+ 646: EXTENDED_ARG         
+ 648: JUMP_FORWARD         to 1284
+ 650: LOAD_FAST            deop
+ 652: LOAD_GLOBAL          hasjabs
+ 664: CONTAINS_OP          
+ 666: POP_JUMP_FORWARD_IF_FALSE to 718
+ 668: LOAD_DEREF           arg
+ 670: LOAD_CONST           2
+ 672: BINARY_OP            *
+ 676: STORE_FAST           argval
+ 678: LOAD_CONST           'to '
+ 680: LOAD_GLOBAL          NULL + repr
+ 692: LOAD_FAST            argval
+ 694: PRECALL              
+ 698: CALL                 
+ 708: BINARY_OP            +
+ 712: STORE_FAST           argrepr
+ 714: EXTENDED_ARG         
+ 716: JUMP_FORWARD         to 1284
+ 718: LOAD_FAST            deop
+ 720: LOAD_GLOBAL          hasjrel
+ 732: CONTAINS_OP          
+ 734: POP_JUMP_FORWARD_IF_FALSE to 836
+ 736: LOAD_GLOBAL          NULL + _is_backward_jump
+ 748: LOAD_FAST            deop
+ 750: PRECALL              
+ 754: CALL                 
+ 764: POP_JUMP_FORWARD_IF_FALSE to 772
+ 766: LOAD_DEREF           arg
+ 768: UNARY_NEGATIVE       
+ 770: JUMP_FORWARD         to 774
+ 772: LOAD_DEREF           arg
+ 774: STORE_FAST           signed_arg
+ 776: LOAD_FAST            offset
+ 778: LOAD_CONST           2
+ 780: BINARY_OP            +
+ 784: LOAD_FAST            signed_arg
+ 786: LOAD_CONST           2
+ 788: BINARY_OP            *
+ 792: BINARY_OP            +
+ 796: STORE_FAST           argval
+ 798: LOAD_CONST           'to '
+ 800: LOAD_GLOBAL          NULL + repr
+ 812: LOAD_FAST            argval
+ 814: PRECALL              
+ 818: CALL                 
+ 828: BINARY_OP            +
+ 832: STORE_FAST           argrepr
+ 834: JUMP_FORWARD         to 1284
+ 836: LOAD_FAST            deop
+ 838: LOAD_GLOBAL          haslocal
+ 850: CONTAINS_OP          
+ 852: POP_JUMP_FORWARD_IF_TRUE to 872
+ 854: LOAD_FAST            deop
+ 856: LOAD_GLOBAL          hasfree
+ 868: CONTAINS_OP          
+ 870: POP_JUMP_FORWARD_IF_FALSE to 912
+ 872: LOAD_GLOBAL          NULL + _get_name_info
+ 884: LOAD_DEREF           arg
+ 886: LOAD_FAST            varname_from_oparg
+ 888: PRECALL              
+ 892: CALL                 
+ 902: UNPACK_SEQUENCE      
+ 906: STORE_FAST           argval
+ 908: STORE_FAST           argrepr
+ 910: JUMP_FORWARD         to 1284
+ 912: LOAD_FAST            deop
+ 914: LOAD_GLOBAL          hascompare
+ 926: CONTAINS_OP          
+ 928: POP_JUMP_FORWARD_IF_FALSE to 962
+ 930: LOAD_GLOBAL          cmp_op
+ 942: LOAD_DEREF           arg
+ 944: BINARY_SUBSCR        
+ 954: STORE_FAST           argval
+ 956: LOAD_FAST            argval
+ 958: STORE_FAST           argrepr
+ 960: JUMP_FORWARD         to 1284
+ 962: LOAD_FAST            deop
+ 964: LOAD_GLOBAL          FORMAT_VALUE
+ 976: COMPARE_OP           ==
+ 982: POP_JUMP_FORWARD_IF_FALSE to 1104
+ 984: LOAD_GLOBAL          FORMAT_VALUE_CONVERTERS
+ 996: LOAD_DEREF           arg
+ 998: LOAD_CONST           3
+1000: BINARY_OP            &
+1004: BINARY_SUBSCR        
+1014: UNPACK_SEQUENCE      
+1018: STORE_FAST           argval
+1020: STORE_FAST           argrepr
+1022: LOAD_FAST            argval
+1024: LOAD_GLOBAL          NULL + bool
+1036: LOAD_DEREF           arg
+1038: LOAD_CONST           4
+1040: BINARY_OP            &
+1044: PRECALL              
+1048: CALL                 
+1058: BUILD_TUPLE          
+1060: STORE_FAST           argval
+1062: LOAD_FAST            argval
+1064: LOAD_CONST           1
+1066: BINARY_SUBSCR        
+1076: POP_JUMP_FORWARD_IF_FALSE to 1102
+1078: LOAD_FAST            argrepr
+1080: POP_JUMP_FORWARD_IF_FALSE to 1092
+1082: LOAD_FAST            argrepr
+1084: LOAD_CONST           ', '
+1086: BINARY_OP            +=
+1090: STORE_FAST           argrepr
+1092: LOAD_FAST            argrepr
+1094: LOAD_CONST           'with format'
+1096: BINARY_OP            +=
+1100: STORE_FAST           argrepr
+1102: JUMP_FORWARD         to 1284
+1104: LOAD_FAST            deop
+1106: LOAD_GLOBAL          MAKE_FUNCTION
+1118: COMPARE_OP           ==
+1124: POP_JUMP_FORWARD_IF_FALSE to 1230
+1126: LOAD_CONST           ', '
+1128: LOAD_METHOD          join
+1150: LOAD_CLOSURE         arg
+1152: BUILD_TUPLE          
+1154: LOAD_CONST           <code object <genexpr> at 0x000002406945E3D0, file "dis.py", line 488>
+1156: MAKE_FUNCTION        closure
+1158: LOAD_GLOBAL          NULL + enumerate
+1170: LOAD_GLOBAL          MAKE_FUNCTION_FLAGS
+1182: PRECALL              
+1186: CALL                 
+1196: GET_ITER             
+1198: PRECALL              
+1202: CALL                 
+1212: PRECALL              
+1216: CALL                 
+1226: STORE_FAST           argrepr
+1228: JUMP_FORWARD         to 1284
+1230: LOAD_FAST            deop
+1232: LOAD_GLOBAL          BINARY_OP
+1244: COMPARE_OP           ==
+1250: POP_JUMP_FORWARD_IF_FALSE to 1284
+1252: LOAD_GLOBAL          _nb_ops
+1264: LOAD_DEREF           arg
+1266: BINARY_SUBSCR        
+1276: UNPACK_SEQUENCE      
+1280: STORE_FAST           _
+1282: STORE_FAST           argrepr
+1284: LOAD_GLOBAL          NULL + Instruction
+1296: LOAD_GLOBAL          _all_opname
+1308: LOAD_FAST            op
+1310: BINARY_SUBSCR        
+1320: LOAD_FAST            op
+1322: LOAD_DEREF           arg
+1324: LOAD_FAST            argval
+1326: LOAD_FAST            argrepr
+1328: LOAD_FAST            offset
+1330: LOAD_FAST            starts_line
+1332: LOAD_FAST            is_jump_target
+1334: LOAD_FAST            positions
+1336: PRECALL              
+1340: CALL                 
+1350: YIELD_VALUE          
+1352: RESUME               
+1354: POP_TOP              
+1356: LOAD_GLOBAL          _inline_cache_entries
+1368: LOAD_FAST            deop
+1370: BINARY_SUBSCR        
+1380: STORE_FAST           caches
+1382: LOAD_FAST            caches
+1384: POP_JUMP_FORWARD_IF_TRUE to 1390
+1386: EXTENDED_ARG         
+1388: JUMP_BACKWARD        to 256
+1390: LOAD_FAST            show_caches
+1392: POP_JUMP_FORWARD_IF_TRUE to 1466
+1394: LOAD_GLOBAL          NULL + range
+1406: LOAD_FAST            caches
+1408: PRECALL              
+1412: CALL                 
+1422: GET_ITER             
+1424: FOR_ITER             to 1462
+1426: STORE_FAST           _
+1428: LOAD_GLOBAL          NULL + next
+1440: LOAD_FAST            co_positions
+1442: LOAD_CONST           ()
+1444: PRECALL              
+1448: CALL                 
+1458: POP_TOP              
+1460: JUMP_BACKWARD        to 1424
+1462: EXTENDED_ARG         
+1464: JUMP_BACKWARD        to 256
+1466: LOAD_GLOBAL          _cache_format
+1478: LOAD_GLOBAL          opname
+1490: LOAD_FAST            deop
+1492: BINARY_SUBSCR        
+1502: BINARY_SUBSCR        
+1512: LOAD_METHOD          items
+1534: PRECALL              
+1538: CALL                 
+1548: GET_ITER             
+1550: FOR_ITER             to 1856
+1552: UNPACK_SEQUENCE      
+1556: STORE_FAST           name
+1558: STORE_FAST           size
+1560: LOAD_GLOBAL          NULL + range
+1572: LOAD_FAST            size
+1574: PRECALL              
+1578: CALL                 
+1588: GET_ITER             
+1590: FOR_ITER             to 1854
+1592: STORE_FAST           i
+1594: LOAD_FAST            offset
+1596: LOAD_CONST           2
+1598: BINARY_OP            +=
+1602: STORE_FAST           offset
+1604: LOAD_FAST            i
+1606: LOAD_CONST           0
+1608: COMPARE_OP           ==
+1614: POP_JUMP_FORWARD_IF_FALSE to 1746
+1616: LOAD_FAST            op
+1618: LOAD_FAST            deop
+1620: COMPARE_OP           !=
+1626: POP_JUMP_FORWARD_IF_FALSE to 1746
+1628: LOAD_FAST            code
+1630: LOAD_FAST            offset
+1632: LOAD_FAST            offset
+1634: LOAD_CONST           2
+1636: LOAD_FAST            size
+1638: BINARY_OP            *
+1642: BINARY_OP            +
+1646: BUILD_SLICE          
+1648: BINARY_SUBSCR        
+1658: STORE_FAST           data
+1660: LOAD_FAST            name
+1662: FORMAT_VALUE         
+1664: LOAD_CONST           ': '
+1666: LOAD_GLOBAL          int
+1678: LOAD_METHOD          from_bytes
+1700: LOAD_FAST            data
+1702: LOAD_GLOBAL          sys
+1714: LOAD_ATTR            byteorder
+1724: PRECALL              
+1728: CALL                 
+1738: FORMAT_VALUE         
+1740: BUILD_STRING         
+1742: STORE_FAST           argrepr
+1744: JUMP_FORWARD         to 1750
+1746: LOAD_CONST           ''
+1748: STORE_FAST           argrepr
+1750: LOAD_GLOBAL          NULL + Instruction
+1762: LOAD_CONST           'CACHE'
+1764: LOAD_GLOBAL          CACHE
+1776: LOAD_CONST           0
+1778: LOAD_CONST           None
+1780: LOAD_FAST            argrepr
+1782: LOAD_FAST            offset
+1784: LOAD_CONST           None
+1786: LOAD_CONST           False
+1788: LOAD_GLOBAL          NULL + Positions
+1800: LOAD_GLOBAL          NULL + next
+1812: LOAD_FAST            co_positions
+1814: LOAD_CONST           ()
+1816: PRECALL              
+1820: CALL                 
+1830: CALL_FUNCTION_EX     
+1832: PRECALL              
+1836: CALL                 
+1846: YIELD_VALUE          
+1848: RESUME               
+1850: POP_TOP              
+1852: JUMP_BACKWARD        to 1590
+1854: JUMP_BACKWARD        to 1550
+1856: EXTENDED_ARG         
+1858: JUMP_BACKWARD        to 256
+1860: LOAD_CONST           None
+1862: RETURN_VALUE         

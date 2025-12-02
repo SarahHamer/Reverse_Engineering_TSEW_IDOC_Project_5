@@ -1,0 +1,19 @@
+# Disassembly for importlib._NamespacePath.__contains__
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+(None,)
+
+## co_names:
+('_recalculate',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            item
+   4: LOAD_FAST            self
+   6: LOAD_METHOD          _recalculate
+  28: PRECALL              
+  32: CALL                 
+  42: CONTAINS_OP          
+  44: RETURN_VALUE         

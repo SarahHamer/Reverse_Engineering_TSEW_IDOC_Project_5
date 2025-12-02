@@ -1,0 +1,34 @@
+# Disassembly for typing.Annotated
+# From module file: typing
+
+## co_consts:
+('Annotated', "Add context-specific metadata to a type.\n\n    Example: Annotated[int, runtime_check.Unsigned] indicates to the\n    hypothetical runtime_check module that this type is an unsigned int.\n    Every other consumer of this type can ignore this metadata and treat\n    this type as int.\n\n    The first argument to Annotated must be a valid type.\n\n    Details:\n\n    - It's an error to call `Annotated` with less than two arguments.\n    - Access the metadata via the ``__metadata__`` attribute::\n\n        assert Annotated[int, '$'].__metadata__ == ('$',)\n\n    - Nested Annotated types are flattened::\n\n        assert Annotated[Annotated[T, Ann1, Ann2], Ann3] == Annotated[T, Ann1, Ann2, Ann3]\n\n    - Instantiating an annotated type is equivalent to instantiating the\n    underlying type::\n\n        assert Annotated[C, Ann1](5) == C(5)\n\n    - Annotated can be used as a generic type alias::\n\n        Optimized: TypeAlias = Annotated[T, runtime.Optimize()]\n        assert Optimized[int] == Annotated[int, runtime.Optimize()]\n\n        OptimizedList: TypeAlias = Annotated[list[T], runtime.Optimize()]\n        assert OptimizedList[int] == Annotated[list[int], runtime.Optimize()]\n\n    - Annotated cannot be used with an unpacked TypeVarTuple::\n\n        Variadic: TypeAlias = Annotated[*Ts, Ann1]  # NOT valid\n\n      This would be equivalent to::\n\n        Annotated[T1, T2, T3, ..., Ann1]\n\n      where T1, T2 etc. are TypeVars, which would be invalid, because\n      only one type should be passed to Annotated.\n    ", (), <code object __new__ at 0x0000024069CF1370, file "typing.py", line 2207>, <code object __class_getitem__ at 0x0000024069CD8030, file "typing.py", line 2210>, <code object __init_subclass__ at 0x0000024069CE4140, file "typing.py", line 2224>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__slots__', '__new__', '_tp_cache', '__class_getitem__', '__init_subclass__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Annotated'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           "Add context-specific metadata to a type.\n\n    Example: Annotated[int, runtime_check.Unsigned] indicates to the\n    hypothetical runtime_check module that this type is an unsigned int.\n    Every other consumer of this type can ignore this metadata and treat\n    this type as int.\n\n    The first argument to Annotated must be a valid type.\n\n    Details:\n\n    - It's an error to call `Annotated` with less than two arguments.\n    - Access the metadata via the ``__metadata__`` attribute::\n\n        assert Annotated[int, '$'].__metadata__ == ('$',)\n\n    - Nested Annotated types are flattened::\n\n        assert Annotated[Annotated[T, Ann1, Ann2], Ann3] == Annotated[T, Ann1, Ann2, Ann3]\n\n    - Instantiating an annotated type is equivalent to instantiating the\n    underlying type::\n\n        assert Annotated[C, Ann1](5) == C(5)\n\n    - Annotated can be used as a generic type alias::\n\n        Optimized: TypeAlias = Annotated[T, runtime.Optimize()]\n        assert Optimized[int] == Annotated[int, runtime.Optimize()]\n\n        OptimizedList: TypeAlias = Annotated[list[T], runtime.Optimize()]\n        assert OptimizedList[int] == Annotated[list[int], runtime.Optimize()]\n\n    - Annotated cannot be used with an unpacked TypeVarTuple::\n\n        Variadic: TypeAlias = Annotated[*Ts, Ann1]  # NOT valid\n\n      This would be equivalent to::\n\n        Annotated[T1, T2, T3, ..., Ann1]\n\n      where T1, T2 etc. are TypeVars, which would be invalid, because\n      only one type should be passed to Annotated.\n    "
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ()
+  16: STORE_NAME           __slots__
+  18: LOAD_CONST           <code object __new__ at 0x0000024069CF1370, file "typing.py", line 2207>
+  20: MAKE_FUNCTION        
+  22: STORE_NAME           __new__
+  24: LOAD_NAME            _tp_cache
+  26: LOAD_CONST           <code object __class_getitem__ at 0x0000024069CD8030, file "typing.py", line 2210>
+  28: MAKE_FUNCTION        
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_NAME           __class_getitem__
+  46: LOAD_CONST           <code object __init_subclass__ at 0x0000024069CE4140, file "typing.py", line 2224>
+  48: MAKE_FUNCTION        
+  50: STORE_NAME           __init_subclass__
+  52: LOAD_CONST           None
+  54: RETURN_VALUE         

@@ -1,0 +1,24 @@
+# Disassembly for argparse.HelpFormatter._add_item
+# From module file: argparse
+
+## co_consts:
+(None,)
+
+## co_names:
+('_current_section', 'items', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _current_section
+  14: LOAD_ATTR            items
+  24: LOAD_METHOD          append
+  46: LOAD_FAST            func
+  48: LOAD_FAST            args
+  50: BUILD_TUPLE          
+  52: PRECALL              
+  56: CALL                 
+  66: POP_TOP              
+  68: LOAD_CONST           None
+  70: RETURN_VALUE         

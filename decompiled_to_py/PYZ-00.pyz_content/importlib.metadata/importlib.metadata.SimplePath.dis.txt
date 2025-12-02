@@ -1,0 +1,38 @@
+# Disassembly for importlib.metadata.SimplePath
+# From module file: importlib.metadata._meta
+
+## co_consts:
+('SimplePath', '\n    A minimal subset of pathlib.Path required by PathDistribution.\n    ', 'return', <code object joinpath at 0x000002406943BDB0, file "importlib\metadata\_meta.py", line 37>, <code object __truediv__ at 0x000002406943B570, file "importlib\metadata\_meta.py", line 40>, <code object parent at 0x000002406943B930, file "importlib\metadata\_meta.py", line 43>, <code object read_text at 0x000002406943B330, file "importlib\metadata\_meta.py", line 46>, None, ('return', 'SimplePath'))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'joinpath', '__truediv__', 'parent', 'str', 'read_text')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'SimplePath'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           '\n    A minimal subset of pathlib.Path required by PathDistribution.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ('return', 'SimplePath')
+  16: LOAD_CONST           <code object joinpath at 0x000002406943BDB0, file "importlib\metadata\_meta.py", line 37>
+  18: MAKE_FUNCTION        annotations
+  20: STORE_NAME           joinpath
+  22: LOAD_CONST           ('return', 'SimplePath')
+  24: LOAD_CONST           <code object __truediv__ at 0x000002406943B570, file "importlib\metadata\_meta.py", line 40>
+  26: MAKE_FUNCTION        annotations
+  28: STORE_NAME           __truediv__
+  30: LOAD_CONST           ('return', 'SimplePath')
+  32: LOAD_CONST           <code object parent at 0x000002406943B930, file "importlib\metadata\_meta.py", line 43>
+  34: MAKE_FUNCTION        annotations
+  36: STORE_NAME           parent
+  38: LOAD_CONST           'return'
+  40: LOAD_NAME            str
+  42: BUILD_TUPLE          
+  44: LOAD_CONST           <code object read_text at 0x000002406943B330, file "importlib\metadata\_meta.py", line 46>
+  46: MAKE_FUNCTION        annotations
+  48: STORE_NAME           read_text
+  50: LOAD_CONST           None
+  52: RETURN_VALUE         

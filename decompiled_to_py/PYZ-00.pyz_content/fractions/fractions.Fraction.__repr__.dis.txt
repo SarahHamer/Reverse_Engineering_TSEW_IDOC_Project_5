@@ -1,0 +1,27 @@
+# Disassembly for fractions.Fraction.__repr__
+# From module file: fractions
+
+## co_consts:
+('repr(self)', '(', ', ', ')')
+
+## co_names:
+('__class__', '__name__', '_numerator', '_denominator')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            __class__
+  14: LOAD_ATTR            __name__
+  24: FORMAT_VALUE         str
+  26: LOAD_CONST           '('
+  28: LOAD_FAST            self
+  30: LOAD_ATTR            _numerator
+  40: FORMAT_VALUE         str
+  42: LOAD_CONST           ', '
+  44: LOAD_FAST            self
+  46: LOAD_ATTR            _denominator
+  56: FORMAT_VALUE         str
+  58: LOAD_CONST           ')'
+  60: BUILD_STRING         
+  62: RETURN_VALUE         

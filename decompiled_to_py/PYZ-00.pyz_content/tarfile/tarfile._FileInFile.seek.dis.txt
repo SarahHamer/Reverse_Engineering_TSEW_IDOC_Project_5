@@ -1,0 +1,91 @@
+# Disassembly for tarfile._FileInFile.seek
+# From module file: tarfile
+
+## co_consts:
+('Seek to a position in the file.\n        ', 0, 'Invalid argument')
+
+## co_names:
+('io', 'SEEK_SET', 'min', 'max', 'size', 'position', 'SEEK_CUR', 'SEEK_END', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            whence
+   4: LOAD_GLOBAL          io
+  16: LOAD_ATTR            SEEK_SET
+  26: COMPARE_OP           ==
+  32: POP_JUMP_FORWARD_IF_FALSE to 116
+  34: LOAD_GLOBAL          NULL + min
+  46: LOAD_GLOBAL          NULL + max
+  58: LOAD_FAST            position
+  60: LOAD_CONST           0
+  62: PRECALL              
+  66: CALL                 
+  76: LOAD_FAST            self
+  78: LOAD_ATTR            size
+  88: PRECALL              
+  92: CALL                 
+ 102: LOAD_FAST            self
+ 104: STORE_ATTR           position
+ 114: JUMP_FORWARD         to 450
+ 116: LOAD_FAST            whence
+ 118: LOAD_GLOBAL          io
+ 130: LOAD_ATTR            SEEK_CUR
+ 140: COMPARE_OP           ==
+ 146: POP_JUMP_FORWARD_IF_FALSE to 290
+ 148: LOAD_FAST            position
+ 150: LOAD_CONST           0
+ 152: COMPARE_OP           <
+ 158: POP_JUMP_FORWARD_IF_FALSE to 220
+ 160: LOAD_GLOBAL          NULL + max
+ 172: LOAD_FAST            self
+ 174: LOAD_ATTR            position
+ 184: LOAD_FAST            position
+ 186: BINARY_OP            +
+ 190: LOAD_CONST           0
+ 192: PRECALL              
+ 196: CALL                 
+ 206: LOAD_FAST            self
+ 208: STORE_ATTR           position
+ 218: JUMP_FORWARD         to 450
+ 220: LOAD_GLOBAL          NULL + min
+ 232: LOAD_FAST            self
+ 234: LOAD_ATTR            position
+ 244: LOAD_FAST            position
+ 246: BINARY_OP            +
+ 250: LOAD_FAST            self
+ 252: LOAD_ATTR            size
+ 262: PRECALL              
+ 266: CALL                 
+ 276: LOAD_FAST            self
+ 278: STORE_ATTR           position
+ 288: JUMP_FORWARD         to 450
+ 290: LOAD_FAST            whence
+ 292: LOAD_GLOBAL          io
+ 304: LOAD_ATTR            SEEK_END
+ 314: COMPARE_OP           ==
+ 320: POP_JUMP_FORWARD_IF_FALSE to 420
+ 322: LOAD_GLOBAL          NULL + max
+ 334: LOAD_GLOBAL          NULL + min
+ 346: LOAD_FAST            self
+ 348: LOAD_ATTR            size
+ 358: LOAD_FAST            position
+ 360: BINARY_OP            +
+ 364: LOAD_FAST            self
+ 366: LOAD_ATTR            size
+ 376: PRECALL              
+ 380: CALL                 
+ 390: LOAD_CONST           0
+ 392: PRECALL              
+ 396: CALL                 
+ 406: LOAD_FAST            self
+ 408: STORE_ATTR           position
+ 418: JUMP_FORWARD         to 450
+ 420: LOAD_GLOBAL          NULL + ValueError
+ 432: LOAD_CONST           'Invalid argument'
+ 434: PRECALL              
+ 438: CALL                 
+ 448: RAISE_VARARGS        
+ 450: LOAD_FAST            self
+ 452: LOAD_ATTR            position
+ 462: RETURN_VALUE         

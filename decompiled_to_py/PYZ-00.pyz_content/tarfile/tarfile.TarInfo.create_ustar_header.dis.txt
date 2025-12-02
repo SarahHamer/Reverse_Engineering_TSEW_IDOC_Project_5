@@ -1,0 +1,74 @@
+# Disassembly for tarfile.TarInfo.create_ustar_header
+# From module file: tarfile
+
+## co_consts:
+('Return the object as a ustar header block.\n        ', 'magic', 'linkname', 'linkname is too long', 'name', 'prefix')
+
+## co_names:
+('POSIX_MAGIC', 'len', 'encode', 'LENGTH_LINK', 'ValueError', 'LENGTH_NAME', '_posix_split_name', '_create_header', 'USTAR_FORMAT')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          POSIX_MAGIC
+  14: LOAD_FAST            info
+  16: LOAD_CONST           'magic'
+  18: STORE_SUBSCR         
+  22: LOAD_GLOBAL          NULL + len
+  34: LOAD_FAST            info
+  36: LOAD_CONST           'linkname'
+  38: BINARY_SUBSCR        
+  48: LOAD_METHOD          encode
+  70: LOAD_FAST            encoding
+  72: LOAD_FAST            errors
+  74: PRECALL              
+  78: CALL                 
+  88: PRECALL              
+  92: CALL                 
+ 102: LOAD_GLOBAL          LENGTH_LINK
+ 114: COMPARE_OP           >
+ 120: POP_JUMP_FORWARD_IF_FALSE to 152
+ 122: LOAD_GLOBAL          NULL + ValueError
+ 134: LOAD_CONST           'linkname is too long'
+ 136: PRECALL              
+ 140: CALL                 
+ 150: RAISE_VARARGS        
+ 152: LOAD_GLOBAL          NULL + len
+ 164: LOAD_FAST            info
+ 166: LOAD_CONST           'name'
+ 168: BINARY_SUBSCR        
+ 178: LOAD_METHOD          encode
+ 200: LOAD_FAST            encoding
+ 202: LOAD_FAST            errors
+ 204: PRECALL              
+ 208: CALL                 
+ 218: PRECALL              
+ 222: CALL                 
+ 232: LOAD_GLOBAL          LENGTH_NAME
+ 244: COMPARE_OP           >
+ 250: POP_JUMP_FORWARD_IF_FALSE to 328
+ 252: LOAD_FAST            self
+ 254: LOAD_METHOD          _posix_split_name
+ 276: LOAD_FAST            info
+ 278: LOAD_CONST           'name'
+ 280: BINARY_SUBSCR        
+ 290: LOAD_FAST            encoding
+ 292: LOAD_FAST            errors
+ 294: PRECALL              
+ 298: CALL                 
+ 308: UNPACK_SEQUENCE      
+ 312: LOAD_FAST            info
+ 314: LOAD_CONST           'prefix'
+ 316: STORE_SUBSCR         
+ 320: LOAD_FAST            info
+ 322: LOAD_CONST           'name'
+ 324: STORE_SUBSCR         
+ 328: LOAD_FAST            self
+ 330: LOAD_METHOD          _create_header
+ 352: LOAD_FAST            info
+ 354: LOAD_GLOBAL          USTAR_FORMAT
+ 366: LOAD_FAST            encoding
+ 368: LOAD_FAST            errors
+ 370: PRECALL              
+ 374: CALL                 
+ 384: RETURN_VALUE         

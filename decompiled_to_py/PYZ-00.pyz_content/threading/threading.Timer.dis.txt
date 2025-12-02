@@ -1,0 +1,30 @@
+# Disassembly for threading.Timer
+# From module file: threading
+
+## co_consts:
+('Timer', "Call a function after a specified number of seconds:\n\n            t = Timer(30.0, f, args=None, kwargs=None)\n            t.start()\n            t.cancel()     # stop the timer's action if it's still waiting\n\n    ", None, <code object __init__ at 0x00000240691C14D0, file "threading.py", line 1379>, <code object cancel at 0x000002406945E3D0, file "threading.py", line 1387>, <code object run at 0x000002406942E740, file "threading.py", line 1391>, (None, None))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', 'cancel', 'run')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Timer'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           "Call a function after a specified number of seconds:\n\n            t = Timer(30.0, f, args=None, kwargs=None)\n            t.start()\n            t.cancel()     # stop the timer's action if it's still waiting\n\n    "
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           (None, None)
+  16: LOAD_CONST           <code object __init__ at 0x00000240691C14D0, file "threading.py", line 1379>
+  18: MAKE_FUNCTION        defaults
+  20: STORE_NAME           __init__
+  22: LOAD_CONST           <code object cancel at 0x000002406945E3D0, file "threading.py", line 1387>
+  24: MAKE_FUNCTION        
+  26: STORE_NAME           cancel
+  28: LOAD_CONST           <code object run at 0x000002406942E740, file "threading.py", line 1391>
+  30: MAKE_FUNCTION        
+  32: STORE_NAME           run
+  34: LOAD_CONST           None
+  36: RETURN_VALUE         

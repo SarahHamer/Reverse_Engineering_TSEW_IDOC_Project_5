@@ -1,0 +1,33 @@
+# Disassembly for tempfile.SpooledTemporaryFile.mode
+# From module file: tempfile
+
+## co_consts:
+(None, 'mode')
+
+## co_names:
+('_file', 'mode', 'AttributeError', '_TemporaryFileArgs')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            _file
+  16: LOAD_ATTR            mode
+  26: RETURN_VALUE         
+  28: PUSH_EXC_INFO        
+  30: LOAD_GLOBAL          AttributeError
+  42: CHECK_EXC_MATCH      
+  44: POP_JUMP_FORWARD_IF_FALSE to 78
+  46: POP_TOP              
+  48: LOAD_FAST            self
+  50: LOAD_ATTR            _TemporaryFileArgs
+  60: LOAD_CONST           'mode'
+  62: BINARY_SUBSCR        
+  72: SWAP                 
+  74: POP_EXCEPT           
+  76: RETURN_VALUE         
+  78: RERAISE              
+  80: COPY                 
+  82: POP_EXCEPT           
+  84: RERAISE              

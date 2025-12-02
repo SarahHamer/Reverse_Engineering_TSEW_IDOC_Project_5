@@ -1,0 +1,59 @@
+# Disassembly for _threading_local.local.__setattr__
+# From module file: _threading_local
+
+## co_consts:
+(None, '__dict__', "%r object attribute '__dict__' is read-only")
+
+## co_names:
+('AttributeError', '__class__', '__name__', '_patch', 'object', '__setattr__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            name
+   4: LOAD_CONST           '__dict__'
+   6: COMPARE_OP           ==
+  12: POP_JUMP_FORWARD_IF_FALSE to 70
+  14: LOAD_GLOBAL          NULL + AttributeError
+  26: LOAD_CONST           "%r object attribute '__dict__' is read-only"
+  28: LOAD_FAST            self
+  30: LOAD_ATTR            __class__
+  40: LOAD_ATTR            __name__
+  50: BINARY_OP            %
+  54: PRECALL              
+  58: CALL                 
+  68: RAISE_VARARGS        
+  70: LOAD_GLOBAL          NULL + _patch
+  82: LOAD_FAST            self
+  84: PRECALL              
+  88: CALL                 
+  98: BEFORE_WITH          
+ 100: POP_TOP              
+ 102: LOAD_GLOBAL          object
+ 114: LOAD_METHOD          __setattr__
+ 136: LOAD_FAST            self
+ 138: LOAD_FAST            name
+ 140: LOAD_FAST            value
+ 142: PRECALL              
+ 146: CALL                 
+ 156: SWAP                 
+ 158: LOAD_CONST           None
+ 160: LOAD_CONST           None
+ 162: LOAD_CONST           None
+ 164: PRECALL              
+ 168: CALL                 
+ 178: POP_TOP              
+ 180: RETURN_VALUE         
+ 182: PUSH_EXC_INFO        
+ 184: WITH_EXCEPT_START    
+ 186: POP_JUMP_FORWARD_IF_TRUE to 196
+ 188: RERAISE              
+ 190: COPY                 
+ 192: POP_EXCEPT           
+ 194: RERAISE              
+ 196: POP_TOP              
+ 198: POP_EXCEPT           
+ 200: POP_TOP              
+ 202: POP_TOP              
+ 204: LOAD_CONST           None
+ 206: RETURN_VALUE         

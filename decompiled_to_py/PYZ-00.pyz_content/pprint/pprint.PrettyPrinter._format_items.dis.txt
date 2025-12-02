@@ -1,0 +1,191 @@
+# Disassembly for pprint.PrettyPrinter._format_items
+# From module file: pprint
+
+## co_consts:
+(None, 1, ' ', ',\n', '', False, True, 2, ', ')
+
+## co_names:
+('write', '_indent_per_level', '_width', 'iter', 'next', 'StopIteration', '_compact', '_repr', 'len', '_format')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            stream
+   4: LOAD_ATTR            write
+  14: STORE_FAST           write
+  16: LOAD_FAST            indent
+  18: LOAD_FAST            self
+  20: LOAD_ATTR            _indent_per_level
+  30: BINARY_OP            +=
+  34: STORE_FAST           indent
+  36: LOAD_FAST            self
+  38: LOAD_ATTR            _indent_per_level
+  48: LOAD_CONST           1
+  50: COMPARE_OP           >
+  56: POP_JUMP_FORWARD_IF_FALSE to 102
+  58: PUSH_NULL            
+  60: LOAD_FAST            write
+  62: LOAD_FAST            self
+  64: LOAD_ATTR            _indent_per_level
+  74: LOAD_CONST           1
+  76: BINARY_OP            -
+  80: LOAD_CONST           ' '
+  82: BINARY_OP            *
+  86: PRECALL              
+  90: CALL                 
+ 100: POP_TOP              
+ 102: LOAD_CONST           ',\n'
+ 104: LOAD_CONST           ' '
+ 106: LOAD_FAST            indent
+ 108: BINARY_OP            *
+ 112: BINARY_OP            +
+ 116: STORE_FAST           delimnl
+ 118: LOAD_CONST           ''
+ 120: STORE_FAST           delim
+ 122: LOAD_FAST            self
+ 124: LOAD_ATTR            _width
+ 134: LOAD_FAST            indent
+ 136: BINARY_OP            -
+ 140: LOAD_CONST           1
+ 142: BINARY_OP            +
+ 146: COPY                 
+ 148: STORE_FAST           width
+ 150: STORE_FAST           max_width
+ 152: LOAD_GLOBAL          NULL + iter
+ 164: LOAD_FAST            items
+ 166: PRECALL              
+ 170: CALL                 
+ 180: STORE_FAST           it
+ 182: NOP                  
+ 184: LOAD_GLOBAL          NULL + next
+ 196: LOAD_FAST            it
+ 198: PRECALL              
+ 202: CALL                 
+ 212: STORE_FAST           next_ent
+ 214: JUMP_FORWARD         to 250
+ 216: PUSH_EXC_INFO        
+ 218: LOAD_GLOBAL          StopIteration
+ 230: CHECK_EXC_MATCH      
+ 232: POP_JUMP_FORWARD_IF_FALSE to 242
+ 234: POP_TOP              
+ 236: POP_EXCEPT           
+ 238: LOAD_CONST           None
+ 240: RETURN_VALUE         
+ 242: RERAISE              
+ 244: COPY                 
+ 246: POP_EXCEPT           
+ 248: RERAISE              
+ 250: LOAD_CONST           False
+ 252: STORE_FAST           last
+ 254: LOAD_FAST            last
+ 256: POP_JUMP_FORWARD_IF_TRUE to 638
+ 258: LOAD_FAST            next_ent
+ 260: STORE_FAST           ent
+ 262: NOP                  
+ 264: LOAD_GLOBAL          NULL + next
+ 276: LOAD_FAST            it
+ 278: PRECALL              
+ 282: CALL                 
+ 292: STORE_FAST           next_ent
+ 294: JUMP_FORWARD         to 352
+ 296: PUSH_EXC_INFO        
+ 298: LOAD_GLOBAL          StopIteration
+ 310: CHECK_EXC_MATCH      
+ 312: POP_JUMP_FORWARD_IF_FALSE to 344
+ 314: POP_TOP              
+ 316: LOAD_CONST           True
+ 318: STORE_FAST           last
+ 320: LOAD_FAST            max_width
+ 322: LOAD_FAST            allowance
+ 324: BINARY_OP            -=
+ 328: STORE_FAST           max_width
+ 330: LOAD_FAST            width
+ 332: LOAD_FAST            allowance
+ 334: BINARY_OP            -=
+ 338: STORE_FAST           width
+ 340: POP_EXCEPT           
+ 342: JUMP_FORWARD         to 352
+ 344: RERAISE              
+ 346: COPY                 
+ 348: POP_EXCEPT           
+ 350: RERAISE              
+ 352: LOAD_FAST            self
+ 354: LOAD_ATTR            _compact
+ 364: POP_JUMP_FORWARD_IF_FALSE to 544
+ 366: LOAD_FAST            self
+ 368: LOAD_METHOD          _repr
+ 390: LOAD_FAST            ent
+ 392: LOAD_FAST            context
+ 394: LOAD_FAST            level
+ 396: PRECALL              
+ 400: CALL                 
+ 410: STORE_FAST           rep
+ 412: LOAD_GLOBAL          NULL + len
+ 424: LOAD_FAST            rep
+ 426: PRECALL              
+ 430: CALL                 
+ 440: LOAD_CONST           2
+ 442: BINARY_OP            +
+ 446: STORE_FAST           w
+ 448: LOAD_FAST            width
+ 450: LOAD_FAST            w
+ 452: COMPARE_OP           <
+ 458: POP_JUMP_FORWARD_IF_FALSE to 472
+ 460: LOAD_FAST            max_width
+ 462: STORE_FAST           width
+ 464: LOAD_FAST            delim
+ 466: POP_JUMP_FORWARD_IF_FALSE to 472
+ 468: LOAD_FAST            delimnl
+ 470: STORE_FAST           delim
+ 472: LOAD_FAST            width
+ 474: LOAD_FAST            w
+ 476: COMPARE_OP           >=
+ 482: POP_JUMP_FORWARD_IF_FALSE to 544
+ 484: LOAD_FAST            width
+ 486: LOAD_FAST            w
+ 488: BINARY_OP            -=
+ 492: STORE_FAST           width
+ 494: PUSH_NULL            
+ 496: LOAD_FAST            write
+ 498: LOAD_FAST            delim
+ 500: PRECALL              
+ 504: CALL                 
+ 514: POP_TOP              
+ 516: LOAD_CONST           ', '
+ 518: STORE_FAST           delim
+ 520: PUSH_NULL            
+ 522: LOAD_FAST            write
+ 524: LOAD_FAST            rep
+ 526: PRECALL              
+ 530: CALL                 
+ 540: POP_TOP              
+ 542: JUMP_BACKWARD        to 254
+ 544: PUSH_NULL            
+ 546: LOAD_FAST            write
+ 548: LOAD_FAST            delim
+ 550: PRECALL              
+ 554: CALL                 
+ 564: POP_TOP              
+ 566: LOAD_FAST            delimnl
+ 568: STORE_FAST           delim
+ 570: LOAD_FAST            self
+ 572: LOAD_METHOD          _format
+ 594: LOAD_FAST            ent
+ 596: LOAD_FAST            stream
+ 598: LOAD_FAST            indent
+ 600: LOAD_FAST            last
+ 602: POP_JUMP_FORWARD_IF_FALSE to 608
+ 604: LOAD_FAST            allowance
+ 606: JUMP_FORWARD         to 610
+ 608: LOAD_CONST           1
+ 610: LOAD_FAST            context
+ 612: LOAD_FAST            level
+ 614: PRECALL              
+ 618: CALL                 
+ 628: POP_TOP              
+ 630: LOAD_FAST            last
+ 632: POP_JUMP_BACKWARD_IF_FALSE to 258
+ 634: LOAD_CONST           None
+ 636: RETURN_VALUE         
+ 638: LOAD_CONST           None
+ 640: RETURN_VALUE         

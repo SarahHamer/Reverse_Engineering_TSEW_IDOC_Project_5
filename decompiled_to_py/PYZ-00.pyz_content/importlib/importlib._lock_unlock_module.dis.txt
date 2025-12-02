@@ -1,0 +1,42 @@
+# Disassembly for importlib._lock_unlock_module
+# From module file: importlib._bootstrap
+
+## co_consts:
+('Acquires then releases the module lock for a given module name.\n\n    This is used to ensure a module is completely initialized, in the\n    event it is being imported by another thread.\n    ', None)
+
+## co_names:
+('_get_module_lock', 'acquire', 'release', '_DeadlockError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _get_module_lock
+  14: LOAD_FAST            name
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           lock
+  32: NOP                  
+  34: LOAD_FAST            lock
+  36: LOAD_METHOD          acquire
+  58: PRECALL              
+  62: CALL                 
+  72: POP_TOP              
+  74: LOAD_FAST            lock
+  76: LOAD_METHOD          release
+  98: PRECALL              
+ 102: CALL                 
+ 112: POP_TOP              
+ 114: LOAD_CONST           None
+ 116: RETURN_VALUE         
+ 118: PUSH_EXC_INFO        
+ 120: LOAD_GLOBAL          _DeadlockError
+ 132: CHECK_EXC_MATCH      
+ 134: POP_JUMP_FORWARD_IF_FALSE to 144
+ 136: POP_TOP              
+ 138: POP_EXCEPT           
+ 140: LOAD_CONST           None
+ 142: RETURN_VALUE         
+ 144: RERAISE              
+ 146: COPY                 
+ 148: POP_EXCEPT           
+ 150: RERAISE              

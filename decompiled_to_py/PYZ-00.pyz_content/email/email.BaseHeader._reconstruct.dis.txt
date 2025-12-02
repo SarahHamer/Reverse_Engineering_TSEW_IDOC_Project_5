@@ -1,0 +1,19 @@
+# Disassembly for email.BaseHeader._reconstruct
+# From module file: email.headerregistry
+
+## co_consts:
+(None,)
+
+## co_names:
+('str', '__new__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          str
+  14: LOAD_METHOD          __new__
+  36: LOAD_FAST            cls
+  38: LOAD_FAST            value
+  40: PRECALL              
+  44: CALL                 
+  54: RETURN_VALUE         

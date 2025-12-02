@@ -1,0 +1,117 @@
+# Disassembly for pprint.PrettyPrinter._pprint_deque
+# From module file: pprint
+
+## co_consts:
+(None, '(', 1, '[', 2, '])', '],\n', ' ', 'maxlen=', ')')
+
+## co_names:
+('len', 'write', 'repr', '__class__', '__name__', 'maxlen', '_format_items', '_repr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + len
+  14: LOAD_FAST            object
+  16: PRECALL              
+  20: CALL                 
+  30: POP_JUMP_FORWARD_IF_TRUE to 104
+  32: LOAD_FAST            stream
+  34: LOAD_METHOD          write
+  56: LOAD_GLOBAL          NULL + repr
+  68: LOAD_FAST            object
+  70: PRECALL              
+  74: CALL                 
+  84: PRECALL              
+  88: CALL                 
+  98: POP_TOP              
+ 100: LOAD_CONST           None
+ 102: RETURN_VALUE         
+ 104: LOAD_FAST            object
+ 106: LOAD_ATTR            __class__
+ 116: STORE_FAST           cls
+ 118: LOAD_FAST            stream
+ 120: LOAD_METHOD          write
+ 142: LOAD_FAST            cls
+ 144: LOAD_ATTR            __name__
+ 154: LOAD_CONST           '('
+ 156: BINARY_OP            +
+ 160: PRECALL              
+ 164: CALL                 
+ 174: POP_TOP              
+ 176: LOAD_FAST            indent
+ 178: LOAD_GLOBAL          NULL + len
+ 190: LOAD_FAST            cls
+ 192: LOAD_ATTR            __name__
+ 202: PRECALL              
+ 206: CALL                 
+ 216: LOAD_CONST           1
+ 218: BINARY_OP            +
+ 222: BINARY_OP            +=
+ 226: STORE_FAST           indent
+ 228: LOAD_FAST            stream
+ 230: LOAD_METHOD          write
+ 252: LOAD_CONST           '['
+ 254: PRECALL              
+ 258: CALL                 
+ 268: POP_TOP              
+ 270: LOAD_FAST            object
+ 272: LOAD_ATTR            maxlen
+ 282: POP_JUMP_FORWARD_IF_NOT_NONE to 388
+ 284: LOAD_FAST            self
+ 286: LOAD_METHOD          _format_items
+ 308: LOAD_FAST            object
+ 310: LOAD_FAST            stream
+ 312: LOAD_FAST            indent
+ 314: LOAD_FAST            allowance
+ 316: LOAD_CONST           2
+ 318: BINARY_OP            +
+ 322: LOAD_FAST            context
+ 324: LOAD_FAST            level
+ 326: PRECALL              
+ 330: CALL                 
+ 340: POP_TOP              
+ 342: LOAD_FAST            stream
+ 344: LOAD_METHOD          write
+ 366: LOAD_CONST           '])'
+ 368: PRECALL              
+ 372: CALL                 
+ 382: POP_TOP              
+ 384: LOAD_CONST           None
+ 386: RETURN_VALUE         
+ 388: LOAD_FAST            self
+ 390: LOAD_METHOD          _format_items
+ 412: LOAD_FAST            object
+ 414: LOAD_FAST            stream
+ 416: LOAD_FAST            indent
+ 418: LOAD_CONST           2
+ 420: LOAD_FAST            context
+ 422: LOAD_FAST            level
+ 424: PRECALL              
+ 428: CALL                 
+ 438: POP_TOP              
+ 440: LOAD_FAST            self
+ 442: LOAD_METHOD          _repr
+ 464: LOAD_FAST            object
+ 466: LOAD_ATTR            maxlen
+ 476: LOAD_FAST            context
+ 478: LOAD_FAST            level
+ 480: PRECALL              
+ 484: CALL                 
+ 494: STORE_FAST           rml
+ 496: LOAD_FAST            stream
+ 498: LOAD_METHOD          write
+ 520: LOAD_CONST           '],\n'
+ 522: LOAD_CONST           ' '
+ 524: LOAD_FAST            indent
+ 526: BINARY_OP            *
+ 530: FORMAT_VALUE         str
+ 532: LOAD_CONST           'maxlen='
+ 534: LOAD_FAST            rml
+ 536: FORMAT_VALUE         str
+ 538: LOAD_CONST           ')'
+ 540: BUILD_STRING         
+ 542: PRECALL              
+ 546: CALL                 
+ 556: POP_TOP              
+ 558: LOAD_CONST           None
+ 560: RETURN_VALUE         

@@ -1,0 +1,30 @@
+# Disassembly for importlib.resources.MultiplexedPath.__repr__
+# From module file: importlib.resources.readers
+
+## co_consts:
+(None, ', ', <code object <genexpr> at 0x0000024069466A30, file "importlib\resources\readers.py", line 103>, 'MultiplexedPath(', ')')
+
+## co_names:
+('join', '_paths')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           ', '
+   4: LOAD_METHOD          join
+  26: LOAD_CONST           <code object <genexpr> at 0x0000024069466A30, file "importlib\resources\readers.py", line 103>
+  28: MAKE_FUNCTION        
+  30: LOAD_FAST            self
+  32: LOAD_ATTR            _paths
+  42: GET_ITER             
+  44: PRECALL              
+  48: CALL                 
+  58: PRECALL              
+  62: CALL                 
+  72: STORE_FAST           paths
+  74: LOAD_CONST           'MultiplexedPath('
+  76: LOAD_FAST            paths
+  78: FORMAT_VALUE         
+  80: LOAD_CONST           ')'
+  82: BUILD_STRING         
+  84: RETURN_VALUE         

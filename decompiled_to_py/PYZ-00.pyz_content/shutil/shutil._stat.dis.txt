@@ -1,0 +1,30 @@
+# Disassembly for shutil._stat
+# From module file: shutil
+
+## co_consts:
+(None,)
+
+## co_names:
+('isinstance', 'os', 'DirEntry', 'stat')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            fn
+  16: LOAD_GLOBAL          os
+  28: LOAD_ATTR            DirEntry
+  38: PRECALL              
+  42: CALL                 
+  52: POP_JUMP_FORWARD_IF_FALSE to 94
+  54: LOAD_FAST            fn
+  56: LOAD_METHOD          stat
+  78: PRECALL              
+  82: CALL                 
+  92: JUMP_FORWARD         to 132
+  94: LOAD_GLOBAL          NULL + os
+ 106: LOAD_ATTR            stat
+ 116: LOAD_FAST            fn
+ 118: PRECALL              
+ 122: CALL                 
+ 132: RETURN_VALUE         

@@ -1,0 +1,66 @@
+# Disassembly for ftplib.FTP.dir
+# From module file: ftplib
+
+## co_consts:
+('List a directory in long form.\n        By default list current directory to stdout.\n        Optional last argument is callback function; all\n        non-empty arguments before it are concatenated to the\n        LIST command.  (This *should* only be used for a pathname.)', 'LIST', None, -1, '', ' ')
+
+## co_names:
+('type', 'retrlines')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'LIST'
+   4: STORE_FAST           cmd
+   6: LOAD_CONST           None
+   8: STORE_FAST           func
+  10: LOAD_FAST            args
+  12: LOAD_CONST           -1
+  14: LOAD_CONST           None
+  16: BUILD_SLICE          
+  18: BINARY_SUBSCR        
+  28: POP_JUMP_FORWARD_IF_FALSE to 142
+  30: LOAD_GLOBAL          NULL + type
+  42: LOAD_FAST            args
+  44: LOAD_CONST           -1
+  46: BINARY_SUBSCR        
+  56: PRECALL              
+  60: CALL                 
+  70: LOAD_GLOBAL          NULL + type
+  82: LOAD_CONST           ''
+  84: PRECALL              
+  88: CALL                 
+  98: COMPARE_OP           !=
+ 104: POP_JUMP_FORWARD_IF_FALSE to 142
+ 106: LOAD_FAST            args
+ 108: LOAD_CONST           None
+ 110: LOAD_CONST           -1
+ 112: BUILD_SLICE          
+ 114: BINARY_SUBSCR        
+ 124: LOAD_FAST            args
+ 126: LOAD_CONST           -1
+ 128: BINARY_SUBSCR        
+ 138: STORE_FAST           func
+ 140: STORE_FAST           args
+ 142: LOAD_FAST            args
+ 144: GET_ITER             
+ 146: FOR_ITER             to 172
+ 148: STORE_FAST           arg
+ 150: LOAD_FAST            arg
+ 152: POP_JUMP_FORWARD_IF_FALSE to 170
+ 154: LOAD_FAST            cmd
+ 156: LOAD_CONST           ' '
+ 158: LOAD_FAST            arg
+ 160: BINARY_OP            +
+ 164: BINARY_OP            +
+ 168: STORE_FAST           cmd
+ 170: JUMP_BACKWARD        to 146
+ 172: LOAD_FAST            self
+ 174: LOAD_METHOD          retrlines
+ 196: LOAD_FAST            cmd
+ 198: LOAD_FAST            func
+ 200: PRECALL              
+ 204: CALL                 
+ 214: POP_TOP              
+ 216: LOAD_CONST           None
+ 218: RETURN_VALUE         

@@ -1,0 +1,311 @@
+# Disassembly for _pydecimal.Decimal.__format__
+# From module file: _pydecimal
+
+## co_consts:
+("Format a Decimal instance according to the given specifier.\n\n        The specifier should be a standard format specifier, with the\n        form described in PEP 3101.  Formatting types 'e', 'E', 'f',\n        'F', 'g', 'G', 'n' and '%' are supported.  If the formatting\n        type is omitted it defaults to 'g' or 'G', depending on the\n        value of context.capitals.\n        ", None, ('_localeconv',), 'type', '%', 'g', 'G', 2, 'precision', 'eE', 1, 'fF%', 'gG', 0, 'no_neg_0', -6, '0', '')
+
+## co_names:
+('getcontext', '_parse_format_specifier', '_is_special', '_format_sign', '_sign', 'str', 'copy_abs', '_format_align', 'capitals', '_dec_from_triple', '_int', '_exp', 'rounding', '_round', '_rescale', 'len', '_format_number')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            context
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 34
+   6: LOAD_GLOBAL          NULL + getcontext
+  18: PRECALL              
+  22: CALL                 
+  32: STORE_FAST           context
+  34: LOAD_GLOBAL          NULL + _parse_format_specifier
+  46: LOAD_FAST            specifier
+  48: LOAD_FAST            _localeconv
+  50: KW_NAMES             
+  52: PRECALL              
+  56: CALL                 
+  66: STORE_FAST           spec
+  68: LOAD_FAST            self
+  70: LOAD_ATTR            _is_special
+  80: POP_JUMP_FORWARD_IF_FALSE to 258
+  82: LOAD_GLOBAL          NULL + _format_sign
+  94: LOAD_FAST            self
+  96: LOAD_ATTR            _sign
+ 106: LOAD_FAST            spec
+ 108: PRECALL              
+ 112: CALL                 
+ 122: STORE_FAST           sign
+ 124: LOAD_GLOBAL          NULL + str
+ 136: LOAD_FAST            self
+ 138: LOAD_METHOD          copy_abs
+ 160: PRECALL              
+ 164: CALL                 
+ 174: PRECALL              
+ 178: CALL                 
+ 188: STORE_FAST           body
+ 190: LOAD_FAST            spec
+ 192: LOAD_CONST           'type'
+ 194: BINARY_SUBSCR        
+ 204: LOAD_CONST           '%'
+ 206: COMPARE_OP           ==
+ 212: POP_JUMP_FORWARD_IF_FALSE to 224
+ 214: LOAD_FAST            body
+ 216: LOAD_CONST           '%'
+ 218: BINARY_OP            +=
+ 222: STORE_FAST           body
+ 224: LOAD_GLOBAL          NULL + _format_align
+ 236: LOAD_FAST            sign
+ 238: LOAD_FAST            body
+ 240: LOAD_FAST            spec
+ 242: PRECALL              
+ 246: CALL                 
+ 256: RETURN_VALUE         
+ 258: LOAD_FAST            spec
+ 260: LOAD_CONST           'type'
+ 262: BINARY_SUBSCR        
+ 272: POP_JUMP_FORWARD_IF_NOT_NONE to 310
+ 274: LOAD_CONST           'g'
+ 276: LOAD_CONST           'G'
+ 278: BUILD_LIST           
+ 280: LOAD_FAST            context
+ 282: LOAD_ATTR            capitals
+ 292: BINARY_SUBSCR        
+ 302: LOAD_FAST            spec
+ 304: LOAD_CONST           'type'
+ 306: STORE_SUBSCR         
+ 310: LOAD_FAST            spec
+ 312: LOAD_CONST           'type'
+ 314: BINARY_SUBSCR        
+ 324: LOAD_CONST           '%'
+ 326: COMPARE_OP           ==
+ 332: POP_JUMP_FORWARD_IF_FALSE to 404
+ 334: LOAD_GLOBAL          NULL + _dec_from_triple
+ 346: LOAD_FAST            self
+ 348: LOAD_ATTR            _sign
+ 358: LOAD_FAST            self
+ 360: LOAD_ATTR            _int
+ 370: LOAD_FAST            self
+ 372: LOAD_ATTR            _exp
+ 382: LOAD_CONST           2
+ 384: BINARY_OP            +
+ 388: PRECALL              
+ 392: CALL                 
+ 402: STORE_FAST           self
+ 404: LOAD_FAST            context
+ 406: LOAD_ATTR            rounding
+ 416: STORE_FAST           rounding
+ 418: LOAD_FAST            spec
+ 420: LOAD_CONST           'precision'
+ 422: BINARY_SUBSCR        
+ 432: STORE_FAST           precision
+ 434: LOAD_FAST            precision
+ 436: POP_JUMP_FORWARD_IF_NONE to 690
+ 438: LOAD_FAST            spec
+ 440: LOAD_CONST           'type'
+ 442: BINARY_SUBSCR        
+ 452: LOAD_CONST           'eE'
+ 454: CONTAINS_OP          
+ 456: POP_JUMP_FORWARD_IF_FALSE to 510
+ 458: LOAD_FAST            self
+ 460: LOAD_METHOD          _round
+ 482: LOAD_FAST            precision
+ 484: LOAD_CONST           1
+ 486: BINARY_OP            +
+ 490: LOAD_FAST            rounding
+ 492: PRECALL              
+ 496: CALL                 
+ 506: STORE_FAST           self
+ 508: JUMP_FORWARD         to 690
+ 510: LOAD_FAST            spec
+ 512: LOAD_CONST           'type'
+ 514: BINARY_SUBSCR        
+ 524: LOAD_CONST           'fF%'
+ 526: CONTAINS_OP          
+ 528: POP_JUMP_FORWARD_IF_FALSE to 578
+ 530: LOAD_FAST            self
+ 532: LOAD_METHOD          _rescale
+ 554: LOAD_FAST            precision
+ 556: UNARY_NEGATIVE       
+ 558: LOAD_FAST            rounding
+ 560: PRECALL              
+ 564: CALL                 
+ 574: STORE_FAST           self
+ 576: JUMP_FORWARD         to 690
+ 578: LOAD_FAST            spec
+ 580: LOAD_CONST           'type'
+ 582: BINARY_SUBSCR        
+ 592: LOAD_CONST           'gG'
+ 594: CONTAINS_OP          
+ 596: POP_JUMP_FORWARD_IF_FALSE to 690
+ 598: LOAD_GLOBAL          NULL + len
+ 610: LOAD_FAST            self
+ 612: LOAD_ATTR            _int
+ 622: PRECALL              
+ 626: CALL                 
+ 636: LOAD_FAST            precision
+ 638: COMPARE_OP           >
+ 644: POP_JUMP_FORWARD_IF_FALSE to 690
+ 646: LOAD_FAST            self
+ 648: LOAD_METHOD          _round
+ 670: LOAD_FAST            precision
+ 672: LOAD_FAST            rounding
+ 674: PRECALL              
+ 678: CALL                 
+ 688: STORE_FAST           self
+ 690: LOAD_FAST            self
+ 692: POP_JUMP_FORWARD_IF_TRUE to 780
+ 694: LOAD_FAST            self
+ 696: LOAD_ATTR            _exp
+ 706: LOAD_CONST           0
+ 708: COMPARE_OP           >
+ 714: POP_JUMP_FORWARD_IF_FALSE to 780
+ 716: LOAD_FAST            spec
+ 718: LOAD_CONST           'type'
+ 720: BINARY_SUBSCR        
+ 730: LOAD_CONST           'fF%'
+ 732: CONTAINS_OP          
+ 734: POP_JUMP_FORWARD_IF_FALSE to 780
+ 736: LOAD_FAST            self
+ 738: LOAD_METHOD          _rescale
+ 760: LOAD_CONST           0
+ 762: LOAD_FAST            rounding
+ 764: PRECALL              
+ 768: CALL                 
+ 778: STORE_FAST           self
+ 780: LOAD_FAST            self
+ 782: POP_JUMP_FORWARD_IF_TRUE to 820
+ 784: LOAD_FAST            spec
+ 786: LOAD_CONST           'no_neg_0'
+ 788: BINARY_SUBSCR        
+ 798: POP_JUMP_FORWARD_IF_FALSE to 820
+ 800: LOAD_FAST            self
+ 802: LOAD_ATTR            _sign
+ 812: POP_JUMP_FORWARD_IF_FALSE to 820
+ 814: LOAD_CONST           0
+ 816: STORE_FAST           adjusted_sign
+ 818: JUMP_FORWARD         to 834
+ 820: LOAD_FAST            self
+ 822: LOAD_ATTR            _sign
+ 832: STORE_FAST           adjusted_sign
+ 834: LOAD_FAST            self
+ 836: LOAD_ATTR            _exp
+ 846: LOAD_GLOBAL          NULL + len
+ 858: LOAD_FAST            self
+ 860: LOAD_ATTR            _int
+ 870: PRECALL              
+ 874: CALL                 
+ 884: BINARY_OP            +
+ 888: STORE_FAST           leftdigits
+ 890: LOAD_FAST            spec
+ 892: LOAD_CONST           'type'
+ 894: BINARY_SUBSCR        
+ 904: LOAD_CONST           'eE'
+ 906: CONTAINS_OP          
+ 908: POP_JUMP_FORWARD_IF_FALSE to 936
+ 910: LOAD_FAST            self
+ 912: POP_JUMP_FORWARD_IF_TRUE to 930
+ 914: LOAD_FAST            precision
+ 916: POP_JUMP_FORWARD_IF_NONE to 930
+ 918: LOAD_CONST           1
+ 920: LOAD_FAST            precision
+ 922: BINARY_OP            -
+ 926: STORE_FAST           dotplace
+ 928: JUMP_FORWARD         to 1026
+ 930: LOAD_CONST           1
+ 932: STORE_FAST           dotplace
+ 934: JUMP_FORWARD         to 1026
+ 936: LOAD_FAST            spec
+ 938: LOAD_CONST           'type'
+ 940: BINARY_SUBSCR        
+ 950: LOAD_CONST           'fF%'
+ 952: CONTAINS_OP          
+ 954: POP_JUMP_FORWARD_IF_FALSE to 962
+ 956: LOAD_FAST            leftdigits
+ 958: STORE_FAST           dotplace
+ 960: JUMP_FORWARD         to 1026
+ 962: LOAD_FAST            spec
+ 964: LOAD_CONST           'type'
+ 966: BINARY_SUBSCR        
+ 976: LOAD_CONST           'gG'
+ 978: CONTAINS_OP          
+ 980: POP_JUMP_FORWARD_IF_FALSE to 1026
+ 982: LOAD_FAST            self
+ 984: LOAD_ATTR            _exp
+ 994: LOAD_CONST           0
+ 996: COMPARE_OP           <=
+1002: POP_JUMP_FORWARD_IF_FALSE to 1022
+1004: LOAD_FAST            leftdigits
+1006: LOAD_CONST           -6
+1008: COMPARE_OP           >
+1014: POP_JUMP_FORWARD_IF_FALSE to 1022
+1016: LOAD_FAST            leftdigits
+1018: STORE_FAST           dotplace
+1020: JUMP_FORWARD         to 1026
+1022: LOAD_CONST           1
+1024: STORE_FAST           dotplace
+1026: LOAD_FAST            dotplace
+1028: LOAD_CONST           0
+1030: COMPARE_OP           <
+1036: POP_JUMP_FORWARD_IF_FALSE to 1072
+1038: LOAD_CONST           '0'
+1040: STORE_FAST           intpart
+1042: LOAD_CONST           '0'
+1044: LOAD_FAST            dotplace
+1046: UNARY_NEGATIVE       
+1048: BINARY_OP            *
+1052: LOAD_FAST            self
+1054: LOAD_ATTR            _int
+1064: BINARY_OP            +
+1068: STORE_FAST           fracpart
+1070: JUMP_FORWARD         to 1258
+1072: LOAD_FAST            dotplace
+1074: LOAD_GLOBAL          NULL + len
+1086: LOAD_FAST            self
+1088: LOAD_ATTR            _int
+1098: PRECALL              
+1102: CALL                 
+1112: COMPARE_OP           >
+1118: POP_JUMP_FORWARD_IF_FALSE to 1194
+1120: LOAD_FAST            self
+1122: LOAD_ATTR            _int
+1132: LOAD_CONST           '0'
+1134: LOAD_FAST            dotplace
+1136: LOAD_GLOBAL          NULL + len
+1148: LOAD_FAST            self
+1150: LOAD_ATTR            _int
+1160: PRECALL              
+1164: CALL                 
+1174: BINARY_OP            -
+1178: BINARY_OP            *
+1182: BINARY_OP            +
+1186: STORE_FAST           intpart
+1188: LOAD_CONST           ''
+1190: STORE_FAST           fracpart
+1192: JUMP_FORWARD         to 1258
+1194: LOAD_FAST            self
+1196: LOAD_ATTR            _int
+1206: LOAD_CONST           None
+1208: LOAD_FAST            dotplace
+1210: BUILD_SLICE          
+1212: BINARY_SUBSCR        
+1222: JUMP_IF_TRUE_OR_POP  to 1226
+1224: LOAD_CONST           '0'
+1226: STORE_FAST           intpart
+1228: LOAD_FAST            self
+1230: LOAD_ATTR            _int
+1240: LOAD_FAST            dotplace
+1242: LOAD_CONST           None
+1244: BUILD_SLICE          
+1246: BINARY_SUBSCR        
+1256: STORE_FAST           fracpart
+1258: LOAD_FAST            leftdigits
+1260: LOAD_FAST            dotplace
+1262: BINARY_OP            -
+1266: STORE_FAST           exp
+1268: LOAD_GLOBAL          NULL + _format_number
+1280: LOAD_FAST            adjusted_sign
+1282: LOAD_FAST            intpart
+1284: LOAD_FAST            fracpart
+1286: LOAD_FAST            exp
+1288: LOAD_FAST            spec
+1290: PRECALL              
+1294: CALL                 
+1304: RETURN_VALUE         

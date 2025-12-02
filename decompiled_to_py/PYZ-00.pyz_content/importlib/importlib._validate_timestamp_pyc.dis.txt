@@ -1,0 +1,75 @@
+# Disassembly for importlib._validate_timestamp_pyc
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Validate a pyc against the source last-modified time.\n\n    *data* is the contents of the pyc file. (Only the first 16 bytes are\n    required.)\n\n    *source_mtime* is the last modified timestamp of the source file.\n\n    *source_size* is None or the size of the source file in bytes.\n\n    *name* is the name of the module being imported. It is used for logging.\n\n    *exc_details* is a dictionary passed to ImportError if it raised for\n    improved debugging.\n\n    An ImportError is raised if the bytecode is stale.\n\n    ', 8, 12, 4294967295, 'bytecode is stale for ', '{}', None, 16)
+
+## co_names:
+('_unpack_uint32', '_bootstrap', '_verbose_message', 'ImportError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _unpack_uint32
+  14: LOAD_FAST            data
+  16: LOAD_CONST           8
+  18: LOAD_CONST           12
+  20: BUILD_SLICE          
+  22: BINARY_SUBSCR        
+  32: PRECALL              
+  36: CALL                 
+  46: LOAD_FAST            source_mtime
+  48: LOAD_CONST           4294967295
+  50: BINARY_OP            &
+  54: COMPARE_OP           !=
+  60: POP_JUMP_FORWARD_IF_FALSE to 152
+  62: LOAD_CONST           'bytecode is stale for '
+  64: LOAD_FAST            name
+  66: FORMAT_VALUE         repr
+  68: BUILD_STRING         
+  70: STORE_FAST           message
+  72: LOAD_GLOBAL          _bootstrap
+  84: LOAD_METHOD          _verbose_message
+ 106: LOAD_CONST           '{}'
+ 108: LOAD_FAST            message
+ 110: PRECALL              
+ 114: CALL                 
+ 124: POP_TOP              
+ 126: LOAD_GLOBAL          NULL + ImportError
+ 138: LOAD_FAST            message
+ 140: BUILD_TUPLE          
+ 142: BUILD_MAP            
+ 144: LOAD_FAST            exc_details
+ 146: DICT_MERGE           
+ 148: CALL_FUNCTION_EX     
+ 150: RAISE_VARARGS        
+ 152: LOAD_FAST            source_size
+ 154: POP_JUMP_FORWARD_IF_NONE to 248
+ 156: LOAD_GLOBAL          NULL + _unpack_uint32
+ 168: LOAD_FAST            data
+ 170: LOAD_CONST           12
+ 172: LOAD_CONST           16
+ 174: BUILD_SLICE          
+ 176: BINARY_SUBSCR        
+ 186: PRECALL              
+ 190: CALL                 
+ 200: LOAD_FAST            source_size
+ 202: LOAD_CONST           4294967295
+ 204: BINARY_OP            &
+ 208: COMPARE_OP           !=
+ 214: POP_JUMP_FORWARD_IF_FALSE to 252
+ 216: LOAD_GLOBAL          NULL + ImportError
+ 228: LOAD_CONST           'bytecode is stale for '
+ 230: LOAD_FAST            name
+ 232: FORMAT_VALUE         repr
+ 234: BUILD_STRING         
+ 236: BUILD_TUPLE          
+ 238: BUILD_MAP            
+ 240: LOAD_FAST            exc_details
+ 242: DICT_MERGE           
+ 244: CALL_FUNCTION_EX     
+ 246: RAISE_VARARGS        
+ 248: LOAD_CONST           None
+ 250: RETURN_VALUE         
+ 252: LOAD_CONST           None
+ 254: RETURN_VALUE         

@@ -1,0 +1,53 @@
+# Disassembly for base64._85encode.<listcomp>
+# From module file: base64
+
+## co_consts:
+(b'z', 538976288, b'y', 614125, 85, 7225)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: BUILD_LIST           
+   6: LOAD_FAST            .0
+   8: FOR_ITER             to 122
+  10: STORE_FAST           word
+  12: LOAD_DEREF           foldnuls
+  14: POP_JUMP_FORWARD_IF_FALSE to 24
+  16: LOAD_FAST            word
+  18: POP_JUMP_FORWARD_IF_TRUE to 24
+  20: LOAD_CONST           b'z'
+  22: JUMP_FORWARD         to 118
+  24: LOAD_DEREF           foldspaces
+  26: POP_JUMP_FORWARD_IF_FALSE to 44
+  28: LOAD_FAST            word
+  30: LOAD_CONST           538976288
+  32: COMPARE_OP           ==
+  38: POP_JUMP_FORWARD_IF_FALSE to 44
+  40: LOAD_CONST           b'y'
+  42: JUMP_FORWARD         to 118
+  44: LOAD_DEREF           chars2
+  46: LOAD_FAST            word
+  48: LOAD_CONST           614125
+  50: BINARY_OP            //
+  54: BINARY_SUBSCR        
+  64: LOAD_DEREF           chars2
+  66: LOAD_FAST            word
+  68: LOAD_CONST           85
+  70: BINARY_OP            //
+  74: LOAD_CONST           7225
+  76: BINARY_OP            %
+  80: BINARY_SUBSCR        
+  90: BINARY_OP            +
+  94: LOAD_DEREF           chars
+  96: LOAD_FAST            word
+  98: LOAD_CONST           85
+ 100: BINARY_OP            %
+ 104: BINARY_SUBSCR        
+ 114: BINARY_OP            +
+ 118: LIST_APPEND          
+ 120: JUMP_BACKWARD        to 8
+ 122: RETURN_VALUE         

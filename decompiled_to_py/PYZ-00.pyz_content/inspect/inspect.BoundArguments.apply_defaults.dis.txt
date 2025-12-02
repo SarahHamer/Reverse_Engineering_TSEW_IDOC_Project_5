@@ -1,0 +1,94 @@
+# Disassembly for inspect.BoundArguments.apply_defaults
+# From module file: inspect
+
+## co_consts:
+('Set default values for missing arguments.\n\n        For variable-positional arguments (*args) the default is an\n        empty tuple.\n\n        For variable-keyword arguments (**kwargs) the default is an\n        empty dict.\n        ', (), None)
+
+## co_names:
+('arguments', '_signature', 'parameters', 'items', 'append', 'KeyError', 'default', '_empty', 'kind', '_VAR_POSITIONAL', '_VAR_KEYWORD', 'dict')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            arguments
+  14: STORE_FAST           arguments
+  16: BUILD_LIST           
+  18: STORE_FAST           new_arguments
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            _signature
+  32: LOAD_ATTR            parameters
+  42: LOAD_METHOD          items
+  64: PRECALL              
+  68: CALL                 
+  78: GET_ITER             
+  80: FOR_ITER             to 346
+  82: UNPACK_SEQUENCE      
+  86: STORE_FAST           name
+  88: STORE_FAST           param
+  90: NOP                  
+  92: LOAD_FAST            new_arguments
+  94: LOAD_METHOD          append
+ 116: LOAD_FAST            name
+ 118: LOAD_FAST            arguments
+ 120: LOAD_FAST            name
+ 122: BINARY_SUBSCR        
+ 132: BUILD_TUPLE          
+ 134: PRECALL              
+ 138: CALL                 
+ 148: POP_TOP              
+ 150: JUMP_BACKWARD        to 80
+ 152: PUSH_EXC_INFO        
+ 154: LOAD_GLOBAL          KeyError
+ 166: CHECK_EXC_MATCH      
+ 168: POP_JUMP_FORWARD_IF_FALSE to 338
+ 170: POP_TOP              
+ 172: LOAD_FAST            param
+ 174: LOAD_ATTR            default
+ 184: LOAD_GLOBAL          _empty
+ 196: IS_OP                
+ 198: POP_JUMP_FORWARD_IF_FALSE to 216
+ 200: LOAD_FAST            param
+ 202: LOAD_ATTR            default
+ 212: STORE_FAST           val
+ 214: JUMP_FORWARD         to 288
+ 216: LOAD_FAST            param
+ 218: LOAD_ATTR            kind
+ 228: LOAD_GLOBAL          _VAR_POSITIONAL
+ 240: IS_OP                
+ 242: POP_JUMP_FORWARD_IF_FALSE to 250
+ 244: LOAD_CONST           ()
+ 246: STORE_FAST           val
+ 248: JUMP_FORWARD         to 288
+ 250: LOAD_FAST            param
+ 252: LOAD_ATTR            kind
+ 262: LOAD_GLOBAL          _VAR_KEYWORD
+ 274: IS_OP                
+ 276: POP_JUMP_FORWARD_IF_FALSE to 284
+ 278: BUILD_MAP            
+ 280: STORE_FAST           val
+ 282: JUMP_FORWARD         to 288
+ 284: POP_EXCEPT           
+ 286: JUMP_BACKWARD        to 80
+ 288: LOAD_FAST            new_arguments
+ 290: LOAD_METHOD          append
+ 312: LOAD_FAST            name
+ 314: LOAD_FAST            val
+ 316: BUILD_TUPLE          
+ 318: PRECALL              
+ 322: CALL                 
+ 332: POP_TOP              
+ 334: POP_EXCEPT           
+ 336: JUMP_BACKWARD        to 80
+ 338: RERAISE              
+ 340: COPY                 
+ 342: POP_EXCEPT           
+ 344: RERAISE              
+ 346: LOAD_GLOBAL          NULL + dict
+ 358: LOAD_FAST            new_arguments
+ 360: PRECALL              
+ 364: CALL                 
+ 374: LOAD_FAST            self
+ 376: STORE_ATTR           arguments
+ 386: LOAD_CONST           None
+ 388: RETURN_VALUE         

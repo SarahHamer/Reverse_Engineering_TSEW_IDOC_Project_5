@@ -1,0 +1,95 @@
+# Disassembly for ast._Unparser.visit_MatchAs
+# From module file: ast
+
+## co_consts:
+(None, '_', ' as ')
+
+## co_names:
+('name', 'pattern', 'write', 'require_parens', '_Precedence', 'TEST', 'set_precedence', 'BOR', 'traverse')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            node
+   4: LOAD_ATTR            name
+  14: STORE_FAST           name
+  16: LOAD_FAST            node
+  18: LOAD_ATTR            pattern
+  28: STORE_FAST           pattern
+  30: LOAD_FAST            name
+  32: POP_JUMP_FORWARD_IF_NOT_NONE to 80
+  34: LOAD_FAST            self
+  36: LOAD_METHOD          write
+  58: LOAD_CONST           '_'
+  60: PRECALL              
+  64: CALL                 
+  74: POP_TOP              
+  76: LOAD_CONST           None
+  78: RETURN_VALUE         
+  80: LOAD_FAST            pattern
+  82: POP_JUMP_FORWARD_IF_NOT_NONE to 140
+  84: LOAD_FAST            self
+  86: LOAD_METHOD          write
+ 108: LOAD_FAST            node
+ 110: LOAD_ATTR            name
+ 120: PRECALL              
+ 124: CALL                 
+ 134: POP_TOP              
+ 136: LOAD_CONST           None
+ 138: RETURN_VALUE         
+ 140: LOAD_FAST            self
+ 142: LOAD_METHOD          require_parens
+ 164: LOAD_GLOBAL          _Precedence
+ 176: LOAD_ATTR            TEST
+ 186: LOAD_FAST            node
+ 188: PRECALL              
+ 192: CALL                 
+ 202: BEFORE_WITH          
+ 204: POP_TOP              
+ 206: LOAD_FAST            self
+ 208: LOAD_METHOD          set_precedence
+ 230: LOAD_GLOBAL          _Precedence
+ 242: LOAD_ATTR            BOR
+ 252: LOAD_FAST            node
+ 254: LOAD_ATTR            pattern
+ 264: PRECALL              
+ 268: CALL                 
+ 278: POP_TOP              
+ 280: LOAD_FAST            self
+ 282: LOAD_METHOD          traverse
+ 304: LOAD_FAST            node
+ 306: LOAD_ATTR            pattern
+ 316: PRECALL              
+ 320: CALL                 
+ 330: POP_TOP              
+ 332: LOAD_FAST            self
+ 334: LOAD_METHOD          write
+ 356: LOAD_CONST           ' as '
+ 358: LOAD_FAST            node
+ 360: LOAD_ATTR            name
+ 370: FORMAT_VALUE         
+ 372: BUILD_STRING         
+ 374: PRECALL              
+ 378: CALL                 
+ 388: POP_TOP              
+ 390: LOAD_CONST           None
+ 392: LOAD_CONST           None
+ 394: LOAD_CONST           None
+ 396: PRECALL              
+ 400: CALL                 
+ 410: POP_TOP              
+ 412: LOAD_CONST           None
+ 414: RETURN_VALUE         
+ 416: PUSH_EXC_INFO        
+ 418: WITH_EXCEPT_START    
+ 420: POP_JUMP_FORWARD_IF_TRUE to 430
+ 422: RERAISE              
+ 424: COPY                 
+ 426: POP_EXCEPT           
+ 428: RERAISE              
+ 430: POP_TOP              
+ 432: POP_EXCEPT           
+ 434: POP_TOP              
+ 436: POP_TOP              
+ 438: LOAD_CONST           None
+ 440: RETURN_VALUE         

@@ -1,0 +1,192 @@
+# Disassembly for argparse._ActionsContainer.add_argument
+# From module file: argparse
+
+## co_consts:
+('\n        add_argument(dest, ..., name=value, ...)\n        add_argument(option_string, option_string, ..., name=value, ...)\n        ', 1, 0, 'dest', 'dest supplied twice for positional argument', 'default', None, 'unknown action "', '"', 'type', ' is not callable', ' is a FileType class object, instance of it must be passed', '_get_formatter', 'length of metavar tuple does not match nargs', ())
+
+## co_names:
+('prefix_chars', 'len', 'ValueError', '_get_positional_kwargs', '_get_optional_kwargs', '_defaults', 'argument_default', '_pop_action_class', 'callable', '_registry_get', 'type', 'FileType', 'hasattr', '_get_formatter', '_format_args', 'TypeError', '_add_action')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            prefix_chars
+  14: STORE_FAST           chars
+  16: LOAD_FAST            args
+  18: POP_JUMP_FORWARD_IF_FALSE to 90
+  20: LOAD_GLOBAL          NULL + len
+  32: LOAD_FAST            args
+  34: PRECALL              
+  38: CALL                 
+  48: LOAD_CONST           1
+  50: COMPARE_OP           ==
+  56: POP_JUMP_FORWARD_IF_FALSE to 160
+  58: LOAD_FAST            args
+  60: LOAD_CONST           0
+  62: BINARY_SUBSCR        
+  72: LOAD_CONST           0
+  74: BINARY_SUBSCR        
+  84: LOAD_FAST            chars
+  86: CONTAINS_OP          
+  88: POP_JUMP_FORWARD_IF_FALSE to 160
+  90: LOAD_FAST            args
+  92: POP_JUMP_FORWARD_IF_FALSE to 132
+  94: LOAD_CONST           'dest'
+  96: LOAD_FAST            kwargs
+  98: CONTAINS_OP          
+ 100: POP_JUMP_FORWARD_IF_FALSE to 132
+ 102: LOAD_GLOBAL          NULL + ValueError
+ 114: LOAD_CONST           'dest supplied twice for positional argument'
+ 116: PRECALL              
+ 120: CALL                 
+ 130: RAISE_VARARGS        
+ 132: PUSH_NULL            
+ 134: LOAD_FAST            self
+ 136: LOAD_ATTR            _get_positional_kwargs
+ 146: LOAD_FAST            args
+ 148: BUILD_MAP            
+ 150: LOAD_FAST            kwargs
+ 152: DICT_MERGE           
+ 154: CALL_FUNCTION_EX     
+ 156: STORE_FAST           kwargs
+ 158: JUMP_FORWARD         to 186
+ 160: PUSH_NULL            
+ 162: LOAD_FAST            self
+ 164: LOAD_ATTR            _get_optional_kwargs
+ 174: LOAD_FAST            args
+ 176: BUILD_MAP            
+ 178: LOAD_FAST            kwargs
+ 180: DICT_MERGE           
+ 182: CALL_FUNCTION_EX     
+ 184: STORE_FAST           kwargs
+ 186: LOAD_CONST           'default'
+ 188: LOAD_FAST            kwargs
+ 190: CONTAINS_OP          
+ 192: POP_JUMP_FORWARD_IF_FALSE to 296
+ 194: LOAD_FAST            kwargs
+ 196: LOAD_CONST           'dest'
+ 198: BINARY_SUBSCR        
+ 208: STORE_FAST           dest
+ 210: LOAD_FAST            dest
+ 212: LOAD_FAST            self
+ 214: LOAD_ATTR            _defaults
+ 224: CONTAINS_OP          
+ 226: POP_JUMP_FORWARD_IF_FALSE to 262
+ 228: LOAD_FAST            self
+ 230: LOAD_ATTR            _defaults
+ 240: LOAD_FAST            dest
+ 242: BINARY_SUBSCR        
+ 252: LOAD_FAST            kwargs
+ 254: LOAD_CONST           'default'
+ 256: STORE_SUBSCR         
+ 260: JUMP_FORWARD         to 296
+ 262: LOAD_FAST            self
+ 264: LOAD_ATTR            argument_default
+ 274: POP_JUMP_FORWARD_IF_NONE to 296
+ 276: LOAD_FAST            self
+ 278: LOAD_ATTR            argument_default
+ 288: LOAD_FAST            kwargs
+ 290: LOAD_CONST           'default'
+ 292: STORE_SUBSCR         
+ 296: LOAD_FAST            self
+ 298: LOAD_METHOD          _pop_action_class
+ 320: LOAD_FAST            kwargs
+ 322: PRECALL              
+ 326: CALL                 
+ 336: STORE_FAST           action_class
+ 338: LOAD_GLOBAL          NULL + callable
+ 350: LOAD_FAST            action_class
+ 352: PRECALL              
+ 356: CALL                 
+ 366: POP_JUMP_FORWARD_IF_TRUE to 406
+ 368: LOAD_GLOBAL          NULL + ValueError
+ 380: LOAD_CONST           'unknown action "'
+ 382: LOAD_FAST            action_class
+ 384: FORMAT_VALUE         str
+ 386: LOAD_CONST           '"'
+ 388: BUILD_STRING         
+ 390: PRECALL              
+ 394: CALL                 
+ 404: RAISE_VARARGS        
+ 406: PUSH_NULL            
+ 408: LOAD_FAST            action_class
+ 410: LOAD_CONST           ()
+ 412: BUILD_MAP            
+ 414: LOAD_FAST            kwargs
+ 416: DICT_MERGE           
+ 418: CALL_FUNCTION_EX     
+ 420: STORE_FAST           action
+ 422: LOAD_FAST            self
+ 424: LOAD_METHOD          _registry_get
+ 446: LOAD_CONST           'type'
+ 448: LOAD_FAST            action
+ 450: LOAD_ATTR            type
+ 460: LOAD_FAST            action
+ 462: LOAD_ATTR            type
+ 472: PRECALL              
+ 476: CALL                 
+ 486: STORE_FAST           type_func
+ 488: LOAD_GLOBAL          NULL + callable
+ 500: LOAD_FAST            type_func
+ 502: PRECALL              
+ 506: CALL                 
+ 516: POP_JUMP_FORWARD_IF_TRUE to 554
+ 518: LOAD_GLOBAL          NULL + ValueError
+ 530: LOAD_FAST            type_func
+ 532: FORMAT_VALUE         repr
+ 534: LOAD_CONST           ' is not callable'
+ 536: BUILD_STRING         
+ 538: PRECALL              
+ 542: CALL                 
+ 552: RAISE_VARARGS        
+ 554: LOAD_FAST            type_func
+ 556: LOAD_GLOBAL          FileType
+ 568: IS_OP                
+ 570: POP_JUMP_FORWARD_IF_FALSE to 608
+ 572: LOAD_GLOBAL          NULL + ValueError
+ 584: LOAD_FAST            type_func
+ 586: FORMAT_VALUE         repr
+ 588: LOAD_CONST           ' is a FileType class object, instance of it must be passed'
+ 590: BUILD_STRING         
+ 592: PRECALL              
+ 596: CALL                 
+ 606: RAISE_VARARGS        
+ 608: LOAD_GLOBAL          NULL + hasattr
+ 620: LOAD_FAST            self
+ 622: LOAD_CONST           '_get_formatter'
+ 624: PRECALL              
+ 628: CALL                 
+ 638: POP_JUMP_FORWARD_IF_FALSE to 782
+ 640: NOP                  
+ 642: LOAD_FAST            self
+ 644: LOAD_METHOD          _get_formatter
+ 666: PRECALL              
+ 670: CALL                 
+ 680: LOAD_METHOD          _format_args
+ 702: LOAD_FAST            action
+ 704: LOAD_CONST           None
+ 706: PRECALL              
+ 710: CALL                 
+ 720: POP_TOP              
+ 722: JUMP_FORWARD         to 782
+ 724: PUSH_EXC_INFO        
+ 726: LOAD_GLOBAL          TypeError
+ 738: CHECK_EXC_MATCH      
+ 740: POP_JUMP_FORWARD_IF_FALSE to 774
+ 742: POP_TOP              
+ 744: LOAD_GLOBAL          NULL + ValueError
+ 756: LOAD_CONST           'length of metavar tuple does not match nargs'
+ 758: PRECALL              
+ 762: CALL                 
+ 772: RAISE_VARARGS        
+ 774: RERAISE              
+ 776: COPY                 
+ 778: POP_EXCEPT           
+ 780: RERAISE              
+ 782: LOAD_FAST            self
+ 784: LOAD_METHOD          _add_action
+ 806: LOAD_FAST            action
+ 808: PRECALL              
+ 812: CALL                 
+ 822: RETURN_VALUE         

@@ -1,0 +1,33 @@
+# Disassembly for logging.BufferingFormatter
+# From module file: logging
+
+## co_consts:
+('BufferingFormatter', '\n    A formatter suitable for formatting a number of records.\n    ', None, <code object __init__ at 0x000002406945DE30, file "logging\__init__.py", line 715>, <code object formatHeader at 0x000002406943B930, file "logging\__init__.py", line 725>, <code object formatFooter at 0x000002406943ABB0, file "logging\__init__.py", line 731>, <code object format at 0x000002406942CB20, file "logging\__init__.py", line 737>, (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', 'formatHeader', 'formatFooter', 'format')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'BufferingFormatter'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           '\n    A formatter suitable for formatting a number of records.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           (None,)
+  16: LOAD_CONST           <code object __init__ at 0x000002406945DE30, file "logging\__init__.py", line 715>
+  18: MAKE_FUNCTION        defaults
+  20: STORE_NAME           __init__
+  22: LOAD_CONST           <code object formatHeader at 0x000002406943B930, file "logging\__init__.py", line 725>
+  24: MAKE_FUNCTION        
+  26: STORE_NAME           formatHeader
+  28: LOAD_CONST           <code object formatFooter at 0x000002406943ABB0, file "logging\__init__.py", line 731>
+  30: MAKE_FUNCTION        
+  32: STORE_NAME           formatFooter
+  34: LOAD_CONST           <code object format at 0x000002406942CB20, file "logging\__init__.py", line 737>
+  36: MAKE_FUNCTION        
+  38: STORE_NAME           format
+  40: LOAD_CONST           None
+  42: RETURN_VALUE         

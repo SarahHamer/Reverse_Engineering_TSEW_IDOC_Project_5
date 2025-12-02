@@ -1,0 +1,14 @@
+# Disassembly for importlib.resources.ResourceReader.is_resource
+# From module file: importlib.resources.abc
+
+## co_consts:
+("Return True if the named 'path' is a resource.\n\n        Files are resources, directories are not.\n        ",)
+
+## co_names:
+('FileNotFoundError',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          FileNotFoundError
+  14: RAISE_VARARGS        

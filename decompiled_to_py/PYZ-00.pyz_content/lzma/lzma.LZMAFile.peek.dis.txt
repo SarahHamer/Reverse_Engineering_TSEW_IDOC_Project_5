@@ -1,0 +1,24 @@
+# Disassembly for lzma.LZMAFile.peek
+# From module file: lzma
+
+## co_consts:
+('Return buffered data without advancing the file position.\n\n        Always returns at least one byte of data, unless at EOF.\n        The exact number of bytes returned is unspecified.\n        ',)
+
+## co_names:
+('_check_can_read', '_buffer', 'peek')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _check_can_read
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            _buffer
+  54: LOAD_METHOD          peek
+  76: LOAD_FAST            size
+  78: PRECALL              
+  82: CALL                 
+  92: RETURN_VALUE         

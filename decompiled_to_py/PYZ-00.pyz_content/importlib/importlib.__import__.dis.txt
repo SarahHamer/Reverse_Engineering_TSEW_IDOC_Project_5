@@ -1,0 +1,108 @@
+# Disassembly for importlib.__import__
+# From module file: importlib._bootstrap
+
+## co_consts:
+("Import a module.\n\n    The 'globals' argument is used to infer where the import is occurring from\n    to handle relative imports. The 'locals' argument is ignored. The\n    'fromlist' argument specifies what should exist as attributes on the module\n    being imported (e.g. ``from module import <fromlist>``).  The 'level'\n    argument represents the package location to import from in a relative\n    import (e.g. ``from ..pkg import mod`` would have a 'level' of 2).\n\n    ", 0, None, '.', '__path__')
+
+## co_names:
+('_gcd_import', '_calc___package__', 'partition', 'len', 'sys', 'modules', '__name__', 'hasattr', '_handle_fromlist')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            level
+   4: LOAD_CONST           0
+   6: COMPARE_OP           ==
+  12: POP_JUMP_FORWARD_IF_FALSE to 46
+  14: LOAD_GLOBAL          NULL + _gcd_import
+  26: LOAD_FAST            name
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           module
+  44: JUMP_FORWARD         to 122
+  46: LOAD_FAST            globals
+  48: POP_JUMP_FORWARD_IF_NONE to 54
+  50: LOAD_FAST            globals
+  52: JUMP_FORWARD         to 56
+  54: BUILD_MAP            
+  56: STORE_FAST           globals_
+  58: LOAD_GLOBAL          NULL + _calc___package__
+  70: LOAD_FAST            globals_
+  72: PRECALL              
+  76: CALL                 
+  86: STORE_FAST           package
+  88: LOAD_GLOBAL          NULL + _gcd_import
+ 100: LOAD_FAST            name
+ 102: LOAD_FAST            package
+ 104: LOAD_FAST            level
+ 106: PRECALL              
+ 110: CALL                 
+ 120: STORE_FAST           module
+ 122: LOAD_FAST            fromlist
+ 124: POP_JUMP_FORWARD_IF_TRUE to 442
+ 126: LOAD_FAST            level
+ 128: LOAD_CONST           0
+ 130: COMPARE_OP           ==
+ 136: POP_JUMP_FORWARD_IF_FALSE to 218
+ 138: LOAD_GLOBAL          NULL + _gcd_import
+ 150: LOAD_FAST            name
+ 152: LOAD_METHOD          partition
+ 174: LOAD_CONST           '.'
+ 176: PRECALL              
+ 180: CALL                 
+ 190: LOAD_CONST           0
+ 192: BINARY_SUBSCR        
+ 202: PRECALL              
+ 206: CALL                 
+ 216: RETURN_VALUE         
+ 218: LOAD_FAST            name
+ 220: POP_JUMP_FORWARD_IF_TRUE to 226
+ 222: LOAD_FAST            module
+ 224: RETURN_VALUE         
+ 226: LOAD_GLOBAL          NULL + len
+ 238: LOAD_FAST            name
+ 240: PRECALL              
+ 244: CALL                 
+ 254: LOAD_GLOBAL          NULL + len
+ 266: LOAD_FAST            name
+ 268: LOAD_METHOD          partition
+ 290: LOAD_CONST           '.'
+ 292: PRECALL              
+ 296: CALL                 
+ 306: LOAD_CONST           0
+ 308: BINARY_SUBSCR        
+ 318: PRECALL              
+ 322: CALL                 
+ 332: BINARY_OP            -
+ 336: STORE_FAST           cut_off
+ 338: LOAD_GLOBAL          sys
+ 350: LOAD_ATTR            modules
+ 360: LOAD_FAST            module
+ 362: LOAD_ATTR            __name__
+ 372: LOAD_CONST           None
+ 374: LOAD_GLOBAL          NULL + len
+ 386: LOAD_FAST            module
+ 388: LOAD_ATTR            __name__
+ 398: PRECALL              
+ 402: CALL                 
+ 412: LOAD_FAST            cut_off
+ 414: BINARY_OP            -
+ 418: BUILD_SLICE          
+ 420: BINARY_SUBSCR        
+ 430: BINARY_SUBSCR        
+ 440: RETURN_VALUE         
+ 442: LOAD_GLOBAL          NULL + hasattr
+ 454: LOAD_FAST            module
+ 456: LOAD_CONST           '__path__'
+ 458: PRECALL              
+ 462: CALL                 
+ 472: POP_JUMP_FORWARD_IF_FALSE to 518
+ 474: LOAD_GLOBAL          NULL + _handle_fromlist
+ 486: LOAD_FAST            module
+ 488: LOAD_FAST            fromlist
+ 490: LOAD_GLOBAL          _gcd_import
+ 502: PRECALL              
+ 506: CALL                 
+ 516: RETURN_VALUE         
+ 518: LOAD_FAST            module
+ 520: RETURN_VALUE         

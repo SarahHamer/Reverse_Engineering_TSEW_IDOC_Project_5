@@ -1,0 +1,33 @@
+# Disassembly for typing._AnnotatedAlias.__repr__
+# From module file: typing
+
+## co_consts:
+(None, 'typing.Annotated[{}, {}]', ', ', <code object <genexpr> at 0x0000024069CF4A80, file "typing.py", line 2136>)
+
+## co_names:
+('format', '_type_repr', '__origin__', 'join', '__metadata__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'typing.Annotated[{}, {}]'
+   4: LOAD_METHOD          format
+  26: LOAD_GLOBAL          NULL + _type_repr
+  38: LOAD_FAST            self
+  40: LOAD_ATTR            __origin__
+  50: PRECALL              
+  54: CALL                 
+  64: LOAD_CONST           ', '
+  66: LOAD_METHOD          join
+  88: LOAD_CONST           <code object <genexpr> at 0x0000024069CF4A80, file "typing.py", line 2136>
+  90: MAKE_FUNCTION        
+  92: LOAD_FAST            self
+  94: LOAD_ATTR            __metadata__
+ 104: GET_ITER             
+ 106: PRECALL              
+ 110: CALL                 
+ 120: PRECALL              
+ 124: CALL                 
+ 134: PRECALL              
+ 138: CALL                 
+ 148: RETURN_VALUE         

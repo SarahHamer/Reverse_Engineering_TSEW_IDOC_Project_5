@@ -1,0 +1,48 @@
+# Disassembly for _pydecimal._sqrt_nearest
+# From module file: _pydecimal
+
+## co_consts:
+('Closest integer to the square root of the positive integer n.  a is\n    an initial approximation to the square root.  Any positive integer\n    will do for a, but the closer a is to the square root of n the\n    faster convergence will be.\n\n    ', 0, 'Both arguments to _sqrt_nearest should be positive.', 1)
+
+## co_names:
+('ValueError',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            n
+   4: LOAD_CONST           0
+   6: COMPARE_OP           <=
+  12: POP_JUMP_FORWARD_IF_TRUE to 26
+  14: LOAD_FAST            a
+  16: LOAD_CONST           0
+  18: COMPARE_OP           <=
+  24: POP_JUMP_FORWARD_IF_FALSE to 56
+  26: LOAD_GLOBAL          NULL + ValueError
+  38: LOAD_CONST           'Both arguments to _sqrt_nearest should be positive.'
+  40: PRECALL              
+  44: CALL                 
+  54: RAISE_VARARGS        
+  56: LOAD_CONST           0
+  58: STORE_FAST           b
+  60: LOAD_FAST            a
+  62: LOAD_FAST            b
+  64: COMPARE_OP           !=
+  70: POP_JUMP_FORWARD_IF_FALSE to 112
+  72: LOAD_FAST            a
+  74: LOAD_FAST            a
+  76: LOAD_FAST            n
+  78: UNARY_NEGATIVE       
+  80: LOAD_FAST            a
+  82: BINARY_OP            //
+  86: BINARY_OP            -
+  90: LOAD_CONST           1
+  92: BINARY_OP            >>
+  96: STORE_FAST           a
+  98: STORE_FAST           b
+ 100: LOAD_FAST            a
+ 102: LOAD_FAST            b
+ 104: COMPARE_OP           !=
+ 110: POP_JUMP_BACKWARD_IF_TRUE to 72
+ 112: LOAD_FAST            a
+ 114: RETURN_VALUE         

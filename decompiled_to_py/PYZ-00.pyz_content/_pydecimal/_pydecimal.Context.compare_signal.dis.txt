@@ -1,0 +1,27 @@
+# Disassembly for _pydecimal.Context.compare_signal
+# From module file: _pydecimal
+
+## co_consts:
+("Compares the values of the two operands numerically.\n\n        It's pretty much like compare(), but all NaNs signal, with signaling\n        NaNs taking precedence over quiet NaNs.\n\n        >>> c = ExtendedContext\n        >>> c.compare_signal(Decimal('2.1'), Decimal('3'))\n        Decimal('-1')\n        >>> c.compare_signal(Decimal('2.1'), Decimal('2.1'))\n        Decimal('0')\n        >>> c.flags[InvalidOperation] = 0\n        >>> print(c.flags[InvalidOperation])\n        0\n        >>> c.compare_signal(Decimal('NaN'), Decimal('2.1'))\n        Decimal('NaN')\n        >>> print(c.flags[InvalidOperation])\n        1\n        >>> c.flags[InvalidOperation] = 0\n        >>> print(c.flags[InvalidOperation])\n        0\n        >>> c.compare_signal(Decimal('sNaN'), Decimal('2.1'))\n        Decimal('NaN')\n        >>> print(c.flags[InvalidOperation])\n        1\n        >>> c.compare_signal(-1, 2)\n        Decimal('-1')\n        >>> c.compare_signal(Decimal(-1), 2)\n        Decimal('-1')\n        >>> c.compare_signal(-1, Decimal(2))\n        Decimal('-1')\n        ", True, ('raiseit',), ('context',))
+
+## co_names:
+('_convert_other', 'compare_signal')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _convert_other
+  14: LOAD_FAST            a
+  16: LOAD_CONST           True
+  18: KW_NAMES             
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           a
+  36: LOAD_FAST            a
+  38: LOAD_METHOD          compare_signal
+  60: LOAD_FAST            b
+  62: LOAD_FAST            self
+  64: KW_NAMES             
+  66: PRECALL              
+  70: CALL                 
+  80: RETURN_VALUE         

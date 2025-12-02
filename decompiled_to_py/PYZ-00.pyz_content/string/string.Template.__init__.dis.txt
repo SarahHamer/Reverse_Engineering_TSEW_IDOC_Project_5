@@ -1,0 +1,17 @@
+# Disassembly for string.Template.__init__
+# From module file: string
+
+## co_consts:
+(None,)
+
+## co_names:
+('template',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            template
+   4: LOAD_FAST            self
+   6: STORE_ATTR           template
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         

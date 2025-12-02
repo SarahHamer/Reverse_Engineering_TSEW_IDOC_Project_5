@@ -1,0 +1,126 @@
+# Disassembly for random._test
+# From module file: random
+
+## co_consts:
+(None, (), (0.0, 1.0), (0.01, 1.0), (0.1, 1.0), (0.1, 2.0), (0.5, 1.0), (0.9, 1.0), (1.0, 1.0), (2.0, 1.0), (20.0, 1.0), (200.0, 1.0), (3.0, 3.0), (0.0, 1.0, 0.3333333333333333))
+
+## co_names:
+('_test_generator', 'random', 'normalvariate', 'lognormvariate', 'vonmisesvariate', 'gammavariate', 'gauss', 'betavariate', 'triangular')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _test_generator
+  14: LOAD_FAST            N
+  16: LOAD_GLOBAL          random
+  28: LOAD_CONST           ()
+  30: PRECALL              
+  34: CALL                 
+  44: POP_TOP              
+  46: LOAD_GLOBAL          NULL + _test_generator
+  58: LOAD_FAST            N
+  60: LOAD_GLOBAL          normalvariate
+  72: LOAD_CONST           (0.0, 1.0)
+  74: PRECALL              
+  78: CALL                 
+  88: POP_TOP              
+  90: LOAD_GLOBAL          NULL + _test_generator
+ 102: LOAD_FAST            N
+ 104: LOAD_GLOBAL          lognormvariate
+ 116: LOAD_CONST           (0.0, 1.0)
+ 118: PRECALL              
+ 122: CALL                 
+ 132: POP_TOP              
+ 134: LOAD_GLOBAL          NULL + _test_generator
+ 146: LOAD_FAST            N
+ 148: LOAD_GLOBAL          vonmisesvariate
+ 160: LOAD_CONST           (0.0, 1.0)
+ 162: PRECALL              
+ 166: CALL                 
+ 176: POP_TOP              
+ 178: LOAD_GLOBAL          NULL + _test_generator
+ 190: LOAD_FAST            N
+ 192: LOAD_GLOBAL          gammavariate
+ 204: LOAD_CONST           (0.01, 1.0)
+ 206: PRECALL              
+ 210: CALL                 
+ 220: POP_TOP              
+ 222: LOAD_GLOBAL          NULL + _test_generator
+ 234: LOAD_FAST            N
+ 236: LOAD_GLOBAL          gammavariate
+ 248: LOAD_CONST           (0.1, 1.0)
+ 250: PRECALL              
+ 254: CALL                 
+ 264: POP_TOP              
+ 266: LOAD_GLOBAL          NULL + _test_generator
+ 278: LOAD_FAST            N
+ 280: LOAD_GLOBAL          gammavariate
+ 292: LOAD_CONST           (0.1, 2.0)
+ 294: PRECALL              
+ 298: CALL                 
+ 308: POP_TOP              
+ 310: LOAD_GLOBAL          NULL + _test_generator
+ 322: LOAD_FAST            N
+ 324: LOAD_GLOBAL          gammavariate
+ 336: LOAD_CONST           (0.5, 1.0)
+ 338: PRECALL              
+ 342: CALL                 
+ 352: POP_TOP              
+ 354: LOAD_GLOBAL          NULL + _test_generator
+ 366: LOAD_FAST            N
+ 368: LOAD_GLOBAL          gammavariate
+ 380: LOAD_CONST           (0.9, 1.0)
+ 382: PRECALL              
+ 386: CALL                 
+ 396: POP_TOP              
+ 398: LOAD_GLOBAL          NULL + _test_generator
+ 410: LOAD_FAST            N
+ 412: LOAD_GLOBAL          gammavariate
+ 424: LOAD_CONST           (1.0, 1.0)
+ 426: PRECALL              
+ 430: CALL                 
+ 440: POP_TOP              
+ 442: LOAD_GLOBAL          NULL + _test_generator
+ 454: LOAD_FAST            N
+ 456: LOAD_GLOBAL          gammavariate
+ 468: LOAD_CONST           (2.0, 1.0)
+ 470: PRECALL              
+ 474: CALL                 
+ 484: POP_TOP              
+ 486: LOAD_GLOBAL          NULL + _test_generator
+ 498: LOAD_FAST            N
+ 500: LOAD_GLOBAL          gammavariate
+ 512: LOAD_CONST           (20.0, 1.0)
+ 514: PRECALL              
+ 518: CALL                 
+ 528: POP_TOP              
+ 530: LOAD_GLOBAL          NULL + _test_generator
+ 542: LOAD_FAST            N
+ 544: LOAD_GLOBAL          gammavariate
+ 556: LOAD_CONST           (200.0, 1.0)
+ 558: PRECALL              
+ 562: CALL                 
+ 572: POP_TOP              
+ 574: LOAD_GLOBAL          NULL + _test_generator
+ 586: LOAD_FAST            N
+ 588: LOAD_GLOBAL          gauss
+ 600: LOAD_CONST           (0.0, 1.0)
+ 602: PRECALL              
+ 606: CALL                 
+ 616: POP_TOP              
+ 618: LOAD_GLOBAL          NULL + _test_generator
+ 630: LOAD_FAST            N
+ 632: LOAD_GLOBAL          betavariate
+ 644: LOAD_CONST           (3.0, 3.0)
+ 646: PRECALL              
+ 650: CALL                 
+ 660: POP_TOP              
+ 662: LOAD_GLOBAL          NULL + _test_generator
+ 674: LOAD_FAST            N
+ 676: LOAD_GLOBAL          triangular
+ 688: LOAD_CONST           (0.0, 1.0, 0.3333333333333333)
+ 690: PRECALL              
+ 694: CALL                 
+ 704: POP_TOP              
+ 706: LOAD_CONST           None
+ 708: RETURN_VALUE         

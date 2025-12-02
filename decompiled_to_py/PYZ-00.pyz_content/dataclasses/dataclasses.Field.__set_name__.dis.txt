@@ -1,0 +1,38 @@
+# Disassembly for dataclasses.Field.__set_name__
+# From module file: dataclasses
+
+## co_consts:
+(None, '__set_name__')
+
+## co_names:
+('getattr', 'type', 'default')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + getattr
+  14: LOAD_GLOBAL          NULL + type
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            default
+  38: PRECALL              
+  42: CALL                 
+  52: LOAD_CONST           '__set_name__'
+  54: LOAD_CONST           None
+  56: PRECALL              
+  60: CALL                 
+  70: STORE_FAST           func
+  72: LOAD_FAST            func
+  74: POP_JUMP_FORWARD_IF_FALSE to 116
+  76: PUSH_NULL            
+  78: LOAD_FAST            func
+  80: LOAD_FAST            self
+  82: LOAD_ATTR            default
+  92: LOAD_FAST            owner
+  94: LOAD_FAST            name
+  96: PRECALL              
+ 100: CALL                 
+ 110: POP_TOP              
+ 112: LOAD_CONST           None
+ 114: RETURN_VALUE         
+ 116: LOAD_CONST           None
+ 118: RETURN_VALUE         

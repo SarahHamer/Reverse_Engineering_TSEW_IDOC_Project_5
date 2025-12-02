@@ -1,0 +1,72 @@
+# Disassembly for _pydecimal._group_lengths
+# From module file: _pydecimal
+
+## co_consts:
+('Convert a localeconv-style grouping into a (possibly infinite)\n    iterable of integers representing group lengths.\n\n    ', 0, ('chain', 'repeat'), -1, 2, None, -2, 'unrecognised format for grouping')
+
+## co_names:
+('itertools', 'chain', 'repeat', 'len', '_locale', 'CHAR_MAX', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           ('chain', 'repeat')
+   6: IMPORT_NAME          itertools
+   8: IMPORT_FROM          chain
+  10: STORE_FAST           chain
+  12: IMPORT_FROM          repeat
+  14: STORE_FAST           repeat
+  16: POP_TOP              
+  18: LOAD_FAST            grouping
+  20: POP_JUMP_FORWARD_IF_TRUE to 26
+  22: BUILD_LIST           
+  24: RETURN_VALUE         
+  26: LOAD_FAST            grouping
+  28: LOAD_CONST           -1
+  30: BINARY_SUBSCR        
+  40: LOAD_CONST           0
+  42: COMPARE_OP           ==
+  48: POP_JUMP_FORWARD_IF_FALSE to 158
+  50: LOAD_GLOBAL          NULL + len
+  62: LOAD_FAST            grouping
+  64: PRECALL              
+  68: CALL                 
+  78: LOAD_CONST           2
+  80: COMPARE_OP           >=
+  86: POP_JUMP_FORWARD_IF_FALSE to 158
+  88: PUSH_NULL            
+  90: LOAD_FAST            chain
+  92: LOAD_FAST            grouping
+  94: LOAD_CONST           None
+  96: LOAD_CONST           -1
+  98: BUILD_SLICE          
+ 100: BINARY_SUBSCR        
+ 110: PUSH_NULL            
+ 112: LOAD_FAST            repeat
+ 114: LOAD_FAST            grouping
+ 116: LOAD_CONST           -2
+ 118: BINARY_SUBSCR        
+ 128: PRECALL              
+ 132: CALL                 
+ 142: PRECALL              
+ 146: CALL                 
+ 156: RETURN_VALUE         
+ 158: LOAD_FAST            grouping
+ 160: LOAD_CONST           -1
+ 162: BINARY_SUBSCR        
+ 172: LOAD_GLOBAL          _locale
+ 184: LOAD_ATTR            CHAR_MAX
+ 194: COMPARE_OP           ==
+ 200: POP_JUMP_FORWARD_IF_FALSE to 222
+ 202: LOAD_FAST            grouping
+ 204: LOAD_CONST           None
+ 206: LOAD_CONST           -1
+ 208: BUILD_SLICE          
+ 210: BINARY_SUBSCR        
+ 220: RETURN_VALUE         
+ 222: LOAD_GLOBAL          NULL + ValueError
+ 234: LOAD_CONST           'unrecognised format for grouping'
+ 236: PRECALL              
+ 240: CALL                 
+ 250: RAISE_VARARGS        

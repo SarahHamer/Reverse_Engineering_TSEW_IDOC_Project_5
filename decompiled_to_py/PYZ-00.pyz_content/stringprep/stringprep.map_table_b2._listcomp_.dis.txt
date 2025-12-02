@@ -1,0 +1,23 @@
+# Disassembly for stringprep.map_table_b2.<listcomp>
+# From module file: stringprep
+
+## co_consts:
+()
+
+## co_names:
+('map_table_b3',)
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 42
+   8: STORE_FAST           ch
+  10: LOAD_GLOBAL          NULL + map_table_b3
+  22: LOAD_FAST            ch
+  24: PRECALL              
+  28: CALL                 
+  38: LIST_APPEND          
+  40: JUMP_BACKWARD        to 6
+  42: RETURN_VALUE         

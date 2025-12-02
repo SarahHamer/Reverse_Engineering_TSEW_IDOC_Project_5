@@ -1,0 +1,20 @@
+# Disassembly for importlib.distributions
+# From module file: importlib.metadata
+
+## co_consts:
+('Get all ``Distribution`` instances in the current environment.\n\n    :return: An iterable of ``Distribution`` instances.\n    ', ())
+
+## co_names:
+('Distribution', 'discover')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + Distribution
+  14: LOAD_ATTR            discover
+  24: LOAD_CONST           ()
+  26: BUILD_MAP            
+  28: LOAD_FAST            kwargs
+  30: DICT_MERGE           
+  32: CALL_FUNCTION_EX     
+  34: RETURN_VALUE         

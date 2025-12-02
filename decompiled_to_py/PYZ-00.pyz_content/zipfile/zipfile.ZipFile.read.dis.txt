@@ -1,0 +1,46 @@
+# Disassembly for zipfile.ZipFile.read
+# From module file: zipfile
+
+## co_consts:
+('Return file bytes for name.', 'r', None)
+
+## co_names:
+('open', 'read')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          open
+  26: LOAD_FAST            name
+  28: LOAD_CONST           'r'
+  30: LOAD_FAST            pwd
+  32: PRECALL              
+  36: CALL                 
+  46: BEFORE_WITH          
+  48: STORE_FAST           fp
+  50: LOAD_FAST            fp
+  52: LOAD_METHOD          read
+  74: PRECALL              
+  78: CALL                 
+  88: SWAP                 
+  90: LOAD_CONST           None
+  92: LOAD_CONST           None
+  94: LOAD_CONST           None
+  96: PRECALL              
+ 100: CALL                 
+ 110: POP_TOP              
+ 112: RETURN_VALUE         
+ 114: PUSH_EXC_INFO        
+ 116: WITH_EXCEPT_START    
+ 118: POP_JUMP_FORWARD_IF_TRUE to 128
+ 120: RERAISE              
+ 122: COPY                 
+ 124: POP_EXCEPT           
+ 126: RERAISE              
+ 128: POP_TOP              
+ 130: POP_EXCEPT           
+ 132: POP_TOP              
+ 134: POP_TOP              
+ 136: LOAD_CONST           None
+ 138: RETURN_VALUE         

@@ -1,0 +1,170 @@
+# Disassembly for _pydecimal._ilog
+# From module file: _pydecimal
+
+## co_consts:
+('Integer approximation to M*log(x/M), with absolute error boundable\n    in terms only of x/M.\n\n    Given positive integers x and M, return an integer approximation to\n    M * log(x/M).  For L = 8 and 0.1 <= x/M <= 10 the difference\n    between the approximation and the exact result is at most 22.  For\n    L = 8 and 1.0 <= x/M <= 10.0 the difference is at most 15.  In\n    both cases these are upper bounds on the error; it will usually be\n    much smaller.', 0, 1, -10, 3, -1)
+
+## co_names:
+('abs', '_div_nearest', '_sqrt_nearest', '_rshift_nearest', 'int', 'len', 'str', 'range')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            x
+   4: LOAD_FAST            M
+   6: BINARY_OP            -
+  10: STORE_FAST           y
+  12: LOAD_CONST           0
+  14: STORE_FAST           R
+  16: LOAD_FAST            R
+  18: LOAD_FAST            L
+  20: COMPARE_OP           <=
+  26: POP_JUMP_FORWARD_IF_FALSE to 78
+  28: LOAD_GLOBAL          NULL + abs
+  40: LOAD_FAST            y
+  42: PRECALL              
+  46: CALL                 
+  56: LOAD_FAST            L
+  58: LOAD_FAST            R
+  60: BINARY_OP            -
+  64: BINARY_OP            <<
+  68: LOAD_FAST            M
+  70: COMPARE_OP           >=
+  76: POP_JUMP_FORWARD_IF_TRUE to 140
+  78: LOAD_FAST            R
+  80: LOAD_FAST            L
+  82: COMPARE_OP           >
+  88: POP_JUMP_FORWARD_IF_FALSE to 392
+  90: LOAD_GLOBAL          NULL + abs
+ 102: LOAD_FAST            y
+ 104: PRECALL              
+ 108: CALL                 
+ 118: LOAD_FAST            R
+ 120: LOAD_FAST            L
+ 122: BINARY_OP            -
+ 126: BINARY_OP            >>
+ 130: LOAD_FAST            M
+ 132: COMPARE_OP           >=
+ 138: POP_JUMP_FORWARD_IF_FALSE to 392
+ 140: LOAD_GLOBAL          NULL + _div_nearest
+ 152: LOAD_FAST            M
+ 154: LOAD_FAST            y
+ 156: BINARY_OP            *
+ 160: LOAD_CONST           1
+ 162: BINARY_OP            <<
+ 166: LOAD_FAST            M
+ 168: LOAD_GLOBAL          NULL + _sqrt_nearest
+ 180: LOAD_FAST            M
+ 182: LOAD_FAST            M
+ 184: LOAD_GLOBAL          NULL + _rshift_nearest
+ 196: LOAD_FAST            y
+ 198: LOAD_FAST            R
+ 200: PRECALL              
+ 204: CALL                 
+ 214: BINARY_OP            +
+ 218: BINARY_OP            *
+ 222: LOAD_FAST            M
+ 224: PRECALL              
+ 228: CALL                 
+ 238: BINARY_OP            +
+ 242: PRECALL              
+ 246: CALL                 
+ 256: STORE_FAST           y
+ 258: LOAD_FAST            R
+ 260: LOAD_CONST           1
+ 262: BINARY_OP            +=
+ 266: STORE_FAST           R
+ 268: LOAD_FAST            R
+ 270: LOAD_FAST            L
+ 272: COMPARE_OP           <=
+ 278: POP_JUMP_FORWARD_IF_FALSE to 330
+ 280: LOAD_GLOBAL          NULL + abs
+ 292: LOAD_FAST            y
+ 294: PRECALL              
+ 298: CALL                 
+ 308: LOAD_FAST            L
+ 310: LOAD_FAST            R
+ 312: BINARY_OP            -
+ 316: BINARY_OP            <<
+ 320: LOAD_FAST            M
+ 322: COMPARE_OP           >=
+ 328: POP_JUMP_BACKWARD_IF_TRUE to 140
+ 330: LOAD_FAST            R
+ 332: LOAD_FAST            L
+ 334: COMPARE_OP           >
+ 340: POP_JUMP_FORWARD_IF_FALSE to 392
+ 342: LOAD_GLOBAL          NULL + abs
+ 354: LOAD_FAST            y
+ 356: PRECALL              
+ 360: CALL                 
+ 370: LOAD_FAST            R
+ 372: LOAD_FAST            L
+ 374: BINARY_OP            -
+ 378: BINARY_OP            >>
+ 382: LOAD_FAST            M
+ 384: COMPARE_OP           >=
+ 390: POP_JUMP_BACKWARD_IF_TRUE to 140
+ 392: LOAD_GLOBAL          NULL + int
+ 404: LOAD_CONST           -10
+ 406: LOAD_GLOBAL          NULL + len
+ 418: LOAD_GLOBAL          NULL + str
+ 430: LOAD_FAST            M
+ 432: PRECALL              
+ 436: CALL                 
+ 446: PRECALL              
+ 450: CALL                 
+ 460: BINARY_OP            *
+ 464: LOAD_CONST           3
+ 466: LOAD_FAST            L
+ 468: BINARY_OP            *
+ 472: BINARY_OP            //
+ 476: PRECALL              
+ 480: CALL                 
+ 490: UNARY_NEGATIVE       
+ 492: STORE_FAST           T
+ 494: LOAD_GLOBAL          NULL + _rshift_nearest
+ 506: LOAD_FAST            y
+ 508: LOAD_FAST            R
+ 510: PRECALL              
+ 514: CALL                 
+ 524: STORE_FAST           yshift
+ 526: LOAD_GLOBAL          NULL + _div_nearest
+ 538: LOAD_FAST            M
+ 540: LOAD_FAST            T
+ 542: PRECALL              
+ 546: CALL                 
+ 556: STORE_FAST           w
+ 558: LOAD_GLOBAL          NULL + range
+ 570: LOAD_FAST            T
+ 572: LOAD_CONST           1
+ 574: BINARY_OP            -
+ 578: LOAD_CONST           0
+ 580: LOAD_CONST           -1
+ 582: PRECALL              
+ 586: CALL                 
+ 596: GET_ITER             
+ 598: FOR_ITER             to 676
+ 600: STORE_FAST           k
+ 602: LOAD_GLOBAL          NULL + _div_nearest
+ 614: LOAD_FAST            M
+ 616: LOAD_FAST            k
+ 618: PRECALL              
+ 622: CALL                 
+ 632: LOAD_GLOBAL          NULL + _div_nearest
+ 644: LOAD_FAST            yshift
+ 646: LOAD_FAST            w
+ 648: BINARY_OP            *
+ 652: LOAD_FAST            M
+ 654: PRECALL              
+ 658: CALL                 
+ 668: BINARY_OP            -
+ 672: STORE_FAST           w
+ 674: JUMP_BACKWARD        to 598
+ 676: LOAD_GLOBAL          NULL + _div_nearest
+ 688: LOAD_FAST            w
+ 690: LOAD_FAST            y
+ 692: BINARY_OP            *
+ 696: LOAD_FAST            M
+ 698: PRECALL              
+ 702: CALL                 
+ 712: RETURN_VALUE         

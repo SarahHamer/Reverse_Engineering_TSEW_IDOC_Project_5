@@ -1,0 +1,66 @@
+# Disassembly for ast._Unparser.visit_Set
+# From module file: ast
+
+## co_consts:
+(None, '{', '}', <code object <lambda> at 0x0000024069CE4B70, file "ast.py", line 1317>, '{*()}')
+
+## co_names:
+('elts', 'delimit', 'interleave', 'traverse', 'write')
+
+## bytecode:
+
+   0: MAKE_CELL            self
+   2: RESUME               
+   4: LOAD_FAST            node
+   6: LOAD_ATTR            elts
+  16: POP_JUMP_FORWARD_IF_FALSE to 188
+  18: LOAD_DEREF           self
+  20: LOAD_METHOD          delimit
+  42: LOAD_CONST           '{'
+  44: LOAD_CONST           '}'
+  46: PRECALL              
+  50: CALL                 
+  60: BEFORE_WITH          
+  62: POP_TOP              
+  64: LOAD_DEREF           self
+  66: LOAD_METHOD          interleave
+  88: LOAD_CLOSURE         self
+  90: BUILD_TUPLE          
+  92: LOAD_CONST           <code object <lambda> at 0x0000024069CE4B70, file "ast.py", line 1317>
+  94: MAKE_FUNCTION        closure
+  96: LOAD_DEREF           self
+  98: LOAD_ATTR            traverse
+ 108: LOAD_FAST            node
+ 110: LOAD_ATTR            elts
+ 120: PRECALL              
+ 124: CALL                 
+ 134: POP_TOP              
+ 136: LOAD_CONST           None
+ 138: LOAD_CONST           None
+ 140: LOAD_CONST           None
+ 142: PRECALL              
+ 146: CALL                 
+ 156: POP_TOP              
+ 158: LOAD_CONST           None
+ 160: RETURN_VALUE         
+ 162: PUSH_EXC_INFO        
+ 164: WITH_EXCEPT_START    
+ 166: POP_JUMP_FORWARD_IF_TRUE to 176
+ 168: RERAISE              
+ 170: COPY                 
+ 172: POP_EXCEPT           
+ 174: RERAISE              
+ 176: POP_TOP              
+ 178: POP_EXCEPT           
+ 180: POP_TOP              
+ 182: POP_TOP              
+ 184: LOAD_CONST           None
+ 186: RETURN_VALUE         
+ 188: LOAD_DEREF           self
+ 190: LOAD_METHOD          write
+ 212: LOAD_CONST           '{*()}'
+ 214: PRECALL              
+ 218: CALL                 
+ 228: POP_TOP              
+ 230: LOAD_CONST           None
+ 232: RETURN_VALUE         

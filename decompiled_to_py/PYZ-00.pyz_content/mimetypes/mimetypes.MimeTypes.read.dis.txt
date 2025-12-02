@@ -1,0 +1,48 @@
+# Disassembly for mimetypes.MimeTypes.read
+# From module file: mimetypes
+
+## co_consts:
+('\n        Read a single mime.types-format file, specified by pathname.\n\n        If strict is true, information will be added to\n        list of standard types, else to the list of non-standard\n        types.\n        ', 'utf-8', ('encoding',), None)
+
+## co_names:
+('open', 'readfp')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + open
+  14: LOAD_FAST            filename
+  16: LOAD_CONST           'utf-8'
+  18: KW_NAMES             
+  20: PRECALL              
+  24: CALL                 
+  34: BEFORE_WITH          
+  36: STORE_FAST           fp
+  38: LOAD_FAST            self
+  40: LOAD_METHOD          readfp
+  62: LOAD_FAST            fp
+  64: LOAD_FAST            strict
+  66: PRECALL              
+  70: CALL                 
+  80: POP_TOP              
+  82: LOAD_CONST           None
+  84: LOAD_CONST           None
+  86: LOAD_CONST           None
+  88: PRECALL              
+  92: CALL                 
+ 102: POP_TOP              
+ 104: LOAD_CONST           None
+ 106: RETURN_VALUE         
+ 108: PUSH_EXC_INFO        
+ 110: WITH_EXCEPT_START    
+ 112: POP_JUMP_FORWARD_IF_TRUE to 122
+ 114: RERAISE              
+ 116: COPY                 
+ 118: POP_EXCEPT           
+ 120: RERAISE              
+ 122: POP_TOP              
+ 124: POP_EXCEPT           
+ 126: POP_TOP              
+ 128: POP_TOP              
+ 130: LOAD_CONST           None
+ 132: RETURN_VALUE         

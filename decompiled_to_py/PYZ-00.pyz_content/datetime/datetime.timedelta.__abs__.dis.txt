@@ -1,0 +1,22 @@
+# Disassembly for datetime.timedelta.__abs__
+# From module file: datetime
+
+## co_consts:
+(None, 0)
+
+## co_names:
+('_days',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _days
+  14: LOAD_CONST           0
+  16: COMPARE_OP           <
+  22: POP_JUMP_FORWARD_IF_FALSE to 30
+  24: LOAD_FAST            self
+  26: UNARY_NEGATIVE       
+  28: RETURN_VALUE         
+  30: LOAD_FAST            self
+  32: RETURN_VALUE         

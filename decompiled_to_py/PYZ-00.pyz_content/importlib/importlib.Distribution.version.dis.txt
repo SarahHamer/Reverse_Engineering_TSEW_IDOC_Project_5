@@ -1,0 +1,17 @@
+# Disassembly for importlib.Distribution.version
+# From module file: importlib.metadata
+
+## co_consts:
+("Return the 'Version' metadata for the distribution package.", 'Version')
+
+## co_names:
+('metadata',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            metadata
+  14: LOAD_CONST           'Version'
+  16: BINARY_SUBSCR        
+  26: RETURN_VALUE         

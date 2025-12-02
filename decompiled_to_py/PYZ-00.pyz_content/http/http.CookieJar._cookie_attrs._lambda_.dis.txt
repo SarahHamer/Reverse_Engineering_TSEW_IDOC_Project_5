@@ -1,0 +1,18 @@
+# Disassembly for http.CookieJar._cookie_attrs.<lambda>
+# From module file: http.cookiejar
+
+## co_consts:
+(None,)
+
+## co_names:
+('len', 'path')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + len
+  14: LOAD_FAST            a
+  16: LOAD_ATTR            path
+  26: PRECALL              
+  30: CALL                 
+  40: RETURN_VALUE         

@@ -1,0 +1,21 @@
+# Disassembly for fractions.Fraction.__reduce__
+# From module file: fractions
+
+## co_consts:
+(None,)
+
+## co_names:
+('__class__', '_numerator', '_denominator')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            __class__
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            _numerator
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            _denominator
+  38: BUILD_TUPLE          
+  40: BUILD_TUPLE          
+  42: RETURN_VALUE         

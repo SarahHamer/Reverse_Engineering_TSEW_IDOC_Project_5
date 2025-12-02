@@ -1,0 +1,14 @@
+# Disassembly for right.SheetMusicGuide.get_description
+# From module file: right
+
+## co_consts:
+(None, 'There is sheet music guide on the counter.')
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'There is sheet music guide on the counter.'
+   4: RETURN_VALUE         

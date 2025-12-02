@@ -1,0 +1,39 @@
+# Disassembly for importlib.FileFinder.find_loader
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Try to find a loader for the specified module, or the namespace\n        package portions. Returns (loader, list-of-portions).\n\n        This method is deprecated.  Use find_spec() instead.\n\n        ', 'FileFinder.find_loader() is deprecated and slated for removal in Python 3.12; use find_spec() instead', None)
+
+## co_names:
+('_warnings', 'warn', 'DeprecationWarning', 'find_spec', 'loader', 'submodule_search_locations')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _warnings
+  14: LOAD_ATTR            warn
+  24: LOAD_CONST           'FileFinder.find_loader() is deprecated and slated for removal in Python 3.12; use find_spec() instead'
+  26: LOAD_GLOBAL          DeprecationWarning
+  38: PRECALL              
+  42: CALL                 
+  52: POP_TOP              
+  54: LOAD_FAST            self
+  56: LOAD_METHOD          find_spec
+  78: LOAD_FAST            fullname
+  80: PRECALL              
+  84: CALL                 
+  94: STORE_FAST           spec
+  96: LOAD_FAST            spec
+  98: POP_JUMP_FORWARD_IF_NOT_NONE to 108
+ 100: LOAD_CONST           None
+ 102: BUILD_LIST           
+ 104: BUILD_TUPLE          
+ 106: RETURN_VALUE         
+ 108: LOAD_FAST            spec
+ 110: LOAD_ATTR            loader
+ 120: LOAD_FAST            spec
+ 122: LOAD_ATTR            submodule_search_locations
+ 132: JUMP_IF_TRUE_OR_POP  to 136
+ 134: BUILD_LIST           
+ 136: BUILD_TUPLE          
+ 138: RETURN_VALUE         

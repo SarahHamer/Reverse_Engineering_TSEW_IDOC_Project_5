@@ -1,0 +1,28 @@
+# Disassembly for calendar._nextmonth
+# From module file: calendar
+
+## co_consts:
+(None, 12, 1)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            month
+   4: LOAD_CONST           12
+   6: COMPARE_OP           ==
+  12: POP_JUMP_FORWARD_IF_FALSE to 28
+  14: LOAD_FAST            year
+  16: LOAD_CONST           1
+  18: BINARY_OP            +
+  22: LOAD_CONST           1
+  24: BUILD_TUPLE          
+  26: RETURN_VALUE         
+  28: LOAD_FAST            year
+  30: LOAD_FAST            month
+  32: LOAD_CONST           1
+  34: BINARY_OP            +
+  38: BUILD_TUPLE          
+  40: RETURN_VALUE         

@@ -1,0 +1,30 @@
+# Disassembly for calendar.LocaleHTMLCalendar.__init__
+# From module file: calendar
+
+## co_consts:
+(None,)
+
+## co_names:
+('HTMLCalendar', '__init__', '_get_default_locale', 'locale')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          HTMLCalendar
+  14: LOAD_METHOD          __init__
+  36: LOAD_FAST            self
+  38: LOAD_FAST            firstweekday
+  40: PRECALL              
+  44: CALL                 
+  54: POP_TOP              
+  56: LOAD_FAST            locale
+  58: POP_JUMP_FORWARD_IF_NOT_NONE to 88
+  60: LOAD_GLOBAL          NULL + _get_default_locale
+  72: PRECALL              
+  76: CALL                 
+  86: STORE_FAST           locale
+  88: LOAD_FAST            locale
+  90: LOAD_FAST            self
+  92: STORE_ATTR           locale
+ 102: LOAD_CONST           None
+ 104: RETURN_VALUE         

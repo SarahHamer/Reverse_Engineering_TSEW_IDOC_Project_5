@@ -1,0 +1,112 @@
+# Disassembly for threading._make_invoke_excepthook.invoke_excepthook
+# From module file: threading
+
+## co_consts:
+(None, True, 'Exception in threading.excepthook:', ('file', 'flush'))
+
+## co_names:
+('excepthook', 'ExceptHookArgs', 'Exception', '__suppress_context__', 'stderr', '_stderr')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: NOP                  
+   6: LOAD_GLOBAL          excepthook
+  18: STORE_FAST           hook
+  20: LOAD_FAST            hook
+  22: POP_JUMP_FORWARD_IF_NOT_NONE to 28
+  24: LOAD_DEREF           old_excepthook
+  26: STORE_FAST           hook
+  28: LOAD_GLOBAL          NULL + ExceptHookArgs
+  40: BUILD_LIST           
+  42: PUSH_NULL            
+  44: LOAD_DEREF           sys_exc_info
+  46: PRECALL              
+  50: CALL                 
+  60: LIST_EXTEND          
+  62: LOAD_FAST            thread
+  64: LIST_APPEND          
+  66: PRECALL              
+  70: CALL                 
+  80: STORE_FAST           args
+  82: PUSH_NULL            
+  84: LOAD_FAST            hook
+  86: LOAD_FAST            args
+  88: PRECALL              
+  92: CALL                 
+ 102: POP_TOP              
+ 104: JUMP_FORWARD         to 308
+ 106: PUSH_EXC_INFO        
+ 108: LOAD_GLOBAL          Exception
+ 120: CHECK_EXC_MATCH      
+ 122: POP_JUMP_FORWARD_IF_FALSE to 300
+ 124: STORE_FAST           exc
+ 126: LOAD_CONST           True
+ 128: LOAD_FAST            exc
+ 130: STORE_ATTR           __suppress_context__
+ 140: DELETE_FAST          exc
+ 142: LOAD_DEREF           local_sys
+ 144: POP_JUMP_FORWARD_IF_NONE to 176
+ 146: LOAD_DEREF           local_sys
+ 148: LOAD_ATTR            stderr
+ 158: POP_JUMP_FORWARD_IF_NONE to 176
+ 160: LOAD_DEREF           local_sys
+ 162: LOAD_ATTR            stderr
+ 172: STORE_FAST           stderr
+ 174: JUMP_FORWARD         to 190
+ 176: LOAD_FAST            thread
+ 178: LOAD_ATTR            _stderr
+ 188: STORE_FAST           stderr
+ 190: PUSH_NULL            
+ 192: LOAD_DEREF           local_print
+ 194: LOAD_CONST           'Exception in threading.excepthook:'
+ 196: LOAD_FAST            stderr
+ 198: LOAD_CONST           True
+ 200: KW_NAMES             
+ 202: PRECALL              
+ 206: CALL                 
+ 216: POP_TOP              
+ 218: LOAD_DEREF           local_sys
+ 220: POP_JUMP_FORWARD_IF_NONE to 252
+ 222: LOAD_DEREF           local_sys
+ 224: LOAD_ATTR            excepthook
+ 234: POP_JUMP_FORWARD_IF_NONE to 252
+ 236: LOAD_DEREF           local_sys
+ 238: LOAD_ATTR            excepthook
+ 248: STORE_FAST           sys_excepthook
+ 250: JUMP_FORWARD         to 256
+ 252: LOAD_DEREF           old_sys_excepthook
+ 254: STORE_FAST           sys_excepthook
+ 256: PUSH_NULL            
+ 258: LOAD_FAST            sys_excepthook
+ 260: PUSH_NULL            
+ 262: LOAD_DEREF           sys_exc_info
+ 264: PRECALL              
+ 268: CALL                 
+ 278: CALL_FUNCTION_EX     
+ 280: POP_TOP              
+ 282: POP_EXCEPT           
+ 284: LOAD_CONST           None
+ 286: STORE_FAST           exc
+ 288: DELETE_FAST          exc
+ 290: JUMP_FORWARD         to 308
+ 292: LOAD_CONST           None
+ 294: STORE_FAST           exc
+ 296: DELETE_FAST          exc
+ 298: RERAISE              
+ 300: RERAISE              
+ 302: COPY                 
+ 304: POP_EXCEPT           
+ 306: RERAISE              
+ 308: LOAD_CONST           None
+ 310: STORE_FAST           args
+ 312: LOAD_CONST           None
+ 314: RETURN_VALUE         
+ 316: PUSH_EXC_INFO        
+ 318: LOAD_CONST           None
+ 320: STORE_FAST           args
+ 322: RERAISE              
+ 324: COPY                 
+ 326: POP_EXCEPT           
+ 328: RERAISE              

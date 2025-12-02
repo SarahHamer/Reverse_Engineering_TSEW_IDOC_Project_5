@@ -1,0 +1,157 @@
+# Disassembly for random.Random.seed
+# From module file: random
+
+## co_consts:
+('Initialize internal state from a seed.\n\n        The only supported seed types are None, int, float,\n        str, bytes, and bytearray.\n\n        None or no argument seeds from current time or from an operating\n        system specific randomness source if available.\n\n        If *a* is an int, all bits are used.\n\n        For version 2 (the default), all of the bits are used if *a* is a str,\n        bytes, or bytearray.  For version 1 (provided for reproducing random\n        sequences from older versions of Python), the algorithm for str and\n        bytes generates a narrower range of seeds.\n\n        ', 1, 'latin-1', 0, 7, 1000003, 18446744073709551615, -1, -2, 2, None, 'The only supported seed types are: None,\nint, float, str, bytes, and bytearray.')
+
+## co_names:
+('isinstance', 'str', 'bytes', 'decode', 'ord', 'map', 'len', 'bytearray', 'encode', 'int', 'from_bytes', '_sha512', 'digest', 'type', 'float', 'TypeError', 'super', 'seed', 'gauss_next')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_FAST            version
+   6: LOAD_CONST           1
+   8: COMPARE_OP           ==
+  14: POP_JUMP_FORWARD_IF_FALSE to 344
+  16: LOAD_GLOBAL          NULL + isinstance
+  28: LOAD_FAST            a
+  30: LOAD_GLOBAL          str
+  42: LOAD_GLOBAL          bytes
+  54: BUILD_TUPLE          
+  56: PRECALL              
+  60: CALL                 
+  70: POP_JUMP_FORWARD_IF_FALSE to 344
+  72: LOAD_GLOBAL          NULL + isinstance
+  84: LOAD_FAST            a
+  86: LOAD_GLOBAL          bytes
+  98: PRECALL              
+ 102: CALL                 
+ 112: POP_JUMP_FORWARD_IF_FALSE to 156
+ 114: LOAD_FAST            a
+ 116: LOAD_METHOD          decode
+ 138: LOAD_CONST           'latin-1'
+ 140: PRECALL              
+ 144: CALL                 
+ 154: JUMP_FORWARD         to 158
+ 156: LOAD_FAST            a
+ 158: STORE_FAST           a
+ 160: LOAD_FAST            a
+ 162: POP_JUMP_FORWARD_IF_FALSE to 212
+ 164: LOAD_GLOBAL          NULL + ord
+ 176: LOAD_FAST            a
+ 178: LOAD_CONST           0
+ 180: BINARY_SUBSCR        
+ 190: PRECALL              
+ 194: CALL                 
+ 204: LOAD_CONST           7
+ 206: BINARY_OP            <<
+ 210: JUMP_FORWARD         to 214
+ 212: LOAD_CONST           0
+ 214: STORE_FAST           x
+ 216: LOAD_GLOBAL          NULL + map
+ 228: LOAD_GLOBAL          ord
+ 240: LOAD_FAST            a
+ 242: PRECALL              
+ 246: CALL                 
+ 256: GET_ITER             
+ 258: FOR_ITER             to 286
+ 260: STORE_FAST           c
+ 262: LOAD_CONST           1000003
+ 264: LOAD_FAST            x
+ 266: BINARY_OP            *
+ 270: LOAD_FAST            c
+ 272: BINARY_OP            ^
+ 276: LOAD_CONST           18446744073709551615
+ 278: BINARY_OP            &
+ 282: STORE_FAST           x
+ 284: JUMP_BACKWARD        to 258
+ 286: LOAD_FAST            x
+ 288: LOAD_GLOBAL          NULL + len
+ 300: LOAD_FAST            a
+ 302: PRECALL              
+ 306: CALL                 
+ 316: BINARY_OP            ^=
+ 320: STORE_FAST           x
+ 322: LOAD_FAST            x
+ 324: LOAD_CONST           -1
+ 326: COMPARE_OP           ==
+ 332: POP_JUMP_FORWARD_IF_FALSE to 338
+ 334: LOAD_CONST           -2
+ 336: JUMP_FORWARD         to 340
+ 338: LOAD_FAST            x
+ 340: STORE_FAST           a
+ 342: JUMP_FORWARD         to 778
+ 344: LOAD_FAST            version
+ 346: LOAD_CONST           2
+ 348: COMPARE_OP           ==
+ 354: POP_JUMP_FORWARD_IF_FALSE to 628
+ 356: LOAD_GLOBAL          NULL + isinstance
+ 368: LOAD_FAST            a
+ 370: LOAD_GLOBAL          str
+ 382: LOAD_GLOBAL          bytes
+ 394: LOAD_GLOBAL          bytearray
+ 406: BUILD_TUPLE          
+ 408: PRECALL              
+ 412: CALL                 
+ 422: POP_JUMP_FORWARD_IF_FALSE to 628
+ 424: LOAD_GLOBAL          NULL + isinstance
+ 436: LOAD_FAST            a
+ 438: LOAD_GLOBAL          str
+ 450: PRECALL              
+ 454: CALL                 
+ 464: POP_JUMP_FORWARD_IF_FALSE to 506
+ 466: LOAD_FAST            a
+ 468: LOAD_METHOD          encode
+ 490: PRECALL              
+ 494: CALL                 
+ 504: STORE_FAST           a
+ 506: LOAD_GLOBAL          int
+ 518: LOAD_METHOD          from_bytes
+ 540: LOAD_FAST            a
+ 542: LOAD_GLOBAL          NULL + _sha512
+ 554: LOAD_FAST            a
+ 556: PRECALL              
+ 560: CALL                 
+ 570: LOAD_METHOD          digest
+ 592: PRECALL              
+ 596: CALL                 
+ 606: BINARY_OP            +
+ 610: PRECALL              
+ 614: CALL                 
+ 624: STORE_FAST           a
+ 626: JUMP_FORWARD         to 778
+ 628: LOAD_GLOBAL          NULL + isinstance
+ 640: LOAD_FAST            a
+ 642: LOAD_GLOBAL          NULL + type
+ 654: LOAD_CONST           None
+ 656: PRECALL              
+ 660: CALL                 
+ 670: LOAD_GLOBAL          int
+ 682: LOAD_GLOBAL          float
+ 694: LOAD_GLOBAL          str
+ 706: LOAD_GLOBAL          bytes
+ 718: LOAD_GLOBAL          bytearray
+ 730: BUILD_TUPLE          
+ 732: PRECALL              
+ 736: CALL                 
+ 746: POP_JUMP_FORWARD_IF_TRUE to 778
+ 748: LOAD_GLOBAL          NULL + TypeError
+ 760: LOAD_CONST           'The only supported seed types are: None,\nint, float, str, bytes, and bytearray.'
+ 762: PRECALL              
+ 766: CALL                 
+ 776: RAISE_VARARGS        
+ 778: LOAD_GLOBAL          NULL + super
+ 790: PRECALL              
+ 794: CALL                 
+ 804: LOAD_METHOD          seed
+ 826: LOAD_FAST            a
+ 828: PRECALL              
+ 832: CALL                 
+ 842: POP_TOP              
+ 844: LOAD_CONST           None
+ 846: LOAD_FAST            self
+ 848: STORE_ATTR           gauss_next
+ 858: LOAD_CONST           None
+ 860: RETURN_VALUE         

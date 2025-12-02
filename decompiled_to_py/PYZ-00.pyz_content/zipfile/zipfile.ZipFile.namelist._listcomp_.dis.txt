@@ -1,0 +1,21 @@
+# Disassembly for zipfile.ZipFile.namelist.<listcomp>
+# From module file: zipfile
+
+## co_consts:
+()
+
+## co_names:
+('filename',)
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 26
+   8: STORE_FAST           data
+  10: LOAD_FAST            data
+  12: LOAD_ATTR            filename
+  22: LIST_APPEND          
+  24: JUMP_BACKWARD        to 6
+  26: RETURN_VALUE         

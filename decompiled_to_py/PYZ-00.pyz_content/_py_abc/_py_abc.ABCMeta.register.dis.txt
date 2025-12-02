@@ -1,0 +1,58 @@
+# Disassembly for _py_abc.ABCMeta.register
+# From module file: _py_abc
+
+## co_consts:
+('Register a virtual subclass of an ABC.\n\n        Returns the subclass, to allow usage as a class decorator.\n        ', 'Can only register classes', 'Refusing to create an inheritance cycle', 1)
+
+## co_names:
+('isinstance', 'type', 'TypeError', 'issubclass', 'RuntimeError', '_abc_registry', 'add', 'ABCMeta', '_abc_invalidation_counter')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            subclass
+  16: LOAD_GLOBAL          type
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_TRUE to 74
+  44: LOAD_GLOBAL          NULL + TypeError
+  56: LOAD_CONST           'Can only register classes'
+  58: PRECALL              
+  62: CALL                 
+  72: RAISE_VARARGS        
+  74: LOAD_GLOBAL          NULL + issubclass
+  86: LOAD_FAST            subclass
+  88: LOAD_FAST            cls
+  90: PRECALL              
+  94: CALL                 
+ 104: POP_JUMP_FORWARD_IF_FALSE to 110
+ 106: LOAD_FAST            subclass
+ 108: RETURN_VALUE         
+ 110: LOAD_GLOBAL          NULL + issubclass
+ 122: LOAD_FAST            cls
+ 124: LOAD_FAST            subclass
+ 126: PRECALL              
+ 130: CALL                 
+ 140: POP_JUMP_FORWARD_IF_FALSE to 172
+ 142: LOAD_GLOBAL          NULL + RuntimeError
+ 154: LOAD_CONST           'Refusing to create an inheritance cycle'
+ 156: PRECALL              
+ 160: CALL                 
+ 170: RAISE_VARARGS        
+ 172: LOAD_FAST            cls
+ 174: LOAD_ATTR            _abc_registry
+ 184: LOAD_METHOD          add
+ 206: LOAD_FAST            subclass
+ 208: PRECALL              
+ 212: CALL                 
+ 222: POP_TOP              
+ 224: LOAD_GLOBAL          ABCMeta
+ 236: COPY                 
+ 238: LOAD_ATTR            _abc_invalidation_counter
+ 248: LOAD_CONST           1
+ 250: BINARY_OP            +=
+ 254: SWAP                 
+ 256: STORE_ATTR           _abc_invalidation_counter
+ 266: LOAD_FAST            subclass
+ 268: RETURN_VALUE         

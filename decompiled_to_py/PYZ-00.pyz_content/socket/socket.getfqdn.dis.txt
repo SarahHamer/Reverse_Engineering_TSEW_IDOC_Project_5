@@ -1,0 +1,70 @@
+# Disassembly for socket.getfqdn
+# From module file: socket
+
+## co_consts:
+("Get fully qualified domain name from name.\n\n    An empty argument is interpreted as meaning the local host.\n\n    First the hostname returned by gethostbyaddr() is checked, then\n    possibly existing aliases. In case no FQDN is available and `name`\n    was given, it is returned unchanged. If `name` was empty, '0.0.0.0' or '::',\n    hostname from gethostname() is returned.\n    ", ('0.0.0.0', '::'), 0, '.')
+
+## co_names:
+('strip', 'gethostname', 'gethostbyaddr', 'insert', 'error')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            name
+   4: LOAD_METHOD          strip
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           name
+  42: LOAD_FAST            name
+  44: POP_JUMP_FORWARD_IF_FALSE to 54
+  46: LOAD_FAST            name
+  48: LOAD_CONST           ('0.0.0.0', '::')
+  50: CONTAINS_OP          
+  52: POP_JUMP_FORWARD_IF_FALSE to 82
+  54: LOAD_GLOBAL          NULL + gethostname
+  66: PRECALL              
+  70: CALL                 
+  80: STORE_FAST           name
+  82: NOP                  
+  84: LOAD_GLOBAL          NULL + gethostbyaddr
+  96: LOAD_FAST            name
+  98: PRECALL              
+ 102: CALL                 
+ 112: UNPACK_SEQUENCE      
+ 116: STORE_FAST           hostname
+ 118: STORE_FAST           aliases
+ 120: STORE_FAST           ipaddrs
+ 122: LOAD_FAST            aliases
+ 124: LOAD_METHOD          insert
+ 146: LOAD_CONST           0
+ 148: LOAD_FAST            hostname
+ 150: PRECALL              
+ 154: CALL                 
+ 164: POP_TOP              
+ 166: LOAD_FAST            aliases
+ 168: GET_ITER             
+ 170: FOR_ITER             to 188
+ 172: STORE_FAST           name
+ 174: LOAD_CONST           '.'
+ 176: LOAD_FAST            name
+ 178: CONTAINS_OP          
+ 180: POP_JUMP_FORWARD_IF_FALSE to 186
+ 182: POP_TOP              
+ 184: JUMP_FORWARD         to 192
+ 186: JUMP_BACKWARD        to 170
+ 188: LOAD_FAST            hostname
+ 190: STORE_FAST           name
+ 192: JUMP_FORWARD         to 226
+ 194: PUSH_EXC_INFO        
+ 196: LOAD_GLOBAL          error
+ 208: CHECK_EXC_MATCH      
+ 210: POP_JUMP_FORWARD_IF_FALSE to 218
+ 212: POP_TOP              
+ 214: POP_EXCEPT           
+ 216: JUMP_FORWARD         to 226
+ 218: RERAISE              
+ 220: COPY                 
+ 222: POP_EXCEPT           
+ 224: RERAISE              
+ 226: LOAD_FAST            name
+ 228: RETURN_VALUE         

@@ -1,0 +1,33 @@
+# Disassembly for importlib.WindowsRegistryFinder.find_module
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Find module named in the registry.\n\n        This method is deprecated.  Use find_spec() instead.\n\n        ', 'WindowsRegistryFinder.find_module() is deprecated and slated for removal in Python 3.12; use find_spec() instead', None)
+
+## co_names:
+('_warnings', 'warn', 'DeprecationWarning', 'find_spec', 'loader')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _warnings
+  14: LOAD_ATTR            warn
+  24: LOAD_CONST           'WindowsRegistryFinder.find_module() is deprecated and slated for removal in Python 3.12; use find_spec() instead'
+  26: LOAD_GLOBAL          DeprecationWarning
+  38: PRECALL              
+  42: CALL                 
+  52: POP_TOP              
+  54: LOAD_FAST            cls
+  56: LOAD_METHOD          find_spec
+  78: LOAD_FAST            fullname
+  80: LOAD_FAST            path
+  82: PRECALL              
+  86: CALL                 
+  96: STORE_FAST           spec
+  98: LOAD_FAST            spec
+ 100: POP_JUMP_FORWARD_IF_NONE to 116
+ 102: LOAD_FAST            spec
+ 104: LOAD_ATTR            loader
+ 114: RETURN_VALUE         
+ 116: LOAD_CONST           None
+ 118: RETURN_VALUE         

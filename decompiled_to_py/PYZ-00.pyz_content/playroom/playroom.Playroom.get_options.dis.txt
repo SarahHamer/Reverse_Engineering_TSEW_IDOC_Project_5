@@ -1,0 +1,48 @@
+# Disassembly for playroom.Playroom.get_options
+# From module file: playroom
+
+## co_consts:
+(None, ('P', 'Pinch yourself to wake up.'), ('S', "Stay here and keep play where it's safe."))
+
+## co_names:
+('super', 'get_options', 'get_child_by_type', 'Drawings', 'checked', 'FactoryModel', 'append')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + super
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_METHOD          get_options
+  52: PRECALL              
+  56: CALL                 
+  66: STORE_FAST           options
+  68: LOAD_FAST            self
+  70: LOAD_METHOD          get_child_by_type
+  92: LOAD_GLOBAL          Drawings
+ 104: PRECALL              
+ 108: CALL                 
+ 118: LOAD_ATTR            checked
+ 128: POP_JUMP_FORWARD_IF_FALSE to 276
+ 130: LOAD_FAST            self
+ 132: LOAD_METHOD          get_child_by_type
+ 154: LOAD_GLOBAL          FactoryModel
+ 166: PRECALL              
+ 170: CALL                 
+ 180: LOAD_ATTR            checked
+ 190: POP_JUMP_FORWARD_IF_FALSE to 276
+ 192: LOAD_FAST            options
+ 194: LOAD_METHOD          append
+ 216: LOAD_CONST           ('P', 'Pinch yourself to wake up.')
+ 218: PRECALL              
+ 222: CALL                 
+ 232: POP_TOP              
+ 234: LOAD_FAST            options
+ 236: LOAD_METHOD          append
+ 258: LOAD_CONST           ('S', "Stay here and keep play where it's safe.")
+ 260: PRECALL              
+ 264: CALL                 
+ 274: POP_TOP              
+ 276: LOAD_FAST            options
+ 278: RETURN_VALUE         

@@ -1,0 +1,125 @@
+# Disassembly for pickle._Unpickler.load
+# From module file: pickle
+
+## co_consts:
+('Read a pickled object representation from the open file.\n\n        Return the reconstituted object hierarchy specified in the file.\n        ', '_file_read', 'Unpickler.__init__() was not called by ', '.__init__()', 0, True, 1, None)
+
+## co_names:
+('hasattr', 'UnpicklingError', '__class__', '__name__', '_Unframer', '_file_read', '_file_readline', '_unframer', 'read', 'readinto', 'readline', 'metastack', 'stack', 'append', 'proto', 'dispatch', 'EOFError', 'isinstance', 'bytes_types', '_Stop', 'value')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + hasattr
+  14: LOAD_FAST            self
+  16: LOAD_CONST           '_file_read'
+  18: PRECALL              
+  22: CALL                 
+  32: POP_JUMP_FORWARD_IF_TRUE to 92
+  34: LOAD_GLOBAL          NULL + UnpicklingError
+  46: LOAD_CONST           'Unpickler.__init__() was not called by '
+  48: LOAD_FAST            self
+  50: LOAD_ATTR            __class__
+  60: LOAD_ATTR            __name__
+  70: FORMAT_VALUE         str
+  72: LOAD_CONST           '.__init__()'
+  74: BUILD_STRING         
+  76: PRECALL              
+  80: CALL                 
+  90: RAISE_VARARGS        
+  92: LOAD_GLOBAL          NULL + _Unframer
+ 104: LOAD_FAST            self
+ 106: LOAD_ATTR            _file_read
+ 116: LOAD_FAST            self
+ 118: LOAD_ATTR            _file_readline
+ 128: PRECALL              
+ 132: CALL                 
+ 142: LOAD_FAST            self
+ 144: STORE_ATTR           _unframer
+ 154: LOAD_FAST            self
+ 156: LOAD_ATTR            _unframer
+ 166: LOAD_ATTR            read
+ 176: LOAD_FAST            self
+ 178: STORE_ATTR           read
+ 188: LOAD_FAST            self
+ 190: LOAD_ATTR            _unframer
+ 200: LOAD_ATTR            readinto
+ 210: LOAD_FAST            self
+ 212: STORE_ATTR           readinto
+ 222: LOAD_FAST            self
+ 224: LOAD_ATTR            _unframer
+ 234: LOAD_ATTR            readline
+ 244: LOAD_FAST            self
+ 246: STORE_ATTR           readline
+ 256: BUILD_LIST           
+ 258: LOAD_FAST            self
+ 260: STORE_ATTR           metastack
+ 270: BUILD_LIST           
+ 272: LOAD_FAST            self
+ 274: STORE_ATTR           stack
+ 284: LOAD_FAST            self
+ 286: LOAD_ATTR            stack
+ 296: LOAD_ATTR            append
+ 306: LOAD_FAST            self
+ 308: STORE_ATTR           append
+ 318: LOAD_CONST           0
+ 320: LOAD_FAST            self
+ 322: STORE_ATTR           proto
+ 332: LOAD_FAST            self
+ 334: LOAD_ATTR            read
+ 344: STORE_FAST           read
+ 346: LOAD_FAST            self
+ 348: LOAD_ATTR            dispatch
+ 358: STORE_FAST           dispatch
+ 360: NOP                  
+ 362: NOP                  
+ 364: PUSH_NULL            
+ 366: LOAD_FAST            read
+ 368: LOAD_CONST           1
+ 370: PRECALL              
+ 374: CALL                 
+ 384: STORE_FAST           key
+ 386: LOAD_FAST            key
+ 388: POP_JUMP_FORWARD_IF_TRUE to 404
+ 390: LOAD_GLOBAL          EOFError
+ 402: RAISE_VARARGS        
+ 404: LOAD_GLOBAL          NULL + isinstance
+ 416: LOAD_FAST            key
+ 418: LOAD_GLOBAL          bytes_types
+ 430: PRECALL              
+ 434: CALL                 
+ 444: POP_JUMP_FORWARD_IF_TRUE to 450
+ 446: LOAD_ASSERTION_ERROR 
+ 448: RAISE_VARARGS        
+ 450: PUSH_NULL            
+ 452: LOAD_FAST            dispatch
+ 454: LOAD_FAST            key
+ 456: LOAD_CONST           0
+ 458: BINARY_SUBSCR        
+ 468: BINARY_SUBSCR        
+ 478: LOAD_FAST            self
+ 480: PRECALL              
+ 484: CALL                 
+ 494: POP_TOP              
+ 496: JUMP_BACKWARD        to 364
+ 498: PUSH_EXC_INFO        
+ 500: LOAD_GLOBAL          _Stop
+ 512: CHECK_EXC_MATCH      
+ 514: POP_JUMP_FORWARD_IF_FALSE to 550
+ 516: STORE_FAST           stopinst
+ 518: LOAD_FAST            stopinst
+ 520: LOAD_ATTR            value
+ 530: SWAP                 
+ 532: POP_EXCEPT           
+ 534: LOAD_CONST           None
+ 536: STORE_FAST           stopinst
+ 538: DELETE_FAST          stopinst
+ 540: RETURN_VALUE         
+ 542: LOAD_CONST           None
+ 544: STORE_FAST           stopinst
+ 546: DELETE_FAST          stopinst
+ 548: RERAISE              
+ 550: RERAISE              
+ 552: COPY                 
+ 554: POP_EXCEPT           
+ 556: RERAISE              

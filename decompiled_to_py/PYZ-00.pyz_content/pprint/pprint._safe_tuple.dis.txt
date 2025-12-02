@@ -1,0 +1,26 @@
+# Disassembly for pprint._safe_tuple
+# From module file: pprint
+
+## co_consts:
+('Helper function for comparing 2-tuples', 0, 1)
+
+## co_names:
+('_safe_key',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _safe_key
+  14: LOAD_FAST            t
+  16: LOAD_CONST           0
+  18: BINARY_SUBSCR        
+  28: PRECALL              
+  32: CALL                 
+  42: LOAD_GLOBAL          NULL + _safe_key
+  54: LOAD_FAST            t
+  56: LOAD_CONST           1
+  58: BINARY_SUBSCR        
+  68: PRECALL              
+  72: CALL                 
+  82: BUILD_TUPLE          
+  84: RETURN_VALUE         

@@ -1,0 +1,39 @@
+# Disassembly for _pydecimal._log10_lb
+# From module file: _pydecimal
+
+## co_consts:
+('Compute a lower bound for 100*log10(c) for a positive integer c.', 0, 'The argument to _log10_lb should be nonnegative.', 100)
+
+## co_names:
+('ValueError', 'str', 'len')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            c
+   4: LOAD_CONST           0
+   6: COMPARE_OP           <=
+  12: POP_JUMP_FORWARD_IF_FALSE to 44
+  14: LOAD_GLOBAL          NULL + ValueError
+  26: LOAD_CONST           'The argument to _log10_lb should be nonnegative.'
+  28: PRECALL              
+  32: CALL                 
+  42: RAISE_VARARGS        
+  44: LOAD_GLOBAL          NULL + str
+  56: LOAD_FAST            c
+  58: PRECALL              
+  62: CALL                 
+  72: STORE_FAST           str_c
+  74: LOAD_CONST           100
+  76: LOAD_GLOBAL          NULL + len
+  88: LOAD_FAST            str_c
+  90: PRECALL              
+  94: CALL                 
+ 104: BINARY_OP            *
+ 108: LOAD_FAST            correction
+ 110: LOAD_FAST            str_c
+ 112: LOAD_CONST           0
+ 114: BINARY_SUBSCR        
+ 124: BINARY_SUBSCR        
+ 134: BINARY_OP            -
+ 138: RETURN_VALUE         

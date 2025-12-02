@@ -1,0 +1,19 @@
+# Disassembly for importlib.PackagePath.locate
+# From module file: importlib.metadata
+
+## co_consts:
+('Return a path-like object for this path',)
+
+## co_names:
+('dist', 'locate_file')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            dist
+  14: LOAD_METHOD          locate_file
+  36: LOAD_FAST            self
+  38: PRECALL              
+  42: CALL                 
+  52: RETURN_VALUE         

@@ -1,0 +1,208 @@
+# Disassembly for email.AddrlistClass.getaddrspec
+# From module file: email._parseaddr
+
+## co_consts:
+('Parse an RFC 2822 addr-spec.', True, '.', -1, 1, False, '"', '"%s"', '@')
+
+## co_names:
+('gotonext', 'pos', 'len', 'field', 'strip', 'pop', 'append', 'quote', 'getquote', 'atomends', 'getatom', 'EMPTYSTRING', 'join', 'getdomain')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           aslist
+   6: LOAD_FAST            self
+   8: LOAD_METHOD          gotonext
+  30: PRECALL              
+  34: CALL                 
+  44: POP_TOP              
+  46: LOAD_FAST            self
+  48: LOAD_ATTR            pos
+  58: LOAD_GLOBAL          NULL + len
+  70: LOAD_FAST            self
+  72: LOAD_ATTR            field
+  82: PRECALL              
+  86: CALL                 
+  96: COMPARE_OP           <
+ 102: EXTENDED_ARG         
+ 104: POP_JUMP_FORWARD_IF_FALSE to 862
+ 106: LOAD_CONST           True
+ 108: STORE_FAST           preserve_ws
+ 110: LOAD_FAST            self
+ 112: LOAD_ATTR            field
+ 122: LOAD_FAST            self
+ 124: LOAD_ATTR            pos
+ 134: BINARY_SUBSCR        
+ 144: LOAD_CONST           '.'
+ 146: COMPARE_OP           ==
+ 152: POP_JUMP_FORWARD_IF_FALSE to 330
+ 154: LOAD_FAST            aslist
+ 156: POP_JUMP_FORWARD_IF_FALSE to 250
+ 158: LOAD_FAST            aslist
+ 160: LOAD_CONST           -1
+ 162: BINARY_SUBSCR        
+ 172: LOAD_METHOD          strip
+ 194: PRECALL              
+ 198: CALL                 
+ 208: POP_JUMP_FORWARD_IF_TRUE to 250
+ 210: LOAD_FAST            aslist
+ 212: LOAD_METHOD          pop
+ 234: PRECALL              
+ 238: CALL                 
+ 248: POP_TOP              
+ 250: LOAD_FAST            aslist
+ 252: LOAD_METHOD          append
+ 274: LOAD_CONST           '.'
+ 276: PRECALL              
+ 280: CALL                 
+ 290: POP_TOP              
+ 292: LOAD_FAST            self
+ 294: COPY                 
+ 296: LOAD_ATTR            pos
+ 306: LOAD_CONST           1
+ 308: BINARY_OP            +=
+ 312: SWAP                 
+ 314: STORE_ATTR           pos
+ 324: LOAD_CONST           False
+ 326: STORE_FAST           preserve_ws
+ 328: JUMP_FORWARD         to 712
+ 330: LOAD_FAST            self
+ 332: LOAD_ATTR            field
+ 342: LOAD_FAST            self
+ 344: LOAD_ATTR            pos
+ 354: BINARY_SUBSCR        
+ 364: LOAD_CONST           '"'
+ 366: COMPARE_OP           ==
+ 372: POP_JUMP_FORWARD_IF_FALSE to 486
+ 374: LOAD_FAST            aslist
+ 376: LOAD_METHOD          append
+ 398: LOAD_CONST           '"%s"'
+ 400: LOAD_GLOBAL          NULL + quote
+ 412: LOAD_FAST            self
+ 414: LOAD_METHOD          getquote
+ 436: PRECALL              
+ 440: CALL                 
+ 450: PRECALL              
+ 454: CALL                 
+ 464: BINARY_OP            %
+ 468: PRECALL              
+ 472: CALL                 
+ 482: POP_TOP              
+ 484: JUMP_FORWARD         to 712
+ 486: LOAD_FAST            self
+ 488: LOAD_ATTR            field
+ 498: LOAD_FAST            self
+ 500: LOAD_ATTR            pos
+ 510: BINARY_SUBSCR        
+ 520: LOAD_FAST            self
+ 522: LOAD_ATTR            atomends
+ 532: CONTAINS_OP          
+ 534: POP_JUMP_FORWARD_IF_FALSE to 634
+ 536: LOAD_FAST            aslist
+ 538: POP_JUMP_FORWARD_IF_FALSE to 632
+ 540: LOAD_FAST            aslist
+ 542: LOAD_CONST           -1
+ 544: BINARY_SUBSCR        
+ 554: LOAD_METHOD          strip
+ 576: PRECALL              
+ 580: CALL                 
+ 590: POP_JUMP_FORWARD_IF_TRUE to 632
+ 592: LOAD_FAST            aslist
+ 594: LOAD_METHOD          pop
+ 616: PRECALL              
+ 620: CALL                 
+ 630: POP_TOP              
+ 632: JUMP_FORWARD         to 862
+ 634: LOAD_FAST            aslist
+ 636: LOAD_METHOD          append
+ 658: LOAD_FAST            self
+ 660: LOAD_METHOD          getatom
+ 682: PRECALL              
+ 686: CALL                 
+ 696: PRECALL              
+ 700: CALL                 
+ 710: POP_TOP              
+ 712: LOAD_FAST            self
+ 714: LOAD_METHOD          gotonext
+ 736: PRECALL              
+ 740: CALL                 
+ 750: STORE_FAST           ws
+ 752: LOAD_FAST            preserve_ws
+ 754: POP_JUMP_FORWARD_IF_FALSE to 802
+ 756: LOAD_FAST            ws
+ 758: POP_JUMP_FORWARD_IF_FALSE to 802
+ 760: LOAD_FAST            aslist
+ 762: LOAD_METHOD          append
+ 784: LOAD_FAST            ws
+ 786: PRECALL              
+ 790: CALL                 
+ 800: POP_TOP              
+ 802: LOAD_FAST            self
+ 804: LOAD_ATTR            pos
+ 814: LOAD_GLOBAL          NULL + len
+ 826: LOAD_FAST            self
+ 828: LOAD_ATTR            field
+ 838: PRECALL              
+ 842: CALL                 
+ 852: COMPARE_OP           <
+ 858: EXTENDED_ARG         
+ 860: POP_JUMP_BACKWARD_IF_TRUE to 106
+ 862: LOAD_FAST            self
+ 864: LOAD_ATTR            pos
+ 874: LOAD_GLOBAL          NULL + len
+ 886: LOAD_FAST            self
+ 888: LOAD_ATTR            field
+ 898: PRECALL              
+ 902: CALL                 
+ 912: COMPARE_OP           >=
+ 918: POP_JUMP_FORWARD_IF_TRUE to 964
+ 920: LOAD_FAST            self
+ 922: LOAD_ATTR            field
+ 932: LOAD_FAST            self
+ 934: LOAD_ATTR            pos
+ 944: BINARY_SUBSCR        
+ 954: LOAD_CONST           '@'
+ 956: COMPARE_OP           !=
+ 962: POP_JUMP_FORWARD_IF_FALSE to 1016
+ 964: LOAD_GLOBAL          EMPTYSTRING
+ 976: LOAD_METHOD          join
+ 998: LOAD_FAST            aslist
+1000: PRECALL              
+1004: CALL                 
+1014: RETURN_VALUE         
+1016: LOAD_FAST            aslist
+1018: LOAD_METHOD          append
+1040: LOAD_CONST           '@'
+1042: PRECALL              
+1046: CALL                 
+1056: POP_TOP              
+1058: LOAD_FAST            self
+1060: COPY                 
+1062: LOAD_ATTR            pos
+1072: LOAD_CONST           1
+1074: BINARY_OP            +=
+1078: SWAP                 
+1080: STORE_ATTR           pos
+1090: LOAD_FAST            self
+1092: LOAD_METHOD          gotonext
+1114: PRECALL              
+1118: CALL                 
+1128: POP_TOP              
+1130: LOAD_FAST            self
+1132: LOAD_METHOD          getdomain
+1154: PRECALL              
+1158: CALL                 
+1168: STORE_FAST           domain
+1170: LOAD_FAST            domain
+1172: POP_JUMP_FORWARD_IF_TRUE to 1188
+1174: LOAD_GLOBAL          EMPTYSTRING
+1186: RETURN_VALUE         
+1188: LOAD_GLOBAL          EMPTYSTRING
+1200: LOAD_METHOD          join
+1222: LOAD_FAST            aslist
+1224: PRECALL              
+1228: CALL                 
+1238: LOAD_FAST            domain
+1240: BINARY_OP            +
+1244: RETURN_VALUE         

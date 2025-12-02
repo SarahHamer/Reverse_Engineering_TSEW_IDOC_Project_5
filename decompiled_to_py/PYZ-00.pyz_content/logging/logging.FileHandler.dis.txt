@@ -1,0 +1,36 @@
+# Disassembly for logging.FileHandler
+# From module file: logging
+
+## co_consts:
+('FileHandler', '\n    A handler class which writes formatted logging records to disk files.\n    ', 'a', None, False, <code object __init__ at 0x0000024068E1DBC0, file "logging\__init__.py", line 1156>, <code object close at 0x0000024068DC1E00, file "logging\__init__.py", line 1183>, <code object _open at 0x000002406944A670, file "logging\__init__.py", line 1207>, <code object emit at 0x000002406949C8D0, file "logging\__init__.py", line 1216>, <code object __repr__ at 0x000002406941A9D0, file "logging\__init__.py", line 1232>, ('a', None, False, None))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', 'close', '_open', 'emit', '__repr__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'FileHandler'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           '\n    A handler class which writes formatted logging records to disk files.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ('a', None, False, None)
+  16: LOAD_CONST           <code object __init__ at 0x0000024068E1DBC0, file "logging\__init__.py", line 1156>
+  18: MAKE_FUNCTION        defaults
+  20: STORE_NAME           __init__
+  22: LOAD_CONST           <code object close at 0x0000024068DC1E00, file "logging\__init__.py", line 1183>
+  24: MAKE_FUNCTION        
+  26: STORE_NAME           close
+  28: LOAD_CONST           <code object _open at 0x000002406944A670, file "logging\__init__.py", line 1207>
+  30: MAKE_FUNCTION        
+  32: STORE_NAME           _open
+  34: LOAD_CONST           <code object emit at 0x000002406949C8D0, file "logging\__init__.py", line 1216>
+  36: MAKE_FUNCTION        
+  38: STORE_NAME           emit
+  40: LOAD_CONST           <code object __repr__ at 0x000002406941A9D0, file "logging\__init__.py", line 1232>
+  42: MAKE_FUNCTION        
+  44: STORE_NAME           __repr__
+  46: LOAD_CONST           None
+  48: RETURN_VALUE         

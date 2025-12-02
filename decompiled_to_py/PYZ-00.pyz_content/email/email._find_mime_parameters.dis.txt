@@ -1,0 +1,95 @@
+# Disassembly for email._find_mime_parameters
+# From module file: email._header_value_parser
+
+## co_consts:
+('Do our best to find the parameters in an invalid MIME header\n\n    ', 0, ';', 'misplaced-special', 1, None, 'parameter-separator')
+
+## co_names:
+('PHRASE_ENDS', 'append', 'ValueTerminal', 'get_phrase', 'parse_mime_parameters')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            value
+   4: POP_JUMP_FORWARD_IF_FALSE to 270
+   6: LOAD_FAST            value
+   8: LOAD_CONST           0
+  10: BINARY_SUBSCR        
+  20: LOAD_CONST           ';'
+  22: COMPARE_OP           !=
+  28: POP_JUMP_FORWARD_IF_FALSE to 270
+  30: LOAD_FAST            value
+  32: LOAD_CONST           0
+  34: BINARY_SUBSCR        
+  44: LOAD_GLOBAL          PHRASE_ENDS
+  56: CONTAINS_OP          
+  58: POP_JUMP_FORWARD_IF_FALSE to 164
+  60: LOAD_FAST            tokenlist
+  62: LOAD_METHOD          append
+  84: LOAD_GLOBAL          NULL + ValueTerminal
+  96: LOAD_FAST            value
+  98: LOAD_CONST           0
+ 100: BINARY_SUBSCR        
+ 110: LOAD_CONST           'misplaced-special'
+ 112: PRECALL              
+ 116: CALL                 
+ 126: PRECALL              
+ 130: CALL                 
+ 140: POP_TOP              
+ 142: LOAD_FAST            value
+ 144: LOAD_CONST           1
+ 146: LOAD_CONST           None
+ 148: BUILD_SLICE          
+ 150: BINARY_SUBSCR        
+ 160: STORE_FAST           value
+ 162: JUMP_FORWARD         to 242
+ 164: LOAD_GLOBAL          NULL + get_phrase
+ 176: LOAD_FAST            value
+ 178: PRECALL              
+ 182: CALL                 
+ 192: UNPACK_SEQUENCE      
+ 196: STORE_FAST           token
+ 198: STORE_FAST           value
+ 200: LOAD_FAST            tokenlist
+ 202: LOAD_METHOD          append
+ 224: LOAD_FAST            token
+ 226: PRECALL              
+ 230: CALL                 
+ 240: POP_TOP              
+ 242: LOAD_FAST            value
+ 244: POP_JUMP_FORWARD_IF_FALSE to 270
+ 246: LOAD_FAST            value
+ 248: LOAD_CONST           0
+ 250: BINARY_SUBSCR        
+ 260: LOAD_CONST           ';'
+ 262: COMPARE_OP           !=
+ 268: POP_JUMP_BACKWARD_IF_TRUE to 30
+ 270: LOAD_FAST            value
+ 272: POP_JUMP_FORWARD_IF_TRUE to 278
+ 274: LOAD_CONST           None
+ 276: RETURN_VALUE         
+ 278: LOAD_FAST            tokenlist
+ 280: LOAD_METHOD          append
+ 302: LOAD_GLOBAL          NULL + ValueTerminal
+ 314: LOAD_CONST           ';'
+ 316: LOAD_CONST           'parameter-separator'
+ 318: PRECALL              
+ 322: CALL                 
+ 332: PRECALL              
+ 336: CALL                 
+ 346: POP_TOP              
+ 348: LOAD_FAST            tokenlist
+ 350: LOAD_METHOD          append
+ 372: LOAD_GLOBAL          NULL + parse_mime_parameters
+ 384: LOAD_FAST            value
+ 386: LOAD_CONST           1
+ 388: LOAD_CONST           None
+ 390: BUILD_SLICE          
+ 392: BINARY_SUBSCR        
+ 402: PRECALL              
+ 406: CALL                 
+ 416: PRECALL              
+ 420: CALL                 
+ 430: POP_TOP              
+ 432: LOAD_CONST           None
+ 434: RETURN_VALUE         

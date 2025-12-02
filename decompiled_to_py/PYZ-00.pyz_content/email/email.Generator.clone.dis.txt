@@ -1,0 +1,24 @@
+# Disassembly for email.Generator.clone
+# From module file: email.generator
+
+## co_consts:
+('Clone this generator with the exact same options.', None, ('policy',))
+
+## co_names:
+('__class__', '_mangle_from_', 'policy')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          __class__
+  26: LOAD_FAST            fp
+  28: LOAD_FAST            self
+  30: LOAD_ATTR            _mangle_from_
+  40: LOAD_CONST           None
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            policy
+  54: KW_NAMES             
+  56: PRECALL              
+  60: CALL                 
+  70: RETURN_VALUE         

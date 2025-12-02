@@ -1,0 +1,45 @@
+# Disassembly for pickle._dumps
+# From module file: pickle
+
+## co_consts:
+(None, ('fix_imports', 'buffer_callback'))
+
+## co_names:
+('io', 'BytesIO', '_Pickler', 'dump', 'getvalue', 'isinstance', 'bytes_types')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + io
+  14: LOAD_ATTR            BytesIO
+  24: PRECALL              
+  28: CALL                 
+  38: STORE_FAST           f
+  40: LOAD_GLOBAL          NULL + _Pickler
+  52: LOAD_FAST            f
+  54: LOAD_FAST            protocol
+  56: LOAD_FAST            fix_imports
+  58: LOAD_FAST            buffer_callback
+  60: KW_NAMES             
+  62: PRECALL              
+  66: CALL                 
+  76: LOAD_METHOD          dump
+  98: LOAD_FAST            obj
+ 100: PRECALL              
+ 104: CALL                 
+ 114: POP_TOP              
+ 116: LOAD_FAST            f
+ 118: LOAD_METHOD          getvalue
+ 140: PRECALL              
+ 144: CALL                 
+ 154: STORE_FAST           res
+ 156: LOAD_GLOBAL          NULL + isinstance
+ 168: LOAD_FAST            res
+ 170: LOAD_GLOBAL          bytes_types
+ 182: PRECALL              
+ 186: CALL                 
+ 196: POP_JUMP_FORWARD_IF_TRUE to 202
+ 198: LOAD_ASSERTION_ERROR 
+ 200: RAISE_VARARGS        
+ 202: LOAD_FAST            res
+ 204: RETURN_VALUE         

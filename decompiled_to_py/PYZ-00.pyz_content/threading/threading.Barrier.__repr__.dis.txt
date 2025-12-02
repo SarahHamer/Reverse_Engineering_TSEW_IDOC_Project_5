@@ -1,0 +1,62 @@
+# Disassembly for threading.Barrier.__repr__
+# From module file: threading
+
+## co_consts:
+(None, '<', '.', ' at ', '#x', ': broken>', ': waiters=', '/', '>')
+
+## co_names:
+('__class__', 'broken', '__module__', '__qualname__', 'id', 'n_waiting', 'parties')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            __class__
+  14: STORE_FAST           cls
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            broken
+  28: POP_JUMP_FORWARD_IF_FALSE to 102
+  30: LOAD_CONST           '<'
+  32: LOAD_FAST            cls
+  34: LOAD_ATTR            __module__
+  44: FORMAT_VALUE         
+  46: LOAD_CONST           '.'
+  48: LOAD_FAST            cls
+  50: LOAD_ATTR            __qualname__
+  60: FORMAT_VALUE         
+  62: LOAD_CONST           ' at '
+  64: LOAD_GLOBAL          NULL + id
+  76: LOAD_FAST            self
+  78: PRECALL              
+  82: CALL                 
+  92: LOAD_CONST           '#x'
+  94: FORMAT_VALUE         with format
+  96: LOAD_CONST           ': broken>'
+  98: BUILD_STRING         
+ 100: RETURN_VALUE         
+ 102: LOAD_CONST           '<'
+ 104: LOAD_FAST            cls
+ 106: LOAD_ATTR            __module__
+ 116: FORMAT_VALUE         
+ 118: LOAD_CONST           '.'
+ 120: LOAD_FAST            cls
+ 122: LOAD_ATTR            __qualname__
+ 132: FORMAT_VALUE         
+ 134: LOAD_CONST           ' at '
+ 136: LOAD_GLOBAL          NULL + id
+ 148: LOAD_FAST            self
+ 150: PRECALL              
+ 154: CALL                 
+ 164: LOAD_CONST           '#x'
+ 166: FORMAT_VALUE         with format
+ 168: LOAD_CONST           ': waiters='
+ 170: LOAD_FAST            self
+ 172: LOAD_ATTR            n_waiting
+ 182: FORMAT_VALUE         
+ 184: LOAD_CONST           '/'
+ 186: LOAD_FAST            self
+ 188: LOAD_ATTR            parties
+ 198: FORMAT_VALUE         
+ 200: LOAD_CONST           '>'
+ 202: BUILD_STRING         
+ 204: RETURN_VALUE         

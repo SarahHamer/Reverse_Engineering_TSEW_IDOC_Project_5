@@ -1,0 +1,47 @@
+# Disassembly for email.MIMEVersionHeader.init
+# From module file: email.headerregistry
+
+## co_consts:
+(None, 'version', 'major', 'minor')
+
+## co_names:
+('pop', '_version', '_major', '_minor', 'super', 'init')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_FAST            kw
+   6: LOAD_METHOD          pop
+  28: LOAD_CONST           'version'
+  30: PRECALL              
+  34: CALL                 
+  44: LOAD_FAST            self
+  46: STORE_ATTR           _version
+  56: LOAD_FAST            kw
+  58: LOAD_METHOD          pop
+  80: LOAD_CONST           'major'
+  82: PRECALL              
+  86: CALL                 
+  96: LOAD_FAST            self
+  98: STORE_ATTR           _major
+ 108: LOAD_FAST            kw
+ 110: LOAD_METHOD          pop
+ 132: LOAD_CONST           'minor'
+ 134: PRECALL              
+ 138: CALL                 
+ 148: LOAD_FAST            self
+ 150: STORE_ATTR           _minor
+ 160: PUSH_NULL            
+ 162: LOAD_GLOBAL          NULL + super
+ 174: PRECALL              
+ 178: CALL                 
+ 188: LOAD_ATTR            init
+ 198: LOAD_FAST            args
+ 200: BUILD_MAP            
+ 202: LOAD_FAST            kw
+ 204: DICT_MERGE           
+ 206: CALL_FUNCTION_EX     
+ 208: POP_TOP              
+ 210: LOAD_CONST           None
+ 212: RETURN_VALUE         

@@ -1,0 +1,20 @@
+# Disassembly for subprocess.Popen.universal_newlines
+# From module file: subprocess
+
+## co_consts:
+(None,)
+
+## co_names:
+('bool', 'text_mode')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + bool
+  14: LOAD_FAST            universal_newlines
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_FAST            self
+  32: STORE_ATTR           text_mode
+  42: LOAD_CONST           None
+  44: RETURN_VALUE         

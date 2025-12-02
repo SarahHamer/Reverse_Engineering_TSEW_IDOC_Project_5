@@ -1,0 +1,39 @@
+# Disassembly for zipfile.CompleteDirs._implied_dirs
+# From module file: zipfile
+
+## co_consts:
+(None, <code object <genexpr> at 0x0000024069CF64C0, file "zipfile.py", line 2235>)
+
+## co_names:
+('itertools', 'chain', 'from_iterable', 'map', '_parents', '_dedupe', '_difference')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          itertools
+  14: LOAD_ATTR            chain
+  24: LOAD_METHOD          from_iterable
+  46: LOAD_GLOBAL          NULL + map
+  58: LOAD_GLOBAL          _parents
+  70: LOAD_FAST            names
+  72: PRECALL              
+  76: CALL                 
+  86: PRECALL              
+  90: CALL                 
+ 100: STORE_FAST           parents
+ 102: LOAD_CONST           <code object <genexpr> at 0x0000024069CF64C0, file "zipfile.py", line 2235>
+ 104: MAKE_FUNCTION        
+ 106: LOAD_FAST            parents
+ 108: GET_ITER             
+ 110: PRECALL              
+ 114: CALL                 
+ 124: STORE_FAST           as_dirs
+ 126: LOAD_GLOBAL          NULL + _dedupe
+ 138: LOAD_GLOBAL          NULL + _difference
+ 150: LOAD_FAST            as_dirs
+ 152: LOAD_FAST            names
+ 154: PRECALL              
+ 158: CALL                 
+ 168: PRECALL              
+ 172: CALL                 
+ 182: RETURN_VALUE         

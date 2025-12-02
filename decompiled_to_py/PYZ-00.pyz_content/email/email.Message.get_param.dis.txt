@@ -1,0 +1,55 @@
+# Disassembly for email.Message.get_param
+# From module file: email.message
+
+## co_consts:
+("Return the parameter value if found in the Content-Type header.\n\n        Optional failobj is the object to return if there is no Content-Type\n        header, or the Content-Type header has no such parameter.  Optional\n        header is the header to search instead of Content-Type.\n\n        Parameter keys are always compared case insensitively.  The return\n        value can either be a string, or a 3-tuple if the parameter was RFC\n        2231 encoded.  When it's a 3-tuple, the elements of the value are of\n        the form (CHARSET, LANGUAGE, VALUE).  Note that both CHARSET and\n        LANGUAGE can be None, in which case you should consider VALUE to be\n        encoded in the us-ascii charset.  You can usually ignore LANGUAGE.\n        The parameter value (either the returned string, or the VALUE item in\n        the 3-tuple) is always unquoted, unless unquote is set to False.\n\n        If your application doesn't care whether the parameter was RFC 2231\n        encoded, it can turn the return value into a string as follows:\n\n            rawparam = msg.get_param('foo')\n            param = email.utils.collapse_rfc2231_value(rawparam)\n\n        ",)
+
+## co_names:
+('_get_params_preserve', 'lower', '_unquotevalue')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            header
+   4: LOAD_FAST            self
+   6: CONTAINS_OP          
+   8: POP_JUMP_FORWARD_IF_FALSE to 14
+  10: LOAD_FAST            failobj
+  12: RETURN_VALUE         
+  14: LOAD_FAST            self
+  16: LOAD_METHOD          _get_params_preserve
+  38: LOAD_FAST            failobj
+  40: LOAD_FAST            header
+  42: PRECALL              
+  46: CALL                 
+  56: GET_ITER             
+  58: FOR_ITER             to 200
+  60: UNPACK_SEQUENCE      
+  64: STORE_FAST           k
+  66: STORE_FAST           v
+  68: LOAD_FAST            k
+  70: LOAD_METHOD          lower
+  92: PRECALL              
+  96: CALL                 
+ 106: LOAD_FAST            param
+ 108: LOAD_METHOD          lower
+ 130: PRECALL              
+ 134: CALL                 
+ 144: COMPARE_OP           ==
+ 150: POP_JUMP_FORWARD_IF_FALSE to 198
+ 152: LOAD_FAST            unquote
+ 154: POP_JUMP_FORWARD_IF_FALSE to 190
+ 156: LOAD_GLOBAL          NULL + _unquotevalue
+ 168: LOAD_FAST            v
+ 170: PRECALL              
+ 174: CALL                 
+ 184: SWAP                 
+ 186: POP_TOP              
+ 188: RETURN_VALUE         
+ 190: LOAD_FAST            v
+ 192: SWAP                 
+ 194: POP_TOP              
+ 196: RETURN_VALUE         
+ 198: JUMP_BACKWARD        to 58
+ 200: LOAD_FAST            failobj
+ 202: RETURN_VALUE         

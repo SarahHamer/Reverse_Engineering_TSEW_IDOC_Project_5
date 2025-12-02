@@ -1,0 +1,22 @@
+# Disassembly for importlib.resources.FileReader.resource_path
+# From module file: importlib.resources.readers
+
+## co_consts:
+('\n        Return the file system path to prevent\n        `resources.path()` from creating a temporary\n        copy.\n        ',)
+
+## co_names:
+('str', 'path', 'joinpath')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + str
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            path
+  26: LOAD_METHOD          joinpath
+  48: LOAD_FAST            resource
+  50: PRECALL              
+  54: CALL                 
+  64: PRECALL              
+  68: CALL                 
+  78: RETURN_VALUE         

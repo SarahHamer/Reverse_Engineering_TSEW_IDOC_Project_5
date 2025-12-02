@@ -1,0 +1,153 @@
+# Disassembly for left
+# From module file: left
+
+## co_consts:
+(0, ('*',), None, 10, 15, 12, 17, 14, 19, ('Shark', 'Cat', 'Lion', 'Dog', 'Snake', 'Mouse'), <code object AnimalChart at 0x00000240693ABAF0, file "left.py", line 15>, 'AnimalChart', 'A', 'Z', 1, <code object CryptoCypherCard at 0x00000240693AB230, file "left.py", line 46>, 'CryptoCypherCard', <code object Computer at 0x00000240693AB9B0, file "left.py", line 75>, 'Computer', <code object Safe at 0x00000240693AB5F0, file "left.py", line 114>, 'Safe', <code object Left at 0x00000240691F3B40, file "left.py", line 151>, 'Left')
+
+## co_names:
+('entities', 'random', 'animals', 'Item', 'AnimalChart', 'letters', 'range', 'ord', 'code', 'append', 'chr', 'reverse', 'copy', 'letters_shuffled', 'shuffle', 'cypher', 'len', 'pop', 'CryptoCypherCard', 'Computer', 'Safe', 'Room', 'Left')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           ('*',)
+   6: IMPORT_NAME          entities
+   8: IMPORT_STAR          
+  10: LOAD_CONST           0
+  12: LOAD_CONST           None
+  14: IMPORT_NAME          random
+  16: STORE_NAME           random
+  18: LOAD_CONST           10
+  20: LOAD_CONST           15
+  22: LOAD_CONST           12
+  24: LOAD_CONST           17
+  26: LOAD_CONST           14
+  28: LOAD_CONST           19
+  30: LOAD_CONST           ('Shark', 'Cat', 'Lion', 'Dog', 'Snake', 'Mouse')
+  32: BUILD_CONST_KEY_MAP  
+  34: STORE_GLOBAL         animals
+  36: PUSH_NULL            
+  38: LOAD_BUILD_CLASS     
+  40: LOAD_CONST           <code object AnimalChart at 0x00000240693ABAF0, file "left.py", line 15>
+  42: MAKE_FUNCTION        
+  44: LOAD_CONST           'AnimalChart'
+  46: LOAD_NAME            Item
+  48: PRECALL              
+  52: CALL                 
+  62: STORE_NAME           AnimalChart
+  64: BUILD_LIST           
+  66: STORE_NAME           letters
+  68: PUSH_NULL            
+  70: LOAD_NAME            range
+  72: PUSH_NULL            
+  74: LOAD_NAME            ord
+  76: LOAD_CONST           'A'
+  78: PRECALL              
+  82: CALL                 
+  92: PUSH_NULL            
+  94: LOAD_NAME            ord
+  96: LOAD_CONST           'Z'
+  98: PRECALL              
+ 102: CALL                 
+ 112: LOAD_CONST           1
+ 114: BINARY_OP            +
+ 118: PRECALL              
+ 122: CALL                 
+ 132: GET_ITER             
+ 134: FOR_ITER             to 200
+ 136: STORE_NAME           code
+ 138: LOAD_NAME            letters
+ 140: LOAD_METHOD          append
+ 162: PUSH_NULL            
+ 164: LOAD_NAME            chr
+ 166: LOAD_NAME            code
+ 168: PRECALL              
+ 172: CALL                 
+ 182: PRECALL              
+ 186: CALL                 
+ 196: POP_TOP              
+ 198: JUMP_BACKWARD        to 134
+ 200: LOAD_NAME            letters
+ 202: LOAD_METHOD          reverse
+ 224: PRECALL              
+ 228: CALL                 
+ 238: POP_TOP              
+ 240: LOAD_NAME            letters
+ 242: LOAD_METHOD          copy
+ 264: PRECALL              
+ 268: CALL                 
+ 278: STORE_NAME           letters_shuffled
+ 280: PUSH_NULL            
+ 282: LOAD_NAME            random
+ 284: LOAD_ATTR            shuffle
+ 294: LOAD_NAME            letters_shuffled
+ 296: PRECALL              
+ 300: CALL                 
+ 310: POP_TOP              
+ 312: BUILD_MAP            
+ 314: STORE_GLOBAL         cypher
+ 316: PUSH_NULL            
+ 318: LOAD_NAME            len
+ 320: LOAD_NAME            letters
+ 322: PRECALL              
+ 326: CALL                 
+ 336: LOAD_CONST           0
+ 338: COMPARE_OP           >
+ 344: POP_JUMP_FORWARD_IF_FALSE to 468
+ 346: LOAD_NAME            letters_shuffled
+ 348: LOAD_METHOD          pop
+ 370: PRECALL              
+ 374: CALL                 
+ 384: LOAD_GLOBAL          cypher
+ 396: LOAD_NAME            letters
+ 398: LOAD_METHOD          pop
+ 420: PRECALL              
+ 424: CALL                 
+ 434: STORE_SUBSCR         
+ 438: PUSH_NULL            
+ 440: LOAD_NAME            len
+ 442: LOAD_NAME            letters
+ 444: PRECALL              
+ 448: CALL                 
+ 458: LOAD_CONST           0
+ 460: COMPARE_OP           >
+ 466: POP_JUMP_BACKWARD_IF_TRUE to 346
+ 468: PUSH_NULL            
+ 470: LOAD_BUILD_CLASS     
+ 472: LOAD_CONST           <code object CryptoCypherCard at 0x00000240693AB230, file "left.py", line 46>
+ 474: MAKE_FUNCTION        
+ 476: LOAD_CONST           'CryptoCypherCard'
+ 478: LOAD_NAME            Item
+ 480: PRECALL              
+ 484: CALL                 
+ 494: STORE_NAME           CryptoCypherCard
+ 496: PUSH_NULL            
+ 498: LOAD_BUILD_CLASS     
+ 500: LOAD_CONST           <code object Computer at 0x00000240693AB9B0, file "left.py", line 75>
+ 502: MAKE_FUNCTION        
+ 504: LOAD_CONST           'Computer'
+ 506: LOAD_NAME            Item
+ 508: PRECALL              
+ 512: CALL                 
+ 522: STORE_NAME           Computer
+ 524: PUSH_NULL            
+ 526: LOAD_BUILD_CLASS     
+ 528: LOAD_CONST           <code object Safe at 0x00000240693AB5F0, file "left.py", line 114>
+ 530: MAKE_FUNCTION        
+ 532: LOAD_CONST           'Safe'
+ 534: LOAD_NAME            Item
+ 536: PRECALL              
+ 540: CALL                 
+ 550: STORE_NAME           Safe
+ 552: PUSH_NULL            
+ 554: LOAD_BUILD_CLASS     
+ 556: LOAD_CONST           <code object Left at 0x00000240691F3B40, file "left.py", line 151>
+ 558: MAKE_FUNCTION        
+ 560: LOAD_CONST           'Left'
+ 562: LOAD_NAME            Room
+ 564: PRECALL              
+ 568: CALL                 
+ 578: STORE_NAME           Left
+ 580: LOAD_CONST           None
+ 582: RETURN_VALUE         

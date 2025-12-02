@@ -1,0 +1,14 @@
+# Disassembly for numbers.Real.__float__
+# From module file: numbers
+
+## co_consts:
+('Any Real can be converted to a native float object.\n\n        Called for float(self).',)
+
+## co_names:
+('NotImplementedError',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NotImplementedError
+  14: RAISE_VARARGS        

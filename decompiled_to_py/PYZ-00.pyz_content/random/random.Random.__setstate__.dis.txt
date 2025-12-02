@@ -1,0 +1,20 @@
+# Disassembly for random.Random.__setstate__
+# From module file: random
+
+## co_consts:
+(None,)
+
+## co_names:
+('setstate',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          setstate
+  26: LOAD_FAST            state
+  28: PRECALL              
+  32: CALL                 
+  42: POP_TOP              
+  44: LOAD_CONST           None
+  46: RETURN_VALUE         

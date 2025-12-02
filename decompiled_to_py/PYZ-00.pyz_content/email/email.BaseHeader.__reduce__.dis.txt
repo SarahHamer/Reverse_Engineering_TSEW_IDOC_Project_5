@@ -1,0 +1,30 @@
+# Disassembly for email.BaseHeader.__reduce__
+# From module file: email.headerregistry
+
+## co_consts:
+(None,)
+
+## co_names:
+('_reconstruct_header', '__class__', '__name__', '__bases__', 'str', '__getstate__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _reconstruct_header
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            __class__
+  26: LOAD_ATTR            __name__
+  36: LOAD_FAST            self
+  38: LOAD_ATTR            __class__
+  48: LOAD_ATTR            __bases__
+  58: LOAD_GLOBAL          NULL + str
+  70: LOAD_FAST            self
+  72: PRECALL              
+  76: CALL                 
+  86: BUILD_TUPLE          
+  88: LOAD_FAST            self
+  90: LOAD_METHOD          __getstate__
+ 112: PRECALL              
+ 116: CALL                 
+ 126: BUILD_TUPLE          
+ 128: RETURN_VALUE         

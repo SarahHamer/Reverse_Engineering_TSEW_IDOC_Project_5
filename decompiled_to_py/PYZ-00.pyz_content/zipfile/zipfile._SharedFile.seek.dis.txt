@@ -1,0 +1,64 @@
+# Disassembly for zipfile._SharedFile.seek
+# From module file: zipfile
+
+## co_consts:
+(None, "Can't reposition in the ZIP file while there is an open writing handle on it. Close the writing handle before trying to read.")
+
+## co_names:
+('_lock', '_writing', 'ValueError', '_file', 'seek', 'tell', '_pos')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _lock
+  14: BEFORE_WITH          
+  16: POP_TOP              
+  18: LOAD_FAST            self
+  20: LOAD_METHOD          _writing
+  42: PRECALL              
+  46: CALL                 
+  56: POP_JUMP_FORWARD_IF_FALSE to 88
+  58: LOAD_GLOBAL          NULL + ValueError
+  70: LOAD_CONST           "Can't reposition in the ZIP file while there is an open writing handle on it. Close the writing handle before trying to read."
+  72: PRECALL              
+  76: CALL                 
+  86: RAISE_VARARGS        
+  88: LOAD_FAST            self
+  90: LOAD_ATTR            _file
+ 100: LOAD_METHOD          seek
+ 122: LOAD_FAST            offset
+ 124: LOAD_FAST            whence
+ 126: PRECALL              
+ 130: CALL                 
+ 140: POP_TOP              
+ 142: LOAD_FAST            self
+ 144: LOAD_ATTR            _file
+ 154: LOAD_METHOD          tell
+ 176: PRECALL              
+ 180: CALL                 
+ 190: LOAD_FAST            self
+ 192: STORE_ATTR           _pos
+ 202: LOAD_FAST            self
+ 204: LOAD_ATTR            _pos
+ 214: SWAP                 
+ 216: LOAD_CONST           None
+ 218: LOAD_CONST           None
+ 220: LOAD_CONST           None
+ 222: PRECALL              
+ 226: CALL                 
+ 236: POP_TOP              
+ 238: RETURN_VALUE         
+ 240: PUSH_EXC_INFO        
+ 242: WITH_EXCEPT_START    
+ 244: POP_JUMP_FORWARD_IF_TRUE to 254
+ 246: RERAISE              
+ 248: COPY                 
+ 250: POP_EXCEPT           
+ 252: RERAISE              
+ 254: POP_TOP              
+ 256: POP_EXCEPT           
+ 258: POP_TOP              
+ 260: POP_TOP              
+ 262: LOAD_CONST           None
+ 264: RETURN_VALUE         

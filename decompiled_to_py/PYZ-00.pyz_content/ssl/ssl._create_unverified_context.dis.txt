@@ -1,0 +1,136 @@
+# Disassembly for ssl._create_unverified_context
+# From module file: ssl
+
+## co_consts:
+("Create a SSLContext object for Python stdlib modules\n\n    All Python stdlib modules shall use this function to create SSLContext\n    objects in order to keep common settings in one place. The configuration\n    is less restrict than create_default_context()'s to increase backward\n    compatibility.\n    ", None, True, 'certfile must be specified', 'keylog_filename', 'SSLKEYLOGFILE')
+
+## co_names:
+('isinstance', '_ASN1Object', 'TypeError', 'Purpose', 'SERVER_AUTH', 'PROTOCOL_TLS_CLIENT', 'CLIENT_AUTH', 'PROTOCOL_TLS_SERVER', 'ValueError', 'SSLContext', 'check_hostname', 'verify_mode', 'load_cert_chain', 'load_verify_locations', 'CERT_NONE', 'load_default_certs', 'hasattr', 'os', 'environ', 'get', 'sys', 'flags', 'ignore_environment', 'keylog_filename')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            purpose
+  16: LOAD_GLOBAL          _ASN1Object
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_TRUE to 74
+  44: LOAD_GLOBAL          NULL + TypeError
+  56: LOAD_FAST            purpose
+  58: PRECALL              
+  62: CALL                 
+  72: RAISE_VARARGS        
+  74: LOAD_FAST            purpose
+  76: LOAD_GLOBAL          Purpose
+  88: LOAD_ATTR            SERVER_AUTH
+  98: COMPARE_OP           ==
+ 104: POP_JUMP_FORWARD_IF_FALSE to 126
+ 106: LOAD_FAST            protocol
+ 108: POP_JUMP_FORWARD_IF_NOT_NONE to 124
+ 110: LOAD_GLOBAL          PROTOCOL_TLS_CLIENT
+ 122: STORE_FAST           protocol
+ 124: JUMP_FORWARD         to 208
+ 126: LOAD_FAST            purpose
+ 128: LOAD_GLOBAL          Purpose
+ 140: LOAD_ATTR            CLIENT_AUTH
+ 150: COMPARE_OP           ==
+ 156: POP_JUMP_FORWARD_IF_FALSE to 178
+ 158: LOAD_FAST            protocol
+ 160: POP_JUMP_FORWARD_IF_NOT_NONE to 176
+ 162: LOAD_GLOBAL          PROTOCOL_TLS_SERVER
+ 174: STORE_FAST           protocol
+ 176: JUMP_FORWARD         to 208
+ 178: LOAD_GLOBAL          NULL + ValueError
+ 190: LOAD_FAST            purpose
+ 192: PRECALL              
+ 196: CALL                 
+ 206: RAISE_VARARGS        
+ 208: LOAD_GLOBAL          NULL + SSLContext
+ 220: LOAD_FAST            protocol
+ 222: PRECALL              
+ 226: CALL                 
+ 236: STORE_FAST           context
+ 238: LOAD_FAST            check_hostname
+ 240: LOAD_FAST            context
+ 242: STORE_ATTR           check_hostname
+ 252: LOAD_FAST            cert_reqs
+ 254: POP_JUMP_FORWARD_IF_NONE to 270
+ 256: LOAD_FAST            cert_reqs
+ 258: LOAD_FAST            context
+ 260: STORE_ATTR           verify_mode
+ 270: LOAD_FAST            check_hostname
+ 272: POP_JUMP_FORWARD_IF_FALSE to 288
+ 274: LOAD_CONST           True
+ 276: LOAD_FAST            context
+ 278: STORE_ATTR           check_hostname
+ 288: LOAD_FAST            keyfile
+ 290: POP_JUMP_FORWARD_IF_FALSE to 326
+ 292: LOAD_FAST            certfile
+ 294: POP_JUMP_FORWARD_IF_TRUE to 326
+ 296: LOAD_GLOBAL          NULL + ValueError
+ 308: LOAD_CONST           'certfile must be specified'
+ 310: PRECALL              
+ 314: CALL                 
+ 324: RAISE_VARARGS        
+ 326: LOAD_FAST            certfile
+ 328: POP_JUMP_FORWARD_IF_TRUE to 334
+ 330: LOAD_FAST            keyfile
+ 332: POP_JUMP_FORWARD_IF_FALSE to 378
+ 334: LOAD_FAST            context
+ 336: LOAD_METHOD          load_cert_chain
+ 358: LOAD_FAST            certfile
+ 360: LOAD_FAST            keyfile
+ 362: PRECALL              
+ 366: CALL                 
+ 376: POP_TOP              
+ 378: LOAD_FAST            cafile
+ 380: POP_JUMP_FORWARD_IF_TRUE to 390
+ 382: LOAD_FAST            capath
+ 384: POP_JUMP_FORWARD_IF_TRUE to 390
+ 386: LOAD_FAST            cadata
+ 388: POP_JUMP_FORWARD_IF_FALSE to 438
+ 390: LOAD_FAST            context
+ 392: LOAD_METHOD          load_verify_locations
+ 414: LOAD_FAST            cafile
+ 416: LOAD_FAST            capath
+ 418: LOAD_FAST            cadata
+ 420: PRECALL              
+ 424: CALL                 
+ 434: POP_TOP              
+ 436: JUMP_FORWARD         to 512
+ 438: LOAD_FAST            context
+ 440: LOAD_ATTR            verify_mode
+ 450: LOAD_GLOBAL          CERT_NONE
+ 462: COMPARE_OP           !=
+ 468: POP_JUMP_FORWARD_IF_FALSE to 512
+ 470: LOAD_FAST            context
+ 472: LOAD_METHOD          load_default_certs
+ 494: LOAD_FAST            purpose
+ 496: PRECALL              
+ 500: CALL                 
+ 510: POP_TOP              
+ 512: LOAD_GLOBAL          NULL + hasattr
+ 524: LOAD_FAST            context
+ 526: LOAD_CONST           'keylog_filename'
+ 528: PRECALL              
+ 532: CALL                 
+ 542: POP_JUMP_FORWARD_IF_FALSE to 658
+ 544: LOAD_GLOBAL          os
+ 556: LOAD_ATTR            environ
+ 566: LOAD_METHOD          get
+ 588: LOAD_CONST           'SSLKEYLOGFILE'
+ 590: PRECALL              
+ 594: CALL                 
+ 604: STORE_FAST           keylogfile
+ 606: LOAD_FAST            keylogfile
+ 608: POP_JUMP_FORWARD_IF_FALSE to 658
+ 610: LOAD_GLOBAL          sys
+ 622: LOAD_ATTR            flags
+ 632: LOAD_ATTR            ignore_environment
+ 642: POP_JUMP_FORWARD_IF_TRUE to 658
+ 644: LOAD_FAST            keylogfile
+ 646: LOAD_FAST            context
+ 648: STORE_ATTR           keylog_filename
+ 658: LOAD_FAST            context
+ 660: RETURN_VALUE         

@@ -1,0 +1,39 @@
+# Disassembly for _pydecimal.Decimal._islogical
+# From module file: _pydecimal
+
+## co_consts:
+('Return True if self is a logical operand.\n\n        For being logical, it must be a finite number with a sign of 0,\n        an exponent of 0, and a coefficient whose digits must all be\n        either 0 or 1.\n        ', 0, False, '01', True)
+
+## co_names:
+('_sign', '_exp', '_int')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _sign
+  14: LOAD_CONST           0
+  16: COMPARE_OP           !=
+  22: POP_JUMP_FORWARD_IF_TRUE to 46
+  24: LOAD_FAST            self
+  26: LOAD_ATTR            _exp
+  36: LOAD_CONST           0
+  38: COMPARE_OP           !=
+  44: POP_JUMP_FORWARD_IF_FALSE to 50
+  46: LOAD_CONST           False
+  48: RETURN_VALUE         
+  50: LOAD_FAST            self
+  52: LOAD_ATTR            _int
+  62: GET_ITER             
+  64: FOR_ITER             to 84
+  66: STORE_FAST           dig
+  68: LOAD_FAST            dig
+  70: LOAD_CONST           '01'
+  72: CONTAINS_OP          
+  74: POP_JUMP_FORWARD_IF_FALSE to 82
+  76: POP_TOP              
+  78: LOAD_CONST           False
+  80: RETURN_VALUE         
+  82: JUMP_BACKWARD        to 64
+  84: LOAD_CONST           True
+  86: RETURN_VALUE         

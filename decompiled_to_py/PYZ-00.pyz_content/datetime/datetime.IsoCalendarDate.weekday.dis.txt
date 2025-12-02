@@ -1,0 +1,16 @@
+# Disassembly for datetime.IsoCalendarDate.weekday
+# From module file: datetime
+
+## co_consts:
+(None, 2)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_CONST           2
+   6: BINARY_SUBSCR        
+  16: RETURN_VALUE         

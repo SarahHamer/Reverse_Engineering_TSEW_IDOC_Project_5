@@ -1,0 +1,42 @@
+# Disassembly for copy._deepcopy_list
+# From module file: copy
+
+## co_consts:
+(None,)
+
+## co_names:
+('id', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           y
+   6: LOAD_FAST            y
+   8: LOAD_FAST            memo
+  10: LOAD_GLOBAL          NULL + id
+  22: LOAD_FAST            x
+  24: PRECALL              
+  28: CALL                 
+  38: STORE_SUBSCR         
+  42: LOAD_FAST            y
+  44: LOAD_ATTR            append
+  54: STORE_FAST           append
+  56: LOAD_FAST            x
+  58: GET_ITER             
+  60: FOR_ITER             to 108
+  62: STORE_FAST           a
+  64: PUSH_NULL            
+  66: LOAD_FAST            append
+  68: PUSH_NULL            
+  70: LOAD_FAST            deepcopy
+  72: LOAD_FAST            a
+  74: LOAD_FAST            memo
+  76: PRECALL              
+  80: CALL                 
+  90: PRECALL              
+  94: CALL                 
+ 104: POP_TOP              
+ 106: JUMP_BACKWARD        to 60
+ 108: LOAD_FAST            y
+ 110: RETURN_VALUE         

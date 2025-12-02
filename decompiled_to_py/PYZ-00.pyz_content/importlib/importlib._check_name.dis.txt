@@ -1,0 +1,37 @@
+# Disassembly for importlib._check_name
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Decorator to verify that the module being requested matches the one the\n    loader can handle.\n\n    The first argument (self) must define _name which the second argument is\n    compared against. If the comparison fails then ImportError is raised.\n\n    ', None, <code object _check_name_wrapper at 0x00000240693AB230, file "importlib\_bootstrap_external.py", line 599>, <code object _wrap at 0x000002406949D2E0, file "importlib\_bootstrap_external.py", line 612>, (None,))
+
+## co_names:
+('_bootstrap', '_wrap')
+
+## bytecode:
+
+   0: MAKE_CELL            method
+   2: RESUME               
+   4: LOAD_CONST           (None,)
+   6: LOAD_CLOSURE         method
+   8: BUILD_TUPLE          
+  10: LOAD_CONST           <code object _check_name_wrapper at 0x00000240693AB230, file "importlib\_bootstrap_external.py", line 599>
+  12: MAKE_FUNCTION        defaults, closure
+  14: STORE_FAST           _check_name_wrapper
+  16: LOAD_GLOBAL          _bootstrap
+  28: POP_JUMP_FORWARD_IF_NONE to 56
+  30: LOAD_GLOBAL          _bootstrap
+  42: LOAD_ATTR            _wrap
+  52: STORE_FAST           _wrap
+  54: JUMP_FORWARD         to 62
+  56: LOAD_CONST           <code object _wrap at 0x000002406949D2E0, file "importlib\_bootstrap_external.py", line 612>
+  58: MAKE_FUNCTION        
+  60: STORE_FAST           _wrap
+  62: PUSH_NULL            
+  64: LOAD_FAST            _wrap
+  66: LOAD_FAST            _check_name_wrapper
+  68: LOAD_DEREF           method
+  70: PRECALL              
+  74: CALL                 
+  84: POP_TOP              
+  86: LOAD_FAST            _check_name_wrapper
+  88: RETURN_VALUE         

@@ -1,0 +1,29 @@
+# Disassembly for email.Message.values.<listcomp>
+# From module file: email.message
+
+## co_consts:
+()
+
+## co_names:
+('policy', 'header_fetch_parse')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: BUILD_LIST           
+   6: LOAD_FAST            .0
+   8: FOR_ITER             to 74
+  10: UNPACK_SEQUENCE      
+  14: STORE_FAST           k
+  16: STORE_FAST           v
+  18: LOAD_DEREF           self
+  20: LOAD_ATTR            policy
+  30: LOAD_METHOD          header_fetch_parse
+  52: LOAD_FAST            k
+  54: LOAD_FAST            v
+  56: PRECALL              
+  60: CALL                 
+  70: LIST_APPEND          
+  72: JUMP_BACKWARD        to 8
+  74: RETURN_VALUE         

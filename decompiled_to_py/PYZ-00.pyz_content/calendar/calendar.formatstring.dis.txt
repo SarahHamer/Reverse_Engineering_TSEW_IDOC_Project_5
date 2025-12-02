@@ -1,0 +1,30 @@
+# Disassembly for calendar.formatstring
+# From module file: calendar
+
+## co_consts:
+('Returns a string formatted from n strings, centered within n columns.', ' ', <code object <genexpr> at 0x00000240693EAF30, file "calendar.py", line 646>)
+
+## co_names:
+('join',)
+
+## bytecode:
+
+   0: MAKE_CELL            colwidth
+   2: RESUME               
+   4: LOAD_FAST            spacing
+   6: LOAD_CONST           ' '
+   8: BINARY_OP            *=
+  12: STORE_FAST           spacing
+  14: LOAD_FAST            spacing
+  16: LOAD_METHOD          join
+  38: LOAD_CLOSURE         colwidth
+  40: BUILD_TUPLE          
+  42: LOAD_CONST           <code object <genexpr> at 0x00000240693EAF30, file "calendar.py", line 646>
+  44: MAKE_FUNCTION        closure
+  46: LOAD_FAST            cols
+  48: GET_ITER             
+  50: PRECALL              
+  54: CALL                 
+  64: PRECALL              
+  68: CALL                 
+  78: RETURN_VALUE         

@@ -1,0 +1,23 @@
+# Disassembly for random.Random.__init__
+# From module file: random
+
+## co_consts:
+('Initialize an instance.\n\n        Optional argument x controls seeding, as for Random.seed().\n        ', None)
+
+## co_names:
+('seed', 'gauss_next')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          seed
+  26: LOAD_FAST            x
+  28: PRECALL              
+  32: CALL                 
+  42: POP_TOP              
+  44: LOAD_CONST           None
+  46: LOAD_FAST            self
+  48: STORE_ATTR           gauss_next
+  58: LOAD_CONST           None
+  60: RETURN_VALUE         

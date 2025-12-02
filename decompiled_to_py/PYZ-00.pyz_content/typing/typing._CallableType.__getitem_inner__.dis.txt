@@ -1,0 +1,66 @@
+# Disassembly for typing._CallableType.__getitem_inner__
+# From module file: typing
+
+## co_consts:
+(None, 'Callable[args, result]: result must be a type.', <code object <genexpr> at 0x000002406945D6B0, file "typing.py", line 1641>)
+
+## co_names:
+('_type_check', 'Ellipsis', 'copy_with', '_TypingEllipsis', 'isinstance', 'tuple')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            params
+   4: UNPACK_SEQUENCE      
+   8: STORE_FAST           args
+  10: STORE_FAST           result
+  12: LOAD_CONST           'Callable[args, result]: result must be a type.'
+  14: STORE_FAST           msg
+  16: LOAD_GLOBAL          NULL + _type_check
+  28: LOAD_FAST            result
+  30: LOAD_FAST            msg
+  32: PRECALL              
+  36: CALL                 
+  46: STORE_FAST           result
+  48: LOAD_FAST            args
+  50: LOAD_GLOBAL          Ellipsis
+  62: IS_OP                
+  64: POP_JUMP_FORWARD_IF_FALSE to 122
+  66: LOAD_FAST            self
+  68: LOAD_METHOD          copy_with
+  90: LOAD_GLOBAL          _TypingEllipsis
+ 102: LOAD_FAST            result
+ 104: BUILD_TUPLE          
+ 106: PRECALL              
+ 110: CALL                 
+ 120: RETURN_VALUE         
+ 122: LOAD_GLOBAL          NULL + isinstance
+ 134: LOAD_FAST            args
+ 136: LOAD_GLOBAL          tuple
+ 148: PRECALL              
+ 152: CALL                 
+ 162: POP_JUMP_FORWARD_IF_TRUE to 170
+ 164: LOAD_FAST            args
+ 166: BUILD_TUPLE          
+ 168: STORE_FAST           args
+ 170: LOAD_GLOBAL          NULL + tuple
+ 182: LOAD_CONST           <code object <genexpr> at 0x000002406945D6B0, file "typing.py", line 1641>
+ 184: MAKE_FUNCTION        
+ 186: LOAD_FAST            args
+ 188: GET_ITER             
+ 190: PRECALL              
+ 194: CALL                 
+ 204: PRECALL              
+ 208: CALL                 
+ 218: STORE_FAST           args
+ 220: LOAD_FAST            args
+ 222: LOAD_FAST            result
+ 224: BUILD_TUPLE          
+ 226: BINARY_OP            +
+ 230: STORE_FAST           params
+ 232: LOAD_FAST            self
+ 234: LOAD_METHOD          copy_with
+ 256: LOAD_FAST            params
+ 258: PRECALL              
+ 262: CALL                 
+ 272: RETURN_VALUE         

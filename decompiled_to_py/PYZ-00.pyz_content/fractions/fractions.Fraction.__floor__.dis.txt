@@ -1,0 +1,18 @@
+# Disassembly for fractions.Fraction.__floor__
+# From module file: fractions
+
+## co_consts:
+('math.floor(a)',)
+
+## co_names:
+('numerator', 'denominator')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            a
+   4: LOAD_ATTR            numerator
+  14: LOAD_FAST            a
+  16: LOAD_ATTR            denominator
+  26: BINARY_OP            //
+  30: RETURN_VALUE         

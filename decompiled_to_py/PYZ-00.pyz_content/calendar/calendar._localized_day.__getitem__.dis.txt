@@ -1,0 +1,40 @@
+# Disassembly for calendar._localized_day.__getitem__
+# From module file: calendar
+
+## co_consts:
+(None, <code object <listcomp> at 0x000002406945DB60, file "calendar.py", line 82>)
+
+## co_names:
+('_days', 'isinstance', 'slice', 'format')
+
+## bytecode:
+
+   0: MAKE_CELL            self
+   2: RESUME               
+   4: LOAD_DEREF           self
+   6: LOAD_ATTR            _days
+  16: LOAD_FAST            i
+  18: BINARY_SUBSCR        
+  28: STORE_FAST           funcs
+  30: LOAD_GLOBAL          NULL + isinstance
+  42: LOAD_FAST            i
+  44: LOAD_GLOBAL          slice
+  56: PRECALL              
+  60: CALL                 
+  70: POP_JUMP_FORWARD_IF_FALSE to 100
+  72: LOAD_CLOSURE         self
+  74: BUILD_TUPLE          
+  76: LOAD_CONST           <code object <listcomp> at 0x000002406945DB60, file "calendar.py", line 82>
+  78: MAKE_FUNCTION        closure
+  80: LOAD_FAST            funcs
+  82: GET_ITER             
+  84: PRECALL              
+  88: CALL                 
+  98: RETURN_VALUE         
+ 100: PUSH_NULL            
+ 102: LOAD_FAST            funcs
+ 104: LOAD_DEREF           self
+ 106: LOAD_ATTR            format
+ 116: PRECALL              
+ 120: CALL                 
+ 130: RETURN_VALUE         

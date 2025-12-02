@@ -1,0 +1,57 @@
+# Disassembly for pickle._Unpickler.load_inst
+# From module file: pickle
+
+## co_consts:
+(None, -1, 'ascii')
+
+## co_names:
+('readline', 'decode', 'find_class', '_instantiate', 'pop_mark')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          readline
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_CONST           None
+  42: LOAD_CONST           -1
+  44: BUILD_SLICE          
+  46: BINARY_SUBSCR        
+  56: LOAD_METHOD          decode
+  78: LOAD_CONST           'ascii'
+  80: PRECALL              
+  84: CALL                 
+  94: STORE_FAST           module
+  96: LOAD_FAST            self
+  98: LOAD_METHOD          readline
+ 120: PRECALL              
+ 124: CALL                 
+ 134: LOAD_CONST           None
+ 136: LOAD_CONST           -1
+ 138: BUILD_SLICE          
+ 140: BINARY_SUBSCR        
+ 150: LOAD_METHOD          decode
+ 172: LOAD_CONST           'ascii'
+ 174: PRECALL              
+ 178: CALL                 
+ 188: STORE_FAST           name
+ 190: LOAD_FAST            self
+ 192: LOAD_METHOD          find_class
+ 214: LOAD_FAST            module
+ 216: LOAD_FAST            name
+ 218: PRECALL              
+ 222: CALL                 
+ 232: STORE_FAST           klass
+ 234: LOAD_FAST            self
+ 236: LOAD_METHOD          _instantiate
+ 258: LOAD_FAST            klass
+ 260: LOAD_FAST            self
+ 262: LOAD_METHOD          pop_mark
+ 284: PRECALL              
+ 288: CALL                 
+ 298: PRECALL              
+ 302: CALL                 
+ 312: POP_TOP              
+ 314: LOAD_CONST           None
+ 316: RETURN_VALUE         

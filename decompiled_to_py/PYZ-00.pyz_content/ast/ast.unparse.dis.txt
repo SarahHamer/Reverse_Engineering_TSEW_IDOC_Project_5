@@ -1,0 +1,22 @@
+# Disassembly for ast.unparse
+# From module file: ast
+
+## co_consts:
+(None,)
+
+## co_names:
+('_Unparser', 'visit')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _Unparser
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           unparser
+  30: LOAD_FAST            unparser
+  32: LOAD_METHOD          visit
+  54: LOAD_FAST            ast_obj
+  56: PRECALL              
+  60: CALL                 
+  70: RETURN_VALUE         

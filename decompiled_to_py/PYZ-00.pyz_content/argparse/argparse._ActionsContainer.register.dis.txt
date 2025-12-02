@@ -1,0 +1,26 @@
+# Disassembly for argparse._ActionsContainer.register
+# From module file: argparse
+
+## co_consts:
+(None,)
+
+## co_names:
+('_registries', 'setdefault')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _registries
+  14: LOAD_METHOD          setdefault
+  36: LOAD_FAST            registry_name
+  38: BUILD_MAP            
+  40: PRECALL              
+  44: CALL                 
+  54: STORE_FAST           registry
+  56: LOAD_FAST            object
+  58: LOAD_FAST            registry
+  60: LOAD_FAST            value
+  62: STORE_SUBSCR         
+  66: LOAD_CONST           None
+  68: RETURN_VALUE         

@@ -1,0 +1,46 @@
+# Disassembly for argparse._ActionsContainer._handle_conflict_resolve
+# From module file: argparse
+
+## co_consts:
+(None,)
+
+## co_names:
+('option_strings', 'remove', '_option_string_actions', 'pop', 'container', '_remove_action')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            conflicting_actions
+   4: GET_ITER             
+   6: FOR_ITER             to 190
+   8: UNPACK_SEQUENCE      
+  12: STORE_FAST           option_string
+  14: STORE_FAST           action
+  16: LOAD_FAST            action
+  18: LOAD_ATTR            option_strings
+  28: LOAD_METHOD          remove
+  50: LOAD_FAST            option_string
+  52: PRECALL              
+  56: CALL                 
+  66: POP_TOP              
+  68: LOAD_FAST            self
+  70: LOAD_ATTR            _option_string_actions
+  80: LOAD_METHOD          pop
+ 102: LOAD_FAST            option_string
+ 104: LOAD_CONST           None
+ 106: PRECALL              
+ 110: CALL                 
+ 120: POP_TOP              
+ 122: LOAD_FAST            action
+ 124: LOAD_ATTR            option_strings
+ 134: POP_JUMP_FORWARD_IF_TRUE to 188
+ 136: LOAD_FAST            action
+ 138: LOAD_ATTR            container
+ 148: LOAD_METHOD          _remove_action
+ 170: LOAD_FAST            action
+ 172: PRECALL              
+ 176: CALL                 
+ 186: POP_TOP              
+ 188: JUMP_BACKWARD        to 6
+ 190: LOAD_CONST           None
+ 192: RETURN_VALUE         

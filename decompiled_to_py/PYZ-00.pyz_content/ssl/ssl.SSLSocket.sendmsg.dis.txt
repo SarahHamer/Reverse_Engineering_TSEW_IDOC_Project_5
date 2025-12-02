@@ -1,0 +1,20 @@
+# Disassembly for ssl.SSLSocket.sendmsg
+# From module file: ssl
+
+## co_consts:
+(None, 'sendmsg not allowed on instances of %s')
+
+## co_names:
+('NotImplementedError', '__class__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + NotImplementedError
+  14: LOAD_CONST           'sendmsg not allowed on instances of %s'
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            __class__
+  28: BINARY_OP            %
+  32: PRECALL              
+  36: CALL                 
+  46: RAISE_VARARGS        

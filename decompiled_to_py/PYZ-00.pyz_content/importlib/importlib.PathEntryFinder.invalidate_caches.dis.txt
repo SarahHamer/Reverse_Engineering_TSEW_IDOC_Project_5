@@ -1,0 +1,14 @@
+# Disassembly for importlib.PathEntryFinder.invalidate_caches
+# From module file: importlib.abc
+
+## co_consts:
+("An optional method for clearing the finder's cache, if any.\n        This method is used by PathFinder.invalidate_caches().\n        ", None)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: RETURN_VALUE         

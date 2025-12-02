@@ -1,0 +1,40 @@
+# Disassembly for inspect.Signature.replace
+# From module file: inspect
+
+## co_consts:
+("Creates a customized copy of the Signature.\n        Pass 'parameters' and/or 'return_annotation' arguments\n        to override them in the new copy.\n        ", ('return_annotation',))
+
+## co_names:
+('_void', 'parameters', 'values', '_return_annotation', 'type')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            parameters
+   4: LOAD_GLOBAL          _void
+  16: IS_OP                
+  18: POP_JUMP_FORWARD_IF_FALSE to 70
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            parameters
+  32: LOAD_METHOD          values
+  54: PRECALL              
+  58: CALL                 
+  68: STORE_FAST           parameters
+  70: LOAD_FAST            return_annotation
+  72: LOAD_GLOBAL          _void
+  84: IS_OP                
+  86: POP_JUMP_FORWARD_IF_FALSE to 102
+  88: LOAD_FAST            self
+  90: LOAD_ATTR            _return_annotation
+ 100: STORE_FAST           return_annotation
+ 102: PUSH_NULL            
+ 104: LOAD_GLOBAL          NULL + type
+ 116: LOAD_FAST            self
+ 118: PRECALL              
+ 122: CALL                 
+ 132: LOAD_FAST            parameters
+ 134: LOAD_FAST            return_annotation
+ 136: KW_NAMES             
+ 138: PRECALL              
+ 142: CALL                 
+ 152: RETURN_VALUE         

@@ -1,0 +1,29 @@
+# Disassembly for importlib._install_external_importers
+# From module file: importlib._bootstrap
+
+## co_consts:
+('Install importers that require external filesystem access', 0, None)
+
+## co_names:
+('_frozen_importlib_external', '_bootstrap_external', '_install', 'sys', 'modules', '__name__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           None
+   6: IMPORT_NAME          _frozen_importlib_external
+   8: STORE_FAST           _frozen_importlib_external
+  10: LOAD_FAST            _frozen_importlib_external
+  12: STORE_GLOBAL         _bootstrap_external
+  14: LOAD_FAST            _frozen_importlib_external
+  16: LOAD_METHOD          _install
+  38: LOAD_GLOBAL          sys
+  50: LOAD_ATTR            modules
+  60: LOAD_GLOBAL          __name__
+  72: BINARY_SUBSCR        
+  82: PRECALL              
+  86: CALL                 
+  96: POP_TOP              
+  98: LOAD_CONST           None
+ 100: RETURN_VALUE         

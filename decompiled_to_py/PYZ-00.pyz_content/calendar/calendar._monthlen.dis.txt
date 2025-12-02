@@ -1,0 +1,25 @@
+# Disassembly for calendar._monthlen
+# From module file: calendar
+
+## co_consts:
+(None,)
+
+## co_names:
+('mdays', 'February', 'isleap')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          mdays
+  14: LOAD_FAST            month
+  16: BINARY_SUBSCR        
+  26: LOAD_FAST            month
+  28: LOAD_GLOBAL          February
+  40: COMPARE_OP           ==
+  46: JUMP_IF_FALSE_OR_POP to 76
+  48: LOAD_GLOBAL          NULL + isleap
+  60: LOAD_FAST            year
+  62: PRECALL              
+  66: CALL                 
+  76: BINARY_OP            +
+  80: RETURN_VALUE         

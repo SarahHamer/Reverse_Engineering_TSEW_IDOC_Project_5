@@ -1,0 +1,14 @@
+# Disassembly for tarfile._FileInFile.flush
+# From module file: tarfile
+
+## co_consts:
+(None,)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: RETURN_VALUE         

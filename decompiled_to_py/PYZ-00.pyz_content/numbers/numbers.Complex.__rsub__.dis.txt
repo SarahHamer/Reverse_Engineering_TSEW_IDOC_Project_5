@@ -1,0 +1,17 @@
+# Disassembly for numbers.Complex.__rsub__
+# From module file: numbers
+
+## co_consts:
+('other - self',)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: UNARY_NEGATIVE       
+   6: LOAD_FAST            other
+   8: BINARY_OP            +
+  12: RETURN_VALUE         

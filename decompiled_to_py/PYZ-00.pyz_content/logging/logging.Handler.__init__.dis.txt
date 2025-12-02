@@ -1,0 +1,45 @@
+# Disassembly for logging.Handler.__init__
+# From module file: logging
+
+## co_consts:
+('\n        Initializes the instance - basically setting the formatter to None\n        and the filter list to empty.\n        ', None, False)
+
+## co_names:
+('Filterer', '__init__', '_name', '_checkLevel', 'level', 'formatter', '_closed', '_addHandlerRef', 'createLock')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          Filterer
+  14: LOAD_METHOD          __init__
+  36: LOAD_FAST            self
+  38: PRECALL              
+  42: CALL                 
+  52: POP_TOP              
+  54: LOAD_CONST           None
+  56: LOAD_FAST            self
+  58: STORE_ATTR           _name
+  68: LOAD_GLOBAL          NULL + _checkLevel
+  80: LOAD_FAST            level
+  82: PRECALL              
+  86: CALL                 
+  96: LOAD_FAST            self
+  98: STORE_ATTR           level
+ 108: LOAD_CONST           None
+ 110: LOAD_FAST            self
+ 112: STORE_ATTR           formatter
+ 122: LOAD_CONST           False
+ 124: LOAD_FAST            self
+ 126: STORE_ATTR           _closed
+ 136: LOAD_GLOBAL          NULL + _addHandlerRef
+ 148: LOAD_FAST            self
+ 150: PRECALL              
+ 154: CALL                 
+ 164: POP_TOP              
+ 166: LOAD_FAST            self
+ 168: LOAD_METHOD          createLock
+ 190: PRECALL              
+ 194: CALL                 
+ 204: POP_TOP              
+ 206: LOAD_CONST           None
+ 208: RETURN_VALUE         

@@ -1,0 +1,24 @@
+# Disassembly for http.DefaultCookiePolicy.set_allowed_domains
+# From module file: http.cookiejar
+
+## co_consts:
+('Set the sequence of allowed domains, or None.', None)
+
+## co_names:
+('tuple', '_allowed_domains')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            allowed_domains
+   4: POP_JUMP_FORWARD_IF_NONE to 36
+   6: LOAD_GLOBAL          NULL + tuple
+  18: LOAD_FAST            allowed_domains
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           allowed_domains
+  36: LOAD_FAST            allowed_domains
+  38: LOAD_FAST            self
+  40: STORE_ATTR           _allowed_domains
+  50: LOAD_CONST           None
+  52: RETURN_VALUE         

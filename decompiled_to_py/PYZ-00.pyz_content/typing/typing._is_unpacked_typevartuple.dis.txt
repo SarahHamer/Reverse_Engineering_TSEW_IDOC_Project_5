@@ -1,0 +1,26 @@
+# Disassembly for typing._is_unpacked_typevartuple
+# From module file: typing
+
+## co_consts:
+(None, '__typing_is_unpacked_typevartuple__', False)
+
+## co_names:
+('isinstance', 'type', 'getattr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            x
+  16: LOAD_GLOBAL          type
+  28: PRECALL              
+  32: CALL                 
+  42: UNARY_NOT            
+  44: JUMP_IF_FALSE_OR_POP to 78
+  46: LOAD_GLOBAL          NULL + getattr
+  58: LOAD_FAST            x
+  60: LOAD_CONST           '__typing_is_unpacked_typevartuple__'
+  62: LOAD_CONST           False
+  64: PRECALL              
+  68: CALL                 
+  78: RETURN_VALUE         

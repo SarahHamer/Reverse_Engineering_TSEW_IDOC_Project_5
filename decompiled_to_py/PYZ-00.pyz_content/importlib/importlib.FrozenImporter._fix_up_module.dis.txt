@@ -1,0 +1,355 @@
+# Disassembly for importlib.FrozenImporter._fix_up_module
+# From module file: importlib._bootstrap
+
+## co_consts:
+(None, '__origname__', 'see PyImport_ImportFrozenModuleObject()', '__path__', ('filename', 'origname'), 0, '__file__', 'filename', 'origname')
+
+## co_names:
+('__spec__', 'loader_state', 'vars', 'pop', 'hasattr', '_imp', 'is_frozen_package', '__name__', '_resolve_filename', 'name', 'type', 'sys', 'implementation', 'submodule_search_locations', 'insert', '__file__', 'AttributeError', '__path__', 'extend', 'sorted', 'origname', 'filename', 'has_location')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            module
+   4: LOAD_ATTR            __spec__
+  14: STORE_FAST           spec
+  16: LOAD_FAST            spec
+  18: LOAD_ATTR            loader_state
+  28: STORE_FAST           state
+  30: LOAD_FAST            state
+  32: EXTENDED_ARG         
+  34: POP_JUMP_FORWARD_IF_NOT_NONE to 780
+  36: LOAD_GLOBAL          NULL + vars
+  48: LOAD_FAST            module
+  50: PRECALL              
+  54: CALL                 
+  64: LOAD_METHOD          pop
+  86: LOAD_CONST           '__origname__'
+  88: LOAD_CONST           None
+  90: PRECALL              
+  94: CALL                 
+ 104: STORE_FAST           origname
+ 106: LOAD_FAST            origname
+ 108: POP_JUMP_FORWARD_IF_TRUE to 130
+ 110: LOAD_ASSERTION_ERROR 
+ 112: LOAD_CONST           'see PyImport_ImportFrozenModuleObject()'
+ 114: PRECALL              
+ 118: CALL                 
+ 128: RAISE_VARARGS        
+ 130: LOAD_GLOBAL          NULL + hasattr
+ 142: LOAD_FAST            module
+ 144: LOAD_CONST           '__path__'
+ 146: PRECALL              
+ 150: CALL                 
+ 160: STORE_FAST           ispkg
+ 162: LOAD_GLOBAL          _imp
+ 174: LOAD_METHOD          is_frozen_package
+ 196: LOAD_FAST            module
+ 198: LOAD_ATTR            __name__
+ 208: PRECALL              
+ 212: CALL                 
+ 222: LOAD_FAST            ispkg
+ 224: COMPARE_OP           ==
+ 230: POP_JUMP_FORWARD_IF_TRUE to 252
+ 232: LOAD_ASSERTION_ERROR 
+ 234: LOAD_FAST            ispkg
+ 236: PRECALL              
+ 240: CALL                 
+ 250: RAISE_VARARGS        
+ 252: LOAD_FAST            cls
+ 254: LOAD_METHOD          _resolve_filename
+ 276: LOAD_FAST            origname
+ 278: LOAD_FAST            spec
+ 280: LOAD_ATTR            name
+ 290: LOAD_FAST            ispkg
+ 292: PRECALL              
+ 296: CALL                 
+ 306: UNPACK_SEQUENCE      
+ 310: STORE_FAST           filename
+ 312: STORE_FAST           pkgdir
+ 314: PUSH_NULL            
+ 316: LOAD_GLOBAL          NULL + type
+ 328: LOAD_GLOBAL          sys
+ 340: LOAD_ATTR            implementation
+ 350: PRECALL              
+ 354: CALL                 
+ 364: LOAD_FAST            filename
+ 366: LOAD_FAST            origname
+ 368: KW_NAMES             
+ 370: PRECALL              
+ 374: CALL                 
+ 384: LOAD_FAST            spec
+ 386: STORE_ATTR           loader_state
+ 396: LOAD_FAST            spec
+ 398: LOAD_ATTR            submodule_search_locations
+ 408: STORE_FAST           __path__
+ 410: LOAD_FAST            ispkg
+ 412: POP_JUMP_FORWARD_IF_FALSE to 506
+ 414: LOAD_FAST            __path__
+ 416: BUILD_LIST           
+ 418: COMPARE_OP           ==
+ 424: POP_JUMP_FORWARD_IF_TRUE to 446
+ 426: LOAD_ASSERTION_ERROR 
+ 428: LOAD_FAST            __path__
+ 430: PRECALL              
+ 434: CALL                 
+ 444: RAISE_VARARGS        
+ 446: LOAD_FAST            pkgdir
+ 448: POP_JUMP_FORWARD_IF_FALSE to 504
+ 450: LOAD_FAST            spec
+ 452: LOAD_ATTR            submodule_search_locations
+ 462: LOAD_METHOD          insert
+ 484: LOAD_CONST           0
+ 486: LOAD_FAST            pkgdir
+ 488: PRECALL              
+ 492: CALL                 
+ 502: POP_TOP              
+ 504: JUMP_FORWARD         to 530
+ 506: LOAD_FAST            __path__
+ 508: POP_JUMP_FORWARD_IF_NONE to 530
+ 510: LOAD_ASSERTION_ERROR 
+ 512: LOAD_FAST            __path__
+ 514: PRECALL              
+ 518: CALL                 
+ 528: RAISE_VARARGS        
+ 530: LOAD_GLOBAL          NULL + hasattr
+ 542: LOAD_FAST            module
+ 544: LOAD_CONST           '__file__'
+ 546: PRECALL              
+ 550: CALL                 
+ 560: POP_JUMP_FORWARD_IF_FALSE to 592
+ 562: LOAD_ASSERTION_ERROR 
+ 564: LOAD_FAST            module
+ 566: LOAD_ATTR            __file__
+ 576: PRECALL              
+ 580: CALL                 
+ 590: RAISE_VARARGS        
+ 592: LOAD_FAST            filename
+ 594: POP_JUMP_FORWARD_IF_FALSE to 646
+ 596: NOP                  
+ 598: LOAD_FAST            filename
+ 600: LOAD_FAST            module
+ 602: STORE_ATTR           __file__
+ 612: JUMP_FORWARD         to 646
+ 614: PUSH_EXC_INFO        
+ 616: LOAD_GLOBAL          AttributeError
+ 628: CHECK_EXC_MATCH      
+ 630: POP_JUMP_FORWARD_IF_FALSE to 638
+ 632: POP_TOP              
+ 634: POP_EXCEPT           
+ 636: JUMP_FORWARD         to 646
+ 638: RERAISE              
+ 640: COPY                 
+ 642: POP_EXCEPT           
+ 644: RERAISE              
+ 646: LOAD_FAST            ispkg
+ 648: POP_JUMP_FORWARD_IF_FALSE to 776
+ 650: LOAD_FAST            module
+ 652: LOAD_ATTR            __path__
+ 662: LOAD_FAST            __path__
+ 664: COMPARE_OP           !=
+ 670: POP_JUMP_FORWARD_IF_FALSE to 776
+ 672: LOAD_FAST            module
+ 674: LOAD_ATTR            __path__
+ 684: BUILD_LIST           
+ 686: COMPARE_OP           ==
+ 692: POP_JUMP_FORWARD_IF_TRUE to 724
+ 694: LOAD_ASSERTION_ERROR 
+ 696: LOAD_FAST            module
+ 698: LOAD_ATTR            __path__
+ 708: PRECALL              
+ 712: CALL                 
+ 722: RAISE_VARARGS        
+ 724: LOAD_FAST            module
+ 726: LOAD_ATTR            __path__
+ 736: LOAD_METHOD          extend
+ 758: LOAD_FAST            __path__
+ 760: PRECALL              
+ 764: CALL                 
+ 774: POP_TOP              
+ 776: EXTENDED_ARG         
+ 778: JUMP_FORWARD         to 1526
+ 780: LOAD_FAST            spec
+ 782: LOAD_ATTR            submodule_search_locations
+ 792: STORE_FAST           __path__
+ 794: LOAD_FAST            __path__
+ 796: LOAD_CONST           None
+ 798: IS_OP                
+ 800: STORE_FAST           ispkg
+ 802: LOAD_GLOBAL          NULL + sorted
+ 814: LOAD_GLOBAL          NULL + vars
+ 826: LOAD_FAST            state
+ 828: PRECALL              
+ 832: CALL                 
+ 842: PRECALL              
+ 846: CALL                 
+ 856: LOAD_CONST           'filename'
+ 858: LOAD_CONST           'origname'
+ 860: BUILD_LIST           
+ 862: COMPARE_OP           ==
+ 868: POP_JUMP_FORWARD_IF_TRUE to 890
+ 870: LOAD_ASSERTION_ERROR 
+ 872: LOAD_FAST            state
+ 874: PRECALL              
+ 878: CALL                 
+ 888: RAISE_VARARGS        
+ 890: LOAD_FAST            state
+ 892: LOAD_ATTR            origname
+ 902: POP_JUMP_FORWARD_IF_FALSE to 1118
+ 904: LOAD_FAST            cls
+ 906: LOAD_METHOD          _resolve_filename
+ 928: LOAD_FAST            state
+ 930: LOAD_ATTR            origname
+ 940: LOAD_FAST            spec
+ 942: LOAD_ATTR            name
+ 952: LOAD_FAST            ispkg
+ 954: PRECALL              
+ 958: CALL                 
+ 968: UNPACK_SEQUENCE      
+ 972: STORE_FAST           __file__
+ 974: STORE_FAST           pkgdir
+ 976: LOAD_FAST            state
+ 978: LOAD_ATTR            filename
+ 988: LOAD_FAST            __file__
+ 990: COMPARE_OP           ==
+ 996: POP_JUMP_FORWARD_IF_TRUE to 1032
+ 998: LOAD_ASSERTION_ERROR 
+1000: LOAD_FAST            state
+1002: LOAD_ATTR            filename
+1012: LOAD_FAST            __file__
+1014: BUILD_TUPLE          
+1016: PRECALL              
+1020: CALL                 
+1030: RAISE_VARARGS        
+1032: LOAD_FAST            pkgdir
+1034: POP_JUMP_FORWARD_IF_FALSE to 1076
+1036: LOAD_FAST            __path__
+1038: LOAD_FAST            pkgdir
+1040: BUILD_LIST           
+1042: COMPARE_OP           ==
+1048: POP_JUMP_FORWARD_IF_TRUE to 1074
+1050: LOAD_ASSERTION_ERROR 
+1052: LOAD_FAST            __path__
+1054: LOAD_FAST            pkgdir
+1056: BUILD_TUPLE          
+1058: PRECALL              
+1062: CALL                 
+1072: RAISE_VARARGS        
+1074: JUMP_FORWARD         to 1206
+1076: LOAD_FAST            __path__
+1078: LOAD_FAST            ispkg
+1080: POP_JUMP_FORWARD_IF_FALSE to 1086
+1082: BUILD_LIST           
+1084: JUMP_FORWARD         to 1088
+1086: LOAD_CONST           None
+1088: COMPARE_OP           ==
+1094: POP_JUMP_FORWARD_IF_TRUE to 1116
+1096: LOAD_ASSERTION_ERROR 
+1098: LOAD_FAST            __path__
+1100: PRECALL              
+1104: CALL                 
+1114: RAISE_VARARGS        
+1116: JUMP_FORWARD         to 1206
+1118: LOAD_CONST           None
+1120: STORE_FAST           __file__
+1122: LOAD_FAST            state
+1124: LOAD_ATTR            filename
+1134: POP_JUMP_FORWARD_IF_NONE to 1166
+1136: LOAD_ASSERTION_ERROR 
+1138: LOAD_FAST            state
+1140: LOAD_ATTR            filename
+1150: PRECALL              
+1154: CALL                 
+1164: RAISE_VARARGS        
+1166: LOAD_FAST            __path__
+1168: LOAD_FAST            ispkg
+1170: POP_JUMP_FORWARD_IF_FALSE to 1176
+1172: BUILD_LIST           
+1174: JUMP_FORWARD         to 1178
+1176: LOAD_CONST           None
+1178: COMPARE_OP           ==
+1184: POP_JUMP_FORWARD_IF_TRUE to 1206
+1186: LOAD_ASSERTION_ERROR 
+1188: LOAD_FAST            __path__
+1190: PRECALL              
+1194: CALL                 
+1204: RAISE_VARARGS        
+1206: LOAD_FAST            __file__
+1208: POP_JUMP_FORWARD_IF_FALSE to 1304
+1210: LOAD_GLOBAL          NULL + hasattr
+1222: LOAD_FAST            module
+1224: LOAD_CONST           '__file__'
+1226: PRECALL              
+1230: CALL                 
+1240: POP_JUMP_FORWARD_IF_TRUE to 1246
+1242: LOAD_ASSERTION_ERROR 
+1244: RAISE_VARARGS        
+1246: LOAD_FAST            module
+1248: LOAD_ATTR            __file__
+1258: LOAD_FAST            __file__
+1260: COMPARE_OP           ==
+1266: POP_JUMP_FORWARD_IF_TRUE to 1302
+1268: LOAD_ASSERTION_ERROR 
+1270: LOAD_FAST            module
+1272: LOAD_ATTR            __file__
+1282: LOAD_FAST            __file__
+1284: BUILD_TUPLE          
+1286: PRECALL              
+1290: CALL                 
+1300: RAISE_VARARGS        
+1302: JUMP_FORWARD         to 1366
+1304: LOAD_GLOBAL          NULL + hasattr
+1316: LOAD_FAST            module
+1318: LOAD_CONST           '__file__'
+1320: PRECALL              
+1324: CALL                 
+1334: POP_JUMP_FORWARD_IF_FALSE to 1366
+1336: LOAD_ASSERTION_ERROR 
+1338: LOAD_FAST            module
+1340: LOAD_ATTR            __file__
+1350: PRECALL              
+1354: CALL                 
+1364: RAISE_VARARGS        
+1366: LOAD_FAST            ispkg
+1368: POP_JUMP_FORWARD_IF_FALSE to 1464
+1370: LOAD_GLOBAL          NULL + hasattr
+1382: LOAD_FAST            module
+1384: LOAD_CONST           '__path__'
+1386: PRECALL              
+1390: CALL                 
+1400: POP_JUMP_FORWARD_IF_TRUE to 1406
+1402: LOAD_ASSERTION_ERROR 
+1404: RAISE_VARARGS        
+1406: LOAD_FAST            module
+1408: LOAD_ATTR            __path__
+1418: LOAD_FAST            __path__
+1420: COMPARE_OP           ==
+1426: POP_JUMP_FORWARD_IF_TRUE to 1462
+1428: LOAD_ASSERTION_ERROR 
+1430: LOAD_FAST            module
+1432: LOAD_ATTR            __path__
+1442: LOAD_FAST            __path__
+1444: BUILD_TUPLE          
+1446: PRECALL              
+1450: CALL                 
+1460: RAISE_VARARGS        
+1462: JUMP_FORWARD         to 1526
+1464: LOAD_GLOBAL          NULL + hasattr
+1476: LOAD_FAST            module
+1478: LOAD_CONST           '__path__'
+1480: PRECALL              
+1484: CALL                 
+1494: POP_JUMP_FORWARD_IF_FALSE to 1526
+1496: LOAD_ASSERTION_ERROR 
+1498: LOAD_FAST            module
+1500: LOAD_ATTR            __path__
+1510: PRECALL              
+1514: CALL                 
+1524: RAISE_VARARGS        
+1526: LOAD_FAST            spec
+1528: LOAD_ATTR            has_location
+1538: POP_JUMP_FORWARD_IF_FALSE to 1544
+1540: LOAD_ASSERTION_ERROR 
+1542: RAISE_VARARGS        
+1544: LOAD_CONST           None
+1546: RETURN_VALUE         

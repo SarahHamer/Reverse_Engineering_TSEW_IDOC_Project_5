@@ -1,0 +1,24 @@
+# Disassembly for calendar.IllegalWeekdayError
+# From module file: calendar
+
+## co_consts:
+('IllegalWeekdayError', <code object __init__ at 0x0000024069427B80, file "calendar.py", line 34>, <code object __str__ at 0x0000024069427C50, file "calendar.py", line 36>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', '__str__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'IllegalWeekdayError'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           <code object __init__ at 0x0000024069427B80, file "calendar.py", line 34>
+  12: MAKE_FUNCTION        
+  14: STORE_NAME           __init__
+  16: LOAD_CONST           <code object __str__ at 0x0000024069427C50, file "calendar.py", line 36>
+  18: MAKE_FUNCTION        
+  20: STORE_NAME           __str__
+  22: LOAD_CONST           None
+  24: RETURN_VALUE         

@@ -1,0 +1,68 @@
+# Disassembly for _threading_local._localimpl.create_dict
+# From module file: _threading_local
+
+## co_consts:
+('Create a new dict for the current thread, and return it.', <code object local_deleted at 0x000002406945EA60, file "_threading_local.py", line 170>, <code object thread_deleted at 0x000002406944A890, file "_threading_local.py", line 175>)
+
+## co_names:
+('key', 'current_thread', 'id', 'ref', '__dict__', 'dicts')
+
+## bytecode:
+
+   0: MAKE_CELL            wrlocal
+   2: MAKE_CELL            wrthread
+   4: RESUME               
+   6: BUILD_MAP            
+   8: STORE_FAST           localdict
+  10: LOAD_FAST            self
+  12: LOAD_ATTR            key
+  22: STORE_FAST           key
+  24: LOAD_GLOBAL          NULL + current_thread
+  36: PRECALL              
+  40: CALL                 
+  50: STORE_FAST           thread
+  52: LOAD_GLOBAL          NULL + id
+  64: LOAD_FAST            thread
+  66: PRECALL              
+  70: CALL                 
+  80: STORE_FAST           idt
+  82: LOAD_FAST            key
+  84: BUILD_TUPLE          
+  86: LOAD_CLOSURE         wrthread
+  88: BUILD_TUPLE          
+  90: LOAD_CONST           <code object local_deleted at 0x000002406945EA60, file "_threading_local.py", line 170>
+  92: MAKE_FUNCTION        defaults, closure
+  94: STORE_FAST           local_deleted
+  96: LOAD_FAST            idt
+  98: BUILD_TUPLE          
+ 100: LOAD_CLOSURE         wrlocal
+ 102: BUILD_TUPLE          
+ 104: LOAD_CONST           <code object thread_deleted at 0x000002406944A890, file "_threading_local.py", line 175>
+ 106: MAKE_FUNCTION        defaults, closure
+ 108: STORE_FAST           thread_deleted
+ 110: LOAD_GLOBAL          NULL + ref
+ 122: LOAD_FAST            self
+ 124: LOAD_FAST            local_deleted
+ 126: PRECALL              
+ 130: CALL                 
+ 140: STORE_DEREF          wrlocal
+ 142: LOAD_GLOBAL          NULL + ref
+ 154: LOAD_FAST            thread
+ 156: LOAD_FAST            thread_deleted
+ 158: PRECALL              
+ 162: CALL                 
+ 172: STORE_DEREF          wrthread
+ 174: LOAD_DEREF           wrlocal
+ 176: LOAD_FAST            thread
+ 178: LOAD_ATTR            __dict__
+ 188: LOAD_FAST            key
+ 190: STORE_SUBSCR         
+ 194: LOAD_DEREF           wrthread
+ 196: LOAD_FAST            localdict
+ 198: BUILD_TUPLE          
+ 200: LOAD_FAST            self
+ 202: LOAD_ATTR            dicts
+ 212: LOAD_FAST            idt
+ 214: STORE_SUBSCR         
+ 218: LOAD_FAST            localdict
+ 220: RETURN_VALUE         

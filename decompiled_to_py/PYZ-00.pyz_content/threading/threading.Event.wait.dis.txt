@@ -1,0 +1,50 @@
+# Disassembly for threading.Event.wait
+# From module file: threading
+
+## co_consts:
+('Block until the internal flag is true.\n\n        If the internal flag is true on entry, return immediately. Otherwise,\n        block until another thread calls set() to set the flag to true, or until\n        the optional timeout occurs.\n\n        When the timeout argument is present and not None, it should be a\n        floating point number specifying a timeout for the operation in seconds\n        (or fractions thereof).\n\n        This method returns the internal flag on exit, so it will always return\n        True except if a timeout is given and the operation times out.\n\n        ', None)
+
+## co_names:
+('_cond', '_flag', 'wait')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _cond
+  14: BEFORE_WITH          
+  16: POP_TOP              
+  18: LOAD_FAST            self
+  20: LOAD_ATTR            _flag
+  30: STORE_FAST           signaled
+  32: LOAD_FAST            signaled
+  34: POP_JUMP_FORWARD_IF_TRUE to 88
+  36: LOAD_FAST            self
+  38: LOAD_ATTR            _cond
+  48: LOAD_METHOD          wait
+  70: LOAD_FAST            timeout
+  72: PRECALL              
+  76: CALL                 
+  86: STORE_FAST           signaled
+  88: LOAD_FAST            signaled
+  90: SWAP                 
+  92: LOAD_CONST           None
+  94: LOAD_CONST           None
+  96: LOAD_CONST           None
+  98: PRECALL              
+ 102: CALL                 
+ 112: POP_TOP              
+ 114: RETURN_VALUE         
+ 116: PUSH_EXC_INFO        
+ 118: WITH_EXCEPT_START    
+ 120: POP_JUMP_FORWARD_IF_TRUE to 130
+ 122: RERAISE              
+ 124: COPY                 
+ 126: POP_EXCEPT           
+ 128: RERAISE              
+ 130: POP_TOP              
+ 132: POP_EXCEPT           
+ 134: POP_TOP              
+ 136: POP_TOP              
+ 138: LOAD_CONST           None
+ 140: RETURN_VALUE         

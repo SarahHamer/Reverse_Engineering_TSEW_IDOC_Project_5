@@ -1,0 +1,61 @@
+# Disassembly for email.AddrlistClass
+# From module file: email._parseaddr
+
+## co_consts:
+('AddrlistClass', 'Address parser class by Ben Escoto.\n\n    To understand what this class does, it helps to have a copy of RFC 2822 in\n    front of you.\n\n    Note: this class interface is deprecated and may be removed in the future.\n    Use email.utils.AddressList instead.\n    ', <code object __init__ at 0x0000024069498570, file "email\_parseaddr.py", line 221>, <code object gotonext at 0x0000024068DC20D0, file "email\_parseaddr.py", line 240>, <code object getaddrlist at 0x00000240691F5BD0, file "email\_parseaddr.py", line 254>, <code object getaddress at 0x0000024068E954A0, file "email\_parseaddr.py", line 268>, <code object getrouteaddr at 0x0000024068E8FC50, file "email\_parseaddr.py", line 327>, <code object getaddrspec at 0x0000024068E95B70, file "email\_parseaddr.py", line 359>, <code object getdomain at 0x0000024068E7BE40, file "email\_parseaddr.py", line 397>, True, <code object getdelimited at 0x0000024068C367B0, file "email\_parseaddr.py", line 420>, <code object getquote at 0x000002406945D890, file "email\_parseaddr.py", line 457>, <code object getcomment at 0x000002406945F1E0, file "email\_parseaddr.py", line 461>, <code object getdomainliteral at 0x000002406945F960, file "email\_parseaddr.py", line 465>, None, <code object getatom at 0x0000024068E22820, file "email\_parseaddr.py", line 469>, <code object getphraselist at 0x0000024068B79560, file "email\_parseaddr.py", line 489>, (True,), (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', 'gotonext', 'getaddrlist', 'getaddress', 'getrouteaddr', 'getaddrspec', 'getdomain', 'getdelimited', 'getquote', 'getcomment', 'getdomainliteral', 'getatom', 'getphraselist')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'AddrlistClass'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Address parser class by Ben Escoto.\n\n    To understand what this class does, it helps to have a copy of RFC 2822 in\n    front of you.\n\n    Note: this class interface is deprecated and may be removed in the future.\n    Use email.utils.AddressList instead.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object __init__ at 0x0000024069498570, file "email\_parseaddr.py", line 221>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           __init__
+  20: LOAD_CONST           <code object gotonext at 0x0000024068DC20D0, file "email\_parseaddr.py", line 240>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           gotonext
+  26: LOAD_CONST           <code object getaddrlist at 0x00000240691F5BD0, file "email\_parseaddr.py", line 254>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           getaddrlist
+  32: LOAD_CONST           <code object getaddress at 0x0000024068E954A0, file "email\_parseaddr.py", line 268>
+  34: MAKE_FUNCTION        
+  36: STORE_NAME           getaddress
+  38: LOAD_CONST           <code object getrouteaddr at 0x0000024068E8FC50, file "email\_parseaddr.py", line 327>
+  40: MAKE_FUNCTION        
+  42: STORE_NAME           getrouteaddr
+  44: LOAD_CONST           <code object getaddrspec at 0x0000024068E95B70, file "email\_parseaddr.py", line 359>
+  46: MAKE_FUNCTION        
+  48: STORE_NAME           getaddrspec
+  50: LOAD_CONST           <code object getdomain at 0x0000024068E7BE40, file "email\_parseaddr.py", line 397>
+  52: MAKE_FUNCTION        
+  54: STORE_NAME           getdomain
+  56: LOAD_CONST           (True,)
+  58: LOAD_CONST           <code object getdelimited at 0x0000024068C367B0, file "email\_parseaddr.py", line 420>
+  60: MAKE_FUNCTION        defaults
+  62: STORE_NAME           getdelimited
+  64: LOAD_CONST           <code object getquote at 0x000002406945D890, file "email\_parseaddr.py", line 457>
+  66: MAKE_FUNCTION        
+  68: STORE_NAME           getquote
+  70: LOAD_CONST           <code object getcomment at 0x000002406945F1E0, file "email\_parseaddr.py", line 461>
+  72: MAKE_FUNCTION        
+  74: STORE_NAME           getcomment
+  76: LOAD_CONST           <code object getdomainliteral at 0x000002406945F960, file "email\_parseaddr.py", line 465>
+  78: MAKE_FUNCTION        
+  80: STORE_NAME           getdomainliteral
+  82: LOAD_CONST           (None,)
+  84: LOAD_CONST           <code object getatom at 0x0000024068E22820, file "email\_parseaddr.py", line 469>
+  86: MAKE_FUNCTION        defaults
+  88: STORE_NAME           getatom
+  90: LOAD_CONST           <code object getphraselist at 0x0000024068B79560, file "email\_parseaddr.py", line 489>
+  92: MAKE_FUNCTION        
+  94: STORE_NAME           getphraselist
+  96: LOAD_CONST           None
+  98: RETURN_VALUE         

@@ -1,0 +1,69 @@
+# Disassembly for inspect._shadowed_dict
+# From module file: inspect
+
+## co_consts:
+(None, '__dict__')
+
+## co_names:
+('type', '__dict__', '_static_getmro', '__get__', 'types', 'GetSetDescriptorType', '__name__', '__objclass__', 'KeyError', '_sentinel')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          type
+  14: LOAD_ATTR            __dict__
+  24: LOAD_CONST           '__dict__'
+  26: BINARY_SUBSCR        
+  36: STORE_FAST           dict_attr
+  38: LOAD_GLOBAL          NULL + _static_getmro
+  50: LOAD_FAST            klass
+  52: PRECALL              
+  56: CALL                 
+  66: GET_ITER             
+  68: FOR_ITER             to 264
+  70: STORE_FAST           entry
+  72: NOP                  
+  74: LOAD_FAST            dict_attr
+  76: LOAD_METHOD          __get__
+  98: LOAD_FAST            entry
+ 100: PRECALL              
+ 104: CALL                 
+ 114: LOAD_CONST           '__dict__'
+ 116: BINARY_SUBSCR        
+ 126: STORE_FAST           class_dict
+ 128: LOAD_GLOBAL          NULL + type
+ 140: LOAD_FAST            class_dict
+ 142: PRECALL              
+ 146: CALL                 
+ 156: LOAD_GLOBAL          types
+ 168: LOAD_ATTR            GetSetDescriptorType
+ 178: IS_OP                
+ 180: POP_JUMP_FORWARD_IF_FALSE to 222
+ 182: LOAD_FAST            class_dict
+ 184: LOAD_ATTR            __name__
+ 194: LOAD_CONST           '__dict__'
+ 196: COMPARE_OP           ==
+ 202: POP_JUMP_FORWARD_IF_FALSE to 222
+ 204: LOAD_FAST            class_dict
+ 206: LOAD_ATTR            __objclass__
+ 216: LOAD_FAST            entry
+ 218: IS_OP                
+ 220: POP_JUMP_FORWARD_IF_TRUE to 230
+ 222: LOAD_FAST            class_dict
+ 224: SWAP                 
+ 226: POP_TOP              
+ 228: RETURN_VALUE         
+ 230: JUMP_BACKWARD        to 68
+ 232: PUSH_EXC_INFO        
+ 234: LOAD_GLOBAL          KeyError
+ 246: CHECK_EXC_MATCH      
+ 248: POP_JUMP_FORWARD_IF_FALSE to 256
+ 250: POP_TOP              
+ 252: POP_EXCEPT           
+ 254: JUMP_BACKWARD        to 68
+ 256: RERAISE              
+ 258: COPY                 
+ 260: POP_EXCEPT           
+ 262: RERAISE              
+ 264: LOAD_GLOBAL          _sentinel
+ 276: RETURN_VALUE         

@@ -1,0 +1,58 @@
+# Disassembly for email.get_extended_attrtext
+# From module file: email._header_value_parser
+
+## co_consts:
+("attrtext = 1*(any non-ATTRIBUTE_ENDS character plus '%')\n\n    This is a special parsing routine so that we get a value that\n    includes % escapes as a single string (which we decode as a single\n    string later).\n\n    ", 'expected extended attrtext but found {!r}', None, 'extended-attrtext')
+
+## co_names:
+('_non_extended_attribute_end_matcher', 'errors', 'HeaderParseError', 'format', 'group', 'len', 'ValueTerminal', '_validate_xtext')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _non_extended_attribute_end_matcher
+  14: LOAD_FAST            value
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           m
+  32: LOAD_FAST            m
+  34: POP_JUMP_FORWARD_IF_TRUE to 114
+  36: LOAD_GLOBAL          NULL + errors
+  48: LOAD_ATTR            HeaderParseError
+  58: LOAD_CONST           'expected extended attrtext but found {!r}'
+  60: LOAD_METHOD          format
+  82: LOAD_FAST            value
+  84: PRECALL              
+  88: CALL                 
+  98: PRECALL              
+ 102: CALL                 
+ 112: RAISE_VARARGS        
+ 114: LOAD_FAST            m
+ 116: LOAD_METHOD          group
+ 138: PRECALL              
+ 142: CALL                 
+ 152: STORE_FAST           attrtext
+ 154: LOAD_FAST            value
+ 156: LOAD_GLOBAL          NULL + len
+ 168: LOAD_FAST            attrtext
+ 170: PRECALL              
+ 174: CALL                 
+ 184: LOAD_CONST           None
+ 186: BUILD_SLICE          
+ 188: BINARY_SUBSCR        
+ 198: STORE_FAST           value
+ 200: LOAD_GLOBAL          NULL + ValueTerminal
+ 212: LOAD_FAST            attrtext
+ 214: LOAD_CONST           'extended-attrtext'
+ 216: PRECALL              
+ 220: CALL                 
+ 230: STORE_FAST           attrtext
+ 232: LOAD_GLOBAL          NULL + _validate_xtext
+ 244: LOAD_FAST            attrtext
+ 246: PRECALL              
+ 250: CALL                 
+ 260: POP_TOP              
+ 262: LOAD_FAST            attrtext
+ 264: LOAD_FAST            value
+ 266: BUILD_TUPLE          
+ 268: RETURN_VALUE         

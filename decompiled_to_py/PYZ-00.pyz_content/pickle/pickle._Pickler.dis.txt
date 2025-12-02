@@ -1,0 +1,188 @@
+# Disassembly for pickle._Pickler
+# From module file: pickle
+
+## co_consts:
+('_Pickler', None, True, ('fix_imports', 'buffer_callback'), <code object __init__ at 0x0000024068DC20D0, file "pickle.py", line 409>, <code object clear_memo at 0x000002406945D890, file "pickle.py", line 466>, <code object dump at 0x0000024068E1E580, file "pickle.py", line 476>, <code object memoize at 0x000002406934F990, file "pickle.py", line 491>, <code object put at 0x00000240691A7D70, file "pickle.py", line 514>, <code object get at 0x000002406942E100, file "pickle.py", line 526>, <code object save at 0x0000024066CF3CC0, file "pickle.py", line 535>, <code object persistent_id at 0x000002406943BB70, file "pickle.py", line 605>, <code object save_pers at 0x0000024069365770, file "pickle.py", line 609>, ('obj',), <code object save_reduce at 0x0000024068CA0CF0, file "pickle.py", line 621>, <code object save_none at 0x00000240693EA430, file "pickle.py", line 740>, <code object save_bool at 0x000002406921F840, file "pickle.py", line 744>, <code object save_long at 0x0000024068E17000, file "pickle.py", line 751>, <code object save_float at 0x000002406934FCF0, file "pickle.py", line 782>, <code object save_bytes at 0x0000024068C2A210, file "pickle.py", line 789>, <code object save_bytearray at 0x0000024068D33080, file "pickle.py", line 809>, <code object save_picklebuffer at 0x0000024068BE48C0, file "pickle.py", line 825>, <code object save_str at 0x0000024068E13940, file "pickle.py", line 851>, <code object save_tuple at 0x0000024068E134B0, file "pickle.py", line 874>, <code object save_list at 0x00000240691F60B0, file "pickle.py", line 925>, 1000, <code object _batch_appends at 0x0000024066C24210, file "pickle.py", line 938>, <code object save_dict at 0x0000024069498030, file "pickle.py", line 965>, <code object _batch_setitems at 0x0000024068C08FC0, file "pickle.py", line 978>, <code object save_set at 0x0000024068C324E0, file "pickle.py", line 1009>, <code object save_frozenset at 0x0000024068D31B80, file "pickle.py", line 1033>, <code object save_global at 0x0000024068E11BA0, file "pickle.py", line 1056>, <code object save_type at 0x0000024068E223E0, file "pickle.py", line 1122>, (None,), (True,), (None, None, None, None))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', 'clear_memo', 'dump', 'memoize', 'put', 'get', 'save', 'persistent_id', 'save_pers', 'save_reduce', 'dispatch', 'save_none', 'type', 'save_bool', 'bool', 'save_long', 'int', 'save_float', 'float', 'save_bytes', 'bytes', 'save_bytearray', 'bytearray', '_HAVE_PICKLE_BUFFER', 'save_picklebuffer', 'PickleBuffer', 'save_str', 'str', 'save_tuple', 'tuple', 'save_list', 'list', '_BATCHSIZE', '_batch_appends', 'save_dict', 'dict', 'PyStringMap', '_batch_setitems', 'save_set', 'set', 'save_frozenset', 'frozenset', 'save_global', 'save_type', 'FunctionType')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_Pickler'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           (None,)
+  12: LOAD_CONST           True
+  14: LOAD_CONST           None
+  16: LOAD_CONST           ('fix_imports', 'buffer_callback')
+  18: BUILD_CONST_KEY_MAP  
+  20: LOAD_CONST           <code object __init__ at 0x0000024068DC20D0, file "pickle.py", line 409>
+  22: MAKE_FUNCTION        defaults, kwdefaults
+  24: STORE_NAME           __init__
+  26: LOAD_CONST           <code object clear_memo at 0x000002406945D890, file "pickle.py", line 466>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           clear_memo
+  32: LOAD_CONST           <code object dump at 0x0000024068E1E580, file "pickle.py", line 476>
+  34: MAKE_FUNCTION        
+  36: STORE_NAME           dump
+  38: LOAD_CONST           <code object memoize at 0x000002406934F990, file "pickle.py", line 491>
+  40: MAKE_FUNCTION        
+  42: STORE_NAME           memoize
+  44: LOAD_CONST           <code object put at 0x00000240691A7D70, file "pickle.py", line 514>
+  46: MAKE_FUNCTION        
+  48: STORE_NAME           put
+  50: LOAD_CONST           <code object get at 0x000002406942E100, file "pickle.py", line 526>
+  52: MAKE_FUNCTION        
+  54: STORE_NAME           get
+  56: LOAD_CONST           (True,)
+  58: LOAD_CONST           <code object save at 0x0000024066CF3CC0, file "pickle.py", line 535>
+  60: MAKE_FUNCTION        defaults
+  62: STORE_NAME           save
+  64: LOAD_CONST           <code object persistent_id at 0x000002406943BB70, file "pickle.py", line 605>
+  66: MAKE_FUNCTION        
+  68: STORE_NAME           persistent_id
+  70: LOAD_CONST           <code object save_pers at 0x0000024069365770, file "pickle.py", line 609>
+  72: MAKE_FUNCTION        
+  74: STORE_NAME           save_pers
+  76: NOP                  
+  78: NOP                  
+  80: LOAD_CONST           (None, None, None, None)
+  82: LOAD_CONST           None
+  84: LOAD_CONST           ('obj',)
+  86: BUILD_CONST_KEY_MAP  
+  88: LOAD_CONST           <code object save_reduce at 0x0000024068CA0CF0, file "pickle.py", line 621>
+  90: MAKE_FUNCTION        defaults, kwdefaults
+  92: STORE_NAME           save_reduce
+  94: BUILD_MAP            
+  96: STORE_NAME           dispatch
+  98: LOAD_CONST           <code object save_none at 0x00000240693EA430, file "pickle.py", line 740>
+ 100: MAKE_FUNCTION        
+ 102: STORE_NAME           save_none
+ 104: LOAD_NAME            save_none
+ 106: LOAD_NAME            dispatch
+ 108: PUSH_NULL            
+ 110: LOAD_NAME            type
+ 112: LOAD_CONST           None
+ 114: PRECALL              
+ 118: CALL                 
+ 128: STORE_SUBSCR         
+ 132: LOAD_CONST           <code object save_bool at 0x000002406921F840, file "pickle.py", line 744>
+ 134: MAKE_FUNCTION        
+ 136: STORE_NAME           save_bool
+ 138: LOAD_NAME            save_bool
+ 140: LOAD_NAME            dispatch
+ 142: LOAD_NAME            bool
+ 144: STORE_SUBSCR         
+ 148: LOAD_CONST           <code object save_long at 0x0000024068E17000, file "pickle.py", line 751>
+ 150: MAKE_FUNCTION        
+ 152: STORE_NAME           save_long
+ 154: LOAD_NAME            save_long
+ 156: LOAD_NAME            dispatch
+ 158: LOAD_NAME            int
+ 160: STORE_SUBSCR         
+ 164: LOAD_CONST           <code object save_float at 0x000002406934FCF0, file "pickle.py", line 782>
+ 166: MAKE_FUNCTION        
+ 168: STORE_NAME           save_float
+ 170: LOAD_NAME            save_float
+ 172: LOAD_NAME            dispatch
+ 174: LOAD_NAME            float
+ 176: STORE_SUBSCR         
+ 180: LOAD_CONST           <code object save_bytes at 0x0000024068C2A210, file "pickle.py", line 789>
+ 182: MAKE_FUNCTION        
+ 184: STORE_NAME           save_bytes
+ 186: LOAD_NAME            save_bytes
+ 188: LOAD_NAME            dispatch
+ 190: LOAD_NAME            bytes
+ 192: STORE_SUBSCR         
+ 196: LOAD_CONST           <code object save_bytearray at 0x0000024068D33080, file "pickle.py", line 809>
+ 198: MAKE_FUNCTION        
+ 200: STORE_NAME           save_bytearray
+ 202: LOAD_NAME            save_bytearray
+ 204: LOAD_NAME            dispatch
+ 206: LOAD_NAME            bytearray
+ 208: STORE_SUBSCR         
+ 212: LOAD_NAME            _HAVE_PICKLE_BUFFER
+ 214: POP_JUMP_FORWARD_IF_FALSE to 232
+ 216: LOAD_CONST           <code object save_picklebuffer at 0x0000024068BE48C0, file "pickle.py", line 825>
+ 218: MAKE_FUNCTION        
+ 220: STORE_NAME           save_picklebuffer
+ 222: LOAD_NAME            save_picklebuffer
+ 224: LOAD_NAME            dispatch
+ 226: LOAD_NAME            PickleBuffer
+ 228: STORE_SUBSCR         
+ 232: LOAD_CONST           <code object save_str at 0x0000024068E13940, file "pickle.py", line 851>
+ 234: MAKE_FUNCTION        
+ 236: STORE_NAME           save_str
+ 238: LOAD_NAME            save_str
+ 240: LOAD_NAME            dispatch
+ 242: LOAD_NAME            str
+ 244: STORE_SUBSCR         
+ 248: LOAD_CONST           <code object save_tuple at 0x0000024068E134B0, file "pickle.py", line 874>
+ 250: MAKE_FUNCTION        
+ 252: STORE_NAME           save_tuple
+ 254: LOAD_NAME            save_tuple
+ 256: LOAD_NAME            dispatch
+ 258: LOAD_NAME            tuple
+ 260: STORE_SUBSCR         
+ 264: LOAD_CONST           <code object save_list at 0x00000240691F60B0, file "pickle.py", line 925>
+ 266: MAKE_FUNCTION        
+ 268: STORE_NAME           save_list
+ 270: LOAD_NAME            save_list
+ 272: LOAD_NAME            dispatch
+ 274: LOAD_NAME            list
+ 276: STORE_SUBSCR         
+ 280: LOAD_CONST           1000
+ 282: STORE_NAME           _BATCHSIZE
+ 284: LOAD_CONST           <code object _batch_appends at 0x0000024066C24210, file "pickle.py", line 938>
+ 286: MAKE_FUNCTION        
+ 288: STORE_NAME           _batch_appends
+ 290: LOAD_CONST           <code object save_dict at 0x0000024069498030, file "pickle.py", line 965>
+ 292: MAKE_FUNCTION        
+ 294: STORE_NAME           save_dict
+ 296: LOAD_NAME            save_dict
+ 298: LOAD_NAME            dispatch
+ 300: LOAD_NAME            dict
+ 302: STORE_SUBSCR         
+ 306: LOAD_NAME            PyStringMap
+ 308: POP_JUMP_FORWARD_IF_NONE to 320
+ 310: LOAD_NAME            save_dict
+ 312: LOAD_NAME            dispatch
+ 314: LOAD_NAME            PyStringMap
+ 316: STORE_SUBSCR         
+ 320: LOAD_CONST           <code object _batch_setitems at 0x0000024068C08FC0, file "pickle.py", line 978>
+ 322: MAKE_FUNCTION        
+ 324: STORE_NAME           _batch_setitems
+ 326: LOAD_CONST           <code object save_set at 0x0000024068C324E0, file "pickle.py", line 1009>
+ 328: MAKE_FUNCTION        
+ 330: STORE_NAME           save_set
+ 332: LOAD_NAME            save_set
+ 334: LOAD_NAME            dispatch
+ 336: LOAD_NAME            set
+ 338: STORE_SUBSCR         
+ 342: LOAD_CONST           <code object save_frozenset at 0x0000024068D31B80, file "pickle.py", line 1033>
+ 344: MAKE_FUNCTION        
+ 346: STORE_NAME           save_frozenset
+ 348: LOAD_NAME            save_frozenset
+ 350: LOAD_NAME            dispatch
+ 352: LOAD_NAME            frozenset
+ 354: STORE_SUBSCR         
+ 358: LOAD_CONST           (None,)
+ 360: LOAD_CONST           <code object save_global at 0x0000024068E11BA0, file "pickle.py", line 1056>
+ 362: MAKE_FUNCTION        defaults
+ 364: STORE_NAME           save_global
+ 366: LOAD_CONST           <code object save_type at 0x0000024068E223E0, file "pickle.py", line 1122>
+ 368: MAKE_FUNCTION        
+ 370: STORE_NAME           save_type
+ 372: LOAD_NAME            save_global
+ 374: LOAD_NAME            dispatch
+ 376: LOAD_NAME            FunctionType
+ 378: STORE_SUBSCR         
+ 382: LOAD_NAME            save_type
+ 384: LOAD_NAME            dispatch
+ 386: LOAD_NAME            type
+ 388: STORE_SUBSCR         
+ 392: LOAD_CONST           None
+ 394: RETURN_VALUE         

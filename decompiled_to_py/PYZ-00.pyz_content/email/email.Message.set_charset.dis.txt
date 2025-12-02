@@ -1,0 +1,170 @@
+# Disassembly for email.Message.set_charset
+# From module file: email.message
+
+## co_consts:
+('Set the charset of the payload to a given character set.\n\n        charset can be a Charset instance, a string naming a character set, or\n        None.  If it is a string it will be converted to a Charset instance.\n        If charset is None, the charset parameter will be removed from the\n        Content-Type field.  Anything else will generate a TypeError.\n\n        The message will be assumed to be of type text/* encoded with\n        charset.input_charset.  It will be converted to charset.output_charset\n        and encoded properly, if needed, when generating the plain text\n        representation of the message.  MIME headers (MIME-Version,\n        Content-Type, Content-Transfer-Encoding) will be added as needed.\n        ', None, 'charset', 'MIME-Version', '1.0', 'Content-Type', 'text/plain', ('charset',), 'Content-Transfer-Encoding', 'ascii', 'surrogateescape')
+
+## co_names:
+('del_param', '_charset', 'isinstance', 'Charset', 'add_header', 'get_output_charset', 'set_param', 'body_encode', '_payload', 'get_body_encoding', 'TypeError', 'encode', 'UnicodeError', 'output_charset')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            charset
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 66
+   6: LOAD_FAST            self
+   8: LOAD_METHOD          del_param
+  30: LOAD_CONST           'charset'
+  32: PRECALL              
+  36: CALL                 
+  46: POP_TOP              
+  48: LOAD_CONST           None
+  50: LOAD_FAST            self
+  52: STORE_ATTR           _charset
+  62: LOAD_CONST           None
+  64: RETURN_VALUE         
+  66: LOAD_GLOBAL          NULL + isinstance
+  78: LOAD_FAST            charset
+  80: LOAD_GLOBAL          Charset
+  92: PRECALL              
+  96: CALL                 
+ 106: POP_JUMP_FORWARD_IF_TRUE to 138
+ 108: LOAD_GLOBAL          NULL + Charset
+ 120: LOAD_FAST            charset
+ 122: PRECALL              
+ 126: CALL                 
+ 136: STORE_FAST           charset
+ 138: LOAD_FAST            charset
+ 140: LOAD_FAST            self
+ 142: STORE_ATTR           _charset
+ 152: LOAD_CONST           'MIME-Version'
+ 154: LOAD_FAST            self
+ 156: CONTAINS_OP          
+ 158: POP_JUMP_FORWARD_IF_FALSE to 204
+ 160: LOAD_FAST            self
+ 162: LOAD_METHOD          add_header
+ 184: LOAD_CONST           'MIME-Version'
+ 186: LOAD_CONST           '1.0'
+ 188: PRECALL              
+ 192: CALL                 
+ 202: POP_TOP              
+ 204: LOAD_CONST           'Content-Type'
+ 206: LOAD_FAST            self
+ 208: CONTAINS_OP          
+ 210: POP_JUMP_FORWARD_IF_FALSE to 298
+ 212: LOAD_FAST            self
+ 214: LOAD_METHOD          add_header
+ 236: LOAD_CONST           'Content-Type'
+ 238: LOAD_CONST           'text/plain'
+ 240: LOAD_FAST            charset
+ 242: LOAD_METHOD          get_output_charset
+ 264: PRECALL              
+ 268: CALL                 
+ 278: KW_NAMES             
+ 280: PRECALL              
+ 284: CALL                 
+ 294: POP_TOP              
+ 296: JUMP_FORWARD         to 378
+ 298: LOAD_FAST            self
+ 300: LOAD_METHOD          set_param
+ 322: LOAD_CONST           'charset'
+ 324: LOAD_FAST            charset
+ 326: LOAD_METHOD          get_output_charset
+ 348: PRECALL              
+ 352: CALL                 
+ 362: PRECALL              
+ 366: CALL                 
+ 376: POP_TOP              
+ 378: LOAD_FAST            charset
+ 380: LOAD_FAST            charset
+ 382: LOAD_METHOD          get_output_charset
+ 404: PRECALL              
+ 408: CALL                 
+ 418: COMPARE_OP           !=
+ 424: POP_JUMP_FORWARD_IF_FALSE to 488
+ 426: LOAD_FAST            charset
+ 428: LOAD_METHOD          body_encode
+ 450: LOAD_FAST            self
+ 452: LOAD_ATTR            _payload
+ 462: PRECALL              
+ 466: CALL                 
+ 476: LOAD_FAST            self
+ 478: STORE_ATTR           _payload
+ 488: LOAD_CONST           'Content-Transfer-Encoding'
+ 490: LOAD_FAST            self
+ 492: CONTAINS_OP          
+ 494: POP_JUMP_FORWARD_IF_FALSE to 844
+ 496: LOAD_FAST            charset
+ 498: LOAD_METHOD          get_body_encoding
+ 520: PRECALL              
+ 524: CALL                 
+ 534: STORE_FAST           cte
+ 536: NOP                  
+ 538: PUSH_NULL            
+ 540: LOAD_FAST            cte
+ 542: LOAD_FAST            self
+ 544: PRECALL              
+ 548: CALL                 
+ 558: POP_TOP              
+ 560: LOAD_CONST           None
+ 562: RETURN_VALUE         
+ 564: PUSH_EXC_INFO        
+ 566: LOAD_GLOBAL          TypeError
+ 578: CHECK_EXC_MATCH      
+ 580: POP_JUMP_FORWARD_IF_FALSE to 836
+ 582: POP_TOP              
+ 584: LOAD_FAST            self
+ 586: LOAD_ATTR            _payload
+ 596: STORE_FAST           payload
+ 598: LOAD_FAST            payload
+ 600: POP_JUMP_FORWARD_IF_FALSE to 734
+ 602: NOP                  
+ 604: LOAD_FAST            payload
+ 606: LOAD_METHOD          encode
+ 628: LOAD_CONST           'ascii'
+ 630: LOAD_CONST           'surrogateescape'
+ 632: PRECALL              
+ 636: CALL                 
+ 646: STORE_FAST           payload
+ 648: JUMP_FORWARD         to 734
+ 650: PUSH_EXC_INFO        
+ 652: LOAD_GLOBAL          UnicodeError
+ 664: CHECK_EXC_MATCH      
+ 666: POP_JUMP_FORWARD_IF_FALSE to 726
+ 668: POP_TOP              
+ 670: LOAD_FAST            payload
+ 672: LOAD_METHOD          encode
+ 694: LOAD_FAST            charset
+ 696: LOAD_ATTR            output_charset
+ 706: PRECALL              
+ 710: CALL                 
+ 720: STORE_FAST           payload
+ 722: POP_EXCEPT           
+ 724: JUMP_FORWARD         to 734
+ 726: RERAISE              
+ 728: COPY                 
+ 730: POP_EXCEPT           
+ 732: RERAISE              
+ 734: LOAD_FAST            charset
+ 736: LOAD_METHOD          body_encode
+ 758: LOAD_FAST            payload
+ 760: PRECALL              
+ 764: CALL                 
+ 774: LOAD_FAST            self
+ 776: STORE_ATTR           _payload
+ 786: LOAD_FAST            self
+ 788: LOAD_METHOD          add_header
+ 810: LOAD_CONST           'Content-Transfer-Encoding'
+ 812: LOAD_FAST            cte
+ 814: PRECALL              
+ 818: CALL                 
+ 828: POP_TOP              
+ 830: POP_EXCEPT           
+ 832: LOAD_CONST           None
+ 834: RETURN_VALUE         
+ 836: RERAISE              
+ 838: COPY                 
+ 840: POP_EXCEPT           
+ 842: RERAISE              
+ 844: LOAD_CONST           None
+ 846: RETURN_VALUE         

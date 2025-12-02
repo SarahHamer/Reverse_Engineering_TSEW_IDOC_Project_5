@@ -1,0 +1,72 @@
+# Disassembly for netrc
+# From module file: netrc
+
+## co_consts:
+('An object-oriented interface to .netrc files.', 0, None, 'netrc', 'NetrcParseError', <code object NetrcParseError at 0x0000024069467C90, file "netrc.py", line 10>, <code object _netrclex at 0x00000240694679F0, file "netrc.py", line 22>, '_netrclex', <code object netrc at 0x000002406945F3C0, file "netrc.py", line 66>, '__main__')
+
+## co_names:
+('__doc__', 'os', 'shlex', 'stat', '__all__', 'Exception', 'NetrcParseError', '_netrclex', 'netrc', '__name__', 'print')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'An object-oriented interface to .netrc files.'
+   4: STORE_NAME           __doc__
+   6: LOAD_CONST           0
+   8: LOAD_CONST           None
+  10: IMPORT_NAME          os
+  12: STORE_NAME           os
+  14: LOAD_CONST           0
+  16: LOAD_CONST           None
+  18: IMPORT_NAME          shlex
+  20: STORE_NAME           shlex
+  22: LOAD_CONST           0
+  24: LOAD_CONST           None
+  26: IMPORT_NAME          stat
+  28: STORE_NAME           stat
+  30: LOAD_CONST           'netrc'
+  32: LOAD_CONST           'NetrcParseError'
+  34: BUILD_LIST           
+  36: STORE_NAME           __all__
+  38: PUSH_NULL            
+  40: LOAD_BUILD_CLASS     
+  42: LOAD_CONST           <code object NetrcParseError at 0x0000024069467C90, file "netrc.py", line 10>
+  44: MAKE_FUNCTION        
+  46: LOAD_CONST           'NetrcParseError'
+  48: LOAD_NAME            Exception
+  50: PRECALL              
+  54: CALL                 
+  64: STORE_NAME           NetrcParseError
+  66: PUSH_NULL            
+  68: LOAD_BUILD_CLASS     
+  70: LOAD_CONST           <code object _netrclex at 0x00000240694679F0, file "netrc.py", line 22>
+  72: MAKE_FUNCTION        
+  74: LOAD_CONST           '_netrclex'
+  76: PRECALL              
+  80: CALL                 
+  90: STORE_NAME           _netrclex
+  92: PUSH_NULL            
+  94: LOAD_BUILD_CLASS     
+  96: LOAD_CONST           <code object netrc at 0x000002406945F3C0, file "netrc.py", line 66>
+  98: MAKE_FUNCTION        
+ 100: LOAD_CONST           'netrc'
+ 102: PRECALL              
+ 106: CALL                 
+ 116: STORE_NAME           netrc
+ 118: LOAD_NAME            __name__
+ 120: LOAD_CONST           '__main__'
+ 122: COMPARE_OP           ==
+ 128: POP_JUMP_FORWARD_IF_FALSE to 172
+ 130: PUSH_NULL            
+ 132: LOAD_NAME            print
+ 134: PUSH_NULL            
+ 136: LOAD_NAME            netrc
+ 138: PRECALL              
+ 142: CALL                 
+ 152: PRECALL              
+ 156: CALL                 
+ 166: POP_TOP              
+ 168: LOAD_CONST           None
+ 170: RETURN_VALUE         
+ 172: LOAD_CONST           None
+ 174: RETURN_VALUE         

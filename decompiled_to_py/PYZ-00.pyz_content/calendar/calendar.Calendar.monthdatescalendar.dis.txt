@@ -1,0 +1,40 @@
+# Disassembly for calendar.Calendar.monthdatescalendar
+# From module file: calendar
+
+## co_consts:
+("\n        Return a matrix (list of lists) representing a month's calendar.\n        Each row represents a week; week entries are datetime.date values.\n        ", <code object <listcomp> at 0x000002406945E1F0, file "calendar.py", line 236>, 0, 7)
+
+## co_names:
+('list', 'itermonthdates', 'range', 'len')
+
+## bytecode:
+
+   0: MAKE_CELL            dates
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + list
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          itermonthdates
+  40: LOAD_FAST            year
+  42: LOAD_FAST            month
+  44: PRECALL              
+  48: CALL                 
+  58: PRECALL              
+  62: CALL                 
+  72: STORE_DEREF          dates
+  74: LOAD_CLOSURE         dates
+  76: BUILD_TUPLE          
+  78: LOAD_CONST           <code object <listcomp> at 0x000002406945E1F0, file "calendar.py", line 236>
+  80: MAKE_FUNCTION        closure
+  82: LOAD_GLOBAL          NULL + range
+  94: LOAD_CONST           0
+  96: LOAD_GLOBAL          NULL + len
+ 108: LOAD_DEREF           dates
+ 110: PRECALL              
+ 114: CALL                 
+ 124: LOAD_CONST           7
+ 126: PRECALL              
+ 130: CALL                 
+ 140: GET_ITER             
+ 142: PRECALL              
+ 146: CALL                 
+ 156: RETURN_VALUE         

@@ -1,0 +1,51 @@
+# Disassembly for typing._unpack_args
+# From module file: typing
+
+## co_consts:
+(None, '__typing_unpacked_tuple_args__', -1, Ellipsis)
+
+## co_names:
+('getattr', 'extend', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           newargs
+   6: LOAD_FAST            args
+   8: GET_ITER             
+  10: FOR_ITER             to 164
+  12: STORE_FAST           arg
+  14: LOAD_GLOBAL          NULL + getattr
+  26: LOAD_FAST            arg
+  28: LOAD_CONST           '__typing_unpacked_tuple_args__'
+  30: LOAD_CONST           None
+  32: PRECALL              
+  36: CALL                 
+  46: STORE_FAST           subargs
+  48: LOAD_FAST            subargs
+  50: POP_JUMP_FORWARD_IF_NONE to 120
+  52: LOAD_FAST            subargs
+  54: POP_JUMP_FORWARD_IF_FALSE to 76
+  56: LOAD_FAST            subargs
+  58: LOAD_CONST           -1
+  60: BINARY_SUBSCR        
+  70: LOAD_CONST           Ellipsis
+  72: IS_OP                
+  74: POP_JUMP_FORWARD_IF_TRUE to 120
+  76: LOAD_FAST            newargs
+  78: LOAD_METHOD          extend
+ 100: LOAD_FAST            subargs
+ 102: PRECALL              
+ 106: CALL                 
+ 116: POP_TOP              
+ 118: JUMP_BACKWARD        to 10
+ 120: LOAD_FAST            newargs
+ 122: LOAD_METHOD          append
+ 144: LOAD_FAST            arg
+ 146: PRECALL              
+ 150: CALL                 
+ 160: POP_TOP              
+ 162: JUMP_BACKWARD        to 10
+ 164: LOAD_FAST            newargs
+ 166: RETURN_VALUE         

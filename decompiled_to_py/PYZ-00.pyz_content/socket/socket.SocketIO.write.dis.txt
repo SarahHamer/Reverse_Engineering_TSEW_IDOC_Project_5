@@ -1,0 +1,55 @@
+# Disassembly for socket.SocketIO.write
+# From module file: socket
+
+## co_consts:
+('Write the given bytes or bytearray object *b* to the socket\n        and return the number of bytes written.  This can be less than\n        len(b) if not all data could be written.  If the socket is\n        non-blocking and no bytes could be written None is returned.\n        ', None)
+
+## co_names:
+('_checkClosed', '_checkWritable', '_sock', 'send', 'error', 'errno', '_blocking_errnos')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _checkClosed
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_FAST            self
+  44: LOAD_METHOD          _checkWritable
+  66: PRECALL              
+  70: CALL                 
+  80: POP_TOP              
+  82: NOP                  
+  84: LOAD_FAST            self
+  86: LOAD_ATTR            _sock
+  96: LOAD_METHOD          send
+ 118: LOAD_FAST            b
+ 120: PRECALL              
+ 124: CALL                 
+ 134: RETURN_VALUE         
+ 136: PUSH_EXC_INFO        
+ 138: LOAD_GLOBAL          error
+ 150: CHECK_EXC_MATCH      
+ 152: POP_JUMP_FORWARD_IF_FALSE to 206
+ 154: STORE_FAST           e
+ 156: LOAD_FAST            e
+ 158: LOAD_ATTR            errno
+ 168: LOAD_GLOBAL          _blocking_errnos
+ 180: CONTAINS_OP          
+ 182: POP_JUMP_FORWARD_IF_FALSE to 196
+ 184: POP_EXCEPT           
+ 186: LOAD_CONST           None
+ 188: STORE_FAST           e
+ 190: DELETE_FAST          e
+ 192: LOAD_CONST           None
+ 194: RETURN_VALUE         
+ 196: RAISE_VARARGS        
+ 198: LOAD_CONST           None
+ 200: STORE_FAST           e
+ 202: DELETE_FAST          e
+ 204: RERAISE              
+ 206: RERAISE              
+ 208: COPY                 
+ 210: POP_EXCEPT           
+ 212: RERAISE              

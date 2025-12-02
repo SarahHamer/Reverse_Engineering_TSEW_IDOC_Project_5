@@ -1,0 +1,41 @@
+# Disassembly for typing._caller
+# From module file: typing
+
+## co_consts:
+(None, 1, '__name__')
+
+## co_names:
+('sys', '_getframe', 'f_globals', 'get', 'AttributeError', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_GLOBAL          NULL + sys
+  16: LOAD_ATTR            _getframe
+  26: LOAD_FAST            depth
+  28: LOAD_CONST           1
+  30: BINARY_OP            +
+  34: PRECALL              
+  38: CALL                 
+  48: LOAD_ATTR            f_globals
+  58: LOAD_METHOD          get
+  80: LOAD_CONST           '__name__'
+  82: LOAD_FAST            default
+  84: PRECALL              
+  88: CALL                 
+  98: RETURN_VALUE         
+ 100: PUSH_EXC_INFO        
+ 102: LOAD_GLOBAL          AttributeError
+ 114: LOAD_GLOBAL          ValueError
+ 126: BUILD_TUPLE          
+ 128: CHECK_EXC_MATCH      
+ 130: POP_JUMP_FORWARD_IF_FALSE to 140
+ 132: POP_TOP              
+ 134: POP_EXCEPT           
+ 136: LOAD_CONST           None
+ 138: RETURN_VALUE         
+ 140: RERAISE              
+ 142: COPY                 
+ 144: POP_EXCEPT           
+ 146: RERAISE              

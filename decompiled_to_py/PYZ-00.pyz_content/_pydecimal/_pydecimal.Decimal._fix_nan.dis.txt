@@ -1,0 +1,58 @@
+# Disassembly for _pydecimal.Decimal._fix_nan
+# From module file: _pydecimal
+
+## co_consts:
+('Decapitate the payload of a NaN to fit the context', None, '0', True)
+
+## co_names:
+('_int', 'prec', 'clamp', 'len', 'lstrip', '_dec_from_triple', '_sign', '_exp', 'Decimal')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _int
+  14: STORE_FAST           payload
+  16: LOAD_FAST            context
+  18: LOAD_ATTR            prec
+  28: LOAD_FAST            context
+  30: LOAD_ATTR            clamp
+  40: BINARY_OP            -
+  44: STORE_FAST           max_payload_len
+  46: LOAD_GLOBAL          NULL + len
+  58: LOAD_FAST            payload
+  60: PRECALL              
+  64: CALL                 
+  74: LOAD_FAST            max_payload_len
+  76: COMPARE_OP           >
+  82: POP_JUMP_FORWARD_IF_FALSE to 230
+  84: LOAD_FAST            payload
+  86: LOAD_GLOBAL          NULL + len
+  98: LOAD_FAST            payload
+ 100: PRECALL              
+ 104: CALL                 
+ 114: LOAD_FAST            max_payload_len
+ 116: BINARY_OP            -
+ 120: LOAD_CONST           None
+ 122: BUILD_SLICE          
+ 124: BINARY_SUBSCR        
+ 134: LOAD_METHOD          lstrip
+ 156: LOAD_CONST           '0'
+ 158: PRECALL              
+ 162: CALL                 
+ 172: STORE_FAST           payload
+ 174: LOAD_GLOBAL          NULL + _dec_from_triple
+ 186: LOAD_FAST            self
+ 188: LOAD_ATTR            _sign
+ 198: LOAD_FAST            payload
+ 200: LOAD_FAST            self
+ 202: LOAD_ATTR            _exp
+ 212: LOAD_CONST           True
+ 214: PRECALL              
+ 218: CALL                 
+ 228: RETURN_VALUE         
+ 230: LOAD_GLOBAL          NULL + Decimal
+ 242: LOAD_FAST            self
+ 244: PRECALL              
+ 248: CALL                 
+ 258: RETURN_VALUE         

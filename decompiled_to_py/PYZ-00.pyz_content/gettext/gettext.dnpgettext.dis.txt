@@ -1,0 +1,55 @@
+# Disassembly for gettext.dnpgettext
+# From module file: gettext
+
+## co_consts:
+(None, 1)
+
+## co_names:
+('translation', '_localedirs', 'get', 'OSError', 'npgettext')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_GLOBAL          NULL + translation
+  16: LOAD_FAST            domain
+  18: LOAD_GLOBAL          _localedirs
+  30: LOAD_METHOD          get
+  52: LOAD_FAST            domain
+  54: LOAD_CONST           None
+  56: PRECALL              
+  60: CALL                 
+  70: PRECALL              
+  74: CALL                 
+  84: STORE_FAST           t
+  86: JUMP_FORWARD         to 144
+  88: PUSH_EXC_INFO        
+  90: LOAD_GLOBAL          OSError
+ 102: CHECK_EXC_MATCH      
+ 104: POP_JUMP_FORWARD_IF_FALSE to 136
+ 106: POP_TOP              
+ 108: LOAD_FAST            n
+ 110: LOAD_CONST           1
+ 112: COMPARE_OP           ==
+ 118: POP_JUMP_FORWARD_IF_FALSE to 128
+ 120: LOAD_FAST            msgid1
+ 122: SWAP                 
+ 124: POP_EXCEPT           
+ 126: RETURN_VALUE         
+ 128: LOAD_FAST            msgid2
+ 130: SWAP                 
+ 132: POP_EXCEPT           
+ 134: RETURN_VALUE         
+ 136: RERAISE              
+ 138: COPY                 
+ 140: POP_EXCEPT           
+ 142: RERAISE              
+ 144: LOAD_FAST            t
+ 146: LOAD_METHOD          npgettext
+ 168: LOAD_FAST            context
+ 170: LOAD_FAST            msgid1
+ 172: LOAD_FAST            msgid2
+ 174: LOAD_FAST            n
+ 176: PRECALL              
+ 180: CALL                 
+ 190: RETURN_VALUE         

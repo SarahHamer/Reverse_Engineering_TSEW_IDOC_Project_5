@@ -1,0 +1,35 @@
+# Disassembly for email.SingleAddressHeader.address
+# From module file: email.headerregistry
+
+## co_consts:
+(None, 1, 'value of single address header {} is not a single address', 0)
+
+## co_names:
+('len', 'addresses', 'ValueError', 'format', 'name')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + len
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            addresses
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_CONST           1
+  42: COMPARE_OP           !=
+  48: POP_JUMP_FORWARD_IF_FALSE to 128
+  50: LOAD_GLOBAL          NULL + ValueError
+  62: LOAD_CONST           'value of single address header {} is not a single address'
+  64: LOAD_METHOD          format
+  86: LOAD_FAST            self
+  88: LOAD_ATTR            name
+  98: PRECALL              
+ 102: CALL                 
+ 112: PRECALL              
+ 116: CALL                 
+ 126: RAISE_VARARGS        
+ 128: LOAD_FAST            self
+ 130: LOAD_ATTR            addresses
+ 140: LOAD_CONST           0
+ 142: BINARY_SUBSCR        
+ 152: RETURN_VALUE         

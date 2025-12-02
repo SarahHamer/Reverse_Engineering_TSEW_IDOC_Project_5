@@ -1,0 +1,59 @@
+# Disassembly for ftplib.FTP.abort
+# From module file: ftplib
+
+## co_consts:
+("Abort a file transfer.  Uses out-of-band data.\n        This does not follow the procedure from the RFC to send Telnet\n        IP and Synch; that doesn't seem to work with the servers I've\n        tried.  Instead, just send the ABOR command as OOB data.", b'ABOR', 1, '*put urgent*', None, 3, frozenset({'226', '225', '426'}))
+
+## co_names:
+('B_CRLF', 'debugging', 'print', 'sanitize', 'sock', 'sendall', 'MSG_OOB', 'getmultiline', 'error_proto')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           b'ABOR'
+   4: LOAD_GLOBAL          B_CRLF
+  16: BINARY_OP            +
+  20: STORE_FAST           line
+  22: LOAD_FAST            self
+  24: LOAD_ATTR            debugging
+  34: LOAD_CONST           1
+  36: COMPARE_OP           >
+  42: POP_JUMP_FORWARD_IF_FALSE to 114
+  44: LOAD_GLOBAL          NULL + print
+  56: LOAD_CONST           '*put urgent*'
+  58: LOAD_FAST            self
+  60: LOAD_METHOD          sanitize
+  82: LOAD_FAST            line
+  84: PRECALL              
+  88: CALL                 
+  98: PRECALL              
+ 102: CALL                 
+ 112: POP_TOP              
+ 114: LOAD_FAST            self
+ 116: LOAD_ATTR            sock
+ 126: LOAD_METHOD          sendall
+ 148: LOAD_FAST            line
+ 150: LOAD_GLOBAL          MSG_OOB
+ 162: PRECALL              
+ 166: CALL                 
+ 176: POP_TOP              
+ 178: LOAD_FAST            self
+ 180: LOAD_METHOD          getmultiline
+ 202: PRECALL              
+ 206: CALL                 
+ 216: STORE_FAST           resp
+ 218: LOAD_FAST            resp
+ 220: LOAD_CONST           None
+ 222: LOAD_CONST           3
+ 224: BUILD_SLICE          
+ 226: BINARY_SUBSCR        
+ 236: LOAD_CONST           frozenset({'226', '225', '426'})
+ 238: CONTAINS_OP          
+ 240: POP_JUMP_FORWARD_IF_FALSE to 272
+ 242: LOAD_GLOBAL          NULL + error_proto
+ 254: LOAD_FAST            resp
+ 256: PRECALL              
+ 260: CALL                 
+ 270: RAISE_VARARGS        
+ 272: LOAD_FAST            resp
+ 274: RETURN_VALUE         

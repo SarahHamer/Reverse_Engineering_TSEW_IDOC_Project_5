@@ -1,0 +1,94 @@
+# Disassembly for inspect.formatargvalues
+# From module file: inspect
+
+## co_consts:
+('Format an argument spec from the 4 values returned by getargvalues.\n\n    The first four arguments are (args, varargs, varkw, locals).  The\n    next four arguments are the corresponding optional formatting functions\n    that are called to turn names and values into strings.  The ninth\n    argument is an optional function to format the sequence of arguments.', <code object convert at 0x0000024069CF0030, file "inspect.py", line 1473>, '(', ', ', ')')
+
+## co_names:
+('range', 'len', 'append', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            locals
+   4: LOAD_FAST            formatarg
+   6: LOAD_FAST            formatvalue
+   8: BUILD_TUPLE          
+  10: LOAD_CONST           <code object convert at 0x0000024069CF0030, file "inspect.py", line 1473>
+  12: MAKE_FUNCTION        defaults
+  14: STORE_FAST           convert
+  16: BUILD_LIST           
+  18: STORE_FAST           specs
+  20: LOAD_GLOBAL          NULL + range
+  32: LOAD_GLOBAL          NULL + len
+  44: LOAD_FAST            args
+  46: PRECALL              
+  50: CALL                 
+  60: PRECALL              
+  64: CALL                 
+  74: GET_ITER             
+  76: FOR_ITER             to 154
+  78: STORE_FAST           i
+  80: LOAD_FAST            specs
+  82: LOAD_METHOD          append
+ 104: PUSH_NULL            
+ 106: LOAD_FAST            convert
+ 108: LOAD_FAST            args
+ 110: LOAD_FAST            i
+ 112: BINARY_SUBSCR        
+ 122: PRECALL              
+ 126: CALL                 
+ 136: PRECALL              
+ 140: CALL                 
+ 150: POP_TOP              
+ 152: JUMP_BACKWARD        to 76
+ 154: LOAD_FAST            varargs
+ 156: POP_JUMP_FORWARD_IF_FALSE to 254
+ 158: LOAD_FAST            specs
+ 160: LOAD_METHOD          append
+ 182: PUSH_NULL            
+ 184: LOAD_FAST            formatvarargs
+ 186: LOAD_FAST            varargs
+ 188: PRECALL              
+ 192: CALL                 
+ 202: PUSH_NULL            
+ 204: LOAD_FAST            formatvalue
+ 206: LOAD_FAST            locals
+ 208: LOAD_FAST            varargs
+ 210: BINARY_SUBSCR        
+ 220: PRECALL              
+ 224: CALL                 
+ 234: BINARY_OP            +
+ 238: PRECALL              
+ 242: CALL                 
+ 252: POP_TOP              
+ 254: LOAD_FAST            varkw
+ 256: POP_JUMP_FORWARD_IF_FALSE to 354
+ 258: LOAD_FAST            specs
+ 260: LOAD_METHOD          append
+ 282: PUSH_NULL            
+ 284: LOAD_FAST            formatvarkw
+ 286: LOAD_FAST            varkw
+ 288: PRECALL              
+ 292: CALL                 
+ 302: PUSH_NULL            
+ 304: LOAD_FAST            formatvalue
+ 306: LOAD_FAST            locals
+ 308: LOAD_FAST            varkw
+ 310: BINARY_SUBSCR        
+ 320: PRECALL              
+ 324: CALL                 
+ 334: BINARY_OP            +
+ 338: PRECALL              
+ 342: CALL                 
+ 352: POP_TOP              
+ 354: LOAD_CONST           '('
+ 356: LOAD_CONST           ', '
+ 358: LOAD_METHOD          join
+ 380: LOAD_FAST            specs
+ 382: PRECALL              
+ 386: CALL                 
+ 396: BINARY_OP            +
+ 400: LOAD_CONST           ')'
+ 402: BINARY_OP            +
+ 406: RETURN_VALUE         

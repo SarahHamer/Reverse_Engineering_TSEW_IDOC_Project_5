@@ -1,0 +1,68 @@
+# Disassembly for threading.Semaphore.release
+# From module file: threading
+
+## co_consts:
+('Release a semaphore, incrementing the internal counter by one or more.\n\n        When the counter is zero on entry and another thread is waiting for it\n        to become larger than zero again, wake up that thread.\n\n        ', 1, 'n must be one or more', None)
+
+## co_names:
+('ValueError', '_cond', '_value', 'range', 'notify')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            n
+   4: LOAD_CONST           1
+   6: COMPARE_OP           <
+  12: POP_JUMP_FORWARD_IF_FALSE to 44
+  14: LOAD_GLOBAL          NULL + ValueError
+  26: LOAD_CONST           'n must be one or more'
+  28: PRECALL              
+  32: CALL                 
+  42: RAISE_VARARGS        
+  44: LOAD_FAST            self
+  46: LOAD_ATTR            _cond
+  56: BEFORE_WITH          
+  58: POP_TOP              
+  60: LOAD_FAST            self
+  62: COPY                 
+  64: LOAD_ATTR            _value
+  74: LOAD_FAST            n
+  76: BINARY_OP            +=
+  80: SWAP                 
+  82: STORE_ATTR           _value
+  92: LOAD_GLOBAL          NULL + range
+ 104: LOAD_FAST            n
+ 106: PRECALL              
+ 110: CALL                 
+ 120: GET_ITER             
+ 122: FOR_ITER             to 178
+ 124: STORE_FAST           i
+ 126: LOAD_FAST            self
+ 128: LOAD_ATTR            _cond
+ 138: LOAD_METHOD          notify
+ 160: PRECALL              
+ 164: CALL                 
+ 174: POP_TOP              
+ 176: JUMP_BACKWARD        to 122
+ 178: NOP                  
+ 180: LOAD_CONST           None
+ 182: LOAD_CONST           None
+ 184: LOAD_CONST           None
+ 186: PRECALL              
+ 190: CALL                 
+ 200: POP_TOP              
+ 202: LOAD_CONST           None
+ 204: RETURN_VALUE         
+ 206: PUSH_EXC_INFO        
+ 208: WITH_EXCEPT_START    
+ 210: POP_JUMP_FORWARD_IF_TRUE to 220
+ 212: RERAISE              
+ 214: COPY                 
+ 216: POP_EXCEPT           
+ 218: RERAISE              
+ 220: POP_TOP              
+ 222: POP_EXCEPT           
+ 224: POP_TOP              
+ 226: POP_TOP              
+ 228: LOAD_CONST           None
+ 230: RETURN_VALUE         

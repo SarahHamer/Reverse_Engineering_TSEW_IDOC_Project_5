@@ -1,0 +1,67 @@
+# Disassembly for _pydecimal.Decimal.__round__
+# From module file: _pydecimal
+
+## co_consts:
+("Round self to the nearest integer, or to a given precision.\n\n        If only one argument is supplied, round a finite Decimal\n        instance self to the nearest integer.  If self is infinite or\n        a NaN then a Python exception is raised.  If self is finite\n        and lies exactly halfway between two integers then it is\n        rounded to the integer with even last digit.\n\n        >>> round(Decimal('123.456'))\n        123\n        >>> round(Decimal('-456.789'))\n        -457\n        >>> round(Decimal('-3.0'))\n        -3\n        >>> round(Decimal('2.5'))\n        2\n        >>> round(Decimal('3.5'))\n        4\n        >>> round(Decimal('Inf'))\n        Traceback (most recent call last):\n          ...\n        OverflowError: cannot round an infinity\n        >>> round(Decimal('NaN'))\n        Traceback (most recent call last):\n          ...\n        ValueError: cannot round a NaN\n\n        If a second argument n is supplied, self is rounded to n\n        decimal places using the rounding mode for the current\n        context.\n\n        For an integer n, round(self, -n) is exactly equivalent to\n        self.quantize(Decimal('1En')).\n\n        >>> round(Decimal('123.456'), 0)\n        Decimal('123')\n        >>> round(Decimal('123.456'), 2)\n        Decimal('123.46')\n        >>> round(Decimal('123.456'), -2)\n        Decimal('1E+2')\n        >>> round(Decimal('-Infinity'), 37)\n        Decimal('NaN')\n        >>> round(Decimal('sNaN123'), 0)\n        Decimal('NaN123')\n\n        ", None, 'Second argument to round should be integral', 0, '1', 'cannot round a NaN', 'cannot round an infinity')
+
+## co_names:
+('isinstance', 'int', 'TypeError', '_dec_from_triple', 'quantize', '_is_special', 'is_nan', 'ValueError', 'OverflowError', '_rescale', 'ROUND_HALF_EVEN')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            n
+   4: POP_JUMP_FORWARD_IF_NONE to 156
+   6: LOAD_GLOBAL          NULL + isinstance
+  18: LOAD_FAST            n
+  20: LOAD_GLOBAL          int
+  32: PRECALL              
+  36: CALL                 
+  46: POP_JUMP_FORWARD_IF_TRUE to 78
+  48: LOAD_GLOBAL          NULL + TypeError
+  60: LOAD_CONST           'Second argument to round should be integral'
+  62: PRECALL              
+  66: CALL                 
+  76: RAISE_VARARGS        
+  78: LOAD_GLOBAL          NULL + _dec_from_triple
+  90: LOAD_CONST           0
+  92: LOAD_CONST           '1'
+  94: LOAD_FAST            n
+  96: UNARY_NEGATIVE       
+  98: PRECALL              
+ 102: CALL                 
+ 112: STORE_FAST           exp
+ 114: LOAD_FAST            self
+ 116: LOAD_METHOD          quantize
+ 138: LOAD_FAST            exp
+ 140: PRECALL              
+ 144: CALL                 
+ 154: RETURN_VALUE         
+ 156: LOAD_FAST            self
+ 158: LOAD_ATTR            _is_special
+ 168: POP_JUMP_FORWARD_IF_FALSE to 270
+ 170: LOAD_FAST            self
+ 172: LOAD_METHOD          is_nan
+ 194: PRECALL              
+ 198: CALL                 
+ 208: POP_JUMP_FORWARD_IF_FALSE to 240
+ 210: LOAD_GLOBAL          NULL + ValueError
+ 222: LOAD_CONST           'cannot round a NaN'
+ 224: PRECALL              
+ 228: CALL                 
+ 238: RAISE_VARARGS        
+ 240: LOAD_GLOBAL          NULL + OverflowError
+ 252: LOAD_CONST           'cannot round an infinity'
+ 254: PRECALL              
+ 258: CALL                 
+ 268: RAISE_VARARGS        
+ 270: LOAD_GLOBAL          NULL + int
+ 282: LOAD_FAST            self
+ 284: LOAD_METHOD          _rescale
+ 306: LOAD_CONST           0
+ 308: LOAD_GLOBAL          ROUND_HALF_EVEN
+ 320: PRECALL              
+ 324: CALL                 
+ 334: PRECALL              
+ 338: CALL                 
+ 348: RETURN_VALUE         

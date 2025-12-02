@@ -1,0 +1,143 @@
+# Disassembly for importlib._load_unlocked
+# From module file: importlib._bootstrap
+
+## co_consts:
+(None, 'exec_module', '.exec_module() not found; falling back to load_module()', True, 'missing loader', ('name',), 'import {!r} # {!r}', False)
+
+## co_names:
+('loader', 'hasattr', '_object_name', '_warnings', 'warn', 'ImportWarning', '_load_backward_compatible', 'module_from_spec', '_initializing', 'sys', 'modules', 'name', 'submodule_search_locations', 'ImportError', 'exec_module', 'KeyError', 'pop', '_verbose_message')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            spec
+   4: LOAD_ATTR            loader
+  14: POP_JUMP_FORWARD_IF_NONE to 198
+  16: LOAD_GLOBAL          NULL + hasattr
+  28: LOAD_FAST            spec
+  30: LOAD_ATTR            loader
+  40: LOAD_CONST           'exec_module'
+  42: PRECALL              
+  46: CALL                 
+  56: POP_JUMP_FORWARD_IF_TRUE to 198
+  58: LOAD_GLOBAL          NULL + _object_name
+  70: LOAD_FAST            spec
+  72: LOAD_ATTR            loader
+  82: PRECALL              
+  86: CALL                 
+  96: FORMAT_VALUE         
+  98: LOAD_CONST           '.exec_module() not found; falling back to load_module()'
+ 100: BUILD_STRING         
+ 102: STORE_FAST           msg
+ 104: LOAD_GLOBAL          _warnings
+ 116: LOAD_METHOD          warn
+ 138: LOAD_FAST            msg
+ 140: LOAD_GLOBAL          ImportWarning
+ 152: PRECALL              
+ 156: CALL                 
+ 166: POP_TOP              
+ 168: LOAD_GLOBAL          NULL + _load_backward_compatible
+ 180: LOAD_FAST            spec
+ 182: PRECALL              
+ 186: CALL                 
+ 196: RETURN_VALUE         
+ 198: LOAD_GLOBAL          NULL + module_from_spec
+ 210: LOAD_FAST            spec
+ 212: PRECALL              
+ 216: CALL                 
+ 226: STORE_FAST           module
+ 228: LOAD_CONST           True
+ 230: LOAD_FAST            spec
+ 232: STORE_ATTR           _initializing
+ 242: NOP                  
+ 244: LOAD_FAST            module
+ 246: LOAD_GLOBAL          sys
+ 258: LOAD_ATTR            modules
+ 268: LOAD_FAST            spec
+ 270: LOAD_ATTR            name
+ 280: STORE_SUBSCR         
+ 284: NOP                  
+ 286: LOAD_FAST            spec
+ 288: LOAD_ATTR            loader
+ 298: POP_JUMP_FORWARD_IF_NOT_NONE to 360
+ 300: LOAD_FAST            spec
+ 302: LOAD_ATTR            submodule_search_locations
+ 312: POP_JUMP_FORWARD_IF_NOT_NONE to 358
+ 314: LOAD_GLOBAL          NULL + ImportError
+ 326: LOAD_CONST           'missing loader'
+ 328: LOAD_FAST            spec
+ 330: LOAD_ATTR            name
+ 340: KW_NAMES             
+ 342: PRECALL              
+ 346: CALL                 
+ 356: RAISE_VARARGS        
+ 358: JUMP_FORWARD         to 412
+ 360: LOAD_FAST            spec
+ 362: LOAD_ATTR            loader
+ 372: LOAD_METHOD          exec_module
+ 394: LOAD_FAST            module
+ 396: PRECALL              
+ 400: CALL                 
+ 410: POP_TOP              
+ 412: JUMP_FORWARD         to 498
+ 414: PUSH_EXC_INFO        
+ 416: POP_TOP              
+ 418: NOP                  
+ 420: LOAD_GLOBAL          sys
+ 432: LOAD_ATTR            modules
+ 442: LOAD_FAST            spec
+ 444: LOAD_ATTR            name
+ 454: DELETE_SUBSCR        
+ 456: JUMP_FORWARD         to 490
+ 458: PUSH_EXC_INFO        
+ 460: LOAD_GLOBAL          KeyError
+ 472: CHECK_EXC_MATCH      
+ 474: POP_JUMP_FORWARD_IF_FALSE to 482
+ 476: POP_TOP              
+ 478: POP_EXCEPT           
+ 480: JUMP_FORWARD         to 490
+ 482: RERAISE              
+ 484: COPY                 
+ 486: POP_EXCEPT           
+ 488: RERAISE              
+ 490: RAISE_VARARGS        
+ 492: COPY                 
+ 494: POP_EXCEPT           
+ 496: RERAISE              
+ 498: LOAD_GLOBAL          sys
+ 510: LOAD_ATTR            modules
+ 520: LOAD_METHOD          pop
+ 542: LOAD_FAST            spec
+ 544: LOAD_ATTR            name
+ 554: PRECALL              
+ 558: CALL                 
+ 568: STORE_FAST           module
+ 570: LOAD_FAST            module
+ 572: LOAD_GLOBAL          sys
+ 584: LOAD_ATTR            modules
+ 594: LOAD_FAST            spec
+ 596: LOAD_ATTR            name
+ 606: STORE_SUBSCR         
+ 610: LOAD_GLOBAL          NULL + _verbose_message
+ 622: LOAD_CONST           'import {!r} # {!r}'
+ 624: LOAD_FAST            spec
+ 626: LOAD_ATTR            name
+ 636: LOAD_FAST            spec
+ 638: LOAD_ATTR            loader
+ 648: PRECALL              
+ 652: CALL                 
+ 662: POP_TOP              
+ 664: LOAD_CONST           False
+ 666: LOAD_FAST            spec
+ 668: STORE_ATTR           _initializing
+ 678: JUMP_FORWARD         to 704
+ 680: PUSH_EXC_INFO        
+ 682: LOAD_CONST           False
+ 684: LOAD_FAST            spec
+ 686: STORE_ATTR           _initializing
+ 696: RERAISE              
+ 698: COPY                 
+ 700: POP_EXCEPT           
+ 702: RERAISE              
+ 704: LOAD_FAST            module
+ 706: RETURN_VALUE         

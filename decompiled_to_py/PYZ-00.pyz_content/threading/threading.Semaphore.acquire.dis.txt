@@ -1,0 +1,100 @@
+# Disassembly for threading.Semaphore.acquire
+# From module file: threading
+
+## co_consts:
+('Acquire a semaphore, decrementing the internal counter by one.\n\n        When invoked without arguments: if the internal counter is larger than\n        zero on entry, decrement it by one and return immediately. If it is zero\n        on entry, block, waiting until some other thread has called release() to\n        make it larger than zero. This is done with proper interlocking so that\n        if multiple acquire() calls are blocked, release() will wake exactly one\n        of them up. The implementation may pick one at random, so the order in\n        which blocked threads are awakened should not be relied on. There is no\n        return value in this case.\n\n        When invoked with blocking set to true, do the same thing as when called\n        without arguments, and return true.\n\n        When invoked with blocking set to false, do not block. If a call without\n        an argument would block, return false immediately; otherwise, do the\n        same thing as when called without arguments, and return true.\n\n        When invoked with a timeout other than None, it will block for at\n        most timeout seconds.  If acquire does not complete successfully in\n        that interval, return false.  Return true otherwise.\n\n        ', None, "can't specify timeout for non-blocking acquire", False, 0, 1, True)
+
+## co_names:
+('ValueError', '_cond', '_value', '_time', 'wait')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            blocking
+   4: POP_JUMP_FORWARD_IF_TRUE to 40
+   6: LOAD_FAST            timeout
+   8: POP_JUMP_FORWARD_IF_NONE to 40
+  10: LOAD_GLOBAL          NULL + ValueError
+  22: LOAD_CONST           "can't specify timeout for non-blocking acquire"
+  24: PRECALL              
+  28: CALL                 
+  38: RAISE_VARARGS        
+  40: LOAD_CONST           False
+  42: STORE_FAST           rc
+  44: LOAD_CONST           None
+  46: STORE_FAST           endtime
+  48: LOAD_FAST            self
+  50: LOAD_ATTR            _cond
+  60: BEFORE_WITH          
+  62: POP_TOP              
+  64: LOAD_FAST            self
+  66: LOAD_ATTR            _value
+  76: LOAD_CONST           0
+  78: COMPARE_OP           ==
+  84: POP_JUMP_FORWARD_IF_FALSE to 258
+  86: LOAD_FAST            blocking
+  88: POP_JUMP_FORWARD_IF_TRUE to 92
+  90: JUMP_FORWARD         to 294
+  92: LOAD_FAST            timeout
+  94: POP_JUMP_FORWARD_IF_NONE to 184
+  96: LOAD_FAST            endtime
+  98: POP_JUMP_FORWARD_IF_NOT_NONE to 136
+ 100: LOAD_GLOBAL          NULL + _time
+ 112: PRECALL              
+ 116: CALL                 
+ 126: LOAD_FAST            timeout
+ 128: BINARY_OP            +
+ 132: STORE_FAST           endtime
+ 134: JUMP_FORWARD         to 184
+ 136: LOAD_FAST            endtime
+ 138: LOAD_GLOBAL          NULL + _time
+ 150: PRECALL              
+ 154: CALL                 
+ 164: BINARY_OP            -
+ 168: STORE_FAST           timeout
+ 170: LOAD_FAST            timeout
+ 172: LOAD_CONST           0
+ 174: COMPARE_OP           <=
+ 180: POP_JUMP_FORWARD_IF_FALSE to 184
+ 182: JUMP_FORWARD         to 294
+ 184: LOAD_FAST            self
+ 186: LOAD_ATTR            _cond
+ 196: LOAD_METHOD          wait
+ 218: LOAD_FAST            timeout
+ 220: PRECALL              
+ 224: CALL                 
+ 234: POP_TOP              
+ 236: LOAD_FAST            self
+ 238: LOAD_ATTR            _value
+ 248: LOAD_CONST           0
+ 250: COMPARE_OP           ==
+ 256: POP_JUMP_BACKWARD_IF_TRUE to 86
+ 258: LOAD_FAST            self
+ 260: COPY                 
+ 262: LOAD_ATTR            _value
+ 272: LOAD_CONST           1
+ 274: BINARY_OP            -=
+ 278: SWAP                 
+ 280: STORE_ATTR           _value
+ 290: LOAD_CONST           True
+ 292: STORE_FAST           rc
+ 294: LOAD_CONST           None
+ 296: LOAD_CONST           None
+ 298: LOAD_CONST           None
+ 300: PRECALL              
+ 304: CALL                 
+ 314: POP_TOP              
+ 316: JUMP_FORWARD         to 340
+ 318: PUSH_EXC_INFO        
+ 320: WITH_EXCEPT_START    
+ 322: POP_JUMP_FORWARD_IF_TRUE to 332
+ 324: RERAISE              
+ 326: COPY                 
+ 328: POP_EXCEPT           
+ 330: RERAISE              
+ 332: POP_TOP              
+ 334: POP_EXCEPT           
+ 336: POP_TOP              
+ 338: POP_TOP              
+ 340: LOAD_FAST            rc
+ 342: RETURN_VALUE         

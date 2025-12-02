@@ -1,0 +1,26 @@
+# Disassembly for threading._RLock._acquire_restore
+# From module file: threading
+
+## co_consts:
+(None,)
+
+## co_names:
+('_block', 'acquire', '_count', '_owner')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _block
+  14: LOAD_METHOD          acquire
+  36: PRECALL              
+  40: CALL                 
+  50: POP_TOP              
+  52: LOAD_FAST            state
+  54: UNPACK_SEQUENCE      
+  58: LOAD_FAST            self
+  60: STORE_ATTR           _count
+  70: LOAD_FAST            self
+  72: STORE_ATTR           _owner
+  82: LOAD_CONST           None
+  84: RETURN_VALUE         

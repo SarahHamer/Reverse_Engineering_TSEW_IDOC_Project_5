@@ -1,0 +1,20 @@
+# Disassembly for zipfile.CompleteDirs._name_set
+# From module file: zipfile
+
+## co_consts:
+(None,)
+
+## co_names:
+('set', 'namelist')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + set
+  14: LOAD_FAST            self
+  16: LOAD_METHOD          namelist
+  38: PRECALL              
+  42: CALL                 
+  52: PRECALL              
+  56: CALL                 
+  66: RETURN_VALUE         

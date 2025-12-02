@@ -1,0 +1,34 @@
+# Disassembly for fractions.Fraction._mod
+# From module file: fractions
+
+## co_consts:
+('a % b',)
+
+## co_names:
+('denominator', 'Fraction', 'numerator')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            a
+   4: LOAD_ATTR            denominator
+  14: LOAD_FAST            b
+  16: LOAD_ATTR            denominator
+  26: STORE_FAST           db
+  28: STORE_FAST           da
+  30: LOAD_GLOBAL          NULL + Fraction
+  42: LOAD_FAST            a
+  44: LOAD_ATTR            numerator
+  54: LOAD_FAST            db
+  56: BINARY_OP            *
+  60: LOAD_FAST            b
+  62: LOAD_ATTR            numerator
+  72: LOAD_FAST            da
+  74: BINARY_OP            *
+  78: BINARY_OP            %
+  82: LOAD_FAST            da
+  84: LOAD_FAST            db
+  86: BINARY_OP            *
+  90: PRECALL              
+  94: CALL                 
+ 104: RETURN_VALUE         

@@ -1,0 +1,35 @@
+# Disassembly for tarfile.TarFile.__exit__
+# From module file: tarfile
+
+## co_consts:
+(None, True)
+
+## co_names:
+('close', '_extfileobj', 'fileobj', 'closed')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            type
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 50
+   6: LOAD_FAST            self
+   8: LOAD_METHOD          close
+  30: PRECALL              
+  34: CALL                 
+  44: POP_TOP              
+  46: LOAD_CONST           None
+  48: RETURN_VALUE         
+  50: LOAD_FAST            self
+  52: LOAD_ATTR            _extfileobj
+  62: POP_JUMP_FORWARD_IF_TRUE to 114
+  64: LOAD_FAST            self
+  66: LOAD_ATTR            fileobj
+  76: LOAD_METHOD          close
+  98: PRECALL              
+ 102: CALL                 
+ 112: POP_TOP              
+ 114: LOAD_CONST           True
+ 116: LOAD_FAST            self
+ 118: STORE_ATTR           closed
+ 128: LOAD_CONST           None
+ 130: RETURN_VALUE         

@@ -1,0 +1,26 @@
+# Disassembly for _pydecimal.Context.abs
+# From module file: _pydecimal
+
+## co_consts:
+("Returns the absolute value of the operand.\n\n        If the operand is negative, the result is the same as using the minus\n        operation on the operand.  Otherwise, the result is the same as using\n        the plus operation on the operand.\n\n        >>> ExtendedContext.abs(Decimal('2.1'))\n        Decimal('2.1')\n        >>> ExtendedContext.abs(Decimal('-100'))\n        Decimal('100')\n        >>> ExtendedContext.abs(Decimal('101.5'))\n        Decimal('101.5')\n        >>> ExtendedContext.abs(Decimal('-101.5'))\n        Decimal('101.5')\n        >>> ExtendedContext.abs(-1)\n        Decimal('1')\n        ", True, ('raiseit',), ('context',))
+
+## co_names:
+('_convert_other', '__abs__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _convert_other
+  14: LOAD_FAST            a
+  16: LOAD_CONST           True
+  18: KW_NAMES             
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           a
+  36: LOAD_FAST            a
+  38: LOAD_METHOD          __abs__
+  60: LOAD_FAST            self
+  62: KW_NAMES             
+  64: PRECALL              
+  68: CALL                 
+  78: RETURN_VALUE         

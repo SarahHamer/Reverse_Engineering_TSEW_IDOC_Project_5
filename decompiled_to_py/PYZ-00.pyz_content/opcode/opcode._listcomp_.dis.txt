@@ -1,0 +1,33 @@
+# Disassembly for opcode.<listcomp>
+# From module file: opcode
+
+## co_consts:
+()
+
+## co_names:
+('sum', '_cache_format', 'get', 'opname', 'values')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 150
+   8: STORE_FAST           opcode
+  10: LOAD_GLOBAL          NULL + sum
+  22: LOAD_GLOBAL          _cache_format
+  34: LOAD_METHOD          get
+  56: LOAD_GLOBAL          opname
+  68: LOAD_FAST            opcode
+  70: BINARY_SUBSCR        
+  80: BUILD_MAP            
+  82: PRECALL              
+  86: CALL                 
+  96: LOAD_METHOD          values
+ 118: PRECALL              
+ 122: CALL                 
+ 132: PRECALL              
+ 136: CALL                 
+ 146: LIST_APPEND          
+ 148: JUMP_BACKWARD        to 6
+ 150: RETURN_VALUE         

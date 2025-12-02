@@ -1,0 +1,32 @@
+# Disassembly for logging.Manager.__init__
+# From module file: logging
+
+## co_consts:
+('\n        Initialize the manager with the root node of the logger hierarchy.\n        ', 0, False, None)
+
+## co_names:
+('root', 'disable', 'emittedNoHandlerWarning', 'loggerDict', 'loggerClass', 'logRecordFactory')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            rootnode
+   4: LOAD_FAST            self
+   6: STORE_ATTR           root
+  16: LOAD_CONST           0
+  18: LOAD_FAST            self
+  20: STORE_ATTR           disable
+  30: LOAD_CONST           False
+  32: LOAD_FAST            self
+  34: STORE_ATTR           emittedNoHandlerWarning
+  44: BUILD_MAP            
+  46: LOAD_FAST            self
+  48: STORE_ATTR           loggerDict
+  58: LOAD_CONST           None
+  60: LOAD_FAST            self
+  62: STORE_ATTR           loggerClass
+  72: LOAD_CONST           None
+  74: LOAD_FAST            self
+  76: STORE_ATTR           logRecordFactory
+  86: LOAD_CONST           None
+  88: RETURN_VALUE         

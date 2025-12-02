@@ -1,0 +1,23 @@
+# Disassembly for typing._CallableGenericAlias.__repr__.<listcomp>
+# From module file: typing
+
+## co_consts:
+()
+
+## co_names:
+('_type_repr',)
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 42
+   8: STORE_FAST           a
+  10: LOAD_GLOBAL          NULL + _type_repr
+  22: LOAD_FAST            a
+  24: PRECALL              
+  28: CALL                 
+  38: LIST_APPEND          
+  40: JUMP_BACKWARD        to 6
+  42: RETURN_VALUE         

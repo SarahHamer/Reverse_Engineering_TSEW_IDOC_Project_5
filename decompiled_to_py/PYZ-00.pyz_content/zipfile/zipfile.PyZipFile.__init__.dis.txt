@@ -1,0 +1,28 @@
+# Disassembly for zipfile.PyZipFile.__init__
+# From module file: zipfile
+
+## co_consts:
+(None, ('mode', 'compression', 'allowZip64'))
+
+## co_names:
+('ZipFile', '__init__', '_optimize')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          ZipFile
+  14: LOAD_METHOD          __init__
+  36: LOAD_FAST            self
+  38: LOAD_FAST            file
+  40: LOAD_FAST            mode
+  42: LOAD_FAST            compression
+  44: LOAD_FAST            allowZip64
+  46: KW_NAMES             
+  48: PRECALL              
+  52: CALL                 
+  62: POP_TOP              
+  64: LOAD_FAST            optimize
+  66: LOAD_FAST            self
+  68: STORE_ATTR           _optimize
+  78: LOAD_CONST           None
+  80: RETURN_VALUE         

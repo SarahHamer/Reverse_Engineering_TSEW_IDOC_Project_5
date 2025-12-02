@@ -1,0 +1,46 @@
+# Disassembly for calendar._localized_month
+# From module file: calendar
+
+## co_consts:
+('_localized_month', <code object <listcomp> at 0x000002406944A560, file "calendar.py", line 54>, 12, 0, <code object <lambda> at 0x000002406943BAB0, file "calendar.py", line 55>, <code object __init__ at 0x0000024069427EC0, file "calendar.py", line 57>, <code object __getitem__ at 0x00000240693A9570, file "calendar.py", line 60>, <code object __len__ at 0x000002406943B930, file "calendar.py", line 67>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', 'range', '_months', 'insert', '__init__', '__getitem__', '__len__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_localized_month'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           <code object <listcomp> at 0x000002406944A560, file "calendar.py", line 54>
+  12: MAKE_FUNCTION        
+  14: PUSH_NULL            
+  16: LOAD_NAME            range
+  18: LOAD_CONST           12
+  20: PRECALL              
+  24: CALL                 
+  34: GET_ITER             
+  36: PRECALL              
+  40: CALL                 
+  50: STORE_NAME           _months
+  52: LOAD_NAME            _months
+  54: LOAD_METHOD          insert
+  76: LOAD_CONST           0
+  78: LOAD_CONST           <code object <lambda> at 0x000002406943BAB0, file "calendar.py", line 55>
+  80: MAKE_FUNCTION        
+  82: PRECALL              
+  86: CALL                 
+  96: POP_TOP              
+  98: LOAD_CONST           <code object __init__ at 0x0000024069427EC0, file "calendar.py", line 57>
+ 100: MAKE_FUNCTION        
+ 102: STORE_NAME           __init__
+ 104: LOAD_CONST           <code object __getitem__ at 0x00000240693A9570, file "calendar.py", line 60>
+ 106: MAKE_FUNCTION        
+ 108: STORE_NAME           __getitem__
+ 110: LOAD_CONST           <code object __len__ at 0x000002406943B930, file "calendar.py", line 67>
+ 112: MAKE_FUNCTION        
+ 114: STORE_NAME           __len__
+ 116: LOAD_CONST           None
+ 118: RETURN_VALUE         

@@ -1,0 +1,81 @@
+# Disassembly for threading.BoundedSemaphore.release
+# From module file: threading
+
+## co_consts:
+('Release a semaphore, incrementing the internal counter by one or more.\n\n        When the counter is zero on entry and another thread is waiting for it\n        to become larger than zero again, wake up that thread.\n\n        If the number of releases exceeds the number of acquires,\n        raise a ValueError.\n\n        ', 1, 'n must be one or more', 'Semaphore released too many times', None)
+
+## co_names:
+('ValueError', '_cond', '_value', '_initial_value', 'range', 'notify')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            n
+   4: LOAD_CONST           1
+   6: COMPARE_OP           <
+  12: POP_JUMP_FORWARD_IF_FALSE to 44
+  14: LOAD_GLOBAL          NULL + ValueError
+  26: LOAD_CONST           'n must be one or more'
+  28: PRECALL              
+  32: CALL                 
+  42: RAISE_VARARGS        
+  44: LOAD_FAST            self
+  46: LOAD_ATTR            _cond
+  56: BEFORE_WITH          
+  58: POP_TOP              
+  60: LOAD_FAST            self
+  62: LOAD_ATTR            _value
+  72: LOAD_FAST            n
+  74: BINARY_OP            +
+  78: LOAD_FAST            self
+  80: LOAD_ATTR            _initial_value
+  90: COMPARE_OP           >
+  96: POP_JUMP_FORWARD_IF_FALSE to 128
+  98: LOAD_GLOBAL          NULL + ValueError
+ 110: LOAD_CONST           'Semaphore released too many times'
+ 112: PRECALL              
+ 116: CALL                 
+ 126: RAISE_VARARGS        
+ 128: LOAD_FAST            self
+ 130: COPY                 
+ 132: LOAD_ATTR            _value
+ 142: LOAD_FAST            n
+ 144: BINARY_OP            +=
+ 148: SWAP                 
+ 150: STORE_ATTR           _value
+ 160: LOAD_GLOBAL          NULL + range
+ 172: LOAD_FAST            n
+ 174: PRECALL              
+ 178: CALL                 
+ 188: GET_ITER             
+ 190: FOR_ITER             to 246
+ 192: STORE_FAST           i
+ 194: LOAD_FAST            self
+ 196: LOAD_ATTR            _cond
+ 206: LOAD_METHOD          notify
+ 228: PRECALL              
+ 232: CALL                 
+ 242: POP_TOP              
+ 244: JUMP_BACKWARD        to 190
+ 246: NOP                  
+ 248: LOAD_CONST           None
+ 250: LOAD_CONST           None
+ 252: LOAD_CONST           None
+ 254: PRECALL              
+ 258: CALL                 
+ 268: POP_TOP              
+ 270: LOAD_CONST           None
+ 272: RETURN_VALUE         
+ 274: PUSH_EXC_INFO        
+ 276: WITH_EXCEPT_START    
+ 278: POP_JUMP_FORWARD_IF_TRUE to 288
+ 280: RERAISE              
+ 282: COPY                 
+ 284: POP_EXCEPT           
+ 286: RERAISE              
+ 288: POP_TOP              
+ 290: POP_EXCEPT           
+ 292: POP_TOP              
+ 294: POP_TOP              
+ 296: LOAD_CONST           None
+ 298: RETURN_VALUE         

@@ -1,0 +1,74 @@
+# Disassembly for tarfile.TarInfo._proc_gnusparse_00
+# From module file: tarfile
+
+## co_consts:
+('Process a GNU tar extended sparse header, version 0.0.\n        ', b'\\d+ GNU.sparse.offset=(\\d+)\\n', 1, b'\\d+ GNU.sparse.numbytes=(\\d+)\\n', None)
+
+## co_names:
+('re', 'finditer', 'append', 'int', 'group', 'list', 'zip', 'sparse')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           offsets
+   6: LOAD_GLOBAL          NULL + re
+  18: LOAD_ATTR            finditer
+  28: LOAD_CONST           b'\\d+ GNU.sparse.offset=(\\d+)\\n'
+  30: LOAD_FAST            buf
+  32: PRECALL              
+  36: CALL                 
+  46: GET_ITER             
+  48: FOR_ITER             to 160
+  50: STORE_FAST           match
+  52: LOAD_FAST            offsets
+  54: LOAD_METHOD          append
+  76: LOAD_GLOBAL          NULL + int
+  88: LOAD_FAST            match
+  90: LOAD_METHOD          group
+ 112: LOAD_CONST           1
+ 114: PRECALL              
+ 118: CALL                 
+ 128: PRECALL              
+ 132: CALL                 
+ 142: PRECALL              
+ 146: CALL                 
+ 156: POP_TOP              
+ 158: JUMP_BACKWARD        to 48
+ 160: BUILD_LIST           
+ 162: STORE_FAST           numbytes
+ 164: LOAD_GLOBAL          NULL + re
+ 176: LOAD_ATTR            finditer
+ 186: LOAD_CONST           b'\\d+ GNU.sparse.numbytes=(\\d+)\\n'
+ 188: LOAD_FAST            buf
+ 190: PRECALL              
+ 194: CALL                 
+ 204: GET_ITER             
+ 206: FOR_ITER             to 318
+ 208: STORE_FAST           match
+ 210: LOAD_FAST            numbytes
+ 212: LOAD_METHOD          append
+ 234: LOAD_GLOBAL          NULL + int
+ 246: LOAD_FAST            match
+ 248: LOAD_METHOD          group
+ 270: LOAD_CONST           1
+ 272: PRECALL              
+ 276: CALL                 
+ 286: PRECALL              
+ 290: CALL                 
+ 300: PRECALL              
+ 304: CALL                 
+ 314: POP_TOP              
+ 316: JUMP_BACKWARD        to 206
+ 318: LOAD_GLOBAL          NULL + list
+ 330: LOAD_GLOBAL          NULL + zip
+ 342: LOAD_FAST            offsets
+ 344: LOAD_FAST            numbytes
+ 346: PRECALL              
+ 350: CALL                 
+ 360: PRECALL              
+ 364: CALL                 
+ 374: LOAD_FAST            next
+ 376: STORE_ATTR           sparse
+ 386: LOAD_CONST           None
+ 388: RETURN_VALUE         

@@ -1,0 +1,76 @@
+# Disassembly for email.Message.__setitem__
+# From module file: email.message
+
+## co_consts:
+('Set the value of a header.\n\n        Note: this does not overwrite an existing header with the same field\n        name.  Use __delitem__() first to delete any existing headers.\n        ', 0, 1, 'There may be at most {} {} headers in a message', None)
+
+## co_names:
+('policy', 'header_max_count', 'lower', '_headers', 'ValueError', 'format', 'append', 'header_store_parse')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            policy
+  14: LOAD_METHOD          header_max_count
+  36: LOAD_FAST            name
+  38: PRECALL              
+  42: CALL                 
+  52: STORE_FAST           max_count
+  54: LOAD_FAST            max_count
+  56: POP_JUMP_FORWARD_IF_FALSE to 268
+  58: LOAD_FAST            name
+  60: LOAD_METHOD          lower
+  82: PRECALL              
+  86: CALL                 
+  96: STORE_FAST           lname
+  98: LOAD_CONST           0
+ 100: STORE_FAST           found
+ 102: LOAD_FAST            self
+ 104: LOAD_ATTR            _headers
+ 114: GET_ITER             
+ 116: FOR_ITER             to 268
+ 118: UNPACK_SEQUENCE      
+ 122: STORE_FAST           k
+ 124: STORE_FAST           v
+ 126: LOAD_FAST            k
+ 128: LOAD_METHOD          lower
+ 150: PRECALL              
+ 154: CALL                 
+ 164: LOAD_FAST            lname
+ 166: COMPARE_OP           ==
+ 172: POP_JUMP_FORWARD_IF_FALSE to 266
+ 174: LOAD_FAST            found
+ 176: LOAD_CONST           1
+ 178: BINARY_OP            +=
+ 182: STORE_FAST           found
+ 184: LOAD_FAST            found
+ 186: LOAD_FAST            max_count
+ 188: COMPARE_OP           >=
+ 194: POP_JUMP_FORWARD_IF_FALSE to 266
+ 196: LOAD_GLOBAL          NULL + ValueError
+ 208: LOAD_CONST           'There may be at most {} {} headers in a message'
+ 210: LOAD_METHOD          format
+ 232: LOAD_FAST            max_count
+ 234: LOAD_FAST            name
+ 236: PRECALL              
+ 240: CALL                 
+ 250: PRECALL              
+ 254: CALL                 
+ 264: RAISE_VARARGS        
+ 266: JUMP_BACKWARD        to 116
+ 268: LOAD_FAST            self
+ 270: LOAD_ATTR            _headers
+ 280: LOAD_METHOD          append
+ 302: LOAD_FAST            self
+ 304: LOAD_ATTR            policy
+ 314: LOAD_METHOD          header_store_parse
+ 336: LOAD_FAST            name
+ 338: LOAD_FAST            val
+ 340: PRECALL              
+ 344: CALL                 
+ 354: PRECALL              
+ 358: CALL                 
+ 368: POP_TOP              
+ 370: LOAD_CONST           None
+ 372: RETURN_VALUE         

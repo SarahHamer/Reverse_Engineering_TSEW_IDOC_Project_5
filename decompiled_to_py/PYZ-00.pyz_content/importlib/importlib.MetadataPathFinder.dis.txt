@@ -1,0 +1,38 @@
+# Disassembly for importlib.MetadataPathFinder
+# From module file: importlib.metadata
+
+## co_consts:
+('MetadataPathFinder', <code object find_distributions at 0x00000240693D30E0, file "importlib\metadata\__init__.py", line 897>, <code object _search_paths at 0x00000240691C05B0, file "importlib\metadata\__init__.py", line 910>, <code object invalidate_caches at 0x00000240693EAC30, file "importlib\metadata\__init__.py", line 918>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', 'classmethod', 'DistributionFinder', 'Context', 'find_distributions', '_search_paths', 'invalidate_caches')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'MetadataPathFinder'
+   8: STORE_NAME           __qualname__
+  10: LOAD_NAME            classmethod
+  12: LOAD_NAME            DistributionFinder
+  14: LOAD_METHOD          Context
+  36: PRECALL              
+  40: CALL                 
+  50: BUILD_TUPLE          
+  52: LOAD_CONST           <code object find_distributions at 0x00000240693D30E0, file "importlib\metadata\__init__.py", line 897>
+  54: MAKE_FUNCTION        defaults
+  56: PRECALL              
+  60: CALL                 
+  70: STORE_NAME           find_distributions
+  72: LOAD_NAME            classmethod
+  74: LOAD_CONST           <code object _search_paths at 0x00000240691C05B0, file "importlib\metadata\__init__.py", line 910>
+  76: MAKE_FUNCTION        
+  78: PRECALL              
+  82: CALL                 
+  92: STORE_NAME           _search_paths
+  94: LOAD_CONST           <code object invalidate_caches at 0x00000240693EAC30, file "importlib\metadata\__init__.py", line 918>
+  96: MAKE_FUNCTION        
+  98: STORE_NAME           invalidate_caches
+ 100: LOAD_CONST           None
+ 102: RETURN_VALUE         

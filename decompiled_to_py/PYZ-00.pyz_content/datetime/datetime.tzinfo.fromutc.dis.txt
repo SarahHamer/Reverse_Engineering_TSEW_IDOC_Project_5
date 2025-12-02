@@ -1,0 +1,83 @@
+# Disassembly for datetime.tzinfo.fromutc
+# From module file: datetime
+
+## co_consts:
+('datetime in UTC -> datetime in local time.', 'fromutc() requires a datetime argument', 'dt.tzinfo is not self', None, 'fromutc() requires a non-None utcoffset() result', 'fromutc() requires a non-None dst() result', 'fromutc(): dt.dst gave inconsistent results; cannot convert')
+
+## co_names:
+('isinstance', 'datetime', 'TypeError', 'tzinfo', 'ValueError', 'utcoffset', 'dst')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            dt
+  16: LOAD_GLOBAL          datetime
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_TRUE to 74
+  44: LOAD_GLOBAL          NULL + TypeError
+  56: LOAD_CONST           'fromutc() requires a datetime argument'
+  58: PRECALL              
+  62: CALL                 
+  72: RAISE_VARARGS        
+  74: LOAD_FAST            dt
+  76: LOAD_ATTR            tzinfo
+  86: LOAD_FAST            self
+  88: IS_OP                
+  90: POP_JUMP_FORWARD_IF_FALSE to 122
+  92: LOAD_GLOBAL          NULL + ValueError
+ 104: LOAD_CONST           'dt.tzinfo is not self'
+ 106: PRECALL              
+ 110: CALL                 
+ 120: RAISE_VARARGS        
+ 122: LOAD_FAST            dt
+ 124: LOAD_METHOD          utcoffset
+ 146: PRECALL              
+ 150: CALL                 
+ 160: STORE_FAST           dtoff
+ 162: LOAD_FAST            dtoff
+ 164: POP_JUMP_FORWARD_IF_NOT_NONE to 196
+ 166: LOAD_GLOBAL          NULL + ValueError
+ 178: LOAD_CONST           'fromutc() requires a non-None utcoffset() result'
+ 180: PRECALL              
+ 184: CALL                 
+ 194: RAISE_VARARGS        
+ 196: LOAD_FAST            dt
+ 198: LOAD_METHOD          dst
+ 220: PRECALL              
+ 224: CALL                 
+ 234: STORE_FAST           dtdst
+ 236: LOAD_FAST            dtdst
+ 238: POP_JUMP_FORWARD_IF_NOT_NONE to 270
+ 240: LOAD_GLOBAL          NULL + ValueError
+ 252: LOAD_CONST           'fromutc() requires a non-None dst() result'
+ 254: PRECALL              
+ 258: CALL                 
+ 268: RAISE_VARARGS        
+ 270: LOAD_FAST            dtoff
+ 272: LOAD_FAST            dtdst
+ 274: BINARY_OP            -
+ 278: STORE_FAST           delta
+ 280: LOAD_FAST            delta
+ 282: POP_JUMP_FORWARD_IF_FALSE to 368
+ 284: LOAD_FAST            dt
+ 286: LOAD_FAST            delta
+ 288: BINARY_OP            +=
+ 292: STORE_FAST           dt
+ 294: LOAD_FAST            dt
+ 296: LOAD_METHOD          dst
+ 318: PRECALL              
+ 322: CALL                 
+ 332: STORE_FAST           dtdst
+ 334: LOAD_FAST            dtdst
+ 336: POP_JUMP_FORWARD_IF_NOT_NONE to 368
+ 338: LOAD_GLOBAL          NULL + ValueError
+ 350: LOAD_CONST           'fromutc(): dt.dst gave inconsistent results; cannot convert'
+ 352: PRECALL              
+ 356: CALL                 
+ 366: RAISE_VARARGS        
+ 368: LOAD_FAST            dt
+ 370: LOAD_FAST            dtdst
+ 372: BINARY_OP            +
+ 376: RETURN_VALUE         

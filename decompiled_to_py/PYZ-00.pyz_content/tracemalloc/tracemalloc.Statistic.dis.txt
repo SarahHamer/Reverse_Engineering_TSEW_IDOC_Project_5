@@ -1,0 +1,40 @@
+# Disassembly for tracemalloc.Statistic
+# From module file: tracemalloc
+
+## co_consts:
+('Statistic', '\n    Statistic difference on memory allocations between two Snapshot instance.\n    ', ('traceback', 'size', 'count'), <code object __init__ at 0x000002406945DE30, file "tracemalloc.py", line 37>, <code object __hash__ at 0x00000240693EBD30, file "tracemalloc.py", line 42>, <code object __eq__ at 0x00000240691C18F0, file "tracemalloc.py", line 45>, <code object __str__ at 0x00000240691C3730, file "tracemalloc.py", line 52>, <code object __repr__ at 0x000002406945E100, file "tracemalloc.py", line 62>, <code object _sort_key at 0x000002406945F690, file "tracemalloc.py", line 66>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__slots__', '__init__', '__hash__', '__eq__', '__str__', '__repr__', '_sort_key')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Statistic'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           '\n    Statistic difference on memory allocations between two Snapshot instance.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ('traceback', 'size', 'count')
+  16: STORE_NAME           __slots__
+  18: LOAD_CONST           <code object __init__ at 0x000002406945DE30, file "tracemalloc.py", line 37>
+  20: MAKE_FUNCTION        
+  22: STORE_NAME           __init__
+  24: LOAD_CONST           <code object __hash__ at 0x00000240693EBD30, file "tracemalloc.py", line 42>
+  26: MAKE_FUNCTION        
+  28: STORE_NAME           __hash__
+  30: LOAD_CONST           <code object __eq__ at 0x00000240691C18F0, file "tracemalloc.py", line 45>
+  32: MAKE_FUNCTION        
+  34: STORE_NAME           __eq__
+  36: LOAD_CONST           <code object __str__ at 0x00000240691C3730, file "tracemalloc.py", line 52>
+  38: MAKE_FUNCTION        
+  40: STORE_NAME           __str__
+  42: LOAD_CONST           <code object __repr__ at 0x000002406945E100, file "tracemalloc.py", line 62>
+  44: MAKE_FUNCTION        
+  46: STORE_NAME           __repr__
+  48: LOAD_CONST           <code object _sort_key at 0x000002406945F690, file "tracemalloc.py", line 66>
+  50: MAKE_FUNCTION        
+  52: STORE_NAME           _sort_key
+  54: LOAD_CONST           None
+  56: RETURN_VALUE         

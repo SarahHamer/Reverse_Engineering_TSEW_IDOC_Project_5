@@ -1,0 +1,56 @@
+# Disassembly for socket.getaddrinfo
+# From module file: socket
+
+## co_consts:
+("Resolve host and port into list of address info entries.\n\n    Translate the host/port argument into a sequence of 5-tuples that contain\n    all the necessary arguments for creating a socket connected to that service.\n    host is a domain name, a string representation of an IPv4/v6 address or\n    None. port is a string service name such as 'http', a numeric port number or\n    None. By passing None as the value of host and port, you can pass NULL to\n    the underlying C API.\n\n    The family, type and proto arguments can be optionally specified in order to\n    narrow the list of addresses returned. Passing zero as a value for each of\n    these arguments selects the full range of results.\n    ",)
+
+## co_names:
+('_socket', 'getaddrinfo', 'append', '_intenum_converter', 'AddressFamily', 'SocketKind')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           addrlist
+   6: LOAD_GLOBAL          NULL + _socket
+  18: LOAD_ATTR            getaddrinfo
+  28: LOAD_FAST            host
+  30: LOAD_FAST            port
+  32: LOAD_FAST            family
+  34: LOAD_FAST            type
+  36: LOAD_FAST            proto
+  38: LOAD_FAST            flags
+  40: PRECALL              
+  44: CALL                 
+  54: GET_ITER             
+  56: FOR_ITER             to 206
+  58: STORE_FAST           res
+  60: LOAD_FAST            res
+  62: UNPACK_SEQUENCE      
+  66: STORE_FAST           af
+  68: STORE_FAST           socktype
+  70: STORE_FAST           proto
+  72: STORE_FAST           canonname
+  74: STORE_FAST           sa
+  76: LOAD_FAST            addrlist
+  78: LOAD_METHOD          append
+ 100: LOAD_GLOBAL          NULL + _intenum_converter
+ 112: LOAD_FAST            af
+ 114: LOAD_GLOBAL          AddressFamily
+ 126: PRECALL              
+ 130: CALL                 
+ 140: LOAD_GLOBAL          NULL + _intenum_converter
+ 152: LOAD_FAST            socktype
+ 154: LOAD_GLOBAL          SocketKind
+ 166: PRECALL              
+ 170: CALL                 
+ 180: LOAD_FAST            proto
+ 182: LOAD_FAST            canonname
+ 184: LOAD_FAST            sa
+ 186: BUILD_TUPLE          
+ 188: PRECALL              
+ 192: CALL                 
+ 202: POP_TOP              
+ 204: JUMP_BACKWARD        to 56
+ 206: LOAD_FAST            addrlist
+ 208: RETURN_VALUE         

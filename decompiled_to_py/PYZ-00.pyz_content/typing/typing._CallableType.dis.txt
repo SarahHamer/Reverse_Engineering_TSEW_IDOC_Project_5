@@ -1,0 +1,30 @@
+# Disassembly for typing._CallableType
+# From module file: typing
+
+## co_consts:
+('_CallableType', <code object copy_with at 0x00000240693EA530, file "typing.py", line 1613>, <code object __getitem__ at 0x0000024069498570, file "typing.py", line 1618>, <code object __getitem_inner__ at 0x00000240691DAD80, file "typing.py", line 1632>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', 'copy_with', '__getitem__', '_tp_cache', '__getitem_inner__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_CallableType'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           <code object copy_with at 0x00000240693EA530, file "typing.py", line 1613>
+  12: MAKE_FUNCTION        
+  14: STORE_NAME           copy_with
+  16: LOAD_CONST           <code object __getitem__ at 0x0000024069498570, file "typing.py", line 1618>
+  18: MAKE_FUNCTION        
+  20: STORE_NAME           __getitem__
+  22: LOAD_NAME            _tp_cache
+  24: LOAD_CONST           <code object __getitem_inner__ at 0x00000240691DAD80, file "typing.py", line 1632>
+  26: MAKE_FUNCTION        
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_NAME           __getitem_inner__
+  44: LOAD_CONST           None
+  46: RETURN_VALUE         

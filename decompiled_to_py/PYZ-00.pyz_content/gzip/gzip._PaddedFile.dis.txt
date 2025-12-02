@@ -1,0 +1,37 @@
+# Disassembly for gzip._PaddedFile
+# From module file: gzip
+
+## co_consts:
+('_PaddedFile', "Minimal read-only file object that prepends a string to the contents\n    of an actual file. Shouldn't be used outside of gzip.py, as it lacks\n    essential functionality.", b'', <code object __init__ at 0x000002406944ABC0, file "gzip.py", line 80>, <code object read at 0x000002406931FA30, file "gzip.py", line 86>, <code object prepend at 0x00000240691C18F0, file "gzip.py", line 99>, <code object seek at 0x000002406944A890, file "gzip.py", line 108>, <code object seekable at 0x000002406943B0F0, file "gzip.py", line 113>, None, (b'',))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', 'read', 'prepend', 'seek', 'seekable')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_PaddedFile'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           "Minimal read-only file object that prepends a string to the contents\n    of an actual file. Shouldn't be used outside of gzip.py, as it lacks\n    essential functionality."
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           (b'',)
+  16: LOAD_CONST           <code object __init__ at 0x000002406944ABC0, file "gzip.py", line 80>
+  18: MAKE_FUNCTION        defaults
+  20: STORE_NAME           __init__
+  22: LOAD_CONST           <code object read at 0x000002406931FA30, file "gzip.py", line 86>
+  24: MAKE_FUNCTION        
+  26: STORE_NAME           read
+  28: LOAD_CONST           (b'',)
+  30: LOAD_CONST           <code object prepend at 0x00000240691C18F0, file "gzip.py", line 99>
+  32: MAKE_FUNCTION        defaults
+  34: STORE_NAME           prepend
+  36: LOAD_CONST           <code object seek at 0x000002406944A890, file "gzip.py", line 108>
+  38: MAKE_FUNCTION        
+  40: STORE_NAME           seek
+  42: LOAD_CONST           <code object seekable at 0x000002406943B0F0, file "gzip.py", line 113>
+  44: MAKE_FUNCTION        
+  46: STORE_NAME           seekable
+  48: LOAD_CONST           None
+  50: RETURN_VALUE         

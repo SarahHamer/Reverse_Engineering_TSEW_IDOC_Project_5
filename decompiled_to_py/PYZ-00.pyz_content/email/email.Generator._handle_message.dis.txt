@@ -1,0 +1,67 @@
+# Disassembly for email.Generator._handle_message
+# From module file: email.generator
+
+## co_consts:
+(None, 0, False, ('unixfrom', 'linesep'))
+
+## co_names:
+('_new_buffer', 'clone', '_payload', 'isinstance', 'list', 'flatten', 'get_payload', '_NL', 'getvalue', '_encode', '_fp', 'write')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _new_buffer
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           s
+  42: LOAD_FAST            self
+  44: LOAD_METHOD          clone
+  66: LOAD_FAST            s
+  68: PRECALL              
+  72: CALL                 
+  82: STORE_FAST           g
+  84: LOAD_FAST            msg
+  86: LOAD_ATTR            _payload
+  96: STORE_FAST           payload
+  98: LOAD_GLOBAL          NULL + isinstance
+ 110: LOAD_FAST            payload
+ 112: LOAD_GLOBAL          list
+ 124: PRECALL              
+ 128: CALL                 
+ 138: POP_JUMP_FORWARD_IF_FALSE to 278
+ 140: LOAD_FAST            g
+ 142: LOAD_METHOD          flatten
+ 164: LOAD_FAST            msg
+ 166: LOAD_METHOD          get_payload
+ 188: LOAD_CONST           0
+ 190: PRECALL              
+ 194: CALL                 
+ 204: LOAD_CONST           False
+ 206: LOAD_FAST            self
+ 208: LOAD_ATTR            _NL
+ 218: KW_NAMES             
+ 220: PRECALL              
+ 224: CALL                 
+ 234: POP_TOP              
+ 236: LOAD_FAST            s
+ 238: LOAD_METHOD          getvalue
+ 260: PRECALL              
+ 264: CALL                 
+ 274: STORE_FAST           payload
+ 276: JUMP_FORWARD         to 320
+ 278: LOAD_FAST            self
+ 280: LOAD_METHOD          _encode
+ 302: LOAD_FAST            payload
+ 304: PRECALL              
+ 308: CALL                 
+ 318: STORE_FAST           payload
+ 320: LOAD_FAST            self
+ 322: LOAD_ATTR            _fp
+ 332: LOAD_METHOD          write
+ 354: LOAD_FAST            payload
+ 356: PRECALL              
+ 360: CALL                 
+ 370: POP_TOP              
+ 372: LOAD_CONST           None
+ 374: RETURN_VALUE         

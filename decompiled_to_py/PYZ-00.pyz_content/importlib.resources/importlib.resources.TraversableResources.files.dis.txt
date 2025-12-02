@@ -1,0 +1,14 @@
+# Disassembly for importlib.resources.TraversableResources.files
+# From module file: importlib.resources.abc
+
+## co_consts:
+('Return a Traversable object for the loaded package.', None)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: RETURN_VALUE         

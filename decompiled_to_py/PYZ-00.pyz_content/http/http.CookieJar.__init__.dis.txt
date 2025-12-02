@@ -1,0 +1,32 @@
+# Disassembly for http.CookieJar.__init__
+# From module file: http.cookiejar
+
+## co_consts:
+(None,)
+
+## co_names:
+('DefaultCookiePolicy', '_policy', '_threading', 'RLock', '_cookies_lock', '_cookies')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            policy
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 34
+   6: LOAD_GLOBAL          NULL + DefaultCookiePolicy
+  18: PRECALL              
+  22: CALL                 
+  32: STORE_FAST           policy
+  34: LOAD_FAST            policy
+  36: LOAD_FAST            self
+  38: STORE_ATTR           _policy
+  48: LOAD_GLOBAL          NULL + _threading
+  60: LOAD_ATTR            RLock
+  70: PRECALL              
+  74: CALL                 
+  84: LOAD_FAST            self
+  86: STORE_ATTR           _cookies_lock
+  96: BUILD_MAP            
+  98: LOAD_FAST            self
+ 100: STORE_ATTR           _cookies
+ 110: LOAD_CONST           None
+ 112: RETURN_VALUE         

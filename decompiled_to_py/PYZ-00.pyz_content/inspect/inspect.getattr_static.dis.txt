@@ -1,0 +1,166 @@
+# Disassembly for inspect.getattr_static
+# From module file: inspect
+
+## co_consts:
+("Retrieve attributes without triggering dynamic lookup via the\n       descriptor protocol,  __getattr__ or __getattribute__.\n\n       Note: this function may not be able to retrieve all attributes\n       that getattr can fetch (like dynamically created attributes)\n       and may find attributes that getattr can't (like descriptors\n       that raise AttributeError). It can also return descriptor objects\n       instead of instance members in some cases. See the\n       documentation for details.\n    ", '__get__', '__set__', '__delete__')
+
+## co_names:
+('_sentinel', '_is_type', 'type', '_shadowed_dict', 'types', 'MemberDescriptorType', '_check_instance', '_check_class', '_static_getmro', '__dict__', 'KeyError', 'AttributeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _sentinel
+  14: STORE_FAST           instance_result
+  16: LOAD_GLOBAL          NULL + _is_type
+  28: LOAD_FAST            obj
+  30: PRECALL              
+  34: CALL                 
+  44: POP_JUMP_FORWARD_IF_TRUE to 212
+  46: LOAD_GLOBAL          NULL + type
+  58: LOAD_FAST            obj
+  60: PRECALL              
+  64: CALL                 
+  74: STORE_FAST           klass
+  76: LOAD_GLOBAL          NULL + _shadowed_dict
+  88: LOAD_FAST            klass
+  90: PRECALL              
+  94: CALL                 
+ 104: STORE_FAST           dict_attr
+ 106: LOAD_FAST            dict_attr
+ 108: LOAD_GLOBAL          _sentinel
+ 120: IS_OP                
+ 122: POP_JUMP_FORWARD_IF_TRUE to 178
+ 124: LOAD_GLOBAL          NULL + type
+ 136: LOAD_FAST            dict_attr
+ 138: PRECALL              
+ 142: CALL                 
+ 152: LOAD_GLOBAL          types
+ 164: LOAD_ATTR            MemberDescriptorType
+ 174: IS_OP                
+ 176: POP_JUMP_FORWARD_IF_FALSE to 210
+ 178: LOAD_GLOBAL          NULL + _check_instance
+ 190: LOAD_FAST            obj
+ 192: LOAD_FAST            attr
+ 194: PRECALL              
+ 198: CALL                 
+ 208: STORE_FAST           instance_result
+ 210: JUMP_FORWARD         to 216
+ 212: LOAD_FAST            obj
+ 214: STORE_FAST           klass
+ 216: LOAD_GLOBAL          NULL + _check_class
+ 228: LOAD_FAST            klass
+ 230: LOAD_FAST            attr
+ 232: PRECALL              
+ 236: CALL                 
+ 246: STORE_FAST           klass_result
+ 248: LOAD_FAST            instance_result
+ 250: LOAD_GLOBAL          _sentinel
+ 262: IS_OP                
+ 264: POP_JUMP_FORWARD_IF_FALSE to 504
+ 266: LOAD_FAST            klass_result
+ 268: LOAD_GLOBAL          _sentinel
+ 280: IS_OP                
+ 282: POP_JUMP_FORWARD_IF_FALSE to 504
+ 284: LOAD_GLOBAL          NULL + _check_class
+ 296: LOAD_GLOBAL          NULL + type
+ 308: LOAD_FAST            klass_result
+ 310: PRECALL              
+ 314: CALL                 
+ 324: LOAD_CONST           '__get__'
+ 326: PRECALL              
+ 330: CALL                 
+ 340: LOAD_GLOBAL          _sentinel
+ 352: IS_OP                
+ 354: POP_JUMP_FORWARD_IF_FALSE to 504
+ 356: LOAD_GLOBAL          NULL + _check_class
+ 368: LOAD_GLOBAL          NULL + type
+ 380: LOAD_FAST            klass_result
+ 382: PRECALL              
+ 386: CALL                 
+ 396: LOAD_CONST           '__set__'
+ 398: PRECALL              
+ 402: CALL                 
+ 412: LOAD_GLOBAL          _sentinel
+ 424: IS_OP                
+ 426: POP_JUMP_FORWARD_IF_TRUE to 500
+ 428: LOAD_GLOBAL          NULL + _check_class
+ 440: LOAD_GLOBAL          NULL + type
+ 452: LOAD_FAST            klass_result
+ 454: PRECALL              
+ 458: CALL                 
+ 468: LOAD_CONST           '__delete__'
+ 470: PRECALL              
+ 474: CALL                 
+ 484: LOAD_GLOBAL          _sentinel
+ 496: IS_OP                
+ 498: POP_JUMP_FORWARD_IF_FALSE to 504
+ 500: LOAD_FAST            klass_result
+ 502: RETURN_VALUE         
+ 504: LOAD_FAST            instance_result
+ 506: LOAD_GLOBAL          _sentinel
+ 518: IS_OP                
+ 520: POP_JUMP_FORWARD_IF_FALSE to 526
+ 522: LOAD_FAST            instance_result
+ 524: RETURN_VALUE         
+ 526: LOAD_FAST            klass_result
+ 528: LOAD_GLOBAL          _sentinel
+ 540: IS_OP                
+ 542: POP_JUMP_FORWARD_IF_FALSE to 548
+ 544: LOAD_FAST            klass_result
+ 546: RETURN_VALUE         
+ 548: LOAD_FAST            obj
+ 550: LOAD_FAST            klass
+ 552: IS_OP                
+ 554: POP_JUMP_FORWARD_IF_FALSE to 752
+ 556: LOAD_GLOBAL          NULL + _static_getmro
+ 568: LOAD_GLOBAL          NULL + type
+ 580: LOAD_FAST            klass
+ 582: PRECALL              
+ 586: CALL                 
+ 596: PRECALL              
+ 600: CALL                 
+ 610: GET_ITER             
+ 612: FOR_ITER             to 752
+ 614: STORE_FAST           entry
+ 616: LOAD_GLOBAL          NULL + _shadowed_dict
+ 628: LOAD_GLOBAL          NULL + type
+ 640: LOAD_FAST            entry
+ 642: PRECALL              
+ 646: CALL                 
+ 656: PRECALL              
+ 660: CALL                 
+ 670: LOAD_GLOBAL          _sentinel
+ 682: IS_OP                
+ 684: POP_JUMP_FORWARD_IF_FALSE to 750
+ 686: NOP                  
+ 688: LOAD_FAST            entry
+ 690: LOAD_ATTR            __dict__
+ 700: LOAD_FAST            attr
+ 702: BINARY_SUBSCR        
+ 712: SWAP                 
+ 714: POP_TOP              
+ 716: RETURN_VALUE         
+ 718: PUSH_EXC_INFO        
+ 720: LOAD_GLOBAL          KeyError
+ 732: CHECK_EXC_MATCH      
+ 734: POP_JUMP_FORWARD_IF_FALSE to 742
+ 736: POP_TOP              
+ 738: POP_EXCEPT           
+ 740: JUMP_BACKWARD        to 612
+ 742: RERAISE              
+ 744: COPY                 
+ 746: POP_EXCEPT           
+ 748: RERAISE              
+ 750: JUMP_BACKWARD        to 612
+ 752: LOAD_FAST            default
+ 754: LOAD_GLOBAL          _sentinel
+ 766: IS_OP                
+ 768: POP_JUMP_FORWARD_IF_FALSE to 774
+ 770: LOAD_FAST            default
+ 772: RETURN_VALUE         
+ 774: LOAD_GLOBAL          NULL + AttributeError
+ 786: LOAD_FAST            attr
+ 788: PRECALL              
+ 792: CALL                 
+ 802: RAISE_VARARGS        

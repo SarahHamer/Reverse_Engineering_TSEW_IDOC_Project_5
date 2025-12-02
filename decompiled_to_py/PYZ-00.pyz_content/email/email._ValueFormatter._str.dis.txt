@@ -1,0 +1,24 @@
+# Disassembly for email._ValueFormatter._str
+# From module file: email.header
+
+## co_consts:
+(None,)
+
+## co_names:
+('newline', 'join', '_lines')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          newline
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_FAST            linesep
+  44: LOAD_METHOD          join
+  66: LOAD_FAST            self
+  68: LOAD_ATTR            _lines
+  78: PRECALL              
+  82: CALL                 
+  92: RETURN_VALUE         

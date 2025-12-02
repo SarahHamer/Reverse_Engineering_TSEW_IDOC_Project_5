@@ -1,0 +1,34 @@
+# Disassembly for datetime.datetime.timestamp
+# From module file: datetime
+
+## co_consts:
+('Return POSIX timestamp as float', None, 1000000.0)
+
+## co_names:
+('_tzinfo', '_mktime', 'microsecond', '_EPOCH', 'total_seconds')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _tzinfo
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 82
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          _mktime
+  40: PRECALL              
+  44: CALL                 
+  54: STORE_FAST           s
+  56: LOAD_FAST            s
+  58: LOAD_FAST            self
+  60: LOAD_ATTR            microsecond
+  70: LOAD_CONST           1000000.0
+  72: BINARY_OP            /
+  76: BINARY_OP            +
+  80: RETURN_VALUE         
+  82: LOAD_FAST            self
+  84: LOAD_GLOBAL          _EPOCH
+  96: BINARY_OP            -
+ 100: LOAD_METHOD          total_seconds
+ 122: PRECALL              
+ 126: CALL                 
+ 136: RETURN_VALUE         

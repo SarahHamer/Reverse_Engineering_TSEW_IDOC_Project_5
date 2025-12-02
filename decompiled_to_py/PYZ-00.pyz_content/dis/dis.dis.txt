@@ -1,0 +1,439 @@
+# Disassembly for dis
+# From module file: dis
+
+## co_consts:
+('Disassembler of Python byte code into mnemonics.', 0, None, ('*',), ('__all__', '_cache_format', '_inline_cache_entries', '_nb_ops', '_specializations', '_specialized_instructions'), ('code_info', 'dis', 'disassemble', 'distb', 'disco', 'findlinestarts', 'findlabels', 'show_code', 'get_instructions', 'Instruction', 'Bytecode'), 'FORMAT_VALUE', (None, ''), 'str', 'repr', 'ascii', 'MAKE_FUNCTION', ('defaults', 'kwdefaults', 'annotations', 'closure'), 'LOAD_CONST', 'LOAD_GLOBAL', 'BINARY_OP', 'JUMP_BACKWARD', 'CACHE', <code object <listcomp> at 0x00000240693EA730, file "dis.py", line 45>, <code object <dictcomp> at 0x0000024069465450, file "dis.py", line 51>, <code object _try_compile at 0x00000240693D23D0, file "dis.py", line 55>, False, ('file', 'depth', 'show_caches', 'adaptive'), <code object dis at 0x0000024068E96730, file "dis.py", line 68>, ('file', 'show_caches', 'adaptive'), <code object distb at 0x000002406942CB20, file "dis.py", line 113>, 'OPTIMIZED', 'NEWLOCALS', 'VARARGS', 'VARKEYWORDS', 'NESTED', 'GENERATOR', 'NOFREE', 'COROUTINE', 'ITERABLE_COROUTINE', 'ASYNC_GENERATOR', (1, 2, 4, 8, 16, 32, 64, 128, 256, 512), <code object pretty_flags at 0x0000024069365B50, file "dis.py", line 139>, <code object _Unknown at 0x0000024069427D20, file "dis.py", line 153>, '_Unknown', <code object _get_code_object at 0x0000024068E1E0A0, file "dis.py", line 160>, <code object _deoptop at 0x000002406941A9D0, file "dis.py", line 183>, <code object _get_code_array at 0x0000024069465A70, file "dis.py", line 187>, <code object code_info at 0x00000240693EA630, file "dis.py", line 190>, <code object _format_code_info at 0x0000024068E0F020, file "dis.py", line 194>, ('file',), <code object show_code at 0x00000240693EA530, file "dis.py", line 226>, 'Positions', ('lineno', 'end_lineno', 'col_offset', 'end_col_offset'), 4, ('defaults',), '_Instruction', ('opname', 'opcode', 'arg', 'argval', 'argrepr', 'offset', 'starts_line', 'is_jump_target', 'positions'), 'Human readable name for operation', 'Numeric code for operation', 'Numeric argument to operation (if any), otherwise None', 'Resolved arg value (if known), otherwise same as arg', 'Human readable description of operation argument', 'Start index of operation within bytecode sequence', 'Line started by this opcode (if any), otherwise None', 'True if other code jumps to here, otherwise False', 'dis.Positions object holding the span of source code covered by this instruction', '_ExceptionTableEntry', 'start end target depth lasti', 20, 5, <code object Instruction at 0x00000240694657D0, file "dis.py", line 276>, 'Instruction', ('first_line', 'show_caches', 'adaptive'), <code object get_instructions at 0x00000240691A7BB0, file "dis.py", line 330>, <code object _get_const_value at 0x000002406944A340, file "dis.py", line 354>, <code object _get_const_info at 0x0000024069419110, file "dis.py", line 369>, <code object _get_name_info at 0x000002406945DF20, file "dis.py", line 381>, <code object _parse_varint at 0x00000240693AA6F0, file "dis.py", line 395>, <code object _parse_exception_table at 0x0000024068C8D8F0, file "dis.py", line 404>, <code object _is_backward_jump at 0x00000240694679F0, file "dis.py", line 420>, (), <code object _get_instructions_bytes at 0x0000024066D637C0, file "dis.py", line 423>, -1, <code object disassemble at 0x000002406934EF70, file "dis.py", line 519>, <code object _disassemble_recursive at 0x000002406934F630, file "dis.py", line 529>, ('file', 'line_offset', 'exception_entries', 'co_positions', 'show_caches'), <code object _disassemble_bytes at 0x0000024068DCC3C0, file "dis.py", line 542>, <code object _disassemble_str at 0x00000240693EB330, file "dis.py", line 582>, 32, 2, 1, <code object _unpack_opargs at 0x0000024068BF59D0, file "dis.py", line 594>, <code object findlabels at 0x00000240691F63F0, file "dis.py", line 618>, <code object findlinestarts at 0x000002406941AC10, file "dis.py", line 639>, <code object _find_imports at 0x0000024068D318E0, file "dis.py", line 651>, <code object _find_store_names at 0x00000240691C1FD0, file "dis.py", line 674>, <code object Bytecode at 0x0000024069419E90, file "dis.py", line 690>, 'Bytecode', <code object _test at 0x0000024068C8E3E0, file "dis.py", line 762>, '__main__', (None,), (None, None, None, None, 0, (), None, False), (-1,), (-1, None, None, None, None))
+
+## co_names:
+('__doc__', 'sys', 'types', 'collections', 'io', 'opcode', '__all__', '_opcodes_all', '_cache_format', '_inline_cache_entries', '_nb_ops', '_specializations', '_specialized_instructions', 'MethodType', 'FunctionType', 'CodeType', 'classmethod', 'staticmethod', 'type', '_have_code', 'opmap', 'FORMAT_VALUE', 'str', 'repr', 'ascii', 'FORMAT_VALUE_CONVERTERS', 'MAKE_FUNCTION', 'MAKE_FUNCTION_FLAGS', 'LOAD_CONST', 'LOAD_GLOBAL', 'BINARY_OP', 'JUMP_BACKWARD', 'CACHE', 'list', 'opname', '_all_opname', 'dict', '_all_opmap', 'enumerate', '_empty_slot', 'zip', 'spec_op', 'specialized', 'items', 'deoptmap', '_try_compile', 'dis', 'distb', 'COMPILER_FLAG_NAMES', 'pretty_flags', '_Unknown', 'UNKNOWN', '_get_code_object', '_deoptop', '_get_code_array', 'code_info', '_format_code_info', 'show_code', 'namedtuple', 'Positions', '_Instruction', 'arg', 'argval', 'argrepr', 'offset', 'starts_line', 'is_jump_target', 'positions', '_ExceptionTableEntry', '_OPNAME_WIDTH', '_OPARG_WIDTH', 'Instruction', 'get_instructions', '_get_const_value', '_get_const_info', '_get_name_info', '_parse_varint', '_parse_exception_table', '_is_backward_jump', '_get_instructions_bytes', 'disassemble', '_disassemble_recursive', '_disassemble_bytes', '_disassemble_str', 'disco', '_INT_BITS', '_INT_OVERFLOW', '_unpack_opargs', 'findlabels', 'findlinestarts', '_find_imports', '_find_store_names', 'Bytecode', '_test', '__name__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'Disassembler of Python byte code into mnemonics.'
+   4: STORE_NAME           __doc__
+   6: LOAD_CONST           0
+   8: LOAD_CONST           None
+  10: IMPORT_NAME          sys
+  12: STORE_NAME           sys
+  14: LOAD_CONST           0
+  16: LOAD_CONST           None
+  18: IMPORT_NAME          types
+  20: STORE_NAME           types
+  22: LOAD_CONST           0
+  24: LOAD_CONST           None
+  26: IMPORT_NAME          collections
+  28: STORE_NAME           collections
+  30: LOAD_CONST           0
+  32: LOAD_CONST           None
+  34: IMPORT_NAME          io
+  36: STORE_NAME           io
+  38: LOAD_CONST           0
+  40: LOAD_CONST           ('*',)
+  42: IMPORT_NAME          opcode
+  44: IMPORT_STAR          
+  46: LOAD_CONST           0
+  48: LOAD_CONST           ('__all__', '_cache_format', '_inline_cache_entries', '_nb_ops', '_specializations', '_specialized_instructions')
+  50: IMPORT_NAME          opcode
+  52: IMPORT_FROM          __all__
+  54: STORE_NAME           _opcodes_all
+  56: IMPORT_FROM          _cache_format
+  58: STORE_NAME           _cache_format
+  60: IMPORT_FROM          _inline_cache_entries
+  62: STORE_NAME           _inline_cache_entries
+  64: IMPORT_FROM          _nb_ops
+  66: STORE_NAME           _nb_ops
+  68: IMPORT_FROM          _specializations
+  70: STORE_NAME           _specializations
+  72: IMPORT_FROM          _specialized_instructions
+  74: STORE_NAME           _specialized_instructions
+  76: POP_TOP              
+  78: BUILD_LIST           
+  80: LOAD_CONST           ('code_info', 'dis', 'disassemble', 'distb', 'disco', 'findlinestarts', 'findlabels', 'show_code', 'get_instructions', 'Instruction', 'Bytecode')
+  82: LIST_EXTEND          
+  84: LOAD_NAME            _opcodes_all
+  86: BINARY_OP            +
+  90: STORE_NAME           __all__
+  92: DELETE_NAME          _opcodes_all
+  94: LOAD_NAME            types
+  96: LOAD_ATTR            MethodType
+ 106: LOAD_NAME            types
+ 108: LOAD_ATTR            FunctionType
+ 118: LOAD_NAME            types
+ 120: LOAD_ATTR            CodeType
+ 130: LOAD_NAME            classmethod
+ 132: LOAD_NAME            staticmethod
+ 134: LOAD_NAME            type
+ 136: BUILD_TUPLE          
+ 138: STORE_NAME           _have_code
+ 140: LOAD_NAME            opmap
+ 142: LOAD_CONST           'FORMAT_VALUE'
+ 144: BINARY_SUBSCR        
+ 154: STORE_NAME           FORMAT_VALUE
+ 156: LOAD_CONST           (None, '')
+ 158: LOAD_NAME            str
+ 160: LOAD_CONST           'str'
+ 162: BUILD_TUPLE          
+ 164: LOAD_NAME            repr
+ 166: LOAD_CONST           'repr'
+ 168: BUILD_TUPLE          
+ 170: LOAD_NAME            ascii
+ 172: LOAD_CONST           'ascii'
+ 174: BUILD_TUPLE          
+ 176: BUILD_TUPLE          
+ 178: STORE_NAME           FORMAT_VALUE_CONVERTERS
+ 180: LOAD_NAME            opmap
+ 182: LOAD_CONST           'MAKE_FUNCTION'
+ 184: BINARY_SUBSCR        
+ 194: STORE_NAME           MAKE_FUNCTION
+ 196: LOAD_CONST           ('defaults', 'kwdefaults', 'annotations', 'closure')
+ 198: STORE_NAME           MAKE_FUNCTION_FLAGS
+ 200: LOAD_NAME            opmap
+ 202: LOAD_CONST           'LOAD_CONST'
+ 204: BINARY_SUBSCR        
+ 214: STORE_NAME           LOAD_CONST
+ 216: LOAD_NAME            opmap
+ 218: LOAD_CONST           'LOAD_GLOBAL'
+ 220: BINARY_SUBSCR        
+ 230: STORE_NAME           LOAD_GLOBAL
+ 232: LOAD_NAME            opmap
+ 234: LOAD_CONST           'BINARY_OP'
+ 236: BINARY_SUBSCR        
+ 246: STORE_NAME           BINARY_OP
+ 248: LOAD_NAME            opmap
+ 250: LOAD_CONST           'JUMP_BACKWARD'
+ 252: BINARY_SUBSCR        
+ 262: STORE_NAME           JUMP_BACKWARD
+ 264: LOAD_NAME            opmap
+ 266: LOAD_CONST           'CACHE'
+ 268: BINARY_SUBSCR        
+ 278: STORE_NAME           CACHE
+ 280: PUSH_NULL            
+ 282: LOAD_NAME            list
+ 284: LOAD_NAME            opname
+ 286: PRECALL              
+ 290: CALL                 
+ 300: STORE_NAME           _all_opname
+ 302: PUSH_NULL            
+ 304: LOAD_NAME            dict
+ 306: LOAD_NAME            opmap
+ 308: PRECALL              
+ 312: CALL                 
+ 322: STORE_NAME           _all_opmap
+ 324: LOAD_CONST           <code object <listcomp> at 0x00000240693EA730, file "dis.py", line 45>
+ 326: MAKE_FUNCTION        
+ 328: PUSH_NULL            
+ 330: LOAD_NAME            enumerate
+ 332: LOAD_NAME            _all_opname
+ 334: PRECALL              
+ 338: CALL                 
+ 348: GET_ITER             
+ 350: PRECALL              
+ 354: CALL                 
+ 364: STORE_NAME           _empty_slot
+ 366: PUSH_NULL            
+ 368: LOAD_NAME            zip
+ 370: LOAD_NAME            _empty_slot
+ 372: LOAD_NAME            _specialized_instructions
+ 374: PRECALL              
+ 378: CALL                 
+ 388: GET_ITER             
+ 390: FOR_ITER             to 422
+ 392: UNPACK_SEQUENCE      
+ 396: STORE_NAME           spec_op
+ 398: STORE_NAME           specialized
+ 400: LOAD_NAME            specialized
+ 402: LOAD_NAME            _all_opname
+ 404: LOAD_NAME            spec_op
+ 406: STORE_SUBSCR         
+ 410: LOAD_NAME            spec_op
+ 412: LOAD_NAME            _all_opmap
+ 414: LOAD_NAME            specialized
+ 416: STORE_SUBSCR         
+ 420: JUMP_BACKWARD        to 390
+ 422: LOAD_CONST           <code object <dictcomp> at 0x0000024069465450, file "dis.py", line 51>
+ 424: MAKE_FUNCTION        
+ 426: PUSH_NULL            
+ 428: LOAD_NAME            _specializations
+ 430: LOAD_ATTR            items
+ 440: PRECALL              
+ 444: CALL                 
+ 454: GET_ITER             
+ 456: PRECALL              
+ 460: CALL                 
+ 470: STORE_NAME           deoptmap
+ 472: LOAD_CONST           <code object _try_compile at 0x00000240693D23D0, file "dis.py", line 55>
+ 474: MAKE_FUNCTION        
+ 476: STORE_NAME           _try_compile
+ 478: LOAD_CONST           (None,)
+ 480: LOAD_CONST           None
+ 482: LOAD_CONST           None
+ 484: LOAD_CONST           False
+ 486: LOAD_CONST           False
+ 488: LOAD_CONST           ('file', 'depth', 'show_caches', 'adaptive')
+ 490: BUILD_CONST_KEY_MAP  
+ 492: LOAD_CONST           <code object dis at 0x0000024068E96730, file "dis.py", line 68>
+ 494: MAKE_FUNCTION        defaults, kwdefaults
+ 496: STORE_NAME           dis
+ 498: LOAD_CONST           (None,)
+ 500: LOAD_CONST           None
+ 502: LOAD_CONST           False
+ 504: LOAD_CONST           False
+ 506: LOAD_CONST           ('file', 'show_caches', 'adaptive')
+ 508: BUILD_CONST_KEY_MAP  
+ 510: LOAD_CONST           <code object distb at 0x000002406942CB20, file "dis.py", line 113>
+ 512: MAKE_FUNCTION        defaults, kwdefaults
+ 514: STORE_NAME           distb
+ 516: LOAD_CONST           'OPTIMIZED'
+ 518: LOAD_CONST           'NEWLOCALS'
+ 520: LOAD_CONST           'VARARGS'
+ 522: LOAD_CONST           'VARKEYWORDS'
+ 524: LOAD_CONST           'NESTED'
+ 526: LOAD_CONST           'GENERATOR'
+ 528: LOAD_CONST           'NOFREE'
+ 530: LOAD_CONST           'COROUTINE'
+ 532: LOAD_CONST           'ITERABLE_COROUTINE'
+ 534: LOAD_CONST           'ASYNC_GENERATOR'
+ 536: LOAD_CONST           (1, 2, 4, 8, 16, 32, 64, 128, 256, 512)
+ 538: BUILD_CONST_KEY_MAP  
+ 540: STORE_NAME           COMPILER_FLAG_NAMES
+ 542: LOAD_CONST           <code object pretty_flags at 0x0000024069365B50, file "dis.py", line 139>
+ 544: MAKE_FUNCTION        
+ 546: STORE_NAME           pretty_flags
+ 548: PUSH_NULL            
+ 550: LOAD_BUILD_CLASS     
+ 552: LOAD_CONST           <code object _Unknown at 0x0000024069427D20, file "dis.py", line 153>
+ 554: MAKE_FUNCTION        
+ 556: LOAD_CONST           '_Unknown'
+ 558: PRECALL              
+ 562: CALL                 
+ 572: STORE_NAME           _Unknown
+ 574: PUSH_NULL            
+ 576: LOAD_NAME            _Unknown
+ 578: PRECALL              
+ 582: CALL                 
+ 592: STORE_NAME           UNKNOWN
+ 594: LOAD_CONST           <code object _get_code_object at 0x0000024068E1E0A0, file "dis.py", line 160>
+ 596: MAKE_FUNCTION        
+ 598: STORE_NAME           _get_code_object
+ 600: LOAD_CONST           <code object _deoptop at 0x000002406941A9D0, file "dis.py", line 183>
+ 602: MAKE_FUNCTION        
+ 604: STORE_NAME           _deoptop
+ 606: LOAD_CONST           <code object _get_code_array at 0x0000024069465A70, file "dis.py", line 187>
+ 608: MAKE_FUNCTION        
+ 610: STORE_NAME           _get_code_array
+ 612: LOAD_CONST           <code object code_info at 0x00000240693EA630, file "dis.py", line 190>
+ 614: MAKE_FUNCTION        
+ 616: STORE_NAME           code_info
+ 618: LOAD_CONST           <code object _format_code_info at 0x0000024068E0F020, file "dis.py", line 194>
+ 620: MAKE_FUNCTION        
+ 622: STORE_NAME           _format_code_info
+ 624: LOAD_CONST           None
+ 626: LOAD_CONST           ('file',)
+ 628: BUILD_CONST_KEY_MAP  
+ 630: LOAD_CONST           <code object show_code at 0x00000240693EA530, file "dis.py", line 226>
+ 632: MAKE_FUNCTION        kwdefaults
+ 634: STORE_NAME           show_code
+ 636: PUSH_NULL            
+ 638: LOAD_NAME            collections
+ 640: LOAD_ATTR            namedtuple
+ 650: LOAD_CONST           'Positions'
+ 652: BUILD_LIST           
+ 654: LOAD_CONST           ('lineno', 'end_lineno', 'col_offset', 'end_col_offset')
+ 656: LIST_EXTEND          
+ 658: LOAD_CONST           None
+ 660: BUILD_LIST           
+ 662: LOAD_CONST           4
+ 664: BINARY_OP            *
+ 668: KW_NAMES             
+ 670: PRECALL              
+ 674: CALL                 
+ 684: STORE_NAME           Positions
+ 686: PUSH_NULL            
+ 688: LOAD_NAME            collections
+ 690: LOAD_ATTR            namedtuple
+ 700: LOAD_CONST           '_Instruction'
+ 702: BUILD_LIST           
+ 704: LOAD_CONST           ('opname', 'opcode', 'arg', 'argval', 'argrepr', 'offset', 'starts_line', 'is_jump_target', 'positions')
+ 706: LIST_EXTEND          
+ 708: LOAD_CONST           None
+ 710: BUILD_LIST           
+ 712: KW_NAMES             
+ 714: PRECALL              
+ 718: CALL                 
+ 728: STORE_NAME           _Instruction
+ 730: LOAD_CONST           'Human readable name for operation'
+ 732: LOAD_NAME            _Instruction
+ 734: LOAD_ATTR            opname
+ 744: STORE_ATTR           __doc__
+ 754: LOAD_CONST           'Numeric code for operation'
+ 756: LOAD_NAME            _Instruction
+ 758: LOAD_ATTR            opcode
+ 768: STORE_ATTR           __doc__
+ 778: LOAD_CONST           'Numeric argument to operation (if any), otherwise None'
+ 780: LOAD_NAME            _Instruction
+ 782: LOAD_ATTR            arg
+ 792: STORE_ATTR           __doc__
+ 802: LOAD_CONST           'Resolved arg value (if known), otherwise same as arg'
+ 804: LOAD_NAME            _Instruction
+ 806: LOAD_ATTR            argval
+ 816: STORE_ATTR           __doc__
+ 826: LOAD_CONST           'Human readable description of operation argument'
+ 828: LOAD_NAME            _Instruction
+ 830: LOAD_ATTR            argrepr
+ 840: STORE_ATTR           __doc__
+ 850: LOAD_CONST           'Start index of operation within bytecode sequence'
+ 852: LOAD_NAME            _Instruction
+ 854: LOAD_ATTR            offset
+ 864: STORE_ATTR           __doc__
+ 874: LOAD_CONST           'Line started by this opcode (if any), otherwise None'
+ 876: LOAD_NAME            _Instruction
+ 878: LOAD_ATTR            starts_line
+ 888: STORE_ATTR           __doc__
+ 898: LOAD_CONST           'True if other code jumps to here, otherwise False'
+ 900: LOAD_NAME            _Instruction
+ 902: LOAD_ATTR            is_jump_target
+ 912: STORE_ATTR           __doc__
+ 922: LOAD_CONST           'dis.Positions object holding the span of source code covered by this instruction'
+ 924: LOAD_NAME            _Instruction
+ 926: LOAD_ATTR            positions
+ 936: STORE_ATTR           __doc__
+ 946: PUSH_NULL            
+ 948: LOAD_NAME            collections
+ 950: LOAD_ATTR            namedtuple
+ 960: LOAD_CONST           '_ExceptionTableEntry'
+ 962: LOAD_CONST           'start end target depth lasti'
+ 964: PRECALL              
+ 968: CALL                 
+ 978: STORE_NAME           _ExceptionTableEntry
+ 980: LOAD_CONST           20
+ 982: STORE_NAME           _OPNAME_WIDTH
+ 984: LOAD_CONST           5
+ 986: STORE_NAME           _OPARG_WIDTH
+ 988: PUSH_NULL            
+ 990: LOAD_BUILD_CLASS     
+ 992: LOAD_CONST           <code object Instruction at 0x00000240694657D0, file "dis.py", line 276>
+ 994: MAKE_FUNCTION        
+ 996: LOAD_CONST           'Instruction'
+ 998: LOAD_NAME            _Instruction
+1000: PRECALL              
+1004: CALL                 
+1014: STORE_NAME           Instruction
+1016: LOAD_CONST           None
+1018: LOAD_CONST           False
+1020: LOAD_CONST           False
+1022: LOAD_CONST           ('first_line', 'show_caches', 'adaptive')
+1024: BUILD_CONST_KEY_MAP  
+1026: LOAD_CONST           <code object get_instructions at 0x00000240691A7BB0, file "dis.py", line 330>
+1028: MAKE_FUNCTION        kwdefaults
+1030: STORE_NAME           get_instructions
+1032: LOAD_CONST           <code object _get_const_value at 0x000002406944A340, file "dis.py", line 354>
+1034: MAKE_FUNCTION        
+1036: STORE_NAME           _get_const_value
+1038: LOAD_CONST           <code object _get_const_info at 0x0000024069419110, file "dis.py", line 369>
+1040: MAKE_FUNCTION        
+1042: STORE_NAME           _get_const_info
+1044: LOAD_CONST           <code object _get_name_info at 0x000002406945DF20, file "dis.py", line 381>
+1046: MAKE_FUNCTION        
+1048: STORE_NAME           _get_name_info
+1050: LOAD_CONST           <code object _parse_varint at 0x00000240693AA6F0, file "dis.py", line 395>
+1052: MAKE_FUNCTION        
+1054: STORE_NAME           _parse_varint
+1056: LOAD_CONST           <code object _parse_exception_table at 0x0000024068C8D8F0, file "dis.py", line 404>
+1058: MAKE_FUNCTION        
+1060: STORE_NAME           _parse_exception_table
+1062: LOAD_CONST           <code object _is_backward_jump at 0x00000240694679F0, file "dis.py", line 420>
+1064: MAKE_FUNCTION        
+1066: STORE_NAME           _is_backward_jump
+1068: NOP                  
+1070: NOP                  
+1072: NOP                  
+1074: NOP                  
+1076: NOP                  
+1078: LOAD_CONST           (None, None, None, None, 0, (), None, False)
+1080: LOAD_CONST           <code object _get_instructions_bytes at 0x0000024066D637C0, file "dis.py", line 423>
+1082: MAKE_FUNCTION        defaults
+1084: STORE_NAME           _get_instructions_bytes
+1086: LOAD_CONST           (-1,)
+1088: LOAD_CONST           None
+1090: LOAD_CONST           False
+1092: LOAD_CONST           False
+1094: LOAD_CONST           ('file', 'show_caches', 'adaptive')
+1096: BUILD_CONST_KEY_MAP  
+1098: LOAD_CONST           <code object disassemble at 0x000002406934EF70, file "dis.py", line 519>
+1100: MAKE_FUNCTION        defaults, kwdefaults
+1102: STORE_NAME           disassemble
+1104: LOAD_CONST           None
+1106: LOAD_CONST           None
+1108: LOAD_CONST           False
+1110: LOAD_CONST           False
+1112: LOAD_CONST           ('file', 'depth', 'show_caches', 'adaptive')
+1114: BUILD_CONST_KEY_MAP  
+1116: LOAD_CONST           <code object _disassemble_recursive at 0x000002406934F630, file "dis.py", line 529>
+1118: MAKE_FUNCTION        kwdefaults
+1120: STORE_NAME           _disassemble_recursive
+1122: NOP                  
+1124: NOP                  
+1126: LOAD_CONST           (-1, None, None, None, None)
+1128: LOAD_CONST           None
+1130: LOAD_CONST           0
+1132: LOAD_CONST           ()
+1134: LOAD_CONST           None
+1136: LOAD_CONST           False
+1138: LOAD_CONST           ('file', 'line_offset', 'exception_entries', 'co_positions', 'show_caches')
+1140: BUILD_CONST_KEY_MAP  
+1142: LOAD_CONST           <code object _disassemble_bytes at 0x0000024068DCC3C0, file "dis.py", line 542>
+1144: MAKE_FUNCTION        defaults, kwdefaults
+1146: STORE_NAME           _disassemble_bytes
+1148: LOAD_CONST           <code object _disassemble_str at 0x00000240693EB330, file "dis.py", line 582>
+1150: MAKE_FUNCTION        
+1152: STORE_NAME           _disassemble_str
+1154: LOAD_NAME            disassemble
+1156: STORE_NAME           disco
+1158: LOAD_CONST           32
+1160: STORE_NAME           _INT_BITS
+1162: LOAD_CONST           2
+1164: LOAD_NAME            _INT_BITS
+1166: LOAD_CONST           1
+1168: BINARY_OP            -
+1172: BINARY_OP            **
+1176: STORE_NAME           _INT_OVERFLOW
+1178: LOAD_CONST           <code object _unpack_opargs at 0x0000024068BF59D0, file "dis.py", line 594>
+1180: MAKE_FUNCTION        
+1182: STORE_NAME           _unpack_opargs
+1184: LOAD_CONST           <code object findlabels at 0x00000240691F63F0, file "dis.py", line 618>
+1186: MAKE_FUNCTION        
+1188: STORE_NAME           findlabels
+1190: LOAD_CONST           <code object findlinestarts at 0x000002406941AC10, file "dis.py", line 639>
+1192: MAKE_FUNCTION        
+1194: STORE_NAME           findlinestarts
+1196: LOAD_CONST           <code object _find_imports at 0x0000024068D318E0, file "dis.py", line 651>
+1198: MAKE_FUNCTION        
+1200: STORE_NAME           _find_imports
+1202: LOAD_CONST           <code object _find_store_names at 0x00000240691C1FD0, file "dis.py", line 674>
+1204: MAKE_FUNCTION        
+1206: STORE_NAME           _find_store_names
+1208: PUSH_NULL            
+1210: LOAD_BUILD_CLASS     
+1212: LOAD_CONST           <code object Bytecode at 0x0000024069419E90, file "dis.py", line 690>
+1214: MAKE_FUNCTION        
+1216: LOAD_CONST           'Bytecode'
+1218: PRECALL              
+1222: CALL                 
+1232: STORE_NAME           Bytecode
+1234: LOAD_CONST           <code object _test at 0x0000024068C8E3E0, file "dis.py", line 762>
+1236: MAKE_FUNCTION        
+1238: STORE_NAME           _test
+1240: LOAD_NAME            __name__
+1242: LOAD_CONST           '__main__'
+1244: COMPARE_OP           ==
+1250: POP_JUMP_FORWARD_IF_FALSE to 1276
+1252: PUSH_NULL            
+1254: LOAD_NAME            _test
+1256: PRECALL              
+1260: CALL                 
+1270: POP_TOP              
+1272: LOAD_CONST           None
+1274: RETURN_VALUE         
+1276: LOAD_CONST           None
+1278: RETURN_VALUE         

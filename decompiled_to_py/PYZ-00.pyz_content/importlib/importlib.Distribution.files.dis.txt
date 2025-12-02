@@ -1,0 +1,42 @@
+# Disassembly for importlib.Distribution.files
+# From module file: importlib.metadata
+
+## co_consts:
+('Files in this distribution.\n\n        :return: List of PackagePath for this distribution or None\n\n        Result is `None` if the metadata file that enumerates files\n        (i.e. RECORD for dist-info or SOURCES.txt for egg-info) is\n        missing.\n        Result may be empty if the metadata exists but is empty.\n        ', None, <code object make_file at 0x000002406922CAB0, file "importlib\metadata\__init__.py", line 650>, <code object make_files at 0x000002406941AAF0, file "importlib\metadata\__init__.py", line 657>, (None, None))
+
+## co_names:
+('pass_none', '_read_files_distinfo', '_read_files_egginfo')
+
+## bytecode:
+
+   0: MAKE_CELL            self
+   2: MAKE_CELL            make_file
+   4: RESUME               
+   6: LOAD_CONST           (None, None)
+   8: LOAD_CLOSURE         self
+  10: BUILD_TUPLE          
+  12: LOAD_CONST           <code object make_file at 0x000002406922CAB0, file "importlib\metadata\__init__.py", line 650>
+  14: MAKE_FUNCTION        defaults, closure
+  16: STORE_DEREF          make_file
+  18: LOAD_GLOBAL          pass_none
+  30: LOAD_CLOSURE         make_file
+  32: BUILD_TUPLE          
+  34: LOAD_CONST           <code object make_files at 0x000002406941AAF0, file "importlib\metadata\__init__.py", line 657>
+  36: MAKE_FUNCTION        closure
+  38: PRECALL              
+  42: CALL                 
+  52: STORE_FAST           make_files
+  54: PUSH_NULL            
+  56: LOAD_FAST            make_files
+  58: LOAD_DEREF           self
+  60: LOAD_METHOD          _read_files_distinfo
+  82: PRECALL              
+  86: CALL                 
+  96: JUMP_IF_TRUE_OR_POP  to 136
+  98: LOAD_DEREF           self
+ 100: LOAD_METHOD          _read_files_egginfo
+ 122: PRECALL              
+ 126: CALL                 
+ 136: PRECALL              
+ 140: CALL                 
+ 150: RETURN_VALUE         

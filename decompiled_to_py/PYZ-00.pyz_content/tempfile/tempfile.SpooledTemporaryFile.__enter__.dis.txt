@@ -1,0 +1,23 @@
+# Disassembly for tempfile.SpooledTemporaryFile.__enter__
+# From module file: tempfile
+
+## co_consts:
+(None, 'Cannot enter context with closed file')
+
+## co_names:
+('_file', 'closed', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _file
+  14: LOAD_ATTR            closed
+  24: POP_JUMP_FORWARD_IF_FALSE to 56
+  26: LOAD_GLOBAL          NULL + ValueError
+  38: LOAD_CONST           'Cannot enter context with closed file'
+  40: PRECALL              
+  44: CALL                 
+  54: RAISE_VARARGS        
+  56: LOAD_FAST            self
+  58: RETURN_VALUE         

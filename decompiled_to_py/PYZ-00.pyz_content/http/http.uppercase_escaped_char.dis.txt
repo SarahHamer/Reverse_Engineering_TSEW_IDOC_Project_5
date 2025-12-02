@@ -1,0 +1,23 @@
+# Disassembly for http.uppercase_escaped_char
+# From module file: http.cookiejar
+
+## co_consts:
+(None, '%%%s', 1)
+
+## co_names:
+('group', 'upper')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '%%%s'
+   4: LOAD_FAST            match
+   6: LOAD_METHOD          group
+  28: LOAD_CONST           1
+  30: PRECALL              
+  34: CALL                 
+  44: LOAD_METHOD          upper
+  66: PRECALL              
+  70: CALL                 
+  80: BINARY_OP            %
+  84: RETURN_VALUE         

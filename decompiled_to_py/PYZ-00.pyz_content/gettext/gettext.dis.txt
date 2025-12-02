@@ -1,0 +1,167 @@
+# Disassembly for gettext
+# From module file: gettext
+
+## co_consts:
+('Internationalization and localization support.\n\nThis module provides internationalization (I18N) and localization (L10N)\nsupport for your Python programs by providing an interface to the GNU gettext\nmessage catalog library.\n\nI18N refers to the operation by which a program is made aware of multiple\nlanguages.  L10N refers to the adaptation of your program, once\ninternationalized, to the local language and cultural habits.\n\n', 0, None, ('NullTranslations', 'GNUTranslations', 'Catalog', 'bindtextdomain', 'find', 'translation', 'install', 'textdomain', 'dgettext', 'dngettext', 'gettext', 'ngettext', 'pgettext', 'dpgettext', 'npgettext', 'dnpgettext'), 'share', 'locale', '\n        (?P<WHITESPACES>[ \\t]+)                    | # spaces and horizontal tabs\n        (?P<NUMBER>[0-9]+\\b)                       | # decimal integer\n        (?P<NAME>n\\b)                              | # only n is allowed\n        (?P<PARENTHESIS>[()])                      |\n        (?P<OPERATOR>[-*/%+?:]|[><!]=?|==|&&|\\|\\|) | # !, *, /, %, +, -, <, >,\n                                                     # <=, >=, ==, !=, &&, ||,\n                                                     # ? :\n                                                     # unary and bitwise ops\n                                                     # not allowed\n        (?P<INVALID>\\w+|.)                           # invalid token\n    ', <code object _tokenize at 0x000002406942D930, file "gettext.py", line 86>, <code object _error at 0x00000240693EBA30, file "gettext.py", line 98>, (('||',), ('&&',), ('==', '!='), ('<', '>', '<=', '>='), ('+', '-'), ('*', '/', '%')), <code object <dictcomp> at 0x00000240694656F0, file "gettext.py", line 113>, 1, 'or', 'and', '//', ('||', '&&', '/'), -1, <code object _parse at 0x0000024066C3EE10, file "gettext.py", line 117>, <code object _as_int at 0x000002406942CB20, file "gettext.py", line 167>, <code object c2py at 0x0000024068D6F5A0, file "gettext.py", line 180>, <code object _expand_lang at 0x0000024068B79230, file "gettext.py", line 216>, <code object NullTranslations at 0x000002406944A780, file "gettext.py", line 258>, 'NullTranslations', <code object GNUTranslations at 0x00000240693EB730, file "gettext.py", line 316>, 'GNUTranslations', False, <code object find at 0x0000024068C0AF60, file "gettext.py", line 471>, <code object translation at 0x0000024068C08160, file "gettext.py", line 511>, ('names',), <code object install at 0x000002406944A890, file "gettext.py", line 545>, 'messages', <code object textdomain at 0x00000240694960B0, file "gettext.py", line 556>, <code object bindtextdomain at 0x0000024069419FB0, file "gettext.py", line 563>, <code object dgettext at 0x00000240691C1210, file "gettext.py", line 570>, <code object dngettext at 0x00000240691E9530, file "gettext.py", line 578>, <code object dpgettext at 0x00000240691C0F50, file "gettext.py", line 589>, <code object dnpgettext at 0x00000240691EA2B0, file "gettext.py", line 597>, <code object gettext at 0x000002406945D7A0, file "gettext.py", line 608>, <code object ngettext at 0x000002406945DD40, file "gettext.py", line 612>, <code object pgettext at 0x000002406945F1E0, file "gettext.py", line 616>, <code object npgettext at 0x000002406945F960, file "gettext.py", line 620>, (-1,), (None, None, False), (None, None, None, False), (None,))
+
+## co_names:
+('__doc__', 'os', 're', 'sys', '__all__', 'path', 'join', 'base_prefix', '_default_localedir', 'compile', 'VERBOSE', 'DOTALL', '_token_pattern', '_tokenize', '_error', '_binary_ops', 'enumerate', '_c2py_ops', '_parse', '_as_int', 'c2py', '_expand_lang', 'NullTranslations', 'GNUTranslations', 'find', '_translations', 'translation', 'install', '_localedirs', '_current_domain', 'textdomain', 'bindtextdomain', 'dgettext', 'dngettext', 'dpgettext', 'dnpgettext', 'gettext', 'ngettext', 'pgettext', 'npgettext', 'Catalog')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'Internationalization and localization support.\n\nThis module provides internationalization (I18N) and localization (L10N)\nsupport for your Python programs by providing an interface to the GNU gettext\nmessage catalog library.\n\nI18N refers to the operation by which a program is made aware of multiple\nlanguages.  L10N refers to the adaptation of your program, once\ninternationalized, to the local language and cultural habits.\n\n'
+   4: STORE_NAME           __doc__
+   6: LOAD_CONST           0
+   8: LOAD_CONST           None
+  10: IMPORT_NAME          os
+  12: STORE_NAME           os
+  14: LOAD_CONST           0
+  16: LOAD_CONST           None
+  18: IMPORT_NAME          re
+  20: STORE_NAME           re
+  22: LOAD_CONST           0
+  24: LOAD_CONST           None
+  26: IMPORT_NAME          sys
+  28: STORE_NAME           sys
+  30: BUILD_LIST           
+  32: LOAD_CONST           ('NullTranslations', 'GNUTranslations', 'Catalog', 'bindtextdomain', 'find', 'translation', 'install', 'textdomain', 'dgettext', 'dngettext', 'gettext', 'ngettext', 'pgettext', 'dpgettext', 'npgettext', 'dnpgettext')
+  34: LIST_EXTEND          
+  36: STORE_NAME           __all__
+  38: LOAD_NAME            os
+  40: LOAD_ATTR            path
+  50: LOAD_METHOD          join
+  72: LOAD_NAME            sys
+  74: LOAD_ATTR            base_prefix
+  84: LOAD_CONST           'share'
+  86: LOAD_CONST           'locale'
+  88: PRECALL              
+  92: CALL                 
+ 102: STORE_NAME           _default_localedir
+ 104: PUSH_NULL            
+ 106: LOAD_NAME            re
+ 108: LOAD_ATTR            compile
+ 118: LOAD_CONST           '\n        (?P<WHITESPACES>[ \\t]+)                    | # spaces and horizontal tabs\n        (?P<NUMBER>[0-9]+\\b)                       | # decimal integer\n        (?P<NAME>n\\b)                              | # only n is allowed\n        (?P<PARENTHESIS>[()])                      |\n        (?P<OPERATOR>[-*/%+?:]|[><!]=?|==|&&|\\|\\|) | # !, *, /, %, +, -, <, >,\n                                                     # <=, >=, ==, !=, &&, ||,\n                                                     # ? :\n                                                     # unary and bitwise ops\n                                                     # not allowed\n        (?P<INVALID>\\w+|.)                           # invalid token\n    '
+ 120: LOAD_NAME            re
+ 122: LOAD_ATTR            VERBOSE
+ 132: LOAD_NAME            re
+ 134: LOAD_ATTR            DOTALL
+ 144: BINARY_OP            |
+ 148: PRECALL              
+ 152: CALL                 
+ 162: STORE_NAME           _token_pattern
+ 164: LOAD_CONST           <code object _tokenize at 0x000002406942D930, file "gettext.py", line 86>
+ 166: MAKE_FUNCTION        
+ 168: STORE_NAME           _tokenize
+ 170: LOAD_CONST           <code object _error at 0x00000240693EBA30, file "gettext.py", line 98>
+ 172: MAKE_FUNCTION        
+ 174: STORE_NAME           _error
+ 176: LOAD_CONST           (('||',), ('&&',), ('==', '!='), ('<', '>', '<=', '>='), ('+', '-'), ('*', '/', '%'))
+ 178: STORE_NAME           _binary_ops
+ 180: LOAD_CONST           <code object <dictcomp> at 0x00000240694656F0, file "gettext.py", line 113>
+ 182: MAKE_FUNCTION        
+ 184: PUSH_NULL            
+ 186: LOAD_NAME            enumerate
+ 188: LOAD_NAME            _binary_ops
+ 190: LOAD_CONST           1
+ 192: PRECALL              
+ 196: CALL                 
+ 206: GET_ITER             
+ 208: PRECALL              
+ 212: CALL                 
+ 222: STORE_NAME           _binary_ops
+ 224: LOAD_CONST           'or'
+ 226: LOAD_CONST           'and'
+ 228: LOAD_CONST           '//'
+ 230: LOAD_CONST           ('||', '&&', '/')
+ 232: BUILD_CONST_KEY_MAP  
+ 234: STORE_NAME           _c2py_ops
+ 236: LOAD_CONST           (-1,)
+ 238: LOAD_CONST           <code object _parse at 0x0000024066C3EE10, file "gettext.py", line 117>
+ 240: MAKE_FUNCTION        defaults
+ 242: STORE_NAME           _parse
+ 244: LOAD_CONST           <code object _as_int at 0x000002406942CB20, file "gettext.py", line 167>
+ 246: MAKE_FUNCTION        
+ 248: STORE_NAME           _as_int
+ 250: LOAD_CONST           <code object c2py at 0x0000024068D6F5A0, file "gettext.py", line 180>
+ 252: MAKE_FUNCTION        
+ 254: STORE_NAME           c2py
+ 256: LOAD_CONST           <code object _expand_lang at 0x0000024068B79230, file "gettext.py", line 216>
+ 258: MAKE_FUNCTION        
+ 260: STORE_NAME           _expand_lang
+ 262: PUSH_NULL            
+ 264: LOAD_BUILD_CLASS     
+ 266: LOAD_CONST           <code object NullTranslations at 0x000002406944A780, file "gettext.py", line 258>
+ 268: MAKE_FUNCTION        
+ 270: LOAD_CONST           'NullTranslations'
+ 272: PRECALL              
+ 276: CALL                 
+ 286: STORE_NAME           NullTranslations
+ 288: PUSH_NULL            
+ 290: LOAD_BUILD_CLASS     
+ 292: LOAD_CONST           <code object GNUTranslations at 0x00000240693EB730, file "gettext.py", line 316>
+ 294: MAKE_FUNCTION        
+ 296: LOAD_CONST           'GNUTranslations'
+ 298: LOAD_NAME            NullTranslations
+ 300: PRECALL              
+ 304: CALL                 
+ 314: STORE_NAME           GNUTranslations
+ 316: LOAD_CONST           (None, None, False)
+ 318: LOAD_CONST           <code object find at 0x0000024068C0AF60, file "gettext.py", line 471>
+ 320: MAKE_FUNCTION        defaults
+ 322: STORE_NAME           find
+ 324: BUILD_MAP            
+ 326: STORE_NAME           _translations
+ 328: NOP                  
+ 330: NOP                  
+ 332: LOAD_CONST           (None, None, None, False)
+ 334: LOAD_CONST           <code object translation at 0x0000024068C08160, file "gettext.py", line 511>
+ 336: MAKE_FUNCTION        defaults
+ 338: STORE_NAME           translation
+ 340: LOAD_CONST           (None,)
+ 342: LOAD_CONST           None
+ 344: LOAD_CONST           ('names',)
+ 346: BUILD_CONST_KEY_MAP  
+ 348: LOAD_CONST           <code object install at 0x000002406944A890, file "gettext.py", line 545>
+ 350: MAKE_FUNCTION        defaults, kwdefaults
+ 352: STORE_NAME           install
+ 354: BUILD_MAP            
+ 356: STORE_GLOBAL         _localedirs
+ 358: LOAD_CONST           'messages'
+ 360: STORE_GLOBAL         _current_domain
+ 362: LOAD_CONST           (None,)
+ 364: LOAD_CONST           <code object textdomain at 0x00000240694960B0, file "gettext.py", line 556>
+ 366: MAKE_FUNCTION        defaults
+ 368: STORE_NAME           textdomain
+ 370: LOAD_CONST           (None,)
+ 372: LOAD_CONST           <code object bindtextdomain at 0x0000024069419FB0, file "gettext.py", line 563>
+ 374: MAKE_FUNCTION        defaults
+ 376: STORE_NAME           bindtextdomain
+ 378: LOAD_CONST           <code object dgettext at 0x00000240691C1210, file "gettext.py", line 570>
+ 380: MAKE_FUNCTION        
+ 382: STORE_NAME           dgettext
+ 384: LOAD_CONST           <code object dngettext at 0x00000240691E9530, file "gettext.py", line 578>
+ 386: MAKE_FUNCTION        
+ 388: STORE_NAME           dngettext
+ 390: LOAD_CONST           <code object dpgettext at 0x00000240691C0F50, file "gettext.py", line 589>
+ 392: MAKE_FUNCTION        
+ 394: STORE_NAME           dpgettext
+ 396: LOAD_CONST           <code object dnpgettext at 0x00000240691EA2B0, file "gettext.py", line 597>
+ 398: MAKE_FUNCTION        
+ 400: STORE_NAME           dnpgettext
+ 402: LOAD_CONST           <code object gettext at 0x000002406945D7A0, file "gettext.py", line 608>
+ 404: MAKE_FUNCTION        
+ 406: STORE_NAME           gettext
+ 408: LOAD_CONST           <code object ngettext at 0x000002406945DD40, file "gettext.py", line 612>
+ 410: MAKE_FUNCTION        
+ 412: STORE_NAME           ngettext
+ 414: LOAD_CONST           <code object pgettext at 0x000002406945F1E0, file "gettext.py", line 616>
+ 416: MAKE_FUNCTION        
+ 418: STORE_NAME           pgettext
+ 420: LOAD_CONST           <code object npgettext at 0x000002406945F960, file "gettext.py", line 620>
+ 422: MAKE_FUNCTION        
+ 424: STORE_NAME           npgettext
+ 426: LOAD_NAME            translation
+ 428: STORE_NAME           Catalog
+ 430: LOAD_CONST           None
+ 432: RETURN_VALUE         

@@ -1,0 +1,41 @@
+# Disassembly for typing._UnpackGenericAlias
+# From module file: typing
+
+## co_consts:
+('_UnpackGenericAlias', <code object __repr__ at 0x0000024069CDC530, file "typing.py", line 1754>, <code object __getitem__ at 0x000002406944B440, file "typing.py", line 1759>, <code object __typing_unpacked_tuple_args__ at 0x00000240691EAA30, file "typing.py", line 1764>, <code object __typing_is_unpacked_typevartuple__ at 0x00000240691F39F0, file "typing.py", line 1774>)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__repr__', '__getitem__', 'property', '__typing_unpacked_tuple_args__', '__typing_is_unpacked_typevartuple__', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           '_UnpackGenericAlias'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           <code object __repr__ at 0x0000024069CDC530, file "typing.py", line 1754>
+  14: MAKE_FUNCTION        
+  16: STORE_NAME           __repr__
+  18: LOAD_CLOSURE         __class__
+  20: BUILD_TUPLE          
+  22: LOAD_CONST           <code object __getitem__ at 0x000002406944B440, file "typing.py", line 1759>
+  24: MAKE_FUNCTION        closure
+  26: STORE_NAME           __getitem__
+  28: LOAD_NAME            property
+  30: LOAD_CONST           <code object __typing_unpacked_tuple_args__ at 0x00000240691EAA30, file "typing.py", line 1764>
+  32: MAKE_FUNCTION        
+  34: PRECALL              
+  38: CALL                 
+  48: STORE_NAME           __typing_unpacked_tuple_args__
+  50: LOAD_NAME            property
+  52: LOAD_CONST           <code object __typing_is_unpacked_typevartuple__ at 0x00000240691F39F0, file "typing.py", line 1774>
+  54: MAKE_FUNCTION        
+  56: PRECALL              
+  60: CALL                 
+  70: STORE_NAME           __typing_is_unpacked_typevartuple__
+  72: LOAD_CLOSURE         __class__
+  74: COPY                 
+  76: STORE_NAME           __classcell__
+  78: RETURN_VALUE         

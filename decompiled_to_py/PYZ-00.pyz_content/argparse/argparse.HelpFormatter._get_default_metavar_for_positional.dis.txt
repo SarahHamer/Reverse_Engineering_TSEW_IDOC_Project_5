@@ -1,0 +1,15 @@
+# Disassembly for argparse.HelpFormatter._get_default_metavar_for_positional
+# From module file: argparse
+
+## co_consts:
+(None,)
+
+## co_names:
+('dest',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            action
+   4: LOAD_ATTR            dest
+  14: RETURN_VALUE         

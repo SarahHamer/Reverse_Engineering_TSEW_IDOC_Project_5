@@ -1,0 +1,73 @@
+# Disassembly for gzip._PaddedFile.read
+# From module file: gzip
+
+## co_consts:
+(None,)
+
+## co_names:
+('_read', 'file', 'read', '_length', '_buffer')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _read
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 68
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            file
+  28: LOAD_METHOD          read
+  50: LOAD_FAST            size
+  52: PRECALL              
+  56: CALL                 
+  66: RETURN_VALUE         
+  68: LOAD_FAST            self
+  70: LOAD_ATTR            _read
+  80: LOAD_FAST            size
+  82: BINARY_OP            +
+  86: LOAD_FAST            self
+  88: LOAD_ATTR            _length
+  98: COMPARE_OP           <=
+ 104: POP_JUMP_FORWARD_IF_FALSE to 192
+ 106: LOAD_FAST            self
+ 108: LOAD_ATTR            _read
+ 118: STORE_FAST           read
+ 120: LOAD_FAST            self
+ 122: COPY                 
+ 124: LOAD_ATTR            _read
+ 134: LOAD_FAST            size
+ 136: BINARY_OP            +=
+ 140: SWAP                 
+ 142: STORE_ATTR           _read
+ 152: LOAD_FAST            self
+ 154: LOAD_ATTR            _buffer
+ 164: LOAD_FAST            read
+ 166: LOAD_FAST            self
+ 168: LOAD_ATTR            _read
+ 178: BUILD_SLICE          
+ 180: BINARY_SUBSCR        
+ 190: RETURN_VALUE         
+ 192: LOAD_FAST            self
+ 194: LOAD_ATTR            _read
+ 204: STORE_FAST           read
+ 206: LOAD_CONST           None
+ 208: LOAD_FAST            self
+ 210: STORE_ATTR           _read
+ 220: LOAD_FAST            self
+ 222: LOAD_ATTR            _buffer
+ 232: LOAD_FAST            read
+ 234: LOAD_CONST           None
+ 236: BUILD_SLICE          
+ 238: BINARY_SUBSCR        
+ 248: LOAD_FAST            self
+ 250: LOAD_ATTR            file
+ 260: LOAD_METHOD          read
+ 282: LOAD_FAST            size
+ 284: LOAD_FAST            self
+ 286: LOAD_ATTR            _length
+ 296: BINARY_OP            -
+ 300: LOAD_FAST            read
+ 302: BINARY_OP            +
+ 306: PRECALL              
+ 310: CALL                 
+ 320: BINARY_OP            +
+ 324: RETURN_VALUE         

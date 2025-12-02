@@ -1,0 +1,129 @@
+# Disassembly for email.get_name_addr
+# From module file: email._header_value_parser
+
+## co_consts:
+(' name-addr = [display-name] angle-addr\n\n    ', None, 0, "expected name-addr but found '{}'", '<')
+
+## co_names:
+('NameAddr', 'CFWS_LEADER', 'get_cfws', 'errors', 'HeaderParseError', 'format', 'PHRASE_ENDS', 'get_display_name', 'append', 'get_angle_addr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + NameAddr
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           name_addr
+  30: LOAD_CONST           None
+  32: STORE_FAST           leader
+  34: LOAD_FAST            value
+  36: LOAD_CONST           0
+  38: BINARY_SUBSCR        
+  48: LOAD_GLOBAL          CFWS_LEADER
+  60: CONTAINS_OP          
+  62: POP_JUMP_FORWARD_IF_FALSE to 182
+  64: LOAD_GLOBAL          NULL + get_cfws
+  76: LOAD_FAST            value
+  78: PRECALL              
+  82: CALL                 
+  92: UNPACK_SEQUENCE      
+  96: STORE_FAST           leader
+  98: STORE_FAST           value
+ 100: LOAD_FAST            value
+ 102: POP_JUMP_FORWARD_IF_TRUE to 182
+ 104: LOAD_GLOBAL          NULL + errors
+ 116: LOAD_ATTR            HeaderParseError
+ 126: LOAD_CONST           "expected name-addr but found '{}'"
+ 128: LOAD_METHOD          format
+ 150: LOAD_FAST            leader
+ 152: PRECALL              
+ 156: CALL                 
+ 166: PRECALL              
+ 170: CALL                 
+ 180: RAISE_VARARGS        
+ 182: LOAD_FAST            value
+ 184: LOAD_CONST           0
+ 186: BINARY_SUBSCR        
+ 196: LOAD_CONST           '<'
+ 198: COMPARE_OP           !=
+ 204: POP_JUMP_FORWARD_IF_FALSE to 510
+ 206: LOAD_FAST            value
+ 208: LOAD_CONST           0
+ 210: BINARY_SUBSCR        
+ 220: LOAD_GLOBAL          PHRASE_ENDS
+ 232: CONTAINS_OP          
+ 234: POP_JUMP_FORWARD_IF_FALSE to 314
+ 236: LOAD_GLOBAL          NULL + errors
+ 248: LOAD_ATTR            HeaderParseError
+ 258: LOAD_CONST           "expected name-addr but found '{}'"
+ 260: LOAD_METHOD          format
+ 282: LOAD_FAST            value
+ 284: PRECALL              
+ 288: CALL                 
+ 298: PRECALL              
+ 302: CALL                 
+ 312: RAISE_VARARGS        
+ 314: LOAD_GLOBAL          NULL + get_display_name
+ 326: LOAD_FAST            value
+ 328: PRECALL              
+ 332: CALL                 
+ 342: UNPACK_SEQUENCE      
+ 346: STORE_FAST           token
+ 348: STORE_FAST           value
+ 350: LOAD_FAST            value
+ 352: POP_JUMP_FORWARD_IF_TRUE to 432
+ 354: LOAD_GLOBAL          NULL + errors
+ 366: LOAD_ATTR            HeaderParseError
+ 376: LOAD_CONST           "expected name-addr but found '{}'"
+ 378: LOAD_METHOD          format
+ 400: LOAD_FAST            token
+ 402: PRECALL              
+ 406: CALL                 
+ 416: PRECALL              
+ 420: CALL                 
+ 430: RAISE_VARARGS        
+ 432: LOAD_FAST            leader
+ 434: POP_JUMP_FORWARD_IF_NONE to 468
+ 436: LOAD_FAST            leader
+ 438: BUILD_LIST           
+ 440: LOAD_FAST            token
+ 442: LOAD_CONST           0
+ 444: BINARY_SUBSCR        
+ 454: LOAD_CONST           None
+ 456: LOAD_CONST           0
+ 458: BUILD_SLICE          
+ 460: STORE_SUBSCR         
+ 464: LOAD_CONST           None
+ 466: STORE_FAST           leader
+ 468: LOAD_FAST            name_addr
+ 470: LOAD_METHOD          append
+ 492: LOAD_FAST            token
+ 494: PRECALL              
+ 498: CALL                 
+ 508: POP_TOP              
+ 510: LOAD_GLOBAL          NULL + get_angle_addr
+ 522: LOAD_FAST            value
+ 524: PRECALL              
+ 528: CALL                 
+ 538: UNPACK_SEQUENCE      
+ 542: STORE_FAST           token
+ 544: STORE_FAST           value
+ 546: LOAD_FAST            leader
+ 548: POP_JUMP_FORWARD_IF_NONE to 566
+ 550: LOAD_FAST            leader
+ 552: BUILD_LIST           
+ 554: LOAD_FAST            token
+ 556: LOAD_CONST           None
+ 558: LOAD_CONST           0
+ 560: BUILD_SLICE          
+ 562: STORE_SUBSCR         
+ 566: LOAD_FAST            name_addr
+ 568: LOAD_METHOD          append
+ 590: LOAD_FAST            token
+ 592: PRECALL              
+ 596: CALL                 
+ 606: POP_TOP              
+ 608: LOAD_FAST            name_addr
+ 610: LOAD_FAST            value
+ 612: BUILD_TUPLE          
+ 614: RETURN_VALUE         

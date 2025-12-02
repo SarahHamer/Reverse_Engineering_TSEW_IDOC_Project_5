@@ -1,0 +1,57 @@
+# Disassembly for email._Accumulator
+# From module file: email.header
+
+## co_consts:
+('_Accumulator', 0, <code object __init__ at 0x000002406944A9A0, file "email\header.py", line 538>, <code object push at 0x000002406945FC30, file "email\header.py", line 542>, <code object pop_from at 0x0000024069465A70, file "email\header.py", line 545>, <code object pop at 0x00000240693D2760, file "email\header.py", line 550>, <code object __len__ at 0x00000240693EB230, file "email\header.py", line 555>, <code object __str__ at 0x000002406944B330, file "email\header.py", line 559>, None, <code object reset at 0x000002406945D6B0, file "email\header.py", line 563>, <code object is_onlyws at 0x000002406941AC10, file "email\header.py", line 569>, <code object part_count at 0x00000240693EB330, file "email\header.py", line 572>, (0,), (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', 'push', 'pop_from', 'pop', '__len__', '__str__', 'reset', 'is_onlyws', 'part_count', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           '_Accumulator'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           (0,)
+  14: LOAD_CLOSURE         __class__
+  16: BUILD_TUPLE          
+  18: LOAD_CONST           <code object __init__ at 0x000002406944A9A0, file "email\header.py", line 538>
+  20: MAKE_FUNCTION        defaults, closure
+  22: STORE_NAME           __init__
+  24: LOAD_CONST           <code object push at 0x000002406945FC30, file "email\header.py", line 542>
+  26: MAKE_FUNCTION        
+  28: STORE_NAME           push
+  30: LOAD_CONST           (0,)
+  32: LOAD_CONST           <code object pop_from at 0x0000024069465A70, file "email\header.py", line 545>
+  34: MAKE_FUNCTION        defaults
+  36: STORE_NAME           pop_from
+  38: LOAD_CLOSURE         __class__
+  40: BUILD_TUPLE          
+  42: LOAD_CONST           <code object pop at 0x00000240693D2760, file "email\header.py", line 550>
+  44: MAKE_FUNCTION        closure
+  46: STORE_NAME           pop
+  48: LOAD_CONST           <code object __len__ at 0x00000240693EB230, file "email\header.py", line 555>
+  50: MAKE_FUNCTION        
+  52: STORE_NAME           __len__
+  54: LOAD_CONST           <code object __str__ at 0x000002406944B330, file "email\header.py", line 559>
+  56: MAKE_FUNCTION        
+  58: STORE_NAME           __str__
+  60: LOAD_CONST           (None,)
+  62: LOAD_CONST           <code object reset at 0x000002406945D6B0, file "email\header.py", line 563>
+  64: MAKE_FUNCTION        defaults
+  66: STORE_NAME           reset
+  68: LOAD_CONST           <code object is_onlyws at 0x000002406941AC10, file "email\header.py", line 569>
+  70: MAKE_FUNCTION        
+  72: STORE_NAME           is_onlyws
+  74: LOAD_CLOSURE         __class__
+  76: BUILD_TUPLE          
+  78: LOAD_CONST           <code object part_count at 0x00000240693EB330, file "email\header.py", line 572>
+  80: MAKE_FUNCTION        closure
+  82: STORE_NAME           part_count
+  84: LOAD_CLOSURE         __class__
+  86: COPY                 
+  88: STORE_NAME           __classcell__
+  90: RETURN_VALUE         

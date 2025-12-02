@@ -1,0 +1,39 @@
+# Disassembly for datetime.timedelta.__add__
+# From module file: datetime
+
+## co_consts:
+(None,)
+
+## co_names:
+('isinstance', 'timedelta', '_days', '_seconds', '_microseconds', 'NotImplemented')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            other
+  16: LOAD_GLOBAL          timedelta
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 156
+  44: LOAD_GLOBAL          NULL + timedelta
+  56: LOAD_FAST            self
+  58: LOAD_ATTR            _days
+  68: LOAD_FAST            other
+  70: LOAD_ATTR            _days
+  80: BINARY_OP            +
+  84: LOAD_FAST            self
+  86: LOAD_ATTR            _seconds
+  96: LOAD_FAST            other
+  98: LOAD_ATTR            _seconds
+ 108: BINARY_OP            +
+ 112: LOAD_FAST            self
+ 114: LOAD_ATTR            _microseconds
+ 124: LOAD_FAST            other
+ 126: LOAD_ATTR            _microseconds
+ 136: BINARY_OP            +
+ 140: PRECALL              
+ 144: CALL                 
+ 154: RETURN_VALUE         
+ 156: LOAD_GLOBAL          NotImplemented
+ 168: RETURN_VALUE         

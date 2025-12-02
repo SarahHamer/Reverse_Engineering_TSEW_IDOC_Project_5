@@ -1,0 +1,15 @@
+# Disassembly for typing._PickleUsingNameMixin.__reduce__
+# From module file: typing
+
+## co_consts:
+(None,)
+
+## co_names:
+('__name__',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            __name__
+  14: RETURN_VALUE         

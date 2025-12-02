@@ -1,0 +1,54 @@
+# Disassembly for importlib.resources.MultiplexedPath.__init__
+# From module file: importlib.resources.readers
+
+## co_consts:
+(None, 'MultiplexedPath must contain at least one path', <code object <genexpr> at 0x00000240693EA730, file "importlib\resources\readers.py", line 66>, 'MultiplexedPath only supports directories')
+
+## co_names:
+('list', 'map', 'pathlib', 'Path', 'remove_duplicates', '_paths', 'FileNotFoundError', 'all', 'NotADirectoryError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + list
+  14: LOAD_GLOBAL          NULL + map
+  26: LOAD_GLOBAL          pathlib
+  38: LOAD_ATTR            Path
+  48: LOAD_GLOBAL          NULL + remove_duplicates
+  60: LOAD_FAST            paths
+  62: PRECALL              
+  66: CALL                 
+  76: PRECALL              
+  80: CALL                 
+  90: PRECALL              
+  94: CALL                 
+ 104: LOAD_FAST            self
+ 106: STORE_ATTR           _paths
+ 116: LOAD_FAST            self
+ 118: LOAD_ATTR            _paths
+ 128: POP_JUMP_FORWARD_IF_TRUE to 164
+ 130: LOAD_CONST           'MultiplexedPath must contain at least one path'
+ 132: STORE_FAST           message
+ 134: LOAD_GLOBAL          NULL + FileNotFoundError
+ 146: LOAD_FAST            message
+ 148: PRECALL              
+ 152: CALL                 
+ 162: RAISE_VARARGS        
+ 164: LOAD_GLOBAL          NULL + all
+ 176: LOAD_CONST           <code object <genexpr> at 0x00000240693EA730, file "importlib\resources\readers.py", line 66>
+ 178: MAKE_FUNCTION        
+ 180: LOAD_FAST            self
+ 182: LOAD_ATTR            _paths
+ 192: GET_ITER             
+ 194: PRECALL              
+ 198: CALL                 
+ 208: PRECALL              
+ 212: CALL                 
+ 222: POP_JUMP_FORWARD_IF_TRUE to 254
+ 224: LOAD_GLOBAL          NULL + NotADirectoryError
+ 236: LOAD_CONST           'MultiplexedPath only supports directories'
+ 238: PRECALL              
+ 242: CALL                 
+ 252: RAISE_VARARGS        
+ 254: LOAD_CONST           None
+ 256: RETURN_VALUE         

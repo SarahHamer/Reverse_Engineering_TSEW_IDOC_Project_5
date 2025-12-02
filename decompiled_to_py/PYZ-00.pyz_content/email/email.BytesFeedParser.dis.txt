@@ -1,0 +1,28 @@
+# Disassembly for email.BytesFeedParser
+# From module file: email.feedparser
+
+## co_consts:
+('BytesFeedParser', 'Like FeedParser, but feed accepts bytes.', <code object feed at 0x00000240693D3DF0, file "email\feedparser.py", line 533>)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'feed', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'BytesFeedParser'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           'Like FeedParser, but feed accepts bytes.'
+  14: STORE_NAME           __doc__
+  16: LOAD_CLOSURE         __class__
+  18: BUILD_TUPLE          
+  20: LOAD_CONST           <code object feed at 0x00000240693D3DF0, file "email\feedparser.py", line 533>
+  22: MAKE_FUNCTION        closure
+  24: STORE_NAME           feed
+  26: LOAD_CLOSURE         __class__
+  28: COPY                 
+  30: STORE_NAME           __classcell__
+  32: RETURN_VALUE         

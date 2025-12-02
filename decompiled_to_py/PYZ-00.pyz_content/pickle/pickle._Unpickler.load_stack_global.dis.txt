@@ -1,0 +1,56 @@
+# Disassembly for pickle._Unpickler.load_stack_global
+# From module file: pickle
+
+## co_consts:
+(None, 'STACK_GLOBAL requires str')
+
+## co_names:
+('stack', 'pop', 'type', 'str', 'UnpicklingError', 'append', 'find_class')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            stack
+  14: LOAD_METHOD          pop
+  36: PRECALL              
+  40: CALL                 
+  50: STORE_FAST           name
+  52: LOAD_FAST            self
+  54: LOAD_ATTR            stack
+  64: LOAD_METHOD          pop
+  86: PRECALL              
+  90: CALL                 
+ 100: STORE_FAST           module
+ 102: LOAD_GLOBAL          NULL + type
+ 114: LOAD_FAST            name
+ 116: PRECALL              
+ 120: CALL                 
+ 130: LOAD_GLOBAL          str
+ 142: IS_OP                
+ 144: POP_JUMP_FORWARD_IF_TRUE to 190
+ 146: LOAD_GLOBAL          NULL + type
+ 158: LOAD_FAST            module
+ 160: PRECALL              
+ 164: CALL                 
+ 174: LOAD_GLOBAL          str
+ 186: IS_OP                
+ 188: POP_JUMP_FORWARD_IF_FALSE to 220
+ 190: LOAD_GLOBAL          NULL + UnpicklingError
+ 202: LOAD_CONST           'STACK_GLOBAL requires str'
+ 204: PRECALL              
+ 208: CALL                 
+ 218: RAISE_VARARGS        
+ 220: LOAD_FAST            self
+ 222: LOAD_METHOD          append
+ 244: LOAD_FAST            self
+ 246: LOAD_METHOD          find_class
+ 268: LOAD_FAST            module
+ 270: LOAD_FAST            name
+ 272: PRECALL              
+ 276: CALL                 
+ 286: PRECALL              
+ 290: CALL                 
+ 300: POP_TOP              
+ 302: LOAD_CONST           None
+ 304: RETURN_VALUE         

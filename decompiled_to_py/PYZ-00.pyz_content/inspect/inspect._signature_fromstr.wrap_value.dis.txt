@@ -1,0 +1,74 @@
+# Disassembly for inspect._signature_fromstr.wrap_value
+# From module file: inspect
+
+## co_consts:
+(None,)
+
+## co_names:
+('eval', 'NameError', 'ValueError', 'isinstance', 'str', 'int', 'float', 'bytes', 'bool', 'type', 'ast', 'Constant')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: NOP                  
+   6: LOAD_GLOBAL          NULL + eval
+  18: LOAD_FAST            s
+  20: LOAD_DEREF           module_dict
+  22: PRECALL              
+  26: CALL                 
+  36: STORE_FAST           value
+  38: JUMP_FORWARD         to 150
+  40: PUSH_EXC_INFO        
+  42: LOAD_GLOBAL          NameError
+  54: CHECK_EXC_MATCH      
+  56: POP_JUMP_FORWARD_IF_FALSE to 142
+  58: POP_TOP              
+  60: NOP                  
+  62: LOAD_GLOBAL          NULL + eval
+  74: LOAD_FAST            s
+  76: LOAD_DEREF           sys_module_dict
+  78: PRECALL              
+  82: CALL                 
+  92: STORE_FAST           value
+  94: JUMP_FORWARD         to 138
+  96: PUSH_EXC_INFO        
+  98: LOAD_GLOBAL          NameError
+ 110: CHECK_EXC_MATCH      
+ 112: POP_JUMP_FORWARD_IF_FALSE to 130
+ 114: POP_TOP              
+ 116: LOAD_GLOBAL          ValueError
+ 128: RAISE_VARARGS        
+ 130: RERAISE              
+ 132: COPY                 
+ 134: POP_EXCEPT           
+ 136: RERAISE              
+ 138: POP_EXCEPT           
+ 140: JUMP_FORWARD         to 150
+ 142: RERAISE              
+ 144: COPY                 
+ 146: POP_EXCEPT           
+ 148: RERAISE              
+ 150: LOAD_GLOBAL          NULL + isinstance
+ 162: LOAD_FAST            value
+ 164: LOAD_GLOBAL          str
+ 176: LOAD_GLOBAL          int
+ 188: LOAD_GLOBAL          float
+ 200: LOAD_GLOBAL          bytes
+ 212: LOAD_GLOBAL          bool
+ 224: LOAD_GLOBAL          NULL + type
+ 236: LOAD_CONST           None
+ 238: PRECALL              
+ 242: CALL                 
+ 252: BUILD_TUPLE          
+ 254: PRECALL              
+ 258: CALL                 
+ 268: POP_JUMP_FORWARD_IF_FALSE to 310
+ 270: LOAD_GLOBAL          NULL + ast
+ 282: LOAD_ATTR            Constant
+ 292: LOAD_FAST            value
+ 294: PRECALL              
+ 298: CALL                 
+ 308: RETURN_VALUE         
+ 310: LOAD_GLOBAL          ValueError
+ 322: RAISE_VARARGS        

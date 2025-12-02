@@ -1,0 +1,116 @@
+# Disassembly for logging.Logger.findCaller
+# From module file: logging
+
+## co_consts:
+('\n        Find the stack frame of the caller so that we can note the source\n        file name, line number and function name.\n        ', None, ('(unknown file)', 0, '(unknown function)', None), 0, 1, 'Stack (most recent call last):\n', ('file',), -1, '\n')
+
+## co_names:
+('currentframe', 'f_back', '_is_internal_frame', 'f_code', 'io', 'StringIO', 'write', 'traceback', 'print_stack', 'getvalue', 'co_filename', 'f_lineno', 'co_name')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + currentframe
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           f
+  30: LOAD_FAST            f
+  32: POP_JUMP_FORWARD_IF_NOT_NONE to 38
+  34: LOAD_CONST           ('(unknown file)', 0, '(unknown function)', None)
+  36: RETURN_VALUE         
+  38: LOAD_FAST            stacklevel
+  40: LOAD_CONST           0
+  42: COMPARE_OP           >
+  48: POP_JUMP_FORWARD_IF_FALSE to 126
+  50: LOAD_FAST            f
+  52: LOAD_ATTR            f_back
+  62: STORE_FAST           next_f
+  64: LOAD_FAST            next_f
+  66: POP_JUMP_FORWARD_IF_NOT_NONE to 70
+  68: JUMP_FORWARD         to 126
+  70: LOAD_FAST            next_f
+  72: STORE_FAST           f
+  74: LOAD_GLOBAL          NULL + _is_internal_frame
+  86: LOAD_FAST            f
+  88: PRECALL              
+  92: CALL                 
+ 102: POP_JUMP_FORWARD_IF_TRUE to 114
+ 104: LOAD_FAST            stacklevel
+ 106: LOAD_CONST           1
+ 108: BINARY_OP            -=
+ 112: STORE_FAST           stacklevel
+ 114: LOAD_FAST            stacklevel
+ 116: LOAD_CONST           0
+ 118: COMPARE_OP           >
+ 124: POP_JUMP_BACKWARD_IF_TRUE to 50
+ 126: LOAD_FAST            f
+ 128: LOAD_ATTR            f_code
+ 138: STORE_FAST           co
+ 140: LOAD_CONST           None
+ 142: STORE_FAST           sinfo
+ 144: LOAD_FAST            stack_info
+ 146: POP_JUMP_FORWARD_IF_FALSE to 404
+ 148: LOAD_GLOBAL          NULL + io
+ 160: LOAD_ATTR            StringIO
+ 170: PRECALL              
+ 174: CALL                 
+ 184: BEFORE_WITH          
+ 186: STORE_FAST           sio
+ 188: LOAD_FAST            sio
+ 190: LOAD_METHOD          write
+ 212: LOAD_CONST           'Stack (most recent call last):\n'
+ 214: PRECALL              
+ 218: CALL                 
+ 228: POP_TOP              
+ 230: LOAD_GLOBAL          NULL + traceback
+ 242: LOAD_ATTR            print_stack
+ 252: LOAD_FAST            f
+ 254: LOAD_FAST            sio
+ 256: KW_NAMES             
+ 258: PRECALL              
+ 262: CALL                 
+ 272: POP_TOP              
+ 274: LOAD_FAST            sio
+ 276: LOAD_METHOD          getvalue
+ 298: PRECALL              
+ 302: CALL                 
+ 312: STORE_FAST           sinfo
+ 314: LOAD_FAST            sinfo
+ 316: LOAD_CONST           -1
+ 318: BINARY_SUBSCR        
+ 328: LOAD_CONST           '\n'
+ 330: COMPARE_OP           ==
+ 336: POP_JUMP_FORWARD_IF_FALSE to 358
+ 338: LOAD_FAST            sinfo
+ 340: LOAD_CONST           None
+ 342: LOAD_CONST           -1
+ 344: BUILD_SLICE          
+ 346: BINARY_SUBSCR        
+ 356: STORE_FAST           sinfo
+ 358: LOAD_CONST           None
+ 360: LOAD_CONST           None
+ 362: LOAD_CONST           None
+ 364: PRECALL              
+ 368: CALL                 
+ 378: POP_TOP              
+ 380: JUMP_FORWARD         to 404
+ 382: PUSH_EXC_INFO        
+ 384: WITH_EXCEPT_START    
+ 386: POP_JUMP_FORWARD_IF_TRUE to 396
+ 388: RERAISE              
+ 390: COPY                 
+ 392: POP_EXCEPT           
+ 394: RERAISE              
+ 396: POP_TOP              
+ 398: POP_EXCEPT           
+ 400: POP_TOP              
+ 402: POP_TOP              
+ 404: LOAD_FAST            co
+ 406: LOAD_ATTR            co_filename
+ 416: LOAD_FAST            f
+ 418: LOAD_ATTR            f_lineno
+ 428: LOAD_FAST            co
+ 430: LOAD_ATTR            co_name
+ 440: LOAD_FAST            sinfo
+ 442: BUILD_TUPLE          
+ 444: RETURN_VALUE         

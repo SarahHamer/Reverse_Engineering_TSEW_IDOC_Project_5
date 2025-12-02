@@ -1,0 +1,229 @@
+# Disassembly for base64._b32decode
+# From module file: base64
+
+## co_consts:
+(None, <code object <dictcomp> at 0x0000024069465A70, file "base64.py", line 207>, 8, 'Incorrect padding', 1, b'01', b'O', b'=', 0, 5, 'Non-base32 digit found', frozenset({0, 1, 3, 4, 6}), 43, -5)
+
+## co_names:
+('_b32rev', 'enumerate', '_bytes_from_decode_data', 'len', 'binascii', 'Error', 'repr', 'translate', 'bytes', 'maketrans', 'upper', 'rstrip', 'bytearray', 'range', 'KeyError', 'to_bytes')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            alphabet
+   4: LOAD_GLOBAL          _b32rev
+  16: CONTAINS_OP          
+  18: POP_JUMP_FORWARD_IF_FALSE to 86
+  20: LOAD_CONST           <code object <dictcomp> at 0x0000024069465A70, file "base64.py", line 207>
+  22: MAKE_FUNCTION        
+  24: LOAD_GLOBAL          NULL + enumerate
+  36: LOAD_FAST            alphabet
+  38: PRECALL              
+  42: CALL                 
+  52: GET_ITER             
+  54: PRECALL              
+  58: CALL                 
+  68: LOAD_GLOBAL          _b32rev
+  80: LOAD_FAST            alphabet
+  82: STORE_SUBSCR         
+  86: LOAD_GLOBAL          NULL + _bytes_from_decode_data
+  98: LOAD_FAST            s
+ 100: PRECALL              
+ 104: CALL                 
+ 114: STORE_FAST           s
+ 116: LOAD_GLOBAL          NULL + len
+ 128: LOAD_FAST            s
+ 130: PRECALL              
+ 134: CALL                 
+ 144: LOAD_CONST           8
+ 146: BINARY_OP            %
+ 150: POP_JUMP_FORWARD_IF_FALSE to 192
+ 152: LOAD_GLOBAL          NULL + binascii
+ 164: LOAD_ATTR            Error
+ 174: LOAD_CONST           'Incorrect padding'
+ 176: PRECALL              
+ 180: CALL                 
+ 190: RAISE_VARARGS        
+ 192: LOAD_FAST            map01
+ 194: POP_JUMP_FORWARD_IF_NONE to 408
+ 196: LOAD_GLOBAL          NULL + _bytes_from_decode_data
+ 208: LOAD_FAST            map01
+ 210: PRECALL              
+ 214: CALL                 
+ 224: STORE_FAST           map01
+ 226: LOAD_GLOBAL          NULL + len
+ 238: LOAD_FAST            map01
+ 240: PRECALL              
+ 244: CALL                 
+ 254: LOAD_CONST           1
+ 256: COMPARE_OP           ==
+ 262: POP_JUMP_FORWARD_IF_TRUE to 310
+ 264: LOAD_ASSERTION_ERROR 
+ 266: LOAD_GLOBAL          NULL + repr
+ 278: LOAD_FAST            map01
+ 280: PRECALL              
+ 284: CALL                 
+ 294: PRECALL              
+ 298: CALL                 
+ 308: RAISE_VARARGS        
+ 310: LOAD_FAST            s
+ 312: LOAD_METHOD          translate
+ 334: LOAD_GLOBAL          bytes
+ 346: LOAD_METHOD          maketrans
+ 368: LOAD_CONST           b'01'
+ 370: LOAD_CONST           b'O'
+ 372: LOAD_FAST            map01
+ 374: BINARY_OP            +
+ 378: PRECALL              
+ 382: CALL                 
+ 392: PRECALL              
+ 396: CALL                 
+ 406: STORE_FAST           s
+ 408: LOAD_FAST            casefold
+ 410: POP_JUMP_FORWARD_IF_FALSE to 452
+ 412: LOAD_FAST            s
+ 414: LOAD_METHOD          upper
+ 436: PRECALL              
+ 440: CALL                 
+ 450: STORE_FAST           s
+ 452: LOAD_GLOBAL          NULL + len
+ 464: LOAD_FAST            s
+ 466: PRECALL              
+ 470: CALL                 
+ 480: STORE_FAST           l
+ 482: LOAD_FAST            s
+ 484: LOAD_METHOD          rstrip
+ 506: LOAD_CONST           b'='
+ 508: PRECALL              
+ 512: CALL                 
+ 522: STORE_FAST           s
+ 524: LOAD_FAST            l
+ 526: LOAD_GLOBAL          NULL + len
+ 538: LOAD_FAST            s
+ 540: PRECALL              
+ 544: CALL                 
+ 554: BINARY_OP            -
+ 558: STORE_FAST           padchars
+ 560: LOAD_GLOBAL          NULL + bytearray
+ 572: PRECALL              
+ 576: CALL                 
+ 586: STORE_FAST           decoded
+ 588: LOAD_GLOBAL          _b32rev
+ 600: LOAD_FAST            alphabet
+ 602: BINARY_SUBSCR        
+ 612: STORE_FAST           b32rev
+ 614: LOAD_GLOBAL          NULL + range
+ 626: LOAD_CONST           0
+ 628: LOAD_GLOBAL          NULL + len
+ 640: LOAD_FAST            s
+ 642: PRECALL              
+ 646: CALL                 
+ 656: LOAD_CONST           8
+ 658: PRECALL              
+ 662: CALL                 
+ 672: GET_ITER             
+ 674: FOR_ITER             to 870
+ 676: STORE_FAST           i
+ 678: LOAD_FAST            s
+ 680: LOAD_FAST            i
+ 682: LOAD_FAST            i
+ 684: LOAD_CONST           8
+ 686: BINARY_OP            +
+ 690: BUILD_SLICE          
+ 692: BINARY_SUBSCR        
+ 702: STORE_FAST           quanta
+ 704: LOAD_CONST           0
+ 706: STORE_FAST           acc
+ 708: NOP                  
+ 710: LOAD_FAST            quanta
+ 712: GET_ITER             
+ 714: FOR_ITER             to 748
+ 716: STORE_FAST           c
+ 718: LOAD_FAST            acc
+ 720: LOAD_CONST           5
+ 722: BINARY_OP            <<
+ 726: LOAD_FAST            b32rev
+ 728: LOAD_FAST            c
+ 730: BINARY_SUBSCR        
+ 740: BINARY_OP            +
+ 744: STORE_FAST           acc
+ 746: JUMP_BACKWARD        to 714
+ 748: JUMP_FORWARD         to 820
+ 750: PUSH_EXC_INFO        
+ 752: LOAD_GLOBAL          KeyError
+ 764: CHECK_EXC_MATCH      
+ 766: POP_JUMP_FORWARD_IF_FALSE to 812
+ 768: POP_TOP              
+ 770: LOAD_GLOBAL          NULL + binascii
+ 782: LOAD_ATTR            Error
+ 792: LOAD_CONST           'Non-base32 digit found'
+ 794: PRECALL              
+ 798: CALL                 
+ 808: LOAD_CONST           None
+ 810: RAISE_VARARGS        
+ 812: RERAISE              
+ 814: COPY                 
+ 816: POP_EXCEPT           
+ 818: RERAISE              
+ 820: LOAD_FAST            decoded
+ 822: LOAD_FAST            acc
+ 824: LOAD_METHOD          to_bytes
+ 846: LOAD_CONST           5
+ 848: PRECALL              
+ 852: CALL                 
+ 862: BINARY_OP            +=
+ 866: STORE_FAST           decoded
+ 868: JUMP_BACKWARD        to 674
+ 870: LOAD_FAST            l
+ 872: LOAD_CONST           8
+ 874: BINARY_OP            %
+ 878: POP_JUMP_FORWARD_IF_TRUE to 888
+ 880: LOAD_FAST            padchars
+ 882: LOAD_CONST           frozenset({0, 1, 3, 4, 6})
+ 884: CONTAINS_OP          
+ 886: POP_JUMP_FORWARD_IF_FALSE to 928
+ 888: LOAD_GLOBAL          NULL + binascii
+ 900: LOAD_ATTR            Error
+ 910: LOAD_CONST           'Incorrect padding'
+ 912: PRECALL              
+ 916: CALL                 
+ 926: RAISE_VARARGS        
+ 928: LOAD_FAST            padchars
+ 930: POP_JUMP_FORWARD_IF_FALSE to 1046
+ 932: LOAD_FAST            decoded
+ 934: POP_JUMP_FORWARD_IF_FALSE to 1046
+ 936: LOAD_FAST            acc
+ 938: LOAD_CONST           5
+ 940: LOAD_FAST            padchars
+ 942: BINARY_OP            *
+ 946: BINARY_OP            <<=
+ 950: STORE_FAST           acc
+ 952: LOAD_FAST            acc
+ 954: LOAD_METHOD          to_bytes
+ 976: LOAD_CONST           5
+ 978: PRECALL              
+ 982: CALL                 
+ 992: STORE_FAST           last
+ 994: LOAD_CONST           43
+ 996: LOAD_CONST           5
+ 998: LOAD_FAST            padchars
+1000: BINARY_OP            *
+1004: BINARY_OP            -
+1008: LOAD_CONST           8
+1010: BINARY_OP            //
+1014: STORE_FAST           leftover
+1016: LOAD_FAST            last
+1018: LOAD_CONST           None
+1020: LOAD_FAST            leftover
+1022: BUILD_SLICE          
+1024: BINARY_SUBSCR        
+1034: LOAD_FAST            decoded
+1036: LOAD_CONST           -5
+1038: LOAD_CONST           None
+1040: BUILD_SLICE          
+1042: STORE_SUBSCR         
+1046: LOAD_GLOBAL          NULL + bytes
+1058: LOAD_FAST            decoded
+1060: PRECALL              
+1064: CALL                 
+1074: RETURN_VALUE         

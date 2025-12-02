@@ -1,0 +1,23 @@
+# Disassembly for argparse.ArgumentError.__init__
+# From module file: argparse
+
+## co_consts:
+(None,)
+
+## co_names:
+('_get_action_name', 'argument_name', 'message')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _get_action_name
+  14: LOAD_FAST            argument
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_FAST            self
+  32: STORE_ATTR           argument_name
+  42: LOAD_FAST            message
+  44: LOAD_FAST            self
+  46: STORE_ATTR           message
+  56: LOAD_CONST           None
+  58: RETURN_VALUE         

@@ -1,0 +1,22 @@
+# Disassembly for importlib.metadata.FoldedCase.__ne__
+# From module file: importlib.metadata._text
+
+## co_consts:
+(None,)
+
+## co_names:
+('lower',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          lower
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_FAST            other
+  42: LOAD_METHOD          lower
+  64: PRECALL              
+  68: CALL                 
+  78: COMPARE_OP           !=
+  84: RETURN_VALUE         

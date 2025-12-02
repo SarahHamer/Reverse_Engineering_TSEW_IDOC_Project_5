@@ -1,0 +1,57 @@
+# Disassembly for importlib.PathEntryFinder.find_loader
+# From module file: importlib.abc
+
+## co_consts:
+('Return (loader, namespace portion) for the path entry.\n\n        The fullname is a str.  The namespace portion is a sequence of\n        path entries contributing to part of a namespace package. The\n        sequence may be empty.  If loader is not None, the portion will\n        be ignored.\n\n        The portion will be discarded if another path entry finder\n        locates the module as a normal module or package.\n\n        This method is deprecated since Python 3.4 in favor of\n        finder.find_spec(). If find_spec() is provided than backwards-compatible\n        functionality is provided.\n        ', 'PathEntryFinder.find_loader() is deprecated since Python 3.4 in favor of PathEntryFinder.find_spec() (available since 3.4)', 2, ('stacklevel',), 'find_spec', None)
+
+## co_names:
+('warnings', 'warn', 'DeprecationWarning', 'hasattr', 'find_spec', 'submodule_search_locations', 'loader')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + warnings
+  14: LOAD_ATTR            warn
+  24: LOAD_CONST           'PathEntryFinder.find_loader() is deprecated since Python 3.4 in favor of PathEntryFinder.find_spec() (available since 3.4)'
+  26: LOAD_GLOBAL          DeprecationWarning
+  38: LOAD_CONST           2
+  40: KW_NAMES             
+  42: PRECALL              
+  46: CALL                 
+  56: POP_TOP              
+  58: LOAD_GLOBAL          NULL + hasattr
+  70: LOAD_FAST            self
+  72: LOAD_CONST           'find_spec'
+  74: PRECALL              
+  78: CALL                 
+  88: POP_JUMP_FORWARD_IF_TRUE to 98
+  90: LOAD_CONST           None
+  92: BUILD_LIST           
+  94: BUILD_TUPLE          
+  96: RETURN_VALUE         
+  98: LOAD_FAST            self
+ 100: LOAD_METHOD          find_spec
+ 122: LOAD_FAST            fullname
+ 124: PRECALL              
+ 128: CALL                 
+ 138: STORE_FAST           found
+ 140: LOAD_FAST            found
+ 142: POP_JUMP_FORWARD_IF_NONE to 196
+ 144: LOAD_FAST            found
+ 146: LOAD_ATTR            submodule_search_locations
+ 156: POP_JUMP_FORWARD_IF_TRUE to 164
+ 158: BUILD_LIST           
+ 160: STORE_FAST           portions
+ 162: JUMP_FORWARD         to 178
+ 164: LOAD_FAST            found
+ 166: LOAD_ATTR            submodule_search_locations
+ 176: STORE_FAST           portions
+ 178: LOAD_FAST            found
+ 180: LOAD_ATTR            loader
+ 190: LOAD_FAST            portions
+ 192: BUILD_TUPLE          
+ 194: RETURN_VALUE         
+ 196: LOAD_CONST           None
+ 198: BUILD_LIST           
+ 200: BUILD_TUPLE          
+ 202: RETURN_VALUE         

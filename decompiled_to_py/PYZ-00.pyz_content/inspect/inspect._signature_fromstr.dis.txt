@@ -1,0 +1,331 @@
+# Disassembly for inspect._signature_fromstr
+# From module file: inspect
+
+## co_consts:
+("Private helper to parse content of '__text_signature__'\n    and return a Signature based on it.\n    ", 'def foo', ': pass', None, '{!r} builtin has invalid signature', 0, '__module__', <code object parse_name at 0x00000240693D2C20, file "inspect.py", line 2207>, <code object wrap_value at 0x0000024069CD8030, file "inspect.py", line 2213>, <code object RewriteSymbolics at 0x0000024069CDC8A0, file "inspect.py", line 2226>, 'RewriteSymbolics', <code object p at 0x0000024069CD8230, file "inspect.py", line 2259>, ('fillvalue',), '__self__', ('kind',), ('return_annotation',))
+
+## co_names:
+('_parameter_cls', '_signature_strip_non_python_syntax', 'ast', 'parse', 'SyntaxError', 'isinstance', 'Module', 'ValueError', 'format', 'body', 'empty', 'getattr', 'sys', 'modules', 'get', '__dict__', 'copy', 'NodeTransformer', 'reversed', 'args', 'defaults', 'itertools', 'zip_longest', 'POSITIONAL_ONLY', 'POSITIONAL_OR_KEYWORD', 'enumerate', 'list', 'vararg', 'VAR_POSITIONAL', 'KEYWORD_ONLY', 'zip', 'kwonlyargs', 'kw_defaults', 'kwarg', 'VAR_KEYWORD', 'ismodule', 'pop', 'replace')
+
+## bytecode:
+
+   0: MAKE_CELL            obj
+   2: MAKE_CELL            Parameter
+   4: MAKE_CELL            RewriteSymbolics
+   6: MAKE_CELL            empty
+   8: MAKE_CELL            kind
+  10: MAKE_CELL            module_dict
+  12: MAKE_CELL            parameters
+  14: MAKE_CELL            parse_name
+  16: MAKE_CELL            sys_module_dict
+  18: MAKE_CELL            wrap_value
+  20: RESUME               
+  22: LOAD_FAST            cls
+  24: LOAD_ATTR            _parameter_cls
+  34: STORE_DEREF          Parameter
+  36: LOAD_GLOBAL          NULL + _signature_strip_non_python_syntax
+  48: LOAD_FAST            s
+  50: PRECALL              
+  54: CALL                 
+  64: UNPACK_SEQUENCE      
+  68: STORE_FAST           clean_signature
+  70: STORE_FAST           self_parameter
+  72: STORE_FAST           last_positional_only
+  74: LOAD_CONST           'def foo'
+  76: LOAD_FAST            clean_signature
+  78: BINARY_OP            +
+  82: LOAD_CONST           ': pass'
+  84: BINARY_OP            +
+  88: STORE_FAST           program
+  90: NOP                  
+  92: LOAD_GLOBAL          NULL + ast
+ 104: LOAD_ATTR            parse
+ 114: LOAD_FAST            program
+ 116: PRECALL              
+ 120: CALL                 
+ 130: STORE_FAST           module
+ 132: JUMP_FORWARD         to 170
+ 134: PUSH_EXC_INFO        
+ 136: LOAD_GLOBAL          SyntaxError
+ 148: CHECK_EXC_MATCH      
+ 150: POP_JUMP_FORWARD_IF_FALSE to 162
+ 152: POP_TOP              
+ 154: LOAD_CONST           None
+ 156: STORE_FAST           module
+ 158: POP_EXCEPT           
+ 160: JUMP_FORWARD         to 170
+ 162: RERAISE              
+ 164: COPY                 
+ 166: POP_EXCEPT           
+ 168: RERAISE              
+ 170: LOAD_GLOBAL          NULL + isinstance
+ 182: LOAD_FAST            module
+ 184: LOAD_GLOBAL          ast
+ 196: LOAD_ATTR            Module
+ 206: PRECALL              
+ 210: CALL                 
+ 220: POP_JUMP_FORWARD_IF_TRUE to 290
+ 222: LOAD_GLOBAL          NULL + ValueError
+ 234: LOAD_CONST           '{!r} builtin has invalid signature'
+ 236: LOAD_METHOD          format
+ 258: LOAD_DEREF           obj
+ 260: PRECALL              
+ 264: CALL                 
+ 274: PRECALL              
+ 278: CALL                 
+ 288: RAISE_VARARGS        
+ 290: LOAD_FAST            module
+ 292: LOAD_ATTR            body
+ 302: LOAD_CONST           0
+ 304: BINARY_SUBSCR        
+ 314: STORE_FAST           f
+ 316: BUILD_LIST           
+ 318: STORE_DEREF          parameters
+ 320: LOAD_DEREF           Parameter
+ 322: LOAD_ATTR            empty
+ 332: STORE_DEREF          empty
+ 334: LOAD_CONST           None
+ 336: STORE_FAST           module
+ 338: BUILD_MAP            
+ 340: STORE_DEREF          module_dict
+ 342: LOAD_GLOBAL          NULL + getattr
+ 354: LOAD_DEREF           obj
+ 356: LOAD_CONST           '__module__'
+ 358: LOAD_CONST           None
+ 360: PRECALL              
+ 364: CALL                 
+ 374: STORE_FAST           module_name
+ 376: LOAD_FAST            module_name
+ 378: POP_JUMP_FORWARD_IF_FALSE to 462
+ 380: LOAD_GLOBAL          sys
+ 392: LOAD_ATTR            modules
+ 402: LOAD_METHOD          get
+ 424: LOAD_FAST            module_name
+ 426: LOAD_CONST           None
+ 428: PRECALL              
+ 432: CALL                 
+ 442: STORE_FAST           module
+ 444: LOAD_FAST            module
+ 446: POP_JUMP_FORWARD_IF_FALSE to 462
+ 448: LOAD_FAST            module
+ 450: LOAD_ATTR            __dict__
+ 460: STORE_DEREF          module_dict
+ 462: LOAD_GLOBAL          sys
+ 474: LOAD_ATTR            modules
+ 484: LOAD_METHOD          copy
+ 506: PRECALL              
+ 510: CALL                 
+ 520: STORE_DEREF          sys_module_dict
+ 522: LOAD_CONST           <code object parse_name at 0x00000240693D2C20, file "inspect.py", line 2207>
+ 524: MAKE_FUNCTION        
+ 526: STORE_DEREF          parse_name
+ 528: LOAD_CLOSURE         module_dict
+ 530: LOAD_CLOSURE         sys_module_dict
+ 532: BUILD_TUPLE          
+ 534: LOAD_CONST           <code object wrap_value at 0x0000024069CD8030, file "inspect.py", line 2213>
+ 536: MAKE_FUNCTION        closure
+ 538: STORE_DEREF          wrap_value
+ 540: PUSH_NULL            
+ 542: LOAD_BUILD_CLASS     
+ 544: LOAD_CLOSURE         wrap_value
+ 546: BUILD_TUPLE          
+ 548: LOAD_CONST           <code object RewriteSymbolics at 0x0000024069CDC8A0, file "inspect.py", line 2226>
+ 550: MAKE_FUNCTION        closure
+ 552: LOAD_CONST           'RewriteSymbolics'
+ 554: LOAD_GLOBAL          ast
+ 566: LOAD_ATTR            NodeTransformer
+ 576: PRECALL              
+ 580: CALL                 
+ 590: STORE_DEREF          RewriteSymbolics
+ 592: LOAD_DEREF           empty
+ 594: BUILD_TUPLE          
+ 596: LOAD_CLOSURE         Parameter
+ 598: LOAD_CLOSURE         RewriteSymbolics
+ 600: LOAD_CLOSURE         empty
+ 602: LOAD_CLOSURE         kind
+ 604: LOAD_CLOSURE         obj
+ 606: LOAD_CLOSURE         parameters
+ 608: LOAD_CLOSURE         parse_name
+ 610: BUILD_TUPLE          
+ 612: LOAD_CONST           <code object p at 0x0000024069CD8230, file "inspect.py", line 2259>
+ 614: MAKE_FUNCTION        defaults, closure
+ 616: STORE_FAST           p
+ 618: LOAD_GLOBAL          NULL + reversed
+ 630: LOAD_FAST            f
+ 632: LOAD_ATTR            args
+ 642: LOAD_ATTR            args
+ 652: PRECALL              
+ 656: CALL                 
+ 666: STORE_FAST           args
+ 668: LOAD_GLOBAL          NULL + reversed
+ 680: LOAD_FAST            f
+ 682: LOAD_ATTR            args
+ 692: LOAD_ATTR            defaults
+ 702: PRECALL              
+ 706: CALL                 
+ 716: STORE_FAST           defaults
+ 718: LOAD_GLOBAL          NULL + itertools
+ 730: LOAD_ATTR            zip_longest
+ 740: LOAD_FAST            args
+ 742: LOAD_FAST            defaults
+ 744: LOAD_CONST           None
+ 746: KW_NAMES             
+ 748: PRECALL              
+ 752: CALL                 
+ 762: STORE_FAST           iter
+ 764: LOAD_FAST            last_positional_only
+ 766: POP_JUMP_FORWARD_IF_NONE to 784
+ 768: LOAD_DEREF           Parameter
+ 770: LOAD_ATTR            POSITIONAL_ONLY
+ 780: STORE_DEREF          kind
+ 782: JUMP_FORWARD         to 798
+ 784: LOAD_DEREF           Parameter
+ 786: LOAD_ATTR            POSITIONAL_OR_KEYWORD
+ 796: STORE_DEREF          kind
+ 798: LOAD_GLOBAL          NULL + enumerate
+ 810: LOAD_GLOBAL          NULL + reversed
+ 822: LOAD_GLOBAL          NULL + list
+ 834: LOAD_FAST            iter
+ 836: PRECALL              
+ 840: CALL                 
+ 850: PRECALL              
+ 854: CALL                 
+ 864: PRECALL              
+ 868: CALL                 
+ 878: GET_ITER             
+ 880: FOR_ITER             to 948
+ 882: UNPACK_SEQUENCE      
+ 886: STORE_FAST           i
+ 888: UNPACK_SEQUENCE      
+ 892: STORE_FAST           name
+ 894: STORE_FAST           default
+ 896: PUSH_NULL            
+ 898: LOAD_FAST            p
+ 900: LOAD_FAST            name
+ 902: LOAD_FAST            default
+ 904: PRECALL              
+ 908: CALL                 
+ 918: POP_TOP              
+ 920: LOAD_FAST            i
+ 922: LOAD_FAST            last_positional_only
+ 924: COMPARE_OP           ==
+ 930: POP_JUMP_FORWARD_IF_FALSE to 946
+ 932: LOAD_DEREF           Parameter
+ 934: LOAD_ATTR            POSITIONAL_OR_KEYWORD
+ 944: STORE_DEREF          kind
+ 946: JUMP_BACKWARD        to 880
+ 948: LOAD_FAST            f
+ 950: LOAD_ATTR            args
+ 960: LOAD_ATTR            vararg
+ 970: POP_JUMP_FORWARD_IF_FALSE to 1030
+ 972: LOAD_DEREF           Parameter
+ 974: LOAD_ATTR            VAR_POSITIONAL
+ 984: STORE_DEREF          kind
+ 986: PUSH_NULL            
+ 988: LOAD_FAST            p
+ 990: LOAD_FAST            f
+ 992: LOAD_ATTR            args
+1002: LOAD_ATTR            vararg
+1012: LOAD_DEREF           empty
+1014: PRECALL              
+1018: CALL                 
+1028: POP_TOP              
+1030: LOAD_DEREF           Parameter
+1032: LOAD_ATTR            KEYWORD_ONLY
+1042: STORE_DEREF          kind
+1044: LOAD_GLOBAL          NULL + zip
+1056: LOAD_FAST            f
+1058: LOAD_ATTR            args
+1068: LOAD_ATTR            kwonlyargs
+1078: LOAD_FAST            f
+1080: LOAD_ATTR            args
+1090: LOAD_ATTR            kw_defaults
+1100: PRECALL              
+1104: CALL                 
+1114: GET_ITER             
+1116: FOR_ITER             to 1152
+1118: UNPACK_SEQUENCE      
+1122: STORE_FAST           name
+1124: STORE_FAST           default
+1126: PUSH_NULL            
+1128: LOAD_FAST            p
+1130: LOAD_FAST            name
+1132: LOAD_FAST            default
+1134: PRECALL              
+1138: CALL                 
+1148: POP_TOP              
+1150: JUMP_BACKWARD        to 1116
+1152: LOAD_FAST            f
+1154: LOAD_ATTR            args
+1164: LOAD_ATTR            kwarg
+1174: POP_JUMP_FORWARD_IF_FALSE to 1234
+1176: LOAD_DEREF           Parameter
+1178: LOAD_ATTR            VAR_KEYWORD
+1188: STORE_DEREF          kind
+1190: PUSH_NULL            
+1192: LOAD_FAST            p
+1194: LOAD_FAST            f
+1196: LOAD_ATTR            args
+1206: LOAD_ATTR            kwarg
+1216: LOAD_DEREF           empty
+1218: PRECALL              
+1222: CALL                 
+1232: POP_TOP              
+1234: LOAD_FAST            self_parameter
+1236: POP_JUMP_FORWARD_IF_NONE to 1450
+1238: LOAD_DEREF           parameters
+1240: POP_JUMP_FORWARD_IF_TRUE to 1246
+1242: LOAD_ASSERTION_ERROR 
+1244: RAISE_VARARGS        
+1246: LOAD_GLOBAL          NULL + getattr
+1258: LOAD_DEREF           obj
+1260: LOAD_CONST           '__self__'
+1262: LOAD_CONST           None
+1264: PRECALL              
+1268: CALL                 
+1278: STORE_FAST           _self
+1280: LOAD_FAST            _self
+1282: LOAD_CONST           None
+1284: IS_OP                
+1286: STORE_FAST           self_isbound
+1288: LOAD_GLOBAL          NULL + ismodule
+1300: LOAD_FAST            _self
+1302: PRECALL              
+1306: CALL                 
+1316: STORE_FAST           self_ismodule
+1318: LOAD_FAST            self_isbound
+1320: POP_JUMP_FORWARD_IF_FALSE to 1374
+1322: LOAD_FAST            self_ismodule
+1324: POP_JUMP_FORWARD_IF_TRUE to 1330
+1326: LOAD_FAST            skip_bound_arg
+1328: POP_JUMP_FORWARD_IF_FALSE to 1374
+1330: LOAD_DEREF           parameters
+1332: LOAD_METHOD          pop
+1354: LOAD_CONST           0
+1356: PRECALL              
+1360: CALL                 
+1370: POP_TOP              
+1372: JUMP_FORWARD         to 1450
+1374: LOAD_DEREF           parameters
+1376: LOAD_CONST           0
+1378: BINARY_SUBSCR        
+1388: LOAD_METHOD          replace
+1410: LOAD_DEREF           Parameter
+1412: LOAD_ATTR            POSITIONAL_ONLY
+1422: KW_NAMES             
+1424: PRECALL              
+1428: CALL                 
+1438: STORE_FAST           p
+1440: LOAD_FAST            p
+1442: LOAD_DEREF           parameters
+1444: LOAD_CONST           0
+1446: STORE_SUBSCR         
+1450: PUSH_NULL            
+1452: LOAD_FAST            cls
+1454: LOAD_DEREF           parameters
+1456: LOAD_FAST            cls
+1458: LOAD_ATTR            empty
+1468: KW_NAMES             
+1470: PRECALL              
+1474: CALL                 
+1484: RETURN_VALUE         

@@ -1,0 +1,56 @@
+# Disassembly for selectors.SelectSelector
+# From module file: selectors
+
+## co_consts:
+('SelectSelector', 'Select-based selector.', <code object __init__ at 0x00000240691F23A0, file "selectors.py", line 293>, None, <code object register at 0x000002406934F480, file "selectors.py", line 298>, <code object unregister at 0x00000240691E9830, file "selectors.py", line 306>, 'win32', <code object _select at 0x00000240693EB430, file "selectors.py", line 313>, <code object select at 0x0000024068E821D0, file "selectors.py", line 319>, (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', 'register', 'unregister', 'sys', 'platform', '_select', 'select', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'SelectSelector'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           'Select-based selector.'
+  14: STORE_NAME           __doc__
+  16: LOAD_CLOSURE         __class__
+  18: BUILD_TUPLE          
+  20: LOAD_CONST           <code object __init__ at 0x00000240691F23A0, file "selectors.py", line 293>
+  22: MAKE_FUNCTION        closure
+  24: STORE_NAME           __init__
+  26: LOAD_CONST           (None,)
+  28: LOAD_CLOSURE         __class__
+  30: BUILD_TUPLE          
+  32: LOAD_CONST           <code object register at 0x000002406934F480, file "selectors.py", line 298>
+  34: MAKE_FUNCTION        defaults, closure
+  36: STORE_NAME           register
+  38: LOAD_CLOSURE         __class__
+  40: BUILD_TUPLE          
+  42: LOAD_CONST           <code object unregister at 0x00000240691E9830, file "selectors.py", line 306>
+  44: MAKE_FUNCTION        closure
+  46: STORE_NAME           unregister
+  48: LOAD_NAME            sys
+  50: LOAD_ATTR            platform
+  60: LOAD_CONST           'win32'
+  62: COMPARE_OP           ==
+  68: POP_JUMP_FORWARD_IF_FALSE to 80
+  70: LOAD_CONST           (None,)
+  72: LOAD_CONST           <code object _select at 0x00000240693EB430, file "selectors.py", line 313>
+  74: MAKE_FUNCTION        defaults
+  76: STORE_NAME           _select
+  78: JUMP_FORWARD         to 94
+  80: LOAD_NAME            select
+  82: LOAD_ATTR            select
+  92: STORE_NAME           _select
+  94: LOAD_CONST           (None,)
+  96: LOAD_CONST           <code object select at 0x0000024068E821D0, file "selectors.py", line 319>
+  98: MAKE_FUNCTION        defaults
+ 100: STORE_NAME           select
+ 102: LOAD_CLOSURE         __class__
+ 104: COPY                 
+ 106: STORE_NAME           __classcell__
+ 108: RETURN_VALUE         

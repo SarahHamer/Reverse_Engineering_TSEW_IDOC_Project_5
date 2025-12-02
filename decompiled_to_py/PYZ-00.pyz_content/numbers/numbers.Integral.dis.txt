@@ -1,0 +1,119 @@
+# Disassembly for numbers.Integral
+# From module file: numbers
+
+## co_consts:
+('Integral', 'Integral adds methods that work on integral numbers.\n\n    In short, these are conversion to int, pow with modulus, and the\n    bit-string operations.\n    ', (), <code object __int__ at 0x0000024069495F10, file "numbers.py", line 303>, <code object __index__ at 0x0000024069465450, file "numbers.py", line 308>, None, <code object __pow__ at 0x0000024069495A30, file "numbers.py", line 312>, <code object __lshift__ at 0x0000024069494B90, file "numbers.py", line 323>, <code object __rlshift__ at 0x00000240694956F0, file "numbers.py", line 328>, <code object __rshift__ at 0x0000024069496660, file "numbers.py", line 333>, <code object __rrshift__ at 0x0000024069496730, file "numbers.py", line 338>, <code object __and__ at 0x0000024069496B40, file "numbers.py", line 343>, <code object __rand__ at 0x0000024069496C10, file "numbers.py", line 348>, <code object __xor__ at 0x0000024069496DB0, file "numbers.py", line 353>, <code object __rxor__ at 0x0000024069496E80, file "numbers.py", line 358>, <code object __or__ at 0x0000024069496F50, file "numbers.py", line 363>, <code object __ror__ at 0x0000024069497020, file "numbers.py", line 368>, <code object __invert__ at 0x00000240694970F0, file "numbers.py", line 373>, <code object __float__ at 0x00000240693EB730, file "numbers.py", line 379>, <code object numerator at 0x000002406943ADF0, file "numbers.py", line 383>, <code object denominator at 0x000002406943BDB0, file "numbers.py", line 388>, (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__slots__', 'abstractmethod', '__int__', '__index__', '__pow__', '__lshift__', '__rlshift__', '__rshift__', '__rrshift__', '__and__', '__rand__', '__xor__', '__rxor__', '__or__', '__ror__', '__invert__', '__float__', 'property', 'numerator', 'denominator')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Integral'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Integral adds methods that work on integral numbers.\n\n    In short, these are conversion to int, pow with modulus, and the\n    bit-string operations.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ()
+  16: STORE_NAME           __slots__
+  18: LOAD_NAME            abstractmethod
+  20: LOAD_CONST           <code object __int__ at 0x0000024069495F10, file "numbers.py", line 303>
+  22: MAKE_FUNCTION        
+  24: PRECALL              
+  28: CALL                 
+  38: STORE_NAME           __int__
+  40: LOAD_CONST           <code object __index__ at 0x0000024069465450, file "numbers.py", line 308>
+  42: MAKE_FUNCTION        
+  44: STORE_NAME           __index__
+  46: LOAD_NAME            abstractmethod
+  48: LOAD_CONST           (None,)
+  50: LOAD_CONST           <code object __pow__ at 0x0000024069495A30, file "numbers.py", line 312>
+  52: MAKE_FUNCTION        defaults
+  54: PRECALL              
+  58: CALL                 
+  68: STORE_NAME           __pow__
+  70: LOAD_NAME            abstractmethod
+  72: LOAD_CONST           <code object __lshift__ at 0x0000024069494B90, file "numbers.py", line 323>
+  74: MAKE_FUNCTION        
+  76: PRECALL              
+  80: CALL                 
+  90: STORE_NAME           __lshift__
+  92: LOAD_NAME            abstractmethod
+  94: LOAD_CONST           <code object __rlshift__ at 0x00000240694956F0, file "numbers.py", line 328>
+  96: MAKE_FUNCTION        
+  98: PRECALL              
+ 102: CALL                 
+ 112: STORE_NAME           __rlshift__
+ 114: LOAD_NAME            abstractmethod
+ 116: LOAD_CONST           <code object __rshift__ at 0x0000024069496660, file "numbers.py", line 333>
+ 118: MAKE_FUNCTION        
+ 120: PRECALL              
+ 124: CALL                 
+ 134: STORE_NAME           __rshift__
+ 136: LOAD_NAME            abstractmethod
+ 138: LOAD_CONST           <code object __rrshift__ at 0x0000024069496730, file "numbers.py", line 338>
+ 140: MAKE_FUNCTION        
+ 142: PRECALL              
+ 146: CALL                 
+ 156: STORE_NAME           __rrshift__
+ 158: LOAD_NAME            abstractmethod
+ 160: LOAD_CONST           <code object __and__ at 0x0000024069496B40, file "numbers.py", line 343>
+ 162: MAKE_FUNCTION        
+ 164: PRECALL              
+ 168: CALL                 
+ 178: STORE_NAME           __and__
+ 180: LOAD_NAME            abstractmethod
+ 182: LOAD_CONST           <code object __rand__ at 0x0000024069496C10, file "numbers.py", line 348>
+ 184: MAKE_FUNCTION        
+ 186: PRECALL              
+ 190: CALL                 
+ 200: STORE_NAME           __rand__
+ 202: LOAD_NAME            abstractmethod
+ 204: LOAD_CONST           <code object __xor__ at 0x0000024069496DB0, file "numbers.py", line 353>
+ 206: MAKE_FUNCTION        
+ 208: PRECALL              
+ 212: CALL                 
+ 222: STORE_NAME           __xor__
+ 224: LOAD_NAME            abstractmethod
+ 226: LOAD_CONST           <code object __rxor__ at 0x0000024069496E80, file "numbers.py", line 358>
+ 228: MAKE_FUNCTION        
+ 230: PRECALL              
+ 234: CALL                 
+ 244: STORE_NAME           __rxor__
+ 246: LOAD_NAME            abstractmethod
+ 248: LOAD_CONST           <code object __or__ at 0x0000024069496F50, file "numbers.py", line 363>
+ 250: MAKE_FUNCTION        
+ 252: PRECALL              
+ 256: CALL                 
+ 266: STORE_NAME           __or__
+ 268: LOAD_NAME            abstractmethod
+ 270: LOAD_CONST           <code object __ror__ at 0x0000024069497020, file "numbers.py", line 368>
+ 272: MAKE_FUNCTION        
+ 274: PRECALL              
+ 278: CALL                 
+ 288: STORE_NAME           __ror__
+ 290: LOAD_NAME            abstractmethod
+ 292: LOAD_CONST           <code object __invert__ at 0x00000240694970F0, file "numbers.py", line 373>
+ 294: MAKE_FUNCTION        
+ 296: PRECALL              
+ 300: CALL                 
+ 310: STORE_NAME           __invert__
+ 312: LOAD_CONST           <code object __float__ at 0x00000240693EB730, file "numbers.py", line 379>
+ 314: MAKE_FUNCTION        
+ 316: STORE_NAME           __float__
+ 318: LOAD_NAME            property
+ 320: LOAD_CONST           <code object numerator at 0x000002406943ADF0, file "numbers.py", line 383>
+ 322: MAKE_FUNCTION        
+ 324: PRECALL              
+ 328: CALL                 
+ 338: STORE_NAME           numerator
+ 340: LOAD_NAME            property
+ 342: LOAD_CONST           <code object denominator at 0x000002406943BDB0, file "numbers.py", line 388>
+ 344: MAKE_FUNCTION        
+ 346: PRECALL              
+ 350: CALL                 
+ 360: STORE_NAME           denominator
+ 362: LOAD_CONST           None
+ 364: RETURN_VALUE         

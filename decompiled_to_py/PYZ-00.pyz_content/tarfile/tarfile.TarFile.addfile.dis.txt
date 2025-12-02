@@ -1,0 +1,114 @@
+# Disassembly for tarfile.TarFile.addfile
+# From module file: tarfile
+
+## co_consts:
+("Add the TarInfo object `tarinfo' to the archive. If `fileobj' is\n           given, it should be a binary file, and tarinfo.size bytes are read\n           from it and added to the archive. You can create TarInfo objects\n           directly, or by using gettarinfo().\n        ", 'awx', None, ('bufsize',), 0, 1)
+
+## co_names:
+('_check', 'copy', 'tobuf', 'format', 'encoding', 'errors', 'fileobj', 'write', 'offset', 'len', 'copybufsize', 'copyfileobj', 'size', 'divmod', 'BLOCKSIZE', 'NUL', 'members', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _check
+  26: LOAD_CONST           'awx'
+  28: PRECALL              
+  32: CALL                 
+  42: POP_TOP              
+  44: LOAD_GLOBAL          NULL + copy
+  56: LOAD_ATTR            copy
+  66: LOAD_FAST            tarinfo
+  68: PRECALL              
+  72: CALL                 
+  82: STORE_FAST           tarinfo
+  84: LOAD_FAST            tarinfo
+  86: LOAD_METHOD          tobuf
+ 108: LOAD_FAST            self
+ 110: LOAD_ATTR            format
+ 120: LOAD_FAST            self
+ 122: LOAD_ATTR            encoding
+ 132: LOAD_FAST            self
+ 134: LOAD_ATTR            errors
+ 144: PRECALL              
+ 148: CALL                 
+ 158: STORE_FAST           buf
+ 160: LOAD_FAST            self
+ 162: LOAD_ATTR            fileobj
+ 172: LOAD_METHOD          write
+ 194: LOAD_FAST            buf
+ 196: PRECALL              
+ 200: CALL                 
+ 210: POP_TOP              
+ 212: LOAD_FAST            self
+ 214: COPY                 
+ 216: LOAD_ATTR            offset
+ 226: LOAD_GLOBAL          NULL + len
+ 238: LOAD_FAST            buf
+ 240: PRECALL              
+ 244: CALL                 
+ 254: BINARY_OP            +=
+ 258: SWAP                 
+ 260: STORE_ATTR           offset
+ 270: LOAD_FAST            self
+ 272: LOAD_ATTR            copybufsize
+ 282: STORE_FAST           bufsize
+ 284: LOAD_FAST            fileobj
+ 286: POP_JUMP_FORWARD_IF_NONE to 558
+ 288: LOAD_GLOBAL          NULL + copyfileobj
+ 300: LOAD_FAST            fileobj
+ 302: LOAD_FAST            self
+ 304: LOAD_ATTR            fileobj
+ 314: LOAD_FAST            tarinfo
+ 316: LOAD_ATTR            size
+ 326: LOAD_FAST            bufsize
+ 328: KW_NAMES             
+ 330: PRECALL              
+ 334: CALL                 
+ 344: POP_TOP              
+ 346: LOAD_GLOBAL          NULL + divmod
+ 358: LOAD_FAST            tarinfo
+ 360: LOAD_ATTR            size
+ 370: LOAD_GLOBAL          BLOCKSIZE
+ 382: PRECALL              
+ 386: CALL                 
+ 396: UNPACK_SEQUENCE      
+ 400: STORE_FAST           blocks
+ 402: STORE_FAST           remainder
+ 404: LOAD_FAST            remainder
+ 406: LOAD_CONST           0
+ 408: COMPARE_OP           >
+ 414: POP_JUMP_FORWARD_IF_FALSE to 510
+ 416: LOAD_FAST            self
+ 418: LOAD_ATTR            fileobj
+ 428: LOAD_METHOD          write
+ 450: LOAD_GLOBAL          NUL
+ 462: LOAD_GLOBAL          BLOCKSIZE
+ 474: LOAD_FAST            remainder
+ 476: BINARY_OP            -
+ 480: BINARY_OP            *
+ 484: PRECALL              
+ 488: CALL                 
+ 498: POP_TOP              
+ 500: LOAD_FAST            blocks
+ 502: LOAD_CONST           1
+ 504: BINARY_OP            +=
+ 508: STORE_FAST           blocks
+ 510: LOAD_FAST            self
+ 512: COPY                 
+ 514: LOAD_ATTR            offset
+ 524: LOAD_FAST            blocks
+ 526: LOAD_GLOBAL          BLOCKSIZE
+ 538: BINARY_OP            *
+ 542: BINARY_OP            +=
+ 546: SWAP                 
+ 548: STORE_ATTR           offset
+ 558: LOAD_FAST            self
+ 560: LOAD_ATTR            members
+ 570: LOAD_METHOD          append
+ 592: LOAD_FAST            tarinfo
+ 594: PRECALL              
+ 598: CALL                 
+ 608: POP_TOP              
+ 610: LOAD_CONST           None
+ 612: RETURN_VALUE         

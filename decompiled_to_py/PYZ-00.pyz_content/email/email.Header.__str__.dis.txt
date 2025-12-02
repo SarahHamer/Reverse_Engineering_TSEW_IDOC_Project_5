@@ -1,0 +1,119 @@
+# Disassembly for email.Header.__str__
+# From module file: email.header
+
+## co_consts:
+('Return the string value of the header.', None, 'ascii', 'surrogateescape', 'replace', 0, (None, 'us-ascii'), -1)
+
+## co_names:
+('_normalize', '_chunks', '_charset', 'UNKNOWN8BIT', 'encode', 'decode', '_nonctext', 'append', 'SPACE', 'EMPTYSTRING', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _normalize
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: BUILD_LIST           
+  44: STORE_FAST           uchunks
+  46: LOAD_CONST           None
+  48: STORE_FAST           lastcs
+  50: LOAD_CONST           None
+  52: STORE_FAST           lastspace
+  54: LOAD_FAST            self
+  56: LOAD_ATTR            _chunks
+  66: GET_ITER             
+  68: FOR_ITER             to 512
+  70: UNPACK_SEQUENCE      
+  74: STORE_FAST           string
+  76: STORE_FAST           charset
+  78: LOAD_FAST            charset
+  80: STORE_FAST           nextcs
+  82: LOAD_FAST            nextcs
+  84: LOAD_GLOBAL          _charset
+  96: LOAD_ATTR            UNKNOWN8BIT
+ 106: COMPARE_OP           ==
+ 112: POP_JUMP_FORWARD_IF_FALSE to 202
+ 114: LOAD_FAST            string
+ 116: LOAD_METHOD          encode
+ 138: LOAD_CONST           'ascii'
+ 140: LOAD_CONST           'surrogateescape'
+ 142: PRECALL              
+ 146: CALL                 
+ 156: STORE_FAST           original_bytes
+ 158: LOAD_FAST            original_bytes
+ 160: LOAD_METHOD          decode
+ 182: LOAD_CONST           'ascii'
+ 184: LOAD_CONST           'replace'
+ 186: PRECALL              
+ 190: CALL                 
+ 200: STORE_FAST           string
+ 202: LOAD_FAST            uchunks
+ 204: POP_JUMP_FORWARD_IF_FALSE to 406
+ 206: LOAD_FAST            string
+ 208: JUMP_IF_FALSE_OR_POP to 262
+ 210: LOAD_FAST            self
+ 212: LOAD_METHOD          _nonctext
+ 234: LOAD_FAST            string
+ 236: LOAD_CONST           0
+ 238: BINARY_SUBSCR        
+ 248: PRECALL              
+ 252: CALL                 
+ 262: STORE_FAST           hasspace
+ 264: LOAD_FAST            lastcs
+ 266: LOAD_CONST           (None, 'us-ascii')
+ 268: CONTAINS_OP          
+ 270: POP_JUMP_FORWARD_IF_FALSE to 342
+ 272: LOAD_FAST            nextcs
+ 274: LOAD_CONST           (None, 'us-ascii')
+ 276: CONTAINS_OP          
+ 278: POP_JUMP_FORWARD_IF_FALSE to 340
+ 280: LOAD_FAST            hasspace
+ 282: POP_JUMP_FORWARD_IF_TRUE to 340
+ 284: LOAD_FAST            uchunks
+ 286: LOAD_METHOD          append
+ 308: LOAD_GLOBAL          SPACE
+ 320: PRECALL              
+ 324: CALL                 
+ 334: POP_TOP              
+ 336: LOAD_CONST           None
+ 338: STORE_FAST           nextcs
+ 340: JUMP_FORWARD         to 406
+ 342: LOAD_FAST            nextcs
+ 344: LOAD_CONST           (None, 'us-ascii')
+ 346: CONTAINS_OP          
+ 348: POP_JUMP_FORWARD_IF_FALSE to 406
+ 350: LOAD_FAST            lastspace
+ 352: POP_JUMP_FORWARD_IF_TRUE to 406
+ 354: LOAD_FAST            uchunks
+ 356: LOAD_METHOD          append
+ 378: LOAD_GLOBAL          SPACE
+ 390: PRECALL              
+ 394: CALL                 
+ 404: POP_TOP              
+ 406: LOAD_FAST            string
+ 408: JUMP_IF_FALSE_OR_POP to 462
+ 410: LOAD_FAST            self
+ 412: LOAD_METHOD          _nonctext
+ 434: LOAD_FAST            string
+ 436: LOAD_CONST           -1
+ 438: BINARY_SUBSCR        
+ 448: PRECALL              
+ 452: CALL                 
+ 462: STORE_FAST           lastspace
+ 464: LOAD_FAST            nextcs
+ 466: STORE_FAST           lastcs
+ 468: LOAD_FAST            uchunks
+ 470: LOAD_METHOD          append
+ 492: LOAD_FAST            string
+ 494: PRECALL              
+ 498: CALL                 
+ 508: POP_TOP              
+ 510: JUMP_BACKWARD        to 68
+ 512: LOAD_GLOBAL          EMPTYSTRING
+ 524: LOAD_METHOD          join
+ 546: LOAD_FAST            uchunks
+ 548: PRECALL              
+ 552: CALL                 
+ 562: RETURN_VALUE         

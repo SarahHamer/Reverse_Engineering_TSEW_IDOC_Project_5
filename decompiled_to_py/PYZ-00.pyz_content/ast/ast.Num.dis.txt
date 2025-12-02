@@ -1,0 +1,22 @@
+# Disassembly for ast.Num
+# From module file: ast
+
+## co_consts:
+('Num', ('n',), None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '_fields', '_new', '__new__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Num'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           ('n',)
+  12: STORE_NAME           _fields
+  14: LOAD_NAME            _new
+  16: STORE_NAME           __new__
+  18: LOAD_CONST           None
+  20: RETURN_VALUE         

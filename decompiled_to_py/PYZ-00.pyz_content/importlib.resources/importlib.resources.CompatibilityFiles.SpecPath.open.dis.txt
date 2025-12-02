@@ -1,0 +1,29 @@
+# Disassembly for importlib.resources.CompatibilityFiles.SpecPath.open
+# From module file: importlib.resources._adapters
+
+## co_consts:
+(None,)
+
+## co_names:
+('_io_wrapper', '_reader', 'open_resource')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _io_wrapper
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            _reader
+  26: LOAD_METHOD          open_resource
+  48: LOAD_CONST           None
+  50: PRECALL              
+  54: CALL                 
+  64: LOAD_FAST            mode
+  66: BUILD_LIST           
+  68: LOAD_FAST            args
+  70: LIST_EXTEND          
+  72: LIST_TO_TUPLE        
+  74: BUILD_MAP            
+  76: LOAD_FAST            kwargs
+  78: DICT_MERGE           
+  80: CALL_FUNCTION_EX     
+  82: RETURN_VALUE         

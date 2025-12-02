@@ -1,0 +1,26 @@
+# Disassembly for email.BytesHeaderParser
+# From module file: email.parser
+
+## co_consts:
+('BytesHeaderParser', True, <code object parse at 0x00000240693EA630, file "email\parser.py", line 126>, <code object parsebytes at 0x00000240693EB530, file "email\parser.py", line 129>, None, (True,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', 'parse', 'parsebytes')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'BytesHeaderParser'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           (True,)
+  12: LOAD_CONST           <code object parse at 0x00000240693EA630, file "email\parser.py", line 126>
+  14: MAKE_FUNCTION        defaults
+  16: STORE_NAME           parse
+  18: LOAD_CONST           (True,)
+  20: LOAD_CONST           <code object parsebytes at 0x00000240693EB530, file "email\parser.py", line 129>
+  22: MAKE_FUNCTION        defaults
+  24: STORE_NAME           parsebytes
+  26: LOAD_CONST           None
+  28: RETURN_VALUE         

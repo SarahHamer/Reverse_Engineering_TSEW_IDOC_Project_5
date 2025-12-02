@@ -1,0 +1,98 @@
+# Disassembly for ast._Unparser.visit_IfExp
+# From module file: ast
+
+## co_consts:
+(None, ' if ', ' else ')
+
+## co_names:
+('require_parens', '_Precedence', 'TEST', 'set_precedence', 'next', 'body', 'test', 'traverse', 'write', 'orelse')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          require_parens
+  26: LOAD_GLOBAL          _Precedence
+  38: LOAD_ATTR            TEST
+  48: LOAD_FAST            node
+  50: PRECALL              
+  54: CALL                 
+  64: BEFORE_WITH          
+  66: POP_TOP              
+  68: LOAD_FAST            self
+  70: LOAD_METHOD          set_precedence
+  92: LOAD_GLOBAL          _Precedence
+ 104: LOAD_ATTR            TEST
+ 114: LOAD_METHOD          next
+ 136: PRECALL              
+ 140: CALL                 
+ 150: LOAD_FAST            node
+ 152: LOAD_ATTR            body
+ 162: LOAD_FAST            node
+ 164: LOAD_ATTR            test
+ 174: PRECALL              
+ 178: CALL                 
+ 188: POP_TOP              
+ 190: LOAD_FAST            self
+ 192: LOAD_METHOD          traverse
+ 214: LOAD_FAST            node
+ 216: LOAD_ATTR            body
+ 226: PRECALL              
+ 230: CALL                 
+ 240: POP_TOP              
+ 242: LOAD_FAST            self
+ 244: LOAD_METHOD          write
+ 266: LOAD_CONST           ' if '
+ 268: PRECALL              
+ 272: CALL                 
+ 282: POP_TOP              
+ 284: LOAD_FAST            self
+ 286: LOAD_METHOD          traverse
+ 308: LOAD_FAST            node
+ 310: LOAD_ATTR            test
+ 320: PRECALL              
+ 324: CALL                 
+ 334: POP_TOP              
+ 336: LOAD_FAST            self
+ 338: LOAD_METHOD          write
+ 360: LOAD_CONST           ' else '
+ 362: PRECALL              
+ 366: CALL                 
+ 376: POP_TOP              
+ 378: LOAD_FAST            self
+ 380: LOAD_METHOD          set_precedence
+ 402: LOAD_GLOBAL          _Precedence
+ 414: LOAD_ATTR            TEST
+ 424: LOAD_FAST            node
+ 426: LOAD_ATTR            orelse
+ 436: PRECALL              
+ 440: CALL                 
+ 450: POP_TOP              
+ 452: LOAD_FAST            self
+ 454: LOAD_METHOD          traverse
+ 476: LOAD_FAST            node
+ 478: LOAD_ATTR            orelse
+ 488: PRECALL              
+ 492: CALL                 
+ 502: POP_TOP              
+ 504: LOAD_CONST           None
+ 506: LOAD_CONST           None
+ 508: LOAD_CONST           None
+ 510: PRECALL              
+ 514: CALL                 
+ 524: POP_TOP              
+ 526: LOAD_CONST           None
+ 528: RETURN_VALUE         
+ 530: PUSH_EXC_INFO        
+ 532: WITH_EXCEPT_START    
+ 534: POP_JUMP_FORWARD_IF_TRUE to 544
+ 536: RERAISE              
+ 538: COPY                 
+ 540: POP_EXCEPT           
+ 542: RERAISE              
+ 544: POP_TOP              
+ 546: POP_EXCEPT           
+ 548: POP_TOP              
+ 550: POP_TOP              
+ 552: LOAD_CONST           None
+ 554: RETURN_VALUE         

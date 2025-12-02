@@ -1,0 +1,78 @@
+# Disassembly for ssl.SSLContext.set_npn_protocols
+# From module file: ssl
+
+## co_consts:
+(None, 'ssl NPN is deprecated, use ALPN instead', 2, ('stacklevel',), 'ascii', 0, 255, 'NPN protocols must be 1 to 255 in length')
+
+## co_names:
+('warnings', 'warn', 'DeprecationWarning', 'bytearray', 'bytes', 'len', 'SSLError', 'append', 'extend', '_set_npn_protocols')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + warnings
+  14: LOAD_ATTR            warn
+  24: LOAD_CONST           'ssl NPN is deprecated, use ALPN instead'
+  26: LOAD_GLOBAL          DeprecationWarning
+  38: LOAD_CONST           2
+  40: KW_NAMES             
+  42: PRECALL              
+  46: CALL                 
+  56: POP_TOP              
+  58: LOAD_GLOBAL          NULL + bytearray
+  70: PRECALL              
+  74: CALL                 
+  84: STORE_FAST           protos
+  86: LOAD_FAST            npn_protocols
+  88: GET_ITER             
+  90: FOR_ITER             to 344
+  92: STORE_FAST           protocol
+  94: LOAD_GLOBAL          NULL + bytes
+ 106: LOAD_FAST            protocol
+ 108: LOAD_CONST           'ascii'
+ 110: PRECALL              
+ 114: CALL                 
+ 124: STORE_FAST           b
+ 126: LOAD_GLOBAL          NULL + len
+ 138: LOAD_FAST            b
+ 140: PRECALL              
+ 144: CALL                 
+ 154: LOAD_CONST           0
+ 156: COMPARE_OP           ==
+ 162: POP_JUMP_FORWARD_IF_TRUE to 202
+ 164: LOAD_GLOBAL          NULL + len
+ 176: LOAD_FAST            b
+ 178: PRECALL              
+ 182: CALL                 
+ 192: LOAD_CONST           255
+ 194: COMPARE_OP           >
+ 200: POP_JUMP_FORWARD_IF_FALSE to 232
+ 202: LOAD_GLOBAL          NULL + SSLError
+ 214: LOAD_CONST           'NPN protocols must be 1 to 255 in length'
+ 216: PRECALL              
+ 220: CALL                 
+ 230: RAISE_VARARGS        
+ 232: LOAD_FAST            protos
+ 234: LOAD_METHOD          append
+ 256: LOAD_GLOBAL          NULL + len
+ 268: LOAD_FAST            b
+ 270: PRECALL              
+ 274: CALL                 
+ 284: PRECALL              
+ 288: CALL                 
+ 298: POP_TOP              
+ 300: LOAD_FAST            protos
+ 302: LOAD_METHOD          extend
+ 324: LOAD_FAST            b
+ 326: PRECALL              
+ 330: CALL                 
+ 340: POP_TOP              
+ 342: JUMP_BACKWARD        to 90
+ 344: LOAD_FAST            self
+ 346: LOAD_METHOD          _set_npn_protocols
+ 368: LOAD_FAST            protos
+ 370: PRECALL              
+ 374: CALL                 
+ 384: POP_TOP              
+ 386: LOAD_CONST           None
+ 388: RETURN_VALUE         

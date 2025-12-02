@@ -1,0 +1,24 @@
+# Disassembly for ssl.SSLSocket._check_connected
+# From module file: ssl
+
+## co_consts:
+(None,)
+
+## co_names:
+('_connected', 'getpeername')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _connected
+  14: POP_JUMP_FORWARD_IF_TRUE to 60
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          getpeername
+  40: PRECALL              
+  44: CALL                 
+  54: POP_TOP              
+  56: LOAD_CONST           None
+  58: RETURN_VALUE         
+  60: LOAD_CONST           None
+  62: RETURN_VALUE         

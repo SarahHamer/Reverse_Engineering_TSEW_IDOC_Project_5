@@ -1,0 +1,64 @@
+# Disassembly for zipfile.ZipFile.comment
+# From module file: zipfile
+
+## co_consts:
+(None, 'comment: expected bytes, got %s', 0, 'Archive comment is too long; truncating to %d bytes', 2, ('stacklevel',), True)
+
+## co_names:
+('isinstance', 'bytes', 'TypeError', 'type', '__name__', 'len', 'ZIP_MAX_COMMENT', 'warnings', 'warn', '_comment', '_didModify')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            comment
+  16: LOAD_GLOBAL          bytes
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_TRUE to 116
+  44: LOAD_GLOBAL          NULL + TypeError
+  56: LOAD_CONST           'comment: expected bytes, got %s'
+  58: LOAD_GLOBAL          NULL + type
+  70: LOAD_FAST            comment
+  72: PRECALL              
+  76: CALL                 
+  86: LOAD_ATTR            __name__
+  96: BINARY_OP            %
+ 100: PRECALL              
+ 104: CALL                 
+ 114: RAISE_VARARGS        
+ 116: LOAD_GLOBAL          NULL + len
+ 128: LOAD_FAST            comment
+ 130: PRECALL              
+ 134: CALL                 
+ 144: LOAD_GLOBAL          ZIP_MAX_COMMENT
+ 156: COMPARE_OP           >
+ 162: POP_JUMP_FORWARD_IF_FALSE to 264
+ 164: LOAD_CONST           0
+ 166: LOAD_CONST           None
+ 168: IMPORT_NAME          warnings
+ 170: STORE_FAST           warnings
+ 172: LOAD_FAST            warnings
+ 174: LOAD_METHOD          warn
+ 196: LOAD_CONST           'Archive comment is too long; truncating to %d bytes'
+ 198: LOAD_GLOBAL          ZIP_MAX_COMMENT
+ 210: BINARY_OP            %
+ 214: LOAD_CONST           2
+ 216: KW_NAMES             
+ 218: PRECALL              
+ 222: CALL                 
+ 232: POP_TOP              
+ 234: LOAD_FAST            comment
+ 236: LOAD_CONST           None
+ 238: LOAD_GLOBAL          ZIP_MAX_COMMENT
+ 250: BUILD_SLICE          
+ 252: BINARY_SUBSCR        
+ 262: STORE_FAST           comment
+ 264: LOAD_FAST            comment
+ 266: LOAD_FAST            self
+ 268: STORE_ATTR           _comment
+ 278: LOAD_CONST           True
+ 280: LOAD_FAST            self
+ 282: STORE_ATTR           _didModify
+ 292: LOAD_CONST           None
+ 294: RETURN_VALUE         

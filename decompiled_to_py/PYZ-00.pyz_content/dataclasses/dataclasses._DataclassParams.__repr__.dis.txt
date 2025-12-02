@@ -1,0 +1,39 @@
+# Disassembly for dataclasses._DataclassParams.__repr__
+# From module file: dataclasses
+
+## co_consts:
+(None, '_DataclassParams(init=', ',repr=', ',eq=', ',order=', ',unsafe_hash=', ',frozen=', ')')
+
+## co_names:
+('init', 'repr', 'eq', 'order', 'unsafe_hash', 'frozen')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '_DataclassParams(init='
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            init
+  16: FORMAT_VALUE         repr
+  18: LOAD_CONST           ',repr='
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            repr
+  32: FORMAT_VALUE         repr
+  34: LOAD_CONST           ',eq='
+  36: LOAD_FAST            self
+  38: LOAD_ATTR            eq
+  48: FORMAT_VALUE         repr
+  50: LOAD_CONST           ',order='
+  52: LOAD_FAST            self
+  54: LOAD_ATTR            order
+  64: FORMAT_VALUE         repr
+  66: LOAD_CONST           ',unsafe_hash='
+  68: LOAD_FAST            self
+  70: LOAD_ATTR            unsafe_hash
+  80: FORMAT_VALUE         repr
+  82: LOAD_CONST           ',frozen='
+  84: LOAD_FAST            self
+  86: LOAD_ATTR            frozen
+  96: FORMAT_VALUE         repr
+  98: LOAD_CONST           ')'
+ 100: BUILD_STRING         
+ 102: RETURN_VALUE         

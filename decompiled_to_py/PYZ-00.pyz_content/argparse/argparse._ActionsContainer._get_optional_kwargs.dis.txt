@@ -1,0 +1,128 @@
+# Disassembly for argparse._ActionsContainer._get_optional_kwargs
+# From module file: argparse
+
+## co_consts:
+(None, 0, ('option', 'prefix_chars'), 'invalid option string %(option)r: must start with a character %(prefix_chars)r', 1, 'dest', 'dest= is required for options like %r', '-', '_', ('dest', 'option_strings'))
+
+## co_names:
+('prefix_chars', '_', 'ValueError', 'append', 'len', 'pop', 'lstrip', 'replace', 'dict')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           option_strings
+   6: BUILD_LIST           
+   8: STORE_FAST           long_option_strings
+  10: LOAD_FAST            args
+  12: GET_ITER             
+  14: FOR_ITER             to 288
+  16: STORE_FAST           option_string
+  18: LOAD_FAST            option_string
+  20: LOAD_CONST           0
+  22: BINARY_SUBSCR        
+  32: LOAD_FAST            self
+  34: LOAD_ATTR            prefix_chars
+  44: CONTAINS_OP          
+  46: POP_JUMP_FORWARD_IF_FALSE to 134
+  48: LOAD_FAST            option_string
+  50: LOAD_FAST            self
+  52: LOAD_ATTR            prefix_chars
+  62: LOAD_CONST           ('option', 'prefix_chars')
+  64: BUILD_CONST_KEY_MAP  
+  66: STORE_FAST           args
+  68: LOAD_GLOBAL          NULL + _
+  80: LOAD_CONST           'invalid option string %(option)r: must start with a character %(prefix_chars)r'
+  82: PRECALL              
+  86: CALL                 
+  96: STORE_FAST           msg
+  98: LOAD_GLOBAL          NULL + ValueError
+ 110: LOAD_FAST            msg
+ 112: LOAD_FAST            args
+ 114: BINARY_OP            %
+ 118: PRECALL              
+ 122: CALL                 
+ 132: RAISE_VARARGS        
+ 134: LOAD_FAST            option_strings
+ 136: LOAD_METHOD          append
+ 158: LOAD_FAST            option_string
+ 160: PRECALL              
+ 164: CALL                 
+ 174: POP_TOP              
+ 176: LOAD_GLOBAL          NULL + len
+ 188: LOAD_FAST            option_string
+ 190: PRECALL              
+ 194: CALL                 
+ 204: LOAD_CONST           1
+ 206: COMPARE_OP           >
+ 212: POP_JUMP_FORWARD_IF_FALSE to 286
+ 214: LOAD_FAST            option_string
+ 216: LOAD_CONST           1
+ 218: BINARY_SUBSCR        
+ 228: LOAD_FAST            self
+ 230: LOAD_ATTR            prefix_chars
+ 240: CONTAINS_OP          
+ 242: POP_JUMP_FORWARD_IF_FALSE to 286
+ 244: LOAD_FAST            long_option_strings
+ 246: LOAD_METHOD          append
+ 268: LOAD_FAST            option_string
+ 270: PRECALL              
+ 274: CALL                 
+ 284: POP_TOP              
+ 286: JUMP_BACKWARD        to 14
+ 288: LOAD_FAST            kwargs
+ 290: LOAD_METHOD          pop
+ 312: LOAD_CONST           'dest'
+ 314: LOAD_CONST           None
+ 316: PRECALL              
+ 320: CALL                 
+ 330: STORE_FAST           dest
+ 332: LOAD_FAST            dest
+ 334: POP_JUMP_FORWARD_IF_NOT_NONE to 540
+ 336: LOAD_FAST            long_option_strings
+ 338: POP_JUMP_FORWARD_IF_FALSE to 358
+ 340: LOAD_FAST            long_option_strings
+ 342: LOAD_CONST           0
+ 344: BINARY_SUBSCR        
+ 354: STORE_FAST           dest_option_string
+ 356: JUMP_FORWARD         to 374
+ 358: LOAD_FAST            option_strings
+ 360: LOAD_CONST           0
+ 362: BINARY_SUBSCR        
+ 372: STORE_FAST           dest_option_string
+ 374: LOAD_FAST            dest_option_string
+ 376: LOAD_METHOD          lstrip
+ 398: LOAD_FAST            self
+ 400: LOAD_ATTR            prefix_chars
+ 410: PRECALL              
+ 414: CALL                 
+ 424: STORE_FAST           dest
+ 426: LOAD_FAST            dest
+ 428: POP_JUMP_FORWARD_IF_TRUE to 496
+ 430: LOAD_GLOBAL          NULL + _
+ 442: LOAD_CONST           'dest= is required for options like %r'
+ 444: PRECALL              
+ 448: CALL                 
+ 458: STORE_FAST           msg
+ 460: LOAD_GLOBAL          NULL + ValueError
+ 472: LOAD_FAST            msg
+ 474: LOAD_FAST            option_string
+ 476: BINARY_OP            %
+ 480: PRECALL              
+ 484: CALL                 
+ 494: RAISE_VARARGS        
+ 496: LOAD_FAST            dest
+ 498: LOAD_METHOD          replace
+ 520: LOAD_CONST           '-'
+ 522: LOAD_CONST           '_'
+ 524: PRECALL              
+ 528: CALL                 
+ 538: STORE_FAST           dest
+ 540: LOAD_GLOBAL          NULL + dict
+ 552: LOAD_FAST            kwargs
+ 554: LOAD_FAST            dest
+ 556: LOAD_FAST            option_strings
+ 558: KW_NAMES             
+ 560: PRECALL              
+ 564: CALL                 
+ 574: RETURN_VALUE         

@@ -1,0 +1,100 @@
+# Disassembly for email.Message.get_content_charset
+# From module file: email.message
+
+## co_consts:
+('Return the charset parameter of the Content-Type header.\n\n        The returned string is always coerced to lower case.  If there is no\n        Content-Type header, or if that header has no charset parameter,\n        failobj is returned.\n        ', 'charset', 0, 'us-ascii', 2, 'raw-unicode-escape')
+
+## co_names:
+('object', 'get_param', 'isinstance', 'tuple', 'encode', 'str', 'LookupError', 'UnicodeError', 'lower')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + object
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           missing
+  30: LOAD_FAST            self
+  32: LOAD_METHOD          get_param
+  54: LOAD_CONST           'charset'
+  56: LOAD_FAST            missing
+  58: PRECALL              
+  62: CALL                 
+  72: STORE_FAST           charset
+  74: LOAD_FAST            charset
+  76: LOAD_FAST            missing
+  78: IS_OP                
+  80: POP_JUMP_FORWARD_IF_FALSE to 86
+  82: LOAD_FAST            failobj
+  84: RETURN_VALUE         
+  86: LOAD_GLOBAL          NULL + isinstance
+  98: LOAD_FAST            charset
+ 100: LOAD_GLOBAL          tuple
+ 112: PRECALL              
+ 116: CALL                 
+ 126: POP_JUMP_FORWARD_IF_FALSE to 300
+ 128: LOAD_FAST            charset
+ 130: LOAD_CONST           0
+ 132: BINARY_SUBSCR        
+ 142: JUMP_IF_TRUE_OR_POP  to 146
+ 144: LOAD_CONST           'us-ascii'
+ 146: STORE_FAST           pcharset
+ 148: NOP                  
+ 150: LOAD_FAST            charset
+ 152: LOAD_CONST           2
+ 154: BINARY_SUBSCR        
+ 164: LOAD_METHOD          encode
+ 186: LOAD_CONST           'raw-unicode-escape'
+ 188: PRECALL              
+ 192: CALL                 
+ 202: STORE_FAST           as_bytes
+ 204: LOAD_GLOBAL          NULL + str
+ 216: LOAD_FAST            as_bytes
+ 218: LOAD_FAST            pcharset
+ 220: PRECALL              
+ 224: CALL                 
+ 234: STORE_FAST           charset
+ 236: JUMP_FORWARD         to 300
+ 238: PUSH_EXC_INFO        
+ 240: LOAD_GLOBAL          LookupError
+ 252: LOAD_GLOBAL          UnicodeError
+ 264: BUILD_TUPLE          
+ 266: CHECK_EXC_MATCH      
+ 268: POP_JUMP_FORWARD_IF_FALSE to 292
+ 270: POP_TOP              
+ 272: LOAD_FAST            charset
+ 274: LOAD_CONST           2
+ 276: BINARY_SUBSCR        
+ 286: STORE_FAST           charset
+ 288: POP_EXCEPT           
+ 290: JUMP_FORWARD         to 300
+ 292: RERAISE              
+ 294: COPY                 
+ 296: POP_EXCEPT           
+ 298: RERAISE              
+ 300: NOP                  
+ 302: LOAD_FAST            charset
+ 304: LOAD_METHOD          encode
+ 326: LOAD_CONST           'us-ascii'
+ 328: PRECALL              
+ 332: CALL                 
+ 342: POP_TOP              
+ 344: JUMP_FORWARD         to 382
+ 346: PUSH_EXC_INFO        
+ 348: LOAD_GLOBAL          UnicodeError
+ 360: CHECK_EXC_MATCH      
+ 362: POP_JUMP_FORWARD_IF_FALSE to 374
+ 364: POP_TOP              
+ 366: LOAD_FAST            failobj
+ 368: SWAP                 
+ 370: POP_EXCEPT           
+ 372: RETURN_VALUE         
+ 374: RERAISE              
+ 376: COPY                 
+ 378: POP_EXCEPT           
+ 380: RERAISE              
+ 382: LOAD_FAST            charset
+ 384: LOAD_METHOD          lower
+ 406: PRECALL              
+ 410: CALL                 
+ 420: RETURN_VALUE         

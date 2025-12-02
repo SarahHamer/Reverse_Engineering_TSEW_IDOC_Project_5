@@ -1,0 +1,19 @@
+# Disassembly for logging.Formatter.formatMessage
+# From module file: logging
+
+## co_consts:
+(None,)
+
+## co_names:
+('_style', 'format')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _style
+  14: LOAD_METHOD          format
+  36: LOAD_FAST            record
+  38: PRECALL              
+  42: CALL                 
+  52: RETURN_VALUE         

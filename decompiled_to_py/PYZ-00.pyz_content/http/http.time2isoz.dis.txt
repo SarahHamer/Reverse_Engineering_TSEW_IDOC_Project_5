@@ -1,0 +1,44 @@
+# Disassembly for http.time2isoz
+# From module file: http.cookiejar
+
+## co_consts:
+('Return a string representing time in seconds since epoch, t.\n\n    If the function is called without an argument, it will use the current\n    time.\n\n    The format of the returned string is like "YYYY-MM-DD hh:mm:ssZ",\n    representing Universal Time (UTC, aka GMT).  An example of this format is:\n\n    1994-11-24 08:49:37Z\n\n    ', None, '%04d-%02d-%02d %02d:%02d:%02dZ')
+
+## co_names:
+('datetime', 'utcnow', 'utcfromtimestamp', 'year', 'month', 'day', 'hour', 'minute', 'second')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            t
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 68
+   6: LOAD_GLOBAL          datetime
+  18: LOAD_ATTR            datetime
+  28: LOAD_METHOD          utcnow
+  50: PRECALL              
+  54: CALL                 
+  64: STORE_FAST           dt
+  66: JUMP_FORWARD         to 130
+  68: LOAD_GLOBAL          datetime
+  80: LOAD_ATTR            datetime
+  90: LOAD_METHOD          utcfromtimestamp
+ 112: LOAD_FAST            t
+ 114: PRECALL              
+ 118: CALL                 
+ 128: STORE_FAST           dt
+ 130: LOAD_CONST           '%04d-%02d-%02d %02d:%02d:%02dZ'
+ 132: LOAD_FAST            dt
+ 134: LOAD_ATTR            year
+ 144: LOAD_FAST            dt
+ 146: LOAD_ATTR            month
+ 156: LOAD_FAST            dt
+ 158: LOAD_ATTR            day
+ 168: LOAD_FAST            dt
+ 170: LOAD_ATTR            hour
+ 180: LOAD_FAST            dt
+ 182: LOAD_ATTR            minute
+ 192: LOAD_FAST            dt
+ 194: LOAD_ATTR            second
+ 204: BUILD_TUPLE          
+ 206: BINARY_OP            %
+ 210: RETURN_VALUE         

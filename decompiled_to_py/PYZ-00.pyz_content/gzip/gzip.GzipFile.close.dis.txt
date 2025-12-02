@@ -1,0 +1,102 @@
+# Disassembly for gzip.GzipFile.close
+# From module file: gzip
+
+## co_consts:
+(None, 4294967295)
+
+## co_names:
+('fileobj', 'mode', 'WRITE', 'write', 'compress', 'flush', 'write32u', 'crc', 'size', 'READ', '_buffer', 'close', 'myfileobj')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            fileobj
+  14: STORE_FAST           fileobj
+  16: LOAD_FAST            fileobj
+  18: POP_JUMP_FORWARD_IF_NOT_NONE to 24
+  20: LOAD_CONST           None
+  22: RETURN_VALUE         
+  24: LOAD_CONST           None
+  26: LOAD_FAST            self
+  28: STORE_ATTR           fileobj
+  38: NOP                  
+  40: LOAD_FAST            self
+  42: LOAD_ATTR            mode
+  52: LOAD_GLOBAL          WRITE
+  64: COMPARE_OP           ==
+  70: POP_JUMP_FORWARD_IF_FALSE to 252
+  72: LOAD_FAST            fileobj
+  74: LOAD_METHOD          write
+  96: LOAD_FAST            self
+  98: LOAD_ATTR            compress
+ 108: LOAD_METHOD          flush
+ 130: PRECALL              
+ 134: CALL                 
+ 144: PRECALL              
+ 148: CALL                 
+ 158: POP_TOP              
+ 160: LOAD_GLOBAL          NULL + write32u
+ 172: LOAD_FAST            fileobj
+ 174: LOAD_FAST            self
+ 176: LOAD_ATTR            crc
+ 186: PRECALL              
+ 190: CALL                 
+ 200: POP_TOP              
+ 202: LOAD_GLOBAL          NULL + write32u
+ 214: LOAD_FAST            fileobj
+ 216: LOAD_FAST            self
+ 218: LOAD_ATTR            size
+ 228: LOAD_CONST           4294967295
+ 230: BINARY_OP            &
+ 234: PRECALL              
+ 238: CALL                 
+ 248: POP_TOP              
+ 250: JUMP_FORWARD         to 334
+ 252: LOAD_FAST            self
+ 254: LOAD_ATTR            mode
+ 264: LOAD_GLOBAL          READ
+ 276: COMPARE_OP           ==
+ 282: POP_JUMP_FORWARD_IF_FALSE to 334
+ 284: LOAD_FAST            self
+ 286: LOAD_ATTR            _buffer
+ 296: LOAD_METHOD          close
+ 318: PRECALL              
+ 322: CALL                 
+ 332: POP_TOP              
+ 334: LOAD_FAST            self
+ 336: LOAD_ATTR            myfileobj
+ 346: STORE_FAST           myfileobj
+ 348: LOAD_FAST            myfileobj
+ 350: POP_JUMP_FORWARD_IF_FALSE to 410
+ 352: LOAD_CONST           None
+ 354: LOAD_FAST            self
+ 356: STORE_ATTR           myfileobj
+ 366: LOAD_FAST            myfileobj
+ 368: LOAD_METHOD          close
+ 390: PRECALL              
+ 394: CALL                 
+ 404: POP_TOP              
+ 406: LOAD_CONST           None
+ 408: RETURN_VALUE         
+ 410: LOAD_CONST           None
+ 412: RETURN_VALUE         
+ 414: PUSH_EXC_INFO        
+ 416: LOAD_FAST            self
+ 418: LOAD_ATTR            myfileobj
+ 428: STORE_FAST           myfileobj
+ 430: LOAD_FAST            myfileobj
+ 432: POP_JUMP_FORWARD_IF_FALSE to 490
+ 434: LOAD_CONST           None
+ 436: LOAD_FAST            self
+ 438: STORE_ATTR           myfileobj
+ 448: LOAD_FAST            myfileobj
+ 450: LOAD_METHOD          close
+ 472: PRECALL              
+ 476: CALL                 
+ 486: POP_TOP              
+ 488: RERAISE              
+ 490: RERAISE              
+ 492: COPY                 
+ 494: POP_EXCEPT           
+ 496: RERAISE              

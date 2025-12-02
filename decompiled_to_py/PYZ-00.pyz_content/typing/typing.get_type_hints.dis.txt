@@ -1,0 +1,290 @@
+# Disassembly for typing.get_type_hints
+# From module file: typing
+
+## co_consts:
+("Return type hints for an object.\n\n    This is often the same as obj.__annotations__, but it handles\n    forward references encoded as string literals and recursively replaces all\n    'Annotated[T, ...]' with 'T' (unless 'include_extras=True').\n\n    The argument may be a module, class, method, or function. The annotations\n    are returned as a dictionary. For classes, annotations include also\n    inherited members.\n\n    TypeError is raised if the argument is not of a type that can contain\n    annotations, and an empty dictionary is returned if no annotations are\n    present.\n\n    BEWARE -- the behavior of globalns and localns is counterintuitive\n    (unless you are familiar with how eval() and exec() work).  The\n    search order is locals first, then globals.\n\n    - If no dict arguments are passed, an attempt is made to use the\n      globals from obj (or the respective module's globals for classes),\n      and these are also used as the locals.  If the object does not appear\n      to have globals, an empty dictionary is used.  For classes, the search\n      order is globals first then locals.\n\n    - If one dict argument is passed, it is used for both globals and\n      locals.\n\n    - If two dict arguments are passed, they specify globals and\n      locals, respectively.\n    ", '__no_type_check__', None, '__dict__', '__annotations__', False, True, ('is_argument', 'is_class'), <code object <dictcomp> at 0x0000024069CF4D50, file "typing.py", line 2348>, '__wrapped__', '__globals__', '{!r} is not a module, class, method, or function.', <code object <dictcomp> at 0x0000024069CF4E40, file "typing.py", line 2384>)
+
+## co_names:
+('getattr', 'isinstance', 'type', 'reversed', '__mro__', 'sys', 'modules', 'get', '__module__', '__dict__', 'types', 'GetSetDescriptorType', 'dict', 'vars', 'items', 'str', 'ForwardRef', '_eval_type', 'ModuleType', 'hasattr', '__wrapped__', '_allowed_types', 'TypeError', 'format')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + getattr
+  14: LOAD_FAST            obj
+  16: LOAD_CONST           '__no_type_check__'
+  18: LOAD_CONST           None
+  20: PRECALL              
+  24: CALL                 
+  34: POP_JUMP_FORWARD_IF_FALSE to 40
+  36: BUILD_MAP            
+  38: RETURN_VALUE         
+  40: LOAD_GLOBAL          NULL + isinstance
+  52: LOAD_FAST            obj
+  54: LOAD_GLOBAL          type
+  66: PRECALL              
+  70: CALL                 
+  80: EXTENDED_ARG         
+  82: POP_JUMP_FORWARD_IF_FALSE to 718
+  84: BUILD_MAP            
+  86: STORE_FAST           hints
+  88: LOAD_GLOBAL          NULL + reversed
+ 100: LOAD_FAST            obj
+ 102: LOAD_ATTR            __mro__
+ 112: PRECALL              
+ 116: CALL                 
+ 126: GET_ITER             
+ 128: EXTENDED_ARG         
+ 130: FOR_ITER             to 650
+ 132: STORE_FAST           base
+ 134: LOAD_FAST            globalns
+ 136: POP_JUMP_FORWARD_IF_NOT_NONE to 244
+ 138: LOAD_GLOBAL          NULL + getattr
+ 150: LOAD_GLOBAL          sys
+ 162: LOAD_ATTR            modules
+ 172: LOAD_METHOD          get
+ 194: LOAD_FAST            base
+ 196: LOAD_ATTR            __module__
+ 206: LOAD_CONST           None
+ 208: PRECALL              
+ 212: CALL                 
+ 222: LOAD_CONST           '__dict__'
+ 224: BUILD_MAP            
+ 226: PRECALL              
+ 230: CALL                 
+ 240: STORE_FAST           base_globals
+ 242: JUMP_FORWARD         to 248
+ 244: LOAD_FAST            globalns
+ 246: STORE_FAST           base_globals
+ 248: LOAD_FAST            base
+ 250: LOAD_ATTR            __dict__
+ 260: LOAD_METHOD          get
+ 282: LOAD_CONST           '__annotations__'
+ 284: BUILD_MAP            
+ 286: PRECALL              
+ 290: CALL                 
+ 300: STORE_FAST           ann
+ 302: LOAD_GLOBAL          NULL + isinstance
+ 314: LOAD_FAST            ann
+ 316: LOAD_GLOBAL          types
+ 328: LOAD_ATTR            GetSetDescriptorType
+ 338: PRECALL              
+ 342: CALL                 
+ 352: POP_JUMP_FORWARD_IF_FALSE to 358
+ 354: BUILD_MAP            
+ 356: STORE_FAST           ann
+ 358: LOAD_FAST            localns
+ 360: POP_JUMP_FORWARD_IF_NOT_NONE to 418
+ 362: LOAD_GLOBAL          NULL + dict
+ 374: LOAD_GLOBAL          NULL + vars
+ 386: LOAD_FAST            base
+ 388: PRECALL              
+ 392: CALL                 
+ 402: PRECALL              
+ 406: CALL                 
+ 416: JUMP_FORWARD         to 420
+ 418: LOAD_FAST            localns
+ 420: STORE_FAST           base_locals
+ 422: LOAD_FAST            localns
+ 424: POP_JUMP_FORWARD_IF_NOT_NONE to 438
+ 426: LOAD_FAST            globalns
+ 428: POP_JUMP_FORWARD_IF_NOT_NONE to 438
+ 430: LOAD_FAST            base_locals
+ 432: LOAD_FAST            base_globals
+ 434: STORE_FAST           base_locals
+ 436: STORE_FAST           base_globals
+ 438: LOAD_FAST            ann
+ 440: LOAD_METHOD          items
+ 462: PRECALL              
+ 466: CALL                 
+ 476: GET_ITER             
+ 478: FOR_ITER             to 646
+ 480: UNPACK_SEQUENCE      
+ 484: STORE_FAST           name
+ 486: STORE_FAST           value
+ 488: LOAD_FAST            value
+ 490: POP_JUMP_FORWARD_IF_NOT_NONE to 522
+ 492: LOAD_GLOBAL          NULL + type
+ 504: LOAD_CONST           None
+ 506: PRECALL              
+ 510: CALL                 
+ 520: STORE_FAST           value
+ 522: LOAD_GLOBAL          NULL + isinstance
+ 534: LOAD_FAST            value
+ 536: LOAD_GLOBAL          str
+ 548: PRECALL              
+ 552: CALL                 
+ 562: POP_JUMP_FORWARD_IF_FALSE to 600
+ 564: LOAD_GLOBAL          NULL + ForwardRef
+ 576: LOAD_FAST            value
+ 578: LOAD_CONST           False
+ 580: LOAD_CONST           True
+ 582: KW_NAMES             
+ 584: PRECALL              
+ 588: CALL                 
+ 598: STORE_FAST           value
+ 600: LOAD_GLOBAL          NULL + _eval_type
+ 612: LOAD_FAST            value
+ 614: LOAD_FAST            base_globals
+ 616: LOAD_FAST            base_locals
+ 618: PRECALL              
+ 622: CALL                 
+ 632: STORE_FAST           value
+ 634: LOAD_FAST            value
+ 636: LOAD_FAST            hints
+ 638: LOAD_FAST            name
+ 640: STORE_SUBSCR         
+ 644: JUMP_BACKWARD        to 478
+ 646: EXTENDED_ARG         
+ 648: JUMP_BACKWARD        to 128
+ 650: LOAD_FAST            include_extras
+ 652: POP_JUMP_FORWARD_IF_FALSE to 658
+ 654: LOAD_FAST            hints
+ 656: JUMP_FORWARD         to 716
+ 658: LOAD_CONST           <code object <dictcomp> at 0x0000024069CF4D50, file "typing.py", line 2348>
+ 660: MAKE_FUNCTION        
+ 662: LOAD_FAST            hints
+ 664: LOAD_METHOD          items
+ 686: PRECALL              
+ 690: CALL                 
+ 700: GET_ITER             
+ 702: PRECALL              
+ 706: CALL                 
+ 716: RETURN_VALUE         
+ 718: LOAD_FAST            globalns
+ 720: POP_JUMP_FORWARD_IF_NOT_NONE to 916
+ 722: LOAD_GLOBAL          NULL + isinstance
+ 734: LOAD_FAST            obj
+ 736: LOAD_GLOBAL          types
+ 748: LOAD_ATTR            ModuleType
+ 758: PRECALL              
+ 762: CALL                 
+ 772: POP_JUMP_FORWARD_IF_FALSE to 790
+ 774: LOAD_FAST            obj
+ 776: LOAD_ATTR            __dict__
+ 786: STORE_FAST           globalns
+ 788: JUMP_FORWARD         to 906
+ 790: LOAD_FAST            obj
+ 792: STORE_FAST           nsobj
+ 794: LOAD_GLOBAL          NULL + hasattr
+ 806: LOAD_FAST            nsobj
+ 808: LOAD_CONST           '__wrapped__'
+ 810: PRECALL              
+ 814: CALL                 
+ 824: POP_JUMP_FORWARD_IF_FALSE to 872
+ 826: LOAD_FAST            nsobj
+ 828: LOAD_ATTR            __wrapped__
+ 838: STORE_FAST           nsobj
+ 840: LOAD_GLOBAL          NULL + hasattr
+ 852: LOAD_FAST            nsobj
+ 854: LOAD_CONST           '__wrapped__'
+ 856: PRECALL              
+ 860: CALL                 
+ 870: POP_JUMP_BACKWARD_IF_TRUE to 826
+ 872: LOAD_GLOBAL          NULL + getattr
+ 884: LOAD_FAST            nsobj
+ 886: LOAD_CONST           '__globals__'
+ 888: BUILD_MAP            
+ 890: PRECALL              
+ 894: CALL                 
+ 904: STORE_FAST           globalns
+ 906: LOAD_FAST            localns
+ 908: POP_JUMP_FORWARD_IF_NOT_NONE to 914
+ 910: LOAD_FAST            globalns
+ 912: STORE_FAST           localns
+ 914: JUMP_FORWARD         to 924
+ 916: LOAD_FAST            localns
+ 918: POP_JUMP_FORWARD_IF_NOT_NONE to 924
+ 920: LOAD_FAST            globalns
+ 922: STORE_FAST           localns
+ 924: LOAD_GLOBAL          NULL + getattr
+ 936: LOAD_FAST            obj
+ 938: LOAD_CONST           '__annotations__'
+ 940: LOAD_CONST           None
+ 942: PRECALL              
+ 946: CALL                 
+ 956: STORE_FAST           hints
+ 958: LOAD_FAST            hints
+ 960: POP_JUMP_FORWARD_IF_NOT_NONE to 1076
+ 962: LOAD_GLOBAL          NULL + isinstance
+ 974: LOAD_FAST            obj
+ 976: LOAD_GLOBAL          _allowed_types
+ 988: PRECALL              
+ 992: CALL                 
+1002: POP_JUMP_FORWARD_IF_FALSE to 1008
+1004: BUILD_MAP            
+1006: RETURN_VALUE         
+1008: LOAD_GLOBAL          NULL + TypeError
+1020: LOAD_CONST           '{!r} is not a module, class, method, or function.'
+1022: LOAD_METHOD          format
+1044: LOAD_FAST            obj
+1046: PRECALL              
+1050: CALL                 
+1060: PRECALL              
+1064: CALL                 
+1074: RAISE_VARARGS        
+1076: LOAD_GLOBAL          NULL + dict
+1088: LOAD_FAST            hints
+1090: PRECALL              
+1094: CALL                 
+1104: STORE_FAST           hints
+1106: LOAD_FAST            hints
+1108: LOAD_METHOD          items
+1130: PRECALL              
+1134: CALL                 
+1144: GET_ITER             
+1146: FOR_ITER             to 1360
+1148: UNPACK_SEQUENCE      
+1152: STORE_FAST           name
+1154: STORE_FAST           value
+1156: LOAD_FAST            value
+1158: POP_JUMP_FORWARD_IF_NOT_NONE to 1190
+1160: LOAD_GLOBAL          NULL + type
+1172: LOAD_CONST           None
+1174: PRECALL              
+1178: CALL                 
+1188: STORE_FAST           value
+1190: LOAD_GLOBAL          NULL + isinstance
+1202: LOAD_FAST            value
+1204: LOAD_GLOBAL          str
+1216: PRECALL              
+1220: CALL                 
+1230: POP_JUMP_FORWARD_IF_FALSE to 1318
+1232: LOAD_GLOBAL          NULL + ForwardRef
+1244: LOAD_FAST            value
+1246: LOAD_GLOBAL          NULL + isinstance
+1258: LOAD_FAST            obj
+1260: LOAD_GLOBAL          types
+1272: LOAD_ATTR            ModuleType
+1282: PRECALL              
+1286: CALL                 
+1296: UNARY_NOT            
+1298: LOAD_CONST           False
+1300: KW_NAMES             
+1302: PRECALL              
+1306: CALL                 
+1316: STORE_FAST           value
+1318: LOAD_GLOBAL          NULL + _eval_type
+1330: LOAD_FAST            value
+1332: LOAD_FAST            globalns
+1334: LOAD_FAST            localns
+1336: PRECALL              
+1340: CALL                 
+1350: LOAD_FAST            hints
+1352: LOAD_FAST            name
+1354: STORE_SUBSCR         
+1358: JUMP_BACKWARD        to 1146
+1360: LOAD_FAST            include_extras
+1362: POP_JUMP_FORWARD_IF_FALSE to 1368
+1364: LOAD_FAST            hints
+1366: JUMP_FORWARD         to 1426
+1368: LOAD_CONST           <code object <dictcomp> at 0x0000024069CF4E40, file "typing.py", line 2384>
+1370: MAKE_FUNCTION        
+1372: LOAD_FAST            hints
+1374: LOAD_METHOD          items
+1396: PRECALL              
+1400: CALL                 
+1410: GET_ITER             
+1412: PRECALL              
+1416: CALL                 
+1426: RETURN_VALUE         

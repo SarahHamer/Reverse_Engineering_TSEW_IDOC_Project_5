@@ -1,0 +1,258 @@
+# Disassembly for inspect.findsource
+# From module file: inspect
+
+## co_consts:
+('Return the entire source file and starting line number for an object.\n\n    The argument may be a module, class, method, function, traceback, frame,\n    or code object.  The source code is returned as a list of all the lines\n    in the file and the line number indexes a line in that list.  An OSError\n    is raised if the source code cannot be retrieved.', '<', '>', 'source code not available', 'could not get source code', 0, '', 'could not find class definition', None, 'co_firstlineno', 'could not find function definition', 1, '^(\\s*def\\s)|(\\s*async\\s+def\\s)|(.*(?<!\\w)lambda(:|\\s))|^(\\s*@)', 'lineno is out of bounds', 'could not find code object')
+
+## co_names:
+('getsourcefile', 'linecache', 'checkcache', 'getfile', 'startswith', 'endswith', 'OSError', 'getmodule', 'getlines', '__dict__', 'ismodule', 'isclass', '__qualname__', 'join', 'ast', 'parse', '_ClassFinder', 'visit', 'ClassFoundException', 'args', 'ismethod', '__func__', 'isfunction', '__code__', 'istraceback', 'tb_frame', 'isframe', 'f_code', 'iscode', 'hasattr', 'co_firstlineno', 're', 'compile', 'IndexError', 'match')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + getsourcefile
+  14: LOAD_FAST            object
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           file
+  32: LOAD_FAST            file
+  34: POP_JUMP_FORWARD_IF_FALSE to 78
+  36: LOAD_GLOBAL          NULL + linecache
+  48: LOAD_ATTR            checkcache
+  58: LOAD_FAST            file
+  60: PRECALL              
+  64: CALL                 
+  74: POP_TOP              
+  76: JUMP_FORWARD         to 222
+  78: LOAD_GLOBAL          NULL + getfile
+  90: LOAD_FAST            object
+  92: PRECALL              
+  96: CALL                 
+ 106: STORE_FAST           file
+ 108: LOAD_FAST            file
+ 110: LOAD_METHOD          startswith
+ 132: LOAD_CONST           '<'
+ 134: PRECALL              
+ 138: CALL                 
+ 148: POP_JUMP_FORWARD_IF_FALSE to 192
+ 150: LOAD_FAST            file
+ 152: LOAD_METHOD          endswith
+ 174: LOAD_CONST           '>'
+ 176: PRECALL              
+ 180: CALL                 
+ 190: POP_JUMP_FORWARD_IF_TRUE to 222
+ 192: LOAD_GLOBAL          NULL + OSError
+ 204: LOAD_CONST           'source code not available'
+ 206: PRECALL              
+ 210: CALL                 
+ 220: RAISE_VARARGS        
+ 222: LOAD_GLOBAL          NULL + getmodule
+ 234: LOAD_FAST            object
+ 236: LOAD_FAST            file
+ 238: PRECALL              
+ 242: CALL                 
+ 252: STORE_FAST           module
+ 254: LOAD_FAST            module
+ 256: POP_JUMP_FORWARD_IF_FALSE to 312
+ 258: LOAD_GLOBAL          NULL + linecache
+ 270: LOAD_ATTR            getlines
+ 280: LOAD_FAST            file
+ 282: LOAD_FAST            module
+ 284: LOAD_ATTR            __dict__
+ 294: PRECALL              
+ 298: CALL                 
+ 308: STORE_FAST           lines
+ 310: JUMP_FORWARD         to 352
+ 312: LOAD_GLOBAL          NULL + linecache
+ 324: LOAD_ATTR            getlines
+ 334: LOAD_FAST            file
+ 336: PRECALL              
+ 340: CALL                 
+ 350: STORE_FAST           lines
+ 352: LOAD_FAST            lines
+ 354: POP_JUMP_FORWARD_IF_TRUE to 386
+ 356: LOAD_GLOBAL          NULL + OSError
+ 368: LOAD_CONST           'could not get source code'
+ 370: PRECALL              
+ 374: CALL                 
+ 384: RAISE_VARARGS        
+ 386: LOAD_GLOBAL          NULL + ismodule
+ 398: LOAD_FAST            object
+ 400: PRECALL              
+ 404: CALL                 
+ 414: POP_JUMP_FORWARD_IF_FALSE to 424
+ 416: LOAD_FAST            lines
+ 418: LOAD_CONST           0
+ 420: BUILD_TUPLE          
+ 422: RETURN_VALUE         
+ 424: LOAD_GLOBAL          NULL + isclass
+ 436: LOAD_FAST            object
+ 438: PRECALL              
+ 442: CALL                 
+ 452: POP_JUMP_FORWARD_IF_FALSE to 734
+ 454: LOAD_FAST            object
+ 456: LOAD_ATTR            __qualname__
+ 466: STORE_FAST           qualname
+ 468: LOAD_CONST           ''
+ 470: LOAD_METHOD          join
+ 492: LOAD_FAST            lines
+ 494: PRECALL              
+ 498: CALL                 
+ 508: STORE_FAST           source
+ 510: LOAD_GLOBAL          NULL + ast
+ 522: LOAD_ATTR            parse
+ 532: LOAD_FAST            source
+ 534: PRECALL              
+ 538: CALL                 
+ 548: STORE_FAST           tree
+ 550: LOAD_GLOBAL          NULL + _ClassFinder
+ 562: LOAD_FAST            qualname
+ 564: PRECALL              
+ 568: CALL                 
+ 578: STORE_FAST           class_finder
+ 580: NOP                  
+ 582: LOAD_FAST            class_finder
+ 584: LOAD_METHOD          visit
+ 606: LOAD_FAST            tree
+ 608: PRECALL              
+ 612: CALL                 
+ 622: POP_TOP              
+ 624: LOAD_GLOBAL          NULL + OSError
+ 636: LOAD_CONST           'could not find class definition'
+ 638: PRECALL              
+ 642: CALL                 
+ 652: RAISE_VARARGS        
+ 654: PUSH_EXC_INFO        
+ 656: LOAD_GLOBAL          ClassFoundException
+ 668: CHECK_EXC_MATCH      
+ 670: POP_JUMP_FORWARD_IF_FALSE to 726
+ 672: STORE_FAST           e
+ 674: LOAD_FAST            e
+ 676: LOAD_ATTR            args
+ 686: LOAD_CONST           0
+ 688: BINARY_SUBSCR        
+ 698: STORE_FAST           line_number
+ 700: LOAD_FAST            lines
+ 702: LOAD_FAST            line_number
+ 704: BUILD_TUPLE          
+ 706: SWAP                 
+ 708: POP_EXCEPT           
+ 710: LOAD_CONST           None
+ 712: STORE_FAST           e
+ 714: DELETE_FAST          e
+ 716: RETURN_VALUE         
+ 718: LOAD_CONST           None
+ 720: STORE_FAST           e
+ 722: DELETE_FAST          e
+ 724: RERAISE              
+ 726: RERAISE              
+ 728: COPY                 
+ 730: POP_EXCEPT           
+ 732: RERAISE              
+ 734: LOAD_GLOBAL          NULL + ismethod
+ 746: LOAD_FAST            object
+ 748: PRECALL              
+ 752: CALL                 
+ 762: POP_JUMP_FORWARD_IF_FALSE to 778
+ 764: LOAD_FAST            object
+ 766: LOAD_ATTR            __func__
+ 776: STORE_FAST           object
+ 778: LOAD_GLOBAL          NULL + isfunction
+ 790: LOAD_FAST            object
+ 792: PRECALL              
+ 796: CALL                 
+ 806: POP_JUMP_FORWARD_IF_FALSE to 822
+ 808: LOAD_FAST            object
+ 810: LOAD_ATTR            __code__
+ 820: STORE_FAST           object
+ 822: LOAD_GLOBAL          NULL + istraceback
+ 834: LOAD_FAST            object
+ 836: PRECALL              
+ 840: CALL                 
+ 850: POP_JUMP_FORWARD_IF_FALSE to 866
+ 852: LOAD_FAST            object
+ 854: LOAD_ATTR            tb_frame
+ 864: STORE_FAST           object
+ 866: LOAD_GLOBAL          NULL + isframe
+ 878: LOAD_FAST            object
+ 880: PRECALL              
+ 884: CALL                 
+ 894: POP_JUMP_FORWARD_IF_FALSE to 910
+ 896: LOAD_FAST            object
+ 898: LOAD_ATTR            f_code
+ 908: STORE_FAST           object
+ 910: LOAD_GLOBAL          NULL + iscode
+ 922: LOAD_FAST            object
+ 924: PRECALL              
+ 928: CALL                 
+ 938: POP_JUMP_FORWARD_IF_FALSE to 1226
+ 940: LOAD_GLOBAL          NULL + hasattr
+ 952: LOAD_FAST            object
+ 954: LOAD_CONST           'co_firstlineno'
+ 956: PRECALL              
+ 960: CALL                 
+ 970: POP_JUMP_FORWARD_IF_TRUE to 1002
+ 972: LOAD_GLOBAL          NULL + OSError
+ 984: LOAD_CONST           'could not find function definition'
+ 986: PRECALL              
+ 990: CALL                 
+1000: RAISE_VARARGS        
+1002: LOAD_FAST            object
+1004: LOAD_ATTR            co_firstlineno
+1014: LOAD_CONST           1
+1016: BINARY_OP            -
+1020: STORE_FAST           lnum
+1022: LOAD_GLOBAL          NULL + re
+1034: LOAD_ATTR            compile
+1044: LOAD_CONST           '^(\\s*def\\s)|(\\s*async\\s+def\\s)|(.*(?<!\\w)lambda(:|\\s))|^(\\s*@)'
+1046: PRECALL              
+1050: CALL                 
+1060: STORE_FAST           pat
+1062: LOAD_FAST            lnum
+1064: LOAD_CONST           0
+1066: COMPARE_OP           >
+1072: POP_JUMP_FORWARD_IF_FALSE to 1218
+1074: NOP                  
+1076: LOAD_FAST            lines
+1078: LOAD_FAST            lnum
+1080: BINARY_SUBSCR        
+1090: STORE_FAST           line
+1092: JUMP_FORWARD         to 1152
+1094: PUSH_EXC_INFO        
+1096: LOAD_GLOBAL          IndexError
+1108: CHECK_EXC_MATCH      
+1110: POP_JUMP_FORWARD_IF_FALSE to 1144
+1112: POP_TOP              
+1114: LOAD_GLOBAL          NULL + OSError
+1126: LOAD_CONST           'lineno is out of bounds'
+1128: PRECALL              
+1132: CALL                 
+1142: RAISE_VARARGS        
+1144: RERAISE              
+1146: COPY                 
+1148: POP_EXCEPT           
+1150: RERAISE              
+1152: LOAD_FAST            pat
+1154: LOAD_METHOD          match
+1176: LOAD_FAST            line
+1178: PRECALL              
+1182: CALL                 
+1192: POP_JUMP_FORWARD_IF_FALSE to 1196
+1194: JUMP_FORWARD         to 1218
+1196: LOAD_FAST            lnum
+1198: LOAD_CONST           1
+1200: BINARY_OP            -
+1204: STORE_FAST           lnum
+1206: LOAD_FAST            lnum
+1208: LOAD_CONST           0
+1210: COMPARE_OP           >
+1216: POP_JUMP_BACKWARD_IF_TRUE to 1074
+1218: LOAD_FAST            lines
+1220: LOAD_FAST            lnum
+1222: BUILD_TUPLE          
+1224: RETURN_VALUE         
+1226: LOAD_GLOBAL          NULL + OSError
+1238: LOAD_CONST           'could not find code object'
+1240: PRECALL              
+1244: CALL                 
+1254: RAISE_VARARGS        

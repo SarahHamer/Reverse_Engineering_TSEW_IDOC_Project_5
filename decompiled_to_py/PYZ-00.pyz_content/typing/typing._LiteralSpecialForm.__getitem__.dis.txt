@@ -1,0 +1,31 @@
+# Disassembly for typing._LiteralSpecialForm.__getitem__
+# From module file: typing
+
+## co_consts:
+(None,)
+
+## co_names:
+('isinstance', 'tuple', '_getitem')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            parameters
+  16: LOAD_GLOBAL          tuple
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_TRUE to 50
+  44: LOAD_FAST            parameters
+  46: BUILD_TUPLE          
+  48: STORE_FAST           parameters
+  50: PUSH_NULL            
+  52: LOAD_FAST            self
+  54: LOAD_ATTR            _getitem
+  64: LOAD_FAST            self
+  66: BUILD_LIST           
+  68: LOAD_FAST            parameters
+  70: LIST_EXTEND          
+  72: LIST_TO_TUPLE        
+  74: CALL_FUNCTION_EX     
+  76: RETURN_VALUE         

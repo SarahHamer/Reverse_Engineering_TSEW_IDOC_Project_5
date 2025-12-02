@@ -1,0 +1,32 @@
+# Disassembly for _py_abc
+# From module file: _py_abc
+
+## co_consts:
+(0, ('WeakSet',), <code object get_cache_token at 0x0000024069465DF0, file "_py_abc.py", line 4>, <code object ABCMeta at 0x000002406944ACD0, file "_py_abc.py", line 14>, 'ABCMeta', None)
+
+## co_names:
+('_weakrefset', 'WeakSet', 'get_cache_token', 'type', 'ABCMeta')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           ('WeakSet',)
+   6: IMPORT_NAME          _weakrefset
+   8: IMPORT_FROM          WeakSet
+  10: STORE_NAME           WeakSet
+  12: POP_TOP              
+  14: LOAD_CONST           <code object get_cache_token at 0x0000024069465DF0, file "_py_abc.py", line 4>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           get_cache_token
+  20: PUSH_NULL            
+  22: LOAD_BUILD_CLASS     
+  24: LOAD_CONST           <code object ABCMeta at 0x000002406944ACD0, file "_py_abc.py", line 14>
+  26: MAKE_FUNCTION        
+  28: LOAD_CONST           'ABCMeta'
+  30: LOAD_NAME            type
+  32: PRECALL              
+  36: CALL                 
+  46: STORE_NAME           ABCMeta
+  48: LOAD_CONST           None
+  50: RETURN_VALUE         

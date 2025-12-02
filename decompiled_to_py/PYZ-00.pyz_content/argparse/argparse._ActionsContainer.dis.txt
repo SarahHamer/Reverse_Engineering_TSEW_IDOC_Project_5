@@ -1,0 +1,79 @@
+# Disassembly for argparse._ActionsContainer
+# From module file: argparse
+
+## co_consts:
+('_ActionsContainer', <code object __init__ at 0x0000024066CE7CA0, file "argparse.py", line 1337>, <code object register at 0x00000240693EB530, file "argparse.py", line 1390>, None, <code object _registry_get at 0x00000240693EB630, file "argparse.py", line 1394>, <code object set_defaults at 0x00000240693AA830, file "argparse.py", line 1400>, <code object get_default at 0x00000240693AA970, file "argparse.py", line 1409>, <code object add_argument at 0x0000024068E79A30, file "argparse.py", line 1419>, <code object add_argument_group at 0x000002406941A0D0, file "argparse.py", line 1470>, <code object add_mutually_exclusive_group at 0x000002406944AAB0, file "argparse.py", line 1475>, <code object _add_action at 0x000002406947C3F0, file "argparse.py", line 1480>, <code object _remove_action at 0x00000240693EB730, file "argparse.py", line 1501>, <code object _add_container_actions at 0x0000024068C08CE0, file "argparse.py", line 1504>, <code object _get_positional_kwargs at 0x00000240694983B0, file "argparse.py", line 1544>, <code object _get_optional_kwargs at 0x0000024068BE48C0, file "argparse.py", line 1560>, <code object _pop_action_class at 0x000002406941A1F0, file "argparse.py", line 1594>, <code object _get_handler at 0x00000240691C0B30, file "argparse.py", line 1598>, <code object _check_conflict at 0x00000240691E8F30, file "argparse.py", line 1607>, <code object _handle_conflict_error at 0x00000240691C0DF0, file "argparse.py", line 1621>, <code object _handle_conflict_resolve at 0x00000240691E9230, file "argparse.py", line 1630>, (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', 'register', '_registry_get', 'set_defaults', 'get_default', 'add_argument', 'add_argument_group', 'add_mutually_exclusive_group', '_add_action', '_remove_action', '_add_container_actions', '_get_positional_kwargs', '_get_optional_kwargs', '_pop_action_class', '_get_handler', '_check_conflict', '_handle_conflict_error', '_handle_conflict_resolve', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           '_ActionsContainer'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CLOSURE         __class__
+  14: BUILD_TUPLE          
+  16: LOAD_CONST           <code object __init__ at 0x0000024066CE7CA0, file "argparse.py", line 1337>
+  18: MAKE_FUNCTION        closure
+  20: STORE_NAME           __init__
+  22: LOAD_CONST           <code object register at 0x00000240693EB530, file "argparse.py", line 1390>
+  24: MAKE_FUNCTION        
+  26: STORE_NAME           register
+  28: LOAD_CONST           (None,)
+  30: LOAD_CONST           <code object _registry_get at 0x00000240693EB630, file "argparse.py", line 1394>
+  32: MAKE_FUNCTION        defaults
+  34: STORE_NAME           _registry_get
+  36: LOAD_CONST           <code object set_defaults at 0x00000240693AA830, file "argparse.py", line 1400>
+  38: MAKE_FUNCTION        
+  40: STORE_NAME           set_defaults
+  42: LOAD_CONST           <code object get_default at 0x00000240693AA970, file "argparse.py", line 1409>
+  44: MAKE_FUNCTION        
+  46: STORE_NAME           get_default
+  48: LOAD_CONST           <code object add_argument at 0x0000024068E79A30, file "argparse.py", line 1419>
+  50: MAKE_FUNCTION        
+  52: STORE_NAME           add_argument
+  54: LOAD_CONST           <code object add_argument_group at 0x000002406941A0D0, file "argparse.py", line 1470>
+  56: MAKE_FUNCTION        
+  58: STORE_NAME           add_argument_group
+  60: LOAD_CONST           <code object add_mutually_exclusive_group at 0x000002406944AAB0, file "argparse.py", line 1475>
+  62: MAKE_FUNCTION        
+  64: STORE_NAME           add_mutually_exclusive_group
+  66: LOAD_CONST           <code object _add_action at 0x000002406947C3F0, file "argparse.py", line 1480>
+  68: MAKE_FUNCTION        
+  70: STORE_NAME           _add_action
+  72: LOAD_CONST           <code object _remove_action at 0x00000240693EB730, file "argparse.py", line 1501>
+  74: MAKE_FUNCTION        
+  76: STORE_NAME           _remove_action
+  78: LOAD_CONST           <code object _add_container_actions at 0x0000024068C08CE0, file "argparse.py", line 1504>
+  80: MAKE_FUNCTION        
+  82: STORE_NAME           _add_container_actions
+  84: LOAD_CONST           <code object _get_positional_kwargs at 0x00000240694983B0, file "argparse.py", line 1544>
+  86: MAKE_FUNCTION        
+  88: STORE_NAME           _get_positional_kwargs
+  90: LOAD_CONST           <code object _get_optional_kwargs at 0x0000024068BE48C0, file "argparse.py", line 1560>
+  92: MAKE_FUNCTION        
+  94: STORE_NAME           _get_optional_kwargs
+  96: LOAD_CONST           (None,)
+  98: LOAD_CONST           <code object _pop_action_class at 0x000002406941A1F0, file "argparse.py", line 1594>
+ 100: MAKE_FUNCTION        defaults
+ 102: STORE_NAME           _pop_action_class
+ 104: LOAD_CONST           <code object _get_handler at 0x00000240691C0B30, file "argparse.py", line 1598>
+ 106: MAKE_FUNCTION        
+ 108: STORE_NAME           _get_handler
+ 110: LOAD_CONST           <code object _check_conflict at 0x00000240691E8F30, file "argparse.py", line 1607>
+ 112: MAKE_FUNCTION        
+ 114: STORE_NAME           _check_conflict
+ 116: LOAD_CONST           <code object _handle_conflict_error at 0x00000240691C0DF0, file "argparse.py", line 1621>
+ 118: MAKE_FUNCTION        
+ 120: STORE_NAME           _handle_conflict_error
+ 122: LOAD_CONST           <code object _handle_conflict_resolve at 0x00000240691E9230, file "argparse.py", line 1630>
+ 124: MAKE_FUNCTION        
+ 126: STORE_NAME           _handle_conflict_resolve
+ 128: LOAD_CLOSURE         __class__
+ 130: COPY                 
+ 132: STORE_NAME           __classcell__
+ 134: RETURN_VALUE         

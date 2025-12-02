@@ -1,0 +1,101 @@
+# Disassembly for ftplib.FTP.connect
+# From module file: ftplib
+
+## co_consts:
+('Connect to host.  Arguments are:\n         - host: hostname to connect to (string, default previous host)\n         - port: port to connect to (integer, default previous port)\n         - timeout: the timeout to set against the ftp socket(s)\n         - source_address: a 2-tuple (host, port) for the socket to bind\n           to as its source address before connecting.\n        ', '', 0, -999, None, 'Non-blocking socket (timeout=0) is not supported', 'ftplib.connect', ('source_address',), 'r', ('encoding',))
+
+## co_names:
+('host', 'port', 'timeout', 'ValueError', 'source_address', 'sys', 'audit', 'socket', 'create_connection', 'sock', 'family', 'af', 'makefile', 'encoding', 'file', 'getresp', 'welcome')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            host
+   4: LOAD_CONST           ''
+   6: COMPARE_OP           !=
+  12: POP_JUMP_FORWARD_IF_FALSE to 28
+  14: LOAD_FAST            host
+  16: LOAD_FAST            self
+  18: STORE_ATTR           host
+  28: LOAD_FAST            port
+  30: LOAD_CONST           0
+  32: COMPARE_OP           >
+  38: POP_JUMP_FORWARD_IF_FALSE to 54
+  40: LOAD_FAST            port
+  42: LOAD_FAST            self
+  44: STORE_ATTR           port
+  54: LOAD_FAST            timeout
+  56: LOAD_CONST           -999
+  58: COMPARE_OP           !=
+  64: POP_JUMP_FORWARD_IF_FALSE to 80
+  66: LOAD_FAST            timeout
+  68: LOAD_FAST            self
+  70: STORE_ATTR           timeout
+  80: LOAD_FAST            self
+  82: LOAD_ATTR            timeout
+  92: POP_JUMP_FORWARD_IF_NONE to 138
+  94: LOAD_FAST            self
+  96: LOAD_ATTR            timeout
+ 106: POP_JUMP_FORWARD_IF_TRUE to 138
+ 108: LOAD_GLOBAL          NULL + ValueError
+ 120: LOAD_CONST           'Non-blocking socket (timeout=0) is not supported'
+ 122: PRECALL              
+ 126: CALL                 
+ 136: RAISE_VARARGS        
+ 138: LOAD_FAST            source_address
+ 140: POP_JUMP_FORWARD_IF_NONE to 156
+ 142: LOAD_FAST            source_address
+ 144: LOAD_FAST            self
+ 146: STORE_ATTR           source_address
+ 156: LOAD_GLOBAL          NULL + sys
+ 168: LOAD_ATTR            audit
+ 178: LOAD_CONST           'ftplib.connect'
+ 180: LOAD_FAST            self
+ 182: LOAD_FAST            self
+ 184: LOAD_ATTR            host
+ 194: LOAD_FAST            self
+ 196: LOAD_ATTR            port
+ 206: PRECALL              
+ 210: CALL                 
+ 220: POP_TOP              
+ 222: LOAD_GLOBAL          NULL + socket
+ 234: LOAD_ATTR            create_connection
+ 244: LOAD_FAST            self
+ 246: LOAD_ATTR            host
+ 256: LOAD_FAST            self
+ 258: LOAD_ATTR            port
+ 268: BUILD_TUPLE          
+ 270: LOAD_FAST            self
+ 272: LOAD_ATTR            timeout
+ 282: LOAD_FAST            self
+ 284: LOAD_ATTR            source_address
+ 294: KW_NAMES             
+ 296: PRECALL              
+ 300: CALL                 
+ 310: LOAD_FAST            self
+ 312: STORE_ATTR           sock
+ 322: LOAD_FAST            self
+ 324: LOAD_ATTR            sock
+ 334: LOAD_ATTR            family
+ 344: LOAD_FAST            self
+ 346: STORE_ATTR           af
+ 356: LOAD_FAST            self
+ 358: LOAD_ATTR            sock
+ 368: LOAD_METHOD          makefile
+ 390: LOAD_CONST           'r'
+ 392: LOAD_FAST            self
+ 394: LOAD_ATTR            encoding
+ 404: KW_NAMES             
+ 406: PRECALL              
+ 410: CALL                 
+ 420: LOAD_FAST            self
+ 422: STORE_ATTR           file
+ 432: LOAD_FAST            self
+ 434: LOAD_METHOD          getresp
+ 456: PRECALL              
+ 460: CALL                 
+ 470: LOAD_FAST            self
+ 472: STORE_ATTR           welcome
+ 482: LOAD_FAST            self
+ 484: LOAD_ATTR            welcome
+ 494: RETURN_VALUE         

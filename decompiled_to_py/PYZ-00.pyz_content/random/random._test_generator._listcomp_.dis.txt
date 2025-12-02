@@ -1,0 +1,24 @@
+# Disassembly for random._test_generator.<listcomp>
+# From module file: random
+
+## co_consts:
+()
+
+## co_names:
+()
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: BUILD_LIST           
+   6: LOAD_FAST            .0
+   8: FOR_ITER             to 24
+  10: STORE_FAST           i
+  12: PUSH_NULL            
+  14: LOAD_DEREF           func
+  16: LOAD_DEREF           args
+  18: CALL_FUNCTION_EX     
+  20: LIST_APPEND          
+  22: JUMP_BACKWARD        to 8
+  24: RETURN_VALUE         

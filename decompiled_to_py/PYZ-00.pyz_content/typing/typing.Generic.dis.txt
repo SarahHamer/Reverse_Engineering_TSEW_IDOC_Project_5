@@ -1,0 +1,38 @@
+# Disassembly for typing.Generic
+# From module file: typing
+
+## co_consts:
+('Generic', 'Abstract base class for generic types.\n\n    A generic type is typically declared by inheriting from\n    this class parameterized with one or more type variables.\n    For example, a generic mapping type might be defined as::\n\n      class Mapping(Generic[KT, VT]):\n          def __getitem__(self, key: KT) -> VT:\n              ...\n          # Etc.\n\n    This class can then be used as follows::\n\n      def lookup_name(mapping: Mapping[KT, VT], key: KT, default: VT) -> VT:\n          try:\n              return mapping[key]\n          except KeyError:\n              return default\n    ', (), False, <code object __class_getitem__ at 0x000002406959F200, file "typing.py", line 1804>, <code object __init_subclass__ at 0x0000024068DCB8E0, file "typing.py", line 1851>)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__slots__', '_is_protocol', '_tp_cache', '__class_getitem__', '__init_subclass__', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'Generic'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           'Abstract base class for generic types.\n\n    A generic type is typically declared by inheriting from\n    this class parameterized with one or more type variables.\n    For example, a generic mapping type might be defined as::\n\n      class Mapping(Generic[KT, VT]):\n          def __getitem__(self, key: KT) -> VT:\n              ...\n          # Etc.\n\n    This class can then be used as follows::\n\n      def lookup_name(mapping: Mapping[KT, VT], key: KT, default: VT) -> VT:\n          try:\n              return mapping[key]\n          except KeyError:\n              return default\n    '
+  14: STORE_NAME           __doc__
+  16: LOAD_CONST           ()
+  18: STORE_NAME           __slots__
+  20: LOAD_CONST           False
+  22: STORE_NAME           _is_protocol
+  24: LOAD_NAME            _tp_cache
+  26: LOAD_CONST           <code object __class_getitem__ at 0x000002406959F200, file "typing.py", line 1804>
+  28: MAKE_FUNCTION        
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_NAME           __class_getitem__
+  46: LOAD_CLOSURE         __class__
+  48: BUILD_TUPLE          
+  50: LOAD_CONST           <code object __init_subclass__ at 0x0000024068DCB8E0, file "typing.py", line 1851>
+  52: MAKE_FUNCTION        closure
+  54: STORE_NAME           __init_subclass__
+  56: LOAD_CLOSURE         __class__
+  58: COPY                 
+  60: STORE_NAME           __classcell__
+  62: RETURN_VALUE         

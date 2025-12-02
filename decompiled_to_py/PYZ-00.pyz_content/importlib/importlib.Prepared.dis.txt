@@ -1,0 +1,42 @@
+# Disassembly for importlib.Prepared
+# From module file: importlib.metadata
+
+## co_consts:
+('Prepared', '\n    A prepared search for metadata on a possibly-named package.\n    ', None, <code object __init__ at 0x00000240693ABC30, file "importlib\metadata\__init__.py", line 870>, <code object normalize at 0x00000240693A9570, file "importlib\metadata\__init__.py", line 877>, <code object legacy_normalize at 0x000002406944A450, file "importlib\metadata\__init__.py", line 884>, <code object __bool__ at 0x000002406945D7A0, file "importlib\metadata\__init__.py", line 892>)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'normalized', 'legacy_normalized', '__init__', 'staticmethod', 'normalize', 'legacy_normalize', '__bool__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Prepared'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           '\n    A prepared search for metadata on a possibly-named package.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           None
+  16: STORE_NAME           normalized
+  18: LOAD_CONST           None
+  20: STORE_NAME           legacy_normalized
+  22: LOAD_CONST           <code object __init__ at 0x00000240693ABC30, file "importlib\metadata\__init__.py", line 870>
+  24: MAKE_FUNCTION        
+  26: STORE_NAME           __init__
+  28: LOAD_NAME            staticmethod
+  30: LOAD_CONST           <code object normalize at 0x00000240693A9570, file "importlib\metadata\__init__.py", line 877>
+  32: MAKE_FUNCTION        
+  34: PRECALL              
+  38: CALL                 
+  48: STORE_NAME           normalize
+  50: LOAD_NAME            staticmethod
+  52: LOAD_CONST           <code object legacy_normalize at 0x000002406944A450, file "importlib\metadata\__init__.py", line 884>
+  54: MAKE_FUNCTION        
+  56: PRECALL              
+  60: CALL                 
+  70: STORE_NAME           legacy_normalize
+  72: LOAD_CONST           <code object __bool__ at 0x000002406945D7A0, file "importlib\metadata\__init__.py", line 892>
+  74: MAKE_FUNCTION        
+  76: STORE_NAME           __bool__
+  78: LOAD_CONST           None
+  80: RETURN_VALUE         

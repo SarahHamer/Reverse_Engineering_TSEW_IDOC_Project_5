@@ -1,0 +1,83 @@
+# Disassembly for dis._test
+# From module file: dis
+
+## co_consts:
+('Simple test program to disassemble a file.', 0, None, 'infile', 'rb', '?', '-', ('type', 'nargs', 'default'), 'exec')
+
+## co_names:
+('argparse', 'ArgumentParser', 'add_argument', 'FileType', 'parse_args', 'infile', 'read', 'compile', 'name', 'dis')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           None
+   6: IMPORT_NAME          argparse
+   8: STORE_FAST           argparse
+  10: LOAD_FAST            argparse
+  12: LOAD_METHOD          ArgumentParser
+  34: PRECALL              
+  38: CALL                 
+  48: STORE_FAST           parser
+  50: LOAD_FAST            parser
+  52: LOAD_METHOD          add_argument
+  74: LOAD_CONST           'infile'
+  76: LOAD_FAST            argparse
+  78: LOAD_METHOD          FileType
+ 100: LOAD_CONST           'rb'
+ 102: PRECALL              
+ 106: CALL                 
+ 116: LOAD_CONST           '?'
+ 118: LOAD_CONST           '-'
+ 120: KW_NAMES             
+ 122: PRECALL              
+ 126: CALL                 
+ 136: POP_TOP              
+ 138: LOAD_FAST            parser
+ 140: LOAD_METHOD          parse_args
+ 162: PRECALL              
+ 166: CALL                 
+ 176: STORE_FAST           args
+ 178: LOAD_FAST            args
+ 180: LOAD_ATTR            infile
+ 190: BEFORE_WITH          
+ 192: STORE_FAST           infile
+ 194: LOAD_FAST            infile
+ 196: LOAD_METHOD          read
+ 218: PRECALL              
+ 222: CALL                 
+ 232: STORE_FAST           source
+ 234: LOAD_CONST           None
+ 236: LOAD_CONST           None
+ 238: LOAD_CONST           None
+ 240: PRECALL              
+ 244: CALL                 
+ 254: POP_TOP              
+ 256: JUMP_FORWARD         to 280
+ 258: PUSH_EXC_INFO        
+ 260: WITH_EXCEPT_START    
+ 262: POP_JUMP_FORWARD_IF_TRUE to 272
+ 264: RERAISE              
+ 266: COPY                 
+ 268: POP_EXCEPT           
+ 270: RERAISE              
+ 272: POP_TOP              
+ 274: POP_EXCEPT           
+ 276: POP_TOP              
+ 278: POP_TOP              
+ 280: LOAD_GLOBAL          NULL + compile
+ 292: LOAD_FAST            source
+ 294: LOAD_FAST            args
+ 296: LOAD_ATTR            infile
+ 306: LOAD_ATTR            name
+ 316: LOAD_CONST           'exec'
+ 318: PRECALL              
+ 322: CALL                 
+ 332: STORE_FAST           code
+ 334: LOAD_GLOBAL          NULL + dis
+ 346: LOAD_FAST            code
+ 348: PRECALL              
+ 352: CALL                 
+ 362: POP_TOP              
+ 364: LOAD_CONST           None
+ 366: RETURN_VALUE         

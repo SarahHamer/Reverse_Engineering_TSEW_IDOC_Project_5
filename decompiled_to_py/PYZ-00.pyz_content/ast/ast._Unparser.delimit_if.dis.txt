@@ -1,0 +1,25 @@
+# Disassembly for ast._Unparser.delimit_if
+# From module file: ast
+
+## co_consts:
+(None,)
+
+## co_names:
+('delimit', 'nullcontext')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            condition
+   4: POP_JUMP_FORWARD_IF_FALSE to 50
+   6: LOAD_FAST            self
+   8: LOAD_METHOD          delimit
+  30: LOAD_FAST            start
+  32: LOAD_FAST            end
+  34: PRECALL              
+  38: CALL                 
+  48: RETURN_VALUE         
+  50: LOAD_GLOBAL          NULL + nullcontext
+  62: PRECALL              
+  66: CALL                 
+  76: RETURN_VALUE         

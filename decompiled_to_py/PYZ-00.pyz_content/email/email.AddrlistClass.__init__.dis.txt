@@ -1,0 +1,58 @@
+# Disassembly for email.AddrlistClass.__init__
+# From module file: email._parseaddr
+
+## co_consts:
+("Initialize a new instance.\n\n        `field' is an unparsed address header field, containing\n        one or more addresses.\n        ", '()<>@,:;."[]', 0, ' \t', '\r\n', '.', '', None)
+
+## co_names:
+('specials', 'pos', 'LWS', 'CR', 'FWS', 'atomends', 'replace', 'phraseends', 'field', 'commentlist')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '()<>@,:;."[]'
+   4: LOAD_FAST            self
+   6: STORE_ATTR           specials
+  16: LOAD_CONST           0
+  18: LOAD_FAST            self
+  20: STORE_ATTR           pos
+  30: LOAD_CONST           ' \t'
+  32: LOAD_FAST            self
+  34: STORE_ATTR           LWS
+  44: LOAD_CONST           '\r\n'
+  46: LOAD_FAST            self
+  48: STORE_ATTR           CR
+  58: LOAD_FAST            self
+  60: LOAD_ATTR            LWS
+  70: LOAD_FAST            self
+  72: LOAD_ATTR            CR
+  82: BINARY_OP            +
+  86: LOAD_FAST            self
+  88: STORE_ATTR           FWS
+  98: LOAD_FAST            self
+ 100: LOAD_ATTR            specials
+ 110: LOAD_FAST            self
+ 112: LOAD_ATTR            LWS
+ 122: BINARY_OP            +
+ 126: LOAD_FAST            self
+ 128: LOAD_ATTR            CR
+ 138: BINARY_OP            +
+ 142: LOAD_FAST            self
+ 144: STORE_ATTR           atomends
+ 154: LOAD_FAST            self
+ 156: LOAD_ATTR            atomends
+ 166: LOAD_METHOD          replace
+ 188: LOAD_CONST           '.'
+ 190: LOAD_CONST           ''
+ 192: PRECALL              
+ 196: CALL                 
+ 206: LOAD_FAST            self
+ 208: STORE_ATTR           phraseends
+ 218: LOAD_FAST            field
+ 220: LOAD_FAST            self
+ 222: STORE_ATTR           field
+ 232: BUILD_LIST           
+ 234: LOAD_FAST            self
+ 236: STORE_ATTR           commentlist
+ 246: LOAD_CONST           None
+ 248: RETURN_VALUE         

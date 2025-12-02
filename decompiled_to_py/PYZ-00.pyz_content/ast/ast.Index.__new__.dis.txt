@@ -1,0 +1,14 @@
+# Disassembly for ast.Index.__new__
+# From module file: ast
+
+## co_consts:
+(None,)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            value
+   4: RETURN_VALUE         

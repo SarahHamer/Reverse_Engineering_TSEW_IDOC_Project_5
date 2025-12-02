@@ -1,0 +1,24 @@
+# Disassembly for http.IncompleteRead.__init__
+# From module file: http.client
+
+## co_consts:
+(None,)
+
+## co_names:
+('args', 'partial', 'expected')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            partial
+   4: BUILD_TUPLE          
+   6: LOAD_FAST            self
+   8: STORE_ATTR           args
+  18: LOAD_FAST            partial
+  20: LOAD_FAST            self
+  22: STORE_ATTR           partial
+  32: LOAD_FAST            expected
+  34: LOAD_FAST            self
+  36: STORE_ATTR           expected
+  46: LOAD_CONST           None
+  48: RETURN_VALUE         

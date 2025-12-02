@@ -1,0 +1,165 @@
+# Disassembly for argparse._ActionsContainer.__init__
+# From module file: argparse
+
+## co_consts:
+(None, 'action', 'store', 'store_const', 'store_true', 'store_false', 'append', 'append_const', 'count', 'help', 'version', 'parsers', 'extend', '^-\\d+$|^-\\d*\\.\\d+$')
+
+## co_names:
+('super', '_ActionsContainer', '__init__', 'description', 'argument_default', 'prefix_chars', 'conflict_handler', '_registries', 'register', '_StoreAction', '_StoreConstAction', '_StoreTrueAction', '_StoreFalseAction', '_AppendAction', '_AppendConstAction', '_CountAction', '_HelpAction', '_VersionAction', '_SubParsersAction', '_ExtendAction', '_get_handler', '_actions', '_option_string_actions', '_action_groups', '_mutually_exclusive_groups', '_defaults', '_re', 'compile', '_negative_number_matcher', '_has_negative_number_optionals')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + super
+  16: LOAD_GLOBAL          _ActionsContainer
+  28: LOAD_FAST            self
+  30: PRECALL              
+  34: CALL                 
+  44: LOAD_METHOD          __init__
+  66: PRECALL              
+  70: CALL                 
+  80: POP_TOP              
+  82: LOAD_FAST            description
+  84: LOAD_FAST            self
+  86: STORE_ATTR           description
+  96: LOAD_FAST            argument_default
+  98: LOAD_FAST            self
+ 100: STORE_ATTR           argument_default
+ 110: LOAD_FAST            prefix_chars
+ 112: LOAD_FAST            self
+ 114: STORE_ATTR           prefix_chars
+ 124: LOAD_FAST            conflict_handler
+ 126: LOAD_FAST            self
+ 128: STORE_ATTR           conflict_handler
+ 138: BUILD_MAP            
+ 140: LOAD_FAST            self
+ 142: STORE_ATTR           _registries
+ 152: LOAD_FAST            self
+ 154: LOAD_METHOD          register
+ 176: LOAD_CONST           'action'
+ 178: LOAD_CONST           None
+ 180: LOAD_GLOBAL          _StoreAction
+ 192: PRECALL              
+ 196: CALL                 
+ 206: POP_TOP              
+ 208: LOAD_FAST            self
+ 210: LOAD_METHOD          register
+ 232: LOAD_CONST           'action'
+ 234: LOAD_CONST           'store'
+ 236: LOAD_GLOBAL          _StoreAction
+ 248: PRECALL              
+ 252: CALL                 
+ 262: POP_TOP              
+ 264: LOAD_FAST            self
+ 266: LOAD_METHOD          register
+ 288: LOAD_CONST           'action'
+ 290: LOAD_CONST           'store_const'
+ 292: LOAD_GLOBAL          _StoreConstAction
+ 304: PRECALL              
+ 308: CALL                 
+ 318: POP_TOP              
+ 320: LOAD_FAST            self
+ 322: LOAD_METHOD          register
+ 344: LOAD_CONST           'action'
+ 346: LOAD_CONST           'store_true'
+ 348: LOAD_GLOBAL          _StoreTrueAction
+ 360: PRECALL              
+ 364: CALL                 
+ 374: POP_TOP              
+ 376: LOAD_FAST            self
+ 378: LOAD_METHOD          register
+ 400: LOAD_CONST           'action'
+ 402: LOAD_CONST           'store_false'
+ 404: LOAD_GLOBAL          _StoreFalseAction
+ 416: PRECALL              
+ 420: CALL                 
+ 430: POP_TOP              
+ 432: LOAD_FAST            self
+ 434: LOAD_METHOD          register
+ 456: LOAD_CONST           'action'
+ 458: LOAD_CONST           'append'
+ 460: LOAD_GLOBAL          _AppendAction
+ 472: PRECALL              
+ 476: CALL                 
+ 486: POP_TOP              
+ 488: LOAD_FAST            self
+ 490: LOAD_METHOD          register
+ 512: LOAD_CONST           'action'
+ 514: LOAD_CONST           'append_const'
+ 516: LOAD_GLOBAL          _AppendConstAction
+ 528: PRECALL              
+ 532: CALL                 
+ 542: POP_TOP              
+ 544: LOAD_FAST            self
+ 546: LOAD_METHOD          register
+ 568: LOAD_CONST           'action'
+ 570: LOAD_CONST           'count'
+ 572: LOAD_GLOBAL          _CountAction
+ 584: PRECALL              
+ 588: CALL                 
+ 598: POP_TOP              
+ 600: LOAD_FAST            self
+ 602: LOAD_METHOD          register
+ 624: LOAD_CONST           'action'
+ 626: LOAD_CONST           'help'
+ 628: LOAD_GLOBAL          _HelpAction
+ 640: PRECALL              
+ 644: CALL                 
+ 654: POP_TOP              
+ 656: LOAD_FAST            self
+ 658: LOAD_METHOD          register
+ 680: LOAD_CONST           'action'
+ 682: LOAD_CONST           'version'
+ 684: LOAD_GLOBAL          _VersionAction
+ 696: PRECALL              
+ 700: CALL                 
+ 710: POP_TOP              
+ 712: LOAD_FAST            self
+ 714: LOAD_METHOD          register
+ 736: LOAD_CONST           'action'
+ 738: LOAD_CONST           'parsers'
+ 740: LOAD_GLOBAL          _SubParsersAction
+ 752: PRECALL              
+ 756: CALL                 
+ 766: POP_TOP              
+ 768: LOAD_FAST            self
+ 770: LOAD_METHOD          register
+ 792: LOAD_CONST           'action'
+ 794: LOAD_CONST           'extend'
+ 796: LOAD_GLOBAL          _ExtendAction
+ 808: PRECALL              
+ 812: CALL                 
+ 822: POP_TOP              
+ 824: LOAD_FAST            self
+ 826: LOAD_METHOD          _get_handler
+ 848: PRECALL              
+ 852: CALL                 
+ 862: POP_TOP              
+ 864: BUILD_LIST           
+ 866: LOAD_FAST            self
+ 868: STORE_ATTR           _actions
+ 878: BUILD_MAP            
+ 880: LOAD_FAST            self
+ 882: STORE_ATTR           _option_string_actions
+ 892: BUILD_LIST           
+ 894: LOAD_FAST            self
+ 896: STORE_ATTR           _action_groups
+ 906: BUILD_LIST           
+ 908: LOAD_FAST            self
+ 910: STORE_ATTR           _mutually_exclusive_groups
+ 920: BUILD_MAP            
+ 922: LOAD_FAST            self
+ 924: STORE_ATTR           _defaults
+ 934: LOAD_GLOBAL          NULL + _re
+ 946: LOAD_ATTR            compile
+ 956: LOAD_CONST           '^-\\d+$|^-\\d*\\.\\d+$'
+ 958: PRECALL              
+ 962: CALL                 
+ 972: LOAD_FAST            self
+ 974: STORE_ATTR           _negative_number_matcher
+ 984: BUILD_LIST           
+ 986: LOAD_FAST            self
+ 988: STORE_ATTR           _has_negative_number_optionals
+ 998: LOAD_CONST           None
+1000: RETURN_VALUE         

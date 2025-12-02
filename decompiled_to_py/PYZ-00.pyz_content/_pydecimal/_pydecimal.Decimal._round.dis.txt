@@ -1,0 +1,71 @@
+# Disassembly for _pydecimal.Decimal._round
+# From module file: _pydecimal
+
+## co_consts:
+('Round a nonzero, nonspecial Decimal to a fixed number of\n        significant figures, using the given rounding mode.\n\n        Infinities, NaNs and zeros are returned unaltered.\n\n        This operation is quiet: it raises no flags, and uses no\n        information from the context.\n\n        ', 0, 'argument should be at least 1 in _round', 1)
+
+## co_names:
+('ValueError', '_is_special', 'Decimal', '_rescale', 'adjusted')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            places
+   4: LOAD_CONST           0
+   6: COMPARE_OP           <=
+  12: POP_JUMP_FORWARD_IF_FALSE to 44
+  14: LOAD_GLOBAL          NULL + ValueError
+  26: LOAD_CONST           'argument should be at least 1 in _round'
+  28: PRECALL              
+  32: CALL                 
+  42: RAISE_VARARGS        
+  44: LOAD_FAST            self
+  46: LOAD_ATTR            _is_special
+  56: POP_JUMP_FORWARD_IF_TRUE to 62
+  58: LOAD_FAST            self
+  60: POP_JUMP_FORWARD_IF_TRUE to 92
+  62: LOAD_GLOBAL          NULL + Decimal
+  74: LOAD_FAST            self
+  76: PRECALL              
+  80: CALL                 
+  90: RETURN_VALUE         
+  92: LOAD_FAST            self
+  94: LOAD_METHOD          _rescale
+ 116: LOAD_FAST            self
+ 118: LOAD_METHOD          adjusted
+ 140: PRECALL              
+ 144: CALL                 
+ 154: LOAD_CONST           1
+ 156: BINARY_OP            +
+ 160: LOAD_FAST            places
+ 162: BINARY_OP            -
+ 166: LOAD_FAST            rounding
+ 168: PRECALL              
+ 172: CALL                 
+ 182: STORE_FAST           ans
+ 184: LOAD_FAST            ans
+ 186: LOAD_METHOD          adjusted
+ 208: PRECALL              
+ 212: CALL                 
+ 222: LOAD_FAST            self
+ 224: LOAD_METHOD          adjusted
+ 246: PRECALL              
+ 250: CALL                 
+ 260: COMPARE_OP           !=
+ 266: POP_JUMP_FORWARD_IF_FALSE to 360
+ 268: LOAD_FAST            ans
+ 270: LOAD_METHOD          _rescale
+ 292: LOAD_FAST            ans
+ 294: LOAD_METHOD          adjusted
+ 316: PRECALL              
+ 320: CALL                 
+ 330: LOAD_CONST           1
+ 332: BINARY_OP            +
+ 336: LOAD_FAST            places
+ 338: BINARY_OP            -
+ 342: LOAD_FAST            rounding
+ 344: PRECALL              
+ 348: CALL                 
+ 358: STORE_FAST           ans
+ 360: LOAD_FAST            ans
+ 362: RETURN_VALUE         

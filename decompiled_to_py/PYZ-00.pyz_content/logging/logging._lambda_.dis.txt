@@ -1,0 +1,18 @@
+# Disassembly for logging.<lambda>
+# From module file: logging
+
+## co_consts:
+(None, 1)
+
+## co_names:
+('sys', '_getframe')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + sys
+  14: LOAD_ATTR            _getframe
+  24: LOAD_CONST           1
+  26: PRECALL              
+  30: CALL                 
+  40: RETURN_VALUE         

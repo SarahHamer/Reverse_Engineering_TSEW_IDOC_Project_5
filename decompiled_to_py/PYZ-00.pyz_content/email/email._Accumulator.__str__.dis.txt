@@ -1,0 +1,23 @@
+# Disassembly for email._Accumulator.__str__
+# From module file: email.header
+
+## co_consts:
+(None, <code object <genexpr> at 0x000002406944AEF0, file "email\header.py", line 560>)
+
+## co_names:
+('EMPTYSTRING', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          EMPTYSTRING
+  14: LOAD_METHOD          join
+  36: LOAD_CONST           <code object <genexpr> at 0x000002406944AEF0, file "email\header.py", line 560>
+  38: MAKE_FUNCTION        
+  40: LOAD_FAST            self
+  42: GET_ITER             
+  44: PRECALL              
+  48: CALL                 
+  58: PRECALL              
+  62: CALL                 
+  72: RETURN_VALUE         

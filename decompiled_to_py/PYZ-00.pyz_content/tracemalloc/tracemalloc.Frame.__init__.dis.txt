@@ -1,0 +1,17 @@
+# Disassembly for tracemalloc.Frame.__init__
+# From module file: tracemalloc
+
+## co_consts:
+(None,)
+
+## co_names:
+('_frame',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            frame
+   4: LOAD_FAST            self
+   6: STORE_ATTR           _frame
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         

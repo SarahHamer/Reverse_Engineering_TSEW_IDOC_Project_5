@@ -1,0 +1,24 @@
+# Disassembly for datetime.datetime.strptime
+# From module file: datetime
+
+## co_consts:
+('string, format -> new datetime parsed from a string (like time.strptime()).', 0, None)
+
+## co_names:
+('_strptime', '_strptime_datetime')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           None
+   6: IMPORT_NAME          _strptime
+   8: STORE_FAST           _strptime
+  10: LOAD_FAST            _strptime
+  12: LOAD_METHOD          _strptime_datetime
+  34: LOAD_FAST            cls
+  36: LOAD_FAST            date_string
+  38: LOAD_FAST            format
+  40: PRECALL              
+  44: CALL                 
+  54: RETURN_VALUE         

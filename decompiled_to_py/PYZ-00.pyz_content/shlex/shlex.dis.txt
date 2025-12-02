@@ -1,0 +1,143 @@
+# Disassembly for shlex
+# From module file: shlex
+
+## co_consts:
+('A lexical analyzer class for simple shell-like syntaxes.', 0, None, ('deque',), ('StringIO',), ('shlex', 'split', 'quote', 'join'), <code object shlex at 0x00000240693D2170, file "shlex.py", line 19>, 'shlex', False, True, <code object split at 0x00000240691C14D0, file "shlex.py", line 305>, <code object join at 0x00000240693EB730, file "shlex.py", line 318>, '[^\\w@%+=:,./-]', <code object quote at 0x000002406941A0D0, file "shlex.py", line 325>, <code object _print_tokens at 0x00000240693D2760, file "shlex.py", line 337>, '__main__', 1, (False, True))
+
+## co_names:
+('__doc__', 'os', 're', 'sys', 'collections', 'deque', 'io', 'StringIO', '__all__', 'shlex', 'split', 'join', 'compile', 'ASCII', 'search', '_find_unsafe', 'quote', '_print_tokens', '__name__', 'len', 'argv', 'fn', 'open', 'f')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'A lexical analyzer class for simple shell-like syntaxes.'
+   4: STORE_NAME           __doc__
+   6: LOAD_CONST           0
+   8: LOAD_CONST           None
+  10: IMPORT_NAME          os
+  12: STORE_NAME           os
+  14: LOAD_CONST           0
+  16: LOAD_CONST           None
+  18: IMPORT_NAME          re
+  20: STORE_NAME           re
+  22: LOAD_CONST           0
+  24: LOAD_CONST           None
+  26: IMPORT_NAME          sys
+  28: STORE_NAME           sys
+  30: LOAD_CONST           0
+  32: LOAD_CONST           ('deque',)
+  34: IMPORT_NAME          collections
+  36: IMPORT_FROM          deque
+  38: STORE_NAME           deque
+  40: POP_TOP              
+  42: LOAD_CONST           0
+  44: LOAD_CONST           ('StringIO',)
+  46: IMPORT_NAME          io
+  48: IMPORT_FROM          StringIO
+  50: STORE_NAME           StringIO
+  52: POP_TOP              
+  54: BUILD_LIST           
+  56: LOAD_CONST           ('shlex', 'split', 'quote', 'join')
+  58: LIST_EXTEND          
+  60: STORE_NAME           __all__
+  62: PUSH_NULL            
+  64: LOAD_BUILD_CLASS     
+  66: LOAD_CONST           <code object shlex at 0x00000240693D2170, file "shlex.py", line 19>
+  68: MAKE_FUNCTION        
+  70: LOAD_CONST           'shlex'
+  72: PRECALL              
+  76: CALL                 
+  86: STORE_NAME           shlex
+  88: LOAD_CONST           (False, True)
+  90: LOAD_CONST           <code object split at 0x00000240691C14D0, file "shlex.py", line 305>
+  92: MAKE_FUNCTION        defaults
+  94: STORE_NAME           split
+  96: LOAD_CONST           <code object join at 0x00000240693EB730, file "shlex.py", line 318>
+  98: MAKE_FUNCTION        
+ 100: STORE_NAME           join
+ 102: PUSH_NULL            
+ 104: LOAD_NAME            re
+ 106: LOAD_ATTR            compile
+ 116: LOAD_CONST           '[^\\w@%+=:,./-]'
+ 118: LOAD_NAME            re
+ 120: LOAD_ATTR            ASCII
+ 130: PRECALL              
+ 134: CALL                 
+ 144: LOAD_ATTR            search
+ 154: STORE_NAME           _find_unsafe
+ 156: LOAD_CONST           <code object quote at 0x000002406941A0D0, file "shlex.py", line 325>
+ 158: MAKE_FUNCTION        
+ 160: STORE_NAME           quote
+ 162: LOAD_CONST           <code object _print_tokens at 0x00000240693D2760, file "shlex.py", line 337>
+ 164: MAKE_FUNCTION        
+ 166: STORE_NAME           _print_tokens
+ 168: LOAD_NAME            __name__
+ 170: LOAD_CONST           '__main__'
+ 172: COMPARE_OP           ==
+ 178: POP_JUMP_FORWARD_IF_FALSE to 406
+ 180: PUSH_NULL            
+ 182: LOAD_NAME            len
+ 184: LOAD_NAME            sys
+ 186: LOAD_ATTR            argv
+ 196: PRECALL              
+ 200: CALL                 
+ 210: LOAD_CONST           1
+ 212: COMPARE_OP           ==
+ 218: POP_JUMP_FORWARD_IF_FALSE to 262
+ 220: PUSH_NULL            
+ 222: LOAD_NAME            _print_tokens
+ 224: PUSH_NULL            
+ 226: LOAD_NAME            shlex
+ 228: PRECALL              
+ 232: CALL                 
+ 242: PRECALL              
+ 246: CALL                 
+ 256: POP_TOP              
+ 258: LOAD_CONST           None
+ 260: RETURN_VALUE         
+ 262: LOAD_NAME            sys
+ 264: LOAD_ATTR            argv
+ 274: LOAD_CONST           1
+ 276: BINARY_SUBSCR        
+ 286: STORE_NAME           fn
+ 288: PUSH_NULL            
+ 290: LOAD_NAME            open
+ 292: LOAD_NAME            fn
+ 294: PRECALL              
+ 298: CALL                 
+ 308: BEFORE_WITH          
+ 310: STORE_NAME           f
+ 312: PUSH_NULL            
+ 314: LOAD_NAME            _print_tokens
+ 316: PUSH_NULL            
+ 318: LOAD_NAME            shlex
+ 320: LOAD_NAME            f
+ 322: LOAD_NAME            fn
+ 324: PRECALL              
+ 328: CALL                 
+ 338: PRECALL              
+ 342: CALL                 
+ 352: POP_TOP              
+ 354: LOAD_CONST           None
+ 356: LOAD_CONST           None
+ 358: LOAD_CONST           None
+ 360: PRECALL              
+ 364: CALL                 
+ 374: POP_TOP              
+ 376: LOAD_CONST           None
+ 378: RETURN_VALUE         
+ 380: PUSH_EXC_INFO        
+ 382: WITH_EXCEPT_START    
+ 384: POP_JUMP_FORWARD_IF_TRUE to 394
+ 386: RERAISE              
+ 388: COPY                 
+ 390: POP_EXCEPT           
+ 392: RERAISE              
+ 394: POP_TOP              
+ 396: POP_EXCEPT           
+ 398: POP_TOP              
+ 400: POP_TOP              
+ 402: LOAD_CONST           None
+ 404: RETURN_VALUE         
+ 406: LOAD_CONST           None
+ 408: RETURN_VALUE         

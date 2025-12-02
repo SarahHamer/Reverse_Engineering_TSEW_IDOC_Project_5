@@ -1,0 +1,21 @@
+# Disassembly for tracemalloc.Frame.__str__
+# From module file: tracemalloc
+
+## co_consts:
+(None, ':')
+
+## co_names:
+('filename', 'lineno')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            filename
+  14: FORMAT_VALUE         str
+  16: LOAD_CONST           ':'
+  18: LOAD_FAST            self
+  20: LOAD_ATTR            lineno
+  30: FORMAT_VALUE         str
+  32: BUILD_STRING         
+  34: RETURN_VALUE         

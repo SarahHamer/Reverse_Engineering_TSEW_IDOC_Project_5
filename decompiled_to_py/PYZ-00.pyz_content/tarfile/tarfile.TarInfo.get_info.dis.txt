@@ -1,0 +1,77 @@
+# Disassembly for tarfile.TarInfo.get_info
+# From module file: tarfile
+
+## co_consts:
+("Return the TarInfo's attributes as a dictionary.\n        ", None, 4095, ('name', 'mode', 'uid', 'gid', 'size', 'mtime', 'chksum', 'type', 'linkname', 'uname', 'gname', 'devmajor', 'devminor'), 'type', 'name', '/')
+
+## co_names:
+('mode', 'name', 'uid', 'gid', 'size', 'mtime', 'chksum', 'type', 'linkname', 'uname', 'gname', 'devmajor', 'devminor', 'DIRTYPE', 'endswith')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            mode
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 22
+  16: LOAD_CONST           None
+  18: STORE_FAST           mode
+  20: JUMP_FORWARD         to 42
+  22: LOAD_FAST            self
+  24: LOAD_ATTR            mode
+  34: LOAD_CONST           4095
+  36: BINARY_OP            &
+  40: STORE_FAST           mode
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            name
+  54: LOAD_FAST            mode
+  56: LOAD_FAST            self
+  58: LOAD_ATTR            uid
+  68: LOAD_FAST            self
+  70: LOAD_ATTR            gid
+  80: LOAD_FAST            self
+  82: LOAD_ATTR            size
+  92: LOAD_FAST            self
+  94: LOAD_ATTR            mtime
+ 104: LOAD_FAST            self
+ 106: LOAD_ATTR            chksum
+ 116: LOAD_FAST            self
+ 118: LOAD_ATTR            type
+ 128: LOAD_FAST            self
+ 130: LOAD_ATTR            linkname
+ 140: LOAD_FAST            self
+ 142: LOAD_ATTR            uname
+ 152: LOAD_FAST            self
+ 154: LOAD_ATTR            gname
+ 164: LOAD_FAST            self
+ 166: LOAD_ATTR            devmajor
+ 176: LOAD_FAST            self
+ 178: LOAD_ATTR            devminor
+ 188: LOAD_CONST           ('name', 'mode', 'uid', 'gid', 'size', 'mtime', 'chksum', 'type', 'linkname', 'uname', 'gname', 'devmajor', 'devminor')
+ 190: BUILD_CONST_KEY_MAP  
+ 192: STORE_FAST           info
+ 194: LOAD_FAST            info
+ 196: LOAD_CONST           'type'
+ 198: BINARY_SUBSCR        
+ 208: LOAD_GLOBAL          DIRTYPE
+ 220: COMPARE_OP           ==
+ 226: POP_JUMP_FORWARD_IF_FALSE to 314
+ 228: LOAD_FAST            info
+ 230: LOAD_CONST           'name'
+ 232: BINARY_SUBSCR        
+ 242: LOAD_METHOD          endswith
+ 264: LOAD_CONST           '/'
+ 266: PRECALL              
+ 270: CALL                 
+ 280: POP_JUMP_FORWARD_IF_TRUE to 314
+ 282: LOAD_FAST            info
+ 284: LOAD_CONST           'name'
+ 286: COPY                 
+ 288: COPY                 
+ 290: BINARY_SUBSCR        
+ 300: LOAD_CONST           '/'
+ 302: BINARY_OP            +=
+ 306: SWAP                 
+ 308: SWAP                 
+ 310: STORE_SUBSCR         
+ 314: LOAD_FAST            info
+ 316: RETURN_VALUE         

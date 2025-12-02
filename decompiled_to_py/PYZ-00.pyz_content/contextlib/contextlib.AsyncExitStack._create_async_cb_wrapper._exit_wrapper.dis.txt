@@ -1,0 +1,31 @@
+# Disassembly for contextlib.AsyncExitStack._create_async_cb_wrapper._exit_wrapper
+# From module file: contextlib
+
+## co_consts:
+(None,)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RETURN_GENERATOR     
+   4: POP_TOP              
+   6: RESUME               
+   8: PUSH_NULL            
+  10: LOAD_DEREF           callback
+  12: LOAD_DEREF           args
+  14: BUILD_MAP            
+  16: LOAD_DEREF           kwds
+  18: DICT_MERGE           
+  20: CALL_FUNCTION_EX     
+  22: GET_AWAITABLE        
+  24: LOAD_CONST           None
+  26: SEND                 to 34
+  28: YIELD_VALUE          
+  30: RESUME               
+  32: JUMP_BACKWARD_NO_INTERRUPT to 26
+  34: POP_TOP              
+  36: LOAD_CONST           None
+  38: RETURN_VALUE         

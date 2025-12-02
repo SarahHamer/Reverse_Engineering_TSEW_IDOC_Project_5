@@ -1,0 +1,46 @@
+# Disassembly for dis._parse_varint
+# From module file: dis
+
+## co_consts:
+(None, 63, 64, 6)
+
+## co_names:
+('next',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + next
+  14: LOAD_FAST            iterator
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           b
+  32: LOAD_FAST            b
+  34: LOAD_CONST           63
+  36: BINARY_OP            &
+  40: STORE_FAST           val
+  42: LOAD_FAST            b
+  44: LOAD_CONST           64
+  46: BINARY_OP            &
+  50: POP_JUMP_FORWARD_IF_FALSE to 118
+  52: LOAD_FAST            val
+  54: LOAD_CONST           6
+  56: BINARY_OP            <<=
+  60: STORE_FAST           val
+  62: LOAD_GLOBAL          NULL + next
+  74: LOAD_FAST            iterator
+  76: PRECALL              
+  80: CALL                 
+  90: STORE_FAST           b
+  92: LOAD_FAST            val
+  94: LOAD_FAST            b
+  96: LOAD_CONST           63
+  98: BINARY_OP            &
+ 102: BINARY_OP            |=
+ 106: STORE_FAST           val
+ 108: LOAD_FAST            b
+ 110: LOAD_CONST           64
+ 112: BINARY_OP            &
+ 116: POP_JUMP_BACKWARD_IF_TRUE to 52
+ 118: LOAD_FAST            val
+ 120: RETURN_VALUE         

@@ -1,0 +1,19 @@
+# Disassembly for tracemalloc.Traceback.__str__
+# From module file: tracemalloc
+
+## co_consts:
+(None, 0)
+
+## co_names:
+('str',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + str
+  14: LOAD_FAST            self
+  16: LOAD_CONST           0
+  18: BINARY_SUBSCR        
+  28: PRECALL              
+  32: CALL                 
+  42: RETURN_VALUE         

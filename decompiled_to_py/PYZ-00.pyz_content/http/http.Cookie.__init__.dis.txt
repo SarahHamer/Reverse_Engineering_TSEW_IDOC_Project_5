@@ -1,0 +1,100 @@
+# Disassembly for http.Cookie.__init__
+# From module file: http.cookiejar
+
+## co_consts:
+(None, True, 'if port is None, port_specified must be false')
+
+## co_names:
+('int', 'float', 'ValueError', 'version', 'name', 'value', 'port', 'port_specified', 'lower', 'domain', 'domain_specified', 'domain_initial_dot', 'path', 'path_specified', 'secure', 'expires', 'discard', 'comment', 'comment_url', 'rfc2109', 'copy', '_rest')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            version
+   4: POP_JUMP_FORWARD_IF_NONE to 36
+   6: LOAD_GLOBAL          NULL + int
+  18: LOAD_FAST            version
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           version
+  36: LOAD_FAST            expires
+  38: POP_JUMP_FORWARD_IF_NONE to 96
+  40: LOAD_GLOBAL          NULL + int
+  52: LOAD_GLOBAL          NULL + float
+  64: LOAD_FAST            expires
+  66: PRECALL              
+  70: CALL                 
+  80: PRECALL              
+  84: CALL                 
+  94: STORE_FAST           expires
+  96: LOAD_FAST            port
+  98: POP_JUMP_FORWARD_IF_NOT_NONE to 138
+ 100: LOAD_FAST            port_specified
+ 102: LOAD_CONST           True
+ 104: IS_OP                
+ 106: POP_JUMP_FORWARD_IF_FALSE to 138
+ 108: LOAD_GLOBAL          NULL + ValueError
+ 120: LOAD_CONST           'if port is None, port_specified must be false'
+ 122: PRECALL              
+ 126: CALL                 
+ 136: RAISE_VARARGS        
+ 138: LOAD_FAST            version
+ 140: LOAD_FAST            self
+ 142: STORE_ATTR           version
+ 152: LOAD_FAST            name
+ 154: LOAD_FAST            self
+ 156: STORE_ATTR           name
+ 166: LOAD_FAST            value
+ 168: LOAD_FAST            self
+ 170: STORE_ATTR           value
+ 180: LOAD_FAST            port
+ 182: LOAD_FAST            self
+ 184: STORE_ATTR           port
+ 194: LOAD_FAST            port_specified
+ 196: LOAD_FAST            self
+ 198: STORE_ATTR           port_specified
+ 208: LOAD_FAST            domain
+ 210: LOAD_METHOD          lower
+ 232: PRECALL              
+ 236: CALL                 
+ 246: LOAD_FAST            self
+ 248: STORE_ATTR           domain
+ 258: LOAD_FAST            domain_specified
+ 260: LOAD_FAST            self
+ 262: STORE_ATTR           domain_specified
+ 272: LOAD_FAST            domain_initial_dot
+ 274: LOAD_FAST            self
+ 276: STORE_ATTR           domain_initial_dot
+ 286: LOAD_FAST            path
+ 288: LOAD_FAST            self
+ 290: STORE_ATTR           path
+ 300: LOAD_FAST            path_specified
+ 302: LOAD_FAST            self
+ 304: STORE_ATTR           path_specified
+ 314: LOAD_FAST            secure
+ 316: LOAD_FAST            self
+ 318: STORE_ATTR           secure
+ 328: LOAD_FAST            expires
+ 330: LOAD_FAST            self
+ 332: STORE_ATTR           expires
+ 342: LOAD_FAST            discard
+ 344: LOAD_FAST            self
+ 346: STORE_ATTR           discard
+ 356: LOAD_FAST            comment
+ 358: LOAD_FAST            self
+ 360: STORE_ATTR           comment
+ 370: LOAD_FAST            comment_url
+ 372: LOAD_FAST            self
+ 374: STORE_ATTR           comment_url
+ 384: LOAD_FAST            rfc2109
+ 386: LOAD_FAST            self
+ 388: STORE_ATTR           rfc2109
+ 398: LOAD_GLOBAL          NULL + copy
+ 410: LOAD_ATTR            copy
+ 420: LOAD_FAST            rest
+ 422: PRECALL              
+ 426: CALL                 
+ 436: LOAD_FAST            self
+ 438: STORE_ATTR           _rest
+ 448: LOAD_CONST           None
+ 450: RETURN_VALUE         

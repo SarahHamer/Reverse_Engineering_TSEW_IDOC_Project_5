@@ -1,0 +1,27 @@
+# Disassembly for stringprep.in_table_c21_c22
+# From module file: stringprep
+
+## co_consts:
+(None, 'Cc')
+
+## co_names:
+('unicodedata', 'category', 'ord', 'c22_specials')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + unicodedata
+  14: LOAD_ATTR            category
+  24: LOAD_FAST            code
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_CONST           'Cc'
+  42: COMPARE_OP           ==
+  48: JUMP_IF_TRUE_OR_POP  to 92
+  50: LOAD_GLOBAL          NULL + ord
+  62: LOAD_FAST            code
+  64: PRECALL              
+  68: CALL                 
+  78: LOAD_GLOBAL          c22_specials
+  90: CONTAINS_OP          
+  92: RETURN_VALUE         

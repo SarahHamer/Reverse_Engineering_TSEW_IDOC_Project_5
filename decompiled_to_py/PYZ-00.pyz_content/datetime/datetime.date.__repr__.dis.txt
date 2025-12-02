@@ -1,0 +1,28 @@
+# Disassembly for datetime.date.__repr__
+# From module file: datetime
+
+## co_consts:
+("Convert to formal string, for repr().\n\n        >>> dt = datetime(2010, 1, 1)\n        >>> repr(dt)\n        'datetime.datetime(2010, 1, 1, 0, 0)'\n\n        >>> dt = datetime(2010, 1, 1, tzinfo=timezone.utc)\n        >>> repr(dt)\n        'datetime.datetime(2010, 1, 1, 0, 0, tzinfo=datetime.timezone.utc)'\n        ", '%s.%s(%d, %d, %d)')
+
+## co_names:
+('__class__', '__module__', '__qualname__', '_year', '_month', '_day')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '%s.%s(%d, %d, %d)'
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            __class__
+  16: LOAD_ATTR            __module__
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            __class__
+  38: LOAD_ATTR            __qualname__
+  48: LOAD_FAST            self
+  50: LOAD_ATTR            _year
+  60: LOAD_FAST            self
+  62: LOAD_ATTR            _month
+  72: LOAD_FAST            self
+  74: LOAD_ATTR            _day
+  84: BUILD_TUPLE          
+  86: BINARY_OP            %
+  90: RETURN_VALUE         

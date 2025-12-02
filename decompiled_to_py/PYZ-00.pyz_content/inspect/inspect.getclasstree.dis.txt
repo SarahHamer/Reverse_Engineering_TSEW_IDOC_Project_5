@@ -1,0 +1,93 @@
+# Disassembly for inspect.getclasstree
+# From module file: inspect
+
+## co_consts:
+("Arrange the given list of classes into a hierarchy of nested lists.\n\n    Where a nested list appears, it contains classes derived from the class\n    whose entry immediately precedes the list.  Each entry is a 2-tuple\n    containing a class and a tuple of its base classes.  If the 'unique'\n    argument is true, exactly one entry appears in the returned structure\n    for each class in the given list.  Otherwise, classes using multiple\n    inheritance and their descendants will appear multiple times.", None)
+
+## co_names:
+('__bases__', 'append', 'walktree')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_MAP            
+   4: STORE_FAST           children
+   6: BUILD_LIST           
+   8: STORE_FAST           roots
+  10: LOAD_FAST            classes
+  12: GET_ITER             
+  14: FOR_ITER             to 214
+  16: STORE_FAST           c
+  18: LOAD_FAST            c
+  20: LOAD_ATTR            __bases__
+  30: POP_JUMP_FORWARD_IF_FALSE to 162
+  32: LOAD_FAST            c
+  34: LOAD_ATTR            __bases__
+  44: GET_ITER             
+  46: FOR_ITER             to 160
+  48: STORE_FAST           parent
+  50: LOAD_FAST            parent
+  52: LOAD_FAST            children
+  54: CONTAINS_OP          
+  56: POP_JUMP_FORWARD_IF_FALSE to 68
+  58: BUILD_LIST           
+  60: LOAD_FAST            children
+  62: LOAD_FAST            parent
+  64: STORE_SUBSCR         
+  68: LOAD_FAST            c
+  70: LOAD_FAST            children
+  72: LOAD_FAST            parent
+  74: BINARY_SUBSCR        
+  84: CONTAINS_OP          
+  86: POP_JUMP_FORWARD_IF_FALSE to 142
+  88: LOAD_FAST            children
+  90: LOAD_FAST            parent
+  92: BINARY_SUBSCR        
+ 102: LOAD_METHOD          append
+ 124: LOAD_FAST            c
+ 126: PRECALL              
+ 130: CALL                 
+ 140: POP_TOP              
+ 142: LOAD_FAST            unique
+ 144: POP_JUMP_FORWARD_IF_FALSE to 158
+ 146: LOAD_FAST            parent
+ 148: LOAD_FAST            classes
+ 150: CONTAINS_OP          
+ 152: POP_JUMP_FORWARD_IF_FALSE to 158
+ 154: POP_TOP              
+ 156: JUMP_FORWARD         to 160
+ 158: JUMP_BACKWARD        to 46
+ 160: JUMP_BACKWARD        to 14
+ 162: LOAD_FAST            c
+ 164: LOAD_FAST            roots
+ 166: CONTAINS_OP          
+ 168: POP_JUMP_FORWARD_IF_FALSE to 212
+ 170: LOAD_FAST            roots
+ 172: LOAD_METHOD          append
+ 194: LOAD_FAST            c
+ 196: PRECALL              
+ 200: CALL                 
+ 210: POP_TOP              
+ 212: JUMP_BACKWARD        to 14
+ 214: LOAD_FAST            children
+ 216: GET_ITER             
+ 218: FOR_ITER             to 274
+ 220: STORE_FAST           parent
+ 222: LOAD_FAST            parent
+ 224: LOAD_FAST            classes
+ 226: CONTAINS_OP          
+ 228: POP_JUMP_FORWARD_IF_FALSE to 272
+ 230: LOAD_FAST            roots
+ 232: LOAD_METHOD          append
+ 254: LOAD_FAST            parent
+ 256: PRECALL              
+ 260: CALL                 
+ 270: POP_TOP              
+ 272: JUMP_BACKWARD        to 218
+ 274: LOAD_GLOBAL          NULL + walktree
+ 286: LOAD_FAST            roots
+ 288: LOAD_FAST            children
+ 290: LOAD_CONST           None
+ 292: PRECALL              
+ 296: CALL                 
+ 306: RETURN_VALUE         

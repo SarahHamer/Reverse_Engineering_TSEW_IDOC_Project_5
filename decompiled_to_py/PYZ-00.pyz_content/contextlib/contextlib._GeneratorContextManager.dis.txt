@@ -1,0 +1,26 @@
+# Disassembly for contextlib._GeneratorContextManager
+# From module file: contextlib
+
+## co_consts:
+('_GeneratorContextManager', 'Helper for @contextmanager decorator.', <code object __enter__ at 0x00000240693D23D0, file "contextlib.py", line 132>, <code object __exit__ at 0x0000024068C324E0, file "contextlib.py", line 141>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__enter__', '__exit__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_GeneratorContextManager'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Helper for @contextmanager decorator.'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object __enter__ at 0x00000240693D23D0, file "contextlib.py", line 132>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           __enter__
+  20: LOAD_CONST           <code object __exit__ at 0x0000024068C324E0, file "contextlib.py", line 141>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           __exit__
+  26: LOAD_CONST           None
+  28: RETURN_VALUE         

@@ -1,0 +1,49 @@
+# Disassembly for contextlib.AsyncExitStack.push_async_exit
+# From module file: contextlib
+
+## co_consts:
+('Registers a coroutine function with the standard __aexit__ method\n        signature.\n\n        Can suppress exceptions the same way __aexit__ method can.\n        Also accepts any object with an __aexit__ method (registering a call\n        to the method instead of the object itself).\n        ', False)
+
+## co_names:
+('type', '__aexit__', '_push_async_cm_exit', 'AttributeError', '_push_exit_callback')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + type
+  14: LOAD_FAST            exit
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           _cb_type
+  32: NOP                  
+  34: LOAD_FAST            _cb_type
+  36: LOAD_ATTR            __aexit__
+  46: STORE_FAST           exit_method
+  48: LOAD_FAST            self
+  50: LOAD_METHOD          _push_async_cm_exit
+  72: LOAD_FAST            exit
+  74: LOAD_FAST            exit_method
+  76: PRECALL              
+  80: CALL                 
+  90: POP_TOP              
+  92: JUMP_FORWARD         to 170
+  94: PUSH_EXC_INFO        
+  96: LOAD_GLOBAL          AttributeError
+ 108: CHECK_EXC_MATCH      
+ 110: POP_JUMP_FORWARD_IF_FALSE to 162
+ 112: POP_TOP              
+ 114: LOAD_FAST            self
+ 116: LOAD_METHOD          _push_exit_callback
+ 138: LOAD_FAST            exit
+ 140: LOAD_CONST           False
+ 142: PRECALL              
+ 146: CALL                 
+ 156: POP_TOP              
+ 158: POP_EXCEPT           
+ 160: JUMP_FORWARD         to 170
+ 162: RERAISE              
+ 164: COPY                 
+ 166: POP_EXCEPT           
+ 168: RERAISE              
+ 170: LOAD_FAST            exit
+ 172: RETURN_VALUE         

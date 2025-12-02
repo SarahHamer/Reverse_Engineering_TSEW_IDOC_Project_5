@@ -1,0 +1,82 @@
+# Disassembly for subprocess.check_output
+# From module file: subprocess
+
+## co_consts:
+('Run command with arguments and return its output.\n\n    If the exit code was non-zero it raises a CalledProcessError.  The\n    CalledProcessError object will have the return code in the returncode\n    attribute and output in the output attribute.\n\n    The arguments are the same as for the Popen constructor.  Example:\n\n    >>> check_output(["ls", "-l", "/dev/null"])\n    b\'crw-rw-rw- 1 root root 1, 3 Oct 18  2007 /dev/null\\n\'\n\n    The stdout argument is not allowed as it is used internally.\n    To capture standard error in the result, use stderr=STDOUT.\n\n    >>> check_output(["/bin/sh", "-c",\n    ...               "ls -l non_existent_file ; exit 0"],\n    ...              stderr=STDOUT)\n    b\'ls: non_existent_file: No such file or directory\\n\'\n\n    There is an additional optional argument, "input", allowing you to\n    pass a string to the subprocess\'s stdin.  If you use this argument\n    you may not also use the Popen constructor\'s "stdin" argument, as\n    it too will be used internally.  Example:\n\n    >>> check_output(["sed", "-e", "s/foo/bar/"],\n    ...              input=b"when in the course of fooman events\\n")\n    b\'when in the course of barman events\\n\'\n\n    By default, all communication is in bytes, and therefore any "input"\n    should be bytes, and the return value will be bytes.  If in text mode,\n    any "input" should be a string, and the return value will be a string\n    decoded according to locale encoding, or by "encoding" if set. Text mode\n    is triggered by setting any of text, encoding, errors or universal_newlines.\n    ', ('stdout', 'check'), ' argument not allowed, it will be overridden.', 'input', None, 'universal_newlines', 'text', 'encoding', 'errors', '', b'', True, ('stdout', 'timeout', 'check'))
+
+## co_names:
+('ValueError', 'get', 'run', 'PIPE', 'stdout')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           ('stdout', 'check')
+   4: GET_ITER             
+   6: FOR_ITER             to 56
+   8: STORE_FAST           kw
+  10: LOAD_FAST            kw
+  12: LOAD_FAST            kwargs
+  14: CONTAINS_OP          
+  16: POP_JUMP_FORWARD_IF_FALSE to 54
+  18: LOAD_GLOBAL          NULL + ValueError
+  30: LOAD_FAST            kw
+  32: FORMAT_VALUE         
+  34: LOAD_CONST           ' argument not allowed, it will be overridden.'
+  36: BUILD_STRING         
+  38: PRECALL              
+  42: CALL                 
+  52: RAISE_VARARGS        
+  54: JUMP_BACKWARD        to 6
+  56: LOAD_CONST           'input'
+  58: LOAD_FAST            kwargs
+  60: CONTAINS_OP          
+  62: POP_JUMP_FORWARD_IF_FALSE to 268
+  64: LOAD_FAST            kwargs
+  66: LOAD_CONST           'input'
+  68: BINARY_SUBSCR        
+  78: POP_JUMP_FORWARD_IF_NOT_NONE to 268
+  80: LOAD_FAST            kwargs
+  82: LOAD_METHOD          get
+ 104: LOAD_CONST           'universal_newlines'
+ 106: PRECALL              
+ 110: CALL                 
+ 120: POP_JUMP_FORWARD_IF_TRUE to 248
+ 122: LOAD_FAST            kwargs
+ 124: LOAD_METHOD          get
+ 146: LOAD_CONST           'text'
+ 148: PRECALL              
+ 152: CALL                 
+ 162: POP_JUMP_FORWARD_IF_TRUE to 248
+ 164: LOAD_FAST            kwargs
+ 166: LOAD_METHOD          get
+ 188: LOAD_CONST           'encoding'
+ 190: PRECALL              
+ 194: CALL                 
+ 204: POP_JUMP_FORWARD_IF_TRUE to 248
+ 206: LOAD_FAST            kwargs
+ 208: LOAD_METHOD          get
+ 230: LOAD_CONST           'errors'
+ 232: PRECALL              
+ 236: CALL                 
+ 246: POP_JUMP_FORWARD_IF_FALSE to 254
+ 248: LOAD_CONST           ''
+ 250: STORE_FAST           empty
+ 252: JUMP_FORWARD         to 258
+ 254: LOAD_CONST           b''
+ 256: STORE_FAST           empty
+ 258: LOAD_FAST            empty
+ 260: LOAD_FAST            kwargs
+ 262: LOAD_CONST           'input'
+ 264: STORE_SUBSCR         
+ 268: LOAD_GLOBAL          NULL + run
+ 280: LOAD_FAST            popenargs
+ 282: LOAD_GLOBAL          PIPE
+ 294: LOAD_FAST            timeout
+ 296: LOAD_CONST           True
+ 298: LOAD_CONST           ('stdout', 'timeout', 'check')
+ 300: BUILD_CONST_KEY_MAP  
+ 302: LOAD_FAST            kwargs
+ 304: DICT_MERGE           
+ 306: CALL_FUNCTION_EX     
+ 308: LOAD_ATTR            stdout
+ 318: RETURN_VALUE         

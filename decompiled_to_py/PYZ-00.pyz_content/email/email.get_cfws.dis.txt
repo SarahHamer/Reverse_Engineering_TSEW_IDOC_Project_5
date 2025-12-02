@@ -1,0 +1,63 @@
+# Disassembly for email.get_cfws
+# From module file: email._header_value_parser
+
+## co_consts:
+('CFWS = (1*([FWS] comment) [FWS]) / FWS\n\n    ', 0)
+
+## co_names:
+('CFWSList', 'CFWS_LEADER', 'WSP', 'get_fws', 'get_comment', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + CFWSList
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           cfws
+  30: LOAD_FAST            value
+  32: POP_JUMP_FORWARD_IF_FALSE to 244
+  34: LOAD_FAST            value
+  36: LOAD_CONST           0
+  38: BINARY_SUBSCR        
+  48: LOAD_GLOBAL          CFWS_LEADER
+  60: CONTAINS_OP          
+  62: POP_JUMP_FORWARD_IF_FALSE to 244
+  64: LOAD_FAST            value
+  66: LOAD_CONST           0
+  68: BINARY_SUBSCR        
+  78: LOAD_GLOBAL          WSP
+  90: CONTAINS_OP          
+  92: POP_JUMP_FORWARD_IF_FALSE to 132
+  94: LOAD_GLOBAL          NULL + get_fws
+ 106: LOAD_FAST            value
+ 108: PRECALL              
+ 112: CALL                 
+ 122: UNPACK_SEQUENCE      
+ 126: STORE_FAST           token
+ 128: STORE_FAST           value
+ 130: JUMP_FORWARD         to 168
+ 132: LOAD_GLOBAL          NULL + get_comment
+ 144: LOAD_FAST            value
+ 146: PRECALL              
+ 150: CALL                 
+ 160: UNPACK_SEQUENCE      
+ 164: STORE_FAST           token
+ 166: STORE_FAST           value
+ 168: LOAD_FAST            cfws
+ 170: LOAD_METHOD          append
+ 192: LOAD_FAST            token
+ 194: PRECALL              
+ 198: CALL                 
+ 208: POP_TOP              
+ 210: LOAD_FAST            value
+ 212: POP_JUMP_FORWARD_IF_FALSE to 244
+ 214: LOAD_FAST            value
+ 216: LOAD_CONST           0
+ 218: BINARY_SUBSCR        
+ 228: LOAD_GLOBAL          CFWS_LEADER
+ 240: CONTAINS_OP          
+ 242: POP_JUMP_BACKWARD_IF_TRUE to 64
+ 244: LOAD_FAST            cfws
+ 246: LOAD_FAST            value
+ 248: BUILD_TUPLE          
+ 250: RETURN_VALUE         

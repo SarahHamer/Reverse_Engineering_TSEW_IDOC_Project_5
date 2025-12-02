@@ -1,0 +1,124 @@
+# Disassembly for _pydecimal.Decimal._log10_exp_bound
+# From module file: _pydecimal
+
+## co_consts:
+('Compute a lower bound for the adjusted exponent of self.log10().\n        In other words, find r such that self.log10() >= 10**r.\n        Assumes that self is finite and positive and that self != 1.\n        ', 1, -2, -1, 0, 10, 231, 2, '231')
+
+## co_names:
+('_exp', 'len', '_int', 'str', '_WorkRep', 'int', 'exp')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _exp
+  14: LOAD_GLOBAL          NULL + len
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            _int
+  38: PRECALL              
+  42: CALL                 
+  52: BINARY_OP            +
+  56: LOAD_CONST           1
+  58: BINARY_OP            -
+  62: STORE_FAST           adj
+  64: LOAD_FAST            adj
+  66: LOAD_CONST           1
+  68: COMPARE_OP           >=
+  74: POP_JUMP_FORWARD_IF_FALSE to 138
+  76: LOAD_GLOBAL          NULL + len
+  88: LOAD_GLOBAL          NULL + str
+ 100: LOAD_FAST            adj
+ 102: PRECALL              
+ 106: CALL                 
+ 116: PRECALL              
+ 120: CALL                 
+ 130: LOAD_CONST           1
+ 132: BINARY_OP            -
+ 136: RETURN_VALUE         
+ 138: LOAD_FAST            adj
+ 140: LOAD_CONST           -2
+ 142: COMPARE_OP           <=
+ 148: POP_JUMP_FORWARD_IF_FALSE to 218
+ 150: LOAD_GLOBAL          NULL + len
+ 162: LOAD_GLOBAL          NULL + str
+ 174: LOAD_CONST           -1
+ 176: LOAD_FAST            adj
+ 178: BINARY_OP            -
+ 182: PRECALL              
+ 186: CALL                 
+ 196: PRECALL              
+ 200: CALL                 
+ 210: LOAD_CONST           1
+ 212: BINARY_OP            -
+ 216: RETURN_VALUE         
+ 218: LOAD_GLOBAL          NULL + _WorkRep
+ 230: LOAD_FAST            self
+ 232: PRECALL              
+ 236: CALL                 
+ 246: STORE_FAST           op
+ 248: LOAD_FAST            op
+ 250: LOAD_ATTR            int
+ 260: LOAD_FAST            op
+ 262: LOAD_ATTR            exp
+ 272: STORE_FAST           e
+ 274: STORE_FAST           c
+ 276: LOAD_FAST            adj
+ 278: LOAD_CONST           0
+ 280: COMPARE_OP           ==
+ 286: POP_JUMP_FORWARD_IF_FALSE to 450
+ 288: LOAD_GLOBAL          NULL + str
+ 300: LOAD_FAST            c
+ 302: LOAD_CONST           10
+ 304: LOAD_FAST            e
+ 306: UNARY_NEGATIVE       
+ 308: BINARY_OP            **
+ 312: BINARY_OP            -
+ 316: PRECALL              
+ 320: CALL                 
+ 330: STORE_FAST           num
+ 332: LOAD_GLOBAL          NULL + str
+ 344: LOAD_CONST           231
+ 346: LOAD_FAST            c
+ 348: BINARY_OP            *
+ 352: PRECALL              
+ 356: CALL                 
+ 366: STORE_FAST           den
+ 368: LOAD_GLOBAL          NULL + len
+ 380: LOAD_FAST            num
+ 382: PRECALL              
+ 386: CALL                 
+ 396: LOAD_GLOBAL          NULL + len
+ 408: LOAD_FAST            den
+ 410: PRECALL              
+ 414: CALL                 
+ 424: BINARY_OP            -
+ 428: LOAD_FAST            num
+ 430: LOAD_FAST            den
+ 432: COMPARE_OP           <
+ 438: BINARY_OP            -
+ 442: LOAD_CONST           2
+ 444: BINARY_OP            +
+ 448: RETURN_VALUE         
+ 450: LOAD_GLOBAL          NULL + str
+ 462: LOAD_CONST           10
+ 464: LOAD_FAST            e
+ 466: UNARY_NEGATIVE       
+ 468: BINARY_OP            **
+ 472: LOAD_FAST            c
+ 474: BINARY_OP            -
+ 478: PRECALL              
+ 482: CALL                 
+ 492: STORE_FAST           num
+ 494: LOAD_GLOBAL          NULL + len
+ 506: LOAD_FAST            num
+ 508: PRECALL              
+ 512: CALL                 
+ 522: LOAD_FAST            e
+ 524: BINARY_OP            +
+ 528: LOAD_FAST            num
+ 530: LOAD_CONST           '231'
+ 532: COMPARE_OP           <
+ 538: BINARY_OP            -
+ 542: LOAD_CONST           1
+ 544: BINARY_OP            -
+ 548: RETURN_VALUE         

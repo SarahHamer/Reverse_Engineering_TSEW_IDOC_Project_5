@@ -1,0 +1,33 @@
+# Disassembly for importlib._object_name
+# From module file: importlib._bootstrap
+
+## co_consts:
+(None,)
+
+## co_names:
+('__qualname__', 'AttributeError', 'type')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            obj
+   6: LOAD_ATTR            __qualname__
+  16: RETURN_VALUE         
+  18: PUSH_EXC_INFO        
+  20: LOAD_GLOBAL          AttributeError
+  32: CHECK_EXC_MATCH      
+  34: POP_JUMP_FORWARD_IF_FALSE to 82
+  36: POP_TOP              
+  38: LOAD_GLOBAL          NULL + type
+  50: LOAD_FAST            obj
+  52: PRECALL              
+  56: CALL                 
+  66: LOAD_ATTR            __qualname__
+  76: SWAP                 
+  78: POP_EXCEPT           
+  80: RETURN_VALUE         
+  82: RERAISE              
+  84: COPY                 
+  86: POP_EXCEPT           
+  88: RERAISE              

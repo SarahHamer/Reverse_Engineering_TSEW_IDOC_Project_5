@@ -1,0 +1,71 @@
+# Disassembly for http.HTTPResponse._read_next_chunk_size
+# From module file: http.client
+
+## co_consts:
+(None, 1, 'chunk size', b';', 0, 16)
+
+## co_names:
+('fp', 'readline', '_MAXLINE', 'len', 'LineTooLong', 'find', 'int', 'ValueError', '_close_conn')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            fp
+  14: LOAD_METHOD          readline
+  36: LOAD_GLOBAL          _MAXLINE
+  48: LOAD_CONST           1
+  50: BINARY_OP            +
+  54: PRECALL              
+  58: CALL                 
+  68: STORE_FAST           line
+  70: LOAD_GLOBAL          NULL + len
+  82: LOAD_FAST            line
+  84: PRECALL              
+  88: CALL                 
+  98: LOAD_GLOBAL          _MAXLINE
+ 110: COMPARE_OP           >
+ 116: POP_JUMP_FORWARD_IF_FALSE to 148
+ 118: LOAD_GLOBAL          NULL + LineTooLong
+ 130: LOAD_CONST           'chunk size'
+ 132: PRECALL              
+ 136: CALL                 
+ 146: RAISE_VARARGS        
+ 148: LOAD_FAST            line
+ 150: LOAD_METHOD          find
+ 172: LOAD_CONST           b';'
+ 174: PRECALL              
+ 178: CALL                 
+ 188: STORE_FAST           i
+ 190: LOAD_FAST            i
+ 192: LOAD_CONST           0
+ 194: COMPARE_OP           >=
+ 200: POP_JUMP_FORWARD_IF_FALSE to 222
+ 202: LOAD_FAST            line
+ 204: LOAD_CONST           None
+ 206: LOAD_FAST            i
+ 208: BUILD_SLICE          
+ 210: BINARY_SUBSCR        
+ 220: STORE_FAST           line
+ 222: NOP                  
+ 224: LOAD_GLOBAL          NULL + int
+ 236: LOAD_FAST            line
+ 238: LOAD_CONST           16
+ 240: PRECALL              
+ 244: CALL                 
+ 254: RETURN_VALUE         
+ 256: PUSH_EXC_INFO        
+ 258: LOAD_GLOBAL          ValueError
+ 270: CHECK_EXC_MATCH      
+ 272: POP_JUMP_FORWARD_IF_FALSE to 318
+ 274: POP_TOP              
+ 276: LOAD_FAST            self
+ 278: LOAD_METHOD          _close_conn
+ 300: PRECALL              
+ 304: CALL                 
+ 314: POP_TOP              
+ 316: RAISE_VARARGS        
+ 318: RERAISE              
+ 320: COPY                 
+ 322: POP_EXCEPT           
+ 324: RERAISE              

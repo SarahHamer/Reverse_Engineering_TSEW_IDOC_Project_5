@@ -1,0 +1,37 @@
+# Disassembly for dataclasses._dataclass_setstate
+# From module file: dataclasses
+
+## co_consts:
+(None,)
+
+## co_names:
+('zip', 'fields', 'object', '__setattr__', 'name')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + zip
+  14: LOAD_GLOBAL          NULL + fields
+  26: LOAD_FAST            self
+  28: PRECALL              
+  32: CALL                 
+  42: LOAD_FAST            state
+  44: PRECALL              
+  48: CALL                 
+  58: GET_ITER             
+  60: FOR_ITER             to 138
+  62: UNPACK_SEQUENCE      
+  66: STORE_FAST           field
+  68: STORE_FAST           value
+  70: LOAD_GLOBAL          object
+  82: LOAD_METHOD          __setattr__
+ 104: LOAD_FAST            self
+ 106: LOAD_FAST            field
+ 108: LOAD_ATTR            name
+ 118: LOAD_FAST            value
+ 120: PRECALL              
+ 124: CALL                 
+ 134: POP_TOP              
+ 136: JUMP_BACKWARD        to 60
+ 138: LOAD_CONST           None
+ 140: RETURN_VALUE         

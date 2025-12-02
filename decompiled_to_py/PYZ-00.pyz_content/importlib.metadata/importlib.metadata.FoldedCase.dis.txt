@@ -1,0 +1,61 @@
+# Disassembly for importlib.metadata.FoldedCase
+# From module file: importlib.metadata._text
+
+## co_consts:
+('FoldedCase', '\n    A case insensitive string class; behaves just like str\n    except compares equal when the only variation is case.\n\n    >>> s = FoldedCase(\'hello world\')\n\n    >>> s == \'Hello World\'\n    True\n\n    >>> \'Hello World\' == s\n    True\n\n    >>> s != \'Hello World\'\n    False\n\n    >>> s.index(\'O\')\n    4\n\n    >>> s.split(\'O\')\n    [\'hell\', \' w\', \'rld\']\n\n    >>> sorted(map(FoldedCase, [\'GAMMA\', \'alpha\', \'Beta\']))\n    [\'alpha\', \'Beta\', \'GAMMA\']\n\n    Sequence membership is straightforward.\n\n    >>> "Hello World" in [s]\n    True\n    >>> s in ["Hello World"]\n    True\n\n    You may test for set inclusion, but candidate and elements\n    must both be folded.\n\n    >>> FoldedCase("Hello World") in {s}\n    True\n    >>> s in {FoldedCase("Hello World")}\n    True\n\n    String inclusion works as long as the FoldedCase object\n    is on the right.\n\n    >>> "hello" in FoldedCase("Hello World")\n    True\n\n    But not if the FoldedCase object is on the left:\n\n    >>> FoldedCase(\'hello\') in \'Hello World\'\n    False\n\n    In that case, use in_:\n\n    >>> FoldedCase(\'hello\').in_(\'Hello World\')\n    True\n\n    >>> FoldedCase(\'hello\') > FoldedCase(\'Hello\')\n    False\n    ', <code object __lt__ at 0x000002406944A780, file "importlib\metadata\_text.py", line 67>, <code object __gt__ at 0x000002406944A560, file "importlib\metadata\_text.py", line 70>, <code object __eq__ at 0x000002406944A010, file "importlib\metadata\_text.py", line 73>, <code object __ne__ at 0x000002406944AEF0, file "importlib\metadata\_text.py", line 76>, <code object __hash__ at 0x00000240693EB230, file "importlib\metadata\_text.py", line 79>, <code object __contains__ at 0x00000240691F3B40, file "importlib\metadata\_text.py", line 82>, <code object in_ at 0x0000024069467C90, file "importlib\metadata\_text.py", line 85>, <code object lower at 0x00000240693EB930, file "importlib\metadata\_text.py", line 90>, <code object index at 0x00000240693D2760, file "importlib\metadata\_text.py", line 94>, ' ', 0, <code object split at 0x00000240691F13E0, file "importlib\metadata\_text.py", line 97>, (' ', 0))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__lt__', '__gt__', '__eq__', '__ne__', '__hash__', '__contains__', 'in_', 'method_cache', 'lower', 'index', 'split', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'FoldedCase'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           '\n    A case insensitive string class; behaves just like str\n    except compares equal when the only variation is case.\n\n    >>> s = FoldedCase(\'hello world\')\n\n    >>> s == \'Hello World\'\n    True\n\n    >>> \'Hello World\' == s\n    True\n\n    >>> s != \'Hello World\'\n    False\n\n    >>> s.index(\'O\')\n    4\n\n    >>> s.split(\'O\')\n    [\'hell\', \' w\', \'rld\']\n\n    >>> sorted(map(FoldedCase, [\'GAMMA\', \'alpha\', \'Beta\']))\n    [\'alpha\', \'Beta\', \'GAMMA\']\n\n    Sequence membership is straightforward.\n\n    >>> "Hello World" in [s]\n    True\n    >>> s in ["Hello World"]\n    True\n\n    You may test for set inclusion, but candidate and elements\n    must both be folded.\n\n    >>> FoldedCase("Hello World") in {s}\n    True\n    >>> s in {FoldedCase("Hello World")}\n    True\n\n    String inclusion works as long as the FoldedCase object\n    is on the right.\n\n    >>> "hello" in FoldedCase("Hello World")\n    True\n\n    But not if the FoldedCase object is on the left:\n\n    >>> FoldedCase(\'hello\') in \'Hello World\'\n    False\n\n    In that case, use in_:\n\n    >>> FoldedCase(\'hello\').in_(\'Hello World\')\n    True\n\n    >>> FoldedCase(\'hello\') > FoldedCase(\'Hello\')\n    False\n    '
+  14: STORE_NAME           __doc__
+  16: LOAD_CONST           <code object __lt__ at 0x000002406944A780, file "importlib\metadata\_text.py", line 67>
+  18: MAKE_FUNCTION        
+  20: STORE_NAME           __lt__
+  22: LOAD_CONST           <code object __gt__ at 0x000002406944A560, file "importlib\metadata\_text.py", line 70>
+  24: MAKE_FUNCTION        
+  26: STORE_NAME           __gt__
+  28: LOAD_CONST           <code object __eq__ at 0x000002406944A010, file "importlib\metadata\_text.py", line 73>
+  30: MAKE_FUNCTION        
+  32: STORE_NAME           __eq__
+  34: LOAD_CONST           <code object __ne__ at 0x000002406944AEF0, file "importlib\metadata\_text.py", line 76>
+  36: MAKE_FUNCTION        
+  38: STORE_NAME           __ne__
+  40: LOAD_CONST           <code object __hash__ at 0x00000240693EB230, file "importlib\metadata\_text.py", line 79>
+  42: MAKE_FUNCTION        
+  44: STORE_NAME           __hash__
+  46: LOAD_CLOSURE         __class__
+  48: BUILD_TUPLE          
+  50: LOAD_CONST           <code object __contains__ at 0x00000240691F3B40, file "importlib\metadata\_text.py", line 82>
+  52: MAKE_FUNCTION        closure
+  54: STORE_NAME           __contains__
+  56: LOAD_CONST           <code object in_ at 0x0000024069467C90, file "importlib\metadata\_text.py", line 85>
+  58: MAKE_FUNCTION        
+  60: STORE_NAME           in_
+  62: LOAD_NAME            method_cache
+  64: LOAD_CLOSURE         __class__
+  66: BUILD_TUPLE          
+  68: LOAD_CONST           <code object lower at 0x00000240693EB930, file "importlib\metadata\_text.py", line 90>
+  70: MAKE_FUNCTION        closure
+  72: PRECALL              
+  76: CALL                 
+  86: STORE_NAME           lower
+  88: LOAD_CONST           <code object index at 0x00000240693D2760, file "importlib\metadata\_text.py", line 94>
+  90: MAKE_FUNCTION        
+  92: STORE_NAME           index
+  94: LOAD_CONST           (' ', 0)
+  96: LOAD_CONST           <code object split at 0x00000240691F13E0, file "importlib\metadata\_text.py", line 97>
+  98: MAKE_FUNCTION        defaults
+ 100: STORE_NAME           split
+ 102: LOAD_CLOSURE         __class__
+ 104: COPY                 
+ 106: STORE_NAME           __classcell__
+ 108: RETURN_VALUE         

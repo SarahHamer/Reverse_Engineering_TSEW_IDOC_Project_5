@@ -1,0 +1,118 @@
+# Disassembly for email.LocalPart.local_part
+# From module file: email._header_value_parser
+
+## co_consts:
+(None, False, 0, 'cfws', 'dot', -1, 1)
+
+## co_names:
+('DOT', 'token_type', 'TokenList', 'isinstance', 'append', 'value')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          DOT
+  14: BUILD_LIST           
+  16: STORE_FAST           res
+  18: LOAD_GLOBAL          DOT
+  30: STORE_FAST           last
+  32: LOAD_CONST           False
+  34: STORE_FAST           last_is_tl
+  36: LOAD_FAST            self
+  38: LOAD_CONST           0
+  40: BINARY_SUBSCR        
+  50: LOAD_GLOBAL          DOT
+  62: BUILD_LIST           
+  64: BINARY_OP            +
+  68: GET_ITER             
+  70: FOR_ITER             to 462
+  72: STORE_FAST           tok
+  74: LOAD_FAST            tok
+  76: LOAD_ATTR            token_type
+  86: LOAD_CONST           'cfws'
+  88: COMPARE_OP           ==
+  94: POP_JUMP_FORWARD_IF_FALSE to 98
+  96: JUMP_BACKWARD        to 70
+  98: LOAD_FAST            last_is_tl
+ 100: POP_JUMP_FORWARD_IF_FALSE to 210
+ 102: LOAD_FAST            tok
+ 104: LOAD_ATTR            token_type
+ 114: LOAD_CONST           'dot'
+ 116: COMPARE_OP           ==
+ 122: POP_JUMP_FORWARD_IF_FALSE to 210
+ 124: LOAD_FAST            last
+ 126: LOAD_CONST           -1
+ 128: BINARY_SUBSCR        
+ 138: LOAD_ATTR            token_type
+ 148: LOAD_CONST           'cfws'
+ 150: COMPARE_OP           ==
+ 156: POP_JUMP_FORWARD_IF_FALSE to 210
+ 158: LOAD_GLOBAL          NULL + TokenList
+ 170: LOAD_FAST            last
+ 172: LOAD_CONST           None
+ 174: LOAD_CONST           -1
+ 176: BUILD_SLICE          
+ 178: BINARY_SUBSCR        
+ 188: PRECALL              
+ 192: CALL                 
+ 202: LOAD_FAST            res
+ 204: LOAD_CONST           -1
+ 206: STORE_SUBSCR         
+ 210: LOAD_GLOBAL          NULL + isinstance
+ 222: LOAD_FAST            tok
+ 224: LOAD_GLOBAL          TokenList
+ 236: PRECALL              
+ 240: CALL                 
+ 250: STORE_FAST           is_tl
+ 252: LOAD_FAST            is_tl
+ 254: POP_JUMP_FORWARD_IF_FALSE to 398
+ 256: LOAD_FAST            last
+ 258: LOAD_ATTR            token_type
+ 268: LOAD_CONST           'dot'
+ 270: COMPARE_OP           ==
+ 276: POP_JUMP_FORWARD_IF_FALSE to 398
+ 278: LOAD_FAST            tok
+ 280: LOAD_CONST           0
+ 282: BINARY_SUBSCR        
+ 292: LOAD_ATTR            token_type
+ 302: LOAD_CONST           'cfws'
+ 304: COMPARE_OP           ==
+ 310: POP_JUMP_FORWARD_IF_FALSE to 398
+ 312: LOAD_FAST            res
+ 314: LOAD_METHOD          append
+ 336: LOAD_GLOBAL          NULL + TokenList
+ 348: LOAD_FAST            tok
+ 350: LOAD_CONST           1
+ 352: LOAD_CONST           None
+ 354: BUILD_SLICE          
+ 356: BINARY_SUBSCR        
+ 366: PRECALL              
+ 370: CALL                 
+ 380: PRECALL              
+ 384: CALL                 
+ 394: POP_TOP              
+ 396: JUMP_FORWARD         to 440
+ 398: LOAD_FAST            res
+ 400: LOAD_METHOD          append
+ 422: LOAD_FAST            tok
+ 424: PRECALL              
+ 428: CALL                 
+ 438: POP_TOP              
+ 440: LOAD_FAST            res
+ 442: LOAD_CONST           -1
+ 444: BINARY_SUBSCR        
+ 454: STORE_FAST           last
+ 456: LOAD_FAST            is_tl
+ 458: STORE_FAST           last_is_tl
+ 460: JUMP_BACKWARD        to 70
+ 462: LOAD_GLOBAL          NULL + TokenList
+ 474: LOAD_FAST            res
+ 476: LOAD_CONST           1
+ 478: LOAD_CONST           -1
+ 480: BUILD_SLICE          
+ 482: BINARY_SUBSCR        
+ 492: PRECALL              
+ 496: CALL                 
+ 506: STORE_FAST           res
+ 508: LOAD_FAST            res
+ 510: LOAD_ATTR            value
+ 520: RETURN_VALUE         

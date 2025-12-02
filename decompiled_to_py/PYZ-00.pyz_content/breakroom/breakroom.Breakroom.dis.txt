@@ -1,0 +1,61 @@
+# Disassembly for breakroom.Breakroom
+# From module file: breakroom
+
+## co_consts:
+('Breakroom', <code object __init__ at 0x00000240691DAD80, file "breakroom.py", line 178>, 'return', <code object get_description at 0x0000024068C5ABD0, file "breakroom.py", line 188>, None, <code object get_options at 0x0000024068C30CB0, file "breakroom.py", line 211>, 'value', <code object handle_option_answer at 0x0000024068D5FCF0, file "breakroom.py", line 224>, ('Breakroom',))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', 'str', 'get_description', 'list', 'typing', 'Union', 'Callable', 'get_options', 'handle_option_answer', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'Breakroom'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           ('Breakroom',)
+  14: LOAD_CLOSURE         __class__
+  16: BUILD_TUPLE          
+  18: LOAD_CONST           <code object __init__ at 0x00000240691DAD80, file "breakroom.py", line 178>
+  20: MAKE_FUNCTION        defaults, closure
+  22: STORE_NAME           __init__
+  24: LOAD_CONST           'return'
+  26: LOAD_NAME            str
+  28: BUILD_TUPLE          
+  30: LOAD_CONST           <code object get_description at 0x0000024068C5ABD0, file "breakroom.py", line 188>
+  32: MAKE_FUNCTION        annotations
+  34: STORE_NAME           get_description
+  36: LOAD_CONST           'return'
+  38: LOAD_NAME            list
+  40: LOAD_NAME            typing
+  42: LOAD_ATTR            Union
+  52: LOAD_NAME            str
+  54: LOAD_NAME            typing
+  56: LOAD_ATTR            Callable
+  66: BUILD_LIST           
+  68: LOAD_CONST           None
+  70: BUILD_TUPLE          
+  72: BINARY_SUBSCR        
+  82: BUILD_TUPLE          
+  84: BINARY_SUBSCR        
+  94: LOAD_NAME            str
+  96: BUILD_TUPLE          
+  98: BINARY_SUBSCR        
+ 108: BUILD_TUPLE          
+ 110: LOAD_CLOSURE         __class__
+ 112: BUILD_TUPLE          
+ 114: LOAD_CONST           <code object get_options at 0x0000024068C30CB0, file "breakroom.py", line 211>
+ 116: MAKE_FUNCTION        annotations, closure
+ 118: STORE_NAME           get_options
+ 120: LOAD_CONST           'value'
+ 122: LOAD_NAME            str
+ 124: BUILD_TUPLE          
+ 126: LOAD_CONST           <code object handle_option_answer at 0x0000024068D5FCF0, file "breakroom.py", line 224>
+ 128: MAKE_FUNCTION        annotations
+ 130: STORE_NAME           handle_option_answer
+ 132: LOAD_CLOSURE         __class__
+ 134: COPY                 
+ 136: STORE_NAME           __classcell__
+ 138: RETURN_VALUE         

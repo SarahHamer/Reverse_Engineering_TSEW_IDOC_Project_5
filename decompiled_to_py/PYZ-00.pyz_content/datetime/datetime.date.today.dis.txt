@@ -1,0 +1,23 @@
+# Disassembly for datetime.date.today
+# From module file: datetime
+
+## co_consts:
+('Construct a date from time.time().',)
+
+## co_names:
+('_time', 'time', 'fromtimestamp')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _time
+  14: LOAD_ATTR            time
+  24: PRECALL              
+  28: CALL                 
+  38: STORE_FAST           t
+  40: LOAD_FAST            cls
+  42: LOAD_METHOD          fromtimestamp
+  64: LOAD_FAST            t
+  66: PRECALL              
+  70: CALL                 
+  80: RETURN_VALUE         

@@ -1,0 +1,42 @@
+# Disassembly for importlib.ModuleSpec.__init__
+# From module file: importlib._bootstrap
+
+## co_consts:
+(None, False)
+
+## co_names:
+('name', 'loader', 'origin', 'loader_state', 'submodule_search_locations', '_uninitialized_submodules', '_set_fileattr', '_cached')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            name
+   4: LOAD_FAST            self
+   6: STORE_ATTR           name
+  16: LOAD_FAST            loader
+  18: LOAD_FAST            self
+  20: STORE_ATTR           loader
+  30: LOAD_FAST            origin
+  32: LOAD_FAST            self
+  34: STORE_ATTR           origin
+  44: LOAD_FAST            loader_state
+  46: LOAD_FAST            self
+  48: STORE_ATTR           loader_state
+  58: LOAD_FAST            is_package
+  60: POP_JUMP_FORWARD_IF_FALSE to 66
+  62: BUILD_LIST           
+  64: JUMP_FORWARD         to 68
+  66: LOAD_CONST           None
+  68: LOAD_FAST            self
+  70: STORE_ATTR           submodule_search_locations
+  80: BUILD_LIST           
+  82: LOAD_FAST            self
+  84: STORE_ATTR           _uninitialized_submodules
+  94: LOAD_CONST           False
+  96: LOAD_FAST            self
+  98: STORE_ATTR           _set_fileattr
+ 108: LOAD_CONST           None
+ 110: LOAD_FAST            self
+ 112: STORE_ATTR           _cached
+ 122: LOAD_CONST           None
+ 124: RETURN_VALUE         

@@ -1,0 +1,76 @@
+# Disassembly for importlib.FastPath.children
+# From module file: importlib.metadata
+
+## co_consts:
+(None, '.')
+
+## co_names:
+('suppress', 'Exception', 'os', 'listdir', 'root', 'zip_children')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + suppress
+  14: LOAD_GLOBAL          Exception
+  26: PRECALL              
+  30: CALL                 
+  40: BEFORE_WITH          
+  42: POP_TOP              
+  44: LOAD_GLOBAL          NULL + os
+  56: LOAD_ATTR            listdir
+  66: LOAD_FAST            self
+  68: LOAD_ATTR            root
+  78: JUMP_IF_TRUE_OR_POP  to 82
+  80: LOAD_CONST           '.'
+  82: PRECALL              
+  86: CALL                 
+  96: SWAP                 
+  98: LOAD_CONST           None
+ 100: LOAD_CONST           None
+ 102: LOAD_CONST           None
+ 104: PRECALL              
+ 108: CALL                 
+ 118: POP_TOP              
+ 120: RETURN_VALUE         
+ 122: PUSH_EXC_INFO        
+ 124: WITH_EXCEPT_START    
+ 126: POP_JUMP_FORWARD_IF_TRUE to 136
+ 128: RERAISE              
+ 130: COPY                 
+ 132: POP_EXCEPT           
+ 134: RERAISE              
+ 136: POP_TOP              
+ 138: POP_EXCEPT           
+ 140: POP_TOP              
+ 142: POP_TOP              
+ 144: LOAD_GLOBAL          NULL + suppress
+ 156: LOAD_GLOBAL          Exception
+ 168: PRECALL              
+ 172: CALL                 
+ 182: BEFORE_WITH          
+ 184: POP_TOP              
+ 186: LOAD_FAST            self
+ 188: LOAD_METHOD          zip_children
+ 210: PRECALL              
+ 214: CALL                 
+ 224: SWAP                 
+ 226: LOAD_CONST           None
+ 228: LOAD_CONST           None
+ 230: LOAD_CONST           None
+ 232: PRECALL              
+ 236: CALL                 
+ 246: POP_TOP              
+ 248: RETURN_VALUE         
+ 250: PUSH_EXC_INFO        
+ 252: WITH_EXCEPT_START    
+ 254: POP_JUMP_FORWARD_IF_TRUE to 264
+ 256: RERAISE              
+ 258: COPY                 
+ 260: POP_EXCEPT           
+ 262: RERAISE              
+ 264: POP_TOP              
+ 266: POP_EXCEPT           
+ 268: POP_TOP              
+ 270: POP_TOP              
+ 272: BUILD_LIST           
+ 274: RETURN_VALUE         

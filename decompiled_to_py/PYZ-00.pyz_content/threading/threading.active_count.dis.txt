@@ -1,0 +1,45 @@
+# Disassembly for threading.active_count
+# From module file: threading
+
+## co_consts:
+('Return the number of Thread objects currently alive.\n\n    The returned count is equal to the length of the list returned by\n    enumerate().\n\n    ', None)
+
+## co_names:
+('_active_limbo_lock', 'len', '_active', '_limbo')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _active_limbo_lock
+  14: BEFORE_WITH          
+  16: POP_TOP              
+  18: LOAD_GLOBAL          NULL + len
+  30: LOAD_GLOBAL          _active
+  42: PRECALL              
+  46: CALL                 
+  56: LOAD_GLOBAL          NULL + len
+  68: LOAD_GLOBAL          _limbo
+  80: PRECALL              
+  84: CALL                 
+  94: BINARY_OP            +
+  98: SWAP                 
+ 100: LOAD_CONST           None
+ 102: LOAD_CONST           None
+ 104: LOAD_CONST           None
+ 106: PRECALL              
+ 110: CALL                 
+ 120: POP_TOP              
+ 122: RETURN_VALUE         
+ 124: PUSH_EXC_INFO        
+ 126: WITH_EXCEPT_START    
+ 128: POP_JUMP_FORWARD_IF_TRUE to 138
+ 130: RERAISE              
+ 132: COPY                 
+ 134: POP_EXCEPT           
+ 136: RERAISE              
+ 138: POP_TOP              
+ 140: POP_EXCEPT           
+ 142: POP_TOP              
+ 144: POP_TOP              
+ 146: LOAD_CONST           None
+ 148: RETURN_VALUE         

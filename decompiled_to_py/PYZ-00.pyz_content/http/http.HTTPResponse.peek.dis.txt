@@ -1,0 +1,38 @@
+# Disassembly for http.HTTPResponse.peek
+# From module file: http.client
+
+## co_consts:
+(None, 'HEAD', b'')
+
+## co_names:
+('fp', '_method', 'chunked', '_peek_chunked', 'peek')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            fp
+  14: POP_JUMP_FORWARD_IF_NONE to 38
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            _method
+  28: LOAD_CONST           'HEAD'
+  30: COMPARE_OP           ==
+  36: POP_JUMP_FORWARD_IF_FALSE to 42
+  38: LOAD_CONST           b''
+  40: RETURN_VALUE         
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            chunked
+  54: POP_JUMP_FORWARD_IF_FALSE to 98
+  56: LOAD_FAST            self
+  58: LOAD_METHOD          _peek_chunked
+  80: LOAD_FAST            n
+  82: PRECALL              
+  86: CALL                 
+  96: RETURN_VALUE         
+  98: LOAD_FAST            self
+ 100: LOAD_ATTR            fp
+ 110: LOAD_METHOD          peek
+ 132: LOAD_FAST            n
+ 134: PRECALL              
+ 138: CALL                 
+ 148: RETURN_VALUE         

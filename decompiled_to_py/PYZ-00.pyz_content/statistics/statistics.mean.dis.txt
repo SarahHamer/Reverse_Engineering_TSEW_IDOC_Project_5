@@ -1,0 +1,37 @@
+# Disassembly for statistics.mean
+# From module file: statistics
+
+## co_consts:
+('Return the sample arithmetic mean of data.\n\n    >>> mean([1, 2, 3, 4, 4])\n    2.8\n\n    >>> from fractions import Fraction as F\n    >>> mean([F(3, 7), F(1, 21), F(5, 3), F(1, 3)])\n    Fraction(13, 21)\n\n    >>> from decimal import Decimal as D\n    >>> mean([D("0.5"), D("0.75"), D("0.625"), D("0.375")])\n    Decimal(\'0.5625\')\n\n    If ``data`` is empty, StatisticsError will be raised.\n    ', 1, 'mean requires at least one data point')
+
+## co_names:
+('_sum', 'StatisticsError', '_convert')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _sum
+  14: LOAD_FAST            data
+  16: PRECALL              
+  20: CALL                 
+  30: UNPACK_SEQUENCE      
+  34: STORE_FAST           T
+  36: STORE_FAST           total
+  38: STORE_FAST           n
+  40: LOAD_FAST            n
+  42: LOAD_CONST           1
+  44: COMPARE_OP           <
+  50: POP_JUMP_FORWARD_IF_FALSE to 82
+  52: LOAD_GLOBAL          NULL + StatisticsError
+  64: LOAD_CONST           'mean requires at least one data point'
+  66: PRECALL              
+  70: CALL                 
+  80: RAISE_VARARGS        
+  82: LOAD_GLOBAL          NULL + _convert
+  94: LOAD_FAST            total
+  96: LOAD_FAST            n
+  98: BINARY_OP            /
+ 102: LOAD_FAST            T
+ 104: PRECALL              
+ 108: CALL                 
+ 118: RETURN_VALUE         

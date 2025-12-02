@@ -1,0 +1,35 @@
+# Disassembly for ast._Unparser.visit_Expr
+# From module file: ast
+
+## co_consts:
+(None,)
+
+## co_names:
+('fill', 'set_precedence', '_Precedence', 'YIELD', 'value', 'traverse')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          fill
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_FAST            self
+  44: LOAD_METHOD          set_precedence
+  66: LOAD_GLOBAL          _Precedence
+  78: LOAD_ATTR            YIELD
+  88: LOAD_FAST            node
+  90: LOAD_ATTR            value
+ 100: PRECALL              
+ 104: CALL                 
+ 114: POP_TOP              
+ 116: LOAD_FAST            self
+ 118: LOAD_METHOD          traverse
+ 140: LOAD_FAST            node
+ 142: LOAD_ATTR            value
+ 152: PRECALL              
+ 156: CALL                 
+ 166: POP_TOP              
+ 168: LOAD_CONST           None
+ 170: RETURN_VALUE         

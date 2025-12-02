@@ -1,0 +1,19 @@
+# Disassembly for gettext.pgettext
+# From module file: gettext
+
+## co_consts:
+(None,)
+
+## co_names:
+('dpgettext', '_current_domain')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + dpgettext
+  14: LOAD_GLOBAL          _current_domain
+  26: LOAD_FAST            context
+  28: LOAD_FAST            message
+  30: PRECALL              
+  34: CALL                 
+  44: RETURN_VALUE         

@@ -1,0 +1,19 @@
+# Disassembly for threading.Thread._set_native_id
+# From module file: threading
+
+## co_consts:
+(None,)
+
+## co_names:
+('get_native_id', '_native_id')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + get_native_id
+  14: PRECALL              
+  18: CALL                 
+  28: LOAD_FAST            self
+  30: STORE_ATTR           _native_id
+  40: LOAD_CONST           None
+  42: RETURN_VALUE         

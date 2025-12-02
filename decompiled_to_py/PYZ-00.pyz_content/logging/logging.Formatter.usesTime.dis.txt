@@ -1,0 +1,18 @@
+# Disassembly for logging.Formatter.usesTime
+# From module file: logging
+
+## co_consts:
+('\n        Check if the format uses the creation time of the record.\n        ',)
+
+## co_names:
+('_style', 'usesTime')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _style
+  14: LOAD_METHOD          usesTime
+  36: PRECALL              
+  40: CALL                 
+  50: RETURN_VALUE         

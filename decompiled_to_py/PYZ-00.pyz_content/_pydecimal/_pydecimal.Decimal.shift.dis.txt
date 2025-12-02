@@ -1,0 +1,158 @@
+# Disassembly for _pydecimal.Decimal.shift
+# From module file: _pydecimal
+
+## co_consts:
+('Returns a shifted copy of self, value-of-other times.', None, True, ('raiseit',), 0, '0')
+
+## co_names:
+('getcontext', '_convert_other', '_check_nans', '_exp', '_raise_error', 'InvalidOperation', 'prec', 'int', '_isinfinity', 'Decimal', '_int', 'len', '_dec_from_triple', '_sign', 'lstrip')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            context
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 34
+   6: LOAD_GLOBAL          NULL + getcontext
+  18: PRECALL              
+  22: CALL                 
+  32: STORE_FAST           context
+  34: LOAD_GLOBAL          NULL + _convert_other
+  46: LOAD_FAST            other
+  48: LOAD_CONST           True
+  50: KW_NAMES             
+  52: PRECALL              
+  56: CALL                 
+  66: STORE_FAST           other
+  68: LOAD_FAST            self
+  70: LOAD_METHOD          _check_nans
+  92: LOAD_FAST            other
+  94: LOAD_FAST            context
+  96: PRECALL              
+ 100: CALL                 
+ 110: STORE_FAST           ans
+ 112: LOAD_FAST            ans
+ 114: POP_JUMP_FORWARD_IF_FALSE to 120
+ 116: LOAD_FAST            ans
+ 118: RETURN_VALUE         
+ 120: LOAD_FAST            other
+ 122: LOAD_ATTR            _exp
+ 132: LOAD_CONST           0
+ 134: COMPARE_OP           !=
+ 140: POP_JUMP_FORWARD_IF_FALSE to 194
+ 142: LOAD_FAST            context
+ 144: LOAD_METHOD          _raise_error
+ 166: LOAD_GLOBAL          InvalidOperation
+ 178: PRECALL              
+ 182: CALL                 
+ 192: RETURN_VALUE         
+ 194: LOAD_FAST            context
+ 196: LOAD_ATTR            prec
+ 206: UNARY_NEGATIVE       
+ 208: LOAD_GLOBAL          NULL + int
+ 220: LOAD_FAST            other
+ 222: PRECALL              
+ 226: CALL                 
+ 236: SWAP                 
+ 238: COPY                 
+ 240: COMPARE_OP           <=
+ 246: POP_JUMP_FORWARD_IF_FALSE to 270
+ 248: LOAD_FAST            context
+ 250: LOAD_ATTR            prec
+ 260: COMPARE_OP           <=
+ 266: POP_JUMP_FORWARD_IF_TRUE to 324
+ 268: JUMP_FORWARD         to 272
+ 270: POP_TOP              
+ 272: LOAD_FAST            context
+ 274: LOAD_METHOD          _raise_error
+ 296: LOAD_GLOBAL          InvalidOperation
+ 308: PRECALL              
+ 312: CALL                 
+ 322: RETURN_VALUE         
+ 324: LOAD_FAST            self
+ 326: LOAD_METHOD          _isinfinity
+ 348: PRECALL              
+ 352: CALL                 
+ 362: POP_JUMP_FORWARD_IF_FALSE to 394
+ 364: LOAD_GLOBAL          NULL + Decimal
+ 376: LOAD_FAST            self
+ 378: PRECALL              
+ 382: CALL                 
+ 392: RETURN_VALUE         
+ 394: LOAD_GLOBAL          NULL + int
+ 406: LOAD_FAST            other
+ 408: PRECALL              
+ 412: CALL                 
+ 422: STORE_FAST           torot
+ 424: LOAD_FAST            self
+ 426: LOAD_ATTR            _int
+ 436: STORE_FAST           rotdig
+ 438: LOAD_FAST            context
+ 440: LOAD_ATTR            prec
+ 450: LOAD_GLOBAL          NULL + len
+ 462: LOAD_FAST            rotdig
+ 464: PRECALL              
+ 468: CALL                 
+ 478: BINARY_OP            -
+ 482: STORE_FAST           topad
+ 484: LOAD_FAST            topad
+ 486: LOAD_CONST           0
+ 488: COMPARE_OP           >
+ 494: POP_JUMP_FORWARD_IF_FALSE to 514
+ 496: LOAD_CONST           '0'
+ 498: LOAD_FAST            topad
+ 500: BINARY_OP            *
+ 504: LOAD_FAST            rotdig
+ 506: BINARY_OP            +
+ 510: STORE_FAST           rotdig
+ 512: JUMP_FORWARD         to 548
+ 514: LOAD_FAST            topad
+ 516: LOAD_CONST           0
+ 518: COMPARE_OP           <
+ 524: POP_JUMP_FORWARD_IF_FALSE to 548
+ 526: LOAD_FAST            rotdig
+ 528: LOAD_FAST            topad
+ 530: UNARY_NEGATIVE       
+ 532: LOAD_CONST           None
+ 534: BUILD_SLICE          
+ 536: BINARY_SUBSCR        
+ 546: STORE_FAST           rotdig
+ 548: LOAD_FAST            torot
+ 550: LOAD_CONST           0
+ 552: COMPARE_OP           <
+ 558: POP_JUMP_FORWARD_IF_FALSE to 582
+ 560: LOAD_FAST            rotdig
+ 562: LOAD_CONST           None
+ 564: LOAD_FAST            torot
+ 566: BUILD_SLICE          
+ 568: BINARY_SUBSCR        
+ 578: STORE_FAST           shifted
+ 580: JUMP_FORWARD         to 630
+ 582: LOAD_FAST            rotdig
+ 584: LOAD_CONST           '0'
+ 586: LOAD_FAST            torot
+ 588: BINARY_OP            *
+ 592: BINARY_OP            +
+ 596: STORE_FAST           shifted
+ 598: LOAD_FAST            shifted
+ 600: LOAD_FAST            context
+ 602: LOAD_ATTR            prec
+ 612: UNARY_NEGATIVE       
+ 614: LOAD_CONST           None
+ 616: BUILD_SLICE          
+ 618: BINARY_SUBSCR        
+ 628: STORE_FAST           shifted
+ 630: LOAD_GLOBAL          NULL + _dec_from_triple
+ 642: LOAD_FAST            self
+ 644: LOAD_ATTR            _sign
+ 654: LOAD_FAST            shifted
+ 656: LOAD_METHOD          lstrip
+ 678: LOAD_CONST           '0'
+ 680: PRECALL              
+ 684: CALL                 
+ 694: JUMP_IF_TRUE_OR_POP  to 698
+ 696: LOAD_CONST           '0'
+ 698: LOAD_FAST            self
+ 700: LOAD_ATTR            _exp
+ 710: PRECALL              
+ 714: CALL                 
+ 724: RETURN_VALUE         

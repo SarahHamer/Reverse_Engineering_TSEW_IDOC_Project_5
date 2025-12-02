@@ -1,0 +1,22 @@
+# Disassembly for email.header_length
+# From module file: email.quoprimime
+
+## co_consts:
+('Return a header quoted-printable encoding length.\n\n    Note that this does not include any RFC 2047 chrome added by\n    `header_encode()`.\n\n    :param bytearray: An array of bytes (a.k.a. octets).\n    :return: The length in bytes of the byte array when it is encoded with\n        quoted-printable for headers.\n    ', <code object <genexpr> at 0x000002406944A560, file "email\quoprimime.py", line 94>)
+
+## co_names:
+('sum',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + sum
+  14: LOAD_CONST           <code object <genexpr> at 0x000002406944A560, file "email\quoprimime.py", line 94>
+  16: MAKE_FUNCTION        
+  18: LOAD_FAST            bytearray
+  20: GET_ITER             
+  22: PRECALL              
+  26: CALL                 
+  36: PRECALL              
+  40: CALL                 
+  50: RETURN_VALUE         

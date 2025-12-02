@@ -1,0 +1,209 @@
+# Disassembly for subprocess.Popen
+# From module file: subprocess
+
+## co_consts:
+('Popen', " Execute a child program in a new process.\n\n    For a complete description of the arguments see the Python documentation.\n\n    Arguments:\n      args: A string, or a sequence of program arguments.\n\n      bufsize: supplied as the buffering argument to the open() function when\n          creating the stdin/stdout/stderr pipe file objects\n\n      executable: A replacement program to execute.\n\n      stdin, stdout and stderr: These specify the executed programs' standard\n          input, standard output and standard error file handles, respectively.\n\n      preexec_fn: (POSIX only) An object to be called in the child process\n          just before the child is executed.\n\n      close_fds: Controls closing or inheriting of file descriptors.\n\n      shell: If true, the command will be executed through the shell.\n\n      cwd: Sets the current directory before the child is executed.\n\n      env: Defines the environment variables for the new process.\n\n      text: If true, decode stdin, stdout and stderr using the given encoding\n          (if set) or the system default otherwise.\n\n      universal_newlines: Alias of text, provided for backwards compatibility.\n\n      startupinfo and creationflags (Windows only)\n\n      restore_signals (POSIX only)\n\n      start_new_session (POSIX only)\n\n      process_group (POSIX only)\n\n      group (POSIX only)\n\n      extra_groups (POSIX only)\n\n      user (POSIX only)\n\n      umask (POSIX only)\n\n      pass_fds (POSIX only)\n\n      encoding and errors: Text mode encoding and error handling to use for\n          file objects stdin, stdout and stderr.\n\n    Attributes:\n        stdin, stdout, stderr, pid, returncode\n    ", False, -1, None, True, 0, (), ('user', 'group', 'extra_groups', 'encoding', 'errors', 'text', 'umask', 'pipesize', 'process_group'), <code object __init__ at 0x000002406952E050, file "subprocess.py", line 807>, <code object __repr__ at 0x00000240693AA0B0, file "subprocess.py", line 1064>, <code object universal_newlines at 0x0000024069494780, file "subprocess.py", line 1075>, <code object universal_newlines at 0x000002406945D890, file "subprocess.py", line 1081>, <code object _translate_newlines at 0x00000240693AA970, file "subprocess.py", line 1085>, <code object __enter__ at 0x000002406943BAB0, file "subprocess.py", line 1089>, <code object __exit__ at 0x0000024068C57220, file "subprocess.py", line 1092>, <code object __del__ at 0x00000240691F5D70, file "subprocess.py", line 1120>, <code object _get_devnull at 0x00000240691F3B40, file "subprocess.py", line 1135>, <code object _stdin_write at 0x0000024068E21720, file "subprocess.py", line 1140>, <code object communicate at 0x0000024068E16B70, file "subprocess.py", line 1165>, <code object poll at 0x000002406945F780, file "subprocess.py", line 1233>, <code object _remaining_time at 0x000002406945CF30, file "subprocess.py", line 1239>, <code object _check_timeout at 0x00000240691EABB0, file "subprocess.py", line 1247>, <code object wait at 0x0000024069365770, file "subprocess.py", line 1259>, <code object _close_pipe_fds at 0x0000024068C27AE0, file "subprocess.py", line 1282>, <code object _on_error_fd_closer at 0x0000024069365B50, file "subprocess.py", line 1311>, <code object _get_handles at 0x000002406952F030, file "subprocess.py", line 1335>, <code object _make_inheritable at 0x000002406921F9B0, file "subprocess.py", line 1414>, <code object _filter_handle_list at 0x000002406945EF10, file "subprocess.py", line 1423>, <code object _execute_child at 0x0000024066D65800, file "subprocess.py", line 1436>, <code object _internal_poll at 0x00000240693D2890, file "subprocess.py", line 1563>, <code object _wait at 0x000002406947CD50, file "subprocess.py", line 1580>, <code object _readerthread at 0x00000240693ABC30, file "subprocess.py", line 1596>, <code object _communicate at 0x0000024068D36150, file "subprocess.py", line 1601>, <code object send_signal at 0x0000024068DB4190, file "subprocess.py", line 1651>, <code object terminate at 0x000002406942E740, file "subprocess.py", line 1665>, <code object _get_handles at 0x0000024069530770, file "subprocess.py", line 1686>, <code object _posix_spawn at 0x0000024068C03E70, file "subprocess.py", line 1750>, <code object _execute_child at 0x0000024068E8F210, file "subprocess.py", line 1789>, <code object _handle_exitstatus at 0x000002406941AAF0, file "subprocess.py", line 1954>, <code object _internal_poll at 0x0000024068C324E0, file "subprocess.py", line 1966>, <code object _try_wait at 0x00000240693AABF0, file "subprocess.py", line 2001>, <code object _wait at 0x0000024068E17490, file "subprocess.py", line 2014>, <code object _communicate at 0x0000024066CBF360, file "subprocess.py", line 2055>, <code object _save_input at 0x00000240691E84B0, file "subprocess.py", line 2157>, <code object send_signal at 0x00000240691F13E0, file "subprocess.py", line 2169>, <code object terminate at 0x00000240693EB330, file "subprocess.py", line 2201>, <code object kill at 0x00000240693EBC30, file "subprocess.py", line 2206>, (-1, None, None, None, None, None, True, False, None, None, None, None, 0, True, False, ()), (None, None), (False,), (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '_child_created', '__init__', '__repr__', 'classmethod', 'types', 'GenericAlias', '__class_getitem__', 'property', 'universal_newlines', 'setter', '_translate_newlines', '__enter__', '__exit__', 'sys', 'maxsize', 'warnings', 'warn', '__del__', '_get_devnull', '_stdin_write', 'communicate', 'poll', '_remaining_time', '_check_timeout', 'wait', '_close_pipe_fds', 'contextlib', 'contextmanager', '_on_error_fd_closer', '_mswindows', '_get_handles', '_make_inheritable', '_filter_handle_list', '_execute_child', '_winapi', 'WaitForSingleObject', 'WAIT_OBJECT_0', 'GetExitCodeProcess', '_internal_poll', '_wait', '_readerthread', '_communicate', 'send_signal', 'terminate', 'kill', '_posix_spawn', '_waitstatus_to_exitcode', '_WIFSTOPPED', '_WSTOPSIG', '_handle_exitstatus', '_waitpid', '_WNOHANG', 'errno', 'ECHILD', '_try_wait', '_save_input')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Popen'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           " Execute a child program in a new process.\n\n    For a complete description of the arguments see the Python documentation.\n\n    Arguments:\n      args: A string, or a sequence of program arguments.\n\n      bufsize: supplied as the buffering argument to the open() function when\n          creating the stdin/stdout/stderr pipe file objects\n\n      executable: A replacement program to execute.\n\n      stdin, stdout and stderr: These specify the executed programs' standard\n          input, standard output and standard error file handles, respectively.\n\n      preexec_fn: (POSIX only) An object to be called in the child process\n          just before the child is executed.\n\n      close_fds: Controls closing or inheriting of file descriptors.\n\n      shell: If true, the command will be executed through the shell.\n\n      cwd: Sets the current directory before the child is executed.\n\n      env: Defines the environment variables for the new process.\n\n      text: If true, decode stdin, stdout and stderr using the given encoding\n          (if set) or the system default otherwise.\n\n      universal_newlines: Alias of text, provided for backwards compatibility.\n\n      startupinfo and creationflags (Windows only)\n\n      restore_signals (POSIX only)\n\n      start_new_session (POSIX only)\n\n      process_group (POSIX only)\n\n      group (POSIX only)\n\n      extra_groups (POSIX only)\n\n      user (POSIX only)\n\n      umask (POSIX only)\n\n      pass_fds (POSIX only)\n\n      encoding and errors: Text mode encoding and error handling to use for\n          file objects stdin, stdout and stderr.\n\n    Attributes:\n        stdin, stdout, stderr, pid, returncode\n    "
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           False
+  16: STORE_NAME           _child_created
+  18: NOP                  
+  20: NOP                  
+  22: NOP                  
+  24: NOP                  
+  26: NOP                  
+  28: NOP                  
+  30: NOP                  
+  32: LOAD_CONST           (-1, None, None, None, None, None, True, False, None, None, None, None, 0, True, False, ())
+  34: LOAD_CONST           None
+  36: LOAD_CONST           None
+  38: LOAD_CONST           None
+  40: LOAD_CONST           None
+  42: LOAD_CONST           None
+  44: LOAD_CONST           None
+  46: LOAD_CONST           -1
+  48: LOAD_CONST           -1
+  50: LOAD_CONST           None
+  52: LOAD_CONST           ('user', 'group', 'extra_groups', 'encoding', 'errors', 'text', 'umask', 'pipesize', 'process_group')
+  54: BUILD_CONST_KEY_MAP  
+  56: LOAD_CONST           <code object __init__ at 0x000002406952E050, file "subprocess.py", line 807>
+  58: MAKE_FUNCTION        defaults, kwdefaults
+  60: STORE_NAME           __init__
+  62: LOAD_CONST           <code object __repr__ at 0x00000240693AA0B0, file "subprocess.py", line 1064>
+  64: MAKE_FUNCTION        
+  66: STORE_NAME           __repr__
+  68: PUSH_NULL            
+  70: LOAD_NAME            classmethod
+  72: LOAD_NAME            types
+  74: LOAD_ATTR            GenericAlias
+  84: PRECALL              
+  88: CALL                 
+  98: STORE_NAME           __class_getitem__
+ 100: LOAD_NAME            property
+ 102: LOAD_CONST           <code object universal_newlines at 0x0000024069494780, file "subprocess.py", line 1075>
+ 104: MAKE_FUNCTION        
+ 106: PRECALL              
+ 110: CALL                 
+ 120: STORE_NAME           universal_newlines
+ 122: LOAD_NAME            universal_newlines
+ 124: LOAD_ATTR            setter
+ 134: LOAD_CONST           <code object universal_newlines at 0x000002406945D890, file "subprocess.py", line 1081>
+ 136: MAKE_FUNCTION        
+ 138: PRECALL              
+ 142: CALL                 
+ 152: STORE_NAME           universal_newlines
+ 154: LOAD_CONST           <code object _translate_newlines at 0x00000240693AA970, file "subprocess.py", line 1085>
+ 156: MAKE_FUNCTION        
+ 158: STORE_NAME           _translate_newlines
+ 160: LOAD_CONST           <code object __enter__ at 0x000002406943BAB0, file "subprocess.py", line 1089>
+ 162: MAKE_FUNCTION        
+ 164: STORE_NAME           __enter__
+ 166: LOAD_CONST           <code object __exit__ at 0x0000024068C57220, file "subprocess.py", line 1092>
+ 168: MAKE_FUNCTION        
+ 170: STORE_NAME           __exit__
+ 172: LOAD_NAME            sys
+ 174: LOAD_ATTR            maxsize
+ 184: LOAD_NAME            warnings
+ 186: LOAD_ATTR            warn
+ 196: BUILD_TUPLE          
+ 198: LOAD_CONST           <code object __del__ at 0x00000240691F5D70, file "subprocess.py", line 1120>
+ 200: MAKE_FUNCTION        defaults
+ 202: STORE_NAME           __del__
+ 204: LOAD_CONST           <code object _get_devnull at 0x00000240691F3B40, file "subprocess.py", line 1135>
+ 206: MAKE_FUNCTION        
+ 208: STORE_NAME           _get_devnull
+ 210: LOAD_CONST           <code object _stdin_write at 0x0000024068E21720, file "subprocess.py", line 1140>
+ 212: MAKE_FUNCTION        
+ 214: STORE_NAME           _stdin_write
+ 216: LOAD_CONST           (None, None)
+ 218: LOAD_CONST           <code object communicate at 0x0000024068E16B70, file "subprocess.py", line 1165>
+ 220: MAKE_FUNCTION        defaults
+ 222: STORE_NAME           communicate
+ 224: LOAD_CONST           <code object poll at 0x000002406945F780, file "subprocess.py", line 1233>
+ 226: MAKE_FUNCTION        
+ 228: STORE_NAME           poll
+ 230: LOAD_CONST           <code object _remaining_time at 0x000002406945CF30, file "subprocess.py", line 1239>
+ 232: MAKE_FUNCTION        
+ 234: STORE_NAME           _remaining_time
+ 236: NOP                  
+ 238: LOAD_CONST           (False,)
+ 240: LOAD_CONST           <code object _check_timeout at 0x00000240691EABB0, file "subprocess.py", line 1247>
+ 242: MAKE_FUNCTION        defaults
+ 244: STORE_NAME           _check_timeout
+ 246: LOAD_CONST           (None,)
+ 248: LOAD_CONST           <code object wait at 0x0000024069365770, file "subprocess.py", line 1259>
+ 250: MAKE_FUNCTION        defaults
+ 252: STORE_NAME           wait
+ 254: LOAD_CONST           <code object _close_pipe_fds at 0x0000024068C27AE0, file "subprocess.py", line 1282>
+ 256: MAKE_FUNCTION        
+ 258: STORE_NAME           _close_pipe_fds
+ 260: LOAD_NAME            contextlib
+ 262: LOAD_ATTR            contextmanager
+ 272: LOAD_CONST           <code object _on_error_fd_closer at 0x0000024069365B50, file "subprocess.py", line 1311>
+ 274: MAKE_FUNCTION        
+ 276: PRECALL              
+ 280: CALL                 
+ 290: STORE_NAME           _on_error_fd_closer
+ 292: LOAD_NAME            _mswindows
+ 294: POP_JUMP_FORWARD_IF_FALSE to 404
+ 296: LOAD_CONST           <code object _get_handles at 0x000002406952F030, file "subprocess.py", line 1335>
+ 298: MAKE_FUNCTION        
+ 300: STORE_NAME           _get_handles
+ 302: LOAD_CONST           <code object _make_inheritable at 0x000002406921F9B0, file "subprocess.py", line 1414>
+ 304: MAKE_FUNCTION        
+ 306: STORE_NAME           _make_inheritable
+ 308: LOAD_CONST           <code object _filter_handle_list at 0x000002406945EF10, file "subprocess.py", line 1423>
+ 310: MAKE_FUNCTION        
+ 312: STORE_NAME           _filter_handle_list
+ 314: LOAD_CONST           <code object _execute_child at 0x0000024066D65800, file "subprocess.py", line 1436>
+ 316: MAKE_FUNCTION        
+ 318: STORE_NAME           _execute_child
+ 320: LOAD_CONST           None
+ 322: LOAD_NAME            _winapi
+ 324: LOAD_ATTR            WaitForSingleObject
+ 334: LOAD_NAME            _winapi
+ 336: LOAD_ATTR            WAIT_OBJECT_0
+ 346: LOAD_NAME            _winapi
+ 348: LOAD_ATTR            GetExitCodeProcess
+ 358: BUILD_TUPLE          
+ 360: LOAD_CONST           <code object _internal_poll at 0x00000240693D2890, file "subprocess.py", line 1563>
+ 362: MAKE_FUNCTION        defaults
+ 364: STORE_NAME           _internal_poll
+ 366: LOAD_CONST           <code object _wait at 0x000002406947CD50, file "subprocess.py", line 1580>
+ 368: MAKE_FUNCTION        
+ 370: STORE_NAME           _wait
+ 372: LOAD_CONST           <code object _readerthread at 0x00000240693ABC30, file "subprocess.py", line 1596>
+ 374: MAKE_FUNCTION        
+ 376: STORE_NAME           _readerthread
+ 378: LOAD_CONST           <code object _communicate at 0x0000024068D36150, file "subprocess.py", line 1601>
+ 380: MAKE_FUNCTION        
+ 382: STORE_NAME           _communicate
+ 384: LOAD_CONST           <code object send_signal at 0x0000024068DB4190, file "subprocess.py", line 1651>
+ 386: MAKE_FUNCTION        
+ 388: STORE_NAME           send_signal
+ 390: LOAD_CONST           <code object terminate at 0x000002406942E740, file "subprocess.py", line 1665>
+ 392: MAKE_FUNCTION        
+ 394: STORE_NAME           terminate
+ 396: LOAD_NAME            terminate
+ 398: STORE_NAME           kill
+ 400: LOAD_CONST           None
+ 402: RETURN_VALUE         
+ 404: LOAD_CONST           <code object _get_handles at 0x0000024069530770, file "subprocess.py", line 1686>
+ 406: MAKE_FUNCTION        
+ 408: STORE_NAME           _get_handles
+ 410: LOAD_CONST           <code object _posix_spawn at 0x0000024068C03E70, file "subprocess.py", line 1750>
+ 412: MAKE_FUNCTION        
+ 414: STORE_NAME           _posix_spawn
+ 416: LOAD_CONST           <code object _execute_child at 0x0000024068E8F210, file "subprocess.py", line 1789>
+ 418: MAKE_FUNCTION        
+ 420: STORE_NAME           _execute_child
+ 422: LOAD_NAME            _waitstatus_to_exitcode
+ 424: LOAD_NAME            _WIFSTOPPED
+ 426: LOAD_NAME            _WSTOPSIG
+ 428: BUILD_TUPLE          
+ 430: LOAD_CONST           <code object _handle_exitstatus at 0x000002406941AAF0, file "subprocess.py", line 1954>
+ 432: MAKE_FUNCTION        defaults
+ 434: STORE_NAME           _handle_exitstatus
+ 436: LOAD_CONST           None
+ 438: LOAD_NAME            _waitpid
+ 440: LOAD_NAME            _WNOHANG
+ 442: LOAD_NAME            errno
+ 444: LOAD_ATTR            ECHILD
+ 454: BUILD_TUPLE          
+ 456: LOAD_CONST           <code object _internal_poll at 0x0000024068C324E0, file "subprocess.py", line 1966>
+ 458: MAKE_FUNCTION        defaults
+ 460: STORE_NAME           _internal_poll
+ 462: LOAD_CONST           <code object _try_wait at 0x00000240693AABF0, file "subprocess.py", line 2001>
+ 464: MAKE_FUNCTION        
+ 466: STORE_NAME           _try_wait
+ 468: LOAD_CONST           <code object _wait at 0x0000024068E17490, file "subprocess.py", line 2014>
+ 470: MAKE_FUNCTION        
+ 472: STORE_NAME           _wait
+ 474: LOAD_CONST           <code object _communicate at 0x0000024066CBF360, file "subprocess.py", line 2055>
+ 476: MAKE_FUNCTION        
+ 478: STORE_NAME           _communicate
+ 480: LOAD_CONST           <code object _save_input at 0x00000240691E84B0, file "subprocess.py", line 2157>
+ 482: MAKE_FUNCTION        
+ 484: STORE_NAME           _save_input
+ 486: LOAD_CONST           <code object send_signal at 0x00000240691F13E0, file "subprocess.py", line 2169>
+ 488: MAKE_FUNCTION        
+ 490: STORE_NAME           send_signal
+ 492: LOAD_CONST           <code object terminate at 0x00000240693EB330, file "subprocess.py", line 2201>
+ 494: MAKE_FUNCTION        
+ 496: STORE_NAME           terminate
+ 498: LOAD_CONST           <code object kill at 0x00000240693EBC30, file "subprocess.py", line 2206>
+ 500: MAKE_FUNCTION        
+ 502: STORE_NAME           kill
+ 504: LOAD_CONST           None
+ 506: RETURN_VALUE         

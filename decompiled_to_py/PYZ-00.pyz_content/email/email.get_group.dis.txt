@@ -1,0 +1,173 @@
+# Disassembly for email.get_group
+# From module file: email._header_value_parser
+
+## co_consts:
+(' group = display-name ":" [group-list] ";" [CFWS]\n\n    ', 0, ':', "expected ':' at end of group display name but found '{}'", 'group-display-name-terminator', 1, None, ';', 'group-terminator', 'end of header in group', "expected ';' at end of group but found {}")
+
+## co_names:
+('Group', 'get_display_name', 'errors', 'HeaderParseError', 'format', 'append', 'ValueTerminal', 'get_group_list', 'defects', 'InvalidHeaderDefect', 'CFWS_LEADER', 'get_cfws')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + Group
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           group
+  30: LOAD_GLOBAL          NULL + get_display_name
+  42: LOAD_FAST            value
+  44: PRECALL              
+  48: CALL                 
+  58: UNPACK_SEQUENCE      
+  62: STORE_FAST           token
+  64: STORE_FAST           value
+  66: LOAD_FAST            value
+  68: POP_JUMP_FORWARD_IF_FALSE to 94
+  70: LOAD_FAST            value
+  72: LOAD_CONST           0
+  74: BINARY_SUBSCR        
+  84: LOAD_CONST           ':'
+  86: COMPARE_OP           !=
+  92: POP_JUMP_FORWARD_IF_FALSE to 172
+  94: LOAD_GLOBAL          NULL + errors
+ 106: LOAD_ATTR            HeaderParseError
+ 116: LOAD_CONST           "expected ':' at end of group display name but found '{}'"
+ 118: LOAD_METHOD          format
+ 140: LOAD_FAST            value
+ 142: PRECALL              
+ 146: CALL                 
+ 156: PRECALL              
+ 160: CALL                 
+ 170: RAISE_VARARGS        
+ 172: LOAD_FAST            group
+ 174: LOAD_METHOD          append
+ 196: LOAD_FAST            token
+ 198: PRECALL              
+ 202: CALL                 
+ 212: POP_TOP              
+ 214: LOAD_FAST            group
+ 216: LOAD_METHOD          append
+ 238: LOAD_GLOBAL          NULL + ValueTerminal
+ 250: LOAD_CONST           ':'
+ 252: LOAD_CONST           'group-display-name-terminator'
+ 254: PRECALL              
+ 258: CALL                 
+ 268: PRECALL              
+ 272: CALL                 
+ 282: POP_TOP              
+ 284: LOAD_FAST            value
+ 286: LOAD_CONST           1
+ 288: LOAD_CONST           None
+ 290: BUILD_SLICE          
+ 292: BINARY_SUBSCR        
+ 302: STORE_FAST           value
+ 304: LOAD_FAST            value
+ 306: POP_JUMP_FORWARD_IF_FALSE to 426
+ 308: LOAD_FAST            value
+ 310: LOAD_CONST           0
+ 312: BINARY_SUBSCR        
+ 322: LOAD_CONST           ';'
+ 324: COMPARE_OP           ==
+ 330: POP_JUMP_FORWARD_IF_FALSE to 426
+ 332: LOAD_FAST            group
+ 334: LOAD_METHOD          append
+ 356: LOAD_GLOBAL          NULL + ValueTerminal
+ 368: LOAD_CONST           ';'
+ 370: LOAD_CONST           'group-terminator'
+ 372: PRECALL              
+ 376: CALL                 
+ 386: PRECALL              
+ 390: CALL                 
+ 400: POP_TOP              
+ 402: LOAD_FAST            group
+ 404: LOAD_FAST            value
+ 406: LOAD_CONST           1
+ 408: LOAD_CONST           None
+ 410: BUILD_SLICE          
+ 412: BINARY_SUBSCR        
+ 422: BUILD_TUPLE          
+ 424: RETURN_VALUE         
+ 426: LOAD_GLOBAL          NULL + get_group_list
+ 438: LOAD_FAST            value
+ 440: PRECALL              
+ 444: CALL                 
+ 454: UNPACK_SEQUENCE      
+ 458: STORE_FAST           token
+ 460: STORE_FAST           value
+ 462: LOAD_FAST            group
+ 464: LOAD_METHOD          append
+ 486: LOAD_FAST            token
+ 488: PRECALL              
+ 492: CALL                 
+ 502: POP_TOP              
+ 504: LOAD_FAST            value
+ 506: POP_JUMP_FORWARD_IF_TRUE to 598
+ 508: LOAD_FAST            group
+ 510: LOAD_ATTR            defects
+ 520: LOAD_METHOD          append
+ 542: LOAD_GLOBAL          NULL + errors
+ 554: LOAD_ATTR            InvalidHeaderDefect
+ 564: LOAD_CONST           'end of header in group'
+ 566: PRECALL              
+ 570: CALL                 
+ 580: PRECALL              
+ 584: CALL                 
+ 594: POP_TOP              
+ 596: JUMP_FORWARD         to 700
+ 598: LOAD_FAST            value
+ 600: LOAD_CONST           0
+ 602: BINARY_SUBSCR        
+ 612: LOAD_CONST           ';'
+ 614: COMPARE_OP           !=
+ 620: POP_JUMP_FORWARD_IF_FALSE to 700
+ 622: LOAD_GLOBAL          NULL + errors
+ 634: LOAD_ATTR            HeaderParseError
+ 644: LOAD_CONST           "expected ';' at end of group but found {}"
+ 646: LOAD_METHOD          format
+ 668: LOAD_FAST            value
+ 670: PRECALL              
+ 674: CALL                 
+ 684: PRECALL              
+ 688: CALL                 
+ 698: RAISE_VARARGS        
+ 700: LOAD_FAST            group
+ 702: LOAD_METHOD          append
+ 724: LOAD_GLOBAL          NULL + ValueTerminal
+ 736: LOAD_CONST           ';'
+ 738: LOAD_CONST           'group-terminator'
+ 740: PRECALL              
+ 744: CALL                 
+ 754: PRECALL              
+ 758: CALL                 
+ 768: POP_TOP              
+ 770: LOAD_FAST            value
+ 772: LOAD_CONST           1
+ 774: LOAD_CONST           None
+ 776: BUILD_SLICE          
+ 778: BINARY_SUBSCR        
+ 788: STORE_FAST           value
+ 790: LOAD_FAST            value
+ 792: POP_JUMP_FORWARD_IF_FALSE to 902
+ 794: LOAD_FAST            value
+ 796: LOAD_CONST           0
+ 798: BINARY_SUBSCR        
+ 808: LOAD_GLOBAL          CFWS_LEADER
+ 820: CONTAINS_OP          
+ 822: POP_JUMP_FORWARD_IF_FALSE to 902
+ 824: LOAD_GLOBAL          NULL + get_cfws
+ 836: LOAD_FAST            value
+ 838: PRECALL              
+ 842: CALL                 
+ 852: UNPACK_SEQUENCE      
+ 856: STORE_FAST           token
+ 858: STORE_FAST           value
+ 860: LOAD_FAST            group
+ 862: LOAD_METHOD          append
+ 884: LOAD_FAST            token
+ 886: PRECALL              
+ 890: CALL                 
+ 900: POP_TOP              
+ 902: LOAD_FAST            group
+ 904: LOAD_FAST            value
+ 906: BUILD_TUPLE          
+ 908: RETURN_VALUE         

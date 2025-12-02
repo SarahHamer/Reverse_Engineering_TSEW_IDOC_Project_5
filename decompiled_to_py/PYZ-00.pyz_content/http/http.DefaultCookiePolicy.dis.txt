@@ -1,0 +1,115 @@
+# Disassembly for http.DefaultCookiePolicy
+# From module file: http.cookiejar
+
+## co_consts:
+('DefaultCookiePolicy', 'Implements the standard rules for accepting and returning cookies.', 1, 2, 4, 0, None, True, False, ('https', 'wss'), <code object __init__ at 0x00000240691DABB0, file "http\cookiejar.py", line 884>, <code object blocked_domains at 0x0000024069495480, file "http\cookiejar.py", line 919>, <code object set_blocked_domains at 0x000002406945E880, file "http\cookiejar.py", line 922>, <code object is_blocked at 0x00000240693EBB30, file "http\cookiejar.py", line 926>, <code object allowed_domains at 0x0000024069495550, file "http\cookiejar.py", line 932>, <code object set_allowed_domains at 0x000002406945DE30, file "http\cookiejar.py", line 935>, <code object is_not_allowed at 0x000002406944B000, file "http\cookiejar.py", line 941>, <code object set_ok at 0x00000240691C1BB0, file "http\cookiejar.py", line 949>, <code object set_ok_version at 0x00000240691F5D70, file "http\cookiejar.py", line 968>, <code object set_ok_verifiability at 0x00000240691E9830, file "http\cookiejar.py", line 983>, <code object set_ok_name at 0x000002406922D680, file "http\cookiejar.py", line 995>, <code object set_ok_path at 0x000002406942E740, file "http\cookiejar.py", line 1004>, <code object set_ok_domain at 0x0000024068E11050, file "http\cookiejar.py", line 1015>, <code object set_ok_port at 0x0000024069498430, file "http\cookiejar.py", line 1075>, <code object return_ok at 0x000002406922CAB0, file "http\cookiejar.py", line 1096>, <code object return_ok_version at 0x000002406922CD50, file "http\cookiejar.py", line 1114>, <code object return_ok_verifiability at 0x00000240691E8F30, file "http\cookiejar.py", line 1123>, <code object return_ok_secure at 0x000002406944B440, file "http\cookiejar.py", line 1135>, <code object return_ok_expires at 0x0000024069419FB0, file "http\cookiejar.py", line 1141>, <code object return_ok_port at 0x000002406949CE90, file "http\cookiejar.py", line 1147>, <code object return_ok_domain at 0x0000024068E1E310, file "http\cookiejar.py", line 1161>, <code object domain_return_ok at 0x0000024066C26DA0, file "http\cookiejar.py", line 1188>, <code object path_return_ok at 0x00000240691DBA30, file "http\cookiejar.py", line 1214>)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'DomainStrictNoDots', 'DomainStrictNonDomain', 'DomainRFC2965Match', 'DomainLiberal', 'DomainStrict', '__init__', 'blocked_domains', 'set_blocked_domains', 'is_blocked', 'allowed_domains', 'set_allowed_domains', 'is_not_allowed', 'set_ok', 'set_ok_version', 'set_ok_verifiability', 'set_ok_name', 'set_ok_path', 'set_ok_domain', 'set_ok_port', 'return_ok', 'return_ok_version', 'return_ok_verifiability', 'return_ok_secure', 'return_ok_expires', 'return_ok_port', 'return_ok_domain', 'domain_return_ok', 'path_return_ok')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'DefaultCookiePolicy'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Implements the standard rules for accepting and returning cookies.'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           1
+  16: STORE_NAME           DomainStrictNoDots
+  18: LOAD_CONST           2
+  20: STORE_NAME           DomainStrictNonDomain
+  22: LOAD_CONST           4
+  24: STORE_NAME           DomainRFC2965Match
+  26: LOAD_CONST           0
+  28: STORE_NAME           DomainLiberal
+  30: LOAD_NAME            DomainStrictNoDots
+  32: LOAD_NAME            DomainStrictNonDomain
+  34: BINARY_OP            |
+  38: STORE_NAME           DomainStrict
+  40: LOAD_CONST           None
+  42: LOAD_CONST           None
+  44: LOAD_CONST           True
+  46: LOAD_CONST           False
+  48: LOAD_CONST           None
+  50: LOAD_CONST           False
+  52: LOAD_CONST           False
+  54: LOAD_CONST           True
+  56: LOAD_CONST           False
+  58: LOAD_NAME            DomainLiberal
+  60: LOAD_CONST           False
+  62: LOAD_CONST           False
+  64: LOAD_CONST           ('https', 'wss')
+  66: BUILD_TUPLE          
+  68: LOAD_CONST           <code object __init__ at 0x00000240691DABB0, file "http\cookiejar.py", line 884>
+  70: MAKE_FUNCTION        defaults
+  72: STORE_NAME           __init__
+  74: LOAD_CONST           <code object blocked_domains at 0x0000024069495480, file "http\cookiejar.py", line 919>
+  76: MAKE_FUNCTION        
+  78: STORE_NAME           blocked_domains
+  80: LOAD_CONST           <code object set_blocked_domains at 0x000002406945E880, file "http\cookiejar.py", line 922>
+  82: MAKE_FUNCTION        
+  84: STORE_NAME           set_blocked_domains
+  86: LOAD_CONST           <code object is_blocked at 0x00000240693EBB30, file "http\cookiejar.py", line 926>
+  88: MAKE_FUNCTION        
+  90: STORE_NAME           is_blocked
+  92: LOAD_CONST           <code object allowed_domains at 0x0000024069495550, file "http\cookiejar.py", line 932>
+  94: MAKE_FUNCTION        
+  96: STORE_NAME           allowed_domains
+  98: LOAD_CONST           <code object set_allowed_domains at 0x000002406945DE30, file "http\cookiejar.py", line 935>
+ 100: MAKE_FUNCTION        
+ 102: STORE_NAME           set_allowed_domains
+ 104: LOAD_CONST           <code object is_not_allowed at 0x000002406944B000, file "http\cookiejar.py", line 941>
+ 106: MAKE_FUNCTION        
+ 108: STORE_NAME           is_not_allowed
+ 110: LOAD_CONST           <code object set_ok at 0x00000240691C1BB0, file "http\cookiejar.py", line 949>
+ 112: MAKE_FUNCTION        
+ 114: STORE_NAME           set_ok
+ 116: LOAD_CONST           <code object set_ok_version at 0x00000240691F5D70, file "http\cookiejar.py", line 968>
+ 118: MAKE_FUNCTION        
+ 120: STORE_NAME           set_ok_version
+ 122: LOAD_CONST           <code object set_ok_verifiability at 0x00000240691E9830, file "http\cookiejar.py", line 983>
+ 124: MAKE_FUNCTION        
+ 126: STORE_NAME           set_ok_verifiability
+ 128: LOAD_CONST           <code object set_ok_name at 0x000002406922D680, file "http\cookiejar.py", line 995>
+ 130: MAKE_FUNCTION        
+ 132: STORE_NAME           set_ok_name
+ 134: LOAD_CONST           <code object set_ok_path at 0x000002406942E740, file "http\cookiejar.py", line 1004>
+ 136: MAKE_FUNCTION        
+ 138: STORE_NAME           set_ok_path
+ 140: LOAD_CONST           <code object set_ok_domain at 0x0000024068E11050, file "http\cookiejar.py", line 1015>
+ 142: MAKE_FUNCTION        
+ 144: STORE_NAME           set_ok_domain
+ 146: LOAD_CONST           <code object set_ok_port at 0x0000024069498430, file "http\cookiejar.py", line 1075>
+ 148: MAKE_FUNCTION        
+ 150: STORE_NAME           set_ok_port
+ 152: LOAD_CONST           <code object return_ok at 0x000002406922CAB0, file "http\cookiejar.py", line 1096>
+ 154: MAKE_FUNCTION        
+ 156: STORE_NAME           return_ok
+ 158: LOAD_CONST           <code object return_ok_version at 0x000002406922CD50, file "http\cookiejar.py", line 1114>
+ 160: MAKE_FUNCTION        
+ 162: STORE_NAME           return_ok_version
+ 164: LOAD_CONST           <code object return_ok_verifiability at 0x00000240691E8F30, file "http\cookiejar.py", line 1123>
+ 166: MAKE_FUNCTION        
+ 168: STORE_NAME           return_ok_verifiability
+ 170: LOAD_CONST           <code object return_ok_secure at 0x000002406944B440, file "http\cookiejar.py", line 1135>
+ 172: MAKE_FUNCTION        
+ 174: STORE_NAME           return_ok_secure
+ 176: LOAD_CONST           <code object return_ok_expires at 0x0000024069419FB0, file "http\cookiejar.py", line 1141>
+ 178: MAKE_FUNCTION        
+ 180: STORE_NAME           return_ok_expires
+ 182: LOAD_CONST           <code object return_ok_port at 0x000002406949CE90, file "http\cookiejar.py", line 1147>
+ 184: MAKE_FUNCTION        
+ 186: STORE_NAME           return_ok_port
+ 188: LOAD_CONST           <code object return_ok_domain at 0x0000024068E1E310, file "http\cookiejar.py", line 1161>
+ 190: MAKE_FUNCTION        
+ 192: STORE_NAME           return_ok_domain
+ 194: LOAD_CONST           <code object domain_return_ok at 0x0000024066C26DA0, file "http\cookiejar.py", line 1188>
+ 196: MAKE_FUNCTION        
+ 198: STORE_NAME           domain_return_ok
+ 200: LOAD_CONST           <code object path_return_ok at 0x00000240691DBA30, file "http\cookiejar.py", line 1214>
+ 202: MAKE_FUNCTION        
+ 204: STORE_NAME           path_return_ok
+ 206: LOAD_CONST           None
+ 208: RETURN_VALUE         

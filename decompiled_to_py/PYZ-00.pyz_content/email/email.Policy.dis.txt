@@ -1,0 +1,76 @@
+# Disassembly for email.Policy
+# From module file: email._policybase
+
+## co_consts:
+('Policy', "Controls for how messages are interpreted and formatted.\n\n    Most of the classes and many of the methods in the email package accept\n    Policy objects as parameters.  A Policy object contains a set of values and\n    functions that control how input is interpreted and how output is rendered.\n    For example, the parameter 'raise_on_defect' controls whether or not an RFC\n    violation results in an error being raised or not, while 'max_line_length'\n    controls the maximum length of output lines when a Message is serialized.\n\n    Any valid attribute may be overridden when a Policy is created by passing\n    it as a keyword argument to the constructor.  Policy objects are immutable,\n    but a new Policy object can be created with only certain values changed by\n    calling the Policy instance with keyword arguments.  Policy objects can\n    also be added, producing a new Policy object in which the non-default\n    attributes set in the right hand operand overwrite those specified in the\n    left operand.\n\n    Settable attributes:\n\n    raise_on_defect     -- If true, then defects should be raised as errors.\n                           Default: False.\n\n    linesep             -- string containing the value to use as separation\n                           between output lines.  Default '\\n'.\n\n    cte_type            -- Type of allowed content transfer encodings\n\n                           7bit  -- ASCII only\n                           8bit  -- Content-Transfer-Encoding: 8bit is allowed\n\n                           Default: 8bit.  Also controls the disposition of\n                           (RFC invalid) binary data in headers; see the\n                           documentation of the binary_fold method.\n\n    max_line_length     -- maximum length of lines, excluding 'linesep',\n                           during serialization.  None or 0 means no line\n                           wrapping is done.  Default is 78.\n\n    mangle_from_        -- a flag that, when True escapes From_ lines in the\n                           body of the message by putting a `>' in front of\n                           them. This is used when the message is being\n                           serialized by a generator. Default: True.\n\n    message_factory     -- the class to use to create new message objects.\n                           If the value is None, the default is Message.\n\n    ", False, '\n', '8bit', 78, None, <code object handle_defect at 0x00000240693EB530, file "email\_policybase.py", line 169>, <code object register_defect at 0x00000240693EB930, file "email\_policybase.py", line 188>, <code object header_max_count at 0x000002406943BAB0, file "email\_policybase.py", line 201>, <code object header_source_parse at 0x00000240694946B0, file "email\_policybase.py", line 220>, <code object header_store_parse at 0x0000024069495F10, file "email\_policybase.py", line 230>, <code object header_fetch_parse at 0x00000240694957C0, file "email\_policybase.py", line 237>, <code object fold at 0x0000024069495960, file "email\_policybase.py", line 248>, <code object fold_binary at 0x0000024069495890, file "email\_policybase.py", line 260>)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'raise_on_defect', 'linesep', 'cte_type', 'max_line_length', 'mangle_from_', 'message_factory', 'handle_defect', 'register_defect', 'header_max_count', 'abc', 'abstractmethod', 'header_source_parse', 'header_store_parse', 'header_fetch_parse', 'fold', 'fold_binary')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Policy'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           "Controls for how messages are interpreted and formatted.\n\n    Most of the classes and many of the methods in the email package accept\n    Policy objects as parameters.  A Policy object contains a set of values and\n    functions that control how input is interpreted and how output is rendered.\n    For example, the parameter 'raise_on_defect' controls whether or not an RFC\n    violation results in an error being raised or not, while 'max_line_length'\n    controls the maximum length of output lines when a Message is serialized.\n\n    Any valid attribute may be overridden when a Policy is created by passing\n    it as a keyword argument to the constructor.  Policy objects are immutable,\n    but a new Policy object can be created with only certain values changed by\n    calling the Policy instance with keyword arguments.  Policy objects can\n    also be added, producing a new Policy object in which the non-default\n    attributes set in the right hand operand overwrite those specified in the\n    left operand.\n\n    Settable attributes:\n\n    raise_on_defect     -- If true, then defects should be raised as errors.\n                           Default: False.\n\n    linesep             -- string containing the value to use as separation\n                           between output lines.  Default '\\n'.\n\n    cte_type            -- Type of allowed content transfer encodings\n\n                           7bit  -- ASCII only\n                           8bit  -- Content-Transfer-Encoding: 8bit is allowed\n\n                           Default: 8bit.  Also controls the disposition of\n                           (RFC invalid) binary data in headers; see the\n                           documentation of the binary_fold method.\n\n    max_line_length     -- maximum length of lines, excluding 'linesep',\n                           during serialization.  None or 0 means no line\n                           wrapping is done.  Default is 78.\n\n    mangle_from_        -- a flag that, when True escapes From_ lines in the\n                           body of the message by putting a `>' in front of\n                           them. This is used when the message is being\n                           serialized by a generator. Default: True.\n\n    message_factory     -- the class to use to create new message objects.\n                           If the value is None, the default is Message.\n\n    "
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           False
+  16: STORE_NAME           raise_on_defect
+  18: LOAD_CONST           '\n'
+  20: STORE_NAME           linesep
+  22: LOAD_CONST           '8bit'
+  24: STORE_NAME           cte_type
+  26: LOAD_CONST           78
+  28: STORE_NAME           max_line_length
+  30: LOAD_CONST           False
+  32: STORE_NAME           mangle_from_
+  34: LOAD_CONST           None
+  36: STORE_NAME           message_factory
+  38: LOAD_CONST           <code object handle_defect at 0x00000240693EB530, file "email\_policybase.py", line 169>
+  40: MAKE_FUNCTION        
+  42: STORE_NAME           handle_defect
+  44: LOAD_CONST           <code object register_defect at 0x00000240693EB930, file "email\_policybase.py", line 188>
+  46: MAKE_FUNCTION        
+  48: STORE_NAME           register_defect
+  50: LOAD_CONST           <code object header_max_count at 0x000002406943BAB0, file "email\_policybase.py", line 201>
+  52: MAKE_FUNCTION        
+  54: STORE_NAME           header_max_count
+  56: LOAD_NAME            abc
+  58: LOAD_ATTR            abstractmethod
+  68: LOAD_CONST           <code object header_source_parse at 0x00000240694946B0, file "email\_policybase.py", line 220>
+  70: MAKE_FUNCTION        
+  72: PRECALL              
+  76: CALL                 
+  86: STORE_NAME           header_source_parse
+  88: LOAD_NAME            abc
+  90: LOAD_ATTR            abstractmethod
+ 100: LOAD_CONST           <code object header_store_parse at 0x0000024069495F10, file "email\_policybase.py", line 230>
+ 102: MAKE_FUNCTION        
+ 104: PRECALL              
+ 108: CALL                 
+ 118: STORE_NAME           header_store_parse
+ 120: LOAD_NAME            abc
+ 122: LOAD_ATTR            abstractmethod
+ 132: LOAD_CONST           <code object header_fetch_parse at 0x00000240694957C0, file "email\_policybase.py", line 237>
+ 134: MAKE_FUNCTION        
+ 136: PRECALL              
+ 140: CALL                 
+ 150: STORE_NAME           header_fetch_parse
+ 152: LOAD_NAME            abc
+ 154: LOAD_ATTR            abstractmethod
+ 164: LOAD_CONST           <code object fold at 0x0000024069495960, file "email\_policybase.py", line 248>
+ 166: MAKE_FUNCTION        
+ 168: PRECALL              
+ 172: CALL                 
+ 182: STORE_NAME           fold
+ 184: LOAD_NAME            abc
+ 186: LOAD_ATTR            abstractmethod
+ 196: LOAD_CONST           <code object fold_binary at 0x0000024069495890, file "email\_policybase.py", line 260>
+ 198: MAKE_FUNCTION        
+ 200: PRECALL              
+ 204: CALL                 
+ 214: STORE_NAME           fold_binary
+ 216: LOAD_CONST           None
+ 218: RETURN_VALUE         

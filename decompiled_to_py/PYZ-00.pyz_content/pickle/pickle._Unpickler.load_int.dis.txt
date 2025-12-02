@@ -1,0 +1,53 @@
+# Disassembly for pickle._Unpickler.load_int
+# From module file: pickle
+
+## co_consts:
+(None, 1, False, True, 0)
+
+## co_names:
+('readline', 'FALSE', 'TRUE', 'int', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          readline
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           data
+  42: LOAD_FAST            data
+  44: LOAD_GLOBAL          FALSE
+  56: LOAD_CONST           1
+  58: LOAD_CONST           None
+  60: BUILD_SLICE          
+  62: BINARY_SUBSCR        
+  72: COMPARE_OP           ==
+  78: POP_JUMP_FORWARD_IF_FALSE to 86
+  80: LOAD_CONST           False
+  82: STORE_FAST           val
+  84: JUMP_FORWARD         to 162
+  86: LOAD_FAST            data
+  88: LOAD_GLOBAL          TRUE
+ 100: LOAD_CONST           1
+ 102: LOAD_CONST           None
+ 104: BUILD_SLICE          
+ 106: BINARY_SUBSCR        
+ 116: COMPARE_OP           ==
+ 122: POP_JUMP_FORWARD_IF_FALSE to 130
+ 124: LOAD_CONST           True
+ 126: STORE_FAST           val
+ 128: JUMP_FORWARD         to 162
+ 130: LOAD_GLOBAL          NULL + int
+ 142: LOAD_FAST            data
+ 144: LOAD_CONST           0
+ 146: PRECALL              
+ 150: CALL                 
+ 160: STORE_FAST           val
+ 162: LOAD_FAST            self
+ 164: LOAD_METHOD          append
+ 186: LOAD_FAST            val
+ 188: PRECALL              
+ 192: CALL                 
+ 202: POP_TOP              
+ 204: LOAD_CONST           None
+ 206: RETURN_VALUE         

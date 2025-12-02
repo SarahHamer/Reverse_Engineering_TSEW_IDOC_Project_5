@@ -1,0 +1,43 @@
+# Disassembly for datetime.timedelta.__divmod__
+# From module file: datetime
+
+## co_consts:
+(None, 0)
+
+## co_names:
+('isinstance', 'timedelta', 'divmod', '_to_microseconds', 'NotImplemented')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            other
+  16: LOAD_GLOBAL          timedelta
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 192
+  44: LOAD_GLOBAL          NULL + divmod
+  56: LOAD_FAST            self
+  58: LOAD_METHOD          _to_microseconds
+  80: PRECALL              
+  84: CALL                 
+  94: LOAD_FAST            other
+  96: LOAD_METHOD          _to_microseconds
+ 118: PRECALL              
+ 122: CALL                 
+ 132: PRECALL              
+ 136: CALL                 
+ 146: UNPACK_SEQUENCE      
+ 150: STORE_FAST           q
+ 152: STORE_FAST           r
+ 154: LOAD_FAST            q
+ 156: LOAD_GLOBAL          NULL + timedelta
+ 168: LOAD_CONST           0
+ 170: LOAD_CONST           0
+ 172: LOAD_FAST            r
+ 174: PRECALL              
+ 178: CALL                 
+ 188: BUILD_TUPLE          
+ 190: RETURN_VALUE         
+ 192: LOAD_GLOBAL          NotImplemented
+ 204: RETURN_VALUE         

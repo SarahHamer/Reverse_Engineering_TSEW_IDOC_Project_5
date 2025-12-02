@@ -1,0 +1,39 @@
+# Disassembly for tempfile._TemporaryFileWrapper
+# From module file: tempfile
+
+## co_consts:
+('_TemporaryFileWrapper', 'Temporary file wrapper\n\n    This class provides a wrapper around files opened for\n    temporary use.  In particular, it seeks to automatically\n    remove the file when it is no longer needed.\n    ', True, <code object __init__ at 0x000002406941A310, file "tempfile.py", line 467>, <code object __getattr__ at 0x00000240691DABB0, file "tempfile.py", line 473>, <code object __enter__ at 0x000002406945EC40, file "tempfile.py", line 494>, <code object __exit__ at 0x000002406941B3F0, file "tempfile.py", line 500>, <code object close at 0x000002406945F1E0, file "tempfile.py", line 505>, <code object __iter__ at 0x0000024069465610, file "tempfile.py", line 512>, None, (True,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', '__getattr__', '__enter__', '__exit__', 'close', '__iter__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_TemporaryFileWrapper'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Temporary file wrapper\n\n    This class provides a wrapper around files opened for\n    temporary use.  In particular, it seeks to automatically\n    remove the file when it is no longer needed.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           (True,)
+  16: LOAD_CONST           <code object __init__ at 0x000002406941A310, file "tempfile.py", line 467>
+  18: MAKE_FUNCTION        defaults
+  20: STORE_NAME           __init__
+  22: LOAD_CONST           <code object __getattr__ at 0x00000240691DABB0, file "tempfile.py", line 473>
+  24: MAKE_FUNCTION        
+  26: STORE_NAME           __getattr__
+  28: LOAD_CONST           <code object __enter__ at 0x000002406945EC40, file "tempfile.py", line 494>
+  30: MAKE_FUNCTION        
+  32: STORE_NAME           __enter__
+  34: LOAD_CONST           <code object __exit__ at 0x000002406941B3F0, file "tempfile.py", line 500>
+  36: MAKE_FUNCTION        
+  38: STORE_NAME           __exit__
+  40: LOAD_CONST           <code object close at 0x000002406945F1E0, file "tempfile.py", line 505>
+  42: MAKE_FUNCTION        
+  44: STORE_NAME           close
+  46: LOAD_CONST           <code object __iter__ at 0x0000024069465610, file "tempfile.py", line 512>
+  48: MAKE_FUNCTION        
+  50: STORE_NAME           __iter__
+  52: LOAD_CONST           None
+  54: RETURN_VALUE         

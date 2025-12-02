@@ -1,0 +1,18 @@
+# Disassembly for email.BaseHeader.defects
+# From module file: email.headerregistry
+
+## co_consts:
+(None,)
+
+## co_names:
+('tuple', '_defects')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + tuple
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            _defects
+  26: PRECALL              
+  30: CALL                 
+  40: RETURN_VALUE         

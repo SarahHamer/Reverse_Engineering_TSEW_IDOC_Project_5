@@ -1,0 +1,102 @@
+# Disassembly for inspect._signature_is_functionlike
+# From module file: inspect
+
+## co_consts:
+('Private helper to test if `obj` is a duck type of FunctionType.\n    A good example of such objects are functions compiled with\n    Cython, which have all attributes that a pure Python function\n    would have, but have their code statically compiled.\n    ', False, '__name__', None, '__code__', '__defaults__', '__kwdefaults__', '__annotations__')
+
+## co_names:
+('callable', 'isclass', 'getattr', '_void', 'isinstance', 'types', 'CodeType', 'str', 'tuple', 'dict')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + callable
+  14: LOAD_FAST            obj
+  16: PRECALL              
+  20: CALL                 
+  30: POP_JUMP_FORWARD_IF_FALSE to 62
+  32: LOAD_GLOBAL          NULL + isclass
+  44: LOAD_FAST            obj
+  46: PRECALL              
+  50: CALL                 
+  60: POP_JUMP_FORWARD_IF_FALSE to 66
+  62: LOAD_CONST           False
+  64: RETURN_VALUE         
+  66: LOAD_GLOBAL          NULL + getattr
+  78: LOAD_FAST            obj
+  80: LOAD_CONST           '__name__'
+  82: LOAD_CONST           None
+  84: PRECALL              
+  88: CALL                 
+  98: STORE_FAST           name
+ 100: LOAD_GLOBAL          NULL + getattr
+ 112: LOAD_FAST            obj
+ 114: LOAD_CONST           '__code__'
+ 116: LOAD_CONST           None
+ 118: PRECALL              
+ 122: CALL                 
+ 132: STORE_FAST           code
+ 134: LOAD_GLOBAL          NULL + getattr
+ 146: LOAD_FAST            obj
+ 148: LOAD_CONST           '__defaults__'
+ 150: LOAD_GLOBAL          _void
+ 162: PRECALL              
+ 166: CALL                 
+ 176: STORE_FAST           defaults
+ 178: LOAD_GLOBAL          NULL + getattr
+ 190: LOAD_FAST            obj
+ 192: LOAD_CONST           '__kwdefaults__'
+ 194: LOAD_GLOBAL          _void
+ 206: PRECALL              
+ 210: CALL                 
+ 220: STORE_FAST           kwdefaults
+ 222: LOAD_GLOBAL          NULL + getattr
+ 234: LOAD_FAST            obj
+ 236: LOAD_CONST           '__annotations__'
+ 238: LOAD_CONST           None
+ 240: PRECALL              
+ 244: CALL                 
+ 254: STORE_FAST           annotations
+ 256: LOAD_GLOBAL          NULL + isinstance
+ 268: LOAD_FAST            code
+ 270: LOAD_GLOBAL          types
+ 282: LOAD_ATTR            CodeType
+ 292: PRECALL              
+ 296: CALL                 
+ 306: JUMP_IF_FALSE_OR_POP to 498
+ 308: LOAD_GLOBAL          NULL + isinstance
+ 320: LOAD_FAST            name
+ 322: LOAD_GLOBAL          str
+ 334: PRECALL              
+ 338: CALL                 
+ 348: JUMP_IF_FALSE_OR_POP to 498
+ 350: LOAD_FAST            defaults
+ 352: LOAD_CONST           None
+ 354: IS_OP                
+ 356: JUMP_IF_TRUE_OR_POP  to 398
+ 358: LOAD_GLOBAL          NULL + isinstance
+ 370: LOAD_FAST            defaults
+ 372: LOAD_GLOBAL          tuple
+ 384: PRECALL              
+ 388: CALL                 
+ 398: JUMP_IF_FALSE_OR_POP to 498
+ 400: LOAD_FAST            kwdefaults
+ 402: LOAD_CONST           None
+ 404: IS_OP                
+ 406: JUMP_IF_TRUE_OR_POP  to 448
+ 408: LOAD_GLOBAL          NULL + isinstance
+ 420: LOAD_FAST            kwdefaults
+ 422: LOAD_GLOBAL          dict
+ 434: PRECALL              
+ 438: CALL                 
+ 448: JUMP_IF_FALSE_OR_POP to 498
+ 450: LOAD_GLOBAL          NULL + isinstance
+ 462: LOAD_FAST            annotations
+ 464: LOAD_GLOBAL          dict
+ 476: PRECALL              
+ 480: CALL                 
+ 490: JUMP_IF_TRUE_OR_POP  to 498
+ 492: LOAD_FAST            annotations
+ 494: LOAD_CONST           None
+ 496: IS_OP                
+ 498: RETURN_VALUE         

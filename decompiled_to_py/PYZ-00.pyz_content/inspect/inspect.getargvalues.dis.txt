@@ -1,0 +1,30 @@
+# Disassembly for inspect.getargvalues
+# From module file: inspect
+
+## co_consts:
+("Get information about arguments passed into a particular frame.\n\n    A tuple of four things is returned: (args, varargs, varkw, locals).\n    'args' is a list of the argument names.\n    'varargs' and 'varkw' are the names of the * and ** arguments or None.\n    'locals' is the locals dictionary of the given frame.",)
+
+## co_names:
+('getargs', 'f_code', 'ArgInfo', 'f_locals')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + getargs
+  14: LOAD_FAST            frame
+  16: LOAD_ATTR            f_code
+  26: PRECALL              
+  30: CALL                 
+  40: UNPACK_SEQUENCE      
+  44: STORE_FAST           args
+  46: STORE_FAST           varargs
+  48: STORE_FAST           varkw
+  50: LOAD_GLOBAL          NULL + ArgInfo
+  62: LOAD_FAST            args
+  64: LOAD_FAST            varargs
+  66: LOAD_FAST            varkw
+  68: LOAD_FAST            frame
+  70: LOAD_ATTR            f_locals
+  80: PRECALL              
+  84: CALL                 
+  94: RETURN_VALUE         

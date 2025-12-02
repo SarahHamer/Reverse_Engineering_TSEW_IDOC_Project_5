@@ -1,0 +1,269 @@
+# Disassembly for datetime._wrap_strftime
+# From module file: datetime
+
+## co_consts:
+(None, 0, 1, '%', 'f', '%06d', 'microsecond', 'z', '', 'utcoffset', '+', '-', ('hours',), ('minutes',), '%c%02d%02d%02d.%06d', '%c%02d%02d%02d', '%c%02d%02d', 'Z', 'tzname', '%%')
+
+## co_names:
+('append', 'len', 'getattr', 'hasattr', 'utcoffset', 'days', 'divmod', 'timedelta', 'seconds', 'microseconds', 'tzname', 'replace', 'join', '_time', 'strftime')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: STORE_FAST           freplace
+   6: LOAD_CONST           None
+   8: STORE_FAST           zreplace
+  10: LOAD_CONST           None
+  12: STORE_FAST           Zreplace
+  14: BUILD_LIST           
+  16: STORE_FAST           newformat
+  18: LOAD_FAST            newformat
+  20: LOAD_ATTR            append
+  30: STORE_FAST           push
+  32: LOAD_CONST           0
+  34: LOAD_GLOBAL          NULL + len
+  46: LOAD_FAST            format
+  48: PRECALL              
+  52: CALL                 
+  62: STORE_FAST           n
+  64: STORE_FAST           i
+  66: LOAD_FAST            i
+  68: LOAD_FAST            n
+  70: COMPARE_OP           <
+  76: EXTENDED_ARG         
+  78: POP_JUMP_FORWARD_IF_FALSE to 966
+  80: LOAD_FAST            format
+  82: LOAD_FAST            i
+  84: BINARY_SUBSCR        
+  94: STORE_FAST           ch
+  96: LOAD_FAST            i
+  98: LOAD_CONST           1
+ 100: BINARY_OP            +=
+ 104: STORE_FAST           i
+ 106: LOAD_FAST            ch
+ 108: LOAD_CONST           '%'
+ 110: COMPARE_OP           ==
+ 116: EXTENDED_ARG         
+ 118: POP_JUMP_FORWARD_IF_FALSE to 930
+ 120: LOAD_FAST            i
+ 122: LOAD_FAST            n
+ 124: COMPARE_OP           <
+ 130: EXTENDED_ARG         
+ 132: POP_JUMP_FORWARD_IF_FALSE to 906
+ 134: LOAD_FAST            format
+ 136: LOAD_FAST            i
+ 138: BINARY_SUBSCR        
+ 148: STORE_FAST           ch
+ 150: LOAD_FAST            i
+ 152: LOAD_CONST           1
+ 154: BINARY_OP            +=
+ 158: STORE_FAST           i
+ 160: LOAD_FAST            ch
+ 162: LOAD_CONST           'f'
+ 164: COMPARE_OP           ==
+ 170: POP_JUMP_FORWARD_IF_FALSE to 262
+ 172: LOAD_FAST            freplace
+ 174: POP_JUMP_FORWARD_IF_NOT_NONE to 216
+ 176: LOAD_CONST           '%06d'
+ 178: LOAD_GLOBAL          NULL + getattr
+ 190: LOAD_FAST            object
+ 192: LOAD_CONST           'microsecond'
+ 194: LOAD_CONST           0
+ 196: PRECALL              
+ 200: CALL                 
+ 210: BINARY_OP            %
+ 214: STORE_FAST           freplace
+ 216: LOAD_FAST            newformat
+ 218: LOAD_METHOD          append
+ 240: LOAD_FAST            freplace
+ 242: PRECALL              
+ 246: CALL                 
+ 256: POP_TOP              
+ 258: EXTENDED_ARG         
+ 260: JUMP_FORWARD         to 952
+ 262: LOAD_FAST            ch
+ 264: LOAD_CONST           'z'
+ 266: COMPARE_OP           ==
+ 272: POP_JUMP_FORWARD_IF_FALSE to 676
+ 274: LOAD_FAST            zreplace
+ 276: POP_JUMP_FORWARD_IF_NOT_NONE to 620
+ 278: LOAD_CONST           ''
+ 280: STORE_FAST           zreplace
+ 282: LOAD_GLOBAL          NULL + hasattr
+ 294: LOAD_FAST            object
+ 296: LOAD_CONST           'utcoffset'
+ 298: PRECALL              
+ 302: CALL                 
+ 312: POP_JUMP_FORWARD_IF_FALSE to 620
+ 314: LOAD_FAST            object
+ 316: LOAD_METHOD          utcoffset
+ 338: PRECALL              
+ 342: CALL                 
+ 352: STORE_FAST           offset
+ 354: LOAD_FAST            offset
+ 356: POP_JUMP_FORWARD_IF_NONE to 620
+ 358: LOAD_CONST           '+'
+ 360: STORE_FAST           sign
+ 362: LOAD_FAST            offset
+ 364: LOAD_ATTR            days
+ 374: LOAD_CONST           0
+ 376: COMPARE_OP           <
+ 382: POP_JUMP_FORWARD_IF_FALSE to 394
+ 384: LOAD_FAST            offset
+ 386: UNARY_NEGATIVE       
+ 388: STORE_FAST           offset
+ 390: LOAD_CONST           '-'
+ 392: STORE_FAST           sign
+ 394: LOAD_GLOBAL          NULL + divmod
+ 406: LOAD_FAST            offset
+ 408: LOAD_GLOBAL          NULL + timedelta
+ 420: LOAD_CONST           1
+ 422: KW_NAMES             
+ 424: PRECALL              
+ 428: CALL                 
+ 438: PRECALL              
+ 442: CALL                 
+ 452: UNPACK_SEQUENCE      
+ 456: STORE_FAST           h
+ 458: STORE_FAST           rest
+ 460: LOAD_GLOBAL          NULL + divmod
+ 472: LOAD_FAST            rest
+ 474: LOAD_GLOBAL          NULL + timedelta
+ 486: LOAD_CONST           1
+ 488: KW_NAMES             
+ 490: PRECALL              
+ 494: CALL                 
+ 504: PRECALL              
+ 508: CALL                 
+ 518: UNPACK_SEQUENCE      
+ 522: STORE_FAST           m
+ 524: STORE_FAST           rest
+ 526: LOAD_FAST            rest
+ 528: LOAD_ATTR            seconds
+ 538: STORE_FAST           s
+ 540: LOAD_FAST            offset
+ 542: LOAD_ATTR            microseconds
+ 552: STORE_FAST           u
+ 554: LOAD_FAST            u
+ 556: POP_JUMP_FORWARD_IF_FALSE to 580
+ 558: LOAD_CONST           '%c%02d%02d%02d.%06d'
+ 560: LOAD_FAST            sign
+ 562: LOAD_FAST            h
+ 564: LOAD_FAST            m
+ 566: LOAD_FAST            s
+ 568: LOAD_FAST            u
+ 570: BUILD_TUPLE          
+ 572: BINARY_OP            %
+ 576: STORE_FAST           zreplace
+ 578: JUMP_FORWARD         to 620
+ 580: LOAD_FAST            s
+ 582: POP_JUMP_FORWARD_IF_FALSE to 604
+ 584: LOAD_CONST           '%c%02d%02d%02d'
+ 586: LOAD_FAST            sign
+ 588: LOAD_FAST            h
+ 590: LOAD_FAST            m
+ 592: LOAD_FAST            s
+ 594: BUILD_TUPLE          
+ 596: BINARY_OP            %
+ 600: STORE_FAST           zreplace
+ 602: JUMP_FORWARD         to 620
+ 604: LOAD_CONST           '%c%02d%02d'
+ 606: LOAD_FAST            sign
+ 608: LOAD_FAST            h
+ 610: LOAD_FAST            m
+ 612: BUILD_TUPLE          
+ 614: BINARY_OP            %
+ 618: STORE_FAST           zreplace
+ 620: LOAD_CONST           '%'
+ 622: LOAD_FAST            zreplace
+ 624: CONTAINS_OP          
+ 626: POP_JUMP_FORWARD_IF_TRUE to 632
+ 628: LOAD_ASSERTION_ERROR 
+ 630: RAISE_VARARGS        
+ 632: LOAD_FAST            newformat
+ 634: LOAD_METHOD          append
+ 656: LOAD_FAST            zreplace
+ 658: PRECALL              
+ 662: CALL                 
+ 672: POP_TOP              
+ 674: JUMP_FORWARD         to 952
+ 676: LOAD_FAST            ch
+ 678: LOAD_CONST           'Z'
+ 680: COMPARE_OP           ==
+ 686: POP_JUMP_FORWARD_IF_FALSE to 860
+ 688: LOAD_FAST            Zreplace
+ 690: POP_JUMP_FORWARD_IF_NOT_NONE to 816
+ 692: LOAD_CONST           ''
+ 694: STORE_FAST           Zreplace
+ 696: LOAD_GLOBAL          NULL + hasattr
+ 708: LOAD_FAST            object
+ 710: LOAD_CONST           'tzname'
+ 712: PRECALL              
+ 716: CALL                 
+ 726: POP_JUMP_FORWARD_IF_FALSE to 816
+ 728: LOAD_FAST            object
+ 730: LOAD_METHOD          tzname
+ 752: PRECALL              
+ 756: CALL                 
+ 766: STORE_FAST           s
+ 768: LOAD_FAST            s
+ 770: POP_JUMP_FORWARD_IF_NONE to 816
+ 772: LOAD_FAST            s
+ 774: LOAD_METHOD          replace
+ 796: LOAD_CONST           '%'
+ 798: LOAD_CONST           '%%'
+ 800: PRECALL              
+ 804: CALL                 
+ 814: STORE_FAST           Zreplace
+ 816: LOAD_FAST            newformat
+ 818: LOAD_METHOD          append
+ 840: LOAD_FAST            Zreplace
+ 842: PRECALL              
+ 846: CALL                 
+ 856: POP_TOP              
+ 858: JUMP_FORWARD         to 952
+ 860: PUSH_NULL            
+ 862: LOAD_FAST            push
+ 864: LOAD_CONST           '%'
+ 866: PRECALL              
+ 870: CALL                 
+ 880: POP_TOP              
+ 882: PUSH_NULL            
+ 884: LOAD_FAST            push
+ 886: LOAD_FAST            ch
+ 888: PRECALL              
+ 892: CALL                 
+ 902: POP_TOP              
+ 904: JUMP_FORWARD         to 952
+ 906: PUSH_NULL            
+ 908: LOAD_FAST            push
+ 910: LOAD_CONST           '%'
+ 912: PRECALL              
+ 916: CALL                 
+ 926: POP_TOP              
+ 928: JUMP_FORWARD         to 952
+ 930: PUSH_NULL            
+ 932: LOAD_FAST            push
+ 934: LOAD_FAST            ch
+ 936: PRECALL              
+ 940: CALL                 
+ 950: POP_TOP              
+ 952: LOAD_FAST            i
+ 954: LOAD_FAST            n
+ 956: COMPARE_OP           <
+ 962: EXTENDED_ARG         
+ 964: POP_JUMP_BACKWARD_IF_TRUE to 80
+ 966: LOAD_CONST           ''
+ 968: LOAD_METHOD          join
+ 990: LOAD_FAST            newformat
+ 992: PRECALL              
+ 996: CALL                 
+1006: STORE_FAST           newformat
+1008: LOAD_GLOBAL          NULL + _time
+1020: LOAD_ATTR            strftime
+1030: LOAD_FAST            newformat
+1032: LOAD_FAST            timetuple
+1034: PRECALL              
+1038: CALL                 
+1048: RETURN_VALUE         

@@ -1,0 +1,278 @@
+# Disassembly for email.AddrlistClass.getaddress
+# From module file: email._parseaddr
+
+## co_consts:
+('Parse the next address.', 0, '.@', ':', 1, ';', '<', ' (', ' ', ')', ',')
+
+## co_names:
+('commentlist', 'gotonext', 'pos', 'getphraselist', 'len', 'field', 'SPACE', 'join', 'getaddrspec', 'getaddress', 'getrouteaddr', 'specials')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            self
+   6: STORE_ATTR           commentlist
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          gotonext
+  40: PRECALL              
+  44: CALL                 
+  54: POP_TOP              
+  56: LOAD_FAST            self
+  58: LOAD_ATTR            pos
+  68: STORE_FAST           oldpos
+  70: LOAD_FAST            self
+  72: LOAD_ATTR            commentlist
+  82: STORE_FAST           oldcl
+  84: LOAD_FAST            self
+  86: LOAD_METHOD          getphraselist
+ 108: PRECALL              
+ 112: CALL                 
+ 122: STORE_FAST           plist
+ 124: LOAD_FAST            self
+ 126: LOAD_METHOD          gotonext
+ 148: PRECALL              
+ 152: CALL                 
+ 162: POP_TOP              
+ 164: BUILD_LIST           
+ 166: STORE_FAST           returnlist
+ 168: LOAD_FAST            self
+ 170: LOAD_ATTR            pos
+ 180: LOAD_GLOBAL          NULL + len
+ 192: LOAD_FAST            self
+ 194: LOAD_ATTR            field
+ 204: PRECALL              
+ 208: CALL                 
+ 218: COMPARE_OP           >=
+ 224: POP_JUMP_FORWARD_IF_FALSE to 314
+ 226: LOAD_FAST            plist
+ 228: POP_JUMP_FORWARD_IF_FALSE to 310
+ 230: LOAD_GLOBAL          SPACE
+ 242: LOAD_METHOD          join
+ 264: LOAD_FAST            self
+ 266: LOAD_ATTR            commentlist
+ 276: PRECALL              
+ 280: CALL                 
+ 290: LOAD_FAST            plist
+ 292: LOAD_CONST           0
+ 294: BINARY_SUBSCR        
+ 304: BUILD_TUPLE          
+ 306: BUILD_LIST           
+ 308: STORE_FAST           returnlist
+ 310: EXTENDED_ARG         
+ 312: JUMP_FORWARD         to 1370
+ 314: LOAD_FAST            self
+ 316: LOAD_ATTR            field
+ 326: LOAD_FAST            self
+ 328: LOAD_ATTR            pos
+ 338: BINARY_SUBSCR        
+ 348: LOAD_CONST           '.@'
+ 350: CONTAINS_OP          
+ 352: POP_JUMP_FORWARD_IF_FALSE to 494
+ 354: LOAD_FAST            oldpos
+ 356: LOAD_FAST            self
+ 358: STORE_ATTR           pos
+ 368: LOAD_FAST            oldcl
+ 370: LOAD_FAST            self
+ 372: STORE_ATTR           commentlist
+ 382: LOAD_FAST            self
+ 384: LOAD_METHOD          getaddrspec
+ 406: PRECALL              
+ 410: CALL                 
+ 420: STORE_FAST           addrspec
+ 422: LOAD_GLOBAL          SPACE
+ 434: LOAD_METHOD          join
+ 456: LOAD_FAST            self
+ 458: LOAD_ATTR            commentlist
+ 468: PRECALL              
+ 472: CALL                 
+ 482: LOAD_FAST            addrspec
+ 484: BUILD_TUPLE          
+ 486: BUILD_LIST           
+ 488: STORE_FAST           returnlist
+ 490: EXTENDED_ARG         
+ 492: JUMP_FORWARD         to 1370
+ 494: LOAD_FAST            self
+ 496: LOAD_ATTR            field
+ 506: LOAD_FAST            self
+ 508: LOAD_ATTR            pos
+ 518: BINARY_SUBSCR        
+ 528: LOAD_CONST           ':'
+ 530: COMPARE_OP           ==
+ 536: POP_JUMP_FORWARD_IF_FALSE to 918
+ 538: BUILD_LIST           
+ 540: STORE_FAST           returnlist
+ 542: LOAD_GLOBAL          NULL + len
+ 554: LOAD_FAST            self
+ 556: LOAD_ATTR            field
+ 566: PRECALL              
+ 570: CALL                 
+ 580: STORE_FAST           fieldlen
+ 582: LOAD_FAST            self
+ 584: COPY                 
+ 586: LOAD_ATTR            pos
+ 596: LOAD_CONST           1
+ 598: BINARY_OP            +=
+ 602: SWAP                 
+ 604: STORE_ATTR           pos
+ 614: LOAD_FAST            self
+ 616: LOAD_ATTR            pos
+ 626: LOAD_GLOBAL          NULL + len
+ 638: LOAD_FAST            self
+ 640: LOAD_ATTR            field
+ 650: PRECALL              
+ 654: CALL                 
+ 664: COMPARE_OP           <
+ 670: POP_JUMP_FORWARD_IF_FALSE to 916
+ 672: LOAD_FAST            self
+ 674: LOAD_METHOD          gotonext
+ 696: PRECALL              
+ 700: CALL                 
+ 710: POP_TOP              
+ 712: LOAD_FAST            self
+ 714: LOAD_ATTR            pos
+ 724: LOAD_FAST            fieldlen
+ 726: COMPARE_OP           <
+ 732: POP_JUMP_FORWARD_IF_FALSE to 812
+ 734: LOAD_FAST            self
+ 736: LOAD_ATTR            field
+ 746: LOAD_FAST            self
+ 748: LOAD_ATTR            pos
+ 758: BINARY_SUBSCR        
+ 768: LOAD_CONST           ';'
+ 770: COMPARE_OP           ==
+ 776: POP_JUMP_FORWARD_IF_FALSE to 812
+ 778: LOAD_FAST            self
+ 780: COPY                 
+ 782: LOAD_ATTR            pos
+ 792: LOAD_CONST           1
+ 794: BINARY_OP            +=
+ 798: SWAP                 
+ 800: STORE_ATTR           pos
+ 810: JUMP_FORWARD         to 916
+ 812: LOAD_FAST            returnlist
+ 814: LOAD_FAST            self
+ 816: LOAD_METHOD          getaddress
+ 838: PRECALL              
+ 842: CALL                 
+ 852: BINARY_OP            +
+ 856: STORE_FAST           returnlist
+ 858: LOAD_FAST            self
+ 860: LOAD_ATTR            pos
+ 870: LOAD_GLOBAL          NULL + len
+ 882: LOAD_FAST            self
+ 884: LOAD_ATTR            field
+ 894: PRECALL              
+ 898: CALL                 
+ 908: COMPARE_OP           <
+ 914: POP_JUMP_BACKWARD_IF_TRUE to 672
+ 916: JUMP_FORWARD         to 1370
+ 918: LOAD_FAST            self
+ 920: LOAD_ATTR            field
+ 930: LOAD_FAST            self
+ 932: LOAD_ATTR            pos
+ 942: BINARY_SUBSCR        
+ 952: LOAD_CONST           '<'
+ 954: COMPARE_OP           ==
+ 960: POP_JUMP_FORWARD_IF_FALSE to 1202
+ 962: LOAD_FAST            self
+ 964: LOAD_METHOD          getrouteaddr
+ 986: PRECALL              
+ 990: CALL                 
+1000: STORE_FAST           routeaddr
+1002: LOAD_FAST            self
+1004: LOAD_ATTR            commentlist
+1014: POP_JUMP_FORWARD_IF_FALSE to 1142
+1016: LOAD_GLOBAL          SPACE
+1028: LOAD_METHOD          join
+1050: LOAD_FAST            plist
+1052: PRECALL              
+1056: CALL                 
+1066: LOAD_CONST           ' ('
+1068: BINARY_OP            +
+1072: LOAD_CONST           ' '
+1074: LOAD_METHOD          join
+1096: LOAD_FAST            self
+1098: LOAD_ATTR            commentlist
+1108: PRECALL              
+1112: CALL                 
+1122: BINARY_OP            +
+1126: LOAD_CONST           ')'
+1128: BINARY_OP            +
+1132: LOAD_FAST            routeaddr
+1134: BUILD_TUPLE          
+1136: BUILD_LIST           
+1138: STORE_FAST           returnlist
+1140: JUMP_FORWARD         to 1370
+1142: LOAD_GLOBAL          SPACE
+1154: LOAD_METHOD          join
+1176: LOAD_FAST            plist
+1178: PRECALL              
+1182: CALL                 
+1192: LOAD_FAST            routeaddr
+1194: BUILD_TUPLE          
+1196: BUILD_LIST           
+1198: STORE_FAST           returnlist
+1200: JUMP_FORWARD         to 1370
+1202: LOAD_FAST            plist
+1204: POP_JUMP_FORWARD_IF_FALSE to 1288
+1206: LOAD_GLOBAL          SPACE
+1218: LOAD_METHOD          join
+1240: LOAD_FAST            self
+1242: LOAD_ATTR            commentlist
+1252: PRECALL              
+1256: CALL                 
+1266: LOAD_FAST            plist
+1268: LOAD_CONST           0
+1270: BINARY_SUBSCR        
+1280: BUILD_TUPLE          
+1282: BUILD_LIST           
+1284: STORE_FAST           returnlist
+1286: JUMP_FORWARD         to 1370
+1288: LOAD_FAST            self
+1290: LOAD_ATTR            field
+1300: LOAD_FAST            self
+1302: LOAD_ATTR            pos
+1312: BINARY_SUBSCR        
+1322: LOAD_FAST            self
+1324: LOAD_ATTR            specials
+1334: CONTAINS_OP          
+1336: POP_JUMP_FORWARD_IF_FALSE to 1370
+1338: LOAD_FAST            self
+1340: COPY                 
+1342: LOAD_ATTR            pos
+1352: LOAD_CONST           1
+1354: BINARY_OP            +=
+1358: SWAP                 
+1360: STORE_ATTR           pos
+1370: LOAD_FAST            self
+1372: LOAD_METHOD          gotonext
+1394: PRECALL              
+1398: CALL                 
+1408: POP_TOP              
+1410: LOAD_FAST            self
+1412: LOAD_ATTR            pos
+1422: LOAD_GLOBAL          NULL + len
+1434: LOAD_FAST            self
+1436: LOAD_ATTR            field
+1446: PRECALL              
+1450: CALL                 
+1460: COMPARE_OP           <
+1466: POP_JUMP_FORWARD_IF_FALSE to 1544
+1468: LOAD_FAST            self
+1470: LOAD_ATTR            field
+1480: LOAD_FAST            self
+1482: LOAD_ATTR            pos
+1492: BINARY_SUBSCR        
+1502: LOAD_CONST           ','
+1504: COMPARE_OP           ==
+1510: POP_JUMP_FORWARD_IF_FALSE to 1544
+1512: LOAD_FAST            self
+1514: COPY                 
+1516: LOAD_ATTR            pos
+1526: LOAD_CONST           1
+1528: BINARY_OP            +=
+1532: SWAP                 
+1534: STORE_ATTR           pos
+1544: LOAD_FAST            returnlist
+1546: RETURN_VALUE         

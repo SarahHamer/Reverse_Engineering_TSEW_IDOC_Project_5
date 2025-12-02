@@ -1,0 +1,33 @@
+# Disassembly for giftshop.Dollar
+# From module file: giftshop
+
+## co_consts:
+('Dollar', <code object __init__ at 0x000002406944A010, file "giftshop.py", line 80>, 'return', <code object get_description at 0x000002406943B9F0, file "giftshop.py", line 83>, ('Dollar',))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', 'str', 'get_description', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'Dollar'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           ('Dollar',)
+  14: LOAD_CLOSURE         __class__
+  16: BUILD_TUPLE          
+  18: LOAD_CONST           <code object __init__ at 0x000002406944A010, file "giftshop.py", line 80>
+  20: MAKE_FUNCTION        defaults, closure
+  22: STORE_NAME           __init__
+  24: LOAD_CONST           'return'
+  26: LOAD_NAME            str
+  28: BUILD_TUPLE          
+  30: LOAD_CONST           <code object get_description at 0x000002406943B9F0, file "giftshop.py", line 83>
+  32: MAKE_FUNCTION        annotations
+  34: STORE_NAME           get_description
+  36: LOAD_CLOSURE         __class__
+  38: COPY                 
+  40: STORE_NAME           __classcell__
+  42: RETURN_VALUE         

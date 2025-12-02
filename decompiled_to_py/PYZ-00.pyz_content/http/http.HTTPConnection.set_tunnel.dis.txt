@@ -1,0 +1,46 @@
+# Disassembly for http.HTTPConnection.set_tunnel
+# From module file: http.client
+
+## co_consts:
+('Set up host and port for HTTP CONNECT tunnelling.\n\n        In a connection that uses HTTP CONNECT tunneling, the host passed to the\n        constructor is used as a proxy server that relays all communication to\n        the endpoint passed to `set_tunnel`. This done by sending an HTTP\n        CONNECT request to the proxy server when the connection is established.\n\n        This method must be called before the HTTP connection has been\n        established.\n\n        The headers argument should be a mapping of extra HTTP headers to send\n        with the CONNECT request.\n        ', "Can't set up tunnel for established connection", None)
+
+## co_names:
+('sock', 'RuntimeError', '_get_hostport', '_tunnel_host', '_tunnel_port', '_tunnel_headers', 'clear')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            sock
+  14: POP_JUMP_FORWARD_IF_FALSE to 46
+  16: LOAD_GLOBAL          NULL + RuntimeError
+  28: LOAD_CONST           "Can't set up tunnel for established connection"
+  30: PRECALL              
+  34: CALL                 
+  44: RAISE_VARARGS        
+  46: LOAD_FAST            self
+  48: LOAD_METHOD          _get_hostport
+  70: LOAD_FAST            host
+  72: LOAD_FAST            port
+  74: PRECALL              
+  78: CALL                 
+  88: UNPACK_SEQUENCE      
+  92: LOAD_FAST            self
+  94: STORE_ATTR           _tunnel_host
+ 104: LOAD_FAST            self
+ 106: STORE_ATTR           _tunnel_port
+ 116: LOAD_FAST            headers
+ 118: POP_JUMP_FORWARD_IF_FALSE to 138
+ 120: LOAD_FAST            headers
+ 122: LOAD_FAST            self
+ 124: STORE_ATTR           _tunnel_headers
+ 134: LOAD_CONST           None
+ 136: RETURN_VALUE         
+ 138: LOAD_FAST            self
+ 140: LOAD_ATTR            _tunnel_headers
+ 150: LOAD_METHOD          clear
+ 172: PRECALL              
+ 176: CALL                 
+ 186: POP_TOP              
+ 188: LOAD_CONST           None
+ 190: RETURN_VALUE         

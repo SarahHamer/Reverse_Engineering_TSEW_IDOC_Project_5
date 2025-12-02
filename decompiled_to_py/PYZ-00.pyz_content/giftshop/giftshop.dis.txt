@@ -1,0 +1,54 @@
+# Disassembly for giftshop
+# From module file: giftshop
+
+## co_consts:
+(0, ('*',), <code object HistoryBook at 0x00000240693AA470, file "giftshop.py", line 4>, 'HistoryBook', <code object Dollar at 0x000002406945E100, file "giftshop.py", line 79>, 'Dollar', <code object CashRegister at 0x00000240693AB5F0, file "giftshop.py", line 87>, 'CashRegister', <code object GiftShop at 0x00000240691F13E0, file "giftshop.py", line 119>, 'GiftShop', None)
+
+## co_names:
+('entities', 'Item', 'HistoryBook', 'Dollar', 'CashRegister', 'Room', 'GiftShop')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           ('*',)
+   6: IMPORT_NAME          entities
+   8: IMPORT_STAR          
+  10: PUSH_NULL            
+  12: LOAD_BUILD_CLASS     
+  14: LOAD_CONST           <code object HistoryBook at 0x00000240693AA470, file "giftshop.py", line 4>
+  16: MAKE_FUNCTION        
+  18: LOAD_CONST           'HistoryBook'
+  20: LOAD_NAME            Item
+  22: PRECALL              
+  26: CALL                 
+  36: STORE_NAME           HistoryBook
+  38: PUSH_NULL            
+  40: LOAD_BUILD_CLASS     
+  42: LOAD_CONST           <code object Dollar at 0x000002406945E100, file "giftshop.py", line 79>
+  44: MAKE_FUNCTION        
+  46: LOAD_CONST           'Dollar'
+  48: LOAD_NAME            Item
+  50: PRECALL              
+  54: CALL                 
+  64: STORE_NAME           Dollar
+  66: PUSH_NULL            
+  68: LOAD_BUILD_CLASS     
+  70: LOAD_CONST           <code object CashRegister at 0x00000240693AB5F0, file "giftshop.py", line 87>
+  72: MAKE_FUNCTION        
+  74: LOAD_CONST           'CashRegister'
+  76: LOAD_NAME            Item
+  78: PRECALL              
+  82: CALL                 
+  92: STORE_NAME           CashRegister
+  94: PUSH_NULL            
+  96: LOAD_BUILD_CLASS     
+  98: LOAD_CONST           <code object GiftShop at 0x00000240691F13E0, file "giftshop.py", line 119>
+ 100: MAKE_FUNCTION        
+ 102: LOAD_CONST           'GiftShop'
+ 104: LOAD_NAME            Room
+ 106: PRECALL              
+ 110: CALL                 
+ 120: STORE_NAME           GiftShop
+ 122: LOAD_CONST           None
+ 124: RETURN_VALUE         

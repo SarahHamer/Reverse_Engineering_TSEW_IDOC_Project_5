@@ -1,0 +1,38 @@
+# Disassembly for http.strip_quotes
+# From module file: http.cookiejar
+
+## co_consts:
+(None, '"', 1, -1)
+
+## co_names:
+('startswith', 'endswith')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            text
+   4: LOAD_METHOD          startswith
+  26: LOAD_CONST           '"'
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 64
+  44: LOAD_FAST            text
+  46: LOAD_CONST           1
+  48: LOAD_CONST           None
+  50: BUILD_SLICE          
+  52: BINARY_SUBSCR        
+  62: STORE_FAST           text
+  64: LOAD_FAST            text
+  66: LOAD_METHOD          endswith
+  88: LOAD_CONST           '"'
+  90: PRECALL              
+  94: CALL                 
+ 104: POP_JUMP_FORWARD_IF_FALSE to 126
+ 106: LOAD_FAST            text
+ 108: LOAD_CONST           None
+ 110: LOAD_CONST           -1
+ 112: BUILD_SLICE          
+ 114: BINARY_SUBSCR        
+ 124: STORE_FAST           text
+ 126: LOAD_FAST            text
+ 128: RETURN_VALUE         

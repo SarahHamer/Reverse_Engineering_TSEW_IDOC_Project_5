@@ -1,0 +1,17 @@
+# Disassembly for email.NameAddr.addr_spec
+# From module file: email._header_value_parser
+
+## co_consts:
+(None, -1)
+
+## co_names:
+('addr_spec',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_CONST           -1
+   6: BINARY_SUBSCR        
+  16: LOAD_ATTR            addr_spec
+  26: RETURN_VALUE         

@@ -1,0 +1,103 @@
+# Disassembly for logging.Logger._log
+# From module file: logging
+
+## co_consts:
+('\n        Low-level logging routine which creates a LogRecord and then calls\n        all the handlers of this logger to handle the record.\n        ', None, ('(unknown file)', 0, '(unknown function)'))
+
+## co_names:
+('_srcfile', 'findCaller', 'ValueError', 'isinstance', 'BaseException', 'type', '__traceback__', 'tuple', 'sys', 'exc_info', 'makeRecord', 'name', 'handle')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: STORE_FAST           sinfo
+   6: LOAD_GLOBAL          _srcfile
+  18: POP_JUMP_FORWARD_IF_FALSE to 122
+  20: NOP                  
+  22: LOAD_FAST            self
+  24: LOAD_METHOD          findCaller
+  46: LOAD_FAST            stack_info
+  48: LOAD_FAST            stacklevel
+  50: PRECALL              
+  54: CALL                 
+  64: UNPACK_SEQUENCE      
+  68: STORE_FAST           fn
+  70: STORE_FAST           lno
+  72: STORE_FAST           func
+  74: STORE_FAST           sinfo
+  76: JUMP_FORWARD         to 134
+  78: PUSH_EXC_INFO        
+  80: LOAD_GLOBAL          ValueError
+  92: CHECK_EXC_MATCH      
+  94: POP_JUMP_FORWARD_IF_FALSE to 114
+  96: POP_TOP              
+  98: LOAD_CONST           ('(unknown file)', 0, '(unknown function)')
+ 100: UNPACK_SEQUENCE      
+ 104: STORE_FAST           fn
+ 106: STORE_FAST           lno
+ 108: STORE_FAST           func
+ 110: POP_EXCEPT           
+ 112: JUMP_FORWARD         to 134
+ 114: RERAISE              
+ 116: COPY                 
+ 118: POP_EXCEPT           
+ 120: RERAISE              
+ 122: LOAD_CONST           ('(unknown file)', 0, '(unknown function)')
+ 124: UNPACK_SEQUENCE      
+ 128: STORE_FAST           fn
+ 130: STORE_FAST           lno
+ 132: STORE_FAST           func
+ 134: LOAD_FAST            exc_info
+ 136: POP_JUMP_FORWARD_IF_FALSE to 308
+ 138: LOAD_GLOBAL          NULL + isinstance
+ 150: LOAD_FAST            exc_info
+ 152: LOAD_GLOBAL          BaseException
+ 164: PRECALL              
+ 168: CALL                 
+ 178: POP_JUMP_FORWARD_IF_FALSE to 228
+ 180: LOAD_GLOBAL          NULL + type
+ 192: LOAD_FAST            exc_info
+ 194: PRECALL              
+ 198: CALL                 
+ 208: LOAD_FAST            exc_info
+ 210: LOAD_FAST            exc_info
+ 212: LOAD_ATTR            __traceback__
+ 222: BUILD_TUPLE          
+ 224: STORE_FAST           exc_info
+ 226: JUMP_FORWARD         to 308
+ 228: LOAD_GLOBAL          NULL + isinstance
+ 240: LOAD_FAST            exc_info
+ 242: LOAD_GLOBAL          tuple
+ 254: PRECALL              
+ 258: CALL                 
+ 268: POP_JUMP_FORWARD_IF_TRUE to 308
+ 270: LOAD_GLOBAL          NULL + sys
+ 282: LOAD_ATTR            exc_info
+ 292: PRECALL              
+ 296: CALL                 
+ 306: STORE_FAST           exc_info
+ 308: LOAD_FAST            self
+ 310: LOAD_METHOD          makeRecord
+ 332: LOAD_FAST            self
+ 334: LOAD_ATTR            name
+ 344: LOAD_FAST            level
+ 346: LOAD_FAST            fn
+ 348: LOAD_FAST            lno
+ 350: LOAD_FAST            msg
+ 352: LOAD_FAST            args
+ 354: LOAD_FAST            exc_info
+ 356: LOAD_FAST            func
+ 358: LOAD_FAST            extra
+ 360: LOAD_FAST            sinfo
+ 362: PRECALL              
+ 366: CALL                 
+ 376: STORE_FAST           record
+ 378: LOAD_FAST            self
+ 380: LOAD_METHOD          handle
+ 402: LOAD_FAST            record
+ 404: PRECALL              
+ 408: CALL                 
+ 418: POP_TOP              
+ 420: LOAD_CONST           None
+ 422: RETURN_VALUE         

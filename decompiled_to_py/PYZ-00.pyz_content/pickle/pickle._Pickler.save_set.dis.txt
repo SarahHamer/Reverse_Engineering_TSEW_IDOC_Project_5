@@ -1,0 +1,106 @@
+# Disassembly for pickle._Pickler.save_set
+# From module file: pickle
+
+## co_consts:
+(None, 4, ('obj',), True, 0)
+
+## co_names:
+('save', 'write', 'proto', 'save_reduce', 'set', 'list', 'EMPTY_SET', 'memoize', 'iter', 'islice', '_BATCHSIZE', 'len', 'MARK', 'ADDITEMS')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            save
+  14: STORE_FAST           save
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            write
+  28: STORE_FAST           write
+  30: LOAD_FAST            self
+  32: LOAD_ATTR            proto
+  42: LOAD_CONST           4
+  44: COMPARE_OP           <
+  50: POP_JUMP_FORWARD_IF_FALSE to 142
+  52: LOAD_FAST            self
+  54: LOAD_METHOD          save_reduce
+  76: LOAD_GLOBAL          set
+  88: LOAD_GLOBAL          NULL + list
+ 100: LOAD_FAST            obj
+ 102: PRECALL              
+ 106: CALL                 
+ 116: BUILD_TUPLE          
+ 118: LOAD_FAST            obj
+ 120: KW_NAMES             
+ 122: PRECALL              
+ 126: CALL                 
+ 136: POP_TOP              
+ 138: LOAD_CONST           None
+ 140: RETURN_VALUE         
+ 142: PUSH_NULL            
+ 144: LOAD_FAST            write
+ 146: LOAD_GLOBAL          EMPTY_SET
+ 158: PRECALL              
+ 162: CALL                 
+ 172: POP_TOP              
+ 174: LOAD_FAST            self
+ 176: LOAD_METHOD          memoize
+ 198: LOAD_FAST            obj
+ 200: PRECALL              
+ 204: CALL                 
+ 214: POP_TOP              
+ 216: LOAD_GLOBAL          NULL + iter
+ 228: LOAD_FAST            obj
+ 230: PRECALL              
+ 234: CALL                 
+ 244: STORE_FAST           it
+ 246: NOP                  
+ 248: LOAD_GLOBAL          NULL + list
+ 260: LOAD_GLOBAL          NULL + islice
+ 272: LOAD_FAST            it
+ 274: LOAD_FAST            self
+ 276: LOAD_ATTR            _BATCHSIZE
+ 286: PRECALL              
+ 290: CALL                 
+ 300: PRECALL              
+ 304: CALL                 
+ 314: STORE_FAST           batch
+ 316: LOAD_GLOBAL          NULL + len
+ 328: LOAD_FAST            batch
+ 330: PRECALL              
+ 334: CALL                 
+ 344: STORE_FAST           n
+ 346: LOAD_FAST            n
+ 348: LOAD_CONST           0
+ 350: COMPARE_OP           >
+ 356: POP_JUMP_FORWARD_IF_FALSE to 454
+ 358: PUSH_NULL            
+ 360: LOAD_FAST            write
+ 362: LOAD_GLOBAL          MARK
+ 374: PRECALL              
+ 378: CALL                 
+ 388: POP_TOP              
+ 390: LOAD_FAST            batch
+ 392: GET_ITER             
+ 394: FOR_ITER             to 422
+ 396: STORE_FAST           item
+ 398: PUSH_NULL            
+ 400: LOAD_FAST            save
+ 402: LOAD_FAST            item
+ 404: PRECALL              
+ 408: CALL                 
+ 418: POP_TOP              
+ 420: JUMP_BACKWARD        to 394
+ 422: PUSH_NULL            
+ 424: LOAD_FAST            write
+ 426: LOAD_GLOBAL          ADDITEMS
+ 438: PRECALL              
+ 442: CALL                 
+ 452: POP_TOP              
+ 454: LOAD_FAST            n
+ 456: LOAD_FAST            self
+ 458: LOAD_ATTR            _BATCHSIZE
+ 468: COMPARE_OP           <
+ 474: POP_JUMP_FORWARD_IF_FALSE to 480
+ 476: LOAD_CONST           None
+ 478: RETURN_VALUE         
+ 480: JUMP_BACKWARD        to 248

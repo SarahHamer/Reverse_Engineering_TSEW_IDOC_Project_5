@@ -1,0 +1,29 @@
+# Disassembly for argparse._AttributeHolder
+# From module file: argparse
+
+## co_consts:
+('_AttributeHolder', "Abstract base class that provides __repr__.\n\n    The __repr__ method returns a string in the format::\n        ClassName(attr=name, attr=name, ...)\n    The attributes are determined either by a class-level attribute,\n    '_kwarg_names', or by inspecting the instance __dict__.\n    ", <code object __repr__ at 0x0000024066C26880, file "argparse.py", line 118>, <code object _get_kwargs at 0x0000024069449F00, file "argparse.py", line 133>, <code object _get_args at 0x000002406943AAF0, file "argparse.py", line 136>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__repr__', '_get_kwargs', '_get_args')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_AttributeHolder'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           "Abstract base class that provides __repr__.\n\n    The __repr__ method returns a string in the format::\n        ClassName(attr=name, attr=name, ...)\n    The attributes are determined either by a class-level attribute,\n    '_kwarg_names', or by inspecting the instance __dict__.\n    "
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object __repr__ at 0x0000024066C26880, file "argparse.py", line 118>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           __repr__
+  20: LOAD_CONST           <code object _get_kwargs at 0x0000024069449F00, file "argparse.py", line 133>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           _get_kwargs
+  26: LOAD_CONST           <code object _get_args at 0x000002406943AAF0, file "argparse.py", line 136>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           _get_args
+  32: LOAD_CONST           None
+  34: RETURN_VALUE         

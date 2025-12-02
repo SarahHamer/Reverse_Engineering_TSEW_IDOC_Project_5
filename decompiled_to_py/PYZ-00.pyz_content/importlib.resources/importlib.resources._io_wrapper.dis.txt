@@ -1,0 +1,42 @@
+# Disassembly for importlib.resources._io_wrapper
+# From module file: importlib.resources._adapters
+
+## co_consts:
+(None, 'r', 'rb', "Invalid mode value '{}', only 'r' and 'rb' are supported")
+
+## co_names:
+('TextIOWrapper', 'ValueError', 'format')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            mode
+   4: LOAD_CONST           'r'
+   6: COMPARE_OP           ==
+  12: POP_JUMP_FORWARD_IF_FALSE to 46
+  14: LOAD_GLOBAL          NULL + TextIOWrapper
+  26: LOAD_FAST            file
+  28: BUILD_LIST           
+  30: LOAD_FAST            args
+  32: LIST_EXTEND          
+  34: LIST_TO_TUPLE        
+  36: BUILD_MAP            
+  38: LOAD_FAST            kwargs
+  40: DICT_MERGE           
+  42: CALL_FUNCTION_EX     
+  44: RETURN_VALUE         
+  46: LOAD_FAST            mode
+  48: LOAD_CONST           'rb'
+  50: COMPARE_OP           ==
+  56: POP_JUMP_FORWARD_IF_FALSE to 62
+  58: LOAD_FAST            file
+  60: RETURN_VALUE         
+  62: LOAD_GLOBAL          NULL + ValueError
+  74: LOAD_CONST           "Invalid mode value '{}', only 'r' and 'rb' are supported"
+  76: LOAD_METHOD          format
+  98: LOAD_FAST            mode
+ 100: PRECALL              
+ 104: CALL                 
+ 114: PRECALL              
+ 118: CALL                 
+ 128: RAISE_VARARGS        

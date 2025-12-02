@@ -1,0 +1,21 @@
+# Disassembly for entities.Entity.remove_child
+# From module file: entities
+
+## co_consts:
+(None,)
+
+## co_names:
+('children', 'remove')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            children
+  14: LOAD_METHOD          remove
+  36: LOAD_FAST            child
+  38: PRECALL              
+  42: CALL                 
+  52: POP_TOP              
+  54: LOAD_FAST            self
+  56: RETURN_VALUE         

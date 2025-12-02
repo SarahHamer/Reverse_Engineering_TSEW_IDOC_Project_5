@@ -1,0 +1,24 @@
+# Disassembly for threading.BoundedSemaphore.__init__
+# From module file: threading
+
+## co_consts:
+(None,)
+
+## co_names:
+('Semaphore', '__init__', '_initial_value')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          Semaphore
+  14: LOAD_METHOD          __init__
+  36: LOAD_FAST            self
+  38: LOAD_FAST            value
+  40: PRECALL              
+  44: CALL                 
+  54: POP_TOP              
+  56: LOAD_FAST            value
+  58: LOAD_FAST            self
+  60: STORE_ATTR           _initial_value
+  70: LOAD_CONST           None
+  72: RETURN_VALUE         

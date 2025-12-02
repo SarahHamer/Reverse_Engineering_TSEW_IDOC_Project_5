@@ -1,0 +1,14 @@
+# Disassembly for threading._DummyThread._stop
+# From module file: threading
+
+## co_consts:
+(None,)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: RETURN_VALUE         

@@ -1,0 +1,16 @@
+# Disassembly for email.Compat32.header_store_parse
+# From module file: email._policybase
+
+## co_consts:
+('+\n        The name and value are returned unmodified.\n        ',)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            name
+   4: LOAD_FAST            value
+   6: BUILD_TUPLE          
+   8: RETURN_VALUE         

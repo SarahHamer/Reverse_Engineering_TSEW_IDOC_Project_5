@@ -1,0 +1,43 @@
+# Disassembly for ftplib.FTP_TLS.abort
+# From module file: ftplib
+
+## co_consts:
+(None, b'ABOR', 3, frozenset({'226', '225', '426'}))
+
+## co_names:
+('B_CRLF', 'sock', 'sendall', 'getmultiline', 'error_proto')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           b'ABOR'
+   4: LOAD_GLOBAL          B_CRLF
+  16: BINARY_OP            +
+  20: STORE_FAST           line
+  22: LOAD_FAST            self
+  24: LOAD_ATTR            sock
+  34: LOAD_METHOD          sendall
+  56: LOAD_FAST            line
+  58: PRECALL              
+  62: CALL                 
+  72: POP_TOP              
+  74: LOAD_FAST            self
+  76: LOAD_METHOD          getmultiline
+  98: PRECALL              
+ 102: CALL                 
+ 112: STORE_FAST           resp
+ 114: LOAD_FAST            resp
+ 116: LOAD_CONST           None
+ 118: LOAD_CONST           3
+ 120: BUILD_SLICE          
+ 122: BINARY_SUBSCR        
+ 132: LOAD_CONST           frozenset({'226', '225', '426'})
+ 134: CONTAINS_OP          
+ 136: POP_JUMP_FORWARD_IF_FALSE to 168
+ 138: LOAD_GLOBAL          NULL + error_proto
+ 150: LOAD_FAST            resp
+ 152: PRECALL              
+ 156: CALL                 
+ 166: RAISE_VARARGS        
+ 168: LOAD_FAST            resp
+ 170: RETURN_VALUE         

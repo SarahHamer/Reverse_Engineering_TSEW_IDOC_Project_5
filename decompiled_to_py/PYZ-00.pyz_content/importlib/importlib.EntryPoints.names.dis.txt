@@ -1,0 +1,19 @@
+# Disassembly for importlib.EntryPoints.names
+# From module file: importlib.metadata
+
+## co_consts:
+('\n        Return the set of all names of all entry points.\n        ', <code object <setcomp> at 0x0000024069465450, file "importlib\metadata\__init__.py", line 387>)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           <code object <setcomp> at 0x0000024069465450, file "importlib\metadata\__init__.py", line 387>
+   4: MAKE_FUNCTION        
+   6: LOAD_FAST            self
+   8: GET_ITER             
+  10: PRECALL              
+  14: CALL                 
+  24: RETURN_VALUE         

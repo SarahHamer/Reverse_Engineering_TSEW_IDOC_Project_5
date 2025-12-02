@@ -1,0 +1,27 @@
+# Disassembly for pickle.<listcomp>
+# From module file: pickle
+
+## co_consts:
+('[A-Z][A-Z0-9_]+$',)
+
+## co_names:
+('re', 'match')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 58
+   8: STORE_FAST           x
+  10: LOAD_GLOBAL          NULL + re
+  22: LOAD_ATTR            match
+  32: LOAD_CONST           '[A-Z][A-Z0-9_]+$'
+  34: LOAD_FAST            x
+  36: PRECALL              
+  40: CALL                 
+  50: POP_JUMP_BACKWARD_IF_FALSE to 6
+  52: LOAD_FAST            x
+  54: LIST_APPEND          
+  56: JUMP_BACKWARD        to 6
+  58: RETURN_VALUE         

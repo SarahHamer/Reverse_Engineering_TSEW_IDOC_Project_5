@@ -1,0 +1,18 @@
+# Disassembly for importlib.distribution
+# From module file: importlib.metadata
+
+## co_consts:
+('Get the ``Distribution`` instance for the named package.\n\n    :param distribution_name: The name of the distribution package as a string.\n    :return: A ``Distribution`` instance (or subclass thereof).\n    ',)
+
+## co_names:
+('Distribution', 'from_name')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          Distribution
+  14: LOAD_METHOD          from_name
+  36: LOAD_FAST            distribution_name
+  38: PRECALL              
+  42: CALL                 
+  52: RETURN_VALUE         

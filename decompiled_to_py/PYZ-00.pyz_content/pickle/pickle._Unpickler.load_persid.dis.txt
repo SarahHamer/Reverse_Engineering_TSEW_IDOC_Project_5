@@ -1,0 +1,53 @@
+# Disassembly for pickle._Unpickler.load_persid
+# From module file: pickle
+
+## co_consts:
+(None, -1, 'ascii', 'persistent IDs in protocol 0 must be ASCII strings')
+
+## co_names:
+('readline', 'decode', 'UnicodeDecodeError', 'UnpicklingError', 'append', 'persistent_load')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            self
+   6: LOAD_METHOD          readline
+  28: PRECALL              
+  32: CALL                 
+  42: LOAD_CONST           None
+  44: LOAD_CONST           -1
+  46: BUILD_SLICE          
+  48: BINARY_SUBSCR        
+  58: LOAD_METHOD          decode
+  80: LOAD_CONST           'ascii'
+  82: PRECALL              
+  86: CALL                 
+  96: STORE_FAST           pid
+  98: JUMP_FORWARD         to 158
+ 100: PUSH_EXC_INFO        
+ 102: LOAD_GLOBAL          UnicodeDecodeError
+ 114: CHECK_EXC_MATCH      
+ 116: POP_JUMP_FORWARD_IF_FALSE to 150
+ 118: POP_TOP              
+ 120: LOAD_GLOBAL          NULL + UnpicklingError
+ 132: LOAD_CONST           'persistent IDs in protocol 0 must be ASCII strings'
+ 134: PRECALL              
+ 138: CALL                 
+ 148: RAISE_VARARGS        
+ 150: RERAISE              
+ 152: COPY                 
+ 154: POP_EXCEPT           
+ 156: RERAISE              
+ 158: LOAD_FAST            self
+ 160: LOAD_METHOD          append
+ 182: LOAD_FAST            self
+ 184: LOAD_METHOD          persistent_load
+ 206: LOAD_FAST            pid
+ 208: PRECALL              
+ 212: CALL                 
+ 222: PRECALL              
+ 226: CALL                 
+ 236: POP_TOP              
+ 238: LOAD_CONST           None
+ 240: RETURN_VALUE         

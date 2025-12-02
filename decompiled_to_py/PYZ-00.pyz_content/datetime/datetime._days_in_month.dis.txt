@@ -1,0 +1,43 @@
+# Disassembly for datetime._days_in_month
+# From module file: datetime
+
+## co_consts:
+('year, month -> number of days in that month in that year.', 1, 12, 2, 29)
+
+## co_names:
+('_is_leap', '_DAYS_IN_MONTH')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           1
+   4: LOAD_FAST            month
+   6: SWAP                 
+   8: COPY                 
+  10: COMPARE_OP           <=
+  16: POP_JUMP_FORWARD_IF_FALSE to 30
+  18: LOAD_CONST           12
+  20: COMPARE_OP           <=
+  26: POP_JUMP_FORWARD_IF_TRUE to 52
+  28: JUMP_FORWARD         to 32
+  30: POP_TOP              
+  32: LOAD_ASSERTION_ERROR 
+  34: LOAD_FAST            month
+  36: PRECALL              
+  40: CALL                 
+  50: RAISE_VARARGS        
+  52: LOAD_FAST            month
+  54: LOAD_CONST           2
+  56: COMPARE_OP           ==
+  62: POP_JUMP_FORWARD_IF_FALSE to 98
+  64: LOAD_GLOBAL          NULL + _is_leap
+  76: LOAD_FAST            year
+  78: PRECALL              
+  82: CALL                 
+  92: POP_JUMP_FORWARD_IF_FALSE to 98
+  94: LOAD_CONST           29
+  96: RETURN_VALUE         
+  98: LOAD_GLOBAL          _DAYS_IN_MONTH
+ 110: LOAD_FAST            month
+ 112: BINARY_SUBSCR        
+ 122: RETURN_VALUE         

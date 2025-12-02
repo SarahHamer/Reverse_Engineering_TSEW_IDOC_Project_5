@@ -1,0 +1,200 @@
+# Disassembly for importlib.reload
+# From module file: importlib
+
+## co_consts:
+('Reload the module and return it.\n\n    The module must have been successfully imported before.\n\n    ', 'reload() argument must be a module', 'module {} not in sys.modules', ('name',), '.', 0, 'parent {!r} not in sys.modules', None, 'spec not found for the module ')
+
+## co_names:
+('__spec__', 'name', 'AttributeError', '__name__', 'TypeError', 'sys', 'modules', 'get', 'ImportError', 'format', '_RELOADING', 'rpartition', '__path__', 'KeyError', '_bootstrap', '_find_spec', 'ModuleNotFoundError', '_exec')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            module
+   6: LOAD_ATTR            __spec__
+  16: LOAD_ATTR            name
+  26: STORE_FAST           name
+  28: JUMP_FORWARD         to 138
+  30: PUSH_EXC_INFO        
+  32: LOAD_GLOBAL          AttributeError
+  44: CHECK_EXC_MATCH      
+  46: POP_JUMP_FORWARD_IF_FALSE to 130
+  48: POP_TOP              
+  50: NOP                  
+  52: LOAD_FAST            module
+  54: LOAD_ATTR            __name__
+  64: STORE_FAST           name
+  66: JUMP_FORWARD         to 126
+  68: PUSH_EXC_INFO        
+  70: LOAD_GLOBAL          AttributeError
+  82: CHECK_EXC_MATCH      
+  84: POP_JUMP_FORWARD_IF_FALSE to 118
+  86: POP_TOP              
+  88: LOAD_GLOBAL          NULL + TypeError
+ 100: LOAD_CONST           'reload() argument must be a module'
+ 102: PRECALL              
+ 106: CALL                 
+ 116: RAISE_VARARGS        
+ 118: RERAISE              
+ 120: COPY                 
+ 122: POP_EXCEPT           
+ 124: RERAISE              
+ 126: POP_EXCEPT           
+ 128: JUMP_FORWARD         to 138
+ 130: RERAISE              
+ 132: COPY                 
+ 134: POP_EXCEPT           
+ 136: RERAISE              
+ 138: LOAD_GLOBAL          sys
+ 150: LOAD_ATTR            modules
+ 160: LOAD_METHOD          get
+ 182: LOAD_FAST            name
+ 184: PRECALL              
+ 188: CALL                 
+ 198: LOAD_FAST            module
+ 200: IS_OP                
+ 202: POP_JUMP_FORWARD_IF_FALSE to 280
+ 204: LOAD_CONST           'module {} not in sys.modules'
+ 206: STORE_FAST           msg
+ 208: LOAD_GLOBAL          NULL + ImportError
+ 220: LOAD_FAST            msg
+ 222: LOAD_METHOD          format
+ 244: LOAD_FAST            name
+ 246: PRECALL              
+ 250: CALL                 
+ 260: LOAD_FAST            name
+ 262: KW_NAMES             
+ 264: PRECALL              
+ 268: CALL                 
+ 278: RAISE_VARARGS        
+ 280: LOAD_FAST            name
+ 282: LOAD_GLOBAL          _RELOADING
+ 294: CONTAINS_OP          
+ 296: POP_JUMP_FORWARD_IF_FALSE to 324
+ 298: LOAD_GLOBAL          _RELOADING
+ 310: LOAD_FAST            name
+ 312: BINARY_SUBSCR        
+ 322: RETURN_VALUE         
+ 324: LOAD_FAST            module
+ 326: LOAD_GLOBAL          _RELOADING
+ 338: LOAD_FAST            name
+ 340: STORE_SUBSCR         
+ 344: NOP                  
+ 346: LOAD_FAST            name
+ 348: LOAD_METHOD          rpartition
+ 370: LOAD_CONST           '.'
+ 372: PRECALL              
+ 376: CALL                 
+ 386: LOAD_CONST           0
+ 388: BINARY_SUBSCR        
+ 398: STORE_FAST           parent_name
+ 400: LOAD_FAST            parent_name
+ 402: POP_JUMP_FORWARD_IF_FALSE to 564
+ 404: NOP                  
+ 406: LOAD_GLOBAL          sys
+ 418: LOAD_ATTR            modules
+ 428: LOAD_FAST            parent_name
+ 430: BINARY_SUBSCR        
+ 440: STORE_FAST           parent
+ 442: LOAD_FAST            parent
+ 444: LOAD_ATTR            __path__
+ 454: STORE_FAST           pkgpath
+ 456: JUMP_FORWARD         to 568
+ 458: PUSH_EXC_INFO        
+ 460: LOAD_GLOBAL          KeyError
+ 472: CHECK_EXC_MATCH      
+ 474: POP_JUMP_FORWARD_IF_FALSE to 556
+ 476: POP_TOP              
+ 478: LOAD_CONST           'parent {!r} not in sys.modules'
+ 480: STORE_FAST           msg
+ 482: LOAD_GLOBAL          NULL + ImportError
+ 494: LOAD_FAST            msg
+ 496: LOAD_METHOD          format
+ 518: LOAD_FAST            parent_name
+ 520: PRECALL              
+ 524: CALL                 
+ 534: LOAD_FAST            parent_name
+ 536: KW_NAMES             
+ 538: PRECALL              
+ 542: CALL                 
+ 552: LOAD_CONST           None
+ 554: RAISE_VARARGS        
+ 556: RERAISE              
+ 558: COPY                 
+ 560: POP_EXCEPT           
+ 562: RERAISE              
+ 564: LOAD_CONST           None
+ 566: STORE_FAST           pkgpath
+ 568: LOAD_FAST            module
+ 570: STORE_FAST           target
+ 572: LOAD_GLOBAL          NULL + _bootstrap
+ 584: LOAD_ATTR            _find_spec
+ 594: LOAD_FAST            name
+ 596: LOAD_FAST            pkgpath
+ 598: LOAD_FAST            target
+ 600: PRECALL              
+ 604: CALL                 
+ 614: COPY                 
+ 616: STORE_FAST           spec
+ 618: LOAD_FAST            module
+ 620: STORE_ATTR           __spec__
+ 630: LOAD_FAST            spec
+ 632: POP_JUMP_FORWARD_IF_NOT_NONE to 674
+ 634: LOAD_GLOBAL          NULL + ModuleNotFoundError
+ 646: LOAD_CONST           'spec not found for the module '
+ 648: LOAD_FAST            name
+ 650: FORMAT_VALUE         repr
+ 652: BUILD_STRING         
+ 654: LOAD_FAST            name
+ 656: KW_NAMES             
+ 658: PRECALL              
+ 662: CALL                 
+ 672: RAISE_VARARGS        
+ 674: LOAD_GLOBAL          NULL + _bootstrap
+ 686: LOAD_ATTR            _exec
+ 696: LOAD_FAST            spec
+ 698: LOAD_FAST            module
+ 700: PRECALL              
+ 704: CALL                 
+ 714: POP_TOP              
+ 716: LOAD_GLOBAL          sys
+ 728: LOAD_ATTR            modules
+ 738: LOAD_FAST            name
+ 740: BINARY_SUBSCR        
+ 750: NOP                  
+ 752: LOAD_GLOBAL          _RELOADING
+ 764: LOAD_FAST            name
+ 766: DELETE_SUBSCR        
+ 768: RETURN_VALUE         
+ 770: PUSH_EXC_INFO        
+ 772: LOAD_GLOBAL          KeyError
+ 784: CHECK_EXC_MATCH      
+ 786: POP_JUMP_FORWARD_IF_FALSE to 794
+ 788: POP_TOP              
+ 790: POP_EXCEPT           
+ 792: RETURN_VALUE         
+ 794: RERAISE              
+ 796: COPY                 
+ 798: POP_EXCEPT           
+ 800: RERAISE              
+ 802: PUSH_EXC_INFO        
+ 804: NOP                  
+ 806: LOAD_GLOBAL          _RELOADING
+ 818: LOAD_FAST            name
+ 820: DELETE_SUBSCR        
+ 822: RERAISE              
+ 824: PUSH_EXC_INFO        
+ 826: LOAD_GLOBAL          KeyError
+ 838: CHECK_EXC_MATCH      
+ 840: POP_JUMP_FORWARD_IF_FALSE to 848
+ 842: POP_TOP              
+ 844: POP_EXCEPT           
+ 846: RERAISE              
+ 848: RERAISE              
+ 850: COPY                 
+ 852: POP_EXCEPT           
+ 854: RERAISE              
+ 856: COPY                 
+ 858: POP_EXCEPT           
+ 860: RERAISE              

@@ -1,0 +1,84 @@
+# Disassembly for email._structure
+# From module file: email.iterators
+
+## co_consts:
+('A handy debugging aid', None, ' ', 4, '', ('end', 'file'), ' [%s]', ('file',), 1)
+
+## co_names:
+('sys', 'stdout', 'print', 'get_content_type', 'get_default_type', 'is_multipart', 'get_payload', '_structure')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            fp
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 30
+   6: LOAD_GLOBAL          sys
+  18: LOAD_ATTR            stdout
+  28: STORE_FAST           fp
+  30: LOAD_CONST           ' '
+  32: LOAD_FAST            level
+  34: LOAD_CONST           4
+  36: BINARY_OP            *
+  40: BINARY_OP            *
+  44: STORE_FAST           tab
+  46: LOAD_GLOBAL          NULL + print
+  58: LOAD_FAST            tab
+  60: LOAD_FAST            msg
+  62: LOAD_METHOD          get_content_type
+  84: PRECALL              
+  88: CALL                 
+  98: BINARY_OP            +
+ 102: LOAD_CONST           ''
+ 104: LOAD_FAST            fp
+ 106: KW_NAMES             
+ 108: PRECALL              
+ 112: CALL                 
+ 122: POP_TOP              
+ 124: LOAD_FAST            include_default
+ 126: POP_JUMP_FORWARD_IF_FALSE to 206
+ 128: LOAD_GLOBAL          NULL + print
+ 140: LOAD_CONST           ' [%s]'
+ 142: LOAD_FAST            msg
+ 144: LOAD_METHOD          get_default_type
+ 166: PRECALL              
+ 170: CALL                 
+ 180: BINARY_OP            %
+ 184: LOAD_FAST            fp
+ 186: KW_NAMES             
+ 188: PRECALL              
+ 192: CALL                 
+ 202: POP_TOP              
+ 204: JUMP_FORWARD         to 238
+ 206: LOAD_GLOBAL          NULL + print
+ 218: LOAD_FAST            fp
+ 220: KW_NAMES             
+ 222: PRECALL              
+ 226: CALL                 
+ 236: POP_TOP              
+ 238: LOAD_FAST            msg
+ 240: LOAD_METHOD          is_multipart
+ 262: PRECALL              
+ 266: CALL                 
+ 276: POP_JUMP_FORWARD_IF_FALSE to 366
+ 278: LOAD_FAST            msg
+ 280: LOAD_METHOD          get_payload
+ 302: PRECALL              
+ 306: CALL                 
+ 316: GET_ITER             
+ 318: FOR_ITER             to 370
+ 320: STORE_FAST           subpart
+ 322: LOAD_GLOBAL          NULL + _structure
+ 334: LOAD_FAST            subpart
+ 336: LOAD_FAST            fp
+ 338: LOAD_FAST            level
+ 340: LOAD_CONST           1
+ 342: BINARY_OP            +
+ 346: LOAD_FAST            include_default
+ 348: PRECALL              
+ 352: CALL                 
+ 362: POP_TOP              
+ 364: JUMP_BACKWARD        to 318
+ 366: LOAD_CONST           None
+ 368: RETURN_VALUE         
+ 370: LOAD_CONST           None
+ 372: RETURN_VALUE         

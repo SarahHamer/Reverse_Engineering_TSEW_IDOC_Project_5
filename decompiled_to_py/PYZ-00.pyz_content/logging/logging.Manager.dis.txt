@@ -1,0 +1,54 @@
+# Disassembly for logging.Manager
+# From module file: logging
+
+## co_consts:
+('Manager', '\n    There is [under normal circumstances] just one Manager instance, which\n    holds the hierarchy of loggers.\n    ', <code object __init__ at 0x000002406941A8B0, file "logging\__init__.py", line 1308>, <code object disable at 0x00000240694960B0, file "logging\__init__.py", line 1319>, <code object disable at 0x000002406945D5C0, file "logging\__init__.py", line 1323>, <code object getLogger at 0x0000024068DBD480, file "logging\__init__.py", line 1327>, <code object setLoggerClass at 0x00000240693AAAB0, file "logging\__init__.py", line 1361>, <code object setLogRecordFactory at 0x0000024069495210, file "logging\__init__.py", line 1371>, <code object _fixupParents at 0x0000024068E1D200, file "logging\__init__.py", line 1378>, <code object _fixupChildren at 0x00000240691E9830, file "logging\__init__.py", line 1402>, <code object _clear_cache at 0x00000240691DB120, file "logging\__init__.py", line 1415>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', 'property', 'disable', 'setter', 'getLogger', 'setLoggerClass', 'setLogRecordFactory', '_fixupParents', '_fixupChildren', '_clear_cache')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Manager'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           '\n    There is [under normal circumstances] just one Manager instance, which\n    holds the hierarchy of loggers.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object __init__ at 0x000002406941A8B0, file "logging\__init__.py", line 1308>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           __init__
+  20: LOAD_NAME            property
+  22: LOAD_CONST           <code object disable at 0x00000240694960B0, file "logging\__init__.py", line 1319>
+  24: MAKE_FUNCTION        
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_NAME           disable
+  42: LOAD_NAME            disable
+  44: LOAD_ATTR            setter
+  54: LOAD_CONST           <code object disable at 0x000002406945D5C0, file "logging\__init__.py", line 1323>
+  56: MAKE_FUNCTION        
+  58: PRECALL              
+  62: CALL                 
+  72: STORE_NAME           disable
+  74: LOAD_CONST           <code object getLogger at 0x0000024068DBD480, file "logging\__init__.py", line 1327>
+  76: MAKE_FUNCTION        
+  78: STORE_NAME           getLogger
+  80: LOAD_CONST           <code object setLoggerClass at 0x00000240693AAAB0, file "logging\__init__.py", line 1361>
+  82: MAKE_FUNCTION        
+  84: STORE_NAME           setLoggerClass
+  86: LOAD_CONST           <code object setLogRecordFactory at 0x0000024069495210, file "logging\__init__.py", line 1371>
+  88: MAKE_FUNCTION        
+  90: STORE_NAME           setLogRecordFactory
+  92: LOAD_CONST           <code object _fixupParents at 0x0000024068E1D200, file "logging\__init__.py", line 1378>
+  94: MAKE_FUNCTION        
+  96: STORE_NAME           _fixupParents
+  98: LOAD_CONST           <code object _fixupChildren at 0x00000240691E9830, file "logging\__init__.py", line 1402>
+ 100: MAKE_FUNCTION        
+ 102: STORE_NAME           _fixupChildren
+ 104: LOAD_CONST           <code object _clear_cache at 0x00000240691DB120, file "logging\__init__.py", line 1415>
+ 106: MAKE_FUNCTION        
+ 108: STORE_NAME           _clear_cache
+ 110: LOAD_CONST           None
+ 112: RETURN_VALUE         

@@ -1,0 +1,19 @@
+# Disassembly for importlib._NamespacePath.__repr__
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+(None, '_NamespacePath({!r})')
+
+## co_names:
+('format', '_path')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '_NamespacePath({!r})'
+   4: LOAD_METHOD          format
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            _path
+  38: PRECALL              
+  42: CALL                 
+  52: RETURN_VALUE         

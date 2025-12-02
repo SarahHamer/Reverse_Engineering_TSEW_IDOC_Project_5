@@ -1,0 +1,42 @@
+# Disassembly for inspect._check_instance
+# From module file: inspect
+
+## co_consts:
+(None, '__dict__')
+
+## co_names:
+('object', '__getattribute__', 'AttributeError', 'dict', 'get', '_sentinel')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_MAP            
+   4: STORE_FAST           instance_dict
+   6: NOP                  
+   8: LOAD_GLOBAL          object
+  20: LOAD_METHOD          __getattribute__
+  42: LOAD_FAST            obj
+  44: LOAD_CONST           '__dict__'
+  46: PRECALL              
+  50: CALL                 
+  60: STORE_FAST           instance_dict
+  62: JUMP_FORWARD         to 96
+  64: PUSH_EXC_INFO        
+  66: LOAD_GLOBAL          AttributeError
+  78: CHECK_EXC_MATCH      
+  80: POP_JUMP_FORWARD_IF_FALSE to 88
+  82: POP_TOP              
+  84: POP_EXCEPT           
+  86: JUMP_FORWARD         to 96
+  88: RERAISE              
+  90: COPY                 
+  92: POP_EXCEPT           
+  94: RERAISE              
+  96: LOAD_GLOBAL          dict
+ 108: LOAD_METHOD          get
+ 130: LOAD_FAST            instance_dict
+ 132: LOAD_FAST            attr
+ 134: LOAD_GLOBAL          _sentinel
+ 146: PRECALL              
+ 150: CALL                 
+ 160: RETURN_VALUE         

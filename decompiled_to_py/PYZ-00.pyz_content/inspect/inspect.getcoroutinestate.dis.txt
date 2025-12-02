@@ -1,0 +1,29 @@
+# Disassembly for inspect.getcoroutinestate
+# From module file: inspect
+
+## co_consts:
+('Get current state of a coroutine object.\n\n    Possible states are:\n      CORO_CREATED: Waiting to start execution.\n      CORO_RUNNING: Currently being executed by the interpreter.\n      CORO_SUSPENDED: Currently suspended at an await expression.\n      CORO_CLOSED: Execution has completed.\n    ',)
+
+## co_names:
+('cr_running', 'CORO_RUNNING', 'cr_suspended', 'CORO_SUSPENDED', 'cr_frame', 'CORO_CLOSED', 'CORO_CREATED')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            coroutine
+   4: LOAD_ATTR            cr_running
+  14: POP_JUMP_FORWARD_IF_FALSE to 30
+  16: LOAD_GLOBAL          CORO_RUNNING
+  28: RETURN_VALUE         
+  30: LOAD_FAST            coroutine
+  32: LOAD_ATTR            cr_suspended
+  42: POP_JUMP_FORWARD_IF_FALSE to 58
+  44: LOAD_GLOBAL          CORO_SUSPENDED
+  56: RETURN_VALUE         
+  58: LOAD_FAST            coroutine
+  60: LOAD_ATTR            cr_frame
+  70: POP_JUMP_FORWARD_IF_NOT_NONE to 86
+  72: LOAD_GLOBAL          CORO_CLOSED
+  84: RETURN_VALUE         
+  86: LOAD_GLOBAL          CORO_CREATED
+  98: RETURN_VALUE         

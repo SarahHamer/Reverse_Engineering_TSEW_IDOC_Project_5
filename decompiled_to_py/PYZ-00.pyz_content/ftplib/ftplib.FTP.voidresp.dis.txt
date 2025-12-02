@@ -1,0 +1,32 @@
+# Disassembly for ftplib.FTP.voidresp
+# From module file: ftplib
+
+## co_consts:
+("Expect a response beginning with '2'.", None, 1, '2')
+
+## co_names:
+('getresp', 'error_reply')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          getresp
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           resp
+  42: LOAD_FAST            resp
+  44: LOAD_CONST           None
+  46: LOAD_CONST           1
+  48: BUILD_SLICE          
+  50: BINARY_SUBSCR        
+  60: LOAD_CONST           '2'
+  62: COMPARE_OP           !=
+  68: POP_JUMP_FORWARD_IF_FALSE to 100
+  70: LOAD_GLOBAL          NULL + error_reply
+  82: LOAD_FAST            resp
+  84: PRECALL              
+  88: CALL                 
+  98: RAISE_VARARGS        
+ 100: LOAD_FAST            resp
+ 102: RETURN_VALUE         

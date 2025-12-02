@@ -1,0 +1,91 @@
+# Disassembly for importlib.module_for_loader.module_for_loader_wrapper
+# From module file: importlib.util
+
+## co_consts:
+(None, '.', 0)
+
+## co_names:
+('_module_to_load', '__loader__', 'is_package', '__package__', 'rpartition', 'ImportError', 'AttributeError')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + _module_to_load
+  16: LOAD_FAST            fullname
+  18: PRECALL              
+  22: CALL                 
+  32: BEFORE_WITH          
+  34: STORE_FAST           module
+  36: LOAD_FAST            self
+  38: LOAD_FAST            module
+  40: STORE_ATTR           __loader__
+  50: NOP                  
+  52: LOAD_FAST            self
+  54: LOAD_METHOD          is_package
+  76: LOAD_FAST            fullname
+  78: PRECALL              
+  82: CALL                 
+  92: STORE_FAST           is_package
+  94: LOAD_FAST            is_package
+  96: POP_JUMP_FORWARD_IF_FALSE to 114
+  98: LOAD_FAST            fullname
+ 100: LOAD_FAST            module
+ 102: STORE_ATTR           __package__
+ 112: JUMP_FORWARD         to 226
+ 114: LOAD_FAST            fullname
+ 116: LOAD_METHOD          rpartition
+ 138: LOAD_CONST           '.'
+ 140: PRECALL              
+ 144: CALL                 
+ 154: LOAD_CONST           0
+ 156: BINARY_SUBSCR        
+ 166: LOAD_FAST            module
+ 168: STORE_ATTR           __package__
+ 178: JUMP_FORWARD         to 226
+ 180: PUSH_EXC_INFO        
+ 182: LOAD_GLOBAL          ImportError
+ 194: LOAD_GLOBAL          AttributeError
+ 206: BUILD_TUPLE          
+ 208: CHECK_EXC_MATCH      
+ 210: POP_JUMP_FORWARD_IF_FALSE to 218
+ 212: POP_TOP              
+ 214: POP_EXCEPT           
+ 216: JUMP_FORWARD         to 226
+ 218: RERAISE              
+ 220: COPY                 
+ 222: POP_EXCEPT           
+ 224: RERAISE              
+ 226: PUSH_NULL            
+ 228: LOAD_DEREF           fxn
+ 230: LOAD_FAST            self
+ 232: LOAD_FAST            module
+ 234: BUILD_LIST           
+ 236: LOAD_FAST            args
+ 238: LIST_EXTEND          
+ 240: LIST_TO_TUPLE        
+ 242: BUILD_MAP            
+ 244: LOAD_FAST            kwargs
+ 246: DICT_MERGE           
+ 248: CALL_FUNCTION_EX     
+ 250: SWAP                 
+ 252: LOAD_CONST           None
+ 254: LOAD_CONST           None
+ 256: LOAD_CONST           None
+ 258: PRECALL              
+ 262: CALL                 
+ 272: POP_TOP              
+ 274: RETURN_VALUE         
+ 276: PUSH_EXC_INFO        
+ 278: WITH_EXCEPT_START    
+ 280: POP_JUMP_FORWARD_IF_TRUE to 290
+ 282: RERAISE              
+ 284: COPY                 
+ 286: POP_EXCEPT           
+ 288: RERAISE              
+ 290: POP_TOP              
+ 292: POP_EXCEPT           
+ 294: POP_TOP              
+ 296: POP_TOP              
+ 298: LOAD_CONST           None
+ 300: RETURN_VALUE         

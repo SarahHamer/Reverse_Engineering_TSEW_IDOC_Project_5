@@ -1,0 +1,41 @@
+# Disassembly for inspect.getgeneratorlocals
+# From module file: inspect
+
+## co_consts:
+('\n    Get the mapping of generator local variables to their current values.\n\n    A dict is returned, with the keys the local variable names and values the\n    bound values.', '{!r} is not a Python generator', 'gi_frame', None)
+
+## co_names:
+('isgenerator', 'TypeError', 'format', 'getattr', 'gi_frame', 'f_locals')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isgenerator
+  14: LOAD_FAST            generator
+  16: PRECALL              
+  20: CALL                 
+  30: POP_JUMP_FORWARD_IF_TRUE to 100
+  32: LOAD_GLOBAL          NULL + TypeError
+  44: LOAD_CONST           '{!r} is not a Python generator'
+  46: LOAD_METHOD          format
+  68: LOAD_FAST            generator
+  70: PRECALL              
+  74: CALL                 
+  84: PRECALL              
+  88: CALL                 
+  98: RAISE_VARARGS        
+ 100: LOAD_GLOBAL          NULL + getattr
+ 112: LOAD_FAST            generator
+ 114: LOAD_CONST           'gi_frame'
+ 116: LOAD_CONST           None
+ 118: PRECALL              
+ 122: CALL                 
+ 132: STORE_FAST           frame
+ 134: LOAD_FAST            frame
+ 136: POP_JUMP_FORWARD_IF_NONE to 162
+ 138: LOAD_FAST            generator
+ 140: LOAD_ATTR            gi_frame
+ 150: LOAD_ATTR            f_locals
+ 160: RETURN_VALUE         
+ 162: BUILD_MAP            
+ 164: RETURN_VALUE         

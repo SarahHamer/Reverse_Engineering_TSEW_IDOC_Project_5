@@ -1,0 +1,27 @@
+# Disassembly for argparse._ActionsContainer._pop_action_class
+# From module file: argparse
+
+## co_consts:
+(None, 'action')
+
+## co_names:
+('pop', '_registry_get')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            kwargs
+   4: LOAD_METHOD          pop
+  26: LOAD_CONST           'action'
+  28: LOAD_FAST            default
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_FAST           action
+  46: LOAD_FAST            self
+  48: LOAD_METHOD          _registry_get
+  70: LOAD_CONST           'action'
+  72: LOAD_FAST            action
+  74: LOAD_FAST            action
+  76: PRECALL              
+  80: CALL                 
+  90: RETURN_VALUE         

@@ -1,0 +1,27 @@
+# Disassembly for datetime.timedelta.total_seconds
+# From module file: datetime
+
+## co_consts:
+('Total seconds in the duration.', 86400, 1000000)
+
+## co_names:
+('days', 'seconds', 'microseconds')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            days
+  14: LOAD_CONST           86400
+  16: BINARY_OP            *
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            seconds
+  32: BINARY_OP            +
+  36: LOAD_CONST           1000000
+  38: BINARY_OP            *
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            microseconds
+  54: BINARY_OP            +
+  58: LOAD_CONST           1000000
+  60: BINARY_OP            /
+  64: RETURN_VALUE         

@@ -1,0 +1,279 @@
+# Disassembly for http.DefaultCookiePolicy.set_ok_domain
+# From module file: http.cookiejar
+
+## co_consts:
+(None, '   domain %s is in user block-list', False, '   domain %s is not in user allow-list', '.', 2, 0, 1, ('co', 'ac', 'com', 'edu', 'org', 'net', 'gov', 'mil', 'int', 'aero', 'biz', 'cat', 'coop', 'info', 'jobs', 'mobi', 'museum', 'name', 'pro', 'travel', 'eu'), '   country-code second level domain %s', '.local', '   non-local domain %s contains no embedded dot', '   effective request-host %s (even with added initial dot) does not end with %s', '   effective request-host %s does not domain-match %s', '   host prefix %s for domain %s contains a dot', True)
+
+## co_names:
+('is_blocked', 'domain', '_debug', 'is_not_allowed', 'domain_specified', 'eff_request_host', 'strict_domain', 'count', 'rfind', 'lower', 'len', 'startswith', 'find', 'endswith', 'version', 'strict_ns_domain', 'DomainRFC2965Match', 'domain_match', 'DomainStrictNoDots', 'IPV4_RE', 'search')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          is_blocked
+  26: LOAD_FAST            cookie
+  28: LOAD_ATTR            domain
+  38: PRECALL              
+  42: CALL                 
+  52: POP_JUMP_FORWARD_IF_FALSE to 100
+  54: LOAD_GLOBAL          NULL + _debug
+  66: LOAD_CONST           '   domain %s is in user block-list'
+  68: LOAD_FAST            cookie
+  70: LOAD_ATTR            domain
+  80: PRECALL              
+  84: CALL                 
+  94: POP_TOP              
+  96: LOAD_CONST           False
+  98: RETURN_VALUE         
+ 100: LOAD_FAST            self
+ 102: LOAD_METHOD          is_not_allowed
+ 124: LOAD_FAST            cookie
+ 126: LOAD_ATTR            domain
+ 136: PRECALL              
+ 140: CALL                 
+ 150: POP_JUMP_FORWARD_IF_FALSE to 198
+ 152: LOAD_GLOBAL          NULL + _debug
+ 164: LOAD_CONST           '   domain %s is not in user allow-list'
+ 166: LOAD_FAST            cookie
+ 168: LOAD_ATTR            domain
+ 178: PRECALL              
+ 182: CALL                 
+ 192: POP_TOP              
+ 194: LOAD_CONST           False
+ 196: RETURN_VALUE         
+ 198: LOAD_FAST            cookie
+ 200: LOAD_ATTR            domain_specified
+ 210: EXTENDED_ARG         
+ 212: POP_JUMP_FORWARD_IF_FALSE to 1400
+ 214: LOAD_GLOBAL          NULL + eff_request_host
+ 226: LOAD_FAST            request
+ 228: PRECALL              
+ 232: CALL                 
+ 242: UNPACK_SEQUENCE      
+ 246: STORE_FAST           req_host
+ 248: STORE_FAST           erhn
+ 250: LOAD_FAST            cookie
+ 252: LOAD_ATTR            domain
+ 262: STORE_FAST           domain
+ 264: LOAD_FAST            self
+ 266: LOAD_ATTR            strict_domain
+ 276: POP_JUMP_FORWARD_IF_FALSE to 598
+ 278: LOAD_FAST            domain
+ 280: LOAD_METHOD          count
+ 302: LOAD_CONST           '.'
+ 304: PRECALL              
+ 308: CALL                 
+ 318: LOAD_CONST           2
+ 320: COMPARE_OP           >=
+ 326: POP_JUMP_FORWARD_IF_FALSE to 598
+ 328: LOAD_FAST            domain
+ 330: LOAD_METHOD          rfind
+ 352: LOAD_CONST           '.'
+ 354: PRECALL              
+ 358: CALL                 
+ 368: STORE_FAST           i
+ 370: LOAD_FAST            domain
+ 372: LOAD_METHOD          rfind
+ 394: LOAD_CONST           '.'
+ 396: LOAD_CONST           0
+ 398: LOAD_FAST            i
+ 400: PRECALL              
+ 404: CALL                 
+ 414: STORE_FAST           j
+ 416: LOAD_FAST            j
+ 418: LOAD_CONST           0
+ 420: COMPARE_OP           ==
+ 426: POP_JUMP_FORWARD_IF_FALSE to 598
+ 428: LOAD_FAST            domain
+ 430: LOAD_FAST            i
+ 432: LOAD_CONST           1
+ 434: BINARY_OP            +
+ 438: LOAD_CONST           None
+ 440: BUILD_SLICE          
+ 442: BINARY_SUBSCR        
+ 452: STORE_FAST           tld
+ 454: LOAD_FAST            domain
+ 456: LOAD_FAST            j
+ 458: LOAD_CONST           1
+ 460: BINARY_OP            +
+ 464: LOAD_FAST            i
+ 466: BUILD_SLICE          
+ 468: BINARY_SUBSCR        
+ 478: STORE_FAST           sld
+ 480: LOAD_FAST            sld
+ 482: LOAD_METHOD          lower
+ 504: PRECALL              
+ 508: CALL                 
+ 518: LOAD_CONST           ('co', 'ac', 'com', 'edu', 'org', 'net', 'gov', 'mil', 'int', 'aero', 'biz', 'cat', 'coop', 'info', 'jobs', 'mobi', 'museum', 'name', 'pro', 'travel', 'eu')
+ 520: CONTAINS_OP          
+ 522: POP_JUMP_FORWARD_IF_FALSE to 598
+ 524: LOAD_GLOBAL          NULL + len
+ 536: LOAD_FAST            tld
+ 538: PRECALL              
+ 542: CALL                 
+ 552: LOAD_CONST           2
+ 554: COMPARE_OP           ==
+ 560: POP_JUMP_FORWARD_IF_FALSE to 598
+ 562: LOAD_GLOBAL          NULL + _debug
+ 574: LOAD_CONST           '   country-code second level domain %s'
+ 576: LOAD_FAST            domain
+ 578: PRECALL              
+ 582: CALL                 
+ 592: POP_TOP              
+ 594: LOAD_CONST           False
+ 596: RETURN_VALUE         
+ 598: LOAD_FAST            domain
+ 600: LOAD_METHOD          startswith
+ 622: LOAD_CONST           '.'
+ 624: PRECALL              
+ 628: CALL                 
+ 638: POP_JUMP_FORWARD_IF_FALSE to 662
+ 640: LOAD_FAST            domain
+ 642: LOAD_CONST           1
+ 644: LOAD_CONST           None
+ 646: BUILD_SLICE          
+ 648: BINARY_SUBSCR        
+ 658: STORE_FAST           undotted_domain
+ 660: JUMP_FORWARD         to 666
+ 662: LOAD_FAST            domain
+ 664: STORE_FAST           undotted_domain
+ 666: LOAD_FAST            undotted_domain
+ 668: LOAD_METHOD          find
+ 690: LOAD_CONST           '.'
+ 692: PRECALL              
+ 696: CALL                 
+ 706: LOAD_CONST           0
+ 708: COMPARE_OP           >=
+ 714: STORE_FAST           embedded_dots
+ 716: LOAD_FAST            embedded_dots
+ 718: POP_JUMP_FORWARD_IF_TRUE to 798
+ 720: LOAD_FAST            erhn
+ 722: LOAD_METHOD          endswith
+ 744: LOAD_CONST           '.local'
+ 746: PRECALL              
+ 750: CALL                 
+ 760: POP_JUMP_FORWARD_IF_TRUE to 798
+ 762: LOAD_GLOBAL          NULL + _debug
+ 774: LOAD_CONST           '   non-local domain %s contains no embedded dot'
+ 776: LOAD_FAST            domain
+ 778: PRECALL              
+ 782: CALL                 
+ 792: POP_TOP              
+ 794: LOAD_CONST           False
+ 796: RETURN_VALUE         
+ 798: LOAD_FAST            cookie
+ 800: LOAD_ATTR            version
+ 810: LOAD_CONST           0
+ 812: COMPARE_OP           ==
+ 818: POP_JUMP_FORWARD_IF_FALSE to 1038
+ 820: LOAD_FAST            erhn
+ 822: LOAD_METHOD          endswith
+ 844: LOAD_FAST            domain
+ 846: PRECALL              
+ 850: CALL                 
+ 860: POP_JUMP_FORWARD_IF_TRUE to 1038
+ 862: LOAD_FAST            erhn
+ 864: LOAD_METHOD          endswith
+ 886: LOAD_FAST            undotted_domain
+ 888: FORMAT_VALUE         
+ 890: LOAD_CONST           '.local'
+ 892: BUILD_STRING         
+ 894: PRECALL              
+ 898: CALL                 
+ 908: POP_JUMP_FORWARD_IF_TRUE to 1038
+ 910: LOAD_FAST            erhn
+ 912: LOAD_METHOD          startswith
+ 934: LOAD_CONST           '.'
+ 936: PRECALL              
+ 940: CALL                 
+ 950: POP_JUMP_FORWARD_IF_TRUE to 1038
+ 952: LOAD_CONST           '.'
+ 954: LOAD_FAST            erhn
+ 956: BINARY_OP            +
+ 960: LOAD_METHOD          endswith
+ 982: LOAD_FAST            domain
+ 984: PRECALL              
+ 988: CALL                 
+ 998: POP_JUMP_FORWARD_IF_TRUE to 1038
+1000: LOAD_GLOBAL          NULL + _debug
+1012: LOAD_CONST           '   effective request-host %s (even with added initial dot) does not end with %s'
+1014: LOAD_FAST            erhn
+1016: LOAD_FAST            domain
+1018: PRECALL              
+1022: CALL                 
+1032: POP_TOP              
+1034: LOAD_CONST           False
+1036: RETURN_VALUE         
+1038: LOAD_FAST            cookie
+1040: LOAD_ATTR            version
+1050: LOAD_CONST           0
+1052: COMPARE_OP           >
+1058: POP_JUMP_FORWARD_IF_TRUE to 1090
+1060: LOAD_FAST            self
+1062: LOAD_ATTR            strict_ns_domain
+1072: LOAD_FAST            self
+1074: LOAD_ATTR            DomainRFC2965Match
+1084: BINARY_OP            &
+1088: POP_JUMP_FORWARD_IF_FALSE to 1160
+1090: LOAD_GLOBAL          NULL + domain_match
+1102: LOAD_FAST            erhn
+1104: LOAD_FAST            domain
+1106: PRECALL              
+1110: CALL                 
+1120: POP_JUMP_FORWARD_IF_TRUE to 1160
+1122: LOAD_GLOBAL          NULL + _debug
+1134: LOAD_CONST           '   effective request-host %s does not domain-match %s'
+1136: LOAD_FAST            erhn
+1138: LOAD_FAST            domain
+1140: PRECALL              
+1144: CALL                 
+1154: POP_TOP              
+1156: LOAD_CONST           False
+1158: RETURN_VALUE         
+1160: LOAD_FAST            cookie
+1162: LOAD_ATTR            version
+1172: LOAD_CONST           0
+1174: COMPARE_OP           >
+1180: POP_JUMP_FORWARD_IF_TRUE to 1212
+1182: LOAD_FAST            self
+1184: LOAD_ATTR            strict_ns_domain
+1194: LOAD_FAST            self
+1196: LOAD_ATTR            DomainStrictNoDots
+1206: BINARY_OP            &
+1210: POP_JUMP_FORWARD_IF_FALSE to 1400
+1212: LOAD_FAST            req_host
+1214: LOAD_CONST           None
+1216: LOAD_GLOBAL          NULL + len
+1228: LOAD_FAST            domain
+1230: PRECALL              
+1234: CALL                 
+1244: UNARY_NEGATIVE       
+1246: BUILD_SLICE          
+1248: BINARY_SUBSCR        
+1258: STORE_FAST           host_prefix
+1260: LOAD_FAST            host_prefix
+1262: LOAD_METHOD          find
+1284: LOAD_CONST           '.'
+1286: PRECALL              
+1290: CALL                 
+1300: LOAD_CONST           0
+1302: COMPARE_OP           >=
+1308: POP_JUMP_FORWARD_IF_FALSE to 1400
+1310: LOAD_GLOBAL          IPV4_RE
+1322: LOAD_METHOD          search
+1344: LOAD_FAST            req_host
+1346: PRECALL              
+1350: CALL                 
+1360: POP_JUMP_FORWARD_IF_TRUE to 1400
+1362: LOAD_GLOBAL          NULL + _debug
+1374: LOAD_CONST           '   host prefix %s for domain %s contains a dot'
+1376: LOAD_FAST            host_prefix
+1378: LOAD_FAST            domain
+1380: PRECALL              
+1384: CALL                 
+1394: POP_TOP              
+1396: LOAD_CONST           False
+1398: RETURN_VALUE         
+1400: LOAD_CONST           True
+1402: RETURN_VALUE         

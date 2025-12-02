@@ -1,0 +1,39 @@
+# Disassembly for getpass.fallback_getpass
+# From module file: getpass
+
+## co_consts:
+(None, 'Can not control echo on the terminal.', 2, ('stacklevel',), 'Warning: Password input may be echoed.', ('file',))
+
+## co_names:
+('warnings', 'warn', 'GetPassWarning', 'sys', 'stderr', 'print', '_raw_input')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + warnings
+  14: LOAD_ATTR            warn
+  24: LOAD_CONST           'Can not control echo on the terminal.'
+  26: LOAD_GLOBAL          GetPassWarning
+  38: LOAD_CONST           2
+  40: KW_NAMES             
+  42: PRECALL              
+  46: CALL                 
+  56: POP_TOP              
+  58: LOAD_FAST            stream
+  60: POP_JUMP_FORWARD_IF_TRUE to 86
+  62: LOAD_GLOBAL          sys
+  74: LOAD_ATTR            stderr
+  84: STORE_FAST           stream
+  86: LOAD_GLOBAL          NULL + print
+  98: LOAD_CONST           'Warning: Password input may be echoed.'
+ 100: LOAD_FAST            stream
+ 102: KW_NAMES             
+ 104: PRECALL              
+ 108: CALL                 
+ 118: POP_TOP              
+ 120: LOAD_GLOBAL          NULL + _raw_input
+ 132: LOAD_FAST            prompt
+ 134: LOAD_FAST            stream
+ 136: PRECALL              
+ 140: CALL                 
+ 150: RETURN_VALUE         

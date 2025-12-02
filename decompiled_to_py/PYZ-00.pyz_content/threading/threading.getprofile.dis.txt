@@ -1,0 +1,14 @@
+# Disassembly for threading.getprofile
+# From module file: threading
+
+## co_consts:
+('Get the profiler function as set by threading.setprofile().',)
+
+## co_names:
+('_profile_hook',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _profile_hook
+  14: RETURN_VALUE         

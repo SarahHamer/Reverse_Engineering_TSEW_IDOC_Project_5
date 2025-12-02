@@ -1,0 +1,39 @@
+# Disassembly for tempfile.mkstemp
+# From module file: tempfile
+
+## co_consts:
+("User-callable function to create and return a unique temporary\n    file.  The return value is a pair (fd, name) where fd is the\n    file descriptor returned by os.open, and name is the filename.\n\n    If 'suffix' is not None, the file name will end with that suffix,\n    otherwise there will be no suffix.\n\n    If 'prefix' is not None, the file name will begin with that prefix,\n    otherwise a default prefix is used.\n\n    If 'dir' is not None, the file will be created in that directory,\n    otherwise a default directory is used.\n\n    If 'text' is specified and true, the file is opened in text\n    mode.  Else (the default) the file is opened in binary mode.\n\n    If any of 'suffix', 'prefix' and 'dir' are not None, they must be the\n    same type.  If they are bytes, the returned name will be bytes; str\n    otherwise.\n\n    The file is readable and writable only by the creating user ID.\n    If the operating system uses permission bits to indicate whether a\n    file is executable, the file is executable by no one. The file\n    descriptor is not inherited by children of this process.\n\n    Caller is responsible for deleting the file when done with it.\n    ",)
+
+## co_names:
+('_sanitize_params', '_text_openflags', '_bin_openflags', '_mkstemp_inner')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _sanitize_params
+  14: LOAD_FAST            prefix
+  16: LOAD_FAST            suffix
+  18: LOAD_FAST            dir
+  20: PRECALL              
+  24: CALL                 
+  34: UNPACK_SEQUENCE      
+  38: STORE_FAST           prefix
+  40: STORE_FAST           suffix
+  42: STORE_FAST           dir
+  44: STORE_FAST           output_type
+  46: LOAD_FAST            text
+  48: POP_JUMP_FORWARD_IF_FALSE to 66
+  50: LOAD_GLOBAL          _text_openflags
+  62: STORE_FAST           flags
+  64: JUMP_FORWARD         to 80
+  66: LOAD_GLOBAL          _bin_openflags
+  78: STORE_FAST           flags
+  80: LOAD_GLOBAL          NULL + _mkstemp_inner
+  92: LOAD_FAST            dir
+  94: LOAD_FAST            prefix
+  96: LOAD_FAST            suffix
+  98: LOAD_FAST            flags
+ 100: LOAD_FAST            output_type
+ 102: PRECALL              
+ 106: CALL                 
+ 116: RETURN_VALUE         

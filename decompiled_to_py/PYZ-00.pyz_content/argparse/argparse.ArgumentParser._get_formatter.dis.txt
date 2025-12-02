@@ -1,0 +1,20 @@
+# Disassembly for argparse.ArgumentParser._get_formatter
+# From module file: argparse
+
+## co_consts:
+(None, ('prog',))
+
+## co_names:
+('formatter_class', 'prog')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          formatter_class
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            prog
+  38: KW_NAMES             
+  40: PRECALL              
+  44: CALL                 
+  54: RETURN_VALUE         

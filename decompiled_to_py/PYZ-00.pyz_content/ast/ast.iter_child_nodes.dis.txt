@@ -1,0 +1,58 @@
+# Disassembly for ast.iter_child_nodes
+# From module file: ast
+
+## co_consts:
+('\n    Yield all direct child nodes of *node*, that is, all fields that are nodes\n    and all items of fields that are lists of nodes.\n    ', None)
+
+## co_names:
+('iter_fields', 'isinstance', 'AST', 'list')
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_GLOBAL          NULL + iter_fields
+  18: LOAD_FAST            node
+  20: PRECALL              
+  24: CALL                 
+  34: GET_ITER             
+  36: FOR_ITER             to 202
+  38: UNPACK_SEQUENCE      
+  42: STORE_FAST           name
+  44: STORE_FAST           field
+  46: LOAD_GLOBAL          NULL + isinstance
+  58: LOAD_FAST            field
+  60: LOAD_GLOBAL          AST
+  72: PRECALL              
+  76: CALL                 
+  86: POP_JUMP_FORWARD_IF_FALSE to 98
+  88: LOAD_FAST            field
+  90: YIELD_VALUE          
+  92: RESUME               
+  94: POP_TOP              
+  96: JUMP_BACKWARD        to 36
+  98: LOAD_GLOBAL          NULL + isinstance
+ 110: LOAD_FAST            field
+ 112: LOAD_GLOBAL          list
+ 124: PRECALL              
+ 128: CALL                 
+ 138: POP_JUMP_FORWARD_IF_FALSE to 200
+ 140: LOAD_FAST            field
+ 142: GET_ITER             
+ 144: FOR_ITER             to 200
+ 146: STORE_FAST           item
+ 148: LOAD_GLOBAL          NULL + isinstance
+ 160: LOAD_FAST            item
+ 162: LOAD_GLOBAL          AST
+ 174: PRECALL              
+ 178: CALL                 
+ 188: POP_JUMP_FORWARD_IF_FALSE to 198
+ 190: LOAD_FAST            item
+ 192: YIELD_VALUE          
+ 194: RESUME               
+ 196: POP_TOP              
+ 198: JUMP_BACKWARD        to 144
+ 200: JUMP_BACKWARD        to 36
+ 202: LOAD_CONST           None
+ 204: RETURN_VALUE         

@@ -1,0 +1,34 @@
+# Disassembly for ssl.SSLSocket.sendfile
+# From module file: ssl
+
+## co_consts:
+('Send a file, possibly by using os.sendfile() if this is a\n        clear-text socket.  Return the total number of bytes sent.\n        ',)
+
+## co_names:
+('_sslobj', '_sendfile_use_send', 'super', 'sendfile')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            _sslobj
+  16: POP_JUMP_FORWARD_IF_NONE to 64
+  18: LOAD_FAST            self
+  20: LOAD_METHOD          _sendfile_use_send
+  42: LOAD_FAST            file
+  44: LOAD_FAST            offset
+  46: LOAD_FAST            count
+  48: PRECALL              
+  52: CALL                 
+  62: RETURN_VALUE         
+  64: LOAD_GLOBAL          NULL + super
+  76: PRECALL              
+  80: CALL                 
+  90: LOAD_METHOD          sendfile
+ 112: LOAD_FAST            file
+ 114: LOAD_FAST            offset
+ 116: LOAD_FAST            count
+ 118: PRECALL              
+ 122: CALL                 
+ 132: RETURN_VALUE         

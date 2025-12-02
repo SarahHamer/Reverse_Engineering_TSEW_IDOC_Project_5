@@ -1,0 +1,91 @@
+# Disassembly for pickle._Pickler.save_bytearray
+# From module file: pickle
+
+## co_consts:
+(None, 5, (), ('obj',), '<Q')
+
+## co_names:
+('proto', 'save_reduce', 'bytearray', 'bytes', 'len', 'framer', '_FRAME_SIZE_TARGET', '_write_large_bytes', 'BYTEARRAY8', 'pack', 'write', 'memoize')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            proto
+  14: LOAD_CONST           5
+  16: COMPARE_OP           <
+  22: POP_JUMP_FORWARD_IF_FALSE to 178
+  24: LOAD_FAST            obj
+  26: POP_JUMP_FORWARD_IF_TRUE to 88
+  28: LOAD_FAST            self
+  30: LOAD_METHOD          save_reduce
+  52: LOAD_GLOBAL          bytearray
+  64: LOAD_CONST           ()
+  66: LOAD_FAST            obj
+  68: KW_NAMES             
+  70: PRECALL              
+  74: CALL                 
+  84: POP_TOP              
+  86: JUMP_FORWARD         to 174
+  88: LOAD_FAST            self
+  90: LOAD_METHOD          save_reduce
+ 112: LOAD_GLOBAL          bytearray
+ 124: LOAD_GLOBAL          NULL + bytes
+ 136: LOAD_FAST            obj
+ 138: PRECALL              
+ 142: CALL                 
+ 152: BUILD_TUPLE          
+ 154: LOAD_FAST            obj
+ 156: KW_NAMES             
+ 158: PRECALL              
+ 162: CALL                 
+ 172: POP_TOP              
+ 174: LOAD_CONST           None
+ 176: RETURN_VALUE         
+ 178: LOAD_GLOBAL          NULL + len
+ 190: LOAD_FAST            obj
+ 192: PRECALL              
+ 196: CALL                 
+ 206: STORE_FAST           n
+ 208: LOAD_FAST            n
+ 210: LOAD_FAST            self
+ 212: LOAD_ATTR            framer
+ 222: LOAD_ATTR            _FRAME_SIZE_TARGET
+ 232: COMPARE_OP           >=
+ 238: POP_JUMP_FORWARD_IF_FALSE to 330
+ 240: LOAD_FAST            self
+ 242: LOAD_METHOD          _write_large_bytes
+ 264: LOAD_GLOBAL          BYTEARRAY8
+ 276: LOAD_GLOBAL          NULL + pack
+ 288: LOAD_CONST           '<Q'
+ 290: LOAD_FAST            n
+ 292: PRECALL              
+ 296: CALL                 
+ 306: BINARY_OP            +
+ 310: LOAD_FAST            obj
+ 312: PRECALL              
+ 316: CALL                 
+ 326: POP_TOP              
+ 328: JUMP_FORWARD         to 422
+ 330: LOAD_FAST            self
+ 332: LOAD_METHOD          write
+ 354: LOAD_GLOBAL          BYTEARRAY8
+ 366: LOAD_GLOBAL          NULL + pack
+ 378: LOAD_CONST           '<Q'
+ 380: LOAD_FAST            n
+ 382: PRECALL              
+ 386: CALL                 
+ 396: BINARY_OP            +
+ 400: LOAD_FAST            obj
+ 402: BINARY_OP            +
+ 406: PRECALL              
+ 410: CALL                 
+ 420: POP_TOP              
+ 422: LOAD_FAST            self
+ 424: LOAD_METHOD          memoize
+ 446: LOAD_FAST            obj
+ 448: PRECALL              
+ 452: CALL                 
+ 462: POP_TOP              
+ 464: LOAD_CONST           None
+ 466: RETURN_VALUE         

@@ -1,0 +1,281 @@
+# Disassembly for importlib.SourceLoader.get_code
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Concrete implementation of InspectLoader.get_code.\n\n        Reading of bytecode requires path_stats to be implemented. To write\n        bytecode, set_data must also be implemented.\n\n        ', None, False, True, 'mtime', ('name', 'path'), 16, 1, 0, 2, 'never', 'always', 'size', '{} matches {}', ('name', 'bytecode_path', 'source_path'), 'code object from {}')
+
+## co_names:
+('get_filename', 'cache_from_source', 'path_stats', 'int', 'get_data', '_classify_pyc', 'memoryview', '_imp', 'check_hash_based_pycs', 'source_hash', '_RAW_MAGIC_NUMBER', '_validate_hash_pyc', '_validate_timestamp_pyc', '_bootstrap', '_verbose_message', '_compile_bytecode', 'ImportError', 'EOFError', 'OSError', 'NotImplementedError', 'source_to_code', 'sys', 'dont_write_bytecode', '_code_to_hash_pyc', '_code_to_timestamp_pyc', 'len', '_cache_bytecode')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          get_filename
+  26: LOAD_FAST            fullname
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           source_path
+  44: LOAD_CONST           None
+  46: STORE_FAST           source_mtime
+  48: LOAD_CONST           None
+  50: STORE_FAST           source_bytes
+  52: LOAD_CONST           None
+  54: STORE_FAST           source_hash
+  56: LOAD_CONST           False
+  58: STORE_FAST           hash_based
+  60: LOAD_CONST           True
+  62: STORE_FAST           check_source
+  64: NOP                  
+  66: LOAD_GLOBAL          NULL + cache_from_source
+  78: LOAD_FAST            source_path
+  80: PRECALL              
+  84: CALL                 
+  94: STORE_FAST           bytecode_path
+  96: NOP                  
+  98: LOAD_FAST            self
+ 100: LOAD_METHOD          path_stats
+ 122: LOAD_FAST            source_path
+ 124: PRECALL              
+ 128: CALL                 
+ 138: STORE_FAST           st
+ 140: LOAD_GLOBAL          NULL + int
+ 152: LOAD_FAST            st
+ 154: LOAD_CONST           'mtime'
+ 156: BINARY_SUBSCR        
+ 166: PRECALL              
+ 170: CALL                 
+ 180: STORE_FAST           source_mtime
+ 182: NOP                  
+ 184: LOAD_FAST            self
+ 186: LOAD_METHOD          get_data
+ 208: LOAD_FAST            bytecode_path
+ 210: PRECALL              
+ 214: CALL                 
+ 224: STORE_FAST           data
+ 226: LOAD_FAST            fullname
+ 228: LOAD_FAST            bytecode_path
+ 230: LOAD_CONST           ('name', 'path')
+ 232: BUILD_CONST_KEY_MAP  
+ 234: STORE_FAST           exc_details
+ 236: NOP                  
+ 238: LOAD_GLOBAL          NULL + _classify_pyc
+ 250: LOAD_FAST            data
+ 252: LOAD_FAST            fullname
+ 254: LOAD_FAST            exc_details
+ 256: PRECALL              
+ 260: CALL                 
+ 270: STORE_FAST           flags
+ 272: LOAD_GLOBAL          NULL + memoryview
+ 284: LOAD_FAST            data
+ 286: PRECALL              
+ 290: CALL                 
+ 300: LOAD_CONST           16
+ 302: LOAD_CONST           None
+ 304: BUILD_SLICE          
+ 306: BINARY_SUBSCR        
+ 316: STORE_FAST           bytes_data
+ 318: LOAD_FAST            flags
+ 320: LOAD_CONST           1
+ 322: BINARY_OP            &
+ 326: LOAD_CONST           0
+ 328: COMPARE_OP           !=
+ 334: STORE_FAST           hash_based
+ 336: LOAD_FAST            hash_based
+ 338: POP_JUMP_FORWARD_IF_FALSE to 558
+ 340: LOAD_FAST            flags
+ 342: LOAD_CONST           2
+ 344: BINARY_OP            &
+ 348: LOAD_CONST           0
+ 350: COMPARE_OP           !=
+ 356: STORE_FAST           check_source
+ 358: LOAD_GLOBAL          _imp
+ 370: LOAD_ATTR            check_hash_based_pycs
+ 380: LOAD_CONST           'never'
+ 382: COMPARE_OP           !=
+ 388: POP_JUMP_FORWARD_IF_FALSE to 556
+ 390: LOAD_FAST            check_source
+ 392: POP_JUMP_FORWARD_IF_TRUE to 426
+ 394: LOAD_GLOBAL          _imp
+ 406: LOAD_ATTR            check_hash_based_pycs
+ 416: LOAD_CONST           'always'
+ 418: COMPARE_OP           ==
+ 424: POP_JUMP_FORWARD_IF_FALSE to 556
+ 426: LOAD_FAST            self
+ 428: LOAD_METHOD          get_data
+ 450: LOAD_FAST            source_path
+ 452: PRECALL              
+ 456: CALL                 
+ 466: STORE_FAST           source_bytes
+ 468: LOAD_GLOBAL          NULL + _imp
+ 480: LOAD_ATTR            source_hash
+ 490: LOAD_GLOBAL          _RAW_MAGIC_NUMBER
+ 502: LOAD_FAST            source_bytes
+ 504: PRECALL              
+ 508: CALL                 
+ 518: STORE_FAST           source_hash
+ 520: LOAD_GLOBAL          NULL + _validate_hash_pyc
+ 532: LOAD_FAST            data
+ 534: LOAD_FAST            source_hash
+ 536: LOAD_FAST            fullname
+ 538: LOAD_FAST            exc_details
+ 540: PRECALL              
+ 544: CALL                 
+ 554: POP_TOP              
+ 556: JUMP_FORWARD         to 608
+ 558: LOAD_GLOBAL          NULL + _validate_timestamp_pyc
+ 570: LOAD_FAST            data
+ 572: LOAD_FAST            source_mtime
+ 574: LOAD_FAST            st
+ 576: LOAD_CONST           'size'
+ 578: BINARY_SUBSCR        
+ 588: LOAD_FAST            fullname
+ 590: LOAD_FAST            exc_details
+ 592: PRECALL              
+ 596: CALL                 
+ 606: POP_TOP              
+ 608: LOAD_GLOBAL          _bootstrap
+ 620: LOAD_METHOD          _verbose_message
+ 642: LOAD_CONST           '{} matches {}'
+ 644: LOAD_FAST            bytecode_path
+ 646: LOAD_FAST            source_path
+ 648: PRECALL              
+ 652: CALL                 
+ 662: POP_TOP              
+ 664: LOAD_GLOBAL          NULL + _compile_bytecode
+ 676: LOAD_FAST            bytes_data
+ 678: LOAD_FAST            fullname
+ 680: LOAD_FAST            bytecode_path
+ 682: LOAD_FAST            source_path
+ 684: KW_NAMES             
+ 686: PRECALL              
+ 690: CALL                 
+ 700: RETURN_VALUE         
+ 702: PUSH_EXC_INFO        
+ 704: LOAD_GLOBAL          ImportError
+ 716: LOAD_GLOBAL          EOFError
+ 728: BUILD_TUPLE          
+ 730: CHECK_EXC_MATCH      
+ 732: POP_JUMP_FORWARD_IF_FALSE to 740
+ 734: POP_TOP              
+ 736: POP_EXCEPT           
+ 738: JUMP_FORWARD         to 848
+ 740: RERAISE              
+ 742: COPY                 
+ 744: POP_EXCEPT           
+ 746: RERAISE              
+ 748: PUSH_EXC_INFO        
+ 750: LOAD_GLOBAL          OSError
+ 762: CHECK_EXC_MATCH      
+ 764: POP_JUMP_FORWARD_IF_FALSE to 772
+ 766: POP_TOP              
+ 768: POP_EXCEPT           
+ 770: JUMP_FORWARD         to 848
+ 772: RERAISE              
+ 774: COPY                 
+ 776: POP_EXCEPT           
+ 778: RERAISE              
+ 780: PUSH_EXC_INFO        
+ 782: LOAD_GLOBAL          OSError
+ 794: CHECK_EXC_MATCH      
+ 796: POP_JUMP_FORWARD_IF_FALSE to 804
+ 798: POP_TOP              
+ 800: POP_EXCEPT           
+ 802: JUMP_FORWARD         to 848
+ 804: RERAISE              
+ 806: COPY                 
+ 808: POP_EXCEPT           
+ 810: RERAISE              
+ 812: PUSH_EXC_INFO        
+ 814: LOAD_GLOBAL          NotImplementedError
+ 826: CHECK_EXC_MATCH      
+ 828: POP_JUMP_FORWARD_IF_FALSE to 840
+ 830: POP_TOP              
+ 832: LOAD_CONST           None
+ 834: STORE_FAST           bytecode_path
+ 836: POP_EXCEPT           
+ 838: JUMP_FORWARD         to 848
+ 840: RERAISE              
+ 842: COPY                 
+ 844: POP_EXCEPT           
+ 846: RERAISE              
+ 848: LOAD_FAST            source_bytes
+ 850: POP_JUMP_FORWARD_IF_NOT_NONE to 894
+ 852: LOAD_FAST            self
+ 854: LOAD_METHOD          get_data
+ 876: LOAD_FAST            source_path
+ 878: PRECALL              
+ 882: CALL                 
+ 892: STORE_FAST           source_bytes
+ 894: LOAD_FAST            self
+ 896: LOAD_METHOD          source_to_code
+ 918: LOAD_FAST            source_bytes
+ 920: LOAD_FAST            source_path
+ 922: PRECALL              
+ 926: CALL                 
+ 936: STORE_FAST           code_object
+ 938: LOAD_GLOBAL          _bootstrap
+ 950: LOAD_METHOD          _verbose_message
+ 972: LOAD_CONST           'code object from {}'
+ 974: LOAD_FAST            source_path
+ 976: PRECALL              
+ 980: CALL                 
+ 990: POP_TOP              
+ 992: LOAD_GLOBAL          sys
+1004: LOAD_ATTR            dont_write_bytecode
+1014: POP_JUMP_FORWARD_IF_TRUE to 1250
+1016: LOAD_FAST            bytecode_path
+1018: POP_JUMP_FORWARD_IF_NONE to 1250
+1020: LOAD_FAST            source_mtime
+1022: POP_JUMP_FORWARD_IF_NONE to 1250
+1024: LOAD_FAST            hash_based
+1026: POP_JUMP_FORWARD_IF_FALSE to 1108
+1028: LOAD_FAST            source_hash
+1030: POP_JUMP_FORWARD_IF_NOT_NONE to 1072
+1032: LOAD_GLOBAL          NULL + _imp
+1044: LOAD_ATTR            source_hash
+1054: LOAD_FAST            source_bytes
+1056: PRECALL              
+1060: CALL                 
+1070: STORE_FAST           source_hash
+1072: LOAD_GLOBAL          NULL + _code_to_hash_pyc
+1084: LOAD_FAST            code_object
+1086: LOAD_FAST            source_hash
+1088: LOAD_FAST            check_source
+1090: PRECALL              
+1094: CALL                 
+1104: STORE_FAST           data
+1106: JUMP_FORWARD         to 1168
+1108: LOAD_GLOBAL          NULL + _code_to_timestamp_pyc
+1120: LOAD_FAST            code_object
+1122: LOAD_FAST            source_mtime
+1124: LOAD_GLOBAL          NULL + len
+1136: LOAD_FAST            source_bytes
+1138: PRECALL              
+1142: CALL                 
+1152: PRECALL              
+1156: CALL                 
+1166: STORE_FAST           data
+1168: NOP                  
+1170: LOAD_FAST            self
+1172: LOAD_METHOD          _cache_bytecode
+1194: LOAD_FAST            source_path
+1196: LOAD_FAST            bytecode_path
+1198: LOAD_FAST            data
+1200: PRECALL              
+1204: CALL                 
+1214: POP_TOP              
+1216: JUMP_FORWARD         to 1250
+1218: PUSH_EXC_INFO        
+1220: LOAD_GLOBAL          NotImplementedError
+1232: CHECK_EXC_MATCH      
+1234: POP_JUMP_FORWARD_IF_FALSE to 1242
+1236: POP_TOP              
+1238: POP_EXCEPT           
+1240: JUMP_FORWARD         to 1250
+1242: RERAISE              
+1244: COPY                 
+1246: POP_EXCEPT           
+1248: RERAISE              
+1250: LOAD_FAST            code_object
+1252: RETURN_VALUE         

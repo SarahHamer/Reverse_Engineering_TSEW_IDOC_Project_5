@@ -1,0 +1,20 @@
+# Disassembly for importlib.MetadataPathFinder.invalidate_caches
+# From module file: importlib.metadata
+
+## co_consts:
+(None,)
+
+## co_names:
+('FastPath', '__new__', 'cache_clear')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          FastPath
+  14: LOAD_ATTR            __new__
+  24: LOAD_METHOD          cache_clear
+  46: PRECALL              
+  50: CALL                 
+  60: POP_TOP              
+  62: LOAD_CONST           None
+  64: RETURN_VALUE         

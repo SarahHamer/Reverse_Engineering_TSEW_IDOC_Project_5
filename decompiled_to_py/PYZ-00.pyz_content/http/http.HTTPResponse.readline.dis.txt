@@ -1,0 +1,81 @@
+# Disassembly for http.HTTPResponse.readline
+# From module file: http.client
+
+## co_consts:
+(None, 'HEAD', b'', 0)
+
+## co_names:
+('fp', '_method', 'chunked', 'super', 'readline', 'length', '_close_conn', 'len')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            fp
+  16: POP_JUMP_FORWARD_IF_NONE to 40
+  18: LOAD_FAST            self
+  20: LOAD_ATTR            _method
+  30: LOAD_CONST           'HEAD'
+  32: COMPARE_OP           ==
+  38: POP_JUMP_FORWARD_IF_FALSE to 44
+  40: LOAD_CONST           b''
+  42: RETURN_VALUE         
+  44: LOAD_FAST            self
+  46: LOAD_ATTR            chunked
+  56: POP_JUMP_FORWARD_IF_FALSE to 124
+  58: LOAD_GLOBAL          NULL + super
+  70: PRECALL              
+  74: CALL                 
+  84: LOAD_METHOD          readline
+ 106: LOAD_FAST            limit
+ 108: PRECALL              
+ 112: CALL                 
+ 122: RETURN_VALUE         
+ 124: LOAD_FAST            self
+ 126: LOAD_ATTR            length
+ 136: POP_JUMP_FORWARD_IF_NONE to 186
+ 138: LOAD_FAST            limit
+ 140: LOAD_CONST           0
+ 142: COMPARE_OP           <
+ 148: POP_JUMP_FORWARD_IF_TRUE to 172
+ 150: LOAD_FAST            limit
+ 152: LOAD_FAST            self
+ 154: LOAD_ATTR            length
+ 164: COMPARE_OP           >
+ 170: POP_JUMP_FORWARD_IF_FALSE to 186
+ 172: LOAD_FAST            self
+ 174: LOAD_ATTR            length
+ 184: STORE_FAST           limit
+ 186: LOAD_FAST            self
+ 188: LOAD_ATTR            fp
+ 198: LOAD_METHOD          readline
+ 220: LOAD_FAST            limit
+ 222: PRECALL              
+ 226: CALL                 
+ 236: STORE_FAST           result
+ 238: LOAD_FAST            result
+ 240: POP_JUMP_FORWARD_IF_TRUE to 288
+ 242: LOAD_FAST            limit
+ 244: POP_JUMP_FORWARD_IF_FALSE to 288
+ 246: LOAD_FAST            self
+ 248: LOAD_METHOD          _close_conn
+ 270: PRECALL              
+ 274: CALL                 
+ 284: POP_TOP              
+ 286: JUMP_FORWARD         to 360
+ 288: LOAD_FAST            self
+ 290: LOAD_ATTR            length
+ 300: POP_JUMP_FORWARD_IF_NONE to 360
+ 302: LOAD_FAST            self
+ 304: COPY                 
+ 306: LOAD_ATTR            length
+ 316: LOAD_GLOBAL          NULL + len
+ 328: LOAD_FAST            result
+ 330: PRECALL              
+ 334: CALL                 
+ 344: BINARY_OP            -=
+ 348: SWAP                 
+ 350: STORE_ATTR           length
+ 360: LOAD_FAST            result
+ 362: RETURN_VALUE         

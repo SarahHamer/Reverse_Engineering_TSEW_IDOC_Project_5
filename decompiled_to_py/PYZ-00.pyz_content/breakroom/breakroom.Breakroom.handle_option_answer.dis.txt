@@ -1,0 +1,206 @@
+# Disassembly for breakroom.Breakroom.handle_option_answer
+# From module file: breakroom
+
+## co_consts:
+(None, 'B', 'You head back to the Lobby.', 'Lobby', 'L', 'You go through the left door.', 'Left', 'You try the left door, but it is locked.', 'R', 'You go through the right door.', 'Right', True, 'You take the key and unlock the right door.', 'You try the right door, but it is locked.', 'C', 'You go through the center door.', 'Central', 'You try the center door, but it is locked.', 'J', 'You take the jacket.')
+
+## co_names:
+('send_message', 'world', 'player', 'set_parent', 'rooms', 'left_unlocked', 'right_unlocked', 'get_child_by_type', 'Key', 'right_checked', 'remove_child', 'central_left_unlocked', 'central_right_unlocked', 'Jacket')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            value
+   4: COPY                 
+   6: LOAD_CONST           'B'
+   8: COMPARE_OP           ==
+  14: POP_JUMP_FORWARD_IF_FALSE to 158
+  16: POP_TOP              
+  18: LOAD_FAST            self
+  20: LOAD_METHOD          send_message
+  42: LOAD_CONST           'You head back to the Lobby.'
+  44: PRECALL              
+  48: CALL                 
+  58: POP_TOP              
+  60: LOAD_FAST            self
+  62: LOAD_ATTR            world
+  72: LOAD_ATTR            player
+  82: LOAD_METHOD          set_parent
+ 104: LOAD_FAST            self
+ 106: LOAD_ATTR            world
+ 116: LOAD_ATTR            rooms
+ 126: LOAD_CONST           'Lobby'
+ 128: BINARY_SUBSCR        
+ 138: PRECALL              
+ 142: CALL                 
+ 152: POP_TOP              
+ 154: LOAD_CONST           None
+ 156: RETURN_VALUE         
+ 158: COPY                 
+ 160: LOAD_CONST           'L'
+ 162: COMPARE_OP           ==
+ 168: POP_JUMP_FORWARD_IF_FALSE to 372
+ 170: POP_TOP              
+ 172: LOAD_FAST            self
+ 174: LOAD_ATTR            left_unlocked
+ 184: POP_JUMP_FORWARD_IF_FALSE to 326
+ 186: LOAD_FAST            self
+ 188: LOAD_METHOD          send_message
+ 210: LOAD_CONST           'You go through the left door.'
+ 212: PRECALL              
+ 216: CALL                 
+ 226: POP_TOP              
+ 228: LOAD_FAST            self
+ 230: LOAD_ATTR            world
+ 240: LOAD_ATTR            player
+ 250: LOAD_METHOD          set_parent
+ 272: LOAD_FAST            self
+ 274: LOAD_ATTR            world
+ 284: LOAD_ATTR            rooms
+ 294: LOAD_CONST           'Left'
+ 296: BINARY_SUBSCR        
+ 306: PRECALL              
+ 310: CALL                 
+ 320: POP_TOP              
+ 322: LOAD_CONST           None
+ 324: RETURN_VALUE         
+ 326: LOAD_FAST            self
+ 328: LOAD_METHOD          send_message
+ 350: LOAD_CONST           'You try the left door, but it is locked.'
+ 352: PRECALL              
+ 356: CALL                 
+ 366: POP_TOP              
+ 368: LOAD_CONST           None
+ 370: RETURN_VALUE         
+ 372: COPY                 
+ 374: LOAD_CONST           'R'
+ 376: COMPARE_OP           ==
+ 382: POP_JUMP_FORWARD_IF_FALSE to 810
+ 384: POP_TOP              
+ 386: LOAD_FAST            self
+ 388: LOAD_ATTR            right_unlocked
+ 398: POP_JUMP_FORWARD_IF_FALSE to 540
+ 400: LOAD_FAST            self
+ 402: LOAD_METHOD          send_message
+ 424: LOAD_CONST           'You go through the right door.'
+ 426: PRECALL              
+ 430: CALL                 
+ 440: POP_TOP              
+ 442: LOAD_FAST            self
+ 444: LOAD_ATTR            world
+ 454: LOAD_ATTR            player
+ 464: LOAD_METHOD          set_parent
+ 486: LOAD_FAST            self
+ 488: LOAD_ATTR            world
+ 498: LOAD_ATTR            rooms
+ 508: LOAD_CONST           'Right'
+ 510: BINARY_SUBSCR        
+ 520: PRECALL              
+ 524: CALL                 
+ 534: POP_TOP              
+ 536: LOAD_CONST           None
+ 538: RETURN_VALUE         
+ 540: LOAD_FAST            self
+ 542: LOAD_ATTR            world
+ 552: LOAD_ATTR            player
+ 562: LOAD_METHOD          get_child_by_type
+ 584: LOAD_GLOBAL          Key
+ 596: PRECALL              
+ 600: CALL                 
+ 610: STORE_FAST           key
+ 612: LOAD_FAST            self
+ 614: LOAD_ATTR            right_checked
+ 624: POP_JUMP_FORWARD_IF_FALSE to 750
+ 626: LOAD_FAST            key
+ 628: POP_JUMP_FORWARD_IF_NONE to 750
+ 630: LOAD_FAST            self
+ 632: LOAD_ATTR            world
+ 642: LOAD_ATTR            player
+ 652: LOAD_METHOD          remove_child
+ 674: LOAD_FAST            key
+ 676: PRECALL              
+ 680: CALL                 
+ 690: POP_TOP              
+ 692: LOAD_CONST           True
+ 694: LOAD_FAST            self
+ 696: STORE_ATTR           right_unlocked
+ 706: LOAD_FAST            self
+ 708: LOAD_METHOD          send_message
+ 730: LOAD_CONST           'You take the key and unlock the right door.'
+ 732: PRECALL              
+ 736: CALL                 
+ 746: POP_TOP              
+ 748: JUMP_FORWARD         to 792
+ 750: LOAD_FAST            self
+ 752: LOAD_METHOD          send_message
+ 774: LOAD_CONST           'You try the right door, but it is locked.'
+ 776: PRECALL              
+ 780: CALL                 
+ 790: POP_TOP              
+ 792: LOAD_CONST           True
+ 794: LOAD_FAST            self
+ 796: STORE_ATTR           right_checked
+ 806: LOAD_CONST           None
+ 808: RETURN_VALUE         
+ 810: COPY                 
+ 812: LOAD_CONST           'C'
+ 814: COMPARE_OP           ==
+ 820: POP_JUMP_FORWARD_IF_FALSE to 1038
+ 822: POP_TOP              
+ 824: LOAD_FAST            self
+ 826: LOAD_ATTR            central_left_unlocked
+ 836: POP_JUMP_FORWARD_IF_FALSE to 992
+ 838: LOAD_FAST            self
+ 840: LOAD_ATTR            central_right_unlocked
+ 850: POP_JUMP_FORWARD_IF_FALSE to 992
+ 852: LOAD_FAST            self
+ 854: LOAD_METHOD          send_message
+ 876: LOAD_CONST           'You go through the center door.'
+ 878: PRECALL              
+ 882: CALL                 
+ 892: POP_TOP              
+ 894: LOAD_FAST            self
+ 896: LOAD_ATTR            world
+ 906: LOAD_ATTR            player
+ 916: LOAD_METHOD          set_parent
+ 938: LOAD_FAST            self
+ 940: LOAD_ATTR            world
+ 950: LOAD_ATTR            rooms
+ 960: LOAD_CONST           'Central'
+ 962: BINARY_SUBSCR        
+ 972: PRECALL              
+ 976: CALL                 
+ 986: POP_TOP              
+ 988: LOAD_CONST           None
+ 990: RETURN_VALUE         
+ 992: LOAD_FAST            self
+ 994: LOAD_METHOD          send_message
+1016: LOAD_CONST           'You try the center door, but it is locked.'
+1018: PRECALL              
+1022: CALL                 
+1032: POP_TOP              
+1034: LOAD_CONST           None
+1036: RETURN_VALUE         
+1038: LOAD_CONST           'J'
+1040: COMPARE_OP           ==
+1046: POP_JUMP_FORWARD_IF_FALSE to 1180
+1048: LOAD_GLOBAL          NULL + Jacket
+1060: PRECALL              
+1064: CALL                 
+1074: LOAD_METHOD          set_parent
+1096: LOAD_FAST            self
+1098: LOAD_ATTR            world
+1108: LOAD_ATTR            player
+1118: PRECALL              
+1122: CALL                 
+1132: POP_TOP              
+1134: LOAD_FAST            self
+1136: LOAD_METHOD          send_message
+1158: LOAD_CONST           'You take the jacket.'
+1160: PRECALL              
+1164: CALL                 
+1174: POP_TOP              
+1176: LOAD_CONST           None
+1178: RETURN_VALUE         
+1180: LOAD_CONST           None
+1182: RETURN_VALUE         

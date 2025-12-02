@@ -1,0 +1,161 @@
+# Disassembly for _pydecimal.Context.__init__
+# From module file: _pydecimal
+
+## co_consts:
+(None, <code object <genexpr> at 0x00000240693EBE30, file "_pydecimal.py", line 3927>, 0, <code object <genexpr> at 0x00000240693EAC30, file "_pydecimal.py", line 3934>)
+
+## co_names:
+('DefaultContext', 'NameError', 'prec', 'rounding', 'Emin', 'Emax', 'capitals', 'clamp', '_ignored_flags', 'traps', 'copy', 'isinstance', 'dict', '_signals', 'fromkeys', 'flags')
+
+## bytecode:
+
+   0: MAKE_CELL            flags
+   2: MAKE_CELL            traps
+   4: RESUME               
+   6: NOP                  
+   8: LOAD_GLOBAL          DefaultContext
+  20: STORE_FAST           dc
+  22: JUMP_FORWARD         to 56
+  24: PUSH_EXC_INFO        
+  26: LOAD_GLOBAL          NameError
+  38: CHECK_EXC_MATCH      
+  40: POP_JUMP_FORWARD_IF_FALSE to 48
+  42: POP_TOP              
+  44: POP_EXCEPT           
+  46: JUMP_FORWARD         to 56
+  48: RERAISE              
+  50: COPY                 
+  52: POP_EXCEPT           
+  54: RERAISE              
+  56: LOAD_FAST            prec
+  58: POP_JUMP_FORWARD_IF_NONE to 64
+  60: LOAD_FAST            prec
+  62: JUMP_FORWARD         to 76
+  64: LOAD_FAST            dc
+  66: LOAD_ATTR            prec
+  76: LOAD_FAST            self
+  78: STORE_ATTR           prec
+  88: LOAD_FAST            rounding
+  90: POP_JUMP_FORWARD_IF_NONE to 96
+  92: LOAD_FAST            rounding
+  94: JUMP_FORWARD         to 108
+  96: LOAD_FAST            dc
+  98: LOAD_ATTR            rounding
+ 108: LOAD_FAST            self
+ 110: STORE_ATTR           rounding
+ 120: LOAD_FAST            Emin
+ 122: POP_JUMP_FORWARD_IF_NONE to 128
+ 124: LOAD_FAST            Emin
+ 126: JUMP_FORWARD         to 140
+ 128: LOAD_FAST            dc
+ 130: LOAD_ATTR            Emin
+ 140: LOAD_FAST            self
+ 142: STORE_ATTR           Emin
+ 152: LOAD_FAST            Emax
+ 154: POP_JUMP_FORWARD_IF_NONE to 160
+ 156: LOAD_FAST            Emax
+ 158: JUMP_FORWARD         to 172
+ 160: LOAD_FAST            dc
+ 162: LOAD_ATTR            Emax
+ 172: LOAD_FAST            self
+ 174: STORE_ATTR           Emax
+ 184: LOAD_FAST            capitals
+ 186: POP_JUMP_FORWARD_IF_NONE to 192
+ 188: LOAD_FAST            capitals
+ 190: JUMP_FORWARD         to 204
+ 192: LOAD_FAST            dc
+ 194: LOAD_ATTR            capitals
+ 204: LOAD_FAST            self
+ 206: STORE_ATTR           capitals
+ 216: LOAD_FAST            clamp
+ 218: POP_JUMP_FORWARD_IF_NONE to 224
+ 220: LOAD_FAST            clamp
+ 222: JUMP_FORWARD         to 236
+ 224: LOAD_FAST            dc
+ 226: LOAD_ATTR            clamp
+ 236: LOAD_FAST            self
+ 238: STORE_ATTR           clamp
+ 248: LOAD_FAST            _ignored_flags
+ 250: POP_JUMP_FORWARD_IF_NOT_NONE to 268
+ 252: BUILD_LIST           
+ 254: LOAD_FAST            self
+ 256: STORE_ATTR           _ignored_flags
+ 266: JUMP_FORWARD         to 282
+ 268: LOAD_FAST            _ignored_flags
+ 270: LOAD_FAST            self
+ 272: STORE_ATTR           _ignored_flags
+ 282: LOAD_DEREF           traps
+ 284: POP_JUMP_FORWARD_IF_NOT_NONE to 348
+ 286: LOAD_FAST            dc
+ 288: LOAD_ATTR            traps
+ 298: LOAD_METHOD          copy
+ 320: PRECALL              
+ 324: CALL                 
+ 334: LOAD_FAST            self
+ 336: STORE_ATTR           traps
+ 346: JUMP_FORWARD         to 486
+ 348: LOAD_GLOBAL          NULL + isinstance
+ 360: LOAD_DEREF           traps
+ 362: LOAD_GLOBAL          dict
+ 374: PRECALL              
+ 378: CALL                 
+ 388: POP_JUMP_FORWARD_IF_TRUE to 472
+ 390: LOAD_GLOBAL          NULL + dict
+ 402: LOAD_CLOSURE         traps
+ 404: BUILD_TUPLE          
+ 406: LOAD_CONST           <code object <genexpr> at 0x00000240693EBE30, file "_pydecimal.py", line 3927>
+ 408: MAKE_FUNCTION        closure
+ 410: LOAD_GLOBAL          _signals
+ 422: LOAD_DEREF           traps
+ 424: BINARY_OP            +
+ 428: GET_ITER             
+ 430: PRECALL              
+ 434: CALL                 
+ 444: PRECALL              
+ 448: CALL                 
+ 458: LOAD_FAST            self
+ 460: STORE_ATTR           traps
+ 470: JUMP_FORWARD         to 486
+ 472: LOAD_DEREF           traps
+ 474: LOAD_FAST            self
+ 476: STORE_ATTR           traps
+ 486: LOAD_DEREF           flags
+ 488: POP_JUMP_FORWARD_IF_NOT_NONE to 568
+ 490: LOAD_GLOBAL          dict
+ 502: LOAD_METHOD          fromkeys
+ 524: LOAD_GLOBAL          _signals
+ 536: LOAD_CONST           0
+ 538: PRECALL              
+ 542: CALL                 
+ 552: LOAD_FAST            self
+ 554: STORE_ATTR           flags
+ 564: LOAD_CONST           None
+ 566: RETURN_VALUE         
+ 568: LOAD_GLOBAL          NULL + isinstance
+ 580: LOAD_DEREF           flags
+ 582: LOAD_GLOBAL          dict
+ 594: PRECALL              
+ 598: CALL                 
+ 608: POP_JUMP_FORWARD_IF_TRUE to 694
+ 610: LOAD_GLOBAL          NULL + dict
+ 622: LOAD_CLOSURE         flags
+ 624: BUILD_TUPLE          
+ 626: LOAD_CONST           <code object <genexpr> at 0x00000240693EAC30, file "_pydecimal.py", line 3934>
+ 628: MAKE_FUNCTION        closure
+ 630: LOAD_GLOBAL          _signals
+ 642: LOAD_DEREF           flags
+ 644: BINARY_OP            +
+ 648: GET_ITER             
+ 650: PRECALL              
+ 654: CALL                 
+ 664: PRECALL              
+ 668: CALL                 
+ 678: LOAD_FAST            self
+ 680: STORE_ATTR           flags
+ 690: LOAD_CONST           None
+ 692: RETURN_VALUE         
+ 694: LOAD_DEREF           flags
+ 696: LOAD_FAST            self
+ 698: STORE_ATTR           flags
+ 708: LOAD_CONST           None
+ 710: RETURN_VALUE         

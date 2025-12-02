@@ -1,0 +1,559 @@
+# Disassembly for subprocess.Popen._execute_child
+# From module file: subprocess
+
+## co_consts:
+('Execute program (POSIX version)', 'path-like args is not allowed when shell is true', 'getandroidapilevel', '/system/bin/sh', '/bin/sh', '-c', 0, None, 'subprocess.Popen', -1, 2, 3, b'=', 'illegal environment variable name', <code object <genexpr> at 0x00000240693AA5B0, file "subprocess.py", line 1878>, True, 50000, b':', b'SubprocessError', b'0', 'Bad exception data from child: {!r}', 'ascii', 16, 'noexec', '')
+
+## co_names:
+('isinstance', 'str', 'bytes', 'os', 'PathLike', 'TypeError', 'list', 'hasattr', 'sys', 'audit', '_USE_POSIX_SPAWN', 'path', 'dirname', '_posix_spawn', 'pipe', 'append', 'dup', 'close', 'items', 'fsencode', 'ValueError', 'tuple', 'get_exec_path', 'set', 'add', '_fork_exec', 'sorted', 'map', 'int', '_USE_VFORK', 'pid', '_child_created', '_close_pipe_fds', 'bytearray', 'read', 'len', 'waitpid', '_handle_exitstatus', 'maxsize', 'returncode', 'ChildProcessError', 'split', 'decode', 'format', 'getattr', 'builtins', 'SubprocessError', 'issubclass', 'OSError', 'strerror')
+
+## bytecode:
+
+   0: MAKE_CELL            executable
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + isinstance
+  16: LOAD_FAST            args
+  18: LOAD_GLOBAL          str
+  30: LOAD_GLOBAL          bytes
+  42: BUILD_TUPLE          
+  44: PRECALL              
+  48: CALL                 
+  58: POP_JUMP_FORWARD_IF_FALSE to 68
+  60: LOAD_FAST            args
+  62: BUILD_LIST           
+  64: STORE_FAST           args
+  66: JUMP_FORWARD         to 192
+  68: LOAD_GLOBAL          NULL + isinstance
+  80: LOAD_FAST            args
+  82: LOAD_GLOBAL          os
+  94: LOAD_ATTR            PathLike
+ 104: PRECALL              
+ 108: CALL                 
+ 118: POP_JUMP_FORWARD_IF_FALSE to 162
+ 120: LOAD_FAST            shell
+ 122: POP_JUMP_FORWARD_IF_FALSE to 154
+ 124: LOAD_GLOBAL          NULL + TypeError
+ 136: LOAD_CONST           'path-like args is not allowed when shell is true'
+ 138: PRECALL              
+ 142: CALL                 
+ 152: RAISE_VARARGS        
+ 154: LOAD_FAST            args
+ 156: BUILD_LIST           
+ 158: STORE_FAST           args
+ 160: JUMP_FORWARD         to 192
+ 162: LOAD_GLOBAL          NULL + list
+ 174: LOAD_FAST            args
+ 176: PRECALL              
+ 180: CALL                 
+ 190: STORE_FAST           args
+ 192: LOAD_FAST            shell
+ 194: POP_JUMP_FORWARD_IF_FALSE to 274
+ 196: LOAD_GLOBAL          NULL + hasattr
+ 208: LOAD_GLOBAL          sys
+ 220: LOAD_CONST           'getandroidapilevel'
+ 222: PRECALL              
+ 226: CALL                 
+ 236: POP_JUMP_FORWARD_IF_FALSE to 242
+ 238: LOAD_CONST           '/system/bin/sh'
+ 240: JUMP_FORWARD         to 244
+ 242: LOAD_CONST           '/bin/sh'
+ 244: STORE_FAST           unix_shell
+ 246: LOAD_FAST            unix_shell
+ 248: LOAD_CONST           '-c'
+ 250: BUILD_LIST           
+ 252: LOAD_FAST            args
+ 254: BINARY_OP            +
+ 258: STORE_FAST           args
+ 260: LOAD_DEREF           executable
+ 262: POP_JUMP_FORWARD_IF_FALSE to 274
+ 264: LOAD_DEREF           executable
+ 266: LOAD_FAST            args
+ 268: LOAD_CONST           0
+ 270: STORE_SUBSCR         
+ 274: LOAD_DEREF           executable
+ 276: POP_JUMP_FORWARD_IF_NOT_NONE to 294
+ 278: LOAD_FAST            args
+ 280: LOAD_CONST           0
+ 282: BINARY_SUBSCR        
+ 292: STORE_DEREF          executable
+ 294: LOAD_GLOBAL          NULL + sys
+ 306: LOAD_ATTR            audit
+ 316: LOAD_CONST           'subprocess.Popen'
+ 318: LOAD_DEREF           executable
+ 320: LOAD_FAST            args
+ 322: LOAD_FAST            cwd
+ 324: LOAD_FAST            env
+ 326: PRECALL              
+ 330: CALL                 
+ 340: POP_TOP              
+ 342: LOAD_GLOBAL          _USE_POSIX_SPAWN
+ 354: POP_JUMP_FORWARD_IF_FALSE to 610
+ 356: LOAD_GLOBAL          os
+ 368: LOAD_ATTR            path
+ 378: LOAD_METHOD          dirname
+ 400: LOAD_DEREF           executable
+ 402: PRECALL              
+ 406: CALL                 
+ 416: POP_JUMP_FORWARD_IF_FALSE to 610
+ 418: LOAD_FAST            preexec_fn
+ 420: POP_JUMP_FORWARD_IF_NOT_NONE to 610
+ 422: LOAD_FAST            close_fds
+ 424: POP_JUMP_FORWARD_IF_TRUE to 610
+ 426: LOAD_FAST            pass_fds
+ 428: POP_JUMP_FORWARD_IF_TRUE to 610
+ 430: LOAD_FAST            cwd
+ 432: POP_JUMP_FORWARD_IF_NOT_NONE to 610
+ 434: LOAD_FAST            p2cread
+ 436: LOAD_CONST           -1
+ 438: COMPARE_OP           ==
+ 444: POP_JUMP_FORWARD_IF_TRUE to 458
+ 446: LOAD_FAST            p2cread
+ 448: LOAD_CONST           2
+ 450: COMPARE_OP           >
+ 456: POP_JUMP_FORWARD_IF_FALSE to 610
+ 458: LOAD_FAST            c2pwrite
+ 460: LOAD_CONST           -1
+ 462: COMPARE_OP           ==
+ 468: POP_JUMP_FORWARD_IF_TRUE to 482
+ 470: LOAD_FAST            c2pwrite
+ 472: LOAD_CONST           2
+ 474: COMPARE_OP           >
+ 480: POP_JUMP_FORWARD_IF_FALSE to 610
+ 482: LOAD_FAST            errwrite
+ 484: LOAD_CONST           -1
+ 486: COMPARE_OP           ==
+ 492: POP_JUMP_FORWARD_IF_TRUE to 506
+ 494: LOAD_FAST            errwrite
+ 496: LOAD_CONST           2
+ 498: COMPARE_OP           >
+ 504: POP_JUMP_FORWARD_IF_FALSE to 610
+ 506: LOAD_FAST            start_new_session
+ 508: POP_JUMP_FORWARD_IF_TRUE to 610
+ 510: LOAD_FAST            process_group
+ 512: LOAD_CONST           -1
+ 514: COMPARE_OP           ==
+ 520: POP_JUMP_FORWARD_IF_FALSE to 610
+ 522: LOAD_FAST            gid
+ 524: POP_JUMP_FORWARD_IF_NOT_NONE to 610
+ 526: LOAD_FAST            gids
+ 528: POP_JUMP_FORWARD_IF_NOT_NONE to 610
+ 530: LOAD_FAST            uid
+ 532: POP_JUMP_FORWARD_IF_NOT_NONE to 610
+ 534: LOAD_FAST            umask
+ 536: LOAD_CONST           0
+ 538: COMPARE_OP           <
+ 544: POP_JUMP_FORWARD_IF_FALSE to 610
+ 546: LOAD_FAST            self
+ 548: LOAD_METHOD          _posix_spawn
+ 570: LOAD_FAST            args
+ 572: LOAD_DEREF           executable
+ 574: LOAD_FAST            env
+ 576: LOAD_FAST            restore_signals
+ 578: LOAD_FAST            p2cread
+ 580: LOAD_FAST            p2cwrite
+ 582: LOAD_FAST            c2pread
+ 584: LOAD_FAST            c2pwrite
+ 586: LOAD_FAST            errread
+ 588: LOAD_FAST            errwrite
+ 590: PRECALL              
+ 594: CALL                 
+ 604: POP_TOP              
+ 606: LOAD_CONST           None
+ 608: RETURN_VALUE         
+ 610: LOAD_DEREF           executable
+ 612: STORE_FAST           orig_executable
+ 614: LOAD_GLOBAL          NULL + os
+ 626: LOAD_ATTR            pipe
+ 636: PRECALL              
+ 640: CALL                 
+ 650: UNPACK_SEQUENCE      
+ 654: STORE_FAST           errpipe_read
+ 656: STORE_FAST           errpipe_write
+ 658: BUILD_LIST           
+ 660: STORE_FAST           low_fds_to_close
+ 662: LOAD_FAST            errpipe_write
+ 664: LOAD_CONST           3
+ 666: COMPARE_OP           <
+ 672: POP_JUMP_FORWARD_IF_FALSE to 768
+ 674: LOAD_FAST            low_fds_to_close
+ 676: LOAD_METHOD          append
+ 698: LOAD_FAST            errpipe_write
+ 700: PRECALL              
+ 704: CALL                 
+ 714: POP_TOP              
+ 716: LOAD_GLOBAL          NULL + os
+ 728: LOAD_ATTR            dup
+ 738: LOAD_FAST            errpipe_write
+ 740: PRECALL              
+ 744: CALL                 
+ 754: STORE_FAST           errpipe_write
+ 756: LOAD_FAST            errpipe_write
+ 758: LOAD_CONST           3
+ 760: COMPARE_OP           <
+ 766: POP_JUMP_BACKWARD_IF_TRUE to 674
+ 768: LOAD_FAST            low_fds_to_close
+ 770: GET_ITER             
+ 772: FOR_ITER             to 818
+ 774: STORE_FAST           low_fd
+ 776: LOAD_GLOBAL          NULL + os
+ 788: LOAD_ATTR            close
+ 798: LOAD_FAST            low_fd
+ 800: PRECALL              
+ 804: CALL                 
+ 814: POP_TOP              
+ 816: JUMP_BACKWARD        to 772
+ 818: NOP                  
+ 820: NOP                  
+ 822: LOAD_FAST            env
+ 824: POP_JUMP_FORWARD_IF_NONE to 1052
+ 826: BUILD_LIST           
+ 828: STORE_FAST           env_list
+ 830: LOAD_FAST            env
+ 832: LOAD_METHOD          items
+ 854: PRECALL              
+ 858: CALL                 
+ 868: GET_ITER             
+ 870: FOR_ITER             to 1050
+ 872: UNPACK_SEQUENCE      
+ 876: STORE_FAST           k
+ 878: STORE_FAST           v
+ 880: LOAD_GLOBAL          NULL + os
+ 892: LOAD_ATTR            fsencode
+ 902: LOAD_FAST            k
+ 904: PRECALL              
+ 908: CALL                 
+ 918: STORE_FAST           k
+ 920: LOAD_CONST           b'='
+ 922: LOAD_FAST            k
+ 924: CONTAINS_OP          
+ 926: POP_JUMP_FORWARD_IF_FALSE to 958
+ 928: LOAD_GLOBAL          NULL + ValueError
+ 940: LOAD_CONST           'illegal environment variable name'
+ 942: PRECALL              
+ 946: CALL                 
+ 956: RAISE_VARARGS        
+ 958: LOAD_FAST            env_list
+ 960: LOAD_METHOD          append
+ 982: LOAD_FAST            k
+ 984: LOAD_CONST           b'='
+ 986: BINARY_OP            +
+ 990: LOAD_GLOBAL          NULL + os
+1002: LOAD_ATTR            fsencode
+1012: LOAD_FAST            v
+1014: PRECALL              
+1018: CALL                 
+1028: BINARY_OP            +
+1032: PRECALL              
+1036: CALL                 
+1046: POP_TOP              
+1048: JUMP_BACKWARD        to 870
+1050: JUMP_FORWARD         to 1056
+1052: LOAD_CONST           None
+1054: STORE_FAST           env_list
+1056: LOAD_GLOBAL          NULL + os
+1068: LOAD_ATTR            fsencode
+1078: LOAD_DEREF           executable
+1080: PRECALL              
+1084: CALL                 
+1094: STORE_DEREF          executable
+1096: LOAD_GLOBAL          os
+1108: LOAD_ATTR            path
+1118: LOAD_METHOD          dirname
+1140: LOAD_DEREF           executable
+1142: PRECALL              
+1146: CALL                 
+1156: POP_JUMP_FORWARD_IF_FALSE to 1166
+1158: LOAD_DEREF           executable
+1160: BUILD_TUPLE          
+1162: STORE_FAST           executable_list
+1164: JUMP_FORWARD         to 1256
+1166: LOAD_GLOBAL          NULL + tuple
+1178: LOAD_CLOSURE         executable
+1180: BUILD_TUPLE          
+1182: LOAD_CONST           <code object <genexpr> at 0x00000240693AA5B0, file "subprocess.py", line 1878>
+1184: MAKE_FUNCTION        closure
+1186: LOAD_GLOBAL          NULL + os
+1198: LOAD_ATTR            get_exec_path
+1208: LOAD_FAST            env
+1210: PRECALL              
+1214: CALL                 
+1224: GET_ITER             
+1226: PRECALL              
+1230: CALL                 
+1240: PRECALL              
+1244: CALL                 
+1254: STORE_FAST           executable_list
+1256: LOAD_GLOBAL          NULL + set
+1268: LOAD_FAST            pass_fds
+1270: PRECALL              
+1274: CALL                 
+1284: STORE_FAST           fds_to_keep
+1286: LOAD_FAST            fds_to_keep
+1288: LOAD_METHOD          add
+1310: LOAD_FAST            errpipe_write
+1312: PRECALL              
+1316: CALL                 
+1326: POP_TOP              
+1328: LOAD_GLOBAL          NULL + _fork_exec
+1340: LOAD_FAST            args
+1342: LOAD_FAST            executable_list
+1344: LOAD_FAST            close_fds
+1346: LOAD_GLOBAL          NULL + tuple
+1358: LOAD_GLOBAL          NULL + sorted
+1370: LOAD_GLOBAL          NULL + map
+1382: LOAD_GLOBAL          int
+1394: LOAD_FAST            fds_to_keep
+1396: PRECALL              
+1400: CALL                 
+1410: PRECALL              
+1414: CALL                 
+1424: PRECALL              
+1428: CALL                 
+1438: LOAD_FAST            cwd
+1440: LOAD_FAST            env_list
+1442: LOAD_FAST            p2cread
+1444: LOAD_FAST            p2cwrite
+1446: LOAD_FAST            c2pread
+1448: LOAD_FAST            c2pwrite
+1450: LOAD_FAST            errread
+1452: LOAD_FAST            errwrite
+1454: LOAD_FAST            errpipe_read
+1456: LOAD_FAST            errpipe_write
+1458: LOAD_FAST            restore_signals
+1460: LOAD_FAST            start_new_session
+1462: LOAD_FAST            process_group
+1464: LOAD_FAST            gid
+1466: LOAD_FAST            gids
+1468: LOAD_FAST            uid
+1470: LOAD_FAST            umask
+1472: LOAD_FAST            preexec_fn
+1474: LOAD_GLOBAL          _USE_VFORK
+1486: PRECALL              
+1490: CALL                 
+1500: LOAD_FAST            self
+1502: STORE_ATTR           pid
+1512: LOAD_CONST           True
+1514: LOAD_FAST            self
+1516: STORE_ATTR           _child_created
+1526: LOAD_GLOBAL          NULL + os
+1538: LOAD_ATTR            close
+1548: LOAD_FAST            errpipe_write
+1550: PRECALL              
+1554: CALL                 
+1564: POP_TOP              
+1566: JUMP_FORWARD         to 1618
+1568: PUSH_EXC_INFO        
+1570: LOAD_GLOBAL          NULL + os
+1582: LOAD_ATTR            close
+1592: LOAD_FAST            errpipe_write
+1594: PRECALL              
+1598: CALL                 
+1608: POP_TOP              
+1610: RERAISE              
+1612: COPY                 
+1614: POP_EXCEPT           
+1616: RERAISE              
+1618: LOAD_FAST            self
+1620: LOAD_METHOD          _close_pipe_fds
+1642: LOAD_FAST            p2cread
+1644: LOAD_FAST            p2cwrite
+1646: LOAD_FAST            c2pread
+1648: LOAD_FAST            c2pwrite
+1650: LOAD_FAST            errread
+1652: LOAD_FAST            errwrite
+1654: PRECALL              
+1658: CALL                 
+1668: POP_TOP              
+1670: LOAD_GLOBAL          NULL + bytearray
+1682: PRECALL              
+1686: CALL                 
+1696: STORE_FAST           errpipe_data
+1698: NOP                  
+1700: LOAD_GLOBAL          NULL + os
+1712: LOAD_ATTR            read
+1722: LOAD_FAST            errpipe_read
+1724: LOAD_CONST           50000
+1726: PRECALL              
+1730: CALL                 
+1740: STORE_FAST           part
+1742: LOAD_FAST            errpipe_data
+1744: LOAD_FAST            part
+1746: BINARY_OP            +=
+1750: STORE_FAST           errpipe_data
+1752: LOAD_FAST            part
+1754: POP_JUMP_FORWARD_IF_FALSE to 1794
+1756: LOAD_GLOBAL          NULL + len
+1768: LOAD_FAST            errpipe_data
+1770: PRECALL              
+1774: CALL                 
+1784: LOAD_CONST           50000
+1786: COMPARE_OP           >
+1792: POP_JUMP_FORWARD_IF_FALSE to 1796
+1794: JUMP_FORWARD         to 1798
+1796: JUMP_BACKWARD        to 1700
+1798: NOP                  
+1800: LOAD_GLOBAL          NULL + os
+1812: LOAD_ATTR            close
+1822: LOAD_FAST            errpipe_read
+1824: PRECALL              
+1828: CALL                 
+1838: POP_TOP              
+1840: JUMP_FORWARD         to 1892
+1842: PUSH_EXC_INFO        
+1844: LOAD_GLOBAL          NULL + os
+1856: LOAD_ATTR            close
+1866: LOAD_FAST            errpipe_read
+1868: PRECALL              
+1872: CALL                 
+1882: POP_TOP              
+1884: RERAISE              
+1886: COPY                 
+1888: POP_EXCEPT           
+1890: RERAISE              
+1892: LOAD_FAST            errpipe_data
+1894: EXTENDED_ARG         
+1896: POP_JUMP_FORWARD_IF_FALSE to 2596
+1898: NOP                  
+1900: LOAD_GLOBAL          NULL + os
+1912: LOAD_ATTR            waitpid
+1922: LOAD_FAST            self
+1924: LOAD_ATTR            pid
+1934: LOAD_CONST           0
+1936: PRECALL              
+1940: CALL                 
+1950: UNPACK_SEQUENCE      
+1954: STORE_FAST           pid
+1956: STORE_FAST           sts
+1958: LOAD_FAST            pid
+1960: LOAD_FAST            self
+1962: LOAD_ATTR            pid
+1972: COMPARE_OP           ==
+1978: POP_JUMP_FORWARD_IF_FALSE to 2024
+1980: LOAD_FAST            self
+1982: LOAD_METHOD          _handle_exitstatus
+2004: LOAD_FAST            sts
+2006: PRECALL              
+2010: CALL                 
+2020: POP_TOP              
+2022: JUMP_FORWARD         to 2058
+2024: LOAD_GLOBAL          sys
+2036: LOAD_ATTR            maxsize
+2046: LOAD_FAST            self
+2048: STORE_ATTR           returncode
+2058: JUMP_FORWARD         to 2092
+2060: PUSH_EXC_INFO        
+2062: LOAD_GLOBAL          ChildProcessError
+2074: CHECK_EXC_MATCH      
+2076: POP_JUMP_FORWARD_IF_FALSE to 2084
+2078: POP_TOP              
+2080: POP_EXCEPT           
+2082: JUMP_FORWARD         to 2092
+2084: RERAISE              
+2086: COPY                 
+2088: POP_EXCEPT           
+2090: RERAISE              
+2092: NOP                  
+2094: LOAD_FAST            errpipe_data
+2096: LOAD_METHOD          split
+2118: LOAD_CONST           b':'
+2120: LOAD_CONST           2
+2122: PRECALL              
+2126: CALL                 
+2136: UNPACK_SEQUENCE      
+2140: STORE_FAST           exception_name
+2142: STORE_FAST           hex_errno
+2144: STORE_FAST           err_msg
+2146: LOAD_FAST            err_msg
+2148: LOAD_METHOD          decode
+2170: PRECALL              
+2174: CALL                 
+2184: STORE_FAST           err_msg
+2186: JUMP_FORWARD         to 2296
+2188: PUSH_EXC_INFO        
+2190: LOAD_GLOBAL          ValueError
+2202: CHECK_EXC_MATCH      
+2204: POP_JUMP_FORWARD_IF_FALSE to 2288
+2206: POP_TOP              
+2208: LOAD_CONST           b'SubprocessError'
+2210: STORE_FAST           exception_name
+2212: LOAD_CONST           b'0'
+2214: STORE_FAST           hex_errno
+2216: LOAD_CONST           'Bad exception data from child: {!r}'
+2218: LOAD_METHOD          format
+2240: LOAD_GLOBAL          NULL + bytes
+2252: LOAD_FAST            errpipe_data
+2254: PRECALL              
+2258: CALL                 
+2268: PRECALL              
+2272: CALL                 
+2282: STORE_FAST           err_msg
+2284: POP_EXCEPT           
+2286: JUMP_FORWARD         to 2296
+2288: RERAISE              
+2290: COPY                 
+2292: POP_EXCEPT           
+2294: RERAISE              
+2296: LOAD_GLOBAL          NULL + getattr
+2308: LOAD_GLOBAL          builtins
+2320: LOAD_FAST            exception_name
+2322: LOAD_METHOD          decode
+2344: LOAD_CONST           'ascii'
+2346: PRECALL              
+2350: CALL                 
+2360: LOAD_GLOBAL          SubprocessError
+2372: PRECALL              
+2376: CALL                 
+2386: STORE_FAST           child_exception_type
+2388: LOAD_GLOBAL          NULL + issubclass
+2400: LOAD_FAST            child_exception_type
+2402: LOAD_GLOBAL          OSError
+2414: PRECALL              
+2418: CALL                 
+2428: POP_JUMP_FORWARD_IF_FALSE to 2574
+2430: LOAD_FAST            hex_errno
+2432: POP_JUMP_FORWARD_IF_FALSE to 2574
+2434: LOAD_GLOBAL          NULL + int
+2446: LOAD_FAST            hex_errno
+2448: LOAD_CONST           16
+2450: PRECALL              
+2454: CALL                 
+2464: STORE_FAST           errno_num
+2466: LOAD_FAST            err_msg
+2468: LOAD_CONST           'noexec'
+2470: COMPARE_OP           ==
+2476: STORE_FAST           child_exec_never_called
+2478: LOAD_FAST            child_exec_never_called
+2480: POP_JUMP_FORWARD_IF_FALSE to 2492
+2482: LOAD_CONST           ''
+2484: STORE_FAST           err_msg
+2486: LOAD_FAST            cwd
+2488: STORE_FAST           err_filename
+2490: JUMP_FORWARD         to 2496
+2492: LOAD_FAST            orig_executable
+2494: STORE_FAST           err_filename
+2496: LOAD_FAST            errno_num
+2498: LOAD_CONST           0
+2500: COMPARE_OP           !=
+2506: POP_JUMP_FORWARD_IF_FALSE to 2548
+2508: LOAD_GLOBAL          NULL + os
+2520: LOAD_ATTR            strerror
+2530: LOAD_FAST            errno_num
+2532: PRECALL              
+2536: CALL                 
+2546: STORE_FAST           err_msg
+2548: PUSH_NULL            
+2550: LOAD_FAST            child_exception_type
+2552: LOAD_FAST            errno_num
+2554: LOAD_FAST            err_msg
+2556: LOAD_FAST            err_filename
+2558: PRECALL              
+2562: CALL                 
+2572: RAISE_VARARGS        
+2574: PUSH_NULL            
+2576: LOAD_FAST            child_exception_type
+2578: LOAD_FAST            err_msg
+2580: PRECALL              
+2584: CALL                 
+2594: RAISE_VARARGS        
+2596: LOAD_CONST           None
+2598: RETURN_VALUE         

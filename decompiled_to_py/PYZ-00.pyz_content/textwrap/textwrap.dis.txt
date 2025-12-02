@@ -1,0 +1,86 @@
+# Disassembly for textwrap
+# From module file: textwrap
+
+## co_consts:
+('Text wrapping and filling.\n', 0, None, ('TextWrapper', 'wrap', 'fill', 'dedent', 'indent', 'shorten'), '\t\n\x0b\x0c\r ', <code object TextWrapper at 0x0000024068D6E320, file "textwrap.py", line 17>, 'TextWrapper', 70, <code object wrap at 0x00000240693EBE30, file "textwrap.py", line 373>, <code object fill at 0x00000240693EAE30, file "textwrap.py", line 386>, <code object shorten at 0x000002406921F840, file "textwrap.py", line 398>, '^[ \t]+$', '(^[ \t]*)(?:[^ \t\n])', <code object dedent at 0x0000024068D6E570, file "textwrap.py", line 419>, <code object indent at 0x000002406941A430, file "textwrap.py", line 470>, '__main__', 'Hello there.\n  This is indented.', (70,), (None,))
+
+## co_names:
+('__doc__', 're', '__all__', '_whitespace', 'TextWrapper', 'wrap', 'fill', 'shorten', 'compile', 'MULTILINE', '_whitespace_only_re', '_leading_whitespace_re', 'dedent', 'indent', '__name__', 'print')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'Text wrapping and filling.\n'
+   4: STORE_NAME           __doc__
+   6: LOAD_CONST           0
+   8: LOAD_CONST           None
+  10: IMPORT_NAME          re
+  12: STORE_NAME           re
+  14: BUILD_LIST           
+  16: LOAD_CONST           ('TextWrapper', 'wrap', 'fill', 'dedent', 'indent', 'shorten')
+  18: LIST_EXTEND          
+  20: STORE_NAME           __all__
+  22: LOAD_CONST           '\t\n\x0b\x0c\r '
+  24: STORE_NAME           _whitespace
+  26: PUSH_NULL            
+  28: LOAD_BUILD_CLASS     
+  30: LOAD_CONST           <code object TextWrapper at 0x0000024068D6E320, file "textwrap.py", line 17>
+  32: MAKE_FUNCTION        
+  34: LOAD_CONST           'TextWrapper'
+  36: PRECALL              
+  40: CALL                 
+  50: STORE_NAME           TextWrapper
+  52: LOAD_CONST           (70,)
+  54: LOAD_CONST           <code object wrap at 0x00000240693EBE30, file "textwrap.py", line 373>
+  56: MAKE_FUNCTION        defaults
+  58: STORE_NAME           wrap
+  60: LOAD_CONST           (70,)
+  62: LOAD_CONST           <code object fill at 0x00000240693EAE30, file "textwrap.py", line 386>
+  64: MAKE_FUNCTION        defaults
+  66: STORE_NAME           fill
+  68: LOAD_CONST           <code object shorten at 0x000002406921F840, file "textwrap.py", line 398>
+  70: MAKE_FUNCTION        
+  72: STORE_NAME           shorten
+  74: PUSH_NULL            
+  76: LOAD_NAME            re
+  78: LOAD_ATTR            compile
+  88: LOAD_CONST           '^[ \t]+$'
+  90: LOAD_NAME            re
+  92: LOAD_ATTR            MULTILINE
+ 102: PRECALL              
+ 106: CALL                 
+ 116: STORE_NAME           _whitespace_only_re
+ 118: PUSH_NULL            
+ 120: LOAD_NAME            re
+ 122: LOAD_ATTR            compile
+ 132: LOAD_CONST           '(^[ \t]*)(?:[^ \t\n])'
+ 134: LOAD_NAME            re
+ 136: LOAD_ATTR            MULTILINE
+ 146: PRECALL              
+ 150: CALL                 
+ 160: STORE_NAME           _leading_whitespace_re
+ 162: LOAD_CONST           <code object dedent at 0x0000024068D6E570, file "textwrap.py", line 419>
+ 164: MAKE_FUNCTION        
+ 166: STORE_NAME           dedent
+ 168: LOAD_CONST           (None,)
+ 170: LOAD_CONST           <code object indent at 0x000002406941A430, file "textwrap.py", line 470>
+ 172: MAKE_FUNCTION        defaults
+ 174: STORE_NAME           indent
+ 176: LOAD_NAME            __name__
+ 178: LOAD_CONST           '__main__'
+ 180: COMPARE_OP           ==
+ 186: POP_JUMP_FORWARD_IF_FALSE to 232
+ 188: PUSH_NULL            
+ 190: LOAD_NAME            print
+ 192: PUSH_NULL            
+ 194: LOAD_NAME            dedent
+ 196: LOAD_CONST           'Hello there.\n  This is indented.'
+ 198: PRECALL              
+ 202: CALL                 
+ 212: PRECALL              
+ 216: CALL                 
+ 226: POP_TOP              
+ 228: LOAD_CONST           None
+ 230: RETURN_VALUE         
+ 232: LOAD_CONST           None
+ 234: RETURN_VALUE         

@@ -1,0 +1,39 @@
+# Disassembly for pickle._Framer.write_large_bytes
+# From module file: pickle
+
+## co_consts:
+(None, True, ('force',))
+
+## co_names:
+('file_write', 'current_frame', 'commit_frame')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            file_write
+  14: STORE_FAST           write
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            current_frame
+  28: POP_JUMP_FORWARD_IF_FALSE to 74
+  30: LOAD_FAST            self
+  32: LOAD_METHOD          commit_frame
+  54: LOAD_CONST           True
+  56: KW_NAMES             
+  58: PRECALL              
+  62: CALL                 
+  72: POP_TOP              
+  74: PUSH_NULL            
+  76: LOAD_FAST            write
+  78: LOAD_FAST            header
+  80: PRECALL              
+  84: CALL                 
+  94: POP_TOP              
+  96: PUSH_NULL            
+  98: LOAD_FAST            write
+ 100: LOAD_FAST            payload
+ 102: PRECALL              
+ 106: CALL                 
+ 116: POP_TOP              
+ 118: LOAD_CONST           None
+ 120: RETURN_VALUE         

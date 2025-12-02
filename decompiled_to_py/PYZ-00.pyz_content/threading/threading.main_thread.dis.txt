@@ -1,0 +1,14 @@
+# Disassembly for threading.main_thread
+# From module file: threading
+
+## co_consts:
+('Return the main thread object.\n\n    In normal conditions, the main thread is the thread from which the\n    Python interpreter was started.\n    ',)
+
+## co_names:
+('_main_thread',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _main_thread
+  14: RETURN_VALUE         

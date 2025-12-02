@@ -1,0 +1,66 @@
+# Disassembly for ast._Unparser.visit_Tuple
+# From module file: ast
+
+## co_consts:
+(None, '(', ')', 0)
+
+## co_names:
+('delimit_if', 'len', 'elts', 'get_precedence', '_Precedence', 'TUPLE', 'items_view', 'traverse')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          delimit_if
+  26: LOAD_CONST           '('
+  28: LOAD_CONST           ')'
+  30: LOAD_GLOBAL          NULL + len
+  42: LOAD_FAST            node
+  44: LOAD_ATTR            elts
+  54: PRECALL              
+  58: CALL                 
+  68: LOAD_CONST           0
+  70: COMPARE_OP           ==
+  76: JUMP_IF_TRUE_OR_POP  to 146
+  78: LOAD_FAST            self
+  80: LOAD_METHOD          get_precedence
+ 102: LOAD_FAST            node
+ 104: PRECALL              
+ 108: CALL                 
+ 118: LOAD_GLOBAL          _Precedence
+ 130: LOAD_ATTR            TUPLE
+ 140: COMPARE_OP           >
+ 146: PRECALL              
+ 150: CALL                 
+ 160: BEFORE_WITH          
+ 162: POP_TOP              
+ 164: LOAD_FAST            self
+ 166: LOAD_METHOD          items_view
+ 188: LOAD_FAST            self
+ 190: LOAD_ATTR            traverse
+ 200: LOAD_FAST            node
+ 202: LOAD_ATTR            elts
+ 212: PRECALL              
+ 216: CALL                 
+ 226: POP_TOP              
+ 228: LOAD_CONST           None
+ 230: LOAD_CONST           None
+ 232: LOAD_CONST           None
+ 234: PRECALL              
+ 238: CALL                 
+ 248: POP_TOP              
+ 250: LOAD_CONST           None
+ 252: RETURN_VALUE         
+ 254: PUSH_EXC_INFO        
+ 256: WITH_EXCEPT_START    
+ 258: POP_JUMP_FORWARD_IF_TRUE to 268
+ 260: RERAISE              
+ 262: COPY                 
+ 264: POP_EXCEPT           
+ 266: RERAISE              
+ 268: POP_TOP              
+ 270: POP_EXCEPT           
+ 272: POP_TOP              
+ 274: POP_TOP              
+ 276: LOAD_CONST           None
+ 278: RETURN_VALUE         

@@ -1,0 +1,25 @@
+# Disassembly for pickle._Unpickler.load_list
+# From module file: pickle
+
+## co_consts:
+(None,)
+
+## co_names:
+('pop_mark', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          pop_mark
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           items
+  42: LOAD_FAST            self
+  44: LOAD_METHOD          append
+  66: LOAD_FAST            items
+  68: PRECALL              
+  72: CALL                 
+  82: POP_TOP              
+  84: LOAD_CONST           None
+  86: RETURN_VALUE         

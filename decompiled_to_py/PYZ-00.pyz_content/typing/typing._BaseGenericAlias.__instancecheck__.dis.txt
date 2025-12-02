@@ -1,0 +1,21 @@
+# Disassembly for typing._BaseGenericAlias.__instancecheck__
+# From module file: typing
+
+## co_consts:
+(None,)
+
+## co_names:
+('__subclasscheck__', 'type')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          __subclasscheck__
+  26: LOAD_GLOBAL          NULL + type
+  38: LOAD_FAST            obj
+  40: PRECALL              
+  44: CALL                 
+  54: PRECALL              
+  58: CALL                 
+  68: RETURN_VALUE         

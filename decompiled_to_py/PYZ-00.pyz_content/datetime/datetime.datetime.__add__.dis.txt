@@ -1,0 +1,101 @@
+# Disassembly for datetime.datetime.__add__
+# From module file: datetime
+
+## co_consts:
+('Add a datetime and a timedelta.', ('hours', 'minutes', 'seconds', 'microseconds'), 3600, 60, 0, ('tzinfo',), 'result out of range')
+
+## co_names:
+('isinstance', 'timedelta', 'NotImplemented', 'toordinal', '_hour', '_minute', '_second', '_microsecond', 'divmod', 'seconds', 'days', '_MAXORDINAL', 'type', 'combine', 'date', 'fromordinal', 'time', 'microseconds', '_tzinfo', 'OverflowError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            other
+  16: LOAD_GLOBAL          timedelta
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_TRUE to 58
+  44: LOAD_GLOBAL          NotImplemented
+  56: RETURN_VALUE         
+  58: LOAD_GLOBAL          NULL + timedelta
+  70: LOAD_FAST            self
+  72: LOAD_METHOD          toordinal
+  94: PRECALL              
+  98: CALL                 
+ 108: LOAD_FAST            self
+ 110: LOAD_ATTR            _hour
+ 120: LOAD_FAST            self
+ 122: LOAD_ATTR            _minute
+ 132: LOAD_FAST            self
+ 134: LOAD_ATTR            _second
+ 144: LOAD_FAST            self
+ 146: LOAD_ATTR            _microsecond
+ 156: KW_NAMES             
+ 158: PRECALL              
+ 162: CALL                 
+ 172: STORE_FAST           delta
+ 174: LOAD_FAST            delta
+ 176: LOAD_FAST            other
+ 178: BINARY_OP            +=
+ 182: STORE_FAST           delta
+ 184: LOAD_GLOBAL          NULL + divmod
+ 196: LOAD_FAST            delta
+ 198: LOAD_ATTR            seconds
+ 208: LOAD_CONST           3600
+ 210: PRECALL              
+ 214: CALL                 
+ 224: UNPACK_SEQUENCE      
+ 228: STORE_FAST           hour
+ 230: STORE_FAST           rem
+ 232: LOAD_GLOBAL          NULL + divmod
+ 244: LOAD_FAST            rem
+ 246: LOAD_CONST           60
+ 248: PRECALL              
+ 252: CALL                 
+ 262: UNPACK_SEQUENCE      
+ 266: STORE_FAST           minute
+ 268: STORE_FAST           second
+ 270: LOAD_CONST           0
+ 272: LOAD_FAST            delta
+ 274: LOAD_ATTR            days
+ 284: SWAP                 
+ 286: COPY                 
+ 288: COMPARE_OP           <
+ 294: POP_JUMP_FORWARD_IF_FALSE to 318
+ 296: LOAD_GLOBAL          _MAXORDINAL
+ 308: COMPARE_OP           <=
+ 314: POP_JUMP_FORWARD_IF_FALSE to 506
+ 316: JUMP_FORWARD         to 322
+ 318: POP_TOP              
+ 320: JUMP_FORWARD         to 506
+ 322: LOAD_GLOBAL          NULL + type
+ 334: LOAD_FAST            self
+ 336: PRECALL              
+ 340: CALL                 
+ 350: LOAD_METHOD          combine
+ 372: LOAD_GLOBAL          date
+ 384: LOAD_METHOD          fromordinal
+ 406: LOAD_FAST            delta
+ 408: LOAD_ATTR            days
+ 418: PRECALL              
+ 422: CALL                 
+ 432: LOAD_GLOBAL          NULL + time
+ 444: LOAD_FAST            hour
+ 446: LOAD_FAST            minute
+ 448: LOAD_FAST            second
+ 450: LOAD_FAST            delta
+ 452: LOAD_ATTR            microseconds
+ 462: LOAD_FAST            self
+ 464: LOAD_ATTR            _tzinfo
+ 474: KW_NAMES             
+ 476: PRECALL              
+ 480: CALL                 
+ 490: PRECALL              
+ 494: CALL                 
+ 504: RETURN_VALUE         
+ 506: LOAD_GLOBAL          NULL + OverflowError
+ 518: LOAD_CONST           'result out of range'
+ 520: PRECALL              
+ 524: CALL                 
+ 534: RAISE_VARARGS        

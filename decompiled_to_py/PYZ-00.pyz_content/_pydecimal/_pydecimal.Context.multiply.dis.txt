@@ -1,0 +1,40 @@
+# Disassembly for _pydecimal.Context.multiply
+# From module file: _pydecimal
+
+## co_consts:
+("multiply multiplies two operands.\n\n        If either operand is a special value then the general rules apply.\n        Otherwise, the operands are multiplied together\n        ('long multiplication'), resulting in a number which may be as long as\n        the sum of the lengths of the two operands.\n\n        >>> ExtendedContext.multiply(Decimal('1.20'), Decimal('3'))\n        Decimal('3.60')\n        >>> ExtendedContext.multiply(Decimal('7'), Decimal('3'))\n        Decimal('21')\n        >>> ExtendedContext.multiply(Decimal('0.9'), Decimal('0.8'))\n        Decimal('0.72')\n        >>> ExtendedContext.multiply(Decimal('0.9'), Decimal('-0'))\n        Decimal('-0.0')\n        >>> ExtendedContext.multiply(Decimal('654321'), Decimal('654321'))\n        Decimal('4.28135971E+11')\n        >>> ExtendedContext.multiply(7, 7)\n        Decimal('49')\n        >>> ExtendedContext.multiply(Decimal(7), 7)\n        Decimal('49')\n        >>> ExtendedContext.multiply(7, Decimal(7))\n        Decimal('49')\n        ", True, ('raiseit',), ('context',), 'Unable to convert %s to Decimal')
+
+## co_names:
+('_convert_other', '__mul__', 'NotImplemented', 'TypeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _convert_other
+  14: LOAD_FAST            a
+  16: LOAD_CONST           True
+  18: KW_NAMES             
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           a
+  36: LOAD_FAST            a
+  38: LOAD_METHOD          __mul__
+  60: LOAD_FAST            b
+  62: LOAD_FAST            self
+  64: KW_NAMES             
+  66: PRECALL              
+  70: CALL                 
+  80: STORE_FAST           r
+  82: LOAD_FAST            r
+  84: LOAD_GLOBAL          NotImplemented
+  96: IS_OP                
+  98: POP_JUMP_FORWARD_IF_FALSE to 136
+ 100: LOAD_GLOBAL          NULL + TypeError
+ 112: LOAD_CONST           'Unable to convert %s to Decimal'
+ 114: LOAD_FAST            b
+ 116: BINARY_OP            %
+ 120: PRECALL              
+ 124: CALL                 
+ 134: RAISE_VARARGS        
+ 136: LOAD_FAST            r
+ 138: RETURN_VALUE         

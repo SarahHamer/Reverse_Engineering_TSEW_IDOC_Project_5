@@ -1,0 +1,84 @@
+# Disassembly for tarfile.TarFile.extractfile
+# From module file: tarfile
+
+## co_consts:
+("Extract a member from the archive as a file object. `member' may be\n           a filename or a TarInfo object. If `member' is a regular file or\n           a link, an io.BufferedReader object is returned. For all other\n           existing members, None is returned. If `member' does not appear\n           in the archive, KeyError is raised.\n        ", 'r', 'cannot extract (sym)link as file object', None)
+
+## co_names:
+('_check', 'isinstance', 'str', 'getmember', 'isreg', 'type', 'SUPPORTED_TYPES', 'fileobject', 'islnk', 'issym', 'fileobj', '_Stream', 'StreamError', 'extractfile', '_find_link_target')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _check
+  26: LOAD_CONST           'r'
+  28: PRECALL              
+  32: CALL                 
+  42: POP_TOP              
+  44: LOAD_GLOBAL          NULL + isinstance
+  56: LOAD_FAST            member
+  58: LOAD_GLOBAL          str
+  70: PRECALL              
+  74: CALL                 
+  84: POP_JUMP_FORWARD_IF_FALSE to 130
+  86: LOAD_FAST            self
+  88: LOAD_METHOD          getmember
+ 110: LOAD_FAST            member
+ 112: PRECALL              
+ 116: CALL                 
+ 126: STORE_FAST           tarinfo
+ 128: JUMP_FORWARD         to 134
+ 130: LOAD_FAST            member
+ 132: STORE_FAST           tarinfo
+ 134: LOAD_FAST            tarinfo
+ 136: LOAD_METHOD          isreg
+ 158: PRECALL              
+ 162: CALL                 
+ 172: POP_JUMP_FORWARD_IF_TRUE to 202
+ 174: LOAD_FAST            tarinfo
+ 176: LOAD_ATTR            type
+ 186: LOAD_GLOBAL          SUPPORTED_TYPES
+ 198: CONTAINS_OP          
+ 200: POP_JUMP_FORWARD_IF_FALSE to 246
+ 202: LOAD_FAST            self
+ 204: LOAD_METHOD          fileobject
+ 226: LOAD_FAST            self
+ 228: LOAD_FAST            tarinfo
+ 230: PRECALL              
+ 234: CALL                 
+ 244: RETURN_VALUE         
+ 246: LOAD_FAST            tarinfo
+ 248: LOAD_METHOD          islnk
+ 270: PRECALL              
+ 274: CALL                 
+ 284: POP_JUMP_FORWARD_IF_TRUE to 326
+ 286: LOAD_FAST            tarinfo
+ 288: LOAD_METHOD          issym
+ 310: PRECALL              
+ 314: CALL                 
+ 324: POP_JUMP_FORWARD_IF_FALSE to 488
+ 326: LOAD_GLOBAL          NULL + isinstance
+ 338: LOAD_FAST            self
+ 340: LOAD_ATTR            fileobj
+ 350: LOAD_GLOBAL          _Stream
+ 362: PRECALL              
+ 366: CALL                 
+ 376: POP_JUMP_FORWARD_IF_FALSE to 408
+ 378: LOAD_GLOBAL          NULL + StreamError
+ 390: LOAD_CONST           'cannot extract (sym)link as file object'
+ 392: PRECALL              
+ 396: CALL                 
+ 406: RAISE_VARARGS        
+ 408: LOAD_FAST            self
+ 410: LOAD_METHOD          extractfile
+ 432: LOAD_FAST            self
+ 434: LOAD_METHOD          _find_link_target
+ 456: LOAD_FAST            tarinfo
+ 458: PRECALL              
+ 462: CALL                 
+ 472: PRECALL              
+ 476: CALL                 
+ 486: RETURN_VALUE         
+ 488: LOAD_CONST           None
+ 490: RETURN_VALUE         

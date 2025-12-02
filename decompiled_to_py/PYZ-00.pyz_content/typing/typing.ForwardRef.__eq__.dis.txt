@@ -1,0 +1,50 @@
+# Disassembly for typing.ForwardRef.__eq__
+# From module file: typing
+
+## co_consts:
+(None,)
+
+## co_names:
+('isinstance', 'ForwardRef', 'NotImplemented', '__forward_evaluated__', '__forward_arg__', '__forward_value__', '__forward_module__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            other
+  16: LOAD_GLOBAL          ForwardRef
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_TRUE to 58
+  44: LOAD_GLOBAL          NotImplemented
+  56: RETURN_VALUE         
+  58: LOAD_FAST            self
+  60: LOAD_ATTR            __forward_evaluated__
+  70: POP_JUMP_FORWARD_IF_FALSE to 150
+  72: LOAD_FAST            other
+  74: LOAD_ATTR            __forward_evaluated__
+  84: POP_JUMP_FORWARD_IF_FALSE to 150
+  86: LOAD_FAST            self
+  88: LOAD_ATTR            __forward_arg__
+  98: LOAD_FAST            other
+ 100: LOAD_ATTR            __forward_arg__
+ 110: COMPARE_OP           ==
+ 116: JUMP_IF_FALSE_OR_POP to 148
+ 118: LOAD_FAST            self
+ 120: LOAD_ATTR            __forward_value__
+ 130: LOAD_FAST            other
+ 132: LOAD_ATTR            __forward_value__
+ 142: COMPARE_OP           ==
+ 148: RETURN_VALUE         
+ 150: LOAD_FAST            self
+ 152: LOAD_ATTR            __forward_arg__
+ 162: LOAD_FAST            other
+ 164: LOAD_ATTR            __forward_arg__
+ 174: COMPARE_OP           ==
+ 180: JUMP_IF_FALSE_OR_POP to 212
+ 182: LOAD_FAST            self
+ 184: LOAD_ATTR            __forward_module__
+ 194: LOAD_FAST            other
+ 196: LOAD_ATTR            __forward_module__
+ 206: COMPARE_OP           ==
+ 212: RETURN_VALUE         

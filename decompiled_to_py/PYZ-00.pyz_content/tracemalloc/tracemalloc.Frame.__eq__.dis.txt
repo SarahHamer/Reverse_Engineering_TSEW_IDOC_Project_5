@@ -1,0 +1,26 @@
+# Disassembly for tracemalloc.Frame.__eq__
+# From module file: tracemalloc
+
+## co_consts:
+(None,)
+
+## co_names:
+('isinstance', 'Frame', 'NotImplemented', '_frame')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            other
+  16: LOAD_GLOBAL          Frame
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_TRUE to 58
+  44: LOAD_GLOBAL          NotImplemented
+  56: RETURN_VALUE         
+  58: LOAD_FAST            self
+  60: LOAD_ATTR            _frame
+  70: LOAD_FAST            other
+  72: LOAD_ATTR            _frame
+  82: COMPARE_OP           ==
+  88: RETURN_VALUE         

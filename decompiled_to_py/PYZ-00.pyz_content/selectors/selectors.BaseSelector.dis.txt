@@ -1,0 +1,62 @@
+# Disassembly for selectors.BaseSelector
+# From module file: selectors
+
+## co_consts:
+('BaseSelector', 'Selector abstract base class.\n\n    A selector supports registering file objects to be monitored for specific\n    I/O events.\n\n    A file object is a file descriptor or any object with a `fileno()` method.\n    An arbitrary object can be attached to the file object, which can be used\n    for example to store context information, a callback, etc.\n\n    A selector can use various implementations (select(), poll(), epoll()...)\n    depending on the platform. The default `Selector` class uses the most\n    efficient implementation on the current platform.\n    ', None, <code object register at 0x0000024069495D70, file "selectors.py", line 95>, <code object unregister at 0x00000240694960B0, file "selectors.py", line 118>, <code object modify at 0x0000024069419E90, file "selectors.py", line 137>, <code object select at 0x00000240694957C0, file "selectors.py", line 154>, <code object close at 0x000002406943BB70, file "selectors.py", line 173>, <code object get_key at 0x00000240691E9FB0, file "selectors.py", line 180>, <code object get_map at 0x0000024069495210, file "selectors.py", line 194>, <code object __enter__ at 0x000002406943B930, file "selectors.py", line 199>, <code object __exit__ at 0x000002406945F3C0, file "selectors.py", line 202>, (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'abstractmethod', 'register', 'unregister', 'modify', 'select', 'close', 'get_key', 'get_map', '__enter__', '__exit__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'BaseSelector'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Selector abstract base class.\n\n    A selector supports registering file objects to be monitored for specific\n    I/O events.\n\n    A file object is a file descriptor or any object with a `fileno()` method.\n    An arbitrary object can be attached to the file object, which can be used\n    for example to store context information, a callback, etc.\n\n    A selector can use various implementations (select(), poll(), epoll()...)\n    depending on the platform. The default `Selector` class uses the most\n    efficient implementation on the current platform.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_NAME            abstractmethod
+  16: LOAD_CONST           (None,)
+  18: LOAD_CONST           <code object register at 0x0000024069495D70, file "selectors.py", line 95>
+  20: MAKE_FUNCTION        defaults
+  22: PRECALL              
+  26: CALL                 
+  36: STORE_NAME           register
+  38: LOAD_NAME            abstractmethod
+  40: LOAD_CONST           <code object unregister at 0x00000240694960B0, file "selectors.py", line 118>
+  42: MAKE_FUNCTION        
+  44: PRECALL              
+  48: CALL                 
+  58: STORE_NAME           unregister
+  60: LOAD_CONST           (None,)
+  62: LOAD_CONST           <code object modify at 0x0000024069419E90, file "selectors.py", line 137>
+  64: MAKE_FUNCTION        defaults
+  66: STORE_NAME           modify
+  68: LOAD_NAME            abstractmethod
+  70: LOAD_CONST           (None,)
+  72: LOAD_CONST           <code object select at 0x00000240694957C0, file "selectors.py", line 154>
+  74: MAKE_FUNCTION        defaults
+  76: PRECALL              
+  80: CALL                 
+  90: STORE_NAME           select
+  92: LOAD_CONST           <code object close at 0x000002406943BB70, file "selectors.py", line 173>
+  94: MAKE_FUNCTION        
+  96: STORE_NAME           close
+  98: LOAD_CONST           <code object get_key at 0x00000240691E9FB0, file "selectors.py", line 180>
+ 100: MAKE_FUNCTION        
+ 102: STORE_NAME           get_key
+ 104: LOAD_NAME            abstractmethod
+ 106: LOAD_CONST           <code object get_map at 0x0000024069495210, file "selectors.py", line 194>
+ 108: MAKE_FUNCTION        
+ 110: PRECALL              
+ 114: CALL                 
+ 124: STORE_NAME           get_map
+ 126: LOAD_CONST           <code object __enter__ at 0x000002406943B930, file "selectors.py", line 199>
+ 128: MAKE_FUNCTION        
+ 130: STORE_NAME           __enter__
+ 132: LOAD_CONST           <code object __exit__ at 0x000002406945F3C0, file "selectors.py", line 202>
+ 134: MAKE_FUNCTION        
+ 136: STORE_NAME           __exit__
+ 138: LOAD_CONST           None
+ 140: RETURN_VALUE         

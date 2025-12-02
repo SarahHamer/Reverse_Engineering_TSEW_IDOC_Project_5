@@ -1,0 +1,15 @@
+# Disassembly for importlib.ExtensionFileLoader.get_filename
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Return the path to the source file as found by the finder.',)
+
+## co_names:
+('path',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            path
+  14: RETURN_VALUE         

@@ -1,0 +1,49 @@
+# Disassembly for tracemalloc.Snapshot.dump
+# From module file: tracemalloc
+
+## co_consts:
+('\n        Write the snapshot into a file.\n        ', 'wb', None)
+
+## co_names:
+('open', 'pickle', 'dump', 'HIGHEST_PROTOCOL')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + open
+  14: LOAD_FAST            filename
+  16: LOAD_CONST           'wb'
+  18: PRECALL              
+  22: CALL                 
+  32: BEFORE_WITH          
+  34: STORE_FAST           fp
+  36: LOAD_GLOBAL          NULL + pickle
+  48: LOAD_ATTR            dump
+  58: LOAD_FAST            self
+  60: LOAD_FAST            fp
+  62: LOAD_GLOBAL          pickle
+  74: LOAD_ATTR            HIGHEST_PROTOCOL
+  84: PRECALL              
+  88: CALL                 
+  98: POP_TOP              
+ 100: LOAD_CONST           None
+ 102: LOAD_CONST           None
+ 104: LOAD_CONST           None
+ 106: PRECALL              
+ 110: CALL                 
+ 120: POP_TOP              
+ 122: LOAD_CONST           None
+ 124: RETURN_VALUE         
+ 126: PUSH_EXC_INFO        
+ 128: WITH_EXCEPT_START    
+ 130: POP_JUMP_FORWARD_IF_TRUE to 140
+ 132: RERAISE              
+ 134: COPY                 
+ 136: POP_EXCEPT           
+ 138: RERAISE              
+ 140: POP_TOP              
+ 142: POP_EXCEPT           
+ 144: POP_TOP              
+ 146: POP_TOP              
+ 148: LOAD_CONST           None
+ 150: RETURN_VALUE         

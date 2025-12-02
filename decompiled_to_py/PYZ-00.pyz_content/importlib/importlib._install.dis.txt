@@ -1,0 +1,41 @@
+# Disassembly for importlib._install
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Install the path-based import components.', None)
+
+## co_names:
+('_set_bootstrap_module', '_get_supported_file_loaders', 'sys', 'path_hooks', 'extend', 'FileFinder', 'path_hook', 'meta_path', 'append', 'PathFinder')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _set_bootstrap_module
+  14: LOAD_FAST            _bootstrap_module
+  16: PRECALL              
+  20: CALL                 
+  30: POP_TOP              
+  32: LOAD_GLOBAL          NULL + _get_supported_file_loaders
+  44: PRECALL              
+  48: CALL                 
+  58: STORE_FAST           supported_loaders
+  60: LOAD_GLOBAL          sys
+  72: LOAD_ATTR            path_hooks
+  82: LOAD_METHOD          extend
+ 104: LOAD_GLOBAL          NULL + FileFinder
+ 116: LOAD_ATTR            path_hook
+ 126: LOAD_FAST            supported_loaders
+ 128: CALL_FUNCTION_EX     
+ 130: BUILD_LIST           
+ 132: PRECALL              
+ 136: CALL                 
+ 146: POP_TOP              
+ 148: LOAD_GLOBAL          sys
+ 160: LOAD_ATTR            meta_path
+ 170: LOAD_METHOD          append
+ 192: LOAD_GLOBAL          PathFinder
+ 204: PRECALL              
+ 208: CALL                 
+ 218: POP_TOP              
+ 220: LOAD_CONST           None
+ 222: RETURN_VALUE         

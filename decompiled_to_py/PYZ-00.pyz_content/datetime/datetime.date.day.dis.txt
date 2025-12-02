@@ -1,0 +1,15 @@
+# Disassembly for datetime.date.day
+# From module file: datetime
+
+## co_consts:
+('day (1-31)',)
+
+## co_names:
+('_day',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _day
+  14: RETURN_VALUE         

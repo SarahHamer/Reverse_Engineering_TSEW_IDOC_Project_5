@@ -1,0 +1,42 @@
+# Disassembly for importlib.SourceLoader
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('SourceLoader', <code object path_mtime at 0x00000240694949F0, file "importlib\_bootstrap_external.py", line 950>, <code object path_stats at 0x000002406945D2F0, file "importlib\_bootstrap_external.py", line 958>, <code object _cache_bytecode at 0x000002406945DA70, file "importlib\_bootstrap_external.py", line 972>, <code object set_data at 0x000002406943AEB0, file "importlib\_bootstrap_external.py", line 982>, <code object get_source at 0x00000240691EABB0, file "importlib\_bootstrap_external.py", line 989>, -1, ('_optimize',), <code object source_to_code at 0x000002406944B000, file "importlib\_bootstrap_external.py", line 999>, <code object get_code at 0x0000024068BBF800, file "importlib\_bootstrap_external.py", line 1007>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', 'path_mtime', 'path_stats', '_cache_bytecode', 'set_data', 'get_source', 'source_to_code', 'get_code')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'SourceLoader'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           <code object path_mtime at 0x00000240694949F0, file "importlib\_bootstrap_external.py", line 950>
+  12: MAKE_FUNCTION        
+  14: STORE_NAME           path_mtime
+  16: LOAD_CONST           <code object path_stats at 0x000002406945D2F0, file "importlib\_bootstrap_external.py", line 958>
+  18: MAKE_FUNCTION        
+  20: STORE_NAME           path_stats
+  22: LOAD_CONST           <code object _cache_bytecode at 0x000002406945DA70, file "importlib\_bootstrap_external.py", line 972>
+  24: MAKE_FUNCTION        
+  26: STORE_NAME           _cache_bytecode
+  28: LOAD_CONST           <code object set_data at 0x000002406943AEB0, file "importlib\_bootstrap_external.py", line 982>
+  30: MAKE_FUNCTION        
+  32: STORE_NAME           set_data
+  34: LOAD_CONST           <code object get_source at 0x00000240691EABB0, file "importlib\_bootstrap_external.py", line 989>
+  36: MAKE_FUNCTION        
+  38: STORE_NAME           get_source
+  40: LOAD_CONST           -1
+  42: LOAD_CONST           ('_optimize',)
+  44: BUILD_CONST_KEY_MAP  
+  46: LOAD_CONST           <code object source_to_code at 0x000002406944B000, file "importlib\_bootstrap_external.py", line 999>
+  48: MAKE_FUNCTION        kwdefaults
+  50: STORE_NAME           source_to_code
+  52: LOAD_CONST           <code object get_code at 0x0000024068BBF800, file "importlib\_bootstrap_external.py", line 1007>
+  54: MAKE_FUNCTION        
+  56: STORE_NAME           get_code
+  58: LOAD_CONST           None
+  60: RETURN_VALUE         

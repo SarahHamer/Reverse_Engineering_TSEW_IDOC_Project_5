@@ -1,0 +1,44 @@
+# Disassembly for importlib._wrap
+# From module file: importlib._bootstrap
+
+## co_consts:
+('Simple substitute for functools.update_wrapper.', ('__module__', '__name__', '__qualname__', '__doc__'), None)
+
+## co_names:
+('hasattr', 'setattr', 'getattr', '__dict__', 'update')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           ('__module__', '__name__', '__qualname__', '__doc__')
+   4: GET_ITER             
+   6: FOR_ITER             to 106
+   8: STORE_FAST           replace
+  10: LOAD_GLOBAL          NULL + hasattr
+  22: LOAD_FAST            old
+  24: LOAD_FAST            replace
+  26: PRECALL              
+  30: CALL                 
+  40: POP_JUMP_FORWARD_IF_FALSE to 104
+  42: LOAD_GLOBAL          NULL + setattr
+  54: LOAD_FAST            new
+  56: LOAD_FAST            replace
+  58: LOAD_GLOBAL          NULL + getattr
+  70: LOAD_FAST            old
+  72: LOAD_FAST            replace
+  74: PRECALL              
+  78: CALL                 
+  88: PRECALL              
+  92: CALL                 
+ 102: POP_TOP              
+ 104: JUMP_BACKWARD        to 6
+ 106: LOAD_FAST            new
+ 108: LOAD_ATTR            __dict__
+ 118: LOAD_METHOD          update
+ 140: LOAD_FAST            old
+ 142: LOAD_ATTR            __dict__
+ 152: PRECALL              
+ 156: CALL                 
+ 166: POP_TOP              
+ 168: LOAD_CONST           None
+ 170: RETURN_VALUE         

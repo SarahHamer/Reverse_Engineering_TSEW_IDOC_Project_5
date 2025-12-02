@@ -1,0 +1,20 @@
+# Disassembly for statistics.NormalDist.__pos__
+# From module file: statistics
+
+## co_consts:
+('Return a copy of the instance.',)
+
+## co_names:
+('NormalDist', '_mu', '_sigma')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + NormalDist
+  14: LOAD_FAST            x1
+  16: LOAD_ATTR            _mu
+  26: LOAD_FAST            x1
+  28: LOAD_ATTR            _sigma
+  38: PRECALL              
+  42: CALL                 
+  52: RETURN_VALUE         

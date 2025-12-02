@@ -1,0 +1,42 @@
+# Disassembly for threading.Barrier.abort
+# From module file: threading
+
+## co_consts:
+("Place the barrier into a 'broken' state.\n\n        Useful in case of error.  Any currently waiting threads and threads\n        attempting to 'wait()' will have BrokenBarrierError raised.\n\n        ", None)
+
+## co_names:
+('_cond', '_break')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _cond
+  14: BEFORE_WITH          
+  16: POP_TOP              
+  18: LOAD_FAST            self
+  20: LOAD_METHOD          _break
+  42: PRECALL              
+  46: CALL                 
+  56: POP_TOP              
+  58: LOAD_CONST           None
+  60: LOAD_CONST           None
+  62: LOAD_CONST           None
+  64: PRECALL              
+  68: CALL                 
+  78: POP_TOP              
+  80: LOAD_CONST           None
+  82: RETURN_VALUE         
+  84: PUSH_EXC_INFO        
+  86: WITH_EXCEPT_START    
+  88: POP_JUMP_FORWARD_IF_TRUE to 98
+  90: RERAISE              
+  92: COPY                 
+  94: POP_EXCEPT           
+  96: RERAISE              
+  98: POP_TOP              
+ 100: POP_EXCEPT           
+ 102: POP_TOP              
+ 104: POP_TOP              
+ 106: LOAD_CONST           None
+ 108: RETURN_VALUE         

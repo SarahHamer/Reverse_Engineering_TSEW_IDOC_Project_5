@@ -1,0 +1,91 @@
+# Disassembly for dis._get_code_object
+# From module file: dis
+
+## co_consts:
+('Helper to handle methods, compiled or raw code objects, and strings.', '__func__', '__code__', 'gi_code', 'ag_code', 'cr_code', '<disassembly>', 'co_code', "don't know how to disassemble %s objects")
+
+## co_names:
+('hasattr', '__func__', '__code__', 'gi_code', 'ag_code', 'cr_code', 'isinstance', 'str', '_try_compile', 'TypeError', 'type', '__name__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + hasattr
+  14: LOAD_FAST            x
+  16: LOAD_CONST           '__func__'
+  18: PRECALL              
+  22: CALL                 
+  32: POP_JUMP_FORWARD_IF_FALSE to 48
+  34: LOAD_FAST            x
+  36: LOAD_ATTR            __func__
+  46: STORE_FAST           x
+  48: LOAD_GLOBAL          NULL + hasattr
+  60: LOAD_FAST            x
+  62: LOAD_CONST           '__code__'
+  64: PRECALL              
+  68: CALL                 
+  78: POP_JUMP_FORWARD_IF_FALSE to 96
+  80: LOAD_FAST            x
+  82: LOAD_ATTR            __code__
+  92: STORE_FAST           x
+  94: JUMP_FORWARD         to 238
+  96: LOAD_GLOBAL          NULL + hasattr
+ 108: LOAD_FAST            x
+ 110: LOAD_CONST           'gi_code'
+ 112: PRECALL              
+ 116: CALL                 
+ 126: POP_JUMP_FORWARD_IF_FALSE to 144
+ 128: LOAD_FAST            x
+ 130: LOAD_ATTR            gi_code
+ 140: STORE_FAST           x
+ 142: JUMP_FORWARD         to 238
+ 144: LOAD_GLOBAL          NULL + hasattr
+ 156: LOAD_FAST            x
+ 158: LOAD_CONST           'ag_code'
+ 160: PRECALL              
+ 164: CALL                 
+ 174: POP_JUMP_FORWARD_IF_FALSE to 192
+ 176: LOAD_FAST            x
+ 178: LOAD_ATTR            ag_code
+ 188: STORE_FAST           x
+ 190: JUMP_FORWARD         to 238
+ 192: LOAD_GLOBAL          NULL + hasattr
+ 204: LOAD_FAST            x
+ 206: LOAD_CONST           'cr_code'
+ 208: PRECALL              
+ 212: CALL                 
+ 222: POP_JUMP_FORWARD_IF_FALSE to 238
+ 224: LOAD_FAST            x
+ 226: LOAD_ATTR            cr_code
+ 236: STORE_FAST           x
+ 238: LOAD_GLOBAL          NULL + isinstance
+ 250: LOAD_FAST            x
+ 252: LOAD_GLOBAL          str
+ 264: PRECALL              
+ 268: CALL                 
+ 278: POP_JUMP_FORWARD_IF_FALSE to 312
+ 280: LOAD_GLOBAL          NULL + _try_compile
+ 292: LOAD_FAST            x
+ 294: LOAD_CONST           '<disassembly>'
+ 296: PRECALL              
+ 300: CALL                 
+ 310: STORE_FAST           x
+ 312: LOAD_GLOBAL          NULL + hasattr
+ 324: LOAD_FAST            x
+ 326: LOAD_CONST           'co_code'
+ 328: PRECALL              
+ 332: CALL                 
+ 342: POP_JUMP_FORWARD_IF_FALSE to 348
+ 344: LOAD_FAST            x
+ 346: RETURN_VALUE         
+ 348: LOAD_GLOBAL          NULL + TypeError
+ 360: LOAD_CONST           "don't know how to disassemble %s objects"
+ 362: LOAD_GLOBAL          NULL + type
+ 374: LOAD_FAST            x
+ 376: PRECALL              
+ 380: CALL                 
+ 390: LOAD_ATTR            __name__
+ 400: BINARY_OP            %
+ 404: PRECALL              
+ 408: CALL                 
+ 418: RAISE_VARARGS        

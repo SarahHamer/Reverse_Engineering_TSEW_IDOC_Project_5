@@ -1,0 +1,122 @@
+# Disassembly for argparse.ArgumentParser._get_value
+# From module file: argparse
+
+## co_consts:
+(None, 'type', '%r is not callable', '__name__', ('type', 'value'), 'invalid %(type)s value: %(value)r')
+
+## co_names:
+('_registry_get', 'type', 'callable', '_', 'ArgumentError', 'ArgumentTypeError', 'getattr', 'repr', 'str', 'TypeError', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _registry_get
+  26: LOAD_CONST           'type'
+  28: LOAD_FAST            action
+  30: LOAD_ATTR            type
+  40: LOAD_FAST            action
+  42: LOAD_ATTR            type
+  52: PRECALL              
+  56: CALL                 
+  66: STORE_FAST           type_func
+  68: LOAD_GLOBAL          NULL + callable
+  80: LOAD_FAST            type_func
+  82: PRECALL              
+  86: CALL                 
+  96: POP_JUMP_FORWARD_IF_TRUE to 166
+  98: LOAD_GLOBAL          NULL + _
+ 110: LOAD_CONST           '%r is not callable'
+ 112: PRECALL              
+ 116: CALL                 
+ 126: STORE_FAST           msg
+ 128: LOAD_GLOBAL          NULL + ArgumentError
+ 140: LOAD_FAST            action
+ 142: LOAD_FAST            msg
+ 144: LOAD_FAST            type_func
+ 146: BINARY_OP            %
+ 150: PRECALL              
+ 154: CALL                 
+ 164: RAISE_VARARGS        
+ 166: NOP                  
+ 168: PUSH_NULL            
+ 170: LOAD_FAST            type_func
+ 172: LOAD_FAST            arg_string
+ 174: PRECALL              
+ 178: CALL                 
+ 188: STORE_FAST           result
+ 190: JUMP_FORWARD         to 560
+ 192: PUSH_EXC_INFO        
+ 194: LOAD_GLOBAL          ArgumentTypeError
+ 206: CHECK_EXC_MATCH      
+ 208: POP_JUMP_FORWARD_IF_FALSE to 362
+ 210: STORE_FAST           err
+ 212: LOAD_GLOBAL          NULL + getattr
+ 224: LOAD_FAST            action
+ 226: LOAD_ATTR            type
+ 236: LOAD_CONST           '__name__'
+ 238: LOAD_GLOBAL          NULL + repr
+ 250: LOAD_FAST            action
+ 252: LOAD_ATTR            type
+ 262: PRECALL              
+ 266: CALL                 
+ 276: PRECALL              
+ 280: CALL                 
+ 290: STORE_FAST           name
+ 292: LOAD_GLOBAL          NULL + str
+ 304: LOAD_FAST            err
+ 306: PRECALL              
+ 310: CALL                 
+ 320: STORE_FAST           msg
+ 322: LOAD_GLOBAL          NULL + ArgumentError
+ 334: LOAD_FAST            action
+ 336: LOAD_FAST            msg
+ 338: PRECALL              
+ 342: CALL                 
+ 352: RAISE_VARARGS        
+ 354: LOAD_CONST           None
+ 356: STORE_FAST           err
+ 358: DELETE_FAST          err
+ 360: RERAISE              
+ 362: LOAD_GLOBAL          TypeError
+ 374: LOAD_GLOBAL          ValueError
+ 386: BUILD_TUPLE          
+ 388: CHECK_EXC_MATCH      
+ 390: POP_JUMP_FORWARD_IF_FALSE to 552
+ 392: POP_TOP              
+ 394: LOAD_GLOBAL          NULL + getattr
+ 406: LOAD_FAST            action
+ 408: LOAD_ATTR            type
+ 418: LOAD_CONST           '__name__'
+ 420: LOAD_GLOBAL          NULL + repr
+ 432: LOAD_FAST            action
+ 434: LOAD_ATTR            type
+ 444: PRECALL              
+ 448: CALL                 
+ 458: PRECALL              
+ 462: CALL                 
+ 472: STORE_FAST           name
+ 474: LOAD_FAST            name
+ 476: LOAD_FAST            arg_string
+ 478: LOAD_CONST           ('type', 'value')
+ 480: BUILD_CONST_KEY_MAP  
+ 482: STORE_FAST           args
+ 484: LOAD_GLOBAL          NULL + _
+ 496: LOAD_CONST           'invalid %(type)s value: %(value)r'
+ 498: PRECALL              
+ 502: CALL                 
+ 512: STORE_FAST           msg
+ 514: LOAD_GLOBAL          NULL + ArgumentError
+ 526: LOAD_FAST            action
+ 528: LOAD_FAST            msg
+ 530: LOAD_FAST            args
+ 532: BINARY_OP            %
+ 536: PRECALL              
+ 540: CALL                 
+ 550: RAISE_VARARGS        
+ 552: RERAISE              
+ 554: COPY                 
+ 556: POP_EXCEPT           
+ 558: RERAISE              
+ 560: LOAD_FAST            result
+ 562: RETURN_VALUE         

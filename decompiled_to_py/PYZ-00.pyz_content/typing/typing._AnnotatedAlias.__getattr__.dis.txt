@@ -1,0 +1,27 @@
+# Disassembly for typing._AnnotatedAlias.__getattr__
+# From module file: typing
+
+## co_consts:
+(None, frozenset({'__qualname__', '__name__'}), 'Annotated')
+
+## co_names:
+('super', '__getattr__')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_FAST            attr
+   6: LOAD_CONST           frozenset({'__qualname__', '__name__'})
+   8: CONTAINS_OP          
+  10: POP_JUMP_FORWARD_IF_FALSE to 16
+  12: LOAD_CONST           'Annotated'
+  14: RETURN_VALUE         
+  16: LOAD_GLOBAL          NULL + super
+  28: PRECALL              
+  32: CALL                 
+  42: LOAD_METHOD          __getattr__
+  64: LOAD_FAST            attr
+  66: PRECALL              
+  70: CALL                 
+  80: RETURN_VALUE         

@@ -1,0 +1,323 @@
+# Disassembly for argparse.HelpFormatter._format_usage
+# From module file: argparse
+
+## co_consts:
+(None, 'usage: ', ('prog',), '%(prog)s', ' ', <code object <listcomp> at 0x0000024069425B00, file "argparse.py", line 325>, '\\(.*?\\)+(?=\\s|$)|\\[.*?\\]+(?=\\s|$)|\\S+', <code object get_lines at 0x0000024068DC3750, file "argparse.py", line 345>, 0.75, 1, '\n', '\n\n', (None,))
+
+## co_names:
+('_', 'dict', '_prog', 'option_strings', 'append', '_format_actions_usage', 'join', '_width', '_current_indent', 'len', '_re', 'findall', 'extend')
+
+## bytecode:
+
+   0: MAKE_CELL            text_width
+   2: RESUME               
+   4: LOAD_FAST            prefix
+   6: POP_JUMP_FORWARD_IF_NOT_NONE to 38
+   8: LOAD_GLOBAL          NULL + _
+  20: LOAD_CONST           'usage: '
+  22: PRECALL              
+  26: CALL                 
+  36: STORE_FAST           prefix
+  38: LOAD_FAST            usage
+  40: POP_JUMP_FORWARD_IF_NONE to 94
+  42: LOAD_FAST            usage
+  44: LOAD_GLOBAL          NULL + dict
+  56: LOAD_FAST            self
+  58: LOAD_ATTR            _prog
+  68: KW_NAMES             
+  70: PRECALL              
+  74: CALL                 
+  84: BINARY_OP            %
+  88: STORE_FAST           usage
+  90: EXTENDED_ARG         
+  92: JUMP_FORWARD         to 1384
+  94: LOAD_FAST            usage
+  96: POP_JUMP_FORWARD_IF_NOT_NONE to 154
+  98: LOAD_FAST            actions
+ 100: POP_JUMP_FORWARD_IF_TRUE to 154
+ 102: LOAD_CONST           '%(prog)s'
+ 104: LOAD_GLOBAL          NULL + dict
+ 116: LOAD_FAST            self
+ 118: LOAD_ATTR            _prog
+ 128: KW_NAMES             
+ 130: PRECALL              
+ 134: CALL                 
+ 144: BINARY_OP            %
+ 148: STORE_FAST           usage
+ 150: EXTENDED_ARG         
+ 152: JUMP_FORWARD         to 1384
+ 154: LOAD_FAST            usage
+ 156: EXTENDED_ARG         
+ 158: POP_JUMP_FORWARD_IF_NOT_NONE to 1384
+ 160: LOAD_CONST           '%(prog)s'
+ 162: LOAD_GLOBAL          NULL + dict
+ 174: LOAD_FAST            self
+ 176: LOAD_ATTR            _prog
+ 186: KW_NAMES             
+ 188: PRECALL              
+ 192: CALL                 
+ 202: BINARY_OP            %
+ 206: STORE_FAST           prog
+ 208: BUILD_LIST           
+ 210: STORE_FAST           optionals
+ 212: BUILD_LIST           
+ 214: STORE_FAST           positionals
+ 216: LOAD_FAST            actions
+ 218: GET_ITER             
+ 220: FOR_ITER             to 326
+ 222: STORE_FAST           action
+ 224: LOAD_FAST            action
+ 226: LOAD_ATTR            option_strings
+ 236: POP_JUMP_FORWARD_IF_FALSE to 282
+ 238: LOAD_FAST            optionals
+ 240: LOAD_METHOD          append
+ 262: LOAD_FAST            action
+ 264: PRECALL              
+ 268: CALL                 
+ 278: POP_TOP              
+ 280: JUMP_BACKWARD        to 220
+ 282: LOAD_FAST            positionals
+ 284: LOAD_METHOD          append
+ 306: LOAD_FAST            action
+ 308: PRECALL              
+ 312: CALL                 
+ 322: POP_TOP              
+ 324: JUMP_BACKWARD        to 220
+ 326: LOAD_FAST            self
+ 328: LOAD_ATTR            _format_actions_usage
+ 338: STORE_FAST           format
+ 340: PUSH_NULL            
+ 342: LOAD_FAST            format
+ 344: LOAD_FAST            optionals
+ 346: LOAD_FAST            positionals
+ 348: BINARY_OP            +
+ 352: LOAD_FAST            groups
+ 354: PRECALL              
+ 358: CALL                 
+ 368: STORE_FAST           action_usage
+ 370: LOAD_CONST           ' '
+ 372: LOAD_METHOD          join
+ 394: LOAD_CONST           <code object <listcomp> at 0x0000024069425B00, file "argparse.py", line 325>
+ 396: MAKE_FUNCTION        
+ 398: LOAD_FAST            prog
+ 400: LOAD_FAST            action_usage
+ 402: BUILD_TUPLE          
+ 404: GET_ITER             
+ 406: PRECALL              
+ 410: CALL                 
+ 420: PRECALL              
+ 424: CALL                 
+ 434: STORE_FAST           usage
+ 436: LOAD_FAST            self
+ 438: LOAD_ATTR            _width
+ 448: LOAD_FAST            self
+ 450: LOAD_ATTR            _current_indent
+ 460: BINARY_OP            -
+ 464: STORE_DEREF          text_width
+ 466: LOAD_GLOBAL          NULL + len
+ 478: LOAD_FAST            prefix
+ 480: PRECALL              
+ 484: CALL                 
+ 494: LOAD_GLOBAL          NULL + len
+ 506: LOAD_FAST            usage
+ 508: PRECALL              
+ 512: CALL                 
+ 522: BINARY_OP            +
+ 526: LOAD_DEREF           text_width
+ 528: COMPARE_OP           >
+ 534: EXTENDED_ARG         
+ 536: POP_JUMP_FORWARD_IF_FALSE to 1384
+ 538: LOAD_CONST           '\\(.*?\\)+(?=\\s|$)|\\[.*?\\]+(?=\\s|$)|\\S+'
+ 540: STORE_FAST           part_regexp
+ 542: PUSH_NULL            
+ 544: LOAD_FAST            format
+ 546: LOAD_FAST            optionals
+ 548: LOAD_FAST            groups
+ 550: PRECALL              
+ 554: CALL                 
+ 564: STORE_FAST           opt_usage
+ 566: PUSH_NULL            
+ 568: LOAD_FAST            format
+ 570: LOAD_FAST            positionals
+ 572: LOAD_FAST            groups
+ 574: PRECALL              
+ 578: CALL                 
+ 588: STORE_FAST           pos_usage
+ 590: LOAD_GLOBAL          NULL + _re
+ 602: LOAD_ATTR            findall
+ 612: LOAD_FAST            part_regexp
+ 614: LOAD_FAST            opt_usage
+ 616: PRECALL              
+ 620: CALL                 
+ 630: STORE_FAST           opt_parts
+ 632: LOAD_GLOBAL          NULL + _re
+ 644: LOAD_ATTR            findall
+ 654: LOAD_FAST            part_regexp
+ 656: LOAD_FAST            pos_usage
+ 658: PRECALL              
+ 662: CALL                 
+ 672: STORE_FAST           pos_parts
+ 674: LOAD_CONST           ' '
+ 676: LOAD_METHOD          join
+ 698: LOAD_FAST            opt_parts
+ 700: PRECALL              
+ 704: CALL                 
+ 714: LOAD_FAST            opt_usage
+ 716: COMPARE_OP           ==
+ 722: POP_JUMP_FORWARD_IF_TRUE to 728
+ 724: LOAD_ASSERTION_ERROR 
+ 726: RAISE_VARARGS        
+ 728: LOAD_CONST           ' '
+ 730: LOAD_METHOD          join
+ 752: LOAD_FAST            pos_parts
+ 754: PRECALL              
+ 758: CALL                 
+ 768: LOAD_FAST            pos_usage
+ 770: COMPARE_OP           ==
+ 776: POP_JUMP_FORWARD_IF_TRUE to 782
+ 778: LOAD_ASSERTION_ERROR 
+ 780: RAISE_VARARGS        
+ 782: LOAD_CONST           (None,)
+ 784: LOAD_CLOSURE         text_width
+ 786: BUILD_TUPLE          
+ 788: LOAD_CONST           <code object get_lines at 0x0000024068DC3750, file "argparse.py", line 345>
+ 790: MAKE_FUNCTION        defaults, closure
+ 792: STORE_FAST           get_lines
+ 794: LOAD_GLOBAL          NULL + len
+ 806: LOAD_FAST            prefix
+ 808: PRECALL              
+ 812: CALL                 
+ 822: LOAD_GLOBAL          NULL + len
+ 834: LOAD_FAST            prog
+ 836: PRECALL              
+ 840: CALL                 
+ 850: BINARY_OP            +
+ 854: LOAD_CONST           0.75
+ 856: LOAD_DEREF           text_width
+ 858: BINARY_OP            *
+ 862: COMPARE_OP           <=
+ 868: POP_JUMP_FORWARD_IF_FALSE to 1094
+ 870: LOAD_CONST           ' '
+ 872: LOAD_GLOBAL          NULL + len
+ 884: LOAD_FAST            prefix
+ 886: PRECALL              
+ 890: CALL                 
+ 900: LOAD_GLOBAL          NULL + len
+ 912: LOAD_FAST            prog
+ 914: PRECALL              
+ 918: CALL                 
+ 928: BINARY_OP            +
+ 932: LOAD_CONST           1
+ 934: BINARY_OP            +
+ 938: BINARY_OP            *
+ 942: STORE_FAST           indent
+ 944: LOAD_FAST            opt_parts
+ 946: POP_JUMP_FORWARD_IF_FALSE to 1046
+ 948: PUSH_NULL            
+ 950: LOAD_FAST            get_lines
+ 952: LOAD_FAST            prog
+ 954: BUILD_LIST           
+ 956: LOAD_FAST            opt_parts
+ 958: BINARY_OP            +
+ 962: LOAD_FAST            indent
+ 964: LOAD_FAST            prefix
+ 966: PRECALL              
+ 970: CALL                 
+ 980: STORE_FAST           lines
+ 982: LOAD_FAST            lines
+ 984: LOAD_METHOD          extend
+1006: PUSH_NULL            
+1008: LOAD_FAST            get_lines
+1010: LOAD_FAST            pos_parts
+1012: LOAD_FAST            indent
+1014: PRECALL              
+1018: CALL                 
+1028: PRECALL              
+1032: CALL                 
+1042: POP_TOP              
+1044: JUMP_FORWARD         to 1342
+1046: LOAD_FAST            pos_parts
+1048: POP_JUMP_FORWARD_IF_FALSE to 1086
+1050: PUSH_NULL            
+1052: LOAD_FAST            get_lines
+1054: LOAD_FAST            prog
+1056: BUILD_LIST           
+1058: LOAD_FAST            pos_parts
+1060: BINARY_OP            +
+1064: LOAD_FAST            indent
+1066: LOAD_FAST            prefix
+1068: PRECALL              
+1072: CALL                 
+1082: STORE_FAST           lines
+1084: JUMP_FORWARD         to 1342
+1086: LOAD_FAST            prog
+1088: BUILD_LIST           
+1090: STORE_FAST           lines
+1092: JUMP_FORWARD         to 1342
+1094: LOAD_CONST           ' '
+1096: LOAD_GLOBAL          NULL + len
+1108: LOAD_FAST            prefix
+1110: PRECALL              
+1114: CALL                 
+1124: BINARY_OP            *
+1128: STORE_FAST           indent
+1130: LOAD_FAST            opt_parts
+1132: LOAD_FAST            pos_parts
+1134: BINARY_OP            +
+1138: STORE_FAST           parts
+1140: PUSH_NULL            
+1142: LOAD_FAST            get_lines
+1144: LOAD_FAST            parts
+1146: LOAD_FAST            indent
+1148: PRECALL              
+1152: CALL                 
+1162: STORE_FAST           lines
+1164: LOAD_GLOBAL          NULL + len
+1176: LOAD_FAST            lines
+1178: PRECALL              
+1182: CALL                 
+1192: LOAD_CONST           1
+1194: COMPARE_OP           >
+1200: POP_JUMP_FORWARD_IF_FALSE to 1330
+1202: BUILD_LIST           
+1204: STORE_FAST           lines
+1206: LOAD_FAST            lines
+1208: LOAD_METHOD          extend
+1230: PUSH_NULL            
+1232: LOAD_FAST            get_lines
+1234: LOAD_FAST            opt_parts
+1236: LOAD_FAST            indent
+1238: PRECALL              
+1242: CALL                 
+1252: PRECALL              
+1256: CALL                 
+1266: POP_TOP              
+1268: LOAD_FAST            lines
+1270: LOAD_METHOD          extend
+1292: PUSH_NULL            
+1294: LOAD_FAST            get_lines
+1296: LOAD_FAST            pos_parts
+1298: LOAD_FAST            indent
+1300: PRECALL              
+1304: CALL                 
+1314: PRECALL              
+1318: CALL                 
+1328: POP_TOP              
+1330: LOAD_FAST            prog
+1332: BUILD_LIST           
+1334: LOAD_FAST            lines
+1336: BINARY_OP            +
+1340: STORE_FAST           lines
+1342: LOAD_CONST           '\n'
+1344: LOAD_METHOD          join
+1366: LOAD_FAST            lines
+1368: PRECALL              
+1372: CALL                 
+1382: STORE_FAST           usage
+1384: LOAD_FAST            prefix
+1386: FORMAT_VALUE         str
+1388: LOAD_FAST            usage
+1390: FORMAT_VALUE         str
+1392: LOAD_CONST           '\n\n'
+1394: BUILD_STRING         
+1396: RETURN_VALUE         

@@ -1,0 +1,103 @@
+# Disassembly for datetime.time.__repr__
+# From module file: datetime
+
+## co_consts:
+('Convert to formal string, for repr().', 0, ', %d, %d', ', %d', '', '%s.%s(%d, %d%s)', None, -1, ')', ', tzinfo=%r', ', fold=1)')
+
+## co_names:
+('_microsecond', '_second', '__class__', '__module__', '__qualname__', '_hour', '_minute', '_tzinfo', '_fold')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _microsecond
+  14: LOAD_CONST           0
+  16: COMPARE_OP           !=
+  22: POP_JUMP_FORWARD_IF_FALSE to 60
+  24: LOAD_CONST           ', %d, %d'
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            _second
+  38: LOAD_FAST            self
+  40: LOAD_ATTR            _microsecond
+  50: BUILD_TUPLE          
+  52: BINARY_OP            %
+  56: STORE_FAST           s
+  58: JUMP_FORWARD         to 108
+  60: LOAD_FAST            self
+  62: LOAD_ATTR            _second
+  72: LOAD_CONST           0
+  74: COMPARE_OP           !=
+  80: POP_JUMP_FORWARD_IF_FALSE to 104
+  82: LOAD_CONST           ', %d'
+  84: LOAD_FAST            self
+  86: LOAD_ATTR            _second
+  96: BINARY_OP            %
+ 100: STORE_FAST           s
+ 102: JUMP_FORWARD         to 108
+ 104: LOAD_CONST           ''
+ 106: STORE_FAST           s
+ 108: LOAD_CONST           '%s.%s(%d, %d%s)'
+ 110: LOAD_FAST            self
+ 112: LOAD_ATTR            __class__
+ 122: LOAD_ATTR            __module__
+ 132: LOAD_FAST            self
+ 134: LOAD_ATTR            __class__
+ 144: LOAD_ATTR            __qualname__
+ 154: LOAD_FAST            self
+ 156: LOAD_ATTR            _hour
+ 166: LOAD_FAST            self
+ 168: LOAD_ATTR            _minute
+ 178: LOAD_FAST            s
+ 180: BUILD_TUPLE          
+ 182: BINARY_OP            %
+ 186: STORE_FAST           s
+ 188: LOAD_FAST            self
+ 190: LOAD_ATTR            _tzinfo
+ 200: POP_JUMP_FORWARD_IF_NONE to 282
+ 202: LOAD_FAST            s
+ 204: LOAD_CONST           -1
+ 206: LOAD_CONST           None
+ 208: BUILD_SLICE          
+ 210: BINARY_SUBSCR        
+ 220: LOAD_CONST           ')'
+ 222: COMPARE_OP           ==
+ 228: POP_JUMP_FORWARD_IF_TRUE to 234
+ 230: LOAD_ASSERTION_ERROR 
+ 232: RAISE_VARARGS        
+ 234: LOAD_FAST            s
+ 236: LOAD_CONST           None
+ 238: LOAD_CONST           -1
+ 240: BUILD_SLICE          
+ 242: BINARY_SUBSCR        
+ 252: LOAD_CONST           ', tzinfo=%r'
+ 254: LOAD_FAST            self
+ 256: LOAD_ATTR            _tzinfo
+ 266: BINARY_OP            %
+ 270: BINARY_OP            +
+ 274: LOAD_CONST           ')'
+ 276: BINARY_OP            +
+ 280: STORE_FAST           s
+ 282: LOAD_FAST            self
+ 284: LOAD_ATTR            _fold
+ 294: POP_JUMP_FORWARD_IF_FALSE to 354
+ 296: LOAD_FAST            s
+ 298: LOAD_CONST           -1
+ 300: LOAD_CONST           None
+ 302: BUILD_SLICE          
+ 304: BINARY_SUBSCR        
+ 314: LOAD_CONST           ')'
+ 316: COMPARE_OP           ==
+ 322: POP_JUMP_FORWARD_IF_TRUE to 328
+ 324: LOAD_ASSERTION_ERROR 
+ 326: RAISE_VARARGS        
+ 328: LOAD_FAST            s
+ 330: LOAD_CONST           None
+ 332: LOAD_CONST           -1
+ 334: BUILD_SLICE          
+ 336: BINARY_SUBSCR        
+ 346: LOAD_CONST           ', fold=1)'
+ 348: BINARY_OP            +
+ 352: STORE_FAST           s
+ 354: LOAD_FAST            s
+ 356: RETURN_VALUE         

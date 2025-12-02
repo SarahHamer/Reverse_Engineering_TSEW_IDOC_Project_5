@@ -1,0 +1,41 @@
+# Disassembly for threading.Thread.is_alive
+# From module file: threading
+
+## co_consts:
+('Return whether the thread is alive.\n\n        This method returns True just before the run() method starts until just\n        after the run() method terminates. See also the module function\n        enumerate().\n\n        ', 'Thread.__init__() not called', False)
+
+## co_names:
+('_initialized', '_is_stopped', '_started', 'is_set', '_wait_for_tstate_lock')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _initialized
+  14: POP_JUMP_FORWARD_IF_TRUE to 36
+  16: LOAD_ASSERTION_ERROR 
+  18: LOAD_CONST           'Thread.__init__() not called'
+  20: PRECALL              
+  24: CALL                 
+  34: RAISE_VARARGS        
+  36: LOAD_FAST            self
+  38: LOAD_ATTR            _is_stopped
+  48: POP_JUMP_FORWARD_IF_TRUE to 100
+  50: LOAD_FAST            self
+  52: LOAD_ATTR            _started
+  62: LOAD_METHOD          is_set
+  84: PRECALL              
+  88: CALL                 
+  98: POP_JUMP_FORWARD_IF_TRUE to 104
+ 100: LOAD_CONST           False
+ 102: RETURN_VALUE         
+ 104: LOAD_FAST            self
+ 106: LOAD_METHOD          _wait_for_tstate_lock
+ 128: LOAD_CONST           False
+ 130: PRECALL              
+ 134: CALL                 
+ 144: POP_TOP              
+ 146: LOAD_FAST            self
+ 148: LOAD_ATTR            _is_stopped
+ 158: UNARY_NOT            
+ 160: RETURN_VALUE         

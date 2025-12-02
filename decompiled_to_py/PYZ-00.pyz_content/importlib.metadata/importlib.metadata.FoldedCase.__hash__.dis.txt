@@ -1,0 +1,20 @@
+# Disassembly for importlib.metadata.FoldedCase.__hash__
+# From module file: importlib.metadata._text
+
+## co_consts:
+(None,)
+
+## co_names:
+('hash', 'lower')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + hash
+  14: LOAD_FAST            self
+  16: LOAD_METHOD          lower
+  38: PRECALL              
+  42: CALL                 
+  52: PRECALL              
+  56: CALL                 
+  66: RETURN_VALUE         

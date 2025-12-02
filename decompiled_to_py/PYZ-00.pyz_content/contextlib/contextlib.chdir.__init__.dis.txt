@@ -1,0 +1,20 @@
+# Disassembly for contextlib.chdir.__init__
+# From module file: contextlib
+
+## co_consts:
+(None,)
+
+## co_names:
+('path', '_old_cwd')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            path
+   4: LOAD_FAST            self
+   6: STORE_ATTR           path
+  16: BUILD_LIST           
+  18: LOAD_FAST            self
+  20: STORE_ATTR           _old_cwd
+  30: LOAD_CONST           None
+  32: RETURN_VALUE         

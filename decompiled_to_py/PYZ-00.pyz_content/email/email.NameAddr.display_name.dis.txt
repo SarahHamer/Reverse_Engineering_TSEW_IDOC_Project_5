@@ -1,0 +1,26 @@
+# Disassembly for email.NameAddr.display_name
+# From module file: email._header_value_parser
+
+## co_consts:
+(None, 1, 0)
+
+## co_names:
+('len', 'display_name')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + len
+  14: LOAD_FAST            self
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_CONST           1
+  32: COMPARE_OP           ==
+  38: POP_JUMP_FORWARD_IF_FALSE to 44
+  40: LOAD_CONST           None
+  42: RETURN_VALUE         
+  44: LOAD_FAST            self
+  46: LOAD_CONST           0
+  48: BINARY_SUBSCR        
+  58: LOAD_ATTR            display_name
+  68: RETURN_VALUE         

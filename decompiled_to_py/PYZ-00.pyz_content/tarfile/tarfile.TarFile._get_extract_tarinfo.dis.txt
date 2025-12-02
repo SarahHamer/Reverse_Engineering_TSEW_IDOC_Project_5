@@ -1,0 +1,120 @@
+# Disassembly for tarfile.TarFile._get_extract_tarinfo
+# From module file: tarfile
+
+## co_consts:
+('Get filtered TarInfo (or None) from member, which might be a str', None, 2, 'tarfile: Excluded %r')
+
+## co_names:
+('isinstance', 'str', 'getmember', 'OSError', 'FilterError', '_handle_fatal_error', 'ExtractError', '_handle_nonfatal_error', '_dbg', 'name', 'islnk', 'copy', 'os', 'path', 'join', 'linkname', '_link_target')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            member
+  16: LOAD_GLOBAL          str
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 88
+  44: LOAD_FAST            self
+  46: LOAD_METHOD          getmember
+  68: LOAD_FAST            member
+  70: PRECALL              
+  74: CALL                 
+  84: STORE_FAST           tarinfo
+  86: JUMP_FORWARD         to 92
+  88: LOAD_FAST            member
+  90: STORE_FAST           tarinfo
+  92: LOAD_FAST            tarinfo
+  94: STORE_FAST           unfiltered
+  96: NOP                  
+  98: PUSH_NULL            
+ 100: LOAD_FAST            filter_function
+ 102: LOAD_FAST            tarinfo
+ 104: LOAD_FAST            path
+ 106: PRECALL              
+ 110: CALL                 
+ 120: STORE_FAST           tarinfo
+ 122: JUMP_FORWARD         to 304
+ 124: PUSH_EXC_INFO        
+ 126: LOAD_GLOBAL          OSError
+ 138: LOAD_GLOBAL          FilterError
+ 150: BUILD_TUPLE          
+ 152: CHECK_EXC_MATCH      
+ 154: POP_JUMP_FORWARD_IF_FALSE to 218
+ 156: STORE_FAST           e
+ 158: LOAD_FAST            self
+ 160: LOAD_METHOD          _handle_fatal_error
+ 182: LOAD_FAST            e
+ 184: PRECALL              
+ 188: CALL                 
+ 198: POP_TOP              
+ 200: POP_EXCEPT           
+ 202: LOAD_CONST           None
+ 204: STORE_FAST           e
+ 206: DELETE_FAST          e
+ 208: JUMP_FORWARD         to 304
+ 210: LOAD_CONST           None
+ 212: STORE_FAST           e
+ 214: DELETE_FAST          e
+ 216: RERAISE              
+ 218: LOAD_GLOBAL          ExtractError
+ 230: CHECK_EXC_MATCH      
+ 232: POP_JUMP_FORWARD_IF_FALSE to 296
+ 234: STORE_FAST           e
+ 236: LOAD_FAST            self
+ 238: LOAD_METHOD          _handle_nonfatal_error
+ 260: LOAD_FAST            e
+ 262: PRECALL              
+ 266: CALL                 
+ 276: POP_TOP              
+ 278: POP_EXCEPT           
+ 280: LOAD_CONST           None
+ 282: STORE_FAST           e
+ 284: DELETE_FAST          e
+ 286: JUMP_FORWARD         to 304
+ 288: LOAD_CONST           None
+ 290: STORE_FAST           e
+ 292: DELETE_FAST          e
+ 294: RERAISE              
+ 296: RERAISE              
+ 298: COPY                 
+ 300: POP_EXCEPT           
+ 302: RERAISE              
+ 304: LOAD_FAST            tarinfo
+ 306: POP_JUMP_FORWARD_IF_NOT_NONE to 372
+ 308: LOAD_FAST            self
+ 310: LOAD_METHOD          _dbg
+ 332: LOAD_CONST           2
+ 334: LOAD_CONST           'tarfile: Excluded %r'
+ 336: LOAD_FAST            unfiltered
+ 338: LOAD_ATTR            name
+ 348: BINARY_OP            %
+ 352: PRECALL              
+ 356: CALL                 
+ 366: POP_TOP              
+ 368: LOAD_CONST           None
+ 370: RETURN_VALUE         
+ 372: LOAD_FAST            tarinfo
+ 374: LOAD_METHOD          islnk
+ 396: PRECALL              
+ 400: CALL                 
+ 410: POP_JUMP_FORWARD_IF_FALSE to 536
+ 412: LOAD_GLOBAL          NULL + copy
+ 424: LOAD_ATTR            copy
+ 434: LOAD_FAST            tarinfo
+ 436: PRECALL              
+ 440: CALL                 
+ 450: STORE_FAST           tarinfo
+ 452: LOAD_GLOBAL          os
+ 464: LOAD_ATTR            path
+ 474: LOAD_METHOD          join
+ 496: LOAD_FAST            path
+ 498: LOAD_FAST            tarinfo
+ 500: LOAD_ATTR            linkname
+ 510: PRECALL              
+ 514: CALL                 
+ 524: LOAD_FAST            tarinfo
+ 526: STORE_ATTR           _link_target
+ 536: LOAD_FAST            tarinfo
+ 538: RETURN_VALUE         

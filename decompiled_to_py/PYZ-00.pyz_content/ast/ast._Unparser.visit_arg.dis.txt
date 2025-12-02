@@ -1,0 +1,39 @@
+# Disassembly for ast._Unparser.visit_arg
+# From module file: ast
+
+## co_consts:
+(None, ': ')
+
+## co_names:
+('write', 'arg', 'annotation', 'traverse')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          write
+  26: LOAD_FAST            node
+  28: LOAD_ATTR            arg
+  38: PRECALL              
+  42: CALL                 
+  52: POP_TOP              
+  54: LOAD_FAST            node
+  56: LOAD_ATTR            annotation
+  66: POP_JUMP_FORWARD_IF_FALSE to 166
+  68: LOAD_FAST            self
+  70: LOAD_METHOD          write
+  92: LOAD_CONST           ': '
+  94: PRECALL              
+  98: CALL                 
+ 108: POP_TOP              
+ 110: LOAD_FAST            self
+ 112: LOAD_METHOD          traverse
+ 134: LOAD_FAST            node
+ 136: LOAD_ATTR            annotation
+ 146: PRECALL              
+ 150: CALL                 
+ 160: POP_TOP              
+ 162: LOAD_CONST           None
+ 164: RETURN_VALUE         
+ 166: LOAD_CONST           None
+ 168: RETURN_VALUE         

@@ -1,0 +1,154 @@
+# Disassembly for tarfile._FileInFile.read
+# From module file: tarfile
+
+## co_consts:
+('Read data from the file.\n        ', None, b'', 0, True, 1, 'unexpected end of data')
+
+## co_names:
+('size', 'position', 'min', 'map', 'map_index', 'len', 'fileobj', 'seek', 'read', 'ReadError', 'NUL')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            size
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 38
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            size
+  18: LOAD_FAST            self
+  20: LOAD_ATTR            position
+  30: BINARY_OP            -
+  34: STORE_FAST           size
+  36: JUMP_FORWARD         to 96
+  38: LOAD_GLOBAL          NULL + min
+  50: LOAD_FAST            size
+  52: LOAD_FAST            self
+  54: LOAD_ATTR            size
+  64: LOAD_FAST            self
+  66: LOAD_ATTR            position
+  76: BINARY_OP            -
+  80: PRECALL              
+  84: CALL                 
+  94: STORE_FAST           size
+  96: LOAD_CONST           b''
+  98: STORE_FAST           buf
+ 100: LOAD_FAST            size
+ 102: LOAD_CONST           0
+ 104: COMPARE_OP           >
+ 110: EXTENDED_ARG         
+ 112: POP_JUMP_FORWARD_IF_FALSE to 652
+ 114: NOP                  
+ 116: LOAD_FAST            self
+ 118: LOAD_ATTR            map
+ 128: LOAD_FAST            self
+ 130: LOAD_ATTR            map_index
+ 140: BINARY_SUBSCR        
+ 150: UNPACK_SEQUENCE      
+ 154: STORE_FAST           data
+ 156: STORE_FAST           start
+ 158: STORE_FAST           stop
+ 160: STORE_FAST           offset
+ 162: LOAD_FAST            start
+ 164: LOAD_FAST            self
+ 166: LOAD_ATTR            position
+ 176: SWAP                 
+ 178: COPY                 
+ 180: COMPARE_OP           <=
+ 186: POP_JUMP_FORWARD_IF_FALSE to 200
+ 188: LOAD_FAST            stop
+ 190: COMPARE_OP           <
+ 196: POP_JUMP_FORWARD_IF_FALSE to 206
+ 198: JUMP_FORWARD         to 204
+ 200: POP_TOP              
+ 202: JUMP_FORWARD         to 206
+ 204: JUMP_FORWARD         to 312
+ 206: LOAD_FAST            self
+ 208: COPY                 
+ 210: LOAD_ATTR            map_index
+ 220: LOAD_CONST           1
+ 222: BINARY_OP            +=
+ 226: SWAP                 
+ 228: STORE_ATTR           map_index
+ 238: LOAD_FAST            self
+ 240: LOAD_ATTR            map_index
+ 250: LOAD_GLOBAL          NULL + len
+ 262: LOAD_FAST            self
+ 264: LOAD_ATTR            map
+ 274: PRECALL              
+ 278: CALL                 
+ 288: COMPARE_OP           ==
+ 294: POP_JUMP_FORWARD_IF_FALSE to 310
+ 296: LOAD_CONST           0
+ 298: LOAD_FAST            self
+ 300: STORE_ATTR           map_index
+ 310: JUMP_BACKWARD        to 116
+ 312: LOAD_GLOBAL          NULL + min
+ 324: LOAD_FAST            size
+ 326: LOAD_FAST            stop
+ 328: LOAD_FAST            self
+ 330: LOAD_ATTR            position
+ 340: BINARY_OP            -
+ 344: PRECALL              
+ 348: CALL                 
+ 358: STORE_FAST           length
+ 360: LOAD_FAST            data
+ 362: POP_JUMP_FORWARD_IF_FALSE to 570
+ 364: LOAD_FAST            self
+ 366: LOAD_ATTR            fileobj
+ 376: LOAD_METHOD          seek
+ 398: LOAD_FAST            offset
+ 400: LOAD_FAST            self
+ 402: LOAD_ATTR            position
+ 412: LOAD_FAST            start
+ 414: BINARY_OP            -
+ 418: BINARY_OP            +
+ 422: PRECALL              
+ 426: CALL                 
+ 436: POP_TOP              
+ 438: LOAD_FAST            self
+ 440: LOAD_ATTR            fileobj
+ 450: LOAD_METHOD          read
+ 472: LOAD_FAST            length
+ 474: PRECALL              
+ 478: CALL                 
+ 488: STORE_FAST           b
+ 490: LOAD_GLOBAL          NULL + len
+ 502: LOAD_FAST            b
+ 504: PRECALL              
+ 508: CALL                 
+ 518: LOAD_FAST            length
+ 520: COMPARE_OP           !=
+ 526: POP_JUMP_FORWARD_IF_FALSE to 558
+ 528: LOAD_GLOBAL          NULL + ReadError
+ 540: LOAD_CONST           'unexpected end of data'
+ 542: PRECALL              
+ 546: CALL                 
+ 556: RAISE_VARARGS        
+ 558: LOAD_FAST            buf
+ 560: LOAD_FAST            b
+ 562: BINARY_OP            +=
+ 566: STORE_FAST           buf
+ 568: JUMP_FORWARD         to 596
+ 570: LOAD_FAST            buf
+ 572: LOAD_GLOBAL          NUL
+ 584: LOAD_FAST            length
+ 586: BINARY_OP            *
+ 590: BINARY_OP            +=
+ 594: STORE_FAST           buf
+ 596: LOAD_FAST            size
+ 598: LOAD_FAST            length
+ 600: BINARY_OP            -=
+ 604: STORE_FAST           size
+ 606: LOAD_FAST            self
+ 608: COPY                 
+ 610: LOAD_ATTR            position
+ 620: LOAD_FAST            length
+ 622: BINARY_OP            +=
+ 626: SWAP                 
+ 628: STORE_ATTR           position
+ 638: LOAD_FAST            size
+ 640: LOAD_CONST           0
+ 642: COMPARE_OP           >
+ 648: EXTENDED_ARG         
+ 650: POP_JUMP_BACKWARD_IF_TRUE to 114
+ 652: LOAD_FAST            buf
+ 654: RETURN_VALUE         

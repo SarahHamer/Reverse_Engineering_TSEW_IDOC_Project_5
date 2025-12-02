@@ -1,0 +1,73 @@
+# Disassembly for lobby.Telephone.get_options
+# From module file: lobby
+
+## co_consts:
+(None, <code object <lambda> at 0x000002406945CF30, file "lobby.py", line 61>, 'Plug in telephone', <code object <lambda> at 0x000002406945F690, file "lobby.py", line 63>, 'Use telephone', <code object <lambda> at 0x000002406945F3C0, file "lobby.py", line 66>, 'Dial an extension on the telephone', <code object <lambda> at 0x000002406945D4D0, file "lobby.py", line 68>)
+
+## co_names:
+('plugged_in', 'tried_phone', 'append', 'ready_for_number')
+
+## bytecode:
+
+   0: MAKE_CELL            self
+   2: RESUME               
+   4: BUILD_LIST           
+   6: STORE_FAST           options
+   8: LOAD_DEREF           self
+  10: LOAD_ATTR            plugged_in
+  20: POP_JUMP_FORWARD_IF_TRUE to 144
+  22: LOAD_DEREF           self
+  24: LOAD_ATTR            tried_phone
+  34: POP_JUMP_FORWARD_IF_FALSE to 90
+  36: LOAD_FAST            options
+  38: LOAD_METHOD          append
+  60: LOAD_CLOSURE         self
+  62: BUILD_TUPLE          
+  64: LOAD_CONST           <code object <lambda> at 0x000002406945CF30, file "lobby.py", line 61>
+  66: MAKE_FUNCTION        closure
+  68: LOAD_CONST           'Plug in telephone'
+  70: BUILD_TUPLE          
+  72: PRECALL              
+  76: CALL                 
+  86: POP_TOP              
+  88: JUMP_FORWARD         to 264
+  90: LOAD_FAST            options
+  92: LOAD_METHOD          append
+ 114: LOAD_CLOSURE         self
+ 116: BUILD_TUPLE          
+ 118: LOAD_CONST           <code object <lambda> at 0x000002406945F690, file "lobby.py", line 63>
+ 120: MAKE_FUNCTION        closure
+ 122: LOAD_CONST           'Use telephone'
+ 124: BUILD_TUPLE          
+ 126: PRECALL              
+ 130: CALL                 
+ 140: POP_TOP              
+ 142: JUMP_FORWARD         to 264
+ 144: LOAD_DEREF           self
+ 146: LOAD_ATTR            ready_for_number
+ 156: POP_JUMP_FORWARD_IF_FALSE to 212
+ 158: LOAD_FAST            options
+ 160: LOAD_METHOD          append
+ 182: LOAD_CLOSURE         self
+ 184: BUILD_TUPLE          
+ 186: LOAD_CONST           <code object <lambda> at 0x000002406945F3C0, file "lobby.py", line 66>
+ 188: MAKE_FUNCTION        closure
+ 190: LOAD_CONST           'Dial an extension on the telephone'
+ 192: BUILD_TUPLE          
+ 194: PRECALL              
+ 198: CALL                 
+ 208: POP_TOP              
+ 210: JUMP_FORWARD         to 264
+ 212: LOAD_FAST            options
+ 214: LOAD_METHOD          append
+ 236: LOAD_CLOSURE         self
+ 238: BUILD_TUPLE          
+ 240: LOAD_CONST           <code object <lambda> at 0x000002406945D4D0, file "lobby.py", line 68>
+ 242: MAKE_FUNCTION        closure
+ 244: LOAD_CONST           'Use telephone'
+ 246: BUILD_TUPLE          
+ 248: PRECALL              
+ 252: CALL                 
+ 262: POP_TOP              
+ 264: LOAD_FAST            options
+ 266: RETURN_VALUE         

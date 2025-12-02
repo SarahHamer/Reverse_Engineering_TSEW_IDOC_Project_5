@@ -1,0 +1,17 @@
+# Disassembly for typing.Annotated.__new__
+# From module file: typing
+
+## co_consts:
+(None, 'Type Annotated cannot be instantiated.')
+
+## co_names:
+('TypeError',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + TypeError
+  14: LOAD_CONST           'Type Annotated cannot be instantiated.'
+  16: PRECALL              
+  20: CALL                 
+  30: RAISE_VARARGS        

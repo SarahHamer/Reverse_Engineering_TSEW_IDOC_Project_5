@@ -1,0 +1,20 @@
+# Disassembly for ast._Unparser.visit_Continue
+# From module file: ast
+
+## co_consts:
+(None, 'continue')
+
+## co_names:
+('fill',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          fill
+  26: LOAD_CONST           'continue'
+  28: PRECALL              
+  32: CALL                 
+  42: POP_TOP              
+  44: LOAD_CONST           None
+  46: RETURN_VALUE         

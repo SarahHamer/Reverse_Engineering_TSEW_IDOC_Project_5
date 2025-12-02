@@ -1,0 +1,93 @@
+# Disassembly for email.get_token
+# From module file: email._header_value_parser
+
+## co_consts:
+("token = [CFWS] 1*ttext [CFWS]\n\n    The RFC equivalent of ttext is any US-ASCII chars except space, ctls, or\n    tspecials.  We also exclude tabs even though the RFC doesn't.\n\n    The RFC implies the CFWS but is not explicit about it in the BNF.\n\n    ", 0, "expected token but found '{}'")
+
+## co_names:
+('Token', 'CFWS_LEADER', 'get_cfws', 'append', 'TOKEN_ENDS', 'errors', 'HeaderParseError', 'format', 'get_ttext')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + Token
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           mtoken
+  30: LOAD_FAST            value
+  32: POP_JUMP_FORWARD_IF_FALSE to 142
+  34: LOAD_FAST            value
+  36: LOAD_CONST           0
+  38: BINARY_SUBSCR        
+  48: LOAD_GLOBAL          CFWS_LEADER
+  60: CONTAINS_OP          
+  62: POP_JUMP_FORWARD_IF_FALSE to 142
+  64: LOAD_GLOBAL          NULL + get_cfws
+  76: LOAD_FAST            value
+  78: PRECALL              
+  82: CALL                 
+  92: UNPACK_SEQUENCE      
+  96: STORE_FAST           token
+  98: STORE_FAST           value
+ 100: LOAD_FAST            mtoken
+ 102: LOAD_METHOD          append
+ 124: LOAD_FAST            token
+ 126: PRECALL              
+ 130: CALL                 
+ 140: POP_TOP              
+ 142: LOAD_FAST            value
+ 144: POP_JUMP_FORWARD_IF_FALSE to 254
+ 146: LOAD_FAST            value
+ 148: LOAD_CONST           0
+ 150: BINARY_SUBSCR        
+ 160: LOAD_GLOBAL          TOKEN_ENDS
+ 172: CONTAINS_OP          
+ 174: POP_JUMP_FORWARD_IF_FALSE to 254
+ 176: LOAD_GLOBAL          NULL + errors
+ 188: LOAD_ATTR            HeaderParseError
+ 198: LOAD_CONST           "expected token but found '{}'"
+ 200: LOAD_METHOD          format
+ 222: LOAD_FAST            value
+ 224: PRECALL              
+ 228: CALL                 
+ 238: PRECALL              
+ 242: CALL                 
+ 252: RAISE_VARARGS        
+ 254: LOAD_GLOBAL          NULL + get_ttext
+ 266: LOAD_FAST            value
+ 268: PRECALL              
+ 272: CALL                 
+ 282: UNPACK_SEQUENCE      
+ 286: STORE_FAST           token
+ 288: STORE_FAST           value
+ 290: LOAD_FAST            mtoken
+ 292: LOAD_METHOD          append
+ 314: LOAD_FAST            token
+ 316: PRECALL              
+ 320: CALL                 
+ 330: POP_TOP              
+ 332: LOAD_FAST            value
+ 334: POP_JUMP_FORWARD_IF_FALSE to 444
+ 336: LOAD_FAST            value
+ 338: LOAD_CONST           0
+ 340: BINARY_SUBSCR        
+ 350: LOAD_GLOBAL          CFWS_LEADER
+ 362: CONTAINS_OP          
+ 364: POP_JUMP_FORWARD_IF_FALSE to 444
+ 366: LOAD_GLOBAL          NULL + get_cfws
+ 378: LOAD_FAST            value
+ 380: PRECALL              
+ 384: CALL                 
+ 394: UNPACK_SEQUENCE      
+ 398: STORE_FAST           token
+ 400: STORE_FAST           value
+ 402: LOAD_FAST            mtoken
+ 404: LOAD_METHOD          append
+ 426: LOAD_FAST            token
+ 428: PRECALL              
+ 432: CALL                 
+ 442: POP_TOP              
+ 444: LOAD_FAST            mtoken
+ 446: LOAD_FAST            value
+ 448: BUILD_TUPLE          
+ 450: RETURN_VALUE         

@@ -1,0 +1,42 @@
+# Disassembly for pickle._Unpickler.load_newobj
+# From module file: pickle
+
+## co_consts:
+(None,)
+
+## co_names:
+('stack', 'pop', '__new__', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            stack
+  14: LOAD_METHOD          pop
+  36: PRECALL              
+  40: CALL                 
+  50: STORE_FAST           args
+  52: LOAD_FAST            self
+  54: LOAD_ATTR            stack
+  64: LOAD_METHOD          pop
+  86: PRECALL              
+  90: CALL                 
+ 100: STORE_FAST           cls
+ 102: PUSH_NULL            
+ 104: LOAD_FAST            cls
+ 106: LOAD_ATTR            __new__
+ 116: LOAD_FAST            cls
+ 118: BUILD_LIST           
+ 120: LOAD_FAST            args
+ 122: LIST_EXTEND          
+ 124: LIST_TO_TUPLE        
+ 126: CALL_FUNCTION_EX     
+ 128: STORE_FAST           obj
+ 130: LOAD_FAST            self
+ 132: LOAD_METHOD          append
+ 154: LOAD_FAST            obj
+ 156: PRECALL              
+ 160: CALL                 
+ 170: POP_TOP              
+ 172: LOAD_CONST           None
+ 174: RETURN_VALUE         

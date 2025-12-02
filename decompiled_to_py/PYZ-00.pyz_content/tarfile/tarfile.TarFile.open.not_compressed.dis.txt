@@ -1,0 +1,20 @@
+# Disassembly for tarfile.TarFile.open.not_compressed
+# From module file: tarfile
+
+## co_consts:
+(None, 'taropen')
+
+## co_names:
+('OPEN_METH',)
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_DEREF           cls
+   6: LOAD_ATTR            OPEN_METH
+  16: LOAD_FAST            comptype
+  18: BINARY_SUBSCR        
+  28: LOAD_CONST           'taropen'
+  30: COMPARE_OP           ==
+  36: RETURN_VALUE         

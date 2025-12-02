@@ -1,0 +1,64 @@
+# Disassembly for datetime.datetime.combine
+# From module file: datetime
+
+## co_consts:
+('Construct a datetime from a given date and a given time.', 'date argument must be a date instance', 'time argument must be a time instance', True, ('fold',))
+
+## co_names:
+('isinstance', '_date_class', 'TypeError', '_time_class', 'tzinfo', 'year', 'month', 'day', 'hour', 'minute', 'second', 'microsecond', 'fold')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            date
+  16: LOAD_GLOBAL          _date_class
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_TRUE to 74
+  44: LOAD_GLOBAL          NULL + TypeError
+  56: LOAD_CONST           'date argument must be a date instance'
+  58: PRECALL              
+  62: CALL                 
+  72: RAISE_VARARGS        
+  74: LOAD_GLOBAL          NULL + isinstance
+  86: LOAD_FAST            time
+  88: LOAD_GLOBAL          _time_class
+ 100: PRECALL              
+ 104: CALL                 
+ 114: POP_JUMP_FORWARD_IF_TRUE to 146
+ 116: LOAD_GLOBAL          NULL + TypeError
+ 128: LOAD_CONST           'time argument must be a time instance'
+ 130: PRECALL              
+ 134: CALL                 
+ 144: RAISE_VARARGS        
+ 146: LOAD_FAST            tzinfo
+ 148: LOAD_CONST           True
+ 150: IS_OP                
+ 152: POP_JUMP_FORWARD_IF_FALSE to 168
+ 154: LOAD_FAST            time
+ 156: LOAD_ATTR            tzinfo
+ 166: STORE_FAST           tzinfo
+ 168: PUSH_NULL            
+ 170: LOAD_FAST            cls
+ 172: LOAD_FAST            date
+ 174: LOAD_ATTR            year
+ 184: LOAD_FAST            date
+ 186: LOAD_ATTR            month
+ 196: LOAD_FAST            date
+ 198: LOAD_ATTR            day
+ 208: LOAD_FAST            time
+ 210: LOAD_ATTR            hour
+ 220: LOAD_FAST            time
+ 222: LOAD_ATTR            minute
+ 232: LOAD_FAST            time
+ 234: LOAD_ATTR            second
+ 244: LOAD_FAST            time
+ 246: LOAD_ATTR            microsecond
+ 256: LOAD_FAST            tzinfo
+ 258: LOAD_FAST            time
+ 260: LOAD_ATTR            fold
+ 270: KW_NAMES             
+ 272: PRECALL              
+ 276: CALL                 
+ 286: RETURN_VALUE         

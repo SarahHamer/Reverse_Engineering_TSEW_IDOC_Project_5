@@ -1,0 +1,44 @@
+# Disassembly for email.encode_rfc2231
+# From module file: email.utils
+
+## co_consts:
+('Encode string according to RFC 2231.\n\n    If neither charset nor language is given, then s is returned as-is.  If\n    charset is given but not language, the string is encoded using the empty\n    string for language.\n    ', '', 'ascii', ('safe', 'encoding'), None, "'")
+
+## co_names:
+('urllib', 'parse', 'quote')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          urllib
+  14: LOAD_ATTR            parse
+  24: LOAD_METHOD          quote
+  46: LOAD_FAST            s
+  48: LOAD_CONST           ''
+  50: LOAD_FAST            charset
+  52: JUMP_IF_TRUE_OR_POP  to 56
+  54: LOAD_CONST           'ascii'
+  56: KW_NAMES             
+  58: PRECALL              
+  62: CALL                 
+  72: STORE_FAST           s
+  74: LOAD_FAST            charset
+  76: POP_JUMP_FORWARD_IF_NOT_NONE to 86
+  78: LOAD_FAST            language
+  80: POP_JUMP_FORWARD_IF_NOT_NONE to 86
+  82: LOAD_FAST            s
+  84: RETURN_VALUE         
+  86: LOAD_FAST            language
+  88: POP_JUMP_FORWARD_IF_NOT_NONE to 94
+  90: LOAD_CONST           ''
+  92: STORE_FAST           language
+  94: LOAD_FAST            charset
+  96: FORMAT_VALUE         str
+  98: LOAD_CONST           "'"
+ 100: LOAD_FAST            language
+ 102: FORMAT_VALUE         str
+ 104: LOAD_CONST           "'"
+ 106: LOAD_FAST            s
+ 108: FORMAT_VALUE         str
+ 110: BUILD_STRING         
+ 112: RETURN_VALUE         

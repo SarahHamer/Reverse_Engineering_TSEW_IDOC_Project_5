@@ -1,0 +1,56 @@
+# Disassembly for _pydecimal.Decimal.__neg__
+# From module file: _pydecimal
+
+## co_consts:
+('Returns a copy with the sign switched.\n\n        Rounds, if it has reason.\n        ', ('context',))
+
+## co_names:
+('_is_special', '_check_nans', 'getcontext', 'rounding', 'ROUND_FLOOR', 'copy_abs', 'copy_negate', '_fix')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _is_special
+  14: POP_JUMP_FORWARD_IF_FALSE to 68
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          _check_nans
+  40: LOAD_FAST            context
+  42: KW_NAMES             
+  44: PRECALL              
+  48: CALL                 
+  58: STORE_FAST           ans
+  60: LOAD_FAST            ans
+  62: POP_JUMP_FORWARD_IF_FALSE to 68
+  64: LOAD_FAST            ans
+  66: RETURN_VALUE         
+  68: LOAD_FAST            context
+  70: POP_JUMP_FORWARD_IF_NOT_NONE to 100
+  72: LOAD_GLOBAL          NULL + getcontext
+  84: PRECALL              
+  88: CALL                 
+  98: STORE_FAST           context
+ 100: LOAD_FAST            self
+ 102: POP_JUMP_FORWARD_IF_TRUE to 178
+ 104: LOAD_FAST            context
+ 106: LOAD_ATTR            rounding
+ 116: LOAD_GLOBAL          ROUND_FLOOR
+ 128: COMPARE_OP           !=
+ 134: POP_JUMP_FORWARD_IF_FALSE to 178
+ 136: LOAD_FAST            self
+ 138: LOAD_METHOD          copy_abs
+ 160: PRECALL              
+ 164: CALL                 
+ 174: STORE_FAST           ans
+ 176: JUMP_FORWARD         to 218
+ 178: LOAD_FAST            self
+ 180: LOAD_METHOD          copy_negate
+ 202: PRECALL              
+ 206: CALL                 
+ 216: STORE_FAST           ans
+ 218: LOAD_FAST            ans
+ 220: LOAD_METHOD          _fix
+ 242: LOAD_FAST            context
+ 244: PRECALL              
+ 248: CALL                 
+ 258: RETURN_VALUE         

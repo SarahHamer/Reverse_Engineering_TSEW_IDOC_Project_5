@@ -1,0 +1,54 @@
+# Disassembly for threading._make_invoke_excepthook
+# From module file: threading
+
+## co_consts:
+(None, 'threading.excepthook is None', 'sys.excepthook is None', <code object invoke_excepthook at 0x0000024068BF59D0, file "threading.py", line 1333>)
+
+## co_names:
+('excepthook', '_sys', 'RuntimeError', 'exc_info', 'print')
+
+## bytecode:
+
+   0: MAKE_CELL            local_print
+   2: MAKE_CELL            local_sys
+   4: MAKE_CELL            old_excepthook
+   6: MAKE_CELL            old_sys_excepthook
+   8: MAKE_CELL            sys_exc_info
+  10: RESUME               
+  12: LOAD_GLOBAL          excepthook
+  24: STORE_DEREF          old_excepthook
+  26: LOAD_GLOBAL          _sys
+  38: LOAD_ATTR            excepthook
+  48: STORE_DEREF          old_sys_excepthook
+  50: LOAD_DEREF           old_excepthook
+  52: POP_JUMP_FORWARD_IF_NOT_NONE to 84
+  54: LOAD_GLOBAL          NULL + RuntimeError
+  66: LOAD_CONST           'threading.excepthook is None'
+  68: PRECALL              
+  72: CALL                 
+  82: RAISE_VARARGS        
+  84: LOAD_DEREF           old_sys_excepthook
+  86: POP_JUMP_FORWARD_IF_NOT_NONE to 118
+  88: LOAD_GLOBAL          NULL + RuntimeError
+ 100: LOAD_CONST           'sys.excepthook is None'
+ 102: PRECALL              
+ 106: CALL                 
+ 116: RAISE_VARARGS        
+ 118: LOAD_GLOBAL          _sys
+ 130: LOAD_ATTR            exc_info
+ 140: STORE_DEREF          sys_exc_info
+ 142: LOAD_GLOBAL          print
+ 154: STORE_DEREF          local_print
+ 156: LOAD_GLOBAL          _sys
+ 168: STORE_DEREF          local_sys
+ 170: LOAD_CLOSURE         local_print
+ 172: LOAD_CLOSURE         local_sys
+ 174: LOAD_CLOSURE         old_excepthook
+ 176: LOAD_CLOSURE         old_sys_excepthook
+ 178: LOAD_CLOSURE         sys_exc_info
+ 180: BUILD_TUPLE          
+ 182: LOAD_CONST           <code object invoke_excepthook at 0x0000024068BF59D0, file "threading.py", line 1333>
+ 184: MAKE_FUNCTION        closure
+ 186: STORE_FAST           invoke_excepthook
+ 188: LOAD_FAST            invoke_excepthook
+ 190: RETURN_VALUE         

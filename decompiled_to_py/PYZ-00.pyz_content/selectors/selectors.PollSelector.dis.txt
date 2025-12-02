@@ -1,0 +1,29 @@
+# Disassembly for selectors.PollSelector
+# From module file: selectors
+
+## co_consts:
+('PollSelector', 'Poll-based selector.', None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'select', 'poll', '_selector_cls', 'POLLIN', '_EVENT_READ', 'POLLOUT', '_EVENT_WRITE')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'PollSelector'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Poll-based selector.'
+  12: STORE_NAME           __doc__
+  14: LOAD_NAME            select
+  16: LOAD_ATTR            poll
+  26: STORE_NAME           _selector_cls
+  28: LOAD_NAME            select
+  30: LOAD_ATTR            POLLIN
+  40: STORE_NAME           _EVENT_READ
+  42: LOAD_NAME            select
+  44: LOAD_ATTR            POLLOUT
+  54: STORE_NAME           _EVENT_WRITE
+  56: LOAD_CONST           None
+  58: RETURN_VALUE         

@@ -1,0 +1,20 @@
+# Disassembly for statistics.NormalDist.__setstate__
+# From module file: statistics
+
+## co_consts:
+(None,)
+
+## co_names:
+('_mu', '_sigma')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            state
+   4: UNPACK_SEQUENCE      
+   8: LOAD_FAST            self
+  10: STORE_ATTR           _mu
+  20: LOAD_FAST            self
+  22: STORE_ATTR           _sigma
+  32: LOAD_CONST           None
+  34: RETURN_VALUE         

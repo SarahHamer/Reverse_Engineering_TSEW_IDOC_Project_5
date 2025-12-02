@@ -1,0 +1,27 @@
+# Disassembly for email.WhiteSpaceTerminal
+# From module file: email._header_value_parser
+
+## co_consts:
+('WhiteSpaceTerminal', <code object value at 0x000002406943AEB0, file "email\_header_value_parser.py", line 915>, <code object startswith_fws at 0x000002406943B930, file "email\_header_value_parser.py", line 919>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', 'property', 'value', 'startswith_fws')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'WhiteSpaceTerminal'
+   8: STORE_NAME           __qualname__
+  10: LOAD_NAME            property
+  12: LOAD_CONST           <code object value at 0x000002406943AEB0, file "email\_header_value_parser.py", line 915>
+  14: MAKE_FUNCTION        
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_NAME           value
+  32: LOAD_CONST           <code object startswith_fws at 0x000002406943B930, file "email\_header_value_parser.py", line 919>
+  34: MAKE_FUNCTION        
+  36: STORE_NAME           startswith_fws
+  38: LOAD_CONST           None
+  40: RETURN_VALUE         

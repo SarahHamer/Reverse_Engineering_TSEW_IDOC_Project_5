@@ -1,0 +1,55 @@
+# Disassembly for selectors._PollLikeSelector
+# From module file: selectors
+
+## co_consts:
+('_PollLikeSelector', 'Base class shared between poll, epoll and devpoll selectors.', None, <code object __init__ at 0x00000240693AA0B0, file "selectors.py", line 347>, <code object register at 0x0000024069366AD0, file "selectors.py", line 351>, <code object unregister at 0x000002406921FE00, file "selectors.py", line 365>, <code object modify at 0x0000024068C04130, file "selectors.py", line 375>, <code object select at 0x0000024068D6EEB0, file "selectors.py", line 402>, (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '_selector_cls', '_EVENT_READ', '_EVENT_WRITE', '__init__', 'register', 'unregister', 'modify', 'select', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           '_PollLikeSelector'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           'Base class shared between poll, epoll and devpoll selectors.'
+  14: STORE_NAME           __doc__
+  16: LOAD_CONST           None
+  18: STORE_NAME           _selector_cls
+  20: LOAD_CONST           None
+  22: STORE_NAME           _EVENT_READ
+  24: LOAD_CONST           None
+  26: STORE_NAME           _EVENT_WRITE
+  28: LOAD_CLOSURE         __class__
+  30: BUILD_TUPLE          
+  32: LOAD_CONST           <code object __init__ at 0x00000240693AA0B0, file "selectors.py", line 347>
+  34: MAKE_FUNCTION        closure
+  36: STORE_NAME           __init__
+  38: LOAD_CONST           (None,)
+  40: LOAD_CLOSURE         __class__
+  42: BUILD_TUPLE          
+  44: LOAD_CONST           <code object register at 0x0000024069366AD0, file "selectors.py", line 351>
+  46: MAKE_FUNCTION        defaults, closure
+  48: STORE_NAME           register
+  50: LOAD_CLOSURE         __class__
+  52: BUILD_TUPLE          
+  54: LOAD_CONST           <code object unregister at 0x000002406921FE00, file "selectors.py", line 365>
+  56: MAKE_FUNCTION        closure
+  58: STORE_NAME           unregister
+  60: LOAD_CONST           (None,)
+  62: LOAD_CLOSURE         __class__
+  64: BUILD_TUPLE          
+  66: LOAD_CONST           <code object modify at 0x0000024068C04130, file "selectors.py", line 375>
+  68: MAKE_FUNCTION        defaults, closure
+  70: STORE_NAME           modify
+  72: LOAD_CONST           (None,)
+  74: LOAD_CONST           <code object select at 0x0000024068D6EEB0, file "selectors.py", line 402>
+  76: MAKE_FUNCTION        defaults
+  78: STORE_NAME           select
+  80: LOAD_CLOSURE         __class__
+  82: COPY                 
+  84: STORE_NAME           __classcell__
+  86: RETURN_VALUE         

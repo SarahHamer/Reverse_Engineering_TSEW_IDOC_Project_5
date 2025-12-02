@@ -1,0 +1,49 @@
+# Disassembly for importlib.Sectioned
+# From module file: importlib.metadata
+
+## co_consts:
+('Sectioned', "\n    A simple entry point config parser for performance\n\n    >>> for item in Sectioned.read(Sectioned._sample):\n    ...     print(item)\n    Pair(name='sec1', value='# comments ignored')\n    Pair(name='sec1', value='a = 1')\n    Pair(name='sec1', value='b = 2')\n    Pair(name='sec2', value='a = 2')\n\n    >>> res = Sectioned.section_pairs(Sectioned._sample)\n    >>> item = next(res)\n    >>> item.name\n    'sec1'\n    >>> item.value\n    Pair(name='a', value='1')\n    >>> item = next(res)\n    >>> item.value\n    Pair(name='b', value='2')\n    >>> item = next(res)\n    >>> item.name\n    'sec2'\n    >>> item.value\n    Pair(name='a', value='2')\n    >>> list(res)\n    []\n    ", '\n        [sec1]\n        # comments ignored\n        a = 1\n        b = 2\n\n        [sec2]\n        a = 2\n        ', <code object section_pairs at 0x000002406944A780, file "importlib\metadata\__init__.py", line 99>, None, <code object read at 0x0000024069365770, file "importlib\metadata\__init__.py", line 107>, <code object valid at 0x000002406945F870, file "importlib\metadata\__init__.py", line 118>, (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'textwrap', 'dedent', 'lstrip', '_sample', 'classmethod', 'section_pairs', 'staticmethod', 'read', 'valid')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Sectioned'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           "\n    A simple entry point config parser for performance\n\n    >>> for item in Sectioned.read(Sectioned._sample):\n    ...     print(item)\n    Pair(name='sec1', value='# comments ignored')\n    Pair(name='sec1', value='a = 1')\n    Pair(name='sec1', value='b = 2')\n    Pair(name='sec2', value='a = 2')\n\n    >>> res = Sectioned.section_pairs(Sectioned._sample)\n    >>> item = next(res)\n    >>> item.name\n    'sec1'\n    >>> item.value\n    Pair(name='a', value='1')\n    >>> item = next(res)\n    >>> item.value\n    Pair(name='b', value='2')\n    >>> item = next(res)\n    >>> item.name\n    'sec2'\n    >>> item.value\n    Pair(name='a', value='2')\n    >>> list(res)\n    []\n    "
+  12: STORE_NAME           __doc__
+  14: PUSH_NULL            
+  16: LOAD_NAME            textwrap
+  18: LOAD_ATTR            dedent
+  28: LOAD_CONST           '\n        [sec1]\n        # comments ignored\n        a = 1\n        b = 2\n\n        [sec2]\n        a = 2\n        '
+  30: PRECALL              
+  34: CALL                 
+  44: LOAD_METHOD          lstrip
+  66: PRECALL              
+  70: CALL                 
+  80: STORE_NAME           _sample
+  82: LOAD_NAME            classmethod
+  84: LOAD_CONST           <code object section_pairs at 0x000002406944A780, file "importlib\metadata\__init__.py", line 99>
+  86: MAKE_FUNCTION        
+  88: PRECALL              
+  92: CALL                 
+ 102: STORE_NAME           section_pairs
+ 104: LOAD_NAME            staticmethod
+ 106: LOAD_CONST           (None,)
+ 108: LOAD_CONST           <code object read at 0x0000024069365770, file "importlib\metadata\__init__.py", line 107>
+ 110: MAKE_FUNCTION        defaults
+ 112: PRECALL              
+ 116: CALL                 
+ 126: STORE_NAME           read
+ 128: LOAD_NAME            staticmethod
+ 130: LOAD_CONST           <code object valid at 0x000002406945F870, file "importlib\metadata\__init__.py", line 118>
+ 132: MAKE_FUNCTION        
+ 134: PRECALL              
+ 138: CALL                 
+ 148: STORE_NAME           valid
+ 150: LOAD_CONST           None
+ 152: RETURN_VALUE         

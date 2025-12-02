@@ -1,0 +1,30 @@
+# Disassembly for email.AddressHeader.addresses
+# From module file: email.headerregistry
+
+## co_consts:
+(None, <code object <genexpr> at 0x000002406945D7A0, file "email\headerregistry.py", line 377>)
+
+## co_names:
+('_addresses', 'tuple', '_groups')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _addresses
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 86
+  16: LOAD_GLOBAL          NULL + tuple
+  28: LOAD_CONST           <code object <genexpr> at 0x000002406945D7A0, file "email\headerregistry.py", line 377>
+  30: MAKE_FUNCTION        
+  32: LOAD_FAST            self
+  34: LOAD_ATTR            _groups
+  44: GET_ITER             
+  46: PRECALL              
+  50: CALL                 
+  60: PRECALL              
+  64: CALL                 
+  74: LOAD_FAST            self
+  76: STORE_ATTR           _addresses
+  86: LOAD_FAST            self
+  88: LOAD_ATTR            _addresses
+  98: RETURN_VALUE         

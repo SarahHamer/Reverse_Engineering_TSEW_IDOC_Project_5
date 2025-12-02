@@ -1,0 +1,17 @@
+# Disassembly for importlib.ModuleSpec.cached
+# From module file: importlib._bootstrap
+
+## co_consts:
+(None,)
+
+## co_names:
+('_cached',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            cached
+   4: LOAD_FAST            self
+   6: STORE_ATTR           _cached
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         

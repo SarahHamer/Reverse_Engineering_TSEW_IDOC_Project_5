@@ -1,0 +1,78 @@
+# Disassembly for breakroom
+# From module file: breakroom
+
+## co_consts:
+(0, ('*',), ('Dollar',), <code object ClockInOutBoard at 0x00000240693A9570, file "breakroom.py", line 5>, 'ClockInOutBoard', <code object Key at 0x000002406945DD40, file "breakroom.py", line 66>, 'Key', <code object VendingMachine at 0x00000240693AA5B0, file "breakroom.py", line 74>, 'VendingMachine', <code object Photo at 0x00000240693AA470, file "breakroom.py", line 121>, 'Photo', <code object Jacket at 0x000002406922CAB0, file "breakroom.py", line 143>, 'Jacket', <code object Breakroom at 0x000002406922CD50, file "breakroom.py", line 177>, 'Breakroom', None)
+
+## co_names:
+('entities', 'giftshop', 'Dollar', 'Item', 'ClockInOutBoard', 'Key', 'VendingMachine', 'Photo', 'Jacket', 'Room', 'Breakroom')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           ('*',)
+   6: IMPORT_NAME          entities
+   8: IMPORT_STAR          
+  10: LOAD_CONST           0
+  12: LOAD_CONST           ('Dollar',)
+  14: IMPORT_NAME          giftshop
+  16: IMPORT_FROM          Dollar
+  18: STORE_NAME           Dollar
+  20: POP_TOP              
+  22: PUSH_NULL            
+  24: LOAD_BUILD_CLASS     
+  26: LOAD_CONST           <code object ClockInOutBoard at 0x00000240693A9570, file "breakroom.py", line 5>
+  28: MAKE_FUNCTION        
+  30: LOAD_CONST           'ClockInOutBoard'
+  32: LOAD_NAME            Item
+  34: PRECALL              
+  38: CALL                 
+  48: STORE_NAME           ClockInOutBoard
+  50: PUSH_NULL            
+  52: LOAD_BUILD_CLASS     
+  54: LOAD_CONST           <code object Key at 0x000002406945DD40, file "breakroom.py", line 66>
+  56: MAKE_FUNCTION        
+  58: LOAD_CONST           'Key'
+  60: LOAD_NAME            Item
+  62: PRECALL              
+  66: CALL                 
+  76: STORE_NAME           Key
+  78: PUSH_NULL            
+  80: LOAD_BUILD_CLASS     
+  82: LOAD_CONST           <code object VendingMachine at 0x00000240693AA5B0, file "breakroom.py", line 74>
+  84: MAKE_FUNCTION        
+  86: LOAD_CONST           'VendingMachine'
+  88: LOAD_NAME            Item
+  90: PRECALL              
+  94: CALL                 
+ 104: STORE_NAME           VendingMachine
+ 106: PUSH_NULL            
+ 108: LOAD_BUILD_CLASS     
+ 110: LOAD_CONST           <code object Photo at 0x00000240693AA470, file "breakroom.py", line 121>
+ 112: MAKE_FUNCTION        
+ 114: LOAD_CONST           'Photo'
+ 116: LOAD_NAME            Item
+ 118: PRECALL              
+ 122: CALL                 
+ 132: STORE_NAME           Photo
+ 134: PUSH_NULL            
+ 136: LOAD_BUILD_CLASS     
+ 138: LOAD_CONST           <code object Jacket at 0x000002406922CAB0, file "breakroom.py", line 143>
+ 140: MAKE_FUNCTION        
+ 142: LOAD_CONST           'Jacket'
+ 144: LOAD_NAME            Item
+ 146: PRECALL              
+ 150: CALL                 
+ 160: STORE_NAME           Jacket
+ 162: PUSH_NULL            
+ 164: LOAD_BUILD_CLASS     
+ 166: LOAD_CONST           <code object Breakroom at 0x000002406922CD50, file "breakroom.py", line 177>
+ 168: MAKE_FUNCTION        
+ 170: LOAD_CONST           'Breakroom'
+ 172: LOAD_NAME            Room
+ 174: PRECALL              
+ 178: CALL                 
+ 188: STORE_NAME           Breakroom
+ 190: LOAD_CONST           None
+ 192: RETURN_VALUE         

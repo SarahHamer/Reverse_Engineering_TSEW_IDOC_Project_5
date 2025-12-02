@@ -1,0 +1,138 @@
+# Disassembly for _pydecimal._insert_thousands_sep
+# From module file: _pydecimal
+
+## co_consts:
+("Insert thousands separators into a digit string.\n\n    spec is a dictionary whose keys should include 'thousands_sep' and\n    'grouping'; typically it's the result of parsing the format\n    specifier using _parse_format_specifier.\n\n    The min_width keyword argument gives the minimum length of the\n    result, which will be padded on the left with zeros if necessary.\n\n    If necessary, the zero padding adds an extra '0' on the left to\n    avoid a leading thousands separator.  For example, inserting\n    commas every three digits in '123456', with min_width=8, gives\n    '0,123,456', even though that has length 9.\n\n    ", 'thousands_sep', 'grouping', 0, 'group length should be positive', 1, '0', None)
+
+## co_names:
+('_group_lengths', 'ValueError', 'min', 'max', 'len', 'append', 'join', 'reversed')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            spec
+   4: LOAD_CONST           'thousands_sep'
+   6: BINARY_SUBSCR        
+  16: STORE_FAST           sep
+  18: LOAD_FAST            spec
+  20: LOAD_CONST           'grouping'
+  22: BINARY_SUBSCR        
+  32: STORE_FAST           grouping
+  34: BUILD_LIST           
+  36: STORE_FAST           groups
+  38: LOAD_GLOBAL          NULL + _group_lengths
+  50: LOAD_FAST            grouping
+  52: PRECALL              
+  56: CALL                 
+  66: GET_ITER             
+  68: FOR_ITER             to 396
+  70: STORE_FAST           l
+  72: LOAD_FAST            l
+  74: LOAD_CONST           0
+  76: COMPARE_OP           <=
+  82: POP_JUMP_FORWARD_IF_FALSE to 114
+  84: LOAD_GLOBAL          NULL + ValueError
+  96: LOAD_CONST           'group length should be positive'
+  98: PRECALL              
+ 102: CALL                 
+ 112: RAISE_VARARGS        
+ 114: LOAD_GLOBAL          NULL + min
+ 126: LOAD_GLOBAL          NULL + max
+ 138: LOAD_GLOBAL          NULL + len
+ 150: LOAD_FAST            digits
+ 152: PRECALL              
+ 156: CALL                 
+ 166: LOAD_FAST            min_width
+ 168: LOAD_CONST           1
+ 170: PRECALL              
+ 174: CALL                 
+ 184: LOAD_FAST            l
+ 186: PRECALL              
+ 190: CALL                 
+ 200: STORE_FAST           l
+ 202: LOAD_FAST            groups
+ 204: LOAD_METHOD          append
+ 226: LOAD_CONST           '0'
+ 228: LOAD_FAST            l
+ 230: LOAD_GLOBAL          NULL + len
+ 242: LOAD_FAST            digits
+ 244: PRECALL              
+ 248: CALL                 
+ 258: BINARY_OP            -
+ 262: BINARY_OP            *
+ 266: LOAD_FAST            digits
+ 268: LOAD_FAST            l
+ 270: UNARY_NEGATIVE       
+ 272: LOAD_CONST           None
+ 274: BUILD_SLICE          
+ 276: BINARY_SUBSCR        
+ 286: BINARY_OP            +
+ 290: PRECALL              
+ 294: CALL                 
+ 304: POP_TOP              
+ 306: LOAD_FAST            digits
+ 308: LOAD_CONST           None
+ 310: LOAD_FAST            l
+ 312: UNARY_NEGATIVE       
+ 314: BUILD_SLICE          
+ 316: BINARY_SUBSCR        
+ 326: STORE_FAST           digits
+ 328: LOAD_FAST            min_width
+ 330: LOAD_FAST            l
+ 332: BINARY_OP            -=
+ 336: STORE_FAST           min_width
+ 338: LOAD_FAST            digits
+ 340: POP_JUMP_FORWARD_IF_TRUE to 358
+ 342: LOAD_FAST            min_width
+ 344: LOAD_CONST           0
+ 346: COMPARE_OP           <=
+ 352: POP_JUMP_FORWARD_IF_FALSE to 358
+ 354: POP_TOP              
+ 356: JUMP_FORWARD         to 560
+ 358: LOAD_FAST            min_width
+ 360: LOAD_GLOBAL          NULL + len
+ 372: LOAD_FAST            sep
+ 374: PRECALL              
+ 378: CALL                 
+ 388: BINARY_OP            -=
+ 392: STORE_FAST           min_width
+ 394: JUMP_BACKWARD        to 68
+ 396: LOAD_GLOBAL          NULL + max
+ 408: LOAD_GLOBAL          NULL + len
+ 420: LOAD_FAST            digits
+ 422: PRECALL              
+ 426: CALL                 
+ 436: LOAD_FAST            min_width
+ 438: LOAD_CONST           1
+ 440: PRECALL              
+ 444: CALL                 
+ 454: STORE_FAST           l
+ 456: LOAD_FAST            groups
+ 458: LOAD_METHOD          append
+ 480: LOAD_CONST           '0'
+ 482: LOAD_FAST            l
+ 484: LOAD_GLOBAL          NULL + len
+ 496: LOAD_FAST            digits
+ 498: PRECALL              
+ 502: CALL                 
+ 512: BINARY_OP            -
+ 516: BINARY_OP            *
+ 520: LOAD_FAST            digits
+ 522: LOAD_FAST            l
+ 524: UNARY_NEGATIVE       
+ 526: LOAD_CONST           None
+ 528: BUILD_SLICE          
+ 530: BINARY_SUBSCR        
+ 540: BINARY_OP            +
+ 544: PRECALL              
+ 548: CALL                 
+ 558: POP_TOP              
+ 560: LOAD_FAST            sep
+ 562: LOAD_METHOD          join
+ 584: LOAD_GLOBAL          NULL + reversed
+ 596: LOAD_FAST            groups
+ 598: PRECALL              
+ 602: CALL                 
+ 612: PRECALL              
+ 616: CALL                 
+ 626: RETURN_VALUE         

@@ -1,0 +1,94 @@
+# Disassembly for email.Message._get_params_preserve
+# From module file: email.message
+
+## co_consts:
+(None, '=', 1, '')
+
+## co_names:
+('object', 'get', '_parseparam', 'split', 'strip', 'ValueError', 'append', 'utils', 'decode_params')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + object
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           missing
+  30: LOAD_FAST            self
+  32: LOAD_METHOD          get
+  54: LOAD_FAST            header
+  56: LOAD_FAST            missing
+  58: PRECALL              
+  62: CALL                 
+  72: STORE_FAST           value
+  74: LOAD_FAST            value
+  76: LOAD_FAST            missing
+  78: IS_OP                
+  80: POP_JUMP_FORWARD_IF_FALSE to 86
+  82: LOAD_FAST            failobj
+  84: RETURN_VALUE         
+  86: BUILD_LIST           
+  88: STORE_FAST           params
+  90: LOAD_GLOBAL          NULL + _parseparam
+ 102: LOAD_FAST            value
+ 104: PRECALL              
+ 108: CALL                 
+ 118: GET_ITER             
+ 120: FOR_ITER             to 382
+ 122: STORE_FAST           p
+ 124: NOP                  
+ 126: LOAD_FAST            p
+ 128: LOAD_METHOD          split
+ 150: LOAD_CONST           '='
+ 152: LOAD_CONST           1
+ 154: PRECALL              
+ 158: CALL                 
+ 168: UNPACK_SEQUENCE      
+ 172: STORE_FAST           name
+ 174: STORE_FAST           val
+ 176: LOAD_FAST            name
+ 178: LOAD_METHOD          strip
+ 200: PRECALL              
+ 204: CALL                 
+ 214: STORE_FAST           name
+ 216: LOAD_FAST            val
+ 218: LOAD_METHOD          strip
+ 240: PRECALL              
+ 244: CALL                 
+ 254: STORE_FAST           val
+ 256: JUMP_FORWARD         to 334
+ 258: PUSH_EXC_INFO        
+ 260: LOAD_GLOBAL          ValueError
+ 272: CHECK_EXC_MATCH      
+ 274: POP_JUMP_FORWARD_IF_FALSE to 326
+ 276: POP_TOP              
+ 278: LOAD_FAST            p
+ 280: LOAD_METHOD          strip
+ 302: PRECALL              
+ 306: CALL                 
+ 316: STORE_FAST           name
+ 318: LOAD_CONST           ''
+ 320: STORE_FAST           val
+ 322: POP_EXCEPT           
+ 324: JUMP_FORWARD         to 334
+ 326: RERAISE              
+ 328: COPY                 
+ 330: POP_EXCEPT           
+ 332: RERAISE              
+ 334: LOAD_FAST            params
+ 336: LOAD_METHOD          append
+ 358: LOAD_FAST            name
+ 360: LOAD_FAST            val
+ 362: BUILD_TUPLE          
+ 364: PRECALL              
+ 368: CALL                 
+ 378: POP_TOP              
+ 380: JUMP_BACKWARD        to 120
+ 382: LOAD_GLOBAL          NULL + utils
+ 394: LOAD_ATTR            decode_params
+ 404: LOAD_FAST            params
+ 406: PRECALL              
+ 410: CALL                 
+ 420: STORE_FAST           params
+ 422: LOAD_FAST            params
+ 424: RETURN_VALUE         

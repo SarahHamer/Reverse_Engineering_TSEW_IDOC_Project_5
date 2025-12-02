@@ -1,0 +1,53 @@
+# Disassembly for contextlib.AsyncExitStack
+# From module file: contextlib
+
+## co_consts:
+('AsyncExitStack', 'Async context manager for dynamic management of a stack of exit\n    callbacks.\n\n    For example:\n        async with AsyncExitStack() as stack:\n            connections = [await stack.enter_async_context(get_connection())\n                for i in range(5)]\n            # All opened connections will automatically be released at the\n            # end of the async with statement, even if attempts to open a\n            # connection later in the list raise an exception.\n    ', <code object _create_async_exit_wrapper at 0x0000024069465C30, file "contextlib.py", line 614>, <code object _create_async_cb_wrapper at 0x0000024069465DF0, file "contextlib.py", line 618>, <code object enter_async_context at 0x000002406934EF70, file "contextlib.py", line 624>, <code object push_async_exit at 0x000002406949CD20, file "contextlib.py", line 642>, <code object push_async_callback at 0x000002406941A9D0, file "contextlib.py", line 660>, <code object aclose at 0x00000240693EA830, file "contextlib.py", line 673>, <code object _push_async_cm_exit at 0x000002406941AAF0, file "contextlib.py", line 677>, <code object __aenter__ at 0x00000240694957C0, file "contextlib.py", line 683>, <code object __aexit__ at 0x0000024066C24210, file "contextlib.py", line 686>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'staticmethod', '_create_async_exit_wrapper', '_create_async_cb_wrapper', 'enter_async_context', 'push_async_exit', 'push_async_callback', 'aclose', '_push_async_cm_exit', '__aenter__', '__aexit__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'AsyncExitStack'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Async context manager for dynamic management of a stack of exit\n    callbacks.\n\n    For example:\n        async with AsyncExitStack() as stack:\n            connections = [await stack.enter_async_context(get_connection())\n                for i in range(5)]\n            # All opened connections will automatically be released at the\n            # end of the async with statement, even if attempts to open a\n            # connection later in the list raise an exception.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_NAME            staticmethod
+  16: LOAD_CONST           <code object _create_async_exit_wrapper at 0x0000024069465C30, file "contextlib.py", line 614>
+  18: MAKE_FUNCTION        
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_NAME           _create_async_exit_wrapper
+  36: LOAD_NAME            staticmethod
+  38: LOAD_CONST           <code object _create_async_cb_wrapper at 0x0000024069465DF0, file "contextlib.py", line 618>
+  40: MAKE_FUNCTION        
+  42: PRECALL              
+  46: CALL                 
+  56: STORE_NAME           _create_async_cb_wrapper
+  58: LOAD_CONST           <code object enter_async_context at 0x000002406934EF70, file "contextlib.py", line 624>
+  60: MAKE_FUNCTION        
+  62: STORE_NAME           enter_async_context
+  64: LOAD_CONST           <code object push_async_exit at 0x000002406949CD20, file "contextlib.py", line 642>
+  66: MAKE_FUNCTION        
+  68: STORE_NAME           push_async_exit
+  70: LOAD_CONST           <code object push_async_callback at 0x000002406941A9D0, file "contextlib.py", line 660>
+  72: MAKE_FUNCTION        
+  74: STORE_NAME           push_async_callback
+  76: LOAD_CONST           <code object aclose at 0x00000240693EA830, file "contextlib.py", line 673>
+  78: MAKE_FUNCTION        
+  80: STORE_NAME           aclose
+  82: LOAD_CONST           <code object _push_async_cm_exit at 0x000002406941AAF0, file "contextlib.py", line 677>
+  84: MAKE_FUNCTION        
+  86: STORE_NAME           _push_async_cm_exit
+  88: LOAD_CONST           <code object __aenter__ at 0x00000240694957C0, file "contextlib.py", line 683>
+  90: MAKE_FUNCTION        
+  92: STORE_NAME           __aenter__
+  94: LOAD_CONST           <code object __aexit__ at 0x0000024066C24210, file "contextlib.py", line 686>
+  96: MAKE_FUNCTION        
+  98: STORE_NAME           __aexit__
+ 100: LOAD_CONST           None
+ 102: RETURN_VALUE         

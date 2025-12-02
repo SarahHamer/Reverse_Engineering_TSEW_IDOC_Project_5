@@ -1,0 +1,247 @@
+# Disassembly for http.HTTPResponse.begin
+# From module file: http.client
+
+## co_consts:
+(None, True, 0, 'headers:', ('HTTP/1.0', 'HTTP/0.9'), 10, 'HTTP/1.', 11, 'header:', ':', 'transfer-encoding', 'chunked', False, 'content-length', 100, 200, 'HEAD')
+
+## co_names:
+('headers', '_read_status', 'CONTINUE', '_read_headers', 'fp', 'debuglevel', 'print', 'code', 'status', 'strip', 'reason', 'version', 'startswith', 'UnknownProtocol', 'parse_headers', 'msg', 'items', 'get', 'lower', 'chunked', 'chunk_left', '_check_close', 'will_close', 'length', 'int', 'ValueError', 'NO_CONTENT', 'NOT_MODIFIED', '_method')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            headers
+  14: POP_JUMP_FORWARD_IF_NONE to 20
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         
+  20: NOP                  
+  22: LOAD_FAST            self
+  24: LOAD_METHOD          _read_status
+  46: PRECALL              
+  50: CALL                 
+  60: UNPACK_SEQUENCE      
+  64: STORE_FAST           version
+  66: STORE_FAST           status
+  68: STORE_FAST           reason
+  70: LOAD_FAST            status
+  72: LOAD_GLOBAL          CONTINUE
+  84: COMPARE_OP           !=
+  90: POP_JUMP_FORWARD_IF_FALSE to 94
+  92: JUMP_FORWARD         to 192
+  94: LOAD_GLOBAL          NULL + _read_headers
+ 106: LOAD_FAST            self
+ 108: LOAD_ATTR            fp
+ 118: PRECALL              
+ 122: CALL                 
+ 132: STORE_FAST           skipped_headers
+ 134: LOAD_FAST            self
+ 136: LOAD_ATTR            debuglevel
+ 146: LOAD_CONST           0
+ 148: COMPARE_OP           >
+ 154: POP_JUMP_FORWARD_IF_FALSE to 188
+ 156: LOAD_GLOBAL          NULL + print
+ 168: LOAD_CONST           'headers:'
+ 170: LOAD_FAST            skipped_headers
+ 172: PRECALL              
+ 176: CALL                 
+ 186: POP_TOP              
+ 188: DELETE_FAST          skipped_headers
+ 190: JUMP_BACKWARD        to 22
+ 192: LOAD_FAST            status
+ 194: COPY                 
+ 196: LOAD_FAST            self
+ 198: STORE_ATTR           code
+ 208: LOAD_FAST            self
+ 210: STORE_ATTR           status
+ 220: LOAD_FAST            reason
+ 222: LOAD_METHOD          strip
+ 244: PRECALL              
+ 248: CALL                 
+ 258: LOAD_FAST            self
+ 260: STORE_ATTR           reason
+ 270: LOAD_FAST            version
+ 272: LOAD_CONST           ('HTTP/1.0', 'HTTP/0.9')
+ 274: CONTAINS_OP          
+ 276: POP_JUMP_FORWARD_IF_FALSE to 294
+ 278: LOAD_CONST           10
+ 280: LOAD_FAST            self
+ 282: STORE_ATTR           version
+ 292: JUMP_FORWARD         to 382
+ 294: LOAD_FAST            version
+ 296: LOAD_METHOD          startswith
+ 318: LOAD_CONST           'HTTP/1.'
+ 320: PRECALL              
+ 324: CALL                 
+ 334: POP_JUMP_FORWARD_IF_FALSE to 352
+ 336: LOAD_CONST           11
+ 338: LOAD_FAST            self
+ 340: STORE_ATTR           version
+ 350: JUMP_FORWARD         to 382
+ 352: LOAD_GLOBAL          NULL + UnknownProtocol
+ 364: LOAD_FAST            version
+ 366: PRECALL              
+ 370: CALL                 
+ 380: RAISE_VARARGS        
+ 382: LOAD_GLOBAL          NULL + parse_headers
+ 394: LOAD_FAST            self
+ 396: LOAD_ATTR            fp
+ 406: PRECALL              
+ 410: CALL                 
+ 420: COPY                 
+ 422: LOAD_FAST            self
+ 424: STORE_ATTR           headers
+ 434: LOAD_FAST            self
+ 436: STORE_ATTR           msg
+ 446: LOAD_FAST            self
+ 448: LOAD_ATTR            debuglevel
+ 458: LOAD_CONST           0
+ 460: COMPARE_OP           >
+ 466: POP_JUMP_FORWARD_IF_FALSE to 570
+ 468: LOAD_FAST            self
+ 470: LOAD_ATTR            headers
+ 480: LOAD_METHOD          items
+ 502: PRECALL              
+ 506: CALL                 
+ 516: GET_ITER             
+ 518: FOR_ITER             to 570
+ 520: UNPACK_SEQUENCE      
+ 524: STORE_FAST           hdr
+ 526: STORE_FAST           val
+ 528: LOAD_GLOBAL          NULL + print
+ 540: LOAD_CONST           'header:'
+ 542: LOAD_FAST            hdr
+ 544: LOAD_CONST           ':'
+ 546: BINARY_OP            +
+ 550: LOAD_FAST            val
+ 552: PRECALL              
+ 556: CALL                 
+ 566: POP_TOP              
+ 568: JUMP_BACKWARD        to 518
+ 570: LOAD_FAST            self
+ 572: LOAD_ATTR            headers
+ 582: LOAD_METHOD          get
+ 604: LOAD_CONST           'transfer-encoding'
+ 606: PRECALL              
+ 610: CALL                 
+ 620: STORE_FAST           tr_enc
+ 622: LOAD_FAST            tr_enc
+ 624: POP_JUMP_FORWARD_IF_FALSE to 704
+ 626: LOAD_FAST            tr_enc
+ 628: LOAD_METHOD          lower
+ 650: PRECALL              
+ 654: CALL                 
+ 664: LOAD_CONST           'chunked'
+ 666: COMPARE_OP           ==
+ 672: POP_JUMP_FORWARD_IF_FALSE to 704
+ 674: LOAD_CONST           True
+ 676: LOAD_FAST            self
+ 678: STORE_ATTR           chunked
+ 688: LOAD_CONST           None
+ 690: LOAD_FAST            self
+ 692: STORE_ATTR           chunk_left
+ 702: JUMP_FORWARD         to 718
+ 704: LOAD_CONST           False
+ 706: LOAD_FAST            self
+ 708: STORE_ATTR           chunked
+ 718: LOAD_FAST            self
+ 720: LOAD_METHOD          _check_close
+ 742: PRECALL              
+ 746: CALL                 
+ 756: LOAD_FAST            self
+ 758: STORE_ATTR           will_close
+ 768: LOAD_CONST           None
+ 770: LOAD_FAST            self
+ 772: STORE_ATTR           length
+ 782: LOAD_FAST            self
+ 784: LOAD_ATTR            headers
+ 794: LOAD_METHOD          get
+ 816: LOAD_CONST           'content-length'
+ 818: PRECALL              
+ 822: CALL                 
+ 832: STORE_FAST           length
+ 834: LOAD_FAST            length
+ 836: POP_JUMP_FORWARD_IF_FALSE to 978
+ 838: LOAD_FAST            self
+ 840: LOAD_ATTR            chunked
+ 850: POP_JUMP_FORWARD_IF_TRUE to 978
+ 852: NOP                  
+ 854: LOAD_GLOBAL          NULL + int
+ 866: LOAD_FAST            length
+ 868: PRECALL              
+ 872: CALL                 
+ 882: LOAD_FAST            self
+ 884: STORE_ATTR           length
+ 894: LOAD_FAST            self
+ 896: LOAD_ATTR            length
+ 906: LOAD_CONST           0
+ 908: COMPARE_OP           <
+ 914: POP_JUMP_FORWARD_IF_FALSE to 930
+ 916: LOAD_CONST           None
+ 918: LOAD_FAST            self
+ 920: STORE_ATTR           length
+ 930: JUMP_FORWARD         to 992
+ 932: PUSH_EXC_INFO        
+ 934: LOAD_GLOBAL          ValueError
+ 946: CHECK_EXC_MATCH      
+ 948: POP_JUMP_FORWARD_IF_FALSE to 970
+ 950: POP_TOP              
+ 952: LOAD_CONST           None
+ 954: LOAD_FAST            self
+ 956: STORE_ATTR           length
+ 966: POP_EXCEPT           
+ 968: JUMP_FORWARD         to 992
+ 970: RERAISE              
+ 972: COPY                 
+ 974: POP_EXCEPT           
+ 976: RERAISE              
+ 978: LOAD_CONST           None
+ 980: LOAD_FAST            self
+ 982: STORE_ATTR           length
+ 992: LOAD_FAST            status
+ 994: LOAD_GLOBAL          NO_CONTENT
+1006: COMPARE_OP           ==
+1012: POP_JUMP_FORWARD_IF_TRUE to 1088
+1014: LOAD_FAST            status
+1016: LOAD_GLOBAL          NOT_MODIFIED
+1028: COMPARE_OP           ==
+1034: POP_JUMP_FORWARD_IF_TRUE to 1088
+1036: LOAD_CONST           100
+1038: LOAD_FAST            status
+1040: SWAP                 
+1042: COPY                 
+1044: COMPARE_OP           <=
+1050: POP_JUMP_FORWARD_IF_FALSE to 1064
+1052: LOAD_CONST           200
+1054: COMPARE_OP           <
+1060: POP_JUMP_FORWARD_IF_TRUE to 1088
+1062: JUMP_FORWARD         to 1066
+1064: POP_TOP              
+1066: LOAD_FAST            self
+1068: LOAD_ATTR            _method
+1078: LOAD_CONST           'HEAD'
+1080: COMPARE_OP           ==
+1086: POP_JUMP_FORWARD_IF_FALSE to 1102
+1088: LOAD_CONST           0
+1090: LOAD_FAST            self
+1092: STORE_ATTR           length
+1102: LOAD_FAST            self
+1104: LOAD_ATTR            will_close
+1114: POP_JUMP_FORWARD_IF_TRUE to 1162
+1116: LOAD_FAST            self
+1118: LOAD_ATTR            chunked
+1128: POP_JUMP_FORWARD_IF_TRUE to 1166
+1130: LOAD_FAST            self
+1132: LOAD_ATTR            length
+1142: POP_JUMP_FORWARD_IF_NOT_NONE to 1170
+1144: LOAD_CONST           True
+1146: LOAD_FAST            self
+1148: STORE_ATTR           will_close
+1158: LOAD_CONST           None
+1160: RETURN_VALUE         
+1162: LOAD_CONST           None
+1164: RETURN_VALUE         
+1166: LOAD_CONST           None
+1168: RETURN_VALUE         
+1170: LOAD_CONST           None
+1172: RETURN_VALUE         

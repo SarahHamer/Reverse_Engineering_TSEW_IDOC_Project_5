@@ -1,0 +1,19 @@
+# Disassembly for importlib.EntryPoints.groups
+# From module file: importlib.metadata
+
+## co_consts:
+('\n        Return the set of all groups of all entry points.\n\n        For coverage while SelectableGroups is present.\n        >>> EntryPoints().groups\n        set()\n        ', <code object <setcomp> at 0x0000024069465ED0, file "importlib\metadata\__init__.py", line 398>)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           <code object <setcomp> at 0x0000024069465ED0, file "importlib\metadata\__init__.py", line 398>
+   4: MAKE_FUNCTION        
+   6: LOAD_FAST            self
+   8: GET_ITER             
+  10: PRECALL              
+  14: CALL                 
+  24: RETURN_VALUE         

@@ -1,0 +1,84 @@
+# Disassembly for http.DefaultCookiePolicy.set_ok_port
+# From module file: http.cookiejar
+
+## co_consts:
+(None, '80', ',', '   bad port %s (not numeric)', False, '   request port (%s) not found in %s', True)
+
+## co_names:
+('port_specified', 'request_port', 'str', 'port', 'split', 'int', 'ValueError', '_debug')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            cookie
+   4: LOAD_ATTR            port_specified
+  14: POP_JUMP_FORWARD_IF_FALSE to 310
+  16: LOAD_GLOBAL          NULL + request_port
+  28: LOAD_FAST            request
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_FAST           req_port
+  46: LOAD_FAST            req_port
+  48: POP_JUMP_FORWARD_IF_NOT_NONE to 56
+  50: LOAD_CONST           '80'
+  52: STORE_FAST           req_port
+  54: JUMP_FORWARD         to 86
+  56: LOAD_GLOBAL          NULL + str
+  68: LOAD_FAST            req_port
+  70: PRECALL              
+  74: CALL                 
+  84: STORE_FAST           req_port
+  86: LOAD_FAST            cookie
+  88: LOAD_ATTR            port
+  98: LOAD_METHOD          split
+ 120: LOAD_CONST           ','
+ 122: PRECALL              
+ 126: CALL                 
+ 136: GET_ITER             
+ 138: FOR_ITER             to 262
+ 140: STORE_FAST           p
+ 142: NOP                  
+ 144: LOAD_GLOBAL          NULL + int
+ 156: LOAD_FAST            p
+ 158: PRECALL              
+ 162: CALL                 
+ 172: POP_TOP              
+ 174: JUMP_FORWARD         to 244
+ 176: PUSH_EXC_INFO        
+ 178: LOAD_GLOBAL          ValueError
+ 190: CHECK_EXC_MATCH      
+ 192: POP_JUMP_FORWARD_IF_FALSE to 236
+ 194: POP_TOP              
+ 196: LOAD_GLOBAL          NULL + _debug
+ 208: LOAD_CONST           '   bad port %s (not numeric)'
+ 210: LOAD_FAST            p
+ 212: PRECALL              
+ 216: CALL                 
+ 226: POP_TOP              
+ 228: POP_EXCEPT           
+ 230: POP_TOP              
+ 232: LOAD_CONST           False
+ 234: RETURN_VALUE         
+ 236: RERAISE              
+ 238: COPY                 
+ 240: POP_EXCEPT           
+ 242: RERAISE              
+ 244: LOAD_FAST            p
+ 246: LOAD_FAST            req_port
+ 248: COMPARE_OP           ==
+ 254: POP_JUMP_FORWARD_IF_FALSE to 260
+ 256: POP_TOP              
+ 258: JUMP_FORWARD         to 310
+ 260: JUMP_BACKWARD        to 138
+ 262: LOAD_GLOBAL          NULL + _debug
+ 274: LOAD_CONST           '   request port (%s) not found in %s'
+ 276: LOAD_FAST            req_port
+ 278: LOAD_FAST            cookie
+ 280: LOAD_ATTR            port
+ 290: PRECALL              
+ 294: CALL                 
+ 304: POP_TOP              
+ 306: LOAD_CONST           False
+ 308: RETURN_VALUE         
+ 310: LOAD_CONST           True
+ 312: RETURN_VALUE         

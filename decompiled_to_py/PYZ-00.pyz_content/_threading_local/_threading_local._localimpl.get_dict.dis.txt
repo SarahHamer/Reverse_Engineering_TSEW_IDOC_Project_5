@@ -1,0 +1,26 @@
+# Disassembly for _threading_local._localimpl.get_dict
+# From module file: _threading_local
+
+## co_consts:
+('Return the dict for the current thread. Raises KeyError if none\n        defined.', 1)
+
+## co_names:
+('current_thread', 'dicts', 'id')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + current_thread
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           thread
+  30: LOAD_FAST            self
+  32: LOAD_ATTR            dicts
+  42: LOAD_GLOBAL          NULL + id
+  54: LOAD_FAST            thread
+  56: PRECALL              
+  60: CALL                 
+  70: BINARY_SUBSCR        
+  80: LOAD_CONST           1
+  82: BINARY_SUBSCR        
+  92: RETURN_VALUE         

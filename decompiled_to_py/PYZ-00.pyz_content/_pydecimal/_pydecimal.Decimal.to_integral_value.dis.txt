@@ -1,0 +1,59 @@
+# Disassembly for _pydecimal.Decimal.to_integral_value
+# From module file: _pydecimal
+
+## co_consts:
+('Rounds to the nearest integer, without raising inexact, rounded.', None, ('context',), 0)
+
+## co_names:
+('getcontext', 'rounding', '_is_special', '_check_nans', 'Decimal', '_exp', '_rescale')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            context
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 34
+   6: LOAD_GLOBAL          NULL + getcontext
+  18: PRECALL              
+  22: CALL                 
+  32: STORE_FAST           context
+  34: LOAD_FAST            rounding
+  36: POP_JUMP_FORWARD_IF_NOT_NONE to 52
+  38: LOAD_FAST            context
+  40: LOAD_ATTR            rounding
+  50: STORE_FAST           rounding
+  52: LOAD_FAST            self
+  54: LOAD_ATTR            _is_special
+  64: POP_JUMP_FORWARD_IF_FALSE to 148
+  66: LOAD_FAST            self
+  68: LOAD_METHOD          _check_nans
+  90: LOAD_FAST            context
+  92: KW_NAMES             
+  94: PRECALL              
+  98: CALL                 
+ 108: STORE_FAST           ans
+ 110: LOAD_FAST            ans
+ 112: POP_JUMP_FORWARD_IF_FALSE to 118
+ 114: LOAD_FAST            ans
+ 116: RETURN_VALUE         
+ 118: LOAD_GLOBAL          NULL + Decimal
+ 130: LOAD_FAST            self
+ 132: PRECALL              
+ 136: CALL                 
+ 146: RETURN_VALUE         
+ 148: LOAD_FAST            self
+ 150: LOAD_ATTR            _exp
+ 160: LOAD_CONST           0
+ 162: COMPARE_OP           >=
+ 168: POP_JUMP_FORWARD_IF_FALSE to 200
+ 170: LOAD_GLOBAL          NULL + Decimal
+ 182: LOAD_FAST            self
+ 184: PRECALL              
+ 188: CALL                 
+ 198: RETURN_VALUE         
+ 200: LOAD_FAST            self
+ 202: LOAD_METHOD          _rescale
+ 224: LOAD_CONST           0
+ 226: LOAD_FAST            rounding
+ 228: PRECALL              
+ 232: CALL                 
+ 242: RETURN_VALUE         

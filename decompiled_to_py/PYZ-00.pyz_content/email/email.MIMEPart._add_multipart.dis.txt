@@ -1,0 +1,75 @@
+# Disassembly for email.MIMEPart._add_multipart
+# From module file: email.message
+
+## co_consts:
+(None, 'multipart', 'make_', ('policy',), 'content-disposition', 'Content-Disposition')
+
+## co_names:
+('get_content_maintype', 'get_content_subtype', 'getattr', 'type', 'policy', 'set_content', 'attach')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          get_content_maintype
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_CONST           'multipart'
+  42: COMPARE_OP           !=
+  48: POP_JUMP_FORWARD_IF_TRUE to 98
+  50: LOAD_FAST            self
+  52: LOAD_METHOD          get_content_subtype
+  74: PRECALL              
+  78: CALL                 
+  88: LOAD_FAST            _subtype
+  90: COMPARE_OP           !=
+  96: POP_JUMP_FORWARD_IF_FALSE to 152
+  98: PUSH_NULL            
+ 100: LOAD_GLOBAL          NULL + getattr
+ 112: LOAD_FAST            self
+ 114: LOAD_CONST           'make_'
+ 116: LOAD_FAST            _subtype
+ 118: BINARY_OP            +
+ 122: PRECALL              
+ 126: CALL                 
+ 136: PRECALL              
+ 140: CALL                 
+ 150: POP_TOP              
+ 152: PUSH_NULL            
+ 154: LOAD_GLOBAL          NULL + type
+ 166: LOAD_FAST            self
+ 168: PRECALL              
+ 172: CALL                 
+ 182: LOAD_FAST            self
+ 184: LOAD_ATTR            policy
+ 194: KW_NAMES             
+ 196: PRECALL              
+ 200: CALL                 
+ 210: STORE_FAST           part
+ 212: PUSH_NULL            
+ 214: LOAD_FAST            part
+ 216: LOAD_ATTR            set_content
+ 226: LOAD_FAST            args
+ 228: BUILD_MAP            
+ 230: LOAD_FAST            kw
+ 232: DICT_MERGE           
+ 234: CALL_FUNCTION_EX     
+ 236: POP_TOP              
+ 238: LOAD_FAST            _disp
+ 240: POP_JUMP_FORWARD_IF_FALSE to 260
+ 242: LOAD_CONST           'content-disposition'
+ 244: LOAD_FAST            part
+ 246: CONTAINS_OP          
+ 248: POP_JUMP_FORWARD_IF_FALSE to 260
+ 250: LOAD_FAST            _disp
+ 252: LOAD_FAST            part
+ 254: LOAD_CONST           'Content-Disposition'
+ 256: STORE_SUBSCR         
+ 260: LOAD_FAST            self
+ 262: LOAD_METHOD          attach
+ 284: LOAD_FAST            part
+ 286: PRECALL              
+ 290: CALL                 
+ 300: POP_TOP              
+ 302: LOAD_CONST           None
+ 304: RETURN_VALUE         

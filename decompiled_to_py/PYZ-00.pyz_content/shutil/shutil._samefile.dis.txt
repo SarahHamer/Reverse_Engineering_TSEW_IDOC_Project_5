@@ -1,0 +1,106 @@
+# Disassembly for shutil._samefile
+# From module file: shutil
+
+## co_consts:
+(None, 'samestat', False, 'samefile')
+
+## co_names:
+('isinstance', 'os', 'DirEntry', 'hasattr', 'path', 'samestat', 'stat', 'OSError', 'samefile', 'normcase', 'abspath')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            src
+  16: LOAD_GLOBAL          os
+  28: LOAD_ATTR            DirEntry
+  38: PRECALL              
+  42: CALL                 
+  52: POP_JUMP_FORWARD_IF_FALSE to 278
+  54: LOAD_GLOBAL          NULL + hasattr
+  66: LOAD_GLOBAL          os
+  78: LOAD_ATTR            path
+  88: LOAD_CONST           'samestat'
+  90: PRECALL              
+  94: CALL                 
+ 104: POP_JUMP_FORWARD_IF_FALSE to 278
+ 106: NOP                  
+ 108: LOAD_GLOBAL          os
+ 120: LOAD_ATTR            path
+ 130: LOAD_METHOD          samestat
+ 152: LOAD_FAST            src
+ 154: LOAD_METHOD          stat
+ 176: PRECALL              
+ 180: CALL                 
+ 190: LOAD_GLOBAL          NULL + os
+ 202: LOAD_ATTR            stat
+ 212: LOAD_FAST            dst
+ 214: PRECALL              
+ 218: CALL                 
+ 228: PRECALL              
+ 232: CALL                 
+ 242: RETURN_VALUE         
+ 244: PUSH_EXC_INFO        
+ 246: LOAD_GLOBAL          OSError
+ 258: CHECK_EXC_MATCH      
+ 260: POP_JUMP_FORWARD_IF_FALSE to 270
+ 262: POP_TOP              
+ 264: POP_EXCEPT           
+ 266: LOAD_CONST           False
+ 268: RETURN_VALUE         
+ 270: RERAISE              
+ 272: COPY                 
+ 274: POP_EXCEPT           
+ 276: RERAISE              
+ 278: LOAD_GLOBAL          NULL + hasattr
+ 290: LOAD_GLOBAL          os
+ 302: LOAD_ATTR            path
+ 312: LOAD_CONST           'samefile'
+ 314: PRECALL              
+ 318: CALL                 
+ 328: POP_JUMP_FORWARD_IF_FALSE to 430
+ 330: NOP                  
+ 332: LOAD_GLOBAL          os
+ 344: LOAD_ATTR            path
+ 354: LOAD_METHOD          samefile
+ 376: LOAD_FAST            src
+ 378: LOAD_FAST            dst
+ 380: PRECALL              
+ 384: CALL                 
+ 394: RETURN_VALUE         
+ 396: PUSH_EXC_INFO        
+ 398: LOAD_GLOBAL          OSError
+ 410: CHECK_EXC_MATCH      
+ 412: POP_JUMP_FORWARD_IF_FALSE to 422
+ 414: POP_TOP              
+ 416: POP_EXCEPT           
+ 418: LOAD_CONST           False
+ 420: RETURN_VALUE         
+ 422: RERAISE              
+ 424: COPY                 
+ 426: POP_EXCEPT           
+ 428: RERAISE              
+ 430: LOAD_GLOBAL          os
+ 442: LOAD_ATTR            path
+ 452: LOAD_METHOD          normcase
+ 474: LOAD_GLOBAL          os
+ 486: LOAD_ATTR            path
+ 496: LOAD_METHOD          abspath
+ 518: LOAD_FAST            src
+ 520: PRECALL              
+ 524: CALL                 
+ 534: PRECALL              
+ 538: CALL                 
+ 548: LOAD_GLOBAL          os
+ 560: LOAD_ATTR            path
+ 570: LOAD_METHOD          normcase
+ 592: LOAD_GLOBAL          os
+ 604: LOAD_ATTR            path
+ 614: LOAD_METHOD          abspath
+ 636: LOAD_FAST            dst
+ 638: PRECALL              
+ 642: CALL                 
+ 652: PRECALL              
+ 656: CALL                 
+ 666: COMPARE_OP           ==
+ 672: RETURN_VALUE         

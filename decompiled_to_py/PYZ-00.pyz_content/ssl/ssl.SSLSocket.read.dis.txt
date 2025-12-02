@@ -1,0 +1,81 @@
+# Disassembly for ssl.SSLSocket.read
+# From module file: ssl
+
+## co_consts:
+('Read up to LEN bytes and return them.\n        Return zero-length string on EOF.', None, 'Read on closed or unwrapped SSL socket.', 0, b'')
+
+## co_names:
+('_checkClosed', '_sslobj', 'ValueError', 'read', 'SSLError', 'args', 'SSL_ERROR_EOF', 'suppress_ragged_eofs')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _checkClosed
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            _sslobj
+  54: POP_JUMP_FORWARD_IF_NOT_NONE to 86
+  56: LOAD_GLOBAL          NULL + ValueError
+  68: LOAD_CONST           'Read on closed or unwrapped SSL socket.'
+  70: PRECALL              
+  74: CALL                 
+  84: RAISE_VARARGS        
+  86: NOP                  
+  88: LOAD_FAST            buffer
+  90: POP_JUMP_FORWARD_IF_NONE to 146
+  92: LOAD_FAST            self
+  94: LOAD_ATTR            _sslobj
+ 104: LOAD_METHOD          read
+ 126: LOAD_FAST            len
+ 128: LOAD_FAST            buffer
+ 130: PRECALL              
+ 134: CALL                 
+ 144: RETURN_VALUE         
+ 146: LOAD_FAST            self
+ 148: LOAD_ATTR            _sslobj
+ 158: LOAD_METHOD          read
+ 180: LOAD_FAST            len
+ 182: PRECALL              
+ 186: CALL                 
+ 196: RETURN_VALUE         
+ 198: PUSH_EXC_INFO        
+ 200: LOAD_GLOBAL          SSLError
+ 212: CHECK_EXC_MATCH      
+ 214: POP_JUMP_FORWARD_IF_FALSE to 314
+ 216: STORE_FAST           x
+ 218: LOAD_FAST            x
+ 220: LOAD_ATTR            args
+ 230: LOAD_CONST           0
+ 232: BINARY_SUBSCR        
+ 242: LOAD_GLOBAL          SSL_ERROR_EOF
+ 254: COMPARE_OP           ==
+ 260: POP_JUMP_FORWARD_IF_FALSE to 304
+ 262: LOAD_FAST            self
+ 264: LOAD_ATTR            suppress_ragged_eofs
+ 274: POP_JUMP_FORWARD_IF_FALSE to 304
+ 276: LOAD_FAST            buffer
+ 278: POP_JUMP_FORWARD_IF_NONE to 292
+ 280: POP_EXCEPT           
+ 282: LOAD_CONST           None
+ 284: STORE_FAST           x
+ 286: DELETE_FAST          x
+ 288: LOAD_CONST           0
+ 290: RETURN_VALUE         
+ 292: POP_EXCEPT           
+ 294: LOAD_CONST           None
+ 296: STORE_FAST           x
+ 298: DELETE_FAST          x
+ 300: LOAD_CONST           b''
+ 302: RETURN_VALUE         
+ 304: RAISE_VARARGS        
+ 306: LOAD_CONST           None
+ 308: STORE_FAST           x
+ 310: DELETE_FAST          x
+ 312: RERAISE              
+ 314: RERAISE              
+ 316: COPY                 
+ 318: POP_EXCEPT           
+ 320: RERAISE              

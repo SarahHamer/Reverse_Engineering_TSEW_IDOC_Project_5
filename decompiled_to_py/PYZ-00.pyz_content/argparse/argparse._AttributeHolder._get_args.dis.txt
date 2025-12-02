@@ -1,0 +1,14 @@
+# Disassembly for argparse._AttributeHolder._get_args
+# From module file: argparse
+
+## co_consts:
+(None,)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: RETURN_VALUE         

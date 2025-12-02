@@ -1,0 +1,29 @@
+# Disassembly for getopt.GetoptError
+# From module file: getopt
+
+## co_consts:
+('GetoptError', '', <code object __init__ at 0x0000024069419D70, file "getopt.py", line 46>, <code object __str__ at 0x0000024069427C50, file "getopt.py", line 51>, None, ('',))
+
+## co_names:
+('__name__', '__module__', '__qualname__', 'opt', 'msg', '__init__', '__str__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'GetoptError'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           ''
+  12: STORE_NAME           opt
+  14: LOAD_CONST           ''
+  16: STORE_NAME           msg
+  18: LOAD_CONST           ('',)
+  20: LOAD_CONST           <code object __init__ at 0x0000024069419D70, file "getopt.py", line 46>
+  22: MAKE_FUNCTION        defaults
+  24: STORE_NAME           __init__
+  26: LOAD_CONST           <code object __str__ at 0x0000024069427C50, file "getopt.py", line 51>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           __str__
+  32: LOAD_CONST           None
+  34: RETURN_VALUE         

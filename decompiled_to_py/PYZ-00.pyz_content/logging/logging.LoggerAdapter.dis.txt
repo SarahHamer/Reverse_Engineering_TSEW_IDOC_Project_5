@@ -1,0 +1,98 @@
+# Disassembly for logging.LoggerAdapter
+# From module file: logging
+
+## co_consts:
+('LoggerAdapter', '\n    An adapter for loggers which makes it easier to specify contextual\n    information in logging output.\n    ', None, <code object __init__ at 0x0000024069466E90, file "logging\__init__.py", line 1809>, <code object process at 0x0000024069466F70, file "logging\__init__.py", line 1823>, <code object debug at 0x000002406945E4C0, file "logging\__init__.py", line 1839>, <code object info at 0x000002406945EC40, file "logging\__init__.py", line 1845>, <code object warning at 0x000002406945DB60, file "logging\__init__.py", line 1851>, <code object warn at 0x00000240694198F0, file "logging\__init__.py", line 1857>, <code object error at 0x000002406945E010, file "logging\__init__.py", line 1862>, True, ('exc_info',), <code object exception at 0x000002406945E5B0, file "logging\__init__.py", line 1868>, <code object critical at 0x000002406945F960, file "logging\__init__.py", line 1874>, <code object log at 0x000002406922D140, file "logging\__init__.py", line 1880>, <code object isEnabledFor at 0x000002406945E6A0, file "logging\__init__.py", line 1889>, <code object setLevel at 0x00000240693EAA30, file "logging\__init__.py", line 1895>, <code object getEffectiveLevel at 0x0000024069CDC030, file "logging\__init__.py", line 1901>, <code object hasHandlers at 0x0000024069CDC120, file "logging\__init__.py", line 1907>, False, <code object _log at 0x00000240693EB630, file "logging\__init__.py", line 1913>, <code object manager at 0x0000024069467050, file "logging\__init__.py", line 1926>, <code object manager at 0x0000024069465290, file "logging\__init__.py", line 1930>, <code object name at 0x0000024069467670, file "logging\__init__.py", line 1934>, <code object __repr__ at 0x00000240693AA330, file "logging\__init__.py", line 1938>, (None,), (None, None, False))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', 'process', 'debug', 'info', 'warning', 'warn', 'error', 'exception', 'critical', 'log', 'isEnabledFor', 'setLevel', 'getEffectiveLevel', 'hasHandlers', '_log', 'property', 'manager', 'setter', 'name', '__repr__', 'classmethod', 'GenericAlias', '__class_getitem__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'LoggerAdapter'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           '\n    An adapter for loggers which makes it easier to specify contextual\n    information in logging output.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           (None,)
+  16: LOAD_CONST           <code object __init__ at 0x0000024069466E90, file "logging\__init__.py", line 1809>
+  18: MAKE_FUNCTION        defaults
+  20: STORE_NAME           __init__
+  22: LOAD_CONST           <code object process at 0x0000024069466F70, file "logging\__init__.py", line 1823>
+  24: MAKE_FUNCTION        
+  26: STORE_NAME           process
+  28: LOAD_CONST           <code object debug at 0x000002406945E4C0, file "logging\__init__.py", line 1839>
+  30: MAKE_FUNCTION        
+  32: STORE_NAME           debug
+  34: LOAD_CONST           <code object info at 0x000002406945EC40, file "logging\__init__.py", line 1845>
+  36: MAKE_FUNCTION        
+  38: STORE_NAME           info
+  40: LOAD_CONST           <code object warning at 0x000002406945DB60, file "logging\__init__.py", line 1851>
+  42: MAKE_FUNCTION        
+  44: STORE_NAME           warning
+  46: LOAD_CONST           <code object warn at 0x00000240694198F0, file "logging\__init__.py", line 1857>
+  48: MAKE_FUNCTION        
+  50: STORE_NAME           warn
+  52: LOAD_CONST           <code object error at 0x000002406945E010, file "logging\__init__.py", line 1862>
+  54: MAKE_FUNCTION        
+  56: STORE_NAME           error
+  58: LOAD_CONST           True
+  60: LOAD_CONST           ('exc_info',)
+  62: BUILD_CONST_KEY_MAP  
+  64: LOAD_CONST           <code object exception at 0x000002406945E5B0, file "logging\__init__.py", line 1868>
+  66: MAKE_FUNCTION        kwdefaults
+  68: STORE_NAME           exception
+  70: LOAD_CONST           <code object critical at 0x000002406945F960, file "logging\__init__.py", line 1874>
+  72: MAKE_FUNCTION        
+  74: STORE_NAME           critical
+  76: LOAD_CONST           <code object log at 0x000002406922D140, file "logging\__init__.py", line 1880>
+  78: MAKE_FUNCTION        
+  80: STORE_NAME           log
+  82: LOAD_CONST           <code object isEnabledFor at 0x000002406945E6A0, file "logging\__init__.py", line 1889>
+  84: MAKE_FUNCTION        
+  86: STORE_NAME           isEnabledFor
+  88: LOAD_CONST           <code object setLevel at 0x00000240693EAA30, file "logging\__init__.py", line 1895>
+  90: MAKE_FUNCTION        
+  92: STORE_NAME           setLevel
+  94: LOAD_CONST           <code object getEffectiveLevel at 0x0000024069CDC030, file "logging\__init__.py", line 1901>
+  96: MAKE_FUNCTION        
+  98: STORE_NAME           getEffectiveLevel
+ 100: LOAD_CONST           <code object hasHandlers at 0x0000024069CDC120, file "logging\__init__.py", line 1907>
+ 102: MAKE_FUNCTION        
+ 104: STORE_NAME           hasHandlers
+ 106: LOAD_CONST           (None, None, False)
+ 108: LOAD_CONST           <code object _log at 0x00000240693EB630, file "logging\__init__.py", line 1913>
+ 110: MAKE_FUNCTION        defaults
+ 112: STORE_NAME           _log
+ 114: LOAD_NAME            property
+ 116: LOAD_CONST           <code object manager at 0x0000024069467050, file "logging\__init__.py", line 1926>
+ 118: MAKE_FUNCTION        
+ 120: PRECALL              
+ 124: CALL                 
+ 134: STORE_NAME           manager
+ 136: LOAD_NAME            manager
+ 138: LOAD_ATTR            setter
+ 148: LOAD_CONST           <code object manager at 0x0000024069465290, file "logging\__init__.py", line 1930>
+ 150: MAKE_FUNCTION        
+ 152: PRECALL              
+ 156: CALL                 
+ 166: STORE_NAME           manager
+ 168: LOAD_NAME            property
+ 170: LOAD_CONST           <code object name at 0x0000024069467670, file "logging\__init__.py", line 1934>
+ 172: MAKE_FUNCTION        
+ 174: PRECALL              
+ 178: CALL                 
+ 188: STORE_NAME           name
+ 190: LOAD_CONST           <code object __repr__ at 0x00000240693AA330, file "logging\__init__.py", line 1938>
+ 192: MAKE_FUNCTION        
+ 194: STORE_NAME           __repr__
+ 196: PUSH_NULL            
+ 198: LOAD_NAME            classmethod
+ 200: LOAD_NAME            GenericAlias
+ 202: PRECALL              
+ 206: CALL                 
+ 216: STORE_NAME           __class_getitem__
+ 218: LOAD_CONST           None
+ 220: RETURN_VALUE         

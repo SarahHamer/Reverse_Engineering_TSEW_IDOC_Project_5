@@ -1,0 +1,20 @@
+# Disassembly for email.AddrlistClass.getcomment
+# From module file: email._parseaddr
+
+## co_consts:
+("Get a parenthesis-delimited fragment from self's field.", '(', ')\r', True)
+
+## co_names:
+('getdelimited',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          getdelimited
+  26: LOAD_CONST           '('
+  28: LOAD_CONST           ')\r'
+  30: LOAD_CONST           True
+  32: PRECALL              
+  36: CALL                 
+  46: RETURN_VALUE         

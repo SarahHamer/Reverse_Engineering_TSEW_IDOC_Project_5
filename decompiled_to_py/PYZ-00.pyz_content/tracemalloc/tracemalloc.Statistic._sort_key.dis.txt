@@ -1,0 +1,20 @@
+# Disassembly for tracemalloc.Statistic._sort_key
+# From module file: tracemalloc
+
+## co_consts:
+(None,)
+
+## co_names:
+('size', 'count', 'traceback')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            size
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            count
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            traceback
+  38: BUILD_TUPLE          
+  40: RETURN_VALUE         

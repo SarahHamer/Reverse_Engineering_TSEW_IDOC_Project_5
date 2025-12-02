@@ -1,0 +1,28 @@
+# Disassembly for subprocess.Popen._readerthread
+# From module file: subprocess
+
+## co_consts:
+(None,)
+
+## co_names:
+('append', 'read', 'close')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            buffer
+   4: LOAD_METHOD          append
+  26: LOAD_FAST            fh
+  28: LOAD_METHOD          read
+  50: PRECALL              
+  54: CALL                 
+  64: PRECALL              
+  68: CALL                 
+  78: POP_TOP              
+  80: LOAD_FAST            fh
+  82: LOAD_METHOD          close
+ 104: PRECALL              
+ 108: CALL                 
+ 118: POP_TOP              
+ 120: LOAD_CONST           None
+ 122: RETURN_VALUE         

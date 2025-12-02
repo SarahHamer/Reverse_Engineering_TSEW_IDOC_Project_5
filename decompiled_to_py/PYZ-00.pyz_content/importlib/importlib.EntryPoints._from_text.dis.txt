@@ -1,0 +1,25 @@
+# Disassembly for importlib.EntryPoints._from_text
+# From module file: importlib.metadata
+
+## co_consts:
+(None, <code object <genexpr> at 0x00000240693D2D50, file "importlib\metadata\__init__.py", line 406>, '')
+
+## co_names:
+('Sectioned', 'section_pairs')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           <code object <genexpr> at 0x00000240693D2D50, file "importlib\metadata\__init__.py", line 406>
+   4: MAKE_FUNCTION        
+   6: LOAD_GLOBAL          Sectioned
+  18: LOAD_METHOD          section_pairs
+  40: LOAD_FAST            text
+  42: JUMP_IF_TRUE_OR_POP  to 46
+  44: LOAD_CONST           ''
+  46: PRECALL              
+  50: CALL                 
+  60: GET_ITER             
+  62: PRECALL              
+  66: CALL                 
+  76: RETURN_VALUE         

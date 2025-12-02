@@ -1,0 +1,31 @@
+# Disassembly for dataclasses._is_classvar
+# From module file: dataclasses
+
+## co_consts:
+(None,)
+
+## co_names:
+('ClassVar', 'type', '_GenericAlias', '__origin__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            a_type
+   4: LOAD_FAST            typing
+   6: LOAD_ATTR            ClassVar
+  16: IS_OP                
+  18: JUMP_IF_TRUE_OR_POP  to 90
+  20: LOAD_GLOBAL          NULL + type
+  32: LOAD_FAST            a_type
+  34: PRECALL              
+  38: CALL                 
+  48: LOAD_FAST            typing
+  50: LOAD_ATTR            _GenericAlias
+  60: IS_OP                
+  62: JUMP_IF_FALSE_OR_POP to 90
+  64: LOAD_FAST            a_type
+  66: LOAD_ATTR            __origin__
+  76: LOAD_FAST            typing
+  78: LOAD_ATTR            ClassVar
+  88: IS_OP                
+  90: RETURN_VALUE         

@@ -1,0 +1,26 @@
+# Disassembly for _pydecimal.Context.logb
+# From module file: _pydecimal
+
+## co_consts:
+(" Returns the exponent of the magnitude of the operand's MSD.\n\n        The result is the integer which is the exponent of the magnitude\n        of the most significant digit of the operand (as though the\n        operand were truncated to a single digit while maintaining the\n        value of that digit and without limiting the resulting exponent).\n\n        >>> ExtendedContext.logb(Decimal('250'))\n        Decimal('2')\n        >>> ExtendedContext.logb(Decimal('2.50'))\n        Decimal('0')\n        >>> ExtendedContext.logb(Decimal('0.03'))\n        Decimal('-2')\n        >>> ExtendedContext.logb(Decimal('0'))\n        Decimal('-Infinity')\n        >>> ExtendedContext.logb(1)\n        Decimal('0')\n        >>> ExtendedContext.logb(10)\n        Decimal('1')\n        >>> ExtendedContext.logb(100)\n        Decimal('2')\n        ", True, ('raiseit',), ('context',))
+
+## co_names:
+('_convert_other', 'logb')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _convert_other
+  14: LOAD_FAST            a
+  16: LOAD_CONST           True
+  18: KW_NAMES             
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           a
+  36: LOAD_FAST            a
+  38: LOAD_METHOD          logb
+  60: LOAD_FAST            self
+  62: KW_NAMES             
+  64: PRECALL              
+  68: CALL                 
+  78: RETURN_VALUE         

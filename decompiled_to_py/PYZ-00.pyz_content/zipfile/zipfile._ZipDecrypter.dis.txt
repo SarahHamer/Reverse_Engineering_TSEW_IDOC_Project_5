@@ -1,0 +1,72 @@
+# Disassembly for zipfile._ZipDecrypter
+# From module file: zipfile
+
+## co_consts:
+(None, 305419896, 591751049, 878082192, 256, <code object crc32 at 0x000002406945DD40, file "zipfile.py", line 594>, <code object update_keys at 0x00000240693D2760, file "zipfile.py", line 598>, <code object decrypter at 0x000002406949CE90, file "zipfile.py", line 608>)
+
+## co_names:
+('_crctable', 'list', 'map', '_gen_crc', 'range')
+
+## bytecode:
+
+   0: MAKE_CELL            crc32
+   2: MAKE_CELL            crctable
+   4: MAKE_CELL            key0
+   6: MAKE_CELL            key1
+   8: MAKE_CELL            key2
+  10: MAKE_CELL            update_keys
+  12: RESUME               
+  14: LOAD_CONST           305419896
+  16: STORE_DEREF          key0
+  18: LOAD_CONST           591751049
+  20: STORE_DEREF          key1
+  22: LOAD_CONST           878082192
+  24: STORE_DEREF          key2
+  26: LOAD_GLOBAL          _crctable
+  38: POP_JUMP_FORWARD_IF_NOT_NONE to 134
+  40: LOAD_GLOBAL          NULL + list
+  52: LOAD_GLOBAL          NULL + map
+  64: LOAD_GLOBAL          _gen_crc
+  76: LOAD_GLOBAL          NULL + range
+  88: LOAD_CONST           256
+  90: PRECALL              
+  94: CALL                 
+ 104: PRECALL              
+ 108: CALL                 
+ 118: PRECALL              
+ 122: CALL                 
+ 132: STORE_GLOBAL         _crctable
+ 134: LOAD_GLOBAL          _crctable
+ 146: STORE_DEREF          crctable
+ 148: LOAD_CLOSURE         crctable
+ 150: BUILD_TUPLE          
+ 152: LOAD_CONST           <code object crc32 at 0x000002406945DD40, file "zipfile.py", line 594>
+ 154: MAKE_FUNCTION        closure
+ 156: STORE_DEREF          crc32
+ 158: LOAD_CLOSURE         crc32
+ 160: LOAD_CLOSURE         key0
+ 162: LOAD_CLOSURE         key1
+ 164: LOAD_CLOSURE         key2
+ 166: BUILD_TUPLE          
+ 168: LOAD_CONST           <code object update_keys at 0x00000240693D2760, file "zipfile.py", line 598>
+ 170: MAKE_FUNCTION        closure
+ 172: STORE_DEREF          update_keys
+ 174: LOAD_FAST            pwd
+ 176: GET_ITER             
+ 178: FOR_ITER             to 206
+ 180: STORE_FAST           p
+ 182: PUSH_NULL            
+ 184: LOAD_DEREF           update_keys
+ 186: LOAD_FAST            p
+ 188: PRECALL              
+ 192: CALL                 
+ 202: POP_TOP              
+ 204: JUMP_BACKWARD        to 178
+ 206: LOAD_CLOSURE         key2
+ 208: LOAD_CLOSURE         update_keys
+ 210: BUILD_TUPLE          
+ 212: LOAD_CONST           <code object decrypter at 0x000002406949CE90, file "zipfile.py", line 608>
+ 214: MAKE_FUNCTION        closure
+ 216: STORE_FAST           decrypter
+ 218: LOAD_FAST            decrypter
+ 220: RETURN_VALUE         

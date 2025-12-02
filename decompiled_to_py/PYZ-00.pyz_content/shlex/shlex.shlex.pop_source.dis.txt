@@ -1,0 +1,49 @@
+# Disassembly for shlex.shlex.pop_source
+# From module file: shlex
+
+## co_consts:
+('Pop the input source stack.', 'shlex: popping to %s, line %d', ' ', None)
+
+## co_names:
+('instream', 'close', 'filestack', 'popleft', 'infile', 'lineno', 'debug', 'print', 'state')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            instream
+  14: LOAD_METHOD          close
+  36: PRECALL              
+  40: CALL                 
+  50: POP_TOP              
+  52: LOAD_FAST            self
+  54: LOAD_ATTR            filestack
+  64: LOAD_METHOD          popleft
+  86: PRECALL              
+  90: CALL                 
+ 100: UNPACK_SEQUENCE      
+ 104: LOAD_FAST            self
+ 106: STORE_ATTR           infile
+ 116: LOAD_FAST            self
+ 118: STORE_ATTR           instream
+ 128: LOAD_FAST            self
+ 130: STORE_ATTR           lineno
+ 140: LOAD_FAST            self
+ 142: LOAD_ATTR            debug
+ 152: POP_JUMP_FORWARD_IF_FALSE to 214
+ 154: LOAD_GLOBAL          NULL + print
+ 166: LOAD_CONST           'shlex: popping to %s, line %d'
+ 168: LOAD_FAST            self
+ 170: LOAD_ATTR            instream
+ 180: LOAD_FAST            self
+ 182: LOAD_ATTR            lineno
+ 192: BUILD_TUPLE          
+ 194: BINARY_OP            %
+ 198: PRECALL              
+ 202: CALL                 
+ 212: POP_TOP              
+ 214: LOAD_CONST           ' '
+ 216: LOAD_FAST            self
+ 218: STORE_ATTR           state
+ 228: LOAD_CONST           None
+ 230: RETURN_VALUE         

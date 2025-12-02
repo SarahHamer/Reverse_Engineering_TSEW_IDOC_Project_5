@@ -1,0 +1,49 @@
+# Disassembly for ssl.SSLSocket.send
+# From module file: ssl
+
+## co_consts:
+(None, 0, 'non-zero flags not allowed in calls to send() on %s')
+
+## co_names:
+('_checkClosed', '_sslobj', 'ValueError', '__class__', 'write', 'super', 'send')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_FAST            self
+   6: LOAD_METHOD          _checkClosed
+  28: PRECALL              
+  32: CALL                 
+  42: POP_TOP              
+  44: LOAD_FAST            self
+  46: LOAD_ATTR            _sslobj
+  56: POP_JUMP_FORWARD_IF_NONE to 168
+  58: LOAD_FAST            flags
+  60: LOAD_CONST           0
+  62: COMPARE_OP           !=
+  68: POP_JUMP_FORWARD_IF_FALSE to 116
+  70: LOAD_GLOBAL          NULL + ValueError
+  82: LOAD_CONST           'non-zero flags not allowed in calls to send() on %s'
+  84: LOAD_FAST            self
+  86: LOAD_ATTR            __class__
+  96: BINARY_OP            %
+ 100: PRECALL              
+ 104: CALL                 
+ 114: RAISE_VARARGS        
+ 116: LOAD_FAST            self
+ 118: LOAD_ATTR            _sslobj
+ 128: LOAD_METHOD          write
+ 150: LOAD_FAST            data
+ 152: PRECALL              
+ 156: CALL                 
+ 166: RETURN_VALUE         
+ 168: LOAD_GLOBAL          NULL + super
+ 180: PRECALL              
+ 184: CALL                 
+ 194: LOAD_METHOD          send
+ 216: LOAD_FAST            data
+ 218: LOAD_FAST            flags
+ 220: PRECALL              
+ 224: CALL                 
+ 234: RETURN_VALUE         

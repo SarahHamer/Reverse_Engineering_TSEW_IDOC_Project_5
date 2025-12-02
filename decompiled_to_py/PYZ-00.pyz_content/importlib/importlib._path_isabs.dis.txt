@@ -1,0 +1,18 @@
+# Disassembly for importlib._path_isabs
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Replacement for os.path.isabs.',)
+
+## co_names:
+('startswith', 'path_separators')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            path
+   4: LOAD_METHOD          startswith
+  26: LOAD_GLOBAL          path_separators
+  38: PRECALL              
+  42: CALL                 
+  52: RETURN_VALUE         

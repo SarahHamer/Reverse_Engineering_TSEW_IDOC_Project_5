@@ -1,0 +1,25 @@
+# Disassembly for email.Message.get_content_maintype
+# From module file: email.message
+
+## co_consts:
+("Return the message's main content type.\n\n        This is the `maintype' part of the string returned by\n        get_content_type().\n        ", '/', 0)
+
+## co_names:
+('get_content_type', 'split')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          get_content_type
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           ctype
+  42: LOAD_FAST            ctype
+  44: LOAD_METHOD          split
+  66: LOAD_CONST           '/'
+  68: PRECALL              
+  72: CALL                 
+  82: LOAD_CONST           0
+  84: BINARY_SUBSCR        
+  94: RETURN_VALUE         

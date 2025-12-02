@@ -1,0 +1,26 @@
+# Disassembly for subprocess.CompletedProcess.__init__
+# From module file: subprocess
+
+## co_consts:
+(None,)
+
+## co_names:
+('args', 'returncode', 'stdout', 'stderr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            args
+   4: LOAD_FAST            self
+   6: STORE_ATTR           args
+  16: LOAD_FAST            returncode
+  18: LOAD_FAST            self
+  20: STORE_ATTR           returncode
+  30: LOAD_FAST            stdout
+  32: LOAD_FAST            self
+  34: STORE_ATTR           stdout
+  44: LOAD_FAST            stderr
+  46: LOAD_FAST            self
+  48: STORE_ATTR           stderr
+  58: LOAD_CONST           None
+  60: RETURN_VALUE         

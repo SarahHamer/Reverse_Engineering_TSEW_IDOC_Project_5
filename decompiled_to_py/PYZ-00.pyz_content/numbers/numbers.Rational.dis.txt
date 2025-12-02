@@ -1,0 +1,43 @@
+# Disassembly for numbers.Rational
+# From module file: numbers
+
+## co_consts:
+('Rational', '.numerator and .denominator should be in lowest terms.', (), <code object numerator at 0x0000024069496250, file "numbers.py", line 272>, <code object denominator at 0x0000024069496800, file "numbers.py", line 277>, <code object __float__ at 0x000002406944A340, file "numbers.py", line 283>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__slots__', 'property', 'abstractmethod', 'numerator', 'denominator', '__float__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Rational'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           '.numerator and .denominator should be in lowest terms.'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ()
+  16: STORE_NAME           __slots__
+  18: LOAD_NAME            property
+  20: LOAD_NAME            abstractmethod
+  22: LOAD_CONST           <code object numerator at 0x0000024069496250, file "numbers.py", line 272>
+  24: MAKE_FUNCTION        
+  26: PRECALL              
+  30: CALL                 
+  40: PRECALL              
+  44: CALL                 
+  54: STORE_NAME           numerator
+  56: LOAD_NAME            property
+  58: LOAD_NAME            abstractmethod
+  60: LOAD_CONST           <code object denominator at 0x0000024069496800, file "numbers.py", line 277>
+  62: MAKE_FUNCTION        
+  64: PRECALL              
+  68: CALL                 
+  78: PRECALL              
+  82: CALL                 
+  92: STORE_NAME           denominator
+  94: LOAD_CONST           <code object __float__ at 0x000002406944A340, file "numbers.py", line 283>
+  96: MAKE_FUNCTION        
+  98: STORE_NAME           __float__
+ 100: LOAD_CONST           None
+ 102: RETURN_VALUE         

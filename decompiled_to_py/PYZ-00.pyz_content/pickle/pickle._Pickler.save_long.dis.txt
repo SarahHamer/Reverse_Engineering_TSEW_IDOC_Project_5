@@ -1,0 +1,181 @@
+# Disassembly for pickle._Pickler.save_long
+# From module file: pickle
+
+## co_consts:
+(None, 0, 255, '<B', 65535, '<H', -2147483648, 2147483647, '<i', 2, 256, 'ascii', b'\n', b'L\n')
+
+## co_names:
+('bin', 'write', 'BININT1', 'pack', 'BININT2', 'BININT', 'proto', 'encode_long', 'len', 'LONG1', 'LONG4', 'INT', 'repr', 'encode', 'LONG')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            bin
+  14: POP_JUMP_FORWARD_IF_FALSE to 354
+  16: LOAD_FAST            obj
+  18: LOAD_CONST           0
+  20: COMPARE_OP           >=
+  26: POP_JUMP_FORWARD_IF_FALSE to 232
+  28: LOAD_FAST            obj
+  30: LOAD_CONST           255
+  32: COMPARE_OP           <=
+  38: POP_JUMP_FORWARD_IF_FALSE to 130
+  40: LOAD_FAST            self
+  42: LOAD_METHOD          write
+  64: LOAD_GLOBAL          BININT1
+  76: LOAD_GLOBAL          NULL + pack
+  88: LOAD_CONST           '<B'
+  90: LOAD_FAST            obj
+  92: PRECALL              
+  96: CALL                 
+ 106: BINARY_OP            +
+ 110: PRECALL              
+ 114: CALL                 
+ 124: POP_TOP              
+ 126: LOAD_CONST           None
+ 128: RETURN_VALUE         
+ 130: LOAD_FAST            obj
+ 132: LOAD_CONST           65535
+ 134: COMPARE_OP           <=
+ 140: POP_JUMP_FORWARD_IF_FALSE to 232
+ 142: LOAD_FAST            self
+ 144: LOAD_METHOD          write
+ 166: LOAD_GLOBAL          BININT2
+ 178: LOAD_GLOBAL          NULL + pack
+ 190: LOAD_CONST           '<H'
+ 192: LOAD_FAST            obj
+ 194: PRECALL              
+ 198: CALL                 
+ 208: BINARY_OP            +
+ 212: PRECALL              
+ 216: CALL                 
+ 226: POP_TOP              
+ 228: LOAD_CONST           None
+ 230: RETURN_VALUE         
+ 232: LOAD_CONST           -2147483648
+ 234: LOAD_FAST            obj
+ 236: SWAP                 
+ 238: COPY                 
+ 240: COMPARE_OP           <=
+ 246: POP_JUMP_FORWARD_IF_FALSE to 260
+ 248: LOAD_CONST           2147483647
+ 250: COMPARE_OP           <=
+ 256: POP_JUMP_FORWARD_IF_FALSE to 354
+ 258: JUMP_FORWARD         to 264
+ 260: POP_TOP              
+ 262: JUMP_FORWARD         to 354
+ 264: LOAD_FAST            self
+ 266: LOAD_METHOD          write
+ 288: LOAD_GLOBAL          BININT
+ 300: LOAD_GLOBAL          NULL + pack
+ 312: LOAD_CONST           '<i'
+ 314: LOAD_FAST            obj
+ 316: PRECALL              
+ 320: CALL                 
+ 330: BINARY_OP            +
+ 334: PRECALL              
+ 338: CALL                 
+ 348: POP_TOP              
+ 350: LOAD_CONST           None
+ 352: RETURN_VALUE         
+ 354: LOAD_FAST            self
+ 356: LOAD_ATTR            proto
+ 366: LOAD_CONST           2
+ 368: COMPARE_OP           >=
+ 374: POP_JUMP_FORWARD_IF_FALSE to 638
+ 376: LOAD_GLOBAL          NULL + encode_long
+ 388: LOAD_FAST            obj
+ 390: PRECALL              
+ 394: CALL                 
+ 404: STORE_FAST           encoded
+ 406: LOAD_GLOBAL          NULL + len
+ 418: LOAD_FAST            encoded
+ 420: PRECALL              
+ 424: CALL                 
+ 434: STORE_FAST           n
+ 436: LOAD_FAST            n
+ 438: LOAD_CONST           256
+ 440: COMPARE_OP           <
+ 446: POP_JUMP_FORWARD_IF_FALSE to 542
+ 448: LOAD_FAST            self
+ 450: LOAD_METHOD          write
+ 472: LOAD_GLOBAL          LONG1
+ 484: LOAD_GLOBAL          NULL + pack
+ 496: LOAD_CONST           '<B'
+ 498: LOAD_FAST            n
+ 500: PRECALL              
+ 504: CALL                 
+ 514: BINARY_OP            +
+ 518: LOAD_FAST            encoded
+ 520: BINARY_OP            +
+ 524: PRECALL              
+ 528: CALL                 
+ 538: POP_TOP              
+ 540: JUMP_FORWARD         to 634
+ 542: LOAD_FAST            self
+ 544: LOAD_METHOD          write
+ 566: LOAD_GLOBAL          LONG4
+ 578: LOAD_GLOBAL          NULL + pack
+ 590: LOAD_CONST           '<i'
+ 592: LOAD_FAST            n
+ 594: PRECALL              
+ 598: CALL                 
+ 608: BINARY_OP            +
+ 612: LOAD_FAST            encoded
+ 614: BINARY_OP            +
+ 618: PRECALL              
+ 622: CALL                 
+ 632: POP_TOP              
+ 634: LOAD_CONST           None
+ 636: RETURN_VALUE         
+ 638: LOAD_CONST           -2147483648
+ 640: LOAD_FAST            obj
+ 642: SWAP                 
+ 644: COPY                 
+ 646: COMPARE_OP           <=
+ 652: POP_JUMP_FORWARD_IF_FALSE to 666
+ 654: LOAD_CONST           2147483647
+ 656: COMPARE_OP           <=
+ 662: POP_JUMP_FORWARD_IF_FALSE to 802
+ 664: JUMP_FORWARD         to 670
+ 666: POP_TOP              
+ 668: JUMP_FORWARD         to 802
+ 670: LOAD_FAST            self
+ 672: LOAD_METHOD          write
+ 694: LOAD_GLOBAL          INT
+ 706: LOAD_GLOBAL          NULL + repr
+ 718: LOAD_FAST            obj
+ 720: PRECALL              
+ 724: CALL                 
+ 734: LOAD_METHOD          encode
+ 756: LOAD_CONST           'ascii'
+ 758: PRECALL              
+ 762: CALL                 
+ 772: BINARY_OP            +
+ 776: LOAD_CONST           b'\n'
+ 778: BINARY_OP            +
+ 782: PRECALL              
+ 786: CALL                 
+ 796: POP_TOP              
+ 798: LOAD_CONST           None
+ 800: RETURN_VALUE         
+ 802: LOAD_FAST            self
+ 804: LOAD_METHOD          write
+ 826: LOAD_GLOBAL          LONG
+ 838: LOAD_GLOBAL          NULL + repr
+ 850: LOAD_FAST            obj
+ 852: PRECALL              
+ 856: CALL                 
+ 866: LOAD_METHOD          encode
+ 888: LOAD_CONST           'ascii'
+ 890: PRECALL              
+ 894: CALL                 
+ 904: BINARY_OP            +
+ 908: LOAD_CONST           b'L\n'
+ 910: BINARY_OP            +
+ 914: PRECALL              
+ 918: CALL                 
+ 928: POP_TOP              
+ 930: LOAD_CONST           None
+ 932: RETURN_VALUE         

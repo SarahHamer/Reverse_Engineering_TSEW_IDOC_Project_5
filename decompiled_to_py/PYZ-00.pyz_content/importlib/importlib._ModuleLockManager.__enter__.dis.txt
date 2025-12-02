@@ -1,0 +1,27 @@
+# Disassembly for importlib._ModuleLockManager.__enter__
+# From module file: importlib._bootstrap
+
+## co_consts:
+(None,)
+
+## co_names:
+('_get_module_lock', '_name', '_lock', 'acquire')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _get_module_lock
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            _name
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_FAST            self
+  42: STORE_ATTR           _lock
+  52: LOAD_FAST            self
+  54: LOAD_ATTR            _lock
+  64: LOAD_METHOD          acquire
+  86: PRECALL              
+  90: CALL                 
+ 100: POP_TOP              
+ 102: LOAD_CONST           None
+ 104: RETURN_VALUE         

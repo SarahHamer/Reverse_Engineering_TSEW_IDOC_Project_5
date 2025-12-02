@@ -1,0 +1,39 @@
+# Disassembly for ast._Unparser._write_docstring
+# From module file: ast
+
+## co_consts:
+(None, 'u', ('quote_types',))
+
+## co_names:
+('fill', 'kind', 'write', '_write_str_avoiding_backslashes', 'value', '_MULTI_QUOTES')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          fill
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_FAST            node
+  44: LOAD_ATTR            kind
+  54: LOAD_CONST           'u'
+  56: COMPARE_OP           ==
+  62: POP_JUMP_FORWARD_IF_FALSE to 106
+  64: LOAD_FAST            self
+  66: LOAD_METHOD          write
+  88: LOAD_CONST           'u'
+  90: PRECALL              
+  94: CALL                 
+ 104: POP_TOP              
+ 106: LOAD_FAST            self
+ 108: LOAD_METHOD          _write_str_avoiding_backslashes
+ 130: LOAD_FAST            node
+ 132: LOAD_ATTR            value
+ 142: LOAD_GLOBAL          _MULTI_QUOTES
+ 154: KW_NAMES             
+ 156: PRECALL              
+ 160: CALL                 
+ 170: POP_TOP              
+ 172: LOAD_CONST           None
+ 174: RETURN_VALUE         

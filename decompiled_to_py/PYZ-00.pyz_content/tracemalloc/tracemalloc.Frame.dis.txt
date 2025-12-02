@@ -1,0 +1,52 @@
+# Disassembly for tracemalloc.Frame
+# From module file: tracemalloc
+
+## co_consts:
+('Frame', '\n    Frame of a traceback.\n    ', ('_frame',), <code object __init__ at 0x00000240694969A0, file "tracemalloc.py", line 147>, <code object filename at 0x00000240694658B0, file "tracemalloc.py", line 151>, <code object lineno at 0x0000024069465610, file "tracemalloc.py", line 155>, <code object __eq__ at 0x000002406941B630, file "tracemalloc.py", line 159>, <code object __lt__ at 0x000002406941A430, file "tracemalloc.py", line 164>, <code object __hash__ at 0x000002406945E970, file "tracemalloc.py", line 169>, <code object __str__ at 0x0000024069466DB0, file "tracemalloc.py", line 172>, <code object __repr__ at 0x0000024069465DF0, file "tracemalloc.py", line 175>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__slots__', '__init__', 'property', 'filename', 'lineno', '__eq__', '__lt__', '__hash__', '__str__', '__repr__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Frame'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           '\n    Frame of a traceback.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ('_frame',)
+  16: STORE_NAME           __slots__
+  18: LOAD_CONST           <code object __init__ at 0x00000240694969A0, file "tracemalloc.py", line 147>
+  20: MAKE_FUNCTION        
+  22: STORE_NAME           __init__
+  24: LOAD_NAME            property
+  26: LOAD_CONST           <code object filename at 0x00000240694658B0, file "tracemalloc.py", line 151>
+  28: MAKE_FUNCTION        
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_NAME           filename
+  46: LOAD_NAME            property
+  48: LOAD_CONST           <code object lineno at 0x0000024069465610, file "tracemalloc.py", line 155>
+  50: MAKE_FUNCTION        
+  52: PRECALL              
+  56: CALL                 
+  66: STORE_NAME           lineno
+  68: LOAD_CONST           <code object __eq__ at 0x000002406941B630, file "tracemalloc.py", line 159>
+  70: MAKE_FUNCTION        
+  72: STORE_NAME           __eq__
+  74: LOAD_CONST           <code object __lt__ at 0x000002406941A430, file "tracemalloc.py", line 164>
+  76: MAKE_FUNCTION        
+  78: STORE_NAME           __lt__
+  80: LOAD_CONST           <code object __hash__ at 0x000002406945E970, file "tracemalloc.py", line 169>
+  82: MAKE_FUNCTION        
+  84: STORE_NAME           __hash__
+  86: LOAD_CONST           <code object __str__ at 0x0000024069466DB0, file "tracemalloc.py", line 172>
+  88: MAKE_FUNCTION        
+  90: STORE_NAME           __str__
+  92: LOAD_CONST           <code object __repr__ at 0x0000024069465DF0, file "tracemalloc.py", line 175>
+  94: MAKE_FUNCTION        
+  96: STORE_NAME           __repr__
+  98: LOAD_CONST           None
+ 100: RETURN_VALUE         

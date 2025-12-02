@@ -1,0 +1,20 @@
+# Disassembly for email.HeaderParser.parse
+# From module file: email.parser
+
+## co_consts:
+(None, True)
+
+## co_names:
+('Parser', 'parse')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          Parser
+  14: LOAD_METHOD          parse
+  36: LOAD_FAST            self
+  38: LOAD_FAST            fp
+  40: LOAD_CONST           True
+  42: PRECALL              
+  46: CALL                 
+  56: RETURN_VALUE         

@@ -1,0 +1,82 @@
+# Disassembly for datetime.datetime._getstate
+# From module file: datetime
+
+## co_consts:
+(None, 256, 3, 128)
+
+## co_names:
+('divmod', '_year', '_microsecond', '_month', '_fold', 'bytes', '_day', '_hour', '_minute', '_second', '_tzinfo')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + divmod
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            _year
+  26: LOAD_CONST           256
+  28: PRECALL              
+  32: CALL                 
+  42: UNPACK_SEQUENCE      
+  46: STORE_FAST           yhi
+  48: STORE_FAST           ylo
+  50: LOAD_GLOBAL          NULL + divmod
+  62: LOAD_FAST            self
+  64: LOAD_ATTR            _microsecond
+  74: LOAD_CONST           256
+  76: PRECALL              
+  80: CALL                 
+  90: UNPACK_SEQUENCE      
+  94: STORE_FAST           us2
+  96: STORE_FAST           us3
+  98: LOAD_GLOBAL          NULL + divmod
+ 110: LOAD_FAST            us2
+ 112: LOAD_CONST           256
+ 114: PRECALL              
+ 118: CALL                 
+ 128: UNPACK_SEQUENCE      
+ 132: STORE_FAST           us1
+ 134: STORE_FAST           us2
+ 136: LOAD_FAST            self
+ 138: LOAD_ATTR            _month
+ 148: STORE_FAST           m
+ 150: LOAD_FAST            self
+ 152: LOAD_ATTR            _fold
+ 162: POP_JUMP_FORWARD_IF_FALSE to 186
+ 164: LOAD_FAST            protocol
+ 166: LOAD_CONST           3
+ 168: COMPARE_OP           >
+ 174: POP_JUMP_FORWARD_IF_FALSE to 186
+ 176: LOAD_FAST            m
+ 178: LOAD_CONST           128
+ 180: BINARY_OP            +=
+ 184: STORE_FAST           m
+ 186: LOAD_GLOBAL          NULL + bytes
+ 198: LOAD_FAST            yhi
+ 200: LOAD_FAST            ylo
+ 202: LOAD_FAST            m
+ 204: LOAD_FAST            self
+ 206: LOAD_ATTR            _day
+ 216: LOAD_FAST            self
+ 218: LOAD_ATTR            _hour
+ 228: LOAD_FAST            self
+ 230: LOAD_ATTR            _minute
+ 240: LOAD_FAST            self
+ 242: LOAD_ATTR            _second
+ 252: LOAD_FAST            us1
+ 254: LOAD_FAST            us2
+ 256: LOAD_FAST            us3
+ 258: BUILD_LIST           
+ 260: PRECALL              
+ 264: CALL                 
+ 274: STORE_FAST           basestate
+ 276: LOAD_FAST            self
+ 278: LOAD_ATTR            _tzinfo
+ 288: POP_JUMP_FORWARD_IF_NOT_NONE to 296
+ 290: LOAD_FAST            basestate
+ 292: BUILD_TUPLE          
+ 294: RETURN_VALUE         
+ 296: LOAD_FAST            basestate
+ 298: LOAD_FAST            self
+ 300: LOAD_ATTR            _tzinfo
+ 310: BUILD_TUPLE          
+ 312: RETURN_VALUE         

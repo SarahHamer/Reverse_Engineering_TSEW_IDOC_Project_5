@@ -1,0 +1,117 @@
+# Disassembly for tarfile._FileInFile.__init__
+# From module file: tarfile
+
+## co_consts:
+(None, 0, 'name', False, True)
+
+## co_names:
+('fileobj', 'offset', 'size', 'position', 'getattr', 'name', 'closed', 'map_index', 'map', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            fileobj
+   4: LOAD_FAST            self
+   6: STORE_ATTR           fileobj
+  16: LOAD_FAST            offset
+  18: LOAD_FAST            self
+  20: STORE_ATTR           offset
+  30: LOAD_FAST            size
+  32: LOAD_FAST            self
+  34: STORE_ATTR           size
+  44: LOAD_CONST           0
+  46: LOAD_FAST            self
+  48: STORE_ATTR           position
+  58: LOAD_GLOBAL          NULL + getattr
+  70: LOAD_FAST            fileobj
+  72: LOAD_CONST           'name'
+  74: LOAD_CONST           None
+  76: PRECALL              
+  80: CALL                 
+  90: LOAD_FAST            self
+  92: STORE_ATTR           name
+ 102: LOAD_CONST           False
+ 104: LOAD_FAST            self
+ 106: STORE_ATTR           closed
+ 116: LOAD_FAST            blockinfo
+ 118: POP_JUMP_FORWARD_IF_NOT_NONE to 130
+ 120: LOAD_CONST           0
+ 122: LOAD_FAST            size
+ 124: BUILD_TUPLE          
+ 126: BUILD_LIST           
+ 128: STORE_FAST           blockinfo
+ 130: LOAD_CONST           0
+ 132: LOAD_FAST            self
+ 134: STORE_ATTR           map_index
+ 144: BUILD_LIST           
+ 146: LOAD_FAST            self
+ 148: STORE_ATTR           map
+ 158: LOAD_CONST           0
+ 160: STORE_FAST           lastpos
+ 162: LOAD_FAST            self
+ 164: LOAD_ATTR            offset
+ 174: STORE_FAST           realpos
+ 176: LOAD_FAST            blockinfo
+ 178: GET_ITER             
+ 180: FOR_ITER             to 350
+ 182: UNPACK_SEQUENCE      
+ 186: STORE_FAST           offset
+ 188: STORE_FAST           size
+ 190: LOAD_FAST            offset
+ 192: LOAD_FAST            lastpos
+ 194: COMPARE_OP           >
+ 200: POP_JUMP_FORWARD_IF_FALSE to 262
+ 202: LOAD_FAST            self
+ 204: LOAD_ATTR            map
+ 214: LOAD_METHOD          append
+ 236: LOAD_CONST           False
+ 238: LOAD_FAST            lastpos
+ 240: LOAD_FAST            offset
+ 242: LOAD_CONST           None
+ 244: BUILD_TUPLE          
+ 246: PRECALL              
+ 250: CALL                 
+ 260: POP_TOP              
+ 262: LOAD_FAST            self
+ 264: LOAD_ATTR            map
+ 274: LOAD_METHOD          append
+ 296: LOAD_CONST           True
+ 298: LOAD_FAST            offset
+ 300: LOAD_FAST            offset
+ 302: LOAD_FAST            size
+ 304: BINARY_OP            +
+ 308: LOAD_FAST            realpos
+ 310: BUILD_TUPLE          
+ 312: PRECALL              
+ 316: CALL                 
+ 326: POP_TOP              
+ 328: LOAD_FAST            realpos
+ 330: LOAD_FAST            size
+ 332: BINARY_OP            +=
+ 336: STORE_FAST           realpos
+ 338: LOAD_FAST            offset
+ 340: LOAD_FAST            size
+ 342: BINARY_OP            +
+ 346: STORE_FAST           lastpos
+ 348: JUMP_BACKWARD        to 180
+ 350: LOAD_FAST            lastpos
+ 352: LOAD_FAST            self
+ 354: LOAD_ATTR            size
+ 364: COMPARE_OP           <
+ 370: POP_JUMP_FORWARD_IF_FALSE to 446
+ 372: LOAD_FAST            self
+ 374: LOAD_ATTR            map
+ 384: LOAD_METHOD          append
+ 406: LOAD_CONST           False
+ 408: LOAD_FAST            lastpos
+ 410: LOAD_FAST            self
+ 412: LOAD_ATTR            size
+ 422: LOAD_CONST           None
+ 424: BUILD_TUPLE          
+ 426: PRECALL              
+ 430: CALL                 
+ 440: POP_TOP              
+ 442: LOAD_CONST           None
+ 444: RETURN_VALUE         
+ 446: LOAD_CONST           None
+ 448: RETURN_VALUE         

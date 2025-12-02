@@ -1,0 +1,82 @@
+# Disassembly for selectors._BaseSelectorImpl.modify
+# From module file: selectors
+
+## co_consts:
+(None, '{!r} is not registered', ('data',))
+
+## co_names:
+('_fd_to_key', '_fileobj_lookup', 'KeyError', 'format', 'events', 'unregister', 'register', 'data', '_replace', 'fd')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            _fd_to_key
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          _fileobj_lookup
+  40: LOAD_FAST            fileobj
+  42: PRECALL              
+  46: CALL                 
+  56: BINARY_SUBSCR        
+  66: STORE_FAST           key
+  68: JUMP_FORWARD         to 168
+  70: PUSH_EXC_INFO        
+  72: LOAD_GLOBAL          KeyError
+  84: CHECK_EXC_MATCH      
+  86: POP_JUMP_FORWARD_IF_FALSE to 160
+  88: POP_TOP              
+  90: LOAD_GLOBAL          NULL + KeyError
+ 102: LOAD_CONST           '{!r} is not registered'
+ 104: LOAD_METHOD          format
+ 126: LOAD_FAST            fileobj
+ 128: PRECALL              
+ 132: CALL                 
+ 142: PRECALL              
+ 146: CALL                 
+ 156: LOAD_CONST           None
+ 158: RAISE_VARARGS        
+ 160: RERAISE              
+ 162: COPY                 
+ 164: POP_EXCEPT           
+ 166: RERAISE              
+ 168: LOAD_FAST            events
+ 170: LOAD_FAST            key
+ 172: LOAD_ATTR            events
+ 182: COMPARE_OP           !=
+ 188: POP_JUMP_FORWARD_IF_FALSE to 280
+ 190: LOAD_FAST            self
+ 192: LOAD_METHOD          unregister
+ 214: LOAD_FAST            fileobj
+ 216: PRECALL              
+ 220: CALL                 
+ 230: POP_TOP              
+ 232: LOAD_FAST            self
+ 234: LOAD_METHOD          register
+ 256: LOAD_FAST            fileobj
+ 258: LOAD_FAST            events
+ 260: LOAD_FAST            data
+ 262: PRECALL              
+ 266: CALL                 
+ 276: STORE_FAST           key
+ 278: JUMP_FORWARD         to 376
+ 280: LOAD_FAST            data
+ 282: LOAD_FAST            key
+ 284: LOAD_ATTR            data
+ 294: COMPARE_OP           !=
+ 300: POP_JUMP_FORWARD_IF_FALSE to 376
+ 302: LOAD_FAST            key
+ 304: LOAD_METHOD          _replace
+ 326: LOAD_FAST            data
+ 328: KW_NAMES             
+ 330: PRECALL              
+ 334: CALL                 
+ 344: STORE_FAST           key
+ 346: LOAD_FAST            key
+ 348: LOAD_FAST            self
+ 350: LOAD_ATTR            _fd_to_key
+ 360: LOAD_FAST            key
+ 362: LOAD_ATTR            fd
+ 372: STORE_SUBSCR         
+ 376: LOAD_FAST            key
+ 378: RETURN_VALUE         

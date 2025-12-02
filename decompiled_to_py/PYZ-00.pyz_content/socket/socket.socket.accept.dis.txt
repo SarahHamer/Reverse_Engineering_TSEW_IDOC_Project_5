@@ -1,0 +1,50 @@
+# Disassembly for socket.socket.accept
+# From module file: socket
+
+## co_consts:
+('accept() -> (socket object, address info)\n\n        Wait for an incoming connection.  Return a new socket\n        representing the connection, and the address of the client.\n        For IP sockets, the address info is a pair (hostaddr, port).\n        ', ('fileno',), None, True)
+
+## co_names:
+('_accept', 'socket', 'family', 'type', 'proto', 'getdefaulttimeout', 'gettimeout', 'setblocking')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _accept
+  26: PRECALL              
+  30: CALL                 
+  40: UNPACK_SEQUENCE      
+  44: STORE_FAST           fd
+  46: STORE_FAST           addr
+  48: LOAD_GLOBAL          NULL + socket
+  60: LOAD_FAST            self
+  62: LOAD_ATTR            family
+  72: LOAD_FAST            self
+  74: LOAD_ATTR            type
+  84: LOAD_FAST            self
+  86: LOAD_ATTR            proto
+  96: LOAD_FAST            fd
+  98: KW_NAMES             
+ 100: PRECALL              
+ 104: CALL                 
+ 114: STORE_FAST           sock
+ 116: LOAD_GLOBAL          NULL + getdefaulttimeout
+ 128: PRECALL              
+ 132: CALL                 
+ 142: POP_JUMP_FORWARD_IF_NOT_NONE to 226
+ 144: LOAD_FAST            self
+ 146: LOAD_METHOD          gettimeout
+ 168: PRECALL              
+ 172: CALL                 
+ 182: POP_JUMP_FORWARD_IF_FALSE to 226
+ 184: LOAD_FAST            sock
+ 186: LOAD_METHOD          setblocking
+ 208: LOAD_CONST           True
+ 210: PRECALL              
+ 214: CALL                 
+ 224: POP_TOP              
+ 226: LOAD_FAST            sock
+ 228: LOAD_FAST            addr
+ 230: BUILD_TUPLE          
+ 232: RETURN_VALUE         

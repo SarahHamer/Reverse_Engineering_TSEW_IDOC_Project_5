@@ -1,0 +1,52 @@
+# Disassembly for subprocess.Popen._save_input
+# From module file: subprocess
+
+## co_consts:
+(None, 0)
+
+## co_names:
+('stdin', '_input', '_input_offset', 'text_mode', 'encode', 'encoding', 'errors')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            stdin
+  14: POP_JUMP_FORWARD_IF_FALSE to 184
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            _input
+  28: POP_JUMP_FORWARD_IF_NOT_NONE to 188
+  30: LOAD_CONST           0
+  32: LOAD_FAST            self
+  34: STORE_ATTR           _input_offset
+  44: LOAD_FAST            input
+  46: LOAD_FAST            self
+  48: STORE_ATTR           _input
+  58: LOAD_FAST            input
+  60: POP_JUMP_FORWARD_IF_NONE to 192
+  62: LOAD_FAST            self
+  64: LOAD_ATTR            text_mode
+  74: POP_JUMP_FORWARD_IF_FALSE to 196
+  76: LOAD_FAST            self
+  78: LOAD_ATTR            _input
+  88: LOAD_METHOD          encode
+ 110: LOAD_FAST            self
+ 112: LOAD_ATTR            stdin
+ 122: LOAD_ATTR            encoding
+ 132: LOAD_FAST            self
+ 134: LOAD_ATTR            stdin
+ 144: LOAD_ATTR            errors
+ 154: PRECALL              
+ 158: CALL                 
+ 168: LOAD_FAST            self
+ 170: STORE_ATTR           _input
+ 180: LOAD_CONST           None
+ 182: RETURN_VALUE         
+ 184: LOAD_CONST           None
+ 186: RETURN_VALUE         
+ 188: LOAD_CONST           None
+ 190: RETURN_VALUE         
+ 192: LOAD_CONST           None
+ 194: RETURN_VALUE         
+ 196: LOAD_CONST           None
+ 198: RETURN_VALUE         

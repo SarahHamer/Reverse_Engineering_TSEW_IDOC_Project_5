@@ -1,0 +1,26 @@
+# Disassembly for tarfile.OutsideDestinationError
+# From module file: tarfile
+
+## co_consts:
+('OutsideDestinationError', <code object __init__ at 0x00000240693AB4B0, file "tarfile.py", line 730>)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'OutsideDestinationError'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CLOSURE         __class__
+  14: BUILD_TUPLE          
+  16: LOAD_CONST           <code object __init__ at 0x00000240693AB4B0, file "tarfile.py", line 730>
+  18: MAKE_FUNCTION        closure
+  20: STORE_NAME           __init__
+  22: LOAD_CLOSURE         __class__
+  24: COPY                 
+  26: STORE_NAME           __classcell__
+  28: RETURN_VALUE         

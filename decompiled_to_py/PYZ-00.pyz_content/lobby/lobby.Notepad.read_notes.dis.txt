@@ -1,0 +1,100 @@
+# Disassembly for lobby.Notepad.read_notes
+# From module file: lobby
+
+## co_consts:
+(None, 0, '', 15, '\n', 1)
+
+## co_names:
+('len', 'notes', 'send_message', 'world', 'player', 'pause')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: STORE_FAST           note_num
+   6: LOAD_FAST            note_num
+   8: LOAD_GLOBAL          NULL + len
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            notes
+  32: PRECALL              
+  36: CALL                 
+  46: COMPARE_OP           <
+  52: POP_JUMP_FORWARD_IF_FALSE to 442
+  54: LOAD_CONST           ''
+  56: STORE_FAST           message
+  58: LOAD_CONST           0
+  60: STORE_FAST           count
+  62: LOAD_FAST            note_num
+  64: LOAD_GLOBAL          NULL + len
+  76: LOAD_FAST            self
+  78: LOAD_ATTR            notes
+  88: PRECALL              
+  92: CALL                 
+ 102: COMPARE_OP           <
+ 108: POP_JUMP_FORWARD_IF_FALSE to 240
+ 110: LOAD_FAST            count
+ 112: LOAD_CONST           15
+ 114: COMPARE_OP           <
+ 120: POP_JUMP_FORWARD_IF_FALSE to 240
+ 122: LOAD_FAST            message
+ 124: LOAD_FAST            self
+ 126: LOAD_ATTR            notes
+ 136: LOAD_FAST            note_num
+ 138: BINARY_SUBSCR        
+ 148: LOAD_CONST           '\n'
+ 150: BINARY_OP            +
+ 154: BINARY_OP            +=
+ 158: STORE_FAST           message
+ 160: LOAD_FAST            note_num
+ 162: LOAD_CONST           1
+ 164: BINARY_OP            +=
+ 168: STORE_FAST           note_num
+ 170: LOAD_FAST            count
+ 172: LOAD_CONST           1
+ 174: BINARY_OP            +=
+ 178: STORE_FAST           count
+ 180: LOAD_FAST            note_num
+ 182: LOAD_GLOBAL          NULL + len
+ 194: LOAD_FAST            self
+ 196: LOAD_ATTR            notes
+ 206: PRECALL              
+ 210: CALL                 
+ 220: COMPARE_OP           <
+ 226: POP_JUMP_FORWARD_IF_FALSE to 240
+ 228: LOAD_FAST            count
+ 230: LOAD_CONST           15
+ 232: COMPARE_OP           <
+ 238: POP_JUMP_BACKWARD_IF_TRUE to 122
+ 240: LOAD_FAST            self
+ 242: LOAD_METHOD          send_message
+ 264: LOAD_FAST            message
+ 266: PRECALL              
+ 270: CALL                 
+ 280: POP_TOP              
+ 282: LOAD_FAST            note_num
+ 284: LOAD_GLOBAL          NULL + len
+ 296: LOAD_FAST            self
+ 298: LOAD_ATTR            notes
+ 308: PRECALL              
+ 312: CALL                 
+ 322: COMPARE_OP           <
+ 328: POP_JUMP_FORWARD_IF_FALSE to 390
+ 330: LOAD_FAST            self
+ 332: LOAD_ATTR            world
+ 342: LOAD_ATTR            player
+ 352: LOAD_METHOD          pause
+ 374: PRECALL              
+ 378: CALL                 
+ 388: POP_TOP              
+ 390: LOAD_FAST            note_num
+ 392: LOAD_GLOBAL          NULL + len
+ 404: LOAD_FAST            self
+ 406: LOAD_ATTR            notes
+ 416: PRECALL              
+ 420: CALL                 
+ 430: COMPARE_OP           <
+ 436: POP_JUMP_BACKWARD_IF_TRUE to 54
+ 438: LOAD_CONST           None
+ 440: RETURN_VALUE         
+ 442: LOAD_CONST           None
+ 444: RETURN_VALUE         

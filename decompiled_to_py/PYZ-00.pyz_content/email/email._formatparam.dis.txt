@@ -1,0 +1,119 @@
+# Disassembly for email._formatparam
+# From module file: email.message
+
+## co_consts:
+('Convenience function to format and return a key=value pair.\n\n    This will quote the value if needed or if quote is true.  If value is a\n    three tuple (charset, language, value), it will be encoded according\n    to RFC2231 rules.  If it contains non-ascii characters it will likewise\n    be encoded according to RFC2231 rules, using the utf-8 charset and\n    a null language.\n    ', None, 0, '*', 2, 1, '=', 'ascii', 'utf-8', '', '="', '"')
+
+## co_names:
+('len', 'isinstance', 'tuple', 'utils', 'encode_rfc2231', 'encode', 'UnicodeEncodeError', 'tspecials', 'search', 'quote')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            value
+   4: POP_JUMP_FORWARD_IF_NONE to 458
+   6: LOAD_GLOBAL          NULL + len
+  18: LOAD_FAST            value
+  20: PRECALL              
+  24: CALL                 
+  34: LOAD_CONST           0
+  36: COMPARE_OP           >
+  42: POP_JUMP_FORWARD_IF_FALSE to 458
+  44: LOAD_GLOBAL          NULL + isinstance
+  56: LOAD_FAST            value
+  58: LOAD_GLOBAL          tuple
+  70: PRECALL              
+  74: CALL                 
+  84: POP_JUMP_FORWARD_IF_FALSE to 190
+  86: LOAD_FAST            param
+  88: LOAD_CONST           '*'
+  90: BINARY_OP            +=
+  94: STORE_FAST           param
+  96: LOAD_GLOBAL          NULL + utils
+ 108: LOAD_ATTR            encode_rfc2231
+ 118: LOAD_FAST            value
+ 120: LOAD_CONST           2
+ 122: BINARY_SUBSCR        
+ 132: LOAD_FAST            value
+ 134: LOAD_CONST           0
+ 136: BINARY_SUBSCR        
+ 146: LOAD_FAST            value
+ 148: LOAD_CONST           1
+ 150: BINARY_SUBSCR        
+ 160: PRECALL              
+ 164: CALL                 
+ 174: STORE_FAST           value
+ 176: LOAD_FAST            param
+ 178: FORMAT_VALUE         str
+ 180: LOAD_CONST           '='
+ 182: LOAD_FAST            value
+ 184: FORMAT_VALUE         str
+ 186: BUILD_STRING         
+ 188: RETURN_VALUE         
+ 190: NOP                  
+ 192: LOAD_FAST            value
+ 194: LOAD_METHOD          encode
+ 216: LOAD_CONST           'ascii'
+ 218: PRECALL              
+ 222: CALL                 
+ 232: POP_TOP              
+ 234: JUMP_FORWARD         to 336
+ 236: PUSH_EXC_INFO        
+ 238: LOAD_GLOBAL          UnicodeEncodeError
+ 250: CHECK_EXC_MATCH      
+ 252: POP_JUMP_FORWARD_IF_FALSE to 328
+ 254: POP_TOP              
+ 256: LOAD_FAST            param
+ 258: LOAD_CONST           '*'
+ 260: BINARY_OP            +=
+ 264: STORE_FAST           param
+ 266: LOAD_GLOBAL          NULL + utils
+ 278: LOAD_ATTR            encode_rfc2231
+ 288: LOAD_FAST            value
+ 290: LOAD_CONST           'utf-8'
+ 292: LOAD_CONST           ''
+ 294: PRECALL              
+ 298: CALL                 
+ 308: STORE_FAST           value
+ 310: LOAD_FAST            param
+ 312: FORMAT_VALUE         str
+ 314: LOAD_CONST           '='
+ 316: LOAD_FAST            value
+ 318: FORMAT_VALUE         str
+ 320: BUILD_STRING         
+ 322: SWAP                 
+ 324: POP_EXCEPT           
+ 326: RETURN_VALUE         
+ 328: RERAISE              
+ 330: COPY                 
+ 332: POP_EXCEPT           
+ 334: RERAISE              
+ 336: LOAD_FAST            quote
+ 338: POP_JUMP_FORWARD_IF_TRUE to 392
+ 340: LOAD_GLOBAL          tspecials
+ 352: LOAD_METHOD          search
+ 374: LOAD_FAST            value
+ 376: PRECALL              
+ 380: CALL                 
+ 390: POP_JUMP_FORWARD_IF_FALSE to 444
+ 392: LOAD_FAST            param
+ 394: FORMAT_VALUE         str
+ 396: LOAD_CONST           '="'
+ 398: LOAD_GLOBAL          NULL + utils
+ 410: LOAD_ATTR            quote
+ 420: LOAD_FAST            value
+ 422: PRECALL              
+ 426: CALL                 
+ 436: FORMAT_VALUE         str
+ 438: LOAD_CONST           '"'
+ 440: BUILD_STRING         
+ 442: RETURN_VALUE         
+ 444: LOAD_FAST            param
+ 446: FORMAT_VALUE         str
+ 448: LOAD_CONST           '='
+ 450: LOAD_FAST            value
+ 452: FORMAT_VALUE         str
+ 454: BUILD_STRING         
+ 456: RETURN_VALUE         
+ 458: LOAD_FAST            param
+ 460: RETURN_VALUE         

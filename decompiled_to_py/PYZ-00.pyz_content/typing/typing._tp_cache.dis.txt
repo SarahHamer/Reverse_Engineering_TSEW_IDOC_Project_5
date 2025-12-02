@@ -1,0 +1,28 @@
+# Disassembly for typing._tp_cache
+# From module file: typing
+
+## co_consts:
+('Internal wrapper caching __getitem__ of generic types.\n\n    For non-hashable arguments, the original function is used as a fallback.\n    ', <code object decorator at 0x00000240691E9FB0, file "typing.py", line 348>)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: MAKE_CELL            typed
+   2: RESUME               
+   4: LOAD_CLOSURE         typed
+   6: BUILD_TUPLE          
+   8: LOAD_CONST           <code object decorator at 0x00000240691E9FB0, file "typing.py", line 348>
+  10: MAKE_FUNCTION        closure
+  12: STORE_FAST           decorator
+  14: LOAD_FAST            func
+  16: POP_JUMP_FORWARD_IF_NONE to 40
+  18: PUSH_NULL            
+  20: LOAD_FAST            decorator
+  22: LOAD_FAST            func
+  24: PRECALL              
+  28: CALL                 
+  38: RETURN_VALUE         
+  40: LOAD_FAST            decorator
+  42: RETURN_VALUE         

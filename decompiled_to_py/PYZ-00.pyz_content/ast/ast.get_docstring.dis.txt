@@ -1,0 +1,94 @@
+# Disassembly for ast.get_docstring
+# From module file: ast
+
+## co_consts:
+('\n    Return the docstring for the given node or None if no docstring can\n    be found.  If the node provided does not have docstrings a TypeError\n    will be raised.\n\n    If *clean* is `True`, all tabs are expanded to spaces and any whitespace\n    that can be uniformly removed from the second line onwards is removed.\n    ', "%r can't have docstrings", 0, None)
+
+## co_names:
+('isinstance', 'AsyncFunctionDef', 'FunctionDef', 'ClassDef', 'Module', 'TypeError', '__class__', '__name__', 'body', 'Expr', 'value', 'Str', 's', 'Constant', 'str', 'inspect', 'cleandoc')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            node
+  16: LOAD_GLOBAL          AsyncFunctionDef
+  28: LOAD_GLOBAL          FunctionDef
+  40: LOAD_GLOBAL          ClassDef
+  52: LOAD_GLOBAL          Module
+  64: BUILD_TUPLE          
+  66: PRECALL              
+  70: CALL                 
+  80: POP_JUMP_FORWARD_IF_TRUE to 138
+  82: LOAD_GLOBAL          NULL + TypeError
+  94: LOAD_CONST           "%r can't have docstrings"
+  96: LOAD_FAST            node
+  98: LOAD_ATTR            __class__
+ 108: LOAD_ATTR            __name__
+ 118: BINARY_OP            %
+ 122: PRECALL              
+ 126: CALL                 
+ 136: RAISE_VARARGS        
+ 138: LOAD_FAST            node
+ 140: LOAD_ATTR            body
+ 150: POP_JUMP_FORWARD_IF_FALSE to 216
+ 152: LOAD_GLOBAL          NULL + isinstance
+ 164: LOAD_FAST            node
+ 166: LOAD_ATTR            body
+ 176: LOAD_CONST           0
+ 178: BINARY_SUBSCR        
+ 188: LOAD_GLOBAL          Expr
+ 200: PRECALL              
+ 204: CALL                 
+ 214: POP_JUMP_FORWARD_IF_TRUE to 220
+ 216: LOAD_CONST           None
+ 218: RETURN_VALUE         
+ 220: LOAD_FAST            node
+ 222: LOAD_ATTR            body
+ 232: LOAD_CONST           0
+ 234: BINARY_SUBSCR        
+ 244: LOAD_ATTR            value
+ 254: STORE_FAST           node
+ 256: LOAD_GLOBAL          NULL + isinstance
+ 268: LOAD_FAST            node
+ 270: LOAD_GLOBAL          Str
+ 282: PRECALL              
+ 286: CALL                 
+ 296: POP_JUMP_FORWARD_IF_FALSE to 314
+ 298: LOAD_FAST            node
+ 300: LOAD_ATTR            s
+ 310: STORE_FAST           text
+ 312: JUMP_FORWARD         to 428
+ 314: LOAD_GLOBAL          NULL + isinstance
+ 326: LOAD_FAST            node
+ 328: LOAD_GLOBAL          Constant
+ 340: PRECALL              
+ 344: CALL                 
+ 354: POP_JUMP_FORWARD_IF_FALSE to 424
+ 356: LOAD_GLOBAL          NULL + isinstance
+ 368: LOAD_FAST            node
+ 370: LOAD_ATTR            value
+ 380: LOAD_GLOBAL          str
+ 392: PRECALL              
+ 396: CALL                 
+ 406: POP_JUMP_FORWARD_IF_FALSE to 424
+ 408: LOAD_FAST            node
+ 410: LOAD_ATTR            value
+ 420: STORE_FAST           text
+ 422: JUMP_FORWARD         to 428
+ 424: LOAD_CONST           None
+ 426: RETURN_VALUE         
+ 428: LOAD_FAST            clean
+ 430: POP_JUMP_FORWARD_IF_FALSE to 482
+ 432: LOAD_CONST           0
+ 434: LOAD_CONST           None
+ 436: IMPORT_NAME          inspect
+ 438: STORE_FAST           inspect
+ 440: LOAD_FAST            inspect
+ 442: LOAD_METHOD          cleandoc
+ 464: LOAD_FAST            text
+ 466: PRECALL              
+ 470: CALL                 
+ 480: STORE_FAST           text
+ 482: LOAD_FAST            text
+ 484: RETURN_VALUE         

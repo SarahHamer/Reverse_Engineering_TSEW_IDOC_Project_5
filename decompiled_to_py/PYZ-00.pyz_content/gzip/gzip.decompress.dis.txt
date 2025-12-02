@@ -1,0 +1,130 @@
+# Disassembly for gzip.decompress
+# From module file: gzip
+
+## co_consts:
+('Decompress a gzip compressed string in one shot.\n    Return the decompressed string.\n    ', True, None, b'', ('wbits',), 8, 'Compressed file ended before the end-of-stream marker was reached', '<II', 'CRC check failed', 4294967295, 'Incorrect length of data produced', b'\x00')
+
+## co_names:
+('io', 'BytesIO', '_read_gzip_header', 'join', 'zlib', 'decompressobj', 'MAX_WBITS', 'decompress', 'tell', 'eof', 'len', 'unused_data', 'EOFError', 'struct', 'unpack', 'crc32', 'BadGzipFile', 'append', 'lstrip')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           decompressed_members
+   6: NOP                  
+   8: LOAD_GLOBAL          NULL + io
+  20: LOAD_ATTR            BytesIO
+  30: LOAD_FAST            data
+  32: PRECALL              
+  36: CALL                 
+  46: STORE_FAST           fp
+  48: LOAD_GLOBAL          NULL + _read_gzip_header
+  60: LOAD_FAST            fp
+  62: PRECALL              
+  66: CALL                 
+  76: POP_JUMP_FORWARD_IF_NOT_NONE to 120
+  78: LOAD_CONST           b''
+  80: LOAD_METHOD          join
+ 102: LOAD_FAST            decompressed_members
+ 104: PRECALL              
+ 108: CALL                 
+ 118: RETURN_VALUE         
+ 120: LOAD_GLOBAL          NULL + zlib
+ 132: LOAD_ATTR            decompressobj
+ 142: LOAD_GLOBAL          zlib
+ 154: LOAD_ATTR            MAX_WBITS
+ 164: UNARY_NEGATIVE       
+ 166: KW_NAMES             
+ 168: PRECALL              
+ 172: CALL                 
+ 182: STORE_FAST           do
+ 184: LOAD_FAST            do
+ 186: LOAD_METHOD          decompress
+ 208: LOAD_FAST            data
+ 210: LOAD_FAST            fp
+ 212: LOAD_METHOD          tell
+ 234: PRECALL              
+ 238: CALL                 
+ 248: LOAD_CONST           None
+ 250: BUILD_SLICE          
+ 252: BINARY_SUBSCR        
+ 262: PRECALL              
+ 266: CALL                 
+ 276: STORE_FAST           decompressed
+ 278: LOAD_FAST            do
+ 280: LOAD_ATTR            eof
+ 290: POP_JUMP_FORWARD_IF_FALSE to 340
+ 292: LOAD_GLOBAL          NULL + len
+ 304: LOAD_FAST            do
+ 306: LOAD_ATTR            unused_data
+ 316: PRECALL              
+ 320: CALL                 
+ 330: LOAD_CONST           8
+ 332: COMPARE_OP           <
+ 338: POP_JUMP_FORWARD_IF_FALSE to 370
+ 340: LOAD_GLOBAL          NULL + EOFError
+ 352: LOAD_CONST           'Compressed file ended before the end-of-stream marker was reached'
+ 354: PRECALL              
+ 358: CALL                 
+ 368: RAISE_VARARGS        
+ 370: LOAD_GLOBAL          NULL + struct
+ 382: LOAD_ATTR            unpack
+ 392: LOAD_CONST           '<II'
+ 394: LOAD_FAST            do
+ 396: LOAD_ATTR            unused_data
+ 406: LOAD_CONST           None
+ 408: LOAD_CONST           8
+ 410: BUILD_SLICE          
+ 412: BINARY_SUBSCR        
+ 422: PRECALL              
+ 426: CALL                 
+ 436: UNPACK_SEQUENCE      
+ 440: STORE_FAST           crc
+ 442: STORE_FAST           length
+ 444: LOAD_FAST            crc
+ 446: LOAD_GLOBAL          NULL + zlib
+ 458: LOAD_ATTR            crc32
+ 468: LOAD_FAST            decompressed
+ 470: PRECALL              
+ 474: CALL                 
+ 484: COMPARE_OP           !=
+ 490: POP_JUMP_FORWARD_IF_FALSE to 522
+ 492: LOAD_GLOBAL          NULL + BadGzipFile
+ 504: LOAD_CONST           'CRC check failed'
+ 506: PRECALL              
+ 510: CALL                 
+ 520: RAISE_VARARGS        
+ 522: LOAD_FAST            length
+ 524: LOAD_GLOBAL          NULL + len
+ 536: LOAD_FAST            decompressed
+ 538: PRECALL              
+ 542: CALL                 
+ 552: LOAD_CONST           4294967295
+ 554: BINARY_OP            &
+ 558: COMPARE_OP           !=
+ 564: POP_JUMP_FORWARD_IF_FALSE to 596
+ 566: LOAD_GLOBAL          NULL + BadGzipFile
+ 578: LOAD_CONST           'Incorrect length of data produced'
+ 580: PRECALL              
+ 584: CALL                 
+ 594: RAISE_VARARGS        
+ 596: LOAD_FAST            decompressed_members
+ 598: LOAD_METHOD          append
+ 620: LOAD_FAST            decompressed
+ 622: PRECALL              
+ 626: CALL                 
+ 636: POP_TOP              
+ 638: LOAD_FAST            do
+ 640: LOAD_ATTR            unused_data
+ 650: LOAD_CONST           8
+ 652: LOAD_CONST           None
+ 654: BUILD_SLICE          
+ 656: BINARY_SUBSCR        
+ 666: LOAD_METHOD          lstrip
+ 688: LOAD_CONST           b'\x00'
+ 690: PRECALL              
+ 694: CALL                 
+ 704: STORE_FAST           data
+ 706: EXTENDED_ARG         
+ 708: JUMP_BACKWARD        to 8

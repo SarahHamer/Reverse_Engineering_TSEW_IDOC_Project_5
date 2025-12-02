@@ -1,0 +1,29 @@
+# Disassembly for contextlib.suppress
+# From module file: contextlib
+
+## co_consts:
+('suppress', 'Context manager to suppress specified exceptions\n\n    After the exception is suppressed, execution proceeds with the next\n    statement following the with statement.\n\n         with suppress(FileNotFoundError):\n             os.remove(somefile)\n         # Execution still resumes here if the file was already removed\n    ', <code object __init__ at 0x0000024069495480, file "contextlib.py", line 428>, <code object __enter__ at 0x000002406943B6F0, file "contextlib.py", line 431>, <code object __exit__ at 0x000002406945D2F0, file "contextlib.py", line 434>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', '__enter__', '__exit__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'suppress'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Context manager to suppress specified exceptions\n\n    After the exception is suppressed, execution proceeds with the next\n    statement following the with statement.\n\n         with suppress(FileNotFoundError):\n             os.remove(somefile)\n         # Execution still resumes here if the file was already removed\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object __init__ at 0x0000024069495480, file "contextlib.py", line 428>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           __init__
+  20: LOAD_CONST           <code object __enter__ at 0x000002406943B6F0, file "contextlib.py", line 431>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           __enter__
+  26: LOAD_CONST           <code object __exit__ at 0x000002406945D2F0, file "contextlib.py", line 434>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           __exit__
+  32: LOAD_CONST           None
+  34: RETURN_VALUE         

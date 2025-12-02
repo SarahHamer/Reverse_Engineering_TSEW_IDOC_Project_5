@@ -1,0 +1,72 @@
+# Disassembly for socket.SocketIO.readinto
+# From module file: socket
+
+## co_consts:
+('Read up to len(b) bytes into the writable buffer *b* and return\n        the number of bytes read.  If the socket is non-blocking and no bytes\n        are available, None is returned.\n\n        If *b* is non-empty, a 0 return value indicates that the connection\n        was shutdown at the other end.\n        ', 'cannot read from timed out object', True, None)
+
+## co_names:
+('_checkClosed', '_checkReadable', '_timeout_occurred', 'OSError', '_sock', 'recv_into', 'timeout', 'error', 'errno', '_blocking_errnos')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _checkClosed
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_FAST            self
+  44: LOAD_METHOD          _checkReadable
+  66: PRECALL              
+  70: CALL                 
+  80: POP_TOP              
+  82: LOAD_FAST            self
+  84: LOAD_ATTR            _timeout_occurred
+  94: POP_JUMP_FORWARD_IF_FALSE to 126
+  96: LOAD_GLOBAL          NULL + OSError
+ 108: LOAD_CONST           'cannot read from timed out object'
+ 110: PRECALL              
+ 114: CALL                 
+ 124: RAISE_VARARGS        
+ 126: NOP                  
+ 128: NOP                  
+ 130: LOAD_FAST            self
+ 132: LOAD_ATTR            _sock
+ 142: LOAD_METHOD          recv_into
+ 164: LOAD_FAST            b
+ 166: PRECALL              
+ 170: CALL                 
+ 180: RETURN_VALUE         
+ 182: PUSH_EXC_INFO        
+ 184: LOAD_GLOBAL          timeout
+ 196: CHECK_EXC_MATCH      
+ 198: POP_JUMP_FORWARD_IF_FALSE to 218
+ 200: POP_TOP              
+ 202: LOAD_CONST           True
+ 204: LOAD_FAST            self
+ 206: STORE_ATTR           _timeout_occurred
+ 216: RAISE_VARARGS        
+ 218: LOAD_GLOBAL          error
+ 230: CHECK_EXC_MATCH      
+ 232: POP_JUMP_FORWARD_IF_FALSE to 286
+ 234: STORE_FAST           e
+ 236: LOAD_FAST            e
+ 238: LOAD_ATTR            errno
+ 248: LOAD_GLOBAL          _blocking_errnos
+ 260: CONTAINS_OP          
+ 262: POP_JUMP_FORWARD_IF_FALSE to 276
+ 264: POP_EXCEPT           
+ 266: LOAD_CONST           None
+ 268: STORE_FAST           e
+ 270: DELETE_FAST          e
+ 272: LOAD_CONST           None
+ 274: RETURN_VALUE         
+ 276: RAISE_VARARGS        
+ 278: LOAD_CONST           None
+ 280: STORE_FAST           e
+ 282: DELETE_FAST          e
+ 284: RERAISE              
+ 286: RERAISE              
+ 288: COPY                 
+ 290: POP_EXCEPT           
+ 292: RERAISE              

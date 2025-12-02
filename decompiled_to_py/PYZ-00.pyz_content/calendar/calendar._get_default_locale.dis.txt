@@ -1,0 +1,58 @@
+# Disassembly for calendar._get_default_locale
+# From module file: calendar
+
+## co_consts:
+(None, 'C', '')
+
+## co_names:
+('_locale', 'setlocale', 'LC_TIME', 'different_locale')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _locale
+  14: LOAD_ATTR            setlocale
+  24: LOAD_GLOBAL          _locale
+  36: LOAD_ATTR            LC_TIME
+  46: LOAD_CONST           None
+  48: PRECALL              
+  52: CALL                 
+  62: STORE_FAST           locale
+  64: LOAD_FAST            locale
+  66: LOAD_CONST           'C'
+  68: COMPARE_OP           ==
+  74: POP_JUMP_FORWARD_IF_FALSE to 216
+  76: LOAD_GLOBAL          NULL + different_locale
+  88: LOAD_CONST           ''
+  90: PRECALL              
+  94: CALL                 
+ 104: BEFORE_WITH          
+ 106: POP_TOP              
+ 108: LOAD_GLOBAL          NULL + _locale
+ 120: LOAD_ATTR            setlocale
+ 130: LOAD_GLOBAL          _locale
+ 142: LOAD_ATTR            LC_TIME
+ 152: LOAD_CONST           None
+ 154: PRECALL              
+ 158: CALL                 
+ 168: STORE_FAST           locale
+ 170: LOAD_CONST           None
+ 172: LOAD_CONST           None
+ 174: LOAD_CONST           None
+ 176: PRECALL              
+ 180: CALL                 
+ 190: POP_TOP              
+ 192: JUMP_FORWARD         to 216
+ 194: PUSH_EXC_INFO        
+ 196: WITH_EXCEPT_START    
+ 198: POP_JUMP_FORWARD_IF_TRUE to 208
+ 200: RERAISE              
+ 202: COPY                 
+ 204: POP_EXCEPT           
+ 206: RERAISE              
+ 208: POP_TOP              
+ 210: POP_EXCEPT           
+ 212: POP_TOP              
+ 214: POP_TOP              
+ 216: LOAD_FAST            locale
+ 218: RETURN_VALUE         

@@ -1,0 +1,42 @@
+# Disassembly for ssl.SSLContext.set_servername_callback
+# From module file: ssl
+
+## co_consts:
+(None, 'not a callable object', <code object shim_cb at 0x00000240693EB830, file "ssl.py", line 560>)
+
+## co_names:
+('sni_callback', 'callable', 'TypeError')
+
+## bytecode:
+
+   0: MAKE_CELL            self
+   2: MAKE_CELL            server_name_callback
+   4: RESUME               
+   6: LOAD_DEREF           server_name_callback
+   8: POP_JUMP_FORWARD_IF_NOT_NONE to 28
+  10: LOAD_CONST           None
+  12: LOAD_DEREF           self
+  14: STORE_ATTR           sni_callback
+  24: LOAD_CONST           None
+  26: RETURN_VALUE         
+  28: LOAD_GLOBAL          NULL + callable
+  40: LOAD_DEREF           server_name_callback
+  42: PRECALL              
+  46: CALL                 
+  56: POP_JUMP_FORWARD_IF_TRUE to 88
+  58: LOAD_GLOBAL          NULL + TypeError
+  70: LOAD_CONST           'not a callable object'
+  72: PRECALL              
+  76: CALL                 
+  86: RAISE_VARARGS        
+  88: LOAD_CLOSURE         self
+  90: LOAD_CLOSURE         server_name_callback
+  92: BUILD_TUPLE          
+  94: LOAD_CONST           <code object shim_cb at 0x00000240693EB830, file "ssl.py", line 560>
+  96: MAKE_FUNCTION        closure
+  98: STORE_FAST           shim_cb
+ 100: LOAD_FAST            shim_cb
+ 102: LOAD_DEREF           self
+ 104: STORE_ATTR           sni_callback
+ 114: LOAD_CONST           None
+ 116: RETURN_VALUE         

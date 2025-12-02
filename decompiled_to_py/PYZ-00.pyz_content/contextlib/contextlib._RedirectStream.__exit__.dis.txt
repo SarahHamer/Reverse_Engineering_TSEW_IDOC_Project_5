@@ -1,0 +1,26 @@
+# Disassembly for contextlib._RedirectStream.__exit__
+# From module file: contextlib
+
+## co_consts:
+(None,)
+
+## co_names:
+('setattr', 'sys', '_stream', '_old_targets', 'pop')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + setattr
+  14: LOAD_GLOBAL          sys
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            _stream
+  38: LOAD_FAST            self
+  40: LOAD_ATTR            _old_targets
+  50: LOAD_METHOD          pop
+  72: PRECALL              
+  76: CALL                 
+  86: PRECALL              
+  90: CALL                 
+ 100: POP_TOP              
+ 102: LOAD_CONST           None
+ 104: RETURN_VALUE         

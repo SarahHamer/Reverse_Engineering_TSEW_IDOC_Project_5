@@ -1,0 +1,131 @@
+# Disassembly for _pydecimal.Decimal.as_integer_ratio
+# From module file: _pydecimal
+
+## co_consts:
+("Express a finite Decimal instance in the form n / d.\n\n        Returns a pair (n, d) of integers.  When called on an infinity\n        or NaN, raises OverflowError or ValueError respectively.\n\n        >>> Decimal('3.14').as_integer_ratio()\n        (157, 50)\n        >>> Decimal('-123e5').as_integer_ratio()\n        (-12300000, 1)\n        >>> Decimal('0.00').as_integer_ratio()\n        (0, 1)\n\n        ", 'cannot convert NaN to integer ratio', 'cannot convert Infinity to integer ratio', (0, 1), 0, 10, 1, 5)
+
+## co_names:
+('_is_special', 'is_nan', 'ValueError', 'OverflowError', 'int', '_int', '_exp', 'min', 'bit_length', '_sign')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _is_special
+  14: POP_JUMP_FORWARD_IF_FALSE to 116
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          is_nan
+  40: PRECALL              
+  44: CALL                 
+  54: POP_JUMP_FORWARD_IF_FALSE to 86
+  56: LOAD_GLOBAL          NULL + ValueError
+  68: LOAD_CONST           'cannot convert NaN to integer ratio'
+  70: PRECALL              
+  74: CALL                 
+  84: RAISE_VARARGS        
+  86: LOAD_GLOBAL          NULL + OverflowError
+  98: LOAD_CONST           'cannot convert Infinity to integer ratio'
+ 100: PRECALL              
+ 104: CALL                 
+ 114: RAISE_VARARGS        
+ 116: LOAD_FAST            self
+ 118: POP_JUMP_FORWARD_IF_TRUE to 124
+ 120: LOAD_CONST           (0, 1)
+ 122: RETURN_VALUE         
+ 124: LOAD_GLOBAL          NULL + int
+ 136: LOAD_FAST            self
+ 138: LOAD_ATTR            _int
+ 148: PRECALL              
+ 152: CALL                 
+ 162: STORE_FAST           n
+ 164: LOAD_FAST            self
+ 166: LOAD_ATTR            _exp
+ 176: LOAD_CONST           0
+ 178: COMPARE_OP           >=
+ 184: POP_JUMP_FORWARD_IF_FALSE to 218
+ 186: LOAD_FAST            n
+ 188: LOAD_CONST           10
+ 190: LOAD_FAST            self
+ 192: LOAD_ATTR            _exp
+ 202: BINARY_OP            **
+ 206: BINARY_OP            *
+ 210: LOAD_CONST           1
+ 212: STORE_FAST           d
+ 214: STORE_FAST           n
+ 216: JUMP_FORWARD         to 452
+ 218: LOAD_FAST            self
+ 220: LOAD_ATTR            _exp
+ 230: UNARY_NEGATIVE       
+ 232: STORE_FAST           d5
+ 234: LOAD_FAST            d5
+ 236: LOAD_CONST           0
+ 238: COMPARE_OP           >
+ 244: POP_JUMP_FORWARD_IF_FALSE to 314
+ 246: LOAD_FAST            n
+ 248: LOAD_CONST           5
+ 250: BINARY_OP            %
+ 254: LOAD_CONST           0
+ 256: COMPARE_OP           ==
+ 262: POP_JUMP_FORWARD_IF_FALSE to 314
+ 264: LOAD_FAST            n
+ 266: LOAD_CONST           5
+ 268: BINARY_OP            //=
+ 272: STORE_FAST           n
+ 274: LOAD_FAST            d5
+ 276: LOAD_CONST           1
+ 278: BINARY_OP            -=
+ 282: STORE_FAST           d5
+ 284: LOAD_FAST            d5
+ 286: LOAD_CONST           0
+ 288: COMPARE_OP           >
+ 294: POP_JUMP_FORWARD_IF_FALSE to 314
+ 296: LOAD_FAST            n
+ 298: LOAD_CONST           5
+ 300: BINARY_OP            %
+ 304: LOAD_CONST           0
+ 306: COMPARE_OP           ==
+ 312: POP_JUMP_BACKWARD_IF_TRUE to 264
+ 314: LOAD_FAST            self
+ 316: LOAD_ATTR            _exp
+ 326: UNARY_NEGATIVE       
+ 328: STORE_FAST           d2
+ 330: LOAD_GLOBAL          NULL + min
+ 342: LOAD_FAST            n
+ 344: LOAD_FAST            n
+ 346: UNARY_NEGATIVE       
+ 348: BINARY_OP            &
+ 352: LOAD_METHOD          bit_length
+ 374: PRECALL              
+ 378: CALL                 
+ 388: LOAD_CONST           1
+ 390: BINARY_OP            -
+ 394: LOAD_FAST            d2
+ 396: PRECALL              
+ 400: CALL                 
+ 410: STORE_FAST           shift2
+ 412: LOAD_FAST            shift2
+ 414: POP_JUMP_FORWARD_IF_FALSE to 436
+ 416: LOAD_FAST            n
+ 418: LOAD_FAST            shift2
+ 420: BINARY_OP            >>=
+ 424: STORE_FAST           n
+ 426: LOAD_FAST            d2
+ 428: LOAD_FAST            shift2
+ 430: BINARY_OP            -=
+ 434: STORE_FAST           d2
+ 436: LOAD_CONST           5
+ 438: LOAD_FAST            d5
+ 440: BINARY_OP            **
+ 444: LOAD_FAST            d2
+ 446: BINARY_OP            <<
+ 450: STORE_FAST           d
+ 452: LOAD_FAST            self
+ 454: LOAD_ATTR            _sign
+ 464: POP_JUMP_FORWARD_IF_FALSE to 472
+ 466: LOAD_FAST            n
+ 468: UNARY_NEGATIVE       
+ 470: STORE_FAST           n
+ 472: LOAD_FAST            n
+ 474: LOAD_FAST            d
+ 476: BUILD_TUPLE          
+ 478: RETURN_VALUE         

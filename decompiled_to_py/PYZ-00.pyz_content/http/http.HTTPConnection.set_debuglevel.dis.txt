@@ -1,0 +1,17 @@
+# Disassembly for http.HTTPConnection.set_debuglevel
+# From module file: http.client
+
+## co_consts:
+(None,)
+
+## co_names:
+('debuglevel',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            level
+   4: LOAD_FAST            self
+   6: STORE_ATTR           debuglevel
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         

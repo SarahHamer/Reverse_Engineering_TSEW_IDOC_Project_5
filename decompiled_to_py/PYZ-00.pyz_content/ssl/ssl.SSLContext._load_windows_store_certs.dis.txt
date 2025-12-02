@@ -1,0 +1,76 @@
+# Disassembly for ssl.SSLContext._load_windows_store_certs
+# From module file: ssl
+
+## co_consts:
+(None, 'x509_asn', True, 'unable to enumerate Windows certificate store', ('cadata',))
+
+## co_names:
+('bytearray', 'enum_certificates', 'oid', 'extend', 'PermissionError', 'warnings', 'warn', 'load_verify_locations')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + bytearray
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           certs
+  30: NOP                  
+  32: LOAD_GLOBAL          NULL + enum_certificates
+  44: LOAD_FAST            storename
+  46: PRECALL              
+  50: CALL                 
+  60: GET_ITER             
+  62: FOR_ITER             to 156
+  64: UNPACK_SEQUENCE      
+  68: STORE_FAST           cert
+  70: STORE_FAST           encoding
+  72: STORE_FAST           trust
+  74: LOAD_FAST            encoding
+  76: LOAD_CONST           'x509_asn'
+  78: COMPARE_OP           ==
+  84: POP_JUMP_FORWARD_IF_FALSE to 154
+  86: LOAD_FAST            trust
+  88: LOAD_CONST           True
+  90: IS_OP                
+  92: POP_JUMP_FORWARD_IF_TRUE to 112
+  94: LOAD_FAST            purpose
+  96: LOAD_ATTR            oid
+ 106: LOAD_FAST            trust
+ 108: CONTAINS_OP          
+ 110: POP_JUMP_FORWARD_IF_FALSE to 154
+ 112: LOAD_FAST            certs
+ 114: LOAD_METHOD          extend
+ 136: LOAD_FAST            cert
+ 138: PRECALL              
+ 142: CALL                 
+ 152: POP_TOP              
+ 154: JUMP_BACKWARD        to 62
+ 156: JUMP_FORWARD         to 230
+ 158: PUSH_EXC_INFO        
+ 160: LOAD_GLOBAL          PermissionError
+ 172: CHECK_EXC_MATCH      
+ 174: POP_JUMP_FORWARD_IF_FALSE to 222
+ 176: POP_TOP              
+ 178: LOAD_GLOBAL          NULL + warnings
+ 190: LOAD_ATTR            warn
+ 200: LOAD_CONST           'unable to enumerate Windows certificate store'
+ 202: PRECALL              
+ 206: CALL                 
+ 216: POP_TOP              
+ 218: POP_EXCEPT           
+ 220: JUMP_FORWARD         to 230
+ 222: RERAISE              
+ 224: COPY                 
+ 226: POP_EXCEPT           
+ 228: RERAISE              
+ 230: LOAD_FAST            certs
+ 232: POP_JUMP_FORWARD_IF_FALSE to 278
+ 234: LOAD_FAST            self
+ 236: LOAD_METHOD          load_verify_locations
+ 258: LOAD_FAST            certs
+ 260: KW_NAMES             
+ 262: PRECALL              
+ 266: CALL                 
+ 276: POP_TOP              
+ 278: LOAD_FAST            certs
+ 280: RETURN_VALUE         

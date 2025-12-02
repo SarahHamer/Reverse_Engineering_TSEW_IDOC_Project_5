@@ -1,0 +1,45 @@
+# Disassembly for importlib.resources.Traversable.read_text
+# From module file: importlib.resources.abc
+
+## co_consts:
+('\n        Read contents of self as text\n        ', ('encoding',), None)
+
+## co_names:
+('open', 'read')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          open
+  26: LOAD_FAST            encoding
+  28: KW_NAMES             
+  30: PRECALL              
+  34: CALL                 
+  44: BEFORE_WITH          
+  46: STORE_FAST           strm
+  48: LOAD_FAST            strm
+  50: LOAD_METHOD          read
+  72: PRECALL              
+  76: CALL                 
+  86: SWAP                 
+  88: LOAD_CONST           None
+  90: LOAD_CONST           None
+  92: LOAD_CONST           None
+  94: PRECALL              
+  98: CALL                 
+ 108: POP_TOP              
+ 110: RETURN_VALUE         
+ 112: PUSH_EXC_INFO        
+ 114: WITH_EXCEPT_START    
+ 116: POP_JUMP_FORWARD_IF_TRUE to 126
+ 118: RERAISE              
+ 120: COPY                 
+ 122: POP_EXCEPT           
+ 124: RERAISE              
+ 126: POP_TOP              
+ 128: POP_EXCEPT           
+ 130: POP_TOP              
+ 132: POP_TOP              
+ 134: LOAD_CONST           None
+ 136: RETURN_VALUE         

@@ -1,0 +1,14 @@
+# Disassembly for inspect.isgetsetdescriptor
+# From module file: inspect
+
+## co_consts:
+('Return true if the object is a getset descriptor.\n\n        getset descriptors are specialized descriptors defined in extension\n        modules.', False)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           False
+   4: RETURN_VALUE         

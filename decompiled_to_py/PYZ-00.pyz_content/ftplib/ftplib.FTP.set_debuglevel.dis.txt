@@ -1,0 +1,17 @@
+# Disassembly for ftplib.FTP.set_debuglevel
+# From module file: ftplib
+
+## co_consts:
+('Set the debugging level.\n        The required argument level means:\n        0: no debugging output (default)\n        1: print commands and responses but not body text etc.\n        2: also print raw lines read and sent before stripping CR/LF', None)
+
+## co_names:
+('debugging',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            level
+   4: LOAD_FAST            self
+   6: STORE_ATTR           debugging
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         

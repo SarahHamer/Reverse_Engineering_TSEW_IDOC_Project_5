@@ -1,0 +1,16 @@
+# Disassembly for zipfile._ZipWriteFile._fileobj
+# From module file: zipfile
+
+## co_consts:
+(None,)
+
+## co_names:
+('_zipfile', 'fp')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _zipfile
+  14: LOAD_ATTR            fp
+  24: RETURN_VALUE         

@@ -1,0 +1,432 @@
+# Disassembly for zipfile.ZipFile._write_end_record
+# From module file: zipfile
+
+## co_consts:
+(None, 0, 1980, 9, 1, 5, 2, 3, 11, 4, 4294967295, (1,), '<HH', 'Q', 8, 'Files count', 'Central directory offset', 'Central directory size', ' would require ZIP64 extensions', 44, 45, 65535, 'a')
+
+## co_names:
+('filelist', 'date_time', 'file_size', 'ZIP64_LIMIT', 'compress_size', 'append', 'header_offset', 'extra', '_strip_extra', 'struct', 'pack', 'len', 'ZIP64_VERSION', 'compress_type', 'ZIP_BZIP2', 'max', 'BZIP2_VERSION', 'ZIP_LZMA', 'LZMA_VERSION', 'extract_version', 'create_version', '_encodeFilenameFlags', 'structCentralDir', 'stringCentralDir', 'create_system', 'reserved', 'CRC', 'comment', 'internal_attr', 'external_attr', 'fp', 'write', 'tell', 'start_dir', 'ZIP_FILECOUNT_LIMIT', '_allowZip64', 'LargeZipFile', 'structEndArchive64', 'stringEndArchive64', 'structEndArchive64Locator', 'stringEndArchive64Locator', 'min', 'structEndArchive', 'stringEndArchive', '_comment', 'mode', 'truncate', 'flush')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            filelist
+  14: GET_ITER             
+  16: EXTENDED_ARG         
+  18: FOR_ITER             to 1422
+  20: STORE_FAST           zinfo
+  22: LOAD_FAST            zinfo
+  24: LOAD_ATTR            date_time
+  34: STORE_FAST           dt
+  36: LOAD_FAST            dt
+  38: LOAD_CONST           0
+  40: BINARY_SUBSCR        
+  50: LOAD_CONST           1980
+  52: BINARY_OP            -
+  56: LOAD_CONST           9
+  58: BINARY_OP            <<
+  62: LOAD_FAST            dt
+  64: LOAD_CONST           1
+  66: BINARY_SUBSCR        
+  76: LOAD_CONST           5
+  78: BINARY_OP            <<
+  82: BINARY_OP            |
+  86: LOAD_FAST            dt
+  88: LOAD_CONST           2
+  90: BINARY_SUBSCR        
+ 100: BINARY_OP            |
+ 104: STORE_FAST           dosdate
+ 106: LOAD_FAST            dt
+ 108: LOAD_CONST           3
+ 110: BINARY_SUBSCR        
+ 120: LOAD_CONST           11
+ 122: BINARY_OP            <<
+ 126: LOAD_FAST            dt
+ 128: LOAD_CONST           4
+ 130: BINARY_SUBSCR        
+ 140: LOAD_CONST           5
+ 142: BINARY_OP            <<
+ 146: BINARY_OP            |
+ 150: LOAD_FAST            dt
+ 152: LOAD_CONST           5
+ 154: BINARY_SUBSCR        
+ 164: LOAD_CONST           2
+ 166: BINARY_OP            //
+ 170: BINARY_OP            |
+ 174: STORE_FAST           dostime
+ 176: BUILD_LIST           
+ 178: STORE_FAST           extra
+ 180: LOAD_FAST            zinfo
+ 182: LOAD_ATTR            file_size
+ 192: LOAD_GLOBAL          ZIP64_LIMIT
+ 204: COMPARE_OP           >
+ 210: POP_JUMP_FORWARD_IF_TRUE to 244
+ 212: LOAD_FAST            zinfo
+ 214: LOAD_ATTR            compress_size
+ 224: LOAD_GLOBAL          ZIP64_LIMIT
+ 236: COMPARE_OP           >
+ 242: POP_JUMP_FORWARD_IF_FALSE to 358
+ 244: LOAD_FAST            extra
+ 246: LOAD_METHOD          append
+ 268: LOAD_FAST            zinfo
+ 270: LOAD_ATTR            file_size
+ 280: PRECALL              
+ 284: CALL                 
+ 294: POP_TOP              
+ 296: LOAD_FAST            extra
+ 298: LOAD_METHOD          append
+ 320: LOAD_FAST            zinfo
+ 322: LOAD_ATTR            compress_size
+ 332: PRECALL              
+ 336: CALL                 
+ 346: POP_TOP              
+ 348: LOAD_CONST           4294967295
+ 350: STORE_FAST           file_size
+ 352: LOAD_CONST           4294967295
+ 354: STORE_FAST           compress_size
+ 356: JUMP_FORWARD         to 386
+ 358: LOAD_FAST            zinfo
+ 360: LOAD_ATTR            file_size
+ 370: STORE_FAST           file_size
+ 372: LOAD_FAST            zinfo
+ 374: LOAD_ATTR            compress_size
+ 384: STORE_FAST           compress_size
+ 386: LOAD_FAST            zinfo
+ 388: LOAD_ATTR            header_offset
+ 398: LOAD_GLOBAL          ZIP64_LIMIT
+ 410: COMPARE_OP           >
+ 416: POP_JUMP_FORWARD_IF_FALSE to 476
+ 418: LOAD_FAST            extra
+ 420: LOAD_METHOD          append
+ 442: LOAD_FAST            zinfo
+ 444: LOAD_ATTR            header_offset
+ 454: PRECALL              
+ 458: CALL                 
+ 468: POP_TOP              
+ 470: LOAD_CONST           4294967295
+ 472: STORE_FAST           header_offset
+ 474: JUMP_FORWARD         to 490
+ 476: LOAD_FAST            zinfo
+ 478: LOAD_ATTR            header_offset
+ 488: STORE_FAST           header_offset
+ 490: LOAD_FAST            zinfo
+ 492: LOAD_ATTR            extra
+ 502: STORE_FAST           extra_data
+ 504: LOAD_CONST           0
+ 506: STORE_FAST           min_version
+ 508: LOAD_FAST            extra
+ 510: POP_JUMP_FORWARD_IF_FALSE to 674
+ 512: LOAD_GLOBAL          NULL + _strip_extra
+ 524: LOAD_FAST            extra_data
+ 526: LOAD_CONST           (1,)
+ 528: PRECALL              
+ 532: CALL                 
+ 542: STORE_FAST           extra_data
+ 544: LOAD_GLOBAL          NULL + struct
+ 556: LOAD_ATTR            pack
+ 566: LOAD_CONST           '<HH'
+ 568: LOAD_CONST           'Q'
+ 570: LOAD_GLOBAL          NULL + len
+ 582: LOAD_FAST            extra
+ 584: PRECALL              
+ 588: CALL                 
+ 598: BINARY_OP            *
+ 602: BINARY_OP            +
+ 606: LOAD_CONST           1
+ 608: LOAD_CONST           8
+ 610: LOAD_GLOBAL          NULL + len
+ 622: LOAD_FAST            extra
+ 624: PRECALL              
+ 628: CALL                 
+ 638: BINARY_OP            *
+ 642: BUILD_LIST           
+ 644: LOAD_FAST            extra
+ 646: LIST_EXTEND          
+ 648: LIST_TO_TUPLE        
+ 650: CALL_FUNCTION_EX     
+ 652: LOAD_FAST            extra_data
+ 654: BINARY_OP            +
+ 658: STORE_FAST           extra_data
+ 660: LOAD_GLOBAL          ZIP64_VERSION
+ 672: STORE_FAST           min_version
+ 674: LOAD_FAST            zinfo
+ 676: LOAD_ATTR            compress_type
+ 686: LOAD_GLOBAL          ZIP_BZIP2
+ 698: COMPARE_OP           ==
+ 704: POP_JUMP_FORWARD_IF_FALSE to 750
+ 706: LOAD_GLOBAL          NULL + max
+ 718: LOAD_GLOBAL          BZIP2_VERSION
+ 730: LOAD_FAST            min_version
+ 732: PRECALL              
+ 736: CALL                 
+ 746: STORE_FAST           min_version
+ 748: JUMP_FORWARD         to 824
+ 750: LOAD_FAST            zinfo
+ 752: LOAD_ATTR            compress_type
+ 762: LOAD_GLOBAL          ZIP_LZMA
+ 774: COMPARE_OP           ==
+ 780: POP_JUMP_FORWARD_IF_FALSE to 824
+ 782: LOAD_GLOBAL          NULL + max
+ 794: LOAD_GLOBAL          LZMA_VERSION
+ 806: LOAD_FAST            min_version
+ 808: PRECALL              
+ 812: CALL                 
+ 822: STORE_FAST           min_version
+ 824: LOAD_GLOBAL          NULL + max
+ 836: LOAD_FAST            min_version
+ 838: LOAD_FAST            zinfo
+ 840: LOAD_ATTR            extract_version
+ 850: PRECALL              
+ 854: CALL                 
+ 864: STORE_FAST           extract_version
+ 866: LOAD_GLOBAL          NULL + max
+ 878: LOAD_FAST            min_version
+ 880: LOAD_FAST            zinfo
+ 882: LOAD_ATTR            create_version
+ 892: PRECALL              
+ 896: CALL                 
+ 906: STORE_FAST           create_version
+ 908: LOAD_FAST            zinfo
+ 910: LOAD_METHOD          _encodeFilenameFlags
+ 932: PRECALL              
+ 936: CALL                 
+ 946: UNPACK_SEQUENCE      
+ 950: STORE_FAST           filename
+ 952: STORE_FAST           flag_bits
+ 954: LOAD_GLOBAL          NULL + struct
+ 966: LOAD_ATTR            pack
+ 976: LOAD_GLOBAL          structCentralDir
+ 988: LOAD_GLOBAL          stringCentralDir
+1000: LOAD_FAST            create_version
+1002: LOAD_FAST            zinfo
+1004: LOAD_ATTR            create_system
+1014: LOAD_FAST            extract_version
+1016: LOAD_FAST            zinfo
+1018: LOAD_ATTR            reserved
+1028: LOAD_FAST            flag_bits
+1030: LOAD_FAST            zinfo
+1032: LOAD_ATTR            compress_type
+1042: LOAD_FAST            dostime
+1044: LOAD_FAST            dosdate
+1046: LOAD_FAST            zinfo
+1048: LOAD_ATTR            CRC
+1058: LOAD_FAST            compress_size
+1060: LOAD_FAST            file_size
+1062: LOAD_GLOBAL          NULL + len
+1074: LOAD_FAST            filename
+1076: PRECALL              
+1080: CALL                 
+1090: LOAD_GLOBAL          NULL + len
+1102: LOAD_FAST            extra_data
+1104: PRECALL              
+1108: CALL                 
+1118: LOAD_GLOBAL          NULL + len
+1130: LOAD_FAST            zinfo
+1132: LOAD_ATTR            comment
+1142: PRECALL              
+1146: CALL                 
+1156: LOAD_CONST           0
+1158: LOAD_FAST            zinfo
+1160: LOAD_ATTR            internal_attr
+1170: LOAD_FAST            zinfo
+1172: LOAD_ATTR            external_attr
+1182: LOAD_FAST            header_offset
+1184: PRECALL              
+1188: CALL                 
+1198: STORE_FAST           centdir
+1200: LOAD_FAST            self
+1202: LOAD_ATTR            fp
+1212: LOAD_METHOD          write
+1234: LOAD_FAST            centdir
+1236: PRECALL              
+1240: CALL                 
+1250: POP_TOP              
+1252: LOAD_FAST            self
+1254: LOAD_ATTR            fp
+1264: LOAD_METHOD          write
+1286: LOAD_FAST            filename
+1288: PRECALL              
+1292: CALL                 
+1302: POP_TOP              
+1304: LOAD_FAST            self
+1306: LOAD_ATTR            fp
+1316: LOAD_METHOD          write
+1338: LOAD_FAST            extra_data
+1340: PRECALL              
+1344: CALL                 
+1354: POP_TOP              
+1356: LOAD_FAST            self
+1358: LOAD_ATTR            fp
+1368: LOAD_METHOD          write
+1390: LOAD_FAST            zinfo
+1392: LOAD_ATTR            comment
+1402: PRECALL              
+1406: CALL                 
+1416: POP_TOP              
+1418: EXTENDED_ARG         
+1420: JUMP_BACKWARD        to 16
+1422: LOAD_FAST            self
+1424: LOAD_ATTR            fp
+1434: LOAD_METHOD          tell
+1456: PRECALL              
+1460: CALL                 
+1470: STORE_FAST           pos2
+1472: LOAD_GLOBAL          NULL + len
+1484: LOAD_FAST            self
+1486: LOAD_ATTR            filelist
+1496: PRECALL              
+1500: CALL                 
+1510: STORE_FAST           centDirCount
+1512: LOAD_FAST            pos2
+1514: LOAD_FAST            self
+1516: LOAD_ATTR            start_dir
+1526: BINARY_OP            -
+1530: STORE_FAST           centDirSize
+1532: LOAD_FAST            self
+1534: LOAD_ATTR            start_dir
+1544: STORE_FAST           centDirOffset
+1546: LOAD_CONST           None
+1548: STORE_FAST           requires_zip64
+1550: LOAD_FAST            centDirCount
+1552: LOAD_GLOBAL          ZIP_FILECOUNT_LIMIT
+1564: COMPARE_OP           >
+1570: POP_JUMP_FORWARD_IF_FALSE to 1578
+1572: LOAD_CONST           'Files count'
+1574: STORE_FAST           requires_zip64
+1576: JUMP_FORWARD         to 1632
+1578: LOAD_FAST            centDirOffset
+1580: LOAD_GLOBAL          ZIP64_LIMIT
+1592: COMPARE_OP           >
+1598: POP_JUMP_FORWARD_IF_FALSE to 1606
+1600: LOAD_CONST           'Central directory offset'
+1602: STORE_FAST           requires_zip64
+1604: JUMP_FORWARD         to 1632
+1606: LOAD_FAST            centDirSize
+1608: LOAD_GLOBAL          ZIP64_LIMIT
+1620: COMPARE_OP           >
+1626: POP_JUMP_FORWARD_IF_FALSE to 1632
+1628: LOAD_CONST           'Central directory size'
+1630: STORE_FAST           requires_zip64
+1632: LOAD_FAST            requires_zip64
+1634: POP_JUMP_FORWARD_IF_FALSE to 2034
+1636: LOAD_FAST            self
+1638: LOAD_ATTR            _allowZip64
+1648: POP_JUMP_FORWARD_IF_TRUE to 1686
+1650: LOAD_GLOBAL          NULL + LargeZipFile
+1662: LOAD_FAST            requires_zip64
+1664: LOAD_CONST           ' would require ZIP64 extensions'
+1666: BINARY_OP            +
+1670: PRECALL              
+1674: CALL                 
+1684: RAISE_VARARGS        
+1686: LOAD_GLOBAL          NULL + struct
+1698: LOAD_ATTR            pack
+1708: LOAD_GLOBAL          structEndArchive64
+1720: LOAD_GLOBAL          stringEndArchive64
+1732: LOAD_CONST           44
+1734: LOAD_CONST           45
+1736: LOAD_CONST           45
+1738: LOAD_CONST           0
+1740: LOAD_CONST           0
+1742: LOAD_FAST            centDirCount
+1744: LOAD_FAST            centDirCount
+1746: LOAD_FAST            centDirSize
+1748: LOAD_FAST            centDirOffset
+1750: PRECALL              
+1754: CALL                 
+1764: STORE_FAST           zip64endrec
+1766: LOAD_FAST            self
+1768: LOAD_ATTR            fp
+1778: LOAD_METHOD          write
+1800: LOAD_FAST            zip64endrec
+1802: PRECALL              
+1806: CALL                 
+1816: POP_TOP              
+1818: LOAD_GLOBAL          NULL + struct
+1830: LOAD_ATTR            pack
+1840: LOAD_GLOBAL          structEndArchive64Locator
+1852: LOAD_GLOBAL          stringEndArchive64Locator
+1864: LOAD_CONST           0
+1866: LOAD_FAST            pos2
+1868: LOAD_CONST           1
+1870: PRECALL              
+1874: CALL                 
+1884: STORE_FAST           zip64locrec
+1886: LOAD_FAST            self
+1888: LOAD_ATTR            fp
+1898: LOAD_METHOD          write
+1920: LOAD_FAST            zip64locrec
+1922: PRECALL              
+1926: CALL                 
+1936: POP_TOP              
+1938: LOAD_GLOBAL          NULL + min
+1950: LOAD_FAST            centDirCount
+1952: LOAD_CONST           65535
+1954: PRECALL              
+1958: CALL                 
+1968: STORE_FAST           centDirCount
+1970: LOAD_GLOBAL          NULL + min
+1982: LOAD_FAST            centDirSize
+1984: LOAD_CONST           4294967295
+1986: PRECALL              
+1990: CALL                 
+2000: STORE_FAST           centDirSize
+2002: LOAD_GLOBAL          NULL + min
+2014: LOAD_FAST            centDirOffset
+2016: LOAD_CONST           4294967295
+2018: PRECALL              
+2022: CALL                 
+2032: STORE_FAST           centDirOffset
+2034: LOAD_GLOBAL          NULL + struct
+2046: LOAD_ATTR            pack
+2056: LOAD_GLOBAL          structEndArchive
+2068: LOAD_GLOBAL          stringEndArchive
+2080: LOAD_CONST           0
+2082: LOAD_CONST           0
+2084: LOAD_FAST            centDirCount
+2086: LOAD_FAST            centDirCount
+2088: LOAD_FAST            centDirSize
+2090: LOAD_FAST            centDirOffset
+2092: LOAD_GLOBAL          NULL + len
+2104: LOAD_FAST            self
+2106: LOAD_ATTR            _comment
+2116: PRECALL              
+2120: CALL                 
+2130: PRECALL              
+2134: CALL                 
+2144: STORE_FAST           endrec
+2146: LOAD_FAST            self
+2148: LOAD_ATTR            fp
+2158: LOAD_METHOD          write
+2180: LOAD_FAST            endrec
+2182: PRECALL              
+2186: CALL                 
+2196: POP_TOP              
+2198: LOAD_FAST            self
+2200: LOAD_ATTR            fp
+2210: LOAD_METHOD          write
+2232: LOAD_FAST            self
+2234: LOAD_ATTR            _comment
+2244: PRECALL              
+2248: CALL                 
+2258: POP_TOP              
+2260: LOAD_FAST            self
+2262: LOAD_ATTR            mode
+2272: LOAD_CONST           'a'
+2274: COMPARE_OP           ==
+2280: POP_JUMP_FORWARD_IF_FALSE to 2332
+2282: LOAD_FAST            self
+2284: LOAD_ATTR            fp
+2294: LOAD_METHOD          truncate
+2316: PRECALL              
+2320: CALL                 
+2330: POP_TOP              
+2332: LOAD_FAST            self
+2334: LOAD_ATTR            fp
+2344: LOAD_METHOD          flush
+2366: PRECALL              
+2370: CALL                 
+2380: POP_TOP              
+2382: LOAD_CONST           None
+2384: RETURN_VALUE         

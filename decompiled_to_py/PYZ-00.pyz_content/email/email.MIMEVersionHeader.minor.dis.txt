@@ -1,0 +1,15 @@
+# Disassembly for email.MIMEVersionHeader.minor
+# From module file: email.headerregistry
+
+## co_consts:
+(None,)
+
+## co_names:
+('_minor',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _minor
+  14: RETURN_VALUE         

@@ -1,0 +1,14 @@
+# Disassembly for importlib.ExecutionLoader.get_filename
+# From module file: importlib.abc
+
+## co_consts:
+('Abstract method which should return the value that __file__ is to be\n        set to.\n\n        Raises ImportError if the module cannot be found.\n        ',)
+
+## co_names:
+('ImportError',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          ImportError
+  14: RAISE_VARARGS        

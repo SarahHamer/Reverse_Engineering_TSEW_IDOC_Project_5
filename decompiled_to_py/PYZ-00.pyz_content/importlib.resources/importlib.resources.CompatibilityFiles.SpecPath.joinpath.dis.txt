@@ -1,0 +1,29 @@
+# Disassembly for importlib.resources.CompatibilityFiles.SpecPath.joinpath
+# From module file: importlib.resources._adapters
+
+## co_consts:
+(None,)
+
+## co_names:
+('_reader', 'CompatibilityFiles', 'OrphanPath', 'ChildPath')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _reader
+  14: POP_JUMP_FORWARD_IF_TRUE to 68
+  16: LOAD_GLOBAL          CompatibilityFiles
+  28: LOAD_METHOD          OrphanPath
+  50: LOAD_FAST            other
+  52: PRECALL              
+  56: CALL                 
+  66: RETURN_VALUE         
+  68: LOAD_GLOBAL          CompatibilityFiles
+  80: LOAD_METHOD          ChildPath
+ 102: LOAD_FAST            self
+ 104: LOAD_ATTR            _reader
+ 114: LOAD_FAST            other
+ 116: PRECALL              
+ 120: CALL                 
+ 130: RETURN_VALUE         

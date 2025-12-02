@@ -1,0 +1,76 @@
+# Disassembly for inspect.BoundArguments.args
+# From module file: inspect
+
+## co_consts:
+(None,)
+
+## co_names:
+('_signature', 'parameters', 'items', 'kind', '_VAR_KEYWORD', '_KEYWORD_ONLY', 'arguments', '_VAR_POSITIONAL', 'extend', 'append', 'KeyError', 'tuple')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           args
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            _signature
+  18: LOAD_ATTR            parameters
+  28: LOAD_METHOD          items
+  50: PRECALL              
+  54: CALL                 
+  64: GET_ITER             
+  66: FOR_ITER             to 304
+  68: UNPACK_SEQUENCE      
+  72: STORE_FAST           param_name
+  74: STORE_FAST           param
+  76: LOAD_FAST            param
+  78: LOAD_ATTR            kind
+  88: LOAD_GLOBAL          _VAR_KEYWORD
+ 100: LOAD_GLOBAL          _KEYWORD_ONLY
+ 112: BUILD_TUPLE          
+ 114: CONTAINS_OP          
+ 116: POP_JUMP_FORWARD_IF_FALSE to 122
+ 118: POP_TOP              
+ 120: JUMP_FORWARD         to 304
+ 122: NOP                  
+ 124: LOAD_FAST            self
+ 126: LOAD_ATTR            arguments
+ 136: LOAD_FAST            param_name
+ 138: BINARY_SUBSCR        
+ 148: STORE_FAST           arg
+ 150: LOAD_FAST            param
+ 152: LOAD_ATTR            kind
+ 162: LOAD_GLOBAL          _VAR_POSITIONAL
+ 174: COMPARE_OP           ==
+ 180: POP_JUMP_FORWARD_IF_FALSE to 226
+ 182: LOAD_FAST            args
+ 184: LOAD_METHOD          extend
+ 206: LOAD_FAST            arg
+ 208: PRECALL              
+ 212: CALL                 
+ 222: POP_TOP              
+ 224: JUMP_BACKWARD        to 66
+ 226: LOAD_FAST            args
+ 228: LOAD_METHOD          append
+ 250: LOAD_FAST            arg
+ 252: PRECALL              
+ 256: CALL                 
+ 266: POP_TOP              
+ 268: JUMP_BACKWARD        to 66
+ 270: PUSH_EXC_INFO        
+ 272: LOAD_GLOBAL          KeyError
+ 284: CHECK_EXC_MATCH      
+ 286: POP_JUMP_FORWARD_IF_FALSE to 296
+ 288: POP_TOP              
+ 290: POP_EXCEPT           
+ 292: POP_TOP              
+ 294: JUMP_FORWARD         to 304
+ 296: RERAISE              
+ 298: COPY                 
+ 300: POP_EXCEPT           
+ 302: RERAISE              
+ 304: LOAD_GLOBAL          NULL + tuple
+ 316: LOAD_FAST            args
+ 318: PRECALL              
+ 322: CALL                 
+ 332: RETURN_VALUE         

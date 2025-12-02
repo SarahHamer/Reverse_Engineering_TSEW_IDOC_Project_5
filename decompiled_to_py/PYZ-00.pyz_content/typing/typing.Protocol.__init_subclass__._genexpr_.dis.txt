@@ -1,0 +1,26 @@
+# Disassembly for typing.Protocol.__init_subclass__.<genexpr>
+# From module file: typing
+
+## co_consts:
+(None,)
+
+## co_names:
+('Protocol',)
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_FAST            .0
+   8: FOR_ITER             to 36
+  10: STORE_FAST           b
+  12: LOAD_FAST            b
+  14: LOAD_GLOBAL          Protocol
+  26: IS_OP                
+  28: YIELD_VALUE          
+  30: RESUME               
+  32: POP_TOP              
+  34: JUMP_BACKWARD        to 8
+  36: LOAD_CONST           None
+  38: RETURN_VALUE         

@@ -1,0 +1,60 @@
+# Disassembly for shlex.shlex.sourcehook
+# From module file: shlex
+
+## co_consts:
+('Hook called on a filename to be sourced.', 0, '"', 1, -1, 'r')
+
+## co_names:
+('isinstance', 'infile', 'str', 'os', 'path', 'isabs', 'join', 'dirname', 'open')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            newfile
+   4: LOAD_CONST           0
+   6: BINARY_SUBSCR        
+  16: LOAD_CONST           '"'
+  18: COMPARE_OP           ==
+  24: POP_JUMP_FORWARD_IF_FALSE to 46
+  26: LOAD_FAST            newfile
+  28: LOAD_CONST           1
+  30: LOAD_CONST           -1
+  32: BUILD_SLICE          
+  34: BINARY_SUBSCR        
+  44: STORE_FAST           newfile
+  46: LOAD_GLOBAL          NULL + isinstance
+  58: LOAD_FAST            self
+  60: LOAD_ATTR            infile
+  70: LOAD_GLOBAL          str
+  82: PRECALL              
+  86: CALL                 
+  96: POP_JUMP_FORWARD_IF_FALSE to 292
+  98: LOAD_GLOBAL          os
+ 110: LOAD_ATTR            path
+ 120: LOAD_METHOD          isabs
+ 142: LOAD_FAST            newfile
+ 144: PRECALL              
+ 148: CALL                 
+ 158: POP_JUMP_FORWARD_IF_TRUE to 292
+ 160: LOAD_GLOBAL          os
+ 172: LOAD_ATTR            path
+ 182: LOAD_METHOD          join
+ 204: LOAD_GLOBAL          os
+ 216: LOAD_ATTR            path
+ 226: LOAD_METHOD          dirname
+ 248: LOAD_FAST            self
+ 250: LOAD_ATTR            infile
+ 260: PRECALL              
+ 264: CALL                 
+ 274: LOAD_FAST            newfile
+ 276: PRECALL              
+ 280: CALL                 
+ 290: STORE_FAST           newfile
+ 292: LOAD_FAST            newfile
+ 294: LOAD_GLOBAL          NULL + open
+ 306: LOAD_FAST            newfile
+ 308: LOAD_CONST           'r'
+ 310: PRECALL              
+ 314: CALL                 
+ 324: BUILD_TUPLE          
+ 326: RETURN_VALUE         

@@ -1,0 +1,52 @@
+# Disassembly for _pydecimal.Decimal.__sub__
+# From module file: _pydecimal
+
+## co_consts:
+('Return self - other', ('context',))
+
+## co_names:
+('_convert_other', 'NotImplemented', '_is_special', '_check_nans', '__add__', 'copy_negate')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _convert_other
+  14: LOAD_FAST            other
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           other
+  32: LOAD_FAST            other
+  34: LOAD_GLOBAL          NotImplemented
+  46: IS_OP                
+  48: POP_JUMP_FORWARD_IF_FALSE to 54
+  50: LOAD_FAST            other
+  52: RETURN_VALUE         
+  54: LOAD_FAST            self
+  56: LOAD_ATTR            _is_special
+  66: POP_JUMP_FORWARD_IF_TRUE to 82
+  68: LOAD_FAST            other
+  70: LOAD_ATTR            _is_special
+  80: POP_JUMP_FORWARD_IF_FALSE to 136
+  82: LOAD_FAST            self
+  84: LOAD_METHOD          _check_nans
+ 106: LOAD_FAST            other
+ 108: LOAD_FAST            context
+ 110: KW_NAMES             
+ 112: PRECALL              
+ 116: CALL                 
+ 126: STORE_FAST           ans
+ 128: LOAD_FAST            ans
+ 130: POP_JUMP_FORWARD_IF_FALSE to 136
+ 132: LOAD_FAST            ans
+ 134: RETURN_VALUE         
+ 136: LOAD_FAST            self
+ 138: LOAD_METHOD          __add__
+ 160: LOAD_FAST            other
+ 162: LOAD_METHOD          copy_negate
+ 184: PRECALL              
+ 188: CALL                 
+ 198: LOAD_FAST            context
+ 200: KW_NAMES             
+ 202: PRECALL              
+ 206: CALL                 
+ 216: RETURN_VALUE         

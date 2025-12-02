@@ -1,0 +1,65 @@
+# Disassembly for _pydecimal._WorkRep.__init__
+# From module file: _pydecimal
+
+## co_consts:
+(None, 0, 1, 2)
+
+## co_names:
+('sign', 'int', 'exp', 'isinstance', 'Decimal', '_sign', '_int', '_exp')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            value
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 52
+   6: LOAD_CONST           None
+   8: LOAD_FAST            self
+  10: STORE_ATTR           sign
+  20: LOAD_CONST           0
+  22: LOAD_FAST            self
+  24: STORE_ATTR           int
+  34: LOAD_CONST           None
+  36: LOAD_FAST            self
+  38: STORE_ATTR           exp
+  48: LOAD_CONST           None
+  50: RETURN_VALUE         
+  52: LOAD_GLOBAL          NULL + isinstance
+  64: LOAD_FAST            value
+  66: LOAD_GLOBAL          Decimal
+  78: PRECALL              
+  82: CALL                 
+  92: POP_JUMP_FORWARD_IF_FALSE to 196
+  94: LOAD_FAST            value
+  96: LOAD_ATTR            _sign
+ 106: LOAD_FAST            self
+ 108: STORE_ATTR           sign
+ 118: LOAD_GLOBAL          NULL + int
+ 130: LOAD_FAST            value
+ 132: LOAD_ATTR            _int
+ 142: PRECALL              
+ 146: CALL                 
+ 156: LOAD_FAST            self
+ 158: STORE_ATTR           int
+ 168: LOAD_FAST            value
+ 170: LOAD_ATTR            _exp
+ 180: LOAD_FAST            self
+ 182: STORE_ATTR           exp
+ 192: LOAD_CONST           None
+ 194: RETURN_VALUE         
+ 196: LOAD_FAST            value
+ 198: LOAD_CONST           0
+ 200: BINARY_SUBSCR        
+ 210: LOAD_FAST            self
+ 212: STORE_ATTR           sign
+ 222: LOAD_FAST            value
+ 224: LOAD_CONST           1
+ 226: BINARY_SUBSCR        
+ 236: LOAD_FAST            self
+ 238: STORE_ATTR           int
+ 248: LOAD_FAST            value
+ 250: LOAD_CONST           2
+ 252: BINARY_SUBSCR        
+ 262: LOAD_FAST            self
+ 264: STORE_ATTR           exp
+ 274: LOAD_CONST           None
+ 276: RETURN_VALUE         

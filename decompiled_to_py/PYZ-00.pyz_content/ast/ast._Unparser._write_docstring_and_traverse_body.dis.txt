@@ -1,0 +1,48 @@
+# Disassembly for ast._Unparser._write_docstring_and_traverse_body
+# From module file: ast
+
+## co_consts:
+(None, 1)
+
+## co_names:
+('get_raw_docstring', '_write_docstring', 'traverse', 'body')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          get_raw_docstring
+  26: LOAD_FAST            node
+  28: PRECALL              
+  32: CALL                 
+  42: COPY                 
+  44: STORE_FAST           docstring
+  46: POP_JUMP_FORWARD_IF_FALSE to 162
+  48: LOAD_FAST            self
+  50: LOAD_METHOD          _write_docstring
+  72: LOAD_FAST            docstring
+  74: PRECALL              
+  78: CALL                 
+  88: POP_TOP              
+  90: LOAD_FAST            self
+  92: LOAD_METHOD          traverse
+ 114: LOAD_FAST            node
+ 116: LOAD_ATTR            body
+ 126: LOAD_CONST           1
+ 128: LOAD_CONST           None
+ 130: BUILD_SLICE          
+ 132: BINARY_SUBSCR        
+ 142: PRECALL              
+ 146: CALL                 
+ 156: POP_TOP              
+ 158: LOAD_CONST           None
+ 160: RETURN_VALUE         
+ 162: LOAD_FAST            self
+ 164: LOAD_METHOD          traverse
+ 186: LOAD_FAST            node
+ 188: LOAD_ATTR            body
+ 198: PRECALL              
+ 202: CALL                 
+ 212: POP_TOP              
+ 214: LOAD_CONST           None
+ 216: RETURN_VALUE         

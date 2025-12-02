@@ -1,0 +1,96 @@
+# Disassembly for calendar.TextCalendar.formatmonth
+# From module file: calendar
+
+## co_consts:
+("\n        Return a month's calendar string (multi-line).\n        ", 2, 1, 7, '\n')
+
+## co_names:
+('max', 'formatmonthname', 'rstrip', 'formatweekheader', 'monthdays2calendar', 'formatweek')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + max
+  14: LOAD_CONST           2
+  16: LOAD_FAST            w
+  18: PRECALL              
+  22: CALL                 
+  32: STORE_FAST           w
+  34: LOAD_GLOBAL          NULL + max
+  46: LOAD_CONST           1
+  48: LOAD_FAST            l
+  50: PRECALL              
+  54: CALL                 
+  64: STORE_FAST           l
+  66: LOAD_FAST            self
+  68: LOAD_METHOD          formatmonthname
+  90: LOAD_FAST            theyear
+  92: LOAD_FAST            themonth
+  94: LOAD_CONST           7
+  96: LOAD_FAST            w
+  98: LOAD_CONST           1
+ 100: BINARY_OP            +
+ 104: BINARY_OP            *
+ 108: LOAD_CONST           1
+ 110: BINARY_OP            -
+ 114: PRECALL              
+ 118: CALL                 
+ 128: STORE_FAST           s
+ 130: LOAD_FAST            s
+ 132: LOAD_METHOD          rstrip
+ 154: PRECALL              
+ 158: CALL                 
+ 168: STORE_FAST           s
+ 170: LOAD_FAST            s
+ 172: LOAD_CONST           '\n'
+ 174: LOAD_FAST            l
+ 176: BINARY_OP            *
+ 180: BINARY_OP            +=
+ 184: STORE_FAST           s
+ 186: LOAD_FAST            s
+ 188: LOAD_FAST            self
+ 190: LOAD_METHOD          formatweekheader
+ 212: LOAD_FAST            w
+ 214: PRECALL              
+ 218: CALL                 
+ 228: LOAD_METHOD          rstrip
+ 250: PRECALL              
+ 254: CALL                 
+ 264: BINARY_OP            +=
+ 268: STORE_FAST           s
+ 270: LOAD_FAST            s
+ 272: LOAD_CONST           '\n'
+ 274: LOAD_FAST            l
+ 276: BINARY_OP            *
+ 280: BINARY_OP            +=
+ 284: STORE_FAST           s
+ 286: LOAD_FAST            self
+ 288: LOAD_METHOD          monthdays2calendar
+ 310: LOAD_FAST            theyear
+ 312: LOAD_FAST            themonth
+ 314: PRECALL              
+ 318: CALL                 
+ 328: GET_ITER             
+ 330: FOR_ITER             to 438
+ 332: STORE_FAST           week
+ 334: LOAD_FAST            s
+ 336: LOAD_FAST            self
+ 338: LOAD_METHOD          formatweek
+ 360: LOAD_FAST            week
+ 362: LOAD_FAST            w
+ 364: PRECALL              
+ 368: CALL                 
+ 378: LOAD_METHOD          rstrip
+ 400: PRECALL              
+ 404: CALL                 
+ 414: BINARY_OP            +=
+ 418: STORE_FAST           s
+ 420: LOAD_FAST            s
+ 422: LOAD_CONST           '\n'
+ 424: LOAD_FAST            l
+ 426: BINARY_OP            *
+ 430: BINARY_OP            +=
+ 434: STORE_FAST           s
+ 436: JUMP_BACKWARD        to 330
+ 438: LOAD_FAST            s
+ 440: RETURN_VALUE         

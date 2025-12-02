@@ -1,0 +1,23 @@
+# Disassembly for lobby.Notepad.get_description
+# From module file: lobby
+
+## co_consts:
+(None, 'You have a small notebook and pen.', 'A small notepad and pen is sitting on a chair.')
+
+## co_names:
+('parent', 'world', 'player')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            parent
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            world
+  26: LOAD_ATTR            player
+  36: COMPARE_OP           ==
+  42: POP_JUMP_FORWARD_IF_FALSE to 48
+  44: LOAD_CONST           'You have a small notebook and pen.'
+  46: RETURN_VALUE         
+  48: LOAD_CONST           'A small notepad and pen is sitting on a chair.'
+  50: RETURN_VALUE         

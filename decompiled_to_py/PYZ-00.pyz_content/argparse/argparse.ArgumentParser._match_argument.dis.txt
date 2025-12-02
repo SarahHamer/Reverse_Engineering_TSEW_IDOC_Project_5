@@ -1,0 +1,79 @@
+# Disassembly for argparse.ArgumentParser._match_argument
+# From module file: argparse
+
+## co_consts:
+(None, 'expected one argument', 'expected at most one argument', 'expected at least one argument', 'expected %s argument', 'expected %s arguments', 1)
+
+## co_names:
+('_get_nargs_pattern', '_re', 'match', '_', 'OPTIONAL', 'ONE_OR_MORE', 'get', 'nargs', 'ngettext', 'ArgumentError', 'len', 'group')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _get_nargs_pattern
+  26: LOAD_FAST            action
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           nargs_pattern
+  44: LOAD_GLOBAL          NULL + _re
+  56: LOAD_ATTR            match
+  66: LOAD_FAST            nargs_pattern
+  68: LOAD_FAST            arg_strings_pattern
+  70: PRECALL              
+  74: CALL                 
+  84: STORE_FAST           match
+  86: LOAD_FAST            match
+  88: POP_JUMP_FORWARD_IF_NOT_NONE to 352
+  90: LOAD_CONST           None
+  92: LOAD_GLOBAL          NULL + _
+ 104: LOAD_CONST           'expected one argument'
+ 106: PRECALL              
+ 110: CALL                 
+ 120: LOAD_GLOBAL          OPTIONAL
+ 132: LOAD_GLOBAL          NULL + _
+ 144: LOAD_CONST           'expected at most one argument'
+ 146: PRECALL              
+ 150: CALL                 
+ 160: LOAD_GLOBAL          ONE_OR_MORE
+ 172: LOAD_GLOBAL          NULL + _
+ 184: LOAD_CONST           'expected at least one argument'
+ 186: PRECALL              
+ 190: CALL                 
+ 200: BUILD_MAP            
+ 202: STORE_FAST           nargs_errors
+ 204: LOAD_FAST            nargs_errors
+ 206: LOAD_METHOD          get
+ 228: LOAD_FAST            action
+ 230: LOAD_ATTR            nargs
+ 240: PRECALL              
+ 244: CALL                 
+ 254: STORE_FAST           msg
+ 256: LOAD_FAST            msg
+ 258: POP_JUMP_FORWARD_IF_NOT_NONE to 320
+ 260: LOAD_GLOBAL          NULL + ngettext
+ 272: LOAD_CONST           'expected %s argument'
+ 274: LOAD_CONST           'expected %s arguments'
+ 276: LOAD_FAST            action
+ 278: LOAD_ATTR            nargs
+ 288: PRECALL              
+ 292: CALL                 
+ 302: LOAD_FAST            action
+ 304: LOAD_ATTR            nargs
+ 314: BINARY_OP            %
+ 318: STORE_FAST           msg
+ 320: LOAD_GLOBAL          NULL + ArgumentError
+ 332: LOAD_FAST            action
+ 334: LOAD_FAST            msg
+ 336: PRECALL              
+ 340: CALL                 
+ 350: RAISE_VARARGS        
+ 352: LOAD_GLOBAL          NULL + len
+ 364: LOAD_FAST            match
+ 366: LOAD_METHOD          group
+ 388: LOAD_CONST           1
+ 390: PRECALL              
+ 394: CALL                 
+ 404: PRECALL              
+ 408: CALL                 
+ 418: RETURN_VALUE         

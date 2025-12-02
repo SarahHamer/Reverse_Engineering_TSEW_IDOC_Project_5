@@ -1,0 +1,29 @@
+# Disassembly for subprocess.CompletedProcess.check_returncode
+# From module file: subprocess
+
+## co_consts:
+('Raise CalledProcessError if the exit code is non-zero.', None)
+
+## co_names:
+('returncode', 'CalledProcessError', 'args', 'stdout', 'stderr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            returncode
+  14: POP_JUMP_FORWARD_IF_FALSE to 92
+  16: LOAD_GLOBAL          NULL + CalledProcessError
+  28: LOAD_FAST            self
+  30: LOAD_ATTR            returncode
+  40: LOAD_FAST            self
+  42: LOAD_ATTR            args
+  52: LOAD_FAST            self
+  54: LOAD_ATTR            stdout
+  64: LOAD_FAST            self
+  66: LOAD_ATTR            stderr
+  76: PRECALL              
+  80: CALL                 
+  90: RAISE_VARARGS        
+  92: LOAD_CONST           None
+  94: RETURN_VALUE         

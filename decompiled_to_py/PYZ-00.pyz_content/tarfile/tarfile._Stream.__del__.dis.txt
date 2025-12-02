@@ -1,0 +1,32 @@
+# Disassembly for tarfile._Stream.__del__
+# From module file: tarfile
+
+## co_consts:
+(None, 'closed')
+
+## co_names:
+('hasattr', 'closed', 'close')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + hasattr
+  14: LOAD_FAST            self
+  16: LOAD_CONST           'closed'
+  18: PRECALL              
+  22: CALL                 
+  32: POP_JUMP_FORWARD_IF_FALSE to 92
+  34: LOAD_FAST            self
+  36: LOAD_ATTR            closed
+  46: POP_JUMP_FORWARD_IF_TRUE to 96
+  48: LOAD_FAST            self
+  50: LOAD_METHOD          close
+  72: PRECALL              
+  76: CALL                 
+  86: POP_TOP              
+  88: LOAD_CONST           None
+  90: RETURN_VALUE         
+  92: LOAD_CONST           None
+  94: RETURN_VALUE         
+  96: LOAD_CONST           None
+  98: RETURN_VALUE         

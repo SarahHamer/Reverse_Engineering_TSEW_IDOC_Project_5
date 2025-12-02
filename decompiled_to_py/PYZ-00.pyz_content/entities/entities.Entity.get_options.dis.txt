@@ -1,0 +1,41 @@
+# Disassembly for entities.Entity.get_options
+# From module file: entities
+
+## co_consts:
+(None,)
+
+## co_names:
+('children', 'get_visible', 'get_options', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           options
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            children
+  18: GET_ITER             
+  20: FOR_ITER             to 154
+  22: STORE_FAST           child
+  24: LOAD_FAST            child
+  26: LOAD_METHOD          get_visible
+  48: PRECALL              
+  52: CALL                 
+  62: POP_JUMP_FORWARD_IF_FALSE to 152
+  64: LOAD_FAST            child
+  66: LOAD_METHOD          get_options
+  88: PRECALL              
+  92: CALL                 
+ 102: GET_ITER             
+ 104: FOR_ITER             to 152
+ 106: STORE_FAST           child_option
+ 108: LOAD_FAST            options
+ 110: LOAD_METHOD          append
+ 132: LOAD_FAST            child_option
+ 134: PRECALL              
+ 138: CALL                 
+ 148: POP_TOP              
+ 150: JUMP_BACKWARD        to 104
+ 152: JUMP_BACKWARD        to 20
+ 154: LOAD_FAST            options
+ 156: RETURN_VALUE         

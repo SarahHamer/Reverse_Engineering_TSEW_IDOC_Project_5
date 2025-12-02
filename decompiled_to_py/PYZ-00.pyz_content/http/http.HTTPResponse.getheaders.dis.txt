@@ -1,0 +1,28 @@
+# Disassembly for http.HTTPResponse.getheaders
+# From module file: http.client
+
+## co_consts:
+('Return list of (header, value) tuples.',)
+
+## co_names:
+('headers', 'ResponseNotReady', 'list', 'items')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            headers
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 44
+  16: LOAD_GLOBAL          NULL + ResponseNotReady
+  28: PRECALL              
+  32: CALL                 
+  42: RAISE_VARARGS        
+  44: LOAD_GLOBAL          NULL + list
+  56: LOAD_FAST            self
+  58: LOAD_ATTR            headers
+  68: LOAD_METHOD          items
+  90: PRECALL              
+  94: CALL                 
+ 104: PRECALL              
+ 108: CALL                 
+ 118: RETURN_VALUE         

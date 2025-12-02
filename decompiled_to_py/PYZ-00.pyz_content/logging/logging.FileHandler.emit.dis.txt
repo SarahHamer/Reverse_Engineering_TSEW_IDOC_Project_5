@@ -1,0 +1,43 @@
+# Disassembly for logging.FileHandler.emit
+# From module file: logging
+
+## co_consts:
+("\n        Emit a record.\n\n        If the stream was not opened because 'delay' was specified in the\n        constructor, open it before calling the superclass's emit.\n\n        If stream is not open, current mode is 'w' and `_closed=True`, record\n        will not be emitted (see Issue #42378).\n        ", None, 'w')
+
+## co_names:
+('stream', 'mode', '_closed', '_open', 'StreamHandler', 'emit')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            stream
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 102
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            mode
+  28: LOAD_CONST           'w'
+  30: COMPARE_OP           !=
+  36: POP_JUMP_FORWARD_IF_TRUE to 52
+  38: LOAD_FAST            self
+  40: LOAD_ATTR            _closed
+  50: POP_JUMP_FORWARD_IF_TRUE to 102
+  52: LOAD_FAST            self
+  54: LOAD_METHOD          _open
+  76: PRECALL              
+  80: CALL                 
+  90: LOAD_FAST            self
+  92: STORE_ATTR           stream
+ 102: LOAD_FAST            self
+ 104: LOAD_ATTR            stream
+ 114: POP_JUMP_FORWARD_IF_FALSE to 174
+ 116: LOAD_GLOBAL          StreamHandler
+ 128: LOAD_METHOD          emit
+ 150: LOAD_FAST            self
+ 152: LOAD_FAST            record
+ 154: PRECALL              
+ 158: CALL                 
+ 168: POP_TOP              
+ 170: LOAD_CONST           None
+ 172: RETURN_VALUE         
+ 174: LOAD_CONST           None
+ 176: RETURN_VALUE         

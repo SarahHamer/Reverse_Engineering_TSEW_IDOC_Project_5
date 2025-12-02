@@ -1,0 +1,15 @@
+# Disassembly for zipfile.ZipFile.infolist
+# From module file: zipfile
+
+## co_consts:
+('Return a list of class ZipInfo instances for files in the\n        archive.',)
+
+## co_names:
+('filelist',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            filelist
+  14: RETURN_VALUE         

@@ -1,0 +1,15 @@
+# Disassembly for numbers.Integral.numerator
+# From module file: numbers
+
+## co_consts:
+('Integers are their own numerators.',)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: UNARY_POSITIVE       
+   6: RETURN_VALUE         

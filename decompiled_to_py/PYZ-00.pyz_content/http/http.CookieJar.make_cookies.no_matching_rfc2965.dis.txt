@@ -1,0 +1,24 @@
+# Disassembly for http.CookieJar.make_cookies.no_matching_rfc2965
+# From module file: http.cookiejar
+
+## co_consts:
+(None,)
+
+## co_names:
+('domain', 'path', 'name')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            ns_cookie
+   4: LOAD_ATTR            domain
+  14: LOAD_FAST            ns_cookie
+  16: LOAD_ATTR            path
+  26: LOAD_FAST            ns_cookie
+  28: LOAD_ATTR            name
+  38: BUILD_TUPLE          
+  40: STORE_FAST           key
+  42: LOAD_FAST            key
+  44: LOAD_FAST            lookup
+  46: CONTAINS_OP          
+  48: RETURN_VALUE         

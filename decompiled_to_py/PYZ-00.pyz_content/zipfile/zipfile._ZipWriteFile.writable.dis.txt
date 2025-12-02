@@ -1,0 +1,14 @@
+# Disassembly for zipfile._ZipWriteFile.writable
+# From module file: zipfile
+
+## co_consts:
+(None, True)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           True
+   4: RETURN_VALUE         

@@ -1,0 +1,17 @@
+# Disassembly for email.Message.set_default_type
+# From module file: email.message
+
+## co_consts:
+('Set the `default\' content type.\n\n        ctype should be either "text/plain" or "message/rfc822", although this\n        is not enforced.  The default content type is not stored in the\n        Content-Type header.\n        ', None)
+
+## co_names:
+('_default_type',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            ctype
+   4: LOAD_FAST            self
+   6: STORE_ATTR           _default_type
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         

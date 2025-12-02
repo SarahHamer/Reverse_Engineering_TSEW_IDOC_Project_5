@@ -1,0 +1,32 @@
+# Disassembly for ast._Unparser.__init__
+# From module file: ast
+
+## co_consts:
+(None, 0, False)
+
+## co_names:
+('_source', '_precedences', '_type_ignores', '_indent', '_avoid_backslashes', '_in_try_star')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            self
+   6: STORE_ATTR           _source
+  16: BUILD_MAP            
+  18: LOAD_FAST            self
+  20: STORE_ATTR           _precedences
+  30: BUILD_MAP            
+  32: LOAD_FAST            self
+  34: STORE_ATTR           _type_ignores
+  44: LOAD_CONST           0
+  46: LOAD_FAST            self
+  48: STORE_ATTR           _indent
+  58: LOAD_FAST            _avoid_backslashes
+  60: LOAD_FAST            self
+  62: STORE_ATTR           _avoid_backslashes
+  72: LOAD_CONST           False
+  74: LOAD_FAST            self
+  76: STORE_ATTR           _in_try_star
+  86: LOAD_CONST           None
+  88: RETURN_VALUE         

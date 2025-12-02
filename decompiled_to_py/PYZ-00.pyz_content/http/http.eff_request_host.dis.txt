@@ -1,0 +1,41 @@
+# Disassembly for http.eff_request_host
+# From module file: http.cookiejar
+
+## co_consts:
+('Return a tuple (request-host, effective request-host name).\n\n    As defined by RFC 2965, except both are lowercased.\n\n    ', '.', -1, '.local')
+
+## co_names:
+('request_host', 'find', 'IPV4_RE', 'search')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + request_host
+  14: LOAD_FAST            request
+  16: PRECALL              
+  20: CALL                 
+  30: COPY                 
+  32: STORE_FAST           erhn
+  34: STORE_FAST           req_host
+  36: LOAD_FAST            req_host
+  38: LOAD_METHOD          find
+  60: LOAD_CONST           '.'
+  62: PRECALL              
+  66: CALL                 
+  76: LOAD_CONST           -1
+  78: COMPARE_OP           ==
+  84: POP_JUMP_FORWARD_IF_FALSE to 148
+  86: LOAD_GLOBAL          IPV4_RE
+  98: LOAD_METHOD          search
+ 120: LOAD_FAST            req_host
+ 122: PRECALL              
+ 126: CALL                 
+ 136: POP_JUMP_FORWARD_IF_TRUE to 148
+ 138: LOAD_FAST            req_host
+ 140: LOAD_CONST           '.local'
+ 142: BINARY_OP            +
+ 146: STORE_FAST           erhn
+ 148: LOAD_FAST            req_host
+ 150: LOAD_FAST            erhn
+ 152: BUILD_TUPLE          
+ 154: RETURN_VALUE         

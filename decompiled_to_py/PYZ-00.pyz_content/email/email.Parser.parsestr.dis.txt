@@ -1,0 +1,23 @@
+# Disassembly for email.Parser.parsestr
+# From module file: email.parser
+
+## co_consts:
+('Create a message structure from a string.\n\n        Returns the root of the message structure.  Optional headersonly is a\n        flag specifying whether to stop parsing after reading the headers or\n        not.  The default is False, meaning it parses the entire contents of\n        the file.\n        ', ('headersonly',))
+
+## co_names:
+('parse', 'StringIO')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          parse
+  26: LOAD_GLOBAL          NULL + StringIO
+  38: LOAD_FAST            text
+  40: PRECALL              
+  44: CALL                 
+  54: LOAD_FAST            headersonly
+  56: KW_NAMES             
+  58: PRECALL              
+  62: CALL                 
+  72: RETURN_VALUE         

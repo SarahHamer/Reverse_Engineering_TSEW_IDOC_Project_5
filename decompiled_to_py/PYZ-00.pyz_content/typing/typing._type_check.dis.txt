@@ -1,0 +1,121 @@
+# Disassembly for typing._type_check
+# From module file: typing
+
+## co_consts:
+('Check that the argument is a type, and return it (internal helper).\n\n    As a special case, accept None and return type(None) instead. Also wrap strings\n    into ForwardRef instances. Consider several corner cases, for example plain\n    special forms like Union are not valid, while Union[int, str] is OK, etc.\n    The msg argument is a human-readable error message, e.g.::\n\n        "Union[arg, ...]: arg should be a type."\n\n    We append the repr() of the actual value (truncated to 100 chars).\n    ', ('module', 'allow_special_forms'), ' is not valid as type argument', 'Plain ', ' Got ', '.100', '.')
+
+## co_names:
+('Generic', 'Protocol', 'ClassVar', 'Final', '_type_convert', 'isinstance', '_GenericAlias', '__origin__', 'TypeError', 'Any', 'LiteralString', 'NoReturn', 'Never', 'Self', 'TypeAlias', '_SpecialForm', 'type', 'tuple')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          Generic
+  14: LOAD_GLOBAL          Protocol
+  26: BUILD_TUPLE          
+  28: STORE_FAST           invalid_generic_forms
+  30: LOAD_FAST            allow_special_forms
+  32: POP_JUMP_FORWARD_IF_TRUE to 82
+  34: LOAD_FAST            invalid_generic_forms
+  36: LOAD_GLOBAL          ClassVar
+  48: BUILD_TUPLE          
+  50: BINARY_OP            +=
+  54: STORE_FAST           invalid_generic_forms
+  56: LOAD_FAST            is_argument
+  58: POP_JUMP_FORWARD_IF_FALSE to 82
+  60: LOAD_FAST            invalid_generic_forms
+  62: LOAD_GLOBAL          Final
+  74: BUILD_TUPLE          
+  76: BINARY_OP            +=
+  80: STORE_FAST           invalid_generic_forms
+  82: LOAD_GLOBAL          NULL + _type_convert
+  94: LOAD_FAST            arg
+  96: LOAD_FAST            module
+  98: LOAD_FAST            allow_special_forms
+ 100: KW_NAMES             
+ 102: PRECALL              
+ 106: CALL                 
+ 116: STORE_FAST           arg
+ 118: LOAD_GLOBAL          NULL + isinstance
+ 130: LOAD_FAST            arg
+ 132: LOAD_GLOBAL          _GenericAlias
+ 144: PRECALL              
+ 148: CALL                 
+ 158: POP_JUMP_FORWARD_IF_FALSE to 214
+ 160: LOAD_FAST            arg
+ 162: LOAD_ATTR            __origin__
+ 172: LOAD_FAST            invalid_generic_forms
+ 174: CONTAINS_OP          
+ 176: POP_JUMP_FORWARD_IF_FALSE to 214
+ 178: LOAD_GLOBAL          NULL + TypeError
+ 190: LOAD_FAST            arg
+ 192: FORMAT_VALUE         
+ 194: LOAD_CONST           ' is not valid as type argument'
+ 196: BUILD_STRING         
+ 198: PRECALL              
+ 202: CALL                 
+ 212: RAISE_VARARGS        
+ 214: LOAD_FAST            arg
+ 216: LOAD_GLOBAL          Any
+ 228: LOAD_GLOBAL          LiteralString
+ 240: LOAD_GLOBAL          NoReturn
+ 252: LOAD_GLOBAL          Never
+ 264: LOAD_GLOBAL          Self
+ 276: LOAD_GLOBAL          TypeAlias
+ 288: BUILD_TUPLE          
+ 290: CONTAINS_OP          
+ 292: POP_JUMP_FORWARD_IF_FALSE to 298
+ 294: LOAD_FAST            arg
+ 296: RETURN_VALUE         
+ 298: LOAD_FAST            allow_special_forms
+ 300: POP_JUMP_FORWARD_IF_FALSE to 338
+ 302: LOAD_FAST            arg
+ 304: LOAD_GLOBAL          ClassVar
+ 316: LOAD_GLOBAL          Final
+ 328: BUILD_TUPLE          
+ 330: CONTAINS_OP          
+ 332: POP_JUMP_FORWARD_IF_FALSE to 338
+ 334: LOAD_FAST            arg
+ 336: RETURN_VALUE         
+ 338: LOAD_GLOBAL          NULL + isinstance
+ 350: LOAD_FAST            arg
+ 352: LOAD_GLOBAL          _SpecialForm
+ 364: PRECALL              
+ 368: CALL                 
+ 378: POP_JUMP_FORWARD_IF_TRUE to 412
+ 380: LOAD_FAST            arg
+ 382: LOAD_GLOBAL          Generic
+ 394: LOAD_GLOBAL          Protocol
+ 406: BUILD_TUPLE          
+ 408: CONTAINS_OP          
+ 410: POP_JUMP_FORWARD_IF_FALSE to 450
+ 412: LOAD_GLOBAL          NULL + TypeError
+ 424: LOAD_CONST           'Plain '
+ 426: LOAD_FAST            arg
+ 428: FORMAT_VALUE         
+ 430: LOAD_CONST           ' is not valid as type argument'
+ 432: BUILD_STRING         
+ 434: PRECALL              
+ 438: CALL                 
+ 448: RAISE_VARARGS        
+ 450: LOAD_GLOBAL          NULL + type
+ 462: LOAD_FAST            arg
+ 464: PRECALL              
+ 468: CALL                 
+ 478: LOAD_GLOBAL          tuple
+ 490: IS_OP                
+ 492: POP_JUMP_FORWARD_IF_FALSE to 538
+ 494: LOAD_GLOBAL          NULL + TypeError
+ 506: LOAD_FAST            msg
+ 508: FORMAT_VALUE         
+ 510: LOAD_CONST           ' Got '
+ 512: LOAD_FAST            arg
+ 514: LOAD_CONST           '.100'
+ 516: FORMAT_VALUE         repr, with format
+ 518: LOAD_CONST           '.'
+ 520: BUILD_STRING         
+ 522: PRECALL              
+ 526: CALL                 
+ 536: RAISE_VARARGS        
+ 538: LOAD_FAST            arg
+ 540: RETURN_VALUE         

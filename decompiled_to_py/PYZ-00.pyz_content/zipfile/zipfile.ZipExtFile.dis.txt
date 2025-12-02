@@ -1,0 +1,83 @@
+# Disassembly for zipfile.ZipExtFile
+# From module file: zipfile
+
+## co_consts:
+('ZipExtFile', 'File-like object for reading an archive member.\n       Is returned by ZipFile.open().\n    ', 1073741824, 4096, 16777216, None, False, <code object __init__ at 0x0000024068D03A80, file "zipfile.py", line 820>, <code object _init_decrypter at 0x00000240691E8F30, file "zipfile.py", line 871>, <code object __repr__ at 0x0000024068E1BE80, file "zipfile.py", line 882>, -1, <code object readline at 0x00000240691F6A70, file "zipfile.py", line 896>, 1, <code object peek at 0x0000024068E232C0, file "zipfile.py", line 912>, <code object readable at 0x000002406945FE10, file "zipfile.py", line 925>, <code object read at 0x0000024068C344B0, file "zipfile.py", line 930>, <code object _update_crc at 0x000002406949C030, file "zipfile.py", line 965>, <code object read1 at 0x0000024068B7AEE0, file "zipfile.py", line 975>, <code object _read1 at 0x00000240695977D0, file "zipfile.py", line 1012>, <code object _read2 at 0x0000024069366120, file "zipfile.py", line 1048>, <code object close at 0x000002406942DC50, file "zipfile.py", line 1064>, <code object seekable at 0x00000240693EB930, file "zipfile.py", line 1071>, 0, <code object seek at 0x0000024069597C20, file "zipfile.py", line 1076>, <code object tell at 0x00000240691EA430, file "zipfile.py", line 1126>, (None, False), (-1,), (1,), (0,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'MAX_N', 'MIN_READ_SIZE', 'MAX_SEEK_READ', '__init__', '_init_decrypter', '__repr__', 'readline', 'peek', 'readable', 'read', '_update_crc', 'read1', '_read1', '_read2', 'close', 'seekable', 'seek', 'tell', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'ZipExtFile'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           'File-like object for reading an archive member.\n       Is returned by ZipFile.open().\n    '
+  14: STORE_NAME           __doc__
+  16: LOAD_CONST           1073741824
+  18: STORE_NAME           MAX_N
+  20: LOAD_CONST           4096
+  22: STORE_NAME           MIN_READ_SIZE
+  24: LOAD_CONST           16777216
+  26: STORE_NAME           MAX_SEEK_READ
+  28: NOP                  
+  30: NOP                  
+  32: LOAD_CONST           (None, False)
+  34: LOAD_CONST           <code object __init__ at 0x0000024068D03A80, file "zipfile.py", line 820>
+  36: MAKE_FUNCTION        defaults
+  38: STORE_NAME           __init__
+  40: LOAD_CONST           <code object _init_decrypter at 0x00000240691E8F30, file "zipfile.py", line 871>
+  42: MAKE_FUNCTION        
+  44: STORE_NAME           _init_decrypter
+  46: LOAD_CONST           <code object __repr__ at 0x0000024068E1BE80, file "zipfile.py", line 882>
+  48: MAKE_FUNCTION        
+  50: STORE_NAME           __repr__
+  52: LOAD_CONST           (-1,)
+  54: LOAD_CONST           <code object readline at 0x00000240691F6A70, file "zipfile.py", line 896>
+  56: MAKE_FUNCTION        defaults
+  58: STORE_NAME           readline
+  60: LOAD_CONST           (1,)
+  62: LOAD_CONST           <code object peek at 0x0000024068E232C0, file "zipfile.py", line 912>
+  64: MAKE_FUNCTION        defaults
+  66: STORE_NAME           peek
+  68: LOAD_CONST           <code object readable at 0x000002406945FE10, file "zipfile.py", line 925>
+  70: MAKE_FUNCTION        
+  72: STORE_NAME           readable
+  74: LOAD_CONST           (-1,)
+  76: LOAD_CONST           <code object read at 0x0000024068C344B0, file "zipfile.py", line 930>
+  78: MAKE_FUNCTION        defaults
+  80: STORE_NAME           read
+  82: LOAD_CONST           <code object _update_crc at 0x000002406949C030, file "zipfile.py", line 965>
+  84: MAKE_FUNCTION        
+  86: STORE_NAME           _update_crc
+  88: LOAD_CONST           <code object read1 at 0x0000024068B7AEE0, file "zipfile.py", line 975>
+  90: MAKE_FUNCTION        
+  92: STORE_NAME           read1
+  94: LOAD_CONST           <code object _read1 at 0x00000240695977D0, file "zipfile.py", line 1012>
+  96: MAKE_FUNCTION        
+  98: STORE_NAME           _read1
+ 100: LOAD_CONST           <code object _read2 at 0x0000024069366120, file "zipfile.py", line 1048>
+ 102: MAKE_FUNCTION        
+ 104: STORE_NAME           _read2
+ 106: LOAD_CLOSURE         __class__
+ 108: BUILD_TUPLE          
+ 110: LOAD_CONST           <code object close at 0x000002406942DC50, file "zipfile.py", line 1064>
+ 112: MAKE_FUNCTION        closure
+ 114: STORE_NAME           close
+ 116: LOAD_CONST           <code object seekable at 0x00000240693EB930, file "zipfile.py", line 1071>
+ 118: MAKE_FUNCTION        
+ 120: STORE_NAME           seekable
+ 122: LOAD_CONST           (0,)
+ 124: LOAD_CONST           <code object seek at 0x0000024069597C20, file "zipfile.py", line 1076>
+ 126: MAKE_FUNCTION        defaults
+ 128: STORE_NAME           seek
+ 130: LOAD_CONST           <code object tell at 0x00000240691EA430, file "zipfile.py", line 1126>
+ 132: MAKE_FUNCTION        
+ 134: STORE_NAME           tell
+ 136: LOAD_CLOSURE         __class__
+ 138: COPY                 
+ 140: STORE_NAME           __classcell__
+ 142: RETURN_VALUE         

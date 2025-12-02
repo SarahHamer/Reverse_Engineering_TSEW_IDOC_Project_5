@@ -1,0 +1,40 @@
+# Disassembly for socket.socket.sendfile
+# From module file: socket
+
+## co_consts:
+('sendfile(file[, offset[, count]]) -> sent\n\n        Send a file until EOF is reached by using high-performance\n        os.sendfile() and return the total number of bytes which\n        were sent.\n        *file* must be a regular file object opened in binary mode.\n        If os.sendfile() is not available (e.g. Windows) or file is\n        not a regular file socket.send() will be used instead.\n        *offset* tells from where to start reading the file.\n        If specified, *count* is the total number of bytes to transmit\n        as opposed to sending the file until EOF is reached.\n        File position is updated on return or also in case of error in\n        which case file.tell() can be used to figure out the number of\n        bytes which were sent.\n        The socket must be of SOCK_STREAM type.\n        Non-blocking sockets are not supported.\n        ',)
+
+## co_names:
+('_sendfile_use_sendfile', '_GiveupOnSendfile', '_sendfile_use_send')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            self
+   6: LOAD_METHOD          _sendfile_use_sendfile
+  28: LOAD_FAST            file
+  30: LOAD_FAST            offset
+  32: LOAD_FAST            count
+  34: PRECALL              
+  38: CALL                 
+  48: RETURN_VALUE         
+  50: PUSH_EXC_INFO        
+  52: LOAD_GLOBAL          _GiveupOnSendfile
+  64: CHECK_EXC_MATCH      
+  66: POP_JUMP_FORWARD_IF_FALSE to 120
+  68: POP_TOP              
+  70: LOAD_FAST            self
+  72: LOAD_METHOD          _sendfile_use_send
+  94: LOAD_FAST            file
+  96: LOAD_FAST            offset
+  98: LOAD_FAST            count
+ 100: PRECALL              
+ 104: CALL                 
+ 114: SWAP                 
+ 116: POP_EXCEPT           
+ 118: RETURN_VALUE         
+ 120: RERAISE              
+ 122: COPY                 
+ 124: POP_EXCEPT           
+ 126: RERAISE              

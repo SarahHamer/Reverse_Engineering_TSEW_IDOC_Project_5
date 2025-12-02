@@ -1,0 +1,73 @@
+# Disassembly for statistics._convert
+# From module file: statistics
+
+## co_consts:
+('Convert value to given numeric type T.', 1)
+
+## co_names:
+('type', 'issubclass', 'int', 'denominator', 'float', 'TypeError', 'Decimal', 'numerator')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + type
+  14: LOAD_FAST            value
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_FAST            T
+  32: IS_OP                
+  34: POP_JUMP_FORWARD_IF_FALSE to 40
+  36: LOAD_FAST            value
+  38: RETURN_VALUE         
+  40: LOAD_GLOBAL          NULL + issubclass
+  52: LOAD_FAST            T
+  54: LOAD_GLOBAL          int
+  66: PRECALL              
+  70: CALL                 
+  80: POP_JUMP_FORWARD_IF_FALSE to 118
+  82: LOAD_FAST            value
+  84: LOAD_ATTR            denominator
+  94: LOAD_CONST           1
+  96: COMPARE_OP           !=
+ 102: POP_JUMP_FORWARD_IF_FALSE to 118
+ 104: LOAD_GLOBAL          float
+ 116: STORE_FAST           T
+ 118: NOP                  
+ 120: PUSH_NULL            
+ 122: LOAD_FAST            T
+ 124: LOAD_FAST            value
+ 126: PRECALL              
+ 130: CALL                 
+ 140: RETURN_VALUE         
+ 142: PUSH_EXC_INFO        
+ 144: LOAD_GLOBAL          TypeError
+ 156: CHECK_EXC_MATCH      
+ 158: POP_JUMP_FORWARD_IF_FALSE to 276
+ 160: POP_TOP              
+ 162: LOAD_GLOBAL          NULL + issubclass
+ 174: LOAD_FAST            T
+ 176: LOAD_GLOBAL          Decimal
+ 188: PRECALL              
+ 192: CALL                 
+ 202: POP_JUMP_FORWARD_IF_FALSE to 274
+ 204: PUSH_NULL            
+ 206: LOAD_FAST            T
+ 208: LOAD_FAST            value
+ 210: LOAD_ATTR            numerator
+ 220: PRECALL              
+ 224: CALL                 
+ 234: PUSH_NULL            
+ 236: LOAD_FAST            T
+ 238: LOAD_FAST            value
+ 240: LOAD_ATTR            denominator
+ 250: PRECALL              
+ 254: CALL                 
+ 264: BINARY_OP            /
+ 268: SWAP                 
+ 270: POP_EXCEPT           
+ 272: RETURN_VALUE         
+ 274: RAISE_VARARGS        
+ 276: RERAISE              
+ 278: COPY                 
+ 280: POP_EXCEPT           
+ 282: RERAISE              

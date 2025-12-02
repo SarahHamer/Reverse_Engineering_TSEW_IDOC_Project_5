@@ -1,0 +1,69 @@
+# Disassembly for gettext.GNUTranslations.npgettext
+# From module file: gettext
+
+## co_consts:
+(None, 1)
+
+## co_names:
+('CONTEXT', '_catalog', 'plural', 'KeyError', '_fallback', 'npgettext')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            CONTEXT
+  14: LOAD_FAST            context
+  16: LOAD_FAST            msgid1
+  18: BUILD_TUPLE          
+  20: BINARY_OP            %
+  24: STORE_FAST           ctxt_msg_id
+  26: NOP                  
+  28: LOAD_FAST            self
+  30: LOAD_ATTR            _catalog
+  40: LOAD_FAST            ctxt_msg_id
+  42: LOAD_FAST            self
+  44: LOAD_METHOD          plural
+  66: LOAD_FAST            n
+  68: PRECALL              
+  72: CALL                 
+  82: BUILD_TUPLE          
+  84: BINARY_SUBSCR        
+  94: STORE_FAST           tmsg
+  96: JUMP_FORWARD         to 228
+  98: PUSH_EXC_INFO        
+ 100: LOAD_GLOBAL          KeyError
+ 112: CHECK_EXC_MATCH      
+ 114: POP_JUMP_FORWARD_IF_FALSE to 220
+ 116: POP_TOP              
+ 118: LOAD_FAST            self
+ 120: LOAD_ATTR            _fallback
+ 130: POP_JUMP_FORWARD_IF_FALSE to 194
+ 132: LOAD_FAST            self
+ 134: LOAD_ATTR            _fallback
+ 144: LOAD_METHOD          npgettext
+ 166: LOAD_FAST            context
+ 168: LOAD_FAST            msgid1
+ 170: LOAD_FAST            msgid2
+ 172: LOAD_FAST            n
+ 174: PRECALL              
+ 178: CALL                 
+ 188: SWAP                 
+ 190: POP_EXCEPT           
+ 192: RETURN_VALUE         
+ 194: LOAD_FAST            n
+ 196: LOAD_CONST           1
+ 198: COMPARE_OP           ==
+ 204: POP_JUMP_FORWARD_IF_FALSE to 212
+ 206: LOAD_FAST            msgid1
+ 208: STORE_FAST           tmsg
+ 210: JUMP_FORWARD         to 216
+ 212: LOAD_FAST            msgid2
+ 214: STORE_FAST           tmsg
+ 216: POP_EXCEPT           
+ 218: JUMP_FORWARD         to 228
+ 220: RERAISE              
+ 222: COPY                 
+ 224: POP_EXCEPT           
+ 226: RERAISE              
+ 228: LOAD_FAST            tmsg
+ 230: RETURN_VALUE         

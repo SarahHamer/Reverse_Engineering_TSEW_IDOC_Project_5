@@ -1,0 +1,17 @@
+# Disassembly for typing._overload_dummy
+# From module file: typing
+
+## co_consts:
+('Helper for @overload to raise when called.', 'You should not call an overloaded function. A series of @overload-decorated functions outside a stub module should always be followed by an implementation that is not @overload-ed.')
+
+## co_names:
+('NotImplementedError',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + NotImplementedError
+  14: LOAD_CONST           'You should not call an overloaded function. A series of @overload-decorated functions outside a stub module should always be followed by an implementation that is not @overload-ed.'
+  16: PRECALL              
+  20: CALL                 
+  30: RAISE_VARARGS        

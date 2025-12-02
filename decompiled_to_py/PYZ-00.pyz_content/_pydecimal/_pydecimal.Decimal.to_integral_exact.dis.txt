@@ -1,0 +1,87 @@
+# Disassembly for _pydecimal.Decimal.to_integral_exact
+# From module file: _pydecimal
+
+## co_consts:
+("Rounds to a nearby integer.\n\n        If no rounding mode is specified, take the rounding mode from\n        the context.  This method raises the Rounded and Inexact flags\n        when appropriate.\n\n        See also: to_integral_value, which does exactly the same as\n        this method except that it doesn't raise Inexact or Rounded.\n        ", ('context',), 0, '0')
+
+## co_names:
+('_is_special', '_check_nans', 'Decimal', '_exp', '_dec_from_triple', '_sign', 'getcontext', 'rounding', '_rescale', '_raise_error', 'Inexact', 'Rounded')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _is_special
+  14: POP_JUMP_FORWARD_IF_FALSE to 98
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          _check_nans
+  40: LOAD_FAST            context
+  42: KW_NAMES             
+  44: PRECALL              
+  48: CALL                 
+  58: STORE_FAST           ans
+  60: LOAD_FAST            ans
+  62: POP_JUMP_FORWARD_IF_FALSE to 68
+  64: LOAD_FAST            ans
+  66: RETURN_VALUE         
+  68: LOAD_GLOBAL          NULL + Decimal
+  80: LOAD_FAST            self
+  82: PRECALL              
+  86: CALL                 
+  96: RETURN_VALUE         
+  98: LOAD_FAST            self
+ 100: LOAD_ATTR            _exp
+ 110: LOAD_CONST           0
+ 112: COMPARE_OP           >=
+ 118: POP_JUMP_FORWARD_IF_FALSE to 150
+ 120: LOAD_GLOBAL          NULL + Decimal
+ 132: LOAD_FAST            self
+ 134: PRECALL              
+ 138: CALL                 
+ 148: RETURN_VALUE         
+ 150: LOAD_FAST            self
+ 152: POP_JUMP_FORWARD_IF_TRUE to 198
+ 154: LOAD_GLOBAL          NULL + _dec_from_triple
+ 166: LOAD_FAST            self
+ 168: LOAD_ATTR            _sign
+ 178: LOAD_CONST           '0'
+ 180: LOAD_CONST           0
+ 182: PRECALL              
+ 186: CALL                 
+ 196: RETURN_VALUE         
+ 198: LOAD_FAST            context
+ 200: POP_JUMP_FORWARD_IF_NOT_NONE to 230
+ 202: LOAD_GLOBAL          NULL + getcontext
+ 214: PRECALL              
+ 218: CALL                 
+ 228: STORE_FAST           context
+ 230: LOAD_FAST            rounding
+ 232: POP_JUMP_FORWARD_IF_NOT_NONE to 248
+ 234: LOAD_FAST            context
+ 236: LOAD_ATTR            rounding
+ 246: STORE_FAST           rounding
+ 248: LOAD_FAST            self
+ 250: LOAD_METHOD          _rescale
+ 272: LOAD_CONST           0
+ 274: LOAD_FAST            rounding
+ 276: PRECALL              
+ 280: CALL                 
+ 290: STORE_FAST           ans
+ 292: LOAD_FAST            ans
+ 294: LOAD_FAST            self
+ 296: COMPARE_OP           !=
+ 302: POP_JUMP_FORWARD_IF_FALSE to 356
+ 304: LOAD_FAST            context
+ 306: LOAD_METHOD          _raise_error
+ 328: LOAD_GLOBAL          Inexact
+ 340: PRECALL              
+ 344: CALL                 
+ 354: POP_TOP              
+ 356: LOAD_FAST            context
+ 358: LOAD_METHOD          _raise_error
+ 380: LOAD_GLOBAL          Rounded
+ 392: PRECALL              
+ 396: CALL                 
+ 406: POP_TOP              
+ 408: LOAD_FAST            ans
+ 410: RETURN_VALUE         

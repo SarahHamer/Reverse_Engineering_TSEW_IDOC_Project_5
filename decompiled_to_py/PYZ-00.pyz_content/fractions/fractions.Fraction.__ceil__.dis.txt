@@ -1,0 +1,20 @@
+# Disassembly for fractions.Fraction.__ceil__
+# From module file: fractions
+
+## co_consts:
+('math.ceil(a)',)
+
+## co_names:
+('numerator', 'denominator')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            a
+   4: LOAD_ATTR            numerator
+  14: UNARY_NEGATIVE       
+  16: LOAD_FAST            a
+  18: LOAD_ATTR            denominator
+  28: BINARY_OP            //
+  32: UNARY_NEGATIVE       
+  34: RETURN_VALUE         

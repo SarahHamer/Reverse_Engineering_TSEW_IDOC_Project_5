@@ -1,0 +1,99 @@
+# Disassembly for pickle._Pickler.save_frozenset
+# From module file: pickle
+
+## co_consts:
+(None, 4, ('obj',), 0)
+
+## co_names:
+('save', 'write', 'proto', 'save_reduce', 'frozenset', 'list', 'MARK', 'id', 'memo', 'POP_MARK', 'get', 'FROZENSET', 'memoize')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            save
+  14: STORE_FAST           save
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            write
+  28: STORE_FAST           write
+  30: LOAD_FAST            self
+  32: LOAD_ATTR            proto
+  42: LOAD_CONST           4
+  44: COMPARE_OP           <
+  50: POP_JUMP_FORWARD_IF_FALSE to 142
+  52: LOAD_FAST            self
+  54: LOAD_METHOD          save_reduce
+  76: LOAD_GLOBAL          frozenset
+  88: LOAD_GLOBAL          NULL + list
+ 100: LOAD_FAST            obj
+ 102: PRECALL              
+ 106: CALL                 
+ 116: BUILD_TUPLE          
+ 118: LOAD_FAST            obj
+ 120: KW_NAMES             
+ 122: PRECALL              
+ 126: CALL                 
+ 136: POP_TOP              
+ 138: LOAD_CONST           None
+ 140: RETURN_VALUE         
+ 142: PUSH_NULL            
+ 144: LOAD_FAST            write
+ 146: LOAD_GLOBAL          MARK
+ 158: PRECALL              
+ 162: CALL                 
+ 172: POP_TOP              
+ 174: LOAD_FAST            obj
+ 176: GET_ITER             
+ 178: FOR_ITER             to 206
+ 180: STORE_FAST           item
+ 182: PUSH_NULL            
+ 184: LOAD_FAST            save
+ 186: LOAD_FAST            item
+ 188: PRECALL              
+ 192: CALL                 
+ 202: POP_TOP              
+ 204: JUMP_BACKWARD        to 178
+ 206: LOAD_GLOBAL          NULL + id
+ 218: LOAD_FAST            obj
+ 220: PRECALL              
+ 224: CALL                 
+ 234: LOAD_FAST            self
+ 236: LOAD_ATTR            memo
+ 246: CONTAINS_OP          
+ 248: POP_JUMP_FORWARD_IF_FALSE to 390
+ 250: PUSH_NULL            
+ 252: LOAD_FAST            write
+ 254: LOAD_GLOBAL          POP_MARK
+ 266: LOAD_FAST            self
+ 268: LOAD_METHOD          get
+ 290: LOAD_FAST            self
+ 292: LOAD_ATTR            memo
+ 302: LOAD_GLOBAL          NULL + id
+ 314: LOAD_FAST            obj
+ 316: PRECALL              
+ 320: CALL                 
+ 330: BINARY_SUBSCR        
+ 340: LOAD_CONST           0
+ 342: BINARY_SUBSCR        
+ 352: PRECALL              
+ 356: CALL                 
+ 366: BINARY_OP            +
+ 370: PRECALL              
+ 374: CALL                 
+ 384: POP_TOP              
+ 386: LOAD_CONST           None
+ 388: RETURN_VALUE         
+ 390: PUSH_NULL            
+ 392: LOAD_FAST            write
+ 394: LOAD_GLOBAL          FROZENSET
+ 406: PRECALL              
+ 410: CALL                 
+ 420: POP_TOP              
+ 422: LOAD_FAST            self
+ 424: LOAD_METHOD          memoize
+ 446: LOAD_FAST            obj
+ 448: PRECALL              
+ 452: CALL                 
+ 462: POP_TOP              
+ 464: LOAD_CONST           None
+ 466: RETURN_VALUE         

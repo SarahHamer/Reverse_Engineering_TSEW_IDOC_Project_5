@@ -1,0 +1,63 @@
+# Disassembly for threading.Thread._set_tstate_lock
+# From module file: threading
+
+## co_consts:
+('\n        Set a lock object which will be released by the interpreter when\n        the underlying thread state (see pystate.h) gets deleted.\n        ', None)
+
+## co_names:
+('_set_sentinel', '_tstate_lock', 'acquire', 'daemon', '_shutdown_locks_lock', '_maintain_shutdown_locks', '_shutdown_locks', 'add')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _set_sentinel
+  14: PRECALL              
+  18: CALL                 
+  28: LOAD_FAST            self
+  30: STORE_ATTR           _tstate_lock
+  40: LOAD_FAST            self
+  42: LOAD_ATTR            _tstate_lock
+  52: LOAD_METHOD          acquire
+  74: PRECALL              
+  78: CALL                 
+  88: POP_TOP              
+  90: LOAD_FAST            self
+  92: LOAD_ATTR            daemon
+ 102: POP_JUMP_FORWARD_IF_TRUE to 262
+ 104: LOAD_GLOBAL          _shutdown_locks_lock
+ 116: BEFORE_WITH          
+ 118: POP_TOP              
+ 120: LOAD_GLOBAL          NULL + _maintain_shutdown_locks
+ 132: PRECALL              
+ 136: CALL                 
+ 146: POP_TOP              
+ 148: LOAD_GLOBAL          _shutdown_locks
+ 160: LOAD_METHOD          add
+ 182: LOAD_FAST            self
+ 184: LOAD_ATTR            _tstate_lock
+ 194: PRECALL              
+ 198: CALL                 
+ 208: POP_TOP              
+ 210: LOAD_CONST           None
+ 212: LOAD_CONST           None
+ 214: LOAD_CONST           None
+ 216: PRECALL              
+ 220: CALL                 
+ 230: POP_TOP              
+ 232: LOAD_CONST           None
+ 234: RETURN_VALUE         
+ 236: PUSH_EXC_INFO        
+ 238: WITH_EXCEPT_START    
+ 240: POP_JUMP_FORWARD_IF_TRUE to 250
+ 242: RERAISE              
+ 244: COPY                 
+ 246: POP_EXCEPT           
+ 248: RERAISE              
+ 250: POP_TOP              
+ 252: POP_EXCEPT           
+ 254: POP_TOP              
+ 256: POP_TOP              
+ 258: LOAD_CONST           None
+ 260: RETURN_VALUE         
+ 262: LOAD_CONST           None
+ 264: RETURN_VALUE         

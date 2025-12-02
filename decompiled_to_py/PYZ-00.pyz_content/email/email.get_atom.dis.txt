@@ -1,0 +1,127 @@
+# Disassembly for email.get_atom
+# From module file: email._header_value_parser
+
+## co_consts:
+('atom = [CFWS] 1*atext [CFWS]\n\n    An atom could be an rfc2047 encoded word.\n    ', 0, "expected atom but found '{}'", '=?')
+
+## co_names:
+('Atom', 'CFWS_LEADER', 'get_cfws', 'append', 'ATOM_ENDS', 'errors', 'HeaderParseError', 'format', 'startswith', 'get_encoded_word', 'get_atext')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + Atom
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           atom
+  30: LOAD_FAST            value
+  32: POP_JUMP_FORWARD_IF_FALSE to 142
+  34: LOAD_FAST            value
+  36: LOAD_CONST           0
+  38: BINARY_SUBSCR        
+  48: LOAD_GLOBAL          CFWS_LEADER
+  60: CONTAINS_OP          
+  62: POP_JUMP_FORWARD_IF_FALSE to 142
+  64: LOAD_GLOBAL          NULL + get_cfws
+  76: LOAD_FAST            value
+  78: PRECALL              
+  82: CALL                 
+  92: UNPACK_SEQUENCE      
+  96: STORE_FAST           token
+  98: STORE_FAST           value
+ 100: LOAD_FAST            atom
+ 102: LOAD_METHOD          append
+ 124: LOAD_FAST            token
+ 126: PRECALL              
+ 130: CALL                 
+ 140: POP_TOP              
+ 142: LOAD_FAST            value
+ 144: POP_JUMP_FORWARD_IF_FALSE to 254
+ 146: LOAD_FAST            value
+ 148: LOAD_CONST           0
+ 150: BINARY_SUBSCR        
+ 160: LOAD_GLOBAL          ATOM_ENDS
+ 172: CONTAINS_OP          
+ 174: POP_JUMP_FORWARD_IF_FALSE to 254
+ 176: LOAD_GLOBAL          NULL + errors
+ 188: LOAD_ATTR            HeaderParseError
+ 198: LOAD_CONST           "expected atom but found '{}'"
+ 200: LOAD_METHOD          format
+ 222: LOAD_FAST            value
+ 224: PRECALL              
+ 228: CALL                 
+ 238: PRECALL              
+ 242: CALL                 
+ 252: RAISE_VARARGS        
+ 254: LOAD_FAST            value
+ 256: LOAD_METHOD          startswith
+ 278: LOAD_CONST           '=?'
+ 280: PRECALL              
+ 284: CALL                 
+ 294: POP_JUMP_FORWARD_IF_FALSE to 414
+ 296: NOP                  
+ 298: LOAD_GLOBAL          NULL + get_encoded_word
+ 310: LOAD_FAST            value
+ 312: PRECALL              
+ 316: CALL                 
+ 326: UNPACK_SEQUENCE      
+ 330: STORE_FAST           token
+ 332: STORE_FAST           value
+ 334: JUMP_FORWARD         to 450
+ 336: PUSH_EXC_INFO        
+ 338: LOAD_GLOBAL          errors
+ 350: LOAD_ATTR            HeaderParseError
+ 360: CHECK_EXC_MATCH      
+ 362: POP_JUMP_FORWARD_IF_FALSE to 406
+ 364: POP_TOP              
+ 366: LOAD_GLOBAL          NULL + get_atext
+ 378: LOAD_FAST            value
+ 380: PRECALL              
+ 384: CALL                 
+ 394: UNPACK_SEQUENCE      
+ 398: STORE_FAST           token
+ 400: STORE_FAST           value
+ 402: POP_EXCEPT           
+ 404: JUMP_FORWARD         to 450
+ 406: RERAISE              
+ 408: COPY                 
+ 410: POP_EXCEPT           
+ 412: RERAISE              
+ 414: LOAD_GLOBAL          NULL + get_atext
+ 426: LOAD_FAST            value
+ 428: PRECALL              
+ 432: CALL                 
+ 442: UNPACK_SEQUENCE      
+ 446: STORE_FAST           token
+ 448: STORE_FAST           value
+ 450: LOAD_FAST            atom
+ 452: LOAD_METHOD          append
+ 474: LOAD_FAST            token
+ 476: PRECALL              
+ 480: CALL                 
+ 490: POP_TOP              
+ 492: LOAD_FAST            value
+ 494: POP_JUMP_FORWARD_IF_FALSE to 604
+ 496: LOAD_FAST            value
+ 498: LOAD_CONST           0
+ 500: BINARY_SUBSCR        
+ 510: LOAD_GLOBAL          CFWS_LEADER
+ 522: CONTAINS_OP          
+ 524: POP_JUMP_FORWARD_IF_FALSE to 604
+ 526: LOAD_GLOBAL          NULL + get_cfws
+ 538: LOAD_FAST            value
+ 540: PRECALL              
+ 544: CALL                 
+ 554: UNPACK_SEQUENCE      
+ 558: STORE_FAST           token
+ 560: STORE_FAST           value
+ 562: LOAD_FAST            atom
+ 564: LOAD_METHOD          append
+ 586: LOAD_FAST            token
+ 588: PRECALL              
+ 592: CALL                 
+ 602: POP_TOP              
+ 604: LOAD_FAST            atom
+ 606: LOAD_FAST            value
+ 608: BUILD_TUPLE          
+ 610: RETURN_VALUE         

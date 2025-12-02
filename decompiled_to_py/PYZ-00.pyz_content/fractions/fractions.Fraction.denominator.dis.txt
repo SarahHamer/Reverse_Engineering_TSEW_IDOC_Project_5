@@ -1,0 +1,15 @@
+# Disassembly for fractions.Fraction.denominator
+# From module file: fractions
+
+## co_consts:
+(None,)
+
+## co_names:
+('_denominator',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            a
+   4: LOAD_ATTR            _denominator
+  14: RETURN_VALUE         

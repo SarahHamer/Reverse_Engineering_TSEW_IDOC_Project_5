@@ -1,0 +1,32 @@
+# Disassembly for dataclasses._fields_in_init_order
+# From module file: dataclasses
+
+## co_consts:
+(None, <code object <genexpr> at 0x000002406945DB60, file "dataclasses.py", line 396>, <code object <genexpr> at 0x000002406945F0F0, file "dataclasses.py", line 397>)
+
+## co_names:
+('tuple',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + tuple
+  14: LOAD_CONST           <code object <genexpr> at 0x000002406945DB60, file "dataclasses.py", line 396>
+  16: MAKE_FUNCTION        
+  18: LOAD_FAST            fields
+  20: GET_ITER             
+  22: PRECALL              
+  26: CALL                 
+  36: PRECALL              
+  40: CALL                 
+  50: LOAD_GLOBAL          NULL + tuple
+  62: LOAD_CONST           <code object <genexpr> at 0x000002406945F0F0, file "dataclasses.py", line 397>
+  64: MAKE_FUNCTION        
+  66: LOAD_FAST            fields
+  68: GET_ITER             
+  70: PRECALL              
+  74: CALL                 
+  84: PRECALL              
+  88: CALL                 
+  98: BUILD_TUPLE          
+ 100: RETURN_VALUE         

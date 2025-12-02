@@ -1,0 +1,117 @@
+# Disassembly for _compression.DecompressReader.seek
+# From module file: _compression
+
+## co_consts:
+(None, 0, 'Invalid value for whence: {}')
+
+## co_names:
+('io', 'SEEK_SET', 'SEEK_CUR', '_pos', 'SEEK_END', '_size', 'read', 'DEFAULT_BUFFER_SIZE', 'ValueError', 'format', '_rewind', 'min', 'len')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            whence
+   4: LOAD_GLOBAL          io
+  16: LOAD_ATTR            SEEK_SET
+  26: COMPARE_OP           ==
+  32: POP_JUMP_FORWARD_IF_FALSE to 36
+  34: JUMP_FORWARD         to 360
+  36: LOAD_FAST            whence
+  38: LOAD_GLOBAL          io
+  50: LOAD_ATTR            SEEK_CUR
+  60: COMPARE_OP           ==
+  66: POP_JUMP_FORWARD_IF_FALSE to 90
+  68: LOAD_FAST            self
+  70: LOAD_ATTR            _pos
+  80: LOAD_FAST            offset
+  82: BINARY_OP            +
+  86: STORE_FAST           offset
+  88: JUMP_FORWARD         to 360
+  90: LOAD_FAST            whence
+  92: LOAD_GLOBAL          io
+ 104: LOAD_ATTR            SEEK_END
+ 114: COMPARE_OP           ==
+ 120: POP_JUMP_FORWARD_IF_FALSE to 292
+ 122: LOAD_FAST            self
+ 124: LOAD_ATTR            _size
+ 134: LOAD_CONST           0
+ 136: COMPARE_OP           <
+ 142: POP_JUMP_FORWARD_IF_FALSE to 270
+ 144: LOAD_FAST            self
+ 146: LOAD_METHOD          read
+ 168: LOAD_GLOBAL          io
+ 180: LOAD_ATTR            DEFAULT_BUFFER_SIZE
+ 190: PRECALL              
+ 194: CALL                 
+ 204: POP_JUMP_FORWARD_IF_FALSE to 270
+ 206: NOP                  
+ 208: LOAD_FAST            self
+ 210: LOAD_METHOD          read
+ 232: LOAD_GLOBAL          io
+ 244: LOAD_ATTR            DEFAULT_BUFFER_SIZE
+ 254: PRECALL              
+ 258: CALL                 
+ 268: POP_JUMP_BACKWARD_IF_TRUE to 206
+ 270: LOAD_FAST            self
+ 272: LOAD_ATTR            _size
+ 282: LOAD_FAST            offset
+ 284: BINARY_OP            +
+ 288: STORE_FAST           offset
+ 290: JUMP_FORWARD         to 360
+ 292: LOAD_GLOBAL          NULL + ValueError
+ 304: LOAD_CONST           'Invalid value for whence: {}'
+ 306: LOAD_METHOD          format
+ 328: LOAD_FAST            whence
+ 330: PRECALL              
+ 334: CALL                 
+ 344: PRECALL              
+ 348: CALL                 
+ 358: RAISE_VARARGS        
+ 360: LOAD_FAST            offset
+ 362: LOAD_FAST            self
+ 364: LOAD_ATTR            _pos
+ 374: COMPARE_OP           <
+ 380: POP_JUMP_FORWARD_IF_FALSE to 424
+ 382: LOAD_FAST            self
+ 384: LOAD_METHOD          _rewind
+ 406: PRECALL              
+ 410: CALL                 
+ 420: POP_TOP              
+ 422: JUMP_FORWARD         to 444
+ 424: LOAD_FAST            offset
+ 426: LOAD_FAST            self
+ 428: LOAD_ATTR            _pos
+ 438: BINARY_OP            -=
+ 442: STORE_FAST           offset
+ 444: LOAD_FAST            offset
+ 446: LOAD_CONST           0
+ 448: COMPARE_OP           >
+ 454: POP_JUMP_FORWARD_IF_FALSE to 600
+ 456: LOAD_FAST            self
+ 458: LOAD_METHOD          read
+ 480: LOAD_GLOBAL          NULL + min
+ 492: LOAD_GLOBAL          io
+ 504: LOAD_ATTR            DEFAULT_BUFFER_SIZE
+ 514: LOAD_FAST            offset
+ 516: PRECALL              
+ 520: CALL                 
+ 530: PRECALL              
+ 534: CALL                 
+ 544: STORE_FAST           data
+ 546: LOAD_FAST            data
+ 548: POP_JUMP_FORWARD_IF_TRUE to 552
+ 550: JUMP_FORWARD         to 600
+ 552: LOAD_FAST            offset
+ 554: LOAD_GLOBAL          NULL + len
+ 566: LOAD_FAST            data
+ 568: PRECALL              
+ 572: CALL                 
+ 582: BINARY_OP            -=
+ 586: STORE_FAST           offset
+ 588: LOAD_FAST            offset
+ 590: LOAD_CONST           0
+ 592: COMPARE_OP           >
+ 598: POP_JUMP_BACKWARD_IF_TRUE to 456
+ 600: LOAD_FAST            self
+ 602: LOAD_ATTR            _pos
+ 612: RETURN_VALUE         

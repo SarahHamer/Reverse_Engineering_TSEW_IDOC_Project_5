@@ -1,0 +1,30 @@
+# Disassembly for statistics._integer_sqrt_of_frac_rto
+# From module file: statistics
+
+## co_consts:
+('Square root of n/m, rounded to the nearest integer using round-to-odd.',)
+
+## co_names:
+('math', 'isqrt')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + math
+  14: LOAD_ATTR            isqrt
+  24: LOAD_FAST            n
+  26: LOAD_FAST            m
+  28: BINARY_OP            //
+  32: PRECALL              
+  36: CALL                 
+  46: STORE_FAST           a
+  48: LOAD_FAST            a
+  50: LOAD_FAST            a
+  52: LOAD_FAST            a
+  54: BINARY_OP            *
+  58: LOAD_FAST            m
+  60: BINARY_OP            *
+  64: LOAD_FAST            n
+  66: COMPARE_OP           !=
+  72: BINARY_OP            |
+  76: RETURN_VALUE         

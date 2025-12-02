@@ -1,0 +1,34 @@
+# Disassembly for random.Random.betavariate
+# From module file: random
+
+## co_consts:
+('Beta distribution.\n\n        Conditions on the parameters are alpha > 0 and beta > 0.\n        Returned values range between 0 and 1.\n\n        ', 1.0, 0.0)
+
+## co_names:
+('gammavariate',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          gammavariate
+  26: LOAD_FAST            alpha
+  28: LOAD_CONST           1.0
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_FAST           y
+  46: LOAD_FAST            y
+  48: POP_JUMP_FORWARD_IF_FALSE to 106
+  50: LOAD_FAST            y
+  52: LOAD_FAST            y
+  54: LOAD_FAST            self
+  56: LOAD_METHOD          gammavariate
+  78: LOAD_FAST            beta
+  80: LOAD_CONST           1.0
+  82: PRECALL              
+  86: CALL                 
+  96: BINARY_OP            +
+ 100: BINARY_OP            /
+ 104: RETURN_VALUE         
+ 106: LOAD_CONST           0.0
+ 108: RETURN_VALUE         

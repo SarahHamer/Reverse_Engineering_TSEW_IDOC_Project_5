@@ -1,0 +1,14 @@
+# Disassembly for importlib.resources.Traversable.open
+# From module file: importlib.resources.abc
+
+## co_consts:
+("\n        mode may be 'r' or 'rb' to open as text or binary. Return a handle\n        suitable for reading (same as pathlib.Path.open).\n\n        When opening as text, accepts encoding parameters such as those\n        accepted by io.TextIOWrapper.\n        ", None)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: RETURN_VALUE         

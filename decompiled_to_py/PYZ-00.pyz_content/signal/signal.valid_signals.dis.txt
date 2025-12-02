@@ -1,0 +1,22 @@
+# Disassembly for signal.valid_signals
+# From module file: signal
+
+## co_consts:
+(None, <code object <setcomp> at 0x000002406945F000, file "signal.py", line 89>)
+
+## co_names:
+('_signal', 'valid_signals')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           <code object <setcomp> at 0x000002406945F000, file "signal.py", line 89>
+   4: MAKE_FUNCTION        
+   6: LOAD_GLOBAL          NULL + _signal
+  18: LOAD_ATTR            valid_signals
+  28: PRECALL              
+  32: CALL                 
+  42: GET_ITER             
+  44: PRECALL              
+  48: CALL                 
+  58: RETURN_VALUE         

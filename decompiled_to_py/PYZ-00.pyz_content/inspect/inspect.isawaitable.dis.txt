@@ -1,0 +1,43 @@
+# Disassembly for inspect.isawaitable
+# From module file: inspect
+
+## co_consts:
+('Return true if object can be passed to an ``await`` expression.',)
+
+## co_names:
+('isinstance', 'types', 'CoroutineType', 'GeneratorType', 'bool', 'gi_code', 'co_flags', 'CO_ITERABLE_COROUTINE', 'collections', 'abc', 'Awaitable')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            object
+  16: LOAD_GLOBAL          types
+  28: LOAD_ATTR            CoroutineType
+  38: PRECALL              
+  42: CALL                 
+  52: JUMP_IF_TRUE_OR_POP  to 232
+  54: LOAD_GLOBAL          NULL + isinstance
+  66: LOAD_FAST            object
+  68: LOAD_GLOBAL          types
+  80: LOAD_ATTR            GeneratorType
+  90: PRECALL              
+  94: CALL                 
+ 104: JUMP_IF_FALSE_OR_POP to 170
+ 106: LOAD_GLOBAL          NULL + bool
+ 118: LOAD_FAST            object
+ 120: LOAD_ATTR            gi_code
+ 130: LOAD_ATTR            co_flags
+ 140: LOAD_GLOBAL          CO_ITERABLE_COROUTINE
+ 152: BINARY_OP            &
+ 156: PRECALL              
+ 160: CALL                 
+ 170: JUMP_IF_TRUE_OR_POP  to 232
+ 172: LOAD_GLOBAL          NULL + isinstance
+ 184: LOAD_FAST            object
+ 186: LOAD_GLOBAL          collections
+ 198: LOAD_ATTR            abc
+ 208: LOAD_ATTR            Awaitable
+ 218: PRECALL              
+ 222: CALL                 
+ 232: RETURN_VALUE         

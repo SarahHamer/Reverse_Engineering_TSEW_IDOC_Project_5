@@ -1,0 +1,38 @@
+# Disassembly for importlib.BuiltinImporter.create_module
+# From module file: importlib._bootstrap
+
+## co_consts:
+('Create a built-in module', '{!r} is not a built-in module', ('name',))
+
+## co_names:
+('name', 'sys', 'builtin_module_names', 'ImportError', 'format', '_call_with_frames_removed', '_imp', 'create_builtin')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            spec
+   4: LOAD_ATTR            name
+  14: LOAD_GLOBAL          sys
+  26: LOAD_ATTR            builtin_module_names
+  36: CONTAINS_OP          
+  38: POP_JUMP_FORWARD_IF_FALSE to 132
+  40: LOAD_GLOBAL          NULL + ImportError
+  52: LOAD_CONST           '{!r} is not a built-in module'
+  54: LOAD_METHOD          format
+  76: LOAD_FAST            spec
+  78: LOAD_ATTR            name
+  88: PRECALL              
+  92: CALL                 
+ 102: LOAD_FAST            spec
+ 104: LOAD_ATTR            name
+ 114: KW_NAMES             
+ 116: PRECALL              
+ 120: CALL                 
+ 130: RAISE_VARARGS        
+ 132: LOAD_GLOBAL          NULL + _call_with_frames_removed
+ 144: LOAD_GLOBAL          _imp
+ 156: LOAD_ATTR            create_builtin
+ 166: LOAD_FAST            spec
+ 168: PRECALL              
+ 172: CALL                 
+ 182: RETURN_VALUE         

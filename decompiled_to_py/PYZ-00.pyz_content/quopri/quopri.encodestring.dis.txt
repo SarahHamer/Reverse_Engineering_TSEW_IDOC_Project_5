@@ -1,0 +1,52 @@
+# Disassembly for quopri.encodestring
+# From module file: quopri
+
+## co_consts:
+(None, ('quotetabs', 'header'), 0, ('BytesIO',))
+
+## co_names:
+('b2a_qp', 'io', 'BytesIO', 'encode', 'getvalue')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          b2a_qp
+  14: POP_JUMP_FORWARD_IF_NONE to 52
+  16: LOAD_GLOBAL          NULL + b2a_qp
+  28: LOAD_FAST            s
+  30: LOAD_FAST            quotetabs
+  32: LOAD_FAST            header
+  34: KW_NAMES             
+  36: PRECALL              
+  40: CALL                 
+  50: RETURN_VALUE         
+  52: LOAD_CONST           0
+  54: LOAD_CONST           ('BytesIO',)
+  56: IMPORT_NAME          io
+  58: IMPORT_FROM          BytesIO
+  60: STORE_FAST           BytesIO
+  62: POP_TOP              
+  64: PUSH_NULL            
+  66: LOAD_FAST            BytesIO
+  68: LOAD_FAST            s
+  70: PRECALL              
+  74: CALL                 
+  84: STORE_FAST           infp
+  86: PUSH_NULL            
+  88: LOAD_FAST            BytesIO
+  90: PRECALL              
+  94: CALL                 
+ 104: STORE_FAST           outfp
+ 106: LOAD_GLOBAL          NULL + encode
+ 118: LOAD_FAST            infp
+ 120: LOAD_FAST            outfp
+ 122: LOAD_FAST            quotetabs
+ 124: LOAD_FAST            header
+ 126: PRECALL              
+ 130: CALL                 
+ 140: POP_TOP              
+ 142: LOAD_FAST            outfp
+ 144: LOAD_METHOD          getvalue
+ 166: PRECALL              
+ 170: CALL                 
+ 180: RETURN_VALUE         

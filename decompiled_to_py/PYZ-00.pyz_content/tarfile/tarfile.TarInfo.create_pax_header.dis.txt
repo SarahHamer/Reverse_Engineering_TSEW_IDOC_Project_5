@@ -1,0 +1,183 @@
+# Disassembly for tarfile.TarInfo.create_pax_header
+# From module file: tarfile
+
+## co_consts:
+('Return the object as a ustar header block. If it cannot be\n           represented this way, prepend a pax extended header sequence\n           with supplement information.\n        ', 'magic', 'name', 'path', 'linkname', 'linkpath', ('uname', 'uname', 32), ('gname', 'gname', 32), 'ascii', 'strict', (('uid', 8), ('gid', 8), ('size', 12), ('mtime', 12)), False, 0, 8, 1, True, b'', 'replace')
+
+## co_names:
+('POSIX_MAGIC', 'pax_headers', 'copy', 'LENGTH_NAME', 'LENGTH_LINK', 'encode', 'UnicodeEncodeError', 'len', 'isinstance', 'float', 'round', 'str', '_create_pax_generic_header', 'XHDTYPE', '_create_header', 'USTAR_FORMAT')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          POSIX_MAGIC
+  14: LOAD_FAST            info
+  16: LOAD_CONST           'magic'
+  18: STORE_SUBSCR         
+  22: LOAD_FAST            self
+  24: LOAD_ATTR            pax_headers
+  34: LOAD_METHOD          copy
+  56: PRECALL              
+  60: CALL                 
+  70: STORE_FAST           pax_headers
+  72: LOAD_CONST           'name'
+  74: LOAD_CONST           'path'
+  76: LOAD_GLOBAL          LENGTH_NAME
+  88: BUILD_TUPLE          
+  90: LOAD_CONST           'linkname'
+  92: LOAD_CONST           'linkpath'
+  94: LOAD_GLOBAL          LENGTH_LINK
+ 106: BUILD_TUPLE          
+ 108: LOAD_CONST           ('uname', 'uname', 32)
+ 110: LOAD_CONST           ('gname', 'gname', 32)
+ 112: BUILD_TUPLE          
+ 114: GET_ITER             
+ 116: FOR_ITER             to 326
+ 118: UNPACK_SEQUENCE      
+ 122: STORE_FAST           name
+ 124: STORE_FAST           hname
+ 126: STORE_FAST           length
+ 128: LOAD_FAST            hname
+ 130: LOAD_FAST            pax_headers
+ 132: CONTAINS_OP          
+ 134: POP_JUMP_FORWARD_IF_FALSE to 138
+ 136: JUMP_BACKWARD        to 116
+ 138: NOP                  
+ 140: LOAD_FAST            info
+ 142: LOAD_FAST            name
+ 144: BINARY_SUBSCR        
+ 154: LOAD_METHOD          encode
+ 176: LOAD_CONST           'ascii'
+ 178: LOAD_CONST           'strict'
+ 180: PRECALL              
+ 184: CALL                 
+ 194: POP_TOP              
+ 196: JUMP_FORWARD         to 252
+ 198: PUSH_EXC_INFO        
+ 200: LOAD_GLOBAL          UnicodeEncodeError
+ 212: CHECK_EXC_MATCH      
+ 214: POP_JUMP_FORWARD_IF_FALSE to 244
+ 216: POP_TOP              
+ 218: LOAD_FAST            info
+ 220: LOAD_FAST            name
+ 222: BINARY_SUBSCR        
+ 232: LOAD_FAST            pax_headers
+ 234: LOAD_FAST            hname
+ 236: STORE_SUBSCR         
+ 240: POP_EXCEPT           
+ 242: JUMP_BACKWARD        to 116
+ 244: RERAISE              
+ 246: COPY                 
+ 248: POP_EXCEPT           
+ 250: RERAISE              
+ 252: LOAD_GLOBAL          NULL + len
+ 264: LOAD_FAST            info
+ 266: LOAD_FAST            name
+ 268: BINARY_SUBSCR        
+ 278: PRECALL              
+ 282: CALL                 
+ 292: LOAD_FAST            length
+ 294: COMPARE_OP           >
+ 300: POP_JUMP_FORWARD_IF_FALSE to 324
+ 302: LOAD_FAST            info
+ 304: LOAD_FAST            name
+ 306: BINARY_SUBSCR        
+ 316: LOAD_FAST            pax_headers
+ 318: LOAD_FAST            hname
+ 320: STORE_SUBSCR         
+ 324: JUMP_BACKWARD        to 116
+ 326: LOAD_CONST           (('uid', 8), ('gid', 8), ('size', 12), ('mtime', 12))
+ 328: GET_ITER             
+ 330: FOR_ITER             to 566
+ 332: UNPACK_SEQUENCE      
+ 336: STORE_FAST           name
+ 338: STORE_FAST           digits
+ 340: LOAD_CONST           False
+ 342: STORE_FAST           needs_pax
+ 344: LOAD_FAST            info
+ 346: LOAD_FAST            name
+ 348: BINARY_SUBSCR        
+ 358: STORE_FAST           val
+ 360: LOAD_GLOBAL          NULL + isinstance
+ 372: LOAD_FAST            val
+ 374: LOAD_GLOBAL          float
+ 386: PRECALL              
+ 390: CALL                 
+ 400: STORE_FAST           val_is_float
+ 402: LOAD_FAST            val_is_float
+ 404: POP_JUMP_FORWARD_IF_FALSE to 436
+ 406: LOAD_GLOBAL          NULL + round
+ 418: LOAD_FAST            val
+ 420: PRECALL              
+ 424: CALL                 
+ 434: JUMP_FORWARD         to 438
+ 436: LOAD_FAST            val
+ 438: STORE_FAST           val_int
+ 440: LOAD_CONST           0
+ 442: LOAD_FAST            val_int
+ 444: SWAP                 
+ 446: COPY                 
+ 448: COMPARE_OP           <=
+ 454: POP_JUMP_FORWARD_IF_FALSE to 480
+ 456: LOAD_CONST           8
+ 458: LOAD_FAST            digits
+ 460: LOAD_CONST           1
+ 462: BINARY_OP            -
+ 466: BINARY_OP            **
+ 470: COMPARE_OP           <
+ 476: POP_JUMP_FORWARD_IF_TRUE to 498
+ 478: JUMP_FORWARD         to 482
+ 480: POP_TOP              
+ 482: LOAD_CONST           0
+ 484: LOAD_FAST            info
+ 486: LOAD_FAST            name
+ 488: STORE_SUBSCR         
+ 492: LOAD_CONST           True
+ 494: STORE_FAST           needs_pax
+ 496: JUMP_FORWARD         to 516
+ 498: LOAD_FAST            val_is_float
+ 500: POP_JUMP_FORWARD_IF_FALSE to 516
+ 502: LOAD_FAST            val_int
+ 504: LOAD_FAST            info
+ 506: LOAD_FAST            name
+ 508: STORE_SUBSCR         
+ 512: LOAD_CONST           True
+ 514: STORE_FAST           needs_pax
+ 516: LOAD_FAST            needs_pax
+ 518: POP_JUMP_FORWARD_IF_FALSE to 564
+ 520: LOAD_FAST            name
+ 522: LOAD_FAST            pax_headers
+ 524: CONTAINS_OP          
+ 526: POP_JUMP_FORWARD_IF_FALSE to 564
+ 528: LOAD_GLOBAL          NULL + str
+ 540: LOAD_FAST            val
+ 542: PRECALL              
+ 546: CALL                 
+ 556: LOAD_FAST            pax_headers
+ 558: LOAD_FAST            name
+ 560: STORE_SUBSCR         
+ 564: JUMP_BACKWARD        to 330
+ 566: LOAD_FAST            pax_headers
+ 568: POP_JUMP_FORWARD_IF_FALSE to 628
+ 570: LOAD_FAST            self
+ 572: LOAD_METHOD          _create_pax_generic_header
+ 594: LOAD_FAST            pax_headers
+ 596: LOAD_GLOBAL          XHDTYPE
+ 608: LOAD_FAST            encoding
+ 610: PRECALL              
+ 614: CALL                 
+ 624: STORE_FAST           buf
+ 626: JUMP_FORWARD         to 632
+ 628: LOAD_CONST           b''
+ 630: STORE_FAST           buf
+ 632: LOAD_FAST            buf
+ 634: LOAD_FAST            self
+ 636: LOAD_METHOD          _create_header
+ 658: LOAD_FAST            info
+ 660: LOAD_GLOBAL          USTAR_FORMAT
+ 672: LOAD_CONST           'ascii'
+ 674: LOAD_CONST           'replace'
+ 676: PRECALL              
+ 680: CALL                 
+ 690: BINARY_OP            +
+ 694: RETURN_VALUE         

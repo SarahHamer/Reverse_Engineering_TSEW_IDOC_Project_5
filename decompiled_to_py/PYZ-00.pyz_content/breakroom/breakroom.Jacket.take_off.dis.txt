@@ -1,0 +1,23 @@
+# Disassembly for breakroom.Jacket.take_off
+# From module file: breakroom
+
+## co_consts:
+(None, False, 'You take the jacket off.')
+
+## co_names:
+('on', 'send_message')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           False
+   4: LOAD_FAST            self
+   6: STORE_ATTR           on
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          send_message
+  40: LOAD_CONST           'You take the jacket off.'
+  42: PRECALL              
+  46: CALL                 
+  56: POP_TOP              
+  58: LOAD_CONST           None
+  60: RETURN_VALUE         

@@ -1,0 +1,98 @@
+# Disassembly for http.DefaultCookiePolicy.domain_return_ok
+# From module file: http.cookiejar
+
+## co_consts:
+(None, '.', False, '   domain %s is in user block-list', '   domain %s is not in user allow-list', True)
+
+## co_names:
+('eff_request_host', 'startswith', 'endswith', 'is_blocked', '_debug', 'is_not_allowed')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + eff_request_host
+  14: LOAD_FAST            request
+  16: PRECALL              
+  20: CALL                 
+  30: UNPACK_SEQUENCE      
+  34: STORE_FAST           req_host
+  36: STORE_FAST           erhn
+  38: LOAD_FAST            req_host
+  40: LOAD_METHOD          startswith
+  62: LOAD_CONST           '.'
+  64: PRECALL              
+  68: CALL                 
+  78: POP_JUMP_FORWARD_IF_TRUE to 90
+  80: LOAD_CONST           '.'
+  82: LOAD_FAST            req_host
+  84: BINARY_OP            +
+  88: STORE_FAST           req_host
+  90: LOAD_FAST            erhn
+  92: LOAD_METHOD          startswith
+ 114: LOAD_CONST           '.'
+ 116: PRECALL              
+ 120: CALL                 
+ 130: POP_JUMP_FORWARD_IF_TRUE to 142
+ 132: LOAD_CONST           '.'
+ 134: LOAD_FAST            erhn
+ 136: BINARY_OP            +
+ 140: STORE_FAST           erhn
+ 142: LOAD_FAST            domain
+ 144: POP_JUMP_FORWARD_IF_FALSE to 200
+ 146: LOAD_FAST            domain
+ 148: LOAD_METHOD          startswith
+ 170: LOAD_CONST           '.'
+ 172: PRECALL              
+ 176: CALL                 
+ 186: POP_JUMP_FORWARD_IF_TRUE to 200
+ 188: LOAD_CONST           '.'
+ 190: LOAD_FAST            domain
+ 192: BINARY_OP            +
+ 196: STORE_FAST           dotdomain
+ 198: JUMP_FORWARD         to 204
+ 200: LOAD_FAST            domain
+ 202: STORE_FAST           dotdomain
+ 204: LOAD_FAST            req_host
+ 206: LOAD_METHOD          endswith
+ 228: LOAD_FAST            dotdomain
+ 230: PRECALL              
+ 234: CALL                 
+ 244: POP_JUMP_FORWARD_IF_TRUE to 292
+ 246: LOAD_FAST            erhn
+ 248: LOAD_METHOD          endswith
+ 270: LOAD_FAST            dotdomain
+ 272: PRECALL              
+ 276: CALL                 
+ 286: POP_JUMP_FORWARD_IF_TRUE to 292
+ 288: LOAD_CONST           False
+ 290: RETURN_VALUE         
+ 292: LOAD_FAST            self
+ 294: LOAD_METHOD          is_blocked
+ 316: LOAD_FAST            domain
+ 318: PRECALL              
+ 322: CALL                 
+ 332: POP_JUMP_FORWARD_IF_FALSE to 370
+ 334: LOAD_GLOBAL          NULL + _debug
+ 346: LOAD_CONST           '   domain %s is in user block-list'
+ 348: LOAD_FAST            domain
+ 350: PRECALL              
+ 354: CALL                 
+ 364: POP_TOP              
+ 366: LOAD_CONST           False
+ 368: RETURN_VALUE         
+ 370: LOAD_FAST            self
+ 372: LOAD_METHOD          is_not_allowed
+ 394: LOAD_FAST            domain
+ 396: PRECALL              
+ 400: CALL                 
+ 410: POP_JUMP_FORWARD_IF_FALSE to 448
+ 412: LOAD_GLOBAL          NULL + _debug
+ 424: LOAD_CONST           '   domain %s is not in user allow-list'
+ 426: LOAD_FAST            domain
+ 428: PRECALL              
+ 432: CALL                 
+ 442: POP_TOP              
+ 444: LOAD_CONST           False
+ 446: RETURN_VALUE         
+ 448: LOAD_CONST           True
+ 450: RETURN_VALUE         

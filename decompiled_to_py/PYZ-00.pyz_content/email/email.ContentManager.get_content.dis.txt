@@ -1,0 +1,87 @@
+# Disassembly for email.ContentManager.get_content
+# From module file: email.contentmanager
+
+## co_consts:
+(None, '')
+
+## co_names:
+('get_content_type', 'get_handlers', 'get_content_maintype', 'KeyError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            msg
+   4: LOAD_METHOD          get_content_type
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           content_type
+  42: LOAD_FAST            content_type
+  44: LOAD_FAST            self
+  46: LOAD_ATTR            get_handlers
+  56: CONTAINS_OP          
+  58: POP_JUMP_FORWARD_IF_FALSE to 106
+  60: PUSH_NULL            
+  62: LOAD_FAST            self
+  64: LOAD_ATTR            get_handlers
+  74: LOAD_FAST            content_type
+  76: BINARY_SUBSCR        
+  86: LOAD_FAST            msg
+  88: BUILD_LIST           
+  90: LOAD_FAST            args
+  92: LIST_EXTEND          
+  94: LIST_TO_TUPLE        
+  96: BUILD_MAP            
+  98: LOAD_FAST            kw
+ 100: DICT_MERGE           
+ 102: CALL_FUNCTION_EX     
+ 104: RETURN_VALUE         
+ 106: LOAD_FAST            msg
+ 108: LOAD_METHOD          get_content_maintype
+ 130: PRECALL              
+ 134: CALL                 
+ 144: STORE_FAST           maintype
+ 146: LOAD_FAST            maintype
+ 148: LOAD_FAST            self
+ 150: LOAD_ATTR            get_handlers
+ 160: CONTAINS_OP          
+ 162: POP_JUMP_FORWARD_IF_FALSE to 210
+ 164: PUSH_NULL            
+ 166: LOAD_FAST            self
+ 168: LOAD_ATTR            get_handlers
+ 178: LOAD_FAST            maintype
+ 180: BINARY_SUBSCR        
+ 190: LOAD_FAST            msg
+ 192: BUILD_LIST           
+ 194: LOAD_FAST            args
+ 196: LIST_EXTEND          
+ 198: LIST_TO_TUPLE        
+ 200: BUILD_MAP            
+ 202: LOAD_FAST            kw
+ 204: DICT_MERGE           
+ 206: CALL_FUNCTION_EX     
+ 208: RETURN_VALUE         
+ 210: LOAD_CONST           ''
+ 212: LOAD_FAST            self
+ 214: LOAD_ATTR            get_handlers
+ 224: CONTAINS_OP          
+ 226: POP_JUMP_FORWARD_IF_FALSE to 274
+ 228: PUSH_NULL            
+ 230: LOAD_FAST            self
+ 232: LOAD_ATTR            get_handlers
+ 242: LOAD_CONST           ''
+ 244: BINARY_SUBSCR        
+ 254: LOAD_FAST            msg
+ 256: BUILD_LIST           
+ 258: LOAD_FAST            args
+ 260: LIST_EXTEND          
+ 262: LIST_TO_TUPLE        
+ 264: BUILD_MAP            
+ 266: LOAD_FAST            kw
+ 268: DICT_MERGE           
+ 270: CALL_FUNCTION_EX     
+ 272: RETURN_VALUE         
+ 274: LOAD_GLOBAL          NULL + KeyError
+ 286: LOAD_FAST            content_type
+ 288: PRECALL              
+ 292: CALL                 
+ 302: RAISE_VARARGS        

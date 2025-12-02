@@ -1,0 +1,115 @@
+# Disassembly for ast._Precedence
+# From module file: ast
+
+## co_consts:
+('_Precedence', 'Precedence table that originated from python grammar.', <code object next at 0x000002406944B550, file "ast.py", line 672>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'auto', 'NAMED_EXPR', 'TUPLE', 'YIELD', 'TEST', 'OR', 'AND', 'NOT', 'CMP', 'EXPR', 'BOR', 'BXOR', 'BAND', 'SHIFT', 'ARITH', 'TERM', 'FACTOR', 'POWER', 'AWAIT', 'ATOM', 'next')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_Precedence'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Precedence table that originated from python grammar.'
+  12: STORE_NAME           __doc__
+  14: PUSH_NULL            
+  16: LOAD_NAME            auto
+  18: PRECALL              
+  22: CALL                 
+  32: STORE_NAME           NAMED_EXPR
+  34: PUSH_NULL            
+  36: LOAD_NAME            auto
+  38: PRECALL              
+  42: CALL                 
+  52: STORE_NAME           TUPLE
+  54: PUSH_NULL            
+  56: LOAD_NAME            auto
+  58: PRECALL              
+  62: CALL                 
+  72: STORE_NAME           YIELD
+  74: PUSH_NULL            
+  76: LOAD_NAME            auto
+  78: PRECALL              
+  82: CALL                 
+  92: STORE_NAME           TEST
+  94: PUSH_NULL            
+  96: LOAD_NAME            auto
+  98: PRECALL              
+ 102: CALL                 
+ 112: STORE_NAME           OR
+ 114: PUSH_NULL            
+ 116: LOAD_NAME            auto
+ 118: PRECALL              
+ 122: CALL                 
+ 132: STORE_NAME           AND
+ 134: PUSH_NULL            
+ 136: LOAD_NAME            auto
+ 138: PRECALL              
+ 142: CALL                 
+ 152: STORE_NAME           NOT
+ 154: PUSH_NULL            
+ 156: LOAD_NAME            auto
+ 158: PRECALL              
+ 162: CALL                 
+ 172: STORE_NAME           CMP
+ 174: PUSH_NULL            
+ 176: LOAD_NAME            auto
+ 178: PRECALL              
+ 182: CALL                 
+ 192: STORE_NAME           EXPR
+ 194: LOAD_NAME            EXPR
+ 196: STORE_NAME           BOR
+ 198: PUSH_NULL            
+ 200: LOAD_NAME            auto
+ 202: PRECALL              
+ 206: CALL                 
+ 216: STORE_NAME           BXOR
+ 218: PUSH_NULL            
+ 220: LOAD_NAME            auto
+ 222: PRECALL              
+ 226: CALL                 
+ 236: STORE_NAME           BAND
+ 238: PUSH_NULL            
+ 240: LOAD_NAME            auto
+ 242: PRECALL              
+ 246: CALL                 
+ 256: STORE_NAME           SHIFT
+ 258: PUSH_NULL            
+ 260: LOAD_NAME            auto
+ 262: PRECALL              
+ 266: CALL                 
+ 276: STORE_NAME           ARITH
+ 278: PUSH_NULL            
+ 280: LOAD_NAME            auto
+ 282: PRECALL              
+ 286: CALL                 
+ 296: STORE_NAME           TERM
+ 298: PUSH_NULL            
+ 300: LOAD_NAME            auto
+ 302: PRECALL              
+ 306: CALL                 
+ 316: STORE_NAME           FACTOR
+ 318: PUSH_NULL            
+ 320: LOAD_NAME            auto
+ 322: PRECALL              
+ 326: CALL                 
+ 336: STORE_NAME           POWER
+ 338: PUSH_NULL            
+ 340: LOAD_NAME            auto
+ 342: PRECALL              
+ 346: CALL                 
+ 356: STORE_NAME           AWAIT
+ 358: PUSH_NULL            
+ 360: LOAD_NAME            auto
+ 362: PRECALL              
+ 366: CALL                 
+ 376: STORE_NAME           ATOM
+ 378: LOAD_CONST           <code object next at 0x000002406944B550, file "ast.py", line 672>
+ 380: MAKE_FUNCTION        
+ 382: STORE_NAME           next
+ 384: LOAD_CONST           None
+ 386: RETURN_VALUE         

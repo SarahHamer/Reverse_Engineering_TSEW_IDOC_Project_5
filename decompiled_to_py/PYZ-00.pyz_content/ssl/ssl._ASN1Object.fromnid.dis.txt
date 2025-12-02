@@ -1,0 +1,28 @@
+# Disassembly for ssl._ASN1Object.fromnid
+# From module file: ssl
+
+## co_consts:
+('Create _ASN1Object from OpenSSL numeric ID\n        ',)
+
+## co_names:
+('super', '__new__', '_nid2obj')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: PUSH_NULL            
+   6: LOAD_GLOBAL          NULL + super
+  18: PRECALL              
+  22: CALL                 
+  32: LOAD_ATTR            __new__
+  42: LOAD_FAST            cls
+  44: BUILD_LIST           
+  46: LOAD_GLOBAL          NULL + _nid2obj
+  58: LOAD_FAST            nid
+  60: PRECALL              
+  64: CALL                 
+  74: LIST_EXTEND          
+  76: LIST_TO_TUPLE        
+  78: CALL_FUNCTION_EX     
+  80: RETURN_VALUE         

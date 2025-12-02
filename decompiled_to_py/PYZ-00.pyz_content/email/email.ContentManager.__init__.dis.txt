@@ -1,0 +1,20 @@
+# Disassembly for email.ContentManager.__init__
+# From module file: email.contentmanager
+
+## co_consts:
+(None,)
+
+## co_names:
+('get_handlers', 'set_handlers')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_MAP            
+   4: LOAD_FAST            self
+   6: STORE_ATTR           get_handlers
+  16: BUILD_MAP            
+  18: LOAD_FAST            self
+  20: STORE_ATTR           set_handlers
+  30: LOAD_CONST           None
+  32: RETURN_VALUE         

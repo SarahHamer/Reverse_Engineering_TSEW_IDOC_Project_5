@@ -1,0 +1,21 @@
+# Disassembly for _pydecimal.Decimal.__reduce__
+# From module file: _pydecimal
+
+## co_consts:
+(None,)
+
+## co_names:
+('__class__', 'str')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            __class__
+  14: LOAD_GLOBAL          NULL + str
+  26: LOAD_FAST            self
+  28: PRECALL              
+  32: CALL                 
+  42: BUILD_TUPLE          
+  44: BUILD_TUPLE          
+  46: RETURN_VALUE         

@@ -1,0 +1,34 @@
+# Disassembly for shutil._access_check
+# From module file: shutil
+
+## co_consts:
+(None,)
+
+## co_names:
+('os', 'path', 'exists', 'access', 'isdir')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          os
+  14: LOAD_ATTR            path
+  24: LOAD_METHOD          exists
+  46: LOAD_FAST            fn
+  48: PRECALL              
+  52: CALL                 
+  62: JUMP_IF_FALSE_OR_POP to 168
+  64: LOAD_GLOBAL          NULL + os
+  76: LOAD_ATTR            access
+  86: LOAD_FAST            fn
+  88: LOAD_FAST            mode
+  90: PRECALL              
+  94: CALL                 
+ 104: JUMP_IF_FALSE_OR_POP to 168
+ 106: LOAD_GLOBAL          os
+ 118: LOAD_ATTR            path
+ 128: LOAD_METHOD          isdir
+ 150: LOAD_FAST            fn
+ 152: PRECALL              
+ 156: CALL                 
+ 166: UNARY_NOT            
+ 168: RETURN_VALUE         

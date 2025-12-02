@@ -1,0 +1,61 @@
+# Disassembly for logging.StreamHandler.emit
+# From module file: logging
+
+## co_consts:
+("\n        Emit a record.\n\n        If a formatter is specified, it is used to format the record.\n        The record is then written to the stream with a trailing newline.  If\n        exception information is present, it is formatted using\n        traceback.print_exception and appended to the stream.  If the stream\n        has an 'encoding' attribute, it is used to determine how to do the\n        output to the stream.\n        ", None)
+
+## co_names:
+('format', 'stream', 'write', 'terminator', 'flush', 'RecursionError', 'Exception', 'handleError')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            self
+   6: LOAD_METHOD          format
+  28: LOAD_FAST            record
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_FAST           msg
+  46: LOAD_FAST            self
+  48: LOAD_ATTR            stream
+  58: STORE_FAST           stream
+  60: LOAD_FAST            stream
+  62: LOAD_METHOD          write
+  84: LOAD_FAST            msg
+  86: LOAD_FAST            self
+  88: LOAD_ATTR            terminator
+  98: BINARY_OP            +
+ 102: PRECALL              
+ 106: CALL                 
+ 116: POP_TOP              
+ 118: LOAD_FAST            self
+ 120: LOAD_METHOD          flush
+ 142: PRECALL              
+ 146: CALL                 
+ 156: POP_TOP              
+ 158: LOAD_CONST           None
+ 160: RETURN_VALUE         
+ 162: PUSH_EXC_INFO        
+ 164: LOAD_GLOBAL          RecursionError
+ 176: CHECK_EXC_MATCH      
+ 178: POP_JUMP_FORWARD_IF_FALSE to 184
+ 180: POP_TOP              
+ 182: RAISE_VARARGS        
+ 184: LOAD_GLOBAL          Exception
+ 196: CHECK_EXC_MATCH      
+ 198: POP_JUMP_FORWARD_IF_FALSE to 250
+ 200: POP_TOP              
+ 202: LOAD_FAST            self
+ 204: LOAD_METHOD          handleError
+ 226: LOAD_FAST            record
+ 228: PRECALL              
+ 232: CALL                 
+ 242: POP_TOP              
+ 244: POP_EXCEPT           
+ 246: LOAD_CONST           None
+ 248: RETURN_VALUE         
+ 250: RERAISE              
+ 252: COPY                 
+ 254: POP_EXCEPT           
+ 256: RERAISE              

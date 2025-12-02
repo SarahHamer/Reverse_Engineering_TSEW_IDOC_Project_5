@@ -1,0 +1,25 @@
+# Disassembly for random.Random.randbytes
+# From module file: random
+
+## co_consts:
+('Generate n random bytes.', 8, 'little')
+
+## co_names:
+('getrandbits', 'to_bytes')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          getrandbits
+  26: LOAD_FAST            n
+  28: LOAD_CONST           8
+  30: BINARY_OP            *
+  34: PRECALL              
+  38: CALL                 
+  48: LOAD_METHOD          to_bytes
+  70: LOAD_FAST            n
+  72: LOAD_CONST           'little'
+  74: PRECALL              
+  78: CALL                 
+  88: RETURN_VALUE         

@@ -1,0 +1,119 @@
+# Disassembly for tarfile.TarInfo._apply_pax_info
+# From module file: tarfile
+
+## co_consts:
+('Replace fields with supplemental information from a previous\n           pax extended or global header.\n        ', 'GNU.sparse.name', 'path', 'GNU.sparse.size', 'size', 'GNU.sparse.realsize', 0, '/', None)
+
+## co_names:
+('items', 'setattr', 'int', 'PAX_FIELDS', 'PAX_NUMBER_FIELDS', 'ValueError', 'rstrip', 'copy', 'pax_headers')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            pax_headers
+   4: LOAD_METHOD          items
+  26: PRECALL              
+  30: CALL                 
+  40: GET_ITER             
+  42: FOR_ITER             to 456
+  44: UNPACK_SEQUENCE      
+  48: STORE_FAST           keyword
+  50: STORE_FAST           value
+  52: LOAD_FAST            keyword
+  54: LOAD_CONST           'GNU.sparse.name'
+  56: COMPARE_OP           ==
+  62: POP_JUMP_FORWARD_IF_FALSE to 100
+  64: LOAD_GLOBAL          NULL + setattr
+  76: LOAD_FAST            self
+  78: LOAD_CONST           'path'
+  80: LOAD_FAST            value
+  82: PRECALL              
+  86: CALL                 
+  96: POP_TOP              
+  98: JUMP_BACKWARD        to 42
+ 100: LOAD_FAST            keyword
+ 102: LOAD_CONST           'GNU.sparse.size'
+ 104: COMPARE_OP           ==
+ 110: POP_JUMP_FORWARD_IF_FALSE to 174
+ 112: LOAD_GLOBAL          NULL + setattr
+ 124: LOAD_FAST            self
+ 126: LOAD_CONST           'size'
+ 128: LOAD_GLOBAL          NULL + int
+ 140: LOAD_FAST            value
+ 142: PRECALL              
+ 146: CALL                 
+ 156: PRECALL              
+ 160: CALL                 
+ 170: POP_TOP              
+ 172: JUMP_BACKWARD        to 42
+ 174: LOAD_FAST            keyword
+ 176: LOAD_CONST           'GNU.sparse.realsize'
+ 178: COMPARE_OP           ==
+ 184: POP_JUMP_FORWARD_IF_FALSE to 248
+ 186: LOAD_GLOBAL          NULL + setattr
+ 198: LOAD_FAST            self
+ 200: LOAD_CONST           'size'
+ 202: LOAD_GLOBAL          NULL + int
+ 214: LOAD_FAST            value
+ 216: PRECALL              
+ 220: CALL                 
+ 230: PRECALL              
+ 234: CALL                 
+ 244: POP_TOP              
+ 246: JUMP_BACKWARD        to 42
+ 248: LOAD_FAST            keyword
+ 250: LOAD_GLOBAL          PAX_FIELDS
+ 262: CONTAINS_OP          
+ 264: POP_JUMP_FORWARD_IF_FALSE to 454
+ 266: LOAD_FAST            keyword
+ 268: LOAD_GLOBAL          PAX_NUMBER_FIELDS
+ 280: CONTAINS_OP          
+ 282: POP_JUMP_FORWARD_IF_FALSE to 366
+ 284: NOP                  
+ 286: LOAD_GLOBAL          NULL + PAX_NUMBER_FIELDS
+ 298: LOAD_FAST            keyword
+ 300: BINARY_SUBSCR        
+ 310: LOAD_FAST            value
+ 312: PRECALL              
+ 316: CALL                 
+ 326: STORE_FAST           value
+ 328: JUMP_FORWARD         to 366
+ 330: PUSH_EXC_INFO        
+ 332: LOAD_GLOBAL          ValueError
+ 344: CHECK_EXC_MATCH      
+ 346: POP_JUMP_FORWARD_IF_FALSE to 358
+ 348: POP_TOP              
+ 350: LOAD_CONST           0
+ 352: STORE_FAST           value
+ 354: POP_EXCEPT           
+ 356: JUMP_FORWARD         to 366
+ 358: RERAISE              
+ 360: COPY                 
+ 362: POP_EXCEPT           
+ 364: RERAISE              
+ 366: LOAD_FAST            keyword
+ 368: LOAD_CONST           'path'
+ 370: COMPARE_OP           ==
+ 376: POP_JUMP_FORWARD_IF_FALSE to 420
+ 378: LOAD_FAST            value
+ 380: LOAD_METHOD          rstrip
+ 402: LOAD_CONST           '/'
+ 404: PRECALL              
+ 408: CALL                 
+ 418: STORE_FAST           value
+ 420: LOAD_GLOBAL          NULL + setattr
+ 432: LOAD_FAST            self
+ 434: LOAD_FAST            keyword
+ 436: LOAD_FAST            value
+ 438: PRECALL              
+ 442: CALL                 
+ 452: POP_TOP              
+ 454: JUMP_BACKWARD        to 42
+ 456: LOAD_FAST            pax_headers
+ 458: LOAD_METHOD          copy
+ 480: PRECALL              
+ 484: CALL                 
+ 494: LOAD_FAST            self
+ 496: STORE_ATTR           pax_headers
+ 506: LOAD_CONST           None
+ 508: RETURN_VALUE         

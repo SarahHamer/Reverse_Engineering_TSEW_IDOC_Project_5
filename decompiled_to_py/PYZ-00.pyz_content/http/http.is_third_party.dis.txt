@@ -1,0 +1,31 @@
+# Disassembly for http.is_third_party
+# From module file: http.cookiejar
+
+## co_consts:
+('\n\n    RFC 2965, section 3.3.6:\n\n        An unverifiable transaction is to a third-party host if its request-\n        host U does not domain-match the reach R of the request-host O in the\n        origin transaction.\n\n    ', True, False)
+
+## co_names:
+('request_host', 'domain_match', 'reach', 'origin_req_host')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + request_host
+  14: LOAD_FAST            request
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           req_host
+  32: LOAD_GLOBAL          NULL + domain_match
+  44: LOAD_FAST            req_host
+  46: LOAD_GLOBAL          NULL + reach
+  58: LOAD_FAST            request
+  60: LOAD_ATTR            origin_req_host
+  70: PRECALL              
+  74: CALL                 
+  84: PRECALL              
+  88: CALL                 
+  98: POP_JUMP_FORWARD_IF_TRUE to 104
+ 100: LOAD_CONST           True
+ 102: RETURN_VALUE         
+ 104: LOAD_CONST           False
+ 106: RETURN_VALUE         

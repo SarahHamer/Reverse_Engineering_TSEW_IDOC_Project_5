@@ -1,0 +1,32 @@
+# Disassembly for typing._BoundVarianceMixin
+# From module file: typing
+
+## co_consts:
+('_BoundVarianceMixin', "Mixin giving __init__ bound and variance arguments.\n\n    This is used by TypeVar and ParamSpec, which both employ the notions of\n    a type 'bound' (restricting type arguments to be a subtype of some\n    specified type) and type 'variance' (determining subtype relations between\n    generic types).\n    ", <code object __init__ at 0x00000240691E8AB0, file "typing.py", line 945>, <code object __or__ at 0x0000024069467D70, file "typing.py", line 958>, <code object __ror__ at 0x0000024069466330, file "typing.py", line 961>, <code object __repr__ at 0x00000240693EA830, file "typing.py", line 964>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', '__or__', '__ror__', '__repr__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_BoundVarianceMixin'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           "Mixin giving __init__ bound and variance arguments.\n\n    This is used by TypeVar and ParamSpec, which both employ the notions of\n    a type 'bound' (restricting type arguments to be a subtype of some\n    specified type) and type 'variance' (determining subtype relations between\n    generic types).\n    "
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object __init__ at 0x00000240691E8AB0, file "typing.py", line 945>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           __init__
+  20: LOAD_CONST           <code object __or__ at 0x0000024069467D70, file "typing.py", line 958>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           __or__
+  26: LOAD_CONST           <code object __ror__ at 0x0000024069466330, file "typing.py", line 961>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           __ror__
+  32: LOAD_CONST           <code object __repr__ at 0x00000240693EA830, file "typing.py", line 964>
+  34: MAKE_FUNCTION        
+  36: STORE_NAME           __repr__
+  38: LOAD_CONST           None
+  40: RETURN_VALUE         

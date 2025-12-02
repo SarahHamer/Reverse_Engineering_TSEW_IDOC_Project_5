@@ -1,0 +1,33 @@
+# Disassembly for importlib.metadata
+# From module file: importlib.metadata._text
+
+## co_consts:
+(0, None, 1, ('method_cache',), <code object FoldedCase at 0x00000240693D3800, file "importlib\metadata\_text.py", line 7>, 'FoldedCase')
+
+## co_names:
+('re', '_functools', 'method_cache', 'str', 'FoldedCase')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           None
+   6: IMPORT_NAME          re
+   8: STORE_NAME           re
+  10: LOAD_CONST           1
+  12: LOAD_CONST           ('method_cache',)
+  14: IMPORT_NAME          _functools
+  16: IMPORT_FROM          method_cache
+  18: STORE_NAME           method_cache
+  20: POP_TOP              
+  22: PUSH_NULL            
+  24: LOAD_BUILD_CLASS     
+  26: LOAD_CONST           <code object FoldedCase at 0x00000240693D3800, file "importlib\metadata\_text.py", line 7>
+  28: MAKE_FUNCTION        
+  30: LOAD_CONST           'FoldedCase'
+  32: LOAD_NAME            str
+  34: PRECALL              
+  38: CALL                 
+  48: STORE_NAME           FoldedCase
+  50: LOAD_CONST           None
+  52: RETURN_VALUE         

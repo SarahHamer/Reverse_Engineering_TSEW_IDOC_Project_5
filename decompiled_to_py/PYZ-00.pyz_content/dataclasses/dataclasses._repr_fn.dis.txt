@@ -1,0 +1,40 @@
+# Disassembly for dataclasses._repr_fn
+# From module file: dataclasses
+
+## co_consts:
+(None, '__repr__', ('self',), 'return self.__class__.__qualname__ + f"(', ', ', <code object <listcomp> at 0x000002406945E2E0, file "dataclasses.py", line 592>, ')"', ('globals',))
+
+## co_names:
+('_create_fn', 'join', '_recursive_repr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _create_fn
+  14: LOAD_CONST           '__repr__'
+  16: LOAD_CONST           ('self',)
+  18: LOAD_CONST           'return self.__class__.__qualname__ + f"('
+  20: LOAD_CONST           ', '
+  22: LOAD_METHOD          join
+  44: LOAD_CONST           <code object <listcomp> at 0x000002406945E2E0, file "dataclasses.py", line 592>
+  46: MAKE_FUNCTION        
+  48: LOAD_FAST            fields
+  50: GET_ITER             
+  52: PRECALL              
+  56: CALL                 
+  66: PRECALL              
+  70: CALL                 
+  80: BINARY_OP            +
+  84: LOAD_CONST           ')"'
+  86: BINARY_OP            +
+  90: BUILD_LIST           
+  92: LOAD_FAST            globals
+  94: KW_NAMES             
+  96: PRECALL              
+ 100: CALL                 
+ 110: STORE_FAST           fn
+ 112: LOAD_GLOBAL          NULL + _recursive_repr
+ 124: LOAD_FAST            fn
+ 126: PRECALL              
+ 130: CALL                 
+ 140: RETURN_VALUE         

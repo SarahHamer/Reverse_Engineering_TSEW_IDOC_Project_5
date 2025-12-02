@@ -1,0 +1,18 @@
+# Disassembly for inspect.isgeneratorfunction
+# From module file: inspect
+
+## co_consts:
+('Return true if the object is a user-defined generator function.\n\n    Generator function objects provide the same attributes as functions.\n    See help(isfunction) for a list of attributes.',)
+
+## co_names:
+('_has_code_flag', 'CO_GENERATOR')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _has_code_flag
+  14: LOAD_FAST            obj
+  16: LOAD_GLOBAL          CO_GENERATOR
+  28: PRECALL              
+  32: CALL                 
+  42: RETURN_VALUE         

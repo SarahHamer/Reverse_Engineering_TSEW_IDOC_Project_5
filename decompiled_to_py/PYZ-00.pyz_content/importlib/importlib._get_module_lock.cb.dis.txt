@@ -1,0 +1,46 @@
+# Disassembly for importlib._get_module_lock.cb
+# From module file: importlib._bootstrap
+
+## co_consts:
+(None,)
+
+## co_names:
+('_imp', 'acquire_lock', '_module_locks', 'get', 'release_lock')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _imp
+  14: LOAD_METHOD          acquire_lock
+  36: PRECALL              
+  40: CALL                 
+  50: POP_TOP              
+  52: NOP                  
+  54: LOAD_GLOBAL          _module_locks
+  66: LOAD_METHOD          get
+  88: LOAD_FAST            name
+  90: PRECALL              
+  94: CALL                 
+ 104: LOAD_FAST            ref
+ 106: IS_OP                
+ 108: POP_JUMP_FORWARD_IF_FALSE to 126
+ 110: LOAD_GLOBAL          _module_locks
+ 122: LOAD_FAST            name
+ 124: DELETE_SUBSCR        
+ 126: LOAD_GLOBAL          _imp
+ 138: LOAD_METHOD          release_lock
+ 160: PRECALL              
+ 164: CALL                 
+ 174: POP_TOP              
+ 176: LOAD_CONST           None
+ 178: RETURN_VALUE         
+ 180: PUSH_EXC_INFO        
+ 182: LOAD_GLOBAL          _imp
+ 194: LOAD_METHOD          release_lock
+ 216: PRECALL              
+ 220: CALL                 
+ 230: POP_TOP              
+ 232: RERAISE              
+ 234: COPY                 
+ 236: POP_EXCEPT           
+ 238: RERAISE              

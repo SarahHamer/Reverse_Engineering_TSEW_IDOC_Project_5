@@ -1,0 +1,21 @@
+# Disassembly for inspect.Parameter.__repr__
+# From module file: inspect
+
+## co_consts:
+(None, '<{} "{}">')
+
+## co_names:
+('format', '__class__', '__name__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '<{} "{}">'
+   4: LOAD_METHOD          format
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            __class__
+  38: LOAD_ATTR            __name__
+  48: LOAD_FAST            self
+  50: PRECALL              
+  54: CALL                 
+  64: RETURN_VALUE         

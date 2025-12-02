@@ -1,0 +1,47 @@
+# Disassembly for http.CookieJar._process_rfc2109_cookies
+# From module file: http.cookiejar
+
+## co_consts:
+(None, 'rfc2109_as_netscape', 1, True, 0)
+
+## co_names:
+('getattr', '_policy', 'rfc2965', 'version', 'rfc2109')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + getattr
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            _policy
+  26: LOAD_CONST           'rfc2109_as_netscape'
+  28: LOAD_CONST           None
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_FAST           rfc2109_as_ns
+  46: LOAD_FAST            rfc2109_as_ns
+  48: POP_JUMP_FORWARD_IF_NOT_NONE to 76
+  50: LOAD_FAST            self
+  52: LOAD_ATTR            _policy
+  62: LOAD_ATTR            rfc2965
+  72: UNARY_NOT            
+  74: STORE_FAST           rfc2109_as_ns
+  76: LOAD_FAST            cookies
+  78: GET_ITER             
+  80: FOR_ITER             to 140
+  82: STORE_FAST           cookie
+  84: LOAD_FAST            cookie
+  86: LOAD_ATTR            version
+  96: LOAD_CONST           1
+  98: COMPARE_OP           ==
+ 104: POP_JUMP_FORWARD_IF_FALSE to 138
+ 106: LOAD_CONST           True
+ 108: LOAD_FAST            cookie
+ 110: STORE_ATTR           rfc2109
+ 120: LOAD_FAST            rfc2109_as_ns
+ 122: POP_JUMP_FORWARD_IF_FALSE to 138
+ 124: LOAD_CONST           0
+ 126: LOAD_FAST            cookie
+ 128: STORE_ATTR           version
+ 138: JUMP_BACKWARD        to 80
+ 140: LOAD_CONST           None
+ 142: RETURN_VALUE         

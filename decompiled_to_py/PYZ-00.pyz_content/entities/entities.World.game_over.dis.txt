@@ -1,0 +1,40 @@
+# Disassembly for entities.World.game_over
+# From module file: entities
+
+## co_consts:
+(None, 'You took %s', True)
+
+## co_names:
+('player', 'send_message', 'get_play_time', 'win', 'done')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            player
+  14: LOAD_METHOD          send_message
+  36: LOAD_FAST            message
+  38: PRECALL              
+  42: CALL                 
+  52: POP_TOP              
+  54: LOAD_FAST            self
+  56: LOAD_ATTR            player
+  66: LOAD_METHOD          send_message
+  88: LOAD_CONST           'You took %s'
+  90: LOAD_FAST            self
+  92: LOAD_ATTR            player
+ 102: LOAD_METHOD          get_play_time
+ 124: PRECALL              
+ 128: CALL                 
+ 138: BINARY_OP            %
+ 142: PRECALL              
+ 146: CALL                 
+ 156: POP_TOP              
+ 158: LOAD_FAST            win
+ 160: LOAD_FAST            self
+ 162: STORE_ATTR           win
+ 172: LOAD_CONST           True
+ 174: LOAD_FAST            self
+ 176: STORE_ATTR           done
+ 186: LOAD_CONST           None
+ 188: RETURN_VALUE         

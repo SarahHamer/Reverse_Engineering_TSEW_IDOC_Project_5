@@ -1,0 +1,23 @@
+# Disassembly for email._unquote_match
+# From module file: email.quoprimime
+
+## co_consts:
+('Turn a match in the form =AB to the ASCII character with value 0xab', 0)
+
+## co_names:
+('group', 'unquote')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            match
+   4: LOAD_METHOD          group
+  26: LOAD_CONST           0
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           s
+  44: LOAD_GLOBAL          NULL + unquote
+  56: LOAD_FAST            s
+  58: PRECALL              
+  62: CALL                 
+  72: RETURN_VALUE         

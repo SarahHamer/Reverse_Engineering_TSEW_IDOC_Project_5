@@ -1,0 +1,30 @@
+# Disassembly for importlib.resources.open_text
+# From module file: importlib.resources._legacy
+
+## co_consts:
+('Return a file-like object opened for text reading of the resource.', 'r', ('encoding', 'errors'))
+
+## co_names:
+('_common', 'files', 'normalize_path', 'open')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _common
+  14: LOAD_ATTR            files
+  24: LOAD_FAST            package
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_GLOBAL          NULL + normalize_path
+  52: LOAD_FAST            resource
+  54: PRECALL              
+  58: CALL                 
+  68: BINARY_OP            /
+  72: LOAD_METHOD          open
+  94: LOAD_CONST           'r'
+  96: LOAD_FAST            encoding
+  98: LOAD_FAST            errors
+ 100: KW_NAMES             
+ 102: PRECALL              
+ 106: CALL                 
+ 116: RETURN_VALUE         

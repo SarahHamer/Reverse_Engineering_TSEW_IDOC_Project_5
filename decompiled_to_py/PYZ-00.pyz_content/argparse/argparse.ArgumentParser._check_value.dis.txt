@@ -1,0 +1,51 @@
+# Disassembly for argparse.ArgumentParser._check_value
+# From module file: argparse
+
+## co_consts:
+(None, ', ', ('value', 'choices'), 'invalid choice: %(value)r (choose from %(choices)s)')
+
+## co_names:
+('choices', 'join', 'map', 'repr', '_', 'ArgumentError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            action
+   4: LOAD_ATTR            choices
+  14: POP_JUMP_FORWARD_IF_NONE to 198
+  16: LOAD_FAST            value
+  18: LOAD_FAST            action
+  20: LOAD_ATTR            choices
+  30: CONTAINS_OP          
+  32: POP_JUMP_FORWARD_IF_FALSE to 202
+  34: LOAD_FAST            value
+  36: LOAD_CONST           ', '
+  38: LOAD_METHOD          join
+  60: LOAD_GLOBAL          NULL + map
+  72: LOAD_GLOBAL          repr
+  84: LOAD_FAST            action
+  86: LOAD_ATTR            choices
+  96: PRECALL              
+ 100: CALL                 
+ 110: PRECALL              
+ 114: CALL                 
+ 124: LOAD_CONST           ('value', 'choices')
+ 126: BUILD_CONST_KEY_MAP  
+ 128: STORE_FAST           args
+ 130: LOAD_GLOBAL          NULL + _
+ 142: LOAD_CONST           'invalid choice: %(value)r (choose from %(choices)s)'
+ 144: PRECALL              
+ 148: CALL                 
+ 158: STORE_FAST           msg
+ 160: LOAD_GLOBAL          NULL + ArgumentError
+ 172: LOAD_FAST            action
+ 174: LOAD_FAST            msg
+ 176: LOAD_FAST            args
+ 178: BINARY_OP            %
+ 182: PRECALL              
+ 186: CALL                 
+ 196: RAISE_VARARGS        
+ 198: LOAD_CONST           None
+ 200: RETURN_VALUE         
+ 202: LOAD_CONST           None
+ 204: RETURN_VALUE         

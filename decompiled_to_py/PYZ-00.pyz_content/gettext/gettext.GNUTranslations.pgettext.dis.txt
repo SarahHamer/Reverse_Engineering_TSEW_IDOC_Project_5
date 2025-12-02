@@ -1,0 +1,68 @@
+# Disassembly for gettext.GNUTranslations.pgettext
+# From module file: gettext
+
+## co_consts:
+(None, 1)
+
+## co_names:
+('CONTEXT', 'object', '_catalog', 'get', 'plural', '_fallback', 'pgettext')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            CONTEXT
+  14: LOAD_FAST            context
+  16: LOAD_FAST            message
+  18: BUILD_TUPLE          
+  20: BINARY_OP            %
+  24: STORE_FAST           ctxt_msg_id
+  26: LOAD_GLOBAL          NULL + object
+  38: PRECALL              
+  42: CALL                 
+  52: STORE_FAST           missing
+  54: LOAD_FAST            self
+  56: LOAD_ATTR            _catalog
+  66: LOAD_METHOD          get
+  88: LOAD_FAST            ctxt_msg_id
+  90: LOAD_FAST            missing
+  92: PRECALL              
+  96: CALL                 
+ 106: STORE_FAST           tmsg
+ 108: LOAD_FAST            tmsg
+ 110: LOAD_FAST            missing
+ 112: IS_OP                
+ 114: POP_JUMP_FORWARD_IF_FALSE to 212
+ 116: LOAD_FAST            self
+ 118: LOAD_ATTR            _catalog
+ 128: LOAD_METHOD          get
+ 150: LOAD_FAST            ctxt_msg_id
+ 152: LOAD_FAST            self
+ 154: LOAD_METHOD          plural
+ 176: LOAD_CONST           1
+ 178: PRECALL              
+ 182: CALL                 
+ 192: BUILD_TUPLE          
+ 194: LOAD_FAST            missing
+ 196: PRECALL              
+ 200: CALL                 
+ 210: STORE_FAST           tmsg
+ 212: LOAD_FAST            tmsg
+ 214: LOAD_FAST            missing
+ 216: IS_OP                
+ 218: POP_JUMP_FORWARD_IF_FALSE to 224
+ 220: LOAD_FAST            tmsg
+ 222: RETURN_VALUE         
+ 224: LOAD_FAST            self
+ 226: LOAD_ATTR            _fallback
+ 236: POP_JUMP_FORWARD_IF_FALSE to 292
+ 238: LOAD_FAST            self
+ 240: LOAD_ATTR            _fallback
+ 250: LOAD_METHOD          pgettext
+ 272: LOAD_FAST            context
+ 274: LOAD_FAST            message
+ 276: PRECALL              
+ 280: CALL                 
+ 290: RETURN_VALUE         
+ 292: LOAD_FAST            message
+ 294: RETURN_VALUE         

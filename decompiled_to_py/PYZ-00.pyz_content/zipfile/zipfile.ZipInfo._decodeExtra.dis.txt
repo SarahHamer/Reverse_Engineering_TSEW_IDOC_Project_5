@@ -1,0 +1,183 @@
+# Disassembly for zipfile.ZipInfo._decodeExtra
+# From module file: zipfile
+
+## co_consts:
+(None, 4, '<HH', 'Corrupt extra field %04x (size=%d)', 1, (18446744073709551615, 4294967295), 'File size', '<Q', 8, 4294967295, 'Compress size', 'Header offset', 'Corrupt zip64 extra field. ', ' not found.')
+
+## co_names:
+('extra', 'struct', 'unpack', 'len', 'BadZipFile', 'file_size', 'compress_size', 'header_offset', 'error')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            extra
+  14: STORE_FAST           extra
+  16: LOAD_GLOBAL          struct
+  28: LOAD_ATTR            unpack
+  38: STORE_FAST           unpack
+  40: LOAD_GLOBAL          NULL + len
+  52: LOAD_FAST            extra
+  54: PRECALL              
+  58: CALL                 
+  68: LOAD_CONST           4
+  70: COMPARE_OP           >=
+  76: EXTENDED_ARG         
+  78: POP_JUMP_FORWARD_IF_FALSE to 676
+  80: PUSH_NULL            
+  82: LOAD_FAST            unpack
+  84: LOAD_CONST           '<HH'
+  86: LOAD_FAST            extra
+  88: LOAD_CONST           None
+  90: LOAD_CONST           4
+  92: BUILD_SLICE          
+  94: BINARY_SUBSCR        
+ 104: PRECALL              
+ 108: CALL                 
+ 118: UNPACK_SEQUENCE      
+ 122: STORE_FAST           tp
+ 124: STORE_FAST           ln
+ 126: LOAD_FAST            ln
+ 128: LOAD_CONST           4
+ 130: BINARY_OP            +
+ 134: LOAD_GLOBAL          NULL + len
+ 146: LOAD_FAST            extra
+ 148: PRECALL              
+ 152: CALL                 
+ 162: COMPARE_OP           >
+ 168: POP_JUMP_FORWARD_IF_FALSE to 210
+ 170: LOAD_GLOBAL          NULL + BadZipFile
+ 182: LOAD_CONST           'Corrupt extra field %04x (size=%d)'
+ 184: LOAD_FAST            tp
+ 186: LOAD_FAST            ln
+ 188: BUILD_TUPLE          
+ 190: BINARY_OP            %
+ 194: PRECALL              
+ 198: CALL                 
+ 208: RAISE_VARARGS        
+ 210: LOAD_FAST            tp
+ 212: LOAD_CONST           1
+ 214: COMPARE_OP           ==
+ 220: POP_JUMP_FORWARD_IF_FALSE to 606
+ 222: LOAD_FAST            extra
+ 224: LOAD_CONST           4
+ 226: LOAD_FAST            ln
+ 228: LOAD_CONST           4
+ 230: BINARY_OP            +
+ 234: BUILD_SLICE          
+ 236: BINARY_SUBSCR        
+ 246: STORE_FAST           data
+ 248: NOP                  
+ 250: LOAD_FAST            self
+ 252: LOAD_ATTR            file_size
+ 262: LOAD_CONST           (18446744073709551615, 4294967295)
+ 264: CONTAINS_OP          
+ 266: POP_JUMP_FORWARD_IF_FALSE to 346
+ 268: LOAD_CONST           'File size'
+ 270: STORE_FAST           field
+ 272: PUSH_NULL            
+ 274: LOAD_FAST            unpack
+ 276: LOAD_CONST           '<Q'
+ 278: LOAD_FAST            data
+ 280: LOAD_CONST           None
+ 282: LOAD_CONST           8
+ 284: BUILD_SLICE          
+ 286: BINARY_SUBSCR        
+ 296: PRECALL              
+ 300: CALL                 
+ 310: UNPACK_SEQUENCE      
+ 314: LOAD_FAST            self
+ 316: STORE_ATTR           file_size
+ 326: LOAD_FAST            data
+ 328: LOAD_CONST           8
+ 330: LOAD_CONST           None
+ 332: BUILD_SLICE          
+ 334: BINARY_SUBSCR        
+ 344: STORE_FAST           data
+ 346: LOAD_FAST            self
+ 348: LOAD_ATTR            compress_size
+ 358: LOAD_CONST           4294967295
+ 360: COMPARE_OP           ==
+ 366: POP_JUMP_FORWARD_IF_FALSE to 446
+ 368: LOAD_CONST           'Compress size'
+ 370: STORE_FAST           field
+ 372: PUSH_NULL            
+ 374: LOAD_FAST            unpack
+ 376: LOAD_CONST           '<Q'
+ 378: LOAD_FAST            data
+ 380: LOAD_CONST           None
+ 382: LOAD_CONST           8
+ 384: BUILD_SLICE          
+ 386: BINARY_SUBSCR        
+ 396: PRECALL              
+ 400: CALL                 
+ 410: UNPACK_SEQUENCE      
+ 414: LOAD_FAST            self
+ 416: STORE_ATTR           compress_size
+ 426: LOAD_FAST            data
+ 428: LOAD_CONST           8
+ 430: LOAD_CONST           None
+ 432: BUILD_SLICE          
+ 434: BINARY_SUBSCR        
+ 444: STORE_FAST           data
+ 446: LOAD_FAST            self
+ 448: LOAD_ATTR            header_offset
+ 458: LOAD_CONST           4294967295
+ 460: COMPARE_OP           ==
+ 466: POP_JUMP_FORWARD_IF_FALSE to 526
+ 468: LOAD_CONST           'Header offset'
+ 470: STORE_FAST           field
+ 472: PUSH_NULL            
+ 474: LOAD_FAST            unpack
+ 476: LOAD_CONST           '<Q'
+ 478: LOAD_FAST            data
+ 480: LOAD_CONST           None
+ 482: LOAD_CONST           8
+ 484: BUILD_SLICE          
+ 486: BINARY_SUBSCR        
+ 496: PRECALL              
+ 500: CALL                 
+ 510: UNPACK_SEQUENCE      
+ 514: LOAD_FAST            self
+ 516: STORE_ATTR           header_offset
+ 526: JUMP_FORWARD         to 606
+ 528: PUSH_EXC_INFO        
+ 530: LOAD_GLOBAL          struct
+ 542: LOAD_ATTR            error
+ 552: CHECK_EXC_MATCH      
+ 554: POP_JUMP_FORWARD_IF_FALSE to 598
+ 556: POP_TOP              
+ 558: LOAD_GLOBAL          NULL + BadZipFile
+ 570: LOAD_CONST           'Corrupt zip64 extra field. '
+ 572: LOAD_FAST            field
+ 574: FORMAT_VALUE         
+ 576: LOAD_CONST           ' not found.'
+ 578: BUILD_STRING         
+ 580: PRECALL              
+ 584: CALL                 
+ 594: LOAD_CONST           None
+ 596: RAISE_VARARGS        
+ 598: RERAISE              
+ 600: COPY                 
+ 602: POP_EXCEPT           
+ 604: RERAISE              
+ 606: LOAD_FAST            extra
+ 608: LOAD_FAST            ln
+ 610: LOAD_CONST           4
+ 612: BINARY_OP            +
+ 616: LOAD_CONST           None
+ 618: BUILD_SLICE          
+ 620: BINARY_SUBSCR        
+ 630: STORE_FAST           extra
+ 632: LOAD_GLOBAL          NULL + len
+ 644: LOAD_FAST            extra
+ 646: PRECALL              
+ 650: CALL                 
+ 660: LOAD_CONST           4
+ 662: COMPARE_OP           >=
+ 668: EXTENDED_ARG         
+ 670: POP_JUMP_BACKWARD_IF_TRUE to 80
+ 672: LOAD_CONST           None
+ 674: RETURN_VALUE         
+ 676: LOAD_CONST           None
+ 678: RETURN_VALUE         

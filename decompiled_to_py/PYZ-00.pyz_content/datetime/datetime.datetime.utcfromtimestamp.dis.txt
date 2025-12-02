@@ -1,0 +1,20 @@
+# Disassembly for datetime.datetime.utcfromtimestamp
+# From module file: datetime
+
+## co_consts:
+('Construct a naive UTC datetime from a POSIX timestamp.', True, None)
+
+## co_names:
+('_fromtimestamp',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            cls
+   4: LOAD_METHOD          _fromtimestamp
+  26: LOAD_FAST            t
+  28: LOAD_CONST           True
+  30: LOAD_CONST           None
+  32: PRECALL              
+  36: CALL                 
+  46: RETURN_VALUE         

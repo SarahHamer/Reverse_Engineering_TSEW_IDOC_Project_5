@@ -1,0 +1,24 @@
+# Disassembly for zipfile.Path.__init__
+# From module file: zipfile
+
+## co_consts:
+('\n        Construct a Path from a ZipFile or filename.\n\n        Note: When the source is an existing ZipFile object,\n        its type (__class__) will be mutated to a\n        specialized type. If the caller wishes to retain the\n        original type, the caller should either create a\n        separate ZipFile object or pass a filename.\n        ', None)
+
+## co_names:
+('FastLookup', 'make', 'root', 'at')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          FastLookup
+  14: LOAD_METHOD          make
+  36: LOAD_FAST            root
+  38: PRECALL              
+  42: CALL                 
+  52: LOAD_FAST            self
+  54: STORE_ATTR           root
+  64: LOAD_FAST            at
+  66: LOAD_FAST            self
+  68: STORE_ATTR           at
+  78: LOAD_CONST           None
+  80: RETURN_VALUE         

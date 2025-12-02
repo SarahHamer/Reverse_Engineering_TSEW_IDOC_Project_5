@@ -1,0 +1,25 @@
+# Disassembly for typing._CallableType.copy_with
+# From module file: typing
+
+## co_consts:
+(None, True, ('name', 'inst', '_paramspec_tvars'))
+
+## co_names:
+('_CallableGenericAlias', '__origin__', '_name', '_inst')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _CallableGenericAlias
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            __origin__
+  26: LOAD_FAST            params
+  28: LOAD_FAST            self
+  30: LOAD_ATTR            _name
+  40: LOAD_FAST            self
+  42: LOAD_ATTR            _inst
+  52: LOAD_CONST           True
+  54: KW_NAMES             
+  56: PRECALL              
+  60: CALL                 
+  70: RETURN_VALUE         

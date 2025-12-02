@@ -1,0 +1,37 @@
+# Disassembly for datetime.tzinfo
+# From module file: datetime
+
+## co_consts:
+('tzinfo', 'Abstract base class for time zone info classes.\n\n    Subclasses must override the name(), utcoffset() and dst() methods.\n    ', (), <code object tzname at 0x0000024069465DF0, file "datetime.py", line 1230>, <code object utcoffset at 0x0000024069465D10, file "datetime.py", line 1234>, <code object dst at 0x0000024069465FB0, file "datetime.py", line 1238>, <code object fromutc at 0x0000024068BD5780, file "datetime.py", line 1246>, <code object __reduce__ at 0x00000240693AB730, file "datetime.py", line 1275>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__slots__', 'tzname', 'utcoffset', 'dst', 'fromutc', '__reduce__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'tzinfo'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Abstract base class for time zone info classes.\n\n    Subclasses must override the name(), utcoffset() and dst() methods.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ()
+  16: STORE_NAME           __slots__
+  18: LOAD_CONST           <code object tzname at 0x0000024069465DF0, file "datetime.py", line 1230>
+  20: MAKE_FUNCTION        
+  22: STORE_NAME           tzname
+  24: LOAD_CONST           <code object utcoffset at 0x0000024069465D10, file "datetime.py", line 1234>
+  26: MAKE_FUNCTION        
+  28: STORE_NAME           utcoffset
+  30: LOAD_CONST           <code object dst at 0x0000024069465FB0, file "datetime.py", line 1238>
+  32: MAKE_FUNCTION        
+  34: STORE_NAME           dst
+  36: LOAD_CONST           <code object fromutc at 0x0000024068BD5780, file "datetime.py", line 1246>
+  38: MAKE_FUNCTION        
+  40: STORE_NAME           fromutc
+  42: LOAD_CONST           <code object __reduce__ at 0x00000240693AB730, file "datetime.py", line 1275>
+  44: MAKE_FUNCTION        
+  46: STORE_NAME           __reduce__
+  48: LOAD_CONST           None
+  50: RETURN_VALUE         

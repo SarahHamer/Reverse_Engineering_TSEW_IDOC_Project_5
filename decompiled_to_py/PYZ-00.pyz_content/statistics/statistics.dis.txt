@@ -1,0 +1,295 @@
+# Disassembly for statistics
+# From module file: statistics
+
+## co_consts:
+('\nBasic statistics module.\n\nThis module provides functions for calculating statistics of data, including\naverages, variance, and standard deviation.\n\nCalculating averages\n--------------------\n\n==================  ==================================================\nFunction            Description\n==================  ==================================================\nmean                Arithmetic mean (average) of data.\nfmean               Fast, floating point arithmetic mean.\ngeometric_mean      Geometric mean of data.\nharmonic_mean       Harmonic mean of data.\nmedian              Median (middle value) of data.\nmedian_low          Low median of data.\nmedian_high         High median of data.\nmedian_grouped      Median, or 50th percentile, of grouped data.\nmode                Mode (most common value) of data.\nmultimode           List of modes (most common values of data).\nquantiles           Divide data into intervals with equal probability.\n==================  ==================================================\n\nCalculate the arithmetic mean ("the average") of data:\n\n>>> mean([-1.0, 2.5, 3.25, 5.75])\n2.625\n\n\nCalculate the standard median of discrete data:\n\n>>> median([2, 3, 4, 5])\n3.5\n\n\nCalculate the median, or 50th percentile, of data grouped into class intervals\ncentred on the data values provided. E.g. if your data points are rounded to\nthe nearest whole number:\n\n>>> median_grouped([2, 2, 3, 3, 3, 4])  #doctest: +ELLIPSIS\n2.8333333333...\n\nThis should be interpreted in this way: you have two data points in the class\ninterval 1.5-2.5, three data points in the class interval 2.5-3.5, and one in\nthe class interval 3.5-4.5. The median of these data points is 2.8333...\n\n\nCalculating variability or spread\n---------------------------------\n\n==================  =============================================\nFunction            Description\n==================  =============================================\npvariance           Population variance of data.\nvariance            Sample variance of data.\npstdev              Population standard deviation of data.\nstdev               Sample standard deviation of data.\n==================  =============================================\n\nCalculate the standard deviation of sample data:\n\n>>> stdev([2.5, 3.25, 5.5, 11.25, 11.75])  #doctest: +ELLIPSIS\n4.38961843444...\n\nIf you have previously calculated the mean, you can pass it as the optional\nsecond argument to the four "spread" functions to avoid recalculating it:\n\n>>> data = [1, 2, 2, 4, 4, 4, 5, 6]\n>>> mu = mean(data)\n>>> pvariance(data, mu)\n2.5\n\n\nStatistics for relations between two inputs\n-------------------------------------------\n\n==================  ====================================================\nFunction            Description\n==================  ====================================================\ncovariance          Sample covariance for two variables.\ncorrelation         Pearson\'s correlation coefficient for two variables.\nlinear_regression   Intercept and slope for simple linear regression.\n==================  ====================================================\n\nCalculate covariance, Pearson\'s correlation, and simple linear regression\nfor two inputs:\n\n>>> x = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n>>> y = [1, 2, 3, 1, 2, 3, 1, 2, 3]\n>>> covariance(x, y)\n0.75\n>>> correlation(x, y)  #doctest: +ELLIPSIS\n0.31622776601...\n>>> linear_regression(x, y)  #doctest:\nLinearRegression(slope=0.1, intercept=1.5)\n\n\nExceptions\n----------\n\nA single exception is defined: StatisticsError is a subclass of ValueError.\n\n', ('NormalDist', 'StatisticsError', 'correlation', 'covariance', 'fmean', 'geometric_mean', 'harmonic_mean', 'linear_regression', 'mean', 'median', 'median_grouped', 'median_high', 'median_low', 'mode', 'multimode', 'pstdev', 'pvariance', 'quantiles', 'stdev', 'variance'), 0, None, ('Fraction',), ('Decimal',), ('groupby', 'repeat'), ('bisect_left', 'bisect_right'), ('hypot', 'sqrt', 'fabs', 'exp', 'erf', 'tau', 'log', 'fsum'), ('reduce',), ('mul',), ('Counter', 'namedtuple', 'defaultdict'), 2.0, <code object StatisticsError at 0x0000024069496180, file "statistics.py", line 148>, 'StatisticsError', <code object _sum at 0x0000024066C25E40, file "statistics.py", line 154>, <code object _ss at 0x0000024068D03690, file "statistics.py", line 208>, <code object _isfinite at 0x00000240693D2760, file "statistics.py", line 249>, <code object _coerce at 0x0000024068DC4B00, file "statistics.py", line 256>, <code object _exact_ratio at 0x000002406947C7B0, file "statistics.py", line 287>, <code object _convert at 0x000002406947CB70, file "statistics.py", line 333>, 'negative value', <code object _fail_neg at 0x00000240693EB030, file "statistics.py", line 351>, 'n', 'm', 'return', <code object _integer_sqrt_of_frac_rto at 0x000002406944AAB0, file "statistics.py", line 359>, 2, 3, '_sqrt_bit_width', <code object _float_sqrt_of_frac at 0x000002406934F120, file "statistics.py", line 371>, <code object _decimal_sqrt_of_frac at 0x0000024068DC4290, file "statistics.py", line 384>, <code object mean at 0x00000240693D2890, file "statistics.py", line 414>, <code object fmean at 0x00000240695EE140, file "statistics.py", line 436>, <code object geometric_mean at 0x00000240691C2970, file "statistics.py", line 474>, <code object harmonic_mean at 0x0000024068D03A80, file "statistics.py", line 493>, <code object median at 0x00000240691EA730, file "statistics.py", line 549>, <code object median_low at 0x000002406949C8D0, file "statistics.py", line 573>, <code object median_high at 0x00000240693AA970, file "statistics.py", line 595>, 1.0, <code object median_grouped at 0x0000024068DB6590, file "statistics.py", line 614>, <code object mode at 0x00000240691E8DB0, file "statistics.py", line 686>, <code object multimode at 0x00000240691E9E30, file "statistics.py", line 716>, 4, 'exclusive', ('n', 'method'), <code object quantiles at 0x0000024066346C70, file "statistics.py", line 773>, <code object variance at 0x00000240693AB4B0, file "statistics.py", line 822>, <code object pvariance at 0x00000240693ABC30, file "statistics.py", line 866>, <code object stdev at 0x000002406934F990, file "statistics.py", line 907>, <code object pstdev at 0x000002406934F7E0, file "statistics.py", line 925>, <code object _mean_stdev at 0x0000024069365770, file "statistics.py", line 943>, <code object covariance at 0x000002406931FC30, file "statistics.py", line 963>, <code object correlation at 0x0000024068DC3750, file "statistics.py", line 991>, 'LinearRegression', ('slope', 'intercept'), False, ('proportional',), <code object linear_regression at 0x0000024068B79230, file "statistics.py", line 1027>, <code object _normal_dist_inv_cdf at 0x00000240695945A0, file "statistics.py", line 1089>, ('_normal_dist_inv_cdf',), <code object NormalDist at 0x0000024069365B50, file "statistics.py", line 1170>, 'NormalDist', (None,), ('negative value',), (1.0,))
+
+## co_names:
+('__doc__', '__all__', 'math', 'numbers', 'random', 'sys', 'fractions', 'Fraction', 'decimal', 'Decimal', 'itertools', 'groupby', 'repeat', 'bisect', 'bisect_left', 'bisect_right', 'hypot', 'sqrt', 'fabs', 'exp', 'erf', 'tau', 'log', 'fsum', 'functools', 'reduce', 'operator', 'mul', 'collections', 'Counter', 'namedtuple', 'defaultdict', '_SQRT2', 'ValueError', 'StatisticsError', '_sum', '_ss', '_isfinite', '_coerce', '_exact_ratio', '_convert', '_fail_neg', 'int', '_integer_sqrt_of_frac_rto', 'float_info', 'mant_dig', '_sqrt_bit_width', '__annotations__', 'float', '_float_sqrt_of_frac', '_decimal_sqrt_of_frac', 'mean', 'fmean', 'geometric_mean', 'harmonic_mean', 'median', 'median_low', 'median_high', 'median_grouped', 'mode', 'multimode', 'quantiles', 'variance', 'pvariance', 'stdev', 'pstdev', '_mean_stdev', 'covariance', 'correlation', 'LinearRegression', 'linear_regression', '_normal_dist_inv_cdf', '_statistics', 'ImportError', 'NormalDist')
+
+## bytecode:
+
+   0: RESUME               
+   2: SETUP_ANNOTATIONS    
+   4: LOAD_CONST           '\nBasic statistics module.\n\nThis module provides functions for calculating statistics of data, including\naverages, variance, and standard deviation.\n\nCalculating averages\n--------------------\n\n==================  ==================================================\nFunction            Description\n==================  ==================================================\nmean                Arithmetic mean (average) of data.\nfmean               Fast, floating point arithmetic mean.\ngeometric_mean      Geometric mean of data.\nharmonic_mean       Harmonic mean of data.\nmedian              Median (middle value) of data.\nmedian_low          Low median of data.\nmedian_high         High median of data.\nmedian_grouped      Median, or 50th percentile, of grouped data.\nmode                Mode (most common value) of data.\nmultimode           List of modes (most common values of data).\nquantiles           Divide data into intervals with equal probability.\n==================  ==================================================\n\nCalculate the arithmetic mean ("the average") of data:\n\n>>> mean([-1.0, 2.5, 3.25, 5.75])\n2.625\n\n\nCalculate the standard median of discrete data:\n\n>>> median([2, 3, 4, 5])\n3.5\n\n\nCalculate the median, or 50th percentile, of data grouped into class intervals\ncentred on the data values provided. E.g. if your data points are rounded to\nthe nearest whole number:\n\n>>> median_grouped([2, 2, 3, 3, 3, 4])  #doctest: +ELLIPSIS\n2.8333333333...\n\nThis should be interpreted in this way: you have two data points in the class\ninterval 1.5-2.5, three data points in the class interval 2.5-3.5, and one in\nthe class interval 3.5-4.5. The median of these data points is 2.8333...\n\n\nCalculating variability or spread\n---------------------------------\n\n==================  =============================================\nFunction            Description\n==================  =============================================\npvariance           Population variance of data.\nvariance            Sample variance of data.\npstdev              Population standard deviation of data.\nstdev               Sample standard deviation of data.\n==================  =============================================\n\nCalculate the standard deviation of sample data:\n\n>>> stdev([2.5, 3.25, 5.5, 11.25, 11.75])  #doctest: +ELLIPSIS\n4.38961843444...\n\nIf you have previously calculated the mean, you can pass it as the optional\nsecond argument to the four "spread" functions to avoid recalculating it:\n\n>>> data = [1, 2, 2, 4, 4, 4, 5, 6]\n>>> mu = mean(data)\n>>> pvariance(data, mu)\n2.5\n\n\nStatistics for relations between two inputs\n-------------------------------------------\n\n==================  ====================================================\nFunction            Description\n==================  ====================================================\ncovariance          Sample covariance for two variables.\ncorrelation         Pearson\'s correlation coefficient for two variables.\nlinear_regression   Intercept and slope for simple linear regression.\n==================  ====================================================\n\nCalculate covariance, Pearson\'s correlation, and simple linear regression\nfor two inputs:\n\n>>> x = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n>>> y = [1, 2, 3, 1, 2, 3, 1, 2, 3]\n>>> covariance(x, y)\n0.75\n>>> correlation(x, y)  #doctest: +ELLIPSIS\n0.31622776601...\n>>> linear_regression(x, y)  #doctest:\nLinearRegression(slope=0.1, intercept=1.5)\n\n\nExceptions\n----------\n\nA single exception is defined: StatisticsError is a subclass of ValueError.\n\n'
+   6: STORE_NAME           __doc__
+   8: BUILD_LIST           
+  10: LOAD_CONST           ('NormalDist', 'StatisticsError', 'correlation', 'covariance', 'fmean', 'geometric_mean', 'harmonic_mean', 'linear_regression', 'mean', 'median', 'median_grouped', 'median_high', 'median_low', 'mode', 'multimode', 'pstdev', 'pvariance', 'quantiles', 'stdev', 'variance')
+  12: LIST_EXTEND          
+  14: STORE_NAME           __all__
+  16: LOAD_CONST           0
+  18: LOAD_CONST           None
+  20: IMPORT_NAME          math
+  22: STORE_NAME           math
+  24: LOAD_CONST           0
+  26: LOAD_CONST           None
+  28: IMPORT_NAME          numbers
+  30: STORE_NAME           numbers
+  32: LOAD_CONST           0
+  34: LOAD_CONST           None
+  36: IMPORT_NAME          random
+  38: STORE_NAME           random
+  40: LOAD_CONST           0
+  42: LOAD_CONST           None
+  44: IMPORT_NAME          sys
+  46: STORE_NAME           sys
+  48: LOAD_CONST           0
+  50: LOAD_CONST           ('Fraction',)
+  52: IMPORT_NAME          fractions
+  54: IMPORT_FROM          Fraction
+  56: STORE_NAME           Fraction
+  58: POP_TOP              
+  60: LOAD_CONST           0
+  62: LOAD_CONST           ('Decimal',)
+  64: IMPORT_NAME          decimal
+  66: IMPORT_FROM          Decimal
+  68: STORE_NAME           Decimal
+  70: POP_TOP              
+  72: LOAD_CONST           0
+  74: LOAD_CONST           ('groupby', 'repeat')
+  76: IMPORT_NAME          itertools
+  78: IMPORT_FROM          groupby
+  80: STORE_NAME           groupby
+  82: IMPORT_FROM          repeat
+  84: STORE_NAME           repeat
+  86: POP_TOP              
+  88: LOAD_CONST           0
+  90: LOAD_CONST           ('bisect_left', 'bisect_right')
+  92: IMPORT_NAME          bisect
+  94: IMPORT_FROM          bisect_left
+  96: STORE_NAME           bisect_left
+  98: IMPORT_FROM          bisect_right
+ 100: STORE_NAME           bisect_right
+ 102: POP_TOP              
+ 104: LOAD_CONST           0
+ 106: LOAD_CONST           ('hypot', 'sqrt', 'fabs', 'exp', 'erf', 'tau', 'log', 'fsum')
+ 108: IMPORT_NAME          math
+ 110: IMPORT_FROM          hypot
+ 112: STORE_NAME           hypot
+ 114: IMPORT_FROM          sqrt
+ 116: STORE_NAME           sqrt
+ 118: IMPORT_FROM          fabs
+ 120: STORE_NAME           fabs
+ 122: IMPORT_FROM          exp
+ 124: STORE_NAME           exp
+ 126: IMPORT_FROM          erf
+ 128: STORE_NAME           erf
+ 130: IMPORT_FROM          tau
+ 132: STORE_NAME           tau
+ 134: IMPORT_FROM          log
+ 136: STORE_NAME           log
+ 138: IMPORT_FROM          fsum
+ 140: STORE_NAME           fsum
+ 142: POP_TOP              
+ 144: LOAD_CONST           0
+ 146: LOAD_CONST           ('reduce',)
+ 148: IMPORT_NAME          functools
+ 150: IMPORT_FROM          reduce
+ 152: STORE_NAME           reduce
+ 154: POP_TOP              
+ 156: LOAD_CONST           0
+ 158: LOAD_CONST           ('mul',)
+ 160: IMPORT_NAME          operator
+ 162: IMPORT_FROM          mul
+ 164: STORE_NAME           mul
+ 166: POP_TOP              
+ 168: LOAD_CONST           0
+ 170: LOAD_CONST           ('Counter', 'namedtuple', 'defaultdict')
+ 172: IMPORT_NAME          collections
+ 174: IMPORT_FROM          Counter
+ 176: STORE_NAME           Counter
+ 178: IMPORT_FROM          namedtuple
+ 180: STORE_NAME           namedtuple
+ 182: IMPORT_FROM          defaultdict
+ 184: STORE_NAME           defaultdict
+ 186: POP_TOP              
+ 188: PUSH_NULL            
+ 190: LOAD_NAME            sqrt
+ 192: LOAD_CONST           2.0
+ 194: PRECALL              
+ 198: CALL                 
+ 208: STORE_NAME           _SQRT2
+ 210: PUSH_NULL            
+ 212: LOAD_BUILD_CLASS     
+ 214: LOAD_CONST           <code object StatisticsError at 0x0000024069496180, file "statistics.py", line 148>
+ 216: MAKE_FUNCTION        
+ 218: LOAD_CONST           'StatisticsError'
+ 220: LOAD_NAME            ValueError
+ 222: PRECALL              
+ 226: CALL                 
+ 236: STORE_NAME           StatisticsError
+ 238: LOAD_CONST           <code object _sum at 0x0000024066C25E40, file "statistics.py", line 154>
+ 240: MAKE_FUNCTION        
+ 242: STORE_NAME           _sum
+ 244: LOAD_CONST           (None,)
+ 246: LOAD_CONST           <code object _ss at 0x0000024068D03690, file "statistics.py", line 208>
+ 248: MAKE_FUNCTION        defaults
+ 250: STORE_NAME           _ss
+ 252: LOAD_CONST           <code object _isfinite at 0x00000240693D2760, file "statistics.py", line 249>
+ 254: MAKE_FUNCTION        
+ 256: STORE_NAME           _isfinite
+ 258: LOAD_CONST           <code object _coerce at 0x0000024068DC4B00, file "statistics.py", line 256>
+ 260: MAKE_FUNCTION        
+ 262: STORE_NAME           _coerce
+ 264: LOAD_CONST           <code object _exact_ratio at 0x000002406947C7B0, file "statistics.py", line 287>
+ 266: MAKE_FUNCTION        
+ 268: STORE_NAME           _exact_ratio
+ 270: LOAD_CONST           <code object _convert at 0x000002406947CB70, file "statistics.py", line 333>
+ 272: MAKE_FUNCTION        
+ 274: STORE_NAME           _convert
+ 276: LOAD_CONST           ('negative value',)
+ 278: LOAD_CONST           <code object _fail_neg at 0x00000240693EB030, file "statistics.py", line 351>
+ 280: MAKE_FUNCTION        defaults
+ 282: STORE_NAME           _fail_neg
+ 284: LOAD_CONST           'n'
+ 286: LOAD_NAME            int
+ 288: LOAD_CONST           'm'
+ 290: LOAD_NAME            int
+ 292: LOAD_CONST           'return'
+ 294: LOAD_NAME            int
+ 296: BUILD_TUPLE          
+ 298: LOAD_CONST           <code object _integer_sqrt_of_frac_rto at 0x000002406944AAB0, file "statistics.py", line 359>
+ 300: MAKE_FUNCTION        annotations
+ 302: STORE_NAME           _integer_sqrt_of_frac_rto
+ 304: LOAD_CONST           2
+ 306: LOAD_NAME            sys
+ 308: LOAD_ATTR            float_info
+ 318: LOAD_ATTR            mant_dig
+ 328: BINARY_OP            *
+ 332: LOAD_CONST           3
+ 334: BINARY_OP            +
+ 338: STORE_NAME           _sqrt_bit_width
+ 340: LOAD_NAME            int
+ 342: LOAD_NAME            __annotations__
+ 344: LOAD_CONST           '_sqrt_bit_width'
+ 346: STORE_SUBSCR         
+ 350: LOAD_CONST           'n'
+ 352: LOAD_NAME            int
+ 354: LOAD_CONST           'm'
+ 356: LOAD_NAME            int
+ 358: LOAD_CONST           'return'
+ 360: LOAD_NAME            float
+ 362: BUILD_TUPLE          
+ 364: LOAD_CONST           <code object _float_sqrt_of_frac at 0x000002406934F120, file "statistics.py", line 371>
+ 366: MAKE_FUNCTION        annotations
+ 368: STORE_NAME           _float_sqrt_of_frac
+ 370: LOAD_CONST           'n'
+ 372: LOAD_NAME            int
+ 374: LOAD_CONST           'm'
+ 376: LOAD_NAME            int
+ 378: LOAD_CONST           'return'
+ 380: LOAD_NAME            Decimal
+ 382: BUILD_TUPLE          
+ 384: LOAD_CONST           <code object _decimal_sqrt_of_frac at 0x0000024068DC4290, file "statistics.py", line 384>
+ 386: MAKE_FUNCTION        annotations
+ 388: STORE_NAME           _decimal_sqrt_of_frac
+ 390: LOAD_CONST           <code object mean at 0x00000240693D2890, file "statistics.py", line 414>
+ 392: MAKE_FUNCTION        
+ 394: STORE_NAME           mean
+ 396: LOAD_CONST           (None,)
+ 398: LOAD_CONST           <code object fmean at 0x00000240695EE140, file "statistics.py", line 436>
+ 400: MAKE_FUNCTION        defaults
+ 402: STORE_NAME           fmean
+ 404: LOAD_CONST           <code object geometric_mean at 0x00000240691C2970, file "statistics.py", line 474>
+ 406: MAKE_FUNCTION        
+ 408: STORE_NAME           geometric_mean
+ 410: LOAD_CONST           (None,)
+ 412: LOAD_CONST           <code object harmonic_mean at 0x0000024068D03A80, file "statistics.py", line 493>
+ 414: MAKE_FUNCTION        defaults
+ 416: STORE_NAME           harmonic_mean
+ 418: LOAD_CONST           <code object median at 0x00000240691EA730, file "statistics.py", line 549>
+ 420: MAKE_FUNCTION        
+ 422: STORE_NAME           median
+ 424: LOAD_CONST           <code object median_low at 0x000002406949C8D0, file "statistics.py", line 573>
+ 426: MAKE_FUNCTION        
+ 428: STORE_NAME           median_low
+ 430: LOAD_CONST           <code object median_high at 0x00000240693AA970, file "statistics.py", line 595>
+ 432: MAKE_FUNCTION        
+ 434: STORE_NAME           median_high
+ 436: LOAD_CONST           (1.0,)
+ 438: LOAD_CONST           <code object median_grouped at 0x0000024068DB6590, file "statistics.py", line 614>
+ 440: MAKE_FUNCTION        defaults
+ 442: STORE_NAME           median_grouped
+ 444: LOAD_CONST           <code object mode at 0x00000240691E8DB0, file "statistics.py", line 686>
+ 446: MAKE_FUNCTION        
+ 448: STORE_NAME           mode
+ 450: LOAD_CONST           <code object multimode at 0x00000240691E9E30, file "statistics.py", line 716>
+ 452: MAKE_FUNCTION        
+ 454: STORE_NAME           multimode
+ 456: LOAD_CONST           4
+ 458: LOAD_CONST           'exclusive'
+ 460: LOAD_CONST           ('n', 'method')
+ 462: BUILD_CONST_KEY_MAP  
+ 464: LOAD_CONST           <code object quantiles at 0x0000024066346C70, file "statistics.py", line 773>
+ 466: MAKE_FUNCTION        kwdefaults
+ 468: STORE_NAME           quantiles
+ 470: LOAD_CONST           (None,)
+ 472: LOAD_CONST           <code object variance at 0x00000240693AB4B0, file "statistics.py", line 822>
+ 474: MAKE_FUNCTION        defaults
+ 476: STORE_NAME           variance
+ 478: LOAD_CONST           (None,)
+ 480: LOAD_CONST           <code object pvariance at 0x00000240693ABC30, file "statistics.py", line 866>
+ 482: MAKE_FUNCTION        defaults
+ 484: STORE_NAME           pvariance
+ 486: LOAD_CONST           (None,)
+ 488: LOAD_CONST           <code object stdev at 0x000002406934F990, file "statistics.py", line 907>
+ 490: MAKE_FUNCTION        defaults
+ 492: STORE_NAME           stdev
+ 494: LOAD_CONST           (None,)
+ 496: LOAD_CONST           <code object pstdev at 0x000002406934F7E0, file "statistics.py", line 925>
+ 498: MAKE_FUNCTION        defaults
+ 500: STORE_NAME           pstdev
+ 502: LOAD_CONST           <code object _mean_stdev at 0x0000024069365770, file "statistics.py", line 943>
+ 504: MAKE_FUNCTION        
+ 506: STORE_NAME           _mean_stdev
+ 508: LOAD_CONST           <code object covariance at 0x000002406931FC30, file "statistics.py", line 963>
+ 510: MAKE_FUNCTION        
+ 512: STORE_NAME           covariance
+ 514: LOAD_CONST           <code object correlation at 0x0000024068DC3750, file "statistics.py", line 991>
+ 516: MAKE_FUNCTION        
+ 518: STORE_NAME           correlation
+ 520: PUSH_NULL            
+ 522: LOAD_NAME            namedtuple
+ 524: LOAD_CONST           'LinearRegression'
+ 526: LOAD_CONST           ('slope', 'intercept')
+ 528: PRECALL              
+ 532: CALL                 
+ 542: STORE_NAME           LinearRegression
+ 544: LOAD_CONST           False
+ 546: LOAD_CONST           ('proportional',)
+ 548: BUILD_CONST_KEY_MAP  
+ 550: LOAD_CONST           <code object linear_regression at 0x0000024068B79230, file "statistics.py", line 1027>
+ 552: MAKE_FUNCTION        kwdefaults
+ 554: STORE_NAME           linear_regression
+ 556: LOAD_CONST           <code object _normal_dist_inv_cdf at 0x00000240695945A0, file "statistics.py", line 1089>
+ 558: MAKE_FUNCTION        
+ 560: STORE_NAME           _normal_dist_inv_cdf
+ 562: NOP                  
+ 564: LOAD_CONST           0
+ 566: LOAD_CONST           ('_normal_dist_inv_cdf',)
+ 568: IMPORT_NAME          _statistics
+ 570: IMPORT_FROM          _normal_dist_inv_cdf
+ 572: STORE_NAME           _normal_dist_inv_cdf
+ 574: POP_TOP              
+ 576: JUMP_FORWARD         to 600
+ 578: PUSH_EXC_INFO        
+ 580: LOAD_NAME            ImportError
+ 582: CHECK_EXC_MATCH      
+ 584: POP_JUMP_FORWARD_IF_FALSE to 592
+ 586: POP_TOP              
+ 588: POP_EXCEPT           
+ 590: JUMP_FORWARD         to 600
+ 592: RERAISE              
+ 594: COPY                 
+ 596: POP_EXCEPT           
+ 598: RERAISE              
+ 600: PUSH_NULL            
+ 602: LOAD_BUILD_CLASS     
+ 604: LOAD_CONST           <code object NormalDist at 0x0000024069365B50, file "statistics.py", line 1170>
+ 606: MAKE_FUNCTION        
+ 608: LOAD_CONST           'NormalDist'
+ 610: PRECALL              
+ 614: CALL                 
+ 624: STORE_NAME           NormalDist
+ 626: LOAD_CONST           None
+ 628: RETURN_VALUE         

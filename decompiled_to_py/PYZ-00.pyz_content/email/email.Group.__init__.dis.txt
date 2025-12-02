@@ -1,0 +1,29 @@
+# Disassembly for email.Group.__init__
+# From module file: email.headerregistry
+
+## co_consts:
+('Create an object representing an address group.\n\n        An address group consists of a display_name followed by colon and a\n        list of addresses (see Address) terminated by a semi-colon.  The Group\n        is created by specifying a display_name and a possibly empty list of\n        Address objects.  A Group can also be used to represent a single\n        address that is not in a group, which is convenient when manipulating\n        lists that are a combination of Groups and individual Addresses.  In\n        this case the display_name should be set to None.  In particular, the\n        string representation of a Group whose display_name is None is the same\n        as the Address object, if there is one and only one Address object in\n        the addresses list.\n\n        ', None)
+
+## co_names:
+('_display_name', 'tuple', '_addresses')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            display_name
+   4: LOAD_FAST            self
+   6: STORE_ATTR           _display_name
+  16: LOAD_FAST            addresses
+  18: POP_JUMP_FORWARD_IF_FALSE to 50
+  20: LOAD_GLOBAL          NULL + tuple
+  32: LOAD_FAST            addresses
+  34: PRECALL              
+  38: CALL                 
+  48: JUMP_FORWARD         to 76
+  50: LOAD_GLOBAL          NULL + tuple
+  62: PRECALL              
+  66: CALL                 
+  76: LOAD_FAST            self
+  78: STORE_ATTR           _addresses
+  88: LOAD_CONST           None
+  90: RETURN_VALUE         

@@ -1,0 +1,18 @@
+# Disassembly for tracemalloc._Traces.__len__
+# From module file: tracemalloc
+
+## co_consts:
+(None,)
+
+## co_names:
+('len', '_traces')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + len
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            _traces
+  26: PRECALL              
+  30: CALL                 
+  40: RETURN_VALUE         

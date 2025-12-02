@@ -1,0 +1,14 @@
+# Disassembly for email.Policy.fold_binary
+# From module file: email._policybase
+
+## co_consts:
+('Given the header name and the value from the model, return binary\n        data containing linesep characters that implement the folding of the\n        header according to the policy controls.  The value passed in by the\n        email package may contain surrogateescaped binary data.\n\n        ',)
+
+## co_names:
+('NotImplementedError',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NotImplementedError
+  14: RAISE_VARARGS        

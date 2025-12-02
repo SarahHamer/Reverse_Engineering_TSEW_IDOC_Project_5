@@ -1,0 +1,17 @@
+# Disassembly for tarfile.TarInfo.isblk
+# From module file: tarfile
+
+## co_consts:
+('Return True if it is a block device.',)
+
+## co_names:
+('type', 'BLKTYPE')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            type
+  14: LOAD_GLOBAL          BLKTYPE
+  26: COMPARE_OP           ==
+  32: RETURN_VALUE         

@@ -1,0 +1,57 @@
+# Disassembly for datetime.timedelta.__floordiv__
+# From module file: datetime
+
+## co_consts:
+(None, 0)
+
+## co_names:
+('isinstance', 'int', 'timedelta', 'NotImplemented', '_to_microseconds')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            other
+  16: LOAD_GLOBAL          int
+  28: LOAD_GLOBAL          timedelta
+  40: BUILD_TUPLE          
+  42: PRECALL              
+  46: CALL                 
+  56: POP_JUMP_FORWARD_IF_TRUE to 72
+  58: LOAD_GLOBAL          NotImplemented
+  70: RETURN_VALUE         
+  72: LOAD_FAST            self
+  74: LOAD_METHOD          _to_microseconds
+  96: PRECALL              
+ 100: CALL                 
+ 110: STORE_FAST           usec
+ 112: LOAD_GLOBAL          NULL + isinstance
+ 124: LOAD_FAST            other
+ 126: LOAD_GLOBAL          timedelta
+ 138: PRECALL              
+ 142: CALL                 
+ 152: POP_JUMP_FORWARD_IF_FALSE to 200
+ 154: LOAD_FAST            usec
+ 156: LOAD_FAST            other
+ 158: LOAD_METHOD          _to_microseconds
+ 180: PRECALL              
+ 184: CALL                 
+ 194: BINARY_OP            //
+ 198: RETURN_VALUE         
+ 200: LOAD_GLOBAL          NULL + isinstance
+ 212: LOAD_FAST            other
+ 214: LOAD_GLOBAL          int
+ 226: PRECALL              
+ 230: CALL                 
+ 240: POP_JUMP_FORWARD_IF_FALSE to 282
+ 242: LOAD_GLOBAL          NULL + timedelta
+ 254: LOAD_CONST           0
+ 256: LOAD_CONST           0
+ 258: LOAD_FAST            usec
+ 260: LOAD_FAST            other
+ 262: BINARY_OP            //
+ 266: PRECALL              
+ 270: CALL                 
+ 280: RETURN_VALUE         
+ 282: LOAD_CONST           None
+ 284: RETURN_VALUE         

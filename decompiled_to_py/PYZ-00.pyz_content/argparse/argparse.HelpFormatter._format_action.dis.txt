@@ -1,0 +1,189 @@
+# Disassembly for argparse.HelpFormatter._format_action
+# From module file: argparse
+
+## co_consts:
+(None, 2, 11, '', '%*s%s\n', '%*s%-*s  ', 0, 1, '\n')
+
+## co_names:
+('min', '_action_max_length', '_max_help_position', 'max', '_width', '_current_indent', '_format_action_invocation', 'help', 'len', 'strip', '_expand_help', '_split_lines', 'append', 'endswith', '_iter_indented_subactions', '_format_action', '_join_parts')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + min
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            _action_max_length
+  26: LOAD_CONST           2
+  28: BINARY_OP            +
+  32: LOAD_FAST            self
+  34: LOAD_ATTR            _max_help_position
+  44: PRECALL              
+  48: CALL                 
+  58: STORE_FAST           help_position
+  60: LOAD_GLOBAL          NULL + max
+  72: LOAD_FAST            self
+  74: LOAD_ATTR            _width
+  84: LOAD_FAST            help_position
+  86: BINARY_OP            -
+  90: LOAD_CONST           11
+  92: PRECALL              
+  96: CALL                 
+ 106: STORE_FAST           help_width
+ 108: LOAD_FAST            help_position
+ 110: LOAD_FAST            self
+ 112: LOAD_ATTR            _current_indent
+ 122: BINARY_OP            -
+ 126: LOAD_CONST           2
+ 128: BINARY_OP            -
+ 132: STORE_FAST           action_width
+ 134: LOAD_FAST            self
+ 136: LOAD_METHOD          _format_action_invocation
+ 158: LOAD_FAST            action
+ 160: PRECALL              
+ 164: CALL                 
+ 174: STORE_FAST           action_header
+ 176: LOAD_FAST            action
+ 178: LOAD_ATTR            help
+ 188: POP_JUMP_FORWARD_IF_TRUE to 222
+ 190: LOAD_FAST            self
+ 192: LOAD_ATTR            _current_indent
+ 202: LOAD_CONST           ''
+ 204: LOAD_FAST            action_header
+ 206: BUILD_TUPLE          
+ 208: STORE_FAST           tup
+ 210: LOAD_CONST           '%*s%s\n'
+ 212: LOAD_FAST            tup
+ 214: BINARY_OP            %
+ 218: STORE_FAST           action_header
+ 220: JUMP_FORWARD         to 332
+ 222: LOAD_GLOBAL          NULL + len
+ 234: LOAD_FAST            action_header
+ 236: PRECALL              
+ 240: CALL                 
+ 250: LOAD_FAST            action_width
+ 252: COMPARE_OP           <=
+ 258: POP_JUMP_FORWARD_IF_FALSE to 298
+ 260: LOAD_FAST            self
+ 262: LOAD_ATTR            _current_indent
+ 272: LOAD_CONST           ''
+ 274: LOAD_FAST            action_width
+ 276: LOAD_FAST            action_header
+ 278: BUILD_TUPLE          
+ 280: STORE_FAST           tup
+ 282: LOAD_CONST           '%*s%-*s  '
+ 284: LOAD_FAST            tup
+ 286: BINARY_OP            %
+ 290: STORE_FAST           action_header
+ 292: LOAD_CONST           0
+ 294: STORE_FAST           indent_first
+ 296: JUMP_FORWARD         to 332
+ 298: LOAD_FAST            self
+ 300: LOAD_ATTR            _current_indent
+ 310: LOAD_CONST           ''
+ 312: LOAD_FAST            action_header
+ 314: BUILD_TUPLE          
+ 316: STORE_FAST           tup
+ 318: LOAD_CONST           '%*s%s\n'
+ 320: LOAD_FAST            tup
+ 322: BINARY_OP            %
+ 326: STORE_FAST           action_header
+ 328: LOAD_FAST            help_position
+ 330: STORE_FAST           indent_first
+ 332: LOAD_FAST            action_header
+ 334: BUILD_LIST           
+ 336: STORE_FAST           parts
+ 338: LOAD_FAST            action
+ 340: LOAD_ATTR            help
+ 350: POP_JUMP_FORWARD_IF_FALSE to 640
+ 352: LOAD_FAST            action
+ 354: LOAD_ATTR            help
+ 364: LOAD_METHOD          strip
+ 386: PRECALL              
+ 390: CALL                 
+ 400: POP_JUMP_FORWARD_IF_FALSE to 640
+ 402: LOAD_FAST            self
+ 404: LOAD_METHOD          _expand_help
+ 426: LOAD_FAST            action
+ 428: PRECALL              
+ 432: CALL                 
+ 442: STORE_FAST           help_text
+ 444: LOAD_FAST            help_text
+ 446: POP_JUMP_FORWARD_IF_FALSE to 638
+ 448: LOAD_FAST            self
+ 450: LOAD_METHOD          _split_lines
+ 472: LOAD_FAST            help_text
+ 474: LOAD_FAST            help_width
+ 476: PRECALL              
+ 480: CALL                 
+ 490: STORE_FAST           help_lines
+ 492: LOAD_FAST            parts
+ 494: LOAD_METHOD          append
+ 516: LOAD_CONST           '%*s%s\n'
+ 518: LOAD_FAST            indent_first
+ 520: LOAD_CONST           ''
+ 522: LOAD_FAST            help_lines
+ 524: LOAD_CONST           0
+ 526: BINARY_SUBSCR        
+ 536: BUILD_TUPLE          
+ 538: BINARY_OP            %
+ 542: PRECALL              
+ 546: CALL                 
+ 556: POP_TOP              
+ 558: LOAD_FAST            help_lines
+ 560: LOAD_CONST           1
+ 562: LOAD_CONST           None
+ 564: BUILD_SLICE          
+ 566: BINARY_SUBSCR        
+ 576: GET_ITER             
+ 578: FOR_ITER             to 638
+ 580: STORE_FAST           line
+ 582: LOAD_FAST            parts
+ 584: LOAD_METHOD          append
+ 606: LOAD_CONST           '%*s%s\n'
+ 608: LOAD_FAST            help_position
+ 610: LOAD_CONST           ''
+ 612: LOAD_FAST            line
+ 614: BUILD_TUPLE          
+ 616: BINARY_OP            %
+ 620: PRECALL              
+ 624: CALL                 
+ 634: POP_TOP              
+ 636: JUMP_BACKWARD        to 578
+ 638: JUMP_FORWARD         to 724
+ 640: LOAD_FAST            action_header
+ 642: LOAD_METHOD          endswith
+ 664: LOAD_CONST           '\n'
+ 666: PRECALL              
+ 670: CALL                 
+ 680: POP_JUMP_FORWARD_IF_TRUE to 724
+ 682: LOAD_FAST            parts
+ 684: LOAD_METHOD          append
+ 706: LOAD_CONST           '\n'
+ 708: PRECALL              
+ 712: CALL                 
+ 722: POP_TOP              
+ 724: LOAD_FAST            self
+ 726: LOAD_METHOD          _iter_indented_subactions
+ 748: LOAD_FAST            action
+ 750: PRECALL              
+ 754: CALL                 
+ 764: GET_ITER             
+ 766: FOR_ITER             to 852
+ 768: STORE_FAST           subaction
+ 770: LOAD_FAST            parts
+ 772: LOAD_METHOD          append
+ 794: LOAD_FAST            self
+ 796: LOAD_METHOD          _format_action
+ 818: LOAD_FAST            subaction
+ 820: PRECALL              
+ 824: CALL                 
+ 834: PRECALL              
+ 838: CALL                 
+ 848: POP_TOP              
+ 850: JUMP_BACKWARD        to 766
+ 852: LOAD_FAST            self
+ 854: LOAD_METHOD          _join_parts
+ 876: LOAD_FAST            parts
+ 878: PRECALL              
+ 882: CALL                 
+ 892: RETURN_VALUE         

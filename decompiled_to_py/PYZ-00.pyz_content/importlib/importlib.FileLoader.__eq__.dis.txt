@@ -1,0 +1,24 @@
+# Disassembly for importlib.FileLoader.__eq__
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+(None,)
+
+## co_names:
+('__class__', '__dict__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            __class__
+  14: LOAD_FAST            other
+  16: LOAD_ATTR            __class__
+  26: COMPARE_OP           ==
+  32: JUMP_IF_FALSE_OR_POP to 64
+  34: LOAD_FAST            self
+  36: LOAD_ATTR            __dict__
+  46: LOAD_FAST            other
+  48: LOAD_ATTR            __dict__
+  58: COMPARE_OP           ==
+  64: RETURN_VALUE         

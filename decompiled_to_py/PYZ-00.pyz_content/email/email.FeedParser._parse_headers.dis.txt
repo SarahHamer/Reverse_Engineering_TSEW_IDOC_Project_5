@@ -1,0 +1,215 @@
+# Disassembly for email.FeedParser._parse_headers
+# From module file: email.feedparser
+
+## co_consts:
+(None, '', 0, ' \t', 'From ', 1, ':', 'Missing header name.', '_parse_headers fed line with no : and no leading WS')
+
+## co_names:
+('enumerate', 'errors', 'FirstHeaderLineIsContinuationDefect', 'policy', 'handle_defect', '_cur', 'append', 'set_raw', 'header_source_parse', 'startswith', 'NLCRE_eol', 'search', 'len', 'group', 'set_unixfrom', '_input', 'unreadline', 'MisplacedEnvelopeHeaderDefect', 'defects', 'find', 'InvalidHeaderDefect')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           ''
+   4: STORE_FAST           lastheader
+   6: BUILD_LIST           
+   8: STORE_FAST           lastvalue
+  10: LOAD_GLOBAL          NULL + enumerate
+  22: LOAD_FAST            lines
+  24: PRECALL              
+  28: CALL                 
+  38: GET_ITER             
+  40: EXTENDED_ARG         
+  42: FOR_ITER             to 998
+  44: UNPACK_SEQUENCE      
+  48: STORE_FAST           lineno
+  50: STORE_FAST           line
+  52: LOAD_FAST            line
+  54: LOAD_CONST           0
+  56: BINARY_SUBSCR        
+  66: LOAD_CONST           ' \t'
+  68: CONTAINS_OP          
+  70: POP_JUMP_FORWARD_IF_FALSE to 226
+  72: LOAD_FAST            lastheader
+  74: POP_JUMP_FORWARD_IF_TRUE to 182
+  76: LOAD_GLOBAL          NULL + errors
+  88: LOAD_ATTR            FirstHeaderLineIsContinuationDefect
+  98: LOAD_FAST            line
+ 100: PRECALL              
+ 104: CALL                 
+ 114: STORE_FAST           defect
+ 116: LOAD_FAST            self
+ 118: LOAD_ATTR            policy
+ 128: LOAD_METHOD          handle_defect
+ 150: LOAD_FAST            self
+ 152: LOAD_ATTR            _cur
+ 162: LOAD_FAST            defect
+ 164: PRECALL              
+ 168: CALL                 
+ 178: POP_TOP              
+ 180: JUMP_BACKWARD        to 40
+ 182: LOAD_FAST            lastvalue
+ 184: LOAD_METHOD          append
+ 206: LOAD_FAST            line
+ 208: PRECALL              
+ 212: CALL                 
+ 222: POP_TOP              
+ 224: JUMP_BACKWARD        to 40
+ 226: LOAD_FAST            lastheader
+ 228: POP_JUMP_FORWARD_IF_FALSE to 316
+ 230: PUSH_NULL            
+ 232: LOAD_FAST            self
+ 234: LOAD_ATTR            _cur
+ 244: LOAD_ATTR            set_raw
+ 254: LOAD_FAST            self
+ 256: LOAD_ATTR            policy
+ 266: LOAD_METHOD          header_source_parse
+ 288: LOAD_FAST            lastvalue
+ 290: PRECALL              
+ 294: CALL                 
+ 304: CALL_FUNCTION_EX     
+ 306: POP_TOP              
+ 308: LOAD_CONST           ''
+ 310: BUILD_LIST           
+ 312: STORE_FAST           lastvalue
+ 314: STORE_FAST           lastheader
+ 316: LOAD_FAST            line
+ 318: LOAD_METHOD          startswith
+ 340: LOAD_CONST           'From '
+ 342: PRECALL              
+ 346: CALL                 
+ 356: POP_JUMP_FORWARD_IF_FALSE to 776
+ 358: LOAD_FAST            lineno
+ 360: LOAD_CONST           0
+ 362: COMPARE_OP           ==
+ 368: POP_JUMP_FORWARD_IF_FALSE to 568
+ 370: LOAD_GLOBAL          NLCRE_eol
+ 382: LOAD_METHOD          search
+ 404: LOAD_FAST            line
+ 406: PRECALL              
+ 410: CALL                 
+ 420: STORE_FAST           mo
+ 422: LOAD_FAST            mo
+ 424: POP_JUMP_FORWARD_IF_FALSE to 512
+ 426: LOAD_FAST            line
+ 428: LOAD_CONST           None
+ 430: LOAD_GLOBAL          NULL + len
+ 442: LOAD_FAST            mo
+ 444: LOAD_METHOD          group
+ 466: LOAD_CONST           0
+ 468: PRECALL              
+ 472: CALL                 
+ 482: PRECALL              
+ 486: CALL                 
+ 496: UNARY_NEGATIVE       
+ 498: BUILD_SLICE          
+ 500: BINARY_SUBSCR        
+ 510: STORE_FAST           line
+ 512: LOAD_FAST            self
+ 514: LOAD_ATTR            _cur
+ 524: LOAD_METHOD          set_unixfrom
+ 546: LOAD_FAST            line
+ 548: PRECALL              
+ 552: CALL                 
+ 562: POP_TOP              
+ 564: EXTENDED_ARG         
+ 566: JUMP_BACKWARD        to 40
+ 568: LOAD_FAST            lineno
+ 570: LOAD_GLOBAL          NULL + len
+ 582: LOAD_FAST            lines
+ 584: PRECALL              
+ 588: CALL                 
+ 598: LOAD_CONST           1
+ 600: BINARY_OP            -
+ 604: COMPARE_OP           ==
+ 610: POP_JUMP_FORWARD_IF_FALSE to 670
+ 612: LOAD_FAST            self
+ 614: LOAD_ATTR            _input
+ 624: LOAD_METHOD          unreadline
+ 646: LOAD_FAST            line
+ 648: PRECALL              
+ 652: CALL                 
+ 662: POP_TOP              
+ 664: POP_TOP              
+ 666: LOAD_CONST           None
+ 668: RETURN_VALUE         
+ 670: LOAD_GLOBAL          NULL + errors
+ 682: LOAD_ATTR            MisplacedEnvelopeHeaderDefect
+ 692: LOAD_FAST            line
+ 694: PRECALL              
+ 698: CALL                 
+ 708: STORE_FAST           defect
+ 710: LOAD_FAST            self
+ 712: LOAD_ATTR            _cur
+ 722: LOAD_ATTR            defects
+ 732: LOAD_METHOD          append
+ 754: LOAD_FAST            defect
+ 756: PRECALL              
+ 760: CALL                 
+ 770: POP_TOP              
+ 772: EXTENDED_ARG         
+ 774: JUMP_BACKWARD        to 40
+ 776: LOAD_FAST            line
+ 778: LOAD_METHOD          find
+ 800: LOAD_CONST           ':'
+ 802: PRECALL              
+ 806: CALL                 
+ 816: STORE_FAST           i
+ 818: LOAD_FAST            i
+ 820: LOAD_CONST           0
+ 822: COMPARE_OP           ==
+ 828: POP_JUMP_FORWARD_IF_FALSE to 936
+ 830: LOAD_GLOBAL          NULL + errors
+ 842: LOAD_ATTR            InvalidHeaderDefect
+ 852: LOAD_CONST           'Missing header name.'
+ 854: PRECALL              
+ 858: CALL                 
+ 868: STORE_FAST           defect
+ 870: LOAD_FAST            self
+ 872: LOAD_ATTR            _cur
+ 882: LOAD_ATTR            defects
+ 892: LOAD_METHOD          append
+ 914: LOAD_FAST            defect
+ 916: PRECALL              
+ 920: CALL                 
+ 930: POP_TOP              
+ 932: EXTENDED_ARG         
+ 934: JUMP_BACKWARD        to 40
+ 936: LOAD_FAST            i
+ 938: LOAD_CONST           0
+ 940: COMPARE_OP           >
+ 946: POP_JUMP_FORWARD_IF_TRUE to 968
+ 948: LOAD_ASSERTION_ERROR 
+ 950: LOAD_CONST           '_parse_headers fed line with no : and no leading WS'
+ 952: PRECALL              
+ 956: CALL                 
+ 966: RAISE_VARARGS        
+ 968: LOAD_FAST            line
+ 970: LOAD_CONST           None
+ 972: LOAD_FAST            i
+ 974: BUILD_SLICE          
+ 976: BINARY_SUBSCR        
+ 986: STORE_FAST           lastheader
+ 988: LOAD_FAST            line
+ 990: BUILD_LIST           
+ 992: STORE_FAST           lastvalue
+ 994: EXTENDED_ARG         
+ 996: JUMP_BACKWARD        to 40
+ 998: LOAD_FAST            lastheader
+1000: POP_JUMP_FORWARD_IF_FALSE to 1084
+1002: PUSH_NULL            
+1004: LOAD_FAST            self
+1006: LOAD_ATTR            _cur
+1016: LOAD_ATTR            set_raw
+1026: LOAD_FAST            self
+1028: LOAD_ATTR            policy
+1038: LOAD_METHOD          header_source_parse
+1060: LOAD_FAST            lastvalue
+1062: PRECALL              
+1066: CALL                 
+1076: CALL_FUNCTION_EX     
+1078: POP_TOP              
+1080: LOAD_CONST           None
+1082: RETURN_VALUE         
+1084: LOAD_CONST           None
+1086: RETURN_VALUE         

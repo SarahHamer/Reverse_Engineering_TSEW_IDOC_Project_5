@@ -1,0 +1,33 @@
+# Disassembly for ftplib.FTP.putcmd
+# From module file: ftplib
+
+## co_consts:
+(None, '*cmd*')
+
+## co_names:
+('debugging', 'print', 'sanitize', 'putline')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            debugging
+  14: POP_JUMP_FORWARD_IF_FALSE to 86
+  16: LOAD_GLOBAL          NULL + print
+  28: LOAD_CONST           '*cmd*'
+  30: LOAD_FAST            self
+  32: LOAD_METHOD          sanitize
+  54: LOAD_FAST            line
+  56: PRECALL              
+  60: CALL                 
+  70: PRECALL              
+  74: CALL                 
+  84: POP_TOP              
+  86: LOAD_FAST            self
+  88: LOAD_METHOD          putline
+ 110: LOAD_FAST            line
+ 112: PRECALL              
+ 116: CALL                 
+ 126: POP_TOP              
+ 128: LOAD_CONST           None
+ 130: RETURN_VALUE         

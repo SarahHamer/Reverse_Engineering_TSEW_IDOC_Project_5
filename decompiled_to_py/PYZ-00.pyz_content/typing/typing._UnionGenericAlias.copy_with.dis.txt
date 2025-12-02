@@ -1,0 +1,16 @@
+# Disassembly for typing._UnionGenericAlias.copy_with
+# From module file: typing
+
+## co_consts:
+(None,)
+
+## co_names:
+('Union',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          Union
+  14: LOAD_FAST            params
+  16: BINARY_SUBSCR        
+  26: RETURN_VALUE         

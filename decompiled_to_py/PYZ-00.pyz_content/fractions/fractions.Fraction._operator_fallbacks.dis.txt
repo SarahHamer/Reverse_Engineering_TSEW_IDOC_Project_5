@@ -1,0 +1,54 @@
+# Disassembly for fractions.Fraction._operator_fallbacks
+# From module file: fractions
+
+## co_consts:
+('Generates forward and reverse operators given a purely-rational\n        operator and a function from the operator module.\n\n        Use this like:\n        __op__, __rop__ = _operator_fallbacks(just_rational_op, operator.op)\n\n        In general, we want to implement the arithmetic operations so\n        that mixed-mode operations either call an implementation whose\n        author knew about the types of both arguments, or convert both\n        to the nearest built in type and do the operation there. In\n        Fraction, that means that we define __add__ and __radd__ as:\n\n            def __add__(self, other):\n                # Both types have numerators/denominator attributes,\n                # so do the operation directly\n                if isinstance(other, (int, Fraction)):\n                    return Fraction(self.numerator * other.denominator +\n                                    other.numerator * self.denominator,\n                                    self.denominator * other.denominator)\n                # float and complex don\'t have those operations, but we\n                # know about those types, so special case them.\n                elif isinstance(other, float):\n                    return float(self) + other\n                elif isinstance(other, complex):\n                    return complex(self) + other\n                # Let the other type take over.\n                return NotImplemented\n\n            def __radd__(self, other):\n                # radd handles more types than add because there\'s\n                # nothing left to fall back to.\n                if isinstance(other, numbers.Rational):\n                    return Fraction(self.numerator * other.denominator +\n                                    other.numerator * self.denominator,\n                                    self.denominator * other.denominator)\n                elif isinstance(other, Real):\n                    return float(other) + float(self)\n                elif isinstance(other, Complex):\n                    return complex(other) + complex(self)\n                return NotImplemented\n\n\n        There are 5 different cases for a mixed-type addition on\n        Fraction. I\'ll refer to all of the above code that doesn\'t\n        refer to Fraction, float, or complex as "boilerplate". \'r\'\n        will be an instance of Fraction, which is a subtype of\n        Rational (r : Fraction <: Rational), and b : B <:\n        Complex. The first three involve \'r + b\':\n\n            1. If B <: Fraction, int, float, or complex, we handle\n               that specially, and all is well.\n            2. If Fraction falls back to the boilerplate code, and it\n               were to return a value from __add__, we\'d miss the\n               possibility that B defines a more intelligent __radd__,\n               so the boilerplate should return NotImplemented from\n               __add__. In particular, we don\'t handle Rational\n               here, even though we could get an exact answer, in case\n               the other type wants to do something special.\n            3. If B <: Fraction, Python tries B.__radd__ before\n               Fraction.__add__. This is ok, because it was\n               implemented with knowledge of Fraction, so it can\n               handle those instances before delegating to Real or\n               Complex.\n\n        The next two situations describe \'b + r\'. We assume that b\n        didn\'t know about Fraction in its implementation, and that it\n        uses similar boilerplate code:\n\n            4. If B <: Rational, then __radd_ converts both to the\n               builtin rational type (hey look, that\'s us) and\n               proceeds.\n            5. Otherwise, __radd__ tries to find the nearest common\n               base ABC, and fall back to its builtin type. Since this\n               class doesn\'t subclass a concrete type, there\'s no\n               implementation to fall back to, so we need to try as\n               hard as possible to return an actual value, or the user\n               will get a TypeError.\n\n        ', <code object forward at 0x000002406947C5D0, file "fractions.py", line 357>, '__', <code object reverse at 0x0000024068E21940, file "fractions.py", line 369>, '__r')
+
+## co_names:
+('__name__', '__doc__')
+
+## bytecode:
+
+   0: MAKE_CELL            monomorphic_operator
+   2: MAKE_CELL            fallback_operator
+   4: RESUME               
+   6: LOAD_CLOSURE         fallback_operator
+   8: LOAD_CLOSURE         monomorphic_operator
+  10: BUILD_TUPLE          
+  12: LOAD_CONST           <code object forward at 0x000002406947C5D0, file "fractions.py", line 357>
+  14: MAKE_FUNCTION        closure
+  16: STORE_FAST           forward
+  18: LOAD_CONST           '__'
+  20: LOAD_DEREF           fallback_operator
+  22: LOAD_ATTR            __name__
+  32: BINARY_OP            +
+  36: LOAD_CONST           '__'
+  38: BINARY_OP            +
+  42: LOAD_FAST            forward
+  44: STORE_ATTR           __name__
+  54: LOAD_DEREF           monomorphic_operator
+  56: LOAD_ATTR            __doc__
+  66: LOAD_FAST            forward
+  68: STORE_ATTR           __doc__
+  78: LOAD_CLOSURE         fallback_operator
+  80: LOAD_CLOSURE         monomorphic_operator
+  82: BUILD_TUPLE          
+  84: LOAD_CONST           <code object reverse at 0x0000024068E21940, file "fractions.py", line 369>
+  86: MAKE_FUNCTION        closure
+  88: STORE_FAST           reverse
+  90: LOAD_CONST           '__r'
+  92: LOAD_DEREF           fallback_operator
+  94: LOAD_ATTR            __name__
+ 104: BINARY_OP            +
+ 108: LOAD_CONST           '__'
+ 110: BINARY_OP            +
+ 114: LOAD_FAST            reverse
+ 116: STORE_ATTR           __name__
+ 126: LOAD_DEREF           monomorphic_operator
+ 128: LOAD_ATTR            __doc__
+ 138: LOAD_FAST            reverse
+ 140: STORE_ATTR           __doc__
+ 150: LOAD_FAST            forward
+ 152: LOAD_FAST            reverse
+ 154: BUILD_TUPLE          
+ 156: RETURN_VALUE         

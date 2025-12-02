@@ -1,0 +1,18 @@
+# Disassembly for email.Charset.get_output_charset
+# From module file: email.charset
+
+## co_consts:
+('Return the output character set.\n\n        This is self.output_charset if that is not None, otherwise it is\n        self.input_charset.\n        ',)
+
+## co_names:
+('output_charset', 'input_charset')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            output_charset
+  14: JUMP_IF_TRUE_OR_POP  to 28
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            input_charset
+  28: RETURN_VALUE         

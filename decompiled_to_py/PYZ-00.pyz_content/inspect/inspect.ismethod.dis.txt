@@ -1,0 +1,19 @@
+# Disassembly for inspect.ismethod
+# From module file: inspect
+
+## co_consts:
+('Return true if the object is an instance method.\n\n    Instance method objects provide these attributes:\n        __doc__         documentation string\n        __name__        name with which this method was defined\n        __func__        function object containing implementation of method\n        __self__        instance to which this method is bound',)
+
+## co_names:
+('isinstance', 'types', 'MethodType')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            object
+  16: LOAD_GLOBAL          types
+  28: LOAD_ATTR            MethodType
+  38: PRECALL              
+  42: CALL                 
+  52: RETURN_VALUE         

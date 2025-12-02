@@ -1,0 +1,186 @@
+# Disassembly for zipfile.ZipExtFile.seek
+# From module file: zipfile
+
+## co_consts:
+(None, 'seek on closed file.', 'underlying stream is not seekable', 0, 1, 2, 'whence must be os.SEEK_SET (0), os.SEEK_CUR (1), or os.SEEK_END (2)', b'', False)
+
+## co_names:
+('closed', 'ValueError', '_seekable', 'io', 'UnsupportedOperation', 'tell', '_orig_file_size', '_offset', 'len', '_readbuffer', '_fileobj', 'seek', '_orig_compress_start', '_orig_start_crc', '_running_crc', '_orig_compress_size', '_compress_left', '_left', '_get_decompressor', '_compress_type', '_decompressor', '_eof', '_decrypter', '_init_decrypter', 'min', 'MAX_SEEK_READ', 'read')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            closed
+  14: POP_JUMP_FORWARD_IF_FALSE to 46
+  16: LOAD_GLOBAL          NULL + ValueError
+  28: LOAD_CONST           'seek on closed file.'
+  30: PRECALL              
+  34: CALL                 
+  44: RAISE_VARARGS        
+  46: LOAD_FAST            self
+  48: LOAD_ATTR            _seekable
+  58: POP_JUMP_FORWARD_IF_TRUE to 100
+  60: LOAD_GLOBAL          NULL + io
+  72: LOAD_ATTR            UnsupportedOperation
+  82: LOAD_CONST           'underlying stream is not seekable'
+  84: PRECALL              
+  88: CALL                 
+  98: RAISE_VARARGS        
+ 100: LOAD_FAST            self
+ 102: LOAD_METHOD          tell
+ 124: PRECALL              
+ 128: CALL                 
+ 138: STORE_FAST           curr_pos
+ 140: LOAD_FAST            whence
+ 142: LOAD_CONST           0
+ 144: COMPARE_OP           ==
+ 150: POP_JUMP_FORWARD_IF_FALSE to 158
+ 152: LOAD_FAST            offset
+ 154: STORE_FAST           new_pos
+ 156: JUMP_FORWARD         to 246
+ 158: LOAD_FAST            whence
+ 160: LOAD_CONST           1
+ 162: COMPARE_OP           ==
+ 168: POP_JUMP_FORWARD_IF_FALSE to 182
+ 170: LOAD_FAST            curr_pos
+ 172: LOAD_FAST            offset
+ 174: BINARY_OP            +
+ 178: STORE_FAST           new_pos
+ 180: JUMP_FORWARD         to 246
+ 182: LOAD_FAST            whence
+ 184: LOAD_CONST           2
+ 186: COMPARE_OP           ==
+ 192: POP_JUMP_FORWARD_IF_FALSE to 216
+ 194: LOAD_FAST            self
+ 196: LOAD_ATTR            _orig_file_size
+ 206: LOAD_FAST            offset
+ 208: BINARY_OP            +
+ 212: STORE_FAST           new_pos
+ 214: JUMP_FORWARD         to 246
+ 216: LOAD_GLOBAL          NULL + ValueError
+ 228: LOAD_CONST           'whence must be os.SEEK_SET (0), os.SEEK_CUR (1), or os.SEEK_END (2)'
+ 230: PRECALL              
+ 234: CALL                 
+ 244: RAISE_VARARGS        
+ 246: LOAD_FAST            new_pos
+ 248: LOAD_FAST            self
+ 250: LOAD_ATTR            _orig_file_size
+ 260: COMPARE_OP           >
+ 266: POP_JUMP_FORWARD_IF_FALSE to 282
+ 268: LOAD_FAST            self
+ 270: LOAD_ATTR            _orig_file_size
+ 280: STORE_FAST           new_pos
+ 282: LOAD_FAST            new_pos
+ 284: LOAD_CONST           0
+ 286: COMPARE_OP           <
+ 292: POP_JUMP_FORWARD_IF_FALSE to 298
+ 294: LOAD_CONST           0
+ 296: STORE_FAST           new_pos
+ 298: LOAD_FAST            new_pos
+ 300: LOAD_FAST            curr_pos
+ 302: BINARY_OP            -
+ 306: STORE_FAST           read_offset
+ 308: LOAD_FAST            read_offset
+ 310: LOAD_FAST            self
+ 312: LOAD_ATTR            _offset
+ 322: BINARY_OP            +
+ 326: STORE_FAST           buff_offset
+ 328: LOAD_FAST            buff_offset
+ 330: LOAD_CONST           0
+ 332: COMPARE_OP           >=
+ 338: POP_JUMP_FORWARD_IF_FALSE to 408
+ 340: LOAD_FAST            buff_offset
+ 342: LOAD_GLOBAL          NULL + len
+ 354: LOAD_FAST            self
+ 356: LOAD_ATTR            _readbuffer
+ 366: PRECALL              
+ 370: CALL                 
+ 380: COMPARE_OP           <
+ 386: POP_JUMP_FORWARD_IF_FALSE to 408
+ 388: LOAD_FAST            buff_offset
+ 390: LOAD_FAST            self
+ 392: STORE_ATTR           _offset
+ 402: LOAD_CONST           0
+ 404: STORE_FAST           read_offset
+ 406: JUMP_FORWARD         to 704
+ 408: LOAD_FAST            read_offset
+ 410: LOAD_CONST           0
+ 412: COMPARE_OP           <
+ 418: POP_JUMP_FORWARD_IF_FALSE to 704
+ 420: LOAD_FAST            self
+ 422: LOAD_ATTR            _fileobj
+ 432: LOAD_METHOD          seek
+ 454: LOAD_FAST            self
+ 456: LOAD_ATTR            _orig_compress_start
+ 466: PRECALL              
+ 470: CALL                 
+ 480: POP_TOP              
+ 482: LOAD_FAST            self
+ 484: LOAD_ATTR            _orig_start_crc
+ 494: LOAD_FAST            self
+ 496: STORE_ATTR           _running_crc
+ 506: LOAD_FAST            self
+ 508: LOAD_ATTR            _orig_compress_size
+ 518: LOAD_FAST            self
+ 520: STORE_ATTR           _compress_left
+ 530: LOAD_FAST            self
+ 532: LOAD_ATTR            _orig_file_size
+ 542: LOAD_FAST            self
+ 544: STORE_ATTR           _left
+ 554: LOAD_CONST           b''
+ 556: LOAD_FAST            self
+ 558: STORE_ATTR           _readbuffer
+ 568: LOAD_CONST           0
+ 570: LOAD_FAST            self
+ 572: STORE_ATTR           _offset
+ 582: LOAD_GLOBAL          NULL + _get_decompressor
+ 594: LOAD_FAST            self
+ 596: LOAD_ATTR            _compress_type
+ 606: PRECALL              
+ 610: CALL                 
+ 620: LOAD_FAST            self
+ 622: STORE_ATTR           _decompressor
+ 632: LOAD_CONST           False
+ 634: LOAD_FAST            self
+ 636: STORE_ATTR           _eof
+ 646: LOAD_FAST            new_pos
+ 648: STORE_FAST           read_offset
+ 650: LOAD_FAST            self
+ 652: LOAD_ATTR            _decrypter
+ 662: POP_JUMP_FORWARD_IF_NONE to 704
+ 664: LOAD_FAST            self
+ 666: LOAD_METHOD          _init_decrypter
+ 688: PRECALL              
+ 692: CALL                 
+ 702: POP_TOP              
+ 704: LOAD_FAST            read_offset
+ 706: LOAD_CONST           0
+ 708: COMPARE_OP           >
+ 714: POP_JUMP_FORWARD_IF_FALSE to 822
+ 716: LOAD_GLOBAL          NULL + min
+ 728: LOAD_FAST            self
+ 730: LOAD_ATTR            MAX_SEEK_READ
+ 740: LOAD_FAST            read_offset
+ 742: PRECALL              
+ 746: CALL                 
+ 756: STORE_FAST           read_len
+ 758: LOAD_FAST            self
+ 760: LOAD_METHOD          read
+ 782: LOAD_FAST            read_len
+ 784: PRECALL              
+ 788: CALL                 
+ 798: POP_TOP              
+ 800: LOAD_FAST            read_offset
+ 802: LOAD_FAST            read_len
+ 804: BINARY_OP            -=
+ 808: STORE_FAST           read_offset
+ 810: LOAD_FAST            read_offset
+ 812: LOAD_CONST           0
+ 814: COMPARE_OP           >
+ 820: POP_JUMP_BACKWARD_IF_TRUE to 716
+ 822: LOAD_FAST            self
+ 824: LOAD_METHOD          tell
+ 846: PRECALL              
+ 850: CALL                 
+ 860: RETURN_VALUE         

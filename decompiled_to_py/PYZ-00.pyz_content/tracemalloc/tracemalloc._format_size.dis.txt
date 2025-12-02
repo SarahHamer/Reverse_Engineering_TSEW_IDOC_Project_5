@@ -1,0 +1,81 @@
+# Disassembly for tracemalloc._format_size
+# From module file: tracemalloc
+
+## co_consts:
+(None, ('B', 'KiB', 'MiB', 'GiB', 'TiB'), 100, 'B', '%+.1f %s', '%.1f %s', 10240, 'TiB', '%+.0f %s', '%.0f %s', 1024)
+
+## co_names:
+('abs',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           ('B', 'KiB', 'MiB', 'GiB', 'TiB')
+   4: GET_ITER             
+   6: FOR_ITER             to 202
+   8: STORE_FAST           unit
+  10: LOAD_GLOBAL          NULL + abs
+  22: LOAD_FAST            size
+  24: PRECALL              
+  28: CALL                 
+  38: LOAD_CONST           100
+  40: COMPARE_OP           <
+  46: POP_JUMP_FORWARD_IF_FALSE to 100
+  48: LOAD_FAST            unit
+  50: LOAD_CONST           'B'
+  52: COMPARE_OP           !=
+  58: POP_JUMP_FORWARD_IF_FALSE to 100
+  60: LOAD_FAST            sign
+  62: POP_JUMP_FORWARD_IF_FALSE to 82
+  64: LOAD_CONST           '%+.1f %s'
+  66: LOAD_FAST            size
+  68: LOAD_FAST            unit
+  70: BUILD_TUPLE          
+  72: BINARY_OP            %
+  76: SWAP                 
+  78: POP_TOP              
+  80: RETURN_VALUE         
+  82: LOAD_CONST           '%.1f %s'
+  84: LOAD_FAST            size
+  86: LOAD_FAST            unit
+  88: BUILD_TUPLE          
+  90: BINARY_OP            %
+  94: SWAP                 
+  96: POP_TOP              
+  98: RETURN_VALUE         
+ 100: LOAD_GLOBAL          NULL + abs
+ 112: LOAD_FAST            size
+ 114: PRECALL              
+ 118: CALL                 
+ 128: LOAD_CONST           10240
+ 130: COMPARE_OP           <
+ 136: POP_JUMP_FORWARD_IF_TRUE to 150
+ 138: LOAD_FAST            unit
+ 140: LOAD_CONST           'TiB'
+ 142: COMPARE_OP           ==
+ 148: POP_JUMP_FORWARD_IF_FALSE to 190
+ 150: LOAD_FAST            sign
+ 152: POP_JUMP_FORWARD_IF_FALSE to 172
+ 154: LOAD_CONST           '%+.0f %s'
+ 156: LOAD_FAST            size
+ 158: LOAD_FAST            unit
+ 160: BUILD_TUPLE          
+ 162: BINARY_OP            %
+ 166: SWAP                 
+ 168: POP_TOP              
+ 170: RETURN_VALUE         
+ 172: LOAD_CONST           '%.0f %s'
+ 174: LOAD_FAST            size
+ 176: LOAD_FAST            unit
+ 178: BUILD_TUPLE          
+ 180: BINARY_OP            %
+ 184: SWAP                 
+ 186: POP_TOP              
+ 188: RETURN_VALUE         
+ 190: LOAD_FAST            size
+ 192: LOAD_CONST           1024
+ 194: BINARY_OP            /=
+ 198: STORE_FAST           size
+ 200: JUMP_BACKWARD        to 6
+ 202: LOAD_CONST           None
+ 204: RETURN_VALUE         

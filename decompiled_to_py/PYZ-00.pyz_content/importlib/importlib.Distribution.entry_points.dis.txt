@@ -1,0 +1,23 @@
+# Disassembly for importlib.Distribution.entry_points
+# From module file: importlib.metadata
+
+## co_consts:
+(None, 'entry_points.txt')
+
+## co_names:
+('EntryPoints', '_from_text_for', 'read_text')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          EntryPoints
+  14: LOAD_METHOD          _from_text_for
+  36: LOAD_FAST            self
+  38: LOAD_METHOD          read_text
+  60: LOAD_CONST           'entry_points.txt'
+  62: PRECALL              
+  66: CALL                 
+  76: LOAD_FAST            self
+  78: PRECALL              
+  82: CALL                 
+  92: RETURN_VALUE         

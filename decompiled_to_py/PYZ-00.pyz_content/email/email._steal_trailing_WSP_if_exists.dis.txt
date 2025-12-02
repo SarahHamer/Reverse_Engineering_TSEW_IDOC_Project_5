@@ -1,0 +1,46 @@
+# Disassembly for email._steal_trailing_WSP_if_exists
+# From module file: email._header_value_parser
+
+## co_consts:
+(None, '', -1)
+
+## co_names:
+('WSP',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           ''
+   4: STORE_FAST           wsp
+   6: LOAD_FAST            lines
+   8: POP_JUMP_FORWARD_IF_FALSE to 134
+  10: LOAD_FAST            lines
+  12: LOAD_CONST           -1
+  14: BINARY_SUBSCR        
+  24: POP_JUMP_FORWARD_IF_FALSE to 134
+  26: LOAD_FAST            lines
+  28: LOAD_CONST           -1
+  30: BINARY_SUBSCR        
+  40: LOAD_CONST           -1
+  42: BINARY_SUBSCR        
+  52: LOAD_GLOBAL          WSP
+  64: CONTAINS_OP          
+  66: POP_JUMP_FORWARD_IF_FALSE to 134
+  68: LOAD_FAST            lines
+  70: LOAD_CONST           -1
+  72: BINARY_SUBSCR        
+  82: LOAD_CONST           -1
+  84: BINARY_SUBSCR        
+  94: STORE_FAST           wsp
+  96: LOAD_FAST            lines
+  98: LOAD_CONST           -1
+ 100: BINARY_SUBSCR        
+ 110: LOAD_CONST           None
+ 112: LOAD_CONST           -1
+ 114: BUILD_SLICE          
+ 116: BINARY_SUBSCR        
+ 126: LOAD_FAST            lines
+ 128: LOAD_CONST           -1
+ 130: STORE_SUBSCR         
+ 134: LOAD_FAST            wsp
+ 136: RETURN_VALUE         

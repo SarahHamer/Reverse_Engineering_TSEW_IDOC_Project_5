@@ -1,0 +1,55 @@
+# Disassembly for ast._Unparser.visit_List
+# From module file: ast
+
+## co_consts:
+(None, '[', ']', <code object <lambda> at 0x0000024069CE4A80, file "ast.py", line 1262>)
+
+## co_names:
+('delimit', 'interleave', 'traverse', 'elts')
+
+## bytecode:
+
+   0: MAKE_CELL            self
+   2: RESUME               
+   4: LOAD_DEREF           self
+   6: LOAD_METHOD          delimit
+  28: LOAD_CONST           '['
+  30: LOAD_CONST           ']'
+  32: PRECALL              
+  36: CALL                 
+  46: BEFORE_WITH          
+  48: POP_TOP              
+  50: LOAD_DEREF           self
+  52: LOAD_METHOD          interleave
+  74: LOAD_CLOSURE         self
+  76: BUILD_TUPLE          
+  78: LOAD_CONST           <code object <lambda> at 0x0000024069CE4A80, file "ast.py", line 1262>
+  80: MAKE_FUNCTION        closure
+  82: LOAD_DEREF           self
+  84: LOAD_ATTR            traverse
+  94: LOAD_FAST            node
+  96: LOAD_ATTR            elts
+ 106: PRECALL              
+ 110: CALL                 
+ 120: POP_TOP              
+ 122: LOAD_CONST           None
+ 124: LOAD_CONST           None
+ 126: LOAD_CONST           None
+ 128: PRECALL              
+ 132: CALL                 
+ 142: POP_TOP              
+ 144: LOAD_CONST           None
+ 146: RETURN_VALUE         
+ 148: PUSH_EXC_INFO        
+ 150: WITH_EXCEPT_START    
+ 152: POP_JUMP_FORWARD_IF_TRUE to 162
+ 154: RERAISE              
+ 156: COPY                 
+ 158: POP_EXCEPT           
+ 160: RERAISE              
+ 162: POP_TOP              
+ 164: POP_EXCEPT           
+ 166: POP_TOP              
+ 168: POP_TOP              
+ 170: LOAD_CONST           None
+ 172: RETURN_VALUE         

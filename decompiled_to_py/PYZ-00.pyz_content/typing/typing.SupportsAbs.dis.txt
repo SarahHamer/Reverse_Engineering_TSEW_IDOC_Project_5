@@ -1,0 +1,31 @@
+# Disassembly for typing.SupportsAbs
+# From module file: typing
+
+## co_consts:
+('SupportsAbs', 'An ABC with one abstract method __abs__ that is covariant in its return type.', (), 'return', <code object __abs__ at 0x0000024069CC8C30, file "typing.py", line 2839>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__slots__', 'abstractmethod', 'T_co', '__abs__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'SupportsAbs'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'An ABC with one abstract method __abs__ that is covariant in its return type.'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ()
+  16: STORE_NAME           __slots__
+  18: LOAD_NAME            abstractmethod
+  20: LOAD_CONST           'return'
+  22: LOAD_NAME            T_co
+  24: BUILD_TUPLE          
+  26: LOAD_CONST           <code object __abs__ at 0x0000024069CC8C30, file "typing.py", line 2839>
+  28: MAKE_FUNCTION        annotations
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_NAME           __abs__
+  46: LOAD_CONST           None
+  48: RETURN_VALUE         

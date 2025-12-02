@@ -1,0 +1,23 @@
+# Disassembly for argparse.ArgumentParser._parse_optional.<listcomp>
+# From module file: argparse
+
+## co_consts:
+()
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 24
+   8: UNPACK_SEQUENCE      
+  12: STORE_FAST           action
+  14: STORE_FAST           option_string
+  16: STORE_FAST           explicit_arg
+  18: LOAD_FAST            option_string
+  20: LIST_APPEND          
+  22: JUMP_BACKWARD        to 6
+  24: RETURN_VALUE         

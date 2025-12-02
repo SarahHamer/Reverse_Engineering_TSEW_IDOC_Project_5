@@ -1,0 +1,76 @@
+# Disassembly for email.get_address
+# From module file: email._header_value_parser
+
+## co_consts:
+(" address = mailbox / group\n\n    Note that counter-intuitively, an address can be either a single address or\n    a list of addresses (a group).  This is why the returned Address object has\n    a 'mailboxes' attribute which treats a single address as a list of length\n    one.  When you need to differentiate between to two cases, extract the single\n    element, which is either a mailbox or a group token.\n\n    ", "expected address but found '{}'")
+
+## co_names:
+('Address', 'get_group', 'errors', 'HeaderParseError', 'get_mailbox', 'format', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + Address
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           address
+  30: NOP                  
+  32: LOAD_GLOBAL          NULL + get_group
+  44: LOAD_FAST            value
+  46: PRECALL              
+  50: CALL                 
+  60: UNPACK_SEQUENCE      
+  64: STORE_FAST           token
+  66: STORE_FAST           value
+  68: JUMP_FORWARD         to 268
+  70: PUSH_EXC_INFO        
+  72: LOAD_GLOBAL          errors
+  84: LOAD_ATTR            HeaderParseError
+  94: CHECK_EXC_MATCH      
+  96: POP_JUMP_FORWARD_IF_FALSE to 260
+  98: POP_TOP              
+ 100: NOP                  
+ 102: LOAD_GLOBAL          NULL + get_mailbox
+ 114: LOAD_FAST            value
+ 116: PRECALL              
+ 120: CALL                 
+ 130: UNPACK_SEQUENCE      
+ 134: STORE_FAST           token
+ 136: STORE_FAST           value
+ 138: JUMP_FORWARD         to 256
+ 140: PUSH_EXC_INFO        
+ 142: LOAD_GLOBAL          errors
+ 154: LOAD_ATTR            HeaderParseError
+ 164: CHECK_EXC_MATCH      
+ 166: POP_JUMP_FORWARD_IF_FALSE to 248
+ 168: POP_TOP              
+ 170: LOAD_GLOBAL          NULL + errors
+ 182: LOAD_ATTR            HeaderParseError
+ 192: LOAD_CONST           "expected address but found '{}'"
+ 194: LOAD_METHOD          format
+ 216: LOAD_FAST            value
+ 218: PRECALL              
+ 222: CALL                 
+ 232: PRECALL              
+ 236: CALL                 
+ 246: RAISE_VARARGS        
+ 248: RERAISE              
+ 250: COPY                 
+ 252: POP_EXCEPT           
+ 254: RERAISE              
+ 256: POP_EXCEPT           
+ 258: JUMP_FORWARD         to 268
+ 260: RERAISE              
+ 262: COPY                 
+ 264: POP_EXCEPT           
+ 266: RERAISE              
+ 268: LOAD_FAST            address
+ 270: LOAD_METHOD          append
+ 292: LOAD_FAST            token
+ 294: PRECALL              
+ 298: CALL                 
+ 308: POP_TOP              
+ 310: LOAD_FAST            address
+ 312: LOAD_FAST            value
+ 314: BUILD_TUPLE          
+ 316: RETURN_VALUE         

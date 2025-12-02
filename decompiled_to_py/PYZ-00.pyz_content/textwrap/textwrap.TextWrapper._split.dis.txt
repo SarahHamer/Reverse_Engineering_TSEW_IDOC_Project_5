@@ -1,0 +1,41 @@
+# Disassembly for textwrap.TextWrapper._split
+# From module file: textwrap
+
+## co_consts:
+("_split(text : string) -> [string]\n\n        Split the text to wrap into indivisible chunks.  Chunks are\n        not quite the same as words; see _wrap_chunks() for full\n        details.  As an example, the text\n          Look, goof-ball -- use the -b option!\n        breaks into the following chunks:\n          'Look,', ' ', 'goof-', 'ball', ' ', '--', ' ',\n          'use', ' ', 'the', ' ', '-b', ' ', 'option!'\n        if break_on_hyphens is True, or in:\n          'Look,', ' ', 'goof-ball', ' ', '--', ' ',\n          'use', ' ', 'the', ' ', '-b', ' ', option!'\n        otherwise.\n        ", True, <code object <listcomp> at 0x0000024069496180, file "textwrap.py", line 176>)
+
+## co_names:
+('break_on_hyphens', 'wordsep_re', 'split', 'wordsep_simple_re')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            break_on_hyphens
+  14: LOAD_CONST           True
+  16: IS_OP                
+  18: POP_JUMP_FORWARD_IF_FALSE to 74
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            wordsep_re
+  32: LOAD_METHOD          split
+  54: LOAD_FAST            text
+  56: PRECALL              
+  60: CALL                 
+  70: STORE_FAST           chunks
+  72: JUMP_FORWARD         to 126
+  74: LOAD_FAST            self
+  76: LOAD_ATTR            wordsep_simple_re
+  86: LOAD_METHOD          split
+ 108: LOAD_FAST            text
+ 110: PRECALL              
+ 114: CALL                 
+ 124: STORE_FAST           chunks
+ 126: LOAD_CONST           <code object <listcomp> at 0x0000024069496180, file "textwrap.py", line 176>
+ 128: MAKE_FUNCTION        
+ 130: LOAD_FAST            chunks
+ 132: GET_ITER             
+ 134: PRECALL              
+ 138: CALL                 
+ 148: STORE_FAST           chunks
+ 150: LOAD_FAST            chunks
+ 152: RETURN_VALUE         

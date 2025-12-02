@@ -1,0 +1,44 @@
+# Disassembly for email.Address.addr_spec
+# From module file: email.headerregistry
+
+## co_consts:
+('The addr_spec (username@domain) portion of the address, quoted\n        according to RFC 5322 rules, but with no Content Transfer Encoding.\n        ', '@', '<>')
+
+## co_names:
+('username', 'parser', 'DOT_ATOM_ENDS', 'isdisjoint', 'quote_string', 'domain')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            username
+  14: STORE_FAST           lp
+  16: LOAD_GLOBAL          parser
+  28: LOAD_ATTR            DOT_ATOM_ENDS
+  38: LOAD_METHOD          isdisjoint
+  60: LOAD_FAST            lp
+  62: PRECALL              
+  66: CALL                 
+  76: POP_JUMP_FORWARD_IF_TRUE to 118
+  78: LOAD_GLOBAL          NULL + parser
+  90: LOAD_ATTR            quote_string
+ 100: LOAD_FAST            lp
+ 102: PRECALL              
+ 106: CALL                 
+ 116: STORE_FAST           lp
+ 118: LOAD_FAST            self
+ 120: LOAD_ATTR            domain
+ 130: POP_JUMP_FORWARD_IF_FALSE to 158
+ 132: LOAD_FAST            lp
+ 134: LOAD_CONST           '@'
+ 136: BINARY_OP            +
+ 140: LOAD_FAST            self
+ 142: LOAD_ATTR            domain
+ 152: BINARY_OP            +
+ 156: RETURN_VALUE         
+ 158: LOAD_FAST            lp
+ 160: POP_JUMP_FORWARD_IF_TRUE to 166
+ 162: LOAD_CONST           '<>'
+ 164: RETURN_VALUE         
+ 166: LOAD_FAST            lp
+ 168: RETURN_VALUE         

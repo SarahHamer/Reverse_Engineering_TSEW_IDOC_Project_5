@@ -1,0 +1,14 @@
+# Disassembly for email.Generator._encode
+# From module file: email.generator
+
+## co_consts:
+(None,)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            s
+   4: RETURN_VALUE         

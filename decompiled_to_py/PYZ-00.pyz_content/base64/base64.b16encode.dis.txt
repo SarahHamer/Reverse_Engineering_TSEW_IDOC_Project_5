@@ -1,0 +1,21 @@
+# Disassembly for base64.b16encode
+# From module file: base64
+
+## co_consts:
+('Encode the bytes-like object s using Base16 and return a bytes object.\n    ',)
+
+## co_names:
+('binascii', 'hexlify', 'upper')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + binascii
+  14: LOAD_ATTR            hexlify
+  24: LOAD_FAST            s
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_METHOD          upper
+  62: PRECALL              
+  66: CALL                 
+  76: RETURN_VALUE         

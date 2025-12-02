@@ -1,0 +1,66 @@
+# Disassembly for csv.Sniffer.sniff
+# From module file: csv
+
+## co_consts:
+('\n        Returns a dialect (or None) corresponding to the sample\n        ', 'Could not determine delimiter', <code object dialect at 0x0000024069465530, file "csv.py", line 189>, 'dialect', '"')
+
+## co_names:
+('_guess_quote_and_delimiter', '_guess_delimiter', 'Error', 'Dialect', 'doublequote', 'delimiter', 'quotechar', 'skipinitialspace')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _guess_quote_and_delimiter
+  26: LOAD_FAST            sample
+  28: LOAD_FAST            delimiters
+  30: PRECALL              
+  34: CALL                 
+  44: UNPACK_SEQUENCE      
+  48: STORE_FAST           quotechar
+  50: STORE_FAST           doublequote
+  52: STORE_FAST           delimiter
+  54: STORE_FAST           skipinitialspace
+  56: LOAD_FAST            delimiter
+  58: POP_JUMP_FORWARD_IF_TRUE to 110
+  60: LOAD_FAST            self
+  62: LOAD_METHOD          _guess_delimiter
+  84: LOAD_FAST            sample
+  86: LOAD_FAST            delimiters
+  88: PRECALL              
+  92: CALL                 
+ 102: UNPACK_SEQUENCE      
+ 106: STORE_FAST           delimiter
+ 108: STORE_FAST           skipinitialspace
+ 110: LOAD_FAST            delimiter
+ 112: POP_JUMP_FORWARD_IF_TRUE to 144
+ 114: LOAD_GLOBAL          NULL + Error
+ 126: LOAD_CONST           'Could not determine delimiter'
+ 128: PRECALL              
+ 132: CALL                 
+ 142: RAISE_VARARGS        
+ 144: PUSH_NULL            
+ 146: LOAD_BUILD_CLASS     
+ 148: LOAD_CONST           <code object dialect at 0x0000024069465530, file "csv.py", line 189>
+ 150: MAKE_FUNCTION        
+ 152: LOAD_CONST           'dialect'
+ 154: LOAD_GLOBAL          Dialect
+ 166: PRECALL              
+ 170: CALL                 
+ 180: STORE_FAST           dialect
+ 182: LOAD_FAST            doublequote
+ 184: LOAD_FAST            dialect
+ 186: STORE_ATTR           doublequote
+ 196: LOAD_FAST            delimiter
+ 198: LOAD_FAST            dialect
+ 200: STORE_ATTR           delimiter
+ 210: LOAD_FAST            quotechar
+ 212: JUMP_IF_TRUE_OR_POP  to 216
+ 214: LOAD_CONST           '"'
+ 216: LOAD_FAST            dialect
+ 218: STORE_ATTR           quotechar
+ 228: LOAD_FAST            skipinitialspace
+ 230: LOAD_FAST            dialect
+ 232: STORE_ATTR           skipinitialspace
+ 242: LOAD_FAST            dialect
+ 244: RETURN_VALUE         

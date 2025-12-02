@@ -1,0 +1,17 @@
+# Disassembly for tracemalloc.Frame.lineno
+# From module file: tracemalloc
+
+## co_consts:
+(None, 1)
+
+## co_names:
+('_frame',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _frame
+  14: LOAD_CONST           1
+  16: BINARY_SUBSCR        
+  26: RETURN_VALUE         

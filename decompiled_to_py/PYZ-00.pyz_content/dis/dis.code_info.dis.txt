@@ -1,0 +1,20 @@
+# Disassembly for dis.code_info
+# From module file: dis
+
+## co_consts:
+('Formatted details of methods, functions, or code.',)
+
+## co_names:
+('_format_code_info', '_get_code_object')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _format_code_info
+  14: LOAD_GLOBAL          NULL + _get_code_object
+  26: LOAD_FAST            x
+  28: PRECALL              
+  32: CALL                 
+  42: PRECALL              
+  46: CALL                 
+  56: RETURN_VALUE         

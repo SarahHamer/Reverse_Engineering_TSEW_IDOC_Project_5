@@ -1,0 +1,35 @@
+# Disassembly for base64.decode
+# From module file: base64
+
+## co_consts:
+('Decode a file; input and output are binary files.', True, None)
+
+## co_names:
+('readline', 'binascii', 'a2b_base64', 'write')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            input
+   6: LOAD_METHOD          readline
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           line
+  44: LOAD_FAST            line
+  46: POP_JUMP_FORWARD_IF_TRUE to 52
+  48: LOAD_CONST           None
+  50: RETURN_VALUE         
+  52: LOAD_GLOBAL          NULL + binascii
+  64: LOAD_ATTR            a2b_base64
+  74: LOAD_FAST            line
+  76: PRECALL              
+  80: CALL                 
+  90: STORE_FAST           s
+  92: LOAD_FAST            output
+  94: LOAD_METHOD          write
+ 116: LOAD_FAST            s
+ 118: PRECALL              
+ 122: CALL                 
+ 132: POP_TOP              
+ 134: JUMP_BACKWARD        to 4

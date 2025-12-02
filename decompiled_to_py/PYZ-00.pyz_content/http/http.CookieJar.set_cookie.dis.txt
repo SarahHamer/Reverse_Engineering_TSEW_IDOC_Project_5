@@ -1,0 +1,76 @@
+# Disassembly for http.CookieJar.set_cookie
+# From module file: http.cookiejar
+
+## co_consts:
+('Set a cookie, without checking whether or not it should be set.', None)
+
+## co_names:
+('_cookies', '_cookies_lock', 'acquire', 'domain', 'path', 'name', 'release')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _cookies
+  14: STORE_FAST           c
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            _cookies_lock
+  28: LOAD_METHOD          acquire
+  50: PRECALL              
+  54: CALL                 
+  64: POP_TOP              
+  66: NOP                  
+  68: LOAD_FAST            cookie
+  70: LOAD_ATTR            domain
+  80: LOAD_FAST            c
+  82: CONTAINS_OP          
+  84: POP_JUMP_FORWARD_IF_FALSE to 106
+  86: BUILD_MAP            
+  88: LOAD_FAST            c
+  90: LOAD_FAST            cookie
+  92: LOAD_ATTR            domain
+ 102: STORE_SUBSCR         
+ 106: LOAD_FAST            c
+ 108: LOAD_FAST            cookie
+ 110: LOAD_ATTR            domain
+ 120: BINARY_SUBSCR        
+ 130: STORE_FAST           c2
+ 132: LOAD_FAST            cookie
+ 134: LOAD_ATTR            path
+ 144: LOAD_FAST            c2
+ 146: CONTAINS_OP          
+ 148: POP_JUMP_FORWARD_IF_FALSE to 170
+ 150: BUILD_MAP            
+ 152: LOAD_FAST            c2
+ 154: LOAD_FAST            cookie
+ 156: LOAD_ATTR            path
+ 166: STORE_SUBSCR         
+ 170: LOAD_FAST            c2
+ 172: LOAD_FAST            cookie
+ 174: LOAD_ATTR            path
+ 184: BINARY_SUBSCR        
+ 194: STORE_FAST           c3
+ 196: LOAD_FAST            cookie
+ 198: LOAD_FAST            c3
+ 200: LOAD_FAST            cookie
+ 202: LOAD_ATTR            name
+ 212: STORE_SUBSCR         
+ 216: LOAD_FAST            self
+ 218: LOAD_ATTR            _cookies_lock
+ 228: LOAD_METHOD          release
+ 250: PRECALL              
+ 254: CALL                 
+ 264: POP_TOP              
+ 266: LOAD_CONST           None
+ 268: RETURN_VALUE         
+ 270: PUSH_EXC_INFO        
+ 272: LOAD_FAST            self
+ 274: LOAD_ATTR            _cookies_lock
+ 284: LOAD_METHOD          release
+ 306: PRECALL              
+ 310: CALL                 
+ 320: POP_TOP              
+ 322: RERAISE              
+ 324: COPY                 
+ 326: POP_EXCEPT           
+ 328: RERAISE              

@@ -1,0 +1,20 @@
+# Disassembly for argparse.Action.__call__
+# From module file: argparse
+
+## co_consts:
+(None, '.__call__() not defined')
+
+## co_names:
+('NotImplementedError', '_')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + NotImplementedError
+  14: LOAD_GLOBAL          NULL + _
+  26: LOAD_CONST           '.__call__() not defined'
+  28: PRECALL              
+  32: CALL                 
+  42: PRECALL              
+  46: CALL                 
+  56: RAISE_VARARGS        

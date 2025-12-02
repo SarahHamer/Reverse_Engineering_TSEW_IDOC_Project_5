@@ -1,0 +1,35 @@
+# Disassembly for tarfile.nts
+# From module file: tarfile
+
+## co_consts:
+('Convert a null-terminated bytes object to a string.\n    ', b'\x00', -1, None)
+
+## co_names:
+('find', 'decode')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            s
+   4: LOAD_METHOD          find
+  26: LOAD_CONST           b'\x00'
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           p
+  44: LOAD_FAST            p
+  46: LOAD_CONST           -1
+  48: COMPARE_OP           !=
+  54: POP_JUMP_FORWARD_IF_FALSE to 76
+  56: LOAD_FAST            s
+  58: LOAD_CONST           None
+  60: LOAD_FAST            p
+  62: BUILD_SLICE          
+  64: BINARY_SUBSCR        
+  74: STORE_FAST           s
+  76: LOAD_FAST            s
+  78: LOAD_METHOD          decode
+ 100: LOAD_FAST            encoding
+ 102: LOAD_FAST            errors
+ 104: PRECALL              
+ 108: CALL                 
+ 118: RETURN_VALUE         

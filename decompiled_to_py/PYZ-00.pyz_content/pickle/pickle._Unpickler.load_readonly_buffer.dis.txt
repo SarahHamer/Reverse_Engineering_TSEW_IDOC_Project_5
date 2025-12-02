@@ -1,0 +1,55 @@
+# Disassembly for pickle._Unpickler.load_readonly_buffer
+# From module file: pickle
+
+## co_consts:
+(None, -1)
+
+## co_names:
+('stack', 'memoryview', 'readonly', 'toreadonly')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            stack
+  14: LOAD_CONST           -1
+  16: BINARY_SUBSCR        
+  26: STORE_FAST           buf
+  28: LOAD_GLOBAL          NULL + memoryview
+  40: LOAD_FAST            buf
+  42: PRECALL              
+  46: CALL                 
+  56: BEFORE_WITH          
+  58: STORE_FAST           m
+  60: LOAD_FAST            m
+  62: LOAD_ATTR            readonly
+  72: POP_JUMP_FORWARD_IF_TRUE to 130
+  74: LOAD_FAST            m
+  76: LOAD_METHOD          toreadonly
+  98: PRECALL              
+ 102: CALL                 
+ 112: LOAD_FAST            self
+ 114: LOAD_ATTR            stack
+ 124: LOAD_CONST           -1
+ 126: STORE_SUBSCR         
+ 130: LOAD_CONST           None
+ 132: LOAD_CONST           None
+ 134: LOAD_CONST           None
+ 136: PRECALL              
+ 140: CALL                 
+ 150: POP_TOP              
+ 152: LOAD_CONST           None
+ 154: RETURN_VALUE         
+ 156: PUSH_EXC_INFO        
+ 158: WITH_EXCEPT_START    
+ 160: POP_JUMP_FORWARD_IF_TRUE to 170
+ 162: RERAISE              
+ 164: COPY                 
+ 166: POP_EXCEPT           
+ 168: RERAISE              
+ 170: POP_TOP              
+ 172: POP_EXCEPT           
+ 174: POP_TOP              
+ 176: POP_TOP              
+ 178: LOAD_CONST           None
+ 180: RETURN_VALUE         

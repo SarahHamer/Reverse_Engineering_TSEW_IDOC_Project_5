@@ -1,0 +1,303 @@
+# Disassembly for fractions.Fraction.__new__
+# From module file: fractions
+
+## co_consts:
+("Constructs a Rational.\n\n        Takes a string like '3/2' or '1.5', another Rational instance, a\n        numerator/denominator pair, or a float.\n\n        Examples\n        --------\n\n        >>> Fraction(10, -8)\n        Fraction(-5, 4)\n        >>> Fraction(Fraction(1, 7), 5)\n        Fraction(1, 35)\n        >>> Fraction(Fraction(1, 7), Fraction(2, 3))\n        Fraction(3, 14)\n        >>> Fraction('314')\n        Fraction(314, 1)\n        >>> Fraction('-35/4')\n        Fraction(-35, 4)\n        >>> Fraction('3.1415') # conversion from numeric string\n        Fraction(6283, 2000)\n        >>> Fraction('-47e-2') # string may include a decimal exponent\n        Fraction(-47, 100)\n        >>> Fraction(1.47)  # direct construction from float (exact conversion)\n        Fraction(6620291452234629, 4503599627370496)\n        >>> Fraction(2.25)\n        Fraction(9, 4)\n        >>> Fraction(Decimal('1.47'))\n        Fraction(147, 100)\n\n        ", None, 1, 'Invalid literal for Fraction: %r', 'num', '0', 'denom', 'decimal', '_', '', 10, 'exp', 0, 'sign', '-', 'argument should be a string or a Rational instance', 'both arguments should be Rational instances', 'Fraction(%s, 0)')
+
+## co_names:
+('super', 'Fraction', '__new__', 'type', 'int', '_numerator', '_denominator', 'isinstance', 'numbers', 'Rational', 'numerator', 'denominator', 'float', 'Decimal', 'as_integer_ratio', 'str', '_RATIONAL_FORMAT', 'match', 'ValueError', 'group', 'replace', 'len', 'TypeError', 'ZeroDivisionError', 'math', 'gcd')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + super
+  16: LOAD_GLOBAL          Fraction
+  28: LOAD_FAST            cls
+  30: PRECALL              
+  34: CALL                 
+  44: LOAD_METHOD          __new__
+  66: LOAD_FAST            cls
+  68: PRECALL              
+  72: CALL                 
+  82: STORE_FAST           self
+  84: LOAD_FAST            denominator
+  86: EXTENDED_ARG         
+  88: POP_JUMP_FORWARD_IF_NOT_NONE to 1076
+  90: LOAD_GLOBAL          NULL + type
+ 102: LOAD_FAST            numerator
+ 104: PRECALL              
+ 108: CALL                 
+ 118: LOAD_GLOBAL          int
+ 130: IS_OP                
+ 132: POP_JUMP_FORWARD_IF_FALSE to 166
+ 134: LOAD_FAST            numerator
+ 136: LOAD_FAST            self
+ 138: STORE_ATTR           _numerator
+ 148: LOAD_CONST           1
+ 150: LOAD_FAST            self
+ 152: STORE_ATTR           _denominator
+ 162: LOAD_FAST            self
+ 164: RETURN_VALUE         
+ 166: LOAD_GLOBAL          NULL + isinstance
+ 178: LOAD_FAST            numerator
+ 180: LOAD_GLOBAL          numbers
+ 192: LOAD_ATTR            Rational
+ 202: PRECALL              
+ 206: CALL                 
+ 216: POP_JUMP_FORWARD_IF_FALSE to 270
+ 218: LOAD_FAST            numerator
+ 220: LOAD_ATTR            numerator
+ 230: LOAD_FAST            self
+ 232: STORE_ATTR           _numerator
+ 242: LOAD_FAST            numerator
+ 244: LOAD_ATTR            denominator
+ 254: LOAD_FAST            self
+ 256: STORE_ATTR           _denominator
+ 266: LOAD_FAST            self
+ 268: RETURN_VALUE         
+ 270: LOAD_GLOBAL          NULL + isinstance
+ 282: LOAD_FAST            numerator
+ 284: LOAD_GLOBAL          float
+ 296: LOAD_GLOBAL          Decimal
+ 308: BUILD_TUPLE          
+ 310: PRECALL              
+ 314: CALL                 
+ 324: POP_JUMP_FORWARD_IF_FALSE to 396
+ 326: LOAD_FAST            numerator
+ 328: LOAD_METHOD          as_integer_ratio
+ 350: PRECALL              
+ 354: CALL                 
+ 364: UNPACK_SEQUENCE      
+ 368: LOAD_FAST            self
+ 370: STORE_ATTR           _numerator
+ 380: LOAD_FAST            self
+ 382: STORE_ATTR           _denominator
+ 392: LOAD_FAST            self
+ 394: RETURN_VALUE         
+ 396: LOAD_GLOBAL          NULL + isinstance
+ 408: LOAD_FAST            numerator
+ 410: LOAD_GLOBAL          str
+ 422: PRECALL              
+ 426: CALL                 
+ 436: EXTENDED_ARG         
+ 438: POP_JUMP_FORWARD_IF_FALSE to 1046
+ 440: LOAD_GLOBAL          _RATIONAL_FORMAT
+ 452: LOAD_METHOD          match
+ 474: LOAD_FAST            numerator
+ 476: PRECALL              
+ 480: CALL                 
+ 490: STORE_FAST           m
+ 492: LOAD_FAST            m
+ 494: POP_JUMP_FORWARD_IF_NOT_NONE to 532
+ 496: LOAD_GLOBAL          NULL + ValueError
+ 508: LOAD_CONST           'Invalid literal for Fraction: %r'
+ 510: LOAD_FAST            numerator
+ 512: BINARY_OP            %
+ 516: PRECALL              
+ 520: CALL                 
+ 530: RAISE_VARARGS        
+ 532: LOAD_GLOBAL          NULL + int
+ 544: LOAD_FAST            m
+ 546: LOAD_METHOD          group
+ 568: LOAD_CONST           'num'
+ 570: PRECALL              
+ 574: CALL                 
+ 584: JUMP_IF_TRUE_OR_POP  to 588
+ 586: LOAD_CONST           '0'
+ 588: PRECALL              
+ 592: CALL                 
+ 602: STORE_FAST           numerator
+ 604: LOAD_FAST            m
+ 606: LOAD_METHOD          group
+ 628: LOAD_CONST           'denom'
+ 630: PRECALL              
+ 634: CALL                 
+ 644: STORE_FAST           denom
+ 646: LOAD_FAST            denom
+ 648: POP_JUMP_FORWARD_IF_FALSE to 682
+ 650: LOAD_GLOBAL          NULL + int
+ 662: LOAD_FAST            denom
+ 664: PRECALL              
+ 668: CALL                 
+ 678: STORE_FAST           denominator
+ 680: JUMP_FORWARD         to 988
+ 682: LOAD_CONST           1
+ 684: STORE_FAST           denominator
+ 686: LOAD_FAST            m
+ 688: LOAD_METHOD          group
+ 710: LOAD_CONST           'decimal'
+ 712: PRECALL              
+ 716: CALL                 
+ 726: STORE_FAST           decimal
+ 728: LOAD_FAST            decimal
+ 730: POP_JUMP_FORWARD_IF_FALSE to 864
+ 732: LOAD_FAST            decimal
+ 734: LOAD_METHOD          replace
+ 756: LOAD_CONST           '_'
+ 758: LOAD_CONST           ''
+ 760: PRECALL              
+ 764: CALL                 
+ 774: STORE_FAST           decimal
+ 776: LOAD_CONST           10
+ 778: LOAD_GLOBAL          NULL + len
+ 790: LOAD_FAST            decimal
+ 792: PRECALL              
+ 796: CALL                 
+ 806: BINARY_OP            **
+ 810: STORE_FAST           scale
+ 812: LOAD_FAST            numerator
+ 814: LOAD_FAST            scale
+ 816: BINARY_OP            *
+ 820: LOAD_GLOBAL          NULL + int
+ 832: LOAD_FAST            decimal
+ 834: PRECALL              
+ 838: CALL                 
+ 848: BINARY_OP            +
+ 852: STORE_FAST           numerator
+ 854: LOAD_FAST            denominator
+ 856: LOAD_FAST            scale
+ 858: BINARY_OP            *=
+ 862: STORE_FAST           denominator
+ 864: LOAD_FAST            m
+ 866: LOAD_METHOD          group
+ 888: LOAD_CONST           'exp'
+ 890: PRECALL              
+ 894: CALL                 
+ 904: STORE_FAST           exp
+ 906: LOAD_FAST            exp
+ 908: POP_JUMP_FORWARD_IF_FALSE to 988
+ 910: LOAD_GLOBAL          NULL + int
+ 922: LOAD_FAST            exp
+ 924: PRECALL              
+ 928: CALL                 
+ 938: STORE_FAST           exp
+ 940: LOAD_FAST            exp
+ 942: LOAD_CONST           0
+ 944: COMPARE_OP           >=
+ 950: POP_JUMP_FORWARD_IF_FALSE to 970
+ 952: LOAD_FAST            numerator
+ 954: LOAD_CONST           10
+ 956: LOAD_FAST            exp
+ 958: BINARY_OP            **
+ 962: BINARY_OP            *=
+ 966: STORE_FAST           numerator
+ 968: JUMP_FORWARD         to 988
+ 970: LOAD_FAST            denominator
+ 972: LOAD_CONST           10
+ 974: LOAD_FAST            exp
+ 976: UNARY_NEGATIVE       
+ 978: BINARY_OP            **
+ 982: BINARY_OP            *=
+ 986: STORE_FAST           denominator
+ 988: LOAD_FAST            m
+ 990: LOAD_METHOD          group
+1012: LOAD_CONST           'sign'
+1014: PRECALL              
+1018: CALL                 
+1028: LOAD_CONST           '-'
+1030: COMPARE_OP           ==
+1036: POP_JUMP_FORWARD_IF_FALSE to 1044
+1038: LOAD_FAST            numerator
+1040: UNARY_NEGATIVE       
+1042: STORE_FAST           numerator
+1044: JUMP_FORWARD         to 1360
+1046: LOAD_GLOBAL          NULL + TypeError
+1058: LOAD_CONST           'argument should be a string or a Rational instance'
+1060: PRECALL              
+1064: CALL                 
+1074: RAISE_VARARGS        
+1076: LOAD_GLOBAL          NULL + type
+1088: LOAD_FAST            numerator
+1090: PRECALL              
+1094: CALL                 
+1104: LOAD_GLOBAL          int
+1116: SWAP                 
+1118: COPY                 
+1120: IS_OP                
+1122: POP_JUMP_FORWARD_IF_FALSE to 1158
+1124: LOAD_GLOBAL          NULL + type
+1136: LOAD_FAST            denominator
+1138: PRECALL              
+1142: CALL                 
+1152: IS_OP                
+1154: POP_JUMP_FORWARD_IF_FALSE to 1164
+1156: JUMP_FORWARD         to 1162
+1158: POP_TOP              
+1160: JUMP_FORWARD         to 1164
+1162: JUMP_FORWARD         to 1360
+1164: LOAD_GLOBAL          NULL + isinstance
+1176: LOAD_FAST            numerator
+1178: LOAD_GLOBAL          numbers
+1190: LOAD_ATTR            Rational
+1200: PRECALL              
+1204: CALL                 
+1214: POP_JUMP_FORWARD_IF_FALSE to 1330
+1216: LOAD_GLOBAL          NULL + isinstance
+1228: LOAD_FAST            denominator
+1230: LOAD_GLOBAL          numbers
+1242: LOAD_ATTR            Rational
+1252: PRECALL              
+1256: CALL                 
+1266: POP_JUMP_FORWARD_IF_FALSE to 1330
+1268: LOAD_FAST            numerator
+1270: LOAD_ATTR            numerator
+1280: LOAD_FAST            denominator
+1282: LOAD_ATTR            denominator
+1292: BINARY_OP            *
+1296: LOAD_FAST            denominator
+1298: LOAD_ATTR            numerator
+1308: LOAD_FAST            numerator
+1310: LOAD_ATTR            denominator
+1320: BINARY_OP            *
+1324: STORE_FAST           denominator
+1326: STORE_FAST           numerator
+1328: JUMP_FORWARD         to 1360
+1330: LOAD_GLOBAL          NULL + TypeError
+1342: LOAD_CONST           'both arguments should be Rational instances'
+1344: PRECALL              
+1348: CALL                 
+1358: RAISE_VARARGS        
+1360: LOAD_FAST            denominator
+1362: LOAD_CONST           0
+1364: COMPARE_OP           ==
+1370: POP_JUMP_FORWARD_IF_FALSE to 1408
+1372: LOAD_GLOBAL          NULL + ZeroDivisionError
+1384: LOAD_CONST           'Fraction(%s, 0)'
+1386: LOAD_FAST            numerator
+1388: BINARY_OP            %
+1392: PRECALL              
+1396: CALL                 
+1406: RAISE_VARARGS        
+1408: LOAD_FAST            _normalize
+1410: POP_JUMP_FORWARD_IF_FALSE to 1492
+1412: LOAD_GLOBAL          NULL + math
+1424: LOAD_ATTR            gcd
+1434: LOAD_FAST            numerator
+1436: LOAD_FAST            denominator
+1438: PRECALL              
+1442: CALL                 
+1452: STORE_FAST           g
+1454: LOAD_FAST            denominator
+1456: LOAD_CONST           0
+1458: COMPARE_OP           <
+1464: POP_JUMP_FORWARD_IF_FALSE to 1472
+1466: LOAD_FAST            g
+1468: UNARY_NEGATIVE       
+1470: STORE_FAST           g
+1472: LOAD_FAST            numerator
+1474: LOAD_FAST            g
+1476: BINARY_OP            //=
+1480: STORE_FAST           numerator
+1482: LOAD_FAST            denominator
+1484: LOAD_FAST            g
+1486: BINARY_OP            //=
+1490: STORE_FAST           denominator
+1492: LOAD_FAST            numerator
+1494: LOAD_FAST            self
+1496: STORE_ATTR           _numerator
+1506: LOAD_FAST            denominator
+1508: LOAD_FAST            self
+1510: STORE_ATTR           _denominator
+1520: LOAD_FAST            self
+1522: RETURN_VALUE         

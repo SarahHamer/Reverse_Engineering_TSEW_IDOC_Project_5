@@ -1,0 +1,15 @@
+# Disassembly for http.HTTPResponse.getcode
+# From module file: http.client
+
+## co_consts:
+('Return the HTTP status code that was sent with the response,\n        or None if the URL is not an HTTP URL.\n\n        ',)
+
+## co_names:
+('status',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            status
+  14: RETURN_VALUE         

@@ -1,0 +1,34 @@
+# Disassembly for datetime._check_tzname
+# From module file: datetime
+
+## co_consts:
+(None, "tzinfo.tzname() must return None or string, not '%s'")
+
+## co_names:
+('isinstance', 'str', 'TypeError', 'type')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            name
+   4: POP_JUMP_FORWARD_IF_NONE to 110
+   6: LOAD_GLOBAL          NULL + isinstance
+  18: LOAD_FAST            name
+  20: LOAD_GLOBAL          str
+  32: PRECALL              
+  36: CALL                 
+  46: POP_JUMP_FORWARD_IF_TRUE to 114
+  48: LOAD_GLOBAL          NULL + TypeError
+  60: LOAD_CONST           "tzinfo.tzname() must return None or string, not '%s'"
+  62: LOAD_GLOBAL          NULL + type
+  74: LOAD_FAST            name
+  76: PRECALL              
+  80: CALL                 
+  90: BINARY_OP            %
+  94: PRECALL              
+  98: CALL                 
+ 108: RAISE_VARARGS        
+ 110: LOAD_CONST           None
+ 112: RETURN_VALUE         
+ 114: LOAD_CONST           None
+ 116: RETURN_VALUE         

@@ -1,0 +1,50 @@
+# Disassembly for pickle._Unpickler.load_next_buffer
+# From module file: pickle
+
+## co_consts:
+(None, 'pickle stream refers to out-of-band data but no *buffers* argument was given', 'not enough out-of-band buffers')
+
+## co_names:
+('_buffers', 'UnpicklingError', 'next', 'StopIteration', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _buffers
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 46
+  16: LOAD_GLOBAL          NULL + UnpicklingError
+  28: LOAD_CONST           'pickle stream refers to out-of-band data but no *buffers* argument was given'
+  30: PRECALL              
+  34: CALL                 
+  44: RAISE_VARARGS        
+  46: NOP                  
+  48: LOAD_GLOBAL          NULL + next
+  60: LOAD_FAST            self
+  62: LOAD_ATTR            _buffers
+  72: PRECALL              
+  76: CALL                 
+  86: STORE_FAST           buf
+  88: JUMP_FORWARD         to 148
+  90: PUSH_EXC_INFO        
+  92: LOAD_GLOBAL          StopIteration
+ 104: CHECK_EXC_MATCH      
+ 106: POP_JUMP_FORWARD_IF_FALSE to 140
+ 108: POP_TOP              
+ 110: LOAD_GLOBAL          NULL + UnpicklingError
+ 122: LOAD_CONST           'not enough out-of-band buffers'
+ 124: PRECALL              
+ 128: CALL                 
+ 138: RAISE_VARARGS        
+ 140: RERAISE              
+ 142: COPY                 
+ 144: POP_EXCEPT           
+ 146: RERAISE              
+ 148: LOAD_FAST            self
+ 150: LOAD_METHOD          append
+ 172: LOAD_FAST            buf
+ 174: PRECALL              
+ 178: CALL                 
+ 188: POP_TOP              
+ 190: LOAD_CONST           None
+ 192: RETURN_VALUE         

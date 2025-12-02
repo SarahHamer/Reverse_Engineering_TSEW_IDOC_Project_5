@@ -1,0 +1,105 @@
+# Disassembly for gettext.c2py
+# From module file: gettext
+
+## co_consts:
+('Gets a C expression as used in PO files for plural forms and returns a\n    Python function that implements an equivalent expression.\n    ', 1000, 'plural form expression is too long', 0, '(', 1, 20, 'plural form expression is too complex', ')', '_as_int', 'if True:\n            def func(n):\n                if not isinstance(n, int):\n                    n = _as_int(n)\n                return int(%s)\n            ', 'func')
+
+## co_names:
+('len', 'ValueError', '_parse', '_tokenize', '_error', '_as_int', 'exec', 'RecursionError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + len
+  14: LOAD_FAST            plural
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_CONST           1000
+  32: COMPARE_OP           >
+  38: POP_JUMP_FORWARD_IF_FALSE to 70
+  40: LOAD_GLOBAL          NULL + ValueError
+  52: LOAD_CONST           'plural form expression is too long'
+  54: PRECALL              
+  58: CALL                 
+  68: RAISE_VARARGS        
+  70: NOP                  
+  72: LOAD_GLOBAL          NULL + _parse
+  84: LOAD_GLOBAL          NULL + _tokenize
+  96: LOAD_FAST            plural
+  98: PRECALL              
+ 102: CALL                 
+ 112: PRECALL              
+ 116: CALL                 
+ 126: UNPACK_SEQUENCE      
+ 130: STORE_FAST           result
+ 132: STORE_FAST           nexttok
+ 134: LOAD_FAST            nexttok
+ 136: POP_JUMP_FORWARD_IF_FALSE to 168
+ 138: LOAD_GLOBAL          NULL + _error
+ 150: LOAD_FAST            nexttok
+ 152: PRECALL              
+ 156: CALL                 
+ 166: RAISE_VARARGS        
+ 168: LOAD_CONST           0
+ 170: STORE_FAST           depth
+ 172: LOAD_FAST            result
+ 174: GET_ITER             
+ 176: FOR_ITER             to 270
+ 178: STORE_FAST           c
+ 180: LOAD_FAST            c
+ 182: LOAD_CONST           '('
+ 184: COMPARE_OP           ==
+ 190: POP_JUMP_FORWARD_IF_FALSE to 246
+ 192: LOAD_FAST            depth
+ 194: LOAD_CONST           1
+ 196: BINARY_OP            +=
+ 200: STORE_FAST           depth
+ 202: LOAD_FAST            depth
+ 204: LOAD_CONST           20
+ 206: COMPARE_OP           >
+ 212: POP_JUMP_FORWARD_IF_FALSE to 244
+ 214: LOAD_GLOBAL          NULL + ValueError
+ 226: LOAD_CONST           'plural form expression is too complex'
+ 228: PRECALL              
+ 232: CALL                 
+ 242: RAISE_VARARGS        
+ 244: JUMP_BACKWARD        to 176
+ 246: LOAD_FAST            c
+ 248: LOAD_CONST           ')'
+ 250: COMPARE_OP           ==
+ 256: POP_JUMP_FORWARD_IF_FALSE to 268
+ 258: LOAD_FAST            depth
+ 260: LOAD_CONST           1
+ 262: BINARY_OP            -=
+ 266: STORE_FAST           depth
+ 268: JUMP_BACKWARD        to 176
+ 270: LOAD_CONST           '_as_int'
+ 272: LOAD_GLOBAL          _as_int
+ 284: BUILD_MAP            
+ 286: STORE_FAST           ns
+ 288: LOAD_GLOBAL          NULL + exec
+ 300: LOAD_CONST           'if True:\n            def func(n):\n                if not isinstance(n, int):\n                    n = _as_int(n)\n                return int(%s)\n            '
+ 302: LOAD_FAST            result
+ 304: BINARY_OP            %
+ 308: LOAD_FAST            ns
+ 310: PRECALL              
+ 314: CALL                 
+ 324: POP_TOP              
+ 326: LOAD_FAST            ns
+ 328: LOAD_CONST           'func'
+ 330: BINARY_SUBSCR        
+ 340: RETURN_VALUE         
+ 342: PUSH_EXC_INFO        
+ 344: LOAD_GLOBAL          RecursionError
+ 356: CHECK_EXC_MATCH      
+ 358: POP_JUMP_FORWARD_IF_FALSE to 392
+ 360: POP_TOP              
+ 362: LOAD_GLOBAL          NULL + ValueError
+ 374: LOAD_CONST           'plural form expression is too complex'
+ 376: PRECALL              
+ 380: CALL                 
+ 390: RAISE_VARARGS        
+ 392: RERAISE              
+ 394: COPY                 
+ 396: POP_EXCEPT           
+ 398: RERAISE              

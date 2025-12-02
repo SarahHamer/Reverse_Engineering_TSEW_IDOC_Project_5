@@ -1,0 +1,41 @@
+# Disassembly for _pydecimal.getcontext
+# From module file: _pydecimal
+
+## co_consts:
+("Returns this thread's context.\n\n    If this thread does not yet have a context, returns\n    a new context and sets this thread's context.\n    New contexts are copies of DefaultContext.\n    ",)
+
+## co_names:
+('_current_context_var', 'get', 'LookupError', 'Context', 'set')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_GLOBAL          _current_context_var
+  16: LOAD_METHOD          get
+  38: PRECALL              
+  42: CALL                 
+  52: RETURN_VALUE         
+  54: PUSH_EXC_INFO        
+  56: LOAD_GLOBAL          LookupError
+  68: CHECK_EXC_MATCH      
+  70: POP_JUMP_FORWARD_IF_FALSE to 162
+  72: POP_TOP              
+  74: LOAD_GLOBAL          NULL + Context
+  86: PRECALL              
+  90: CALL                 
+ 100: STORE_FAST           context
+ 102: LOAD_GLOBAL          _current_context_var
+ 114: LOAD_METHOD          set
+ 136: LOAD_FAST            context
+ 138: PRECALL              
+ 142: CALL                 
+ 152: POP_TOP              
+ 154: LOAD_FAST            context
+ 156: SWAP                 
+ 158: POP_EXCEPT           
+ 160: RETURN_VALUE         
+ 162: RERAISE              
+ 164: COPY                 
+ 166: POP_EXCEPT           
+ 168: RERAISE              

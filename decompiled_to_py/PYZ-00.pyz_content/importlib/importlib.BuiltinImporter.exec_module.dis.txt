@@ -1,0 +1,21 @@
+# Disassembly for importlib.BuiltinImporter.exec_module
+# From module file: importlib._bootstrap
+
+## co_consts:
+('Exec a built-in module', None)
+
+## co_names:
+('_call_with_frames_removed', '_imp', 'exec_builtin')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _call_with_frames_removed
+  14: LOAD_GLOBAL          _imp
+  26: LOAD_ATTR            exec_builtin
+  36: LOAD_FAST            module
+  38: PRECALL              
+  42: CALL                 
+  52: POP_TOP              
+  54: LOAD_CONST           None
+  56: RETURN_VALUE         

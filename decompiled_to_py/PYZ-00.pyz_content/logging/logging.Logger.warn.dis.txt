@@ -1,0 +1,35 @@
+# Disassembly for logging.Logger.warn
+# From module file: logging
+
+## co_consts:
+(None, "The 'warn' method is deprecated, use 'warning' instead", 2)
+
+## co_names:
+('warnings', 'warn', 'DeprecationWarning', 'warning')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + warnings
+  14: LOAD_ATTR            warn
+  24: LOAD_CONST           "The 'warn' method is deprecated, use 'warning' instead"
+  26: LOAD_GLOBAL          DeprecationWarning
+  38: LOAD_CONST           2
+  40: PRECALL              
+  44: CALL                 
+  54: POP_TOP              
+  56: PUSH_NULL            
+  58: LOAD_FAST            self
+  60: LOAD_ATTR            warning
+  70: LOAD_FAST            msg
+  72: BUILD_LIST           
+  74: LOAD_FAST            args
+  76: LIST_EXTEND          
+  78: LIST_TO_TUPLE        
+  80: BUILD_MAP            
+  82: LOAD_FAST            kwargs
+  84: DICT_MERGE           
+  86: CALL_FUNCTION_EX     
+  88: POP_TOP              
+  90: LOAD_CONST           None
+  92: RETURN_VALUE         

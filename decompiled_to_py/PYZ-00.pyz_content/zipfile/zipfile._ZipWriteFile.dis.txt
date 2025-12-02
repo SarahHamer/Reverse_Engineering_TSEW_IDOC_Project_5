@@ -1,0 +1,41 @@
+# Disassembly for zipfile._ZipWriteFile
+# From module file: zipfile
+
+## co_consts:
+('_ZipWriteFile', <code object __init__ at 0x000002406922CC00, file "zipfile.py", line 1136>, <code object _fileobj at 0x0000024069465B50, file "zipfile.py", line 1146>, <code object writable at 0x0000024069CCA5B0, file "zipfile.py", line 1150>, <code object write at 0x0000024068DA8CD0, file "zipfile.py", line 1153>, <code object close at 0x0000024068E11B80, file "zipfile.py", line 1172>)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', 'property', '_fileobj', 'writable', 'write', 'close', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           '_ZipWriteFile'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           <code object __init__ at 0x000002406922CC00, file "zipfile.py", line 1136>
+  14: MAKE_FUNCTION        
+  16: STORE_NAME           __init__
+  18: LOAD_NAME            property
+  20: LOAD_CONST           <code object _fileobj at 0x0000024069465B50, file "zipfile.py", line 1146>
+  22: MAKE_FUNCTION        
+  24: PRECALL              
+  28: CALL                 
+  38: STORE_NAME           _fileobj
+  40: LOAD_CONST           <code object writable at 0x0000024069CCA5B0, file "zipfile.py", line 1150>
+  42: MAKE_FUNCTION        
+  44: STORE_NAME           writable
+  46: LOAD_CONST           <code object write at 0x0000024068DA8CD0, file "zipfile.py", line 1153>
+  48: MAKE_FUNCTION        
+  50: STORE_NAME           write
+  52: LOAD_CLOSURE         __class__
+  54: BUILD_TUPLE          
+  56: LOAD_CONST           <code object close at 0x0000024068E11B80, file "zipfile.py", line 1172>
+  58: MAKE_FUNCTION        closure
+  60: STORE_NAME           close
+  62: LOAD_CLOSURE         __class__
+  64: COPY                 
+  66: STORE_NAME           __classcell__
+  68: RETURN_VALUE         

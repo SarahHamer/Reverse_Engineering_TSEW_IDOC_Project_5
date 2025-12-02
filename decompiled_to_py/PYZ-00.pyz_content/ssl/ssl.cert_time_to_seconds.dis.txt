@@ -1,0 +1,92 @@
+# Disassembly for ssl.cert_time_to_seconds
+# From module file: ssl
+
+## co_consts:
+('Return the time in seconds since the Epoch, given the timestring\n    representing the "notBefore" or "notAfter" date from a certificate\n    in ``"%b %d %H:%M:%S %Y %Z"`` strptime format (C locale).\n\n    "notBefore" or "notAfter" dates must use UTC (RFC 5280).\n\n    Month is one of: Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec\n    UTC should be specified as GMT (see ASN1_TIME_print())\n    ', 0, ('strptime',), ('timegm',), ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'), ' %d %H:%M:%S %Y GMT', None, 3, 1, 2, 6, 'time data ', ' does not match format "%b', '"')
+
+## co_names:
+('time', 'strptime', 'calendar', 'timegm', 'index', 'title', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           ('strptime',)
+   6: IMPORT_NAME          time
+   8: IMPORT_FROM          strptime
+  10: STORE_FAST           strptime
+  12: POP_TOP              
+  14: LOAD_CONST           0
+  16: LOAD_CONST           ('timegm',)
+  18: IMPORT_NAME          calendar
+  20: IMPORT_FROM          timegm
+  22: STORE_FAST           timegm
+  24: POP_TOP              
+  26: LOAD_CONST           ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')
+  28: STORE_FAST           months
+  30: LOAD_CONST           ' %d %H:%M:%S %Y GMT'
+  32: STORE_FAST           time_format
+  34: NOP                  
+  36: LOAD_FAST            months
+  38: LOAD_METHOD          index
+  60: LOAD_FAST            cert_time
+  62: LOAD_CONST           None
+  64: LOAD_CONST           3
+  66: BUILD_SLICE          
+  68: BINARY_SUBSCR        
+  78: LOAD_METHOD          title
+ 100: PRECALL              
+ 104: CALL                 
+ 114: PRECALL              
+ 118: CALL                 
+ 128: LOAD_CONST           1
+ 130: BINARY_OP            +
+ 134: STORE_FAST           month_number
+ 136: PUSH_NULL            
+ 138: LOAD_FAST            strptime
+ 140: LOAD_FAST            cert_time
+ 142: LOAD_CONST           3
+ 144: LOAD_CONST           None
+ 146: BUILD_SLICE          
+ 148: BINARY_SUBSCR        
+ 158: LOAD_FAST            time_format
+ 160: PRECALL              
+ 164: CALL                 
+ 174: STORE_FAST           tt
+ 176: PUSH_NULL            
+ 178: LOAD_FAST            timegm
+ 180: LOAD_FAST            tt
+ 182: LOAD_CONST           0
+ 184: BINARY_SUBSCR        
+ 194: LOAD_FAST            month_number
+ 196: BUILD_TUPLE          
+ 198: LOAD_FAST            tt
+ 200: LOAD_CONST           2
+ 202: LOAD_CONST           6
+ 204: BUILD_SLICE          
+ 206: BINARY_SUBSCR        
+ 216: BINARY_OP            +
+ 220: PRECALL              
+ 224: CALL                 
+ 234: RETURN_VALUE         
+ 236: PUSH_EXC_INFO        
+ 238: LOAD_GLOBAL          ValueError
+ 250: CHECK_EXC_MATCH      
+ 252: POP_JUMP_FORWARD_IF_FALSE to 300
+ 254: POP_TOP              
+ 256: LOAD_GLOBAL          NULL + ValueError
+ 268: LOAD_CONST           'time data '
+ 270: LOAD_FAST            cert_time
+ 272: FORMAT_VALUE         repr
+ 274: LOAD_CONST           ' does not match format "%b'
+ 276: LOAD_FAST            time_format
+ 278: FORMAT_VALUE         str
+ 280: LOAD_CONST           '"'
+ 282: BUILD_STRING         
+ 284: PRECALL              
+ 288: CALL                 
+ 298: RAISE_VARARGS        
+ 300: RERAISE              
+ 302: COPY                 
+ 304: POP_EXCEPT           
+ 306: RERAISE              

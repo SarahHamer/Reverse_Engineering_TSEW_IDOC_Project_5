@@ -1,0 +1,127 @@
+# Disassembly for copy.copy
+# From module file: copy
+
+## co_consts:
+("Shallow copy operation on arbitrary Python objects.\n\n    See the module's __doc__ string for more info.\n    ", '__copy__', None, '__reduce_ex__', 4, '__reduce__', 'un(shallow)copyable object of type %s')
+
+## co_names:
+('type', '_copy_dispatch', 'get', 'issubclass', '_copy_immutable', 'getattr', 'dispatch_table', 'Error', 'isinstance', 'str', '_reconstruct')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + type
+  14: LOAD_FAST            x
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           cls
+  32: LOAD_GLOBAL          _copy_dispatch
+  44: LOAD_METHOD          get
+  66: LOAD_FAST            cls
+  68: PRECALL              
+  72: CALL                 
+  82: STORE_FAST           copier
+  84: LOAD_FAST            copier
+  86: POP_JUMP_FORWARD_IF_FALSE to 110
+  88: PUSH_NULL            
+  90: LOAD_FAST            copier
+  92: LOAD_FAST            x
+  94: PRECALL              
+  98: CALL                 
+ 108: RETURN_VALUE         
+ 110: LOAD_GLOBAL          NULL + issubclass
+ 122: LOAD_FAST            cls
+ 124: LOAD_GLOBAL          type
+ 136: PRECALL              
+ 140: CALL                 
+ 150: POP_JUMP_FORWARD_IF_FALSE to 182
+ 152: LOAD_GLOBAL          NULL + _copy_immutable
+ 164: LOAD_FAST            x
+ 166: PRECALL              
+ 170: CALL                 
+ 180: RETURN_VALUE         
+ 182: LOAD_GLOBAL          NULL + getattr
+ 194: LOAD_FAST            cls
+ 196: LOAD_CONST           '__copy__'
+ 198: LOAD_CONST           None
+ 200: PRECALL              
+ 204: CALL                 
+ 214: STORE_FAST           copier
+ 216: LOAD_FAST            copier
+ 218: POP_JUMP_FORWARD_IF_NONE to 242
+ 220: PUSH_NULL            
+ 222: LOAD_FAST            copier
+ 224: LOAD_FAST            x
+ 226: PRECALL              
+ 230: CALL                 
+ 240: RETURN_VALUE         
+ 242: LOAD_GLOBAL          NULL + dispatch_table
+ 254: LOAD_ATTR            get
+ 264: LOAD_FAST            cls
+ 266: PRECALL              
+ 270: CALL                 
+ 280: STORE_FAST           reductor
+ 282: LOAD_FAST            reductor
+ 284: POP_JUMP_FORWARD_IF_NONE to 310
+ 286: PUSH_NULL            
+ 288: LOAD_FAST            reductor
+ 290: LOAD_FAST            x
+ 292: PRECALL              
+ 296: CALL                 
+ 306: STORE_FAST           rv
+ 308: JUMP_FORWARD         to 468
+ 310: LOAD_GLOBAL          NULL + getattr
+ 322: LOAD_FAST            x
+ 324: LOAD_CONST           '__reduce_ex__'
+ 326: LOAD_CONST           None
+ 328: PRECALL              
+ 332: CALL                 
+ 342: STORE_FAST           reductor
+ 344: LOAD_FAST            reductor
+ 346: POP_JUMP_FORWARD_IF_NONE to 372
+ 348: PUSH_NULL            
+ 350: LOAD_FAST            reductor
+ 352: LOAD_CONST           4
+ 354: PRECALL              
+ 358: CALL                 
+ 368: STORE_FAST           rv
+ 370: JUMP_FORWARD         to 468
+ 372: LOAD_GLOBAL          NULL + getattr
+ 384: LOAD_FAST            x
+ 386: LOAD_CONST           '__reduce__'
+ 388: LOAD_CONST           None
+ 390: PRECALL              
+ 394: CALL                 
+ 404: STORE_FAST           reductor
+ 406: LOAD_FAST            reductor
+ 408: POP_JUMP_FORWARD_IF_FALSE to 432
+ 410: PUSH_NULL            
+ 412: LOAD_FAST            reductor
+ 414: PRECALL              
+ 418: CALL                 
+ 428: STORE_FAST           rv
+ 430: JUMP_FORWARD         to 468
+ 432: LOAD_GLOBAL          NULL + Error
+ 444: LOAD_CONST           'un(shallow)copyable object of type %s'
+ 446: LOAD_FAST            cls
+ 448: BINARY_OP            %
+ 452: PRECALL              
+ 456: CALL                 
+ 466: RAISE_VARARGS        
+ 468: LOAD_GLOBAL          NULL + isinstance
+ 480: LOAD_FAST            rv
+ 482: LOAD_GLOBAL          str
+ 494: PRECALL              
+ 498: CALL                 
+ 508: POP_JUMP_FORWARD_IF_FALSE to 514
+ 510: LOAD_FAST            x
+ 512: RETURN_VALUE         
+ 514: LOAD_GLOBAL          NULL + _reconstruct
+ 526: LOAD_FAST            x
+ 528: LOAD_CONST           None
+ 530: BUILD_LIST           
+ 532: LOAD_FAST            rv
+ 534: LIST_EXTEND          
+ 536: LIST_TO_TUPLE        
+ 538: CALL_FUNCTION_EX     
+ 540: RETURN_VALUE         

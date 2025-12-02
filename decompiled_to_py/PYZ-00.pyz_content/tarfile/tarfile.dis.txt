@@ -1,0 +1,529 @@
+# Disassembly for tarfile
+# From module file: tarfile
+
+## co_consts:
+('Read from and write to tar format archives.\n', '0.9.0', 'Lars Gustäbel (lars@gustaebel.de)', 'Gustavo Niemeyer, Niels Gustäbel, Richard Townsend.', 0, ('open',), None, ('TarFile', 'TarInfo', 'is_tarfile', 'TarError', 'ReadError', 'CompressionError', 'StreamError', 'ExtractError', 'HeaderError', 'ENCODING', 'USTAR_FORMAT', 'GNU_FORMAT', 'PAX_FORMAT', 'DEFAULT_FORMAT', 'open'), b'\x00', 512, 20, b'ustar  \x00', b'ustar\x0000', 100, 155, b'0', b'1', b'2', b'3', b'4', b'5', b'6', b'7', b'L', b'K', b'S', b'x', b'g', b'X', 1, 2, ('path', 'linkpath', 'size', 'mtime', 'uid', 'gid', 'uname', 'gname'), frozenset({'path', 'linkpath', 'gname', 'uname'}), ('atime', 'ctime', 'mtime', 'uid', 'gid', 'size'), 'nt', 'utf-8', <code object stn at 0x00000240691C05B0, file "tarfile.py", line 160>, <code object nts at 0x00000240693D2760, file "tarfile.py", line 168>, <code object nti at 0x0000024068DB5390, file "tarfile.py", line 176>, 8, <code object itn at 0x0000024066C25920, file "tarfile.py", line 196>, <code object calc_chksums at 0x00000240691C1790, file "tarfile.py", line 226>, <code object copyfileobj at 0x0000024066C260D0, file "tarfile.py", line 239>, <code object _safe_print at 0x000002406921FE00, file "tarfile.py", line 264>, <code object TarError at 0x0000024069496180, file "tarfile.py", line 271>, 'TarError', <code object ExtractError at 0x00000240694960B0, file "tarfile.py", line 274>, 'ExtractError', <code object ReadError at 0x0000024069495140, file "tarfile.py", line 277>, 'ReadError', <code object CompressionError at 0x00000240694964C0, file "tarfile.py", line 280>, 'CompressionError', <code object StreamError at 0x0000024069494370, file "tarfile.py", line 283>, 'StreamError', <code object HeaderError at 0x0000024069494440, file "tarfile.py", line 286>, 'HeaderError', <code object EmptyHeaderError at 0x0000024069494ED0, file "tarfile.py", line 289>, 'EmptyHeaderError', <code object TruncatedHeaderError at 0x0000024069496CE0, file "tarfile.py", line 292>, 'TruncatedHeaderError', <code object EOFHeaderError at 0x0000024069495B00, file "tarfile.py", line 295>, 'EOFHeaderError', <code object InvalidHeaderError at 0x0000024069494920, file "tarfile.py", line 298>, 'InvalidHeaderError', <code object SubsequentHeaderError at 0x0000024069496590, file "tarfile.py", line 301>, 'SubsequentHeaderError', <code object _LowLevelFile at 0x000002406945F000, file "tarfile.py", line 308>, '_LowLevelFile', <code object _Stream at 0x000002406941B630, file "tarfile.py", line 332>, '_Stream', <code object _StreamProxy at 0x000002406945E880, file "tarfile.py", line 574>, '_StreamProxy', <code object _FileInFile at 0x000002406941A430, file "tarfile.py", line 604>, '_FileInFile', <code object ExFileObject at 0x0000024069465990, file "tarfile.py", line 708>, 'ExFileObject', <code object FilterError at 0x0000024069496A70, file "tarfile.py", line 721>, 'FilterError', <code object AbsolutePathError at 0x0000024069465DF0, file "tarfile.py", line 724>, 'AbsolutePathError', <code object OutsideDestinationError at 0x0000024069466DB0, file "tarfile.py", line 729>, 'OutsideDestinationError', <code object SpecialFileError at 0x0000024069465A70, file "tarfile.py", line 736>, 'SpecialFileError', <code object AbsoluteLinkError at 0x0000024069466090, file "tarfile.py", line 741>, 'AbsoluteLinkError', <code object LinkOutsideDestinationError at 0x0000024069465FB0, file "tarfile.py", line 746>, 'LinkOutsideDestinationError', True, <code object _get_filtered_attrs at 0x0000024068E11BE0, file "tarfile.py", line 753>, <code object fully_trusted_filter at 0x000002406943B7B0, file "tarfile.py", line 816>, <code object tar_filter at 0x000002406944ADE0, file "tarfile.py", line 819>, <code object data_filter at 0x000002406944ACD0, file "tarfile.py", line 825>, ('fully_trusted', 'tar', 'data'), <code object TarInfo at 0x0000024068BFFA70, file "tarfile.py", line 844>, 'TarInfo', <code object TarFile at 0x0000024068D2F960, file "tarfile.py", line 1615>, 'TarFile', <code object is_tarfile at 0x00000240694983B0, file "tarfile.py", line 2779>, <code object main at 0x00000240695B63B0, file "tarfile.py", line 2800>, '__main__', (True,))
+
+## co_names:
+('__doc__', 'version', '__author__', '__credits__', 'builtins', 'open', 'bltn_open', 'sys', 'os', 'io', 'shutil', 'stat', 'time', 'struct', 'copy', 're', 'warnings', 'pwd', 'ImportError', 'grp', 'AttributeError', 'NotImplementedError', 'symlink_exception', 'OSError', 'NameError', '__all__', 'NUL', 'BLOCKSIZE', 'RECORDSIZE', 'GNU_MAGIC', 'POSIX_MAGIC', 'LENGTH_NAME', 'LENGTH_LINK', 'LENGTH_PREFIX', 'REGTYPE', 'AREGTYPE', 'LNKTYPE', 'SYMTYPE', 'CHRTYPE', 'BLKTYPE', 'DIRTYPE', 'FIFOTYPE', 'CONTTYPE', 'GNUTYPE_LONGNAME', 'GNUTYPE_LONGLINK', 'GNUTYPE_SPARSE', 'XHDTYPE', 'XGLTYPE', 'SOLARIS_XHDTYPE', 'USTAR_FORMAT', 'GNU_FORMAT', 'PAX_FORMAT', 'DEFAULT_FORMAT', 'SUPPORTED_TYPES', 'REGULAR_TYPES', 'GNU_TYPES', 'PAX_FIELDS', 'PAX_NAME_FIELDS', 'float', 'int', 'PAX_NUMBER_FIELDS', 'name', 'ENCODING', 'getfilesystemencoding', 'stn', 'nts', 'nti', 'itn', 'calc_chksums', 'copyfileobj', '_safe_print', 'Exception', 'TarError', 'ExtractError', 'ReadError', 'CompressionError', 'StreamError', 'HeaderError', 'EmptyHeaderError', 'TruncatedHeaderError', 'EOFHeaderError', 'InvalidHeaderError', 'SubsequentHeaderError', '_LowLevelFile', '_Stream', 'object', '_StreamProxy', '_FileInFile', 'BufferedReader', 'ExFileObject', 'FilterError', 'AbsolutePathError', 'OutsideDestinationError', 'SpecialFileError', 'AbsoluteLinkError', 'LinkOutsideDestinationError', '_get_filtered_attrs', 'fully_trusted_filter', 'tar_filter', 'data_filter', '_NAMED_FILTERS', '_KEEP', 'TarInfo', 'TarFile', 'is_tarfile', 'main', '__name__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'Read from and write to tar format archives.\n'
+   4: STORE_NAME           __doc__
+   6: LOAD_CONST           '0.9.0'
+   8: STORE_NAME           version
+  10: LOAD_CONST           'Lars Gustäbel (lars@gustaebel.de)'
+  12: STORE_NAME           __author__
+  14: LOAD_CONST           'Gustavo Niemeyer, Niels Gustäbel, Richard Townsend.'
+  16: STORE_NAME           __credits__
+  18: LOAD_CONST           0
+  20: LOAD_CONST           ('open',)
+  22: IMPORT_NAME          builtins
+  24: IMPORT_FROM          open
+  26: STORE_NAME           bltn_open
+  28: POP_TOP              
+  30: LOAD_CONST           0
+  32: LOAD_CONST           None
+  34: IMPORT_NAME          sys
+  36: STORE_NAME           sys
+  38: LOAD_CONST           0
+  40: LOAD_CONST           None
+  42: IMPORT_NAME          os
+  44: STORE_NAME           os
+  46: LOAD_CONST           0
+  48: LOAD_CONST           None
+  50: IMPORT_NAME          io
+  52: STORE_NAME           io
+  54: LOAD_CONST           0
+  56: LOAD_CONST           None
+  58: IMPORT_NAME          shutil
+  60: STORE_NAME           shutil
+  62: LOAD_CONST           0
+  64: LOAD_CONST           None
+  66: IMPORT_NAME          stat
+  68: STORE_NAME           stat
+  70: LOAD_CONST           0
+  72: LOAD_CONST           None
+  74: IMPORT_NAME          time
+  76: STORE_NAME           time
+  78: LOAD_CONST           0
+  80: LOAD_CONST           None
+  82: IMPORT_NAME          struct
+  84: STORE_NAME           struct
+  86: LOAD_CONST           0
+  88: LOAD_CONST           None
+  90: IMPORT_NAME          copy
+  92: STORE_NAME           copy
+  94: LOAD_CONST           0
+  96: LOAD_CONST           None
+  98: IMPORT_NAME          re
+ 100: STORE_NAME           re
+ 102: LOAD_CONST           0
+ 104: LOAD_CONST           None
+ 106: IMPORT_NAME          warnings
+ 108: STORE_NAME           warnings
+ 110: NOP                  
+ 112: LOAD_CONST           0
+ 114: LOAD_CONST           None
+ 116: IMPORT_NAME          pwd
+ 118: STORE_NAME           pwd
+ 120: JUMP_FORWARD         to 148
+ 122: PUSH_EXC_INFO        
+ 124: LOAD_NAME            ImportError
+ 126: CHECK_EXC_MATCH      
+ 128: POP_JUMP_FORWARD_IF_FALSE to 140
+ 130: POP_TOP              
+ 132: LOAD_CONST           None
+ 134: STORE_NAME           pwd
+ 136: POP_EXCEPT           
+ 138: JUMP_FORWARD         to 148
+ 140: RERAISE              
+ 142: COPY                 
+ 144: POP_EXCEPT           
+ 146: RERAISE              
+ 148: NOP                  
+ 150: LOAD_CONST           0
+ 152: LOAD_CONST           None
+ 154: IMPORT_NAME          grp
+ 156: STORE_NAME           grp
+ 158: JUMP_FORWARD         to 186
+ 160: PUSH_EXC_INFO        
+ 162: LOAD_NAME            ImportError
+ 164: CHECK_EXC_MATCH      
+ 166: POP_JUMP_FORWARD_IF_FALSE to 178
+ 168: POP_TOP              
+ 170: LOAD_CONST           None
+ 172: STORE_NAME           grp
+ 174: POP_EXCEPT           
+ 176: JUMP_FORWARD         to 186
+ 178: RERAISE              
+ 180: COPY                 
+ 182: POP_EXCEPT           
+ 184: RERAISE              
+ 186: LOAD_NAME            AttributeError
+ 188: LOAD_NAME            NotImplementedError
+ 190: BUILD_TUPLE          
+ 192: STORE_NAME           symlink_exception
+ 194: NOP                  
+ 196: LOAD_NAME            symlink_exception
+ 198: LOAD_NAME            OSError
+ 200: BUILD_TUPLE          
+ 202: BINARY_OP            +=
+ 206: STORE_NAME           symlink_exception
+ 208: JUMP_FORWARD         to 232
+ 210: PUSH_EXC_INFO        
+ 212: LOAD_NAME            NameError
+ 214: CHECK_EXC_MATCH      
+ 216: POP_JUMP_FORWARD_IF_FALSE to 224
+ 218: POP_TOP              
+ 220: POP_EXCEPT           
+ 222: JUMP_FORWARD         to 232
+ 224: RERAISE              
+ 226: COPY                 
+ 228: POP_EXCEPT           
+ 230: RERAISE              
+ 232: BUILD_LIST           
+ 234: LOAD_CONST           ('TarFile', 'TarInfo', 'is_tarfile', 'TarError', 'ReadError', 'CompressionError', 'StreamError', 'ExtractError', 'HeaderError', 'ENCODING', 'USTAR_FORMAT', 'GNU_FORMAT', 'PAX_FORMAT', 'DEFAULT_FORMAT', 'open')
+ 236: LIST_EXTEND          
+ 238: STORE_NAME           __all__
+ 240: LOAD_CONST           b'\x00'
+ 242: STORE_NAME           NUL
+ 244: LOAD_CONST           512
+ 246: STORE_NAME           BLOCKSIZE
+ 248: LOAD_NAME            BLOCKSIZE
+ 250: LOAD_CONST           20
+ 252: BINARY_OP            *
+ 256: STORE_NAME           RECORDSIZE
+ 258: LOAD_CONST           b'ustar  \x00'
+ 260: STORE_NAME           GNU_MAGIC
+ 262: LOAD_CONST           b'ustar\x0000'
+ 264: STORE_NAME           POSIX_MAGIC
+ 266: LOAD_CONST           100
+ 268: STORE_NAME           LENGTH_NAME
+ 270: LOAD_CONST           100
+ 272: STORE_NAME           LENGTH_LINK
+ 274: LOAD_CONST           155
+ 276: STORE_NAME           LENGTH_PREFIX
+ 278: LOAD_CONST           b'0'
+ 280: STORE_NAME           REGTYPE
+ 282: LOAD_CONST           b'\x00'
+ 284: STORE_NAME           AREGTYPE
+ 286: LOAD_CONST           b'1'
+ 288: STORE_NAME           LNKTYPE
+ 290: LOAD_CONST           b'2'
+ 292: STORE_NAME           SYMTYPE
+ 294: LOAD_CONST           b'3'
+ 296: STORE_NAME           CHRTYPE
+ 298: LOAD_CONST           b'4'
+ 300: STORE_NAME           BLKTYPE
+ 302: LOAD_CONST           b'5'
+ 304: STORE_NAME           DIRTYPE
+ 306: LOAD_CONST           b'6'
+ 308: STORE_NAME           FIFOTYPE
+ 310: LOAD_CONST           b'7'
+ 312: STORE_NAME           CONTTYPE
+ 314: LOAD_CONST           b'L'
+ 316: STORE_NAME           GNUTYPE_LONGNAME
+ 318: LOAD_CONST           b'K'
+ 320: STORE_NAME           GNUTYPE_LONGLINK
+ 322: LOAD_CONST           b'S'
+ 324: STORE_NAME           GNUTYPE_SPARSE
+ 326: LOAD_CONST           b'x'
+ 328: STORE_NAME           XHDTYPE
+ 330: LOAD_CONST           b'g'
+ 332: STORE_NAME           XGLTYPE
+ 334: LOAD_CONST           b'X'
+ 336: STORE_NAME           SOLARIS_XHDTYPE
+ 338: LOAD_CONST           0
+ 340: STORE_NAME           USTAR_FORMAT
+ 342: LOAD_CONST           1
+ 344: STORE_NAME           GNU_FORMAT
+ 346: LOAD_CONST           2
+ 348: STORE_NAME           PAX_FORMAT
+ 350: LOAD_NAME            PAX_FORMAT
+ 352: STORE_NAME           DEFAULT_FORMAT
+ 354: LOAD_NAME            REGTYPE
+ 356: LOAD_NAME            AREGTYPE
+ 358: LOAD_NAME            LNKTYPE
+ 360: LOAD_NAME            SYMTYPE
+ 362: LOAD_NAME            DIRTYPE
+ 364: LOAD_NAME            FIFOTYPE
+ 366: LOAD_NAME            CONTTYPE
+ 368: LOAD_NAME            CHRTYPE
+ 370: LOAD_NAME            BLKTYPE
+ 372: LOAD_NAME            GNUTYPE_LONGNAME
+ 374: LOAD_NAME            GNUTYPE_LONGLINK
+ 376: LOAD_NAME            GNUTYPE_SPARSE
+ 378: BUILD_TUPLE          
+ 380: STORE_NAME           SUPPORTED_TYPES
+ 382: LOAD_NAME            REGTYPE
+ 384: LOAD_NAME            AREGTYPE
+ 386: LOAD_NAME            CONTTYPE
+ 388: LOAD_NAME            GNUTYPE_SPARSE
+ 390: BUILD_TUPLE          
+ 392: STORE_NAME           REGULAR_TYPES
+ 394: LOAD_NAME            GNUTYPE_LONGNAME
+ 396: LOAD_NAME            GNUTYPE_LONGLINK
+ 398: LOAD_NAME            GNUTYPE_SPARSE
+ 400: BUILD_TUPLE          
+ 402: STORE_NAME           GNU_TYPES
+ 404: LOAD_CONST           ('path', 'linkpath', 'size', 'mtime', 'uid', 'gid', 'uname', 'gname')
+ 406: STORE_NAME           PAX_FIELDS
+ 408: BUILD_SET            
+ 410: LOAD_CONST           frozenset({'path', 'linkpath', 'gname', 'uname'})
+ 412: SET_UPDATE           
+ 414: STORE_NAME           PAX_NAME_FIELDS
+ 416: LOAD_NAME            float
+ 418: LOAD_NAME            float
+ 420: LOAD_NAME            float
+ 422: LOAD_NAME            int
+ 424: LOAD_NAME            int
+ 426: LOAD_NAME            int
+ 428: LOAD_CONST           ('atime', 'ctime', 'mtime', 'uid', 'gid', 'size')
+ 430: BUILD_CONST_KEY_MAP  
+ 432: STORE_NAME           PAX_NUMBER_FIELDS
+ 434: LOAD_NAME            os
+ 436: LOAD_ATTR            name
+ 446: LOAD_CONST           'nt'
+ 448: COMPARE_OP           ==
+ 454: POP_JUMP_FORWARD_IF_FALSE to 462
+ 456: LOAD_CONST           'utf-8'
+ 458: STORE_NAME           ENCODING
+ 460: JUMP_FORWARD         to 492
+ 462: PUSH_NULL            
+ 464: LOAD_NAME            sys
+ 466: LOAD_ATTR            getfilesystemencoding
+ 476: PRECALL              
+ 480: CALL                 
+ 490: STORE_NAME           ENCODING
+ 492: LOAD_CONST           <code object stn at 0x00000240691C05B0, file "tarfile.py", line 160>
+ 494: MAKE_FUNCTION        
+ 496: STORE_NAME           stn
+ 498: LOAD_CONST           <code object nts at 0x00000240693D2760, file "tarfile.py", line 168>
+ 500: MAKE_FUNCTION        
+ 502: STORE_NAME           nts
+ 504: LOAD_CONST           <code object nti at 0x0000024068DB5390, file "tarfile.py", line 176>
+ 506: MAKE_FUNCTION        
+ 508: STORE_NAME           nti
+ 510: LOAD_CONST           8
+ 512: LOAD_NAME            DEFAULT_FORMAT
+ 514: BUILD_TUPLE          
+ 516: LOAD_CONST           <code object itn at 0x0000024066C25920, file "tarfile.py", line 196>
+ 518: MAKE_FUNCTION        defaults
+ 520: STORE_NAME           itn
+ 522: LOAD_CONST           <code object calc_chksums at 0x00000240691C1790, file "tarfile.py", line 226>
+ 524: MAKE_FUNCTION        
+ 526: STORE_NAME           calc_chksums
+ 528: LOAD_CONST           None
+ 530: LOAD_NAME            OSError
+ 532: LOAD_CONST           None
+ 534: BUILD_TUPLE          
+ 536: LOAD_CONST           <code object copyfileobj at 0x0000024066C260D0, file "tarfile.py", line 239>
+ 538: MAKE_FUNCTION        defaults
+ 540: STORE_NAME           copyfileobj
+ 542: LOAD_CONST           <code object _safe_print at 0x000002406921FE00, file "tarfile.py", line 264>
+ 544: MAKE_FUNCTION        
+ 546: STORE_NAME           _safe_print
+ 548: PUSH_NULL            
+ 550: LOAD_BUILD_CLASS     
+ 552: LOAD_CONST           <code object TarError at 0x0000024069496180, file "tarfile.py", line 271>
+ 554: MAKE_FUNCTION        
+ 556: LOAD_CONST           'TarError'
+ 558: LOAD_NAME            Exception
+ 560: PRECALL              
+ 564: CALL                 
+ 574: STORE_NAME           TarError
+ 576: PUSH_NULL            
+ 578: LOAD_BUILD_CLASS     
+ 580: LOAD_CONST           <code object ExtractError at 0x00000240694960B0, file "tarfile.py", line 274>
+ 582: MAKE_FUNCTION        
+ 584: LOAD_CONST           'ExtractError'
+ 586: LOAD_NAME            TarError
+ 588: PRECALL              
+ 592: CALL                 
+ 602: STORE_NAME           ExtractError
+ 604: PUSH_NULL            
+ 606: LOAD_BUILD_CLASS     
+ 608: LOAD_CONST           <code object ReadError at 0x0000024069495140, file "tarfile.py", line 277>
+ 610: MAKE_FUNCTION        
+ 612: LOAD_CONST           'ReadError'
+ 614: LOAD_NAME            TarError
+ 616: PRECALL              
+ 620: CALL                 
+ 630: STORE_NAME           ReadError
+ 632: PUSH_NULL            
+ 634: LOAD_BUILD_CLASS     
+ 636: LOAD_CONST           <code object CompressionError at 0x00000240694964C0, file "tarfile.py", line 280>
+ 638: MAKE_FUNCTION        
+ 640: LOAD_CONST           'CompressionError'
+ 642: LOAD_NAME            TarError
+ 644: PRECALL              
+ 648: CALL                 
+ 658: STORE_NAME           CompressionError
+ 660: PUSH_NULL            
+ 662: LOAD_BUILD_CLASS     
+ 664: LOAD_CONST           <code object StreamError at 0x0000024069494370, file "tarfile.py", line 283>
+ 666: MAKE_FUNCTION        
+ 668: LOAD_CONST           'StreamError'
+ 670: LOAD_NAME            TarError
+ 672: PRECALL              
+ 676: CALL                 
+ 686: STORE_NAME           StreamError
+ 688: PUSH_NULL            
+ 690: LOAD_BUILD_CLASS     
+ 692: LOAD_CONST           <code object HeaderError at 0x0000024069494440, file "tarfile.py", line 286>
+ 694: MAKE_FUNCTION        
+ 696: LOAD_CONST           'HeaderError'
+ 698: LOAD_NAME            TarError
+ 700: PRECALL              
+ 704: CALL                 
+ 714: STORE_NAME           HeaderError
+ 716: PUSH_NULL            
+ 718: LOAD_BUILD_CLASS     
+ 720: LOAD_CONST           <code object EmptyHeaderError at 0x0000024069494ED0, file "tarfile.py", line 289>
+ 722: MAKE_FUNCTION        
+ 724: LOAD_CONST           'EmptyHeaderError'
+ 726: LOAD_NAME            HeaderError
+ 728: PRECALL              
+ 732: CALL                 
+ 742: STORE_NAME           EmptyHeaderError
+ 744: PUSH_NULL            
+ 746: LOAD_BUILD_CLASS     
+ 748: LOAD_CONST           <code object TruncatedHeaderError at 0x0000024069496CE0, file "tarfile.py", line 292>
+ 750: MAKE_FUNCTION        
+ 752: LOAD_CONST           'TruncatedHeaderError'
+ 754: LOAD_NAME            HeaderError
+ 756: PRECALL              
+ 760: CALL                 
+ 770: STORE_NAME           TruncatedHeaderError
+ 772: PUSH_NULL            
+ 774: LOAD_BUILD_CLASS     
+ 776: LOAD_CONST           <code object EOFHeaderError at 0x0000024069495B00, file "tarfile.py", line 295>
+ 778: MAKE_FUNCTION        
+ 780: LOAD_CONST           'EOFHeaderError'
+ 782: LOAD_NAME            HeaderError
+ 784: PRECALL              
+ 788: CALL                 
+ 798: STORE_NAME           EOFHeaderError
+ 800: PUSH_NULL            
+ 802: LOAD_BUILD_CLASS     
+ 804: LOAD_CONST           <code object InvalidHeaderError at 0x0000024069494920, file "tarfile.py", line 298>
+ 806: MAKE_FUNCTION        
+ 808: LOAD_CONST           'InvalidHeaderError'
+ 810: LOAD_NAME            HeaderError
+ 812: PRECALL              
+ 816: CALL                 
+ 826: STORE_NAME           InvalidHeaderError
+ 828: PUSH_NULL            
+ 830: LOAD_BUILD_CLASS     
+ 832: LOAD_CONST           <code object SubsequentHeaderError at 0x0000024069496590, file "tarfile.py", line 301>
+ 834: MAKE_FUNCTION        
+ 836: LOAD_CONST           'SubsequentHeaderError'
+ 838: LOAD_NAME            HeaderError
+ 840: PRECALL              
+ 844: CALL                 
+ 854: STORE_NAME           SubsequentHeaderError
+ 856: PUSH_NULL            
+ 858: LOAD_BUILD_CLASS     
+ 860: LOAD_CONST           <code object _LowLevelFile at 0x000002406945F000, file "tarfile.py", line 308>
+ 862: MAKE_FUNCTION        
+ 864: LOAD_CONST           '_LowLevelFile'
+ 866: PRECALL              
+ 870: CALL                 
+ 880: STORE_NAME           _LowLevelFile
+ 882: PUSH_NULL            
+ 884: LOAD_BUILD_CLASS     
+ 886: LOAD_CONST           <code object _Stream at 0x000002406941B630, file "tarfile.py", line 332>
+ 888: MAKE_FUNCTION        
+ 890: LOAD_CONST           '_Stream'
+ 892: PRECALL              
+ 896: CALL                 
+ 906: STORE_NAME           _Stream
+ 908: PUSH_NULL            
+ 910: LOAD_BUILD_CLASS     
+ 912: LOAD_CONST           <code object _StreamProxy at 0x000002406945E880, file "tarfile.py", line 574>
+ 914: MAKE_FUNCTION        
+ 916: LOAD_CONST           '_StreamProxy'
+ 918: LOAD_NAME            object
+ 920: PRECALL              
+ 924: CALL                 
+ 934: STORE_NAME           _StreamProxy
+ 936: PUSH_NULL            
+ 938: LOAD_BUILD_CLASS     
+ 940: LOAD_CONST           <code object _FileInFile at 0x000002406941A430, file "tarfile.py", line 604>
+ 942: MAKE_FUNCTION        
+ 944: LOAD_CONST           '_FileInFile'
+ 946: LOAD_NAME            object
+ 948: PRECALL              
+ 952: CALL                 
+ 962: STORE_NAME           _FileInFile
+ 964: PUSH_NULL            
+ 966: LOAD_BUILD_CLASS     
+ 968: LOAD_CONST           <code object ExFileObject at 0x0000024069465990, file "tarfile.py", line 708>
+ 970: MAKE_FUNCTION        
+ 972: LOAD_CONST           'ExFileObject'
+ 974: LOAD_NAME            io
+ 976: LOAD_ATTR            BufferedReader
+ 986: PRECALL              
+ 990: CALL                 
+1000: STORE_NAME           ExFileObject
+1002: PUSH_NULL            
+1004: LOAD_BUILD_CLASS     
+1006: LOAD_CONST           <code object FilterError at 0x0000024069496A70, file "tarfile.py", line 721>
+1008: MAKE_FUNCTION        
+1010: LOAD_CONST           'FilterError'
+1012: LOAD_NAME            TarError
+1014: PRECALL              
+1018: CALL                 
+1028: STORE_NAME           FilterError
+1030: PUSH_NULL            
+1032: LOAD_BUILD_CLASS     
+1034: LOAD_CONST           <code object AbsolutePathError at 0x0000024069465DF0, file "tarfile.py", line 724>
+1036: MAKE_FUNCTION        
+1038: LOAD_CONST           'AbsolutePathError'
+1040: LOAD_NAME            FilterError
+1042: PRECALL              
+1046: CALL                 
+1056: STORE_NAME           AbsolutePathError
+1058: PUSH_NULL            
+1060: LOAD_BUILD_CLASS     
+1062: LOAD_CONST           <code object OutsideDestinationError at 0x0000024069466DB0, file "tarfile.py", line 729>
+1064: MAKE_FUNCTION        
+1066: LOAD_CONST           'OutsideDestinationError'
+1068: LOAD_NAME            FilterError
+1070: PRECALL              
+1074: CALL                 
+1084: STORE_NAME           OutsideDestinationError
+1086: PUSH_NULL            
+1088: LOAD_BUILD_CLASS     
+1090: LOAD_CONST           <code object SpecialFileError at 0x0000024069465A70, file "tarfile.py", line 736>
+1092: MAKE_FUNCTION        
+1094: LOAD_CONST           'SpecialFileError'
+1096: LOAD_NAME            FilterError
+1098: PRECALL              
+1102: CALL                 
+1112: STORE_NAME           SpecialFileError
+1114: PUSH_NULL            
+1116: LOAD_BUILD_CLASS     
+1118: LOAD_CONST           <code object AbsoluteLinkError at 0x0000024069466090, file "tarfile.py", line 741>
+1120: MAKE_FUNCTION        
+1122: LOAD_CONST           'AbsoluteLinkError'
+1124: LOAD_NAME            FilterError
+1126: PRECALL              
+1130: CALL                 
+1140: STORE_NAME           AbsoluteLinkError
+1142: PUSH_NULL            
+1144: LOAD_BUILD_CLASS     
+1146: LOAD_CONST           <code object LinkOutsideDestinationError at 0x0000024069465FB0, file "tarfile.py", line 746>
+1148: MAKE_FUNCTION        
+1150: LOAD_CONST           'LinkOutsideDestinationError'
+1152: LOAD_NAME            FilterError
+1154: PRECALL              
+1158: CALL                 
+1168: STORE_NAME           LinkOutsideDestinationError
+1170: LOAD_CONST           (True,)
+1172: LOAD_CONST           <code object _get_filtered_attrs at 0x0000024068E11BE0, file "tarfile.py", line 753>
+1174: MAKE_FUNCTION        defaults
+1176: STORE_NAME           _get_filtered_attrs
+1178: LOAD_CONST           <code object fully_trusted_filter at 0x000002406943B7B0, file "tarfile.py", line 816>
+1180: MAKE_FUNCTION        
+1182: STORE_NAME           fully_trusted_filter
+1184: LOAD_CONST           <code object tar_filter at 0x000002406944ADE0, file "tarfile.py", line 819>
+1186: MAKE_FUNCTION        
+1188: STORE_NAME           tar_filter
+1190: LOAD_CONST           <code object data_filter at 0x000002406944ACD0, file "tarfile.py", line 825>
+1192: MAKE_FUNCTION        
+1194: STORE_NAME           data_filter
+1196: LOAD_NAME            fully_trusted_filter
+1198: LOAD_NAME            tar_filter
+1200: LOAD_NAME            data_filter
+1202: LOAD_CONST           ('fully_trusted', 'tar', 'data')
+1204: BUILD_CONST_KEY_MAP  
+1206: STORE_NAME           _NAMED_FILTERS
+1208: PUSH_NULL            
+1210: LOAD_NAME            object
+1212: PRECALL              
+1216: CALL                 
+1226: STORE_NAME           _KEEP
+1228: PUSH_NULL            
+1230: LOAD_BUILD_CLASS     
+1232: LOAD_CONST           <code object TarInfo at 0x0000024068BFFA70, file "tarfile.py", line 844>
+1234: MAKE_FUNCTION        
+1236: LOAD_CONST           'TarInfo'
+1238: LOAD_NAME            object
+1240: PRECALL              
+1244: CALL                 
+1254: STORE_NAME           TarInfo
+1256: PUSH_NULL            
+1258: LOAD_BUILD_CLASS     
+1260: LOAD_CONST           <code object TarFile at 0x0000024068D2F960, file "tarfile.py", line 1615>
+1262: MAKE_FUNCTION        
+1264: LOAD_CONST           'TarFile'
+1266: LOAD_NAME            object
+1268: PRECALL              
+1272: CALL                 
+1282: STORE_NAME           TarFile
+1284: LOAD_CONST           <code object is_tarfile at 0x00000240694983B0, file "tarfile.py", line 2779>
+1286: MAKE_FUNCTION        
+1288: STORE_NAME           is_tarfile
+1290: LOAD_NAME            TarFile
+1292: LOAD_ATTR            open
+1302: STORE_NAME           open
+1304: LOAD_CONST           <code object main at 0x00000240695B63B0, file "tarfile.py", line 2800>
+1306: MAKE_FUNCTION        
+1308: STORE_NAME           main
+1310: LOAD_NAME            __name__
+1312: LOAD_CONST           '__main__'
+1314: COMPARE_OP           ==
+1320: POP_JUMP_FORWARD_IF_FALSE to 1346
+1322: PUSH_NULL            
+1324: LOAD_NAME            main
+1326: PRECALL              
+1330: CALL                 
+1340: POP_TOP              
+1342: LOAD_CONST           None
+1344: RETURN_VALUE         
+1346: LOAD_CONST           None
+1348: RETURN_VALUE         

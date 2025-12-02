@@ -1,0 +1,47 @@
+# Disassembly for typing.ForwardRef
+# From module file: typing
+
+## co_consts:
+('ForwardRef', 'Internal wrapper to hold a forward reference.', ('__forward_arg__', '__forward_code__', '__forward_evaluated__', '__forward_value__', '__forward_is_argument__', '__forward_is_class__', '__forward_module__'), True, None, False, ('is_class',), <code object __init__ at 0x000002406931FA30, file "typing.py", line 845>, <code object _evaluate at 0x0000024068D6DC30, file "typing.py", line 869>, <code object __eq__ at 0x000002406942E290, file "typing.py", line 895>, <code object __hash__ at 0x000002406945F2D0, file "typing.py", line 904>, <code object __or__ at 0x0000024069466A30, file "typing.py", line 907>, <code object __ror__ at 0x0000024069466BF0, file "typing.py", line 910>, <code object __repr__ at 0x00000240693EB630, file "typing.py", line 913>, (True, None))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__slots__', '__init__', '_evaluate', '__eq__', '__hash__', '__or__', '__ror__', '__repr__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'ForwardRef'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Internal wrapper to hold a forward reference.'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ('__forward_arg__', '__forward_code__', '__forward_evaluated__', '__forward_value__', '__forward_is_argument__', '__forward_is_class__', '__forward_module__')
+  16: STORE_NAME           __slots__
+  18: LOAD_CONST           (True, None)
+  20: LOAD_CONST           False
+  22: LOAD_CONST           ('is_class',)
+  24: BUILD_CONST_KEY_MAP  
+  26: LOAD_CONST           <code object __init__ at 0x000002406931FA30, file "typing.py", line 845>
+  28: MAKE_FUNCTION        defaults, kwdefaults
+  30: STORE_NAME           __init__
+  32: LOAD_CONST           <code object _evaluate at 0x0000024068D6DC30, file "typing.py", line 869>
+  34: MAKE_FUNCTION        
+  36: STORE_NAME           _evaluate
+  38: LOAD_CONST           <code object __eq__ at 0x000002406942E290, file "typing.py", line 895>
+  40: MAKE_FUNCTION        
+  42: STORE_NAME           __eq__
+  44: LOAD_CONST           <code object __hash__ at 0x000002406945F2D0, file "typing.py", line 904>
+  46: MAKE_FUNCTION        
+  48: STORE_NAME           __hash__
+  50: LOAD_CONST           <code object __or__ at 0x0000024069466A30, file "typing.py", line 907>
+  52: MAKE_FUNCTION        
+  54: STORE_NAME           __or__
+  56: LOAD_CONST           <code object __ror__ at 0x0000024069466BF0, file "typing.py", line 910>
+  58: MAKE_FUNCTION        
+  60: STORE_NAME           __ror__
+  62: LOAD_CONST           <code object __repr__ at 0x00000240693EB630, file "typing.py", line 913>
+  64: MAKE_FUNCTION        
+  66: STORE_NAME           __repr__
+  68: LOAD_CONST           None
+  70: RETURN_VALUE         

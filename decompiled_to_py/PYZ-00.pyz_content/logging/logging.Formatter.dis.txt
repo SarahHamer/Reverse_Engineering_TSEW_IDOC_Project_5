@@ -1,0 +1,53 @@
+# Disassembly for logging.Formatter
+# From module file: logging
+
+## co_consts:
+('Formatter', '\n    Formatter instances are used to convert a LogRecord to text.\n\n    Formatters need to know how a LogRecord is constructed. They are\n    responsible for converting a LogRecord to (usually) a string which can\n    be interpreted by either a human or an external system. The base Formatter\n    allows a formatting string to be specified. If none is supplied, the\n    style-dependent default value, "%(message)s", "{message}", or\n    "${message}", is used.\n\n    The Formatter can be initialized with a format string which makes use of\n    knowledge of the LogRecord attributes - e.g. the default value mentioned\n    above makes use of the fact that the user\'s message and arguments are pre-\n    formatted into a LogRecord\'s message attribute. Currently, the useful\n    attributes in a LogRecord are described by:\n\n    %(name)s            Name of the logger (logging channel)\n    %(levelno)s         Numeric logging level for the message (DEBUG, INFO,\n                        WARNING, ERROR, CRITICAL)\n    %(levelname)s       Text logging level for the message ("DEBUG", "INFO",\n                        "WARNING", "ERROR", "CRITICAL")\n    %(pathname)s        Full pathname of the source file where the logging\n                        call was issued (if available)\n    %(filename)s        Filename portion of pathname\n    %(module)s          Module (name portion of filename)\n    %(lineno)d          Source line number where the logging call was issued\n                        (if available)\n    %(funcName)s        Function name\n    %(created)f         Time when the LogRecord was created (time.time()\n                        return value)\n    %(asctime)s         Textual time when the LogRecord was created\n    %(msecs)d           Millisecond portion of the creation time\n    %(relativeCreated)d Time in milliseconds when the LogRecord was created,\n                        relative to the time the logging module was loaded\n                        (typically at application startup time)\n    %(thread)d          Thread ID (if available)\n    %(threadName)s      Thread name (if available)\n    %(process)d         Process ID (if available)\n    %(message)s         The result of record.getMessage(), computed just as\n                        the record is emitted\n    ', None, '%', True, ('defaults',), <code object __init__ at 0x000002406931FC30, file "logging\__init__.py", line 576>, '%Y-%m-%d %H:%M:%S', '%s,%03d', <code object formatTime at 0x000002406942CFD0, file "logging\__init__.py", line 606>, <code object formatException at 0x0000024069498570, file "logging\__init__.py", line 633>, <code object usesTime at 0x000002406945DD40, file "logging\__init__.py", line 652>, <code object formatMessage at 0x000002406945D6B0, file "logging\__init__.py", line 658>, <code object formatStack at 0x000002406943B270, file "logging\__init__.py", line 661>, <code object format at 0x0000024068D320C0, file "logging\__init__.py", line 674>, (None, None, '%', True), (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'time', 'localtime', 'converter', '__init__', 'default_time_format', 'default_msec_format', 'formatTime', 'formatException', 'usesTime', 'formatMessage', 'formatStack', 'format')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Formatter'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           '\n    Formatter instances are used to convert a LogRecord to text.\n\n    Formatters need to know how a LogRecord is constructed. They are\n    responsible for converting a LogRecord to (usually) a string which can\n    be interpreted by either a human or an external system. The base Formatter\n    allows a formatting string to be specified. If none is supplied, the\n    style-dependent default value, "%(message)s", "{message}", or\n    "${message}", is used.\n\n    The Formatter can be initialized with a format string which makes use of\n    knowledge of the LogRecord attributes - e.g. the default value mentioned\n    above makes use of the fact that the user\'s message and arguments are pre-\n    formatted into a LogRecord\'s message attribute. Currently, the useful\n    attributes in a LogRecord are described by:\n\n    %(name)s            Name of the logger (logging channel)\n    %(levelno)s         Numeric logging level for the message (DEBUG, INFO,\n                        WARNING, ERROR, CRITICAL)\n    %(levelname)s       Text logging level for the message ("DEBUG", "INFO",\n                        "WARNING", "ERROR", "CRITICAL")\n    %(pathname)s        Full pathname of the source file where the logging\n                        call was issued (if available)\n    %(filename)s        Filename portion of pathname\n    %(module)s          Module (name portion of filename)\n    %(lineno)d          Source line number where the logging call was issued\n                        (if available)\n    %(funcName)s        Function name\n    %(created)f         Time when the LogRecord was created (time.time()\n                        return value)\n    %(asctime)s         Textual time when the LogRecord was created\n    %(msecs)d           Millisecond portion of the creation time\n    %(relativeCreated)d Time in milliseconds when the LogRecord was created,\n                        relative to the time the logging module was loaded\n                        (typically at application startup time)\n    %(thread)d          Thread ID (if available)\n    %(threadName)s      Thread name (if available)\n    %(process)d         Process ID (if available)\n    %(message)s         The result of record.getMessage(), computed just as\n                        the record is emitted\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_NAME            time
+  16: LOAD_ATTR            localtime
+  26: STORE_NAME           converter
+  28: LOAD_CONST           (None, None, '%', True)
+  30: LOAD_CONST           None
+  32: LOAD_CONST           ('defaults',)
+  34: BUILD_CONST_KEY_MAP  
+  36: LOAD_CONST           <code object __init__ at 0x000002406931FC30, file "logging\__init__.py", line 576>
+  38: MAKE_FUNCTION        defaults, kwdefaults
+  40: STORE_NAME           __init__
+  42: LOAD_CONST           '%Y-%m-%d %H:%M:%S'
+  44: STORE_NAME           default_time_format
+  46: LOAD_CONST           '%s,%03d'
+  48: STORE_NAME           default_msec_format
+  50: LOAD_CONST           (None,)
+  52: LOAD_CONST           <code object formatTime at 0x000002406942CFD0, file "logging\__init__.py", line 606>
+  54: MAKE_FUNCTION        defaults
+  56: STORE_NAME           formatTime
+  58: LOAD_CONST           <code object formatException at 0x0000024069498570, file "logging\__init__.py", line 633>
+  60: MAKE_FUNCTION        
+  62: STORE_NAME           formatException
+  64: LOAD_CONST           <code object usesTime at 0x000002406945DD40, file "logging\__init__.py", line 652>
+  66: MAKE_FUNCTION        
+  68: STORE_NAME           usesTime
+  70: LOAD_CONST           <code object formatMessage at 0x000002406945D6B0, file "logging\__init__.py", line 658>
+  72: MAKE_FUNCTION        
+  74: STORE_NAME           formatMessage
+  76: LOAD_CONST           <code object formatStack at 0x000002406943B270, file "logging\__init__.py", line 661>
+  78: MAKE_FUNCTION        
+  80: STORE_NAME           formatStack
+  82: LOAD_CONST           <code object format at 0x0000024068D320C0, file "logging\__init__.py", line 674>
+  84: MAKE_FUNCTION        
+  86: STORE_NAME           format
+  88: LOAD_CONST           None
+  90: RETURN_VALUE         

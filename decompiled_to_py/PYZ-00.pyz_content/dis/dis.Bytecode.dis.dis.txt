@@ -1,0 +1,86 @@
+# Disassembly for dis.Bytecode.dis
+# From module file: dis
+
+## co_consts:
+('Return a formatted view of the bytecode operations.', None, -1, ('varname_from_oparg', 'names', 'co_consts', 'linestarts', 'line_offset', 'file', 'lasti', 'exception_entries', 'co_positions', 'show_caches'))
+
+## co_names:
+('codeobj', 'current_offset', 'io', 'StringIO', '_disassemble_bytes', '_get_code_array', 'adaptive', '_varname_from_oparg', 'co_names', 'co_consts', '_linestarts', '_line_offset', 'exception_entries', 'co_positions', 'show_caches', 'getvalue')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            codeobj
+  14: STORE_FAST           co
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            current_offset
+  28: POP_JUMP_FORWARD_IF_NONE to 46
+  30: LOAD_FAST            self
+  32: LOAD_ATTR            current_offset
+  42: STORE_FAST           offset
+  44: JUMP_FORWARD         to 50
+  46: LOAD_CONST           -1
+  48: STORE_FAST           offset
+  50: LOAD_GLOBAL          NULL + io
+  62: LOAD_ATTR            StringIO
+  72: PRECALL              
+  76: CALL                 
+  86: BEFORE_WITH          
+  88: STORE_FAST           output
+  90: LOAD_GLOBAL          NULL + _disassemble_bytes
+ 102: LOAD_GLOBAL          NULL + _get_code_array
+ 114: LOAD_FAST            co
+ 116: LOAD_FAST            self
+ 118: LOAD_ATTR            adaptive
+ 128: PRECALL              
+ 132: CALL                 
+ 142: LOAD_FAST            co
+ 144: LOAD_ATTR            _varname_from_oparg
+ 154: LOAD_FAST            co
+ 156: LOAD_ATTR            co_names
+ 166: LOAD_FAST            co
+ 168: LOAD_ATTR            co_consts
+ 178: LOAD_FAST            self
+ 180: LOAD_ATTR            _linestarts
+ 190: LOAD_FAST            self
+ 192: LOAD_ATTR            _line_offset
+ 202: LOAD_FAST            output
+ 204: LOAD_FAST            offset
+ 206: LOAD_FAST            self
+ 208: LOAD_ATTR            exception_entries
+ 218: LOAD_FAST            co
+ 220: LOAD_METHOD          co_positions
+ 242: PRECALL              
+ 246: CALL                 
+ 256: LOAD_FAST            self
+ 258: LOAD_ATTR            show_caches
+ 268: KW_NAMES             
+ 270: PRECALL              
+ 274: CALL                 
+ 284: POP_TOP              
+ 286: LOAD_FAST            output
+ 288: LOAD_METHOD          getvalue
+ 310: PRECALL              
+ 314: CALL                 
+ 324: SWAP                 
+ 326: LOAD_CONST           None
+ 328: LOAD_CONST           None
+ 330: LOAD_CONST           None
+ 332: PRECALL              
+ 336: CALL                 
+ 346: POP_TOP              
+ 348: RETURN_VALUE         
+ 350: PUSH_EXC_INFO        
+ 352: WITH_EXCEPT_START    
+ 354: POP_JUMP_FORWARD_IF_TRUE to 364
+ 356: RERAISE              
+ 358: COPY                 
+ 360: POP_EXCEPT           
+ 362: RERAISE              
+ 364: POP_TOP              
+ 366: POP_EXCEPT           
+ 368: POP_TOP              
+ 370: POP_TOP              
+ 372: LOAD_CONST           None
+ 374: RETURN_VALUE         

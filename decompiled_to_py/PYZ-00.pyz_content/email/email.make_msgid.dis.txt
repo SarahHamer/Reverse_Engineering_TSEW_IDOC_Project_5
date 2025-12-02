@@ -1,0 +1,60 @@
+# Disassembly for email.make_msgid
+# From module file: email.utils
+
+## co_consts:
+("Returns a string suitable for RFC 2822 compliant Message-ID, e.g:\n\n    <142480216486.20800.16526388040877946887@nightshade.la.mastaler.com>\n\n    Optional idstring if given is a string used to strengthen the\n    uniqueness of the message id.  Optional domain if given provides the\n    portion of the message id after the '@'.  It defaults to the locally\n    defined hostname.\n    ", 100, 64, None, '', '.', '<%d.%d.%d%s@%s>')
+
+## co_names:
+('int', 'time', 'os', 'getpid', 'random', 'getrandbits', 'socket', 'getfqdn')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + int
+  14: LOAD_GLOBAL          NULL + time
+  26: LOAD_ATTR            time
+  36: PRECALL              
+  40: CALL                 
+  50: LOAD_CONST           100
+  52: BINARY_OP            *
+  56: PRECALL              
+  60: CALL                 
+  70: STORE_FAST           timeval
+  72: LOAD_GLOBAL          NULL + os
+  84: LOAD_ATTR            getpid
+  94: PRECALL              
+  98: CALL                 
+ 108: STORE_FAST           pid
+ 110: LOAD_GLOBAL          NULL + random
+ 122: LOAD_ATTR            getrandbits
+ 132: LOAD_CONST           64
+ 134: PRECALL              
+ 138: CALL                 
+ 148: STORE_FAST           randint
+ 150: LOAD_FAST            idstring
+ 152: POP_JUMP_FORWARD_IF_NOT_NONE to 160
+ 154: LOAD_CONST           ''
+ 156: STORE_FAST           idstring
+ 158: JUMP_FORWARD         to 170
+ 160: LOAD_CONST           '.'
+ 162: LOAD_FAST            idstring
+ 164: BINARY_OP            +
+ 168: STORE_FAST           idstring
+ 170: LOAD_FAST            domain
+ 172: POP_JUMP_FORWARD_IF_NOT_NONE to 212
+ 174: LOAD_GLOBAL          NULL + socket
+ 186: LOAD_ATTR            getfqdn
+ 196: PRECALL              
+ 200: CALL                 
+ 210: STORE_FAST           domain
+ 212: LOAD_CONST           '<%d.%d.%d%s@%s>'
+ 214: LOAD_FAST            timeval
+ 216: LOAD_FAST            pid
+ 218: LOAD_FAST            randint
+ 220: LOAD_FAST            idstring
+ 222: LOAD_FAST            domain
+ 224: BUILD_TUPLE          
+ 226: BINARY_OP            %
+ 230: STORE_FAST           msgid
+ 232: LOAD_FAST            msgid
+ 234: RETURN_VALUE         

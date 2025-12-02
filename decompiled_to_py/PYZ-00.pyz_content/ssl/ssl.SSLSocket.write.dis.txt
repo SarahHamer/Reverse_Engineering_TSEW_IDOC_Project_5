@@ -1,0 +1,32 @@
+# Disassembly for ssl.SSLSocket.write
+# From module file: ssl
+
+## co_consts:
+('Write DATA to the underlying SSL channel.  Returns\n        number of bytes of DATA actually transmitted.', None, 'Write on closed or unwrapped SSL socket.')
+
+## co_names:
+('_checkClosed', '_sslobj', 'ValueError', 'write')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _checkClosed
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            _sslobj
+  54: POP_JUMP_FORWARD_IF_NOT_NONE to 86
+  56: LOAD_GLOBAL          NULL + ValueError
+  68: LOAD_CONST           'Write on closed or unwrapped SSL socket.'
+  70: PRECALL              
+  74: CALL                 
+  84: RAISE_VARARGS        
+  86: LOAD_FAST            self
+  88: LOAD_ATTR            _sslobj
+  98: LOAD_METHOD          write
+ 120: LOAD_FAST            data
+ 122: PRECALL              
+ 126: CALL                 
+ 136: RETURN_VALUE         

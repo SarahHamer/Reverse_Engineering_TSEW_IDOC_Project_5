@@ -1,0 +1,28 @@
+# Disassembly for signal.pthread_sigmask.<genexpr>
+# From module file: signal
+
+## co_consts:
+(None,)
+
+## co_names:
+('_int_to_enum', 'Signals')
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_FAST            .0
+   8: FOR_ITER             to 60
+  10: STORE_FAST           x
+  12: LOAD_GLOBAL          NULL + _int_to_enum
+  24: LOAD_FAST            x
+  26: LOAD_GLOBAL          Signals
+  38: PRECALL              
+  42: CALL                 
+  52: YIELD_VALUE          
+  54: RESUME               
+  56: POP_TOP              
+  58: JUMP_BACKWARD        to 8
+  60: LOAD_CONST           None
+  62: RETURN_VALUE         

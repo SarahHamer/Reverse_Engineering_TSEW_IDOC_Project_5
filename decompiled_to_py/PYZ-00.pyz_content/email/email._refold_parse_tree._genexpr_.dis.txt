@@ -1,0 +1,29 @@
+# Disassembly for email._refold_parse_tree.<genexpr>
+# From module file: email._header_value_parser
+
+## co_consts:
+(None,)
+
+## co_names:
+('isinstance', 'errors', 'UndecodableBytesDefect')
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_FAST            .0
+   8: FOR_ITER             to 70
+  10: STORE_FAST           x
+  12: LOAD_GLOBAL          NULL + isinstance
+  24: LOAD_FAST            x
+  26: LOAD_GLOBAL          errors
+  38: LOAD_ATTR            UndecodableBytesDefect
+  48: PRECALL              
+  52: CALL                 
+  62: YIELD_VALUE          
+  64: RESUME               
+  66: POP_TOP              
+  68: JUMP_BACKWARD        to 8
+  70: LOAD_CONST           None
+  72: RETURN_VALUE         

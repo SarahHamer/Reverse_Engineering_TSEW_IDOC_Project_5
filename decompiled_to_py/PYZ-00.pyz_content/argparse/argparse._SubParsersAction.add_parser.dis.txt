@@ -1,0 +1,123 @@
+# Disassembly for argparse._SubParsersAction.add_parser
+# From module file: argparse
+
+## co_consts:
+(None, 'prog', ' ', 'aliases', (), 'conflicting subparser: %s', 'conflicting subparser alias: %s', 'help')
+
+## co_names:
+('get', '_prog_prefix', 'pop', '_name_parser_map', 'ArgumentError', '_', '_ChoicesPseudoAction', '_choices_actions', 'append', '_parser_class')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            kwargs
+   4: LOAD_METHOD          get
+  26: LOAD_CONST           'prog'
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_NOT_NONE to 74
+  44: LOAD_FAST            self
+  46: LOAD_ATTR            _prog_prefix
+  56: FORMAT_VALUE         str
+  58: LOAD_CONST           ' '
+  60: LOAD_FAST            name
+  62: FORMAT_VALUE         str
+  64: BUILD_STRING         
+  66: LOAD_FAST            kwargs
+  68: LOAD_CONST           'prog'
+  70: STORE_SUBSCR         
+  74: LOAD_FAST            kwargs
+  76: LOAD_METHOD          pop
+  98: LOAD_CONST           'aliases'
+ 100: LOAD_CONST           ()
+ 102: PRECALL              
+ 106: CALL                 
+ 116: STORE_FAST           aliases
+ 118: LOAD_FAST            name
+ 120: LOAD_FAST            self
+ 122: LOAD_ATTR            _name_parser_map
+ 132: CONTAINS_OP          
+ 134: POP_JUMP_FORWARD_IF_FALSE to 200
+ 136: LOAD_GLOBAL          NULL + ArgumentError
+ 148: LOAD_FAST            self
+ 150: LOAD_GLOBAL          NULL + _
+ 162: LOAD_CONST           'conflicting subparser: %s'
+ 164: PRECALL              
+ 168: CALL                 
+ 178: LOAD_FAST            name
+ 180: BINARY_OP            %
+ 184: PRECALL              
+ 188: CALL                 
+ 198: RAISE_VARARGS        
+ 200: LOAD_FAST            aliases
+ 202: GET_ITER             
+ 204: FOR_ITER             to 292
+ 206: STORE_FAST           alias
+ 208: LOAD_FAST            alias
+ 210: LOAD_FAST            self
+ 212: LOAD_ATTR            _name_parser_map
+ 222: CONTAINS_OP          
+ 224: POP_JUMP_FORWARD_IF_FALSE to 290
+ 226: LOAD_GLOBAL          NULL + ArgumentError
+ 238: LOAD_FAST            self
+ 240: LOAD_GLOBAL          NULL + _
+ 252: LOAD_CONST           'conflicting subparser alias: %s'
+ 254: PRECALL              
+ 258: CALL                 
+ 268: LOAD_FAST            alias
+ 270: BINARY_OP            %
+ 274: PRECALL              
+ 278: CALL                 
+ 288: RAISE_VARARGS        
+ 290: JUMP_BACKWARD        to 204
+ 292: LOAD_CONST           'help'
+ 294: LOAD_FAST            kwargs
+ 296: CONTAINS_OP          
+ 298: POP_JUMP_FORWARD_IF_FALSE to 440
+ 300: LOAD_FAST            kwargs
+ 302: LOAD_METHOD          pop
+ 324: LOAD_CONST           'help'
+ 326: PRECALL              
+ 330: CALL                 
+ 340: STORE_FAST           help
+ 342: LOAD_FAST            self
+ 344: LOAD_METHOD          _ChoicesPseudoAction
+ 366: LOAD_FAST            name
+ 368: LOAD_FAST            aliases
+ 370: LOAD_FAST            help
+ 372: PRECALL              
+ 376: CALL                 
+ 386: STORE_FAST           choice_action
+ 388: LOAD_FAST            self
+ 390: LOAD_ATTR            _choices_actions
+ 400: LOAD_METHOD          append
+ 422: LOAD_FAST            choice_action
+ 424: PRECALL              
+ 428: CALL                 
+ 438: POP_TOP              
+ 440: PUSH_NULL            
+ 442: LOAD_FAST            self
+ 444: LOAD_ATTR            _parser_class
+ 454: LOAD_CONST           ()
+ 456: BUILD_MAP            
+ 458: LOAD_FAST            kwargs
+ 460: DICT_MERGE           
+ 462: CALL_FUNCTION_EX     
+ 464: STORE_FAST           parser
+ 466: LOAD_FAST            parser
+ 468: LOAD_FAST            self
+ 470: LOAD_ATTR            _name_parser_map
+ 480: LOAD_FAST            name
+ 482: STORE_SUBSCR         
+ 486: LOAD_FAST            aliases
+ 488: GET_ITER             
+ 490: FOR_ITER             to 516
+ 492: STORE_FAST           alias
+ 494: LOAD_FAST            parser
+ 496: LOAD_FAST            self
+ 498: LOAD_ATTR            _name_parser_map
+ 508: LOAD_FAST            alias
+ 510: STORE_SUBSCR         
+ 514: JUMP_BACKWARD        to 490
+ 516: LOAD_FAST            parser
+ 518: RETURN_VALUE         

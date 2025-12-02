@@ -1,0 +1,33 @@
+# Disassembly for argparse.ArgumentParser.format_usage
+# From module file: argparse
+
+## co_consts:
+(None,)
+
+## co_names:
+('_get_formatter', 'add_usage', 'usage', '_actions', '_mutually_exclusive_groups', 'format_help')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _get_formatter
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           formatter
+  42: LOAD_FAST            formatter
+  44: LOAD_METHOD          add_usage
+  66: LOAD_FAST            self
+  68: LOAD_ATTR            usage
+  78: LOAD_FAST            self
+  80: LOAD_ATTR            _actions
+  90: LOAD_FAST            self
+  92: LOAD_ATTR            _mutually_exclusive_groups
+ 102: PRECALL              
+ 106: CALL                 
+ 116: POP_TOP              
+ 118: LOAD_FAST            formatter
+ 120: LOAD_METHOD          format_help
+ 142: PRECALL              
+ 146: CALL                 
+ 156: RETURN_VALUE         

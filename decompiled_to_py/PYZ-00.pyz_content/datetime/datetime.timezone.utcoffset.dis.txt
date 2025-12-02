@@ -1,0 +1,28 @@
+# Disassembly for datetime.timezone.utcoffset
+# From module file: datetime
+
+## co_consts:
+(None, 'utcoffset() argument must be a datetime instance or None')
+
+## co_names:
+('isinstance', 'datetime', '_offset', 'TypeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            dt
+  16: LOAD_GLOBAL          datetime
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_TRUE to 48
+  44: LOAD_FAST            dt
+  46: POP_JUMP_FORWARD_IF_NOT_NONE to 62
+  48: LOAD_FAST            self
+  50: LOAD_ATTR            _offset
+  60: RETURN_VALUE         
+  62: LOAD_GLOBAL          NULL + TypeError
+  74: LOAD_CONST           'utcoffset() argument must be a datetime instance or None'
+  76: PRECALL              
+  80: CALL                 
+  90: RAISE_VARARGS        

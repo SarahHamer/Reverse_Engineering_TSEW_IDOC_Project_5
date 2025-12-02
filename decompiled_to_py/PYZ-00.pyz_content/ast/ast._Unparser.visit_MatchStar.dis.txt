@@ -1,0 +1,30 @@
+# Disassembly for ast._Unparser.visit_MatchStar
+# From module file: ast
+
+## co_consts:
+(None, '_', '*')
+
+## co_names:
+('name', 'write')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            node
+   4: LOAD_ATTR            name
+  14: STORE_FAST           name
+  16: LOAD_FAST            name
+  18: POP_JUMP_FORWARD_IF_NOT_NONE to 24
+  20: LOAD_CONST           '_'
+  22: STORE_FAST           name
+  24: LOAD_FAST            self
+  26: LOAD_METHOD          write
+  48: LOAD_CONST           '*'
+  50: LOAD_FAST            name
+  52: FORMAT_VALUE         
+  54: BUILD_STRING         
+  56: PRECALL              
+  60: CALL                 
+  70: POP_TOP              
+  72: LOAD_CONST           None
+  74: RETURN_VALUE         

@@ -1,0 +1,21 @@
+# Disassembly for ast._Unparser.visit_Subscript.is_non_empty_tuple
+# From module file: ast
+
+## co_consts:
+(None,)
+
+## co_names:
+('isinstance', 'Tuple', 'elts')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            slice_value
+  16: LOAD_GLOBAL          Tuple
+  28: PRECALL              
+  32: CALL                 
+  42: JUMP_IF_FALSE_OR_POP to 56
+  44: LOAD_FAST            slice_value
+  46: LOAD_ATTR            elts
+  56: RETURN_VALUE         

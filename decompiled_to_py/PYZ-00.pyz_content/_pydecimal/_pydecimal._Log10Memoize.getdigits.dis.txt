@@ -1,0 +1,95 @@
+# Disassembly for _pydecimal._Log10Memoize.getdigits
+# From module file: _pydecimal
+
+## co_consts:
+('Given an integer p >= 0, return floor(10**p)*log(10).\n\n        For example, self.getdigits(3) returns 2302.\n        ', 0, 'p should be nonnegative', 3, True, 10, 2, 100, None, '0', -1, 1)
+
+## co_names:
+('ValueError', 'len', 'digits', 'str', '_div_nearest', '_ilog', 'rstrip', 'int')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            p
+   4: LOAD_CONST           0
+   6: COMPARE_OP           <
+  12: POP_JUMP_FORWARD_IF_FALSE to 44
+  14: LOAD_GLOBAL          NULL + ValueError
+  26: LOAD_CONST           'p should be nonnegative'
+  28: PRECALL              
+  32: CALL                 
+  42: RAISE_VARARGS        
+  44: LOAD_FAST            p
+  46: LOAD_GLOBAL          NULL + len
+  58: LOAD_FAST            self
+  60: LOAD_ATTR            digits
+  70: PRECALL              
+  74: CALL                 
+  84: COMPARE_OP           >=
+  90: POP_JUMP_FORWARD_IF_FALSE to 330
+  92: LOAD_CONST           3
+  94: STORE_FAST           extra
+  96: NOP                  
+  98: LOAD_CONST           10
+ 100: LOAD_FAST            p
+ 102: LOAD_FAST            extra
+ 104: BINARY_OP            +
+ 108: LOAD_CONST           2
+ 110: BINARY_OP            +
+ 114: BINARY_OP            **
+ 118: STORE_FAST           M
+ 120: LOAD_GLOBAL          NULL + str
+ 132: LOAD_GLOBAL          NULL + _div_nearest
+ 144: LOAD_GLOBAL          NULL + _ilog
+ 156: LOAD_CONST           10
+ 158: LOAD_FAST            M
+ 160: BINARY_OP            *
+ 164: LOAD_FAST            M
+ 166: PRECALL              
+ 170: CALL                 
+ 180: LOAD_CONST           100
+ 182: PRECALL              
+ 186: CALL                 
+ 196: PRECALL              
+ 200: CALL                 
+ 210: STORE_FAST           digits
+ 212: LOAD_FAST            digits
+ 214: LOAD_FAST            extra
+ 216: UNARY_NEGATIVE       
+ 218: LOAD_CONST           None
+ 220: BUILD_SLICE          
+ 222: BINARY_SUBSCR        
+ 232: LOAD_CONST           '0'
+ 234: LOAD_FAST            extra
+ 236: BINARY_OP            *
+ 240: COMPARE_OP           !=
+ 246: POP_JUMP_FORWARD_IF_FALSE to 250
+ 248: JUMP_FORWARD         to 262
+ 250: LOAD_FAST            extra
+ 252: LOAD_CONST           3
+ 254: BINARY_OP            +=
+ 258: STORE_FAST           extra
+ 260: JUMP_BACKWARD        to 98
+ 262: LOAD_FAST            digits
+ 264: LOAD_METHOD          rstrip
+ 286: LOAD_CONST           '0'
+ 288: PRECALL              
+ 292: CALL                 
+ 302: LOAD_CONST           None
+ 304: LOAD_CONST           -1
+ 306: BUILD_SLICE          
+ 308: BINARY_SUBSCR        
+ 318: LOAD_FAST            self
+ 320: STORE_ATTR           digits
+ 330: LOAD_GLOBAL          NULL + int
+ 342: LOAD_FAST            self
+ 344: LOAD_ATTR            digits
+ 354: LOAD_CONST           None
+ 356: LOAD_FAST            p
+ 358: LOAD_CONST           1
+ 360: BINARY_OP            +
+ 364: BUILD_SLICE          
+ 366: BINARY_SUBSCR        
+ 376: PRECALL              
+ 380: CALL                 
+ 390: RETURN_VALUE         

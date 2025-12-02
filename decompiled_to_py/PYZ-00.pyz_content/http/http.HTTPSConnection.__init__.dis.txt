@@ -1,0 +1,127 @@
+# Disassembly for http.HTTPSConnection.__init__
+# From module file: http.client
+
+## co_consts:
+(None, ('blocksize',), 0, 'key_file, cert_file and check_hostname are deprecated, use a custom context instead.', 2, 11, 'http/1.1', True, 'check_hostname needs a SSL context with either CERT_OPTIONAL or CERT_REQUIRED')
+
+## co_names:
+('super', 'HTTPSConnection', '__init__', 'warnings', 'warn', 'DeprecationWarning', 'key_file', 'cert_file', 'ssl', '_create_default_https_context', '_http_vsn', 'set_alpn_protocols', 'post_handshake_auth', 'verify_mode', 'CERT_NONE', 'check_hostname', 'ValueError', 'load_cert_chain', '_context')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + super
+  16: LOAD_GLOBAL          HTTPSConnection
+  28: LOAD_FAST            self
+  30: PRECALL              
+  34: CALL                 
+  44: LOAD_METHOD          __init__
+  66: LOAD_FAST            host
+  68: LOAD_FAST            port
+  70: LOAD_FAST            timeout
+  72: LOAD_FAST            source_address
+  74: LOAD_FAST            blocksize
+  76: KW_NAMES             
+  78: PRECALL              
+  82: CALL                 
+  92: POP_TOP              
+  94: LOAD_FAST            key_file
+  96: POP_JUMP_FORWARD_IF_NOT_NONE to 106
+  98: LOAD_FAST            cert_file
+ 100: POP_JUMP_FORWARD_IF_NOT_NONE to 106
+ 102: LOAD_FAST            check_hostname
+ 104: POP_JUMP_FORWARD_IF_NONE to 170
+ 106: LOAD_CONST           0
+ 108: LOAD_CONST           None
+ 110: IMPORT_NAME          warnings
+ 112: STORE_FAST           warnings
+ 114: LOAD_FAST            warnings
+ 116: LOAD_METHOD          warn
+ 138: LOAD_CONST           'key_file, cert_file and check_hostname are deprecated, use a custom context instead.'
+ 140: LOAD_GLOBAL          DeprecationWarning
+ 152: LOAD_CONST           2
+ 154: PRECALL              
+ 158: CALL                 
+ 168: POP_TOP              
+ 170: LOAD_FAST            key_file
+ 172: LOAD_FAST            self
+ 174: STORE_ATTR           key_file
+ 184: LOAD_FAST            cert_file
+ 186: LOAD_FAST            self
+ 188: STORE_ATTR           cert_file
+ 198: LOAD_FAST            context
+ 200: POP_JUMP_FORWARD_IF_NOT_NONE to 334
+ 202: LOAD_GLOBAL          NULL + ssl
+ 214: LOAD_ATTR            _create_default_https_context
+ 224: PRECALL              
+ 228: CALL                 
+ 238: STORE_FAST           context
+ 240: LOAD_FAST            self
+ 242: LOAD_ATTR            _http_vsn
+ 252: LOAD_CONST           11
+ 254: COMPARE_OP           ==
+ 260: POP_JUMP_FORWARD_IF_FALSE to 306
+ 262: LOAD_FAST            context
+ 264: LOAD_METHOD          set_alpn_protocols
+ 286: LOAD_CONST           'http/1.1'
+ 288: BUILD_LIST           
+ 290: PRECALL              
+ 294: CALL                 
+ 304: POP_TOP              
+ 306: LOAD_FAST            context
+ 308: LOAD_ATTR            post_handshake_auth
+ 318: POP_JUMP_FORWARD_IF_NONE to 334
+ 320: LOAD_CONST           True
+ 322: LOAD_FAST            context
+ 324: STORE_ATTR           post_handshake_auth
+ 334: LOAD_FAST            context
+ 336: LOAD_ATTR            verify_mode
+ 346: LOAD_GLOBAL          ssl
+ 358: LOAD_ATTR            CERT_NONE
+ 368: COMPARE_OP           !=
+ 374: STORE_FAST           will_verify
+ 376: LOAD_FAST            check_hostname
+ 378: POP_JUMP_FORWARD_IF_NOT_NONE to 394
+ 380: LOAD_FAST            context
+ 382: LOAD_ATTR            check_hostname
+ 392: STORE_FAST           check_hostname
+ 394: LOAD_FAST            check_hostname
+ 396: POP_JUMP_FORWARD_IF_FALSE to 432
+ 398: LOAD_FAST            will_verify
+ 400: POP_JUMP_FORWARD_IF_TRUE to 432
+ 402: LOAD_GLOBAL          NULL + ValueError
+ 414: LOAD_CONST           'check_hostname needs a SSL context with either CERT_OPTIONAL or CERT_REQUIRED'
+ 416: PRECALL              
+ 420: CALL                 
+ 430: RAISE_VARARGS        
+ 432: LOAD_FAST            key_file
+ 434: POP_JUMP_FORWARD_IF_TRUE to 440
+ 436: LOAD_FAST            cert_file
+ 438: POP_JUMP_FORWARD_IF_FALSE to 512
+ 440: LOAD_FAST            context
+ 442: LOAD_METHOD          load_cert_chain
+ 464: LOAD_FAST            cert_file
+ 466: LOAD_FAST            key_file
+ 468: PRECALL              
+ 472: CALL                 
+ 482: POP_TOP              
+ 484: LOAD_FAST            context
+ 486: LOAD_ATTR            post_handshake_auth
+ 496: POP_JUMP_FORWARD_IF_NONE to 512
+ 498: LOAD_CONST           True
+ 500: LOAD_FAST            context
+ 502: STORE_ATTR           post_handshake_auth
+ 512: LOAD_FAST            context
+ 514: LOAD_FAST            self
+ 516: STORE_ATTR           _context
+ 526: LOAD_FAST            check_hostname
+ 528: POP_JUMP_FORWARD_IF_NONE to 558
+ 530: LOAD_FAST            check_hostname
+ 532: LOAD_FAST            self
+ 534: LOAD_ATTR            _context
+ 544: STORE_ATTR           check_hostname
+ 554: LOAD_CONST           None
+ 556: RETURN_VALUE         
+ 558: LOAD_CONST           None
+ 560: RETURN_VALUE         

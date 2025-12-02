@@ -1,0 +1,24 @@
+# Disassembly for ast.ExtSlice
+# From module file: ast
+
+## co_consts:
+('ExtSlice', 'Deprecated AST node class. Use ast.Tuple instead.', (), <code object __new__ at 0x000002406944B440, file "ast.py", line 613>, None, ((),))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__new__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'ExtSlice'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Deprecated AST node class. Use ast.Tuple instead.'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ((),)
+  16: LOAD_CONST           <code object __new__ at 0x000002406944B440, file "ast.py", line 613>
+  18: MAKE_FUNCTION        defaults
+  20: STORE_NAME           __new__
+  22: LOAD_CONST           None
+  24: RETURN_VALUE         

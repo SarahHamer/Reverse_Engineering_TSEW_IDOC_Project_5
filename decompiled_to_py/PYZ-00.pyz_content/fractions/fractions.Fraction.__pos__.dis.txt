@@ -1,0 +1,22 @@
+# Disassembly for fractions.Fraction.__pos__
+# From module file: fractions
+
+## co_consts:
+('+a: Coerces a subclass instance to Fraction', False, ('_normalize',))
+
+## co_names:
+('Fraction', '_numerator', '_denominator')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + Fraction
+  14: LOAD_FAST            a
+  16: LOAD_ATTR            _numerator
+  26: LOAD_FAST            a
+  28: LOAD_ATTR            _denominator
+  38: LOAD_CONST           False
+  40: KW_NAMES             
+  42: PRECALL              
+  46: CALL                 
+  56: RETURN_VALUE         

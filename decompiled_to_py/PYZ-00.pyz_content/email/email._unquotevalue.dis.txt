@@ -1,0 +1,39 @@
+# Disassembly for email._unquotevalue
+# From module file: email.message
+
+## co_consts:
+(None, 0, 1, 2)
+
+## co_names:
+('isinstance', 'tuple', 'utils', 'unquote')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            value
+  16: LOAD_GLOBAL          tuple
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 126
+  44: LOAD_FAST            value
+  46: LOAD_CONST           0
+  48: BINARY_SUBSCR        
+  58: LOAD_FAST            value
+  60: LOAD_CONST           1
+  62: BINARY_SUBSCR        
+  72: LOAD_GLOBAL          NULL + utils
+  84: LOAD_ATTR            unquote
+  94: LOAD_FAST            value
+  96: LOAD_CONST           2
+  98: BINARY_SUBSCR        
+ 108: PRECALL              
+ 112: CALL                 
+ 122: BUILD_TUPLE          
+ 124: RETURN_VALUE         
+ 126: LOAD_GLOBAL          NULL + utils
+ 138: LOAD_ATTR            unquote
+ 148: LOAD_FAST            value
+ 150: PRECALL              
+ 154: CALL                 
+ 164: RETURN_VALUE         

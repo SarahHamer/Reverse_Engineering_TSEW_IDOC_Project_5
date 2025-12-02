@@ -1,0 +1,17 @@
+# Disassembly for logging.Filterer.__init__
+# From module file: logging
+
+## co_consts:
+('\n        Initialize the list of filters to be an empty list.\n        ', None)
+
+## co_names:
+('filters',)
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            self
+   6: STORE_ATTR           filters
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         

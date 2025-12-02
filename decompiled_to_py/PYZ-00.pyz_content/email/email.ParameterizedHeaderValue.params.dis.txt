@@ -1,0 +1,32 @@
+# Disassembly for email.ParameterizedHeaderValue.params
+# From module file: email._header_value_parser
+
+## co_consts:
+(None, 'mime-parameters')
+
+## co_names:
+('reversed', 'token_type', 'params')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + reversed
+  14: LOAD_FAST            self
+  16: PRECALL              
+  20: CALL                 
+  30: GET_ITER             
+  32: FOR_ITER             to 78
+  34: STORE_FAST           token
+  36: LOAD_FAST            token
+  38: LOAD_ATTR            token_type
+  48: LOAD_CONST           'mime-parameters'
+  50: COMPARE_OP           ==
+  56: POP_JUMP_FORWARD_IF_FALSE to 76
+  58: LOAD_FAST            token
+  60: LOAD_ATTR            params
+  70: SWAP                 
+  72: POP_TOP              
+  74: RETURN_VALUE         
+  76: JUMP_BACKWARD        to 32
+  78: BUILD_MAP            
+  80: RETURN_VALUE         

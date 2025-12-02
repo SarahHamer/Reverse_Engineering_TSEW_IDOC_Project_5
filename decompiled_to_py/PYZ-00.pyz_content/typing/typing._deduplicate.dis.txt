@@ -1,0 +1,61 @@
+# Disassembly for typing._deduplicate
+# From module file: typing
+
+## co_consts:
+(None,)
+
+## co_names:
+('set', 'len', 'append', 'remove')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + set
+  14: LOAD_FAST            params
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           all_params
+  32: LOAD_GLOBAL          NULL + len
+  44: LOAD_FAST            all_params
+  46: PRECALL              
+  50: CALL                 
+  60: LOAD_GLOBAL          NULL + len
+  72: LOAD_FAST            params
+  74: PRECALL              
+  78: CALL                 
+  88: COMPARE_OP           <
+  94: POP_JUMP_FORWARD_IF_FALSE to 230
+  96: BUILD_LIST           
+  98: STORE_FAST           new_params
+ 100: LOAD_FAST            params
+ 102: GET_ITER             
+ 104: FOR_ITER             to 202
+ 106: STORE_FAST           t
+ 108: LOAD_FAST            t
+ 110: LOAD_FAST            all_params
+ 112: CONTAINS_OP          
+ 114: POP_JUMP_FORWARD_IF_FALSE to 200
+ 116: LOAD_FAST            new_params
+ 118: LOAD_METHOD          append
+ 140: LOAD_FAST            t
+ 142: PRECALL              
+ 146: CALL                 
+ 156: POP_TOP              
+ 158: LOAD_FAST            all_params
+ 160: LOAD_METHOD          remove
+ 182: LOAD_FAST            t
+ 184: PRECALL              
+ 188: CALL                 
+ 198: POP_TOP              
+ 200: JUMP_BACKWARD        to 104
+ 202: LOAD_FAST            new_params
+ 204: STORE_FAST           params
+ 206: LOAD_FAST            all_params
+ 208: POP_JUMP_FORWARD_IF_FALSE to 230
+ 210: LOAD_ASSERTION_ERROR 
+ 212: LOAD_FAST            all_params
+ 214: PRECALL              
+ 218: CALL                 
+ 228: RAISE_VARARGS        
+ 230: LOAD_FAST            params
+ 232: RETURN_VALUE         

@@ -1,0 +1,108 @@
+# Disassembly for email.Header.append
+# From module file: email.header
+
+## co_consts:
+("Append a string to the MIME header.\n\n        Optional charset, if given, should be a Charset instance or the name\n        of a character set (which will be converted to a Charset instance).  A\n        value of None (the default) means that the charset given in the\n        constructor is used.\n\n        s may be a byte string or a Unicode string.  If it is a byte string\n        (i.e. isinstance(s, str) is false), then charset is the encoding of\n        that byte string, and a UnicodeError will be raised if the string\n        cannot be decoded with that charset.  If s is a Unicode string, then\n        charset is a hint specifying the character set of the characters in\n        the string.  In either case, when producing an RFC 2822 compliant\n        header using RFC 2047 rules, the string will be encoded using the\n        output codec of the charset.  If the string cannot be encoded to the\n        output codec, a UnicodeError will be raised.\n\n        Optional `errors' is passed as the errors argument to the decode\n        call if s is a byte string.\n        ", None, 'us-ascii', 'surrogateescape')
+
+## co_names:
+('_charset', 'isinstance', 'Charset', 'str', 'input_codec', 'UNKNOWN8BIT', 'decode', 'output_codec', 'encode', 'UnicodeEncodeError', 'UTF8', '_chunks', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            charset
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 22
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            _charset
+  18: STORE_FAST           charset
+  20: JUMP_FORWARD         to 94
+  22: LOAD_GLOBAL          NULL + isinstance
+  34: LOAD_FAST            charset
+  36: LOAD_GLOBAL          Charset
+  48: PRECALL              
+  52: CALL                 
+  62: POP_JUMP_FORWARD_IF_TRUE to 94
+  64: LOAD_GLOBAL          NULL + Charset
+  76: LOAD_FAST            charset
+  78: PRECALL              
+  82: CALL                 
+  92: STORE_FAST           charset
+  94: LOAD_GLOBAL          NULL + isinstance
+ 106: LOAD_FAST            s
+ 108: LOAD_GLOBAL          str
+ 120: PRECALL              
+ 124: CALL                 
+ 134: POP_JUMP_FORWARD_IF_TRUE to 276
+ 136: LOAD_FAST            charset
+ 138: LOAD_ATTR            input_codec
+ 148: JUMP_IF_TRUE_OR_POP  to 152
+ 150: LOAD_CONST           'us-ascii'
+ 152: STORE_FAST           input_charset
+ 154: LOAD_FAST            input_charset
+ 156: LOAD_GLOBAL          _charset
+ 168: LOAD_ATTR            UNKNOWN8BIT
+ 178: COMPARE_OP           ==
+ 184: POP_JUMP_FORWARD_IF_FALSE to 232
+ 186: LOAD_FAST            s
+ 188: LOAD_METHOD          decode
+ 210: LOAD_CONST           'us-ascii'
+ 212: LOAD_CONST           'surrogateescape'
+ 214: PRECALL              
+ 218: CALL                 
+ 228: STORE_FAST           s
+ 230: JUMP_FORWARD         to 276
+ 232: LOAD_FAST            s
+ 234: LOAD_METHOD          decode
+ 256: LOAD_FAST            input_charset
+ 258: LOAD_FAST            errors
+ 260: PRECALL              
+ 264: CALL                 
+ 274: STORE_FAST           s
+ 276: LOAD_FAST            charset
+ 278: LOAD_ATTR            output_codec
+ 288: JUMP_IF_TRUE_OR_POP  to 292
+ 290: LOAD_CONST           'us-ascii'
+ 292: STORE_FAST           output_charset
+ 294: LOAD_FAST            output_charset
+ 296: LOAD_GLOBAL          _charset
+ 308: LOAD_ATTR            UNKNOWN8BIT
+ 318: COMPARE_OP           !=
+ 324: POP_JUMP_FORWARD_IF_FALSE to 434
+ 326: NOP                  
+ 328: LOAD_FAST            s
+ 330: LOAD_METHOD          encode
+ 352: LOAD_FAST            output_charset
+ 354: LOAD_FAST            errors
+ 356: PRECALL              
+ 360: CALL                 
+ 370: POP_TOP              
+ 372: JUMP_FORWARD         to 434
+ 374: PUSH_EXC_INFO        
+ 376: LOAD_GLOBAL          UnicodeEncodeError
+ 388: CHECK_EXC_MATCH      
+ 390: POP_JUMP_FORWARD_IF_FALSE to 426
+ 392: POP_TOP              
+ 394: LOAD_FAST            output_charset
+ 396: LOAD_CONST           'us-ascii'
+ 398: COMPARE_OP           !=
+ 404: POP_JUMP_FORWARD_IF_FALSE to 408
+ 406: RAISE_VARARGS        
+ 408: LOAD_GLOBAL          UTF8
+ 420: STORE_FAST           charset
+ 422: POP_EXCEPT           
+ 424: JUMP_FORWARD         to 434
+ 426: RERAISE              
+ 428: COPY                 
+ 430: POP_EXCEPT           
+ 432: RERAISE              
+ 434: LOAD_FAST            self
+ 436: LOAD_ATTR            _chunks
+ 446: LOAD_METHOD          append
+ 468: LOAD_FAST            s
+ 470: LOAD_FAST            charset
+ 472: BUILD_TUPLE          
+ 474: PRECALL              
+ 478: CALL                 
+ 488: POP_TOP              
+ 490: LOAD_CONST           None
+ 492: RETURN_VALUE         

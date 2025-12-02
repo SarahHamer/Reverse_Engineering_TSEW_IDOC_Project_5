@@ -1,0 +1,19 @@
+# Disassembly for base64.b32hexdecode
+# From module file: base64
+
+## co_consts:
+(None,)
+
+## co_names:
+('_b32decode', '_b32hexalphabet')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _b32decode
+  14: LOAD_GLOBAL          _b32hexalphabet
+  26: LOAD_FAST            s
+  28: LOAD_FAST            casefold
+  30: PRECALL              
+  34: CALL                 
+  44: RETURN_VALUE         

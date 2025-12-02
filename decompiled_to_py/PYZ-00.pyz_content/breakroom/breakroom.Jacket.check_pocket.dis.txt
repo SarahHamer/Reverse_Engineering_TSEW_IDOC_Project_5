@@ -1,0 +1,30 @@
+# Disassembly for breakroom.Jacket.check_pocket
+# From module file: breakroom
+
+## co_consts:
+(None, 'You check the jacket pocket and find a photo.')
+
+## co_names:
+('Photo', 'set_parent', 'world', 'player', 'send_message')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + Photo
+  14: PRECALL              
+  18: CALL                 
+  28: LOAD_METHOD          set_parent
+  50: LOAD_FAST            self
+  52: LOAD_ATTR            world
+  62: LOAD_ATTR            player
+  72: PRECALL              
+  76: CALL                 
+  86: POP_TOP              
+  88: LOAD_FAST            self
+  90: LOAD_METHOD          send_message
+ 112: LOAD_CONST           'You check the jacket pocket and find a photo.'
+ 114: PRECALL              
+ 118: CALL                 
+ 128: POP_TOP              
+ 130: LOAD_CONST           None
+ 132: RETURN_VALUE         

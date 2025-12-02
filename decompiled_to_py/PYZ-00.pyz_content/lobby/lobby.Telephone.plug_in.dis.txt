@@ -1,0 +1,23 @@
+# Disassembly for lobby.Telephone.plug_in
+# From module file: lobby
+
+## co_consts:
+(None, True, 'You find the phone outlet and plug in the phone.')
+
+## co_names:
+('plugged_in', 'send_message')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           True
+   4: LOAD_FAST            self
+   6: STORE_ATTR           plugged_in
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          send_message
+  40: LOAD_CONST           'You find the phone outlet and plug in the phone.'
+  42: PRECALL              
+  46: CALL                 
+  56: POP_TOP              
+  58: LOAD_CONST           None
+  60: RETURN_VALUE         

@@ -1,0 +1,88 @@
+# Disassembly for importlib.FileLoader.get_data
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Return the data from path as raw bytes.', None, 'r')
+
+## co_names:
+('isinstance', 'SourceLoader', 'ExtensionFileLoader', '_io', 'open_code', 'str', 'read', 'FileIO')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            self
+  16: LOAD_GLOBAL          SourceLoader
+  28: LOAD_GLOBAL          ExtensionFileLoader
+  40: BUILD_TUPLE          
+  42: PRECALL              
+  46: CALL                 
+  56: POP_JUMP_FORWARD_IF_FALSE to 216
+  58: LOAD_GLOBAL          NULL + _io
+  70: LOAD_ATTR            open_code
+  80: LOAD_GLOBAL          NULL + str
+  92: LOAD_FAST            path
+  94: PRECALL              
+  98: CALL                 
+ 108: PRECALL              
+ 112: CALL                 
+ 122: BEFORE_WITH          
+ 124: STORE_FAST           file
+ 126: LOAD_FAST            file
+ 128: LOAD_METHOD          read
+ 150: PRECALL              
+ 154: CALL                 
+ 164: SWAP                 
+ 166: LOAD_CONST           None
+ 168: LOAD_CONST           None
+ 170: LOAD_CONST           None
+ 172: PRECALL              
+ 176: CALL                 
+ 186: POP_TOP              
+ 188: RETURN_VALUE         
+ 190: PUSH_EXC_INFO        
+ 192: WITH_EXCEPT_START    
+ 194: POP_JUMP_FORWARD_IF_TRUE to 204
+ 196: RERAISE              
+ 198: COPY                 
+ 200: POP_EXCEPT           
+ 202: RERAISE              
+ 204: POP_TOP              
+ 206: POP_EXCEPT           
+ 208: POP_TOP              
+ 210: POP_TOP              
+ 212: LOAD_CONST           None
+ 214: RETURN_VALUE         
+ 216: LOAD_GLOBAL          NULL + _io
+ 228: LOAD_ATTR            FileIO
+ 238: LOAD_FAST            path
+ 240: LOAD_CONST           'r'
+ 242: PRECALL              
+ 246: CALL                 
+ 256: BEFORE_WITH          
+ 258: STORE_FAST           file
+ 260: LOAD_FAST            file
+ 262: LOAD_METHOD          read
+ 284: PRECALL              
+ 288: CALL                 
+ 298: SWAP                 
+ 300: LOAD_CONST           None
+ 302: LOAD_CONST           None
+ 304: LOAD_CONST           None
+ 306: PRECALL              
+ 310: CALL                 
+ 320: POP_TOP              
+ 322: RETURN_VALUE         
+ 324: PUSH_EXC_INFO        
+ 326: WITH_EXCEPT_START    
+ 328: POP_JUMP_FORWARD_IF_TRUE to 338
+ 330: RERAISE              
+ 332: COPY                 
+ 334: POP_EXCEPT           
+ 336: RERAISE              
+ 338: POP_TOP              
+ 340: POP_EXCEPT           
+ 342: POP_TOP              
+ 344: POP_TOP              
+ 346: LOAD_CONST           None
+ 348: RETURN_VALUE         

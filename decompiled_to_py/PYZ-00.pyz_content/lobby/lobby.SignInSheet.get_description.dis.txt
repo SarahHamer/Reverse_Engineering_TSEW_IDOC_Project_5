@@ -1,0 +1,14 @@
+# Disassembly for lobby.SignInSheet.get_description
+# From module file: lobby
+
+## co_consts:
+(None, 'A sign in sheet is on the counter.')
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'A sign in sheet is on the counter.'
+   4: RETURN_VALUE         

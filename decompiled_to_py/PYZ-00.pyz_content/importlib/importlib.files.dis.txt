@@ -1,0 +1,18 @@
+# Disassembly for importlib.files
+# From module file: importlib.metadata
+
+## co_consts:
+('Return a list of files for the named package.\n\n    :param distribution_name: The name of the distribution package to query.\n    :return: List of files composing the distribution.\n    ',)
+
+## co_names:
+('distribution', 'files')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + distribution
+  14: LOAD_FAST            distribution_name
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_ATTR            files
+  40: RETURN_VALUE         

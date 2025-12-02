@@ -1,0 +1,27 @@
+# Disassembly for _pydecimal._WorkRep.__repr__
+# From module file: _pydecimal
+
+## co_consts:
+(None, '(', ', ', ')')
+
+## co_names:
+('sign', 'int', 'exp')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '('
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            sign
+  16: FORMAT_VALUE         repr
+  18: LOAD_CONST           ', '
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            int
+  32: FORMAT_VALUE         repr
+  34: LOAD_CONST           ', '
+  36: LOAD_FAST            self
+  38: LOAD_ATTR            exp
+  48: FORMAT_VALUE         repr
+  50: LOAD_CONST           ')'
+  52: BUILD_STRING         
+  54: RETURN_VALUE         

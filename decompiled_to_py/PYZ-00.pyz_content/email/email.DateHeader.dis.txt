@@ -1,0 +1,49 @@
+# Disassembly for email.DateHeader
+# From module file: email.headerregistry
+
+## co_consts:
+('DateHeader', "Header whose value consists of a single timestamp.\n\n    Provides an additional attribute, datetime, which is either an aware\n    datetime using a timezone, or a naive datetime if the timezone\n    in the input string is -0000.  Also accepts a datetime as input.\n    The 'value' attribute is the normalized form of the timestamp,\n    which means it is the output of format_datetime on the datetime.\n    ", None, <code object parse at 0x0000024068B3E350, file "email\headerregistry.py", line 292>, <code object init at 0x00000240693D3DF0, file "email\headerregistry.py", line 313>, <code object datetime at 0x0000024069495D70, file "email\headerregistry.py", line 317>)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'max_count', 'staticmethod', 'parser', 'get_unstructured', 'value_parser', 'classmethod', 'parse', 'init', 'property', 'datetime', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'DateHeader'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           "Header whose value consists of a single timestamp.\n\n    Provides an additional attribute, datetime, which is either an aware\n    datetime using a timezone, or a naive datetime if the timezone\n    in the input string is -0000.  Also accepts a datetime as input.\n    The 'value' attribute is the normalized form of the timestamp,\n    which means it is the output of format_datetime on the datetime.\n    "
+  14: STORE_NAME           __doc__
+  16: LOAD_CONST           None
+  18: STORE_NAME           max_count
+  20: PUSH_NULL            
+  22: LOAD_NAME            staticmethod
+  24: LOAD_NAME            parser
+  26: LOAD_ATTR            get_unstructured
+  36: PRECALL              
+  40: CALL                 
+  50: STORE_NAME           value_parser
+  52: LOAD_NAME            classmethod
+  54: LOAD_CONST           <code object parse at 0x0000024068B3E350, file "email\headerregistry.py", line 292>
+  56: MAKE_FUNCTION        
+  58: PRECALL              
+  62: CALL                 
+  72: STORE_NAME           parse
+  74: LOAD_CLOSURE         __class__
+  76: BUILD_TUPLE          
+  78: LOAD_CONST           <code object init at 0x00000240693D3DF0, file "email\headerregistry.py", line 313>
+  80: MAKE_FUNCTION        closure
+  82: STORE_NAME           init
+  84: LOAD_NAME            property
+  86: LOAD_CONST           <code object datetime at 0x0000024069495D70, file "email\headerregistry.py", line 317>
+  88: MAKE_FUNCTION        
+  90: PRECALL              
+  94: CALL                 
+ 104: STORE_NAME           datetime
+ 106: LOAD_CLOSURE         __class__
+ 108: COPY                 
+ 110: STORE_NAME           __classcell__
+ 112: RETURN_VALUE         

@@ -1,0 +1,111 @@
+# Disassembly for tarfile.TarFile.makelink
+# From module file: tarfile
+
+## co_consts:
+('Make a (symbolic) link called targetpath. If it cannot be created\n          (platform limitation), we try to make a copy of the referenced file\n          instead of a link.\n        ', 'unable to resolve link inside archive', None)
+
+## co_names:
+('issym', 'os', 'path', 'lexists', 'unlink', 'symlink', 'linkname', 'exists', '_link_target', 'link', '_extract_member', '_find_link_target', 'symlink_exception', 'KeyError', 'ExtractError')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            tarinfo
+   6: LOAD_METHOD          issym
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 202
+  44: LOAD_GLOBAL          os
+  56: LOAD_ATTR            path
+  66: LOAD_METHOD          lexists
+  88: LOAD_FAST            targetpath
+  90: PRECALL              
+  94: CALL                 
+ 104: POP_JUMP_FORWARD_IF_FALSE to 146
+ 106: LOAD_GLOBAL          NULL + os
+ 118: LOAD_ATTR            unlink
+ 128: LOAD_FAST            targetpath
+ 130: PRECALL              
+ 134: CALL                 
+ 144: POP_TOP              
+ 146: LOAD_GLOBAL          NULL + os
+ 158: LOAD_ATTR            symlink
+ 168: LOAD_FAST            tarinfo
+ 170: LOAD_ATTR            linkname
+ 180: LOAD_FAST            targetpath
+ 182: PRECALL              
+ 186: CALL                 
+ 196: POP_TOP              
+ 198: LOAD_CONST           None
+ 200: RETURN_VALUE         
+ 202: LOAD_GLOBAL          os
+ 214: LOAD_ATTR            path
+ 224: LOAD_METHOD          exists
+ 246: LOAD_FAST            tarinfo
+ 248: LOAD_ATTR            _link_target
+ 258: PRECALL              
+ 262: CALL                 
+ 272: POP_JUMP_FORWARD_IF_FALSE to 330
+ 274: LOAD_GLOBAL          NULL + os
+ 286: LOAD_ATTR            link
+ 296: LOAD_FAST            tarinfo
+ 298: LOAD_ATTR            _link_target
+ 308: LOAD_FAST            targetpath
+ 310: PRECALL              
+ 314: CALL                 
+ 324: POP_TOP              
+ 326: LOAD_CONST           None
+ 328: RETURN_VALUE         
+ 330: LOAD_FAST            self
+ 332: LOAD_METHOD          _extract_member
+ 354: LOAD_FAST            self
+ 356: LOAD_METHOD          _find_link_target
+ 378: LOAD_FAST            tarinfo
+ 380: PRECALL              
+ 384: CALL                 
+ 394: LOAD_FAST            targetpath
+ 396: PRECALL              
+ 400: CALL                 
+ 410: POP_TOP              
+ 412: LOAD_CONST           None
+ 414: RETURN_VALUE         
+ 416: PUSH_EXC_INFO        
+ 418: LOAD_GLOBAL          symlink_exception
+ 430: CHECK_EXC_MATCH      
+ 432: POP_JUMP_FORWARD_IF_FALSE to 586
+ 434: POP_TOP              
+ 436: NOP                  
+ 438: LOAD_FAST            self
+ 440: LOAD_METHOD          _extract_member
+ 462: LOAD_FAST            self
+ 464: LOAD_METHOD          _find_link_target
+ 486: LOAD_FAST            tarinfo
+ 488: PRECALL              
+ 492: CALL                 
+ 502: LOAD_FAST            targetpath
+ 504: PRECALL              
+ 508: CALL                 
+ 518: POP_TOP              
+ 520: POP_EXCEPT           
+ 522: LOAD_CONST           None
+ 524: RETURN_VALUE         
+ 526: PUSH_EXC_INFO        
+ 528: LOAD_GLOBAL          KeyError
+ 540: CHECK_EXC_MATCH      
+ 542: POP_JUMP_FORWARD_IF_FALSE to 578
+ 544: POP_TOP              
+ 546: LOAD_GLOBAL          NULL + ExtractError
+ 558: LOAD_CONST           'unable to resolve link inside archive'
+ 560: PRECALL              
+ 564: CALL                 
+ 574: LOAD_CONST           None
+ 576: RAISE_VARARGS        
+ 578: RERAISE              
+ 580: COPY                 
+ 582: POP_EXCEPT           
+ 584: RERAISE              
+ 586: RERAISE              
+ 588: COPY                 
+ 590: POP_EXCEPT           
+ 592: RERAISE              

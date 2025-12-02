@@ -1,0 +1,39 @@
+# Disassembly for ssl.TLSVersion
+# From module file: ssl
+
+## co_consts:
+('TLSVersion', None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '_ssl', 'PROTO_MINIMUM_SUPPORTED', 'MINIMUM_SUPPORTED', 'PROTO_SSLv3', 'SSLv3', 'PROTO_TLSv1', 'TLSv1', 'PROTO_TLSv1_1', 'TLSv1_1', 'PROTO_TLSv1_2', 'TLSv1_2', 'PROTO_TLSv1_3', 'TLSv1_3', 'PROTO_MAXIMUM_SUPPORTED', 'MAXIMUM_SUPPORTED')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'TLSVersion'
+   8: STORE_NAME           __qualname__
+  10: LOAD_NAME            _ssl
+  12: LOAD_ATTR            PROTO_MINIMUM_SUPPORTED
+  22: STORE_NAME           MINIMUM_SUPPORTED
+  24: LOAD_NAME            _ssl
+  26: LOAD_ATTR            PROTO_SSLv3
+  36: STORE_NAME           SSLv3
+  38: LOAD_NAME            _ssl
+  40: LOAD_ATTR            PROTO_TLSv1
+  50: STORE_NAME           TLSv1
+  52: LOAD_NAME            _ssl
+  54: LOAD_ATTR            PROTO_TLSv1_1
+  64: STORE_NAME           TLSv1_1
+  66: LOAD_NAME            _ssl
+  68: LOAD_ATTR            PROTO_TLSv1_2
+  78: STORE_NAME           TLSv1_2
+  80: LOAD_NAME            _ssl
+  82: LOAD_ATTR            PROTO_TLSv1_3
+  92: STORE_NAME           TLSv1_3
+  94: LOAD_NAME            _ssl
+  96: LOAD_ATTR            PROTO_MAXIMUM_SUPPORTED
+ 106: STORE_NAME           MAXIMUM_SUPPORTED
+ 108: LOAD_CONST           None
+ 110: RETURN_VALUE         

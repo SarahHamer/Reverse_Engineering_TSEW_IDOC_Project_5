@@ -1,0 +1,20 @@
+# Disassembly for pickle._Pickler.clear_memo
+# From module file: pickle
+
+## co_consts:
+('Clears the pickler\'s "memo".\n\n        The memo is the data structure that remembers which objects the\n        pickler has already seen, so that shared or recursive objects\n        are pickled by reference and not by value.  This method is\n        useful when re-using picklers.\n        ', None)
+
+## co_names:
+('memo', 'clear')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            memo
+  14: LOAD_METHOD          clear
+  36: PRECALL              
+  40: CALL                 
+  50: POP_TOP              
+  52: LOAD_CONST           None
+  54: RETURN_VALUE         

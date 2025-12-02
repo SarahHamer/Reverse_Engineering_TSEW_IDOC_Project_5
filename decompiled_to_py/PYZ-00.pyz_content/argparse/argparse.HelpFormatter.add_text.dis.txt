@@ -1,0 +1,33 @@
+# Disassembly for argparse.HelpFormatter.add_text
+# From module file: argparse
+
+## co_consts:
+(None,)
+
+## co_names:
+('SUPPRESS', '_add_item', '_format_text')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            text
+   4: LOAD_GLOBAL          SUPPRESS
+  16: IS_OP                
+  18: POP_JUMP_FORWARD_IF_FALSE to 84
+  20: LOAD_FAST            text
+  22: POP_JUMP_FORWARD_IF_NONE to 88
+  24: LOAD_FAST            self
+  26: LOAD_METHOD          _add_item
+  48: LOAD_FAST            self
+  50: LOAD_ATTR            _format_text
+  60: LOAD_FAST            text
+  62: BUILD_LIST           
+  64: PRECALL              
+  68: CALL                 
+  78: POP_TOP              
+  80: LOAD_CONST           None
+  82: RETURN_VALUE         
+  84: LOAD_CONST           None
+  86: RETURN_VALUE         
+  88: LOAD_CONST           None
+  90: RETURN_VALUE         

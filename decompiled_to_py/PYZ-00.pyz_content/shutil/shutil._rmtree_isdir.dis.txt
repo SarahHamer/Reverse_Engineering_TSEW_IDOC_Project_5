@@ -1,0 +1,32 @@
+# Disassembly for shutil._rmtree_isdir
+# From module file: shutil
+
+## co_consts:
+(None, False, ('follow_symlinks',))
+
+## co_names:
+('is_dir', 'OSError')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            entry
+   6: LOAD_METHOD          is_dir
+  28: LOAD_CONST           False
+  30: KW_NAMES             
+  32: PRECALL              
+  36: CALL                 
+  46: RETURN_VALUE         
+  48: PUSH_EXC_INFO        
+  50: LOAD_GLOBAL          OSError
+  62: CHECK_EXC_MATCH      
+  64: POP_JUMP_FORWARD_IF_FALSE to 74
+  66: POP_TOP              
+  68: POP_EXCEPT           
+  70: LOAD_CONST           False
+  72: RETURN_VALUE         
+  74: RERAISE              
+  76: COPY                 
+  78: POP_EXCEPT           
+  80: RERAISE              

@@ -1,0 +1,17 @@
+# Disassembly for email.Message.set_unixfrom
+# From module file: email.message
+
+## co_consts:
+(None,)
+
+## co_names:
+('_unixfrom',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            unixfrom
+   4: LOAD_FAST            self
+   6: STORE_ATTR           _unixfrom
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         

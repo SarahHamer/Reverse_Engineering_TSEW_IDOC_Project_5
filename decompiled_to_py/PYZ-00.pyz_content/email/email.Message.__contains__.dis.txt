@@ -1,0 +1,25 @@
+# Disassembly for email.Message.__contains__
+# From module file: email.message
+
+## co_consts:
+(None, <code object <listcomp> at 0x00000240693EB930, file "email\message.py", line 451>)
+
+## co_names:
+('lower', '_headers')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            name
+   4: LOAD_METHOD          lower
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_CONST           <code object <listcomp> at 0x00000240693EB930, file "email\message.py", line 451>
+  42: MAKE_FUNCTION        
+  44: LOAD_FAST            self
+  46: LOAD_ATTR            _headers
+  56: GET_ITER             
+  58: PRECALL              
+  62: CALL                 
+  72: CONTAINS_OP          
+  74: RETURN_VALUE         

@@ -1,0 +1,26 @@
+# Disassembly for _pydecimal.Context.next_minus
+# From module file: _pydecimal
+
+## co_consts:
+("Returns the largest representable number smaller than a.\n\n        >>> c = ExtendedContext.copy()\n        >>> c.Emin = -999\n        >>> c.Emax = 999\n        >>> ExtendedContext.next_minus(Decimal('1'))\n        Decimal('0.999999999')\n        >>> c.next_minus(Decimal('1E-1007'))\n        Decimal('0E-1007')\n        >>> ExtendedContext.next_minus(Decimal('-1.00000003'))\n        Decimal('-1.00000004')\n        >>> c.next_minus(Decimal('Infinity'))\n        Decimal('9.99999999E+999')\n        >>> c.next_minus(1)\n        Decimal('0.999999999')\n        ", True, ('raiseit',), ('context',))
+
+## co_names:
+('_convert_other', 'next_minus')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _convert_other
+  14: LOAD_FAST            a
+  16: LOAD_CONST           True
+  18: KW_NAMES             
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           a
+  36: LOAD_FAST            a
+  38: LOAD_METHOD          next_minus
+  60: LOAD_FAST            self
+  62: KW_NAMES             
+  64: PRECALL              
+  68: CALL                 
+  78: RETURN_VALUE         

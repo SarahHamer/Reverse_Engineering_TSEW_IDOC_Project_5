@@ -1,0 +1,45 @@
+# Disassembly for http.HTTPResponse._safe_readinto
+# From module file: http.client
+
+## co_consts:
+('Same as _safe_read, but for reading into a buffer.', None)
+
+## co_names:
+('len', 'fp', 'readinto', 'IncompleteRead', 'bytes')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + len
+  14: LOAD_FAST            b
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           amt
+  32: LOAD_FAST            self
+  34: LOAD_ATTR            fp
+  44: LOAD_METHOD          readinto
+  66: LOAD_FAST            b
+  68: PRECALL              
+  72: CALL                 
+  82: STORE_FAST           n
+  84: LOAD_FAST            n
+  86: LOAD_FAST            amt
+  88: COMPARE_OP           <
+  94: POP_JUMP_FORWARD_IF_FALSE to 176
+  96: LOAD_GLOBAL          NULL + IncompleteRead
+ 108: LOAD_GLOBAL          NULL + bytes
+ 120: LOAD_FAST            b
+ 122: LOAD_CONST           None
+ 124: LOAD_FAST            n
+ 126: BUILD_SLICE          
+ 128: BINARY_SUBSCR        
+ 138: PRECALL              
+ 142: CALL                 
+ 152: LOAD_FAST            amt
+ 154: LOAD_FAST            n
+ 156: BINARY_OP            -
+ 160: PRECALL              
+ 164: CALL                 
+ 174: RAISE_VARARGS        
+ 176: LOAD_FAST            n
+ 178: RETURN_VALUE         

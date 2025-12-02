@@ -1,0 +1,23 @@
+# Disassembly for importlib._ModuleLock.__repr__
+# From module file: importlib._bootstrap
+
+## co_consts:
+(None, '_ModuleLock({!r}) at {}')
+
+## co_names:
+('format', 'name', 'id')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '_ModuleLock({!r}) at {}'
+   4: LOAD_METHOD          format
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            name
+  38: LOAD_GLOBAL          NULL + id
+  50: LOAD_FAST            self
+  52: PRECALL              
+  56: CALL                 
+  66: PRECALL              
+  70: CALL                 
+  80: RETURN_VALUE         

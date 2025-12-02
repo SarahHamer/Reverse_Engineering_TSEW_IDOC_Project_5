@@ -1,0 +1,29 @@
+# Disassembly for contextlib._RedirectStream
+# From module file: contextlib
+
+## co_consts:
+('_RedirectStream', None, <code object __init__ at 0x0000024069467830, file "contextlib.py", line 381>, <code object __enter__ at 0x000002406921F9B0, file "contextlib.py", line 386>, <code object __exit__ at 0x00000240693D2500, file "contextlib.py", line 391>)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '_stream', '__init__', '__enter__', '__exit__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_RedirectStream'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           None
+  12: STORE_NAME           _stream
+  14: LOAD_CONST           <code object __init__ at 0x0000024069467830, file "contextlib.py", line 381>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           __init__
+  20: LOAD_CONST           <code object __enter__ at 0x000002406921F9B0, file "contextlib.py", line 386>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           __enter__
+  26: LOAD_CONST           <code object __exit__ at 0x00000240693D2500, file "contextlib.py", line 391>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           __exit__
+  32: LOAD_CONST           None
+  34: RETURN_VALUE         

@@ -1,0 +1,18 @@
+# Disassembly for _pydecimal.Context._ignore_all_flags
+# From module file: _pydecimal
+
+## co_consts:
+('Ignore all flags, if they are raised',)
+
+## co_names:
+('_ignore_flags', '_signals')
+
+## bytecode:
+
+   0: RESUME               
+   2: PUSH_NULL            
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            _ignore_flags
+  16: LOAD_GLOBAL          _signals
+  28: CALL_FUNCTION_EX     
+  30: RETURN_VALUE         

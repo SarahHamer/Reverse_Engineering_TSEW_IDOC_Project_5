@@ -1,0 +1,43 @@
+# Disassembly for email.Generator._handle_multipart_signed
+# From module file: email.generator
+
+## co_consts:
+(None, 0, ('max_line_length',))
+
+## co_names:
+('policy', 'clone', '_handle_multipart')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            policy
+  14: STORE_FAST           p
+  16: LOAD_FAST            p
+  18: LOAD_METHOD          clone
+  40: LOAD_CONST           0
+  42: KW_NAMES             
+  44: PRECALL              
+  48: CALL                 
+  58: LOAD_FAST            self
+  60: STORE_ATTR           policy
+  70: NOP                  
+  72: LOAD_FAST            self
+  74: LOAD_METHOD          _handle_multipart
+  96: LOAD_FAST            msg
+  98: PRECALL              
+ 102: CALL                 
+ 112: POP_TOP              
+ 114: LOAD_FAST            p
+ 116: LOAD_FAST            self
+ 118: STORE_ATTR           policy
+ 128: LOAD_CONST           None
+ 130: RETURN_VALUE         
+ 132: PUSH_EXC_INFO        
+ 134: LOAD_FAST            p
+ 136: LOAD_FAST            self
+ 138: STORE_ATTR           policy
+ 148: RERAISE              
+ 150: COPY                 
+ 152: POP_EXCEPT           
+ 154: RERAISE              

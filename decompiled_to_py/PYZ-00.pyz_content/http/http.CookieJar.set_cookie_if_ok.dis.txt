@@ -1,0 +1,65 @@
+# Disassembly for http.CookieJar.set_cookie_if_ok
+# From module file: http.cookiejar
+
+## co_consts:
+("Set a cookie if policy says it's OK to do so.", None)
+
+## co_names:
+('_cookies_lock', 'acquire', 'int', 'time', '_policy', '_now', 'set_ok', 'set_cookie', 'release')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _cookies_lock
+  14: LOAD_METHOD          acquire
+  36: PRECALL              
+  40: CALL                 
+  50: POP_TOP              
+  52: NOP                  
+  54: LOAD_GLOBAL          NULL + int
+  66: LOAD_GLOBAL          NULL + time
+  78: LOAD_ATTR            time
+  88: PRECALL              
+  92: CALL                 
+ 102: PRECALL              
+ 106: CALL                 
+ 116: COPY                 
+ 118: LOAD_FAST            self
+ 120: LOAD_ATTR            _policy
+ 130: STORE_ATTR           _now
+ 140: LOAD_FAST            self
+ 142: STORE_ATTR           _now
+ 152: LOAD_FAST            self
+ 154: LOAD_ATTR            _policy
+ 164: LOAD_METHOD          set_ok
+ 186: LOAD_FAST            cookie
+ 188: LOAD_FAST            request
+ 190: PRECALL              
+ 194: CALL                 
+ 204: POP_JUMP_FORWARD_IF_FALSE to 248
+ 206: LOAD_FAST            self
+ 208: LOAD_METHOD          set_cookie
+ 230: LOAD_FAST            cookie
+ 232: PRECALL              
+ 236: CALL                 
+ 246: POP_TOP              
+ 248: LOAD_FAST            self
+ 250: LOAD_ATTR            _cookies_lock
+ 260: LOAD_METHOD          release
+ 282: PRECALL              
+ 286: CALL                 
+ 296: POP_TOP              
+ 298: LOAD_CONST           None
+ 300: RETURN_VALUE         
+ 302: PUSH_EXC_INFO        
+ 304: LOAD_FAST            self
+ 306: LOAD_ATTR            _cookies_lock
+ 316: LOAD_METHOD          release
+ 338: PRECALL              
+ 342: CALL                 
+ 352: POP_TOP              
+ 354: RERAISE              
+ 356: COPY                 
+ 358: POP_EXCEPT           
+ 360: RERAISE              

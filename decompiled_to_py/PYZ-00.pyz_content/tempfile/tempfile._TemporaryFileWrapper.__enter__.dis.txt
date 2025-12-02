@@ -1,0 +1,20 @@
+# Disassembly for tempfile._TemporaryFileWrapper.__enter__
+# From module file: tempfile
+
+## co_consts:
+(None,)
+
+## co_names:
+('file', '__enter__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            file
+  14: LOAD_METHOD          __enter__
+  36: PRECALL              
+  40: CALL                 
+  50: POP_TOP              
+  52: LOAD_FAST            self
+  54: RETURN_VALUE         

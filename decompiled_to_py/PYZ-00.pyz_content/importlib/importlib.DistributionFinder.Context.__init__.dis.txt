@@ -1,0 +1,23 @@
+# Disassembly for importlib.DistributionFinder.Context.__init__
+# From module file: importlib.metadata
+
+## co_consts:
+(None,)
+
+## co_names:
+('vars', 'update')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + vars
+  14: LOAD_FAST            self
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_METHOD          update
+  52: LOAD_FAST            kwargs
+  54: PRECALL              
+  58: CALL                 
+  68: POP_TOP              
+  70: LOAD_CONST           None
+  72: RETURN_VALUE         

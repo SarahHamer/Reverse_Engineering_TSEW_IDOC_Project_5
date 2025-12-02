@@ -1,0 +1,75 @@
+# Disassembly for email.Generator._make_boundary
+# From module file: email.generator
+
+## co_consts:
+(None, '===============', '==', 0, True, '^--', '(--)?$', '.', 1)
+
+## co_names:
+('random', 'randrange', 'sys', 'maxsize', '_fmt', '_compile_re', 're', 'escape', 'MULTILINE', 'search', 'str')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + random
+  14: LOAD_ATTR            randrange
+  24: LOAD_GLOBAL          sys
+  36: LOAD_ATTR            maxsize
+  46: PRECALL              
+  50: CALL                 
+  60: STORE_FAST           token
+  62: LOAD_CONST           '==============='
+  64: LOAD_GLOBAL          _fmt
+  76: LOAD_FAST            token
+  78: BINARY_OP            %
+  82: BINARY_OP            +
+  86: LOAD_CONST           '=='
+  88: BINARY_OP            +
+  92: STORE_FAST           boundary
+  94: LOAD_FAST            text
+  96: POP_JUMP_FORWARD_IF_NOT_NONE to 102
+  98: LOAD_FAST            boundary
+ 100: RETURN_VALUE         
+ 102: LOAD_FAST            boundary
+ 104: STORE_FAST           b
+ 106: LOAD_CONST           0
+ 108: STORE_FAST           counter
+ 110: NOP                  
+ 112: LOAD_FAST            cls
+ 114: LOAD_METHOD          _compile_re
+ 136: LOAD_CONST           '^--'
+ 138: LOAD_GLOBAL          NULL + re
+ 150: LOAD_ATTR            escape
+ 160: LOAD_FAST            b
+ 162: PRECALL              
+ 166: CALL                 
+ 176: BINARY_OP            +
+ 180: LOAD_CONST           '(--)?$'
+ 182: BINARY_OP            +
+ 186: LOAD_GLOBAL          re
+ 198: LOAD_ATTR            MULTILINE
+ 208: PRECALL              
+ 212: CALL                 
+ 222: STORE_FAST           cre
+ 224: LOAD_FAST            cre
+ 226: LOAD_METHOD          search
+ 248: LOAD_FAST            text
+ 250: PRECALL              
+ 254: CALL                 
+ 264: POP_JUMP_FORWARD_IF_TRUE to 268
+ 266: JUMP_FORWARD         to 322
+ 268: LOAD_FAST            boundary
+ 270: LOAD_CONST           '.'
+ 272: BINARY_OP            +
+ 276: LOAD_GLOBAL          NULL + str
+ 288: LOAD_FAST            counter
+ 290: PRECALL              
+ 294: CALL                 
+ 304: BINARY_OP            +
+ 308: STORE_FAST           b
+ 310: LOAD_FAST            counter
+ 312: LOAD_CONST           1
+ 314: BINARY_OP            +=
+ 318: STORE_FAST           counter
+ 320: JUMP_BACKWARD        to 112
+ 322: LOAD_FAST            b
+ 324: RETURN_VALUE         

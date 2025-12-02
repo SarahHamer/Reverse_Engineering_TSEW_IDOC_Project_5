@@ -1,0 +1,23 @@
+# Disassembly for playroom.FactoryModel.check
+# From module file: playroom
+
+## co_consts:
+(None, True, "You check out the toy model in the middle of the room.\nIt's made of small boxes, some paper tubes, and what look like pieces of\nvarious other toys.  It looks like it has 6 rooms connected with hallways.\nThe paper tubes look like smoke stacks.  There are pieces of wire taped down\nand running between the rooms to make it look high-tech.\n\nOne of the rooms is covered with colorful stickers and drawings of music notes.\nAnother room has math equations and pictures of the brain draw on it.\nThere is a sign taped to the building that says:\n --- $world\n\nThis was your favorite game to play with your brothers and sisters!\nYou would pretend to be scientists, artists, and leaders trying to solve\nthe worlds problems.\n\nYou felt like you could accomplish anything!\n\nBut why are you here now?")
+
+## co_names:
+('checked', 'send_message')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           True
+   4: LOAD_FAST            self
+   6: STORE_ATTR           checked
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          send_message
+  40: LOAD_CONST           "You check out the toy model in the middle of the room.\nIt's made of small boxes, some paper tubes, and what look like pieces of\nvarious other toys.  It looks like it has 6 rooms connected with hallways.\nThe paper tubes look like smoke stacks.  There are pieces of wire taped down\nand running between the rooms to make it look high-tech.\n\nOne of the rooms is covered with colorful stickers and drawings of music notes.\nAnother room has math equations and pictures of the brain draw on it.\nThere is a sign taped to the building that says:\n --- $world\n\nThis was your favorite game to play with your brothers and sisters!\nYou would pretend to be scientists, artists, and leaders trying to solve\nthe worlds problems.\n\nYou felt like you could accomplish anything!\n\nBut why are you here now?"
+  42: PRECALL              
+  46: CALL                 
+  56: POP_TOP              
+  58: LOAD_CONST           None
+  60: RETURN_VALUE         

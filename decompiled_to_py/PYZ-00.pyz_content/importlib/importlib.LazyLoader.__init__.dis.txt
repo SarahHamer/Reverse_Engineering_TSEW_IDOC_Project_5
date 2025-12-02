@@ -1,0 +1,23 @@
+# Disassembly for importlib.LazyLoader.__init__
+# From module file: importlib.util
+
+## co_consts:
+(None,)
+
+## co_names:
+('_LazyLoader__check_eager_loader', 'loader')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _LazyLoader__check_eager_loader
+  26: LOAD_FAST            loader
+  28: PRECALL              
+  32: CALL                 
+  42: POP_TOP              
+  44: LOAD_FAST            loader
+  46: LOAD_FAST            self
+  48: STORE_ATTR           loader
+  58: LOAD_CONST           None
+  60: RETURN_VALUE         

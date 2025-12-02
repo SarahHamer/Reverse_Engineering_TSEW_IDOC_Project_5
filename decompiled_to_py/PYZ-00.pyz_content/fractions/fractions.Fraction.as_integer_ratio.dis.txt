@@ -1,0 +1,18 @@
+# Disassembly for fractions.Fraction.as_integer_ratio
+# From module file: fractions
+
+## co_consts:
+('Return the integer ratio as a tuple.\n\n        Return a tuple of two integers, whose ratio is equal to the\n        Fraction and with a positive denominator.\n        ',)
+
+## co_names:
+('_numerator', '_denominator')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _numerator
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            _denominator
+  26: BUILD_TUPLE          
+  28: RETURN_VALUE         

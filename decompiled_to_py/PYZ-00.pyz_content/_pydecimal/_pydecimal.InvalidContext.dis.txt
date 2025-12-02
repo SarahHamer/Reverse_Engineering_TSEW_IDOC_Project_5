@@ -1,0 +1,23 @@
+# Disassembly for _pydecimal.InvalidContext
+# From module file: _pydecimal
+
+## co_consts:
+('InvalidContext', 'Invalid context.  Unknown rounding, for example.\n\n    This occurs and signals invalid-operation if an invalid context was\n    detected during an operation.  This can occur if contexts are not checked\n    on creation and either the precision exceeds the capability of the\n    underlying concrete representation or an unknown or unsupported rounding\n    was specified.  These aspects of the context need only be checked when\n    the values are required to be used.  The result is [0,qNaN].\n    ', <code object handle at 0x00000240694976A0, file "_pydecimal.py", line 327>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'handle')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'InvalidContext'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Invalid context.  Unknown rounding, for example.\n\n    This occurs and signals invalid-operation if an invalid context was\n    detected during an operation.  This can occur if contexts are not checked\n    on creation and either the precision exceeds the capability of the\n    underlying concrete representation or an unknown or unsupported rounding\n    was specified.  These aspects of the context need only be checked when\n    the values are required to be used.  The result is [0,qNaN].\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object handle at 0x00000240694976A0, file "_pydecimal.py", line 327>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           handle
+  20: LOAD_CONST           None
+  22: RETURN_VALUE         

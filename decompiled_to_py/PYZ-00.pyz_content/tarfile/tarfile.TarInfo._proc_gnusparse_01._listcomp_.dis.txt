@@ -1,0 +1,23 @@
+# Disassembly for tarfile.TarInfo._proc_gnusparse_01.<listcomp>
+# From module file: tarfile
+
+## co_consts:
+()
+
+## co_names:
+('int',)
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 42
+   8: STORE_FAST           x
+  10: LOAD_GLOBAL          NULL + int
+  22: LOAD_FAST            x
+  24: PRECALL              
+  28: CALL                 
+  38: LIST_APPEND          
+  40: JUMP_BACKWARD        to 6
+  42: RETURN_VALUE         

@@ -1,0 +1,15 @@
+# Disassembly for dataclasses._FIELD_BASE.__repr__
+# From module file: dataclasses
+
+## co_consts:
+(None,)
+
+## co_names:
+('name',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            name
+  14: RETURN_VALUE         

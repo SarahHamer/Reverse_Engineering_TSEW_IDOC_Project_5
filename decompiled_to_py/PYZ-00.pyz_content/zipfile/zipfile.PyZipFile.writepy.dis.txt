@@ -1,0 +1,397 @@
+# Disassembly for zipfile.PyZipFile.writepy
+# From module file: zipfile
+
+## co_consts:
+('Add all files from "pathname" to the ZIP archive.\n\n        If pathname is a package directory, search the directory and\n        all package subdirectories recursively for all *.py and enter\n        the modules into the archive.  If pathname is a plain\n        directory, listdir *.py and enter all modules.  Else, pathname\n        must be a Python *.py file and the module will be put into the\n        archive.  Added modules are always module.pyc.\n        This method will compile the module.py into module.pyc if\n        necessary.\n        If filterfunc(pathname) is given, it is called with every argument.\n        When it is False, the file or directory is skipped.\n        ', 'path', 'file', ' ', ' skipped by filterfunc', None, '__init__.py', '/', 'Adding package in', 'as', 0, -3, 'Adding', ('filterfunc',), '.py', 'file %r skipped by filterfunc', 'Adding files from directory', 'Files added with writepy() must end with ".py"', 'Adding file')
+
+## co_names:
+('os', 'fspath', 'debug', 'path', 'isdir', 'print', 'split', 'join', 'isfile', '_get_codename', 'write', 'sorted', 'listdir', 'remove', 'splitext', 'writepy', 'RuntimeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + os
+  14: LOAD_ATTR            fspath
+  24: LOAD_FAST            pathname
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           pathname
+  42: LOAD_FAST            filterfunc
+  44: POP_JUMP_FORWARD_IF_FALSE to 198
+  46: PUSH_NULL            
+  48: LOAD_FAST            filterfunc
+  50: LOAD_FAST            pathname
+  52: PRECALL              
+  56: CALL                 
+  66: POP_JUMP_FORWARD_IF_TRUE to 198
+  68: LOAD_FAST            self
+  70: LOAD_ATTR            debug
+  80: POP_JUMP_FORWARD_IF_FALSE to 194
+  82: LOAD_GLOBAL          os
+  94: LOAD_ATTR            path
+ 104: LOAD_METHOD          isdir
+ 126: LOAD_FAST            pathname
+ 128: PRECALL              
+ 132: CALL                 
+ 142: POP_JUMP_FORWARD_IF_FALSE to 148
+ 144: LOAD_CONST           'path'
+ 146: JUMP_FORWARD         to 150
+ 148: LOAD_CONST           'file'
+ 150: STORE_FAST           label
+ 152: LOAD_GLOBAL          NULL + print
+ 164: LOAD_FAST            label
+ 166: FORMAT_VALUE         str
+ 168: LOAD_CONST           ' '
+ 170: LOAD_FAST            pathname
+ 172: FORMAT_VALUE         repr
+ 174: LOAD_CONST           ' skipped by filterfunc'
+ 176: BUILD_STRING         
+ 178: PRECALL              
+ 182: CALL                 
+ 192: POP_TOP              
+ 194: LOAD_CONST           None
+ 196: RETURN_VALUE         
+ 198: LOAD_GLOBAL          os
+ 210: LOAD_ATTR            path
+ 220: LOAD_METHOD          split
+ 242: LOAD_FAST            pathname
+ 244: PRECALL              
+ 248: CALL                 
+ 258: UNPACK_SEQUENCE      
+ 262: STORE_FAST           dir
+ 264: STORE_FAST           name
+ 266: LOAD_GLOBAL          os
+ 278: LOAD_ATTR            path
+ 288: LOAD_METHOD          isdir
+ 310: LOAD_FAST            pathname
+ 312: PRECALL              
+ 316: CALL                 
+ 326: EXTENDED_ARG         
+ 328: POP_JUMP_FORWARD_IF_FALSE to 1926
+ 330: LOAD_GLOBAL          os
+ 342: LOAD_ATTR            path
+ 352: LOAD_METHOD          join
+ 374: LOAD_FAST            pathname
+ 376: LOAD_CONST           '__init__.py'
+ 378: PRECALL              
+ 382: CALL                 
+ 392: STORE_FAST           initname
+ 394: LOAD_GLOBAL          os
+ 406: LOAD_ATTR            path
+ 416: LOAD_METHOD          isfile
+ 438: LOAD_FAST            initname
+ 440: PRECALL              
+ 444: CALL                 
+ 454: EXTENDED_ARG         
+ 456: POP_JUMP_FORWARD_IF_FALSE to 1426
+ 458: LOAD_FAST            basename
+ 460: POP_JUMP_FORWARD_IF_FALSE to 478
+ 462: LOAD_FAST            basename
+ 464: FORMAT_VALUE         str
+ 466: LOAD_CONST           '/'
+ 468: LOAD_FAST            name
+ 470: FORMAT_VALUE         str
+ 472: BUILD_STRING         
+ 474: STORE_FAST           basename
+ 476: JUMP_FORWARD         to 482
+ 478: LOAD_FAST            name
+ 480: STORE_FAST           basename
+ 482: LOAD_FAST            self
+ 484: LOAD_ATTR            debug
+ 494: POP_JUMP_FORWARD_IF_FALSE to 532
+ 496: LOAD_GLOBAL          NULL + print
+ 508: LOAD_CONST           'Adding package in'
+ 510: LOAD_FAST            pathname
+ 512: LOAD_CONST           'as'
+ 514: LOAD_FAST            basename
+ 516: PRECALL              
+ 520: CALL                 
+ 530: POP_TOP              
+ 532: LOAD_FAST            self
+ 534: LOAD_METHOD          _get_codename
+ 556: LOAD_FAST            initname
+ 558: LOAD_CONST           0
+ 560: LOAD_CONST           -3
+ 562: BUILD_SLICE          
+ 564: BINARY_SUBSCR        
+ 574: LOAD_FAST            basename
+ 576: PRECALL              
+ 580: CALL                 
+ 590: UNPACK_SEQUENCE      
+ 594: STORE_FAST           fname
+ 596: STORE_FAST           arcname
+ 598: LOAD_FAST            self
+ 600: LOAD_ATTR            debug
+ 610: POP_JUMP_FORWARD_IF_FALSE to 644
+ 612: LOAD_GLOBAL          NULL + print
+ 624: LOAD_CONST           'Adding'
+ 626: LOAD_FAST            arcname
+ 628: PRECALL              
+ 632: CALL                 
+ 642: POP_TOP              
+ 644: LOAD_FAST            self
+ 646: LOAD_METHOD          write
+ 668: LOAD_FAST            fname
+ 670: LOAD_FAST            arcname
+ 672: PRECALL              
+ 676: CALL                 
+ 686: POP_TOP              
+ 688: LOAD_GLOBAL          NULL + sorted
+ 700: LOAD_GLOBAL          NULL + os
+ 712: LOAD_ATTR            listdir
+ 722: LOAD_FAST            pathname
+ 724: PRECALL              
+ 728: CALL                 
+ 738: PRECALL              
+ 742: CALL                 
+ 752: STORE_FAST           dirlist
+ 754: LOAD_FAST            dirlist
+ 756: LOAD_METHOD          remove
+ 778: LOAD_CONST           '__init__.py'
+ 780: PRECALL              
+ 784: CALL                 
+ 794: POP_TOP              
+ 796: LOAD_FAST            dirlist
+ 798: GET_ITER             
+ 800: EXTENDED_ARG         
+ 802: FOR_ITER             to 1422
+ 804: STORE_FAST           filename
+ 806: LOAD_GLOBAL          os
+ 818: LOAD_ATTR            path
+ 828: LOAD_METHOD          join
+ 850: LOAD_FAST            pathname
+ 852: LOAD_FAST            filename
+ 854: PRECALL              
+ 858: CALL                 
+ 868: STORE_FAST           path
+ 870: LOAD_GLOBAL          os
+ 882: LOAD_ATTR            path
+ 892: LOAD_METHOD          splitext
+ 914: LOAD_FAST            filename
+ 916: PRECALL              
+ 920: CALL                 
+ 930: UNPACK_SEQUENCE      
+ 934: STORE_FAST           root
+ 936: STORE_FAST           ext
+ 938: LOAD_GLOBAL          os
+ 950: LOAD_ATTR            path
+ 960: LOAD_METHOD          isdir
+ 982: LOAD_FAST            path
+ 984: PRECALL              
+ 988: CALL                 
+ 998: POP_JUMP_FORWARD_IF_FALSE to 1172
+1000: LOAD_GLOBAL          os
+1012: LOAD_ATTR            path
+1022: LOAD_METHOD          isfile
+1044: LOAD_GLOBAL          os
+1056: LOAD_ATTR            path
+1066: LOAD_METHOD          join
+1088: LOAD_FAST            path
+1090: LOAD_CONST           '__init__.py'
+1092: PRECALL              
+1096: CALL                 
+1106: PRECALL              
+1110: CALL                 
+1120: POP_JUMP_FORWARD_IF_FALSE to 1170
+1122: LOAD_FAST            self
+1124: LOAD_METHOD          writepy
+1146: LOAD_FAST            path
+1148: LOAD_FAST            basename
+1150: LOAD_FAST            filterfunc
+1152: KW_NAMES             
+1154: PRECALL              
+1158: CALL                 
+1168: POP_TOP              
+1170: JUMP_BACKWARD        to 800
+1172: LOAD_FAST            ext
+1174: LOAD_CONST           '.py'
+1176: COMPARE_OP           ==
+1182: POP_JUMP_FORWARD_IF_FALSE to 1418
+1184: LOAD_FAST            filterfunc
+1186: POP_JUMP_FORWARD_IF_FALSE to 1262
+1188: PUSH_NULL            
+1190: LOAD_FAST            filterfunc
+1192: LOAD_FAST            path
+1194: PRECALL              
+1198: CALL                 
+1208: POP_JUMP_FORWARD_IF_TRUE to 1262
+1210: LOAD_FAST            self
+1212: LOAD_ATTR            debug
+1222: POP_JUMP_FORWARD_IF_FALSE to 1260
+1224: LOAD_GLOBAL          NULL + print
+1236: LOAD_CONST           'file %r skipped by filterfunc'
+1238: LOAD_FAST            path
+1240: BINARY_OP            %
+1244: PRECALL              
+1248: CALL                 
+1258: POP_TOP              
+1260: JUMP_BACKWARD        to 800
+1262: LOAD_FAST            self
+1264: LOAD_METHOD          _get_codename
+1286: LOAD_FAST            path
+1288: LOAD_CONST           0
+1290: LOAD_CONST           -3
+1292: BUILD_SLICE          
+1294: BINARY_SUBSCR        
+1304: LOAD_FAST            basename
+1306: PRECALL              
+1310: CALL                 
+1320: UNPACK_SEQUENCE      
+1324: STORE_FAST           fname
+1326: STORE_FAST           arcname
+1328: LOAD_FAST            self
+1330: LOAD_ATTR            debug
+1340: POP_JUMP_FORWARD_IF_FALSE to 1374
+1342: LOAD_GLOBAL          NULL + print
+1354: LOAD_CONST           'Adding'
+1356: LOAD_FAST            arcname
+1358: PRECALL              
+1362: CALL                 
+1372: POP_TOP              
+1374: LOAD_FAST            self
+1376: LOAD_METHOD          write
+1398: LOAD_FAST            fname
+1400: LOAD_FAST            arcname
+1402: PRECALL              
+1406: CALL                 
+1416: POP_TOP              
+1418: EXTENDED_ARG         
+1420: JUMP_BACKWARD        to 800
+1422: LOAD_CONST           None
+1424: RETURN_VALUE         
+1426: LOAD_FAST            self
+1428: LOAD_ATTR            debug
+1438: POP_JUMP_FORWARD_IF_FALSE to 1472
+1440: LOAD_GLOBAL          NULL + print
+1452: LOAD_CONST           'Adding files from directory'
+1454: LOAD_FAST            pathname
+1456: PRECALL              
+1460: CALL                 
+1470: POP_TOP              
+1472: LOAD_GLOBAL          NULL + sorted
+1484: LOAD_GLOBAL          NULL + os
+1496: LOAD_ATTR            listdir
+1506: LOAD_FAST            pathname
+1508: PRECALL              
+1512: CALL                 
+1522: PRECALL              
+1526: CALL                 
+1536: GET_ITER             
+1538: FOR_ITER             to 1922
+1540: STORE_FAST           filename
+1542: LOAD_GLOBAL          os
+1554: LOAD_ATTR            path
+1564: LOAD_METHOD          join
+1586: LOAD_FAST            pathname
+1588: LOAD_FAST            filename
+1590: PRECALL              
+1594: CALL                 
+1604: STORE_FAST           path
+1606: LOAD_GLOBAL          os
+1618: LOAD_ATTR            path
+1628: LOAD_METHOD          splitext
+1650: LOAD_FAST            filename
+1652: PRECALL              
+1656: CALL                 
+1666: UNPACK_SEQUENCE      
+1670: STORE_FAST           root
+1672: STORE_FAST           ext
+1674: LOAD_FAST            ext
+1676: LOAD_CONST           '.py'
+1678: COMPARE_OP           ==
+1684: POP_JUMP_FORWARD_IF_FALSE to 1920
+1686: LOAD_FAST            filterfunc
+1688: POP_JUMP_FORWARD_IF_FALSE to 1764
+1690: PUSH_NULL            
+1692: LOAD_FAST            filterfunc
+1694: LOAD_FAST            path
+1696: PRECALL              
+1700: CALL                 
+1710: POP_JUMP_FORWARD_IF_TRUE to 1764
+1712: LOAD_FAST            self
+1714: LOAD_ATTR            debug
+1724: POP_JUMP_FORWARD_IF_FALSE to 1762
+1726: LOAD_GLOBAL          NULL + print
+1738: LOAD_CONST           'file %r skipped by filterfunc'
+1740: LOAD_FAST            path
+1742: BINARY_OP            %
+1746: PRECALL              
+1750: CALL                 
+1760: POP_TOP              
+1762: JUMP_BACKWARD        to 1538
+1764: LOAD_FAST            self
+1766: LOAD_METHOD          _get_codename
+1788: LOAD_FAST            path
+1790: LOAD_CONST           0
+1792: LOAD_CONST           -3
+1794: BUILD_SLICE          
+1796: BINARY_SUBSCR        
+1806: LOAD_FAST            basename
+1808: PRECALL              
+1812: CALL                 
+1822: UNPACK_SEQUENCE      
+1826: STORE_FAST           fname
+1828: STORE_FAST           arcname
+1830: LOAD_FAST            self
+1832: LOAD_ATTR            debug
+1842: POP_JUMP_FORWARD_IF_FALSE to 1876
+1844: LOAD_GLOBAL          NULL + print
+1856: LOAD_CONST           'Adding'
+1858: LOAD_FAST            arcname
+1860: PRECALL              
+1864: CALL                 
+1874: POP_TOP              
+1876: LOAD_FAST            self
+1878: LOAD_METHOD          write
+1900: LOAD_FAST            fname
+1902: LOAD_FAST            arcname
+1904: PRECALL              
+1908: CALL                 
+1918: POP_TOP              
+1920: JUMP_BACKWARD        to 1538
+1922: LOAD_CONST           None
+1924: RETURN_VALUE         
+1926: LOAD_FAST            pathname
+1928: LOAD_CONST           -3
+1930: LOAD_CONST           None
+1932: BUILD_SLICE          
+1934: BINARY_SUBSCR        
+1944: LOAD_CONST           '.py'
+1946: COMPARE_OP           !=
+1952: POP_JUMP_FORWARD_IF_FALSE to 1984
+1954: LOAD_GLOBAL          NULL + RuntimeError
+1966: LOAD_CONST           'Files added with writepy() must end with ".py"'
+1968: PRECALL              
+1972: CALL                 
+1982: RAISE_VARARGS        
+1984: LOAD_FAST            self
+1986: LOAD_METHOD          _get_codename
+2008: LOAD_FAST            pathname
+2010: LOAD_CONST           0
+2012: LOAD_CONST           -3
+2014: BUILD_SLICE          
+2016: BINARY_SUBSCR        
+2026: LOAD_FAST            basename
+2028: PRECALL              
+2032: CALL                 
+2042: UNPACK_SEQUENCE      
+2046: STORE_FAST           fname
+2048: STORE_FAST           arcname
+2050: LOAD_FAST            self
+2052: LOAD_ATTR            debug
+2062: POP_JUMP_FORWARD_IF_FALSE to 2096
+2064: LOAD_GLOBAL          NULL + print
+2076: LOAD_CONST           'Adding file'
+2078: LOAD_FAST            arcname
+2080: PRECALL              
+2084: CALL                 
+2094: POP_TOP              
+2096: LOAD_FAST            self
+2098: LOAD_METHOD          write
+2120: LOAD_FAST            fname
+2122: LOAD_FAST            arcname
+2124: PRECALL              
+2128: CALL                 
+2138: POP_TOP              
+2140: LOAD_CONST           None
+2142: RETURN_VALUE         

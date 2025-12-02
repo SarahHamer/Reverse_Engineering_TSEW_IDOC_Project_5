@@ -1,0 +1,34 @@
+# Disassembly for logging.Logger.info
+# From module file: logging
+
+## co_consts:
+('\n        Log \'msg % args\' with severity \'INFO\'.\n\n        To pass exception information, use the keyword argument exc_info with\n        a true value, e.g.\n\n        logger.info("Houston, we have a %s", "interesting problem", exc_info=1)\n        ', None)
+
+## co_names:
+('isEnabledFor', 'INFO', '_log')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          isEnabledFor
+  26: LOAD_GLOBAL          INFO
+  38: PRECALL              
+  42: CALL                 
+  52: POP_JUMP_FORWARD_IF_FALSE to 100
+  54: PUSH_NULL            
+  56: LOAD_FAST            self
+  58: LOAD_ATTR            _log
+  68: LOAD_GLOBAL          INFO
+  80: LOAD_FAST            msg
+  82: LOAD_FAST            args
+  84: BUILD_TUPLE          
+  86: BUILD_MAP            
+  88: LOAD_FAST            kwargs
+  90: DICT_MERGE           
+  92: CALL_FUNCTION_EX     
+  94: POP_TOP              
+  96: LOAD_CONST           None
+  98: RETURN_VALUE         
+ 100: LOAD_CONST           None
+ 102: RETURN_VALUE         

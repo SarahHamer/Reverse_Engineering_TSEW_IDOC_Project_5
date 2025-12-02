@@ -1,0 +1,23 @@
+# Disassembly for tempfile.SpooledTemporaryFile.fileno
+# From module file: tempfile
+
+## co_consts:
+(None,)
+
+## co_names:
+('rollover', '_file', 'fileno')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          rollover
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            _file
+  54: LOAD_METHOD          fileno
+  76: PRECALL              
+  80: CALL                 
+  90: RETURN_VALUE         

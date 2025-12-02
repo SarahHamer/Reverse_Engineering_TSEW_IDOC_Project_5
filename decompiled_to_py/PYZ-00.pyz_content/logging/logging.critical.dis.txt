@@ -1,0 +1,38 @@
+# Disassembly for logging.critical
+# From module file: logging
+
+## co_consts:
+("\n    Log a message with severity 'CRITICAL' on the root logger. If the logger\n    has no handlers, call basicConfig() to add a console handler with a\n    pre-defined format.\n    ", 0, None)
+
+## co_names:
+('len', 'root', 'handlers', 'basicConfig', 'critical')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + len
+  14: LOAD_GLOBAL          root
+  26: LOAD_ATTR            handlers
+  36: PRECALL              
+  40: CALL                 
+  50: LOAD_CONST           0
+  52: COMPARE_OP           ==
+  58: POP_JUMP_FORWARD_IF_FALSE to 88
+  60: LOAD_GLOBAL          NULL + basicConfig
+  72: PRECALL              
+  76: CALL                 
+  86: POP_TOP              
+  88: LOAD_GLOBAL          NULL + root
+ 100: LOAD_ATTR            critical
+ 110: LOAD_FAST            msg
+ 112: BUILD_LIST           
+ 114: LOAD_FAST            args
+ 116: LIST_EXTEND          
+ 118: LIST_TO_TUPLE        
+ 120: BUILD_MAP            
+ 122: LOAD_FAST            kwargs
+ 124: DICT_MERGE           
+ 126: CALL_FUNCTION_EX     
+ 128: POP_TOP              
+ 130: LOAD_CONST           None
+ 132: RETURN_VALUE         

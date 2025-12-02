@@ -1,0 +1,170 @@
+# Disassembly for zipfile.ZipFile.writestr
+# From module file: zipfile
+
+## co_consts:
+("Write a file into the archive.  The contents is 'data', which\n        may be either a 'str' or a 'bytes' instance; if it is a 'str',\n        it is encoded as UTF-8 first.\n        'zinfo_or_arcname' is either a ZipInfo instance or\n        the name of the file in the archive.", 'utf-8', None, 6, ('filename', 'date_time'), -1, '/', 1107099648, 16, 25165824, 'Attempt to write to ZIP archive that was already closed', "Can't write to ZIP archive while an open writing handle exists.", 'w', ('mode',))
+
+## co_names:
+('isinstance', 'str', 'encode', 'ZipInfo', 'time', 'localtime', 'compression', 'compress_type', 'compresslevel', '_compresslevel', 'filename', 'external_attr', 'fp', 'ValueError', '_writing', 'len', 'file_size', '_lock', 'open', 'write')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            data
+  16: LOAD_GLOBAL          str
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 86
+  44: LOAD_FAST            data
+  46: LOAD_METHOD          encode
+  68: LOAD_CONST           'utf-8'
+  70: PRECALL              
+  74: CALL                 
+  84: STORE_FAST           data
+  86: LOAD_GLOBAL          NULL + isinstance
+  98: LOAD_FAST            zinfo_or_arcname
+ 100: LOAD_GLOBAL          ZipInfo
+ 112: PRECALL              
+ 116: CALL                 
+ 126: POP_JUMP_FORWARD_IF_TRUE to 394
+ 128: LOAD_GLOBAL          NULL + ZipInfo
+ 140: LOAD_FAST            zinfo_or_arcname
+ 142: LOAD_GLOBAL          NULL + time
+ 154: LOAD_ATTR            localtime
+ 164: LOAD_GLOBAL          NULL + time
+ 176: LOAD_ATTR            time
+ 186: PRECALL              
+ 190: CALL                 
+ 200: PRECALL              
+ 204: CALL                 
+ 214: LOAD_CONST           None
+ 216: LOAD_CONST           6
+ 218: BUILD_SLICE          
+ 220: BINARY_SUBSCR        
+ 230: KW_NAMES             
+ 232: PRECALL              
+ 236: CALL                 
+ 246: STORE_FAST           zinfo
+ 248: LOAD_FAST            self
+ 250: LOAD_ATTR            compression
+ 260: LOAD_FAST            zinfo
+ 262: STORE_ATTR           compress_type
+ 272: LOAD_FAST            self
+ 274: LOAD_ATTR            compresslevel
+ 284: LOAD_FAST            zinfo
+ 286: STORE_ATTR           _compresslevel
+ 296: LOAD_FAST            zinfo
+ 298: LOAD_ATTR            filename
+ 308: LOAD_CONST           -1
+ 310: BINARY_SUBSCR        
+ 320: LOAD_CONST           '/'
+ 322: COMPARE_OP           ==
+ 328: POP_JUMP_FORWARD_IF_FALSE to 378
+ 330: LOAD_CONST           1107099648
+ 332: LOAD_FAST            zinfo
+ 334: STORE_ATTR           external_attr
+ 344: LOAD_FAST            zinfo
+ 346: COPY                 
+ 348: LOAD_ATTR            external_attr
+ 358: LOAD_CONST           16
+ 360: BINARY_OP            |=
+ 364: SWAP                 
+ 366: STORE_ATTR           external_attr
+ 376: JUMP_FORWARD         to 398
+ 378: LOAD_CONST           25165824
+ 380: LOAD_FAST            zinfo
+ 382: STORE_ATTR           external_attr
+ 392: JUMP_FORWARD         to 398
+ 394: LOAD_FAST            zinfo_or_arcname
+ 396: STORE_FAST           zinfo
+ 398: LOAD_FAST            self
+ 400: LOAD_ATTR            fp
+ 410: POP_JUMP_FORWARD_IF_TRUE to 442
+ 412: LOAD_GLOBAL          NULL + ValueError
+ 424: LOAD_CONST           'Attempt to write to ZIP archive that was already closed'
+ 426: PRECALL              
+ 430: CALL                 
+ 440: RAISE_VARARGS        
+ 442: LOAD_FAST            self
+ 444: LOAD_ATTR            _writing
+ 454: POP_JUMP_FORWARD_IF_FALSE to 486
+ 456: LOAD_GLOBAL          NULL + ValueError
+ 468: LOAD_CONST           "Can't write to ZIP archive while an open writing handle exists."
+ 470: PRECALL              
+ 474: CALL                 
+ 484: RAISE_VARARGS        
+ 486: LOAD_FAST            compress_type
+ 488: POP_JUMP_FORWARD_IF_NONE to 504
+ 490: LOAD_FAST            compress_type
+ 492: LOAD_FAST            zinfo
+ 494: STORE_ATTR           compress_type
+ 504: LOAD_FAST            compresslevel
+ 506: POP_JUMP_FORWARD_IF_NONE to 522
+ 508: LOAD_FAST            compresslevel
+ 510: LOAD_FAST            zinfo
+ 512: STORE_ATTR           _compresslevel
+ 522: LOAD_GLOBAL          NULL + len
+ 534: LOAD_FAST            data
+ 536: PRECALL              
+ 540: CALL                 
+ 550: LOAD_FAST            zinfo
+ 552: STORE_ATTR           file_size
+ 562: LOAD_FAST            self
+ 564: LOAD_ATTR            _lock
+ 574: BEFORE_WITH          
+ 576: POP_TOP              
+ 578: LOAD_FAST            self
+ 580: LOAD_METHOD          open
+ 602: LOAD_FAST            zinfo
+ 604: LOAD_CONST           'w'
+ 606: KW_NAMES             
+ 608: PRECALL              
+ 612: CALL                 
+ 622: BEFORE_WITH          
+ 624: STORE_FAST           dest
+ 626: LOAD_FAST            dest
+ 628: LOAD_METHOD          write
+ 650: LOAD_FAST            data
+ 652: PRECALL              
+ 656: CALL                 
+ 666: POP_TOP              
+ 668: LOAD_CONST           None
+ 670: LOAD_CONST           None
+ 672: LOAD_CONST           None
+ 674: PRECALL              
+ 678: CALL                 
+ 688: POP_TOP              
+ 690: JUMP_FORWARD         to 714
+ 692: PUSH_EXC_INFO        
+ 694: WITH_EXCEPT_START    
+ 696: POP_JUMP_FORWARD_IF_TRUE to 706
+ 698: RERAISE              
+ 700: COPY                 
+ 702: POP_EXCEPT           
+ 704: RERAISE              
+ 706: POP_TOP              
+ 708: POP_EXCEPT           
+ 710: POP_TOP              
+ 712: POP_TOP              
+ 714: LOAD_CONST           None
+ 716: LOAD_CONST           None
+ 718: LOAD_CONST           None
+ 720: PRECALL              
+ 724: CALL                 
+ 734: POP_TOP              
+ 736: LOAD_CONST           None
+ 738: RETURN_VALUE         
+ 740: PUSH_EXC_INFO        
+ 742: WITH_EXCEPT_START    
+ 744: POP_JUMP_FORWARD_IF_TRUE to 754
+ 746: RERAISE              
+ 748: COPY                 
+ 750: POP_EXCEPT           
+ 752: RERAISE              
+ 754: POP_TOP              
+ 756: POP_EXCEPT           
+ 758: POP_TOP              
+ 760: POP_TOP              
+ 762: LOAD_CONST           None
+ 764: RETURN_VALUE         

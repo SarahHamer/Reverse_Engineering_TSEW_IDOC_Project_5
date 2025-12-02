@@ -1,0 +1,25 @@
+# Disassembly for _pydecimal.Context.compare_total
+# From module file: _pydecimal
+
+## co_consts:
+("Compares two operands using their abstract representation.\n\n        This is not like the standard compare, which use their numerical\n        value. Note that a total ordering is defined for all possible abstract\n        representations.\n\n        >>> ExtendedContext.compare_total(Decimal('12.73'), Decimal('127.9'))\n        Decimal('-1')\n        >>> ExtendedContext.compare_total(Decimal('-127'),  Decimal('12'))\n        Decimal('-1')\n        >>> ExtendedContext.compare_total(Decimal('12.30'), Decimal('12.3'))\n        Decimal('-1')\n        >>> ExtendedContext.compare_total(Decimal('12.30'), Decimal('12.30'))\n        Decimal('0')\n        >>> ExtendedContext.compare_total(Decimal('12.3'),  Decimal('12.300'))\n        Decimal('1')\n        >>> ExtendedContext.compare_total(Decimal('12.3'),  Decimal('NaN'))\n        Decimal('-1')\n        >>> ExtendedContext.compare_total(1, 2)\n        Decimal('-1')\n        >>> ExtendedContext.compare_total(Decimal(1), 2)\n        Decimal('-1')\n        >>> ExtendedContext.compare_total(1, Decimal(2))\n        Decimal('-1')\n        ", True, ('raiseit',))
+
+## co_names:
+('_convert_other', 'compare_total')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _convert_other
+  14: LOAD_FAST            a
+  16: LOAD_CONST           True
+  18: KW_NAMES             
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           a
+  36: LOAD_FAST            a
+  38: LOAD_METHOD          compare_total
+  60: LOAD_FAST            b
+  62: PRECALL              
+  66: CALL                 
+  76: RETURN_VALUE         

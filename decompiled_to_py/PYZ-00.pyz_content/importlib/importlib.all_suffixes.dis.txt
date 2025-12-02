@@ -1,0 +1,18 @@
+# Disassembly for importlib.all_suffixes
+# From module file: importlib.machinery
+
+## co_consts:
+('Returns a list of all recognized module suffixes for this process',)
+
+## co_names:
+('SOURCE_SUFFIXES', 'BYTECODE_SUFFIXES', 'EXTENSION_SUFFIXES')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          SOURCE_SUFFIXES
+  14: LOAD_GLOBAL          BYTECODE_SUFFIXES
+  26: BINARY_OP            +
+  30: LOAD_GLOBAL          EXTENSION_SUFFIXES
+  42: BINARY_OP            +
+  46: RETURN_VALUE         

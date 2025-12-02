@@ -1,0 +1,127 @@
+# Disassembly for datetime.datetime._mktime
+# From module file: datetime
+
+## co_consts:
+('Return integer POSIX timestamp.', 1970, 1, 86400, 0, <code object local at 0x00000240691C05B0, file "datetime.py", line 1875>)
+
+## co_names:
+('datetime', 'timedelta', 'fold', 'max', 'min')
+
+## bytecode:
+
+   0: MAKE_CELL            epoch
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + datetime
+  16: LOAD_CONST           1970
+  18: LOAD_CONST           1
+  20: LOAD_CONST           1
+  22: PRECALL              
+  26: CALL                 
+  36: STORE_DEREF          epoch
+  38: LOAD_CONST           86400
+  40: STORE_FAST           max_fold_seconds
+  42: LOAD_FAST            self
+  44: LOAD_DEREF           epoch
+  46: BINARY_OP            -
+  50: LOAD_GLOBAL          NULL + timedelta
+  62: LOAD_CONST           0
+  64: LOAD_CONST           1
+  66: PRECALL              
+  70: CALL                 
+  80: BINARY_OP            //
+  84: STORE_FAST           t
+  86: LOAD_CLOSURE         epoch
+  88: BUILD_TUPLE          
+  90: LOAD_CONST           <code object local at 0x00000240691C05B0, file "datetime.py", line 1875>
+  92: MAKE_FUNCTION        closure
+  94: STORE_FAST           local
+  96: PUSH_NULL            
+  98: LOAD_FAST            local
+ 100: LOAD_FAST            t
+ 102: PRECALL              
+ 106: CALL                 
+ 116: LOAD_FAST            t
+ 118: BINARY_OP            -
+ 122: STORE_FAST           a
+ 124: LOAD_FAST            t
+ 126: LOAD_FAST            a
+ 128: BINARY_OP            -
+ 132: STORE_FAST           u1
+ 134: PUSH_NULL            
+ 136: LOAD_FAST            local
+ 138: LOAD_FAST            u1
+ 140: PRECALL              
+ 144: CALL                 
+ 154: STORE_FAST           t1
+ 156: LOAD_FAST            t1
+ 158: LOAD_FAST            t
+ 160: COMPARE_OP           ==
+ 166: POP_JUMP_FORWARD_IF_FALSE to 252
+ 168: LOAD_FAST            u1
+ 170: LOAD_FAST            max_fold_seconds
+ 172: UNARY_NEGATIVE       
+ 174: LOAD_FAST            max_fold_seconds
+ 176: BUILD_TUPLE          
+ 178: LOAD_FAST            self
+ 180: LOAD_ATTR            fold
+ 190: BINARY_SUBSCR        
+ 200: BINARY_OP            +
+ 204: STORE_FAST           u2
+ 206: PUSH_NULL            
+ 208: LOAD_FAST            local
+ 210: LOAD_FAST            u2
+ 212: PRECALL              
+ 216: CALL                 
+ 226: LOAD_FAST            u2
+ 228: BINARY_OP            -
+ 232: STORE_FAST           b
+ 234: LOAD_FAST            a
+ 236: LOAD_FAST            b
+ 238: COMPARE_OP           ==
+ 244: POP_JUMP_FORWARD_IF_FALSE to 250
+ 246: LOAD_FAST            u1
+ 248: RETURN_VALUE         
+ 250: JUMP_FORWARD         to 278
+ 252: LOAD_FAST            t1
+ 254: LOAD_FAST            u1
+ 256: BINARY_OP            -
+ 260: STORE_FAST           b
+ 262: LOAD_FAST            a
+ 264: LOAD_FAST            b
+ 266: COMPARE_OP           !=
+ 272: POP_JUMP_FORWARD_IF_TRUE to 278
+ 274: LOAD_ASSERTION_ERROR 
+ 276: RAISE_VARARGS        
+ 278: LOAD_FAST            t
+ 280: LOAD_FAST            b
+ 282: BINARY_OP            -
+ 286: STORE_FAST           u2
+ 288: PUSH_NULL            
+ 290: LOAD_FAST            local
+ 292: LOAD_FAST            u2
+ 294: PRECALL              
+ 298: CALL                 
+ 308: STORE_FAST           t2
+ 310: LOAD_FAST            t2
+ 312: LOAD_FAST            t
+ 314: COMPARE_OP           ==
+ 320: POP_JUMP_FORWARD_IF_FALSE to 326
+ 322: LOAD_FAST            u2
+ 324: RETURN_VALUE         
+ 326: LOAD_FAST            t1
+ 328: LOAD_FAST            t
+ 330: COMPARE_OP           ==
+ 336: POP_JUMP_FORWARD_IF_FALSE to 342
+ 338: LOAD_FAST            u1
+ 340: RETURN_VALUE         
+ 342: LOAD_GLOBAL          NULL + max
+ 354: LOAD_GLOBAL          min
+ 366: BUILD_TUPLE          
+ 368: LOAD_FAST            self
+ 370: LOAD_ATTR            fold
+ 380: BINARY_SUBSCR        
+ 390: LOAD_FAST            u1
+ 392: LOAD_FAST            u2
+ 394: PRECALL              
+ 398: CALL                 
+ 408: RETURN_VALUE         

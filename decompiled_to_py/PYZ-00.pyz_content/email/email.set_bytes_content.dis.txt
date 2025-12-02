@@ -1,0 +1,98 @@
+# Disassembly for email.set_bytes_content
+# From module file: email.contentmanager
+
+## co_consts:
+(None, 'base64', ('max_line_length',), 'quoted-printable', False, True, ('istext', 'header', 'quotetabs'), 'ascii', '7bit', ('8bit', 'binary'), 'surrogateescape', 'Content-Transfer-Encoding')
+
+## co_names:
+('_prepare_set', '_encode_base64', 'policy', 'max_line_length', 'binascii', 'b2a_qp', 'decode', 'set_payload', '_finalize_set')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _prepare_set
+  14: LOAD_FAST            msg
+  16: LOAD_FAST            maintype
+  18: LOAD_FAST            subtype
+  20: LOAD_FAST            headers
+  22: PRECALL              
+  26: CALL                 
+  36: POP_TOP              
+  38: LOAD_FAST            cte
+  40: LOAD_CONST           'base64'
+  42: COMPARE_OP           ==
+  48: POP_JUMP_FORWARD_IF_FALSE to 106
+  50: LOAD_GLOBAL          NULL + _encode_base64
+  62: LOAD_FAST            data
+  64: LOAD_FAST            msg
+  66: LOAD_ATTR            policy
+  76: LOAD_ATTR            max_line_length
+  86: KW_NAMES             
+  88: PRECALL              
+  92: CALL                 
+ 102: STORE_FAST           data
+ 104: JUMP_FORWARD         to 318
+ 106: LOAD_FAST            cte
+ 108: LOAD_CONST           'quoted-printable'
+ 110: COMPARE_OP           ==
+ 116: POP_JUMP_FORWARD_IF_FALSE to 210
+ 118: LOAD_GLOBAL          NULL + binascii
+ 130: LOAD_ATTR            b2a_qp
+ 140: LOAD_FAST            data
+ 142: LOAD_CONST           False
+ 144: LOAD_CONST           False
+ 146: LOAD_CONST           True
+ 148: KW_NAMES             
+ 150: PRECALL              
+ 154: CALL                 
+ 164: STORE_FAST           data
+ 166: LOAD_FAST            data
+ 168: LOAD_METHOD          decode
+ 190: LOAD_CONST           'ascii'
+ 192: PRECALL              
+ 196: CALL                 
+ 206: STORE_FAST           data
+ 208: JUMP_FORWARD         to 318
+ 210: LOAD_FAST            cte
+ 212: LOAD_CONST           '7bit'
+ 214: COMPARE_OP           ==
+ 220: POP_JUMP_FORWARD_IF_FALSE to 266
+ 222: LOAD_FAST            data
+ 224: LOAD_METHOD          decode
+ 246: LOAD_CONST           'ascii'
+ 248: PRECALL              
+ 252: CALL                 
+ 262: STORE_FAST           data
+ 264: JUMP_FORWARD         to 318
+ 266: LOAD_FAST            cte
+ 268: LOAD_CONST           ('8bit', 'binary')
+ 270: CONTAINS_OP          
+ 272: POP_JUMP_FORWARD_IF_FALSE to 318
+ 274: LOAD_FAST            data
+ 276: LOAD_METHOD          decode
+ 298: LOAD_CONST           'ascii'
+ 300: LOAD_CONST           'surrogateescape'
+ 302: PRECALL              
+ 306: CALL                 
+ 316: STORE_FAST           data
+ 318: LOAD_FAST            msg
+ 320: LOAD_METHOD          set_payload
+ 342: LOAD_FAST            data
+ 344: PRECALL              
+ 348: CALL                 
+ 358: POP_TOP              
+ 360: LOAD_FAST            cte
+ 362: LOAD_FAST            msg
+ 364: LOAD_CONST           'Content-Transfer-Encoding'
+ 366: STORE_SUBSCR         
+ 370: LOAD_GLOBAL          NULL + _finalize_set
+ 382: LOAD_FAST            msg
+ 384: LOAD_FAST            disposition
+ 386: LOAD_FAST            filename
+ 388: LOAD_FAST            cid
+ 390: LOAD_FAST            params
+ 392: PRECALL              
+ 396: CALL                 
+ 406: POP_TOP              
+ 408: LOAD_CONST           None
+ 410: RETURN_VALUE         

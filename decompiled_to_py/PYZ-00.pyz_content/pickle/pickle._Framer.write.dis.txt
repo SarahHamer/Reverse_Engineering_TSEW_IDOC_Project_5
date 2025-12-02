@@ -1,0 +1,28 @@
+# Disassembly for pickle._Framer.write
+# From module file: pickle
+
+## co_consts:
+(None,)
+
+## co_names:
+('current_frame', 'write', 'file_write')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            current_frame
+  14: POP_JUMP_FORWARD_IF_FALSE to 68
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            current_frame
+  28: LOAD_METHOD          write
+  50: LOAD_FAST            data
+  52: PRECALL              
+  56: CALL                 
+  66: RETURN_VALUE         
+  68: LOAD_FAST            self
+  70: LOAD_METHOD          file_write
+  92: LOAD_FAST            data
+  94: PRECALL              
+  98: CALL                 
+ 108: RETURN_VALUE         

@@ -1,0 +1,14 @@
+# Disassembly for tarfile._FileInFile.writable
+# From module file: tarfile
+
+## co_consts:
+(None, False)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           False
+   4: RETURN_VALUE         

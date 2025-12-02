@@ -1,0 +1,25 @@
+# Disassembly for dataclasses._dataclass_getstate
+# From module file: dataclasses
+
+## co_consts:
+(None, <code object <listcomp> at 0x00000240693EAD30, file "dataclasses.py", line 1124>)
+
+## co_names:
+('fields',)
+
+## bytecode:
+
+   0: MAKE_CELL            self
+   2: RESUME               
+   4: LOAD_CLOSURE         self
+   6: BUILD_TUPLE          
+   8: LOAD_CONST           <code object <listcomp> at 0x00000240693EAD30, file "dataclasses.py", line 1124>
+  10: MAKE_FUNCTION        closure
+  12: LOAD_GLOBAL          NULL + fields
+  24: LOAD_DEREF           self
+  26: PRECALL              
+  30: CALL                 
+  40: GET_ITER             
+  42: PRECALL              
+  46: CALL                 
+  56: RETURN_VALUE         

@@ -1,0 +1,25 @@
+# Disassembly for email.Charset.__eq__
+# From module file: email.charset
+
+## co_consts:
+(None,)
+
+## co_names:
+('str', 'lower')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + str
+  14: LOAD_FAST            self
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_GLOBAL          NULL + str
+  42: LOAD_FAST            other
+  44: PRECALL              
+  48: CALL                 
+  58: LOAD_METHOD          lower
+  80: PRECALL              
+  84: CALL                 
+  94: COMPARE_OP           ==
+ 100: RETURN_VALUE         

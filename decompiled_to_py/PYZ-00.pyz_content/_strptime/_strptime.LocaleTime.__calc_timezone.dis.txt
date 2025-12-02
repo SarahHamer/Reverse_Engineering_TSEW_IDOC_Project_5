@@ -1,0 +1,79 @@
+# Disassembly for _strptime.LocaleTime.__calc_timezone
+# From module file: _strptime
+
+## co_consts:
+(None, 'utc', 'gmt', 0, 1)
+
+## co_names:
+('time', 'tzset', 'AttributeError', 'tzname', 'daylight', 'frozenset', 'lower', 'timezone')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_GLOBAL          NULL + time
+  16: LOAD_ATTR            tzset
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: JUMP_FORWARD         to 76
+  44: PUSH_EXC_INFO        
+  46: LOAD_GLOBAL          AttributeError
+  58: CHECK_EXC_MATCH      
+  60: POP_JUMP_FORWARD_IF_FALSE to 68
+  62: POP_TOP              
+  64: POP_EXCEPT           
+  66: JUMP_FORWARD         to 76
+  68: RERAISE              
+  70: COPY                 
+  72: POP_EXCEPT           
+  74: RERAISE              
+  76: LOAD_GLOBAL          time
+  88: LOAD_ATTR            tzname
+  98: LOAD_FAST            self
+ 100: STORE_ATTR           tzname
+ 110: LOAD_GLOBAL          time
+ 122: LOAD_ATTR            daylight
+ 132: LOAD_FAST            self
+ 134: STORE_ATTR           daylight
+ 144: LOAD_GLOBAL          NULL + frozenset
+ 156: LOAD_CONST           'utc'
+ 158: LOAD_CONST           'gmt'
+ 160: LOAD_FAST            self
+ 162: LOAD_ATTR            tzname
+ 172: LOAD_CONST           0
+ 174: BINARY_SUBSCR        
+ 184: LOAD_METHOD          lower
+ 206: PRECALL              
+ 210: CALL                 
+ 220: BUILD_SET            
+ 222: PRECALL              
+ 226: CALL                 
+ 236: STORE_FAST           no_saving
+ 238: LOAD_FAST            self
+ 240: LOAD_ATTR            daylight
+ 250: POP_JUMP_FORWARD_IF_FALSE to 344
+ 252: LOAD_GLOBAL          NULL + frozenset
+ 264: LOAD_FAST            self
+ 266: LOAD_ATTR            tzname
+ 276: LOAD_CONST           1
+ 278: BINARY_SUBSCR        
+ 288: LOAD_METHOD          lower
+ 310: PRECALL              
+ 314: CALL                 
+ 324: BUILD_SET            
+ 326: PRECALL              
+ 330: CALL                 
+ 340: STORE_FAST           has_saving
+ 342: JUMP_FORWARD         to 372
+ 344: LOAD_GLOBAL          NULL + frozenset
+ 356: PRECALL              
+ 360: CALL                 
+ 370: STORE_FAST           has_saving
+ 372: LOAD_FAST            no_saving
+ 374: LOAD_FAST            has_saving
+ 376: BUILD_TUPLE          
+ 378: LOAD_FAST            self
+ 380: STORE_ATTR           timezone
+ 390: LOAD_CONST           None
+ 392: RETURN_VALUE         

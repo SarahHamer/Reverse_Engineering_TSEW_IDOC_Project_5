@@ -1,0 +1,35 @@
+# Disassembly for http.HTTPConnection.endheaders
+# From module file: http.client
+
+## co_consts:
+('Indicate that the last header line has been sent to the server.\n\n        This method sends the request to the server.  The optional message_body\n        argument can be used to pass a message body associated with the\n        request.\n        ', ('encode_chunked',), None)
+
+## co_names:
+('_HTTPConnection__state', '_CS_REQ_STARTED', '_CS_REQ_SENT', 'CannotSendHeader', '_send_output')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _HTTPConnection__state
+  14: LOAD_GLOBAL          _CS_REQ_STARTED
+  26: COMPARE_OP           ==
+  32: POP_JUMP_FORWARD_IF_FALSE to 60
+  34: LOAD_GLOBAL          _CS_REQ_SENT
+  46: LOAD_FAST            self
+  48: STORE_ATTR           _HTTPConnection__state
+  58: JUMP_FORWARD         to 88
+  60: LOAD_GLOBAL          NULL + CannotSendHeader
+  72: PRECALL              
+  76: CALL                 
+  86: RAISE_VARARGS        
+  88: LOAD_FAST            self
+  90: LOAD_METHOD          _send_output
+ 112: LOAD_FAST            message_body
+ 114: LOAD_FAST            encode_chunked
+ 116: KW_NAMES             
+ 118: PRECALL              
+ 122: CALL                 
+ 132: POP_TOP              
+ 134: LOAD_CONST           None
+ 136: RETURN_VALUE         

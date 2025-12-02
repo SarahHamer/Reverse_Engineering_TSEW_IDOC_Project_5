@@ -1,0 +1,44 @@
+# Disassembly for gzip.GzipFile.flush
+# From module file: gzip
+
+## co_consts:
+(None,)
+
+## co_names:
+('_check_not_closed', 'mode', 'WRITE', 'fileobj', 'write', 'compress', 'flush')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _check_not_closed
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            mode
+  54: LOAD_GLOBAL          WRITE
+  66: COMPARE_OP           ==
+  72: POP_JUMP_FORWARD_IF_FALSE to 228
+  74: LOAD_FAST            self
+  76: LOAD_ATTR            fileobj
+  86: LOAD_METHOD          write
+ 108: LOAD_FAST            self
+ 110: LOAD_ATTR            compress
+ 120: LOAD_METHOD          flush
+ 142: LOAD_FAST            zlib_mode
+ 144: PRECALL              
+ 148: CALL                 
+ 158: PRECALL              
+ 162: CALL                 
+ 172: POP_TOP              
+ 174: LOAD_FAST            self
+ 176: LOAD_ATTR            fileobj
+ 186: LOAD_METHOD          flush
+ 208: PRECALL              
+ 212: CALL                 
+ 222: POP_TOP              
+ 224: LOAD_CONST           None
+ 226: RETURN_VALUE         
+ 228: LOAD_CONST           None
+ 230: RETURN_VALUE         

@@ -1,0 +1,51 @@
+# Disassembly for email.Message.as_bytes
+# From module file: email.message
+
+## co_consts:
+("Return the entire formatted message as a bytes object.\n\n        Optional 'unixfrom', when true, means include the Unix From_ envelope\n        header.  'policy' is passed to the BytesGenerator instance used to\n        serialize the message; if not specified the policy associated with\n        the message instance is used.\n        ", 0, ('BytesGenerator',), None, False, ('mangle_from_', 'policy'), ('unixfrom',))
+
+## co_names:
+('email.generator', 'BytesGenerator', 'policy', 'BytesIO', 'flatten', 'getvalue')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           ('BytesGenerator',)
+   6: IMPORT_NAME          email.generator
+   8: IMPORT_FROM          BytesGenerator
+  10: STORE_FAST           BytesGenerator
+  12: POP_TOP              
+  14: LOAD_FAST            policy
+  16: POP_JUMP_FORWARD_IF_NOT_NONE to 32
+  18: LOAD_FAST            self
+  20: LOAD_ATTR            policy
+  30: JUMP_FORWARD         to 34
+  32: LOAD_FAST            policy
+  34: STORE_FAST           policy
+  36: LOAD_GLOBAL          NULL + BytesIO
+  48: PRECALL              
+  52: CALL                 
+  62: STORE_FAST           fp
+  64: PUSH_NULL            
+  66: LOAD_FAST            BytesGenerator
+  68: LOAD_FAST            fp
+  70: LOAD_CONST           False
+  72: LOAD_FAST            policy
+  74: KW_NAMES             
+  76: PRECALL              
+  80: CALL                 
+  90: STORE_FAST           g
+  92: LOAD_FAST            g
+  94: LOAD_METHOD          flatten
+ 116: LOAD_FAST            self
+ 118: LOAD_FAST            unixfrom
+ 120: KW_NAMES             
+ 122: PRECALL              
+ 126: CALL                 
+ 136: POP_TOP              
+ 138: LOAD_FAST            fp
+ 140: LOAD_METHOD          getvalue
+ 162: PRECALL              
+ 166: CALL                 
+ 176: RETURN_VALUE         

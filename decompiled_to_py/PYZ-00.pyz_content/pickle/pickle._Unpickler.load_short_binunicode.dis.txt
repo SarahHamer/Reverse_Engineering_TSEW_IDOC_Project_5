@@ -1,0 +1,37 @@
+# Disassembly for pickle._Unpickler.load_short_binunicode
+# From module file: pickle
+
+## co_consts:
+(None, 1, 0, 'utf-8', 'surrogatepass')
+
+## co_names:
+('read', 'append', 'str')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          read
+  26: LOAD_CONST           1
+  28: PRECALL              
+  32: CALL                 
+  42: LOAD_CONST           0
+  44: BINARY_SUBSCR        
+  54: STORE_FAST           len
+  56: LOAD_FAST            self
+  58: LOAD_METHOD          append
+  80: LOAD_GLOBAL          NULL + str
+  92: LOAD_FAST            self
+  94: LOAD_METHOD          read
+ 116: LOAD_FAST            len
+ 118: PRECALL              
+ 122: CALL                 
+ 132: LOAD_CONST           'utf-8'
+ 134: LOAD_CONST           'surrogatepass'
+ 136: PRECALL              
+ 140: CALL                 
+ 150: PRECALL              
+ 154: CALL                 
+ 164: POP_TOP              
+ 166: LOAD_CONST           None
+ 168: RETURN_VALUE         

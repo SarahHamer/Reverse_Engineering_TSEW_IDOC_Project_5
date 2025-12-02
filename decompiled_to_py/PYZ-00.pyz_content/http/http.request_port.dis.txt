@@ -1,0 +1,62 @@
+# Disassembly for http.request_port
+# From module file: http.cookiejar
+
+## co_consts:
+(None, ':', 0, 1, "nonnumeric port: '%s'")
+
+## co_names:
+('host', 'find', 'int', 'ValueError', '_debug', 'DEFAULT_HTTP_PORT')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            request
+   4: LOAD_ATTR            host
+  14: STORE_FAST           host
+  16: LOAD_FAST            host
+  18: LOAD_METHOD          find
+  40: LOAD_CONST           ':'
+  42: PRECALL              
+  46: CALL                 
+  56: STORE_FAST           i
+  58: LOAD_FAST            i
+  60: LOAD_CONST           0
+  62: COMPARE_OP           >=
+  68: POP_JUMP_FORWARD_IF_FALSE to 196
+  70: LOAD_FAST            host
+  72: LOAD_FAST            i
+  74: LOAD_CONST           1
+  76: BINARY_OP            +
+  80: LOAD_CONST           None
+  82: BUILD_SLICE          
+  84: BINARY_SUBSCR        
+  94: STORE_FAST           port
+  96: NOP                  
+  98: LOAD_GLOBAL          NULL + int
+ 110: LOAD_FAST            port
+ 112: PRECALL              
+ 116: CALL                 
+ 126: POP_TOP              
+ 128: JUMP_FORWARD         to 210
+ 130: PUSH_EXC_INFO        
+ 132: LOAD_GLOBAL          ValueError
+ 144: CHECK_EXC_MATCH      
+ 146: POP_JUMP_FORWARD_IF_FALSE to 188
+ 148: POP_TOP              
+ 150: LOAD_GLOBAL          NULL + _debug
+ 162: LOAD_CONST           "nonnumeric port: '%s'"
+ 164: LOAD_FAST            port
+ 166: PRECALL              
+ 170: CALL                 
+ 180: POP_TOP              
+ 182: POP_EXCEPT           
+ 184: LOAD_CONST           None
+ 186: RETURN_VALUE         
+ 188: RERAISE              
+ 190: COPY                 
+ 192: POP_EXCEPT           
+ 194: RERAISE              
+ 196: LOAD_GLOBAL          DEFAULT_HTTP_PORT
+ 208: STORE_FAST           port
+ 210: LOAD_FAST            port
+ 212: RETURN_VALUE         

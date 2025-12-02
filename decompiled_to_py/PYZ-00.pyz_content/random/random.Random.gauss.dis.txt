@@ -1,0 +1,66 @@
+# Disassembly for random.Random.gauss
+# From module file: random
+
+## co_consts:
+('Gaussian distribution.\n\n        mu is the mean, and sigma is the standard deviation.  This is\n        slightly faster than the normalvariate() function.\n\n        Not thread-safe without a lock around calls.\n\n        ', None, -2.0, 1.0)
+
+## co_names:
+('random', 'gauss_next', 'TWOPI', '_sqrt', '_log', '_cos', '_sin')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            random
+  14: STORE_FAST           random
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            gauss_next
+  28: STORE_FAST           z
+  30: LOAD_CONST           None
+  32: LOAD_FAST            self
+  34: STORE_ATTR           gauss_next
+  44: LOAD_FAST            z
+  46: POP_JUMP_FORWARD_IF_NOT_NONE to 250
+  48: PUSH_NULL            
+  50: LOAD_FAST            random
+  52: PRECALL              
+  56: CALL                 
+  66: LOAD_GLOBAL          TWOPI
+  78: BINARY_OP            *
+  82: STORE_FAST           x2pi
+  84: LOAD_GLOBAL          NULL + _sqrt
+  96: LOAD_CONST           -2.0
+  98: LOAD_GLOBAL          NULL + _log
+ 110: LOAD_CONST           1.0
+ 112: PUSH_NULL            
+ 114: LOAD_FAST            random
+ 116: PRECALL              
+ 120: CALL                 
+ 130: BINARY_OP            -
+ 134: PRECALL              
+ 138: CALL                 
+ 148: BINARY_OP            *
+ 152: PRECALL              
+ 156: CALL                 
+ 166: STORE_FAST           g2rad
+ 168: LOAD_GLOBAL          NULL + _cos
+ 180: LOAD_FAST            x2pi
+ 182: PRECALL              
+ 186: CALL                 
+ 196: LOAD_FAST            g2rad
+ 198: BINARY_OP            *
+ 202: STORE_FAST           z
+ 204: LOAD_GLOBAL          NULL + _sin
+ 216: LOAD_FAST            x2pi
+ 218: PRECALL              
+ 222: CALL                 
+ 232: LOAD_FAST            g2rad
+ 234: BINARY_OP            *
+ 238: LOAD_FAST            self
+ 240: STORE_ATTR           gauss_next
+ 250: LOAD_FAST            mu
+ 252: LOAD_FAST            z
+ 254: LOAD_FAST            sigma
+ 256: BINARY_OP            *
+ 260: BINARY_OP            +
+ 264: RETURN_VALUE         

@@ -1,0 +1,38 @@
+# Disassembly for tracemalloc.Snapshot.statistics
+# From module file: tracemalloc
+
+## co_consts:
+('\n        Group statistics by key_type. Return a sorted list of Statistic\n        instances.\n        ', True, ('reverse', 'key'))
+
+## co_names:
+('_group_by', 'list', 'values', 'sort', 'Statistic', '_sort_key')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _group_by
+  26: LOAD_FAST            key_type
+  28: LOAD_FAST            cumulative
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_FAST           grouped
+  46: LOAD_GLOBAL          NULL + list
+  58: LOAD_FAST            grouped
+  60: LOAD_METHOD          values
+  82: PRECALL              
+  86: CALL                 
+  96: PRECALL              
+ 100: CALL                 
+ 110: STORE_FAST           statistics
+ 112: LOAD_FAST            statistics
+ 114: LOAD_METHOD          sort
+ 136: LOAD_CONST           True
+ 138: LOAD_GLOBAL          Statistic
+ 150: LOAD_ATTR            _sort_key
+ 160: KW_NAMES             
+ 162: PRECALL              
+ 166: CALL                 
+ 176: POP_TOP              
+ 178: LOAD_FAST            statistics
+ 180: RETURN_VALUE         

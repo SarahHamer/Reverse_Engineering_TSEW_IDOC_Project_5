@@ -1,0 +1,75 @@
+# Disassembly for email.get_quoted_string
+# From module file: email._header_value_parser
+
+## co_consts:
+("quoted-string = [CFWS] <bare-quoted-string> [CFWS]\n\n    'bare-quoted-string' is an intermediate class defined by this\n    parser and not by the RFC grammar.  It is the quoted string\n    without any attached CFWS.\n    ", 0)
+
+## co_names:
+('QuotedString', 'CFWS_LEADER', 'get_cfws', 'append', 'get_bare_quoted_string')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + QuotedString
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           quoted_string
+  30: LOAD_FAST            value
+  32: POP_JUMP_FORWARD_IF_FALSE to 142
+  34: LOAD_FAST            value
+  36: LOAD_CONST           0
+  38: BINARY_SUBSCR        
+  48: LOAD_GLOBAL          CFWS_LEADER
+  60: CONTAINS_OP          
+  62: POP_JUMP_FORWARD_IF_FALSE to 142
+  64: LOAD_GLOBAL          NULL + get_cfws
+  76: LOAD_FAST            value
+  78: PRECALL              
+  82: CALL                 
+  92: UNPACK_SEQUENCE      
+  96: STORE_FAST           token
+  98: STORE_FAST           value
+ 100: LOAD_FAST            quoted_string
+ 102: LOAD_METHOD          append
+ 124: LOAD_FAST            token
+ 126: PRECALL              
+ 130: CALL                 
+ 140: POP_TOP              
+ 142: LOAD_GLOBAL          NULL + get_bare_quoted_string
+ 154: LOAD_FAST            value
+ 156: PRECALL              
+ 160: CALL                 
+ 170: UNPACK_SEQUENCE      
+ 174: STORE_FAST           token
+ 176: STORE_FAST           value
+ 178: LOAD_FAST            quoted_string
+ 180: LOAD_METHOD          append
+ 202: LOAD_FAST            token
+ 204: PRECALL              
+ 208: CALL                 
+ 218: POP_TOP              
+ 220: LOAD_FAST            value
+ 222: POP_JUMP_FORWARD_IF_FALSE to 332
+ 224: LOAD_FAST            value
+ 226: LOAD_CONST           0
+ 228: BINARY_SUBSCR        
+ 238: LOAD_GLOBAL          CFWS_LEADER
+ 250: CONTAINS_OP          
+ 252: POP_JUMP_FORWARD_IF_FALSE to 332
+ 254: LOAD_GLOBAL          NULL + get_cfws
+ 266: LOAD_FAST            value
+ 268: PRECALL              
+ 272: CALL                 
+ 282: UNPACK_SEQUENCE      
+ 286: STORE_FAST           token
+ 288: STORE_FAST           value
+ 290: LOAD_FAST            quoted_string
+ 292: LOAD_METHOD          append
+ 314: LOAD_FAST            token
+ 316: PRECALL              
+ 320: CALL                 
+ 330: POP_TOP              
+ 332: LOAD_FAST            quoted_string
+ 334: LOAD_FAST            value
+ 336: BUILD_TUPLE          
+ 338: RETURN_VALUE         

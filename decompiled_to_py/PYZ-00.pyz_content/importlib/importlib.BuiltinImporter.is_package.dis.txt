@@ -1,0 +1,14 @@
+# Disassembly for importlib.BuiltinImporter.is_package
+# From module file: importlib._bootstrap
+
+## co_consts:
+('Return False as built-in modules are never packages.', False)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           False
+   4: RETURN_VALUE         

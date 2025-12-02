@@ -1,0 +1,14 @@
+# Disassembly for http.HTTPResponse.readable
+# From module file: http.client
+
+## co_consts:
+('Always returns True', True)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           True
+   4: RETURN_VALUE         

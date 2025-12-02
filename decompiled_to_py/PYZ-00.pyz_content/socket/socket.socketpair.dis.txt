@@ -1,0 +1,164 @@
+# Disassembly for socket.socketpair
+# From module file: socket
+
+## co_consts:
+(None, 'Only AF_INET and AF_INET6 socket address families are supported', 'Only SOCK_STREAM socket type is supported', 0, 'Only protocol zero is supported', 2, False, True)
+
+## co_names:
+('AF_INET', '_LOCALHOST', 'AF_INET6', '_LOCALHOST_V6', 'ValueError', 'SOCK_STREAM', 'socket', 'bind', 'listen', 'getsockname', 'setblocking', 'connect', 'BlockingIOError', 'InterruptedError', 'accept', 'close')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            family
+   4: LOAD_GLOBAL          AF_INET
+  16: COMPARE_OP           ==
+  22: POP_JUMP_FORWARD_IF_FALSE to 40
+  24: LOAD_GLOBAL          _LOCALHOST
+  36: STORE_FAST           host
+  38: JUMP_FORWARD         to 108
+  40: LOAD_FAST            family
+  42: LOAD_GLOBAL          AF_INET6
+  54: COMPARE_OP           ==
+  60: POP_JUMP_FORWARD_IF_FALSE to 78
+  62: LOAD_GLOBAL          _LOCALHOST_V6
+  74: STORE_FAST           host
+  76: JUMP_FORWARD         to 108
+  78: LOAD_GLOBAL          NULL + ValueError
+  90: LOAD_CONST           'Only AF_INET and AF_INET6 socket address families are supported'
+  92: PRECALL              
+  96: CALL                 
+ 106: RAISE_VARARGS        
+ 108: LOAD_FAST            type
+ 110: LOAD_GLOBAL          SOCK_STREAM
+ 122: COMPARE_OP           !=
+ 128: POP_JUMP_FORWARD_IF_FALSE to 160
+ 130: LOAD_GLOBAL          NULL + ValueError
+ 142: LOAD_CONST           'Only SOCK_STREAM socket type is supported'
+ 144: PRECALL              
+ 148: CALL                 
+ 158: RAISE_VARARGS        
+ 160: LOAD_FAST            proto
+ 162: LOAD_CONST           0
+ 164: COMPARE_OP           !=
+ 170: POP_JUMP_FORWARD_IF_FALSE to 202
+ 172: LOAD_GLOBAL          NULL + ValueError
+ 184: LOAD_CONST           'Only protocol zero is supported'
+ 186: PRECALL              
+ 190: CALL                 
+ 200: RAISE_VARARGS        
+ 202: LOAD_GLOBAL          NULL + socket
+ 214: LOAD_FAST            family
+ 216: LOAD_FAST            type
+ 218: LOAD_FAST            proto
+ 220: PRECALL              
+ 224: CALL                 
+ 234: STORE_FAST           lsock
+ 236: NOP                  
+ 238: LOAD_FAST            lsock
+ 240: LOAD_METHOD          bind
+ 262: LOAD_FAST            host
+ 264: LOAD_CONST           0
+ 266: BUILD_TUPLE          
+ 268: PRECALL              
+ 272: CALL                 
+ 282: POP_TOP              
+ 284: LOAD_FAST            lsock
+ 286: LOAD_METHOD          listen
+ 308: PRECALL              
+ 312: CALL                 
+ 322: POP_TOP              
+ 324: LOAD_FAST            lsock
+ 326: LOAD_METHOD          getsockname
+ 348: PRECALL              
+ 352: CALL                 
+ 362: LOAD_CONST           None
+ 364: LOAD_CONST           2
+ 366: BUILD_SLICE          
+ 368: BINARY_SUBSCR        
+ 378: UNPACK_SEQUENCE      
+ 382: STORE_FAST           addr
+ 384: STORE_FAST           port
+ 386: LOAD_GLOBAL          NULL + socket
+ 398: LOAD_FAST            family
+ 400: LOAD_FAST            type
+ 402: LOAD_FAST            proto
+ 404: PRECALL              
+ 408: CALL                 
+ 418: STORE_FAST           csock
+ 420: NOP                  
+ 422: LOAD_FAST            csock
+ 424: LOAD_METHOD          setblocking
+ 446: LOAD_CONST           False
+ 448: PRECALL              
+ 452: CALL                 
+ 462: POP_TOP              
+ 464: NOP                  
+ 466: LOAD_FAST            csock
+ 468: LOAD_METHOD          connect
+ 490: LOAD_FAST            addr
+ 492: LOAD_FAST            port
+ 494: BUILD_TUPLE          
+ 496: PRECALL              
+ 500: CALL                 
+ 510: POP_TOP              
+ 512: JUMP_FORWARD         to 560
+ 514: PUSH_EXC_INFO        
+ 516: LOAD_GLOBAL          BlockingIOError
+ 528: LOAD_GLOBAL          InterruptedError
+ 540: BUILD_TUPLE          
+ 542: CHECK_EXC_MATCH      
+ 544: POP_JUMP_FORWARD_IF_FALSE to 552
+ 546: POP_TOP              
+ 548: POP_EXCEPT           
+ 550: JUMP_FORWARD         to 560
+ 552: RERAISE              
+ 554: COPY                 
+ 556: POP_EXCEPT           
+ 558: RERAISE              
+ 560: LOAD_FAST            csock
+ 562: LOAD_METHOD          setblocking
+ 584: LOAD_CONST           True
+ 586: PRECALL              
+ 590: CALL                 
+ 600: POP_TOP              
+ 602: LOAD_FAST            lsock
+ 604: LOAD_METHOD          accept
+ 626: PRECALL              
+ 630: CALL                 
+ 640: UNPACK_SEQUENCE      
+ 644: STORE_FAST           ssock
+ 646: STORE_FAST           _
+ 648: JUMP_FORWARD         to 702
+ 650: PUSH_EXC_INFO        
+ 652: POP_TOP              
+ 654: LOAD_FAST            csock
+ 656: LOAD_METHOD          close
+ 678: PRECALL              
+ 682: CALL                 
+ 692: POP_TOP              
+ 694: RAISE_VARARGS        
+ 696: COPY                 
+ 698: POP_EXCEPT           
+ 700: RERAISE              
+ 702: NOP                  
+ 704: LOAD_FAST            lsock
+ 706: LOAD_METHOD          close
+ 728: PRECALL              
+ 732: CALL                 
+ 742: POP_TOP              
+ 744: JUMP_FORWARD         to 796
+ 746: PUSH_EXC_INFO        
+ 748: LOAD_FAST            lsock
+ 750: LOAD_METHOD          close
+ 772: PRECALL              
+ 776: CALL                 
+ 786: POP_TOP              
+ 788: RERAISE              
+ 790: COPY                 
+ 792: POP_EXCEPT           
+ 794: RERAISE              
+ 796: LOAD_FAST            ssock
+ 798: LOAD_FAST            csock
+ 800: BUILD_TUPLE          
+ 802: RETURN_VALUE         

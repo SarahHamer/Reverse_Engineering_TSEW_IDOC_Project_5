@@ -1,0 +1,34 @@
+# Disassembly for importlib.resources.get_resource_reader
+# From module file: importlib.resources._common
+
+## co_consts:
+("\n    Return the package's loader if it's a ResourceReader.\n    ", 'get_resource_reader', None)
+
+## co_names:
+('__spec__', 'getattr', 'loader', 'name')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            package
+   4: LOAD_ATTR            __spec__
+  14: STORE_FAST           spec
+  16: LOAD_GLOBAL          NULL + getattr
+  28: LOAD_FAST            spec
+  30: LOAD_ATTR            loader
+  40: LOAD_CONST           'get_resource_reader'
+  42: LOAD_CONST           None
+  44: PRECALL              
+  48: CALL                 
+  58: STORE_FAST           reader
+  60: LOAD_FAST            reader
+  62: POP_JUMP_FORWARD_IF_NOT_NONE to 68
+  64: LOAD_CONST           None
+  66: RETURN_VALUE         
+  68: PUSH_NULL            
+  70: LOAD_FAST            reader
+  72: LOAD_FAST            spec
+  74: LOAD_ATTR            name
+  84: PRECALL              
+  88: CALL                 
+  98: RETURN_VALUE         

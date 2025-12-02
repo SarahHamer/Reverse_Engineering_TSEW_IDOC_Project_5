@@ -1,0 +1,36 @@
+# Disassembly for argparse._StoreConstAction
+# From module file: argparse
+
+## co_consts:
+('_StoreConstAction', None, False, <code object __init__ at 0x00000240694198F0, file "argparse.py", line 961>, <code object __call__ at 0x00000240693EB130, file "argparse.py", line 978>, (None, None, False, None, None), (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', '__call__', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           '_StoreConstAction'
+  10: STORE_NAME           __qualname__
+  12: NOP                  
+  14: NOP                  
+  16: NOP                  
+  18: NOP                  
+  20: NOP                  
+  22: LOAD_CONST           (None, None, False, None, None)
+  24: LOAD_CLOSURE         __class__
+  26: BUILD_TUPLE          
+  28: LOAD_CONST           <code object __init__ at 0x00000240694198F0, file "argparse.py", line 961>
+  30: MAKE_FUNCTION        defaults, closure
+  32: STORE_NAME           __init__
+  34: LOAD_CONST           (None,)
+  36: LOAD_CONST           <code object __call__ at 0x00000240693EB130, file "argparse.py", line 978>
+  38: MAKE_FUNCTION        defaults
+  40: STORE_NAME           __call__
+  42: LOAD_CLOSURE         __class__
+  44: COPY                 
+  46: STORE_NAME           __classcell__
+  48: RETURN_VALUE         

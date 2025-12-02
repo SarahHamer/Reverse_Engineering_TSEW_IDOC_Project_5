@@ -1,0 +1,85 @@
+# Disassembly for email.Message.del_param
+# From module file: email.message
+
+## co_consts:
+('Remove the given parameter completely from the Content-Type header.\n\n        The header will be re-written in place without the parameter or its\n        value. All values will be quoted as necessary unless requote is\n        False.  Optional header specifies an alternative to the Content-Type\n        header.\n        ', None, '', ('header', 'unquote'))
+
+## co_names:
+('get_params', 'lower', '_formatparam', 'SEMISPACE', 'join', 'get')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            header
+   4: LOAD_FAST            self
+   6: CONTAINS_OP          
+   8: POP_JUMP_FORWARD_IF_FALSE to 14
+  10: LOAD_CONST           None
+  12: RETURN_VALUE         
+  14: LOAD_CONST           ''
+  16: STORE_FAST           new_ctype
+  18: LOAD_FAST            self
+  20: LOAD_METHOD          get_params
+  42: LOAD_FAST            header
+  44: LOAD_FAST            requote
+  46: KW_NAMES             
+  48: PRECALL              
+  52: CALL                 
+  62: GET_ITER             
+  64: FOR_ITER             to 286
+  66: UNPACK_SEQUENCE      
+  70: STORE_FAST           p
+  72: STORE_FAST           v
+  74: LOAD_FAST            p
+  76: LOAD_METHOD          lower
+  98: PRECALL              
+ 102: CALL                 
+ 112: LOAD_FAST            param
+ 114: LOAD_METHOD          lower
+ 136: PRECALL              
+ 140: CALL                 
+ 150: COMPARE_OP           !=
+ 156: POP_JUMP_FORWARD_IF_FALSE to 284
+ 158: LOAD_FAST            new_ctype
+ 160: POP_JUMP_FORWARD_IF_TRUE to 198
+ 162: LOAD_GLOBAL          NULL + _formatparam
+ 174: LOAD_FAST            p
+ 176: LOAD_FAST            v
+ 178: LOAD_FAST            requote
+ 180: PRECALL              
+ 184: CALL                 
+ 194: STORE_FAST           new_ctype
+ 196: JUMP_BACKWARD        to 64
+ 198: LOAD_GLOBAL          SEMISPACE
+ 210: LOAD_METHOD          join
+ 232: LOAD_FAST            new_ctype
+ 234: LOAD_GLOBAL          NULL + _formatparam
+ 246: LOAD_FAST            p
+ 248: LOAD_FAST            v
+ 250: LOAD_FAST            requote
+ 252: PRECALL              
+ 256: CALL                 
+ 266: BUILD_LIST           
+ 268: PRECALL              
+ 272: CALL                 
+ 282: STORE_FAST           new_ctype
+ 284: JUMP_BACKWARD        to 64
+ 286: LOAD_FAST            new_ctype
+ 288: LOAD_FAST            self
+ 290: LOAD_METHOD          get
+ 312: LOAD_FAST            header
+ 314: PRECALL              
+ 318: CALL                 
+ 328: COMPARE_OP           !=
+ 334: POP_JUMP_FORWARD_IF_FALSE to 356
+ 336: LOAD_FAST            self
+ 338: LOAD_FAST            header
+ 340: DELETE_SUBSCR        
+ 342: LOAD_FAST            new_ctype
+ 344: LOAD_FAST            self
+ 346: LOAD_FAST            header
+ 348: STORE_SUBSCR         
+ 352: LOAD_CONST           None
+ 354: RETURN_VALUE         
+ 356: LOAD_CONST           None
+ 358: RETURN_VALUE         

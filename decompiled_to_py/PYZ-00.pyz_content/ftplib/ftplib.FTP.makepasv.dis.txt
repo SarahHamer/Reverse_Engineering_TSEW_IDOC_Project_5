@@ -1,0 +1,64 @@
+# Disassembly for ftplib.FTP.makepasv
+# From module file: ftplib
+
+## co_consts:
+('Internal: Does the PASV or EPSV handshake -> (address, port)', 'PASV', 0, 'EPSV')
+
+## co_names:
+('af', 'socket', 'AF_INET', 'parse227', 'sendcmd', 'trust_server_pasv_ipv4_address', 'sock', 'getpeername', 'parse229')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            af
+  14: LOAD_GLOBAL          socket
+  26: LOAD_ATTR            AF_INET
+  36: COMPARE_OP           ==
+  42: POP_JUMP_FORWARD_IF_FALSE to 202
+  44: LOAD_GLOBAL          NULL + parse227
+  56: LOAD_FAST            self
+  58: LOAD_METHOD          sendcmd
+  80: LOAD_CONST           'PASV'
+  82: PRECALL              
+  86: CALL                 
+  96: PRECALL              
+ 100: CALL                 
+ 110: UNPACK_SEQUENCE      
+ 114: STORE_FAST           untrusted_host
+ 116: STORE_FAST           port
+ 118: LOAD_FAST            self
+ 120: LOAD_ATTR            trust_server_pasv_ipv4_address
+ 130: POP_JUMP_FORWARD_IF_FALSE to 138
+ 132: LOAD_FAST            untrusted_host
+ 134: STORE_FAST           host
+ 136: JUMP_FORWARD         to 324
+ 138: LOAD_FAST            self
+ 140: LOAD_ATTR            sock
+ 150: LOAD_METHOD          getpeername
+ 172: PRECALL              
+ 176: CALL                 
+ 186: LOAD_CONST           0
+ 188: BINARY_SUBSCR        
+ 198: STORE_FAST           host
+ 200: JUMP_FORWARD         to 324
+ 202: LOAD_GLOBAL          NULL + parse229
+ 214: LOAD_FAST            self
+ 216: LOAD_METHOD          sendcmd
+ 238: LOAD_CONST           'EPSV'
+ 240: PRECALL              
+ 244: CALL                 
+ 254: LOAD_FAST            self
+ 256: LOAD_ATTR            sock
+ 266: LOAD_METHOD          getpeername
+ 288: PRECALL              
+ 292: CALL                 
+ 302: PRECALL              
+ 306: CALL                 
+ 316: UNPACK_SEQUENCE      
+ 320: STORE_FAST           host
+ 322: STORE_FAST           port
+ 324: LOAD_FAST            host
+ 326: LOAD_FAST            port
+ 328: BUILD_TUPLE          
+ 330: RETURN_VALUE         

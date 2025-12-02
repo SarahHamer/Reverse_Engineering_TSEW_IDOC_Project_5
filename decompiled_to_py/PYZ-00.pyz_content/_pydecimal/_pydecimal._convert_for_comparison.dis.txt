@@ -1,0 +1,113 @@
+# Disassembly for _pydecimal._convert_for_comparison
+# From module file: _pydecimal
+
+## co_consts:
+('Given a Decimal instance self and a Python object other, return\n    a pair (s, o) of Decimal instances such that "s op o" is\n    equivalent to "self op other" for any of the 6 comparison\n    operators "op".\n\n    ', 0, 1, 'strict semantics for mixing floats and Decimals are enabled')
+
+## co_names:
+('isinstance', 'Decimal', '_numbers', 'Rational', '_is_special', '_dec_from_triple', '_sign', 'str', 'int', '_int', 'denominator', '_exp', 'numerator', 'Complex', 'imag', 'real', 'float', 'getcontext', 'flags', 'FloatOperation', '_raise_error', 'from_float', 'NotImplemented')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            other
+  16: LOAD_GLOBAL          Decimal
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 52
+  44: LOAD_FAST            self
+  46: LOAD_FAST            other
+  48: BUILD_TUPLE          
+  50: RETURN_VALUE         
+  52: LOAD_GLOBAL          NULL + isinstance
+  64: LOAD_FAST            other
+  66: LOAD_GLOBAL          _numbers
+  78: LOAD_ATTR            Rational
+  88: PRECALL              
+  92: CALL                 
+ 102: POP_JUMP_FORWARD_IF_FALSE to 294
+ 104: LOAD_FAST            self
+ 106: LOAD_ATTR            _is_special
+ 116: POP_JUMP_FORWARD_IF_TRUE to 250
+ 118: LOAD_GLOBAL          NULL + _dec_from_triple
+ 130: LOAD_FAST            self
+ 132: LOAD_ATTR            _sign
+ 142: LOAD_GLOBAL          NULL + str
+ 154: LOAD_GLOBAL          NULL + int
+ 166: LOAD_FAST            self
+ 168: LOAD_ATTR            _int
+ 178: PRECALL              
+ 182: CALL                 
+ 192: LOAD_FAST            other
+ 194: LOAD_ATTR            denominator
+ 204: BINARY_OP            *
+ 208: PRECALL              
+ 212: CALL                 
+ 222: LOAD_FAST            self
+ 224: LOAD_ATTR            _exp
+ 234: PRECALL              
+ 238: CALL                 
+ 248: STORE_FAST           self
+ 250: LOAD_FAST            self
+ 252: LOAD_GLOBAL          NULL + Decimal
+ 264: LOAD_FAST            other
+ 266: LOAD_ATTR            numerator
+ 276: PRECALL              
+ 280: CALL                 
+ 290: BUILD_TUPLE          
+ 292: RETURN_VALUE         
+ 294: LOAD_FAST            equality_op
+ 296: POP_JUMP_FORWARD_IF_FALSE to 386
+ 298: LOAD_GLOBAL          NULL + isinstance
+ 310: LOAD_FAST            other
+ 312: LOAD_GLOBAL          _numbers
+ 324: LOAD_ATTR            Complex
+ 334: PRECALL              
+ 338: CALL                 
+ 348: POP_JUMP_FORWARD_IF_FALSE to 386
+ 350: LOAD_FAST            other
+ 352: LOAD_ATTR            imag
+ 362: LOAD_CONST           0
+ 364: COMPARE_OP           ==
+ 370: POP_JUMP_FORWARD_IF_FALSE to 386
+ 372: LOAD_FAST            other
+ 374: LOAD_ATTR            real
+ 384: STORE_FAST           other
+ 386: LOAD_GLOBAL          NULL + isinstance
+ 398: LOAD_FAST            other
+ 400: LOAD_GLOBAL          float
+ 412: PRECALL              
+ 416: CALL                 
+ 426: POP_JUMP_FORWARD_IF_FALSE to 602
+ 428: LOAD_GLOBAL          NULL + getcontext
+ 440: PRECALL              
+ 444: CALL                 
+ 454: STORE_FAST           context
+ 456: LOAD_FAST            equality_op
+ 458: POP_JUMP_FORWARD_IF_FALSE to 492
+ 460: LOAD_CONST           1
+ 462: LOAD_FAST            context
+ 464: LOAD_ATTR            flags
+ 474: LOAD_GLOBAL          FloatOperation
+ 486: STORE_SUBSCR         
+ 490: JUMP_FORWARD         to 546
+ 492: LOAD_FAST            context
+ 494: LOAD_METHOD          _raise_error
+ 516: LOAD_GLOBAL          FloatOperation
+ 528: LOAD_CONST           'strict semantics for mixing floats and Decimals are enabled'
+ 530: PRECALL              
+ 534: CALL                 
+ 544: POP_TOP              
+ 546: LOAD_FAST            self
+ 548: LOAD_GLOBAL          Decimal
+ 560: LOAD_METHOD          from_float
+ 582: LOAD_FAST            other
+ 584: PRECALL              
+ 588: CALL                 
+ 598: BUILD_TUPLE          
+ 600: RETURN_VALUE         
+ 602: LOAD_GLOBAL          NotImplemented
+ 614: LOAD_GLOBAL          NotImplemented
+ 626: BUILD_TUPLE          
+ 628: RETURN_VALUE         

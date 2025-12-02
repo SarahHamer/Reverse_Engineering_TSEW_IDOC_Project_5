@@ -1,0 +1,86 @@
+# Disassembly for ast._Unparser.visit_UnaryOp
+# From module file: ast
+
+## co_consts:
+(None, ' ')
+
+## co_names:
+('unop', 'op', '__class__', '__name__', 'unop_precedence', 'require_parens', 'write', '_Precedence', 'FACTOR', 'set_precedence', 'operand', 'traverse')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            unop
+  14: LOAD_FAST            node
+  16: LOAD_ATTR            op
+  26: LOAD_ATTR            __class__
+  36: LOAD_ATTR            __name__
+  46: BINARY_SUBSCR        
+  56: STORE_FAST           operator
+  58: LOAD_FAST            self
+  60: LOAD_ATTR            unop_precedence
+  70: LOAD_FAST            operator
+  72: BINARY_SUBSCR        
+  82: STORE_FAST           operator_precedence
+  84: LOAD_FAST            self
+  86: LOAD_METHOD          require_parens
+ 108: LOAD_FAST            operator_precedence
+ 110: LOAD_FAST            node
+ 112: PRECALL              
+ 116: CALL                 
+ 126: BEFORE_WITH          
+ 128: POP_TOP              
+ 130: LOAD_FAST            self
+ 132: LOAD_METHOD          write
+ 154: LOAD_FAST            operator
+ 156: PRECALL              
+ 160: CALL                 
+ 170: POP_TOP              
+ 172: LOAD_FAST            operator_precedence
+ 174: LOAD_GLOBAL          _Precedence
+ 186: LOAD_ATTR            FACTOR
+ 196: IS_OP                
+ 198: POP_JUMP_FORWARD_IF_FALSE to 242
+ 200: LOAD_FAST            self
+ 202: LOAD_METHOD          write
+ 224: LOAD_CONST           ' '
+ 226: PRECALL              
+ 230: CALL                 
+ 240: POP_TOP              
+ 242: LOAD_FAST            self
+ 244: LOAD_METHOD          set_precedence
+ 266: LOAD_FAST            operator_precedence
+ 268: LOAD_FAST            node
+ 270: LOAD_ATTR            operand
+ 280: PRECALL              
+ 284: CALL                 
+ 294: POP_TOP              
+ 296: LOAD_FAST            self
+ 298: LOAD_METHOD          traverse
+ 320: LOAD_FAST            node
+ 322: LOAD_ATTR            operand
+ 332: PRECALL              
+ 336: CALL                 
+ 346: POP_TOP              
+ 348: LOAD_CONST           None
+ 350: LOAD_CONST           None
+ 352: LOAD_CONST           None
+ 354: PRECALL              
+ 358: CALL                 
+ 368: POP_TOP              
+ 370: LOAD_CONST           None
+ 372: RETURN_VALUE         
+ 374: PUSH_EXC_INFO        
+ 376: WITH_EXCEPT_START    
+ 378: POP_JUMP_FORWARD_IF_TRUE to 388
+ 380: RERAISE              
+ 382: COPY                 
+ 384: POP_EXCEPT           
+ 386: RERAISE              
+ 388: POP_TOP              
+ 390: POP_EXCEPT           
+ 392: POP_TOP              
+ 394: POP_TOP              
+ 396: LOAD_CONST           None
+ 398: RETURN_VALUE         

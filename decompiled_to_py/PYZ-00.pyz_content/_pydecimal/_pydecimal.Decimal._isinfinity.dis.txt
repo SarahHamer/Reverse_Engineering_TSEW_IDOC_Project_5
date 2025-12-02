@@ -1,0 +1,26 @@
+# Disassembly for _pydecimal.Decimal._isinfinity
+# From module file: _pydecimal
+
+## co_consts:
+('Returns whether the number is infinite\n\n        0 if finite or not a number\n        1 if +INF\n        -1 if -INF\n        ', 'F', -1, 1, 0)
+
+## co_names:
+('_exp', '_sign')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _exp
+  14: LOAD_CONST           'F'
+  16: COMPARE_OP           ==
+  22: POP_JUMP_FORWARD_IF_FALSE to 46
+  24: LOAD_FAST            self
+  26: LOAD_ATTR            _sign
+  36: POP_JUMP_FORWARD_IF_FALSE to 42
+  38: LOAD_CONST           -1
+  40: RETURN_VALUE         
+  42: LOAD_CONST           1
+  44: RETURN_VALUE         
+  46: LOAD_CONST           0
+  48: RETURN_VALUE         

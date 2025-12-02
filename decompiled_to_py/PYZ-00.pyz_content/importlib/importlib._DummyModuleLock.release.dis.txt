@@ -1,0 +1,31 @@
+# Disassembly for importlib._DummyModuleLock.release
+# From module file: importlib._bootstrap
+
+## co_consts:
+(None, 0, 'cannot release un-acquired lock', 1)
+
+## co_names:
+('count', 'RuntimeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            count
+  14: LOAD_CONST           0
+  16: COMPARE_OP           ==
+  22: POP_JUMP_FORWARD_IF_FALSE to 54
+  24: LOAD_GLOBAL          NULL + RuntimeError
+  36: LOAD_CONST           'cannot release un-acquired lock'
+  38: PRECALL              
+  42: CALL                 
+  52: RAISE_VARARGS        
+  54: LOAD_FAST            self
+  56: COPY                 
+  58: LOAD_ATTR            count
+  68: LOAD_CONST           1
+  70: BINARY_OP            -=
+  74: SWAP                 
+  76: STORE_ATTR           count
+  86: LOAD_CONST           None
+  88: RETURN_VALUE         

@@ -1,0 +1,82 @@
+# Disassembly for ssl.wrap_socket
+# From module file: ssl
+
+## co_consts:
+(None, 'ssl.wrap_socket() is deprecated, use SSLContext.wrap_socket()', 2, ('category', 'stacklevel'), 'certfile must be specified for server-side operations', 'certfile must be specified', ('sock', 'server_side', 'do_handshake_on_connect', 'suppress_ragged_eofs'))
+
+## co_names:
+('warnings', 'warn', 'DeprecationWarning', 'ValueError', 'SSLContext', 'verify_mode', 'load_verify_locations', 'load_cert_chain', 'set_ciphers', 'wrap_socket')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + warnings
+  14: LOAD_ATTR            warn
+  24: LOAD_CONST           'ssl.wrap_socket() is deprecated, use SSLContext.wrap_socket()'
+  26: LOAD_GLOBAL          DeprecationWarning
+  38: LOAD_CONST           2
+  40: KW_NAMES             
+  42: PRECALL              
+  46: CALL                 
+  56: POP_TOP              
+  58: LOAD_FAST            server_side
+  60: POP_JUMP_FORWARD_IF_FALSE to 96
+  62: LOAD_FAST            certfile
+  64: POP_JUMP_FORWARD_IF_TRUE to 96
+  66: LOAD_GLOBAL          NULL + ValueError
+  78: LOAD_CONST           'certfile must be specified for server-side operations'
+  80: PRECALL              
+  84: CALL                 
+  94: RAISE_VARARGS        
+  96: LOAD_FAST            keyfile
+  98: POP_JUMP_FORWARD_IF_FALSE to 134
+ 100: LOAD_FAST            certfile
+ 102: POP_JUMP_FORWARD_IF_TRUE to 134
+ 104: LOAD_GLOBAL          NULL + ValueError
+ 116: LOAD_CONST           'certfile must be specified'
+ 118: PRECALL              
+ 122: CALL                 
+ 132: RAISE_VARARGS        
+ 134: LOAD_GLOBAL          NULL + SSLContext
+ 146: LOAD_FAST            ssl_version
+ 148: PRECALL              
+ 152: CALL                 
+ 162: STORE_FAST           context
+ 164: LOAD_FAST            cert_reqs
+ 166: LOAD_FAST            context
+ 168: STORE_ATTR           verify_mode
+ 178: LOAD_FAST            ca_certs
+ 180: POP_JUMP_FORWARD_IF_FALSE to 224
+ 182: LOAD_FAST            context
+ 184: LOAD_METHOD          load_verify_locations
+ 206: LOAD_FAST            ca_certs
+ 208: PRECALL              
+ 212: CALL                 
+ 222: POP_TOP              
+ 224: LOAD_FAST            certfile
+ 226: POP_JUMP_FORWARD_IF_FALSE to 272
+ 228: LOAD_FAST            context
+ 230: LOAD_METHOD          load_cert_chain
+ 252: LOAD_FAST            certfile
+ 254: LOAD_FAST            keyfile
+ 256: PRECALL              
+ 260: CALL                 
+ 270: POP_TOP              
+ 272: LOAD_FAST            ciphers
+ 274: POP_JUMP_FORWARD_IF_FALSE to 318
+ 276: LOAD_FAST            context
+ 278: LOAD_METHOD          set_ciphers
+ 300: LOAD_FAST            ciphers
+ 302: PRECALL              
+ 306: CALL                 
+ 316: POP_TOP              
+ 318: LOAD_FAST            context
+ 320: LOAD_METHOD          wrap_socket
+ 342: LOAD_FAST            sock
+ 344: LOAD_FAST            server_side
+ 346: LOAD_FAST            do_handshake_on_connect
+ 348: LOAD_FAST            suppress_ragged_eofs
+ 350: KW_NAMES             
+ 352: PRECALL              
+ 356: CALL                 
+ 366: RETURN_VALUE         

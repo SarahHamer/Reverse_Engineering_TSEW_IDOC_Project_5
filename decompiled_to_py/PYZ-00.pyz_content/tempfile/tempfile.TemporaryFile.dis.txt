@@ -1,0 +1,148 @@
+# Disassembly for tempfile.TemporaryFile
+# From module file: tempfile
+
+## co_consts:
+('Create and return a temporary file.\n        Arguments:\n        \'prefix\', \'suffix\', \'dir\' -- as for mkstemp.\n        \'mode\' -- the mode argument to io.open (default "w+b").\n        \'buffering\' -- the buffer size argument to io.open (default -1).\n        \'encoding\' -- the encoding argument to io.open (default None)\n        \'newline\' -- the newline argument to io.open (default None)\n        \'errors\' -- the errors argument to io.open (default None)\n        The file is created as mkstemp() would do it.\n\n        Returns an object with a file-like interface.  The file has no\n        name, and will cease to exist when it is closed.\n        ', 'b', None, <code object opener at 0x00000240693D36D0, file "tempfile.py", line 616>, ('buffering', 'newline', 'encoding', 'errors', 'opener'), 'buffer', 'raw', False, <code object opener at 0x000002406949D2E0, file "tempfile.py", line 648>)
+
+## co_names:
+('_io', 'text_encoding', '_sanitize_params', '_bin_openflags', '_O_TMPFILE_WORKS', 'open', 'getattr', 'name', 'IsADirectoryError', 'OSError')
+
+## bytecode:
+
+   0: MAKE_CELL            suffix
+   2: MAKE_CELL            prefix
+   4: MAKE_CELL            dir
+   6: MAKE_CELL            fd
+   8: MAKE_CELL            flags
+  10: MAKE_CELL            output_type
+  12: RESUME               
+  14: LOAD_CONST           'b'
+  16: LOAD_FAST            mode
+  18: CONTAINS_OP          
+  20: POP_JUMP_FORWARD_IF_FALSE to 62
+  22: LOAD_GLOBAL          NULL + _io
+  34: LOAD_ATTR            text_encoding
+  44: LOAD_FAST            encoding
+  46: PRECALL              
+  50: CALL                 
+  60: STORE_FAST           encoding
+  62: LOAD_GLOBAL          NULL + _sanitize_params
+  74: LOAD_DEREF           prefix
+  76: LOAD_DEREF           suffix
+  78: LOAD_DEREF           dir
+  80: PRECALL              
+  84: CALL                 
+  94: UNPACK_SEQUENCE      
+  98: STORE_DEREF          prefix
+ 100: STORE_DEREF          suffix
+ 102: STORE_DEREF          dir
+ 104: STORE_DEREF          output_type
+ 106: LOAD_GLOBAL          _bin_openflags
+ 118: STORE_DEREF          flags
+ 120: LOAD_GLOBAL          _O_TMPFILE_WORKS
+ 132: POP_JUMP_FORWARD_IF_FALSE to 352
+ 134: LOAD_CONST           None
+ 136: STORE_DEREF          fd
+ 138: LOAD_CLOSURE         dir
+ 140: LOAD_CLOSURE         fd
+ 142: LOAD_CLOSURE         flags
+ 144: BUILD_TUPLE          
+ 146: LOAD_CONST           <code object opener at 0x00000240693D36D0, file "tempfile.py", line 616>
+ 148: MAKE_FUNCTION        closure
+ 150: STORE_FAST           opener
+ 152: NOP                  
+ 154: LOAD_GLOBAL          NULL + _io
+ 166: LOAD_ATTR            open
+ 176: LOAD_DEREF           dir
+ 178: LOAD_FAST            mode
+ 180: LOAD_FAST            buffering
+ 182: LOAD_FAST            newline
+ 184: LOAD_FAST            encoding
+ 186: LOAD_FAST            errors
+ 188: LOAD_FAST            opener
+ 190: KW_NAMES             
+ 192: PRECALL              
+ 196: CALL                 
+ 206: STORE_FAST           file
+ 208: LOAD_GLOBAL          NULL + getattr
+ 220: LOAD_FAST            file
+ 222: LOAD_CONST           'buffer'
+ 224: LOAD_FAST            file
+ 226: PRECALL              
+ 230: CALL                 
+ 240: STORE_FAST           raw
+ 242: LOAD_GLOBAL          NULL + getattr
+ 254: LOAD_FAST            raw
+ 256: LOAD_CONST           'raw'
+ 258: LOAD_FAST            raw
+ 260: PRECALL              
+ 264: CALL                 
+ 274: STORE_FAST           raw
+ 276: LOAD_DEREF           fd
+ 278: LOAD_FAST            raw
+ 280: STORE_ATTR           name
+ 290: LOAD_FAST            file
+ 292: RETURN_VALUE         
+ 294: PUSH_EXC_INFO        
+ 296: LOAD_GLOBAL          IsADirectoryError
+ 308: CHECK_EXC_MATCH      
+ 310: POP_JUMP_FORWARD_IF_FALSE to 322
+ 312: POP_TOP              
+ 314: LOAD_CONST           False
+ 316: STORE_GLOBAL         _O_TMPFILE_WORKS
+ 318: POP_EXCEPT           
+ 320: JUMP_FORWARD         to 352
+ 322: LOAD_GLOBAL          OSError
+ 334: CHECK_EXC_MATCH      
+ 336: POP_JUMP_FORWARD_IF_FALSE to 344
+ 338: POP_TOP              
+ 340: POP_EXCEPT           
+ 342: JUMP_FORWARD         to 352
+ 344: RERAISE              
+ 346: COPY                 
+ 348: POP_EXCEPT           
+ 350: RERAISE              
+ 352: LOAD_CONST           None
+ 354: STORE_DEREF          fd
+ 356: LOAD_CLOSURE         dir
+ 358: LOAD_CLOSURE         fd
+ 360: LOAD_CLOSURE         flags
+ 362: LOAD_CLOSURE         output_type
+ 364: LOAD_CLOSURE         prefix
+ 366: LOAD_CLOSURE         suffix
+ 368: BUILD_TUPLE          
+ 370: LOAD_CONST           <code object opener at 0x000002406949D2E0, file "tempfile.py", line 648>
+ 372: MAKE_FUNCTION        closure
+ 374: STORE_FAST           opener
+ 376: LOAD_GLOBAL          NULL + _io
+ 388: LOAD_ATTR            open
+ 398: LOAD_DEREF           dir
+ 400: LOAD_FAST            mode
+ 402: LOAD_FAST            buffering
+ 404: LOAD_FAST            newline
+ 406: LOAD_FAST            encoding
+ 408: LOAD_FAST            errors
+ 410: LOAD_FAST            opener
+ 412: KW_NAMES             
+ 414: PRECALL              
+ 418: CALL                 
+ 428: STORE_FAST           file
+ 430: LOAD_GLOBAL          NULL + getattr
+ 442: LOAD_FAST            file
+ 444: LOAD_CONST           'buffer'
+ 446: LOAD_FAST            file
+ 448: PRECALL              
+ 452: CALL                 
+ 462: STORE_FAST           raw
+ 464: LOAD_GLOBAL          NULL + getattr
+ 476: LOAD_FAST            raw
+ 478: LOAD_CONST           'raw'
+ 480: LOAD_FAST            raw
+ 482: PRECALL              
+ 486: CALL                 
+ 496: STORE_FAST           raw
+ 498: LOAD_DEREF           fd
+ 500: LOAD_FAST            raw
+ 502: STORE_ATTR           name
+ 512: LOAD_FAST            file
+ 514: RETURN_VALUE         

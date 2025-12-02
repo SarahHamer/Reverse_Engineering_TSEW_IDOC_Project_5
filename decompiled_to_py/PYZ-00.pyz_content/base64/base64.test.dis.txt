@@ -1,0 +1,56 @@
+# Disassembly for base64.test
+# From module file: base64
+
+## co_consts:
+(None, b'Aladdin:open sesame')
+
+## co_names:
+('print', 'repr', 'encodebytes', 'decodebytes')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           b'Aladdin:open sesame'
+   4: STORE_FAST           s0
+   6: LOAD_GLOBAL          NULL + print
+  18: LOAD_GLOBAL          NULL + repr
+  30: LOAD_FAST            s0
+  32: PRECALL              
+  36: CALL                 
+  46: PRECALL              
+  50: CALL                 
+  60: POP_TOP              
+  62: LOAD_GLOBAL          NULL + encodebytes
+  74: LOAD_FAST            s0
+  76: PRECALL              
+  80: CALL                 
+  90: STORE_FAST           s1
+  92: LOAD_GLOBAL          NULL + print
+ 104: LOAD_GLOBAL          NULL + repr
+ 116: LOAD_FAST            s1
+ 118: PRECALL              
+ 122: CALL                 
+ 132: PRECALL              
+ 136: CALL                 
+ 146: POP_TOP              
+ 148: LOAD_GLOBAL          NULL + decodebytes
+ 160: LOAD_FAST            s1
+ 162: PRECALL              
+ 166: CALL                 
+ 176: STORE_FAST           s2
+ 178: LOAD_GLOBAL          NULL + print
+ 190: LOAD_GLOBAL          NULL + repr
+ 202: LOAD_FAST            s2
+ 204: PRECALL              
+ 208: CALL                 
+ 218: PRECALL              
+ 222: CALL                 
+ 232: POP_TOP              
+ 234: LOAD_FAST            s0
+ 236: LOAD_FAST            s2
+ 238: COMPARE_OP           ==
+ 244: POP_JUMP_FORWARD_IF_TRUE to 250
+ 246: LOAD_ASSERTION_ERROR 
+ 248: RAISE_VARARGS        
+ 250: LOAD_CONST           None
+ 252: RETURN_VALUE         

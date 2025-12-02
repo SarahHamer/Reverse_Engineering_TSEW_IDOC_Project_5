@@ -1,0 +1,25 @@
+# Disassembly for tarfile._StreamProxy.__init__
+# From module file: tarfile
+
+## co_consts:
+(None,)
+
+## co_names:
+('fileobj', 'read', 'BLOCKSIZE', 'buf')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            fileobj
+   4: LOAD_FAST            self
+   6: STORE_ATTR           fileobj
+  16: LOAD_FAST            self
+  18: LOAD_ATTR            fileobj
+  28: LOAD_METHOD          read
+  50: LOAD_GLOBAL          BLOCKSIZE
+  62: PRECALL              
+  66: CALL                 
+  76: LOAD_FAST            self
+  78: STORE_ATTR           buf
+  88: LOAD_CONST           None
+  90: RETURN_VALUE         

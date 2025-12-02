@@ -1,0 +1,261 @@
+# Disassembly for tempfile
+# From module file: tempfile
+
+## co_consts:
+("Temporary files.\n\nThis module provides generic, low- and high-level interfaces for\ncreating temporary files and directories.  All of the interfaces\nprovided by this module can be used without fear of race conditions\nexcept for 'mktemp'.  'mktemp' is subject to race conditions and\nshould not be used; it is provided for backward compatibility only.\n\nThe default path names are returned as str.  If you supply bytes as\ninput, all return values will be in bytes.  Ex:\n\n    >>> tempfile.mkstemp()\n    (4, '/tmp/tmptpu9nin8')\n    >>> tempfile.mkdtemp(suffix=b'')\n    b'/tmp/tmppbi8f0hy'\n\nThis module also provides some data items to the user:\n\n  TMP_MAX  - maximum number of names that will be tried before\n             giving up.\n  tempdir  - If this is set to a string before the first use of\n             any routine from this module, it will be considered as\n             another candidate location to store temporary files.\n", ('NamedTemporaryFile', 'TemporaryFile', 'SpooledTemporaryFile', 'TemporaryDirectory', 'mkstemp', 'mkdtemp', 'mktemp', 'TMP_MAX', 'gettempprefix', 'tempdir', 'gettempdir', 'gettempprefixb', 'gettempdirb'), 0, None, ('Random',), 'O_NOFOLLOW', 'O_BINARY', 'TMP_MAX', 10000, 'tmp', <code object _exists at 0x000002406944B330, file "tempfile.py", line 76>, <code object _infer_return_type at 0x0000024068DB4190, file "tempfile.py", line 85>, <code object _sanitize_params at 0x0000024069CDC540, file "tempfile.py", line 114>, <code object _RandomNameSequence at 0x000002406945FE10, file "tempfile.py", line 132>, '_RandomNameSequence', <code object _candidate_tempdir_list at 0x0000024068C09580, file "tempfile.py", line 156>, <code object _get_default_tempdir at 0x0000024069597C20, file "tempfile.py", line 183>, <code object _get_candidate_names at 0x0000024069CDC8A0, file "tempfile.py", line 229>, <code object _mkstemp_inner at 0x0000024068DD4960, file "tempfile.py", line 243>, <code object gettempprefix at 0x000002406945D890, file "tempfile.py", line 275>, <code object gettempprefixb at 0x000002406945F780, file "tempfile.py", line 279>, <code object _gettempdir at 0x0000024069CDCA50, file "tempfile.py", line 285>, <code object gettempdir at 0x00000240693EA230, file "tempfile.py", line 297>, <code object gettempdirb at 0x00000240693EB730, file "tempfile.py", line 301>, False, <code object mkstemp at 0x00000240693D3210, file "tempfile.py", line 305>, <code object mkdtemp at 0x0000024068E6A3B0, file "tempfile.py", line 344>, '', <code object mktemp at 0x0000024069365D40, file "tempfile.py", line 384>, <code object _TemporaryFileCloser at 0x000002406941AAF0, file "tempfile.py", line 416>, '_TemporaryFileCloser', <code object _TemporaryFileWrapper at 0x000002406945EF10, file "tempfile.py", line 459>, '_TemporaryFileWrapper', 'w+b', -1, True, ('errors',), <code object NamedTemporaryFile at 0x0000024068DC5910, file "tempfile.py", line 522>, 'posix', 'cygwin', 'O_TMPFILE', <code object TemporaryFile at 0x0000024068DC1E00, file "tempfile.py", line 590>, <code object SpooledTemporaryFile at 0x0000024068C8F100, file "tempfile.py", line 665>, 'SpooledTemporaryFile', <code object TemporaryDirectory at 0x00000240693AA1F0, file "tempfile.py", line 840>, 'TemporaryDirectory', (None, None, None, False), (None, None, None), ('w+b', -1, None, None, None, None, None, True), ('w+b', -1, None, None, None, None, None))
+
+## co_names:
+('__doc__', '__all__', 'functools', '_functools', 'warnings', '_warnings', 'io', '_io', 'os', '_os', 'shutil', '_shutil', 'errno', '_errno', 'random', 'Random', '_Random', 'sys', '_sys', 'types', '_types', 'weakref', '_weakref', '_thread', 'allocate_lock', '_allocate_lock', 'O_RDWR', 'O_CREAT', 'O_EXCL', '_text_openflags', 'hasattr', 'O_NOFOLLOW', '_bin_openflags', 'O_BINARY', 'TMP_MAX', 'template', '_once_lock', '_exists', '_infer_return_type', '_sanitize_params', '_RandomNameSequence', '_candidate_tempdir_list', '_get_default_tempdir', '_name_sequence', '_get_candidate_names', '_mkstemp_inner', 'gettempprefix', 'gettempprefixb', 'tempdir', '_gettempdir', 'gettempdir', 'gettempdirb', 'mkstemp', 'mkdtemp', 'mktemp', '_TemporaryFileCloser', '_TemporaryFileWrapper', 'NamedTemporaryFile', 'name', 'platform', 'TemporaryFile', '_O_TMPFILE_WORKS', 'IOBase', 'SpooledTemporaryFile', 'TemporaryDirectory')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           "Temporary files.\n\nThis module provides generic, low- and high-level interfaces for\ncreating temporary files and directories.  All of the interfaces\nprovided by this module can be used without fear of race conditions\nexcept for 'mktemp'.  'mktemp' is subject to race conditions and\nshould not be used; it is provided for backward compatibility only.\n\nThe default path names are returned as str.  If you supply bytes as\ninput, all return values will be in bytes.  Ex:\n\n    >>> tempfile.mkstemp()\n    (4, '/tmp/tmptpu9nin8')\n    >>> tempfile.mkdtemp(suffix=b'')\n    b'/tmp/tmppbi8f0hy'\n\nThis module also provides some data items to the user:\n\n  TMP_MAX  - maximum number of names that will be tried before\n             giving up.\n  tempdir  - If this is set to a string before the first use of\n             any routine from this module, it will be considered as\n             another candidate location to store temporary files.\n"
+   4: STORE_NAME           __doc__
+   6: BUILD_LIST           
+   8: LOAD_CONST           ('NamedTemporaryFile', 'TemporaryFile', 'SpooledTemporaryFile', 'TemporaryDirectory', 'mkstemp', 'mkdtemp', 'mktemp', 'TMP_MAX', 'gettempprefix', 'tempdir', 'gettempdir', 'gettempprefixb', 'gettempdirb')
+  10: LIST_EXTEND          
+  12: STORE_NAME           __all__
+  14: LOAD_CONST           0
+  16: LOAD_CONST           None
+  18: IMPORT_NAME          functools
+  20: STORE_NAME           _functools
+  22: LOAD_CONST           0
+  24: LOAD_CONST           None
+  26: IMPORT_NAME          warnings
+  28: STORE_NAME           _warnings
+  30: LOAD_CONST           0
+  32: LOAD_CONST           None
+  34: IMPORT_NAME          io
+  36: STORE_NAME           _io
+  38: LOAD_CONST           0
+  40: LOAD_CONST           None
+  42: IMPORT_NAME          os
+  44: STORE_NAME           _os
+  46: LOAD_CONST           0
+  48: LOAD_CONST           None
+  50: IMPORT_NAME          shutil
+  52: STORE_NAME           _shutil
+  54: LOAD_CONST           0
+  56: LOAD_CONST           None
+  58: IMPORT_NAME          errno
+  60: STORE_NAME           _errno
+  62: LOAD_CONST           0
+  64: LOAD_CONST           ('Random',)
+  66: IMPORT_NAME          random
+  68: IMPORT_FROM          Random
+  70: STORE_NAME           _Random
+  72: POP_TOP              
+  74: LOAD_CONST           0
+  76: LOAD_CONST           None
+  78: IMPORT_NAME          sys
+  80: STORE_NAME           _sys
+  82: LOAD_CONST           0
+  84: LOAD_CONST           None
+  86: IMPORT_NAME          types
+  88: STORE_NAME           _types
+  90: LOAD_CONST           0
+  92: LOAD_CONST           None
+  94: IMPORT_NAME          weakref
+  96: STORE_NAME           _weakref
+  98: LOAD_CONST           0
+ 100: LOAD_CONST           None
+ 102: IMPORT_NAME          _thread
+ 104: STORE_NAME           _thread
+ 106: LOAD_NAME            _thread
+ 108: LOAD_ATTR            allocate_lock
+ 118: STORE_NAME           _allocate_lock
+ 120: LOAD_NAME            _os
+ 122: LOAD_ATTR            O_RDWR
+ 132: LOAD_NAME            _os
+ 134: LOAD_ATTR            O_CREAT
+ 144: BINARY_OP            |
+ 148: LOAD_NAME            _os
+ 150: LOAD_ATTR            O_EXCL
+ 160: BINARY_OP            |
+ 164: STORE_NAME           _text_openflags
+ 166: PUSH_NULL            
+ 168: LOAD_NAME            hasattr
+ 170: LOAD_NAME            _os
+ 172: LOAD_CONST           'O_NOFOLLOW'
+ 174: PRECALL              
+ 178: CALL                 
+ 188: POP_JUMP_FORWARD_IF_FALSE to 210
+ 190: LOAD_NAME            _text_openflags
+ 192: LOAD_NAME            _os
+ 194: LOAD_ATTR            O_NOFOLLOW
+ 204: BINARY_OP            |=
+ 208: STORE_NAME           _text_openflags
+ 210: LOAD_NAME            _text_openflags
+ 212: STORE_NAME           _bin_openflags
+ 214: PUSH_NULL            
+ 216: LOAD_NAME            hasattr
+ 218: LOAD_NAME            _os
+ 220: LOAD_CONST           'O_BINARY'
+ 222: PRECALL              
+ 226: CALL                 
+ 236: POP_JUMP_FORWARD_IF_FALSE to 258
+ 238: LOAD_NAME            _bin_openflags
+ 240: LOAD_NAME            _os
+ 242: LOAD_ATTR            O_BINARY
+ 252: BINARY_OP            |=
+ 256: STORE_NAME           _bin_openflags
+ 258: PUSH_NULL            
+ 260: LOAD_NAME            hasattr
+ 262: LOAD_NAME            _os
+ 264: LOAD_CONST           'TMP_MAX'
+ 266: PRECALL              
+ 270: CALL                 
+ 280: POP_JUMP_FORWARD_IF_FALSE to 298
+ 282: LOAD_NAME            _os
+ 284: LOAD_ATTR            TMP_MAX
+ 294: STORE_NAME           TMP_MAX
+ 296: JUMP_FORWARD         to 302
+ 298: LOAD_CONST           10000
+ 300: STORE_NAME           TMP_MAX
+ 302: LOAD_CONST           'tmp'
+ 304: STORE_NAME           template
+ 306: PUSH_NULL            
+ 308: LOAD_NAME            _allocate_lock
+ 310: PRECALL              
+ 314: CALL                 
+ 324: STORE_NAME           _once_lock
+ 326: LOAD_CONST           <code object _exists at 0x000002406944B330, file "tempfile.py", line 76>
+ 328: MAKE_FUNCTION        
+ 330: STORE_NAME           _exists
+ 332: LOAD_CONST           <code object _infer_return_type at 0x0000024068DB4190, file "tempfile.py", line 85>
+ 334: MAKE_FUNCTION        
+ 336: STORE_NAME           _infer_return_type
+ 338: LOAD_CONST           <code object _sanitize_params at 0x0000024069CDC540, file "tempfile.py", line 114>
+ 340: MAKE_FUNCTION        
+ 342: STORE_NAME           _sanitize_params
+ 344: PUSH_NULL            
+ 346: LOAD_BUILD_CLASS     
+ 348: LOAD_CONST           <code object _RandomNameSequence at 0x000002406945FE10, file "tempfile.py", line 132>
+ 350: MAKE_FUNCTION        
+ 352: LOAD_CONST           '_RandomNameSequence'
+ 354: PRECALL              
+ 358: CALL                 
+ 368: STORE_NAME           _RandomNameSequence
+ 370: LOAD_CONST           <code object _candidate_tempdir_list at 0x0000024068C09580, file "tempfile.py", line 156>
+ 372: MAKE_FUNCTION        
+ 374: STORE_NAME           _candidate_tempdir_list
+ 376: LOAD_CONST           <code object _get_default_tempdir at 0x0000024069597C20, file "tempfile.py", line 183>
+ 378: MAKE_FUNCTION        
+ 380: STORE_NAME           _get_default_tempdir
+ 382: LOAD_CONST           None
+ 384: STORE_GLOBAL         _name_sequence
+ 386: LOAD_CONST           <code object _get_candidate_names at 0x0000024069CDC8A0, file "tempfile.py", line 229>
+ 388: MAKE_FUNCTION        
+ 390: STORE_NAME           _get_candidate_names
+ 392: LOAD_CONST           <code object _mkstemp_inner at 0x0000024068DD4960, file "tempfile.py", line 243>
+ 394: MAKE_FUNCTION        
+ 396: STORE_NAME           _mkstemp_inner
+ 398: LOAD_CONST           <code object gettempprefix at 0x000002406945D890, file "tempfile.py", line 275>
+ 400: MAKE_FUNCTION        
+ 402: STORE_NAME           gettempprefix
+ 404: LOAD_CONST           <code object gettempprefixb at 0x000002406945F780, file "tempfile.py", line 279>
+ 406: MAKE_FUNCTION        
+ 408: STORE_NAME           gettempprefixb
+ 410: LOAD_CONST           None
+ 412: STORE_GLOBAL         tempdir
+ 414: LOAD_CONST           <code object _gettempdir at 0x0000024069CDCA50, file "tempfile.py", line 285>
+ 416: MAKE_FUNCTION        
+ 418: STORE_NAME           _gettempdir
+ 420: LOAD_CONST           <code object gettempdir at 0x00000240693EA230, file "tempfile.py", line 297>
+ 422: MAKE_FUNCTION        
+ 424: STORE_NAME           gettempdir
+ 426: LOAD_CONST           <code object gettempdirb at 0x00000240693EB730, file "tempfile.py", line 301>
+ 428: MAKE_FUNCTION        
+ 430: STORE_NAME           gettempdirb
+ 432: LOAD_CONST           (None, None, None, False)
+ 434: LOAD_CONST           <code object mkstemp at 0x00000240693D3210, file "tempfile.py", line 305>
+ 436: MAKE_FUNCTION        defaults
+ 438: STORE_NAME           mkstemp
+ 440: LOAD_CONST           (None, None, None)
+ 442: LOAD_CONST           <code object mkdtemp at 0x0000024068E6A3B0, file "tempfile.py", line 344>
+ 444: MAKE_FUNCTION        defaults
+ 446: STORE_NAME           mkdtemp
+ 448: LOAD_CONST           ''
+ 450: LOAD_NAME            template
+ 452: LOAD_CONST           None
+ 454: BUILD_TUPLE          
+ 456: LOAD_CONST           <code object mktemp at 0x0000024069365D40, file "tempfile.py", line 384>
+ 458: MAKE_FUNCTION        defaults
+ 460: STORE_NAME           mktemp
+ 462: PUSH_NULL            
+ 464: LOAD_BUILD_CLASS     
+ 466: LOAD_CONST           <code object _TemporaryFileCloser at 0x000002406941AAF0, file "tempfile.py", line 416>
+ 468: MAKE_FUNCTION        
+ 470: LOAD_CONST           '_TemporaryFileCloser'
+ 472: PRECALL              
+ 476: CALL                 
+ 486: STORE_NAME           _TemporaryFileCloser
+ 488: PUSH_NULL            
+ 490: LOAD_BUILD_CLASS     
+ 492: LOAD_CONST           <code object _TemporaryFileWrapper at 0x000002406945EF10, file "tempfile.py", line 459>
+ 494: MAKE_FUNCTION        
+ 496: LOAD_CONST           '_TemporaryFileWrapper'
+ 498: PRECALL              
+ 502: CALL                 
+ 512: STORE_NAME           _TemporaryFileWrapper
+ 514: NOP                  
+ 516: NOP                  
+ 518: NOP                  
+ 520: LOAD_CONST           ('w+b', -1, None, None, None, None, None, True)
+ 522: LOAD_CONST           None
+ 524: LOAD_CONST           ('errors',)
+ 526: BUILD_CONST_KEY_MAP  
+ 528: LOAD_CONST           <code object NamedTemporaryFile at 0x0000024068DC5910, file "tempfile.py", line 522>
+ 530: MAKE_FUNCTION        defaults, kwdefaults
+ 532: STORE_NAME           NamedTemporaryFile
+ 534: LOAD_NAME            _os
+ 536: LOAD_ATTR            name
+ 546: LOAD_CONST           'posix'
+ 548: COMPARE_OP           !=
+ 554: POP_JUMP_FORWARD_IF_TRUE to 578
+ 556: LOAD_NAME            _sys
+ 558: LOAD_ATTR            platform
+ 568: LOAD_CONST           'cygwin'
+ 570: COMPARE_OP           ==
+ 576: POP_JUMP_FORWARD_IF_FALSE to 584
+ 578: LOAD_NAME            NamedTemporaryFile
+ 580: STORE_NAME           TemporaryFile
+ 582: JUMP_FORWARD         to 628
+ 584: PUSH_NULL            
+ 586: LOAD_NAME            hasattr
+ 588: LOAD_NAME            _os
+ 590: LOAD_CONST           'O_TMPFILE'
+ 592: PRECALL              
+ 596: CALL                 
+ 606: STORE_GLOBAL         _O_TMPFILE_WORKS
+ 608: NOP                  
+ 610: NOP                  
+ 612: NOP                  
+ 614: LOAD_CONST           ('w+b', -1, None, None, None, None, None)
+ 616: LOAD_CONST           None
+ 618: LOAD_CONST           ('errors',)
+ 620: BUILD_CONST_KEY_MAP  
+ 622: LOAD_CONST           <code object TemporaryFile at 0x0000024068DC1E00, file "tempfile.py", line 590>
+ 624: MAKE_FUNCTION        defaults, kwdefaults
+ 626: STORE_NAME           TemporaryFile
+ 628: PUSH_NULL            
+ 630: LOAD_BUILD_CLASS     
+ 632: LOAD_CONST           <code object SpooledTemporaryFile at 0x0000024068C8F100, file "tempfile.py", line 665>
+ 634: MAKE_FUNCTION        
+ 636: LOAD_CONST           'SpooledTemporaryFile'
+ 638: LOAD_NAME            _io
+ 640: LOAD_ATTR            IOBase
+ 650: PRECALL              
+ 654: CALL                 
+ 664: STORE_NAME           SpooledTemporaryFile
+ 666: PUSH_NULL            
+ 668: LOAD_BUILD_CLASS     
+ 670: LOAD_CONST           <code object TemporaryDirectory at 0x00000240693AA1F0, file "tempfile.py", line 840>
+ 672: MAKE_FUNCTION        
+ 674: LOAD_CONST           'TemporaryDirectory'
+ 676: PRECALL              
+ 680: CALL                 
+ 690: STORE_NAME           TemporaryDirectory
+ 692: LOAD_CONST           None
+ 694: RETURN_VALUE         

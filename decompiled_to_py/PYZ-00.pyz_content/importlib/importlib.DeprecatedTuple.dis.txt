@@ -1,0 +1,35 @@
+# Disassembly for importlib.DeprecatedTuple
+# From module file: importlib.metadata
+
+## co_consts:
+('DeprecatedTuple', "\n    Provide subscript item access for backward compatibility.\n\n    >>> recwarn = getfixture('recwarn')\n    >>> ep = EntryPoint(name='name', value='value', group='group')\n    >>> ep[:]\n    ('name', 'value', 'group')\n    >>> ep[0]\n    'name'\n    >>> len(recwarn)\n    1\n    ", 'EntryPoint tuple interface is deprecated. Access members by name.', 2, ('stacklevel',), <code object __getitem__ at 0x000002406941A790, file "importlib\metadata\__init__.py", line 144>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'functools', 'partial', 'warnings', 'warn', 'DeprecationWarning', '_warn', '__getitem__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'DeprecatedTuple'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           "\n    Provide subscript item access for backward compatibility.\n\n    >>> recwarn = getfixture('recwarn')\n    >>> ep = EntryPoint(name='name', value='value', group='group')\n    >>> ep[:]\n    ('name', 'value', 'group')\n    >>> ep[0]\n    'name'\n    >>> len(recwarn)\n    1\n    "
+  12: STORE_NAME           __doc__
+  14: PUSH_NULL            
+  16: LOAD_NAME            functools
+  18: LOAD_ATTR            partial
+  28: LOAD_NAME            warnings
+  30: LOAD_ATTR            warn
+  40: LOAD_CONST           'EntryPoint tuple interface is deprecated. Access members by name.'
+  42: LOAD_NAME            DeprecationWarning
+  44: LOAD_CONST           2
+  46: KW_NAMES             
+  48: PRECALL              
+  52: CALL                 
+  62: STORE_NAME           _warn
+  64: LOAD_CONST           <code object __getitem__ at 0x000002406941A790, file "importlib\metadata\__init__.py", line 144>
+  66: MAKE_FUNCTION        
+  68: STORE_NAME           __getitem__
+  70: LOAD_CONST           None
+  72: RETURN_VALUE         

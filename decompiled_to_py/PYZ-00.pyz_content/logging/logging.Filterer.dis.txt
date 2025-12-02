@@ -1,0 +1,32 @@
+# Disassembly for logging.Filterer
+# From module file: logging
+
+## co_consts:
+('Filterer', '\n    A base class for loggers and handlers which allows them to share\n    common code.\n    ', <code object __init__ at 0x00000240694941D0, file "logging\__init__.py", line 795>, <code object addFilter at 0x000002406944B330, file "logging\__init__.py", line 801>, <code object removeFilter at 0x000002406944A890, file "logging\__init__.py", line 808>, <code object filter at 0x000002406922C570, file "logging\__init__.py", line 815>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', 'addFilter', 'removeFilter', 'filter')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Filterer'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           '\n    A base class for loggers and handlers which allows them to share\n    common code.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object __init__ at 0x00000240694941D0, file "logging\__init__.py", line 795>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           __init__
+  20: LOAD_CONST           <code object addFilter at 0x000002406944B330, file "logging\__init__.py", line 801>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           addFilter
+  26: LOAD_CONST           <code object removeFilter at 0x000002406944A890, file "logging\__init__.py", line 808>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           removeFilter
+  32: LOAD_CONST           <code object filter at 0x000002406922C570, file "logging\__init__.py", line 815>
+  34: MAKE_FUNCTION        
+  36: STORE_NAME           filter
+  38: LOAD_CONST           None
+  40: RETURN_VALUE         

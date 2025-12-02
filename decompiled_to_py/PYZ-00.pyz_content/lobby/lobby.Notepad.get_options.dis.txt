@@ -1,0 +1,66 @@
+# Disassembly for lobby.Notepad.get_options
+# From module file: lobby
+
+## co_consts:
+(None, <code object <lambda> at 0x000002406945EA60, file "lobby.py", line 17>, 'Take a note in the notepad.', 0, <code object <lambda> at 0x000002406945E100, file "lobby.py", line 19>, 'Read your notes.', <code object <lambda> at 0x000002406945F0F0, file "lobby.py", line 21>, 'Take the notepad and pen.')
+
+## co_names:
+('parent', 'world', 'player', 'append', 'len', 'notes')
+
+## bytecode:
+
+   0: MAKE_CELL            self
+   2: RESUME               
+   4: BUILD_LIST           
+   6: STORE_FAST           options
+   8: LOAD_DEREF           self
+  10: LOAD_ATTR            parent
+  20: LOAD_DEREF           self
+  22: LOAD_ATTR            world
+  32: LOAD_ATTR            player
+  42: COMPARE_OP           ==
+  48: POP_JUMP_FORWARD_IF_FALSE to 204
+  50: LOAD_FAST            options
+  52: LOAD_METHOD          append
+  74: LOAD_CLOSURE         self
+  76: BUILD_TUPLE          
+  78: LOAD_CONST           <code object <lambda> at 0x000002406945EA60, file "lobby.py", line 17>
+  80: MAKE_FUNCTION        closure
+  82: LOAD_CONST           'Take a note in the notepad.'
+  84: BUILD_TUPLE          
+  86: PRECALL              
+  90: CALL                 
+ 100: POP_TOP              
+ 102: LOAD_GLOBAL          NULL + len
+ 114: LOAD_DEREF           self
+ 116: LOAD_ATTR            notes
+ 126: PRECALL              
+ 130: CALL                 
+ 140: LOAD_CONST           0
+ 142: COMPARE_OP           >
+ 148: POP_JUMP_FORWARD_IF_FALSE to 202
+ 150: LOAD_FAST            options
+ 152: LOAD_METHOD          append
+ 174: LOAD_CLOSURE         self
+ 176: BUILD_TUPLE          
+ 178: LOAD_CONST           <code object <lambda> at 0x000002406945E100, file "lobby.py", line 19>
+ 180: MAKE_FUNCTION        closure
+ 182: LOAD_CONST           'Read your notes.'
+ 184: BUILD_TUPLE          
+ 186: PRECALL              
+ 190: CALL                 
+ 200: POP_TOP              
+ 202: JUMP_FORWARD         to 256
+ 204: LOAD_FAST            options
+ 206: LOAD_METHOD          append
+ 228: LOAD_CLOSURE         self
+ 230: BUILD_TUPLE          
+ 232: LOAD_CONST           <code object <lambda> at 0x000002406945F0F0, file "lobby.py", line 21>
+ 234: MAKE_FUNCTION        closure
+ 236: LOAD_CONST           'Take the notepad and pen.'
+ 238: BUILD_TUPLE          
+ 240: PRECALL              
+ 244: CALL                 
+ 254: POP_TOP              
+ 256: LOAD_FAST            options
+ 258: RETURN_VALUE         

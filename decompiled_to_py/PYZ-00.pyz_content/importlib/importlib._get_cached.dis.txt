@@ -1,0 +1,52 @@
+# Disassembly for importlib._get_cached
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+(None,)
+
+## co_names:
+('endswith', 'tuple', 'SOURCE_SUFFIXES', 'cache_from_source', 'NotImplementedError', 'BYTECODE_SUFFIXES')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            filename
+   4: LOAD_METHOD          endswith
+  26: LOAD_GLOBAL          NULL + tuple
+  38: LOAD_GLOBAL          SOURCE_SUFFIXES
+  50: PRECALL              
+  54: CALL                 
+  64: PRECALL              
+  68: CALL                 
+  78: POP_JUMP_FORWARD_IF_FALSE to 146
+  80: NOP                  
+  82: LOAD_GLOBAL          NULL + cache_from_source
+  94: LOAD_FAST            filename
+  96: PRECALL              
+ 100: CALL                 
+ 110: RETURN_VALUE         
+ 112: PUSH_EXC_INFO        
+ 114: LOAD_GLOBAL          NotImplementedError
+ 126: CHECK_EXC_MATCH      
+ 128: POP_JUMP_FORWARD_IF_FALSE to 138
+ 130: POP_TOP              
+ 132: POP_EXCEPT           
+ 134: LOAD_CONST           None
+ 136: RETURN_VALUE         
+ 138: RERAISE              
+ 140: COPY                 
+ 142: POP_EXCEPT           
+ 144: RERAISE              
+ 146: LOAD_FAST            filename
+ 148: LOAD_METHOD          endswith
+ 170: LOAD_GLOBAL          NULL + tuple
+ 182: LOAD_GLOBAL          BYTECODE_SUFFIXES
+ 194: PRECALL              
+ 198: CALL                 
+ 208: PRECALL              
+ 212: CALL                 
+ 222: POP_JUMP_FORWARD_IF_FALSE to 228
+ 224: LOAD_FAST            filename
+ 226: RETURN_VALUE         
+ 228: LOAD_CONST           None
+ 230: RETURN_VALUE         

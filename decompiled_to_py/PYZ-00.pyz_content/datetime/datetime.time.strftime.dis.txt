@@ -1,0 +1,33 @@
+# Disassembly for datetime.time.strftime
+# From module file: datetime
+
+## co_consts:
+('Format using strftime().  The date part of the timestamp passed\n        to underlying strftime should not be used.\n        ', 1900, 1, 0, -1)
+
+## co_names:
+('_hour', '_minute', '_second', '_wrap_strftime')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           1900
+   4: LOAD_CONST           1
+   6: LOAD_CONST           1
+   8: LOAD_FAST            self
+  10: LOAD_ATTR            _hour
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            _minute
+  32: LOAD_FAST            self
+  34: LOAD_ATTR            _second
+  44: LOAD_CONST           0
+  46: LOAD_CONST           1
+  48: LOAD_CONST           -1
+  50: BUILD_TUPLE          
+  52: STORE_FAST           timetuple
+  54: LOAD_GLOBAL          NULL + _wrap_strftime
+  66: LOAD_FAST            self
+  68: LOAD_FAST            fmt
+  70: LOAD_FAST            timetuple
+  72: PRECALL              
+  76: CALL                 
+  86: RETURN_VALUE         

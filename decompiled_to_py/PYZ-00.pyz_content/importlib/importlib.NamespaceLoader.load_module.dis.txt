@@ -1,0 +1,27 @@
+# Disassembly for importlib.NamespaceLoader.load_module
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Load a namespace module.\n\n        This method is deprecated.  Use exec_module() instead.\n\n        ', 'namespace module loaded with path {!r}')
+
+## co_names:
+('_bootstrap', '_verbose_message', '_path', '_load_module_shim')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _bootstrap
+  14: LOAD_METHOD          _verbose_message
+  36: LOAD_CONST           'namespace module loaded with path {!r}'
+  38: LOAD_FAST            self
+  40: LOAD_ATTR            _path
+  50: PRECALL              
+  54: CALL                 
+  64: POP_TOP              
+  66: LOAD_GLOBAL          _bootstrap
+  78: LOAD_METHOD          _load_module_shim
+ 100: LOAD_FAST            self
+ 102: LOAD_FAST            fullname
+ 104: PRECALL              
+ 108: CALL                 
+ 118: RETURN_VALUE         

@@ -1,0 +1,44 @@
+# Disassembly for threading.Barrier._enter
+# From module file: threading
+
+## co_consts:
+(None, (-1, 1), 0)
+
+## co_names:
+('_state', '_cond', 'wait', 'BrokenBarrierError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _state
+  14: LOAD_CONST           (-1, 1)
+  16: CONTAINS_OP          
+  18: POP_JUMP_FORWARD_IF_FALSE to 88
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            _cond
+  32: LOAD_METHOD          wait
+  54: PRECALL              
+  58: CALL                 
+  68: POP_TOP              
+  70: LOAD_FAST            self
+  72: LOAD_ATTR            _state
+  82: LOAD_CONST           (-1, 1)
+  84: CONTAINS_OP          
+  86: POP_JUMP_BACKWARD_IF_TRUE to 20
+  88: LOAD_FAST            self
+  90: LOAD_ATTR            _state
+ 100: LOAD_CONST           0
+ 102: COMPARE_OP           <
+ 108: POP_JUMP_FORWARD_IF_FALSE to 124
+ 110: LOAD_GLOBAL          BrokenBarrierError
+ 122: RAISE_VARARGS        
+ 124: LOAD_FAST            self
+ 126: LOAD_ATTR            _state
+ 136: LOAD_CONST           0
+ 138: COMPARE_OP           ==
+ 144: POP_JUMP_FORWARD_IF_TRUE to 150
+ 146: LOAD_ASSERTION_ERROR 
+ 148: RAISE_VARARGS        
+ 150: LOAD_CONST           None
+ 152: RETURN_VALUE         

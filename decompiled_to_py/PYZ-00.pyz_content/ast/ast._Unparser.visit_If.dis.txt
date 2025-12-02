@@ -1,0 +1,190 @@
+# Disassembly for ast._Unparser.visit_If
+# From module file: ast
+
+## co_consts:
+(None, 'if ', 1, 0, 'elif ', 'else')
+
+## co_names:
+('fill', 'traverse', 'test', 'block', 'body', 'orelse', 'len', 'isinstance', 'If')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          fill
+  26: LOAD_CONST           'if '
+  28: PRECALL              
+  32: CALL                 
+  42: POP_TOP              
+  44: LOAD_FAST            self
+  46: LOAD_METHOD          traverse
+  68: LOAD_FAST            node
+  70: LOAD_ATTR            test
+  80: PRECALL              
+  84: CALL                 
+  94: POP_TOP              
+  96: LOAD_FAST            self
+  98: LOAD_METHOD          block
+ 120: PRECALL              
+ 124: CALL                 
+ 134: BEFORE_WITH          
+ 136: POP_TOP              
+ 138: LOAD_FAST            self
+ 140: LOAD_METHOD          traverse
+ 162: LOAD_FAST            node
+ 164: LOAD_ATTR            body
+ 174: PRECALL              
+ 178: CALL                 
+ 188: POP_TOP              
+ 190: LOAD_CONST           None
+ 192: LOAD_CONST           None
+ 194: LOAD_CONST           None
+ 196: PRECALL              
+ 200: CALL                 
+ 210: POP_TOP              
+ 212: JUMP_FORWARD         to 236
+ 214: PUSH_EXC_INFO        
+ 216: WITH_EXCEPT_START    
+ 218: POP_JUMP_FORWARD_IF_TRUE to 228
+ 220: RERAISE              
+ 222: COPY                 
+ 224: POP_EXCEPT           
+ 226: RERAISE              
+ 228: POP_TOP              
+ 230: POP_EXCEPT           
+ 232: POP_TOP              
+ 234: POP_TOP              
+ 236: LOAD_FAST            node
+ 238: LOAD_ATTR            orelse
+ 248: POP_JUMP_FORWARD_IF_FALSE to 748
+ 250: LOAD_GLOBAL          NULL + len
+ 262: LOAD_FAST            node
+ 264: LOAD_ATTR            orelse
+ 274: PRECALL              
+ 278: CALL                 
+ 288: LOAD_CONST           1
+ 290: COMPARE_OP           ==
+ 296: POP_JUMP_FORWARD_IF_FALSE to 748
+ 298: LOAD_GLOBAL          NULL + isinstance
+ 310: LOAD_FAST            node
+ 312: LOAD_ATTR            orelse
+ 322: LOAD_CONST           0
+ 324: BINARY_SUBSCR        
+ 334: LOAD_GLOBAL          If
+ 346: PRECALL              
+ 350: CALL                 
+ 360: POP_JUMP_FORWARD_IF_FALSE to 748
+ 362: LOAD_FAST            node
+ 364: LOAD_ATTR            orelse
+ 374: LOAD_CONST           0
+ 376: BINARY_SUBSCR        
+ 386: STORE_FAST           node
+ 388: LOAD_FAST            self
+ 390: LOAD_METHOD          fill
+ 412: LOAD_CONST           'elif '
+ 414: PRECALL              
+ 418: CALL                 
+ 428: POP_TOP              
+ 430: LOAD_FAST            self
+ 432: LOAD_METHOD          traverse
+ 454: LOAD_FAST            node
+ 456: LOAD_ATTR            test
+ 466: PRECALL              
+ 470: CALL                 
+ 480: POP_TOP              
+ 482: LOAD_FAST            self
+ 484: LOAD_METHOD          block
+ 506: PRECALL              
+ 510: CALL                 
+ 520: BEFORE_WITH          
+ 522: POP_TOP              
+ 524: LOAD_FAST            self
+ 526: LOAD_METHOD          traverse
+ 548: LOAD_FAST            node
+ 550: LOAD_ATTR            body
+ 560: PRECALL              
+ 564: CALL                 
+ 574: POP_TOP              
+ 576: LOAD_CONST           None
+ 578: LOAD_CONST           None
+ 580: LOAD_CONST           None
+ 582: PRECALL              
+ 586: CALL                 
+ 596: POP_TOP              
+ 598: JUMP_FORWARD         to 622
+ 600: PUSH_EXC_INFO        
+ 602: WITH_EXCEPT_START    
+ 604: POP_JUMP_FORWARD_IF_TRUE to 614
+ 606: RERAISE              
+ 608: COPY                 
+ 610: POP_EXCEPT           
+ 612: RERAISE              
+ 614: POP_TOP              
+ 616: POP_EXCEPT           
+ 618: POP_TOP              
+ 620: POP_TOP              
+ 622: LOAD_FAST            node
+ 624: LOAD_ATTR            orelse
+ 634: POP_JUMP_FORWARD_IF_FALSE to 748
+ 636: LOAD_GLOBAL          NULL + len
+ 648: LOAD_FAST            node
+ 650: LOAD_ATTR            orelse
+ 660: PRECALL              
+ 664: CALL                 
+ 674: LOAD_CONST           1
+ 676: COMPARE_OP           ==
+ 682: POP_JUMP_FORWARD_IF_FALSE to 748
+ 684: LOAD_GLOBAL          NULL + isinstance
+ 696: LOAD_FAST            node
+ 698: LOAD_ATTR            orelse
+ 708: LOAD_CONST           0
+ 710: BINARY_SUBSCR        
+ 720: LOAD_GLOBAL          If
+ 732: PRECALL              
+ 736: CALL                 
+ 746: POP_JUMP_BACKWARD_IF_TRUE to 362
+ 748: LOAD_FAST            node
+ 750: LOAD_ATTR            orelse
+ 760: POP_JUMP_FORWARD_IF_FALSE to 950
+ 762: LOAD_FAST            self
+ 764: LOAD_METHOD          fill
+ 786: LOAD_CONST           'else'
+ 788: PRECALL              
+ 792: CALL                 
+ 802: POP_TOP              
+ 804: LOAD_FAST            self
+ 806: LOAD_METHOD          block
+ 828: PRECALL              
+ 832: CALL                 
+ 842: BEFORE_WITH          
+ 844: POP_TOP              
+ 846: LOAD_FAST            self
+ 848: LOAD_METHOD          traverse
+ 870: LOAD_FAST            node
+ 872: LOAD_ATTR            orelse
+ 882: PRECALL              
+ 886: CALL                 
+ 896: POP_TOP              
+ 898: LOAD_CONST           None
+ 900: LOAD_CONST           None
+ 902: LOAD_CONST           None
+ 904: PRECALL              
+ 908: CALL                 
+ 918: POP_TOP              
+ 920: LOAD_CONST           None
+ 922: RETURN_VALUE         
+ 924: PUSH_EXC_INFO        
+ 926: WITH_EXCEPT_START    
+ 928: POP_JUMP_FORWARD_IF_TRUE to 938
+ 930: RERAISE              
+ 932: COPY                 
+ 934: POP_EXCEPT           
+ 936: RERAISE              
+ 938: POP_TOP              
+ 940: POP_EXCEPT           
+ 942: POP_TOP              
+ 944: POP_TOP              
+ 946: LOAD_CONST           None
+ 948: RETURN_VALUE         
+ 950: LOAD_CONST           None
+ 952: RETURN_VALUE         

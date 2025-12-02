@@ -1,0 +1,97 @@
+# Disassembly for getpass._raw_input
+# From module file: getpass
+
+## co_consts:
+(None, 'replace', -1, '\n')
+
+## co_names:
+('sys', 'stderr', 'stdin', 'str', 'write', 'UnicodeEncodeError', 'encode', 'encoding', 'decode', 'flush', 'readline', 'EOFError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            stream
+   4: POP_JUMP_FORWARD_IF_TRUE to 30
+   6: LOAD_GLOBAL          sys
+  18: LOAD_ATTR            stderr
+  28: STORE_FAST           stream
+  30: LOAD_FAST            input
+  32: POP_JUMP_FORWARD_IF_TRUE to 58
+  34: LOAD_GLOBAL          sys
+  46: LOAD_ATTR            stdin
+  56: STORE_FAST           input
+  58: LOAD_GLOBAL          NULL + str
+  70: LOAD_FAST            prompt
+  72: PRECALL              
+  76: CALL                 
+  86: STORE_FAST           prompt
+  88: LOAD_FAST            prompt
+  90: POP_JUMP_FORWARD_IF_FALSE to 358
+  92: NOP                  
+  94: LOAD_FAST            stream
+  96: LOAD_METHOD          write
+ 118: LOAD_FAST            prompt
+ 120: PRECALL              
+ 124: CALL                 
+ 134: POP_TOP              
+ 136: JUMP_FORWARD         to 318
+ 138: PUSH_EXC_INFO        
+ 140: LOAD_GLOBAL          UnicodeEncodeError
+ 152: CHECK_EXC_MATCH      
+ 154: POP_JUMP_FORWARD_IF_FALSE to 310
+ 156: POP_TOP              
+ 158: LOAD_FAST            prompt
+ 160: LOAD_METHOD          encode
+ 182: LOAD_FAST            stream
+ 184: LOAD_ATTR            encoding
+ 194: LOAD_CONST           'replace'
+ 196: PRECALL              
+ 200: CALL                 
+ 210: STORE_FAST           prompt
+ 212: LOAD_FAST            prompt
+ 214: LOAD_METHOD          decode
+ 236: LOAD_FAST            stream
+ 238: LOAD_ATTR            encoding
+ 248: PRECALL              
+ 252: CALL                 
+ 262: STORE_FAST           prompt
+ 264: LOAD_FAST            stream
+ 266: LOAD_METHOD          write
+ 288: LOAD_FAST            prompt
+ 290: PRECALL              
+ 294: CALL                 
+ 304: POP_TOP              
+ 306: POP_EXCEPT           
+ 308: JUMP_FORWARD         to 318
+ 310: RERAISE              
+ 312: COPY                 
+ 314: POP_EXCEPT           
+ 316: RERAISE              
+ 318: LOAD_FAST            stream
+ 320: LOAD_METHOD          flush
+ 342: PRECALL              
+ 346: CALL                 
+ 356: POP_TOP              
+ 358: LOAD_FAST            input
+ 360: LOAD_METHOD          readline
+ 382: PRECALL              
+ 386: CALL                 
+ 396: STORE_FAST           line
+ 398: LOAD_FAST            line
+ 400: POP_JUMP_FORWARD_IF_TRUE to 416
+ 402: LOAD_GLOBAL          EOFError
+ 414: RAISE_VARARGS        
+ 416: LOAD_FAST            line
+ 418: LOAD_CONST           -1
+ 420: BINARY_SUBSCR        
+ 430: LOAD_CONST           '\n'
+ 432: COMPARE_OP           ==
+ 438: POP_JUMP_FORWARD_IF_FALSE to 460
+ 440: LOAD_FAST            line
+ 442: LOAD_CONST           None
+ 444: LOAD_CONST           -1
+ 446: BUILD_SLICE          
+ 448: BINARY_SUBSCR        
+ 458: STORE_FAST           line
+ 460: LOAD_FAST            line
+ 462: RETURN_VALUE         

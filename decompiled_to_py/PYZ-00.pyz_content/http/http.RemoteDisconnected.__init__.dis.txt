@@ -1,0 +1,33 @@
+# Disassembly for http.RemoteDisconnected.__init__
+# From module file: http.client
+
+## co_consts:
+(None, '')
+
+## co_names:
+('BadStatusLine', '__init__', 'ConnectionResetError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          BadStatusLine
+  14: LOAD_METHOD          __init__
+  36: LOAD_FAST            self
+  38: LOAD_CONST           ''
+  40: PRECALL              
+  44: CALL                 
+  54: POP_TOP              
+  56: LOAD_GLOBAL          NULL + ConnectionResetError
+  68: LOAD_ATTR            __init__
+  78: LOAD_FAST            self
+  80: BUILD_LIST           
+  82: LOAD_FAST            pos
+  84: LIST_EXTEND          
+  86: LIST_TO_TUPLE        
+  88: BUILD_MAP            
+  90: LOAD_FAST            kw
+  92: DICT_MERGE           
+  94: CALL_FUNCTION_EX     
+  96: POP_TOP              
+  98: LOAD_CONST           None
+ 100: RETURN_VALUE         

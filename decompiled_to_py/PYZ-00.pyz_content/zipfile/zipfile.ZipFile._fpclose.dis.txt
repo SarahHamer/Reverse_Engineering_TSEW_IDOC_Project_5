@@ -1,0 +1,43 @@
+# Disassembly for zipfile.ZipFile._fpclose
+# From module file: zipfile
+
+## co_consts:
+(None, 0, 1)
+
+## co_names:
+('_fileRefCnt', '_filePassed', 'close')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _fileRefCnt
+  14: LOAD_CONST           0
+  16: COMPARE_OP           >
+  22: POP_JUMP_FORWARD_IF_TRUE to 28
+  24: LOAD_ASSERTION_ERROR 
+  26: RAISE_VARARGS        
+  28: LOAD_FAST            self
+  30: COPY                 
+  32: LOAD_ATTR            _fileRefCnt
+  42: LOAD_CONST           1
+  44: BINARY_OP            -=
+  48: SWAP                 
+  50: STORE_ATTR           _fileRefCnt
+  60: LOAD_FAST            self
+  62: LOAD_ATTR            _fileRefCnt
+  72: POP_JUMP_FORWARD_IF_TRUE to 132
+  74: LOAD_FAST            self
+  76: LOAD_ATTR            _filePassed
+  86: POP_JUMP_FORWARD_IF_TRUE to 136
+  88: LOAD_FAST            fp
+  90: LOAD_METHOD          close
+ 112: PRECALL              
+ 116: CALL                 
+ 126: POP_TOP              
+ 128: LOAD_CONST           None
+ 130: RETURN_VALUE         
+ 132: LOAD_CONST           None
+ 134: RETURN_VALUE         
+ 136: LOAD_CONST           None
+ 138: RETURN_VALUE         

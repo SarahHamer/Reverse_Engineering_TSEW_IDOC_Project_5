@@ -1,0 +1,42 @@
+# Disassembly for _pydecimal.Context.copy
+# From module file: _pydecimal
+
+## co_consts:
+('Returns a deep copy from self.',)
+
+## co_names:
+('Context', 'prec', 'rounding', 'Emin', 'Emax', 'capitals', 'clamp', 'flags', 'copy', 'traps', '_ignored_flags')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + Context
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            prec
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            rounding
+  38: LOAD_FAST            self
+  40: LOAD_ATTR            Emin
+  50: LOAD_FAST            self
+  52: LOAD_ATTR            Emax
+  62: LOAD_FAST            self
+  64: LOAD_ATTR            capitals
+  74: LOAD_FAST            self
+  76: LOAD_ATTR            clamp
+  86: LOAD_FAST            self
+  88: LOAD_ATTR            flags
+  98: LOAD_METHOD          copy
+ 120: PRECALL              
+ 124: CALL                 
+ 134: LOAD_FAST            self
+ 136: LOAD_ATTR            traps
+ 146: LOAD_METHOD          copy
+ 168: PRECALL              
+ 172: CALL                 
+ 182: LOAD_FAST            self
+ 184: LOAD_ATTR            _ignored_flags
+ 194: PRECALL              
+ 198: CALL                 
+ 208: STORE_FAST           nc
+ 210: LOAD_FAST            nc
+ 212: RETURN_VALUE         

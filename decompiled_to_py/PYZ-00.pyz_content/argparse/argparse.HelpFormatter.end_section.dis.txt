@@ -1,0 +1,24 @@
+# Disassembly for argparse.HelpFormatter.end_section
+# From module file: argparse
+
+## co_consts:
+(None,)
+
+## co_names:
+('_current_section', 'parent', '_dedent')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _current_section
+  14: LOAD_ATTR            parent
+  24: LOAD_FAST            self
+  26: STORE_ATTR           _current_section
+  36: LOAD_FAST            self
+  38: LOAD_METHOD          _dedent
+  60: PRECALL              
+  64: CALL                 
+  74: POP_TOP              
+  76: LOAD_CONST           None
+  78: RETURN_VALUE         

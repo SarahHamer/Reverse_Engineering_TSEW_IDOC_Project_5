@@ -1,0 +1,24 @@
+# Disassembly for importlib.SourceLoader.source_to_code
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+("Return the code object compiled from source.\n\n        The 'data' argument can be any object type that compile() supports.\n        ", 'exec', True, ('dont_inherit', 'optimize'))
+
+## co_names:
+('_bootstrap', '_call_with_frames_removed', 'compile')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _bootstrap
+  14: LOAD_METHOD          _call_with_frames_removed
+  36: LOAD_GLOBAL          compile
+  48: LOAD_FAST            data
+  50: LOAD_FAST            path
+  52: LOAD_CONST           'exec'
+  54: LOAD_CONST           True
+  56: LOAD_FAST            _optimize
+  58: KW_NAMES             
+  60: PRECALL              
+  64: CALL                 
+  74: RETURN_VALUE         

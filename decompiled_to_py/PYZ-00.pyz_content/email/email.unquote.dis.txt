@@ -1,0 +1,67 @@
+# Disassembly for email.unquote
+# From module file: email.utils
+
+## co_consts:
+('Remove quotes from a string.', 1, '"', -1, '\\\\', '\\', '\\"', '<', '>')
+
+## co_names:
+('len', 'startswith', 'endswith', 'replace')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + len
+  14: LOAD_FAST            str
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_CONST           1
+  32: COMPARE_OP           >
+  38: POP_JUMP_FORWARD_IF_FALSE to 328
+  40: LOAD_FAST            str
+  42: LOAD_METHOD          startswith
+  64: LOAD_CONST           '"'
+  66: PRECALL              
+  70: CALL                 
+  80: POP_JUMP_FORWARD_IF_FALSE to 224
+  82: LOAD_FAST            str
+  84: LOAD_METHOD          endswith
+ 106: LOAD_CONST           '"'
+ 108: PRECALL              
+ 112: CALL                 
+ 122: POP_JUMP_FORWARD_IF_FALSE to 224
+ 124: LOAD_FAST            str
+ 126: LOAD_CONST           1
+ 128: LOAD_CONST           -1
+ 130: BUILD_SLICE          
+ 132: BINARY_SUBSCR        
+ 142: LOAD_METHOD          replace
+ 164: LOAD_CONST           '\\\\'
+ 166: LOAD_CONST           '\\'
+ 168: PRECALL              
+ 172: CALL                 
+ 182: LOAD_METHOD          replace
+ 204: LOAD_CONST           '\\"'
+ 206: LOAD_CONST           '"'
+ 208: PRECALL              
+ 212: CALL                 
+ 222: RETURN_VALUE         
+ 224: LOAD_FAST            str
+ 226: LOAD_METHOD          startswith
+ 248: LOAD_CONST           '<'
+ 250: PRECALL              
+ 254: CALL                 
+ 264: POP_JUMP_FORWARD_IF_FALSE to 328
+ 266: LOAD_FAST            str
+ 268: LOAD_METHOD          endswith
+ 290: LOAD_CONST           '>'
+ 292: PRECALL              
+ 296: CALL                 
+ 306: POP_JUMP_FORWARD_IF_FALSE to 328
+ 308: LOAD_FAST            str
+ 310: LOAD_CONST           1
+ 312: LOAD_CONST           -1
+ 314: BUILD_SLICE          
+ 316: BINARY_SUBSCR        
+ 326: RETURN_VALUE         
+ 328: LOAD_FAST            str
+ 330: RETURN_VALUE         

@@ -1,0 +1,63 @@
+# Disassembly for threading.Thread._stop
+# From module file: threading
+
+## co_consts:
+(None, True)
+
+## co_names:
+('_tstate_lock', 'locked', '_is_stopped', 'daemon', '_shutdown_locks_lock', '_maintain_shutdown_locks')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _tstate_lock
+  14: STORE_FAST           lock
+  16: LOAD_FAST            lock
+  18: POP_JUMP_FORWARD_IF_NONE to 64
+  20: LOAD_FAST            lock
+  22: LOAD_METHOD          locked
+  44: PRECALL              
+  48: CALL                 
+  58: POP_JUMP_FORWARD_IF_FALSE to 64
+  60: LOAD_ASSERTION_ERROR 
+  62: RAISE_VARARGS        
+  64: LOAD_CONST           True
+  66: LOAD_FAST            self
+  68: STORE_ATTR           _is_stopped
+  78: LOAD_CONST           None
+  80: LOAD_FAST            self
+  82: STORE_ATTR           _tstate_lock
+  92: LOAD_FAST            self
+  94: LOAD_ATTR            daemon
+ 104: POP_JUMP_FORWARD_IF_TRUE to 202
+ 106: LOAD_GLOBAL          _shutdown_locks_lock
+ 118: BEFORE_WITH          
+ 120: POP_TOP              
+ 122: LOAD_GLOBAL          NULL + _maintain_shutdown_locks
+ 134: PRECALL              
+ 138: CALL                 
+ 148: POP_TOP              
+ 150: LOAD_CONST           None
+ 152: LOAD_CONST           None
+ 154: LOAD_CONST           None
+ 156: PRECALL              
+ 160: CALL                 
+ 170: POP_TOP              
+ 172: LOAD_CONST           None
+ 174: RETURN_VALUE         
+ 176: PUSH_EXC_INFO        
+ 178: WITH_EXCEPT_START    
+ 180: POP_JUMP_FORWARD_IF_TRUE to 190
+ 182: RERAISE              
+ 184: COPY                 
+ 186: POP_EXCEPT           
+ 188: RERAISE              
+ 190: POP_TOP              
+ 192: POP_EXCEPT           
+ 194: POP_TOP              
+ 196: POP_TOP              
+ 198: LOAD_CONST           None
+ 200: RETURN_VALUE         
+ 202: LOAD_CONST           None
+ 204: RETURN_VALUE         

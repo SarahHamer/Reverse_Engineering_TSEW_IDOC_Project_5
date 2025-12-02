@@ -1,0 +1,104 @@
+# Disassembly for inspect.isabstract
+# From module file: inspect
+
+## co_consts:
+('Return true if the object is an abstract base class (ABC).', False, True, '__abstractmethods__', '__isabstractmethod__', (), None)
+
+## co_names:
+('isinstance', 'type', '__flags__', 'TPFLAGS_IS_ABSTRACT', 'issubclass', 'abc', 'ABCMeta', 'hasattr', '__dict__', 'items', 'getattr', '__bases__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            object
+  16: LOAD_GLOBAL          type
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_TRUE to 48
+  44: LOAD_CONST           False
+  46: RETURN_VALUE         
+  48: LOAD_FAST            object
+  50: LOAD_ATTR            __flags__
+  60: LOAD_GLOBAL          TPFLAGS_IS_ABSTRACT
+  72: BINARY_OP            &
+  76: POP_JUMP_FORWARD_IF_FALSE to 82
+  78: LOAD_CONST           True
+  80: RETURN_VALUE         
+  82: LOAD_GLOBAL          NULL + issubclass
+  94: LOAD_GLOBAL          NULL + type
+ 106: LOAD_FAST            object
+ 108: PRECALL              
+ 112: CALL                 
+ 122: LOAD_GLOBAL          abc
+ 134: LOAD_ATTR            ABCMeta
+ 144: PRECALL              
+ 148: CALL                 
+ 158: POP_JUMP_FORWARD_IF_TRUE to 164
+ 160: LOAD_CONST           False
+ 162: RETURN_VALUE         
+ 164: LOAD_GLOBAL          NULL + hasattr
+ 176: LOAD_FAST            object
+ 178: LOAD_CONST           '__abstractmethods__'
+ 180: PRECALL              
+ 184: CALL                 
+ 194: POP_JUMP_FORWARD_IF_FALSE to 200
+ 196: LOAD_CONST           False
+ 198: RETURN_VALUE         
+ 200: LOAD_FAST            object
+ 202: LOAD_ATTR            __dict__
+ 212: LOAD_METHOD          items
+ 234: PRECALL              
+ 238: CALL                 
+ 248: GET_ITER             
+ 250: FOR_ITER             to 302
+ 252: UNPACK_SEQUENCE      
+ 256: STORE_FAST           name
+ 258: STORE_FAST           value
+ 260: LOAD_GLOBAL          NULL + getattr
+ 272: LOAD_FAST            value
+ 274: LOAD_CONST           '__isabstractmethod__'
+ 276: LOAD_CONST           False
+ 278: PRECALL              
+ 282: CALL                 
+ 292: POP_JUMP_FORWARD_IF_FALSE to 300
+ 294: POP_TOP              
+ 296: LOAD_CONST           True
+ 298: RETURN_VALUE         
+ 300: JUMP_BACKWARD        to 250
+ 302: LOAD_FAST            object
+ 304: LOAD_ATTR            __bases__
+ 314: GET_ITER             
+ 316: FOR_ITER             to 438
+ 318: STORE_FAST           base
+ 320: LOAD_GLOBAL          NULL + getattr
+ 332: LOAD_FAST            base
+ 334: LOAD_CONST           '__abstractmethods__'
+ 336: LOAD_CONST           ()
+ 338: PRECALL              
+ 342: CALL                 
+ 352: GET_ITER             
+ 354: FOR_ITER             to 436
+ 356: STORE_FAST           name
+ 358: LOAD_GLOBAL          NULL + getattr
+ 370: LOAD_FAST            object
+ 372: LOAD_FAST            name
+ 374: LOAD_CONST           None
+ 376: PRECALL              
+ 380: CALL                 
+ 390: STORE_FAST           value
+ 392: LOAD_GLOBAL          NULL + getattr
+ 404: LOAD_FAST            value
+ 406: LOAD_CONST           '__isabstractmethod__'
+ 408: LOAD_CONST           False
+ 410: PRECALL              
+ 414: CALL                 
+ 424: POP_JUMP_FORWARD_IF_FALSE to 434
+ 426: POP_TOP              
+ 428: POP_TOP              
+ 430: LOAD_CONST           True
+ 432: RETURN_VALUE         
+ 434: JUMP_BACKWARD        to 354
+ 436: JUMP_BACKWARD        to 316
+ 438: LOAD_CONST           False
+ 440: RETURN_VALUE         

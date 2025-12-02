@@ -1,0 +1,17 @@
+# Disassembly for http.HTTPResponse.isclosed
+# From module file: http.client
+
+## co_consts:
+('True if the connection is closed.', None)
+
+## co_names:
+('fp',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            fp
+  14: LOAD_CONST           None
+  16: IS_OP                
+  18: RETURN_VALUE         

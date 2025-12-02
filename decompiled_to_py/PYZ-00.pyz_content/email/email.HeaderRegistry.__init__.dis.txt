@@ -1,0 +1,34 @@
+# Disassembly for email.HeaderRegistry.__init__
+# From module file: email.headerregistry
+
+## co_consts:
+('Create a header_factory that works with the Policy API.\n\n        base_class is the class that will be the last class in the created\n        header class\'s __bases__ list.  default_class is the class that will be\n        used if "name" (see __call__) does not appear in the registry.\n        use_default_map controls whether or not the default mapping of names to\n        specialized classes is copied in to the registry when the factory is\n        created.  The default is True.\n\n        ', None)
+
+## co_names:
+('registry', 'base_class', 'default_class', 'update', '_default_header_map')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_MAP            
+   4: LOAD_FAST            self
+   6: STORE_ATTR           registry
+  16: LOAD_FAST            base_class
+  18: LOAD_FAST            self
+  20: STORE_ATTR           base_class
+  30: LOAD_FAST            default_class
+  32: LOAD_FAST            self
+  34: STORE_ATTR           default_class
+  44: LOAD_FAST            use_default_map
+  46: POP_JUMP_FORWARD_IF_FALSE to 114
+  48: LOAD_FAST            self
+  50: LOAD_ATTR            registry
+  60: LOAD_METHOD          update
+  82: LOAD_GLOBAL          _default_header_map
+  94: PRECALL              
+  98: CALL                 
+ 108: POP_TOP              
+ 110: LOAD_CONST           None
+ 112: RETURN_VALUE         
+ 114: LOAD_CONST           None
+ 116: RETURN_VALUE         

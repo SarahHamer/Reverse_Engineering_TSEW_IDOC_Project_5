@@ -1,0 +1,29 @@
+# Disassembly for email.AddressHeader.value_parser
+# From module file: email.headerregistry
+
+## co_consts:
+(None, 'this should not happen')
+
+## co_names:
+('parser', 'get_address_list')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + parser
+  14: LOAD_ATTR            get_address_list
+  24: LOAD_FAST            value
+  26: PRECALL              
+  30: CALL                 
+  40: UNPACK_SEQUENCE      
+  44: STORE_FAST           address_list
+  46: STORE_FAST           value
+  48: LOAD_FAST            value
+  50: POP_JUMP_FORWARD_IF_FALSE to 72
+  52: LOAD_ASSERTION_ERROR 
+  54: LOAD_CONST           'this should not happen'
+  56: PRECALL              
+  60: CALL                 
+  70: RAISE_VARARGS        
+  72: LOAD_FAST            address_list
+  74: RETURN_VALUE         

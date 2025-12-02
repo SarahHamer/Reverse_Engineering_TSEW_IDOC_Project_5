@@ -1,0 +1,95 @@
+# Disassembly for fractions.Fraction.__eq__
+# From module file: fractions
+
+## co_consts:
+('a == b', 1, 0, 0.0)
+
+## co_names:
+('type', 'int', '_numerator', '_denominator', 'isinstance', 'numbers', 'Rational', 'numerator', 'denominator', 'Complex', 'imag', 'real', 'float', 'math', 'isnan', 'isinf', 'from_float', 'NotImplemented')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + type
+  14: LOAD_FAST            b
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_GLOBAL          int
+  42: IS_OP                
+  44: POP_JUMP_FORWARD_IF_FALSE to 90
+  46: LOAD_FAST            a
+  48: LOAD_ATTR            _numerator
+  58: LOAD_FAST            b
+  60: COMPARE_OP           ==
+  66: JUMP_IF_FALSE_OR_POP to 88
+  68: LOAD_FAST            a
+  70: LOAD_ATTR            _denominator
+  80: LOAD_CONST           1
+  82: COMPARE_OP           ==
+  88: RETURN_VALUE         
+  90: LOAD_GLOBAL          NULL + isinstance
+ 102: LOAD_FAST            b
+ 104: LOAD_GLOBAL          numbers
+ 116: LOAD_ATTR            Rational
+ 126: PRECALL              
+ 130: CALL                 
+ 140: POP_JUMP_FORWARD_IF_FALSE to 206
+ 142: LOAD_FAST            a
+ 144: LOAD_ATTR            _numerator
+ 154: LOAD_FAST            b
+ 156: LOAD_ATTR            numerator
+ 166: COMPARE_OP           ==
+ 172: JUMP_IF_FALSE_OR_POP to 204
+ 174: LOAD_FAST            a
+ 176: LOAD_ATTR            _denominator
+ 186: LOAD_FAST            b
+ 188: LOAD_ATTR            denominator
+ 198: COMPARE_OP           ==
+ 204: RETURN_VALUE         
+ 206: LOAD_GLOBAL          NULL + isinstance
+ 218: LOAD_FAST            b
+ 220: LOAD_GLOBAL          numbers
+ 232: LOAD_ATTR            Complex
+ 242: PRECALL              
+ 246: CALL                 
+ 256: POP_JUMP_FORWARD_IF_FALSE to 294
+ 258: LOAD_FAST            b
+ 260: LOAD_ATTR            imag
+ 270: LOAD_CONST           0
+ 272: COMPARE_OP           ==
+ 278: POP_JUMP_FORWARD_IF_FALSE to 294
+ 280: LOAD_FAST            b
+ 282: LOAD_ATTR            real
+ 292: STORE_FAST           b
+ 294: LOAD_GLOBAL          NULL + isinstance
+ 306: LOAD_FAST            b
+ 308: LOAD_GLOBAL          float
+ 320: PRECALL              
+ 324: CALL                 
+ 334: POP_JUMP_FORWARD_IF_FALSE to 478
+ 336: LOAD_GLOBAL          NULL + math
+ 348: LOAD_ATTR            isnan
+ 358: LOAD_FAST            b
+ 360: PRECALL              
+ 364: CALL                 
+ 374: POP_JUMP_FORWARD_IF_TRUE to 416
+ 376: LOAD_GLOBAL          NULL + math
+ 388: LOAD_ATTR            isinf
+ 398: LOAD_FAST            b
+ 400: PRECALL              
+ 404: CALL                 
+ 414: POP_JUMP_FORWARD_IF_FALSE to 428
+ 416: LOAD_CONST           0.0
+ 418: LOAD_FAST            b
+ 420: COMPARE_OP           ==
+ 426: RETURN_VALUE         
+ 428: LOAD_FAST            a
+ 430: LOAD_FAST            a
+ 432: LOAD_METHOD          from_float
+ 454: LOAD_FAST            b
+ 456: PRECALL              
+ 460: CALL                 
+ 470: COMPARE_OP           ==
+ 476: RETURN_VALUE         
+ 478: LOAD_GLOBAL          NotImplemented
+ 490: RETURN_VALUE         

@@ -1,0 +1,35 @@
+# Disassembly for zipfile.PyZipFile
+# From module file: zipfile
+
+## co_consts:
+('PyZipFile', 'Class to create ZIP archives with Python library files and packages.', 'r', True, -1, <code object __init__ at 0x000002406944A780, file "zipfile.py", line 2002>, '', None, <code object writepy at 0x0000024068C871C0, file "zipfile.py", line 2008>, <code object _get_codename at 0x0000024068C88150, file "zipfile.py", line 2090>, ('', None))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'ZIP_STORED', '__init__', 'writepy', '_get_codename')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'PyZipFile'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Class to create ZIP archives with Python library files and packages.'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           'r'
+  16: LOAD_NAME            ZIP_STORED
+  18: LOAD_CONST           True
+  20: LOAD_CONST           -1
+  22: BUILD_TUPLE          
+  24: LOAD_CONST           <code object __init__ at 0x000002406944A780, file "zipfile.py", line 2002>
+  26: MAKE_FUNCTION        defaults
+  28: STORE_NAME           __init__
+  30: LOAD_CONST           ('', None)
+  32: LOAD_CONST           <code object writepy at 0x0000024068C871C0, file "zipfile.py", line 2008>
+  34: MAKE_FUNCTION        defaults
+  36: STORE_NAME           writepy
+  38: LOAD_CONST           <code object _get_codename at 0x0000024068C88150, file "zipfile.py", line 2090>
+  40: MAKE_FUNCTION        
+  42: STORE_NAME           _get_codename
+  44: LOAD_CONST           None
+  46: RETURN_VALUE         

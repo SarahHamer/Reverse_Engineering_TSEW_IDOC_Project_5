@@ -1,0 +1,90 @@
+# Disassembly for typing._ProtocolMeta.__instancecheck__
+# From module file: typing
+
+## co_consts:
+(None, '_is_protocol', False, '_is_runtime_protocol', 2, ('depth',), 'Instance and class checks can only be used with @runtime_checkable protocols', True, <code object <genexpr> at 0x00000240691C14D0, file "typing.py", line 1999>)
+
+## co_names:
+('getattr', '_allow_reckless_class_checks', 'TypeError', '_is_callable_members_only', 'issubclass', '__class__', '_is_protocol', 'all', '_get_protocol_attrs', 'super', '__instancecheck__')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: MAKE_CELL            cls
+   4: MAKE_CELL            instance
+   6: RESUME               
+   8: LOAD_GLOBAL          NULL + getattr
+  20: LOAD_DEREF           cls
+  22: LOAD_CONST           '_is_protocol'
+  24: LOAD_CONST           False
+  26: PRECALL              
+  30: CALL                 
+  40: POP_JUMP_FORWARD_IF_FALSE to 138
+  42: LOAD_GLOBAL          NULL + getattr
+  54: LOAD_DEREF           cls
+  56: LOAD_CONST           '_is_runtime_protocol'
+  58: LOAD_CONST           False
+  60: PRECALL              
+  64: CALL                 
+  74: POP_JUMP_FORWARD_IF_TRUE to 138
+  76: LOAD_GLOBAL          NULL + _allow_reckless_class_checks
+  88: LOAD_CONST           2
+  90: KW_NAMES             
+  92: PRECALL              
+  96: CALL                 
+ 106: POP_JUMP_FORWARD_IF_TRUE to 138
+ 108: LOAD_GLOBAL          NULL + TypeError
+ 120: LOAD_CONST           'Instance and class checks can only be used with @runtime_checkable protocols'
+ 122: PRECALL              
+ 126: CALL                 
+ 136: RAISE_VARARGS        
+ 138: LOAD_GLOBAL          NULL + getattr
+ 150: LOAD_DEREF           cls
+ 152: LOAD_CONST           '_is_protocol'
+ 154: LOAD_CONST           False
+ 156: PRECALL              
+ 160: CALL                 
+ 170: POP_JUMP_FORWARD_IF_FALSE to 202
+ 172: LOAD_GLOBAL          NULL + _is_callable_members_only
+ 184: LOAD_DEREF           cls
+ 186: PRECALL              
+ 190: CALL                 
+ 200: POP_JUMP_FORWARD_IF_FALSE to 248
+ 202: LOAD_GLOBAL          NULL + issubclass
+ 214: LOAD_DEREF           instance
+ 216: LOAD_ATTR            __class__
+ 226: LOAD_DEREF           cls
+ 228: PRECALL              
+ 232: CALL                 
+ 242: POP_JUMP_FORWARD_IF_FALSE to 248
+ 244: LOAD_CONST           True
+ 246: RETURN_VALUE         
+ 248: LOAD_DEREF           cls
+ 250: LOAD_ATTR            _is_protocol
+ 260: POP_JUMP_FORWARD_IF_FALSE to 348
+ 262: LOAD_GLOBAL          NULL + all
+ 274: LOAD_CLOSURE         cls
+ 276: LOAD_CLOSURE         instance
+ 278: BUILD_TUPLE          
+ 280: LOAD_CONST           <code object <genexpr> at 0x00000240691C14D0, file "typing.py", line 1999>
+ 282: MAKE_FUNCTION        closure
+ 284: LOAD_GLOBAL          NULL + _get_protocol_attrs
+ 296: LOAD_DEREF           cls
+ 298: PRECALL              
+ 302: CALL                 
+ 312: GET_ITER             
+ 314: PRECALL              
+ 318: CALL                 
+ 328: PRECALL              
+ 332: CALL                 
+ 342: POP_JUMP_FORWARD_IF_FALSE to 348
+ 344: LOAD_CONST           True
+ 346: RETURN_VALUE         
+ 348: LOAD_GLOBAL          NULL + super
+ 360: PRECALL              
+ 364: CALL                 
+ 374: LOAD_METHOD          __instancecheck__
+ 396: LOAD_DEREF           instance
+ 398: PRECALL              
+ 402: CALL                 
+ 412: RETURN_VALUE         

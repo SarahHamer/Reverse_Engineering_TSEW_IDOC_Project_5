@@ -1,0 +1,40 @@
+# Disassembly for _pydecimal.Decimal._round_half_even
+# From module file: _pydecimal
+
+## co_consts:
+('Round 5 to even, rest to nearest.', 0, 1, '02468', -1)
+
+## co_names:
+('_exact_half', '_int', '_round_half_up')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _exact_half
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            _int
+  26: LOAD_FAST            prec
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 96
+  44: LOAD_FAST            prec
+  46: LOAD_CONST           0
+  48: COMPARE_OP           ==
+  54: POP_JUMP_FORWARD_IF_TRUE to 92
+  56: LOAD_FAST            self
+  58: LOAD_ATTR            _int
+  68: LOAD_FAST            prec
+  70: LOAD_CONST           1
+  72: BINARY_OP            -
+  76: BINARY_SUBSCR        
+  86: LOAD_CONST           '02468'
+  88: CONTAINS_OP          
+  90: POP_JUMP_FORWARD_IF_FALSE to 96
+  92: LOAD_CONST           -1
+  94: RETURN_VALUE         
+  96: LOAD_FAST            self
+  98: LOAD_METHOD          _round_half_up
+ 120: LOAD_FAST            prec
+ 122: PRECALL              
+ 126: CALL                 
+ 136: RETURN_VALUE         

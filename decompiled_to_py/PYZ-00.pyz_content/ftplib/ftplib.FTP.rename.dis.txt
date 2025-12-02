@@ -1,0 +1,39 @@
+# Disassembly for ftplib.FTP.rename
+# From module file: ftplib
+
+## co_consts:
+('Rename a file.', 'RNFR ', 0, '3', 'RNTO ')
+
+## co_names:
+('sendcmd', 'error_reply', 'voidcmd')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          sendcmd
+  26: LOAD_CONST           'RNFR '
+  28: LOAD_FAST            fromname
+  30: BINARY_OP            +
+  34: PRECALL              
+  38: CALL                 
+  48: STORE_FAST           resp
+  50: LOAD_FAST            resp
+  52: LOAD_CONST           0
+  54: BINARY_SUBSCR        
+  64: LOAD_CONST           '3'
+  66: COMPARE_OP           !=
+  72: POP_JUMP_FORWARD_IF_FALSE to 104
+  74: LOAD_GLOBAL          NULL + error_reply
+  86: LOAD_FAST            resp
+  88: PRECALL              
+  92: CALL                 
+ 102: RAISE_VARARGS        
+ 104: LOAD_FAST            self
+ 106: LOAD_METHOD          voidcmd
+ 128: LOAD_CONST           'RNTO '
+ 130: LOAD_FAST            toname
+ 132: BINARY_OP            +
+ 136: PRECALL              
+ 140: CALL                 
+ 150: RETURN_VALUE         

@@ -1,0 +1,335 @@
+# Disassembly for ssl.SSLSocket._create
+# From module file: ssl
+
+## co_consts:
+(None, 'only stream sockets are supported', 'server_hostname can only be specified in client mode', 'session can only be specified in client mode', 'check_hostname requires server_hostname', ('family', 'type', 'proto', 'fileno'), False, True, 1, b'', 'Closed before TLS handshake with data in recv buffer.', ('owner', 'session'), 0.0, 'do_handshake_on_connect should not be specified for non-blocking sockets', ())
+
+## co_names:
+('getsockopt', 'SOL_SOCKET', 'SO_TYPE', 'SOCK_STREAM', 'NotImplementedError', 'ValueError', 'check_hostname', 'dict', 'family', 'type', 'proto', 'fileno', '__new__', 'super', 'SSLSocket', '__init__', 'gettimeout', 'detach', '_context', '_session', '_closed', '_sslobj', 'server_side', '_encode_hostname', 'server_hostname', 'do_handshake_on_connect', 'suppress_ragged_eofs', 'getpeername', 'OSError', 'errno', 'ENOTCONN', 'getblocking', 'setblocking', 'recv', 'EINVAL', 'SSLError', 'reason', 'library', 'close', 'settimeout', '_connected', '_wrap_socket', 'do_handshake')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_FAST            sock
+   6: LOAD_METHOD          getsockopt
+  28: LOAD_GLOBAL          SOL_SOCKET
+  40: LOAD_GLOBAL          SO_TYPE
+  52: PRECALL              
+  56: CALL                 
+  66: LOAD_GLOBAL          SOCK_STREAM
+  78: COMPARE_OP           !=
+  84: POP_JUMP_FORWARD_IF_FALSE to 116
+  86: LOAD_GLOBAL          NULL + NotImplementedError
+  98: LOAD_CONST           'only stream sockets are supported'
+ 100: PRECALL              
+ 104: CALL                 
+ 114: RAISE_VARARGS        
+ 116: LOAD_FAST            server_side
+ 118: POP_JUMP_FORWARD_IF_FALSE to 188
+ 120: LOAD_FAST            server_hostname
+ 122: POP_JUMP_FORWARD_IF_FALSE to 154
+ 124: LOAD_GLOBAL          NULL + ValueError
+ 136: LOAD_CONST           'server_hostname can only be specified in client mode'
+ 138: PRECALL              
+ 142: CALL                 
+ 152: RAISE_VARARGS        
+ 154: LOAD_FAST            session
+ 156: POP_JUMP_FORWARD_IF_NONE to 188
+ 158: LOAD_GLOBAL          NULL + ValueError
+ 170: LOAD_CONST           'session can only be specified in client mode'
+ 172: PRECALL              
+ 176: CALL                 
+ 186: RAISE_VARARGS        
+ 188: LOAD_FAST            context
+ 190: LOAD_ATTR            check_hostname
+ 200: POP_JUMP_FORWARD_IF_FALSE to 236
+ 202: LOAD_FAST            server_hostname
+ 204: POP_JUMP_FORWARD_IF_TRUE to 236
+ 206: LOAD_GLOBAL          NULL + ValueError
+ 218: LOAD_CONST           'check_hostname requires server_hostname'
+ 220: PRECALL              
+ 224: CALL                 
+ 234: RAISE_VARARGS        
+ 236: LOAD_GLOBAL          NULL + dict
+ 248: LOAD_FAST            sock
+ 250: LOAD_ATTR            family
+ 260: LOAD_FAST            sock
+ 262: LOAD_ATTR            type
+ 272: LOAD_FAST            sock
+ 274: LOAD_ATTR            proto
+ 284: LOAD_FAST            sock
+ 286: LOAD_METHOD          fileno
+ 308: PRECALL              
+ 312: CALL                 
+ 322: KW_NAMES             
+ 324: PRECALL              
+ 328: CALL                 
+ 338: STORE_FAST           kwargs
+ 340: PUSH_NULL            
+ 342: LOAD_FAST            cls
+ 344: LOAD_ATTR            __new__
+ 354: LOAD_FAST            cls
+ 356: BUILD_TUPLE          
+ 358: BUILD_MAP            
+ 360: LOAD_FAST            kwargs
+ 362: DICT_MERGE           
+ 364: CALL_FUNCTION_EX     
+ 366: STORE_FAST           self
+ 368: PUSH_NULL            
+ 370: LOAD_GLOBAL          NULL + super
+ 382: LOAD_GLOBAL          SSLSocket
+ 394: LOAD_FAST            self
+ 396: PRECALL              
+ 400: CALL                 
+ 410: LOAD_ATTR            __init__
+ 420: LOAD_CONST           ()
+ 422: BUILD_MAP            
+ 424: LOAD_FAST            kwargs
+ 426: DICT_MERGE           
+ 428: CALL_FUNCTION_EX     
+ 430: POP_TOP              
+ 432: LOAD_FAST            sock
+ 434: LOAD_METHOD          gettimeout
+ 456: PRECALL              
+ 460: CALL                 
+ 470: STORE_FAST           sock_timeout
+ 472: LOAD_FAST            sock
+ 474: LOAD_METHOD          detach
+ 496: PRECALL              
+ 500: CALL                 
+ 510: POP_TOP              
+ 512: LOAD_FAST            context
+ 514: LOAD_FAST            self
+ 516: STORE_ATTR           _context
+ 526: LOAD_FAST            session
+ 528: LOAD_FAST            self
+ 530: STORE_ATTR           _session
+ 540: LOAD_CONST           False
+ 542: LOAD_FAST            self
+ 544: STORE_ATTR           _closed
+ 554: LOAD_CONST           None
+ 556: LOAD_FAST            self
+ 558: STORE_ATTR           _sslobj
+ 568: LOAD_FAST            server_side
+ 570: LOAD_FAST            self
+ 572: STORE_ATTR           server_side
+ 582: LOAD_FAST            context
+ 584: LOAD_METHOD          _encode_hostname
+ 606: LOAD_FAST            server_hostname
+ 608: PRECALL              
+ 612: CALL                 
+ 622: LOAD_FAST            self
+ 624: STORE_ATTR           server_hostname
+ 634: LOAD_FAST            do_handshake_on_connect
+ 636: LOAD_FAST            self
+ 638: STORE_ATTR           do_handshake_on_connect
+ 648: LOAD_FAST            suppress_ragged_eofs
+ 650: LOAD_FAST            self
+ 652: STORE_ATTR           suppress_ragged_eofs
+ 662: NOP                  
+ 664: LOAD_FAST            self
+ 666: LOAD_METHOD          getpeername
+ 688: PRECALL              
+ 692: CALL                 
+ 702: POP_TOP              
+ 704: LOAD_CONST           True
+ 706: STORE_FAST           connected
+ 708: EXTENDED_ARG         
+ 710: JUMP_FORWARD         to 1266
+ 712: PUSH_EXC_INFO        
+ 714: LOAD_GLOBAL          OSError
+ 726: CHECK_EXC_MATCH      
+ 728: EXTENDED_ARG         
+ 730: POP_JUMP_FORWARD_IF_FALSE to 1258
+ 732: STORE_FAST           e
+ 734: LOAD_FAST            e
+ 736: LOAD_ATTR            errno
+ 746: LOAD_GLOBAL          errno
+ 758: LOAD_ATTR            ENOTCONN
+ 768: COMPARE_OP           !=
+ 774: POP_JUMP_FORWARD_IF_FALSE to 778
+ 776: RAISE_VARARGS        
+ 778: LOAD_CONST           False
+ 780: STORE_FAST           connected
+ 782: LOAD_FAST            self
+ 784: LOAD_METHOD          getblocking
+ 806: PRECALL              
+ 810: CALL                 
+ 820: STORE_FAST           blocking
+ 822: LOAD_FAST            self
+ 824: LOAD_METHOD          setblocking
+ 846: LOAD_CONST           False
+ 848: PRECALL              
+ 852: CALL                 
+ 862: POP_TOP              
+ 864: NOP                  
+ 866: LOAD_FAST            self
+ 868: LOAD_METHOD          recv
+ 890: LOAD_CONST           1
+ 892: PRECALL              
+ 896: CALL                 
+ 906: STORE_FAST           notconn_pre_handshake_data
+ 908: JUMP_FORWARD         to 1024
+ 910: PUSH_EXC_INFO        
+ 912: LOAD_GLOBAL          OSError
+ 924: CHECK_EXC_MATCH      
+ 926: POP_JUMP_FORWARD_IF_FALSE to 1016
+ 928: STORE_FAST           e
+ 930: LOAD_FAST            e
+ 932: LOAD_ATTR            errno
+ 942: LOAD_GLOBAL          errno
+ 954: LOAD_ATTR            ENOTCONN
+ 964: LOAD_GLOBAL          errno
+ 976: LOAD_ATTR            EINVAL
+ 986: BUILD_TUPLE          
+ 988: CONTAINS_OP          
+ 990: POP_JUMP_FORWARD_IF_FALSE to 994
+ 992: RAISE_VARARGS        
+ 994: LOAD_CONST           b''
+ 996: STORE_FAST           notconn_pre_handshake_data
+ 998: POP_EXCEPT           
+1000: LOAD_CONST           None
+1002: STORE_FAST           e
+1004: DELETE_FAST          e
+1006: JUMP_FORWARD         to 1024
+1008: LOAD_CONST           None
+1010: STORE_FAST           e
+1012: DELETE_FAST          e
+1014: RERAISE              
+1016: RERAISE              
+1018: COPY                 
+1020: POP_EXCEPT           
+1022: RERAISE              
+1024: LOAD_FAST            self
+1026: LOAD_METHOD          setblocking
+1048: LOAD_FAST            blocking
+1050: PRECALL              
+1054: CALL                 
+1064: POP_TOP              
+1066: LOAD_FAST            notconn_pre_handshake_data
+1068: POP_JUMP_FORWARD_IF_FALSE to 1240
+1070: LOAD_CONST           'Closed before TLS handshake with data in recv buffer.'
+1072: STORE_FAST           reason
+1074: LOAD_GLOBAL          NULL + SSLError
+1086: LOAD_FAST            e
+1088: LOAD_ATTR            errno
+1098: LOAD_FAST            reason
+1100: PRECALL              
+1104: CALL                 
+1114: STORE_FAST           notconn_pre_handshake_data_error
+1116: LOAD_FAST            reason
+1118: LOAD_FAST            notconn_pre_handshake_data_error
+1120: STORE_ATTR           reason
+1130: LOAD_CONST           None
+1132: LOAD_FAST            notconn_pre_handshake_data_error
+1134: STORE_ATTR           library
+1144: NOP                  
+1146: LOAD_FAST            self
+1148: LOAD_METHOD          close
+1170: PRECALL              
+1174: CALL                 
+1184: POP_TOP              
+1186: JUMP_FORWARD         to 1220
+1188: PUSH_EXC_INFO        
+1190: LOAD_GLOBAL          OSError
+1202: CHECK_EXC_MATCH      
+1204: POP_JUMP_FORWARD_IF_FALSE to 1212
+1206: POP_TOP              
+1208: POP_EXCEPT           
+1210: JUMP_FORWARD         to 1220
+1212: RERAISE              
+1214: COPY                 
+1216: POP_EXCEPT           
+1218: RERAISE              
+1220: NOP                  
+1222: LOAD_FAST            notconn_pre_handshake_data_error
+1224: RAISE_VARARGS        
+1226: PUSH_EXC_INFO        
+1228: LOAD_CONST           None
+1230: STORE_FAST           notconn_pre_handshake_data_error
+1232: RERAISE              
+1234: COPY                 
+1236: POP_EXCEPT           
+1238: RERAISE              
+1240: POP_EXCEPT           
+1242: LOAD_CONST           None
+1244: STORE_FAST           e
+1246: DELETE_FAST          e
+1248: JUMP_FORWARD         to 1266
+1250: LOAD_CONST           None
+1252: STORE_FAST           e
+1254: DELETE_FAST          e
+1256: RERAISE              
+1258: RERAISE              
+1260: COPY                 
+1262: POP_EXCEPT           
+1264: RERAISE              
+1266: LOAD_FAST            self
+1268: LOAD_METHOD          settimeout
+1290: LOAD_FAST            sock_timeout
+1292: PRECALL              
+1296: CALL                 
+1306: POP_TOP              
+1308: LOAD_FAST            connected
+1310: LOAD_FAST            self
+1312: STORE_ATTR           _connected
+1322: LOAD_FAST            connected
+1324: POP_JUMP_FORWARD_IF_FALSE to 1632
+1326: NOP                  
+1328: LOAD_FAST            self
+1330: LOAD_ATTR            _context
+1340: LOAD_METHOD          _wrap_socket
+1362: LOAD_FAST            self
+1364: LOAD_FAST            server_side
+1366: LOAD_FAST            self
+1368: LOAD_ATTR            server_hostname
+1378: LOAD_FAST            self
+1380: LOAD_FAST            self
+1382: LOAD_ATTR            _session
+1392: KW_NAMES             
+1394: PRECALL              
+1398: CALL                 
+1408: LOAD_FAST            self
+1410: STORE_ATTR           _sslobj
+1420: LOAD_FAST            do_handshake_on_connect
+1422: POP_JUMP_FORWARD_IF_FALSE to 1546
+1424: LOAD_FAST            self
+1426: LOAD_METHOD          gettimeout
+1448: PRECALL              
+1452: CALL                 
+1462: STORE_FAST           timeout
+1464: LOAD_FAST            timeout
+1466: LOAD_CONST           0.0
+1468: COMPARE_OP           ==
+1474: POP_JUMP_FORWARD_IF_FALSE to 1506
+1476: LOAD_GLOBAL          NULL + ValueError
+1488: LOAD_CONST           'do_handshake_on_connect should not be specified for non-blocking sockets'
+1490: PRECALL              
+1494: CALL                 
+1504: RAISE_VARARGS        
+1506: LOAD_FAST            self
+1508: LOAD_METHOD          do_handshake
+1530: PRECALL              
+1534: CALL                 
+1544: POP_TOP              
+1546: JUMP_FORWARD         to 1632
+1548: PUSH_EXC_INFO        
+1550: LOAD_GLOBAL          OSError
+1562: LOAD_GLOBAL          ValueError
+1574: BUILD_TUPLE          
+1576: CHECK_EXC_MATCH      
+1578: POP_JUMP_FORWARD_IF_FALSE to 1624
+1580: POP_TOP              
+1582: LOAD_FAST            self
+1584: LOAD_METHOD          close
+1606: PRECALL              
+1610: CALL                 
+1620: POP_TOP              
+1622: RAISE_VARARGS        
+1624: RERAISE              
+1626: COPY                 
+1628: POP_EXCEPT           
+1630: RERAISE              
+1632: LOAD_FAST            self
+1634: RETURN_VALUE         

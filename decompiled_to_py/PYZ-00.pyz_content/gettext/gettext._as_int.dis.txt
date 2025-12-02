@@ -1,0 +1,58 @@
+# Disassembly for gettext._as_int
+# From module file: gettext
+
+## co_consts:
+(None, 'Plural value must be an integer, got ', 0, 4)
+
+## co_names:
+('round', 'TypeError', '__class__', '__name__', 'warnings', 'warn', 'DeprecationWarning')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_GLOBAL          NULL + round
+  16: LOAD_FAST            n
+  18: PRECALL              
+  22: CALL                 
+  32: STORE_FAST           i
+  34: JUMP_FORWARD         to 122
+  36: PUSH_EXC_INFO        
+  38: LOAD_GLOBAL          TypeError
+  50: CHECK_EXC_MATCH      
+  52: POP_JUMP_FORWARD_IF_FALSE to 114
+  54: POP_TOP              
+  56: LOAD_GLOBAL          NULL + TypeError
+  68: LOAD_CONST           'Plural value must be an integer, got '
+  70: LOAD_FAST            n
+  72: LOAD_ATTR            __class__
+  82: LOAD_ATTR            __name__
+  92: FORMAT_VALUE         str
+  94: BUILD_STRING         
+  96: PRECALL              
+ 100: CALL                 
+ 110: LOAD_CONST           None
+ 112: RAISE_VARARGS        
+ 114: RERAISE              
+ 116: COPY                 
+ 118: POP_EXCEPT           
+ 120: RERAISE              
+ 122: LOAD_CONST           0
+ 124: LOAD_CONST           None
+ 126: IMPORT_NAME          warnings
+ 128: STORE_FAST           warnings
+ 130: LOAD_FAST            warnings
+ 132: LOAD_METHOD          warn
+ 154: LOAD_CONST           'Plural value must be an integer, got '
+ 156: LOAD_FAST            n
+ 158: LOAD_ATTR            __class__
+ 168: LOAD_ATTR            __name__
+ 178: FORMAT_VALUE         str
+ 180: BUILD_STRING         
+ 182: LOAD_GLOBAL          DeprecationWarning
+ 194: LOAD_CONST           4
+ 196: PRECALL              
+ 200: CALL                 
+ 210: POP_TOP              
+ 212: LOAD_FAST            n
+ 214: RETURN_VALUE         

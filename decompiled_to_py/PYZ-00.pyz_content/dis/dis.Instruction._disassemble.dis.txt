@@ -1,0 +1,137 @@
+# Disassembly for dis.Instruction._disassemble
+# From module file: dis
+
+## co_consts:
+("Format instruction details for inclusion in disassembly output\n\n        *lineno_width* sets the width of the line number field (0 omits it)\n        *mark_as_current* inserts a '-->' marker arrow as part of the line\n        *offset_width* sets the width of the instruction offset field\n        ", None, '%%%dd', ' ', '-->', '   ', '>>', '  ', '(', ')')
+
+## co_names:
+('starts_line', 'append', 'is_jump_target', 'repr', 'offset', 'rjust', 'opname', 'ljust', '_OPNAME_WIDTH', 'arg', '_OPARG_WIDTH', 'argrepr', 'join', 'rstrip')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           fields
+   6: LOAD_FAST            lineno_width
+   8: POP_JUMP_FORWARD_IF_FALSE to 142
+  10: LOAD_FAST            self
+  12: LOAD_ATTR            starts_line
+  22: POP_JUMP_FORWARD_IF_NONE to 94
+  24: LOAD_CONST           '%%%dd'
+  26: LOAD_FAST            lineno_width
+  28: BINARY_OP            %
+  32: STORE_FAST           lineno_fmt
+  34: LOAD_FAST            fields
+  36: LOAD_METHOD          append
+  58: LOAD_FAST            lineno_fmt
+  60: LOAD_FAST            self
+  62: LOAD_ATTR            starts_line
+  72: BINARY_OP            %
+  76: PRECALL              
+  80: CALL                 
+  90: POP_TOP              
+  92: JUMP_FORWARD         to 142
+  94: LOAD_FAST            fields
+  96: LOAD_METHOD          append
+ 118: LOAD_CONST           ' '
+ 120: LOAD_FAST            lineno_width
+ 122: BINARY_OP            *
+ 126: PRECALL              
+ 130: CALL                 
+ 140: POP_TOP              
+ 142: LOAD_FAST            mark_as_current
+ 144: POP_JUMP_FORWARD_IF_FALSE to 190
+ 146: LOAD_FAST            fields
+ 148: LOAD_METHOD          append
+ 170: LOAD_CONST           '-->'
+ 172: PRECALL              
+ 176: CALL                 
+ 186: POP_TOP              
+ 188: JUMP_FORWARD         to 232
+ 190: LOAD_FAST            fields
+ 192: LOAD_METHOD          append
+ 214: LOAD_CONST           '   '
+ 216: PRECALL              
+ 220: CALL                 
+ 230: POP_TOP              
+ 232: LOAD_FAST            self
+ 234: LOAD_ATTR            is_jump_target
+ 244: POP_JUMP_FORWARD_IF_FALSE to 290
+ 246: LOAD_FAST            fields
+ 248: LOAD_METHOD          append
+ 270: LOAD_CONST           '>>'
+ 272: PRECALL              
+ 276: CALL                 
+ 286: POP_TOP              
+ 288: JUMP_FORWARD         to 332
+ 290: LOAD_FAST            fields
+ 292: LOAD_METHOD          append
+ 314: LOAD_CONST           '  '
+ 316: PRECALL              
+ 320: CALL                 
+ 330: POP_TOP              
+ 332: LOAD_FAST            fields
+ 334: LOAD_METHOD          append
+ 356: LOAD_GLOBAL          NULL + repr
+ 368: LOAD_FAST            self
+ 370: LOAD_ATTR            offset
+ 380: PRECALL              
+ 384: CALL                 
+ 394: LOAD_METHOD          rjust
+ 416: LOAD_FAST            offset_width
+ 418: PRECALL              
+ 422: CALL                 
+ 432: PRECALL              
+ 436: CALL                 
+ 446: POP_TOP              
+ 448: LOAD_FAST            fields
+ 450: LOAD_METHOD          append
+ 472: LOAD_FAST            self
+ 474: LOAD_ATTR            opname
+ 484: LOAD_METHOD          ljust
+ 506: LOAD_GLOBAL          _OPNAME_WIDTH
+ 518: PRECALL              
+ 522: CALL                 
+ 532: PRECALL              
+ 536: CALL                 
+ 546: POP_TOP              
+ 548: LOAD_FAST            self
+ 550: LOAD_ATTR            arg
+ 560: POP_JUMP_FORWARD_IF_NONE to 766
+ 562: LOAD_FAST            fields
+ 564: LOAD_METHOD          append
+ 586: LOAD_GLOBAL          NULL + repr
+ 598: LOAD_FAST            self
+ 600: LOAD_ATTR            arg
+ 610: PRECALL              
+ 614: CALL                 
+ 624: LOAD_METHOD          rjust
+ 646: LOAD_GLOBAL          _OPARG_WIDTH
+ 658: PRECALL              
+ 662: CALL                 
+ 672: PRECALL              
+ 676: CALL                 
+ 686: POP_TOP              
+ 688: LOAD_FAST            self
+ 690: LOAD_ATTR            argrepr
+ 700: POP_JUMP_FORWARD_IF_FALSE to 766
+ 702: LOAD_FAST            fields
+ 704: LOAD_METHOD          append
+ 726: LOAD_CONST           '('
+ 728: LOAD_FAST            self
+ 730: LOAD_ATTR            argrepr
+ 740: BINARY_OP            +
+ 744: LOAD_CONST           ')'
+ 746: BINARY_OP            +
+ 750: PRECALL              
+ 754: CALL                 
+ 764: POP_TOP              
+ 766: LOAD_CONST           ' '
+ 768: LOAD_METHOD          join
+ 790: LOAD_FAST            fields
+ 792: PRECALL              
+ 796: CALL                 
+ 806: LOAD_METHOD          rstrip
+ 828: PRECALL              
+ 832: CALL                 
+ 842: RETURN_VALUE         

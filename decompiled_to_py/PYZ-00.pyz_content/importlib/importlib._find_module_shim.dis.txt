@@ -1,0 +1,51 @@
+# Disassembly for importlib._find_module_shim
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Try to find a loader for the specified module by delegating to\n    self.find_loader().\n\n    This method is deprecated in favor of finder.find_spec().\n\n    ', 'find_module() is deprecated and slated for removal in Python 3.12; use find_spec() instead', None, 'Not importing directory {}: missing __init__', 0)
+
+## co_names:
+('_warnings', 'warn', 'DeprecationWarning', 'find_loader', 'len', 'format', 'ImportWarning')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _warnings
+  14: LOAD_ATTR            warn
+  24: LOAD_CONST           'find_module() is deprecated and slated for removal in Python 3.12; use find_spec() instead'
+  26: LOAD_GLOBAL          DeprecationWarning
+  38: PRECALL              
+  42: CALL                 
+  52: POP_TOP              
+  54: LOAD_FAST            self
+  56: LOAD_METHOD          find_loader
+  78: LOAD_FAST            fullname
+  80: PRECALL              
+  84: CALL                 
+  94: UNPACK_SEQUENCE      
+  98: STORE_FAST           loader
+ 100: STORE_FAST           portions
+ 102: LOAD_FAST            loader
+ 104: POP_JUMP_FORWARD_IF_NOT_NONE to 242
+ 106: LOAD_GLOBAL          NULL + len
+ 118: LOAD_FAST            portions
+ 120: PRECALL              
+ 124: CALL                 
+ 134: POP_JUMP_FORWARD_IF_FALSE to 242
+ 136: LOAD_CONST           'Not importing directory {}: missing __init__'
+ 138: STORE_FAST           msg
+ 140: LOAD_GLOBAL          NULL + _warnings
+ 152: LOAD_ATTR            warn
+ 162: LOAD_FAST            msg
+ 164: LOAD_METHOD          format
+ 186: LOAD_FAST            portions
+ 188: LOAD_CONST           0
+ 190: BINARY_SUBSCR        
+ 200: PRECALL              
+ 204: CALL                 
+ 214: LOAD_GLOBAL          ImportWarning
+ 226: PRECALL              
+ 230: CALL                 
+ 240: POP_TOP              
+ 242: LOAD_FAST            loader
+ 244: RETURN_VALUE         

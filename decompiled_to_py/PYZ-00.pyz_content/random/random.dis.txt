@@ -1,0 +1,293 @@
+# Disassembly for random
+# From module file: random
+
+## co_consts:
+('Random variable generators.\n\n    bytes\n    -----\n           uniform bytes (values between 0 and 255)\n\n    integers\n    --------\n           uniform within range\n\n    sequences\n    ---------\n           pick random element\n           pick random sample\n           pick weighted random sample\n           generate random permutation\n\n    distributions on the real line:\n    ------------------------------\n           uniform\n           triangular\n           normal (Gaussian)\n           lognormal\n           negative exponential\n           gamma\n           beta\n           pareto\n           Weibull\n\n    distributions on the circle (angles 0 to 2pi)\n    ---------------------------------------------\n           circular uniform\n           von Mises\n\nGeneral notes on the underlying Mersenne Twister core generator:\n\n* The period is 2**19937-1.\n* It is one of the most extensively tested generators in existence.\n* The random() method is implemented in C, executes in a single Python step,\n  and is, therefore, threadsafe.\n\n', 0, ('warn',), ('log', 'exp', 'pi', 'e', 'ceil'), ('sqrt', 'acos', 'cos', 'sin'), ('tau', 'floor', 'isfinite'), ('urandom',), ('Set', 'Sequence'), ('index',), ('accumulate', 'repeat'), ('bisect',), None, ('sha512',), ('Random', 'SystemRandom', 'betavariate', 'choice', 'choices', 'expovariate', 'gammavariate', 'gauss', 'getrandbits', 'getstate', 'lognormvariate', 'normalvariate', 'paretovariate', 'randbytes', 'randint', 'random', 'randrange', 'sample', 'seed', 'setstate', 'shuffle', 'triangular', 'uniform', 'vonmisesvariate', 'weibullvariate'), 4, -0.5, 2.0, 4.0, 1.0, 4.5, 53, 2, 1, <code object Random at 0x00000240691A7BB0, file "random.py", line 103>, 'Random', <code object SystemRandom at 0x000002406945EC40, file "random.py", line 787>, 'SystemRandom', <code object _test_generator at 0x0000024068E20EA0, file "random.py", line 860>, 2000, <code object _test at 0x0000024068C27750, file "random.py", line 877>, 'fork', ('after_in_child',), '__main__', (2000,))
+
+## co_names:
+('__doc__', 'warnings', 'warn', '_warn', 'math', 'log', '_log', 'exp', '_exp', 'pi', '_pi', 'e', '_e', 'ceil', '_ceil', 'sqrt', '_sqrt', 'acos', '_acos', 'cos', '_cos', 'sin', '_sin', 'tau', 'TWOPI', 'floor', '_floor', 'isfinite', '_isfinite', 'os', 'urandom', '_urandom', '_collections_abc', 'Set', '_Set', 'Sequence', '_Sequence', 'operator', 'index', '_index', 'itertools', 'accumulate', '_accumulate', 'repeat', '_repeat', 'bisect', '_bisect', '_os', '_random', '_sha512', 'sha512', 'ImportError', 'hashlib', '__all__', 'NV_MAGICCONST', 'LOG4', 'SG_MAGICCONST', 'BPF', 'RECIP_BPF', '_ONE', 'Random', 'SystemRandom', '_inst', 'seed', 'random', 'uniform', 'triangular', 'randint', 'choice', 'randrange', 'sample', 'shuffle', 'choices', 'normalvariate', 'lognormvariate', 'expovariate', 'vonmisesvariate', 'gammavariate', 'gauss', 'betavariate', 'paretovariate', 'weibullvariate', 'getstate', 'setstate', 'getrandbits', 'randbytes', '_test_generator', '_test', 'hasattr', 'register_at_fork', '__name__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'Random variable generators.\n\n    bytes\n    -----\n           uniform bytes (values between 0 and 255)\n\n    integers\n    --------\n           uniform within range\n\n    sequences\n    ---------\n           pick random element\n           pick random sample\n           pick weighted random sample\n           generate random permutation\n\n    distributions on the real line:\n    ------------------------------\n           uniform\n           triangular\n           normal (Gaussian)\n           lognormal\n           negative exponential\n           gamma\n           beta\n           pareto\n           Weibull\n\n    distributions on the circle (angles 0 to 2pi)\n    ---------------------------------------------\n           circular uniform\n           von Mises\n\nGeneral notes on the underlying Mersenne Twister core generator:\n\n* The period is 2**19937-1.\n* It is one of the most extensively tested generators in existence.\n* The random() method is implemented in C, executes in a single Python step,\n  and is, therefore, threadsafe.\n\n'
+   4: STORE_NAME           __doc__
+   6: LOAD_CONST           0
+   8: LOAD_CONST           ('warn',)
+  10: IMPORT_NAME          warnings
+  12: IMPORT_FROM          warn
+  14: STORE_NAME           _warn
+  16: POP_TOP              
+  18: LOAD_CONST           0
+  20: LOAD_CONST           ('log', 'exp', 'pi', 'e', 'ceil')
+  22: IMPORT_NAME          math
+  24: IMPORT_FROM          log
+  26: STORE_NAME           _log
+  28: IMPORT_FROM          exp
+  30: STORE_NAME           _exp
+  32: IMPORT_FROM          pi
+  34: STORE_NAME           _pi
+  36: IMPORT_FROM          e
+  38: STORE_NAME           _e
+  40: IMPORT_FROM          ceil
+  42: STORE_NAME           _ceil
+  44: POP_TOP              
+  46: LOAD_CONST           0
+  48: LOAD_CONST           ('sqrt', 'acos', 'cos', 'sin')
+  50: IMPORT_NAME          math
+  52: IMPORT_FROM          sqrt
+  54: STORE_NAME           _sqrt
+  56: IMPORT_FROM          acos
+  58: STORE_NAME           _acos
+  60: IMPORT_FROM          cos
+  62: STORE_NAME           _cos
+  64: IMPORT_FROM          sin
+  66: STORE_NAME           _sin
+  68: POP_TOP              
+  70: LOAD_CONST           0
+  72: LOAD_CONST           ('tau', 'floor', 'isfinite')
+  74: IMPORT_NAME          math
+  76: IMPORT_FROM          tau
+  78: STORE_NAME           TWOPI
+  80: IMPORT_FROM          floor
+  82: STORE_NAME           _floor
+  84: IMPORT_FROM          isfinite
+  86: STORE_NAME           _isfinite
+  88: POP_TOP              
+  90: LOAD_CONST           0
+  92: LOAD_CONST           ('urandom',)
+  94: IMPORT_NAME          os
+  96: IMPORT_FROM          urandom
+  98: STORE_NAME           _urandom
+ 100: POP_TOP              
+ 102: LOAD_CONST           0
+ 104: LOAD_CONST           ('Set', 'Sequence')
+ 106: IMPORT_NAME          _collections_abc
+ 108: IMPORT_FROM          Set
+ 110: STORE_NAME           _Set
+ 112: IMPORT_FROM          Sequence
+ 114: STORE_NAME           _Sequence
+ 116: POP_TOP              
+ 118: LOAD_CONST           0
+ 120: LOAD_CONST           ('index',)
+ 122: IMPORT_NAME          operator
+ 124: IMPORT_FROM          index
+ 126: STORE_NAME           _index
+ 128: POP_TOP              
+ 130: LOAD_CONST           0
+ 132: LOAD_CONST           ('accumulate', 'repeat')
+ 134: IMPORT_NAME          itertools
+ 136: IMPORT_FROM          accumulate
+ 138: STORE_NAME           _accumulate
+ 140: IMPORT_FROM          repeat
+ 142: STORE_NAME           _repeat
+ 144: POP_TOP              
+ 146: LOAD_CONST           0
+ 148: LOAD_CONST           ('bisect',)
+ 150: IMPORT_NAME          bisect
+ 152: IMPORT_FROM          bisect
+ 154: STORE_NAME           _bisect
+ 156: POP_TOP              
+ 158: LOAD_CONST           0
+ 160: LOAD_CONST           None
+ 162: IMPORT_NAME          os
+ 164: STORE_NAME           _os
+ 166: LOAD_CONST           0
+ 168: LOAD_CONST           None
+ 170: IMPORT_NAME          _random
+ 172: STORE_NAME           _random
+ 174: NOP                  
+ 176: LOAD_CONST           0
+ 178: LOAD_CONST           ('sha512',)
+ 180: IMPORT_NAME          _sha512
+ 182: IMPORT_FROM          sha512
+ 184: STORE_NAME           _sha512
+ 186: POP_TOP              
+ 188: JUMP_FORWARD         to 224
+ 190: PUSH_EXC_INFO        
+ 192: LOAD_NAME            ImportError
+ 194: CHECK_EXC_MATCH      
+ 196: POP_JUMP_FORWARD_IF_FALSE to 216
+ 198: POP_TOP              
+ 200: LOAD_CONST           0
+ 202: LOAD_CONST           ('sha512',)
+ 204: IMPORT_NAME          hashlib
+ 206: IMPORT_FROM          sha512
+ 208: STORE_NAME           _sha512
+ 210: POP_TOP              
+ 212: POP_EXCEPT           
+ 214: JUMP_FORWARD         to 224
+ 216: RERAISE              
+ 218: COPY                 
+ 220: POP_EXCEPT           
+ 222: RERAISE              
+ 224: BUILD_LIST           
+ 226: LOAD_CONST           ('Random', 'SystemRandom', 'betavariate', 'choice', 'choices', 'expovariate', 'gammavariate', 'gauss', 'getrandbits', 'getstate', 'lognormvariate', 'normalvariate', 'paretovariate', 'randbytes', 'randint', 'random', 'randrange', 'sample', 'seed', 'setstate', 'shuffle', 'triangular', 'uniform', 'vonmisesvariate', 'weibullvariate')
+ 228: LIST_EXTEND          
+ 230: STORE_NAME           __all__
+ 232: LOAD_CONST           4
+ 234: PUSH_NULL            
+ 236: LOAD_NAME            _exp
+ 238: LOAD_CONST           -0.5
+ 240: PRECALL              
+ 244: CALL                 
+ 254: BINARY_OP            *
+ 258: PUSH_NULL            
+ 260: LOAD_NAME            _sqrt
+ 262: LOAD_CONST           2.0
+ 264: PRECALL              
+ 268: CALL                 
+ 278: BINARY_OP            /
+ 282: STORE_NAME           NV_MAGICCONST
+ 284: PUSH_NULL            
+ 286: LOAD_NAME            _log
+ 288: LOAD_CONST           4.0
+ 290: PRECALL              
+ 294: CALL                 
+ 304: STORE_NAME           LOG4
+ 306: LOAD_CONST           1.0
+ 308: PUSH_NULL            
+ 310: LOAD_NAME            _log
+ 312: LOAD_CONST           4.5
+ 314: PRECALL              
+ 318: CALL                 
+ 328: BINARY_OP            +
+ 332: STORE_NAME           SG_MAGICCONST
+ 334: LOAD_CONST           53
+ 336: STORE_NAME           BPF
+ 338: LOAD_CONST           2
+ 340: LOAD_NAME            BPF
+ 342: UNARY_NEGATIVE       
+ 344: BINARY_OP            **
+ 348: STORE_NAME           RECIP_BPF
+ 350: LOAD_CONST           1
+ 352: STORE_NAME           _ONE
+ 354: PUSH_NULL            
+ 356: LOAD_BUILD_CLASS     
+ 358: LOAD_CONST           <code object Random at 0x00000240691A7BB0, file "random.py", line 103>
+ 360: MAKE_FUNCTION        
+ 362: LOAD_CONST           'Random'
+ 364: LOAD_NAME            _random
+ 366: LOAD_ATTR            Random
+ 376: PRECALL              
+ 380: CALL                 
+ 390: STORE_NAME           Random
+ 392: PUSH_NULL            
+ 394: LOAD_BUILD_CLASS     
+ 396: LOAD_CONST           <code object SystemRandom at 0x000002406945EC40, file "random.py", line 787>
+ 398: MAKE_FUNCTION        
+ 400: LOAD_CONST           'SystemRandom'
+ 402: LOAD_NAME            Random
+ 404: PRECALL              
+ 408: CALL                 
+ 418: STORE_NAME           SystemRandom
+ 420: PUSH_NULL            
+ 422: LOAD_NAME            Random
+ 424: PRECALL              
+ 428: CALL                 
+ 438: STORE_NAME           _inst
+ 440: LOAD_NAME            _inst
+ 442: LOAD_ATTR            seed
+ 452: STORE_NAME           seed
+ 454: LOAD_NAME            _inst
+ 456: LOAD_ATTR            random
+ 466: STORE_NAME           random
+ 468: LOAD_NAME            _inst
+ 470: LOAD_ATTR            uniform
+ 480: STORE_NAME           uniform
+ 482: LOAD_NAME            _inst
+ 484: LOAD_ATTR            triangular
+ 494: STORE_NAME           triangular
+ 496: LOAD_NAME            _inst
+ 498: LOAD_ATTR            randint
+ 508: STORE_NAME           randint
+ 510: LOAD_NAME            _inst
+ 512: LOAD_ATTR            choice
+ 522: STORE_NAME           choice
+ 524: LOAD_NAME            _inst
+ 526: LOAD_ATTR            randrange
+ 536: STORE_NAME           randrange
+ 538: LOAD_NAME            _inst
+ 540: LOAD_ATTR            sample
+ 550: STORE_NAME           sample
+ 552: LOAD_NAME            _inst
+ 554: LOAD_ATTR            shuffle
+ 564: STORE_NAME           shuffle
+ 566: LOAD_NAME            _inst
+ 568: LOAD_ATTR            choices
+ 578: STORE_NAME           choices
+ 580: LOAD_NAME            _inst
+ 582: LOAD_ATTR            normalvariate
+ 592: STORE_NAME           normalvariate
+ 594: LOAD_NAME            _inst
+ 596: LOAD_ATTR            lognormvariate
+ 606: STORE_NAME           lognormvariate
+ 608: LOAD_NAME            _inst
+ 610: LOAD_ATTR            expovariate
+ 620: STORE_NAME           expovariate
+ 622: LOAD_NAME            _inst
+ 624: LOAD_ATTR            vonmisesvariate
+ 634: STORE_NAME           vonmisesvariate
+ 636: LOAD_NAME            _inst
+ 638: LOAD_ATTR            gammavariate
+ 648: STORE_NAME           gammavariate
+ 650: LOAD_NAME            _inst
+ 652: LOAD_ATTR            gauss
+ 662: STORE_NAME           gauss
+ 664: LOAD_NAME            _inst
+ 666: LOAD_ATTR            betavariate
+ 676: STORE_NAME           betavariate
+ 678: LOAD_NAME            _inst
+ 680: LOAD_ATTR            paretovariate
+ 690: STORE_NAME           paretovariate
+ 692: LOAD_NAME            _inst
+ 694: LOAD_ATTR            weibullvariate
+ 704: STORE_NAME           weibullvariate
+ 706: LOAD_NAME            _inst
+ 708: LOAD_ATTR            getstate
+ 718: STORE_NAME           getstate
+ 720: LOAD_NAME            _inst
+ 722: LOAD_ATTR            setstate
+ 732: STORE_NAME           setstate
+ 734: LOAD_NAME            _inst
+ 736: LOAD_ATTR            getrandbits
+ 746: STORE_NAME           getrandbits
+ 748: LOAD_NAME            _inst
+ 750: LOAD_ATTR            randbytes
+ 760: STORE_NAME           randbytes
+ 762: LOAD_CONST           <code object _test_generator at 0x0000024068E20EA0, file "random.py", line 860>
+ 764: MAKE_FUNCTION        
+ 766: STORE_NAME           _test_generator
+ 768: LOAD_CONST           (2000,)
+ 770: LOAD_CONST           <code object _test at 0x0000024068C27750, file "random.py", line 877>
+ 772: MAKE_FUNCTION        defaults
+ 774: STORE_NAME           _test
+ 776: PUSH_NULL            
+ 778: LOAD_NAME            hasattr
+ 780: LOAD_NAME            _os
+ 782: LOAD_CONST           'fork'
+ 784: PRECALL              
+ 788: CALL                 
+ 798: POP_JUMP_FORWARD_IF_FALSE to 844
+ 800: PUSH_NULL            
+ 802: LOAD_NAME            _os
+ 804: LOAD_ATTR            register_at_fork
+ 814: LOAD_NAME            _inst
+ 816: LOAD_ATTR            seed
+ 826: KW_NAMES             
+ 828: PRECALL              
+ 832: CALL                 
+ 842: POP_TOP              
+ 844: LOAD_NAME            __name__
+ 846: LOAD_CONST           '__main__'
+ 848: COMPARE_OP           ==
+ 854: POP_JUMP_FORWARD_IF_FALSE to 880
+ 856: PUSH_NULL            
+ 858: LOAD_NAME            _test
+ 860: PRECALL              
+ 864: CALL                 
+ 874: POP_TOP              
+ 876: LOAD_CONST           None
+ 878: RETURN_VALUE         
+ 880: LOAD_CONST           None
+ 882: RETURN_VALUE         

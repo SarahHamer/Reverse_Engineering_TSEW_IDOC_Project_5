@@ -1,0 +1,154 @@
+# Disassembly for subprocess.Popen._close_pipe_fds
+# From module file: subprocess
+
+## co_consts:
+(None, '_devnull', -1, True)
+
+## co_names:
+('getattr', 'contextlib', 'ExitStack', '_mswindows', 'callback', 'Close', 'os', 'close', '_closed_child_pipe_fds')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + getattr
+  14: LOAD_FAST            self
+  16: LOAD_CONST           '_devnull'
+  18: LOAD_CONST           None
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           devnull_fd
+  36: LOAD_GLOBAL          NULL + contextlib
+  48: LOAD_ATTR            ExitStack
+  58: PRECALL              
+  62: CALL                 
+  72: BEFORE_WITH          
+  74: STORE_FAST           stack
+  76: LOAD_GLOBAL          _mswindows
+  88: POP_JUMP_FORWARD_IF_FALSE to 284
+  90: LOAD_FAST            p2cread
+  92: LOAD_CONST           -1
+  94: COMPARE_OP           !=
+ 100: POP_JUMP_FORWARD_IF_FALSE to 154
+ 102: LOAD_FAST            stack
+ 104: LOAD_METHOD          callback
+ 126: LOAD_FAST            p2cread
+ 128: LOAD_ATTR            Close
+ 138: PRECALL              
+ 142: CALL                 
+ 152: POP_TOP              
+ 154: LOAD_FAST            c2pwrite
+ 156: LOAD_CONST           -1
+ 158: COMPARE_OP           !=
+ 164: POP_JUMP_FORWARD_IF_FALSE to 218
+ 166: LOAD_FAST            stack
+ 168: LOAD_METHOD          callback
+ 190: LOAD_FAST            c2pwrite
+ 192: LOAD_ATTR            Close
+ 202: PRECALL              
+ 206: CALL                 
+ 216: POP_TOP              
+ 218: LOAD_FAST            errwrite
+ 220: LOAD_CONST           -1
+ 222: COMPARE_OP           !=
+ 228: POP_JUMP_FORWARD_IF_FALSE to 282
+ 230: LOAD_FAST            stack
+ 232: LOAD_METHOD          callback
+ 254: LOAD_FAST            errwrite
+ 256: LOAD_ATTR            Close
+ 266: PRECALL              
+ 270: CALL                 
+ 280: POP_TOP              
+ 282: JUMP_FORWARD         to 584
+ 284: LOAD_FAST            p2cread
+ 286: LOAD_CONST           -1
+ 288: COMPARE_OP           !=
+ 294: POP_JUMP_FORWARD_IF_FALSE to 384
+ 296: LOAD_FAST            p2cwrite
+ 298: LOAD_CONST           -1
+ 300: COMPARE_OP           !=
+ 306: POP_JUMP_FORWARD_IF_FALSE to 384
+ 308: LOAD_FAST            p2cread
+ 310: LOAD_FAST            devnull_fd
+ 312: COMPARE_OP           !=
+ 318: POP_JUMP_FORWARD_IF_FALSE to 384
+ 320: LOAD_FAST            stack
+ 322: LOAD_METHOD          callback
+ 344: LOAD_GLOBAL          os
+ 356: LOAD_ATTR            close
+ 366: LOAD_FAST            p2cread
+ 368: PRECALL              
+ 372: CALL                 
+ 382: POP_TOP              
+ 384: LOAD_FAST            c2pwrite
+ 386: LOAD_CONST           -1
+ 388: COMPARE_OP           !=
+ 394: POP_JUMP_FORWARD_IF_FALSE to 484
+ 396: LOAD_FAST            c2pread
+ 398: LOAD_CONST           -1
+ 400: COMPARE_OP           !=
+ 406: POP_JUMP_FORWARD_IF_FALSE to 484
+ 408: LOAD_FAST            c2pwrite
+ 410: LOAD_FAST            devnull_fd
+ 412: COMPARE_OP           !=
+ 418: POP_JUMP_FORWARD_IF_FALSE to 484
+ 420: LOAD_FAST            stack
+ 422: LOAD_METHOD          callback
+ 444: LOAD_GLOBAL          os
+ 456: LOAD_ATTR            close
+ 466: LOAD_FAST            c2pwrite
+ 468: PRECALL              
+ 472: CALL                 
+ 482: POP_TOP              
+ 484: LOAD_FAST            errwrite
+ 486: LOAD_CONST           -1
+ 488: COMPARE_OP           !=
+ 494: POP_JUMP_FORWARD_IF_FALSE to 584
+ 496: LOAD_FAST            errread
+ 498: LOAD_CONST           -1
+ 500: COMPARE_OP           !=
+ 506: POP_JUMP_FORWARD_IF_FALSE to 584
+ 508: LOAD_FAST            errwrite
+ 510: LOAD_FAST            devnull_fd
+ 512: COMPARE_OP           !=
+ 518: POP_JUMP_FORWARD_IF_FALSE to 584
+ 520: LOAD_FAST            stack
+ 522: LOAD_METHOD          callback
+ 544: LOAD_GLOBAL          os
+ 556: LOAD_ATTR            close
+ 566: LOAD_FAST            errwrite
+ 568: PRECALL              
+ 572: CALL                 
+ 582: POP_TOP              
+ 584: LOAD_FAST            devnull_fd
+ 586: POP_JUMP_FORWARD_IF_NONE to 652
+ 588: LOAD_FAST            stack
+ 590: LOAD_METHOD          callback
+ 612: LOAD_GLOBAL          os
+ 624: LOAD_ATTR            close
+ 634: LOAD_FAST            devnull_fd
+ 636: PRECALL              
+ 640: CALL                 
+ 650: POP_TOP              
+ 652: LOAD_CONST           None
+ 654: LOAD_CONST           None
+ 656: LOAD_CONST           None
+ 658: PRECALL              
+ 662: CALL                 
+ 672: POP_TOP              
+ 674: JUMP_FORWARD         to 698
+ 676: PUSH_EXC_INFO        
+ 678: WITH_EXCEPT_START    
+ 680: POP_JUMP_FORWARD_IF_TRUE to 690
+ 682: RERAISE              
+ 684: COPY                 
+ 686: POP_EXCEPT           
+ 688: RERAISE              
+ 690: POP_TOP              
+ 692: POP_EXCEPT           
+ 694: POP_TOP              
+ 696: POP_TOP              
+ 698: LOAD_CONST           True
+ 700: LOAD_FAST            self
+ 702: STORE_ATTR           _closed_child_pipe_fds
+ 712: LOAD_CONST           None
+ 714: RETURN_VALUE         

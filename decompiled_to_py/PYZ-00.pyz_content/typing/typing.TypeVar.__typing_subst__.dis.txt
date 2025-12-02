@@ -1,0 +1,56 @@
+# Disassembly for typing.TypeVar.__typing_subst__
+# From module file: typing
+
+## co_consts:
+(None, 'Parameters to generic types must be types.', True, ('is_argument',), '__unpacked__', False, ' is not valid as type argument')
+
+## co_names:
+('_type_check', 'isinstance', '_GenericAlias', '__origin__', 'Unpack', 'GenericAlias', 'getattr', 'TypeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'Parameters to generic types must be types.'
+   4: STORE_FAST           msg
+   6: LOAD_GLOBAL          NULL + _type_check
+  18: LOAD_FAST            arg
+  20: LOAD_FAST            msg
+  22: LOAD_CONST           True
+  24: KW_NAMES             
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           arg
+  42: LOAD_GLOBAL          NULL + isinstance
+  54: LOAD_FAST            arg
+  56: LOAD_GLOBAL          _GenericAlias
+  68: PRECALL              
+  72: CALL                 
+  82: POP_JUMP_FORWARD_IF_FALSE to 112
+  84: LOAD_FAST            arg
+  86: LOAD_ATTR            __origin__
+  96: LOAD_GLOBAL          Unpack
+ 108: IS_OP                
+ 110: POP_JUMP_FORWARD_IF_TRUE to 188
+ 112: LOAD_GLOBAL          NULL + isinstance
+ 124: LOAD_FAST            arg
+ 126: LOAD_GLOBAL          GenericAlias
+ 138: PRECALL              
+ 142: CALL                 
+ 152: POP_JUMP_FORWARD_IF_FALSE to 224
+ 154: LOAD_GLOBAL          NULL + getattr
+ 166: LOAD_FAST            arg
+ 168: LOAD_CONST           '__unpacked__'
+ 170: LOAD_CONST           False
+ 172: PRECALL              
+ 176: CALL                 
+ 186: POP_JUMP_FORWARD_IF_FALSE to 224
+ 188: LOAD_GLOBAL          NULL + TypeError
+ 200: LOAD_FAST            arg
+ 202: FORMAT_VALUE         
+ 204: LOAD_CONST           ' is not valid as type argument'
+ 206: BUILD_STRING         
+ 208: PRECALL              
+ 212: CALL                 
+ 222: RAISE_VARARGS        
+ 224: LOAD_FAST            arg
+ 226: RETURN_VALUE         

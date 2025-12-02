@@ -1,0 +1,21 @@
+# Disassembly for email.Policy.register_defect
+# From module file: email._policybase
+
+## co_consts:
+("Record 'defect' on 'obj'.\n\n        Called by handle_defect if raise_on_defect is False.  This method is\n        part of the Policy API so that Policy subclasses can implement custom\n        defect handling.  The default implementation calls the append method of\n        the defects attribute of obj.  The objects used by the email package by\n        default that get passed to this method will always have a defects\n        attribute with an append method.\n\n        ", None)
+
+## co_names:
+('defects', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            obj
+   4: LOAD_ATTR            defects
+  14: LOAD_METHOD          append
+  36: LOAD_FAST            defect
+  38: PRECALL              
+  42: CALL                 
+  52: POP_TOP              
+  54: LOAD_CONST           None
+  56: RETURN_VALUE         

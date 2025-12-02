@@ -1,0 +1,38 @@
+# Disassembly for logging.PercentStyle.validate
+# From module file: logging
+
+## co_consts:
+('Validate the input format, ensure it matches the correct style', "Invalid format '", "' for '", 0, "' style", None)
+
+## co_names:
+('validation_pattern', 'search', '_fmt', 'ValueError', 'default_format')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            validation_pattern
+  14: LOAD_METHOD          search
+  36: LOAD_FAST            self
+  38: LOAD_ATTR            _fmt
+  48: PRECALL              
+  52: CALL                 
+  62: POP_JUMP_FORWARD_IF_TRUE to 140
+  64: LOAD_GLOBAL          NULL + ValueError
+  76: LOAD_CONST           "Invalid format '"
+  78: LOAD_FAST            self
+  80: LOAD_ATTR            _fmt
+  90: FORMAT_VALUE         str
+  92: LOAD_CONST           "' for '"
+  94: LOAD_FAST            self
+  96: LOAD_ATTR            default_format
+ 106: LOAD_CONST           0
+ 108: BINARY_SUBSCR        
+ 118: FORMAT_VALUE         str
+ 120: LOAD_CONST           "' style"
+ 122: BUILD_STRING         
+ 124: PRECALL              
+ 128: CALL                 
+ 138: RAISE_VARARGS        
+ 140: LOAD_CONST           None
+ 142: RETURN_VALUE         

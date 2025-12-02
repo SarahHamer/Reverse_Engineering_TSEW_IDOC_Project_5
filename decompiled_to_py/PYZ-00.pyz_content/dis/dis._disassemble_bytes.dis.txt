@@ -1,0 +1,179 @@
+# Disassembly for dis._disassemble_bytes
+# From module file: dis
+
+## co_consts:
+(None, 1000, 3, 0, 2, 10000, 4, ('line_offset', 'exception_entries', 'co_positions', 'show_caches'), ('file',), 'ExceptionTable:', ' lasti', '', '  ', ' to ', ' -> ', ' [', ']')
+
+## co_names:
+('bool', 'max', 'values', 'len', 'str', '_get_instructions_bytes', 'starts_line', 'offset', 'print', '_disassemble', 'lasti', 'end', 'start', 'target', 'depth')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + bool
+  14: LOAD_FAST            linestarts
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           show_lineno
+  32: LOAD_FAST            show_lineno
+  34: POP_JUMP_FORWARD_IF_FALSE to 184
+  36: LOAD_GLOBAL          NULL + max
+  48: LOAD_FAST            linestarts
+  50: LOAD_METHOD          values
+  72: PRECALL              
+  76: CALL                 
+  86: PRECALL              
+  90: CALL                 
+ 100: LOAD_FAST            line_offset
+ 102: BINARY_OP            +
+ 106: STORE_FAST           maxlineno
+ 108: LOAD_FAST            maxlineno
+ 110: LOAD_CONST           1000
+ 112: COMPARE_OP           >=
+ 118: POP_JUMP_FORWARD_IF_FALSE to 178
+ 120: LOAD_GLOBAL          NULL + len
+ 132: LOAD_GLOBAL          NULL + str
+ 144: LOAD_FAST            maxlineno
+ 146: PRECALL              
+ 150: CALL                 
+ 160: PRECALL              
+ 164: CALL                 
+ 174: STORE_FAST           lineno_width
+ 176: JUMP_FORWARD         to 188
+ 178: LOAD_CONST           3
+ 180: STORE_FAST           lineno_width
+ 182: JUMP_FORWARD         to 188
+ 184: LOAD_CONST           0
+ 186: STORE_FAST           lineno_width
+ 188: LOAD_GLOBAL          NULL + len
+ 200: LOAD_FAST            code
+ 202: PRECALL              
+ 206: CALL                 
+ 216: LOAD_CONST           2
+ 218: BINARY_OP            -
+ 222: STORE_FAST           maxoffset
+ 224: LOAD_FAST            maxoffset
+ 226: LOAD_CONST           10000
+ 228: COMPARE_OP           >=
+ 234: POP_JUMP_FORWARD_IF_FALSE to 294
+ 236: LOAD_GLOBAL          NULL + len
+ 248: LOAD_GLOBAL          NULL + str
+ 260: LOAD_FAST            maxoffset
+ 262: PRECALL              
+ 266: CALL                 
+ 276: PRECALL              
+ 280: CALL                 
+ 290: STORE_FAST           offset_width
+ 292: JUMP_FORWARD         to 298
+ 294: LOAD_CONST           4
+ 296: STORE_FAST           offset_width
+ 298: LOAD_GLOBAL          NULL + _get_instructions_bytes
+ 310: LOAD_FAST            code
+ 312: LOAD_FAST            varname_from_oparg
+ 314: LOAD_FAST            names
+ 316: LOAD_FAST            co_consts
+ 318: LOAD_FAST            linestarts
+ 320: LOAD_FAST            line_offset
+ 322: LOAD_FAST            exception_entries
+ 324: LOAD_FAST            co_positions
+ 326: LOAD_FAST            show_caches
+ 328: KW_NAMES             
+ 330: PRECALL              
+ 334: CALL                 
+ 344: GET_ITER             
+ 346: FOR_ITER             to 530
+ 348: STORE_FAST           instr
+ 350: LOAD_FAST            show_lineno
+ 352: JUMP_IF_FALSE_OR_POP to 392
+ 354: LOAD_FAST            instr
+ 356: LOAD_ATTR            starts_line
+ 366: LOAD_CONST           None
+ 368: IS_OP                
+ 370: JUMP_IF_FALSE_OR_POP to 392
+ 372: LOAD_FAST            instr
+ 374: LOAD_ATTR            offset
+ 384: LOAD_CONST           0
+ 386: COMPARE_OP           >
+ 392: STORE_FAST           new_source_line
+ 394: LOAD_FAST            new_source_line
+ 396: POP_JUMP_FORWARD_IF_FALSE to 430
+ 398: LOAD_GLOBAL          NULL + print
+ 410: LOAD_FAST            file
+ 412: KW_NAMES             
+ 414: PRECALL              
+ 418: CALL                 
+ 428: POP_TOP              
+ 430: LOAD_FAST            instr
+ 432: LOAD_ATTR            offset
+ 442: LOAD_FAST            lasti
+ 444: COMPARE_OP           ==
+ 450: STORE_FAST           is_current_instr
+ 452: LOAD_GLOBAL          NULL + print
+ 464: LOAD_FAST            instr
+ 466: LOAD_METHOD          _disassemble
+ 488: LOAD_FAST            lineno_width
+ 490: LOAD_FAST            is_current_instr
+ 492: LOAD_FAST            offset_width
+ 494: PRECALL              
+ 498: CALL                 
+ 508: LOAD_FAST            file
+ 510: KW_NAMES             
+ 512: PRECALL              
+ 516: CALL                 
+ 526: POP_TOP              
+ 528: JUMP_BACKWARD        to 346
+ 530: LOAD_FAST            exception_entries
+ 532: POP_JUMP_FORWARD_IF_FALSE to 714
+ 534: LOAD_GLOBAL          NULL + print
+ 546: LOAD_CONST           'ExceptionTable:'
+ 548: LOAD_FAST            file
+ 550: KW_NAMES             
+ 552: PRECALL              
+ 556: CALL                 
+ 566: POP_TOP              
+ 568: LOAD_FAST            exception_entries
+ 570: GET_ITER             
+ 572: FOR_ITER             to 718
+ 574: STORE_FAST           entry
+ 576: LOAD_FAST            entry
+ 578: LOAD_ATTR            lasti
+ 588: POP_JUMP_FORWARD_IF_FALSE to 594
+ 590: LOAD_CONST           ' lasti'
+ 592: JUMP_FORWARD         to 596
+ 594: LOAD_CONST           ''
+ 596: STORE_FAST           lasti
+ 598: LOAD_FAST            entry
+ 600: LOAD_ATTR            end
+ 610: LOAD_CONST           2
+ 612: BINARY_OP            -
+ 616: STORE_FAST           end
+ 618: LOAD_GLOBAL          NULL + print
+ 630: LOAD_CONST           '  '
+ 632: LOAD_FAST            entry
+ 634: LOAD_ATTR            start
+ 644: FORMAT_VALUE         
+ 646: LOAD_CONST           ' to '
+ 648: LOAD_FAST            end
+ 650: FORMAT_VALUE         
+ 652: LOAD_CONST           ' -> '
+ 654: LOAD_FAST            entry
+ 656: LOAD_ATTR            target
+ 666: FORMAT_VALUE         
+ 668: LOAD_CONST           ' ['
+ 670: LOAD_FAST            entry
+ 672: LOAD_ATTR            depth
+ 682: FORMAT_VALUE         
+ 684: LOAD_CONST           ']'
+ 686: LOAD_FAST            lasti
+ 688: FORMAT_VALUE         
+ 690: BUILD_STRING         
+ 692: LOAD_FAST            file
+ 694: KW_NAMES             
+ 696: PRECALL              
+ 700: CALL                 
+ 710: POP_TOP              
+ 712: JUMP_BACKWARD        to 572
+ 714: LOAD_CONST           None
+ 716: RETURN_VALUE         
+ 718: LOAD_CONST           None
+ 720: RETURN_VALUE         

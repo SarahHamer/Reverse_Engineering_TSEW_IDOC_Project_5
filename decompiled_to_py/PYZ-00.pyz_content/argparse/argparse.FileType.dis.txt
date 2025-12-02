@@ -1,0 +1,30 @@
+# Disassembly for argparse.FileType
+# From module file: argparse
+
+## co_consts:
+('FileType', "Factory for creating file object types\n\n    Instances of FileType are typically passed as type= arguments to the\n    ArgumentParser add_argument() method.\n\n    Keyword Arguments:\n        - mode -- A string indicating how the file is to be opened. Accepts the\n            same values as the builtin open() function.\n        - bufsize -- The file's desired buffer size. Accepts the same values as\n            the builtin open() function.\n        - encoding -- The file's encoding. Accepts the same values as the\n            builtin open() function.\n        - errors -- A string indicating how encoding and decoding errors are to\n            be handled. Accepts the same value as the builtin open() function.\n    ", 'r', -1, None, <code object __init__ at 0x00000240693EB330, file "argparse.py", line 1277>, <code object __call__ at 0x0000024068C06230, file "argparse.py", line 1283>, <code object __repr__ at 0x000002406942CB20, file "argparse.py", line 1303>, ('r', -1, None, None))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', '__call__', '__repr__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'FileType'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           "Factory for creating file object types\n\n    Instances of FileType are typically passed as type= arguments to the\n    ArgumentParser add_argument() method.\n\n    Keyword Arguments:\n        - mode -- A string indicating how the file is to be opened. Accepts the\n            same values as the builtin open() function.\n        - bufsize -- The file's desired buffer size. Accepts the same values as\n            the builtin open() function.\n        - encoding -- The file's encoding. Accepts the same values as the\n            builtin open() function.\n        - errors -- A string indicating how encoding and decoding errors are to\n            be handled. Accepts the same value as the builtin open() function.\n    "
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ('r', -1, None, None)
+  16: LOAD_CONST           <code object __init__ at 0x00000240693EB330, file "argparse.py", line 1277>
+  18: MAKE_FUNCTION        defaults
+  20: STORE_NAME           __init__
+  22: LOAD_CONST           <code object __call__ at 0x0000024068C06230, file "argparse.py", line 1283>
+  24: MAKE_FUNCTION        
+  26: STORE_NAME           __call__
+  28: LOAD_CONST           <code object __repr__ at 0x000002406942CB20, file "argparse.py", line 1303>
+  30: MAKE_FUNCTION        
+  32: STORE_NAME           __repr__
+  34: LOAD_CONST           None
+  36: RETURN_VALUE         

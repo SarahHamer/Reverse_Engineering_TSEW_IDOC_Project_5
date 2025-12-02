@@ -1,0 +1,40 @@
+# Disassembly for importlib.resources.ZipReader.__init__
+# From module file: importlib.resources.readers
+
+## co_consts:
+(None, '.', '\\', '/')
+
+## co_names:
+('rpartition', 'prefix', 'replace', 'archive')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            module
+   4: LOAD_METHOD          rpartition
+  26: LOAD_CONST           '.'
+  28: PRECALL              
+  32: CALL                 
+  42: UNPACK_SEQUENCE      
+  46: STORE_FAST           _
+  48: STORE_FAST           _
+  50: STORE_FAST           name
+  52: LOAD_FAST            loader
+  54: LOAD_ATTR            prefix
+  64: LOAD_METHOD          replace
+  86: LOAD_CONST           '\\'
+  88: LOAD_CONST           '/'
+  90: PRECALL              
+  94: CALL                 
+ 104: LOAD_FAST            name
+ 106: BINARY_OP            +
+ 110: LOAD_CONST           '/'
+ 112: BINARY_OP            +
+ 116: LOAD_FAST            self
+ 118: STORE_ATTR           prefix
+ 128: LOAD_FAST            loader
+ 130: LOAD_ATTR            archive
+ 140: LOAD_FAST            self
+ 142: STORE_ATTR           archive
+ 152: LOAD_CONST           None
+ 154: RETURN_VALUE         

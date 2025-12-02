@@ -1,0 +1,35 @@
+# Disassembly for importlib.Prepared.__init__
+# From module file: importlib.metadata
+
+## co_consts:
+(None,)
+
+## co_names:
+('name', 'normalize', 'normalized', 'legacy_normalize', 'legacy_normalized')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            name
+   4: LOAD_FAST            self
+   6: STORE_ATTR           name
+  16: LOAD_FAST            name
+  18: POP_JUMP_FORWARD_IF_NOT_NONE to 24
+  20: LOAD_CONST           None
+  22: RETURN_VALUE         
+  24: LOAD_FAST            self
+  26: LOAD_METHOD          normalize
+  48: LOAD_FAST            name
+  50: PRECALL              
+  54: CALL                 
+  64: LOAD_FAST            self
+  66: STORE_ATTR           normalized
+  76: LOAD_FAST            self
+  78: LOAD_METHOD          legacy_normalize
+ 100: LOAD_FAST            name
+ 102: PRECALL              
+ 106: CALL                 
+ 116: LOAD_FAST            self
+ 118: STORE_ATTR           legacy_normalized
+ 128: LOAD_CONST           None
+ 130: RETURN_VALUE         

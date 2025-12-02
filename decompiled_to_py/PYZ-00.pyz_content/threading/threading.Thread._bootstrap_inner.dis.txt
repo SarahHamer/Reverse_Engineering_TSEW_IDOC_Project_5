@@ -1,0 +1,118 @@
+# Disassembly for threading.Thread._bootstrap_inner
+# From module file: threading
+
+## co_consts:
+(None,)
+
+## co_names:
+('_set_ident', '_set_tstate_lock', '_HAVE_THREAD_NATIVE_ID', '_set_native_id', '_started', 'set', '_active_limbo_lock', '_active', '_ident', '_limbo', '_trace_hook', '_sys', 'settrace', '_profile_hook', 'setprofile', 'run', '_invoke_excepthook', '_delete')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            self
+   6: LOAD_METHOD          _set_ident
+  28: PRECALL              
+  32: CALL                 
+  42: POP_TOP              
+  44: LOAD_FAST            self
+  46: LOAD_METHOD          _set_tstate_lock
+  68: PRECALL              
+  72: CALL                 
+  82: POP_TOP              
+  84: LOAD_GLOBAL          _HAVE_THREAD_NATIVE_ID
+  96: POP_JUMP_FORWARD_IF_FALSE to 138
+  98: LOAD_FAST            self
+ 100: LOAD_METHOD          _set_native_id
+ 122: PRECALL              
+ 126: CALL                 
+ 136: POP_TOP              
+ 138: LOAD_FAST            self
+ 140: LOAD_ATTR            _started
+ 150: LOAD_METHOD          set
+ 172: PRECALL              
+ 176: CALL                 
+ 186: POP_TOP              
+ 188: LOAD_GLOBAL          _active_limbo_lock
+ 200: BEFORE_WITH          
+ 202: POP_TOP              
+ 204: LOAD_FAST            self
+ 206: LOAD_GLOBAL          _active
+ 218: LOAD_FAST            self
+ 220: LOAD_ATTR            _ident
+ 230: STORE_SUBSCR         
+ 234: LOAD_GLOBAL          _limbo
+ 246: LOAD_FAST            self
+ 248: DELETE_SUBSCR        
+ 250: LOAD_CONST           None
+ 252: LOAD_CONST           None
+ 254: LOAD_CONST           None
+ 256: PRECALL              
+ 260: CALL                 
+ 270: POP_TOP              
+ 272: JUMP_FORWARD         to 296
+ 274: PUSH_EXC_INFO        
+ 276: WITH_EXCEPT_START    
+ 278: POP_JUMP_FORWARD_IF_TRUE to 288
+ 280: RERAISE              
+ 282: COPY                 
+ 284: POP_EXCEPT           
+ 286: RERAISE              
+ 288: POP_TOP              
+ 290: POP_EXCEPT           
+ 292: POP_TOP              
+ 294: POP_TOP              
+ 296: LOAD_GLOBAL          _trace_hook
+ 308: POP_JUMP_FORWARD_IF_FALSE to 360
+ 310: LOAD_GLOBAL          NULL + _sys
+ 322: LOAD_ATTR            settrace
+ 332: LOAD_GLOBAL          _trace_hook
+ 344: PRECALL              
+ 348: CALL                 
+ 358: POP_TOP              
+ 360: LOAD_GLOBAL          _profile_hook
+ 372: POP_JUMP_FORWARD_IF_FALSE to 424
+ 374: LOAD_GLOBAL          NULL + _sys
+ 386: LOAD_ATTR            setprofile
+ 396: LOAD_GLOBAL          _profile_hook
+ 408: PRECALL              
+ 412: CALL                 
+ 422: POP_TOP              
+ 424: NOP                  
+ 426: LOAD_FAST            self
+ 428: LOAD_METHOD          run
+ 450: PRECALL              
+ 454: CALL                 
+ 464: POP_TOP              
+ 466: JUMP_FORWARD         to 524
+ 468: PUSH_EXC_INFO        
+ 470: POP_TOP              
+ 472: LOAD_FAST            self
+ 474: LOAD_METHOD          _invoke_excepthook
+ 496: LOAD_FAST            self
+ 498: PRECALL              
+ 502: CALL                 
+ 512: POP_TOP              
+ 514: POP_EXCEPT           
+ 516: JUMP_FORWARD         to 524
+ 518: COPY                 
+ 520: POP_EXCEPT           
+ 522: RERAISE              
+ 524: LOAD_FAST            self
+ 526: LOAD_METHOD          _delete
+ 548: PRECALL              
+ 552: CALL                 
+ 562: POP_TOP              
+ 564: LOAD_CONST           None
+ 566: RETURN_VALUE         
+ 568: PUSH_EXC_INFO        
+ 570: LOAD_FAST            self
+ 572: LOAD_METHOD          _delete
+ 594: PRECALL              
+ 598: CALL                 
+ 608: POP_TOP              
+ 610: RERAISE              
+ 612: COPY                 
+ 614: POP_EXCEPT           
+ 616: RERAISE              

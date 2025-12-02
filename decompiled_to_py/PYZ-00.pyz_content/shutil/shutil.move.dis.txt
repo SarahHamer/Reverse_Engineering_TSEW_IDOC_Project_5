@@ -1,0 +1,209 @@
+# Disassembly for shutil.move
+# From module file: shutil
+
+## co_consts:
+('Recursively move a file or directory to another location. This is\n    similar to the Unix "mv" command. Return the file or directory\'s\n    destination.\n\n    If the destination is a directory or a symlink to a directory, the source\n    is moved inside the directory. The destination path must not already\n    exist.\n\n    If the destination already exists but is not a directory, it may be\n    overwritten depending on os.rename() semantics.\n\n    If the destination is on our current filesystem, then rename() is used.\n    Otherwise, src is copied to the destination and then removed. Symlinks are\n    recreated under the new name if os.rename() fails because of cross\n    filesystem renames.\n\n    The optional `copy_function` argument is a callable that will be used\n    to copy the source or it will be delegated to `copytree`.\n    By default, copy2() is used, but any function that supports the same\n    signature (like copy()) can be used.\n\n    A lot more could be done here...  A look at a mv.c shows a lot of\n    the issues this implementation glosses over.\n\n    ', 'shutil.move', None, "Destination path '%s' already exists", "Cannot move a directory '", "' into itself '", "'.", 'darwin', "Cannot move the non-empty directory '", "': Lacking write permission to '", True, ('copy_function', 'symlinks'))
+
+## co_names:
+('sys', 'audit', 'os', 'path', 'isdir', '_samefile', 'rename', 'join', '_basename', 'exists', 'Error', 'OSError', 'islink', 'readlink', 'symlink', 'unlink', '_destinsrc', '_is_immutable', 'access', 'W_OK', 'listdir', 'platform', 'PermissionError', 'copytree', 'rmtree')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + sys
+  14: LOAD_ATTR            audit
+  24: LOAD_CONST           'shutil.move'
+  26: LOAD_FAST            src
+  28: LOAD_FAST            dst
+  30: PRECALL              
+  34: CALL                 
+  44: POP_TOP              
+  46: LOAD_FAST            dst
+  48: STORE_FAST           real_dst
+  50: LOAD_GLOBAL          os
+  62: LOAD_ATTR            path
+  72: LOAD_METHOD          isdir
+  94: LOAD_FAST            dst
+  96: PRECALL              
+ 100: CALL                 
+ 110: POP_JUMP_FORWARD_IF_FALSE to 378
+ 112: LOAD_GLOBAL          NULL + _samefile
+ 124: LOAD_FAST            src
+ 126: LOAD_FAST            dst
+ 128: PRECALL              
+ 132: CALL                 
+ 142: POP_JUMP_FORWARD_IF_FALSE to 190
+ 144: LOAD_GLOBAL          NULL + os
+ 156: LOAD_ATTR            rename
+ 166: LOAD_FAST            src
+ 168: LOAD_FAST            dst
+ 170: PRECALL              
+ 174: CALL                 
+ 184: POP_TOP              
+ 186: LOAD_CONST           None
+ 188: RETURN_VALUE         
+ 190: LOAD_GLOBAL          os
+ 202: LOAD_ATTR            path
+ 212: LOAD_METHOD          join
+ 234: LOAD_FAST            dst
+ 236: LOAD_GLOBAL          NULL + _basename
+ 248: LOAD_FAST            src
+ 250: PRECALL              
+ 254: CALL                 
+ 264: PRECALL              
+ 268: CALL                 
+ 278: STORE_FAST           real_dst
+ 280: LOAD_GLOBAL          os
+ 292: LOAD_ATTR            path
+ 302: LOAD_METHOD          exists
+ 324: LOAD_FAST            real_dst
+ 326: PRECALL              
+ 330: CALL                 
+ 340: POP_JUMP_FORWARD_IF_FALSE to 378
+ 342: LOAD_GLOBAL          NULL + Error
+ 354: LOAD_CONST           "Destination path '%s' already exists"
+ 356: LOAD_FAST            real_dst
+ 358: BINARY_OP            %
+ 362: PRECALL              
+ 366: CALL                 
+ 376: RAISE_VARARGS        
+ 378: NOP                  
+ 380: LOAD_GLOBAL          NULL + os
+ 392: LOAD_ATTR            rename
+ 402: LOAD_FAST            src
+ 404: LOAD_FAST            real_dst
+ 406: PRECALL              
+ 410: CALL                 
+ 420: POP_TOP              
+ 422: EXTENDED_ARG         
+ 424: JUMP_FORWARD         to 1126
+ 426: PUSH_EXC_INFO        
+ 428: LOAD_GLOBAL          OSError
+ 440: CHECK_EXC_MATCH      
+ 442: EXTENDED_ARG         
+ 444: POP_JUMP_FORWARD_IF_FALSE to 1118
+ 446: POP_TOP              
+ 448: LOAD_GLOBAL          os
+ 460: LOAD_ATTR            path
+ 470: LOAD_METHOD          islink
+ 492: LOAD_FAST            src
+ 494: PRECALL              
+ 498: CALL                 
+ 508: POP_JUMP_FORWARD_IF_FALSE to 634
+ 510: LOAD_GLOBAL          NULL + os
+ 522: LOAD_ATTR            readlink
+ 532: LOAD_FAST            src
+ 534: PRECALL              
+ 538: CALL                 
+ 548: STORE_FAST           linkto
+ 550: LOAD_GLOBAL          NULL + os
+ 562: LOAD_ATTR            symlink
+ 572: LOAD_FAST            linkto
+ 574: LOAD_FAST            real_dst
+ 576: PRECALL              
+ 580: CALL                 
+ 590: POP_TOP              
+ 592: LOAD_GLOBAL          NULL + os
+ 604: LOAD_ATTR            unlink
+ 614: LOAD_FAST            src
+ 616: PRECALL              
+ 620: CALL                 
+ 630: POP_TOP              
+ 632: JUMP_FORWARD         to 1114
+ 634: LOAD_GLOBAL          os
+ 646: LOAD_ATTR            path
+ 656: LOAD_METHOD          isdir
+ 678: LOAD_FAST            src
+ 680: PRECALL              
+ 684: CALL                 
+ 694: POP_JUMP_FORWARD_IF_FALSE to 1050
+ 696: LOAD_GLOBAL          NULL + _destinsrc
+ 708: LOAD_FAST            src
+ 710: LOAD_FAST            dst
+ 712: PRECALL              
+ 716: CALL                 
+ 726: POP_JUMP_FORWARD_IF_FALSE to 772
+ 728: LOAD_GLOBAL          NULL + Error
+ 740: LOAD_CONST           "Cannot move a directory '"
+ 742: LOAD_FAST            src
+ 744: FORMAT_VALUE         str
+ 746: LOAD_CONST           "' into itself '"
+ 748: LOAD_FAST            dst
+ 750: FORMAT_VALUE         str
+ 752: LOAD_CONST           "'."
+ 754: BUILD_STRING         
+ 756: PRECALL              
+ 760: CALL                 
+ 770: RAISE_VARARGS        
+ 772: LOAD_GLOBAL          NULL + _is_immutable
+ 784: LOAD_FAST            src
+ 786: PRECALL              
+ 790: CALL                 
+ 800: POP_JUMP_FORWARD_IF_TRUE to 936
+ 802: LOAD_GLOBAL          NULL + os
+ 814: LOAD_ATTR            access
+ 824: LOAD_FAST            src
+ 826: LOAD_GLOBAL          os
+ 838: LOAD_ATTR            W_OK
+ 848: PRECALL              
+ 852: CALL                 
+ 862: POP_JUMP_FORWARD_IF_TRUE to 980
+ 864: LOAD_GLOBAL          NULL + os
+ 876: LOAD_ATTR            listdir
+ 886: LOAD_FAST            src
+ 888: PRECALL              
+ 892: CALL                 
+ 902: POP_JUMP_FORWARD_IF_FALSE to 980
+ 904: LOAD_GLOBAL          sys
+ 916: LOAD_ATTR            platform
+ 926: LOAD_CONST           'darwin'
+ 928: COMPARE_OP           ==
+ 934: POP_JUMP_FORWARD_IF_FALSE to 980
+ 936: LOAD_GLOBAL          NULL + PermissionError
+ 948: LOAD_CONST           "Cannot move the non-empty directory '"
+ 950: LOAD_FAST            src
+ 952: FORMAT_VALUE         str
+ 954: LOAD_CONST           "': Lacking write permission to '"
+ 956: LOAD_FAST            src
+ 958: FORMAT_VALUE         str
+ 960: LOAD_CONST           "'."
+ 962: BUILD_STRING         
+ 964: PRECALL              
+ 968: CALL                 
+ 978: RAISE_VARARGS        
+ 980: LOAD_GLOBAL          NULL + copytree
+ 992: LOAD_FAST            src
+ 994: LOAD_FAST            real_dst
+ 996: LOAD_FAST            copy_function
+ 998: LOAD_CONST           True
+1000: KW_NAMES             
+1002: PRECALL              
+1006: CALL                 
+1016: POP_TOP              
+1018: LOAD_GLOBAL          NULL + rmtree
+1030: LOAD_FAST            src
+1032: PRECALL              
+1036: CALL                 
+1046: POP_TOP              
+1048: JUMP_FORWARD         to 1114
+1050: PUSH_NULL            
+1052: LOAD_FAST            copy_function
+1054: LOAD_FAST            src
+1056: LOAD_FAST            real_dst
+1058: PRECALL              
+1062: CALL                 
+1072: POP_TOP              
+1074: LOAD_GLOBAL          NULL + os
+1086: LOAD_ATTR            unlink
+1096: LOAD_FAST            src
+1098: PRECALL              
+1102: CALL                 
+1112: POP_TOP              
+1114: POP_EXCEPT           
+1116: JUMP_FORWARD         to 1126
+1118: RERAISE              
+1120: COPY                 
+1122: POP_EXCEPT           
+1124: RERAISE              
+1126: LOAD_FAST            real_dst
+1128: RETURN_VALUE         

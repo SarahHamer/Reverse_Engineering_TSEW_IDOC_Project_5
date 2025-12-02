@@ -1,0 +1,32 @@
+# Disassembly for zipfile.LZMACompressor.flush
+# From module file: zipfile
+
+## co_consts:
+(None,)
+
+## co_names:
+('_comp', '_init', 'flush')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _comp
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 108
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          _init
+  40: PRECALL              
+  44: CALL                 
+  54: LOAD_FAST            self
+  56: LOAD_ATTR            _comp
+  66: LOAD_METHOD          flush
+  88: PRECALL              
+  92: CALL                 
+ 102: BINARY_OP            +
+ 106: RETURN_VALUE         
+ 108: LOAD_FAST            self
+ 110: LOAD_ATTR            _comp
+ 120: LOAD_METHOD          flush
+ 142: PRECALL              
+ 146: CALL                 
+ 156: RETURN_VALUE         

@@ -1,0 +1,138 @@
+# Disassembly for contextlib.AsyncExitStack.__aexit__
+# From module file: contextlib
+
+## co_consts:
+(None, 0, 1, <code object _fix_exception_context at 0x00000240693EAB30, file "contextlib.py", line 692>, False, True, (None, None, None))
+
+## co_names:
+('sys', 'exc_info', '_exit_callbacks', 'pop', '__context__', 'BaseException')
+
+## bytecode:
+
+   0: MAKE_CELL            frame_exc
+   2: RETURN_GENERATOR     
+   4: POP_TOP              
+   6: RESUME               
+   8: LOAD_FAST            exc_details
+  10: LOAD_CONST           0
+  12: BINARY_SUBSCR        
+  22: LOAD_CONST           None
+  24: IS_OP                
+  26: STORE_FAST           received_exc
+  28: LOAD_GLOBAL          NULL + sys
+  40: LOAD_ATTR            exc_info
+  50: PRECALL              
+  54: CALL                 
+  64: LOAD_CONST           1
+  66: BINARY_SUBSCR        
+  76: STORE_DEREF          frame_exc
+  78: LOAD_CLOSURE         frame_exc
+  80: BUILD_TUPLE          
+  82: LOAD_CONST           <code object _fix_exception_context at 0x00000240693EAB30, file "contextlib.py", line 692>
+  84: MAKE_FUNCTION        closure
+  86: STORE_FAST           _fix_exception_context
+  88: LOAD_CONST           False
+  90: STORE_FAST           suppressed_exc
+  92: LOAD_CONST           False
+  94: STORE_FAST           pending_raise
+  96: LOAD_FAST            self
+  98: LOAD_ATTR            _exit_callbacks
+ 108: POP_JUMP_FORWARD_IF_FALSE to 346
+ 110: LOAD_FAST            self
+ 112: LOAD_ATTR            _exit_callbacks
+ 122: LOAD_METHOD          pop
+ 144: PRECALL              
+ 148: CALL                 
+ 158: UNPACK_SEQUENCE      
+ 162: STORE_FAST           is_sync
+ 164: STORE_FAST           cb
+ 166: NOP                  
+ 168: LOAD_FAST            is_sync
+ 170: POP_JUMP_FORWARD_IF_FALSE to 184
+ 172: PUSH_NULL            
+ 174: LOAD_FAST            cb
+ 176: LOAD_FAST            exc_details
+ 178: CALL_FUNCTION_EX     
+ 180: STORE_FAST           cb_suppress
+ 182: JUMP_FORWARD         to 206
+ 184: PUSH_NULL            
+ 186: LOAD_FAST            cb
+ 188: LOAD_FAST            exc_details
+ 190: CALL_FUNCTION_EX     
+ 192: GET_AWAITABLE        
+ 194: LOAD_CONST           None
+ 196: SEND                 to 204
+ 198: YIELD_VALUE          
+ 200: RESUME               
+ 202: JUMP_BACKWARD_NO_INTERRUPT to 196
+ 204: STORE_FAST           cb_suppress
+ 206: LOAD_FAST            cb_suppress
+ 208: POP_JUMP_FORWARD_IF_FALSE to 222
+ 210: LOAD_CONST           True
+ 212: STORE_FAST           suppressed_exc
+ 214: LOAD_CONST           False
+ 216: STORE_FAST           pending_raise
+ 218: LOAD_CONST           (None, None, None)
+ 220: STORE_FAST           exc_details
+ 222: JUMP_FORWARD         to 332
+ 224: PUSH_EXC_INFO        
+ 226: POP_TOP              
+ 228: LOAD_GLOBAL          NULL + sys
+ 240: LOAD_ATTR            exc_info
+ 250: PRECALL              
+ 254: CALL                 
+ 264: STORE_FAST           new_exc_details
+ 266: PUSH_NULL            
+ 268: LOAD_FAST            _fix_exception_context
+ 270: LOAD_FAST            new_exc_details
+ 272: LOAD_CONST           1
+ 274: BINARY_SUBSCR        
+ 284: LOAD_FAST            exc_details
+ 286: LOAD_CONST           1
+ 288: BINARY_SUBSCR        
+ 298: PRECALL              
+ 302: CALL                 
+ 312: POP_TOP              
+ 314: LOAD_CONST           True
+ 316: STORE_FAST           pending_raise
+ 318: LOAD_FAST            new_exc_details
+ 320: STORE_FAST           exc_details
+ 322: POP_EXCEPT           
+ 324: JUMP_FORWARD         to 332
+ 326: COPY                 
+ 328: POP_EXCEPT           
+ 330: RERAISE              
+ 332: LOAD_FAST            self
+ 334: LOAD_ATTR            _exit_callbacks
+ 344: POP_JUMP_BACKWARD_IF_TRUE to 110
+ 346: LOAD_FAST            pending_raise
+ 348: POP_JUMP_FORWARD_IF_FALSE to 450
+ 350: NOP                  
+ 352: LOAD_FAST            exc_details
+ 354: LOAD_CONST           1
+ 356: BINARY_SUBSCR        
+ 366: LOAD_ATTR            __context__
+ 376: STORE_FAST           fixed_ctx
+ 378: LOAD_FAST            exc_details
+ 380: LOAD_CONST           1
+ 382: BINARY_SUBSCR        
+ 392: RAISE_VARARGS        
+ 394: PUSH_EXC_INFO        
+ 396: LOAD_GLOBAL          BaseException
+ 408: CHECK_EXC_MATCH      
+ 410: POP_JUMP_FORWARD_IF_FALSE to 442
+ 412: POP_TOP              
+ 414: LOAD_FAST            fixed_ctx
+ 416: LOAD_FAST            exc_details
+ 418: LOAD_CONST           1
+ 420: BINARY_SUBSCR        
+ 430: STORE_ATTR           __context__
+ 440: RAISE_VARARGS        
+ 442: RERAISE              
+ 444: COPY                 
+ 446: POP_EXCEPT           
+ 448: RERAISE              
+ 450: LOAD_FAST            received_exc
+ 452: JUMP_IF_FALSE_OR_POP to 456
+ 454: LOAD_FAST            suppressed_exc
+ 456: RETURN_VALUE         

@@ -1,0 +1,20 @@
+# Disassembly for datetime.timedelta._getstate
+# From module file: datetime
+
+## co_consts:
+(None,)
+
+## co_names:
+('_days', '_seconds', '_microseconds')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _days
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            _seconds
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            _microseconds
+  38: BUILD_TUPLE          
+  40: RETURN_VALUE         

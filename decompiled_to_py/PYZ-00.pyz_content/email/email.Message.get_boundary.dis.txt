@@ -1,0 +1,38 @@
+# Disassembly for email.Message.get_boundary
+# From module file: email.message
+
+## co_consts:
+("Return the boundary associated with the payload if present.\n\n        The boundary is extracted from the Content-Type header's `boundary'\n        parameter, and it is unquoted.\n        ", 'boundary')
+
+## co_names:
+('object', 'get_param', 'utils', 'collapse_rfc2231_value', 'rstrip')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + object
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           missing
+  30: LOAD_FAST            self
+  32: LOAD_METHOD          get_param
+  54: LOAD_CONST           'boundary'
+  56: LOAD_FAST            missing
+  58: PRECALL              
+  62: CALL                 
+  72: STORE_FAST           boundary
+  74: LOAD_FAST            boundary
+  76: LOAD_FAST            missing
+  78: IS_OP                
+  80: POP_JUMP_FORWARD_IF_FALSE to 86
+  82: LOAD_FAST            failobj
+  84: RETURN_VALUE         
+  86: LOAD_GLOBAL          NULL + utils
+  98: LOAD_ATTR            collapse_rfc2231_value
+ 108: LOAD_FAST            boundary
+ 110: PRECALL              
+ 114: CALL                 
+ 124: LOAD_METHOD          rstrip
+ 146: PRECALL              
+ 150: CALL                 
+ 160: RETURN_VALUE         

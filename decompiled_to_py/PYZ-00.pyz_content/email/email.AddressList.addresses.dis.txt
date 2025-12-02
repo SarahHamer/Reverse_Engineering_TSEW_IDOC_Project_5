@@ -1,0 +1,19 @@
+# Disassembly for email.AddressList.addresses
+# From module file: email._header_value_parser
+
+## co_consts:
+(None, <code object <listcomp> at 0x0000024069465450, file "email\_header_value_parser.py", line 295>)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           <code object <listcomp> at 0x0000024069465450, file "email\_header_value_parser.py", line 295>
+   4: MAKE_FUNCTION        
+   6: LOAD_FAST            self
+   8: GET_ITER             
+  10: PRECALL              
+  14: CALL                 
+  24: RETURN_VALUE         

@@ -1,0 +1,60 @@
+# Disassembly for email.Generator._write_lines
+# From module file: email.generator
+
+## co_consts:
+(None, -1)
+
+## co_names:
+('NLCRE', 'split', 'write', '_NL')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            lines
+   4: POP_JUMP_FORWARD_IF_TRUE to 10
+   6: LOAD_CONST           None
+   8: RETURN_VALUE         
+  10: LOAD_GLOBAL          NLCRE
+  22: LOAD_METHOD          split
+  44: LOAD_FAST            lines
+  46: PRECALL              
+  50: CALL                 
+  60: STORE_FAST           lines
+  62: LOAD_FAST            lines
+  64: LOAD_CONST           None
+  66: LOAD_CONST           -1
+  68: BUILD_SLICE          
+  70: BINARY_SUBSCR        
+  80: GET_ITER             
+  82: FOR_ITER             to 182
+  84: STORE_FAST           line
+  86: LOAD_FAST            self
+  88: LOAD_METHOD          write
+ 110: LOAD_FAST            line
+ 112: PRECALL              
+ 116: CALL                 
+ 126: POP_TOP              
+ 128: LOAD_FAST            self
+ 130: LOAD_METHOD          write
+ 152: LOAD_FAST            self
+ 154: LOAD_ATTR            _NL
+ 164: PRECALL              
+ 168: CALL                 
+ 178: POP_TOP              
+ 180: JUMP_BACKWARD        to 82
+ 182: LOAD_FAST            lines
+ 184: LOAD_CONST           -1
+ 186: BINARY_SUBSCR        
+ 196: POP_JUMP_FORWARD_IF_FALSE to 256
+ 198: LOAD_FAST            self
+ 200: LOAD_METHOD          write
+ 222: LOAD_FAST            lines
+ 224: LOAD_CONST           -1
+ 226: BINARY_SUBSCR        
+ 236: PRECALL              
+ 240: CALL                 
+ 250: POP_TOP              
+ 252: LOAD_CONST           None
+ 254: RETURN_VALUE         
+ 256: LOAD_CONST           None
+ 258: RETURN_VALUE         

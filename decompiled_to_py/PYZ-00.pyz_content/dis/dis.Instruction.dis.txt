@@ -1,0 +1,24 @@
+# Disassembly for dis.Instruction
+# From module file: dis
+
+## co_consts:
+('Instruction', 'Details for a bytecode operation\n\n       Defined fields:\n         opname - human readable name for operation\n         opcode - numeric code for operation\n         arg - numeric argument to operation (if any), otherwise None\n         argval - resolved arg value (if known), otherwise same as arg\n         argrepr - human readable description of operation argument\n         offset - start index of operation within bytecode sequence\n         starts_line - line started by this opcode (if any), otherwise None\n         is_jump_target - True if other code jumps to here, otherwise False\n         positions - Optional dis.Positions object holding the span of source code\n                     covered by this instruction\n    ', 3, False, 4, <code object _disassemble at 0x0000024066C3EE10, file "dis.py", line 292>, None, (3, False, 4))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '_disassemble')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Instruction'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Details for a bytecode operation\n\n       Defined fields:\n         opname - human readable name for operation\n         opcode - numeric code for operation\n         arg - numeric argument to operation (if any), otherwise None\n         argval - resolved arg value (if known), otherwise same as arg\n         argrepr - human readable description of operation argument\n         offset - start index of operation within bytecode sequence\n         starts_line - line started by this opcode (if any), otherwise None\n         is_jump_target - True if other code jumps to here, otherwise False\n         positions - Optional dis.Positions object holding the span of source code\n                     covered by this instruction\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           (3, False, 4)
+  16: LOAD_CONST           <code object _disassemble at 0x0000024066C3EE10, file "dis.py", line 292>
+  18: MAKE_FUNCTION        defaults
+  20: STORE_NAME           _disassemble
+  22: LOAD_CONST           None
+  24: RETURN_VALUE         

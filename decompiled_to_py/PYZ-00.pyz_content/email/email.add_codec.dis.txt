@@ -1,0 +1,18 @@
+# Disassembly for email.add_codec
+# From module file: email.charset
+
+## co_consts:
+('Add a codec that map characters in the given charset to/from Unicode.\n\n    charset is the canonical name of a character set.  codecname is the name\n    of a Python codec, as appropriate for the second argument to the unicode()\n    built-in, or to the encode() method of a Unicode string.\n    ', None)
+
+## co_names:
+('CODEC_MAP',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            codecname
+   4: LOAD_GLOBAL          CODEC_MAP
+  16: LOAD_FAST            charset
+  18: STORE_SUBSCR         
+  22: LOAD_CONST           None
+  24: RETURN_VALUE         

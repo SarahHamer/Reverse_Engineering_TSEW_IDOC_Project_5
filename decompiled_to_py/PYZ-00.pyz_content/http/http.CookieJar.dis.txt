@@ -1,0 +1,129 @@
+# Disassembly for http.CookieJar
+# From module file: http.cookiejar
+
+## co_consts:
+('CookieJar', 'Collection of HTTP cookies.\n\n    You may not need to know about this class: try\n    urllib.request.build_opener(HTTPCookieProcessor).open(url).\n    ', '\\W', '([\\"\\\\])', '\\.?[^.]*', '[^.]*', '^\\.+', '^\\#LWP-Cookies-(\\d+\\.\\d+)', None, <code object __init__ at 0x00000240693D3340, file "http\cookiejar.py", line 1261>, <code object set_policy at 0x0000024069495070, file "http\cookiejar.py", line 1269>, <code object _cookies_for_domain at 0x0000024068DA87D0, file "http\cookiejar.py", line 1272>, <code object _cookies_for_request at 0x000002406922D3E0, file "http\cookiejar.py", line 1290>, <code object _cookie_attrs at 0x0000024068E91660, file "http\cookiejar.py", line 1297>, <code object add_cookie_header at 0x0000024068C27750, file "http\cookiejar.py", line 1356>, <code object _normalized_cookie_tuples at 0x0000024068BFE070, file "http\cookiejar.py", line 1389>, <code object _cookie_from_cookie_tuple at 0x0000024068CF54C0, file "http\cookiejar.py", line 1486>, <code object _cookies_from_attrs_set at 0x000002406922D7D0, file "http\cookiejar.py", line 1578>, <code object _process_rfc2109_cookies at 0x000002406922D920, file "http\cookiejar.py", line 1587>, <code object make_cookies at 0x0000024069595520, file "http\cookiejar.py", line 1599>, <code object set_cookie_if_ok at 0x0000024068C8F100, file "http\cookiejar.py", line 1654>, <code object set_cookie at 0x0000024068BB79B0, file "http\cookiejar.py", line 1667>, <code object extract_cookies at 0x0000024068CA03E0, file "http\cookiejar.py", line 1680>, <code object clear at 0x00000240691E9230, file "http\cookiejar.py", line 1692>, <code object clear_session_cookies at 0x00000240691DB690, file "http\cookiejar.py", line 1719>, <code object clear_expired_cookies at 0x0000024068BB8400, file "http\cookiejar.py", line 1734>, <code object __iter__ at 0x000002406945F690, file "http\cookiejar.py", line 1753>, <code object __len__ at 0x0000024069465FB0, file "http\cookiejar.py", line 1756>, <code object __repr__ at 0x00000240691C0B30, file "http\cookiejar.py", line 1762>, <code object __str__ at 0x00000240691C0DF0, file "http\cookiejar.py", line 1767>, (None,), (None, None, None))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 're', 'compile', 'non_word_re', 'quote_re', 'strict_domain_re', 'domain_re', 'dots_re', 'ASCII', 'magic_re', '__init__', 'set_policy', '_cookies_for_domain', '_cookies_for_request', '_cookie_attrs', 'add_cookie_header', '_normalized_cookie_tuples', '_cookie_from_cookie_tuple', '_cookies_from_attrs_set', '_process_rfc2109_cookies', 'make_cookies', 'set_cookie_if_ok', 'set_cookie', 'extract_cookies', 'clear', 'clear_session_cookies', 'clear_expired_cookies', '__iter__', '__len__', '__repr__', '__str__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'CookieJar'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Collection of HTTP cookies.\n\n    You may not need to know about this class: try\n    urllib.request.build_opener(HTTPCookieProcessor).open(url).\n    '
+  12: STORE_NAME           __doc__
+  14: PUSH_NULL            
+  16: LOAD_NAME            re
+  18: LOAD_ATTR            compile
+  28: LOAD_CONST           '\\W'
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_NAME           non_word_re
+  46: PUSH_NULL            
+  48: LOAD_NAME            re
+  50: LOAD_ATTR            compile
+  60: LOAD_CONST           '([\\"\\\\])'
+  62: PRECALL              
+  66: CALL                 
+  76: STORE_NAME           quote_re
+  78: PUSH_NULL            
+  80: LOAD_NAME            re
+  82: LOAD_ATTR            compile
+  92: LOAD_CONST           '\\.?[^.]*'
+  94: PRECALL              
+  98: CALL                 
+ 108: STORE_NAME           strict_domain_re
+ 110: PUSH_NULL            
+ 112: LOAD_NAME            re
+ 114: LOAD_ATTR            compile
+ 124: LOAD_CONST           '[^.]*'
+ 126: PRECALL              
+ 130: CALL                 
+ 140: STORE_NAME           domain_re
+ 142: PUSH_NULL            
+ 144: LOAD_NAME            re
+ 146: LOAD_ATTR            compile
+ 156: LOAD_CONST           '^\\.+'
+ 158: PRECALL              
+ 162: CALL                 
+ 172: STORE_NAME           dots_re
+ 174: PUSH_NULL            
+ 176: LOAD_NAME            re
+ 178: LOAD_ATTR            compile
+ 188: LOAD_CONST           '^\\#LWP-Cookies-(\\d+\\.\\d+)'
+ 190: LOAD_NAME            re
+ 192: LOAD_ATTR            ASCII
+ 202: PRECALL              
+ 206: CALL                 
+ 216: STORE_NAME           magic_re
+ 218: LOAD_CONST           (None,)
+ 220: LOAD_CONST           <code object __init__ at 0x00000240693D3340, file "http\cookiejar.py", line 1261>
+ 222: MAKE_FUNCTION        defaults
+ 224: STORE_NAME           __init__
+ 226: LOAD_CONST           <code object set_policy at 0x0000024069495070, file "http\cookiejar.py", line 1269>
+ 228: MAKE_FUNCTION        
+ 230: STORE_NAME           set_policy
+ 232: LOAD_CONST           <code object _cookies_for_domain at 0x0000024068DA87D0, file "http\cookiejar.py", line 1272>
+ 234: MAKE_FUNCTION        
+ 236: STORE_NAME           _cookies_for_domain
+ 238: LOAD_CONST           <code object _cookies_for_request at 0x000002406922D3E0, file "http\cookiejar.py", line 1290>
+ 240: MAKE_FUNCTION        
+ 242: STORE_NAME           _cookies_for_request
+ 244: LOAD_CONST           <code object _cookie_attrs at 0x0000024068E91660, file "http\cookiejar.py", line 1297>
+ 246: MAKE_FUNCTION        
+ 248: STORE_NAME           _cookie_attrs
+ 250: LOAD_CONST           <code object add_cookie_header at 0x0000024068C27750, file "http\cookiejar.py", line 1356>
+ 252: MAKE_FUNCTION        
+ 254: STORE_NAME           add_cookie_header
+ 256: LOAD_CONST           <code object _normalized_cookie_tuples at 0x0000024068BFE070, file "http\cookiejar.py", line 1389>
+ 258: MAKE_FUNCTION        
+ 260: STORE_NAME           _normalized_cookie_tuples
+ 262: LOAD_CONST           <code object _cookie_from_cookie_tuple at 0x0000024068CF54C0, file "http\cookiejar.py", line 1486>
+ 264: MAKE_FUNCTION        
+ 266: STORE_NAME           _cookie_from_cookie_tuple
+ 268: LOAD_CONST           <code object _cookies_from_attrs_set at 0x000002406922D7D0, file "http\cookiejar.py", line 1578>
+ 270: MAKE_FUNCTION        
+ 272: STORE_NAME           _cookies_from_attrs_set
+ 274: LOAD_CONST           <code object _process_rfc2109_cookies at 0x000002406922D920, file "http\cookiejar.py", line 1587>
+ 276: MAKE_FUNCTION        
+ 278: STORE_NAME           _process_rfc2109_cookies
+ 280: LOAD_CONST           <code object make_cookies at 0x0000024069595520, file "http\cookiejar.py", line 1599>
+ 282: MAKE_FUNCTION        
+ 284: STORE_NAME           make_cookies
+ 286: LOAD_CONST           <code object set_cookie_if_ok at 0x0000024068C8F100, file "http\cookiejar.py", line 1654>
+ 288: MAKE_FUNCTION        
+ 290: STORE_NAME           set_cookie_if_ok
+ 292: LOAD_CONST           <code object set_cookie at 0x0000024068BB79B0, file "http\cookiejar.py", line 1667>
+ 294: MAKE_FUNCTION        
+ 296: STORE_NAME           set_cookie
+ 298: LOAD_CONST           <code object extract_cookies at 0x0000024068CA03E0, file "http\cookiejar.py", line 1680>
+ 300: MAKE_FUNCTION        
+ 302: STORE_NAME           extract_cookies
+ 304: LOAD_CONST           (None, None, None)
+ 306: LOAD_CONST           <code object clear at 0x00000240691E9230, file "http\cookiejar.py", line 1692>
+ 308: MAKE_FUNCTION        defaults
+ 310: STORE_NAME           clear
+ 312: LOAD_CONST           <code object clear_session_cookies at 0x00000240691DB690, file "http\cookiejar.py", line 1719>
+ 314: MAKE_FUNCTION        
+ 316: STORE_NAME           clear_session_cookies
+ 318: LOAD_CONST           <code object clear_expired_cookies at 0x0000024068BB8400, file "http\cookiejar.py", line 1734>
+ 320: MAKE_FUNCTION        
+ 322: STORE_NAME           clear_expired_cookies
+ 324: LOAD_CONST           <code object __iter__ at 0x000002406945F690, file "http\cookiejar.py", line 1753>
+ 326: MAKE_FUNCTION        
+ 328: STORE_NAME           __iter__
+ 330: LOAD_CONST           <code object __len__ at 0x0000024069465FB0, file "http\cookiejar.py", line 1756>
+ 332: MAKE_FUNCTION        
+ 334: STORE_NAME           __len__
+ 336: LOAD_CONST           <code object __repr__ at 0x00000240691C0B30, file "http\cookiejar.py", line 1762>
+ 338: MAKE_FUNCTION        
+ 340: STORE_NAME           __repr__
+ 342: LOAD_CONST           <code object __str__ at 0x00000240691C0DF0, file "http\cookiejar.py", line 1767>
+ 344: MAKE_FUNCTION        
+ 346: STORE_NAME           __str__
+ 348: LOAD_CONST           None
+ 350: RETURN_VALUE         

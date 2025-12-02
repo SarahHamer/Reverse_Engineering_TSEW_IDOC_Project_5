@@ -1,0 +1,91 @@
+# Disassembly for selectors.KqueueSelector.register
+# From module file: selectors
+
+## co_consts:
+(None, 0)
+
+## co_names:
+('super', 'register', 'EVENT_READ', 'select', 'kevent', 'fd', 'KQ_FILTER_READ', 'KQ_EV_ADD', '_selector', 'control', 'EVENT_WRITE', 'KQ_FILTER_WRITE', 'unregister')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + super
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_METHOD          register
+  52: LOAD_FAST            fileobj
+  54: LOAD_FAST            events
+  56: LOAD_FAST            data
+  58: PRECALL              
+  62: CALL                 
+  72: STORE_FAST           key
+  74: NOP                  
+  76: LOAD_FAST            events
+  78: LOAD_GLOBAL          EVENT_READ
+  90: BINARY_OP            &
+  94: POP_JUMP_FORWARD_IF_FALSE to 248
+  96: LOAD_GLOBAL          NULL + select
+ 108: LOAD_ATTR            kevent
+ 118: LOAD_FAST            key
+ 120: LOAD_ATTR            fd
+ 130: LOAD_GLOBAL          select
+ 142: LOAD_ATTR            KQ_FILTER_READ
+ 152: LOAD_GLOBAL          select
+ 164: LOAD_ATTR            KQ_EV_ADD
+ 174: PRECALL              
+ 178: CALL                 
+ 188: STORE_FAST           kev
+ 190: LOAD_FAST            self
+ 192: LOAD_ATTR            _selector
+ 202: LOAD_METHOD          control
+ 224: LOAD_FAST            kev
+ 226: BUILD_LIST           
+ 228: LOAD_CONST           0
+ 230: LOAD_CONST           0
+ 232: PRECALL              
+ 236: CALL                 
+ 246: POP_TOP              
+ 248: LOAD_FAST            events
+ 250: LOAD_GLOBAL          EVENT_WRITE
+ 262: BINARY_OP            &
+ 266: POP_JUMP_FORWARD_IF_FALSE to 420
+ 268: LOAD_GLOBAL          NULL + select
+ 280: LOAD_ATTR            kevent
+ 290: LOAD_FAST            key
+ 292: LOAD_ATTR            fd
+ 302: LOAD_GLOBAL          select
+ 314: LOAD_ATTR            KQ_FILTER_WRITE
+ 324: LOAD_GLOBAL          select
+ 336: LOAD_ATTR            KQ_EV_ADD
+ 346: PRECALL              
+ 350: CALL                 
+ 360: STORE_FAST           kev
+ 362: LOAD_FAST            self
+ 364: LOAD_ATTR            _selector
+ 374: LOAD_METHOD          control
+ 396: LOAD_FAST            kev
+ 398: BUILD_LIST           
+ 400: LOAD_CONST           0
+ 402: LOAD_CONST           0
+ 404: PRECALL              
+ 408: CALL                 
+ 418: POP_TOP              
+ 420: JUMP_FORWARD         to 500
+ 422: PUSH_EXC_INFO        
+ 424: POP_TOP              
+ 426: LOAD_GLOBAL          NULL + super
+ 438: PRECALL              
+ 442: CALL                 
+ 452: LOAD_METHOD          unregister
+ 474: LOAD_FAST            fileobj
+ 476: PRECALL              
+ 480: CALL                 
+ 490: POP_TOP              
+ 492: RAISE_VARARGS        
+ 494: COPY                 
+ 496: POP_EXCEPT           
+ 498: RERAISE              
+ 500: LOAD_FAST            key
+ 502: RETURN_VALUE         

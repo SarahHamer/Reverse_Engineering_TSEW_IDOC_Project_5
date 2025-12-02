@@ -1,0 +1,145 @@
+# Disassembly for inspect.getclosurevars
+# From module file: inspect
+
+## co_consts:
+('\n    Get the mapping of free variables to their current values.\n\n    Returns a named tuple of dicts mapping the current nonlocal, global\n    and builtin references as seen by the body of the function. A final\n    set of unbound names that could not be resolved is also provided.\n    ', '{!r} is not a Python function', None, <code object <dictcomp> at 0x0000024069466250, file "inspect.py", line 1605>, '__builtins__', ('None', 'True', 'False'))
+
+## co_names:
+('ismethod', '__func__', 'isfunction', 'TypeError', 'format', '__code__', '__closure__', 'zip', 'co_freevars', '__globals__', 'get', 'builtins', '__dict__', 'ismodule', 'set', 'co_names', 'KeyError', 'add', 'ClosureVars')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + ismethod
+  14: LOAD_FAST            func
+  16: PRECALL              
+  20: CALL                 
+  30: POP_JUMP_FORWARD_IF_FALSE to 46
+  32: LOAD_FAST            func
+  34: LOAD_ATTR            __func__
+  44: STORE_FAST           func
+  46: LOAD_GLOBAL          NULL + isfunction
+  58: LOAD_FAST            func
+  60: PRECALL              
+  64: CALL                 
+  74: POP_JUMP_FORWARD_IF_TRUE to 144
+  76: LOAD_GLOBAL          NULL + TypeError
+  88: LOAD_CONST           '{!r} is not a Python function'
+  90: LOAD_METHOD          format
+ 112: LOAD_FAST            func
+ 114: PRECALL              
+ 118: CALL                 
+ 128: PRECALL              
+ 132: CALL                 
+ 142: RAISE_VARARGS        
+ 144: LOAD_FAST            func
+ 146: LOAD_ATTR            __code__
+ 156: STORE_FAST           code
+ 158: LOAD_FAST            func
+ 160: LOAD_ATTR            __closure__
+ 170: POP_JUMP_FORWARD_IF_NOT_NONE to 178
+ 172: BUILD_MAP            
+ 174: STORE_FAST           nonlocal_vars
+ 176: JUMP_FORWARD         to 250
+ 178: LOAD_CONST           <code object <dictcomp> at 0x0000024069466250, file "inspect.py", line 1605>
+ 180: MAKE_FUNCTION        
+ 182: LOAD_GLOBAL          NULL + zip
+ 194: LOAD_FAST            code
+ 196: LOAD_ATTR            co_freevars
+ 206: LOAD_FAST            func
+ 208: LOAD_ATTR            __closure__
+ 218: PRECALL              
+ 222: CALL                 
+ 232: GET_ITER             
+ 234: PRECALL              
+ 238: CALL                 
+ 248: STORE_FAST           nonlocal_vars
+ 250: LOAD_FAST            func
+ 252: LOAD_ATTR            __globals__
+ 262: STORE_FAST           global_ns
+ 264: LOAD_FAST            global_ns
+ 266: LOAD_METHOD          get
+ 288: LOAD_CONST           '__builtins__'
+ 290: LOAD_GLOBAL          builtins
+ 302: LOAD_ATTR            __dict__
+ 312: PRECALL              
+ 316: CALL                 
+ 326: STORE_FAST           builtin_ns
+ 328: LOAD_GLOBAL          NULL + ismodule
+ 340: LOAD_FAST            builtin_ns
+ 342: PRECALL              
+ 346: CALL                 
+ 356: POP_JUMP_FORWARD_IF_FALSE to 372
+ 358: LOAD_FAST            builtin_ns
+ 360: LOAD_ATTR            __dict__
+ 370: STORE_FAST           builtin_ns
+ 372: BUILD_MAP            
+ 374: STORE_FAST           global_vars
+ 376: BUILD_MAP            
+ 378: STORE_FAST           builtin_vars
+ 380: LOAD_GLOBAL          NULL + set
+ 392: PRECALL              
+ 396: CALL                 
+ 406: STORE_FAST           unbound_names
+ 408: LOAD_FAST            code
+ 410: LOAD_ATTR            co_names
+ 420: GET_ITER             
+ 422: FOR_ITER             to 594
+ 424: STORE_FAST           name
+ 426: LOAD_FAST            name
+ 428: LOAD_CONST           ('None', 'True', 'False')
+ 430: CONTAINS_OP          
+ 432: POP_JUMP_FORWARD_IF_FALSE to 436
+ 434: JUMP_BACKWARD        to 422
+ 436: NOP                  
+ 438: LOAD_FAST            global_ns
+ 440: LOAD_FAST            name
+ 442: BINARY_SUBSCR        
+ 452: LOAD_FAST            global_vars
+ 454: LOAD_FAST            name
+ 456: STORE_SUBSCR         
+ 460: JUMP_BACKWARD        to 422
+ 462: PUSH_EXC_INFO        
+ 464: LOAD_GLOBAL          KeyError
+ 476: CHECK_EXC_MATCH      
+ 478: POP_JUMP_FORWARD_IF_FALSE to 586
+ 480: POP_TOP              
+ 482: NOP                  
+ 484: LOAD_FAST            builtin_ns
+ 486: LOAD_FAST            name
+ 488: BINARY_SUBSCR        
+ 498: LOAD_FAST            builtin_vars
+ 500: LOAD_FAST            name
+ 502: STORE_SUBSCR         
+ 506: JUMP_FORWARD         to 582
+ 508: PUSH_EXC_INFO        
+ 510: LOAD_GLOBAL          KeyError
+ 522: CHECK_EXC_MATCH      
+ 524: POP_JUMP_FORWARD_IF_FALSE to 574
+ 526: POP_TOP              
+ 528: LOAD_FAST            unbound_names
+ 530: LOAD_METHOD          add
+ 552: LOAD_FAST            name
+ 554: PRECALL              
+ 558: CALL                 
+ 568: POP_TOP              
+ 570: POP_EXCEPT           
+ 572: JUMP_FORWARD         to 582
+ 574: RERAISE              
+ 576: COPY                 
+ 578: POP_EXCEPT           
+ 580: RERAISE              
+ 582: POP_EXCEPT           
+ 584: JUMP_BACKWARD        to 422
+ 586: RERAISE              
+ 588: COPY                 
+ 590: POP_EXCEPT           
+ 592: RERAISE              
+ 594: LOAD_GLOBAL          NULL + ClosureVars
+ 606: LOAD_FAST            nonlocal_vars
+ 608: LOAD_FAST            global_vars
+ 610: LOAD_FAST            builtin_vars
+ 612: LOAD_FAST            unbound_names
+ 614: PRECALL              
+ 618: CALL                 
+ 628: RETURN_VALUE         

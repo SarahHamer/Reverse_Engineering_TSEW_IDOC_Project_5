@@ -1,0 +1,29 @@
+# Disassembly for importlib.resources.CompatibilityFiles.OrphanPath.__init__
+# From module file: importlib.resources._adapters
+
+## co_consts:
+(None, 1, 'Need at least one path part to construct a path')
+
+## co_names:
+('len', 'ValueError', '_path')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + len
+  14: LOAD_FAST            path_parts
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_CONST           1
+  32: COMPARE_OP           <
+  38: POP_JUMP_FORWARD_IF_FALSE to 70
+  40: LOAD_GLOBAL          NULL + ValueError
+  52: LOAD_CONST           'Need at least one path part to construct a path'
+  54: PRECALL              
+  58: CALL                 
+  68: RAISE_VARARGS        
+  70: LOAD_FAST            path_parts
+  72: LOAD_FAST            self
+  74: STORE_ATTR           _path
+  84: LOAD_CONST           None
+  86: RETURN_VALUE         

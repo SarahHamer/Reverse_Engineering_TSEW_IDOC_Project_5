@@ -1,0 +1,38 @@
+# Disassembly for ast._Unparser.visit_Return
+# From module file: ast
+
+## co_consts:
+(None, 'return', ' ')
+
+## co_names:
+('fill', 'value', 'write', 'traverse')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          fill
+  26: LOAD_CONST           'return'
+  28: PRECALL              
+  32: CALL                 
+  42: POP_TOP              
+  44: LOAD_FAST            node
+  46: LOAD_ATTR            value
+  56: POP_JUMP_FORWARD_IF_FALSE to 156
+  58: LOAD_FAST            self
+  60: LOAD_METHOD          write
+  82: LOAD_CONST           ' '
+  84: PRECALL              
+  88: CALL                 
+  98: POP_TOP              
+ 100: LOAD_FAST            self
+ 102: LOAD_METHOD          traverse
+ 124: LOAD_FAST            node
+ 126: LOAD_ATTR            value
+ 136: PRECALL              
+ 140: CALL                 
+ 150: POP_TOP              
+ 152: LOAD_CONST           None
+ 154: RETURN_VALUE         
+ 156: LOAD_CONST           None
+ 158: RETURN_VALUE         

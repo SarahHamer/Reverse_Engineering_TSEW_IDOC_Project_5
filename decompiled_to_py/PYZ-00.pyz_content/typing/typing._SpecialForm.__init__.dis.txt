@@ -1,0 +1,25 @@
+# Disassembly for typing._SpecialForm.__init__
+# From module file: typing
+
+## co_consts:
+(None,)
+
+## co_names:
+('_getitem', '__name__', '_name', '__doc__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            getitem
+   4: LOAD_FAST            self
+   6: STORE_ATTR           _getitem
+  16: LOAD_FAST            getitem
+  18: LOAD_ATTR            __name__
+  28: LOAD_FAST            self
+  30: STORE_ATTR           _name
+  40: LOAD_FAST            getitem
+  42: LOAD_ATTR            __doc__
+  52: LOAD_FAST            self
+  54: STORE_ATTR           __doc__
+  64: LOAD_CONST           None
+  66: RETURN_VALUE         

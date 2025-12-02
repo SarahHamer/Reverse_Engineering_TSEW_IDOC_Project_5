@@ -1,0 +1,60 @@
+# Disassembly for _pydecimal.Decimal.logb
+# From module file: _pydecimal
+
+## co_consts:
+(" Returns the exponent of the magnitude of self's MSD.\n\n        The result is the integer which is the exponent of the magnitude\n        of the most significant digit of self (as though it were truncated\n        to a single digit while maintaining the value of that digit and\n        without limiting the resulting exponent).\n        ", ('context',), None, 'logb(0)', 1)
+
+## co_names:
+('_check_nans', 'getcontext', '_isinfinity', '_Infinity', '_raise_error', 'DivisionByZero', 'Decimal', 'adjusted', '_fix')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _check_nans
+  26: LOAD_FAST            context
+  28: KW_NAMES             
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_FAST           ans
+  46: LOAD_FAST            ans
+  48: POP_JUMP_FORWARD_IF_FALSE to 54
+  50: LOAD_FAST            ans
+  52: RETURN_VALUE         
+  54: LOAD_FAST            context
+  56: POP_JUMP_FORWARD_IF_NOT_NONE to 86
+  58: LOAD_GLOBAL          NULL + getcontext
+  70: PRECALL              
+  74: CALL                 
+  84: STORE_FAST           context
+  86: LOAD_FAST            self
+  88: LOAD_METHOD          _isinfinity
+ 110: PRECALL              
+ 114: CALL                 
+ 124: POP_JUMP_FORWARD_IF_FALSE to 140
+ 126: LOAD_GLOBAL          _Infinity
+ 138: RETURN_VALUE         
+ 140: LOAD_FAST            self
+ 142: POP_JUMP_FORWARD_IF_TRUE to 200
+ 144: LOAD_FAST            context
+ 146: LOAD_METHOD          _raise_error
+ 168: LOAD_GLOBAL          DivisionByZero
+ 180: LOAD_CONST           'logb(0)'
+ 182: LOAD_CONST           1
+ 184: PRECALL              
+ 188: CALL                 
+ 198: RETURN_VALUE         
+ 200: LOAD_GLOBAL          NULL + Decimal
+ 212: LOAD_FAST            self
+ 214: LOAD_METHOD          adjusted
+ 236: PRECALL              
+ 240: CALL                 
+ 250: PRECALL              
+ 254: CALL                 
+ 264: STORE_FAST           ans
+ 266: LOAD_FAST            ans
+ 268: LOAD_METHOD          _fix
+ 290: LOAD_FAST            context
+ 292: PRECALL              
+ 296: CALL                 
+ 306: RETURN_VALUE         

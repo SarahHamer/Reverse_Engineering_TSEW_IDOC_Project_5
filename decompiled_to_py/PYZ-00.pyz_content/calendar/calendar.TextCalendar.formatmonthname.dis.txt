@@ -1,0 +1,31 @@
+# Disassembly for calendar.TextCalendar.formatmonthname
+# From module file: calendar
+
+## co_consts:
+('\n        Return a formatted month name.\n        ', ' ')
+
+## co_names:
+('month_name', 'center')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          month_name
+  14: LOAD_FAST            themonth
+  16: BINARY_SUBSCR        
+  26: STORE_FAST           s
+  28: LOAD_FAST            withyear
+  30: POP_JUMP_FORWARD_IF_FALSE to 46
+  32: LOAD_FAST            s
+  34: FORMAT_VALUE         str
+  36: LOAD_CONST           ' '
+  38: LOAD_FAST            theyear
+  40: FORMAT_VALUE         repr
+  42: BUILD_STRING         
+  44: STORE_FAST           s
+  46: LOAD_FAST            s
+  48: LOAD_METHOD          center
+  70: LOAD_FAST            width
+  72: PRECALL              
+  76: CALL                 
+  86: RETURN_VALUE         

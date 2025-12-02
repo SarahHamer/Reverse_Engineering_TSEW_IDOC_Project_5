@@ -1,0 +1,19 @@
+# Disassembly for email.Header.__eq__
+# From module file: email.header
+
+## co_consts:
+(None,)
+
+## co_names:
+('str',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            other
+   4: LOAD_GLOBAL          NULL + str
+  16: LOAD_FAST            self
+  18: PRECALL              
+  22: CALL                 
+  32: COMPARE_OP           ==
+  38: RETURN_VALUE         

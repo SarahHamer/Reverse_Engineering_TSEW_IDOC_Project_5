@@ -1,0 +1,107 @@
+# Disassembly for textwrap.TextWrapper._handle_long_word
+# From module file: textwrap
+
+## co_consts:
+('_handle_long_word(chunks : [string],\n                             cur_line : [string],\n                             cur_len : int, width : int)\n\n        Handle a chunk of text (most likely a word, not whitespace) that\n        is too long to fit in any line.\n        ', 1, -1, '-', 0, <code object <genexpr> at 0x0000024069466DB0, file "textwrap.py", line 221>, None)
+
+## co_names:
+('break_long_words', 'break_on_hyphens', 'len', 'rfind', 'any', 'append', 'pop')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            width
+   4: LOAD_CONST           1
+   6: COMPARE_OP           <
+  12: POP_JUMP_FORWARD_IF_FALSE to 20
+  14: LOAD_CONST           1
+  16: STORE_FAST           space_left
+  18: JUMP_FORWARD         to 30
+  20: LOAD_FAST            width
+  22: LOAD_FAST            cur_len
+  24: BINARY_OP            -
+  28: STORE_FAST           space_left
+  30: LOAD_FAST            self
+  32: LOAD_ATTR            break_long_words
+  42: POP_JUMP_FORWARD_IF_FALSE to 338
+  44: LOAD_FAST            space_left
+  46: STORE_FAST           end
+  48: LOAD_FAST            reversed_chunks
+  50: LOAD_CONST           -1
+  52: BINARY_SUBSCR        
+  62: STORE_FAST           chunk
+  64: LOAD_FAST            self
+  66: LOAD_ATTR            break_on_hyphens
+  76: POP_JUMP_FORWARD_IF_FALSE to 250
+  78: LOAD_GLOBAL          NULL + len
+  90: LOAD_FAST            chunk
+  92: PRECALL              
+  96: CALL                 
+ 106: LOAD_FAST            space_left
+ 108: COMPARE_OP           >
+ 114: POP_JUMP_FORWARD_IF_FALSE to 250
+ 116: LOAD_FAST            chunk
+ 118: LOAD_METHOD          rfind
+ 140: LOAD_CONST           '-'
+ 142: LOAD_CONST           0
+ 144: LOAD_FAST            space_left
+ 146: PRECALL              
+ 150: CALL                 
+ 160: STORE_FAST           hyphen
+ 162: LOAD_FAST            hyphen
+ 164: LOAD_CONST           0
+ 166: COMPARE_OP           >
+ 172: POP_JUMP_FORWARD_IF_FALSE to 250
+ 174: LOAD_GLOBAL          NULL + any
+ 186: LOAD_CONST           <code object <genexpr> at 0x0000024069466DB0, file "textwrap.py", line 221>
+ 188: MAKE_FUNCTION        
+ 190: LOAD_FAST            chunk
+ 192: LOAD_CONST           None
+ 194: LOAD_FAST            hyphen
+ 196: BUILD_SLICE          
+ 198: BINARY_SUBSCR        
+ 208: GET_ITER             
+ 210: PRECALL              
+ 214: CALL                 
+ 224: PRECALL              
+ 228: CALL                 
+ 238: POP_JUMP_FORWARD_IF_FALSE to 250
+ 240: LOAD_FAST            hyphen
+ 242: LOAD_CONST           1
+ 244: BINARY_OP            +
+ 248: STORE_FAST           end
+ 250: LOAD_FAST            cur_line
+ 252: LOAD_METHOD          append
+ 274: LOAD_FAST            chunk
+ 276: LOAD_CONST           None
+ 278: LOAD_FAST            end
+ 280: BUILD_SLICE          
+ 282: BINARY_SUBSCR        
+ 292: PRECALL              
+ 296: CALL                 
+ 306: POP_TOP              
+ 308: LOAD_FAST            chunk
+ 310: LOAD_FAST            end
+ 312: LOAD_CONST           None
+ 314: BUILD_SLICE          
+ 316: BINARY_SUBSCR        
+ 326: LOAD_FAST            reversed_chunks
+ 328: LOAD_CONST           -1
+ 330: STORE_SUBSCR         
+ 334: LOAD_CONST           None
+ 336: RETURN_VALUE         
+ 338: LOAD_FAST            cur_line
+ 340: POP_JUMP_FORWARD_IF_TRUE to 424
+ 342: LOAD_FAST            cur_line
+ 344: LOAD_METHOD          append
+ 366: LOAD_FAST            reversed_chunks
+ 368: LOAD_METHOD          pop
+ 390: PRECALL              
+ 394: CALL                 
+ 404: PRECALL              
+ 408: CALL                 
+ 418: POP_TOP              
+ 420: LOAD_CONST           None
+ 422: RETURN_VALUE         
+ 424: LOAD_CONST           None
+ 426: RETURN_VALUE         

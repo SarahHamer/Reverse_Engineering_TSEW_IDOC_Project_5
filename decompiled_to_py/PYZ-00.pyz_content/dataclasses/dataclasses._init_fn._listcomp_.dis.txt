@@ -1,0 +1,23 @@
+# Disassembly for dataclasses._init_fn.<listcomp>
+# From module file: dataclasses
+
+## co_consts:
+()
+
+## co_names:
+('_init_param',)
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 42
+   8: STORE_FAST           f
+  10: LOAD_GLOBAL          NULL + _init_param
+  22: LOAD_FAST            f
+  24: PRECALL              
+  28: CALL                 
+  38: LIST_APPEND          
+  40: JUMP_BACKWARD        to 6
+  42: RETURN_VALUE         

@@ -1,0 +1,23 @@
+# Disassembly for tracemalloc.Statistic.__init__
+# From module file: tracemalloc
+
+## co_consts:
+(None,)
+
+## co_names:
+('traceback', 'size', 'count')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            traceback
+   4: LOAD_FAST            self
+   6: STORE_ATTR           traceback
+  16: LOAD_FAST            size
+  18: LOAD_FAST            self
+  20: STORE_ATTR           size
+  30: LOAD_FAST            count
+  32: LOAD_FAST            self
+  34: STORE_ATTR           count
+  44: LOAD_CONST           None
+  46: RETURN_VALUE         

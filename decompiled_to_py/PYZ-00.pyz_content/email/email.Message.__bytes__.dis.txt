@@ -1,0 +1,17 @@
+# Disassembly for email.Message.__bytes__
+# From module file: email.message
+
+## co_consts:
+('Return the entire formatted message as a bytes object.\n        ',)
+
+## co_names:
+('as_bytes',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          as_bytes
+  26: PRECALL              
+  30: CALL                 
+  40: RETURN_VALUE         

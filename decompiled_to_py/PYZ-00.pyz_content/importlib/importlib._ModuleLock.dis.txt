@@ -1,0 +1,35 @@
+# Disassembly for importlib._ModuleLock
+# From module file: importlib._bootstrap
+
+## co_consts:
+('_ModuleLock', 'A recursive lock implementation which is able to detect deadlocks\n    (e.g. thread 1 trying to take locks A then B, and thread 2 trying to\n    take locks B then A).\n    ', <code object __init__ at 0x000002406921FB20, file "importlib\_bootstrap.py", line 71>, <code object has_deadlock at 0x000002406934EF70, file "importlib\_bootstrap.py", line 79>, <code object acquire at 0x0000024068DBC8C0, file "importlib\_bootstrap.py", line 100>, <code object release at 0x0000024068C8EED0, file "importlib\_bootstrap.py", line 125>, <code object __repr__ at 0x000002406944A230, file "importlib\_bootstrap.py", line 138>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', 'has_deadlock', 'acquire', 'release', '__repr__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_ModuleLock'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'A recursive lock implementation which is able to detect deadlocks\n    (e.g. thread 1 trying to take locks A then B, and thread 2 trying to\n    take locks B then A).\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object __init__ at 0x000002406921FB20, file "importlib\_bootstrap.py", line 71>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           __init__
+  20: LOAD_CONST           <code object has_deadlock at 0x000002406934EF70, file "importlib\_bootstrap.py", line 79>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           has_deadlock
+  26: LOAD_CONST           <code object acquire at 0x0000024068DBC8C0, file "importlib\_bootstrap.py", line 100>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           acquire
+  32: LOAD_CONST           <code object release at 0x0000024068C8EED0, file "importlib\_bootstrap.py", line 125>
+  34: MAKE_FUNCTION        
+  36: STORE_NAME           release
+  38: LOAD_CONST           <code object __repr__ at 0x000002406944A230, file "importlib\_bootstrap.py", line 138>
+  40: MAKE_FUNCTION        
+  42: STORE_NAME           __repr__
+  44: LOAD_CONST           None
+  46: RETURN_VALUE         

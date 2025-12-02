@@ -1,0 +1,23 @@
+# Disassembly for _pydecimal.DecimalException
+# From module file: _pydecimal
+
+## co_consts:
+('DecimalException', "Base exception class.\n\n    Used exceptions derive from this.\n    If an exception derives from another exception besides this (such as\n    Underflow (Inexact, Rounded, Subnormal) that indicates that it is only\n    called if the others are present.  This isn't actually used for\n    anything, though.\n\n    handle  -- Called when context._raise_error is called and the\n               trap_enabler is not set.  First argument is self, second is the\n               context.  More arguments can be given, those being after\n               the explanation in _raise_error (For example,\n               context._raise_error(NewError, '(-x)!', self._sign) would\n               call NewError().handle(context, self._sign).)\n\n    To define a new exception, it should be sufficient to have it derive\n    from DecimalException.\n    ", <code object handle at 0x000002406943BB70, file "_pydecimal.py", line 211>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'handle')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'DecimalException'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           "Base exception class.\n\n    Used exceptions derive from this.\n    If an exception derives from another exception besides this (such as\n    Underflow (Inexact, Rounded, Subnormal) that indicates that it is only\n    called if the others are present.  This isn't actually used for\n    anything, though.\n\n    handle  -- Called when context._raise_error is called and the\n               trap_enabler is not set.  First argument is self, second is the\n               context.  More arguments can be given, those being after\n               the explanation in _raise_error (For example,\n               context._raise_error(NewError, '(-x)!', self._sign) would\n               call NewError().handle(context, self._sign).)\n\n    To define a new exception, it should be sufficient to have it derive\n    from DecimalException.\n    "
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object handle at 0x000002406943BB70, file "_pydecimal.py", line 211>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           handle
+  20: LOAD_CONST           None
+  22: RETURN_VALUE         

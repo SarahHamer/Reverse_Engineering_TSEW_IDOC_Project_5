@@ -1,0 +1,139 @@
+# Disassembly for zipfile.ZipFile.write
+# From module file: zipfile
+
+## co_consts:
+('Put the bytes from filename into the archive under the name\n        arcname.', 'Attempt to write to ZIP archive that was already closed', "Can't write to ZIP archive while an open writing handle exists", ('strict_timestamps',), 0, None, 'rb', 'w', 8192)
+
+## co_names:
+('fp', 'ValueError', '_writing', 'ZipInfo', 'from_file', '_strict_timestamps', 'is_dir', 'compress_size', 'CRC', 'mkdir', 'compress_type', 'compression', '_compresslevel', 'compresslevel', 'open', 'shutil', 'copyfileobj')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            fp
+  14: POP_JUMP_FORWARD_IF_TRUE to 46
+  16: LOAD_GLOBAL          NULL + ValueError
+  28: LOAD_CONST           'Attempt to write to ZIP archive that was already closed'
+  30: PRECALL              
+  34: CALL                 
+  44: RAISE_VARARGS        
+  46: LOAD_FAST            self
+  48: LOAD_ATTR            _writing
+  58: POP_JUMP_FORWARD_IF_FALSE to 90
+  60: LOAD_GLOBAL          NULL + ValueError
+  72: LOAD_CONST           "Can't write to ZIP archive while an open writing handle exists"
+  74: PRECALL              
+  78: CALL                 
+  88: RAISE_VARARGS        
+  90: LOAD_GLOBAL          ZipInfo
+ 102: LOAD_METHOD          from_file
+ 124: LOAD_FAST            filename
+ 126: LOAD_FAST            arcname
+ 128: LOAD_FAST            self
+ 130: LOAD_ATTR            _strict_timestamps
+ 140: KW_NAMES             
+ 142: PRECALL              
+ 146: CALL                 
+ 156: STORE_FAST           zinfo
+ 158: LOAD_FAST            zinfo
+ 160: LOAD_METHOD          is_dir
+ 182: PRECALL              
+ 186: CALL                 
+ 196: POP_JUMP_FORWARD_IF_FALSE to 272
+ 198: LOAD_CONST           0
+ 200: LOAD_FAST            zinfo
+ 202: STORE_ATTR           compress_size
+ 212: LOAD_CONST           0
+ 214: LOAD_FAST            zinfo
+ 216: STORE_ATTR           CRC
+ 226: LOAD_FAST            self
+ 228: LOAD_METHOD          mkdir
+ 250: LOAD_FAST            zinfo
+ 252: PRECALL              
+ 256: CALL                 
+ 266: POP_TOP              
+ 268: LOAD_CONST           None
+ 270: RETURN_VALUE         
+ 272: LOAD_FAST            compress_type
+ 274: POP_JUMP_FORWARD_IF_NONE to 292
+ 276: LOAD_FAST            compress_type
+ 278: LOAD_FAST            zinfo
+ 280: STORE_ATTR           compress_type
+ 290: JUMP_FORWARD         to 316
+ 292: LOAD_FAST            self
+ 294: LOAD_ATTR            compression
+ 304: LOAD_FAST            zinfo
+ 306: STORE_ATTR           compress_type
+ 316: LOAD_FAST            compresslevel
+ 318: POP_JUMP_FORWARD_IF_NONE to 336
+ 320: LOAD_FAST            compresslevel
+ 322: LOAD_FAST            zinfo
+ 324: STORE_ATTR           _compresslevel
+ 334: JUMP_FORWARD         to 360
+ 336: LOAD_FAST            self
+ 338: LOAD_ATTR            compresslevel
+ 348: LOAD_FAST            zinfo
+ 350: STORE_ATTR           _compresslevel
+ 360: LOAD_GLOBAL          NULL + open
+ 372: LOAD_FAST            filename
+ 374: LOAD_CONST           'rb'
+ 376: PRECALL              
+ 380: CALL                 
+ 390: BEFORE_WITH          
+ 392: STORE_FAST           src
+ 394: LOAD_FAST            self
+ 396: LOAD_METHOD          open
+ 418: LOAD_FAST            zinfo
+ 420: LOAD_CONST           'w'
+ 422: PRECALL              
+ 426: CALL                 
+ 436: BEFORE_WITH          
+ 438: STORE_FAST           dest
+ 440: LOAD_GLOBAL          NULL + shutil
+ 452: LOAD_ATTR            copyfileobj
+ 462: LOAD_FAST            src
+ 464: LOAD_FAST            dest
+ 466: LOAD_CONST           8192
+ 468: PRECALL              
+ 472: CALL                 
+ 482: POP_TOP              
+ 484: LOAD_CONST           None
+ 486: LOAD_CONST           None
+ 488: LOAD_CONST           None
+ 490: PRECALL              
+ 494: CALL                 
+ 504: POP_TOP              
+ 506: JUMP_FORWARD         to 530
+ 508: PUSH_EXC_INFO        
+ 510: WITH_EXCEPT_START    
+ 512: POP_JUMP_FORWARD_IF_TRUE to 522
+ 514: RERAISE              
+ 516: COPY                 
+ 518: POP_EXCEPT           
+ 520: RERAISE              
+ 522: POP_TOP              
+ 524: POP_EXCEPT           
+ 526: POP_TOP              
+ 528: POP_TOP              
+ 530: LOAD_CONST           None
+ 532: LOAD_CONST           None
+ 534: LOAD_CONST           None
+ 536: PRECALL              
+ 540: CALL                 
+ 550: POP_TOP              
+ 552: LOAD_CONST           None
+ 554: RETURN_VALUE         
+ 556: PUSH_EXC_INFO        
+ 558: WITH_EXCEPT_START    
+ 560: POP_JUMP_FORWARD_IF_TRUE to 570
+ 562: RERAISE              
+ 564: COPY                 
+ 566: POP_EXCEPT           
+ 568: RERAISE              
+ 570: POP_TOP              
+ 572: POP_EXCEPT           
+ 574: POP_TOP              
+ 576: POP_TOP              
+ 578: LOAD_CONST           None
+ 580: RETURN_VALUE         

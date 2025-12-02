@@ -1,0 +1,44 @@
+# Disassembly for ast._Unparser.visit_keyword
+# From module file: ast
+
+## co_consts:
+(None, '**', '=')
+
+## co_names:
+('arg', 'write', 'traverse', 'value')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            node
+   4: LOAD_ATTR            arg
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 60
+  16: LOAD_FAST            self
+  18: LOAD_METHOD          write
+  40: LOAD_CONST           '**'
+  42: PRECALL              
+  46: CALL                 
+  56: POP_TOP              
+  58: JUMP_FORWARD         to 154
+  60: LOAD_FAST            self
+  62: LOAD_METHOD          write
+  84: LOAD_FAST            node
+  86: LOAD_ATTR            arg
+  96: PRECALL              
+ 100: CALL                 
+ 110: POP_TOP              
+ 112: LOAD_FAST            self
+ 114: LOAD_METHOD          write
+ 136: LOAD_CONST           '='
+ 138: PRECALL              
+ 142: CALL                 
+ 152: POP_TOP              
+ 154: LOAD_FAST            self
+ 156: LOAD_METHOD          traverse
+ 178: LOAD_FAST            node
+ 180: LOAD_ATTR            value
+ 190: PRECALL              
+ 194: CALL                 
+ 204: POP_TOP              
+ 206: LOAD_CONST           None
+ 208: RETURN_VALUE         

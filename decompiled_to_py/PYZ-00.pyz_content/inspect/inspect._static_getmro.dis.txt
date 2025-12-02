@@ -1,0 +1,21 @@
+# Disassembly for inspect._static_getmro
+# From module file: inspect
+
+## co_consts:
+(None, '__mro__')
+
+## co_names:
+('type', '__dict__', '__get__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          type
+  14: LOAD_ATTR            __dict__
+  24: LOAD_CONST           '__mro__'
+  26: BINARY_SUBSCR        
+  36: LOAD_METHOD          __get__
+  58: LOAD_FAST            klass
+  60: PRECALL              
+  64: CALL                 
+  74: RETURN_VALUE         

@@ -1,0 +1,28 @@
+# Disassembly for calendar.different_locale.__exit__
+# From module file: calendar
+
+## co_consts:
+(None,)
+
+## co_names:
+('oldlocale', '_locale', 'setlocale', 'LC_TIME')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            oldlocale
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 20
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         
+  20: LOAD_GLOBAL          NULL + _locale
+  32: LOAD_ATTR            setlocale
+  42: LOAD_GLOBAL          _locale
+  54: LOAD_ATTR            LC_TIME
+  64: LOAD_FAST            self
+  66: LOAD_ATTR            oldlocale
+  76: PRECALL              
+  80: CALL                 
+  90: POP_TOP              
+  92: LOAD_CONST           None
+  94: RETURN_VALUE         

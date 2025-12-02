@@ -1,0 +1,154 @@
+# Disassembly for py_compile.main
+# From module file: py_compile
+
+## co_consts:
+(None, 0, 'A simple command-line interface for py_compile module.', ('description',), '-q', '--quiet', 'store_true', 'Suppress error output', ('action', 'help'), 'filenames', '+', 'Files to compile', ('nargs', 'help'), '-', <code object <listcomp> at 0x000002406945E3D0, file "py_compile.py", line 193>, True, ('doraise',), 1)
+
+## co_names:
+('argparse', 'ArgumentParser', 'add_argument', 'parse_args', 'filenames', 'sys', 'stdin', 'readlines', 'compile', 'PyCompileError', 'quiet', 'exit', 'msg', 'OSError', 'str')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           None
+   6: IMPORT_NAME          argparse
+   8: STORE_FAST           argparse
+  10: LOAD_CONST           'A simple command-line interface for py_compile module.'
+  12: STORE_FAST           description
+  14: LOAD_FAST            argparse
+  16: LOAD_METHOD          ArgumentParser
+  38: LOAD_FAST            description
+  40: KW_NAMES             
+  42: PRECALL              
+  46: CALL                 
+  56: STORE_FAST           parser
+  58: LOAD_FAST            parser
+  60: LOAD_METHOD          add_argument
+  82: LOAD_CONST           '-q'
+  84: LOAD_CONST           '--quiet'
+  86: LOAD_CONST           'store_true'
+  88: LOAD_CONST           'Suppress error output'
+  90: KW_NAMES             
+  92: PRECALL              
+  96: CALL                 
+ 106: POP_TOP              
+ 108: LOAD_FAST            parser
+ 110: LOAD_METHOD          add_argument
+ 132: LOAD_CONST           'filenames'
+ 134: LOAD_CONST           '+'
+ 136: LOAD_CONST           'Files to compile'
+ 138: KW_NAMES             
+ 140: PRECALL              
+ 144: CALL                 
+ 154: POP_TOP              
+ 156: LOAD_FAST            parser
+ 158: LOAD_METHOD          parse_args
+ 180: PRECALL              
+ 184: CALL                 
+ 194: STORE_FAST           args
+ 196: LOAD_FAST            args
+ 198: LOAD_ATTR            filenames
+ 208: LOAD_CONST           '-'
+ 210: BUILD_LIST           
+ 212: COMPARE_OP           ==
+ 218: POP_JUMP_FORWARD_IF_FALSE to 302
+ 220: LOAD_CONST           <code object <listcomp> at 0x000002406945E3D0, file "py_compile.py", line 193>
+ 222: MAKE_FUNCTION        
+ 224: LOAD_GLOBAL          sys
+ 236: LOAD_ATTR            stdin
+ 246: LOAD_METHOD          readlines
+ 268: PRECALL              
+ 272: CALL                 
+ 282: GET_ITER             
+ 284: PRECALL              
+ 288: CALL                 
+ 298: STORE_FAST           filenames
+ 300: JUMP_FORWARD         to 316
+ 302: LOAD_FAST            args
+ 304: LOAD_ATTR            filenames
+ 314: STORE_FAST           filenames
+ 316: LOAD_FAST            filenames
+ 318: GET_ITER             
+ 320: FOR_ITER             to 684
+ 322: STORE_FAST           filename
+ 324: NOP                  
+ 326: LOAD_GLOBAL          NULL + compile
+ 338: LOAD_FAST            filename
+ 340: LOAD_CONST           True
+ 342: KW_NAMES             
+ 344: PRECALL              
+ 348: CALL                 
+ 358: POP_TOP              
+ 360: JUMP_BACKWARD        to 320
+ 362: PUSH_EXC_INFO        
+ 364: LOAD_GLOBAL          PyCompileError
+ 376: CHECK_EXC_MATCH      
+ 378: POP_JUMP_FORWARD_IF_FALSE to 512
+ 380: STORE_FAST           error
+ 382: LOAD_FAST            args
+ 384: LOAD_ATTR            quiet
+ 394: POP_JUMP_FORWARD_IF_FALSE to 440
+ 396: LOAD_FAST            parser
+ 398: LOAD_METHOD          exit
+ 420: LOAD_CONST           1
+ 422: PRECALL              
+ 426: CALL                 
+ 436: POP_TOP              
+ 438: JUMP_FORWARD         to 494
+ 440: LOAD_FAST            parser
+ 442: LOAD_METHOD          exit
+ 464: LOAD_CONST           1
+ 466: LOAD_FAST            error
+ 468: LOAD_ATTR            msg
+ 478: PRECALL              
+ 482: CALL                 
+ 492: POP_TOP              
+ 494: POP_EXCEPT           
+ 496: LOAD_CONST           None
+ 498: STORE_FAST           error
+ 500: DELETE_FAST          error
+ 502: JUMP_BACKWARD        to 320
+ 504: LOAD_CONST           None
+ 506: STORE_FAST           error
+ 508: DELETE_FAST          error
+ 510: RERAISE              
+ 512: LOAD_GLOBAL          OSError
+ 524: CHECK_EXC_MATCH      
+ 526: POP_JUMP_FORWARD_IF_FALSE to 676
+ 528: STORE_FAST           error
+ 530: LOAD_FAST            args
+ 532: LOAD_ATTR            quiet
+ 542: POP_JUMP_FORWARD_IF_FALSE to 588
+ 544: LOAD_FAST            parser
+ 546: LOAD_METHOD          exit
+ 568: LOAD_CONST           1
+ 570: PRECALL              
+ 574: CALL                 
+ 584: POP_TOP              
+ 586: JUMP_FORWARD         to 658
+ 588: LOAD_FAST            parser
+ 590: LOAD_METHOD          exit
+ 612: LOAD_CONST           1
+ 614: LOAD_GLOBAL          NULL + str
+ 626: LOAD_FAST            error
+ 628: PRECALL              
+ 632: CALL                 
+ 642: PRECALL              
+ 646: CALL                 
+ 656: POP_TOP              
+ 658: POP_EXCEPT           
+ 660: LOAD_CONST           None
+ 662: STORE_FAST           error
+ 664: DELETE_FAST          error
+ 666: JUMP_BACKWARD        to 320
+ 668: LOAD_CONST           None
+ 670: STORE_FAST           error
+ 672: DELETE_FAST          error
+ 674: RERAISE              
+ 676: RERAISE              
+ 678: COPY                 
+ 680: POP_EXCEPT           
+ 682: RERAISE              
+ 684: LOAD_CONST           None
+ 686: RETURN_VALUE         

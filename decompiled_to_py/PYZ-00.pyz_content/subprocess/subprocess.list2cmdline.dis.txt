@@ -1,0 +1,143 @@
+# Disassembly for subprocess.list2cmdline
+# From module file: subprocess
+
+## co_consts:
+('\n    Translate a sequence of arguments into a command line\n    string, using the same rules as the MS C runtime:\n\n    1) Arguments are delimited by white space, which is either a\n       space or a tab.\n\n    2) A string surrounded by double quotation marks is\n       interpreted as a single argument, regardless of white space\n       contained within.  A quoted string can be embedded in an\n       argument.\n\n    3) A double quotation mark preceded by a backslash is\n       interpreted as a literal double quotation mark.\n\n    4) Backslashes are interpreted literally, unless they\n       immediately precede a double quotation mark.\n\n    5) If backslashes immediately precede a double quotation mark,\n       every pair of backslashes is interpreted as a literal\n       backslash.  If the number of backslashes is odd, the last\n       backslash escapes the next double quotation mark as\n       described in rule 3.\n    ', False, ' ', '\t', '"', '\\', 2, '\\"', '')
+
+## co_names:
+('map', 'os', 'fsdecode', 'append', 'len', 'extend', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           result
+   6: LOAD_CONST           False
+   8: STORE_FAST           needquote
+  10: LOAD_GLOBAL          NULL + map
+  22: LOAD_GLOBAL          os
+  34: LOAD_ATTR            fsdecode
+  44: LOAD_FAST            seq
+  46: PRECALL              
+  50: CALL                 
+  60: GET_ITER             
+  62: EXTENDED_ARG         
+  64: FOR_ITER             to 622
+  66: STORE_FAST           arg
+  68: BUILD_LIST           
+  70: STORE_FAST           bs_buf
+  72: LOAD_FAST            result
+  74: POP_JUMP_FORWARD_IF_FALSE to 118
+  76: LOAD_FAST            result
+  78: LOAD_METHOD          append
+ 100: LOAD_CONST           ' '
+ 102: PRECALL              
+ 106: CALL                 
+ 116: POP_TOP              
+ 118: LOAD_CONST           ' '
+ 120: LOAD_FAST            arg
+ 122: CONTAINS_OP          
+ 124: JUMP_IF_TRUE_OR_POP  to 138
+ 126: LOAD_CONST           '\t'
+ 128: LOAD_FAST            arg
+ 130: CONTAINS_OP          
+ 132: JUMP_IF_TRUE_OR_POP  to 138
+ 134: LOAD_FAST            arg
+ 136: UNARY_NOT            
+ 138: STORE_FAST           needquote
+ 140: LOAD_FAST            needquote
+ 142: POP_JUMP_FORWARD_IF_FALSE to 186
+ 144: LOAD_FAST            result
+ 146: LOAD_METHOD          append
+ 168: LOAD_CONST           '"'
+ 170: PRECALL              
+ 174: CALL                 
+ 184: POP_TOP              
+ 186: LOAD_FAST            arg
+ 188: GET_ITER             
+ 190: FOR_ITER             to 484
+ 192: STORE_FAST           c
+ 194: LOAD_FAST            c
+ 196: LOAD_CONST           '\\'
+ 198: COMPARE_OP           ==
+ 204: POP_JUMP_FORWARD_IF_FALSE to 250
+ 206: LOAD_FAST            bs_buf
+ 208: LOAD_METHOD          append
+ 230: LOAD_FAST            c
+ 232: PRECALL              
+ 236: CALL                 
+ 246: POP_TOP              
+ 248: JUMP_BACKWARD        to 190
+ 250: LOAD_FAST            c
+ 252: LOAD_CONST           '"'
+ 254: COMPARE_OP           ==
+ 260: POP_JUMP_FORWARD_IF_FALSE to 390
+ 262: LOAD_FAST            result
+ 264: LOAD_METHOD          append
+ 286: LOAD_CONST           '\\'
+ 288: LOAD_GLOBAL          NULL + len
+ 300: LOAD_FAST            bs_buf
+ 302: PRECALL              
+ 306: CALL                 
+ 316: BINARY_OP            *
+ 320: LOAD_CONST           2
+ 322: BINARY_OP            *
+ 326: PRECALL              
+ 330: CALL                 
+ 340: POP_TOP              
+ 342: BUILD_LIST           
+ 344: STORE_FAST           bs_buf
+ 346: LOAD_FAST            result
+ 348: LOAD_METHOD          append
+ 370: LOAD_CONST           '\\"'
+ 372: PRECALL              
+ 376: CALL                 
+ 386: POP_TOP              
+ 388: JUMP_BACKWARD        to 190
+ 390: LOAD_FAST            bs_buf
+ 392: POP_JUMP_FORWARD_IF_FALSE to 440
+ 394: LOAD_FAST            result
+ 396: LOAD_METHOD          extend
+ 418: LOAD_FAST            bs_buf
+ 420: PRECALL              
+ 424: CALL                 
+ 434: POP_TOP              
+ 436: BUILD_LIST           
+ 438: STORE_FAST           bs_buf
+ 440: LOAD_FAST            result
+ 442: LOAD_METHOD          append
+ 464: LOAD_FAST            c
+ 466: PRECALL              
+ 470: CALL                 
+ 480: POP_TOP              
+ 482: JUMP_BACKWARD        to 190
+ 484: LOAD_FAST            bs_buf
+ 486: POP_JUMP_FORWARD_IF_FALSE to 530
+ 488: LOAD_FAST            result
+ 490: LOAD_METHOD          extend
+ 512: LOAD_FAST            bs_buf
+ 514: PRECALL              
+ 518: CALL                 
+ 528: POP_TOP              
+ 530: LOAD_FAST            needquote
+ 532: POP_JUMP_FORWARD_IF_FALSE to 618
+ 534: LOAD_FAST            result
+ 536: LOAD_METHOD          extend
+ 558: LOAD_FAST            bs_buf
+ 560: PRECALL              
+ 564: CALL                 
+ 574: POP_TOP              
+ 576: LOAD_FAST            result
+ 578: LOAD_METHOD          append
+ 600: LOAD_CONST           '"'
+ 602: PRECALL              
+ 606: CALL                 
+ 616: POP_TOP              
+ 618: EXTENDED_ARG         
+ 620: JUMP_BACKWARD        to 62
+ 622: LOAD_CONST           ''
+ 624: LOAD_METHOD          join
+ 646: LOAD_FAST            result
+ 648: PRECALL              
+ 652: CALL                 
+ 662: RETURN_VALUE         

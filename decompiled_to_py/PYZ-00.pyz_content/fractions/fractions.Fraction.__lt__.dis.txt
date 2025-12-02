@@ -1,0 +1,20 @@
+# Disassembly for fractions.Fraction.__lt__
+# From module file: fractions
+
+## co_consts:
+('a < b',)
+
+## co_names:
+('_richcmp', 'operator', 'lt')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            a
+   4: LOAD_METHOD          _richcmp
+  26: LOAD_FAST            b
+  28: LOAD_GLOBAL          operator
+  40: LOAD_ATTR            lt
+  50: PRECALL              
+  54: CALL                 
+  64: RETURN_VALUE         

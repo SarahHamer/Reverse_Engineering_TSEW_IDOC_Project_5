@@ -1,0 +1,25 @@
+# Disassembly for email.BufferedSubFile.__next__
+# From module file: email.feedparser
+
+## co_consts:
+(None, '')
+
+## co_names:
+('readline', 'StopIteration')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          readline
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           line
+  42: LOAD_FAST            line
+  44: LOAD_CONST           ''
+  46: COMPARE_OP           ==
+  52: POP_JUMP_FORWARD_IF_FALSE to 68
+  54: LOAD_GLOBAL          StopIteration
+  66: RAISE_VARARGS        
+  68: LOAD_FAST            line
+  70: RETURN_VALUE         

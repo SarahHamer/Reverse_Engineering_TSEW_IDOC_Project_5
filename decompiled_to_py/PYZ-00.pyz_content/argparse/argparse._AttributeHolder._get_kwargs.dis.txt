@@ -1,0 +1,21 @@
+# Disassembly for argparse._AttributeHolder._get_kwargs
+# From module file: argparse
+
+## co_consts:
+(None,)
+
+## co_names:
+('list', '__dict__', 'items')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + list
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            __dict__
+  26: LOAD_METHOD          items
+  48: PRECALL              
+  52: CALL                 
+  62: PRECALL              
+  66: CALL                 
+  76: RETURN_VALUE         

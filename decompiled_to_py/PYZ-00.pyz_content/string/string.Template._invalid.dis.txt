@@ -1,0 +1,66 @@
+# Disassembly for string.Template._invalid
+# From module file: string
+
+## co_consts:
+(None, 'invalid', True, ('keepends',), 1, '', -1, 'Invalid placeholder in string: line %d, col %d')
+
+## co_names:
+('start', 'template', 'splitlines', 'len', 'join', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            mo
+   4: LOAD_METHOD          start
+  26: LOAD_CONST           'invalid'
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           i
+  44: LOAD_FAST            self
+  46: LOAD_ATTR            template
+  56: LOAD_CONST           None
+  58: LOAD_FAST            i
+  60: BUILD_SLICE          
+  62: BINARY_SUBSCR        
+  72: LOAD_METHOD          splitlines
+  94: LOAD_CONST           True
+  96: KW_NAMES             
+  98: PRECALL              
+ 102: CALL                 
+ 112: STORE_FAST           lines
+ 114: LOAD_FAST            lines
+ 116: POP_JUMP_FORWARD_IF_TRUE to 128
+ 118: LOAD_CONST           1
+ 120: STORE_FAST           colno
+ 122: LOAD_CONST           1
+ 124: STORE_FAST           lineno
+ 126: JUMP_FORWARD         to 248
+ 128: LOAD_FAST            i
+ 130: LOAD_GLOBAL          NULL + len
+ 142: LOAD_CONST           ''
+ 144: LOAD_METHOD          join
+ 166: LOAD_FAST            lines
+ 168: LOAD_CONST           None
+ 170: LOAD_CONST           -1
+ 172: BUILD_SLICE          
+ 174: BINARY_SUBSCR        
+ 184: PRECALL              
+ 188: CALL                 
+ 198: PRECALL              
+ 202: CALL                 
+ 212: BINARY_OP            -
+ 216: STORE_FAST           colno
+ 218: LOAD_GLOBAL          NULL + len
+ 230: LOAD_FAST            lines
+ 232: PRECALL              
+ 236: CALL                 
+ 246: STORE_FAST           lineno
+ 248: LOAD_GLOBAL          NULL + ValueError
+ 260: LOAD_CONST           'Invalid placeholder in string: line %d, col %d'
+ 262: LOAD_FAST            lineno
+ 264: LOAD_FAST            colno
+ 266: BUILD_TUPLE          
+ 268: BINARY_OP            %
+ 272: PRECALL              
+ 276: CALL                 
+ 286: RAISE_VARARGS        

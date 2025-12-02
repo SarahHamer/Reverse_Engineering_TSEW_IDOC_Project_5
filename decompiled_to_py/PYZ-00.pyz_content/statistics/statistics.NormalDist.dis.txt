@@ -1,0 +1,130 @@
+# Disassembly for statistics.NormalDist
+# From module file: statistics
+
+## co_consts:
+('NormalDist', 'Normal distribution of a random variable', 'Arithmetic mean of a normal distribution', 'Standard deviation of a normal distribution', ('_mu', '_sigma'), 0.0, 1.0, <code object __init__ at 0x00000240693AAFB0, file "statistics.py", line 1180>, <code object from_samples at 0x0000024069466090, file "statistics.py", line 1187>, None, ('seed',), <code object samples at 0x000002406949CBB0, file "statistics.py", line 1192>, <code object pdf at 0x000002406949D2E0, file "statistics.py", line 1198>, <code object cdf at 0x00000240693AABF0, file "statistics.py", line 1206>, <code object inv_cdf at 0x00000240691C1790, file "statistics.py", line 1212>, 4, <code object quantiles at 0x00000240693EB230, file "statistics.py", line 1228>, <code object overlap at 0x0000024068E410A0, file "statistics.py", line 1239>, <code object zscore at 0x000002406944ABC0, file "statistics.py", line 1273>, <code object mean at 0x0000024069494510, file "statistics.py", line 1284>, <code object median at 0x0000024069494780, file "statistics.py", line 1289>, <code object mode at 0x00000240694945E0, file "statistics.py", line 1294>, <code object stdev at 0x0000024069495E40, file "statistics.py", line 1303>, <code object variance at 0x0000024069466F70, file "statistics.py", line 1308>, <code object __add__ at 0x000002406942DAC0, file "statistics.py", line 1313>, <code object __sub__ at 0x000002406942E290, file "statistics.py", line 1327>, <code object __mul__ at 0x000002406941A550, file "statistics.py", line 1341>, <code object __truediv__ at 0x000002406941A790, file "statistics.py", line 1349>, <code object __pos__ at 0x0000024069CF07B0, file "statistics.py", line 1357>, <code object __neg__ at 0x0000024069CF08A0, file "statistics.py", line 1361>, <code object __rsub__ at 0x0000024069495620, file "statistics.py", line 1367>, <code object __eq__ at 0x00000240693AAD30, file "statistics.py", line 1373>, <code object __hash__ at 0x0000024069CF0990, file "statistics.py", line 1379>, <code object __repr__ at 0x000002406944A890, file "statistics.py", line 1383>, <code object __getstate__ at 0x0000024069467050, file "statistics.py", line 1386>, <code object __setstate__ at 0x0000024069465290, file "statistics.py", line 1389>, (0.0, 1.0), (4,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__slots__', '__init__', 'classmethod', 'from_samples', 'samples', 'pdf', 'cdf', 'inv_cdf', 'quantiles', 'overlap', 'zscore', 'property', 'mean', 'median', 'mode', 'stdev', 'variance', '__add__', '__sub__', '__mul__', '__truediv__', '__pos__', '__neg__', '__radd__', '__rsub__', '__rmul__', '__eq__', '__hash__', '__repr__', '__getstate__', '__setstate__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'NormalDist'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Normal distribution of a random variable'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           'Arithmetic mean of a normal distribution'
+  16: LOAD_CONST           'Standard deviation of a normal distribution'
+  18: LOAD_CONST           ('_mu', '_sigma')
+  20: BUILD_CONST_KEY_MAP  
+  22: STORE_NAME           __slots__
+  24: LOAD_CONST           (0.0, 1.0)
+  26: LOAD_CONST           <code object __init__ at 0x00000240693AAFB0, file "statistics.py", line 1180>
+  28: MAKE_FUNCTION        defaults
+  30: STORE_NAME           __init__
+  32: LOAD_NAME            classmethod
+  34: LOAD_CONST           <code object from_samples at 0x0000024069466090, file "statistics.py", line 1187>
+  36: MAKE_FUNCTION        
+  38: PRECALL              
+  42: CALL                 
+  52: STORE_NAME           from_samples
+  54: LOAD_CONST           None
+  56: LOAD_CONST           ('seed',)
+  58: BUILD_CONST_KEY_MAP  
+  60: LOAD_CONST           <code object samples at 0x000002406949CBB0, file "statistics.py", line 1192>
+  62: MAKE_FUNCTION        kwdefaults
+  64: STORE_NAME           samples
+  66: LOAD_CONST           <code object pdf at 0x000002406949D2E0, file "statistics.py", line 1198>
+  68: MAKE_FUNCTION        
+  70: STORE_NAME           pdf
+  72: LOAD_CONST           <code object cdf at 0x00000240693AABF0, file "statistics.py", line 1206>
+  74: MAKE_FUNCTION        
+  76: STORE_NAME           cdf
+  78: LOAD_CONST           <code object inv_cdf at 0x00000240691C1790, file "statistics.py", line 1212>
+  80: MAKE_FUNCTION        
+  82: STORE_NAME           inv_cdf
+  84: LOAD_CONST           (4,)
+  86: LOAD_CONST           <code object quantiles at 0x00000240693EB230, file "statistics.py", line 1228>
+  88: MAKE_FUNCTION        defaults
+  90: STORE_NAME           quantiles
+  92: LOAD_CONST           <code object overlap at 0x0000024068E410A0, file "statistics.py", line 1239>
+  94: MAKE_FUNCTION        
+  96: STORE_NAME           overlap
+  98: LOAD_CONST           <code object zscore at 0x000002406944ABC0, file "statistics.py", line 1273>
+ 100: MAKE_FUNCTION        
+ 102: STORE_NAME           zscore
+ 104: LOAD_NAME            property
+ 106: LOAD_CONST           <code object mean at 0x0000024069494510, file "statistics.py", line 1284>
+ 108: MAKE_FUNCTION        
+ 110: PRECALL              
+ 114: CALL                 
+ 124: STORE_NAME           mean
+ 126: LOAD_NAME            property
+ 128: LOAD_CONST           <code object median at 0x0000024069494780, file "statistics.py", line 1289>
+ 130: MAKE_FUNCTION        
+ 132: PRECALL              
+ 136: CALL                 
+ 146: STORE_NAME           median
+ 148: LOAD_NAME            property
+ 150: LOAD_CONST           <code object mode at 0x00000240694945E0, file "statistics.py", line 1294>
+ 152: MAKE_FUNCTION        
+ 154: PRECALL              
+ 158: CALL                 
+ 168: STORE_NAME           mode
+ 170: LOAD_NAME            property
+ 172: LOAD_CONST           <code object stdev at 0x0000024069495E40, file "statistics.py", line 1303>
+ 174: MAKE_FUNCTION        
+ 176: PRECALL              
+ 180: CALL                 
+ 190: STORE_NAME           stdev
+ 192: LOAD_NAME            property
+ 194: LOAD_CONST           <code object variance at 0x0000024069466F70, file "statistics.py", line 1308>
+ 196: MAKE_FUNCTION        
+ 198: PRECALL              
+ 202: CALL                 
+ 212: STORE_NAME           variance
+ 214: LOAD_CONST           <code object __add__ at 0x000002406942DAC0, file "statistics.py", line 1313>
+ 216: MAKE_FUNCTION        
+ 218: STORE_NAME           __add__
+ 220: LOAD_CONST           <code object __sub__ at 0x000002406942E290, file "statistics.py", line 1327>
+ 222: MAKE_FUNCTION        
+ 224: STORE_NAME           __sub__
+ 226: LOAD_CONST           <code object __mul__ at 0x000002406941A550, file "statistics.py", line 1341>
+ 228: MAKE_FUNCTION        
+ 230: STORE_NAME           __mul__
+ 232: LOAD_CONST           <code object __truediv__ at 0x000002406941A790, file "statistics.py", line 1349>
+ 234: MAKE_FUNCTION        
+ 236: STORE_NAME           __truediv__
+ 238: LOAD_CONST           <code object __pos__ at 0x0000024069CF07B0, file "statistics.py", line 1357>
+ 240: MAKE_FUNCTION        
+ 242: STORE_NAME           __pos__
+ 244: LOAD_CONST           <code object __neg__ at 0x0000024069CF08A0, file "statistics.py", line 1361>
+ 246: MAKE_FUNCTION        
+ 248: STORE_NAME           __neg__
+ 250: LOAD_NAME            __add__
+ 252: STORE_NAME           __radd__
+ 254: LOAD_CONST           <code object __rsub__ at 0x0000024069495620, file "statistics.py", line 1367>
+ 256: MAKE_FUNCTION        
+ 258: STORE_NAME           __rsub__
+ 260: LOAD_NAME            __mul__
+ 262: STORE_NAME           __rmul__
+ 264: LOAD_CONST           <code object __eq__ at 0x00000240693AAD30, file "statistics.py", line 1373>
+ 266: MAKE_FUNCTION        
+ 268: STORE_NAME           __eq__
+ 270: LOAD_CONST           <code object __hash__ at 0x0000024069CF0990, file "statistics.py", line 1379>
+ 272: MAKE_FUNCTION        
+ 274: STORE_NAME           __hash__
+ 276: LOAD_CONST           <code object __repr__ at 0x000002406944A890, file "statistics.py", line 1383>
+ 278: MAKE_FUNCTION        
+ 280: STORE_NAME           __repr__
+ 282: LOAD_CONST           <code object __getstate__ at 0x0000024069467050, file "statistics.py", line 1386>
+ 284: MAKE_FUNCTION        
+ 286: STORE_NAME           __getstate__
+ 288: LOAD_CONST           <code object __setstate__ at 0x0000024069465290, file "statistics.py", line 1389>
+ 290: MAKE_FUNCTION        
+ 292: STORE_NAME           __setstate__
+ 294: LOAD_CONST           None
+ 296: RETURN_VALUE         

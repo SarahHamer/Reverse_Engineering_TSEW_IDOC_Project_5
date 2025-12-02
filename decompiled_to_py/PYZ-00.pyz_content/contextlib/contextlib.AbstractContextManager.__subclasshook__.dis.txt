@@ -1,0 +1,26 @@
+# Disassembly for contextlib.AbstractContextManager.__subclasshook__
+# From module file: contextlib
+
+## co_consts:
+(None, '__enter__', '__exit__')
+
+## co_names:
+('AbstractContextManager', '_collections_abc', '_check_methods', 'NotImplemented')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            cls
+   4: LOAD_GLOBAL          AbstractContextManager
+  16: IS_OP                
+  18: POP_JUMP_FORWARD_IF_FALSE to 64
+  20: LOAD_GLOBAL          NULL + _collections_abc
+  32: LOAD_ATTR            _check_methods
+  42: LOAD_FAST            C
+  44: LOAD_CONST           '__enter__'
+  46: LOAD_CONST           '__exit__'
+  48: PRECALL              
+  52: CALL                 
+  62: RETURN_VALUE         
+  64: LOAD_GLOBAL          NotImplemented
+  76: RETURN_VALUE         

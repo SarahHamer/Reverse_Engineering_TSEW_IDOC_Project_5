@@ -1,0 +1,30 @@
+# Disassembly for netrc.NetrcParseError.__init__
+# From module file: netrc
+
+## co_consts:
+(None,)
+
+## co_names:
+('filename', 'lineno', 'msg', 'Exception', '__init__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            filename
+   4: LOAD_FAST            self
+   6: STORE_ATTR           filename
+  16: LOAD_FAST            lineno
+  18: LOAD_FAST            self
+  20: STORE_ATTR           lineno
+  30: LOAD_FAST            msg
+  32: LOAD_FAST            self
+  34: STORE_ATTR           msg
+  44: LOAD_GLOBAL          Exception
+  56: LOAD_METHOD          __init__
+  78: LOAD_FAST            self
+  80: LOAD_FAST            msg
+  82: PRECALL              
+  86: CALL                 
+  96: POP_TOP              
+  98: LOAD_CONST           None
+ 100: RETURN_VALUE         

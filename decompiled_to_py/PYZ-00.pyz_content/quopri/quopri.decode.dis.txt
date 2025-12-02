@@ -1,0 +1,280 @@
+# Disassembly for quopri.decode
+# From module file: quopri
+
+## co_consts:
+("Read 'input', apply quoted-printable decoding, and write to 'output'.\n    'input' and 'output' are binary file objects.\n    If 'header' is true, decode underscore as space (per RFC 1522).", None, ('header',), b'', 1, 0, b'\n', b' \t\r', b'_', b' ', 2, 3)
+
+## co_names:
+('a2b_qp', 'read', 'write', 'readline', 'len', 'ESCAPE', 'ishex', 'bytes', 'unhex')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          a2b_qp
+  14: POP_JUMP_FORWARD_IF_NONE to 136
+  16: LOAD_FAST            input
+  18: LOAD_METHOD          read
+  40: PRECALL              
+  44: CALL                 
+  54: STORE_FAST           data
+  56: LOAD_GLOBAL          NULL + a2b_qp
+  68: LOAD_FAST            data
+  70: LOAD_FAST            header
+  72: KW_NAMES             
+  74: PRECALL              
+  78: CALL                 
+  88: STORE_FAST           odata
+  90: LOAD_FAST            output
+  92: LOAD_METHOD          write
+ 114: LOAD_FAST            odata
+ 116: PRECALL              
+ 120: CALL                 
+ 130: POP_TOP              
+ 132: LOAD_CONST           None
+ 134: RETURN_VALUE         
+ 136: LOAD_CONST           b''
+ 138: STORE_FAST           new
+ 140: NOP                  
+ 142: LOAD_FAST            input
+ 144: LOAD_METHOD          readline
+ 166: PRECALL              
+ 170: CALL                 
+ 180: STORE_FAST           line
+ 182: LOAD_FAST            line
+ 184: POP_JUMP_FORWARD_IF_TRUE to 190
+ 186: EXTENDED_ARG         
+ 188: JUMP_FORWARD         to 962
+ 190: LOAD_CONST           0
+ 192: LOAD_GLOBAL          NULL + len
+ 204: LOAD_FAST            line
+ 206: PRECALL              
+ 210: CALL                 
+ 220: STORE_FAST           n
+ 222: STORE_FAST           i
+ 224: LOAD_FAST            n
+ 226: LOAD_CONST           0
+ 228: COMPARE_OP           >
+ 234: POP_JUMP_FORWARD_IF_FALSE to 380
+ 236: LOAD_FAST            line
+ 238: LOAD_FAST            n
+ 240: LOAD_CONST           1
+ 242: BINARY_OP            -
+ 246: LOAD_FAST            n
+ 248: BUILD_SLICE          
+ 250: BINARY_SUBSCR        
+ 260: LOAD_CONST           b'\n'
+ 262: COMPARE_OP           ==
+ 268: POP_JUMP_FORWARD_IF_FALSE to 380
+ 270: LOAD_CONST           0
+ 272: STORE_FAST           partial
+ 274: LOAD_FAST            n
+ 276: LOAD_CONST           1
+ 278: BINARY_OP            -
+ 282: STORE_FAST           n
+ 284: LOAD_FAST            n
+ 286: LOAD_CONST           0
+ 288: COMPARE_OP           >
+ 294: POP_JUMP_FORWARD_IF_FALSE to 378
+ 296: LOAD_FAST            line
+ 298: LOAD_FAST            n
+ 300: LOAD_CONST           1
+ 302: BINARY_OP            -
+ 306: LOAD_FAST            n
+ 308: BUILD_SLICE          
+ 310: BINARY_SUBSCR        
+ 320: LOAD_CONST           b' \t\r'
+ 322: CONTAINS_OP          
+ 324: POP_JUMP_FORWARD_IF_FALSE to 378
+ 326: LOAD_FAST            n
+ 328: LOAD_CONST           1
+ 330: BINARY_OP            -
+ 334: STORE_FAST           n
+ 336: LOAD_FAST            n
+ 338: LOAD_CONST           0
+ 340: COMPARE_OP           >
+ 346: POP_JUMP_FORWARD_IF_FALSE to 378
+ 348: LOAD_FAST            line
+ 350: LOAD_FAST            n
+ 352: LOAD_CONST           1
+ 354: BINARY_OP            -
+ 358: LOAD_FAST            n
+ 360: BUILD_SLICE          
+ 362: BINARY_SUBSCR        
+ 372: LOAD_CONST           b' \t\r'
+ 374: CONTAINS_OP          
+ 376: POP_JUMP_BACKWARD_IF_TRUE to 326
+ 378: JUMP_FORWARD         to 384
+ 380: LOAD_CONST           1
+ 382: STORE_FAST           partial
+ 384: LOAD_FAST            i
+ 386: LOAD_FAST            n
+ 388: COMPARE_OP           <
+ 394: POP_JUMP_FORWARD_IF_FALSE to 902
+ 396: LOAD_FAST            line
+ 398: LOAD_FAST            i
+ 400: LOAD_FAST            i
+ 402: LOAD_CONST           1
+ 404: BINARY_OP            +
+ 408: BUILD_SLICE          
+ 410: BINARY_SUBSCR        
+ 420: STORE_FAST           c
+ 422: LOAD_FAST            c
+ 424: LOAD_CONST           b'_'
+ 426: COMPARE_OP           ==
+ 432: POP_JUMP_FORWARD_IF_FALSE to 460
+ 434: LOAD_FAST            header
+ 436: POP_JUMP_FORWARD_IF_FALSE to 460
+ 438: LOAD_FAST            new
+ 440: LOAD_CONST           b' '
+ 442: BINARY_OP            +
+ 446: STORE_FAST           new
+ 448: LOAD_FAST            i
+ 450: LOAD_CONST           1
+ 452: BINARY_OP            +
+ 456: STORE_FAST           i
+ 458: JUMP_FORWARD         to 890
+ 460: LOAD_FAST            c
+ 462: LOAD_GLOBAL          ESCAPE
+ 474: COMPARE_OP           !=
+ 480: POP_JUMP_FORWARD_IF_FALSE to 504
+ 482: LOAD_FAST            new
+ 484: LOAD_FAST            c
+ 486: BINARY_OP            +
+ 490: STORE_FAST           new
+ 492: LOAD_FAST            i
+ 494: LOAD_CONST           1
+ 496: BINARY_OP            +
+ 500: STORE_FAST           i
+ 502: JUMP_FORWARD         to 890
+ 504: LOAD_FAST            i
+ 506: LOAD_CONST           1
+ 508: BINARY_OP            +
+ 512: LOAD_FAST            n
+ 514: COMPARE_OP           ==
+ 520: POP_JUMP_FORWARD_IF_FALSE to 532
+ 522: LOAD_FAST            partial
+ 524: POP_JUMP_FORWARD_IF_TRUE to 532
+ 526: LOAD_CONST           1
+ 528: STORE_FAST           partial
+ 530: JUMP_FORWARD         to 902
+ 532: LOAD_FAST            i
+ 534: LOAD_CONST           1
+ 536: BINARY_OP            +
+ 540: LOAD_FAST            n
+ 542: COMPARE_OP           <
+ 548: POP_JUMP_FORWARD_IF_FALSE to 632
+ 550: LOAD_FAST            line
+ 552: LOAD_FAST            i
+ 554: LOAD_CONST           1
+ 556: BINARY_OP            +
+ 560: LOAD_FAST            i
+ 562: LOAD_CONST           2
+ 564: BINARY_OP            +
+ 568: BUILD_SLICE          
+ 570: BINARY_SUBSCR        
+ 580: LOAD_GLOBAL          ESCAPE
+ 592: COMPARE_OP           ==
+ 598: POP_JUMP_FORWARD_IF_FALSE to 632
+ 600: LOAD_FAST            new
+ 602: LOAD_GLOBAL          ESCAPE
+ 614: BINARY_OP            +
+ 618: STORE_FAST           new
+ 620: LOAD_FAST            i
+ 622: LOAD_CONST           2
+ 624: BINARY_OP            +
+ 628: STORE_FAST           i
+ 630: JUMP_FORWARD         to 890
+ 632: LOAD_FAST            i
+ 634: LOAD_CONST           2
+ 636: BINARY_OP            +
+ 640: LOAD_FAST            n
+ 642: COMPARE_OP           <
+ 648: POP_JUMP_FORWARD_IF_FALSE to 870
+ 650: LOAD_GLOBAL          NULL + ishex
+ 662: LOAD_FAST            line
+ 664: LOAD_FAST            i
+ 666: LOAD_CONST           1
+ 668: BINARY_OP            +
+ 672: LOAD_FAST            i
+ 674: LOAD_CONST           2
+ 676: BINARY_OP            +
+ 680: BUILD_SLICE          
+ 682: BINARY_SUBSCR        
+ 692: PRECALL              
+ 696: CALL                 
+ 706: POP_JUMP_FORWARD_IF_FALSE to 870
+ 708: LOAD_GLOBAL          NULL + ishex
+ 720: LOAD_FAST            line
+ 722: LOAD_FAST            i
+ 724: LOAD_CONST           2
+ 726: BINARY_OP            +
+ 730: LOAD_FAST            i
+ 732: LOAD_CONST           3
+ 734: BINARY_OP            +
+ 738: BUILD_SLICE          
+ 740: BINARY_SUBSCR        
+ 750: PRECALL              
+ 754: CALL                 
+ 764: POP_JUMP_FORWARD_IF_FALSE to 870
+ 766: LOAD_FAST            new
+ 768: LOAD_GLOBAL          NULL + bytes
+ 780: LOAD_GLOBAL          NULL + unhex
+ 792: LOAD_FAST            line
+ 794: LOAD_FAST            i
+ 796: LOAD_CONST           1
+ 798: BINARY_OP            +
+ 802: LOAD_FAST            i
+ 804: LOAD_CONST           3
+ 806: BINARY_OP            +
+ 810: BUILD_SLICE          
+ 812: BINARY_SUBSCR        
+ 822: PRECALL              
+ 826: CALL                 
+ 836: BUILD_TUPLE          
+ 838: PRECALL              
+ 842: CALL                 
+ 852: BINARY_OP            +
+ 856: STORE_FAST           new
+ 858: LOAD_FAST            i
+ 860: LOAD_CONST           3
+ 862: BINARY_OP            +
+ 866: STORE_FAST           i
+ 868: JUMP_FORWARD         to 890
+ 870: LOAD_FAST            new
+ 872: LOAD_FAST            c
+ 874: BINARY_OP            +
+ 878: STORE_FAST           new
+ 880: LOAD_FAST            i
+ 882: LOAD_CONST           1
+ 884: BINARY_OP            +
+ 888: STORE_FAST           i
+ 890: LOAD_FAST            i
+ 892: LOAD_FAST            n
+ 894: COMPARE_OP           <
+ 900: POP_JUMP_BACKWARD_IF_TRUE to 396
+ 902: LOAD_FAST            partial
+ 904: POP_JUMP_FORWARD_IF_TRUE to 958
+ 906: LOAD_FAST            output
+ 908: LOAD_METHOD          write
+ 930: LOAD_FAST            new
+ 932: LOAD_CONST           b'\n'
+ 934: BINARY_OP            +
+ 938: PRECALL              
+ 942: CALL                 
+ 952: POP_TOP              
+ 954: LOAD_CONST           b''
+ 956: STORE_FAST           new
+ 958: EXTENDED_ARG         
+ 960: JUMP_BACKWARD        to 142
+ 962: LOAD_FAST            new
+ 964: POP_JUMP_FORWARD_IF_FALSE to 1012
+ 966: LOAD_FAST            output
+ 968: LOAD_METHOD          write
+ 990: LOAD_FAST            new
+ 992: PRECALL              
+ 996: CALL                 
+1006: POP_TOP              
+1008: LOAD_CONST           None
+1010: RETURN_VALUE         
+1012: LOAD_CONST           None
+1014: RETURN_VALUE         

@@ -1,0 +1,112 @@
+# Disassembly for player.Player
+# From module file: player
+
+## co_consts:
+('Player', 'name', <code object __init__ at 0x00000240691F23A0, file "player.py", line 7>, 'message', 'return', <code object prepare_message at 0x0000024068E22A40, file "player.py", line 13>, <code object send_message at 0x00000240691C14D0, file "player.py", line 22>, <code object get_play_time at 0x00000240691C1FD0, file "player.py", line 29>, <code object pause at 0x0000024069465FB0, file "player.py", line 38>, False, 'prompt', 'options', <code object ask at 0x0000024068E01950, file "player.py", line 41>, 0, 'num_digits', <code object ask_number at 0x0000024068E1DE30, file "player.py", line 56>, True, None, <code object ask_option at 0x0000024068D3FBC0, file "player.py", line 68>, <code object look at 0x000002406945EC40, file "player.py", line 111>, <code object look_at at 0x00000240691E9FB0, file "player.py", line 114>, <code object show_inventory at 0x000002406947CD50, file "player.py", line 123>, (0,), (True,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', 'str', '__init__', 'prepare_message', 'send_message', 'get_play_time', 'pause', 'list', 'ask', 'int', 'ask_number', 'typing', 'Union', 'Callable', 'ask_option', 'look', 'look_at', 'show_inventory', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'Player'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           'name'
+  14: LOAD_NAME            str
+  16: BUILD_TUPLE          
+  18: LOAD_CLOSURE         __class__
+  20: BUILD_TUPLE          
+  22: LOAD_CONST           <code object __init__ at 0x00000240691F23A0, file "player.py", line 7>
+  24: MAKE_FUNCTION        annotations, closure
+  26: STORE_NAME           __init__
+  28: LOAD_CONST           'message'
+  30: LOAD_NAME            str
+  32: LOAD_CONST           'return'
+  34: LOAD_NAME            str
+  36: BUILD_TUPLE          
+  38: LOAD_CONST           <code object prepare_message at 0x0000024068E22A40, file "player.py", line 13>
+  40: MAKE_FUNCTION        annotations
+  42: STORE_NAME           prepare_message
+  44: LOAD_CONST           'message'
+  46: LOAD_NAME            str
+  48: BUILD_TUPLE          
+  50: LOAD_CONST           <code object send_message at 0x00000240691C14D0, file "player.py", line 22>
+  52: MAKE_FUNCTION        annotations
+  54: STORE_NAME           send_message
+  56: LOAD_CONST           'return'
+  58: LOAD_NAME            str
+  60: BUILD_TUPLE          
+  62: LOAD_CONST           <code object get_play_time at 0x00000240691C1FD0, file "player.py", line 29>
+  64: MAKE_FUNCTION        annotations
+  66: STORE_NAME           get_play_time
+  68: LOAD_CONST           <code object pause at 0x0000024069465FB0, file "player.py", line 38>
+  70: MAKE_FUNCTION        
+  72: STORE_NAME           pause
+  74: BUILD_LIST           
+  76: LOAD_CONST           False
+  78: BUILD_TUPLE          
+  80: LOAD_CONST           'prompt'
+  82: LOAD_NAME            str
+  84: LOAD_CONST           'options'
+  86: LOAD_NAME            list
+  88: LOAD_NAME            str
+  90: BINARY_SUBSCR        
+ 100: LOAD_CONST           'return'
+ 102: LOAD_NAME            str
+ 104: BUILD_TUPLE          
+ 106: LOAD_CONST           <code object ask at 0x0000024068E01950, file "player.py", line 41>
+ 108: MAKE_FUNCTION        defaults, annotations
+ 110: STORE_NAME           ask
+ 112: LOAD_CONST           (0,)
+ 114: LOAD_CONST           'prompt'
+ 116: LOAD_NAME            str
+ 118: LOAD_CONST           'num_digits'
+ 120: LOAD_NAME            int
+ 122: LOAD_CONST           'return'
+ 124: LOAD_NAME            int
+ 126: BUILD_TUPLE          
+ 128: LOAD_CONST           <code object ask_number at 0x0000024068E1DE30, file "player.py", line 56>
+ 130: MAKE_FUNCTION        defaults, annotations
+ 132: STORE_NAME           ask_number
+ 134: LOAD_CONST           (True,)
+ 136: LOAD_CONST           'prompt'
+ 138: LOAD_NAME            str
+ 140: LOAD_CONST           'options'
+ 142: LOAD_NAME            list
+ 144: LOAD_NAME            typing
+ 146: LOAD_ATTR            Union
+ 156: LOAD_NAME            str
+ 158: LOAD_NAME            typing
+ 160: LOAD_ATTR            Callable
+ 170: BUILD_LIST           
+ 172: LOAD_CONST           None
+ 174: BUILD_TUPLE          
+ 176: BINARY_SUBSCR        
+ 186: BUILD_TUPLE          
+ 188: BINARY_SUBSCR        
+ 198: LOAD_NAME            str
+ 200: BUILD_TUPLE          
+ 202: BINARY_SUBSCR        
+ 212: LOAD_CONST           'return'
+ 214: LOAD_NAME            str
+ 216: BUILD_TUPLE          
+ 218: LOAD_CONST           <code object ask_option at 0x0000024068D3FBC0, file "player.py", line 68>
+ 220: MAKE_FUNCTION        defaults, annotations
+ 222: STORE_NAME           ask_option
+ 224: LOAD_CONST           <code object look at 0x000002406945EC40, file "player.py", line 111>
+ 226: MAKE_FUNCTION        
+ 228: STORE_NAME           look
+ 230: LOAD_CONST           <code object look_at at 0x00000240691E9FB0, file "player.py", line 114>
+ 232: MAKE_FUNCTION        
+ 234: STORE_NAME           look_at
+ 236: LOAD_CONST           <code object show_inventory at 0x000002406947CD50, file "player.py", line 123>
+ 238: MAKE_FUNCTION        
+ 240: STORE_NAME           show_inventory
+ 242: LOAD_CLOSURE         __class__
+ 244: COPY                 
+ 246: STORE_NAME           __classcell__
+ 248: RETURN_VALUE         

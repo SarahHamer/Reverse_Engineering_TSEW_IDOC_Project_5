@@ -1,0 +1,25 @@
+# Disassembly for lzma.LZMAFile.seek
+# From module file: lzma
+
+## co_consts:
+('Change the file position.\n\n        The new position is specified by offset, relative to the\n        position indicated by whence. Possible values for whence are:\n\n            0: start of stream (default): offset must not be negative\n            1: current stream position\n            2: end of stream; offset must not be positive\n\n        Returns the new file position.\n\n        Note that seeking is emulated, so depending on the parameters,\n        this operation may be extremely slow.\n        ',)
+
+## co_names:
+('_check_can_seek', '_buffer', 'seek')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _check_can_seek
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            _buffer
+  54: LOAD_METHOD          seek
+  76: LOAD_FAST            offset
+  78: LOAD_FAST            whence
+  80: PRECALL              
+  84: CALL                 
+  94: RETURN_VALUE         

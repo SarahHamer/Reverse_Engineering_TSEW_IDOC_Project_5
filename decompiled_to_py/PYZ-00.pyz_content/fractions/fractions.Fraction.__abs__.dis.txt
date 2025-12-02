@@ -1,0 +1,25 @@
+# Disassembly for fractions.Fraction.__abs__
+# From module file: fractions
+
+## co_consts:
+('abs(a)', False, ('_normalize',))
+
+## co_names:
+('Fraction', 'abs', '_numerator', '_denominator')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + Fraction
+  14: LOAD_GLOBAL          NULL + abs
+  26: LOAD_FAST            a
+  28: LOAD_ATTR            _numerator
+  38: PRECALL              
+  42: CALL                 
+  52: LOAD_FAST            a
+  54: LOAD_ATTR            _denominator
+  64: LOAD_CONST           False
+  66: KW_NAMES             
+  68: PRECALL              
+  72: CALL                 
+  82: RETURN_VALUE         

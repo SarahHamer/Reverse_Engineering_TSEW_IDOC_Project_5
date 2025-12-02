@@ -1,0 +1,89 @@
+# Disassembly for ast._Unparser.visit_ExceptHandler
+# From module file: ast
+
+## co_consts:
+(None, 'except*', 'except', ' ', ' as ')
+
+## co_names:
+('fill', '_in_try_star', 'type', 'write', 'traverse', 'name', 'block', 'body')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          fill
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            _in_try_star
+  38: POP_JUMP_FORWARD_IF_FALSE to 44
+  40: LOAD_CONST           'except*'
+  42: JUMP_FORWARD         to 46
+  44: LOAD_CONST           'except'
+  46: PRECALL              
+  50: CALL                 
+  60: POP_TOP              
+  62: LOAD_FAST            node
+  64: LOAD_ATTR            type
+  74: POP_JUMP_FORWARD_IF_FALSE to 170
+  76: LOAD_FAST            self
+  78: LOAD_METHOD          write
+ 100: LOAD_CONST           ' '
+ 102: PRECALL              
+ 106: CALL                 
+ 116: POP_TOP              
+ 118: LOAD_FAST            self
+ 120: LOAD_METHOD          traverse
+ 142: LOAD_FAST            node
+ 144: LOAD_ATTR            type
+ 154: PRECALL              
+ 158: CALL                 
+ 168: POP_TOP              
+ 170: LOAD_FAST            node
+ 172: LOAD_ATTR            name
+ 182: POP_JUMP_FORWARD_IF_FALSE to 278
+ 184: LOAD_FAST            self
+ 186: LOAD_METHOD          write
+ 208: LOAD_CONST           ' as '
+ 210: PRECALL              
+ 214: CALL                 
+ 224: POP_TOP              
+ 226: LOAD_FAST            self
+ 228: LOAD_METHOD          write
+ 250: LOAD_FAST            node
+ 252: LOAD_ATTR            name
+ 262: PRECALL              
+ 266: CALL                 
+ 276: POP_TOP              
+ 278: LOAD_FAST            self
+ 280: LOAD_METHOD          block
+ 302: PRECALL              
+ 306: CALL                 
+ 316: BEFORE_WITH          
+ 318: POP_TOP              
+ 320: LOAD_FAST            self
+ 322: LOAD_METHOD          traverse
+ 344: LOAD_FAST            node
+ 346: LOAD_ATTR            body
+ 356: PRECALL              
+ 360: CALL                 
+ 370: POP_TOP              
+ 372: LOAD_CONST           None
+ 374: LOAD_CONST           None
+ 376: LOAD_CONST           None
+ 378: PRECALL              
+ 382: CALL                 
+ 392: POP_TOP              
+ 394: LOAD_CONST           None
+ 396: RETURN_VALUE         
+ 398: PUSH_EXC_INFO        
+ 400: WITH_EXCEPT_START    
+ 402: POP_JUMP_FORWARD_IF_TRUE to 412
+ 404: RERAISE              
+ 406: COPY                 
+ 408: POP_EXCEPT           
+ 410: RERAISE              
+ 412: POP_TOP              
+ 414: POP_EXCEPT           
+ 416: POP_TOP              
+ 418: POP_TOP              
+ 420: LOAD_CONST           None
+ 422: RETURN_VALUE         

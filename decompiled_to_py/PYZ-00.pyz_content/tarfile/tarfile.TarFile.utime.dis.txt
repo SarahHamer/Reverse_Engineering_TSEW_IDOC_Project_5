@@ -1,0 +1,58 @@
+# Disassembly for tarfile.TarFile.utime
+# From module file: tarfile
+
+## co_consts:
+('Set modification time of targetpath according to tarinfo.\n        ', None, 'utime', 'could not change modification time')
+
+## co_names:
+('mtime', 'hasattr', 'os', 'utime', 'OSError', 'ExtractError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            tarinfo
+   4: LOAD_ATTR            mtime
+  14: STORE_FAST           mtime
+  16: LOAD_FAST            mtime
+  18: POP_JUMP_FORWARD_IF_NOT_NONE to 24
+  20: LOAD_CONST           None
+  22: RETURN_VALUE         
+  24: LOAD_GLOBAL          NULL + hasattr
+  36: LOAD_GLOBAL          os
+  48: LOAD_CONST           'utime'
+  50: PRECALL              
+  54: CALL                 
+  64: POP_JUMP_FORWARD_IF_TRUE to 70
+  66: LOAD_CONST           None
+  68: RETURN_VALUE         
+  70: NOP                  
+  72: LOAD_GLOBAL          NULL + os
+  84: LOAD_ATTR            utime
+  94: LOAD_FAST            targetpath
+  96: LOAD_FAST            mtime
+  98: LOAD_FAST            mtime
+ 100: BUILD_TUPLE          
+ 102: PRECALL              
+ 106: CALL                 
+ 116: POP_TOP              
+ 118: LOAD_CONST           None
+ 120: RETURN_VALUE         
+ 122: PUSH_EXC_INFO        
+ 124: LOAD_GLOBAL          OSError
+ 136: CHECK_EXC_MATCH      
+ 138: POP_JUMP_FORWARD_IF_FALSE to 182
+ 140: STORE_FAST           e
+ 142: LOAD_GLOBAL          NULL + ExtractError
+ 154: LOAD_CONST           'could not change modification time'
+ 156: PRECALL              
+ 160: CALL                 
+ 170: LOAD_FAST            e
+ 172: RAISE_VARARGS        
+ 174: LOAD_CONST           None
+ 176: STORE_FAST           e
+ 178: DELETE_FAST          e
+ 180: RERAISE              
+ 182: RERAISE              
+ 184: COPY                 
+ 186: POP_EXCEPT           
+ 188: RERAISE              

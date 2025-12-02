@@ -1,0 +1,88 @@
+# Disassembly for ftplib.FTP.getline
+# From module file: ftplib
+
+## co_consts:
+(None, 1, 'got more than %d bytes', '*get*', -2, -1)
+
+## co_names:
+('file', 'readline', 'maxline', 'len', 'Error', 'debugging', 'print', 'sanitize', 'EOFError', 'CRLF')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            file
+  14: LOAD_METHOD          readline
+  36: LOAD_FAST            self
+  38: LOAD_ATTR            maxline
+  48: LOAD_CONST           1
+  50: BINARY_OP            +
+  54: PRECALL              
+  58: CALL                 
+  68: STORE_FAST           line
+  70: LOAD_GLOBAL          NULL + len
+  82: LOAD_FAST            line
+  84: PRECALL              
+  88: CALL                 
+  98: LOAD_FAST            self
+ 100: LOAD_ATTR            maxline
+ 110: COMPARE_OP           >
+ 116: POP_JUMP_FORWARD_IF_FALSE to 164
+ 118: LOAD_GLOBAL          NULL + Error
+ 130: LOAD_CONST           'got more than %d bytes'
+ 132: LOAD_FAST            self
+ 134: LOAD_ATTR            maxline
+ 144: BINARY_OP            %
+ 148: PRECALL              
+ 152: CALL                 
+ 162: RAISE_VARARGS        
+ 164: LOAD_FAST            self
+ 166: LOAD_ATTR            debugging
+ 176: LOAD_CONST           1
+ 178: COMPARE_OP           >
+ 184: POP_JUMP_FORWARD_IF_FALSE to 256
+ 186: LOAD_GLOBAL          NULL + print
+ 198: LOAD_CONST           '*get*'
+ 200: LOAD_FAST            self
+ 202: LOAD_METHOD          sanitize
+ 224: LOAD_FAST            line
+ 226: PRECALL              
+ 230: CALL                 
+ 240: PRECALL              
+ 244: CALL                 
+ 254: POP_TOP              
+ 256: LOAD_FAST            line
+ 258: POP_JUMP_FORWARD_IF_TRUE to 274
+ 260: LOAD_GLOBAL          EOFError
+ 272: RAISE_VARARGS        
+ 274: LOAD_FAST            line
+ 276: LOAD_CONST           -2
+ 278: LOAD_CONST           None
+ 280: BUILD_SLICE          
+ 282: BINARY_SUBSCR        
+ 292: LOAD_GLOBAL          CRLF
+ 304: COMPARE_OP           ==
+ 310: POP_JUMP_FORWARD_IF_FALSE to 334
+ 312: LOAD_FAST            line
+ 314: LOAD_CONST           None
+ 316: LOAD_CONST           -2
+ 318: BUILD_SLICE          
+ 320: BINARY_SUBSCR        
+ 330: STORE_FAST           line
+ 332: JUMP_FORWARD         to 388
+ 334: LOAD_FAST            line
+ 336: LOAD_CONST           -1
+ 338: LOAD_CONST           None
+ 340: BUILD_SLICE          
+ 342: BINARY_SUBSCR        
+ 352: LOAD_GLOBAL          CRLF
+ 364: CONTAINS_OP          
+ 366: POP_JUMP_FORWARD_IF_FALSE to 388
+ 368: LOAD_FAST            line
+ 370: LOAD_CONST           None
+ 372: LOAD_CONST           -1
+ 374: BUILD_SLICE          
+ 376: BINARY_SUBSCR        
+ 386: STORE_FAST           line
+ 388: LOAD_FAST            line
+ 390: RETURN_VALUE         

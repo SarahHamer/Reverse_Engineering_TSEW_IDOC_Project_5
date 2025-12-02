@@ -1,0 +1,89 @@
+# Disassembly for dataclasses._is_type
+# From module file: dataclasses
+
+## co_consts:
+(None, 1, 2, True, False)
+
+## co_names:
+('_MODULE_IDENTIFIER_RE', 'match', 'group', 'sys', 'modules', 'get', '__module__', '__dict__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _MODULE_IDENTIFIER_RE
+  14: LOAD_METHOD          match
+  36: LOAD_FAST            annotation
+  38: PRECALL              
+  42: CALL                 
+  52: STORE_FAST           match
+  54: LOAD_FAST            match
+  56: POP_JUMP_FORWARD_IF_FALSE to 514
+  58: LOAD_CONST           None
+  60: STORE_FAST           ns
+  62: LOAD_FAST            match
+  64: LOAD_METHOD          group
+  86: LOAD_CONST           1
+  88: PRECALL              
+  92: CALL                 
+ 102: STORE_FAST           module_name
+ 104: LOAD_FAST            module_name
+ 106: POP_JUMP_FORWARD_IF_TRUE to 192
+ 108: LOAD_GLOBAL          sys
+ 120: LOAD_ATTR            modules
+ 130: LOAD_METHOD          get
+ 152: LOAD_FAST            cls
+ 154: LOAD_ATTR            __module__
+ 164: PRECALL              
+ 168: CALL                 
+ 178: LOAD_ATTR            __dict__
+ 188: STORE_FAST           ns
+ 190: JUMP_FORWARD         to 406
+ 192: LOAD_GLOBAL          sys
+ 204: LOAD_ATTR            modules
+ 214: LOAD_METHOD          get
+ 236: LOAD_FAST            cls
+ 238: LOAD_ATTR            __module__
+ 248: PRECALL              
+ 252: CALL                 
+ 262: STORE_FAST           module
+ 264: LOAD_FAST            module
+ 266: POP_JUMP_FORWARD_IF_FALSE to 406
+ 268: LOAD_FAST            module
+ 270: LOAD_ATTR            __dict__
+ 280: LOAD_METHOD          get
+ 302: LOAD_FAST            module_name
+ 304: PRECALL              
+ 308: CALL                 
+ 318: LOAD_FAST            a_module
+ 320: IS_OP                
+ 322: POP_JUMP_FORWARD_IF_FALSE to 406
+ 324: LOAD_GLOBAL          sys
+ 336: LOAD_ATTR            modules
+ 346: LOAD_METHOD          get
+ 368: LOAD_FAST            a_type
+ 370: LOAD_ATTR            __module__
+ 380: PRECALL              
+ 384: CALL                 
+ 394: LOAD_ATTR            __dict__
+ 404: STORE_FAST           ns
+ 406: LOAD_FAST            ns
+ 408: POP_JUMP_FORWARD_IF_FALSE to 514
+ 410: PUSH_NULL            
+ 412: LOAD_FAST            is_type_predicate
+ 414: LOAD_FAST            ns
+ 416: LOAD_METHOD          get
+ 438: LOAD_FAST            match
+ 440: LOAD_METHOD          group
+ 462: LOAD_CONST           2
+ 464: PRECALL              
+ 468: CALL                 
+ 478: PRECALL              
+ 482: CALL                 
+ 492: LOAD_FAST            a_module
+ 494: PRECALL              
+ 498: CALL                 
+ 508: POP_JUMP_FORWARD_IF_FALSE to 514
+ 510: LOAD_CONST           True
+ 512: RETURN_VALUE         
+ 514: LOAD_CONST           False
+ 516: RETURN_VALUE         

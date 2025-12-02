@@ -1,0 +1,19 @@
+# Disassembly for typing._value_and_type_iter
+# From module file: typing
+
+## co_consts:
+(None, <code object <genexpr> at 0x0000024069CF4300, file "typing.py", line 1695>)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           <code object <genexpr> at 0x0000024069CF4300, file "typing.py", line 1695>
+   4: MAKE_FUNCTION        
+   6: LOAD_FAST            parameters
+   8: GET_ITER             
+  10: PRECALL              
+  14: CALL                 
+  24: RETURN_VALUE         

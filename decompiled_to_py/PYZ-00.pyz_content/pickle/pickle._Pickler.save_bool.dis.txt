@@ -1,0 +1,41 @@
+# Disassembly for pickle._Pickler.save_bool
+# From module file: pickle
+
+## co_consts:
+(None, 2)
+
+## co_names:
+('proto', 'write', 'NEWTRUE', 'NEWFALSE', 'TRUE', 'FALSE')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            proto
+  14: LOAD_CONST           2
+  16: COMPARE_OP           >=
+  22: POP_JUMP_FORWARD_IF_FALSE to 98
+  24: LOAD_FAST            self
+  26: LOAD_METHOD          write
+  48: LOAD_FAST            obj
+  50: POP_JUMP_FORWARD_IF_FALSE to 66
+  52: LOAD_GLOBAL          NEWTRUE
+  64: JUMP_FORWARD         to 78
+  66: LOAD_GLOBAL          NEWFALSE
+  78: PRECALL              
+  82: CALL                 
+  92: POP_TOP              
+  94: LOAD_CONST           None
+  96: RETURN_VALUE         
+  98: LOAD_FAST            self
+ 100: LOAD_METHOD          write
+ 122: LOAD_FAST            obj
+ 124: POP_JUMP_FORWARD_IF_FALSE to 140
+ 126: LOAD_GLOBAL          TRUE
+ 138: JUMP_FORWARD         to 152
+ 140: LOAD_GLOBAL          FALSE
+ 152: PRECALL              
+ 156: CALL                 
+ 166: POP_TOP              
+ 168: LOAD_CONST           None
+ 170: RETURN_VALUE         

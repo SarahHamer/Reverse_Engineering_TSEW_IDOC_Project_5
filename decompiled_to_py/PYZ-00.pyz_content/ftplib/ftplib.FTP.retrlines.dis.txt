@@ -1,0 +1,172 @@
+# Disassembly for ftplib.FTP.retrlines
+# From module file: ftplib
+
+## co_consts:
+('Retrieve data in line mode.  A new port is created for you.\n\n        Args:\n          cmd: A RETR, LIST, or NLST command.\n          callback: An optional single parameter callable that is called\n                    for each line with the trailing CRLF stripped.\n                    [default: print_line()]\n\n        Returns:\n          The response code.\n        ', None, 'TYPE A', 'r', ('encoding',), 1, 'got more than %d bytes', 2, '*retr*', -2, -1, '\n')
+
+## co_names:
+('print_line', 'sendcmd', 'transfercmd', 'makefile', 'encoding', 'readline', 'maxline', 'len', 'Error', 'debugging', 'print', 'repr', 'CRLF', '_SSLSocket', 'isinstance', 'unwrap', 'voidresp')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            callback
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 20
+   6: LOAD_GLOBAL          print_line
+  18: STORE_FAST           callback
+  20: LOAD_FAST            self
+  22: LOAD_METHOD          sendcmd
+  44: LOAD_CONST           'TYPE A'
+  46: PRECALL              
+  50: CALL                 
+  60: STORE_FAST           resp
+  62: LOAD_FAST            self
+  64: LOAD_METHOD          transfercmd
+  86: LOAD_FAST            cmd
+  88: PRECALL              
+  92: CALL                 
+ 102: BEFORE_WITH          
+ 104: STORE_FAST           conn
+ 106: LOAD_FAST            conn
+ 108: LOAD_METHOD          makefile
+ 130: LOAD_CONST           'r'
+ 132: LOAD_FAST            self
+ 134: LOAD_ATTR            encoding
+ 144: KW_NAMES             
+ 146: PRECALL              
+ 150: CALL                 
+ 160: BEFORE_WITH          
+ 162: STORE_FAST           fp
+ 164: NOP                  
+ 166: LOAD_FAST            fp
+ 168: LOAD_METHOD          readline
+ 190: LOAD_FAST            self
+ 192: LOAD_ATTR            maxline
+ 202: LOAD_CONST           1
+ 204: BINARY_OP            +
+ 208: PRECALL              
+ 212: CALL                 
+ 222: STORE_FAST           line
+ 224: LOAD_GLOBAL          NULL + len
+ 236: LOAD_FAST            line
+ 238: PRECALL              
+ 242: CALL                 
+ 252: LOAD_FAST            self
+ 254: LOAD_ATTR            maxline
+ 264: COMPARE_OP           >
+ 270: POP_JUMP_FORWARD_IF_FALSE to 318
+ 272: LOAD_GLOBAL          NULL + Error
+ 284: LOAD_CONST           'got more than %d bytes'
+ 286: LOAD_FAST            self
+ 288: LOAD_ATTR            maxline
+ 298: BINARY_OP            %
+ 302: PRECALL              
+ 306: CALL                 
+ 316: RAISE_VARARGS        
+ 318: LOAD_FAST            self
+ 320: LOAD_ATTR            debugging
+ 330: LOAD_CONST           2
+ 332: COMPARE_OP           >
+ 338: POP_JUMP_FORWARD_IF_FALSE to 398
+ 340: LOAD_GLOBAL          NULL + print
+ 352: LOAD_CONST           '*retr*'
+ 354: LOAD_GLOBAL          NULL + repr
+ 366: LOAD_FAST            line
+ 368: PRECALL              
+ 372: CALL                 
+ 382: PRECALL              
+ 386: CALL                 
+ 396: POP_TOP              
+ 398: LOAD_FAST            line
+ 400: POP_JUMP_FORWARD_IF_TRUE to 404
+ 402: JUMP_FORWARD         to 536
+ 404: LOAD_FAST            line
+ 406: LOAD_CONST           -2
+ 408: LOAD_CONST           None
+ 410: BUILD_SLICE          
+ 412: BINARY_SUBSCR        
+ 422: LOAD_GLOBAL          CRLF
+ 434: COMPARE_OP           ==
+ 440: POP_JUMP_FORWARD_IF_FALSE to 464
+ 442: LOAD_FAST            line
+ 444: LOAD_CONST           None
+ 446: LOAD_CONST           -2
+ 448: BUILD_SLICE          
+ 450: BINARY_SUBSCR        
+ 460: STORE_FAST           line
+ 462: JUMP_FORWARD         to 512
+ 464: LOAD_FAST            line
+ 466: LOAD_CONST           -1
+ 468: LOAD_CONST           None
+ 470: BUILD_SLICE          
+ 472: BINARY_SUBSCR        
+ 482: LOAD_CONST           '\n'
+ 484: COMPARE_OP           ==
+ 490: POP_JUMP_FORWARD_IF_FALSE to 512
+ 492: LOAD_FAST            line
+ 494: LOAD_CONST           None
+ 496: LOAD_CONST           -1
+ 498: BUILD_SLICE          
+ 500: BINARY_SUBSCR        
+ 510: STORE_FAST           line
+ 512: PUSH_NULL            
+ 514: LOAD_FAST            callback
+ 516: LOAD_FAST            line
+ 518: PRECALL              
+ 522: CALL                 
+ 532: POP_TOP              
+ 534: JUMP_BACKWARD        to 166
+ 536: LOAD_GLOBAL          _SSLSocket
+ 548: POP_JUMP_FORWARD_IF_NONE to 632
+ 550: LOAD_GLOBAL          NULL + isinstance
+ 562: LOAD_FAST            conn
+ 564: LOAD_GLOBAL          _SSLSocket
+ 576: PRECALL              
+ 580: CALL                 
+ 590: POP_JUMP_FORWARD_IF_FALSE to 632
+ 592: LOAD_FAST            conn
+ 594: LOAD_METHOD          unwrap
+ 616: PRECALL              
+ 620: CALL                 
+ 630: POP_TOP              
+ 632: LOAD_CONST           None
+ 634: LOAD_CONST           None
+ 636: LOAD_CONST           None
+ 638: PRECALL              
+ 642: CALL                 
+ 652: POP_TOP              
+ 654: JUMP_FORWARD         to 678
+ 656: PUSH_EXC_INFO        
+ 658: WITH_EXCEPT_START    
+ 660: POP_JUMP_FORWARD_IF_TRUE to 670
+ 662: RERAISE              
+ 664: COPY                 
+ 666: POP_EXCEPT           
+ 668: RERAISE              
+ 670: POP_TOP              
+ 672: POP_EXCEPT           
+ 674: POP_TOP              
+ 676: POP_TOP              
+ 678: LOAD_CONST           None
+ 680: LOAD_CONST           None
+ 682: LOAD_CONST           None
+ 684: PRECALL              
+ 688: CALL                 
+ 698: POP_TOP              
+ 700: JUMP_FORWARD         to 724
+ 702: PUSH_EXC_INFO        
+ 704: WITH_EXCEPT_START    
+ 706: POP_JUMP_FORWARD_IF_TRUE to 716
+ 708: RERAISE              
+ 710: COPY                 
+ 712: POP_EXCEPT           
+ 714: RERAISE              
+ 716: POP_TOP              
+ 718: POP_EXCEPT           
+ 720: POP_TOP              
+ 722: POP_TOP              
+ 724: LOAD_FAST            self
+ 726: LOAD_METHOD          voidresp
+ 748: PRECALL              
+ 752: CALL                 
+ 762: RETURN_VALUE         

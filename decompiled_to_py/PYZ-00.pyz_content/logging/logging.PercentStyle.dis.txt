@@ -1,0 +1,51 @@
+# Disassembly for logging.PercentStyle
+# From module file: logging
+
+## co_consts:
+('PercentStyle', '%(message)s', '%(asctime)s', '%(asctime)', '%\\(\\w+\\)[#0+ -]*(\\*|\\d+)?(\\.(\\*|\\d+))?[diouxefgcrsa%]', None, ('defaults',), <code object __init__ at 0x000002406945D7A0, file "logging\__init__.py", line 428>, <code object usesTime at 0x00000240693EA330, file "logging\__init__.py", line 432>, <code object validate at 0x000002406922D920, file "logging\__init__.py", line 435>, <code object _format at 0x000002406944B550, file "logging\__init__.py", line 440>, <code object format at 0x00000240693D2890, file "logging\__init__.py", line 447>)
+
+## co_names:
+('__name__', '__module__', '__qualname__', 'default_format', 'asctime_format', 'asctime_search', 're', 'compile', 'I', 'validation_pattern', '__init__', 'usesTime', 'validate', '_format', 'format')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'PercentStyle'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           '%(message)s'
+  12: STORE_NAME           default_format
+  14: LOAD_CONST           '%(asctime)s'
+  16: STORE_NAME           asctime_format
+  18: LOAD_CONST           '%(asctime)'
+  20: STORE_NAME           asctime_search
+  22: PUSH_NULL            
+  24: LOAD_NAME            re
+  26: LOAD_ATTR            compile
+  36: LOAD_CONST           '%\\(\\w+\\)[#0+ -]*(\\*|\\d+)?(\\.(\\*|\\d+))?[diouxefgcrsa%]'
+  38: LOAD_NAME            re
+  40: LOAD_ATTR            I
+  50: PRECALL              
+  54: CALL                 
+  64: STORE_NAME           validation_pattern
+  66: LOAD_CONST           None
+  68: LOAD_CONST           ('defaults',)
+  70: BUILD_CONST_KEY_MAP  
+  72: LOAD_CONST           <code object __init__ at 0x000002406945D7A0, file "logging\__init__.py", line 428>
+  74: MAKE_FUNCTION        kwdefaults
+  76: STORE_NAME           __init__
+  78: LOAD_CONST           <code object usesTime at 0x00000240693EA330, file "logging\__init__.py", line 432>
+  80: MAKE_FUNCTION        
+  82: STORE_NAME           usesTime
+  84: LOAD_CONST           <code object validate at 0x000002406922D920, file "logging\__init__.py", line 435>
+  86: MAKE_FUNCTION        
+  88: STORE_NAME           validate
+  90: LOAD_CONST           <code object _format at 0x000002406944B550, file "logging\__init__.py", line 440>
+  92: MAKE_FUNCTION        
+  94: STORE_NAME           _format
+  96: LOAD_CONST           <code object format at 0x00000240693D2890, file "logging\__init__.py", line 447>
+  98: MAKE_FUNCTION        
+ 100: STORE_NAME           format
+ 102: LOAD_CONST           None
+ 104: RETURN_VALUE         

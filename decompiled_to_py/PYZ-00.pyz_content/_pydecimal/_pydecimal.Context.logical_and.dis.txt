@@ -1,0 +1,27 @@
+# Disassembly for _pydecimal.Context.logical_and
+# From module file: _pydecimal
+
+## co_consts:
+("Applies the logical operation 'and' between each operand's digits.\n\n        The operands must be both logical numbers.\n\n        >>> ExtendedContext.logical_and(Decimal('0'), Decimal('0'))\n        Decimal('0')\n        >>> ExtendedContext.logical_and(Decimal('0'), Decimal('1'))\n        Decimal('0')\n        >>> ExtendedContext.logical_and(Decimal('1'), Decimal('0'))\n        Decimal('0')\n        >>> ExtendedContext.logical_and(Decimal('1'), Decimal('1'))\n        Decimal('1')\n        >>> ExtendedContext.logical_and(Decimal('1100'), Decimal('1010'))\n        Decimal('1000')\n        >>> ExtendedContext.logical_and(Decimal('1111'), Decimal('10'))\n        Decimal('10')\n        >>> ExtendedContext.logical_and(110, 1101)\n        Decimal('100')\n        >>> ExtendedContext.logical_and(Decimal(110), 1101)\n        Decimal('100')\n        >>> ExtendedContext.logical_and(110, Decimal(1101))\n        Decimal('100')\n        ", True, ('raiseit',), ('context',))
+
+## co_names:
+('_convert_other', 'logical_and')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _convert_other
+  14: LOAD_FAST            a
+  16: LOAD_CONST           True
+  18: KW_NAMES             
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           a
+  36: LOAD_FAST            a
+  38: LOAD_METHOD          logical_and
+  60: LOAD_FAST            b
+  62: LOAD_FAST            self
+  64: KW_NAMES             
+  66: PRECALL              
+  70: CALL                 
+  80: RETURN_VALUE         

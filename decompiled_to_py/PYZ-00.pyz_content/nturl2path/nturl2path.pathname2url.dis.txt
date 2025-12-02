@@ -1,0 +1,177 @@
+# Disassembly for nturl2path.pathname2url
+# From module file: nturl2path
+
+## co_consts:
+("OS-specific conversion from a file system path to a relative URL\n    of the 'file' scheme; not recommended for general use.", 0, None, 4, '\\\\?\\', 'UNC\\', '\\', 1, 2, ':', 'Bad path: ', '\\\\', '/', ('maxsplit',), '///')
+
+## co_names:
+('urllib.parse', 'upper', 'OSError', 'split', 'parse', 'quote', 'join', 'len')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           None
+   6: IMPORT_NAME          urllib.parse
+   8: STORE_FAST           urllib
+  10: LOAD_FAST            p
+  12: LOAD_CONST           None
+  14: LOAD_CONST           4
+  16: BUILD_SLICE          
+  18: BINARY_SUBSCR        
+  28: LOAD_CONST           '\\\\?\\'
+  30: COMPARE_OP           ==
+  36: POP_JUMP_FORWARD_IF_FALSE to 214
+  38: LOAD_FAST            p
+  40: LOAD_CONST           4
+  42: LOAD_CONST           None
+  44: BUILD_SLICE          
+  46: BINARY_SUBSCR        
+  56: STORE_FAST           p
+  58: LOAD_FAST            p
+  60: LOAD_CONST           None
+  62: LOAD_CONST           4
+  64: BUILD_SLICE          
+  66: BINARY_SUBSCR        
+  76: LOAD_METHOD          upper
+  98: PRECALL              
+ 102: CALL                 
+ 112: LOAD_CONST           'UNC\\'
+ 114: COMPARE_OP           ==
+ 120: POP_JUMP_FORWARD_IF_FALSE to 150
+ 122: LOAD_CONST           '\\'
+ 124: LOAD_FAST            p
+ 126: LOAD_CONST           4
+ 128: LOAD_CONST           None
+ 130: BUILD_SLICE          
+ 132: BINARY_SUBSCR        
+ 142: BINARY_OP            +
+ 146: STORE_FAST           p
+ 148: JUMP_FORWARD         to 214
+ 150: LOAD_FAST            p
+ 152: LOAD_CONST           1
+ 154: LOAD_CONST           2
+ 156: BUILD_SLICE          
+ 158: BINARY_SUBSCR        
+ 168: LOAD_CONST           ':'
+ 170: COMPARE_OP           !=
+ 176: POP_JUMP_FORWARD_IF_FALSE to 214
+ 178: LOAD_GLOBAL          NULL + OSError
+ 190: LOAD_CONST           'Bad path: '
+ 192: LOAD_FAST            p
+ 194: BINARY_OP            +
+ 198: PRECALL              
+ 202: CALL                 
+ 212: RAISE_VARARGS        
+ 214: LOAD_CONST           ':'
+ 216: LOAD_FAST            p
+ 218: CONTAINS_OP          
+ 220: POP_JUMP_FORWARD_IF_FALSE to 392
+ 222: LOAD_FAST            p
+ 224: LOAD_CONST           None
+ 226: LOAD_CONST           2
+ 228: BUILD_SLICE          
+ 230: BINARY_SUBSCR        
+ 240: LOAD_CONST           '\\\\'
+ 242: COMPARE_OP           ==
+ 248: POP_JUMP_FORWARD_IF_FALSE to 260
+ 250: LOAD_CONST           '\\\\'
+ 252: LOAD_FAST            p
+ 254: BINARY_OP            +
+ 258: STORE_FAST           p
+ 260: LOAD_FAST            p
+ 262: LOAD_METHOD          split
+ 284: LOAD_CONST           '\\'
+ 286: PRECALL              
+ 290: CALL                 
+ 300: STORE_FAST           components
+ 302: LOAD_FAST            urllib
+ 304: LOAD_ATTR            parse
+ 314: LOAD_METHOD          quote
+ 336: LOAD_CONST           '/'
+ 338: LOAD_METHOD          join
+ 360: LOAD_FAST            components
+ 362: PRECALL              
+ 366: CALL                 
+ 376: PRECALL              
+ 380: CALL                 
+ 390: RETURN_VALUE         
+ 392: LOAD_FAST            p
+ 394: LOAD_METHOD          split
+ 416: LOAD_CONST           ':'
+ 418: LOAD_CONST           2
+ 420: KW_NAMES             
+ 422: PRECALL              
+ 426: CALL                 
+ 436: STORE_FAST           comp
+ 438: LOAD_GLOBAL          NULL + len
+ 450: LOAD_FAST            comp
+ 452: PRECALL              
+ 456: CALL                 
+ 466: LOAD_CONST           2
+ 468: COMPARE_OP           !=
+ 474: POP_JUMP_FORWARD_IF_TRUE to 526
+ 476: LOAD_GLOBAL          NULL + len
+ 488: LOAD_FAST            comp
+ 490: LOAD_CONST           0
+ 492: BINARY_SUBSCR        
+ 502: PRECALL              
+ 506: CALL                 
+ 516: LOAD_CONST           1
+ 518: COMPARE_OP           >
+ 524: POP_JUMP_FORWARD_IF_FALSE to 566
+ 526: LOAD_CONST           'Bad path: '
+ 528: LOAD_FAST            p
+ 530: BINARY_OP            +
+ 534: STORE_FAST           error
+ 536: LOAD_GLOBAL          NULL + OSError
+ 548: LOAD_FAST            error
+ 550: PRECALL              
+ 554: CALL                 
+ 564: RAISE_VARARGS        
+ 566: LOAD_FAST            urllib
+ 568: LOAD_ATTR            parse
+ 578: LOAD_METHOD          quote
+ 600: LOAD_FAST            comp
+ 602: LOAD_CONST           0
+ 604: BINARY_SUBSCR        
+ 614: LOAD_METHOD          upper
+ 636: PRECALL              
+ 640: CALL                 
+ 650: PRECALL              
+ 654: CALL                 
+ 664: STORE_FAST           drive
+ 666: LOAD_FAST            comp
+ 668: LOAD_CONST           1
+ 670: BINARY_SUBSCR        
+ 680: LOAD_METHOD          split
+ 702: LOAD_CONST           '\\'
+ 704: PRECALL              
+ 708: CALL                 
+ 718: STORE_FAST           components
+ 720: LOAD_CONST           '///'
+ 722: LOAD_FAST            drive
+ 724: BINARY_OP            +
+ 728: LOAD_CONST           ':'
+ 730: BINARY_OP            +
+ 734: STORE_FAST           path
+ 736: LOAD_FAST            components
+ 738: GET_ITER             
+ 740: FOR_ITER             to 814
+ 742: STORE_FAST           comp
+ 744: LOAD_FAST            comp
+ 746: POP_JUMP_FORWARD_IF_FALSE to 812
+ 748: LOAD_FAST            path
+ 750: LOAD_CONST           '/'
+ 752: BINARY_OP            +
+ 756: LOAD_FAST            urllib
+ 758: LOAD_ATTR            parse
+ 768: LOAD_METHOD          quote
+ 790: LOAD_FAST            comp
+ 792: PRECALL              
+ 796: CALL                 
+ 806: BINARY_OP            +
+ 810: STORE_FAST           path
+ 812: JUMP_BACKWARD        to 740
+ 814: LOAD_FAST            path
+ 816: RETURN_VALUE         

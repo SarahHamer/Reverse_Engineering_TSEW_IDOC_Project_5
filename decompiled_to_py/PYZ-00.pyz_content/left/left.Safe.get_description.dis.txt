@@ -1,0 +1,14 @@
+# Disassembly for left.Safe.get_description
+# From module file: left
+
+## co_consts:
+(None, 'A small safe is on a table.  It has a 3 number dial lock.')
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'A small safe is on a table.  It has a 3 number dial lock.'
+   4: RETURN_VALUE         

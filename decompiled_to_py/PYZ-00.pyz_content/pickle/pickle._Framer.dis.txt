@@ -1,0 +1,41 @@
+# Disassembly for pickle._Framer
+# From module file: pickle
+
+## co_consts:
+('_Framer', 4, 65536, <code object __init__ at 0x0000024069465610, file "pickle.py", line 205>, <code object start_framing at 0x000002406945F3C0, file "pickle.py", line 209>, <code object end_framing at 0x00000240691F3B40, file "pickle.py", line 212>, False, <code object commit_frame at 0x0000024068C8D8F0, file "pickle.py", line 217>, <code object write at 0x00000240693D2170, file "pickle.py", line 241>, <code object write_large_bytes at 0x00000240693AA470, file "pickle.py", line 247>, None, (False,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '_FRAME_SIZE_MIN', '_FRAME_SIZE_TARGET', '__init__', 'start_framing', 'end_framing', 'commit_frame', 'write', 'write_large_bytes')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_Framer'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           4
+  12: STORE_NAME           _FRAME_SIZE_MIN
+  14: LOAD_CONST           65536
+  16: STORE_NAME           _FRAME_SIZE_TARGET
+  18: LOAD_CONST           <code object __init__ at 0x0000024069465610, file "pickle.py", line 205>
+  20: MAKE_FUNCTION        
+  22: STORE_NAME           __init__
+  24: LOAD_CONST           <code object start_framing at 0x000002406945F3C0, file "pickle.py", line 209>
+  26: MAKE_FUNCTION        
+  28: STORE_NAME           start_framing
+  30: LOAD_CONST           <code object end_framing at 0x00000240691F3B40, file "pickle.py", line 212>
+  32: MAKE_FUNCTION        
+  34: STORE_NAME           end_framing
+  36: LOAD_CONST           (False,)
+  38: LOAD_CONST           <code object commit_frame at 0x0000024068C8D8F0, file "pickle.py", line 217>
+  40: MAKE_FUNCTION        defaults
+  42: STORE_NAME           commit_frame
+  44: LOAD_CONST           <code object write at 0x00000240693D2170, file "pickle.py", line 241>
+  46: MAKE_FUNCTION        
+  48: STORE_NAME           write
+  50: LOAD_CONST           <code object write_large_bytes at 0x00000240693AA470, file "pickle.py", line 247>
+  52: MAKE_FUNCTION        
+  54: STORE_NAME           write_large_bytes
+  56: LOAD_CONST           None
+  58: RETURN_VALUE         

@@ -1,0 +1,182 @@
+# Disassembly for base64._b32encode
+# From module file: base64
+
+## co_consts:
+(None, <code object <listcomp> at 0x000002406945D890, file "base64.py", line 171>, <code object <listcomp> at 0x0000024069465610, file "base64.py", line 172>, 5, b'\x00', 0, 30, 20, 1023, 10, 1, b'======', -6, 2, b'====', -4, 3, b'===', -3, 4, b'=', -1)
+
+## co_names:
+('_b32tab2', 'isinstance', 'bytes_types', 'memoryview', 'tobytes', 'len', 'bytearray', 'int', 'from_bytes', 'range', 'bytes')
+
+## bytecode:
+
+   0: MAKE_CELL            b32tab
+   2: RESUME               
+   4: LOAD_FAST            alphabet
+   6: LOAD_GLOBAL          _b32tab2
+  18: CONTAINS_OP          
+  20: POP_JUMP_FORWARD_IF_FALSE to 94
+  22: LOAD_CONST           <code object <listcomp> at 0x000002406945D890, file "base64.py", line 171>
+  24: MAKE_FUNCTION        
+  26: LOAD_FAST            alphabet
+  28: GET_ITER             
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_DEREF          b32tab
+  46: LOAD_CLOSURE         b32tab
+  48: BUILD_TUPLE          
+  50: LOAD_CONST           <code object <listcomp> at 0x0000024069465610, file "base64.py", line 172>
+  52: MAKE_FUNCTION        closure
+  54: LOAD_DEREF           b32tab
+  56: GET_ITER             
+  58: PRECALL              
+  62: CALL                 
+  72: LOAD_GLOBAL          _b32tab2
+  84: LOAD_FAST            alphabet
+  86: STORE_SUBSCR         
+  90: LOAD_CONST           None
+  92: STORE_DEREF          b32tab
+  94: LOAD_GLOBAL          NULL + isinstance
+ 106: LOAD_FAST            s
+ 108: LOAD_GLOBAL          bytes_types
+ 120: PRECALL              
+ 124: CALL                 
+ 134: POP_JUMP_FORWARD_IF_TRUE to 202
+ 136: LOAD_GLOBAL          NULL + memoryview
+ 148: LOAD_FAST            s
+ 150: PRECALL              
+ 154: CALL                 
+ 164: LOAD_METHOD          tobytes
+ 186: PRECALL              
+ 190: CALL                 
+ 200: STORE_FAST           s
+ 202: LOAD_GLOBAL          NULL + len
+ 214: LOAD_FAST            s
+ 216: PRECALL              
+ 220: CALL                 
+ 230: LOAD_CONST           5
+ 232: BINARY_OP            %
+ 236: STORE_FAST           leftover
+ 238: LOAD_FAST            leftover
+ 240: POP_JUMP_FORWARD_IF_FALSE to 264
+ 242: LOAD_FAST            s
+ 244: LOAD_CONST           b'\x00'
+ 246: LOAD_CONST           5
+ 248: LOAD_FAST            leftover
+ 250: BINARY_OP            -
+ 254: BINARY_OP            *
+ 258: BINARY_OP            +
+ 262: STORE_FAST           s
+ 264: LOAD_GLOBAL          NULL + bytearray
+ 276: PRECALL              
+ 280: CALL                 
+ 290: STORE_FAST           encoded
+ 292: LOAD_GLOBAL          int
+ 304: LOAD_ATTR            from_bytes
+ 314: STORE_FAST           from_bytes
+ 316: LOAD_GLOBAL          _b32tab2
+ 328: LOAD_FAST            alphabet
+ 330: BINARY_SUBSCR        
+ 340: STORE_FAST           b32tab2
+ 342: LOAD_GLOBAL          NULL + range
+ 354: LOAD_CONST           0
+ 356: LOAD_GLOBAL          NULL + len
+ 368: LOAD_FAST            s
+ 370: PRECALL              
+ 374: CALL                 
+ 384: LOAD_CONST           5
+ 386: PRECALL              
+ 390: CALL                 
+ 400: GET_ITER             
+ 402: FOR_ITER             to 564
+ 404: STORE_FAST           i
+ 406: PUSH_NULL            
+ 408: LOAD_FAST            from_bytes
+ 410: LOAD_FAST            s
+ 412: LOAD_FAST            i
+ 414: LOAD_FAST            i
+ 416: LOAD_CONST           5
+ 418: BINARY_OP            +
+ 422: BUILD_SLICE          
+ 424: BINARY_SUBSCR        
+ 434: PRECALL              
+ 438: CALL                 
+ 448: STORE_FAST           c
+ 450: LOAD_FAST            encoded
+ 452: LOAD_FAST            b32tab2
+ 454: LOAD_FAST            c
+ 456: LOAD_CONST           30
+ 458: BINARY_OP            >>
+ 462: BINARY_SUBSCR        
+ 472: LOAD_FAST            b32tab2
+ 474: LOAD_FAST            c
+ 476: LOAD_CONST           20
+ 478: BINARY_OP            >>
+ 482: LOAD_CONST           1023
+ 484: BINARY_OP            &
+ 488: BINARY_SUBSCR        
+ 498: BINARY_OP            +
+ 502: LOAD_FAST            b32tab2
+ 504: LOAD_FAST            c
+ 506: LOAD_CONST           10
+ 508: BINARY_OP            >>
+ 512: LOAD_CONST           1023
+ 514: BINARY_OP            &
+ 518: BINARY_SUBSCR        
+ 528: BINARY_OP            +
+ 532: LOAD_FAST            b32tab2
+ 534: LOAD_FAST            c
+ 536: LOAD_CONST           1023
+ 538: BINARY_OP            &
+ 542: BINARY_SUBSCR        
+ 552: BINARY_OP            +
+ 556: BINARY_OP            +=
+ 560: STORE_FAST           encoded
+ 562: JUMP_BACKWARD        to 402
+ 564: LOAD_FAST            leftover
+ 566: LOAD_CONST           1
+ 568: COMPARE_OP           ==
+ 574: POP_JUMP_FORWARD_IF_FALSE to 592
+ 576: LOAD_CONST           b'======'
+ 578: LOAD_FAST            encoded
+ 580: LOAD_CONST           -6
+ 582: LOAD_CONST           None
+ 584: BUILD_SLICE          
+ 586: STORE_SUBSCR         
+ 590: JUMP_FORWARD         to 674
+ 592: LOAD_FAST            leftover
+ 594: LOAD_CONST           2
+ 596: COMPARE_OP           ==
+ 602: POP_JUMP_FORWARD_IF_FALSE to 620
+ 604: LOAD_CONST           b'===='
+ 606: LOAD_FAST            encoded
+ 608: LOAD_CONST           -4
+ 610: LOAD_CONST           None
+ 612: BUILD_SLICE          
+ 614: STORE_SUBSCR         
+ 618: JUMP_FORWARD         to 674
+ 620: LOAD_FAST            leftover
+ 622: LOAD_CONST           3
+ 624: COMPARE_OP           ==
+ 630: POP_JUMP_FORWARD_IF_FALSE to 648
+ 632: LOAD_CONST           b'==='
+ 634: LOAD_FAST            encoded
+ 636: LOAD_CONST           -3
+ 638: LOAD_CONST           None
+ 640: BUILD_SLICE          
+ 642: STORE_SUBSCR         
+ 646: JUMP_FORWARD         to 674
+ 648: LOAD_FAST            leftover
+ 650: LOAD_CONST           4
+ 652: COMPARE_OP           ==
+ 658: POP_JUMP_FORWARD_IF_FALSE to 674
+ 660: LOAD_CONST           b'='
+ 662: LOAD_FAST            encoded
+ 664: LOAD_CONST           -1
+ 666: LOAD_CONST           None
+ 668: BUILD_SLICE          
+ 670: STORE_SUBSCR         
+ 674: LOAD_GLOBAL          NULL + bytes
+ 686: LOAD_FAST            encoded
+ 688: PRECALL              
+ 692: CALL                 
+ 702: RETURN_VALUE         

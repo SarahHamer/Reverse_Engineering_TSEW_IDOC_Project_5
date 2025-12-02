@@ -1,0 +1,14 @@
+# Disassembly for dataclasses._HAS_DEFAULT_FACTORY_CLASS.__repr__
+# From module file: dataclasses
+
+## co_consts:
+(None, '<factory>')
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '<factory>'
+   4: RETURN_VALUE         

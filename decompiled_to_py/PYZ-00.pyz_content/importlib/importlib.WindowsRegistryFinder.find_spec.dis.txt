@@ -1,0 +1,79 @@
+# Disassembly for importlib.WindowsRegistryFinder.find_spec
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+(None, ('origin',))
+
+## co_names:
+('_search_registry', '_path_stat', 'OSError', '_get_supported_file_loaders', 'endswith', 'tuple', '_bootstrap', 'spec_from_loader')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            cls
+   4: LOAD_METHOD          _search_registry
+  26: LOAD_FAST            fullname
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           filepath
+  44: LOAD_FAST            filepath
+  46: POP_JUMP_FORWARD_IF_NOT_NONE to 52
+  48: LOAD_CONST           None
+  50: RETURN_VALUE         
+  52: NOP                  
+  54: LOAD_GLOBAL          NULL + _path_stat
+  66: LOAD_FAST            filepath
+  68: PRECALL              
+  72: CALL                 
+  82: POP_TOP              
+  84: JUMP_FORWARD         to 120
+  86: PUSH_EXC_INFO        
+  88: LOAD_GLOBAL          OSError
+ 100: CHECK_EXC_MATCH      
+ 102: POP_JUMP_FORWARD_IF_FALSE to 112
+ 104: POP_TOP              
+ 106: POP_EXCEPT           
+ 108: LOAD_CONST           None
+ 110: RETURN_VALUE         
+ 112: RERAISE              
+ 114: COPY                 
+ 116: POP_EXCEPT           
+ 118: RERAISE              
+ 120: LOAD_GLOBAL          NULL + _get_supported_file_loaders
+ 132: PRECALL              
+ 136: CALL                 
+ 146: GET_ITER             
+ 148: FOR_ITER             to 314
+ 150: UNPACK_SEQUENCE      
+ 154: STORE_FAST           loader
+ 156: STORE_FAST           suffixes
+ 158: LOAD_FAST            filepath
+ 160: LOAD_METHOD          endswith
+ 182: LOAD_GLOBAL          NULL + tuple
+ 194: LOAD_FAST            suffixes
+ 196: PRECALL              
+ 200: CALL                 
+ 210: PRECALL              
+ 214: CALL                 
+ 224: POP_JUMP_FORWARD_IF_FALSE to 312
+ 226: LOAD_GLOBAL          _bootstrap
+ 238: LOAD_METHOD          spec_from_loader
+ 260: LOAD_FAST            fullname
+ 262: PUSH_NULL            
+ 264: LOAD_FAST            loader
+ 266: LOAD_FAST            fullname
+ 268: LOAD_FAST            filepath
+ 270: PRECALL              
+ 274: CALL                 
+ 284: LOAD_FAST            filepath
+ 286: KW_NAMES             
+ 288: PRECALL              
+ 292: CALL                 
+ 302: STORE_FAST           spec
+ 304: LOAD_FAST            spec
+ 306: SWAP                 
+ 308: POP_TOP              
+ 310: RETURN_VALUE         
+ 312: JUMP_BACKWARD        to 148
+ 314: LOAD_CONST           None
+ 316: RETURN_VALUE         

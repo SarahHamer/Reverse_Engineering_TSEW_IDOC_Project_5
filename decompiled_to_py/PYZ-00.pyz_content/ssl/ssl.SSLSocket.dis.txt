@@ -1,0 +1,254 @@
+# Disassembly for ssl.SSLSocket
+# From module file: ssl
+
+## co_consts:
+('SSLSocket', 'This class implements a subtype of socket.socket that wraps\n    the underlying OS socket in an SSL context when necessary, and\n    provides read and write methods over that channel. ', <code object __init__ at 0x00000240693EBD30, file "ssl.py", line 1011>, False, True, None, <code object _create at 0x0000024068E95210, file "ssl.py", line 1018>, <code object context at 0x0000024069494FA0, file "ssl.py", line 1114>, <code object context at 0x000002406945F960, file "ssl.py", line 1119>, <code object session at 0x000002406945E6A0, file "ssl.py", line 1124>, <code object session at 0x00000240693EAC30, file "ssl.py", line 1130>, <code object session_reused at 0x000002406945F870, file "ssl.py", line 1136>, <code object dup at 0x00000240693EB130, file "ssl.py", line 1142>, <code object _checkClosed at 0x000002406943B1B0, file "ssl.py", line 1146>, <code object _check_connected at 0x00000240693EAD30, file "ssl.py", line 1150>, 1024, <code object read at 0x0000024069498630, file "ssl.py", line 1158>, <code object write at 0x000002406922D920, file "ssl.py", line 1179>, <code object getpeercert at 0x00000240693ABAF0, file "ssl.py", line 1188>, <code object selected_npn_protocol at 0x000002406941B090, file "ssl.py", line 1194>, <code object selected_alpn_protocol at 0x00000240693A9570, file "ssl.py", line 1204>, <code object cipher at 0x00000240693D3800, file "ssl.py", line 1212>, <code object shared_ciphers at 0x00000240693D22A0, file "ssl.py", line 1220>, <code object compression at 0x00000240693D3A60, file "ssl.py", line 1228>, 0, <code object send at 0x000002406934FB40, file "ssl.py", line 1236>, <code object sendto at 0x000002406934F630, file "ssl.py", line 1247>, <code object sendmsg at 0x000002406945F5A0, file "ssl.py", line 1257>, <code object sendall at 0x00000240695EF410, file "ssl.py", line 1263>, <code object sendfile at 0x00000240693AAAB0, file "ssl.py", line 1279>, <code object recv at 0x00000240691F5A30, file "ssl.py", line 1289>, <code object recv_into at 0x00000240691DABB0, file "ssl.py", line 1300>, <code object recvfrom at 0x000002406949D730, file "ssl.py", line 1315>, <code object recvfrom_into at 0x000002406949D8A0, file "ssl.py", line 1323>, <code object recvmsg at 0x000002406945FA50, file "ssl.py", line 1331>, <code object recvmsg_into at 0x000002406945FB40, file "ssl.py", line 1335>, <code object pending at 0x00000240693D29C0, file "ssl.py", line 1339>, <code object shutdown at 0x00000240693AA830, file "ssl.py", line 1347>, <code object unwrap at 0x000002406922C570, file "ssl.py", line 1352>, <code object verify_client_post_handshake at 0x00000240693AA330, file "ssl.py", line 1361>, <code object _real_close at 0x000002406944BCC0, file "ssl.py", line 1368>, <code object do_handshake at 0x000002406947C210, file "ssl.py", line 1372>, <code object _real_connect at 0x0000024068D33080, file "ssl.py", line 1383>, <code object connect at 0x000002406945E1F0, file "ssl.py", line 1409>, <code object connect_ex at 0x000002406945D980, file "ssl.py", line 1414>, <code object accept at 0x00000240691C1210, file "ssl.py", line 1419>, 'tls-unique', <code object get_channel_binding at 0x00000240691C2810, file "ssl.py", line 1431>, <code object version at 0x0000024069CDC030, file "ssl.py", line 1442>, (False, True, True, None, None, None), (None,), (1024, None), (False,), (0,), (0, None), (1024, 0), (None, 0), ('tls-unique',))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', 'classmethod', '_create', 'property', '_sslcopydoc', 'context', 'setter', 'session', 'session_reused', 'dup', '_checkClosed', '_check_connected', 'read', 'write', 'getpeercert', 'selected_npn_protocol', 'selected_alpn_protocol', 'cipher', 'shared_ciphers', 'compression', 'send', 'sendto', 'sendmsg', 'sendall', 'sendfile', 'recv', 'recv_into', 'recvfrom', 'recvfrom_into', 'recvmsg', 'recvmsg_into', 'pending', 'shutdown', 'unwrap', 'verify_client_post_handshake', '_real_close', 'do_handshake', '_real_connect', 'connect', 'connect_ex', 'accept', 'get_channel_binding', 'version', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'SSLSocket'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           'This class implements a subtype of socket.socket that wraps\n    the underlying OS socket in an SSL context when necessary, and\n    provides read and write methods over that channel. '
+  14: STORE_NAME           __doc__
+  16: LOAD_CONST           <code object __init__ at 0x00000240693EBD30, file "ssl.py", line 1011>
+  18: MAKE_FUNCTION        
+  20: STORE_NAME           __init__
+  22: LOAD_NAME            classmethod
+  24: NOP                  
+  26: NOP                  
+  28: NOP                  
+  30: LOAD_CONST           (False, True, True, None, None, None)
+  32: LOAD_CLOSURE         __class__
+  34: BUILD_TUPLE          
+  36: LOAD_CONST           <code object _create at 0x0000024068E95210, file "ssl.py", line 1018>
+  38: MAKE_FUNCTION        defaults, closure
+  40: PRECALL              
+  44: CALL                 
+  54: STORE_NAME           _create
+  56: LOAD_NAME            property
+  58: LOAD_NAME            _sslcopydoc
+  60: LOAD_CONST           <code object context at 0x0000024069494FA0, file "ssl.py", line 1114>
+  62: MAKE_FUNCTION        
+  64: PRECALL              
+  68: CALL                 
+  78: PRECALL              
+  82: CALL                 
+  92: STORE_NAME           context
+  94: LOAD_NAME            context
+  96: LOAD_ATTR            setter
+ 106: LOAD_CONST           <code object context at 0x000002406945F960, file "ssl.py", line 1119>
+ 108: MAKE_FUNCTION        
+ 110: PRECALL              
+ 114: CALL                 
+ 124: STORE_NAME           context
+ 126: LOAD_NAME            property
+ 128: LOAD_NAME            _sslcopydoc
+ 130: LOAD_CONST           <code object session at 0x000002406945E6A0, file "ssl.py", line 1124>
+ 132: MAKE_FUNCTION        
+ 134: PRECALL              
+ 138: CALL                 
+ 148: PRECALL              
+ 152: CALL                 
+ 162: STORE_NAME           session
+ 164: LOAD_NAME            session
+ 166: LOAD_ATTR            setter
+ 176: LOAD_CONST           <code object session at 0x00000240693EAC30, file "ssl.py", line 1130>
+ 178: MAKE_FUNCTION        
+ 180: PRECALL              
+ 184: CALL                 
+ 194: STORE_NAME           session
+ 196: LOAD_NAME            property
+ 198: LOAD_NAME            _sslcopydoc
+ 200: LOAD_CONST           <code object session_reused at 0x000002406945F870, file "ssl.py", line 1136>
+ 202: MAKE_FUNCTION        
+ 204: PRECALL              
+ 208: CALL                 
+ 218: PRECALL              
+ 222: CALL                 
+ 232: STORE_NAME           session_reused
+ 234: LOAD_CONST           <code object dup at 0x00000240693EB130, file "ssl.py", line 1142>
+ 236: MAKE_FUNCTION        
+ 238: STORE_NAME           dup
+ 240: LOAD_CONST           (None,)
+ 242: LOAD_CONST           <code object _checkClosed at 0x000002406943B1B0, file "ssl.py", line 1146>
+ 244: MAKE_FUNCTION        defaults
+ 246: STORE_NAME           _checkClosed
+ 248: LOAD_CONST           <code object _check_connected at 0x00000240693EAD30, file "ssl.py", line 1150>
+ 250: MAKE_FUNCTION        
+ 252: STORE_NAME           _check_connected
+ 254: LOAD_CONST           (1024, None)
+ 256: LOAD_CONST           <code object read at 0x0000024069498630, file "ssl.py", line 1158>
+ 258: MAKE_FUNCTION        defaults
+ 260: STORE_NAME           read
+ 262: LOAD_CONST           <code object write at 0x000002406922D920, file "ssl.py", line 1179>
+ 264: MAKE_FUNCTION        
+ 266: STORE_NAME           write
+ 268: LOAD_NAME            _sslcopydoc
+ 270: LOAD_CONST           (False,)
+ 272: LOAD_CONST           <code object getpeercert at 0x00000240693ABAF0, file "ssl.py", line 1188>
+ 274: MAKE_FUNCTION        defaults
+ 276: PRECALL              
+ 280: CALL                 
+ 290: STORE_NAME           getpeercert
+ 292: LOAD_NAME            _sslcopydoc
+ 294: LOAD_CONST           <code object selected_npn_protocol at 0x000002406941B090, file "ssl.py", line 1194>
+ 296: MAKE_FUNCTION        
+ 298: PRECALL              
+ 302: CALL                 
+ 312: STORE_NAME           selected_npn_protocol
+ 314: LOAD_NAME            _sslcopydoc
+ 316: LOAD_CONST           <code object selected_alpn_protocol at 0x00000240693A9570, file "ssl.py", line 1204>
+ 318: MAKE_FUNCTION        
+ 320: PRECALL              
+ 324: CALL                 
+ 334: STORE_NAME           selected_alpn_protocol
+ 336: LOAD_NAME            _sslcopydoc
+ 338: LOAD_CONST           <code object cipher at 0x00000240693D3800, file "ssl.py", line 1212>
+ 340: MAKE_FUNCTION        
+ 342: PRECALL              
+ 346: CALL                 
+ 356: STORE_NAME           cipher
+ 358: LOAD_NAME            _sslcopydoc
+ 360: LOAD_CONST           <code object shared_ciphers at 0x00000240693D22A0, file "ssl.py", line 1220>
+ 362: MAKE_FUNCTION        
+ 364: PRECALL              
+ 368: CALL                 
+ 378: STORE_NAME           shared_ciphers
+ 380: LOAD_NAME            _sslcopydoc
+ 382: LOAD_CONST           <code object compression at 0x00000240693D3A60, file "ssl.py", line 1228>
+ 384: MAKE_FUNCTION        
+ 386: PRECALL              
+ 390: CALL                 
+ 400: STORE_NAME           compression
+ 402: LOAD_CONST           (0,)
+ 404: LOAD_CLOSURE         __class__
+ 406: BUILD_TUPLE          
+ 408: LOAD_CONST           <code object send at 0x000002406934FB40, file "ssl.py", line 1236>
+ 410: MAKE_FUNCTION        defaults, closure
+ 412: STORE_NAME           send
+ 414: LOAD_CONST           (None,)
+ 416: LOAD_CLOSURE         __class__
+ 418: BUILD_TUPLE          
+ 420: LOAD_CONST           <code object sendto at 0x000002406934F630, file "ssl.py", line 1247>
+ 422: MAKE_FUNCTION        defaults, closure
+ 424: STORE_NAME           sendto
+ 426: LOAD_CONST           <code object sendmsg at 0x000002406945F5A0, file "ssl.py", line 1257>
+ 428: MAKE_FUNCTION        
+ 430: STORE_NAME           sendmsg
+ 432: LOAD_CONST           (0,)
+ 434: LOAD_CLOSURE         __class__
+ 436: BUILD_TUPLE          
+ 438: LOAD_CONST           <code object sendall at 0x00000240695EF410, file "ssl.py", line 1263>
+ 440: MAKE_FUNCTION        defaults, closure
+ 442: STORE_NAME           sendall
+ 444: LOAD_CONST           (0, None)
+ 446: LOAD_CLOSURE         __class__
+ 448: BUILD_TUPLE          
+ 450: LOAD_CONST           <code object sendfile at 0x00000240693AAAB0, file "ssl.py", line 1279>
+ 452: MAKE_FUNCTION        defaults, closure
+ 454: STORE_NAME           sendfile
+ 456: LOAD_CONST           (1024, 0)
+ 458: LOAD_CLOSURE         __class__
+ 460: BUILD_TUPLE          
+ 462: LOAD_CONST           <code object recv at 0x00000240691F5A30, file "ssl.py", line 1289>
+ 464: MAKE_FUNCTION        defaults, closure
+ 466: STORE_NAME           recv
+ 468: LOAD_CONST           (None, 0)
+ 470: LOAD_CLOSURE         __class__
+ 472: BUILD_TUPLE          
+ 474: LOAD_CONST           <code object recv_into at 0x00000240691DABB0, file "ssl.py", line 1300>
+ 476: MAKE_FUNCTION        defaults, closure
+ 478: STORE_NAME           recv_into
+ 480: LOAD_CONST           (1024, 0)
+ 482: LOAD_CLOSURE         __class__
+ 484: BUILD_TUPLE          
+ 486: LOAD_CONST           <code object recvfrom at 0x000002406949D730, file "ssl.py", line 1315>
+ 488: MAKE_FUNCTION        defaults, closure
+ 490: STORE_NAME           recvfrom
+ 492: LOAD_CONST           (None, 0)
+ 494: LOAD_CLOSURE         __class__
+ 496: BUILD_TUPLE          
+ 498: LOAD_CONST           <code object recvfrom_into at 0x000002406949D8A0, file "ssl.py", line 1323>
+ 500: MAKE_FUNCTION        defaults, closure
+ 502: STORE_NAME           recvfrom_into
+ 504: LOAD_CONST           <code object recvmsg at 0x000002406945FA50, file "ssl.py", line 1331>
+ 506: MAKE_FUNCTION        
+ 508: STORE_NAME           recvmsg
+ 510: LOAD_CONST           <code object recvmsg_into at 0x000002406945FB40, file "ssl.py", line 1335>
+ 512: MAKE_FUNCTION        
+ 514: STORE_NAME           recvmsg_into
+ 516: LOAD_NAME            _sslcopydoc
+ 518: LOAD_CONST           <code object pending at 0x00000240693D29C0, file "ssl.py", line 1339>
+ 520: MAKE_FUNCTION        
+ 522: PRECALL              
+ 526: CALL                 
+ 536: STORE_NAME           pending
+ 538: LOAD_CLOSURE         __class__
+ 540: BUILD_TUPLE          
+ 542: LOAD_CONST           <code object shutdown at 0x00000240693AA830, file "ssl.py", line 1347>
+ 544: MAKE_FUNCTION        closure
+ 546: STORE_NAME           shutdown
+ 548: LOAD_NAME            _sslcopydoc
+ 550: LOAD_CONST           <code object unwrap at 0x000002406922C570, file "ssl.py", line 1352>
+ 552: MAKE_FUNCTION        
+ 554: PRECALL              
+ 558: CALL                 
+ 568: STORE_NAME           unwrap
+ 570: LOAD_NAME            _sslcopydoc
+ 572: LOAD_CONST           <code object verify_client_post_handshake at 0x00000240693AA330, file "ssl.py", line 1361>
+ 574: MAKE_FUNCTION        
+ 576: PRECALL              
+ 580: CALL                 
+ 590: STORE_NAME           verify_client_post_handshake
+ 592: LOAD_CLOSURE         __class__
+ 594: BUILD_TUPLE          
+ 596: LOAD_CONST           <code object _real_close at 0x000002406944BCC0, file "ssl.py", line 1368>
+ 598: MAKE_FUNCTION        closure
+ 600: STORE_NAME           _real_close
+ 602: LOAD_NAME            _sslcopydoc
+ 604: LOAD_CONST           (False,)
+ 606: LOAD_CONST           <code object do_handshake at 0x000002406947C210, file "ssl.py", line 1372>
+ 608: MAKE_FUNCTION        defaults
+ 610: PRECALL              
+ 614: CALL                 
+ 624: STORE_NAME           do_handshake
+ 626: LOAD_CLOSURE         __class__
+ 628: BUILD_TUPLE          
+ 630: LOAD_CONST           <code object _real_connect at 0x0000024068D33080, file "ssl.py", line 1383>
+ 632: MAKE_FUNCTION        closure
+ 634: STORE_NAME           _real_connect
+ 636: LOAD_CONST           <code object connect at 0x000002406945E1F0, file "ssl.py", line 1409>
+ 638: MAKE_FUNCTION        
+ 640: STORE_NAME           connect
+ 642: LOAD_CONST           <code object connect_ex at 0x000002406945D980, file "ssl.py", line 1414>
+ 644: MAKE_FUNCTION        
+ 646: STORE_NAME           connect_ex
+ 648: LOAD_CLOSURE         __class__
+ 650: BUILD_TUPLE          
+ 652: LOAD_CONST           <code object accept at 0x00000240691C1210, file "ssl.py", line 1419>
+ 654: MAKE_FUNCTION        closure
+ 656: STORE_NAME           accept
+ 658: LOAD_NAME            _sslcopydoc
+ 660: LOAD_CONST           ('tls-unique',)
+ 662: LOAD_CONST           <code object get_channel_binding at 0x00000240691C2810, file "ssl.py", line 1431>
+ 664: MAKE_FUNCTION        defaults
+ 666: PRECALL              
+ 670: CALL                 
+ 680: STORE_NAME           get_channel_binding
+ 682: LOAD_NAME            _sslcopydoc
+ 684: LOAD_CONST           <code object version at 0x0000024069CDC030, file "ssl.py", line 1442>
+ 686: MAKE_FUNCTION        
+ 688: PRECALL              
+ 692: CALL                 
+ 702: STORE_NAME           version
+ 704: LOAD_CLOSURE         __class__
+ 706: COPY                 
+ 708: STORE_NAME           __classcell__
+ 710: RETURN_VALUE         

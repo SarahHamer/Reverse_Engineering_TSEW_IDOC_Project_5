@@ -1,0 +1,24 @@
+# Disassembly for email.quote
+# From module file: email._parseaddr
+
+## co_consts:
+('Prepare string to be used in a quoted string.\n\n    Turns backslash and double quote characters into quoted pairs.  These\n    are the only characters that need to be quoted inside a quoted string.\n    Does not add the surrounding double quotes.\n    ', '\\', '\\\\', '"', '\\"')
+
+## co_names:
+('replace',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            str
+   4: LOAD_METHOD          replace
+  26: LOAD_CONST           '\\'
+  28: LOAD_CONST           '\\\\'
+  30: PRECALL              
+  34: CALL                 
+  44: LOAD_METHOD          replace
+  66: LOAD_CONST           '"'
+  68: LOAD_CONST           '\\"'
+  70: PRECALL              
+  74: CALL                 
+  84: RETURN_VALUE         

@@ -1,0 +1,607 @@
+# Disassembly for shlex.shlex.read_token
+# From module file: shlex
+
+## co_consts:
+(None, False, ' ', True, 1, '\n', 3, 'shlex: in state ', ' I see character: ', '', 2, 'shlex: I see whitespace in whitespace state', 'a', 'c', 'shlex: I see EOF in quotes state', 'No closing quotation', 'shlex: I see EOF in escape state', 'No escaped character', ('a', 'c'), 'shlex: I see whitespace in word state', 'shlex: I see punctuation in word state', 'shlex: raw token=', 'shlex: raw token=EOF')
+
+## co_names:
+('punctuation_chars', '_pushback_chars', 'pop', 'instream', 'read', 'lineno', 'debug', 'print', 'state', 'token', 'whitespace', 'posix', 'commenters', 'readline', 'escape', 'wordchars', 'quotes', 'whitespace_split', 'ValueError', 'escapedquotes', 'append', 'pushback', 'appendleft', 'repr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           False
+   4: STORE_FAST           quoted
+   6: LOAD_CONST           ' '
+   8: STORE_FAST           escapedstate
+  10: NOP                  
+  12: LOAD_FAST            self
+  14: LOAD_ATTR            punctuation_chars
+  24: POP_JUMP_FORWARD_IF_FALSE to 92
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            _pushback_chars
+  38: POP_JUMP_FORWARD_IF_FALSE to 92
+  40: LOAD_FAST            self
+  42: LOAD_ATTR            _pushback_chars
+  52: LOAD_METHOD          pop
+  74: PRECALL              
+  78: CALL                 
+  88: STORE_FAST           nextchar
+  90: JUMP_FORWARD         to 144
+  92: LOAD_FAST            self
+  94: LOAD_ATTR            instream
+ 104: LOAD_METHOD          read
+ 126: LOAD_CONST           1
+ 128: PRECALL              
+ 132: CALL                 
+ 142: STORE_FAST           nextchar
+ 144: LOAD_FAST            nextchar
+ 146: LOAD_CONST           '\n'
+ 148: COMPARE_OP           ==
+ 154: POP_JUMP_FORWARD_IF_FALSE to 188
+ 156: LOAD_FAST            self
+ 158: COPY                 
+ 160: LOAD_ATTR            lineno
+ 170: LOAD_CONST           1
+ 172: BINARY_OP            +=
+ 176: SWAP                 
+ 178: STORE_ATTR           lineno
+ 188: LOAD_FAST            self
+ 190: LOAD_ATTR            debug
+ 200: LOAD_CONST           3
+ 202: COMPARE_OP           >=
+ 208: POP_JUMP_FORWARD_IF_FALSE to 262
+ 210: LOAD_GLOBAL          NULL + print
+ 222: LOAD_CONST           'shlex: in state '
+ 224: LOAD_FAST            self
+ 226: LOAD_ATTR            state
+ 236: FORMAT_VALUE         repr
+ 238: LOAD_CONST           ' I see character: '
+ 240: LOAD_FAST            nextchar
+ 242: FORMAT_VALUE         repr
+ 244: BUILD_STRING         
+ 246: PRECALL              
+ 250: CALL                 
+ 260: POP_TOP              
+ 262: LOAD_FAST            self
+ 264: LOAD_ATTR            state
+ 274: POP_JUMP_FORWARD_IF_NOT_NONE to 294
+ 276: LOAD_CONST           ''
+ 278: LOAD_FAST            self
+ 280: STORE_ATTR           token
+ 290: EXTENDED_ARG         
+ 292: JUMP_FORWARD         to 2408
+ 294: LOAD_FAST            self
+ 296: LOAD_ATTR            state
+ 306: LOAD_CONST           ' '
+ 308: COMPARE_OP           ==
+ 314: EXTENDED_ARG         
+ 316: POP_JUMP_FORWARD_IF_FALSE to 870
+ 318: LOAD_FAST            nextchar
+ 320: POP_JUMP_FORWARD_IF_TRUE to 340
+ 322: LOAD_CONST           None
+ 324: LOAD_FAST            self
+ 326: STORE_ATTR           state
+ 336: EXTENDED_ARG         
+ 338: JUMP_FORWARD         to 2408
+ 340: LOAD_FAST            nextchar
+ 342: LOAD_FAST            self
+ 344: LOAD_ATTR            whitespace
+ 354: CONTAINS_OP          
+ 356: POP_JUMP_FORWARD_IF_FALSE to 448
+ 358: LOAD_FAST            self
+ 360: LOAD_ATTR            debug
+ 370: LOAD_CONST           2
+ 372: COMPARE_OP           >=
+ 378: POP_JUMP_FORWARD_IF_FALSE to 410
+ 380: LOAD_GLOBAL          NULL + print
+ 392: LOAD_CONST           'shlex: I see whitespace in whitespace state'
+ 394: PRECALL              
+ 398: CALL                 
+ 408: POP_TOP              
+ 410: LOAD_FAST            self
+ 412: LOAD_ATTR            token
+ 422: POP_JUMP_FORWARD_IF_TRUE to 442
+ 424: LOAD_FAST            self
+ 426: LOAD_ATTR            posix
+ 436: POP_JUMP_FORWARD_IF_FALSE to 446
+ 438: LOAD_FAST            quoted
+ 440: POP_JUMP_FORWARD_IF_FALSE to 446
+ 442: EXTENDED_ARG         
+ 444: JUMP_FORWARD         to 2408
+ 446: JUMP_BACKWARD        to 10
+ 448: LOAD_FAST            nextchar
+ 450: LOAD_FAST            self
+ 452: LOAD_ATTR            commenters
+ 462: CONTAINS_OP          
+ 464: POP_JUMP_FORWARD_IF_FALSE to 552
+ 466: LOAD_FAST            self
+ 468: LOAD_ATTR            instream
+ 478: LOAD_METHOD          readline
+ 500: PRECALL              
+ 504: CALL                 
+ 514: POP_TOP              
+ 516: LOAD_FAST            self
+ 518: COPY                 
+ 520: LOAD_ATTR            lineno
+ 530: LOAD_CONST           1
+ 532: BINARY_OP            +=
+ 536: SWAP                 
+ 538: STORE_ATTR           lineno
+ 548: EXTENDED_ARG         
+ 550: JUMP_FORWARD         to 2404
+ 552: LOAD_FAST            self
+ 554: LOAD_ATTR            posix
+ 564: POP_JUMP_FORWARD_IF_FALSE to 606
+ 566: LOAD_FAST            nextchar
+ 568: LOAD_FAST            self
+ 570: LOAD_ATTR            escape
+ 580: CONTAINS_OP          
+ 582: POP_JUMP_FORWARD_IF_FALSE to 606
+ 584: LOAD_CONST           'a'
+ 586: STORE_FAST           escapedstate
+ 588: LOAD_FAST            nextchar
+ 590: LOAD_FAST            self
+ 592: STORE_ATTR           state
+ 602: EXTENDED_ARG         
+ 604: JUMP_FORWARD         to 2404
+ 606: LOAD_FAST            nextchar
+ 608: LOAD_FAST            self
+ 610: LOAD_ATTR            wordchars
+ 620: CONTAINS_OP          
+ 622: POP_JUMP_FORWARD_IF_FALSE to 656
+ 624: LOAD_FAST            nextchar
+ 626: LOAD_FAST            self
+ 628: STORE_ATTR           token
+ 638: LOAD_CONST           'a'
+ 640: LOAD_FAST            self
+ 642: STORE_ATTR           state
+ 652: EXTENDED_ARG         
+ 654: JUMP_FORWARD         to 2404
+ 656: LOAD_FAST            nextchar
+ 658: LOAD_FAST            self
+ 660: LOAD_ATTR            punctuation_chars
+ 670: CONTAINS_OP          
+ 672: POP_JUMP_FORWARD_IF_FALSE to 706
+ 674: LOAD_FAST            nextchar
+ 676: LOAD_FAST            self
+ 678: STORE_ATTR           token
+ 688: LOAD_CONST           'c'
+ 690: LOAD_FAST            self
+ 692: STORE_ATTR           state
+ 702: EXTENDED_ARG         
+ 704: JUMP_FORWARD         to 2404
+ 706: LOAD_FAST            nextchar
+ 708: LOAD_FAST            self
+ 710: LOAD_ATTR            quotes
+ 720: CONTAINS_OP          
+ 722: POP_JUMP_FORWARD_IF_FALSE to 770
+ 724: LOAD_FAST            self
+ 726: LOAD_ATTR            posix
+ 736: POP_JUMP_FORWARD_IF_TRUE to 752
+ 738: LOAD_FAST            nextchar
+ 740: LOAD_FAST            self
+ 742: STORE_ATTR           token
+ 752: LOAD_FAST            nextchar
+ 754: LOAD_FAST            self
+ 756: STORE_ATTR           state
+ 766: EXTENDED_ARG         
+ 768: JUMP_FORWARD         to 2404
+ 770: LOAD_FAST            self
+ 772: LOAD_ATTR            whitespace_split
+ 782: POP_JUMP_FORWARD_IF_FALSE to 816
+ 784: LOAD_FAST            nextchar
+ 786: LOAD_FAST            self
+ 788: STORE_ATTR           token
+ 798: LOAD_CONST           'a'
+ 800: LOAD_FAST            self
+ 802: STORE_ATTR           state
+ 812: EXTENDED_ARG         
+ 814: JUMP_FORWARD         to 2404
+ 816: LOAD_FAST            nextchar
+ 818: LOAD_FAST            self
+ 820: STORE_ATTR           token
+ 830: LOAD_FAST            self
+ 832: LOAD_ATTR            token
+ 842: POP_JUMP_FORWARD_IF_TRUE to 862
+ 844: LOAD_FAST            self
+ 846: LOAD_ATTR            posix
+ 856: POP_JUMP_FORWARD_IF_FALSE to 866
+ 858: LOAD_FAST            quoted
+ 860: POP_JUMP_FORWARD_IF_FALSE to 866
+ 862: EXTENDED_ARG         
+ 864: JUMP_FORWARD         to 2408
+ 866: EXTENDED_ARG         
+ 868: JUMP_BACKWARD        to 10
+ 870: LOAD_FAST            self
+ 872: LOAD_ATTR            state
+ 882: LOAD_FAST            self
+ 884: LOAD_ATTR            quotes
+ 894: CONTAINS_OP          
+ 896: POP_JUMP_FORWARD_IF_FALSE to 1220
+ 898: LOAD_CONST           True
+ 900: STORE_FAST           quoted
+ 902: LOAD_FAST            nextchar
+ 904: POP_JUMP_FORWARD_IF_TRUE to 988
+ 906: LOAD_FAST            self
+ 908: LOAD_ATTR            debug
+ 918: LOAD_CONST           2
+ 920: COMPARE_OP           >=
+ 926: POP_JUMP_FORWARD_IF_FALSE to 958
+ 928: LOAD_GLOBAL          NULL + print
+ 940: LOAD_CONST           'shlex: I see EOF in quotes state'
+ 942: PRECALL              
+ 946: CALL                 
+ 956: POP_TOP              
+ 958: LOAD_GLOBAL          NULL + ValueError
+ 970: LOAD_CONST           'No closing quotation'
+ 972: PRECALL              
+ 976: CALL                 
+ 986: RAISE_VARARGS        
+ 988: LOAD_FAST            nextchar
+ 990: LOAD_FAST            self
+ 992: LOAD_ATTR            state
+1002: COMPARE_OP           ==
+1008: POP_JUMP_FORWARD_IF_FALSE to 1092
+1010: LOAD_FAST            self
+1012: LOAD_ATTR            posix
+1022: POP_JUMP_FORWARD_IF_TRUE to 1074
+1024: LOAD_FAST            self
+1026: COPY                 
+1028: LOAD_ATTR            token
+1038: LOAD_FAST            nextchar
+1040: BINARY_OP            +=
+1044: SWAP                 
+1046: STORE_ATTR           token
+1056: LOAD_CONST           ' '
+1058: LOAD_FAST            self
+1060: STORE_ATTR           state
+1070: EXTENDED_ARG         
+1072: JUMP_FORWARD         to 2408
+1074: LOAD_CONST           'a'
+1076: LOAD_FAST            self
+1078: STORE_ATTR           state
+1088: EXTENDED_ARG         
+1090: JUMP_FORWARD         to 2404
+1092: LOAD_FAST            self
+1094: LOAD_ATTR            posix
+1104: POP_JUMP_FORWARD_IF_FALSE to 1184
+1106: LOAD_FAST            nextchar
+1108: LOAD_FAST            self
+1110: LOAD_ATTR            escape
+1120: CONTAINS_OP          
+1122: POP_JUMP_FORWARD_IF_FALSE to 1184
+1124: LOAD_FAST            self
+1126: LOAD_ATTR            state
+1136: LOAD_FAST            self
+1138: LOAD_ATTR            escapedquotes
+1148: CONTAINS_OP          
+1150: POP_JUMP_FORWARD_IF_FALSE to 1184
+1152: LOAD_FAST            self
+1154: LOAD_ATTR            state
+1164: STORE_FAST           escapedstate
+1166: LOAD_FAST            nextchar
+1168: LOAD_FAST            self
+1170: STORE_ATTR           state
+1180: EXTENDED_ARG         
+1182: JUMP_FORWARD         to 2404
+1184: LOAD_FAST            self
+1186: COPY                 
+1188: LOAD_ATTR            token
+1198: LOAD_FAST            nextchar
+1200: BINARY_OP            +=
+1204: SWAP                 
+1206: STORE_ATTR           token
+1216: EXTENDED_ARG         
+1218: JUMP_FORWARD         to 2404
+1220: LOAD_FAST            self
+1222: LOAD_ATTR            state
+1232: LOAD_FAST            self
+1234: LOAD_ATTR            escape
+1244: CONTAINS_OP          
+1246: POP_JUMP_FORWARD_IF_FALSE to 1478
+1248: LOAD_FAST            nextchar
+1250: POP_JUMP_FORWARD_IF_TRUE to 1334
+1252: LOAD_FAST            self
+1254: LOAD_ATTR            debug
+1264: LOAD_CONST           2
+1266: COMPARE_OP           >=
+1272: POP_JUMP_FORWARD_IF_FALSE to 1304
+1274: LOAD_GLOBAL          NULL + print
+1286: LOAD_CONST           'shlex: I see EOF in escape state'
+1288: PRECALL              
+1292: CALL                 
+1302: POP_TOP              
+1304: LOAD_GLOBAL          NULL + ValueError
+1316: LOAD_CONST           'No escaped character'
+1318: PRECALL              
+1322: CALL                 
+1332: RAISE_VARARGS        
+1334: LOAD_FAST            escapedstate
+1336: LOAD_FAST            self
+1338: LOAD_ATTR            quotes
+1348: CONTAINS_OP          
+1350: POP_JUMP_FORWARD_IF_FALSE to 1428
+1352: LOAD_FAST            nextchar
+1354: LOAD_FAST            self
+1356: LOAD_ATTR            state
+1366: COMPARE_OP           !=
+1372: POP_JUMP_FORWARD_IF_FALSE to 1428
+1374: LOAD_FAST            nextchar
+1376: LOAD_FAST            escapedstate
+1378: COMPARE_OP           !=
+1384: POP_JUMP_FORWARD_IF_FALSE to 1428
+1386: LOAD_FAST            self
+1388: COPY                 
+1390: LOAD_ATTR            token
+1400: LOAD_FAST            self
+1402: LOAD_ATTR            state
+1412: BINARY_OP            +=
+1416: SWAP                 
+1418: STORE_ATTR           token
+1428: LOAD_FAST            self
+1430: COPY                 
+1432: LOAD_ATTR            token
+1442: LOAD_FAST            nextchar
+1444: BINARY_OP            +=
+1448: SWAP                 
+1450: STORE_ATTR           token
+1460: LOAD_FAST            escapedstate
+1462: LOAD_FAST            self
+1464: STORE_ATTR           state
+1474: EXTENDED_ARG         
+1476: JUMP_FORWARD         to 2404
+1478: LOAD_FAST            self
+1480: LOAD_ATTR            state
+1490: LOAD_CONST           ('a', 'c')
+1492: CONTAINS_OP          
+1494: EXTENDED_ARG         
+1496: POP_JUMP_FORWARD_IF_FALSE to 2404
+1498: LOAD_FAST            nextchar
+1500: POP_JUMP_FORWARD_IF_TRUE to 1520
+1502: LOAD_CONST           None
+1504: LOAD_FAST            self
+1506: STORE_ATTR           state
+1516: EXTENDED_ARG         
+1518: JUMP_FORWARD         to 2408
+1520: LOAD_FAST            nextchar
+1522: LOAD_FAST            self
+1524: LOAD_ATTR            whitespace
+1534: CONTAINS_OP          
+1536: POP_JUMP_FORWARD_IF_FALSE to 1644
+1538: LOAD_FAST            self
+1540: LOAD_ATTR            debug
+1550: LOAD_CONST           2
+1552: COMPARE_OP           >=
+1558: POP_JUMP_FORWARD_IF_FALSE to 1590
+1560: LOAD_GLOBAL          NULL + print
+1572: LOAD_CONST           'shlex: I see whitespace in word state'
+1574: PRECALL              
+1578: CALL                 
+1588: POP_TOP              
+1590: LOAD_CONST           ' '
+1592: LOAD_FAST            self
+1594: STORE_ATTR           state
+1604: LOAD_FAST            self
+1606: LOAD_ATTR            token
+1616: POP_JUMP_FORWARD_IF_TRUE to 1636
+1618: LOAD_FAST            self
+1620: LOAD_ATTR            posix
+1630: POP_JUMP_FORWARD_IF_FALSE to 1640
+1632: LOAD_FAST            quoted
+1634: POP_JUMP_FORWARD_IF_FALSE to 1640
+1636: EXTENDED_ARG         
+1638: JUMP_FORWARD         to 2408
+1640: EXTENDED_ARG         
+1642: JUMP_BACKWARD        to 10
+1644: LOAD_FAST            nextchar
+1646: LOAD_FAST            self
+1648: LOAD_ATTR            commenters
+1658: CONTAINS_OP          
+1660: POP_JUMP_FORWARD_IF_FALSE to 1816
+1662: LOAD_FAST            self
+1664: LOAD_ATTR            instream
+1674: LOAD_METHOD          readline
+1696: PRECALL              
+1700: CALL                 
+1710: POP_TOP              
+1712: LOAD_FAST            self
+1714: COPY                 
+1716: LOAD_ATTR            lineno
+1726: LOAD_CONST           1
+1728: BINARY_OP            +=
+1732: SWAP                 
+1734: STORE_ATTR           lineno
+1744: LOAD_FAST            self
+1746: LOAD_ATTR            posix
+1756: POP_JUMP_FORWARD_IF_FALSE to 1812
+1758: LOAD_CONST           ' '
+1760: LOAD_FAST            self
+1762: STORE_ATTR           state
+1772: LOAD_FAST            self
+1774: LOAD_ATTR            token
+1784: POP_JUMP_FORWARD_IF_TRUE to 1804
+1786: LOAD_FAST            self
+1788: LOAD_ATTR            posix
+1798: POP_JUMP_FORWARD_IF_FALSE to 1808
+1800: LOAD_FAST            quoted
+1802: POP_JUMP_FORWARD_IF_FALSE to 1808
+1804: EXTENDED_ARG         
+1806: JUMP_FORWARD         to 2408
+1808: EXTENDED_ARG         
+1810: JUMP_BACKWARD        to 10
+1812: EXTENDED_ARG         
+1814: JUMP_FORWARD         to 2404
+1816: LOAD_FAST            self
+1818: LOAD_ATTR            state
+1828: LOAD_CONST           'c'
+1830: COMPARE_OP           ==
+1836: POP_JUMP_FORWARD_IF_FALSE to 1978
+1838: LOAD_FAST            nextchar
+1840: LOAD_FAST            self
+1842: LOAD_ATTR            punctuation_chars
+1852: CONTAINS_OP          
+1854: POP_JUMP_FORWARD_IF_FALSE to 1892
+1856: LOAD_FAST            self
+1858: COPY                 
+1860: LOAD_ATTR            token
+1870: LOAD_FAST            nextchar
+1872: BINARY_OP            +=
+1876: SWAP                 
+1878: STORE_ATTR           token
+1888: EXTENDED_ARG         
+1890: JUMP_FORWARD         to 2404
+1892: LOAD_FAST            nextchar
+1894: LOAD_FAST            self
+1896: LOAD_ATTR            whitespace
+1906: CONTAINS_OP          
+1908: POP_JUMP_FORWARD_IF_FALSE to 1962
+1910: LOAD_FAST            self
+1912: LOAD_ATTR            _pushback_chars
+1922: LOAD_METHOD          append
+1944: LOAD_FAST            nextchar
+1946: PRECALL              
+1950: CALL                 
+1960: POP_TOP              
+1962: LOAD_CONST           ' '
+1964: LOAD_FAST            self
+1966: STORE_ATTR           state
+1976: JUMP_FORWARD         to 2408
+1978: LOAD_FAST            self
+1980: LOAD_ATTR            posix
+1990: POP_JUMP_FORWARD_IF_FALSE to 2026
+1992: LOAD_FAST            nextchar
+1994: LOAD_FAST            self
+1996: LOAD_ATTR            quotes
+2006: CONTAINS_OP          
+2008: POP_JUMP_FORWARD_IF_FALSE to 2026
+2010: LOAD_FAST            nextchar
+2012: LOAD_FAST            self
+2014: STORE_ATTR           state
+2024: JUMP_FORWARD         to 2404
+2026: LOAD_FAST            self
+2028: LOAD_ATTR            posix
+2038: POP_JUMP_FORWARD_IF_FALSE to 2078
+2040: LOAD_FAST            nextchar
+2042: LOAD_FAST            self
+2044: LOAD_ATTR            escape
+2054: CONTAINS_OP          
+2056: POP_JUMP_FORWARD_IF_FALSE to 2078
+2058: LOAD_CONST           'a'
+2060: STORE_FAST           escapedstate
+2062: LOAD_FAST            nextchar
+2064: LOAD_FAST            self
+2066: STORE_ATTR           state
+2076: JUMP_FORWARD         to 2404
+2078: LOAD_FAST            nextchar
+2080: LOAD_FAST            self
+2082: LOAD_ATTR            wordchars
+2092: CONTAINS_OP          
+2094: POP_JUMP_FORWARD_IF_TRUE to 2146
+2096: LOAD_FAST            nextchar
+2098: LOAD_FAST            self
+2100: LOAD_ATTR            quotes
+2110: CONTAINS_OP          
+2112: POP_JUMP_FORWARD_IF_TRUE to 2146
+2114: LOAD_FAST            self
+2116: LOAD_ATTR            whitespace_split
+2126: POP_JUMP_FORWARD_IF_FALSE to 2180
+2128: LOAD_FAST            nextchar
+2130: LOAD_FAST            self
+2132: LOAD_ATTR            punctuation_chars
+2142: CONTAINS_OP          
+2144: POP_JUMP_FORWARD_IF_FALSE to 2180
+2146: LOAD_FAST            self
+2148: COPY                 
+2150: LOAD_ATTR            token
+2160: LOAD_FAST            nextchar
+2162: BINARY_OP            +=
+2166: SWAP                 
+2168: STORE_ATTR           token
+2178: JUMP_FORWARD         to 2404
+2180: LOAD_FAST            self
+2182: LOAD_ATTR            punctuation_chars
+2192: POP_JUMP_FORWARD_IF_FALSE to 2248
+2194: LOAD_FAST            self
+2196: LOAD_ATTR            _pushback_chars
+2206: LOAD_METHOD          append
+2228: LOAD_FAST            nextchar
+2230: PRECALL              
+2234: CALL                 
+2244: POP_TOP              
+2246: JUMP_FORWARD         to 2300
+2248: LOAD_FAST            self
+2250: LOAD_ATTR            pushback
+2260: LOAD_METHOD          appendleft
+2282: LOAD_FAST            nextchar
+2284: PRECALL              
+2288: CALL                 
+2298: POP_TOP              
+2300: LOAD_FAST            self
+2302: LOAD_ATTR            debug
+2312: LOAD_CONST           2
+2314: COMPARE_OP           >=
+2320: POP_JUMP_FORWARD_IF_FALSE to 2352
+2322: LOAD_GLOBAL          NULL + print
+2334: LOAD_CONST           'shlex: I see punctuation in word state'
+2336: PRECALL              
+2340: CALL                 
+2350: POP_TOP              
+2352: LOAD_CONST           ' '
+2354: LOAD_FAST            self
+2356: STORE_ATTR           state
+2366: LOAD_FAST            self
+2368: LOAD_ATTR            token
+2378: POP_JUMP_FORWARD_IF_TRUE to 2398
+2380: LOAD_FAST            self
+2382: LOAD_ATTR            posix
+2392: POP_JUMP_FORWARD_IF_FALSE to 2400
+2394: LOAD_FAST            quoted
+2396: POP_JUMP_FORWARD_IF_FALSE to 2400
+2398: JUMP_FORWARD         to 2408
+2400: EXTENDED_ARG         
+2402: JUMP_BACKWARD        to 10
+2404: EXTENDED_ARG         
+2406: JUMP_BACKWARD        to 12
+2408: LOAD_FAST            self
+2410: LOAD_ATTR            token
+2420: STORE_FAST           result
+2422: LOAD_CONST           ''
+2424: LOAD_FAST            self
+2426: STORE_ATTR           token
+2436: LOAD_FAST            self
+2438: LOAD_ATTR            posix
+2448: POP_JUMP_FORWARD_IF_FALSE to 2470
+2450: LOAD_FAST            quoted
+2452: POP_JUMP_FORWARD_IF_TRUE to 2470
+2454: LOAD_FAST            result
+2456: LOAD_CONST           ''
+2458: COMPARE_OP           ==
+2464: POP_JUMP_FORWARD_IF_FALSE to 2470
+2466: LOAD_CONST           None
+2468: STORE_FAST           result
+2470: LOAD_FAST            self
+2472: LOAD_ATTR            debug
+2482: LOAD_CONST           1
+2484: COMPARE_OP           >
+2490: POP_JUMP_FORWARD_IF_FALSE to 2590
+2492: LOAD_FAST            result
+2494: POP_JUMP_FORWARD_IF_FALSE to 2560
+2496: LOAD_GLOBAL          NULL + print
+2508: LOAD_CONST           'shlex: raw token='
+2510: LOAD_GLOBAL          NULL + repr
+2522: LOAD_FAST            result
+2524: PRECALL              
+2528: CALL                 
+2538: BINARY_OP            +
+2542: PRECALL              
+2546: CALL                 
+2556: POP_TOP              
+2558: JUMP_FORWARD         to 2590
+2560: LOAD_GLOBAL          NULL + print
+2572: LOAD_CONST           'shlex: raw token=EOF'
+2574: PRECALL              
+2578: CALL                 
+2588: POP_TOP              
+2590: LOAD_FAST            result
+2592: RETURN_VALUE         

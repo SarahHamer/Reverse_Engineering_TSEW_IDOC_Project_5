@@ -1,0 +1,33 @@
+# Disassembly for logging.Logger.getChild
+# From module file: logging
+
+## co_consts:
+("\n        Get a logger which is a descendant to this one.\n\n        This is a convenience method, such that\n\n        logging.getLogger('abc').getChild('def.ghi')\n\n        is the same as\n\n        logging.getLogger('abc.def.ghi')\n\n        It's useful, for example, when the parent logger is named using\n        __name__ rather than a literal string.\n        ", '.')
+
+## co_names:
+('root', 'join', 'name', 'manager', 'getLogger')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            root
+  14: LOAD_FAST            self
+  16: IS_OP                
+  18: POP_JUMP_FORWARD_IF_FALSE to 76
+  20: LOAD_CONST           '.'
+  22: LOAD_METHOD          join
+  44: LOAD_FAST            self
+  46: LOAD_ATTR            name
+  56: LOAD_FAST            suffix
+  58: BUILD_TUPLE          
+  60: PRECALL              
+  64: CALL                 
+  74: STORE_FAST           suffix
+  76: LOAD_FAST            self
+  78: LOAD_ATTR            manager
+  88: LOAD_METHOD          getLogger
+ 110: LOAD_FAST            suffix
+ 112: PRECALL              
+ 116: CALL                 
+ 126: RETURN_VALUE         

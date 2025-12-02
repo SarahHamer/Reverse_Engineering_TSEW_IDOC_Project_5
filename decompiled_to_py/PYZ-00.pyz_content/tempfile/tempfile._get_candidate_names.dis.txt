@@ -1,0 +1,44 @@
+# Disassembly for tempfile._get_candidate_names
+# From module file: tempfile
+
+## co_consts:
+('Common setup sequence for all user-callable interfaces.',)
+
+## co_names:
+('_name_sequence', '_once_lock', 'acquire', '_RandomNameSequence', 'release')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _name_sequence
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 222
+  16: LOAD_GLOBAL          _once_lock
+  28: LOAD_METHOD          acquire
+  50: PRECALL              
+  54: CALL                 
+  64: POP_TOP              
+  66: NOP                  
+  68: LOAD_GLOBAL          _name_sequence
+  80: POP_JUMP_FORWARD_IF_NOT_NONE to 110
+  82: LOAD_GLOBAL          NULL + _RandomNameSequence
+  94: PRECALL              
+  98: CALL                 
+ 108: STORE_GLOBAL         _name_sequence
+ 110: LOAD_GLOBAL          _once_lock
+ 122: LOAD_METHOD          release
+ 144: PRECALL              
+ 148: CALL                 
+ 158: POP_TOP              
+ 160: JUMP_FORWARD         to 222
+ 162: PUSH_EXC_INFO        
+ 164: LOAD_GLOBAL          _once_lock
+ 176: LOAD_METHOD          release
+ 198: PRECALL              
+ 202: CALL                 
+ 212: POP_TOP              
+ 214: RERAISE              
+ 216: COPY                 
+ 218: POP_EXCEPT           
+ 220: RERAISE              
+ 222: LOAD_GLOBAL          _name_sequence
+ 234: RETURN_VALUE         

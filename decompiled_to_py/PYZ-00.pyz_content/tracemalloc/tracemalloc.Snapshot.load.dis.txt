@@ -1,0 +1,45 @@
+# Disassembly for tracemalloc.Snapshot.load
+# From module file: tracemalloc
+
+## co_consts:
+('\n        Load a snapshot from a file.\n        ', 'rb', None)
+
+## co_names:
+('open', 'pickle', 'load')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + open
+  14: LOAD_FAST            filename
+  16: LOAD_CONST           'rb'
+  18: PRECALL              
+  22: CALL                 
+  32: BEFORE_WITH          
+  34: STORE_FAST           fp
+  36: LOAD_GLOBAL          NULL + pickle
+  48: LOAD_ATTR            load
+  58: LOAD_FAST            fp
+  60: PRECALL              
+  64: CALL                 
+  74: SWAP                 
+  76: LOAD_CONST           None
+  78: LOAD_CONST           None
+  80: LOAD_CONST           None
+  82: PRECALL              
+  86: CALL                 
+  96: POP_TOP              
+  98: RETURN_VALUE         
+ 100: PUSH_EXC_INFO        
+ 102: WITH_EXCEPT_START    
+ 104: POP_JUMP_FORWARD_IF_TRUE to 114
+ 106: RERAISE              
+ 108: COPY                 
+ 110: POP_EXCEPT           
+ 112: RERAISE              
+ 114: POP_TOP              
+ 116: POP_EXCEPT           
+ 118: POP_TOP              
+ 120: POP_TOP              
+ 122: LOAD_CONST           None
+ 124: RETURN_VALUE         

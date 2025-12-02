@@ -1,0 +1,23 @@
+# Disassembly for ssl.<dictcomp>
+# From module file: ssl
+
+## co_consts:
+()
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_MAP            
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 24
+   8: UNPACK_SEQUENCE      
+  12: STORE_FAST           name
+  14: STORE_FAST           value
+  16: LOAD_FAST            value
+  18: LOAD_FAST            name
+  20: MAP_ADD              
+  22: JUMP_BACKWARD        to 6
+  24: RETURN_VALUE         

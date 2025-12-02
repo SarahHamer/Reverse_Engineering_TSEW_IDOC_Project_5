@@ -1,0 +1,34 @@
+# Disassembly for tempfile._RandomNameSequence
+# From module file: tempfile
+
+## co_consts:
+('_RandomNameSequence', 'An instance of _RandomNameSequence generates an endless\n    sequence of unpredictable strings which can safely be incorporated\n    into file names.  Each string is eight characters long.  Multiple\n    threads can safely use the same instance at the same time.\n\n    _RandomNameSequence is an iterator.', 'abcdefghijklmnopqrstuvwxyz0123456789_', <code object rng at 0x00000240691F13E0, file "tempfile.py", line 142>, <code object __iter__ at 0x000002406943B6F0, file "tempfile.py", line 150>, <code object __next__ at 0x00000240693D2630, file "tempfile.py", line 153>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'characters', 'property', 'rng', '__iter__', '__next__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_RandomNameSequence'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'An instance of _RandomNameSequence generates an endless\n    sequence of unpredictable strings which can safely be incorporated\n    into file names.  Each string is eight characters long.  Multiple\n    threads can safely use the same instance at the same time.\n\n    _RandomNameSequence is an iterator.'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           'abcdefghijklmnopqrstuvwxyz0123456789_'
+  16: STORE_NAME           characters
+  18: LOAD_NAME            property
+  20: LOAD_CONST           <code object rng at 0x00000240691F13E0, file "tempfile.py", line 142>
+  22: MAKE_FUNCTION        
+  24: PRECALL              
+  28: CALL                 
+  38: STORE_NAME           rng
+  40: LOAD_CONST           <code object __iter__ at 0x000002406943B6F0, file "tempfile.py", line 150>
+  42: MAKE_FUNCTION        
+  44: STORE_NAME           __iter__
+  46: LOAD_CONST           <code object __next__ at 0x00000240693D2630, file "tempfile.py", line 153>
+  48: MAKE_FUNCTION        
+  50: STORE_NAME           __next__
+  52: LOAD_CONST           None
+  54: RETURN_VALUE         

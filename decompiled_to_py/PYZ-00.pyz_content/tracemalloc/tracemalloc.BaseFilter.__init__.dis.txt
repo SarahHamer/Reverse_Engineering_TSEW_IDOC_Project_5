@@ -1,0 +1,17 @@
+# Disassembly for tracemalloc.BaseFilter.__init__
+# From module file: tracemalloc
+
+## co_consts:
+(None,)
+
+## co_names:
+('inclusive',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            inclusive
+   4: LOAD_FAST            self
+   6: STORE_ATTR           inclusive
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         

@@ -1,0 +1,47 @@
+# Disassembly for threading.Barrier._wait
+# From module file: threading
+
+## co_consts:
+(None, <code object <lambda> at 0x0000024069465C30, file "threading.py", line 725>, 0, 1)
+
+## co_names:
+('_cond', 'wait_for', '_break', 'BrokenBarrierError', '_state')
+
+## bytecode:
+
+   0: MAKE_CELL            self
+   2: RESUME               
+   4: LOAD_DEREF           self
+   6: LOAD_ATTR            _cond
+  16: LOAD_METHOD          wait_for
+  38: LOAD_CLOSURE         self
+  40: BUILD_TUPLE          
+  42: LOAD_CONST           <code object <lambda> at 0x0000024069465C30, file "threading.py", line 725>
+  44: MAKE_FUNCTION        closure
+  46: LOAD_FAST            timeout
+  48: PRECALL              
+  52: CALL                 
+  62: POP_JUMP_FORWARD_IF_TRUE to 118
+  64: LOAD_DEREF           self
+  66: LOAD_METHOD          _break
+  88: PRECALL              
+  92: CALL                 
+ 102: POP_TOP              
+ 104: LOAD_GLOBAL          BrokenBarrierError
+ 116: RAISE_VARARGS        
+ 118: LOAD_DEREF           self
+ 120: LOAD_ATTR            _state
+ 130: LOAD_CONST           0
+ 132: COMPARE_OP           <
+ 138: POP_JUMP_FORWARD_IF_FALSE to 154
+ 140: LOAD_GLOBAL          BrokenBarrierError
+ 152: RAISE_VARARGS        
+ 154: LOAD_DEREF           self
+ 156: LOAD_ATTR            _state
+ 166: LOAD_CONST           1
+ 168: COMPARE_OP           ==
+ 174: POP_JUMP_FORWARD_IF_TRUE to 180
+ 176: LOAD_ASSERTION_ERROR 
+ 178: RAISE_VARARGS        
+ 180: LOAD_CONST           None
+ 182: RETURN_VALUE         

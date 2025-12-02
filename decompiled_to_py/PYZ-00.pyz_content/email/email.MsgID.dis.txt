@@ -1,0 +1,25 @@
+# Disassembly for email.MsgID
+# From module file: email._header_value_parser
+
+## co_consts:
+('MsgID', 'msg-id', False, <code object fold at 0x000002406945DA70, file "email\_header_value_parser.py", line 849>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', 'token_type', 'as_ew_allowed', 'fold')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'MsgID'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'msg-id'
+  12: STORE_NAME           token_type
+  14: LOAD_CONST           False
+  16: STORE_NAME           as_ew_allowed
+  18: LOAD_CONST           <code object fold at 0x000002406945DA70, file "email\_header_value_parser.py", line 849>
+  20: MAKE_FUNCTION        
+  22: STORE_NAME           fold
+  24: LOAD_CONST           None
+  26: RETURN_VALUE         

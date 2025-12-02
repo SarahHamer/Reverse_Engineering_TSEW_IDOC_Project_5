@@ -1,0 +1,56 @@
+# Disassembly for typing._SpecialForm
+# From module file: typing
+
+## co_consts:
+('_SpecialForm', ('_name', '__doc__', '_getitem'), <code object __init__ at 0x00000240693EB230, file "typing.py", line 444>, <code object __getattr__ at 0x000002406945EF10, file "typing.py", line 449>, <code object __mro_entries__ at 0x0000024069467830, file "typing.py", line 455>, <code object __repr__ at 0x00000240694949F0, file "typing.py", line 458>, <code object __reduce__ at 0x0000024069494370, file "typing.py", line 461>, <code object __call__ at 0x0000024069467AD0, file "typing.py", line 464>, <code object __or__ at 0x0000024069465530, file "typing.py", line 467>, <code object __ror__ at 0x0000024069465C30, file "typing.py", line 470>, <code object __instancecheck__ at 0x0000024069467590, file "typing.py", line 473>, <code object __subclasscheck__ at 0x00000240694672F0, file "typing.py", line 476>, <code object __getitem__ at 0x000002406945EC40, file "typing.py", line 479>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__slots__', '__init__', '__getattr__', '__mro_entries__', '__repr__', '__reduce__', '__call__', '__or__', '__ror__', '__instancecheck__', '__subclasscheck__', '_tp_cache', '__getitem__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_SpecialForm'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           ('_name', '__doc__', '_getitem')
+  12: STORE_NAME           __slots__
+  14: LOAD_CONST           <code object __init__ at 0x00000240693EB230, file "typing.py", line 444>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           __init__
+  20: LOAD_CONST           <code object __getattr__ at 0x000002406945EF10, file "typing.py", line 449>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           __getattr__
+  26: LOAD_CONST           <code object __mro_entries__ at 0x0000024069467830, file "typing.py", line 455>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           __mro_entries__
+  32: LOAD_CONST           <code object __repr__ at 0x00000240694949F0, file "typing.py", line 458>
+  34: MAKE_FUNCTION        
+  36: STORE_NAME           __repr__
+  38: LOAD_CONST           <code object __reduce__ at 0x0000024069494370, file "typing.py", line 461>
+  40: MAKE_FUNCTION        
+  42: STORE_NAME           __reduce__
+  44: LOAD_CONST           <code object __call__ at 0x0000024069467AD0, file "typing.py", line 464>
+  46: MAKE_FUNCTION        
+  48: STORE_NAME           __call__
+  50: LOAD_CONST           <code object __or__ at 0x0000024069465530, file "typing.py", line 467>
+  52: MAKE_FUNCTION        
+  54: STORE_NAME           __or__
+  56: LOAD_CONST           <code object __ror__ at 0x0000024069465C30, file "typing.py", line 470>
+  58: MAKE_FUNCTION        
+  60: STORE_NAME           __ror__
+  62: LOAD_CONST           <code object __instancecheck__ at 0x0000024069467590, file "typing.py", line 473>
+  64: MAKE_FUNCTION        
+  66: STORE_NAME           __instancecheck__
+  68: LOAD_CONST           <code object __subclasscheck__ at 0x00000240694672F0, file "typing.py", line 476>
+  70: MAKE_FUNCTION        
+  72: STORE_NAME           __subclasscheck__
+  74: LOAD_NAME            _tp_cache
+  76: LOAD_CONST           <code object __getitem__ at 0x000002406945EC40, file "typing.py", line 479>
+  78: MAKE_FUNCTION        
+  80: PRECALL              
+  84: CALL                 
+  94: STORE_NAME           __getitem__
+  96: LOAD_CONST           None
+  98: RETURN_VALUE         

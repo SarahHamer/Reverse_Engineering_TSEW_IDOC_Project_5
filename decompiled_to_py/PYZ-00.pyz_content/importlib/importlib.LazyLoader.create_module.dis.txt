@@ -1,0 +1,19 @@
+# Disassembly for importlib.LazyLoader.create_module
+# From module file: importlib.util
+
+## co_consts:
+(None,)
+
+## co_names:
+('loader', 'create_module')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            loader
+  14: LOAD_METHOD          create_module
+  36: LOAD_FAST            spec
+  38: PRECALL              
+  42: CALL                 
+  52: RETURN_VALUE         

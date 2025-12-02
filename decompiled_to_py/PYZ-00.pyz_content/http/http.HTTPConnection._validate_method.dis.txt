@@ -1,0 +1,37 @@
+# Disassembly for http.HTTPConnection._validate_method
+# From module file: http.client
+
+## co_consts:
+('Validate a method name for putrequest.', "method can't contain control characters. ", ' (found at least ', ')', None)
+
+## co_names:
+('_contains_disallowed_method_pchar_re', 'search', 'ValueError', 'group')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          _contains_disallowed_method_pchar_re
+  14: LOAD_METHOD          search
+  36: LOAD_FAST            method
+  38: PRECALL              
+  42: CALL                 
+  52: STORE_FAST           match
+  54: LOAD_FAST            match
+  56: POP_JUMP_FORWARD_IF_FALSE to 138
+  58: LOAD_GLOBAL          NULL + ValueError
+  70: LOAD_CONST           "method can't contain control characters. "
+  72: LOAD_FAST            method
+  74: FORMAT_VALUE         repr
+  76: LOAD_CONST           ' (found at least '
+  78: LOAD_FAST            match
+  80: LOAD_METHOD          group
+ 102: PRECALL              
+ 106: CALL                 
+ 116: FORMAT_VALUE         repr
+ 118: LOAD_CONST           ')'
+ 120: BUILD_STRING         
+ 122: PRECALL              
+ 126: CALL                 
+ 136: RAISE_VARARGS        
+ 138: LOAD_CONST           None
+ 140: RETURN_VALUE         

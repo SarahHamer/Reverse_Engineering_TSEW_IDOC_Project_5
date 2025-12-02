@@ -1,0 +1,32 @@
+# Disassembly for datetime._cmperror
+# From module file: datetime
+
+## co_consts:
+(None, "can't compare '", "' to '", "'")
+
+## co_names:
+('TypeError', 'type', '__name__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + TypeError
+  14: LOAD_CONST           "can't compare '"
+  16: LOAD_GLOBAL          NULL + type
+  28: LOAD_FAST            x
+  30: PRECALL              
+  34: CALL                 
+  44: LOAD_ATTR            __name__
+  54: FORMAT_VALUE         str
+  56: LOAD_CONST           "' to '"
+  58: LOAD_GLOBAL          NULL + type
+  70: LOAD_FAST            y
+  72: PRECALL              
+  76: CALL                 
+  86: LOAD_ATTR            __name__
+  96: FORMAT_VALUE         str
+  98: LOAD_CONST           "'"
+ 100: BUILD_STRING         
+ 102: PRECALL              
+ 106: CALL                 
+ 116: RAISE_VARARGS        

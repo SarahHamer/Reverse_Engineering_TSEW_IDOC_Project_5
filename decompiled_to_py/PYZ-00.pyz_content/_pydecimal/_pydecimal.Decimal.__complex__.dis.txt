@@ -1,0 +1,20 @@
+# Disassembly for _pydecimal.Decimal.__complex__
+# From module file: _pydecimal
+
+## co_consts:
+(None,)
+
+## co_names:
+('complex', 'float')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + complex
+  14: LOAD_GLOBAL          NULL + float
+  26: LOAD_FAST            self
+  28: PRECALL              
+  32: CALL                 
+  42: PRECALL              
+  46: CALL                 
+  56: RETURN_VALUE         

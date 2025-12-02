@@ -1,0 +1,40 @@
+# Disassembly for email._PolicyBase
+# From module file: email._policybase
+
+## co_consts:
+('_PolicyBase', 'Policy Object basic framework.\n\n    This class is useless unless subclassed.  A subclass should define\n    class attributes with defaults for any values that are to be\n    managed by the Policy object.  The constructor will then allow\n    non-default values to be set for these attributes at instance\n    creation time.  The instance will be callable, taking these same\n    attributes keyword arguments, and returning a new instance\n    identical to the called instance except for those values changed\n    by the keyword arguments.  Instances may be added, yielding new\n    instances with any non-default values from the right hand\n    operand overriding those in the left hand operand.  That is,\n\n        A + B == A(<non-default values of B>)\n\n    The repr of an instance can be used to reconstruct the object\n    if and only if the repr of the values can be used to reconstruct\n    those values.\n\n    ', <code object __init__ at 0x00000240691A7D70, file "email\_policybase.py", line 41>, <code object __repr__ at 0x000002406921F9B0, file "email\_policybase.py", line 55>, <code object clone at 0x0000024068C5ABD0, file "email\_policybase.py", line 60>, <code object __setattr__ at 0x00000240693AA5B0, file "email\_policybase.py", line 78>, <code object __add__ at 0x0000024069466090, file "email\_policybase.py", line 85>)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', '__repr__', 'clone', '__setattr__', '__add__', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           '_PolicyBase'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           'Policy Object basic framework.\n\n    This class is useless unless subclassed.  A subclass should define\n    class attributes with defaults for any values that are to be\n    managed by the Policy object.  The constructor will then allow\n    non-default values to be set for these attributes at instance\n    creation time.  The instance will be callable, taking these same\n    attributes keyword arguments, and returning a new instance\n    identical to the called instance except for those values changed\n    by the keyword arguments.  Instances may be added, yielding new\n    instances with any non-default values from the right hand\n    operand overriding those in the left hand operand.  That is,\n\n        A + B == A(<non-default values of B>)\n\n    The repr of an instance can be used to reconstruct the object\n    if and only if the repr of the values can be used to reconstruct\n    those values.\n\n    '
+  14: STORE_NAME           __doc__
+  16: LOAD_CLOSURE         __class__
+  18: BUILD_TUPLE          
+  20: LOAD_CONST           <code object __init__ at 0x00000240691A7D70, file "email\_policybase.py", line 41>
+  22: MAKE_FUNCTION        closure
+  24: STORE_NAME           __init__
+  26: LOAD_CONST           <code object __repr__ at 0x000002406921F9B0, file "email\_policybase.py", line 55>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           __repr__
+  32: LOAD_CONST           <code object clone at 0x0000024068C5ABD0, file "email\_policybase.py", line 60>
+  34: MAKE_FUNCTION        
+  36: STORE_NAME           clone
+  38: LOAD_CONST           <code object __setattr__ at 0x00000240693AA5B0, file "email\_policybase.py", line 78>
+  40: MAKE_FUNCTION        
+  42: STORE_NAME           __setattr__
+  44: LOAD_CONST           <code object __add__ at 0x0000024069466090, file "email\_policybase.py", line 85>
+  46: MAKE_FUNCTION        
+  48: STORE_NAME           __add__
+  50: LOAD_CLOSURE         __class__
+  52: COPY                 
+  54: STORE_NAME           __classcell__
+  56: RETURN_VALUE         

@@ -1,0 +1,19 @@
+# Disassembly for shutil._rmtree_islink
+# From module file: shutil
+
+## co_consts:
+(None,)
+
+## co_names:
+('os', 'path', 'islink')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          os
+  14: LOAD_ATTR            path
+  24: LOAD_METHOD          islink
+  46: LOAD_FAST            path
+  48: PRECALL              
+  52: CALL                 
+  62: RETURN_VALUE         

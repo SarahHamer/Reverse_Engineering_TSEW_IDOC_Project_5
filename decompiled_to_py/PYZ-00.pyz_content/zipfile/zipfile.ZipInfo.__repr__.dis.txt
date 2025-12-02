@@ -1,0 +1,134 @@
+# Disassembly for zipfile.ZipInfo.__repr__
+# From module file: zipfile
+
+## co_consts:
+(None, '<', ' filename=', ' compress_type=%s', 16, 65535, ' filemode=%r', ' external_attr=%#x', ' file_size=%r', ' compress_size=%r', '>', '')
+
+## co_names:
+('__class__', '__name__', 'filename', 'compress_type', 'ZIP_STORED', 'append', 'compressor_names', 'get', 'external_attr', 'stat', 'filemode', 'is_dir', 'file_size', 'compress_size', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '<'
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            __class__
+  16: LOAD_ATTR            __name__
+  26: FORMAT_VALUE         str
+  28: LOAD_CONST           ' filename='
+  30: LOAD_FAST            self
+  32: LOAD_ATTR            filename
+  42: FORMAT_VALUE         repr
+  44: BUILD_STRING         
+  46: BUILD_LIST           
+  48: STORE_FAST           result
+  50: LOAD_FAST            self
+  52: LOAD_ATTR            compress_type
+  62: LOAD_GLOBAL          ZIP_STORED
+  74: COMPARE_OP           !=
+  80: POP_JUMP_FORWARD_IF_FALSE to 200
+  82: LOAD_FAST            result
+  84: LOAD_METHOD          append
+ 106: LOAD_CONST           ' compress_type=%s'
+ 108: LOAD_GLOBAL          compressor_names
+ 120: LOAD_METHOD          get
+ 142: LOAD_FAST            self
+ 144: LOAD_ATTR            compress_type
+ 154: LOAD_FAST            self
+ 156: LOAD_ATTR            compress_type
+ 166: PRECALL              
+ 170: CALL                 
+ 180: BINARY_OP            %
+ 184: PRECALL              
+ 188: CALL                 
+ 198: POP_TOP              
+ 200: LOAD_FAST            self
+ 202: LOAD_ATTR            external_attr
+ 212: LOAD_CONST           16
+ 214: BINARY_OP            >>
+ 218: STORE_FAST           hi
+ 220: LOAD_FAST            self
+ 222: LOAD_ATTR            external_attr
+ 232: LOAD_CONST           65535
+ 234: BINARY_OP            &
+ 238: STORE_FAST           lo
+ 240: LOAD_FAST            hi
+ 242: POP_JUMP_FORWARD_IF_FALSE to 328
+ 244: LOAD_FAST            result
+ 246: LOAD_METHOD          append
+ 268: LOAD_CONST           ' filemode=%r'
+ 270: LOAD_GLOBAL          NULL + stat
+ 282: LOAD_ATTR            filemode
+ 292: LOAD_FAST            hi
+ 294: PRECALL              
+ 298: CALL                 
+ 308: BINARY_OP            %
+ 312: PRECALL              
+ 316: CALL                 
+ 326: POP_TOP              
+ 328: LOAD_FAST            lo
+ 330: POP_JUMP_FORWARD_IF_FALSE to 380
+ 332: LOAD_FAST            result
+ 334: LOAD_METHOD          append
+ 356: LOAD_CONST           ' external_attr=%#x'
+ 358: LOAD_FAST            lo
+ 360: BINARY_OP            %
+ 364: PRECALL              
+ 368: CALL                 
+ 378: POP_TOP              
+ 380: LOAD_FAST            self
+ 382: LOAD_METHOD          is_dir
+ 404: PRECALL              
+ 408: CALL                 
+ 418: STORE_FAST           isdir
+ 420: LOAD_FAST            isdir
+ 422: POP_JUMP_FORWARD_IF_FALSE to 438
+ 424: LOAD_FAST            self
+ 426: LOAD_ATTR            file_size
+ 436: POP_JUMP_FORWARD_IF_FALSE to 496
+ 438: LOAD_FAST            result
+ 440: LOAD_METHOD          append
+ 462: LOAD_CONST           ' file_size=%r'
+ 464: LOAD_FAST            self
+ 466: LOAD_ATTR            file_size
+ 476: BINARY_OP            %
+ 480: PRECALL              
+ 484: CALL                 
+ 494: POP_TOP              
+ 496: LOAD_FAST            isdir
+ 498: POP_JUMP_FORWARD_IF_FALSE to 514
+ 500: LOAD_FAST            self
+ 502: LOAD_ATTR            compress_size
+ 512: POP_JUMP_FORWARD_IF_FALSE to 636
+ 514: LOAD_FAST            self
+ 516: LOAD_ATTR            compress_type
+ 526: LOAD_GLOBAL          ZIP_STORED
+ 538: COMPARE_OP           !=
+ 544: POP_JUMP_FORWARD_IF_TRUE to 578
+ 546: LOAD_FAST            self
+ 548: LOAD_ATTR            file_size
+ 558: LOAD_FAST            self
+ 560: LOAD_ATTR            compress_size
+ 570: COMPARE_OP           !=
+ 576: POP_JUMP_FORWARD_IF_FALSE to 636
+ 578: LOAD_FAST            result
+ 580: LOAD_METHOD          append
+ 602: LOAD_CONST           ' compress_size=%r'
+ 604: LOAD_FAST            self
+ 606: LOAD_ATTR            compress_size
+ 616: BINARY_OP            %
+ 620: PRECALL              
+ 624: CALL                 
+ 634: POP_TOP              
+ 636: LOAD_FAST            result
+ 638: LOAD_METHOD          append
+ 660: LOAD_CONST           '>'
+ 662: PRECALL              
+ 666: CALL                 
+ 676: POP_TOP              
+ 678: LOAD_CONST           ''
+ 680: LOAD_METHOD          join
+ 702: LOAD_FAST            result
+ 704: PRECALL              
+ 708: CALL                 
+ 718: RETURN_VALUE         

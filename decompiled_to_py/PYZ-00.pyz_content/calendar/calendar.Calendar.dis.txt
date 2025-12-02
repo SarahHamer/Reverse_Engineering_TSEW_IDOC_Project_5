@@ -1,0 +1,76 @@
+# Disassembly for calendar.Calendar
+# From module file: calendar
+
+## co_consts:
+('Calendar', "\n    Base calendar class. This class doesn't do any formatting. It simply\n    provides data to subclasses.\n    ", 0, <code object __init__ at 0x0000024069495210, file "calendar.py", line 156>, <code object getfirstweekday at 0x00000240694953B0, file "calendar.py", line 159>, <code object setfirstweekday at 0x0000024069495480, file "calendar.py", line 162>, <code object iterweekdays at 0x000002406944A010, file "calendar.py", line 167>, <code object itermonthdates at 0x00000240693D23D0, file "calendar.py", line 175>, <code object itermonthdays at 0x000002406934EF70, file "calendar.py", line 184>, <code object itermonthdays2 at 0x00000240693AA470, file "calendar.py", line 196>, <code object itermonthdays3 at 0x0000024068D6E320, file "calendar.py", line 204>, <code object itermonthdays4 at 0x00000240691F3B40, file "calendar.py", line 222>, <code object monthdatescalendar at 0x00000240691C1FD0, file "calendar.py", line 230>, <code object monthdays2calendar at 0x00000240691C05B0, file "calendar.py", line 238>, <code object monthdayscalendar at 0x00000240691C09D0, file "calendar.py", line 248>, 3, <code object yeardatescalendar at 0x000002406921F840, file "calendar.py", line 256>, <code object yeardays2calendar at 0x000002406921F9B0, file "calendar.py", line 269>, <code object yeardayscalendar at 0x000002406921FC90, file "calendar.py", line 282>, None, (0,), (3,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', 'getfirstweekday', 'setfirstweekday', 'property', 'firstweekday', 'iterweekdays', 'itermonthdates', 'itermonthdays', 'itermonthdays2', 'itermonthdays3', 'itermonthdays4', 'monthdatescalendar', 'monthdays2calendar', 'monthdayscalendar', 'yeardatescalendar', 'yeardays2calendar', 'yeardayscalendar')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'Calendar'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           "\n    Base calendar class. This class doesn't do any formatting. It simply\n    provides data to subclasses.\n    "
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           (0,)
+  16: LOAD_CONST           <code object __init__ at 0x0000024069495210, file "calendar.py", line 156>
+  18: MAKE_FUNCTION        defaults
+  20: STORE_NAME           __init__
+  22: LOAD_CONST           <code object getfirstweekday at 0x00000240694953B0, file "calendar.py", line 159>
+  24: MAKE_FUNCTION        
+  26: STORE_NAME           getfirstweekday
+  28: LOAD_CONST           <code object setfirstweekday at 0x0000024069495480, file "calendar.py", line 162>
+  30: MAKE_FUNCTION        
+  32: STORE_NAME           setfirstweekday
+  34: PUSH_NULL            
+  36: LOAD_NAME            property
+  38: LOAD_NAME            getfirstweekday
+  40: LOAD_NAME            setfirstweekday
+  42: PRECALL              
+  46: CALL                 
+  56: STORE_NAME           firstweekday
+  58: LOAD_CONST           <code object iterweekdays at 0x000002406944A010, file "calendar.py", line 167>
+  60: MAKE_FUNCTION        
+  62: STORE_NAME           iterweekdays
+  64: LOAD_CONST           <code object itermonthdates at 0x00000240693D23D0, file "calendar.py", line 175>
+  66: MAKE_FUNCTION        
+  68: STORE_NAME           itermonthdates
+  70: LOAD_CONST           <code object itermonthdays at 0x000002406934EF70, file "calendar.py", line 184>
+  72: MAKE_FUNCTION        
+  74: STORE_NAME           itermonthdays
+  76: LOAD_CONST           <code object itermonthdays2 at 0x00000240693AA470, file "calendar.py", line 196>
+  78: MAKE_FUNCTION        
+  80: STORE_NAME           itermonthdays2
+  82: LOAD_CONST           <code object itermonthdays3 at 0x0000024068D6E320, file "calendar.py", line 204>
+  84: MAKE_FUNCTION        
+  86: STORE_NAME           itermonthdays3
+  88: LOAD_CONST           <code object itermonthdays4 at 0x00000240691F3B40, file "calendar.py", line 222>
+  90: MAKE_FUNCTION        
+  92: STORE_NAME           itermonthdays4
+  94: LOAD_CONST           <code object monthdatescalendar at 0x00000240691C1FD0, file "calendar.py", line 230>
+  96: MAKE_FUNCTION        
+  98: STORE_NAME           monthdatescalendar
+ 100: LOAD_CONST           <code object monthdays2calendar at 0x00000240691C05B0, file "calendar.py", line 238>
+ 102: MAKE_FUNCTION        
+ 104: STORE_NAME           monthdays2calendar
+ 106: LOAD_CONST           <code object monthdayscalendar at 0x00000240691C09D0, file "calendar.py", line 248>
+ 108: MAKE_FUNCTION        
+ 110: STORE_NAME           monthdayscalendar
+ 112: LOAD_CONST           (3,)
+ 114: LOAD_CONST           <code object yeardatescalendar at 0x000002406921F840, file "calendar.py", line 256>
+ 116: MAKE_FUNCTION        defaults
+ 118: STORE_NAME           yeardatescalendar
+ 120: LOAD_CONST           (3,)
+ 122: LOAD_CONST           <code object yeardays2calendar at 0x000002406921F9B0, file "calendar.py", line 269>
+ 124: MAKE_FUNCTION        defaults
+ 126: STORE_NAME           yeardays2calendar
+ 128: LOAD_CONST           (3,)
+ 130: LOAD_CONST           <code object yeardayscalendar at 0x000002406921FC90, file "calendar.py", line 282>
+ 132: MAKE_FUNCTION        defaults
+ 134: STORE_NAME           yeardayscalendar
+ 136: LOAD_CONST           None
+ 138: RETURN_VALUE         

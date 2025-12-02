@@ -1,0 +1,152 @@
+# Disassembly for email.localtime
+# From module file: email.utils
+
+## co_consts:
+('Return local time as an aware datetime object.\n\n    If called without arguments, return current time.  Otherwise *dt*\n    argument should be a datetime instance, and it is converted to the\n    local time zone according to the system time zone database.  If *dt* is\n    naive (that is, dt.tzinfo is None), it is assumed to be in local time.\n    In this case, a positive or zero value for *isdst* causes localtime to\n    presume initially that summer time (for example, Daylight Saving Time)\n    is or is not (respectively) in effect for the specified time.  A\n    negative value for *isdst* causes the localtime() function to attempt\n    to divine whether summer time is in effect for the specified time.\n\n    ', None, -1, ('seconds',), 6, 0, ('tzinfo',))
+
+## co_names:
+('datetime', 'now', 'timezone', 'utc', 'astimezone', 'tzinfo', 'timetuple', 'time', 'mktime', 'localtime', 'timedelta', 'tm_gmtoff', 'tm_zone', 'AttributeError', 'gmtime', 'daylight', 'tm_isdst', 'altzone', 'tzname', 'replace')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            dt
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 134
+   6: LOAD_GLOBAL          datetime
+  18: LOAD_ATTR            datetime
+  28: LOAD_METHOD          now
+  50: LOAD_GLOBAL          datetime
+  62: LOAD_ATTR            timezone
+  72: LOAD_ATTR            utc
+  82: PRECALL              
+  86: CALL                 
+  96: LOAD_METHOD          astimezone
+ 118: PRECALL              
+ 122: CALL                 
+ 132: RETURN_VALUE         
+ 134: LOAD_FAST            dt
+ 136: LOAD_ATTR            tzinfo
+ 146: POP_JUMP_FORWARD_IF_NONE to 188
+ 148: LOAD_FAST            dt
+ 150: LOAD_METHOD          astimezone
+ 172: PRECALL              
+ 176: CALL                 
+ 186: RETURN_VALUE         
+ 188: LOAD_FAST            dt
+ 190: LOAD_METHOD          timetuple
+ 212: PRECALL              
+ 216: CALL                 
+ 226: LOAD_CONST           None
+ 228: LOAD_CONST           -1
+ 230: BUILD_SLICE          
+ 232: BINARY_SUBSCR        
+ 242: LOAD_FAST            isdst
+ 244: BUILD_TUPLE          
+ 246: BINARY_OP            +
+ 250: STORE_FAST           tm
+ 252: LOAD_GLOBAL          NULL + time
+ 264: LOAD_ATTR            mktime
+ 274: LOAD_FAST            tm
+ 276: PRECALL              
+ 280: CALL                 
+ 290: STORE_FAST           seconds
+ 292: LOAD_GLOBAL          NULL + time
+ 304: LOAD_ATTR            localtime
+ 314: LOAD_FAST            seconds
+ 316: PRECALL              
+ 320: CALL                 
+ 330: STORE_FAST           localtm
+ 332: NOP                  
+ 334: LOAD_GLOBAL          NULL + datetime
+ 346: LOAD_ATTR            timedelta
+ 356: LOAD_FAST            localtm
+ 358: LOAD_ATTR            tm_gmtoff
+ 368: KW_NAMES             
+ 370: PRECALL              
+ 374: CALL                 
+ 384: STORE_FAST           delta
+ 386: LOAD_GLOBAL          NULL + datetime
+ 398: LOAD_ATTR            timezone
+ 408: LOAD_FAST            delta
+ 410: LOAD_FAST            localtm
+ 412: LOAD_ATTR            tm_zone
+ 422: PRECALL              
+ 426: CALL                 
+ 436: STORE_FAST           tz
+ 438: JUMP_FORWARD         to 824
+ 440: PUSH_EXC_INFO        
+ 442: LOAD_GLOBAL          AttributeError
+ 454: CHECK_EXC_MATCH      
+ 456: POP_JUMP_FORWARD_IF_FALSE to 816
+ 458: POP_TOP              
+ 460: LOAD_FAST            dt
+ 462: LOAD_GLOBAL          NULL + datetime
+ 474: LOAD_ATTR            datetime
+ 484: LOAD_GLOBAL          NULL + time
+ 496: LOAD_ATTR            gmtime
+ 506: LOAD_FAST            seconds
+ 508: PRECALL              
+ 512: CALL                 
+ 522: LOAD_CONST           None
+ 524: LOAD_CONST           6
+ 526: BUILD_SLICE          
+ 528: BINARY_SUBSCR        
+ 538: CALL_FUNCTION_EX     
+ 540: BINARY_OP            -
+ 544: STORE_FAST           delta
+ 546: LOAD_GLOBAL          time
+ 558: LOAD_ATTR            daylight
+ 568: JUMP_IF_FALSE_OR_POP to 590
+ 570: LOAD_FAST            localtm
+ 572: LOAD_ATTR            tm_isdst
+ 582: LOAD_CONST           0
+ 584: COMPARE_OP           >
+ 590: STORE_FAST           dst
+ 592: LOAD_FAST            dst
+ 594: POP_JUMP_FORWARD_IF_FALSE to 620
+ 596: LOAD_GLOBAL          time
+ 608: LOAD_ATTR            altzone
+ 618: JUMP_FORWARD         to 642
+ 620: LOAD_GLOBAL          time
+ 632: LOAD_ATTR            timezone
+ 642: UNARY_NEGATIVE       
+ 644: STORE_FAST           gmtoff
+ 646: LOAD_FAST            delta
+ 648: LOAD_GLOBAL          NULL + datetime
+ 660: LOAD_ATTR            timedelta
+ 670: LOAD_FAST            gmtoff
+ 672: KW_NAMES             
+ 674: PRECALL              
+ 678: CALL                 
+ 688: COMPARE_OP           ==
+ 694: POP_JUMP_FORWARD_IF_FALSE to 772
+ 696: LOAD_GLOBAL          NULL + datetime
+ 708: LOAD_ATTR            timezone
+ 718: LOAD_FAST            delta
+ 720: LOAD_GLOBAL          time
+ 732: LOAD_ATTR            tzname
+ 742: LOAD_FAST            dst
+ 744: BINARY_SUBSCR        
+ 754: PRECALL              
+ 758: CALL                 
+ 768: STORE_FAST           tz
+ 770: JUMP_FORWARD         to 812
+ 772: LOAD_GLOBAL          NULL + datetime
+ 784: LOAD_ATTR            timezone
+ 794: LOAD_FAST            delta
+ 796: PRECALL              
+ 800: CALL                 
+ 810: STORE_FAST           tz
+ 812: POP_EXCEPT           
+ 814: JUMP_FORWARD         to 824
+ 816: RERAISE              
+ 818: COPY                 
+ 820: POP_EXCEPT           
+ 822: RERAISE              
+ 824: LOAD_FAST            dt
+ 826: LOAD_METHOD          replace
+ 848: LOAD_FAST            tz
+ 850: KW_NAMES             
+ 852: PRECALL              
+ 856: CALL                 
+ 866: RETURN_VALUE         

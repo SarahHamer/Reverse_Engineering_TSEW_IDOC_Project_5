@@ -1,0 +1,35 @@
+# Disassembly for right.ColorButtons.get_options
+# From module file: right
+
+## co_consts:
+(None, 'Breakroom', <code object <lambda> at 0x000002406945F690, file "right.py", line 61>, 'Press a colored button.')
+
+## co_names:
+('world', 'rooms', 'central_right_unlocked', 'append')
+
+## bytecode:
+
+   0: MAKE_CELL            self
+   2: RESUME               
+   4: BUILD_LIST           
+   6: STORE_FAST           options
+   8: LOAD_DEREF           self
+  10: LOAD_ATTR            world
+  20: LOAD_ATTR            rooms
+  30: LOAD_CONST           'Breakroom'
+  32: BINARY_SUBSCR        
+  42: LOAD_ATTR            central_right_unlocked
+  52: POP_JUMP_FORWARD_IF_TRUE to 106
+  54: LOAD_FAST            options
+  56: LOAD_METHOD          append
+  78: LOAD_CLOSURE         self
+  80: BUILD_TUPLE          
+  82: LOAD_CONST           <code object <lambda> at 0x000002406945F690, file "right.py", line 61>
+  84: MAKE_FUNCTION        closure
+  86: LOAD_CONST           'Press a colored button.'
+  88: BUILD_TUPLE          
+  90: PRECALL              
+  94: CALL                 
+ 104: POP_TOP              
+ 106: LOAD_FAST            options
+ 108: RETURN_VALUE         

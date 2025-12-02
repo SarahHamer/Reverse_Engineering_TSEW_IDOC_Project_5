@@ -1,0 +1,215 @@
+# Disassembly for email.get_bare_quoted_string
+# From module file: email._header_value_parser
+
+## co_consts:
+('bare-quoted-string = DQUOTE *([FWS] qcontent) [FWS] DQUOTE\n\n    A quoted-string without the leading or trailing white space.  Its\n    value is the text between the quote marks, with whitespace\n    preserved and quoted pairs decoded.\n    ', 0, '"', 'expected \'"\' but found \'{}\'', 1, None, 2, '=?', False, 'encoded word inside quoted string', True, -1, 'fws', -2, 'encoded-word', 'end of header inside quoted string')
+
+## co_names:
+('errors', 'HeaderParseError', 'format', 'BareQuotedString', 'get_qcontent', 'append', 'WSP', 'get_fws', 'get_encoded_word', 'defects', 'InvalidHeaderDefect', 'len', 'token_type', 'EWWhiteSpaceTerminal')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            value
+   4: LOAD_CONST           0
+   6: BINARY_SUBSCR        
+  16: LOAD_CONST           '"'
+  18: COMPARE_OP           !=
+  24: POP_JUMP_FORWARD_IF_FALSE to 104
+  26: LOAD_GLOBAL          NULL + errors
+  38: LOAD_ATTR            HeaderParseError
+  48: LOAD_CONST           'expected \'"\' but found \'{}\''
+  50: LOAD_METHOD          format
+  72: LOAD_FAST            value
+  74: PRECALL              
+  78: CALL                 
+  88: PRECALL              
+  92: CALL                 
+ 102: RAISE_VARARGS        
+ 104: LOAD_GLOBAL          NULL + BareQuotedString
+ 116: PRECALL              
+ 120: CALL                 
+ 130: STORE_FAST           bare_quoted_string
+ 132: LOAD_FAST            value
+ 134: LOAD_CONST           1
+ 136: LOAD_CONST           None
+ 138: BUILD_SLICE          
+ 140: BINARY_SUBSCR        
+ 150: STORE_FAST           value
+ 152: LOAD_FAST            value
+ 154: POP_JUMP_FORWARD_IF_FALSE to 258
+ 156: LOAD_FAST            value
+ 158: LOAD_CONST           0
+ 160: BINARY_SUBSCR        
+ 170: LOAD_CONST           '"'
+ 172: COMPARE_OP           ==
+ 178: POP_JUMP_FORWARD_IF_FALSE to 258
+ 180: LOAD_GLOBAL          NULL + get_qcontent
+ 192: LOAD_FAST            value
+ 194: PRECALL              
+ 198: CALL                 
+ 208: UNPACK_SEQUENCE      
+ 212: STORE_FAST           token
+ 214: STORE_FAST           value
+ 216: LOAD_FAST            bare_quoted_string
+ 218: LOAD_METHOD          append
+ 240: LOAD_FAST            token
+ 242: PRECALL              
+ 246: CALL                 
+ 256: POP_TOP              
+ 258: LOAD_FAST            value
+ 260: EXTENDED_ARG         
+ 262: POP_JUMP_FORWARD_IF_FALSE to 870
+ 264: LOAD_FAST            value
+ 266: LOAD_CONST           0
+ 268: BINARY_SUBSCR        
+ 278: LOAD_CONST           '"'
+ 280: COMPARE_OP           !=
+ 286: EXTENDED_ARG         
+ 288: POP_JUMP_FORWARD_IF_FALSE to 870
+ 290: LOAD_FAST            value
+ 292: LOAD_CONST           0
+ 294: BINARY_SUBSCR        
+ 304: LOAD_GLOBAL          WSP
+ 316: CONTAINS_OP          
+ 318: POP_JUMP_FORWARD_IF_FALSE to 358
+ 320: LOAD_GLOBAL          NULL + get_fws
+ 332: LOAD_FAST            value
+ 334: PRECALL              
+ 338: CALL                 
+ 348: UNPACK_SEQUENCE      
+ 352: STORE_FAST           token
+ 354: STORE_FAST           value
+ 356: JUMP_FORWARD         to 798
+ 358: LOAD_FAST            value
+ 360: LOAD_CONST           None
+ 362: LOAD_CONST           2
+ 364: BUILD_SLICE          
+ 366: BINARY_SUBSCR        
+ 376: LOAD_CONST           '=?'
+ 378: COMPARE_OP           ==
+ 384: POP_JUMP_FORWARD_IF_FALSE to 762
+ 386: LOAD_CONST           False
+ 388: STORE_FAST           valid_ew
+ 390: NOP                  
+ 392: LOAD_GLOBAL          NULL + get_encoded_word
+ 404: LOAD_FAST            value
+ 406: PRECALL              
+ 410: CALL                 
+ 420: UNPACK_SEQUENCE      
+ 424: STORE_FAST           token
+ 426: STORE_FAST           value
+ 428: LOAD_FAST            bare_quoted_string
+ 430: LOAD_ATTR            defects
+ 440: LOAD_METHOD          append
+ 462: LOAD_GLOBAL          NULL + errors
+ 474: LOAD_ATTR            InvalidHeaderDefect
+ 484: LOAD_CONST           'encoded word inside quoted string'
+ 486: PRECALL              
+ 490: CALL                 
+ 500: PRECALL              
+ 504: CALL                 
+ 514: POP_TOP              
+ 516: LOAD_CONST           True
+ 518: STORE_FAST           valid_ew
+ 520: JUMP_FORWARD         to 600
+ 522: PUSH_EXC_INFO        
+ 524: LOAD_GLOBAL          errors
+ 536: LOAD_ATTR            HeaderParseError
+ 546: CHECK_EXC_MATCH      
+ 548: POP_JUMP_FORWARD_IF_FALSE to 592
+ 550: POP_TOP              
+ 552: LOAD_GLOBAL          NULL + get_qcontent
+ 564: LOAD_FAST            value
+ 566: PRECALL              
+ 570: CALL                 
+ 580: UNPACK_SEQUENCE      
+ 584: STORE_FAST           token
+ 586: STORE_FAST           value
+ 588: POP_EXCEPT           
+ 590: JUMP_FORWARD         to 600
+ 592: RERAISE              
+ 594: COPY                 
+ 596: POP_EXCEPT           
+ 598: RERAISE              
+ 600: LOAD_FAST            valid_ew
+ 602: POP_JUMP_FORWARD_IF_FALSE to 760
+ 604: LOAD_GLOBAL          NULL + len
+ 616: LOAD_FAST            bare_quoted_string
+ 618: PRECALL              
+ 622: CALL                 
+ 632: LOAD_CONST           1
+ 634: COMPARE_OP           >
+ 640: POP_JUMP_FORWARD_IF_FALSE to 760
+ 642: LOAD_FAST            bare_quoted_string
+ 644: LOAD_CONST           -1
+ 646: BINARY_SUBSCR        
+ 656: LOAD_ATTR            token_type
+ 666: LOAD_CONST           'fws'
+ 668: COMPARE_OP           ==
+ 674: POP_JUMP_FORWARD_IF_FALSE to 760
+ 676: LOAD_FAST            bare_quoted_string
+ 678: LOAD_CONST           -2
+ 680: BINARY_SUBSCR        
+ 690: LOAD_ATTR            token_type
+ 700: LOAD_CONST           'encoded-word'
+ 702: COMPARE_OP           ==
+ 708: POP_JUMP_FORWARD_IF_FALSE to 760
+ 710: LOAD_GLOBAL          NULL + EWWhiteSpaceTerminal
+ 722: LOAD_FAST            bare_quoted_string
+ 724: LOAD_CONST           -1
+ 726: BINARY_SUBSCR        
+ 736: LOAD_CONST           'fws'
+ 738: PRECALL              
+ 742: CALL                 
+ 752: LOAD_FAST            bare_quoted_string
+ 754: LOAD_CONST           -1
+ 756: STORE_SUBSCR         
+ 760: JUMP_FORWARD         to 798
+ 762: LOAD_GLOBAL          NULL + get_qcontent
+ 774: LOAD_FAST            value
+ 776: PRECALL              
+ 780: CALL                 
+ 790: UNPACK_SEQUENCE      
+ 794: STORE_FAST           token
+ 796: STORE_FAST           value
+ 798: LOAD_FAST            bare_quoted_string
+ 800: LOAD_METHOD          append
+ 822: LOAD_FAST            token
+ 824: PRECALL              
+ 828: CALL                 
+ 838: POP_TOP              
+ 840: LOAD_FAST            value
+ 842: POP_JUMP_FORWARD_IF_FALSE to 870
+ 844: LOAD_FAST            value
+ 846: LOAD_CONST           0
+ 848: BINARY_SUBSCR        
+ 858: LOAD_CONST           '"'
+ 860: COMPARE_OP           !=
+ 866: EXTENDED_ARG         
+ 868: POP_JUMP_BACKWARD_IF_TRUE to 290
+ 870: LOAD_FAST            value
+ 872: POP_JUMP_FORWARD_IF_TRUE to 970
+ 874: LOAD_FAST            bare_quoted_string
+ 876: LOAD_ATTR            defects
+ 886: LOAD_METHOD          append
+ 908: LOAD_GLOBAL          NULL + errors
+ 920: LOAD_ATTR            InvalidHeaderDefect
+ 930: LOAD_CONST           'end of header inside quoted string'
+ 932: PRECALL              
+ 936: CALL                 
+ 946: PRECALL              
+ 950: CALL                 
+ 960: POP_TOP              
+ 962: LOAD_FAST            bare_quoted_string
+ 964: LOAD_FAST            value
+ 966: BUILD_TUPLE          
+ 968: RETURN_VALUE         
+ 970: LOAD_FAST            bare_quoted_string
+ 972: LOAD_FAST            value
+ 974: LOAD_CONST           1
+ 976: LOAD_CONST           None
+ 978: BUILD_SLICE          
+ 980: BINARY_SUBSCR        
+ 990: BUILD_TUPLE          
+ 992: RETURN_VALUE         

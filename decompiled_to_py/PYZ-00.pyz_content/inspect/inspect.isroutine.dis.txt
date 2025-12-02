@@ -1,0 +1,37 @@
+# Disassembly for inspect.isroutine
+# From module file: inspect
+
+## co_consts:
+('Return true if the object is any kind of function or method.',)
+
+## co_names:
+('isbuiltin', 'isfunction', 'ismethod', 'ismethoddescriptor', 'ismethodwrapper')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isbuiltin
+  14: LOAD_FAST            object
+  16: PRECALL              
+  20: CALL                 
+  30: JUMP_IF_TRUE_OR_POP  to 150
+  32: LOAD_GLOBAL          NULL + isfunction
+  44: LOAD_FAST            object
+  46: PRECALL              
+  50: CALL                 
+  60: JUMP_IF_TRUE_OR_POP  to 150
+  62: LOAD_GLOBAL          NULL + ismethod
+  74: LOAD_FAST            object
+  76: PRECALL              
+  80: CALL                 
+  90: JUMP_IF_TRUE_OR_POP  to 150
+  92: LOAD_GLOBAL          NULL + ismethoddescriptor
+ 104: LOAD_FAST            object
+ 106: PRECALL              
+ 110: CALL                 
+ 120: JUMP_IF_TRUE_OR_POP  to 150
+ 122: LOAD_GLOBAL          NULL + ismethodwrapper
+ 134: LOAD_FAST            object
+ 136: PRECALL              
+ 140: CALL                 
+ 150: RETURN_VALUE         

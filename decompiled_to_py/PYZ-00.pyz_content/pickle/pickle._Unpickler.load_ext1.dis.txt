@@ -1,0 +1,28 @@
+# Disassembly for pickle._Unpickler.load_ext1
+# From module file: pickle
+
+## co_consts:
+(None, 1, 0)
+
+## co_names:
+('read', 'get_extension')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          read
+  26: LOAD_CONST           1
+  28: PRECALL              
+  32: CALL                 
+  42: LOAD_CONST           0
+  44: BINARY_SUBSCR        
+  54: STORE_FAST           code
+  56: LOAD_FAST            self
+  58: LOAD_METHOD          get_extension
+  80: LOAD_FAST            code
+  82: PRECALL              
+  86: CALL                 
+  96: POP_TOP              
+  98: LOAD_CONST           None
+ 100: RETURN_VALUE         

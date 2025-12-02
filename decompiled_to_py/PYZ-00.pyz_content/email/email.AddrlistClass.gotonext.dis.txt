@@ -1,0 +1,95 @@
+# Disassembly for email.AddrlistClass.gotonext
+# From module file: email._parseaddr
+
+## co_consts:
+('Skip white space and extract comments.', '\n\r', 1, '(')
+
+## co_names:
+('pos', 'len', 'field', 'LWS', 'append', 'commentlist', 'getcomment', 'EMPTYSTRING', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           wslist
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            pos
+  18: LOAD_GLOBAL          NULL + len
+  30: LOAD_FAST            self
+  32: LOAD_ATTR            field
+  42: PRECALL              
+  46: CALL                 
+  56: COMPARE_OP           <
+  62: POP_JUMP_FORWARD_IF_FALSE to 462
+  64: LOAD_FAST            self
+  66: LOAD_ATTR            field
+  76: LOAD_FAST            self
+  78: LOAD_ATTR            pos
+  88: BINARY_SUBSCR        
+  98: LOAD_FAST            self
+ 100: LOAD_ATTR            LWS
+ 110: LOAD_CONST           '\n\r'
+ 112: BINARY_OP            +
+ 116: CONTAINS_OP          
+ 118: POP_JUMP_FORWARD_IF_FALSE to 268
+ 120: LOAD_FAST            self
+ 122: LOAD_ATTR            field
+ 132: LOAD_FAST            self
+ 134: LOAD_ATTR            pos
+ 144: BINARY_SUBSCR        
+ 154: LOAD_CONST           '\n\r'
+ 156: CONTAINS_OP          
+ 158: POP_JUMP_FORWARD_IF_FALSE to 234
+ 160: LOAD_FAST            wslist
+ 162: LOAD_METHOD          append
+ 184: LOAD_FAST            self
+ 186: LOAD_ATTR            field
+ 196: LOAD_FAST            self
+ 198: LOAD_ATTR            pos
+ 208: BINARY_SUBSCR        
+ 218: PRECALL              
+ 222: CALL                 
+ 232: POP_TOP              
+ 234: LOAD_FAST            self
+ 236: COPY                 
+ 238: LOAD_ATTR            pos
+ 248: LOAD_CONST           1
+ 250: BINARY_OP            +=
+ 254: SWAP                 
+ 256: STORE_ATTR           pos
+ 266: JUMP_FORWARD         to 404
+ 268: LOAD_FAST            self
+ 270: LOAD_ATTR            field
+ 280: LOAD_FAST            self
+ 282: LOAD_ATTR            pos
+ 292: BINARY_SUBSCR        
+ 302: LOAD_CONST           '('
+ 304: COMPARE_OP           ==
+ 310: POP_JUMP_FORWARD_IF_FALSE to 402
+ 312: LOAD_FAST            self
+ 314: LOAD_ATTR            commentlist
+ 324: LOAD_METHOD          append
+ 346: LOAD_FAST            self
+ 348: LOAD_METHOD          getcomment
+ 370: PRECALL              
+ 374: CALL                 
+ 384: PRECALL              
+ 388: CALL                 
+ 398: POP_TOP              
+ 400: JUMP_FORWARD         to 404
+ 402: JUMP_FORWARD         to 462
+ 404: LOAD_FAST            self
+ 406: LOAD_ATTR            pos
+ 416: LOAD_GLOBAL          NULL + len
+ 428: LOAD_FAST            self
+ 430: LOAD_ATTR            field
+ 440: PRECALL              
+ 444: CALL                 
+ 454: COMPARE_OP           <
+ 460: POP_JUMP_BACKWARD_IF_TRUE to 64
+ 462: LOAD_GLOBAL          EMPTYSTRING
+ 474: LOAD_METHOD          join
+ 496: LOAD_FAST            wslist
+ 498: PRECALL              
+ 502: CALL                 
+ 512: RETURN_VALUE         

@@ -1,0 +1,15 @@
+# Disassembly for argparse.HelpFormatter._get_help_string
+# From module file: argparse
+
+## co_consts:
+(None,)
+
+## co_names:
+('help',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            action
+   4: LOAD_ATTR            help
+  14: RETURN_VALUE         

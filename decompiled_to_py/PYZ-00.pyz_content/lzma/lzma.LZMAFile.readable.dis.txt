@@ -1,0 +1,22 @@
+# Disassembly for lzma.LZMAFile.readable
+# From module file: lzma
+
+## co_consts:
+('Return whether the file was opened for reading.',)
+
+## co_names:
+('_check_not_closed', '_mode', '_MODE_READ')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _check_not_closed
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            _mode
+  54: LOAD_GLOBAL          _MODE_READ
+  66: COMPARE_OP           ==
+  72: RETURN_VALUE         

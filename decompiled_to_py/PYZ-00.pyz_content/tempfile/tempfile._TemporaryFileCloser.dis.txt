@@ -1,0 +1,47 @@
+# Disassembly for tempfile._TemporaryFileCloser
+# From module file: tempfile
+
+## co_consts:
+('_TemporaryFileCloser', "A separate object allowing proper closing of a temporary file's\n    underlying file object, without adding a __del__ method to the\n    temporary file.", None, False, True, <code object __init__ at 0x000002406945CF30, file "tempfile.py", line 424>, 'nt', <code object close at 0x000002406942CFD0, file "tempfile.py", line 439>, <code object __del__ at 0x000002406945EA60, file "tempfile.py", line 449>, <code object close at 0x000002406944A890, file "tempfile.py", line 453>, (True,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'file', 'close_called', '__init__', '_os', 'name', 'unlink', 'close', '__del__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_TemporaryFileCloser'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           "A separate object allowing proper closing of a temporary file's\n    underlying file object, without adding a __del__ method to the\n    temporary file."
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           None
+  16: STORE_NAME           file
+  18: LOAD_CONST           False
+  20: STORE_NAME           close_called
+  22: LOAD_CONST           (True,)
+  24: LOAD_CONST           <code object __init__ at 0x000002406945CF30, file "tempfile.py", line 424>
+  26: MAKE_FUNCTION        defaults
+  28: STORE_NAME           __init__
+  30: LOAD_NAME            _os
+  32: LOAD_ATTR            name
+  42: LOAD_CONST           'nt'
+  44: COMPARE_OP           !=
+  50: POP_JUMP_FORWARD_IF_FALSE to 82
+  52: LOAD_NAME            _os
+  54: LOAD_ATTR            unlink
+  64: BUILD_TUPLE          
+  66: LOAD_CONST           <code object close at 0x000002406942CFD0, file "tempfile.py", line 439>
+  68: MAKE_FUNCTION        defaults
+  70: STORE_NAME           close
+  72: LOAD_CONST           <code object __del__ at 0x000002406945EA60, file "tempfile.py", line 449>
+  74: MAKE_FUNCTION        
+  76: STORE_NAME           __del__
+  78: LOAD_CONST           None
+  80: RETURN_VALUE         
+  82: LOAD_CONST           <code object close at 0x000002406944A890, file "tempfile.py", line 453>
+  84: MAKE_FUNCTION        
+  86: STORE_NAME           close
+  88: LOAD_CONST           None
+  90: RETURN_VALUE         

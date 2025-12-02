@@ -1,0 +1,78 @@
+# Disassembly for _pydecimal.Decimal._compare_check_nans
+# From module file: _pydecimal
+
+## co_consts:
+('Version of _check_nans used for the signaling comparisons\n        compare_signal, __le__, __lt__, __ge__, __gt__.\n\n        Signal InvalidOperation if either self or other is a (quiet\n        or signaling) NaN.  Signaling NaNs take precedence over quiet\n        NaNs.\n\n        Return 0 if neither operand is a NaN.\n\n        ', None, 'comparison involving sNaN', 'comparison involving NaN', 0)
+
+## co_names:
+('getcontext', '_is_special', 'is_snan', '_raise_error', 'InvalidOperation', 'is_qnan')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            context
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 34
+   6: LOAD_GLOBAL          NULL + getcontext
+  18: PRECALL              
+  22: CALL                 
+  32: STORE_FAST           context
+  34: LOAD_FAST            self
+  36: LOAD_ATTR            _is_special
+  46: POP_JUMP_FORWARD_IF_TRUE to 62
+  48: LOAD_FAST            other
+  50: LOAD_ATTR            _is_special
+  60: POP_JUMP_FORWARD_IF_FALSE to 446
+  62: LOAD_FAST            self
+  64: LOAD_METHOD          is_snan
+  86: PRECALL              
+  90: CALL                 
+ 100: POP_JUMP_FORWARD_IF_FALSE to 158
+ 102: LOAD_FAST            context
+ 104: LOAD_METHOD          _raise_error
+ 126: LOAD_GLOBAL          InvalidOperation
+ 138: LOAD_CONST           'comparison involving sNaN'
+ 140: LOAD_FAST            self
+ 142: PRECALL              
+ 146: CALL                 
+ 156: RETURN_VALUE         
+ 158: LOAD_FAST            other
+ 160: LOAD_METHOD          is_snan
+ 182: PRECALL              
+ 186: CALL                 
+ 196: POP_JUMP_FORWARD_IF_FALSE to 254
+ 198: LOAD_FAST            context
+ 200: LOAD_METHOD          _raise_error
+ 222: LOAD_GLOBAL          InvalidOperation
+ 234: LOAD_CONST           'comparison involving sNaN'
+ 236: LOAD_FAST            other
+ 238: PRECALL              
+ 242: CALL                 
+ 252: RETURN_VALUE         
+ 254: LOAD_FAST            self
+ 256: LOAD_METHOD          is_qnan
+ 278: PRECALL              
+ 282: CALL                 
+ 292: POP_JUMP_FORWARD_IF_FALSE to 350
+ 294: LOAD_FAST            context
+ 296: LOAD_METHOD          _raise_error
+ 318: LOAD_GLOBAL          InvalidOperation
+ 330: LOAD_CONST           'comparison involving NaN'
+ 332: LOAD_FAST            self
+ 334: PRECALL              
+ 338: CALL                 
+ 348: RETURN_VALUE         
+ 350: LOAD_FAST            other
+ 352: LOAD_METHOD          is_qnan
+ 374: PRECALL              
+ 378: CALL                 
+ 388: POP_JUMP_FORWARD_IF_FALSE to 446
+ 390: LOAD_FAST            context
+ 392: LOAD_METHOD          _raise_error
+ 414: LOAD_GLOBAL          InvalidOperation
+ 426: LOAD_CONST           'comparison involving NaN'
+ 428: LOAD_FAST            other
+ 430: PRECALL              
+ 434: CALL                 
+ 444: RETURN_VALUE         
+ 446: LOAD_CONST           0
+ 448: RETURN_VALUE         

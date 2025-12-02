@@ -1,0 +1,39 @@
+# Disassembly for logging.PercentStyle.format
+# From module file: logging
+
+## co_consts:
+(None, 'Formatting field not found in record: %s')
+
+## co_names:
+('_format', 'KeyError', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            self
+   6: LOAD_METHOD          _format
+  28: LOAD_FAST            record
+  30: PRECALL              
+  34: CALL                 
+  44: RETURN_VALUE         
+  46: PUSH_EXC_INFO        
+  48: LOAD_GLOBAL          KeyError
+  60: CHECK_EXC_MATCH      
+  62: POP_JUMP_FORWARD_IF_FALSE to 110
+  64: STORE_FAST           e
+  66: LOAD_GLOBAL          NULL + ValueError
+  78: LOAD_CONST           'Formatting field not found in record: %s'
+  80: LOAD_FAST            e
+  82: BINARY_OP            %
+  86: PRECALL              
+  90: CALL                 
+ 100: RAISE_VARARGS        
+ 102: LOAD_CONST           None
+ 104: STORE_FAST           e
+ 106: DELETE_FAST          e
+ 108: RERAISE              
+ 110: RERAISE              
+ 112: COPY                 
+ 114: POP_EXCEPT           
+ 116: RERAISE              

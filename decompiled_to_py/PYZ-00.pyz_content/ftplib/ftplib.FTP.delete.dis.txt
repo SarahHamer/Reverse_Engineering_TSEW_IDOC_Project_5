@@ -1,0 +1,35 @@
+# Disassembly for ftplib.FTP.delete
+# From module file: ftplib
+
+## co_consts:
+('Delete a file.', 'DELE ', None, 3, frozenset({'200', '250'}))
+
+## co_names:
+('sendcmd', 'error_reply')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          sendcmd
+  26: LOAD_CONST           'DELE '
+  28: LOAD_FAST            filename
+  30: BINARY_OP            +
+  34: PRECALL              
+  38: CALL                 
+  48: STORE_FAST           resp
+  50: LOAD_FAST            resp
+  52: LOAD_CONST           None
+  54: LOAD_CONST           3
+  56: BUILD_SLICE          
+  58: BINARY_SUBSCR        
+  68: LOAD_CONST           frozenset({'200', '250'})
+  70: CONTAINS_OP          
+  72: POP_JUMP_FORWARD_IF_FALSE to 78
+  74: LOAD_FAST            resp
+  76: RETURN_VALUE         
+  78: LOAD_GLOBAL          NULL + error_reply
+  90: LOAD_FAST            resp
+  92: PRECALL              
+  96: CALL                 
+ 106: RAISE_VARARGS        

@@ -1,0 +1,76 @@
+# Disassembly for dis._disassemble_recursive
+# From module file: dis
+
+## co_consts:
+(None, ('file', 'show_caches', 'adaptive'), 0, 1, 'co_code', ('file',), 'Disassembly of ', ':', ('file', 'depth', 'show_caches', 'adaptive'))
+
+## co_names:
+('disassemble', 'co_consts', 'hasattr', 'print', '_disassemble_recursive')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + disassemble
+  14: LOAD_FAST            co
+  16: LOAD_FAST            file
+  18: LOAD_FAST            show_caches
+  20: LOAD_FAST            adaptive
+  22: KW_NAMES             
+  24: PRECALL              
+  28: CALL                 
+  38: POP_TOP              
+  40: LOAD_FAST            depth
+  42: POP_JUMP_FORWARD_IF_NONE to 56
+  44: LOAD_FAST            depth
+  46: LOAD_CONST           0
+  48: COMPARE_OP           >
+  54: POP_JUMP_FORWARD_IF_FALSE to 236
+  56: LOAD_FAST            depth
+  58: POP_JUMP_FORWARD_IF_NONE to 70
+  60: LOAD_FAST            depth
+  62: LOAD_CONST           1
+  64: BINARY_OP            -
+  68: STORE_FAST           depth
+  70: LOAD_FAST            co
+  72: LOAD_ATTR            co_consts
+  82: GET_ITER             
+  84: FOR_ITER             to 240
+  86: STORE_FAST           x
+  88: LOAD_GLOBAL          NULL + hasattr
+ 100: LOAD_FAST            x
+ 102: LOAD_CONST           'co_code'
+ 104: PRECALL              
+ 108: CALL                 
+ 118: POP_JUMP_FORWARD_IF_FALSE to 234
+ 120: LOAD_GLOBAL          NULL + print
+ 132: LOAD_FAST            file
+ 134: KW_NAMES             
+ 136: PRECALL              
+ 140: CALL                 
+ 150: POP_TOP              
+ 152: LOAD_GLOBAL          NULL + print
+ 164: LOAD_CONST           'Disassembly of '
+ 166: LOAD_FAST            x
+ 168: FORMAT_VALUE         repr
+ 170: LOAD_CONST           ':'
+ 172: BUILD_STRING         
+ 174: LOAD_FAST            file
+ 176: KW_NAMES             
+ 178: PRECALL              
+ 182: CALL                 
+ 192: POP_TOP              
+ 194: LOAD_GLOBAL          NULL + _disassemble_recursive
+ 206: LOAD_FAST            x
+ 208: LOAD_FAST            file
+ 210: LOAD_FAST            depth
+ 212: LOAD_FAST            show_caches
+ 214: LOAD_FAST            adaptive
+ 216: KW_NAMES             
+ 218: PRECALL              
+ 222: CALL                 
+ 232: POP_TOP              
+ 234: JUMP_BACKWARD        to 84
+ 236: LOAD_CONST           None
+ 238: RETURN_VALUE         
+ 240: LOAD_CONST           None
+ 242: RETURN_VALUE         

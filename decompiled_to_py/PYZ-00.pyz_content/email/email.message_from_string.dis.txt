@@ -1,0 +1,30 @@
+# Disassembly for email.message_from_string
+# From module file: email
+
+## co_consts:
+('Parse a string into a Message object model.\n\n    Optional _class and strict are passed to the Parser constructor.\n    ', 0, ('Parser',))
+
+## co_names:
+('email.parser', 'Parser', 'parsestr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           ('Parser',)
+   6: IMPORT_NAME          email.parser
+   8: IMPORT_FROM          Parser
+  10: STORE_FAST           Parser
+  12: POP_TOP              
+  14: PUSH_NULL            
+  16: LOAD_FAST            Parser
+  18: LOAD_FAST            args
+  20: BUILD_MAP            
+  22: LOAD_FAST            kws
+  24: DICT_MERGE           
+  26: CALL_FUNCTION_EX     
+  28: LOAD_METHOD          parsestr
+  50: LOAD_FAST            s
+  52: PRECALL              
+  56: CALL                 
+  66: RETURN_VALUE         

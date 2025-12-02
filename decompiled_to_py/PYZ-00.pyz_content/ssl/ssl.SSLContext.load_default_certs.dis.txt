@@ -1,0 +1,48 @@
+# Disassembly for ssl.SSLContext.load_default_certs
+# From module file: ssl
+
+## co_consts:
+(None, 'win32')
+
+## co_names:
+('isinstance', '_ASN1Object', 'TypeError', 'sys', 'platform', '_windows_cert_stores', '_load_windows_store_certs', 'set_default_verify_paths')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            purpose
+  16: LOAD_GLOBAL          _ASN1Object
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_TRUE to 74
+  44: LOAD_GLOBAL          NULL + TypeError
+  56: LOAD_FAST            purpose
+  58: PRECALL              
+  62: CALL                 
+  72: RAISE_VARARGS        
+  74: LOAD_GLOBAL          sys
+  86: LOAD_ATTR            platform
+  96: LOAD_CONST           'win32'
+  98: COMPARE_OP           ==
+ 104: POP_JUMP_FORWARD_IF_FALSE to 170
+ 106: LOAD_FAST            self
+ 108: LOAD_ATTR            _windows_cert_stores
+ 118: GET_ITER             
+ 120: FOR_ITER             to 170
+ 122: STORE_FAST           storename
+ 124: LOAD_FAST            self
+ 126: LOAD_METHOD          _load_windows_store_certs
+ 148: LOAD_FAST            storename
+ 150: LOAD_FAST            purpose
+ 152: PRECALL              
+ 156: CALL                 
+ 166: POP_TOP              
+ 168: JUMP_BACKWARD        to 120
+ 170: LOAD_FAST            self
+ 172: LOAD_METHOD          set_default_verify_paths
+ 194: PRECALL              
+ 198: CALL                 
+ 208: POP_TOP              
+ 210: LOAD_CONST           None
+ 212: RETURN_VALUE         

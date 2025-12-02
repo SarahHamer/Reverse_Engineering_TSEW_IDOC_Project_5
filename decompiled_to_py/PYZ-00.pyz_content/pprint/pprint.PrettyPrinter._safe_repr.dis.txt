@@ -1,0 +1,378 @@
+# Disassembly for pprint.PrettyPrinter._safe_repr
+# From module file: pprint
+
+## co_consts:
+(None, True, False, '__repr__', '_d', ('{}', True, False), '{...}', 1, ('key',), ': ', '{%s}', ', ', ('[]', True, False), '[%s]', '(%s,)', ('()', True, False), '(%s)', '...', '<')
+
+## co_names:
+('type', '_builtin_scalars', 'repr', 'getattr', 'issubclass', 'int', '__repr__', '_underscore_numbers', 'dict', 'id', '_recursion', 'append', '_sort_dicts', 'sorted', 'items', '_safe_tuple', 'format', 'join', 'list', 'tuple', 'len', 'startswith')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + type
+  14: LOAD_FAST            object
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           typ
+  32: LOAD_FAST            typ
+  34: LOAD_GLOBAL          _builtin_scalars
+  46: CONTAINS_OP          
+  48: POP_JUMP_FORWARD_IF_FALSE to 86
+  50: LOAD_GLOBAL          NULL + repr
+  62: LOAD_FAST            object
+  64: PRECALL              
+  68: CALL                 
+  78: LOAD_CONST           True
+  80: LOAD_CONST           False
+  82: BUILD_TUPLE          
+  84: RETURN_VALUE         
+  86: LOAD_GLOBAL          NULL + getattr
+  98: LOAD_FAST            typ
+ 100: LOAD_CONST           '__repr__'
+ 102: LOAD_CONST           None
+ 104: PRECALL              
+ 108: CALL                 
+ 118: STORE_FAST           r
+ 120: LOAD_GLOBAL          NULL + issubclass
+ 132: LOAD_FAST            typ
+ 134: LOAD_GLOBAL          int
+ 146: PRECALL              
+ 150: CALL                 
+ 160: POP_JUMP_FORWARD_IF_FALSE to 254
+ 162: LOAD_FAST            r
+ 164: LOAD_GLOBAL          int
+ 176: LOAD_ATTR            __repr__
+ 186: IS_OP                
+ 188: POP_JUMP_FORWARD_IF_FALSE to 254
+ 190: LOAD_FAST            self
+ 192: LOAD_ATTR            _underscore_numbers
+ 202: POP_JUMP_FORWARD_IF_FALSE to 218
+ 204: LOAD_FAST            object
+ 206: LOAD_CONST           '_d'
+ 208: FORMAT_VALUE         with format
+ 210: LOAD_CONST           True
+ 212: LOAD_CONST           False
+ 214: BUILD_TUPLE          
+ 216: RETURN_VALUE         
+ 218: LOAD_GLOBAL          NULL + repr
+ 230: LOAD_FAST            object
+ 232: PRECALL              
+ 236: CALL                 
+ 246: LOAD_CONST           True
+ 248: LOAD_CONST           False
+ 250: BUILD_TUPLE          
+ 252: RETURN_VALUE         
+ 254: LOAD_GLOBAL          NULL + issubclass
+ 266: LOAD_FAST            typ
+ 268: LOAD_GLOBAL          dict
+ 280: PRECALL              
+ 284: CALL                 
+ 294: EXTENDED_ARG         
+ 296: POP_JUMP_FORWARD_IF_FALSE to 866
+ 298: LOAD_FAST            r
+ 300: LOAD_GLOBAL          dict
+ 312: LOAD_ATTR            __repr__
+ 322: IS_OP                
+ 324: EXTENDED_ARG         
+ 326: POP_JUMP_FORWARD_IF_FALSE to 866
+ 328: LOAD_FAST            object
+ 330: POP_JUMP_FORWARD_IF_TRUE to 336
+ 332: LOAD_CONST           ('{}', True, False)
+ 334: RETURN_VALUE         
+ 336: LOAD_GLOBAL          NULL + id
+ 348: LOAD_FAST            object
+ 350: PRECALL              
+ 354: CALL                 
+ 364: STORE_FAST           objid
+ 366: LOAD_FAST            maxlevels
+ 368: POP_JUMP_FORWARD_IF_FALSE to 396
+ 370: LOAD_FAST            level
+ 372: LOAD_FAST            maxlevels
+ 374: COMPARE_OP           >=
+ 380: POP_JUMP_FORWARD_IF_FALSE to 396
+ 382: LOAD_CONST           '{...}'
+ 384: LOAD_CONST           False
+ 386: LOAD_FAST            objid
+ 388: LOAD_FAST            context
+ 390: CONTAINS_OP          
+ 392: BUILD_TUPLE          
+ 394: RETURN_VALUE         
+ 396: LOAD_FAST            objid
+ 398: LOAD_FAST            context
+ 400: CONTAINS_OP          
+ 402: POP_JUMP_FORWARD_IF_FALSE to 440
+ 404: LOAD_GLOBAL          NULL + _recursion
+ 416: LOAD_FAST            object
+ 418: PRECALL              
+ 422: CALL                 
+ 432: LOAD_CONST           False
+ 434: LOAD_CONST           True
+ 436: BUILD_TUPLE          
+ 438: RETURN_VALUE         
+ 440: LOAD_CONST           1
+ 442: LOAD_FAST            context
+ 444: LOAD_FAST            objid
+ 446: STORE_SUBSCR         
+ 450: LOAD_CONST           True
+ 452: STORE_FAST           readable
+ 454: LOAD_CONST           False
+ 456: STORE_FAST           recursive
+ 458: BUILD_LIST           
+ 460: STORE_FAST           components
+ 462: LOAD_FAST            components
+ 464: LOAD_ATTR            append
+ 474: STORE_FAST           append
+ 476: LOAD_FAST            level
+ 478: LOAD_CONST           1
+ 480: BINARY_OP            +=
+ 484: STORE_FAST           level
+ 486: LOAD_FAST            self
+ 488: LOAD_ATTR            _sort_dicts
+ 498: POP_JUMP_FORWARD_IF_FALSE to 582
+ 500: LOAD_GLOBAL          NULL + sorted
+ 512: LOAD_FAST            object
+ 514: LOAD_METHOD          items
+ 536: PRECALL              
+ 540: CALL                 
+ 550: LOAD_GLOBAL          _safe_tuple
+ 562: KW_NAMES             
+ 564: PRECALL              
+ 568: CALL                 
+ 578: STORE_FAST           items
+ 580: JUMP_FORWARD         to 622
+ 582: LOAD_FAST            object
+ 584: LOAD_METHOD          items
+ 606: PRECALL              
+ 610: CALL                 
+ 620: STORE_FAST           items
+ 622: LOAD_FAST            items
+ 624: GET_ITER             
+ 626: FOR_ITER             to 806
+ 628: UNPACK_SEQUENCE      
+ 632: STORE_FAST           k
+ 634: STORE_FAST           v
+ 636: LOAD_FAST            self
+ 638: LOAD_METHOD          format
+ 660: LOAD_FAST            k
+ 662: LOAD_FAST            context
+ 664: LOAD_FAST            maxlevels
+ 666: LOAD_FAST            level
+ 668: PRECALL              
+ 672: CALL                 
+ 682: UNPACK_SEQUENCE      
+ 686: STORE_FAST           krepr
+ 688: STORE_FAST           kreadable
+ 690: STORE_FAST           krecur
+ 692: LOAD_FAST            self
+ 694: LOAD_METHOD          format
+ 716: LOAD_FAST            v
+ 718: LOAD_FAST            context
+ 720: LOAD_FAST            maxlevels
+ 722: LOAD_FAST            level
+ 724: PRECALL              
+ 728: CALL                 
+ 738: UNPACK_SEQUENCE      
+ 742: STORE_FAST           vrepr
+ 744: STORE_FAST           vreadable
+ 746: STORE_FAST           vrecur
+ 748: PUSH_NULL            
+ 750: LOAD_FAST            append
+ 752: LOAD_FAST            krepr
+ 754: FORMAT_VALUE         str
+ 756: LOAD_CONST           ': '
+ 758: LOAD_FAST            vrepr
+ 760: FORMAT_VALUE         str
+ 762: BUILD_STRING         
+ 764: PRECALL              
+ 768: CALL                 
+ 778: POP_TOP              
+ 780: LOAD_FAST            readable
+ 782: JUMP_IF_FALSE_OR_POP to 790
+ 784: LOAD_FAST            kreadable
+ 786: JUMP_IF_FALSE_OR_POP to 790
+ 788: LOAD_FAST            vreadable
+ 790: STORE_FAST           readable
+ 792: LOAD_FAST            krecur
+ 794: POP_JUMP_FORWARD_IF_TRUE to 800
+ 796: LOAD_FAST            vrecur
+ 798: POP_JUMP_FORWARD_IF_FALSE to 804
+ 800: LOAD_CONST           True
+ 802: STORE_FAST           recursive
+ 804: JUMP_BACKWARD        to 626
+ 806: LOAD_FAST            context
+ 808: LOAD_FAST            objid
+ 810: DELETE_SUBSCR        
+ 812: LOAD_CONST           '{%s}'
+ 814: LOAD_CONST           ', '
+ 816: LOAD_METHOD          join
+ 838: LOAD_FAST            components
+ 840: PRECALL              
+ 844: CALL                 
+ 854: BINARY_OP            %
+ 858: LOAD_FAST            readable
+ 860: LOAD_FAST            recursive
+ 862: BUILD_TUPLE          
+ 864: RETURN_VALUE         
+ 866: LOAD_GLOBAL          NULL + issubclass
+ 878: LOAD_FAST            typ
+ 880: LOAD_GLOBAL          list
+ 892: PRECALL              
+ 896: CALL                 
+ 906: POP_JUMP_FORWARD_IF_FALSE to 936
+ 908: LOAD_FAST            r
+ 910: LOAD_GLOBAL          list
+ 922: LOAD_ATTR            __repr__
+ 932: IS_OP                
+ 934: POP_JUMP_FORWARD_IF_TRUE to 1006
+ 936: LOAD_GLOBAL          NULL + issubclass
+ 948: LOAD_FAST            typ
+ 950: LOAD_GLOBAL          tuple
+ 962: PRECALL              
+ 966: CALL                 
+ 976: POP_JUMP_FORWARD_IF_FALSE to 1438
+ 978: LOAD_FAST            r
+ 980: LOAD_GLOBAL          tuple
+ 992: LOAD_ATTR            __repr__
+1002: IS_OP                
+1004: POP_JUMP_FORWARD_IF_FALSE to 1438
+1006: LOAD_GLOBAL          NULL + issubclass
+1018: LOAD_FAST            typ
+1020: LOAD_GLOBAL          list
+1032: PRECALL              
+1036: CALL                 
+1046: POP_JUMP_FORWARD_IF_FALSE to 1062
+1048: LOAD_FAST            object
+1050: POP_JUMP_FORWARD_IF_TRUE to 1056
+1052: LOAD_CONST           ('[]', True, False)
+1054: RETURN_VALUE         
+1056: LOAD_CONST           '[%s]'
+1058: STORE_FAST           format
+1060: JUMP_FORWARD         to 1118
+1062: LOAD_GLOBAL          NULL + len
+1074: LOAD_FAST            object
+1076: PRECALL              
+1080: CALL                 
+1090: LOAD_CONST           1
+1092: COMPARE_OP           ==
+1098: POP_JUMP_FORWARD_IF_FALSE to 1106
+1100: LOAD_CONST           '(%s,)'
+1102: STORE_FAST           format
+1104: JUMP_FORWARD         to 1118
+1106: LOAD_FAST            object
+1108: POP_JUMP_FORWARD_IF_TRUE to 1114
+1110: LOAD_CONST           ('()', True, False)
+1112: RETURN_VALUE         
+1114: LOAD_CONST           '(%s)'
+1116: STORE_FAST           format
+1118: LOAD_GLOBAL          NULL + id
+1130: LOAD_FAST            object
+1132: PRECALL              
+1136: CALL                 
+1146: STORE_FAST           objid
+1148: LOAD_FAST            maxlevels
+1150: POP_JUMP_FORWARD_IF_FALSE to 1184
+1152: LOAD_FAST            level
+1154: LOAD_FAST            maxlevels
+1156: COMPARE_OP           >=
+1162: POP_JUMP_FORWARD_IF_FALSE to 1184
+1164: LOAD_FAST            format
+1166: LOAD_CONST           '...'
+1168: BINARY_OP            %
+1172: LOAD_CONST           False
+1174: LOAD_FAST            objid
+1176: LOAD_FAST            context
+1178: CONTAINS_OP          
+1180: BUILD_TUPLE          
+1182: RETURN_VALUE         
+1184: LOAD_FAST            objid
+1186: LOAD_FAST            context
+1188: CONTAINS_OP          
+1190: POP_JUMP_FORWARD_IF_FALSE to 1228
+1192: LOAD_GLOBAL          NULL + _recursion
+1204: LOAD_FAST            object
+1206: PRECALL              
+1210: CALL                 
+1220: LOAD_CONST           False
+1222: LOAD_CONST           True
+1224: BUILD_TUPLE          
+1226: RETURN_VALUE         
+1228: LOAD_CONST           1
+1230: LOAD_FAST            context
+1232: LOAD_FAST            objid
+1234: STORE_SUBSCR         
+1238: LOAD_CONST           True
+1240: STORE_FAST           readable
+1242: LOAD_CONST           False
+1244: STORE_FAST           recursive
+1246: BUILD_LIST           
+1248: STORE_FAST           components
+1250: LOAD_FAST            components
+1252: LOAD_ATTR            append
+1262: STORE_FAST           append
+1264: LOAD_FAST            level
+1266: LOAD_CONST           1
+1268: BINARY_OP            +=
+1272: STORE_FAST           level
+1274: LOAD_FAST            object
+1276: GET_ITER             
+1278: FOR_ITER             to 1378
+1280: STORE_FAST           o
+1282: LOAD_FAST            self
+1284: LOAD_METHOD          format
+1306: LOAD_FAST            o
+1308: LOAD_FAST            context
+1310: LOAD_FAST            maxlevels
+1312: LOAD_FAST            level
+1314: PRECALL              
+1318: CALL                 
+1328: UNPACK_SEQUENCE      
+1332: STORE_FAST           orepr
+1334: STORE_FAST           oreadable
+1336: STORE_FAST           orecur
+1338: PUSH_NULL            
+1340: LOAD_FAST            append
+1342: LOAD_FAST            orepr
+1344: PRECALL              
+1348: CALL                 
+1358: POP_TOP              
+1360: LOAD_FAST            oreadable
+1362: POP_JUMP_FORWARD_IF_TRUE to 1368
+1364: LOAD_CONST           False
+1366: STORE_FAST           readable
+1368: LOAD_FAST            orecur
+1370: POP_JUMP_FORWARD_IF_FALSE to 1376
+1372: LOAD_CONST           True
+1374: STORE_FAST           recursive
+1376: JUMP_BACKWARD        to 1278
+1378: LOAD_FAST            context
+1380: LOAD_FAST            objid
+1382: DELETE_SUBSCR        
+1384: LOAD_FAST            format
+1386: LOAD_CONST           ', '
+1388: LOAD_METHOD          join
+1410: LOAD_FAST            components
+1412: PRECALL              
+1416: CALL                 
+1426: BINARY_OP            %
+1430: LOAD_FAST            readable
+1432: LOAD_FAST            recursive
+1434: BUILD_TUPLE          
+1436: RETURN_VALUE         
+1438: LOAD_GLOBAL          NULL + repr
+1450: LOAD_FAST            object
+1452: PRECALL              
+1456: CALL                 
+1466: STORE_FAST           rep
+1468: LOAD_FAST            rep
+1470: LOAD_FAST            rep
+1472: JUMP_IF_FALSE_OR_POP to 1516
+1474: LOAD_FAST            rep
+1476: LOAD_METHOD          startswith
+1498: LOAD_CONST           '<'
+1500: PRECALL              
+1504: CALL                 
+1514: UNARY_NOT            
+1516: LOAD_CONST           False
+1518: BUILD_TUPLE          
+1520: RETURN_VALUE         

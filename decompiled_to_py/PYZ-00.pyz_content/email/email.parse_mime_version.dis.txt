@@ -1,0 +1,387 @@
+# Disassembly for email.parse_mime_version
+# From module file: email._header_value_parser
+
+## co_consts:
+(' mime-version = [CFWS] 1*digit [CFWS] "." [CFWS] 1*digit [CFWS]\n\n    ', 'Missing MIME version number (eg: 1.0)', 0, 'Expected MIME version number but found only CFWS', '', '.', 1, None, 'Expected MIME major version number but found {!r}', 'xtext', 'digits', 'Incomplete MIME version; found only major number', 'version-separator', 'Expected MIME minor version number but found {!r}', 'Excess non-CFWS text after MIME version')
+
+## co_names:
+('MIMEVersion', 'defects', 'append', 'errors', 'HeaderMissingRequiredValue', 'CFWS_LEADER', 'get_cfws', 'isdigit', 'InvalidHeaderDefect', 'format', 'ValueTerminal', 'int', 'major', 'minor')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + MIMEVersion
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           mime_version
+  30: LOAD_FAST            value
+  32: POP_JUMP_FORWARD_IF_TRUE to 126
+  34: LOAD_FAST            mime_version
+  36: LOAD_ATTR            defects
+  46: LOAD_METHOD          append
+  68: LOAD_GLOBAL          NULL + errors
+  80: LOAD_ATTR            HeaderMissingRequiredValue
+  90: LOAD_CONST           'Missing MIME version number (eg: 1.0)'
+  92: PRECALL              
+  96: CALL                 
+ 106: PRECALL              
+ 110: CALL                 
+ 120: POP_TOP              
+ 122: LOAD_FAST            mime_version
+ 124: RETURN_VALUE         
+ 126: LOAD_FAST            value
+ 128: LOAD_CONST           0
+ 130: BINARY_SUBSCR        
+ 140: LOAD_GLOBAL          CFWS_LEADER
+ 152: CONTAINS_OP          
+ 154: POP_JUMP_FORWARD_IF_FALSE to 326
+ 156: LOAD_GLOBAL          NULL + get_cfws
+ 168: LOAD_FAST            value
+ 170: PRECALL              
+ 174: CALL                 
+ 184: UNPACK_SEQUENCE      
+ 188: STORE_FAST           token
+ 190: STORE_FAST           value
+ 192: LOAD_FAST            mime_version
+ 194: LOAD_METHOD          append
+ 216: LOAD_FAST            token
+ 218: PRECALL              
+ 222: CALL                 
+ 232: POP_TOP              
+ 234: LOAD_FAST            value
+ 236: POP_JUMP_FORWARD_IF_TRUE to 326
+ 238: LOAD_FAST            mime_version
+ 240: LOAD_ATTR            defects
+ 250: LOAD_METHOD          append
+ 272: LOAD_GLOBAL          NULL + errors
+ 284: LOAD_ATTR            HeaderMissingRequiredValue
+ 294: LOAD_CONST           'Expected MIME version number but found only CFWS'
+ 296: PRECALL              
+ 300: CALL                 
+ 310: PRECALL              
+ 314: CALL                 
+ 324: POP_TOP              
+ 326: LOAD_CONST           ''
+ 328: STORE_FAST           digits
+ 330: LOAD_FAST            value
+ 332: POP_JUMP_FORWARD_IF_FALSE to 488
+ 334: LOAD_FAST            value
+ 336: LOAD_CONST           0
+ 338: BINARY_SUBSCR        
+ 348: LOAD_CONST           '.'
+ 350: COMPARE_OP           !=
+ 356: POP_JUMP_FORWARD_IF_FALSE to 488
+ 358: LOAD_FAST            value
+ 360: LOAD_CONST           0
+ 362: BINARY_SUBSCR        
+ 372: LOAD_GLOBAL          CFWS_LEADER
+ 384: CONTAINS_OP          
+ 386: POP_JUMP_FORWARD_IF_FALSE to 488
+ 388: LOAD_FAST            digits
+ 390: LOAD_FAST            value
+ 392: LOAD_CONST           0
+ 394: BINARY_SUBSCR        
+ 404: BINARY_OP            +=
+ 408: STORE_FAST           digits
+ 410: LOAD_FAST            value
+ 412: LOAD_CONST           1
+ 414: LOAD_CONST           None
+ 416: BUILD_SLICE          
+ 418: BINARY_SUBSCR        
+ 428: STORE_FAST           value
+ 430: LOAD_FAST            value
+ 432: POP_JUMP_FORWARD_IF_FALSE to 488
+ 434: LOAD_FAST            value
+ 436: LOAD_CONST           0
+ 438: BINARY_SUBSCR        
+ 448: LOAD_CONST           '.'
+ 450: COMPARE_OP           !=
+ 456: POP_JUMP_FORWARD_IF_FALSE to 488
+ 458: LOAD_FAST            value
+ 460: LOAD_CONST           0
+ 462: BINARY_SUBSCR        
+ 472: LOAD_GLOBAL          CFWS_LEADER
+ 484: CONTAINS_OP          
+ 486: POP_JUMP_BACKWARD_IF_TRUE to 388
+ 488: LOAD_FAST            digits
+ 490: LOAD_METHOD          isdigit
+ 512: PRECALL              
+ 516: CALL                 
+ 526: POP_JUMP_FORWARD_IF_TRUE to 726
+ 528: LOAD_FAST            mime_version
+ 530: LOAD_ATTR            defects
+ 540: LOAD_METHOD          append
+ 562: LOAD_GLOBAL          NULL + errors
+ 574: LOAD_ATTR            InvalidHeaderDefect
+ 584: LOAD_CONST           'Expected MIME major version number but found {!r}'
+ 586: LOAD_METHOD          format
+ 608: LOAD_FAST            digits
+ 610: PRECALL              
+ 614: CALL                 
+ 624: PRECALL              
+ 628: CALL                 
+ 638: PRECALL              
+ 642: CALL                 
+ 652: POP_TOP              
+ 654: LOAD_FAST            mime_version
+ 656: LOAD_METHOD          append
+ 678: LOAD_GLOBAL          NULL + ValueTerminal
+ 690: LOAD_FAST            digits
+ 692: LOAD_CONST           'xtext'
+ 694: PRECALL              
+ 698: CALL                 
+ 708: PRECALL              
+ 712: CALL                 
+ 722: POP_TOP              
+ 724: JUMP_FORWARD         to 836
+ 726: LOAD_GLOBAL          NULL + int
+ 738: LOAD_FAST            digits
+ 740: PRECALL              
+ 744: CALL                 
+ 754: LOAD_FAST            mime_version
+ 756: STORE_ATTR           major
+ 766: LOAD_FAST            mime_version
+ 768: LOAD_METHOD          append
+ 790: LOAD_GLOBAL          NULL + ValueTerminal
+ 802: LOAD_FAST            digits
+ 804: LOAD_CONST           'digits'
+ 806: PRECALL              
+ 810: CALL                 
+ 820: PRECALL              
+ 824: CALL                 
+ 834: POP_TOP              
+ 836: LOAD_FAST            value
+ 838: POP_JUMP_FORWARD_IF_FALSE to 948
+ 840: LOAD_FAST            value
+ 842: LOAD_CONST           0
+ 844: BINARY_SUBSCR        
+ 854: LOAD_GLOBAL          CFWS_LEADER
+ 866: CONTAINS_OP          
+ 868: POP_JUMP_FORWARD_IF_FALSE to 948
+ 870: LOAD_GLOBAL          NULL + get_cfws
+ 882: LOAD_FAST            value
+ 884: PRECALL              
+ 888: CALL                 
+ 898: UNPACK_SEQUENCE      
+ 902: STORE_FAST           token
+ 904: STORE_FAST           value
+ 906: LOAD_FAST            mime_version
+ 908: LOAD_METHOD          append
+ 930: LOAD_FAST            token
+ 932: PRECALL              
+ 936: CALL                 
+ 946: POP_TOP              
+ 948: LOAD_FAST            value
+ 950: POP_JUMP_FORWARD_IF_FALSE to 976
+ 952: LOAD_FAST            value
+ 954: LOAD_CONST           0
+ 956: BINARY_SUBSCR        
+ 966: LOAD_CONST           '.'
+ 968: COMPARE_OP           !=
+ 974: POP_JUMP_FORWARD_IF_FALSE to 1156
+ 976: LOAD_FAST            mime_version
+ 978: LOAD_ATTR            major
+ 988: POP_JUMP_FORWARD_IF_NONE to 1078
+ 990: LOAD_FAST            mime_version
+ 992: LOAD_ATTR            defects
+1002: LOAD_METHOD          append
+1024: LOAD_GLOBAL          NULL + errors
+1036: LOAD_ATTR            InvalidHeaderDefect
+1046: LOAD_CONST           'Incomplete MIME version; found only major number'
+1048: PRECALL              
+1052: CALL                 
+1062: PRECALL              
+1066: CALL                 
+1076: POP_TOP              
+1078: LOAD_FAST            value
+1080: POP_JUMP_FORWARD_IF_FALSE to 1152
+1082: LOAD_FAST            mime_version
+1084: LOAD_METHOD          append
+1106: LOAD_GLOBAL          NULL + ValueTerminal
+1118: LOAD_FAST            value
+1120: LOAD_CONST           'xtext'
+1122: PRECALL              
+1126: CALL                 
+1136: PRECALL              
+1140: CALL                 
+1150: POP_TOP              
+1152: LOAD_FAST            mime_version
+1154: RETURN_VALUE         
+1156: LOAD_FAST            mime_version
+1158: LOAD_METHOD          append
+1180: LOAD_GLOBAL          NULL + ValueTerminal
+1192: LOAD_CONST           '.'
+1194: LOAD_CONST           'version-separator'
+1196: PRECALL              
+1200: CALL                 
+1210: PRECALL              
+1214: CALL                 
+1224: POP_TOP              
+1226: LOAD_FAST            value
+1228: LOAD_CONST           1
+1230: LOAD_CONST           None
+1232: BUILD_SLICE          
+1234: BINARY_SUBSCR        
+1244: STORE_FAST           value
+1246: LOAD_FAST            value
+1248: POP_JUMP_FORWARD_IF_FALSE to 1358
+1250: LOAD_FAST            value
+1252: LOAD_CONST           0
+1254: BINARY_SUBSCR        
+1264: LOAD_GLOBAL          CFWS_LEADER
+1276: CONTAINS_OP          
+1278: POP_JUMP_FORWARD_IF_FALSE to 1358
+1280: LOAD_GLOBAL          NULL + get_cfws
+1292: LOAD_FAST            value
+1294: PRECALL              
+1298: CALL                 
+1308: UNPACK_SEQUENCE      
+1312: STORE_FAST           token
+1314: STORE_FAST           value
+1316: LOAD_FAST            mime_version
+1318: LOAD_METHOD          append
+1340: LOAD_FAST            token
+1342: PRECALL              
+1346: CALL                 
+1356: POP_TOP              
+1358: LOAD_FAST            value
+1360: POP_JUMP_FORWARD_IF_TRUE to 1468
+1362: LOAD_FAST            mime_version
+1364: LOAD_ATTR            major
+1374: POP_JUMP_FORWARD_IF_NONE to 1464
+1376: LOAD_FAST            mime_version
+1378: LOAD_ATTR            defects
+1388: LOAD_METHOD          append
+1410: LOAD_GLOBAL          NULL + errors
+1422: LOAD_ATTR            InvalidHeaderDefect
+1432: LOAD_CONST           'Incomplete MIME version; found only major number'
+1434: PRECALL              
+1438: CALL                 
+1448: PRECALL              
+1452: CALL                 
+1462: POP_TOP              
+1464: LOAD_FAST            mime_version
+1466: RETURN_VALUE         
+1468: LOAD_CONST           ''
+1470: STORE_FAST           digits
+1472: LOAD_FAST            value
+1474: POP_JUMP_FORWARD_IF_FALSE to 1582
+1476: LOAD_FAST            value
+1478: LOAD_CONST           0
+1480: BINARY_SUBSCR        
+1490: LOAD_GLOBAL          CFWS_LEADER
+1502: CONTAINS_OP          
+1504: POP_JUMP_FORWARD_IF_FALSE to 1582
+1506: LOAD_FAST            digits
+1508: LOAD_FAST            value
+1510: LOAD_CONST           0
+1512: BINARY_SUBSCR        
+1522: BINARY_OP            +=
+1526: STORE_FAST           digits
+1528: LOAD_FAST            value
+1530: LOAD_CONST           1
+1532: LOAD_CONST           None
+1534: BUILD_SLICE          
+1536: BINARY_SUBSCR        
+1546: STORE_FAST           value
+1548: LOAD_FAST            value
+1550: POP_JUMP_FORWARD_IF_FALSE to 1582
+1552: LOAD_FAST            value
+1554: LOAD_CONST           0
+1556: BINARY_SUBSCR        
+1566: LOAD_GLOBAL          CFWS_LEADER
+1578: CONTAINS_OP          
+1580: POP_JUMP_BACKWARD_IF_TRUE to 1506
+1582: LOAD_FAST            digits
+1584: LOAD_METHOD          isdigit
+1606: PRECALL              
+1610: CALL                 
+1620: POP_JUMP_FORWARD_IF_TRUE to 1820
+1622: LOAD_FAST            mime_version
+1624: LOAD_ATTR            defects
+1634: LOAD_METHOD          append
+1656: LOAD_GLOBAL          NULL + errors
+1668: LOAD_ATTR            InvalidHeaderDefect
+1678: LOAD_CONST           'Expected MIME minor version number but found {!r}'
+1680: LOAD_METHOD          format
+1702: LOAD_FAST            digits
+1704: PRECALL              
+1708: CALL                 
+1718: PRECALL              
+1722: CALL                 
+1732: PRECALL              
+1736: CALL                 
+1746: POP_TOP              
+1748: LOAD_FAST            mime_version
+1750: LOAD_METHOD          append
+1772: LOAD_GLOBAL          NULL + ValueTerminal
+1784: LOAD_FAST            digits
+1786: LOAD_CONST           'xtext'
+1788: PRECALL              
+1792: CALL                 
+1802: PRECALL              
+1806: CALL                 
+1816: POP_TOP              
+1818: JUMP_FORWARD         to 1930
+1820: LOAD_GLOBAL          NULL + int
+1832: LOAD_FAST            digits
+1834: PRECALL              
+1838: CALL                 
+1848: LOAD_FAST            mime_version
+1850: STORE_ATTR           minor
+1860: LOAD_FAST            mime_version
+1862: LOAD_METHOD          append
+1884: LOAD_GLOBAL          NULL + ValueTerminal
+1896: LOAD_FAST            digits
+1898: LOAD_CONST           'digits'
+1900: PRECALL              
+1904: CALL                 
+1914: PRECALL              
+1918: CALL                 
+1928: POP_TOP              
+1930: LOAD_FAST            value
+1932: POP_JUMP_FORWARD_IF_FALSE to 2042
+1934: LOAD_FAST            value
+1936: LOAD_CONST           0
+1938: BINARY_SUBSCR        
+1948: LOAD_GLOBAL          CFWS_LEADER
+1960: CONTAINS_OP          
+1962: POP_JUMP_FORWARD_IF_FALSE to 2042
+1964: LOAD_GLOBAL          NULL + get_cfws
+1976: LOAD_FAST            value
+1978: PRECALL              
+1982: CALL                 
+1992: UNPACK_SEQUENCE      
+1996: STORE_FAST           token
+1998: STORE_FAST           value
+2000: LOAD_FAST            mime_version
+2002: LOAD_METHOD          append
+2024: LOAD_FAST            token
+2026: PRECALL              
+2030: CALL                 
+2040: POP_TOP              
+2042: LOAD_FAST            value
+2044: POP_JUMP_FORWARD_IF_FALSE to 2204
+2046: LOAD_FAST            mime_version
+2048: LOAD_ATTR            defects
+2058: LOAD_METHOD          append
+2080: LOAD_GLOBAL          NULL + errors
+2092: LOAD_ATTR            InvalidHeaderDefect
+2102: LOAD_CONST           'Excess non-CFWS text after MIME version'
+2104: PRECALL              
+2108: CALL                 
+2118: PRECALL              
+2122: CALL                 
+2132: POP_TOP              
+2134: LOAD_FAST            mime_version
+2136: LOAD_METHOD          append
+2158: LOAD_GLOBAL          NULL + ValueTerminal
+2170: LOAD_FAST            value
+2172: LOAD_CONST           'xtext'
+2174: PRECALL              
+2178: CALL                 
+2188: PRECALL              
+2192: CALL                 
+2202: POP_TOP              
+2204: LOAD_FAST            mime_version
+2206: RETURN_VALUE         

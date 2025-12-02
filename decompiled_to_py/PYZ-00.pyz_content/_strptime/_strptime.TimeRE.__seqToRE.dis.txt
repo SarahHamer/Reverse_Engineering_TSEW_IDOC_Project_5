@@ -1,0 +1,56 @@
+# Disassembly for _strptime.TimeRE.__seqToRE
+# From module file: _strptime
+
+## co_consts:
+("Convert a list to a regex string for matching a directive.\n\n        Want possible matching values to be from longest to shortest.  This\n        prevents the possibility of a match occurring for a value that also\n        a substring of a larger value that should have matched (e.g., 'abc'\n        matching when 'abcdef' should have been the match).\n\n        ", True, ('key', 'reverse'), '', '|', <code object <genexpr> at 0x000002406945F3C0, file "_strptime.py", line 234>, '(?P<', '>', '%s)')
+
+## co_names:
+('sorted', 'len', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + sorted
+  14: LOAD_FAST            to_convert
+  16: LOAD_GLOBAL          len
+  28: LOAD_CONST           True
+  30: KW_NAMES             
+  32: PRECALL              
+  36: CALL                 
+  46: STORE_FAST           to_convert
+  48: LOAD_FAST            to_convert
+  50: GET_ITER             
+  52: FOR_ITER             to 74
+  54: STORE_FAST           value
+  56: LOAD_FAST            value
+  58: LOAD_CONST           ''
+  60: COMPARE_OP           !=
+  66: POP_JUMP_FORWARD_IF_FALSE to 72
+  68: POP_TOP              
+  70: JUMP_FORWARD         to 78
+  72: JUMP_BACKWARD        to 52
+  74: LOAD_CONST           ''
+  76: RETURN_VALUE         
+  78: LOAD_CONST           '|'
+  80: LOAD_METHOD          join
+ 102: LOAD_CONST           <code object <genexpr> at 0x000002406945F3C0, file "_strptime.py", line 234>
+ 104: MAKE_FUNCTION        
+ 106: LOAD_FAST            to_convert
+ 108: GET_ITER             
+ 110: PRECALL              
+ 114: CALL                 
+ 124: PRECALL              
+ 128: CALL                 
+ 138: STORE_FAST           regex
+ 140: LOAD_CONST           '(?P<'
+ 142: LOAD_FAST            directive
+ 144: FORMAT_VALUE         str
+ 146: LOAD_CONST           '>'
+ 148: LOAD_FAST            regex
+ 150: FORMAT_VALUE         str
+ 152: BUILD_STRING         
+ 154: STORE_FAST           regex
+ 156: LOAD_CONST           '%s)'
+ 158: LOAD_FAST            regex
+ 160: BINARY_OP            %
+ 164: RETURN_VALUE         

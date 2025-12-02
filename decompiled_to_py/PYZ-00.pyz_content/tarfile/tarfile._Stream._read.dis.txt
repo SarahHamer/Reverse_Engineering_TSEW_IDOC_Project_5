@@ -1,0 +1,123 @@
+# Disassembly for tarfile._Stream._read
+# From module file: tarfile
+
+## co_consts:
+('Return size bytes from the stream.\n        ', 'tar', b'', 'invalid compressed data', None)
+
+## co_names:
+('comptype', '_Stream__read', 'len', 'dbuf', 'buf', 'fileobj', 'read', 'bufsize', 'cmp', 'decompress', 'exception', 'ReadError', 'append', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            comptype
+  14: LOAD_CONST           'tar'
+  16: COMPARE_OP           ==
+  22: POP_JUMP_FORWARD_IF_FALSE to 66
+  24: LOAD_FAST            self
+  26: LOAD_METHOD          _Stream__read
+  48: LOAD_FAST            size
+  50: PRECALL              
+  54: CALL                 
+  64: RETURN_VALUE         
+  66: LOAD_GLOBAL          NULL + len
+  78: LOAD_FAST            self
+  80: LOAD_ATTR            dbuf
+  90: PRECALL              
+  94: CALL                 
+ 104: STORE_FAST           c
+ 106: LOAD_FAST            self
+ 108: LOAD_ATTR            dbuf
+ 118: BUILD_LIST           
+ 120: STORE_FAST           t
+ 122: LOAD_FAST            c
+ 124: LOAD_FAST            size
+ 126: COMPARE_OP           <
+ 132: POP_JUMP_FORWARD_IF_FALSE to 460
+ 134: LOAD_FAST            self
+ 136: LOAD_ATTR            buf
+ 146: POP_JUMP_FORWARD_IF_FALSE to 178
+ 148: LOAD_FAST            self
+ 150: LOAD_ATTR            buf
+ 160: STORE_FAST           buf
+ 162: LOAD_CONST           b''
+ 164: LOAD_FAST            self
+ 166: STORE_ATTR           buf
+ 176: JUMP_FORWARD         to 246
+ 178: LOAD_FAST            self
+ 180: LOAD_ATTR            fileobj
+ 190: LOAD_METHOD          read
+ 212: LOAD_FAST            self
+ 214: LOAD_ATTR            bufsize
+ 224: PRECALL              
+ 228: CALL                 
+ 238: STORE_FAST           buf
+ 240: LOAD_FAST            buf
+ 242: POP_JUMP_FORWARD_IF_TRUE to 246
+ 244: JUMP_FORWARD         to 460
+ 246: NOP                  
+ 248: LOAD_FAST            self
+ 250: LOAD_ATTR            cmp
+ 260: LOAD_METHOD          decompress
+ 282: LOAD_FAST            buf
+ 284: PRECALL              
+ 288: CALL                 
+ 298: STORE_FAST           buf
+ 300: JUMP_FORWARD         to 370
+ 302: PUSH_EXC_INFO        
+ 304: LOAD_FAST            self
+ 306: LOAD_ATTR            exception
+ 316: CHECK_EXC_MATCH      
+ 318: POP_JUMP_FORWARD_IF_FALSE to 362
+ 320: STORE_FAST           e
+ 322: LOAD_GLOBAL          NULL + ReadError
+ 334: LOAD_CONST           'invalid compressed data'
+ 336: PRECALL              
+ 340: CALL                 
+ 350: LOAD_FAST            e
+ 352: RAISE_VARARGS        
+ 354: LOAD_CONST           None
+ 356: STORE_FAST           e
+ 358: DELETE_FAST          e
+ 360: RERAISE              
+ 362: RERAISE              
+ 364: COPY                 
+ 366: POP_EXCEPT           
+ 368: RERAISE              
+ 370: LOAD_FAST            t
+ 372: LOAD_METHOD          append
+ 394: LOAD_FAST            buf
+ 396: PRECALL              
+ 400: CALL                 
+ 410: POP_TOP              
+ 412: LOAD_FAST            c
+ 414: LOAD_GLOBAL          NULL + len
+ 426: LOAD_FAST            buf
+ 428: PRECALL              
+ 432: CALL                 
+ 442: BINARY_OP            +=
+ 446: STORE_FAST           c
+ 448: LOAD_FAST            c
+ 450: LOAD_FAST            size
+ 452: COMPARE_OP           <
+ 458: POP_JUMP_BACKWARD_IF_TRUE to 134
+ 460: LOAD_CONST           b''
+ 462: LOAD_METHOD          join
+ 484: LOAD_FAST            t
+ 486: PRECALL              
+ 490: CALL                 
+ 500: STORE_FAST           t
+ 502: LOAD_FAST            t
+ 504: LOAD_FAST            size
+ 506: LOAD_CONST           None
+ 508: BUILD_SLICE          
+ 510: BINARY_SUBSCR        
+ 520: LOAD_FAST            self
+ 522: STORE_ATTR           dbuf
+ 532: LOAD_FAST            t
+ 534: LOAD_CONST           None
+ 536: LOAD_FAST            size
+ 538: BUILD_SLICE          
+ 540: BINARY_SUBSCR        
+ 550: RETURN_VALUE         

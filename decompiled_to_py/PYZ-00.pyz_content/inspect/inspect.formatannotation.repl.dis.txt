@@ -1,0 +1,23 @@
+# Disassembly for inspect.formatannotation.repl
+# From module file: inspect
+
+## co_consts:
+(None, 'typing.')
+
+## co_names:
+('group', 'removeprefix')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            match
+   4: LOAD_METHOD          group
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           text
+  42: LOAD_FAST            text
+  44: LOAD_METHOD          removeprefix
+  66: LOAD_CONST           'typing.'
+  68: PRECALL              
+  72: CALL                 
+  82: RETURN_VALUE         

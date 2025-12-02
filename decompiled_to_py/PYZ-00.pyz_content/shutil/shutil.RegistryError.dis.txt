@@ -1,0 +1,20 @@
+# Disassembly for shutil.RegistryError
+# From module file: shutil
+
+## co_consts:
+('RegistryError', 'Raised when a registry operation with the archiving\n    and unpacking registries fails', None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'RegistryError'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Raised when a registry operation with the archiving\n    and unpacking registries fails'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           None
+  16: RETURN_VALUE         

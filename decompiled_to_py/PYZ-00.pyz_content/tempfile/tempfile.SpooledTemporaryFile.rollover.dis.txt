@@ -1,0 +1,79 @@
+# Disassembly for tempfile.SpooledTemporaryFile.rollover
+# From module file: tempfile
+
+## co_consts:
+(None, 'buffer', 0, True, ())
+
+## co_names:
+('_rolled', '_file', 'TemporaryFile', '_TemporaryFileArgs', 'tell', 'hasattr', 'buffer', 'write', 'detach', 'getvalue', 'seek')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _rolled
+  14: POP_JUMP_FORWARD_IF_FALSE to 20
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            _file
+  32: STORE_FAST           file
+  34: LOAD_GLOBAL          NULL + TemporaryFile
+  46: LOAD_CONST           ()
+  48: BUILD_MAP            
+  50: LOAD_FAST            self
+  52: LOAD_ATTR            _TemporaryFileArgs
+  62: DICT_MERGE           
+  64: CALL_FUNCTION_EX     
+  66: COPY                 
+  68: STORE_FAST           newfile
+  70: LOAD_FAST            self
+  72: STORE_ATTR           _file
+  82: LOAD_FAST            self
+  84: DELETE_ATTR          _TemporaryFileArgs
+  86: LOAD_FAST            file
+  88: LOAD_METHOD          tell
+ 110: PRECALL              
+ 114: CALL                 
+ 124: STORE_FAST           pos
+ 126: LOAD_GLOBAL          NULL + hasattr
+ 138: LOAD_FAST            newfile
+ 140: LOAD_CONST           'buffer'
+ 142: PRECALL              
+ 146: CALL                 
+ 156: POP_JUMP_FORWARD_IF_FALSE to 284
+ 158: LOAD_FAST            newfile
+ 160: LOAD_ATTR            buffer
+ 170: LOAD_METHOD          write
+ 192: LOAD_FAST            file
+ 194: LOAD_METHOD          detach
+ 216: PRECALL              
+ 220: CALL                 
+ 230: LOAD_METHOD          getvalue
+ 252: PRECALL              
+ 256: CALL                 
+ 266: PRECALL              
+ 270: CALL                 
+ 280: POP_TOP              
+ 282: JUMP_FORWARD         to 362
+ 284: LOAD_FAST            newfile
+ 286: LOAD_METHOD          write
+ 308: LOAD_FAST            file
+ 310: LOAD_METHOD          getvalue
+ 332: PRECALL              
+ 336: CALL                 
+ 346: PRECALL              
+ 350: CALL                 
+ 360: POP_TOP              
+ 362: LOAD_FAST            newfile
+ 364: LOAD_METHOD          seek
+ 386: LOAD_FAST            pos
+ 388: LOAD_CONST           0
+ 390: PRECALL              
+ 394: CALL                 
+ 404: POP_TOP              
+ 406: LOAD_CONST           True
+ 408: LOAD_FAST            self
+ 410: STORE_ATTR           _rolled
+ 420: LOAD_CONST           None
+ 422: RETURN_VALUE         

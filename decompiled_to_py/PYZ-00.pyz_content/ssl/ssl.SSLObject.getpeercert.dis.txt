@@ -1,0 +1,19 @@
+# Disassembly for ssl.SSLObject.getpeercert
+# From module file: ssl
+
+## co_consts:
+('Returns a formatted version of the data in the certificate provided\n        by the other end of the SSL channel.\n\n        Return None if no certificate was provided, {} if a certificate was\n        provided, but not validated.\n        ',)
+
+## co_names:
+('_sslobj', 'getpeercert')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _sslobj
+  14: LOAD_METHOD          getpeercert
+  36: LOAD_FAST            binary_form
+  38: PRECALL              
+  42: CALL                 
+  52: RETURN_VALUE         

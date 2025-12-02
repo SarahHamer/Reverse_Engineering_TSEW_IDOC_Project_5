@@ -1,0 +1,54 @@
+# Disassembly for importlib.packages_distributions
+# From module file: importlib.metadata
+
+## co_consts:
+('\n    Return a mapping of top-level packages to their\n    distributions.\n\n    >>> import collections.abc\n    >>> pkgs = packages_distributions()\n    >>> all(isinstance(dist, collections.abc.Sequence) for dist in pkgs.values())\n    True\n    ', 'Name')
+
+## co_names:
+('collections', 'defaultdict', 'list', 'distributions', '_top_level_declared', '_top_level_inferred', 'append', 'metadata', 'dict')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + collections
+  14: LOAD_ATTR            defaultdict
+  24: LOAD_GLOBAL          list
+  36: PRECALL              
+  40: CALL                 
+  50: STORE_FAST           pkg_to_dist
+  52: LOAD_GLOBAL          NULL + distributions
+  64: PRECALL              
+  68: CALL                 
+  78: GET_ITER             
+  80: FOR_ITER             to 228
+  82: STORE_FAST           dist
+  84: LOAD_GLOBAL          NULL + _top_level_declared
+  96: LOAD_FAST            dist
+  98: PRECALL              
+ 102: CALL                 
+ 112: JUMP_IF_TRUE_OR_POP  to 142
+ 114: LOAD_GLOBAL          NULL + _top_level_inferred
+ 126: LOAD_FAST            dist
+ 128: PRECALL              
+ 132: CALL                 
+ 142: GET_ITER             
+ 144: FOR_ITER             to 226
+ 146: STORE_FAST           pkg
+ 148: LOAD_FAST            pkg_to_dist
+ 150: LOAD_FAST            pkg
+ 152: BINARY_SUBSCR        
+ 162: LOAD_METHOD          append
+ 184: LOAD_FAST            dist
+ 186: LOAD_ATTR            metadata
+ 196: LOAD_CONST           'Name'
+ 198: BINARY_SUBSCR        
+ 208: PRECALL              
+ 212: CALL                 
+ 222: POP_TOP              
+ 224: JUMP_BACKWARD        to 144
+ 226: JUMP_BACKWARD        to 80
+ 228: LOAD_GLOBAL          NULL + dict
+ 240: LOAD_FAST            pkg_to_dist
+ 242: PRECALL              
+ 246: CALL                 
+ 256: RETURN_VALUE         

@@ -1,0 +1,14 @@
+# Disassembly for lobby.Telephone.get_description
+# From module file: lobby
+
+## co_consts:
+(None, 'There is a blue phone on the counter.')
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           'There is a blue phone on the counter.'
+   4: RETURN_VALUE         

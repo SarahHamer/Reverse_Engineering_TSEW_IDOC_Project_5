@@ -1,0 +1,63 @@
+# Disassembly for http._read_headers
+# From module file: http.client
+
+## co_consts:
+('Reads potential header lines into a list from a file pointer.\n\n    Length of line is limited by _MAXLINE, and number of\n    headers is limited by _MAXHEADERS.\n    ', True, 1, 'header line', 'got more than %d headers', (b'\r\n', b'\n', b''))
+
+## co_names:
+('readline', '_MAXLINE', 'len', 'LineTooLong', 'append', '_MAXHEADERS', 'HTTPException')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           headers
+   6: NOP                  
+   8: LOAD_FAST            fp
+  10: LOAD_METHOD          readline
+  32: LOAD_GLOBAL          _MAXLINE
+  44: LOAD_CONST           1
+  46: BINARY_OP            +
+  50: PRECALL              
+  54: CALL                 
+  64: STORE_FAST           line
+  66: LOAD_GLOBAL          NULL + len
+  78: LOAD_FAST            line
+  80: PRECALL              
+  84: CALL                 
+  94: LOAD_GLOBAL          _MAXLINE
+ 106: COMPARE_OP           >
+ 112: POP_JUMP_FORWARD_IF_FALSE to 144
+ 114: LOAD_GLOBAL          NULL + LineTooLong
+ 126: LOAD_CONST           'header line'
+ 128: PRECALL              
+ 132: CALL                 
+ 142: RAISE_VARARGS        
+ 144: LOAD_FAST            headers
+ 146: LOAD_METHOD          append
+ 168: LOAD_FAST            line
+ 170: PRECALL              
+ 174: CALL                 
+ 184: POP_TOP              
+ 186: LOAD_GLOBAL          NULL + len
+ 198: LOAD_FAST            headers
+ 200: PRECALL              
+ 204: CALL                 
+ 214: LOAD_GLOBAL          _MAXHEADERS
+ 226: COMPARE_OP           >
+ 232: POP_JUMP_FORWARD_IF_FALSE to 280
+ 234: LOAD_GLOBAL          NULL + HTTPException
+ 246: LOAD_CONST           'got more than %d headers'
+ 248: LOAD_GLOBAL          _MAXHEADERS
+ 260: BINARY_OP            %
+ 264: PRECALL              
+ 268: CALL                 
+ 278: RAISE_VARARGS        
+ 280: LOAD_FAST            line
+ 282: LOAD_CONST           (b'\r\n', b'\n', b'')
+ 284: CONTAINS_OP          
+ 286: POP_JUMP_FORWARD_IF_FALSE to 290
+ 288: JUMP_FORWARD         to 292
+ 290: JUMP_BACKWARD        to 8
+ 292: LOAD_FAST            headers
+ 294: RETURN_VALUE         

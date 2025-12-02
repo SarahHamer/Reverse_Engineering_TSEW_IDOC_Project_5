@@ -1,0 +1,130 @@
+# Disassembly for random.Random.vonmisesvariate
+# From module file: random
+
+## co_consts:
+('Circular data distribution.\n\n        mu is the mean angle, expressed in radians between 0 and 2*pi, and\n        kappa is the concentration parameter, which must be greater than or\n        equal to zero.  If kappa is equal to zero, this distribution reduces\n        to a uniform random angle over the range 0 to 2*pi.\n\n        ', 1e-06, 0.5, 1.0)
+
+## co_names:
+('random', 'TWOPI', '_sqrt', '_cos', '_pi', '_exp', '_acos')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            random
+  14: STORE_FAST           random
+  16: LOAD_FAST            kappa
+  18: LOAD_CONST           1e-06
+  20: COMPARE_OP           <=
+  26: POP_JUMP_FORWARD_IF_FALSE to 64
+  28: LOAD_GLOBAL          TWOPI
+  40: PUSH_NULL            
+  42: LOAD_FAST            random
+  44: PRECALL              
+  48: CALL                 
+  58: BINARY_OP            *
+  62: RETURN_VALUE         
+  64: LOAD_CONST           0.5
+  66: LOAD_FAST            kappa
+  68: BINARY_OP            /
+  72: STORE_FAST           s
+  74: LOAD_FAST            s
+  76: LOAD_GLOBAL          NULL + _sqrt
+  88: LOAD_CONST           1.0
+  90: LOAD_FAST            s
+  92: LOAD_FAST            s
+  94: BINARY_OP            *
+  98: BINARY_OP            +
+ 102: PRECALL              
+ 106: CALL                 
+ 116: BINARY_OP            +
+ 120: STORE_FAST           r
+ 122: NOP                  
+ 124: PUSH_NULL            
+ 126: LOAD_FAST            random
+ 128: PRECALL              
+ 132: CALL                 
+ 142: STORE_FAST           u1
+ 144: LOAD_GLOBAL          NULL + _cos
+ 156: LOAD_GLOBAL          _pi
+ 168: LOAD_FAST            u1
+ 170: BINARY_OP            *
+ 174: PRECALL              
+ 178: CALL                 
+ 188: STORE_FAST           z
+ 190: LOAD_FAST            z
+ 192: LOAD_FAST            r
+ 194: LOAD_FAST            z
+ 196: BINARY_OP            +
+ 200: BINARY_OP            /
+ 204: STORE_FAST           d
+ 206: PUSH_NULL            
+ 208: LOAD_FAST            random
+ 210: PRECALL              
+ 214: CALL                 
+ 224: STORE_FAST           u2
+ 226: LOAD_FAST            u2
+ 228: LOAD_CONST           1.0
+ 230: LOAD_FAST            d
+ 232: LOAD_FAST            d
+ 234: BINARY_OP            *
+ 238: BINARY_OP            -
+ 242: COMPARE_OP           <
+ 248: POP_JUMP_FORWARD_IF_TRUE to 300
+ 250: LOAD_FAST            u2
+ 252: LOAD_CONST           1.0
+ 254: LOAD_FAST            d
+ 256: BINARY_OP            -
+ 260: LOAD_GLOBAL          NULL + _exp
+ 272: LOAD_FAST            d
+ 274: PRECALL              
+ 278: CALL                 
+ 288: BINARY_OP            *
+ 292: COMPARE_OP           <=
+ 298: POP_JUMP_FORWARD_IF_FALSE to 302
+ 300: JUMP_FORWARD         to 304
+ 302: JUMP_BACKWARD        to 124
+ 304: LOAD_CONST           1.0
+ 306: LOAD_FAST            r
+ 308: BINARY_OP            /
+ 312: STORE_FAST           q
+ 314: LOAD_FAST            q
+ 316: LOAD_FAST            z
+ 318: BINARY_OP            +
+ 322: LOAD_CONST           1.0
+ 324: LOAD_FAST            q
+ 326: LOAD_FAST            z
+ 328: BINARY_OP            *
+ 332: BINARY_OP            +
+ 336: BINARY_OP            /
+ 340: STORE_FAST           f
+ 342: PUSH_NULL            
+ 344: LOAD_FAST            random
+ 346: PRECALL              
+ 350: CALL                 
+ 360: STORE_FAST           u3
+ 362: LOAD_FAST            u3
+ 364: LOAD_CONST           0.5
+ 366: COMPARE_OP           >
+ 372: POP_JUMP_FORWARD_IF_FALSE to 428
+ 374: LOAD_FAST            mu
+ 376: LOAD_GLOBAL          NULL + _acos
+ 388: LOAD_FAST            f
+ 390: PRECALL              
+ 394: CALL                 
+ 404: BINARY_OP            +
+ 408: LOAD_GLOBAL          TWOPI
+ 420: BINARY_OP            %
+ 424: STORE_FAST           theta
+ 426: JUMP_FORWARD         to 480
+ 428: LOAD_FAST            mu
+ 430: LOAD_GLOBAL          NULL + _acos
+ 442: LOAD_FAST            f
+ 444: PRECALL              
+ 448: CALL                 
+ 458: BINARY_OP            -
+ 462: LOAD_GLOBAL          TWOPI
+ 474: BINARY_OP            %
+ 478: STORE_FAST           theta
+ 480: LOAD_FAST            theta
+ 482: RETURN_VALUE         

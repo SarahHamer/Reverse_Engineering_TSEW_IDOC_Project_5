@@ -1,0 +1,26 @@
+# Disassembly for _pydecimal.Context.to_eng_string
+# From module file: _pydecimal
+
+## co_consts:
+("Convert to a string, using engineering notation if an exponent is needed.\n\n        Engineering notation has an exponent which is a multiple of 3.  This\n        can leave up to 3 digits to the left of the decimal place and may\n        require the addition of either one or two trailing zeros.\n\n        The operation is not affected by the context.\n\n        >>> ExtendedContext.to_eng_string(Decimal('123E+1'))\n        '1.23E+3'\n        >>> ExtendedContext.to_eng_string(Decimal('123E+3'))\n        '123E+3'\n        >>> ExtendedContext.to_eng_string(Decimal('123E-10'))\n        '12.3E-9'\n        >>> ExtendedContext.to_eng_string(Decimal('-123E-12'))\n        '-123E-12'\n        >>> ExtendedContext.to_eng_string(Decimal('7E-7'))\n        '700E-9'\n        >>> ExtendedContext.to_eng_string(Decimal('7E+1'))\n        '70'\n        >>> ExtendedContext.to_eng_string(Decimal('0E+1'))\n        '0.00E+3'\n\n        ", True, ('raiseit',), ('context',))
+
+## co_names:
+('_convert_other', 'to_eng_string')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _convert_other
+  14: LOAD_FAST            a
+  16: LOAD_CONST           True
+  18: KW_NAMES             
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           a
+  36: LOAD_FAST            a
+  38: LOAD_METHOD          to_eng_string
+  60: LOAD_FAST            self
+  62: KW_NAMES             
+  64: PRECALL              
+  68: CALL                 
+  78: RETURN_VALUE         

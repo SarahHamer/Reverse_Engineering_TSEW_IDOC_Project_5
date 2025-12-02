@@ -1,0 +1,28 @@
+# Disassembly for logging.LoggerAdapter.warning
+# From module file: logging
+
+## co_consts:
+('\n        Delegate a warning call to the underlying logger.\n        ', None)
+
+## co_names:
+('log', 'WARNING')
+
+## bytecode:
+
+   0: RESUME               
+   2: PUSH_NULL            
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            log
+  16: LOAD_GLOBAL          WARNING
+  28: LOAD_FAST            msg
+  30: BUILD_LIST           
+  32: LOAD_FAST            args
+  34: LIST_EXTEND          
+  36: LIST_TO_TUPLE        
+  38: BUILD_MAP            
+  40: LOAD_FAST            kwargs
+  42: DICT_MERGE           
+  44: CALL_FUNCTION_EX     
+  46: POP_TOP              
+  48: LOAD_CONST           None
+  50: RETURN_VALUE         

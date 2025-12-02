@@ -1,0 +1,30 @@
+# Disassembly for dataclasses._init_fn.<genexpr>
+# From module file: dataclasses
+
+## co_consts:
+(None,)
+
+## co_names:
+('_field_type', '_FIELD_INITVAR', 'name')
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_FAST            .0
+   8: FOR_ITER             to 60
+  10: STORE_FAST           f
+  12: LOAD_FAST            f
+  14: LOAD_ATTR            _field_type
+  24: LOAD_GLOBAL          _FIELD_INITVAR
+  36: IS_OP                
+  38: POP_JUMP_BACKWARD_IF_FALSE to 8
+  40: LOAD_FAST            f
+  42: LOAD_ATTR            name
+  52: YIELD_VALUE          
+  54: RESUME               
+  56: POP_TOP              
+  58: JUMP_BACKWARD        to 8
+  60: LOAD_CONST           None
+  62: RETURN_VALUE         

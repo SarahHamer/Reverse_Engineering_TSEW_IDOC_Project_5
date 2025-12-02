@@ -1,0 +1,32 @@
+# Disassembly for ast._Unparser.delimit
+# From module file: ast
+
+## co_consts:
+('A context manager for preparing the source for expressions. It adds\n        *start* to the buffer and enters, after exit it adds *end*.', None)
+
+## co_names:
+('write',)
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_FAST            self
+   8: LOAD_METHOD          write
+  30: LOAD_FAST            start
+  32: PRECALL              
+  36: CALL                 
+  46: POP_TOP              
+  48: LOAD_CONST           None
+  50: YIELD_VALUE          
+  52: RESUME               
+  54: POP_TOP              
+  56: LOAD_FAST            self
+  58: LOAD_METHOD          write
+  80: LOAD_FAST            end
+  82: PRECALL              
+  86: CALL                 
+  96: POP_TOP              
+  98: LOAD_CONST           None
+ 100: RETURN_VALUE         

@@ -1,0 +1,57 @@
+# Disassembly for importlib.module_from_spec
+# From module file: importlib._bootstrap
+
+## co_consts:
+('Create a module based on the provided spec.', None, 'create_module', 'exec_module', 'loaders that define exec_module() must also define create_module()')
+
+## co_names:
+('hasattr', 'loader', 'create_module', 'ImportError', '_new_module', 'name', '_init_module_attrs')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           None
+   4: STORE_FAST           module
+   6: LOAD_GLOBAL          NULL + hasattr
+  18: LOAD_FAST            spec
+  20: LOAD_ATTR            loader
+  30: LOAD_CONST           'create_module'
+  32: PRECALL              
+  36: CALL                 
+  46: POP_JUMP_FORWARD_IF_FALSE to 102
+  48: LOAD_FAST            spec
+  50: LOAD_ATTR            loader
+  60: LOAD_METHOD          create_module
+  82: LOAD_FAST            spec
+  84: PRECALL              
+  88: CALL                 
+  98: STORE_FAST           module
+ 100: JUMP_FORWARD         to 174
+ 102: LOAD_GLOBAL          NULL + hasattr
+ 114: LOAD_FAST            spec
+ 116: LOAD_ATTR            loader
+ 126: LOAD_CONST           'exec_module'
+ 128: PRECALL              
+ 132: CALL                 
+ 142: POP_JUMP_FORWARD_IF_FALSE to 174
+ 144: LOAD_GLOBAL          NULL + ImportError
+ 156: LOAD_CONST           'loaders that define exec_module() must also define create_module()'
+ 158: PRECALL              
+ 162: CALL                 
+ 172: RAISE_VARARGS        
+ 174: LOAD_FAST            module
+ 176: POP_JUMP_FORWARD_IF_NOT_NONE to 218
+ 178: LOAD_GLOBAL          NULL + _new_module
+ 190: LOAD_FAST            spec
+ 192: LOAD_ATTR            name
+ 202: PRECALL              
+ 206: CALL                 
+ 216: STORE_FAST           module
+ 218: LOAD_GLOBAL          NULL + _init_module_attrs
+ 230: LOAD_FAST            spec
+ 232: LOAD_FAST            module
+ 234: PRECALL              
+ 238: CALL                 
+ 248: POP_TOP              
+ 250: LOAD_FAST            module
+ 252: RETURN_VALUE         

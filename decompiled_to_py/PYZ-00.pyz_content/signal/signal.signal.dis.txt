@@ -1,0 +1,31 @@
+# Disassembly for signal.signal
+# From module file: signal
+
+## co_consts:
+(None,)
+
+## co_names:
+('_signal', 'signal', '_enum_to_int', '_int_to_enum', 'Handlers')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _signal
+  14: LOAD_ATTR            signal
+  24: LOAD_GLOBAL          NULL + _enum_to_int
+  36: LOAD_FAST            signalnum
+  38: PRECALL              
+  42: CALL                 
+  52: LOAD_GLOBAL          NULL + _enum_to_int
+  64: LOAD_FAST            handler
+  66: PRECALL              
+  70: CALL                 
+  80: PRECALL              
+  84: CALL                 
+  94: STORE_FAST           handler
+  96: LOAD_GLOBAL          NULL + _int_to_enum
+ 108: LOAD_FAST            handler
+ 110: LOAD_GLOBAL          Handlers
+ 122: PRECALL              
+ 126: CALL                 
+ 136: RETURN_VALUE         

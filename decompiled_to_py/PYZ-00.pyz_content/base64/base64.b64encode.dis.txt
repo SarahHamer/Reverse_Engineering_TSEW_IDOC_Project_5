@@ -1,0 +1,50 @@
+# Disassembly for base64.b64encode
+# From module file: base64
+
+## co_consts:
+("Encode the bytes-like object s using Base64 and return a bytes object.\n\n    Optional altchars should be a byte string of length 2 which specifies an\n    alternative alphabet for the '+' and '/' characters.  This allows an\n    application to e.g. generate url or filesystem safe Base64 strings.\n    ", False, ('newline',), None, 2, b'+/')
+
+## co_names:
+('binascii', 'b2a_base64', 'len', 'repr', 'translate', 'bytes', 'maketrans')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + binascii
+  14: LOAD_ATTR            b2a_base64
+  24: LOAD_FAST            s
+  26: LOAD_CONST           False
+  28: KW_NAMES             
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_FAST           encoded
+  46: LOAD_FAST            altchars
+  48: POP_JUMP_FORWARD_IF_NONE to 226
+  50: LOAD_GLOBAL          NULL + len
+  62: LOAD_FAST            altchars
+  64: PRECALL              
+  68: CALL                 
+  78: LOAD_CONST           2
+  80: COMPARE_OP           ==
+  86: POP_JUMP_FORWARD_IF_TRUE to 134
+  88: LOAD_ASSERTION_ERROR 
+  90: LOAD_GLOBAL          NULL + repr
+ 102: LOAD_FAST            altchars
+ 104: PRECALL              
+ 108: CALL                 
+ 118: PRECALL              
+ 122: CALL                 
+ 132: RAISE_VARARGS        
+ 134: LOAD_FAST            encoded
+ 136: LOAD_METHOD          translate
+ 158: LOAD_GLOBAL          bytes
+ 170: LOAD_METHOD          maketrans
+ 192: LOAD_CONST           b'+/'
+ 194: LOAD_FAST            altchars
+ 196: PRECALL              
+ 200: CALL                 
+ 210: PRECALL              
+ 214: CALL                 
+ 224: RETURN_VALUE         
+ 226: LOAD_FAST            encoded
+ 228: RETURN_VALUE         

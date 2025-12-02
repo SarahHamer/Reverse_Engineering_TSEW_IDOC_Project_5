@@ -1,0 +1,32 @@
+# Disassembly for logging.NullHandler
+# From module file: logging
+
+## co_consts:
+('NullHandler', '\n    This handler does nothing. It\'s intended to be used to avoid the\n    "No handlers could be found for logger XXX" one-off warning. This is\n    important for library code, which may contain code to log events. If a user\n    of the library does not configure logging, the one-off warning might be\n    produced; to avoid this, the library developer simply needs to instantiate\n    a NullHandler and add it to the top-level logger of the library module or\n    package.\n    ', <code object handle at 0x0000024069CC89F0, file "logging\__init__.py", line 2223>, <code object emit at 0x0000024069CC80F0, file "logging\__init__.py", line 2226>, <code object createLock at 0x00000240694945E0, file "logging\__init__.py", line 2229>, <code object _at_fork_reinit at 0x0000024069CC81B0, file "logging\__init__.py", line 2232>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'handle', 'emit', 'createLock', '_at_fork_reinit')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'NullHandler'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           '\n    This handler does nothing. It\'s intended to be used to avoid the\n    "No handlers could be found for logger XXX" one-off warning. This is\n    important for library code, which may contain code to log events. If a user\n    of the library does not configure logging, the one-off warning might be\n    produced; to avoid this, the library developer simply needs to instantiate\n    a NullHandler and add it to the top-level logger of the library module or\n    package.\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object handle at 0x0000024069CC89F0, file "logging\__init__.py", line 2223>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           handle
+  20: LOAD_CONST           <code object emit at 0x0000024069CC80F0, file "logging\__init__.py", line 2226>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           emit
+  26: LOAD_CONST           <code object createLock at 0x00000240694945E0, file "logging\__init__.py", line 2229>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           createLock
+  32: LOAD_CONST           <code object _at_fork_reinit at 0x0000024069CC81B0, file "logging\__init__.py", line 2232>
+  34: MAKE_FUNCTION        
+  36: STORE_NAME           _at_fork_reinit
+  38: LOAD_CONST           None
+  40: RETURN_VALUE         

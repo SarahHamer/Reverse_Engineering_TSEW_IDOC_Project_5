@@ -1,0 +1,35 @@
+# Disassembly for datetime.date.fromtimestamp
+# From module file: datetime
+
+## co_consts:
+('Construct a date from a POSIX timestamp (like time.time()).',)
+
+## co_names:
+('_time', 'localtime')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _time
+  14: LOAD_ATTR            localtime
+  24: LOAD_FAST            t
+  26: PRECALL              
+  30: CALL                 
+  40: UNPACK_SEQUENCE      
+  44: STORE_FAST           y
+  46: STORE_FAST           m
+  48: STORE_FAST           d
+  50: STORE_FAST           hh
+  52: STORE_FAST           mm
+  54: STORE_FAST           ss
+  56: STORE_FAST           weekday
+  58: STORE_FAST           jday
+  60: STORE_FAST           dst
+  62: PUSH_NULL            
+  64: LOAD_FAST            cls
+  66: LOAD_FAST            y
+  68: LOAD_FAST            m
+  70: LOAD_FAST            d
+  72: PRECALL              
+  76: CALL                 
+  86: RETURN_VALUE         

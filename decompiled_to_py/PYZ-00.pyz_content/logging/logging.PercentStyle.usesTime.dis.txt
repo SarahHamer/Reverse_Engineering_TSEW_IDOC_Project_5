@@ -1,0 +1,22 @@
+# Disassembly for logging.PercentStyle.usesTime
+# From module file: logging
+
+## co_consts:
+(None, 0)
+
+## co_names:
+('_fmt', 'find', 'asctime_search')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _fmt
+  14: LOAD_METHOD          find
+  36: LOAD_FAST            self
+  38: LOAD_ATTR            asctime_search
+  48: PRECALL              
+  52: CALL                 
+  62: LOAD_CONST           0
+  64: COMPARE_OP           >=
+  70: RETURN_VALUE         

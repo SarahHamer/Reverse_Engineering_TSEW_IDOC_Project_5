@@ -1,0 +1,18 @@
+# Disassembly for email.ParameterizedMIMEHeader.params
+# From module file: email.headerregistry
+
+## co_consts:
+(None,)
+
+## co_names:
+('MappingProxyType', '_params')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + MappingProxyType
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            _params
+  26: PRECALL              
+  30: CALL                 
+  40: RETURN_VALUE         

@@ -1,0 +1,85 @@
+# Disassembly for ftplib.FTP.login
+# From module file: ftplib
+
+## co_consts:
+('Login, default anonymous.', 'anonymous', '', frozenset({'', '-'}), 'anonymous@', 'USER ', 0, '3', 'PASS ', 'ACCT ', '2')
+
+## co_names:
+('sendcmd', 'error_reply')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            user
+   4: POP_JUMP_FORWARD_IF_TRUE to 10
+   6: LOAD_CONST           'anonymous'
+   8: STORE_FAST           user
+  10: LOAD_FAST            passwd
+  12: POP_JUMP_FORWARD_IF_TRUE to 18
+  14: LOAD_CONST           ''
+  16: STORE_FAST           passwd
+  18: LOAD_FAST            acct
+  20: POP_JUMP_FORWARD_IF_TRUE to 26
+  22: LOAD_CONST           ''
+  24: STORE_FAST           acct
+  26: LOAD_FAST            user
+  28: LOAD_CONST           'anonymous'
+  30: COMPARE_OP           ==
+  36: POP_JUMP_FORWARD_IF_FALSE to 56
+  38: LOAD_FAST            passwd
+  40: LOAD_CONST           frozenset({'', '-'})
+  42: CONTAINS_OP          
+  44: POP_JUMP_FORWARD_IF_FALSE to 56
+  46: LOAD_FAST            passwd
+  48: LOAD_CONST           'anonymous@'
+  50: BINARY_OP            +
+  54: STORE_FAST           passwd
+  56: LOAD_FAST            self
+  58: LOAD_METHOD          sendcmd
+  80: LOAD_CONST           'USER '
+  82: LOAD_FAST            user
+  84: BINARY_OP            +
+  88: PRECALL              
+  92: CALL                 
+ 102: STORE_FAST           resp
+ 104: LOAD_FAST            resp
+ 106: LOAD_CONST           0
+ 108: BINARY_SUBSCR        
+ 118: LOAD_CONST           '3'
+ 120: COMPARE_OP           ==
+ 126: POP_JUMP_FORWARD_IF_FALSE to 176
+ 128: LOAD_FAST            self
+ 130: LOAD_METHOD          sendcmd
+ 152: LOAD_CONST           'PASS '
+ 154: LOAD_FAST            passwd
+ 156: BINARY_OP            +
+ 160: PRECALL              
+ 164: CALL                 
+ 174: STORE_FAST           resp
+ 176: LOAD_FAST            resp
+ 178: LOAD_CONST           0
+ 180: BINARY_SUBSCR        
+ 190: LOAD_CONST           '3'
+ 192: COMPARE_OP           ==
+ 198: POP_JUMP_FORWARD_IF_FALSE to 248
+ 200: LOAD_FAST            self
+ 202: LOAD_METHOD          sendcmd
+ 224: LOAD_CONST           'ACCT '
+ 226: LOAD_FAST            acct
+ 228: BINARY_OP            +
+ 232: PRECALL              
+ 236: CALL                 
+ 246: STORE_FAST           resp
+ 248: LOAD_FAST            resp
+ 250: LOAD_CONST           0
+ 252: BINARY_SUBSCR        
+ 262: LOAD_CONST           '2'
+ 264: COMPARE_OP           !=
+ 270: POP_JUMP_FORWARD_IF_FALSE to 302
+ 272: LOAD_GLOBAL          NULL + error_reply
+ 284: LOAD_FAST            resp
+ 286: PRECALL              
+ 290: CALL                 
+ 300: RAISE_VARARGS        
+ 302: LOAD_FAST            resp
+ 304: RETURN_VALUE         

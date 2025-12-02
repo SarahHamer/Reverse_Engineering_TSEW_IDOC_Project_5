@@ -1,0 +1,26 @@
+# Disassembly for calendar.TextCalendar.prweek
+# From module file: calendar
+
+## co_consts:
+('\n        Print a single week (no newline).\n        ', '', ('end',), None)
+
+## co_names:
+('print', 'formatweek')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + print
+  14: LOAD_FAST            self
+  16: LOAD_METHOD          formatweek
+  38: LOAD_FAST            theweek
+  40: LOAD_FAST            width
+  42: PRECALL              
+  46: CALL                 
+  56: LOAD_CONST           ''
+  58: KW_NAMES             
+  60: PRECALL              
+  64: CALL                 
+  74: POP_TOP              
+  76: LOAD_CONST           None
+  78: RETURN_VALUE         

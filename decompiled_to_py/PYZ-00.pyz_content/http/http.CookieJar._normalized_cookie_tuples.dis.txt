@@ -1,0 +1,202 @@
+# Disassembly for http.CookieJar._normalized_cookie_tuples
+# From module file: http.cookiejar
+
+## co_consts:
+('Return list of tuples containing normalised cookie information.\n\n        attrs_set is the list of lists of key,value pairs extracted from\n        the Set-Cookie or Set-Cookie2 headers.\n\n        Tuples are name, value, standard, rest, where name and value are the\n        cookie name and value, standard is a dictionary containing the standard\n        cookie-attributes (discard, secure, version, expires or max-age,\n        domain, path and port) and rest is a dictionary containing the rest of\n        the cookie-attributes.\n\n        ', ('discard', 'secure'), ('version', 'expires', 'max-age', 'domain', 'path', 'port', 'comment', 'commenturl'), 0, False, 1, None, True, 'domain', '   missing value for domain attribute', 'expires', '   missing or invalid value for expires attribute: treating as session cookie', 'max-age', '   missing or invalid (non-numeric) value for max-age attribute', ('port', 'comment', 'commenturl'), '   missing value for %s attribute')
+
+## co_names:
+('lower', '_debug', 'int', 'ValueError', '_now', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           cookie_tuples
+   6: LOAD_CONST           ('discard', 'secure')
+   8: STORE_FAST           boolean_attrs
+  10: LOAD_CONST           ('version', 'expires', 'max-age', 'domain', 'path', 'port', 'comment', 'commenturl')
+  12: STORE_FAST           value_attrs
+  14: LOAD_FAST            attrs_set
+  16: GET_ITER             
+  18: EXTENDED_ARG         
+  20: FOR_ITER             to 626
+  22: STORE_FAST           cookie_attrs
+  24: LOAD_FAST            cookie_attrs
+  26: LOAD_CONST           0
+  28: BINARY_SUBSCR        
+  38: UNPACK_SEQUENCE      
+  42: STORE_FAST           name
+  44: STORE_FAST           value
+  46: LOAD_CONST           False
+  48: STORE_FAST           max_age_set
+  50: LOAD_CONST           False
+  52: STORE_FAST           bad_cookie
+  54: BUILD_MAP            
+  56: STORE_FAST           standard
+  58: BUILD_MAP            
+  60: STORE_FAST           rest
+  62: LOAD_FAST            cookie_attrs
+  64: LOAD_CONST           1
+  66: LOAD_CONST           None
+  68: BUILD_SLICE          
+  70: BINARY_SUBSCR        
+  80: GET_ITER             
+  82: FOR_ITER             to 564
+  84: UNPACK_SEQUENCE      
+  88: STORE_FAST           k
+  90: STORE_FAST           v
+  92: LOAD_FAST            k
+  94: LOAD_METHOD          lower
+ 116: PRECALL              
+ 120: CALL                 
+ 130: STORE_FAST           lc
+ 132: LOAD_FAST            lc
+ 134: LOAD_FAST            value_attrs
+ 136: CONTAINS_OP          
+ 138: POP_JUMP_FORWARD_IF_TRUE to 148
+ 140: LOAD_FAST            lc
+ 142: LOAD_FAST            boolean_attrs
+ 144: CONTAINS_OP          
+ 146: POP_JUMP_FORWARD_IF_FALSE to 152
+ 148: LOAD_FAST            lc
+ 150: STORE_FAST           k
+ 152: LOAD_FAST            k
+ 154: LOAD_FAST            boolean_attrs
+ 156: CONTAINS_OP          
+ 158: POP_JUMP_FORWARD_IF_FALSE to 168
+ 160: LOAD_FAST            v
+ 162: POP_JUMP_FORWARD_IF_NOT_NONE to 168
+ 164: LOAD_CONST           True
+ 166: STORE_FAST           v
+ 168: LOAD_FAST            k
+ 170: LOAD_FAST            standard
+ 172: CONTAINS_OP          
+ 174: POP_JUMP_FORWARD_IF_FALSE to 178
+ 176: JUMP_BACKWARD        to 82
+ 178: LOAD_FAST            k
+ 180: LOAD_CONST           'domain'
+ 182: COMPARE_OP           ==
+ 188: POP_JUMP_FORWARD_IF_FALSE to 272
+ 190: LOAD_FAST            v
+ 192: POP_JUMP_FORWARD_IF_NOT_NONE to 232
+ 194: LOAD_GLOBAL          NULL + _debug
+ 206: LOAD_CONST           '   missing value for domain attribute'
+ 208: PRECALL              
+ 212: CALL                 
+ 222: POP_TOP              
+ 224: LOAD_CONST           True
+ 226: STORE_FAST           bad_cookie
+ 228: POP_TOP              
+ 230: JUMP_FORWARD         to 564
+ 232: LOAD_FAST            v
+ 234: LOAD_METHOD          lower
+ 256: PRECALL              
+ 260: CALL                 
+ 270: STORE_FAST           v
+ 272: LOAD_FAST            k
+ 274: LOAD_CONST           'expires'
+ 276: COMPARE_OP           ==
+ 282: POP_JUMP_FORWARD_IF_FALSE to 326
+ 284: LOAD_FAST            max_age_set
+ 286: POP_JUMP_FORWARD_IF_FALSE to 290
+ 288: JUMP_BACKWARD        to 82
+ 290: LOAD_FAST            v
+ 292: POP_JUMP_FORWARD_IF_NOT_NONE to 326
+ 294: LOAD_GLOBAL          NULL + _debug
+ 306: LOAD_CONST           '   missing or invalid value for expires attribute: treating as session cookie'
+ 308: PRECALL              
+ 312: CALL                 
+ 322: POP_TOP              
+ 324: JUMP_BACKWARD        to 82
+ 326: LOAD_FAST            k
+ 328: LOAD_CONST           'max-age'
+ 330: COMPARE_OP           ==
+ 336: POP_JUMP_FORWARD_IF_FALSE to 468
+ 338: LOAD_CONST           True
+ 340: STORE_FAST           max_age_set
+ 342: NOP                  
+ 344: LOAD_GLOBAL          NULL + int
+ 356: LOAD_FAST            v
+ 358: PRECALL              
+ 362: CALL                 
+ 372: STORE_FAST           v
+ 374: JUMP_FORWARD         to 444
+ 376: PUSH_EXC_INFO        
+ 378: LOAD_GLOBAL          ValueError
+ 390: CHECK_EXC_MATCH      
+ 392: POP_JUMP_FORWARD_IF_FALSE to 436
+ 394: POP_TOP              
+ 396: LOAD_GLOBAL          NULL + _debug
+ 408: LOAD_CONST           '   missing or invalid (non-numeric) value for max-age attribute'
+ 410: PRECALL              
+ 414: CALL                 
+ 424: POP_TOP              
+ 426: LOAD_CONST           True
+ 428: STORE_FAST           bad_cookie
+ 430: POP_EXCEPT           
+ 432: POP_TOP              
+ 434: JUMP_FORWARD         to 564
+ 436: RERAISE              
+ 438: COPY                 
+ 440: POP_EXCEPT           
+ 442: RERAISE              
+ 444: LOAD_CONST           'expires'
+ 446: STORE_FAST           k
+ 448: LOAD_FAST            self
+ 450: LOAD_ATTR            _now
+ 460: LOAD_FAST            v
+ 462: BINARY_OP            +
+ 466: STORE_FAST           v
+ 468: LOAD_FAST            k
+ 470: LOAD_FAST            value_attrs
+ 472: CONTAINS_OP          
+ 474: POP_JUMP_FORWARD_IF_TRUE to 484
+ 476: LOAD_FAST            k
+ 478: LOAD_FAST            boolean_attrs
+ 480: CONTAINS_OP          
+ 482: POP_JUMP_FORWARD_IF_FALSE to 552
+ 484: LOAD_FAST            v
+ 486: POP_JUMP_FORWARD_IF_NOT_NONE to 540
+ 488: LOAD_FAST            k
+ 490: LOAD_CONST           ('port', 'comment', 'commenturl')
+ 492: CONTAINS_OP          
+ 494: POP_JUMP_FORWARD_IF_FALSE to 540
+ 496: LOAD_GLOBAL          NULL + _debug
+ 508: LOAD_CONST           '   missing value for %s attribute'
+ 510: LOAD_FAST            k
+ 512: BINARY_OP            %
+ 516: PRECALL              
+ 520: CALL                 
+ 530: POP_TOP              
+ 532: LOAD_CONST           True
+ 534: STORE_FAST           bad_cookie
+ 536: POP_TOP              
+ 538: JUMP_FORWARD         to 564
+ 540: LOAD_FAST            v
+ 542: LOAD_FAST            standard
+ 544: LOAD_FAST            k
+ 546: STORE_SUBSCR         
+ 550: JUMP_BACKWARD        to 82
+ 552: LOAD_FAST            v
+ 554: LOAD_FAST            rest
+ 556: LOAD_FAST            k
+ 558: STORE_SUBSCR         
+ 562: JUMP_BACKWARD        to 82
+ 564: LOAD_FAST            bad_cookie
+ 566: POP_JUMP_FORWARD_IF_FALSE to 572
+ 568: EXTENDED_ARG         
+ 570: JUMP_BACKWARD        to 18
+ 572: LOAD_FAST            cookie_tuples
+ 574: LOAD_METHOD          append
+ 596: LOAD_FAST            name
+ 598: LOAD_FAST            value
+ 600: LOAD_FAST            standard
+ 602: LOAD_FAST            rest
+ 604: BUILD_TUPLE          
+ 606: PRECALL              
+ 610: CALL                 
+ 620: POP_TOP              
+ 622: EXTENDED_ARG         
+ 624: JUMP_BACKWARD        to 18
+ 626: LOAD_FAST            cookie_tuples
+ 628: RETURN_VALUE         

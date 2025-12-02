@@ -1,0 +1,22 @@
+# Disassembly for contextlib.ExitStack.close
+# From module file: contextlib
+
+## co_consts:
+('Immediately unwind the context stack.', None)
+
+## co_names:
+('__exit__',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          __exit__
+  26: LOAD_CONST           None
+  28: LOAD_CONST           None
+  30: LOAD_CONST           None
+  32: PRECALL              
+  36: CALL                 
+  46: POP_TOP              
+  48: LOAD_CONST           None
+  50: RETURN_VALUE         

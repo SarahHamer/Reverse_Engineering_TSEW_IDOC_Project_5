@@ -1,0 +1,20 @@
+# Disassembly for typing._SpecialForm.__mro_entries__
+# From module file: typing
+
+## co_consts:
+(None, 'Cannot subclass ')
+
+## co_names:
+('TypeError',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + TypeError
+  14: LOAD_CONST           'Cannot subclass '
+  16: LOAD_FAST            self
+  18: FORMAT_VALUE         repr
+  20: BUILD_STRING         
+  22: PRECALL              
+  26: CALL                 
+  36: RAISE_VARARGS        

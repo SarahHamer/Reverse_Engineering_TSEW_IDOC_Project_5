@@ -1,0 +1,26 @@
+# Disassembly for shutil.get_archive_formats.<listcomp>
+# From module file: shutil
+
+## co_consts:
+(2,)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 38
+   8: UNPACK_SEQUENCE      
+  12: STORE_FAST           name
+  14: STORE_FAST           registry
+  16: LOAD_FAST            name
+  18: LOAD_FAST            registry
+  20: LOAD_CONST           2
+  22: BINARY_SUBSCR        
+  32: BUILD_TUPLE          
+  34: LIST_APPEND          
+  36: JUMP_BACKWARD        to 6
+  38: RETURN_VALUE         

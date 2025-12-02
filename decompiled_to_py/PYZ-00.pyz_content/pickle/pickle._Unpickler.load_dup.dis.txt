@@ -1,0 +1,23 @@
+# Disassembly for pickle._Unpickler.load_dup
+# From module file: pickle
+
+## co_consts:
+(None, -1)
+
+## co_names:
+('append', 'stack')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          append
+  26: LOAD_FAST            self
+  28: LOAD_ATTR            stack
+  38: LOAD_CONST           -1
+  40: BINARY_SUBSCR        
+  50: PRECALL              
+  54: CALL                 
+  64: POP_TOP              
+  66: LOAD_CONST           None
+  68: RETURN_VALUE         

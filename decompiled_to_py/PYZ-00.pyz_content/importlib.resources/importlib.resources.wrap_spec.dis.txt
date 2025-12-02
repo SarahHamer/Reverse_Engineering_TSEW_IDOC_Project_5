@@ -1,0 +1,19 @@
+# Disassembly for importlib.resources.wrap_spec
+# From module file: importlib.resources._adapters
+
+## co_consts:
+('\n    Construct a package spec with traversable compatibility\n    on the spec/loader/reader.\n    ',)
+
+## co_names:
+('SpecLoaderAdapter', '__spec__', 'TraversableResourcesLoader')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + SpecLoaderAdapter
+  14: LOAD_FAST            package
+  16: LOAD_ATTR            __spec__
+  26: LOAD_GLOBAL          TraversableResourcesLoader
+  38: PRECALL              
+  42: CALL                 
+  52: RETURN_VALUE         

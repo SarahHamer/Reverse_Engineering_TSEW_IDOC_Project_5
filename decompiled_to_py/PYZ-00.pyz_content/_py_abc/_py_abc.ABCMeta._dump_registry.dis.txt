@@ -1,0 +1,82 @@
+# Disassembly for _py_abc.ABCMeta._dump_registry
+# From module file: _py_abc
+
+## co_consts:
+('Debug helper to print the ABC registry.', 'Class: ', '.', ('file',), 'Inv. counter: ', '_abc_', ': ', None)
+
+## co_names:
+('print', '__module__', '__qualname__', 'get_cache_token', '__dict__', 'startswith', 'getattr', 'isinstance', 'WeakSet', 'set')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + print
+  14: LOAD_CONST           'Class: '
+  16: LOAD_FAST            cls
+  18: LOAD_ATTR            __module__
+  28: FORMAT_VALUE         
+  30: LOAD_CONST           '.'
+  32: LOAD_FAST            cls
+  34: LOAD_ATTR            __qualname__
+  44: FORMAT_VALUE         
+  46: BUILD_STRING         
+  48: LOAD_FAST            file
+  50: KW_NAMES             
+  52: PRECALL              
+  56: CALL                 
+  66: POP_TOP              
+  68: LOAD_GLOBAL          NULL + print
+  80: LOAD_CONST           'Inv. counter: '
+  82: LOAD_GLOBAL          NULL + get_cache_token
+  94: PRECALL              
+  98: CALL                 
+ 108: FORMAT_VALUE         
+ 110: BUILD_STRING         
+ 112: LOAD_FAST            file
+ 114: KW_NAMES             
+ 116: PRECALL              
+ 120: CALL                 
+ 130: POP_TOP              
+ 132: LOAD_FAST            cls
+ 134: LOAD_ATTR            __dict__
+ 144: GET_ITER             
+ 146: FOR_ITER             to 342
+ 148: STORE_FAST           name
+ 150: LOAD_FAST            name
+ 152: LOAD_METHOD          startswith
+ 174: LOAD_CONST           '_abc_'
+ 176: PRECALL              
+ 180: CALL                 
+ 190: POP_JUMP_FORWARD_IF_FALSE to 340
+ 192: LOAD_GLOBAL          NULL + getattr
+ 204: LOAD_FAST            cls
+ 206: LOAD_FAST            name
+ 208: PRECALL              
+ 212: CALL                 
+ 222: STORE_FAST           value
+ 224: LOAD_GLOBAL          NULL + isinstance
+ 236: LOAD_FAST            value
+ 238: LOAD_GLOBAL          WeakSet
+ 250: PRECALL              
+ 254: CALL                 
+ 264: POP_JUMP_FORWARD_IF_FALSE to 296
+ 266: LOAD_GLOBAL          NULL + set
+ 278: LOAD_FAST            value
+ 280: PRECALL              
+ 284: CALL                 
+ 294: STORE_FAST           value
+ 296: LOAD_GLOBAL          NULL + print
+ 308: LOAD_FAST            name
+ 310: FORMAT_VALUE         
+ 312: LOAD_CONST           ': '
+ 314: LOAD_FAST            value
+ 316: FORMAT_VALUE         repr
+ 318: BUILD_STRING         
+ 320: LOAD_FAST            file
+ 322: KW_NAMES             
+ 324: PRECALL              
+ 328: CALL                 
+ 338: POP_TOP              
+ 340: JUMP_BACKWARD        to 146
+ 342: LOAD_CONST           None
+ 344: RETURN_VALUE         

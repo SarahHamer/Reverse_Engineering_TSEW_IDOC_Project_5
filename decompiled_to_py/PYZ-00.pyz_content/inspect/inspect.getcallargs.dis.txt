@@ -1,0 +1,275 @@
+# Disassembly for inspect.getcallargs
+# From module file: inspect
+
+## co_consts:
+("Get the mapping of arguments to values.\n\n    A dict is returned, with keys the function argument names (including the\n    names of the * and ** arguments, if any), and values the respective bound\n    values from 'positional' and 'named'.", None, 0, '() got an unexpected keyword argument ', '() got multiple values for argument ', True, 1, False)
+
+## co_names:
+('getfullargspec', '__name__', 'ismethod', '__self__', 'len', 'min', 'range', 'tuple', 'set', 'items', 'TypeError', '_too_many', '_missing_arguments', 'enumerate')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + getfullargspec
+  14: LOAD_FAST            func
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           spec
+  32: LOAD_FAST            spec
+  34: UNPACK_SEQUENCE      
+  38: STORE_FAST           args
+  40: STORE_FAST           varargs
+  42: STORE_FAST           varkw
+  44: STORE_FAST           defaults
+  46: STORE_FAST           kwonlyargs
+  48: STORE_FAST           kwonlydefaults
+  50: STORE_FAST           ann
+  52: LOAD_FAST            func
+  54: LOAD_ATTR            __name__
+  64: STORE_FAST           f_name
+  66: BUILD_MAP            
+  68: STORE_FAST           arg2value
+  70: LOAD_GLOBAL          NULL + ismethod
+  82: LOAD_FAST            func
+  84: PRECALL              
+  88: CALL                 
+  98: POP_JUMP_FORWARD_IF_FALSE to 136
+ 100: LOAD_FAST            func
+ 102: LOAD_ATTR            __self__
+ 112: POP_JUMP_FORWARD_IF_NONE to 136
+ 114: LOAD_FAST            func
+ 116: LOAD_ATTR            __self__
+ 126: BUILD_TUPLE          
+ 128: LOAD_FAST            positional
+ 130: BINARY_OP            +
+ 134: STORE_FAST           positional
+ 136: LOAD_GLOBAL          NULL + len
+ 148: LOAD_FAST            positional
+ 150: PRECALL              
+ 154: CALL                 
+ 164: STORE_FAST           num_pos
+ 166: LOAD_GLOBAL          NULL + len
+ 178: LOAD_FAST            args
+ 180: PRECALL              
+ 184: CALL                 
+ 194: STORE_FAST           num_args
+ 196: LOAD_FAST            defaults
+ 198: POP_JUMP_FORWARD_IF_FALSE to 230
+ 200: LOAD_GLOBAL          NULL + len
+ 212: LOAD_FAST            defaults
+ 214: PRECALL              
+ 218: CALL                 
+ 228: JUMP_FORWARD         to 232
+ 230: LOAD_CONST           0
+ 232: STORE_FAST           num_defaults
+ 234: LOAD_GLOBAL          NULL + min
+ 246: LOAD_FAST            num_pos
+ 248: LOAD_FAST            num_args
+ 250: PRECALL              
+ 254: CALL                 
+ 264: STORE_FAST           n
+ 266: LOAD_GLOBAL          NULL + range
+ 278: LOAD_FAST            n
+ 280: PRECALL              
+ 284: CALL                 
+ 294: GET_ITER             
+ 296: FOR_ITER             to 336
+ 298: STORE_FAST           i
+ 300: LOAD_FAST            positional
+ 302: LOAD_FAST            i
+ 304: BINARY_SUBSCR        
+ 314: LOAD_FAST            arg2value
+ 316: LOAD_FAST            args
+ 318: LOAD_FAST            i
+ 320: BINARY_SUBSCR        
+ 330: STORE_SUBSCR         
+ 334: JUMP_BACKWARD        to 296
+ 336: LOAD_FAST            varargs
+ 338: POP_JUMP_FORWARD_IF_FALSE to 392
+ 340: LOAD_GLOBAL          NULL + tuple
+ 352: LOAD_FAST            positional
+ 354: LOAD_FAST            n
+ 356: LOAD_CONST           None
+ 358: BUILD_SLICE          
+ 360: BINARY_SUBSCR        
+ 370: PRECALL              
+ 374: CALL                 
+ 384: LOAD_FAST            arg2value
+ 386: LOAD_FAST            varargs
+ 388: STORE_SUBSCR         
+ 392: LOAD_GLOBAL          NULL + set
+ 404: LOAD_FAST            args
+ 406: LOAD_FAST            kwonlyargs
+ 408: BINARY_OP            +
+ 412: PRECALL              
+ 416: CALL                 
+ 426: STORE_FAST           possible_kwargs
+ 428: LOAD_FAST            varkw
+ 430: POP_JUMP_FORWARD_IF_FALSE to 442
+ 432: BUILD_MAP            
+ 434: LOAD_FAST            arg2value
+ 436: LOAD_FAST            varkw
+ 438: STORE_SUBSCR         
+ 442: LOAD_FAST            named
+ 444: LOAD_METHOD          items
+ 466: PRECALL              
+ 470: CALL                 
+ 480: GET_ITER             
+ 482: FOR_ITER             to 628
+ 484: UNPACK_SEQUENCE      
+ 488: STORE_FAST           kw
+ 490: STORE_FAST           value
+ 492: LOAD_FAST            kw
+ 494: LOAD_FAST            possible_kwargs
+ 496: CONTAINS_OP          
+ 498: POP_JUMP_FORWARD_IF_FALSE to 568
+ 500: LOAD_FAST            varkw
+ 502: POP_JUMP_FORWARD_IF_TRUE to 544
+ 504: LOAD_GLOBAL          NULL + TypeError
+ 516: LOAD_FAST            f_name
+ 518: FORMAT_VALUE         str
+ 520: LOAD_CONST           '() got an unexpected keyword argument '
+ 522: LOAD_FAST            kw
+ 524: FORMAT_VALUE         repr
+ 526: BUILD_STRING         
+ 528: PRECALL              
+ 532: CALL                 
+ 542: RAISE_VARARGS        
+ 544: LOAD_FAST            value
+ 546: LOAD_FAST            arg2value
+ 548: LOAD_FAST            varkw
+ 550: BINARY_SUBSCR        
+ 560: LOAD_FAST            kw
+ 562: STORE_SUBSCR         
+ 566: JUMP_BACKWARD        to 482
+ 568: LOAD_FAST            kw
+ 570: LOAD_FAST            arg2value
+ 572: CONTAINS_OP          
+ 574: POP_JUMP_FORWARD_IF_FALSE to 616
+ 576: LOAD_GLOBAL          NULL + TypeError
+ 588: LOAD_FAST            f_name
+ 590: FORMAT_VALUE         str
+ 592: LOAD_CONST           '() got multiple values for argument '
+ 594: LOAD_FAST            kw
+ 596: FORMAT_VALUE         repr
+ 598: BUILD_STRING         
+ 600: PRECALL              
+ 604: CALL                 
+ 614: RAISE_VARARGS        
+ 616: LOAD_FAST            value
+ 618: LOAD_FAST            arg2value
+ 620: LOAD_FAST            kw
+ 622: STORE_SUBSCR         
+ 626: JUMP_BACKWARD        to 482
+ 628: LOAD_FAST            num_pos
+ 630: LOAD_FAST            num_args
+ 632: COMPARE_OP           >
+ 638: POP_JUMP_FORWARD_IF_FALSE to 686
+ 640: LOAD_FAST            varargs
+ 642: POP_JUMP_FORWARD_IF_TRUE to 686
+ 644: LOAD_GLOBAL          NULL + _too_many
+ 656: LOAD_FAST            f_name
+ 658: LOAD_FAST            args
+ 660: LOAD_FAST            kwonlyargs
+ 662: LOAD_FAST            varargs
+ 664: LOAD_FAST            num_defaults
+ 666: LOAD_FAST            num_pos
+ 668: LOAD_FAST            arg2value
+ 670: PRECALL              
+ 674: CALL                 
+ 684: POP_TOP              
+ 686: LOAD_FAST            num_pos
+ 688: LOAD_FAST            num_args
+ 690: COMPARE_OP           <
+ 696: POP_JUMP_FORWARD_IF_FALSE to 872
+ 698: LOAD_FAST            args
+ 700: LOAD_CONST           None
+ 702: LOAD_FAST            num_args
+ 704: LOAD_FAST            num_defaults
+ 706: BINARY_OP            -
+ 710: BUILD_SLICE          
+ 712: BINARY_SUBSCR        
+ 722: STORE_FAST           req
+ 724: LOAD_FAST            req
+ 726: GET_ITER             
+ 728: FOR_ITER             to 778
+ 730: STORE_FAST           arg
+ 732: LOAD_FAST            arg
+ 734: LOAD_FAST            arg2value
+ 736: CONTAINS_OP          
+ 738: POP_JUMP_FORWARD_IF_FALSE to 776
+ 740: LOAD_GLOBAL          NULL + _missing_arguments
+ 752: LOAD_FAST            f_name
+ 754: LOAD_FAST            req
+ 756: LOAD_CONST           True
+ 758: LOAD_FAST            arg2value
+ 760: PRECALL              
+ 764: CALL                 
+ 774: POP_TOP              
+ 776: JUMP_BACKWARD        to 728
+ 778: LOAD_GLOBAL          NULL + enumerate
+ 790: LOAD_FAST            args
+ 792: LOAD_FAST            num_args
+ 794: LOAD_FAST            num_defaults
+ 796: BINARY_OP            -
+ 800: LOAD_CONST           None
+ 802: BUILD_SLICE          
+ 804: BINARY_SUBSCR        
+ 814: PRECALL              
+ 818: CALL                 
+ 828: GET_ITER             
+ 830: FOR_ITER             to 872
+ 832: UNPACK_SEQUENCE      
+ 836: STORE_FAST           i
+ 838: STORE_FAST           arg
+ 840: LOAD_FAST            arg
+ 842: LOAD_FAST            arg2value
+ 844: CONTAINS_OP          
+ 846: POP_JUMP_FORWARD_IF_FALSE to 870
+ 848: LOAD_FAST            defaults
+ 850: LOAD_FAST            i
+ 852: BINARY_SUBSCR        
+ 862: LOAD_FAST            arg2value
+ 864: LOAD_FAST            arg
+ 866: STORE_SUBSCR         
+ 870: JUMP_BACKWARD        to 830
+ 872: LOAD_CONST           0
+ 874: STORE_FAST           missing
+ 876: LOAD_FAST            kwonlyargs
+ 878: GET_ITER             
+ 880: FOR_ITER             to 940
+ 882: STORE_FAST           kwarg
+ 884: LOAD_FAST            kwarg
+ 886: LOAD_FAST            arg2value
+ 888: CONTAINS_OP          
+ 890: POP_JUMP_FORWARD_IF_FALSE to 938
+ 892: LOAD_FAST            kwonlydefaults
+ 894: POP_JUMP_FORWARD_IF_FALSE to 928
+ 896: LOAD_FAST            kwarg
+ 898: LOAD_FAST            kwonlydefaults
+ 900: CONTAINS_OP          
+ 902: POP_JUMP_FORWARD_IF_FALSE to 928
+ 904: LOAD_FAST            kwonlydefaults
+ 906: LOAD_FAST            kwarg
+ 908: BINARY_SUBSCR        
+ 918: LOAD_FAST            arg2value
+ 920: LOAD_FAST            kwarg
+ 922: STORE_SUBSCR         
+ 926: JUMP_BACKWARD        to 880
+ 928: LOAD_FAST            missing
+ 930: LOAD_CONST           1
+ 932: BINARY_OP            +=
+ 936: STORE_FAST           missing
+ 938: JUMP_BACKWARD        to 880
+ 940: LOAD_FAST            missing
+ 942: POP_JUMP_FORWARD_IF_FALSE to 980
+ 944: LOAD_GLOBAL          NULL + _missing_arguments
+ 956: LOAD_FAST            f_name
+ 958: LOAD_FAST            kwonlyargs
+ 960: LOAD_CONST           False
+ 962: LOAD_FAST            arg2value
+ 964: PRECALL              
+ 968: CALL                 
+ 978: POP_TOP              
+ 980: LOAD_FAST            arg2value
+ 982: RETURN_VALUE         

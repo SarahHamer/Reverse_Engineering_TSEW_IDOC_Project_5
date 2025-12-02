@@ -1,0 +1,46 @@
+# Disassembly for zipfile.ZipExtFile._update_crc
+# From module file: zipfile
+
+## co_consts:
+(None, 'Bad CRC-32 for file %r')
+
+## co_names:
+('_expected_crc', 'crc32', '_running_crc', '_eof', 'BadZipFile', 'name')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _expected_crc
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 20
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         
+  20: LOAD_GLOBAL          NULL + crc32
+  32: LOAD_FAST            newdata
+  34: LOAD_FAST            self
+  36: LOAD_ATTR            _running_crc
+  46: PRECALL              
+  50: CALL                 
+  60: LOAD_FAST            self
+  62: STORE_ATTR           _running_crc
+  72: LOAD_FAST            self
+  74: LOAD_ATTR            _eof
+  84: POP_JUMP_FORWARD_IF_FALSE to 164
+  86: LOAD_FAST            self
+  88: LOAD_ATTR            _running_crc
+  98: LOAD_FAST            self
+ 100: LOAD_ATTR            _expected_crc
+ 110: COMPARE_OP           !=
+ 116: POP_JUMP_FORWARD_IF_FALSE to 168
+ 118: LOAD_GLOBAL          NULL + BadZipFile
+ 130: LOAD_CONST           'Bad CRC-32 for file %r'
+ 132: LOAD_FAST            self
+ 134: LOAD_ATTR            name
+ 144: BINARY_OP            %
+ 148: PRECALL              
+ 152: CALL                 
+ 162: RAISE_VARARGS        
+ 164: LOAD_CONST           None
+ 166: RETURN_VALUE         
+ 168: LOAD_CONST           None
+ 170: RETURN_VALUE         

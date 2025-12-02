@@ -1,0 +1,44 @@
+# Disassembly for threading._RLock._release_save
+# From module file: threading
+
+## co_consts:
+(None, 0, 'cannot release un-acquired lock')
+
+## co_names:
+('_count', 'RuntimeError', '_owner', '_block', 'release')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _count
+  14: LOAD_CONST           0
+  16: COMPARE_OP           ==
+  22: POP_JUMP_FORWARD_IF_FALSE to 54
+  24: LOAD_GLOBAL          NULL + RuntimeError
+  36: LOAD_CONST           'cannot release un-acquired lock'
+  38: PRECALL              
+  42: CALL                 
+  52: RAISE_VARARGS        
+  54: LOAD_FAST            self
+  56: LOAD_ATTR            _count
+  66: STORE_FAST           count
+  68: LOAD_CONST           0
+  70: LOAD_FAST            self
+  72: STORE_ATTR           _count
+  82: LOAD_FAST            self
+  84: LOAD_ATTR            _owner
+  94: STORE_FAST           owner
+  96: LOAD_CONST           None
+  98: LOAD_FAST            self
+ 100: STORE_ATTR           _owner
+ 110: LOAD_FAST            self
+ 112: LOAD_ATTR            _block
+ 122: LOAD_METHOD          release
+ 144: PRECALL              
+ 148: CALL                 
+ 158: POP_TOP              
+ 160: LOAD_FAST            count
+ 162: LOAD_FAST            owner
+ 164: BUILD_TUPLE          
+ 166: RETURN_VALUE         

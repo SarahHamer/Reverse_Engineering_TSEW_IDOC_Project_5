@@ -1,0 +1,67 @@
+# Disassembly for dis.pretty_flags
+# From module file: dis
+
+## co_consts:
+('Return pretty representation of code flags.', 32, 1, ', ')
+
+## co_names:
+('range', 'append', 'COMPILER_FLAG_NAMES', 'get', 'hex', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           names
+   6: LOAD_GLOBAL          NULL + range
+  18: LOAD_CONST           32
+  20: PRECALL              
+  24: CALL                 
+  34: GET_ITER             
+  36: FOR_ITER             to 198
+  38: STORE_FAST           i
+  40: LOAD_CONST           1
+  42: LOAD_FAST            i
+  44: BINARY_OP            <<
+  48: STORE_FAST           flag
+  50: LOAD_FAST            flags
+  52: LOAD_FAST            flag
+  54: BINARY_OP            &
+  58: POP_JUMP_FORWARD_IF_FALSE to 196
+  60: LOAD_FAST            names
+  62: LOAD_METHOD          append
+  84: LOAD_GLOBAL          COMPILER_FLAG_NAMES
+  96: LOAD_METHOD          get
+ 118: LOAD_FAST            flag
+ 120: LOAD_GLOBAL          NULL + hex
+ 132: LOAD_FAST            flag
+ 134: PRECALL              
+ 138: CALL                 
+ 148: PRECALL              
+ 152: CALL                 
+ 162: PRECALL              
+ 166: CALL                 
+ 176: POP_TOP              
+ 178: LOAD_FAST            flags
+ 180: LOAD_FAST            flag
+ 182: BINARY_OP            ^=
+ 186: STORE_FAST           flags
+ 188: LOAD_FAST            flags
+ 190: POP_JUMP_FORWARD_IF_TRUE to 196
+ 192: POP_TOP              
+ 194: JUMP_FORWARD         to 266
+ 196: JUMP_BACKWARD        to 36
+ 198: LOAD_FAST            names
+ 200: LOAD_METHOD          append
+ 222: LOAD_GLOBAL          NULL + hex
+ 234: LOAD_FAST            flags
+ 236: PRECALL              
+ 240: CALL                 
+ 250: PRECALL              
+ 254: CALL                 
+ 264: POP_TOP              
+ 266: LOAD_CONST           ', '
+ 268: LOAD_METHOD          join
+ 290: LOAD_FAST            names
+ 292: PRECALL              
+ 296: CALL                 
+ 306: RETURN_VALUE         

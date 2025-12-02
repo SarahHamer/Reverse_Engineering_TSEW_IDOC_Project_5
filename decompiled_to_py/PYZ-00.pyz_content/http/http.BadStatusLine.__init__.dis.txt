@@ -1,0 +1,28 @@
+# Disassembly for http.BadStatusLine.__init__
+# From module file: http.client
+
+## co_consts:
+(None,)
+
+## co_names:
+('repr', 'args', 'line')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            line
+   4: POP_JUMP_FORWARD_IF_TRUE to 36
+   6: LOAD_GLOBAL          NULL + repr
+  18: LOAD_FAST            line
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           line
+  36: LOAD_FAST            line
+  38: BUILD_TUPLE          
+  40: LOAD_FAST            self
+  42: STORE_ATTR           args
+  52: LOAD_FAST            line
+  54: LOAD_FAST            self
+  56: STORE_ATTR           line
+  66: LOAD_CONST           None
+  68: RETURN_VALUE         

@@ -1,0 +1,31 @@
+# Disassembly for datetime.time.tzname
+# From module file: datetime
+
+## co_consts:
+('Return the timezone name.\n\n        Note that the name is 100% informational -- there\'s no requirement that\n        it mean anything in particular. For example, "GMT", "UTC", "-500",\n        "-5:00", "EDT", "US/Eastern", "America/New York" are all valid replies.\n        ', None)
+
+## co_names:
+('_tzinfo', 'tzname', '_check_tzname')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _tzinfo
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 20
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            _tzinfo
+  32: LOAD_METHOD          tzname
+  54: LOAD_CONST           None
+  56: PRECALL              
+  60: CALL                 
+  70: STORE_FAST           name
+  72: LOAD_GLOBAL          NULL + _check_tzname
+  84: LOAD_FAST            name
+  86: PRECALL              
+  90: CALL                 
+ 100: POP_TOP              
+ 102: LOAD_FAST            name
+ 104: RETURN_VALUE         

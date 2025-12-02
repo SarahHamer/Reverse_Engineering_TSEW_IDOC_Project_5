@@ -1,0 +1,54 @@
+# Disassembly for http.time2netscape
+# From module file: http.cookiejar
+
+## co_consts:
+('Return a string representing time in seconds since epoch, t.\n\n    If the function is called without an argument, it will use the current\n    time.\n\n    The format of the returned string is like this:\n\n    Wed, DD-Mon-YYYY HH:MM:SS GMT\n\n    ', None, '%s, %02d-%s-%04d %02d:%02d:%02d GMT', 1)
+
+## co_names:
+('datetime', 'utcnow', 'utcfromtimestamp', 'DAYS', 'weekday', 'day', 'MONTHS', 'month', 'year', 'hour', 'minute', 'second')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            t
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 68
+   6: LOAD_GLOBAL          datetime
+  18: LOAD_ATTR            datetime
+  28: LOAD_METHOD          utcnow
+  50: PRECALL              
+  54: CALL                 
+  64: STORE_FAST           dt
+  66: JUMP_FORWARD         to 130
+  68: LOAD_GLOBAL          datetime
+  80: LOAD_ATTR            datetime
+  90: LOAD_METHOD          utcfromtimestamp
+ 112: LOAD_FAST            t
+ 114: PRECALL              
+ 118: CALL                 
+ 128: STORE_FAST           dt
+ 130: LOAD_CONST           '%s, %02d-%s-%04d %02d:%02d:%02d GMT'
+ 132: LOAD_GLOBAL          DAYS
+ 144: LOAD_FAST            dt
+ 146: LOAD_METHOD          weekday
+ 168: PRECALL              
+ 172: CALL                 
+ 182: BINARY_SUBSCR        
+ 192: LOAD_FAST            dt
+ 194: LOAD_ATTR            day
+ 204: LOAD_GLOBAL          MONTHS
+ 216: LOAD_FAST            dt
+ 218: LOAD_ATTR            month
+ 228: LOAD_CONST           1
+ 230: BINARY_OP            -
+ 234: BINARY_SUBSCR        
+ 244: LOAD_FAST            dt
+ 246: LOAD_ATTR            year
+ 256: LOAD_FAST            dt
+ 258: LOAD_ATTR            hour
+ 268: LOAD_FAST            dt
+ 270: LOAD_ATTR            minute
+ 280: LOAD_FAST            dt
+ 282: LOAD_ATTR            second
+ 292: BUILD_TUPLE          
+ 294: BINARY_OP            %
+ 298: RETURN_VALUE         

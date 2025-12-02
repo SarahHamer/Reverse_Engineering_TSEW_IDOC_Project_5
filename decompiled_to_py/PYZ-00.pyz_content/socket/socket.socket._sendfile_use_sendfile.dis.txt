@@ -1,0 +1,17 @@
+# Disassembly for socket.socket._sendfile_use_sendfile
+# From module file: socket
+
+## co_consts:
+(None, 'os.sendfile() not available on this platform')
+
+## co_names:
+('_GiveupOnSendfile',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _GiveupOnSendfile
+  14: LOAD_CONST           'os.sendfile() not available on this platform'
+  16: PRECALL              
+  20: CALL                 
+  30: RAISE_VARARGS        

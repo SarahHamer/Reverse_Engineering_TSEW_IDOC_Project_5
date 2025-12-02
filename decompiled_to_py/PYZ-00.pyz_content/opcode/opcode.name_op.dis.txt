@@ -1,0 +1,26 @@
+# Disassembly for opcode.name_op
+# From module file: opcode
+
+## co_consts:
+(None,)
+
+## co_names:
+('def_op', 'hasname', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + def_op
+  14: LOAD_FAST            name
+  16: LOAD_FAST            op
+  18: PRECALL              
+  22: CALL                 
+  32: POP_TOP              
+  34: LOAD_GLOBAL          hasname
+  46: LOAD_METHOD          append
+  68: LOAD_FAST            op
+  70: PRECALL              
+  74: CALL                 
+  84: POP_TOP              
+  86: LOAD_CONST           None
+  88: RETURN_VALUE         

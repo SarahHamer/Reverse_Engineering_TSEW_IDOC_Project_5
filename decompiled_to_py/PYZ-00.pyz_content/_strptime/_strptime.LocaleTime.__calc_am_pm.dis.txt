@@ -1,0 +1,53 @@
+# Disassembly for _strptime.LocaleTime.__calc_am_pm
+# From module file: _strptime
+
+## co_consts:
+(None, (1, 22), 1999, 3, 17, 44, 55, 2, 76, 0, '%p')
+
+## co_names:
+('time', 'struct_time', 'append', 'strftime', 'lower', 'am_pm')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           am_pm
+   6: LOAD_CONST           (1, 22)
+   8: GET_ITER             
+  10: FOR_ITER             to 190
+  12: STORE_FAST           hour
+  14: LOAD_GLOBAL          NULL + time
+  26: LOAD_ATTR            struct_time
+  36: LOAD_CONST           1999
+  38: LOAD_CONST           3
+  40: LOAD_CONST           17
+  42: LOAD_FAST            hour
+  44: LOAD_CONST           44
+  46: LOAD_CONST           55
+  48: LOAD_CONST           2
+  50: LOAD_CONST           76
+  52: LOAD_CONST           0
+  54: BUILD_TUPLE          
+  56: PRECALL              
+  60: CALL                 
+  70: STORE_FAST           time_tuple
+  72: LOAD_FAST            am_pm
+  74: LOAD_METHOD          append
+  96: LOAD_GLOBAL          NULL + time
+ 108: LOAD_ATTR            strftime
+ 118: LOAD_CONST           '%p'
+ 120: LOAD_FAST            time_tuple
+ 122: PRECALL              
+ 126: CALL                 
+ 136: LOAD_METHOD          lower
+ 158: PRECALL              
+ 162: CALL                 
+ 172: PRECALL              
+ 176: CALL                 
+ 186: POP_TOP              
+ 188: JUMP_BACKWARD        to 10
+ 190: LOAD_FAST            am_pm
+ 192: LOAD_FAST            self
+ 194: STORE_ATTR           am_pm
+ 204: LOAD_CONST           None
+ 206: RETURN_VALUE         

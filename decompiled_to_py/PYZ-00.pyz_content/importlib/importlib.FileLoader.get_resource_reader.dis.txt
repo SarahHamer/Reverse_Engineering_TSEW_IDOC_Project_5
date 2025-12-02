@@ -1,0 +1,24 @@
+# Disassembly for importlib.FileLoader.get_resource_reader
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+(None, 0, ('FileReader',))
+
+## co_names:
+('importlib.readers', 'FileReader')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           ('FileReader',)
+   6: IMPORT_NAME          importlib.readers
+   8: IMPORT_FROM          FileReader
+  10: STORE_FAST           FileReader
+  12: POP_TOP              
+  14: PUSH_NULL            
+  16: LOAD_FAST            FileReader
+  18: LOAD_FAST            self
+  20: PRECALL              
+  24: CALL                 
+  34: RETURN_VALUE         

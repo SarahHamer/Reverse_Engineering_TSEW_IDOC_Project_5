@@ -1,0 +1,155 @@
+# Disassembly for argparse.ArgumentParser._parse_optional
+# From module file: argparse
+
+## co_consts:
+(None, 0, 1, '=', ', ', <code object <listcomp> at 0x0000024069467050, file "argparse.py", line 2260>, ('option', 'matches'), 'ambiguous option: %(option)s could match %(matches)s', ' ')
+
+## co_names:
+('prefix_chars', '_option_string_actions', 'len', 'split', '_get_option_tuples', 'join', '_', 'error', '_negative_number_matcher', 'match', '_has_negative_number_optionals')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            arg_string
+   4: POP_JUMP_FORWARD_IF_TRUE to 10
+   6: LOAD_CONST           None
+   8: RETURN_VALUE         
+  10: LOAD_FAST            arg_string
+  12: LOAD_CONST           0
+  14: BINARY_SUBSCR        
+  24: LOAD_FAST            self
+  26: LOAD_ATTR            prefix_chars
+  36: CONTAINS_OP          
+  38: POP_JUMP_FORWARD_IF_FALSE to 44
+  40: LOAD_CONST           None
+  42: RETURN_VALUE         
+  44: LOAD_FAST            arg_string
+  46: LOAD_FAST            self
+  48: LOAD_ATTR            _option_string_actions
+  58: CONTAINS_OP          
+  60: POP_JUMP_FORWARD_IF_FALSE to 98
+  62: LOAD_FAST            self
+  64: LOAD_ATTR            _option_string_actions
+  74: LOAD_FAST            arg_string
+  76: BINARY_SUBSCR        
+  86: STORE_FAST           action
+  88: LOAD_FAST            action
+  90: LOAD_FAST            arg_string
+  92: LOAD_CONST           None
+  94: BUILD_TUPLE          
+  96: RETURN_VALUE         
+  98: LOAD_GLOBAL          NULL + len
+ 110: LOAD_FAST            arg_string
+ 112: PRECALL              
+ 116: CALL                 
+ 126: LOAD_CONST           1
+ 128: COMPARE_OP           ==
+ 134: POP_JUMP_FORWARD_IF_FALSE to 140
+ 136: LOAD_CONST           None
+ 138: RETURN_VALUE         
+ 140: LOAD_CONST           '='
+ 142: LOAD_FAST            arg_string
+ 144: CONTAINS_OP          
+ 146: POP_JUMP_FORWARD_IF_FALSE to 252
+ 148: LOAD_FAST            arg_string
+ 150: LOAD_METHOD          split
+ 172: LOAD_CONST           '='
+ 174: LOAD_CONST           1
+ 176: PRECALL              
+ 180: CALL                 
+ 190: UNPACK_SEQUENCE      
+ 194: STORE_FAST           option_string
+ 196: STORE_FAST           explicit_arg
+ 198: LOAD_FAST            option_string
+ 200: LOAD_FAST            self
+ 202: LOAD_ATTR            _option_string_actions
+ 212: CONTAINS_OP          
+ 214: POP_JUMP_FORWARD_IF_FALSE to 252
+ 216: LOAD_FAST            self
+ 218: LOAD_ATTR            _option_string_actions
+ 228: LOAD_FAST            option_string
+ 230: BINARY_SUBSCR        
+ 240: STORE_FAST           action
+ 242: LOAD_FAST            action
+ 244: LOAD_FAST            option_string
+ 246: LOAD_FAST            explicit_arg
+ 248: BUILD_TUPLE          
+ 250: RETURN_VALUE         
+ 252: LOAD_FAST            self
+ 254: LOAD_METHOD          _get_option_tuples
+ 276: LOAD_FAST            arg_string
+ 278: PRECALL              
+ 282: CALL                 
+ 292: STORE_FAST           option_tuples
+ 294: LOAD_GLOBAL          NULL + len
+ 306: LOAD_FAST            option_tuples
+ 308: PRECALL              
+ 312: CALL                 
+ 322: LOAD_CONST           1
+ 324: COMPARE_OP           >
+ 330: POP_JUMP_FORWARD_IF_FALSE to 484
+ 332: LOAD_CONST           ', '
+ 334: LOAD_METHOD          join
+ 356: LOAD_CONST           <code object <listcomp> at 0x0000024069467050, file "argparse.py", line 2260>
+ 358: MAKE_FUNCTION        
+ 360: LOAD_FAST            option_tuples
+ 362: GET_ITER             
+ 364: PRECALL              
+ 368: CALL                 
+ 378: PRECALL              
+ 382: CALL                 
+ 392: STORE_FAST           options
+ 394: LOAD_FAST            arg_string
+ 396: LOAD_FAST            options
+ 398: LOAD_CONST           ('option', 'matches')
+ 400: BUILD_CONST_KEY_MAP  
+ 402: STORE_FAST           args
+ 404: LOAD_GLOBAL          NULL + _
+ 416: LOAD_CONST           'ambiguous option: %(option)s could match %(matches)s'
+ 418: PRECALL              
+ 422: CALL                 
+ 432: STORE_FAST           msg
+ 434: LOAD_FAST            self
+ 436: LOAD_METHOD          error
+ 458: LOAD_FAST            msg
+ 460: LOAD_FAST            args
+ 462: BINARY_OP            %
+ 466: PRECALL              
+ 470: CALL                 
+ 480: POP_TOP              
+ 482: JUMP_FORWARD         to 534
+ 484: LOAD_GLOBAL          NULL + len
+ 496: LOAD_FAST            option_tuples
+ 498: PRECALL              
+ 502: CALL                 
+ 512: LOAD_CONST           1
+ 514: COMPARE_OP           ==
+ 520: POP_JUMP_FORWARD_IF_FALSE to 534
+ 522: LOAD_FAST            option_tuples
+ 524: UNPACK_SEQUENCE      
+ 528: STORE_FAST           option_tuple
+ 530: LOAD_FAST            option_tuple
+ 532: RETURN_VALUE         
+ 534: LOAD_FAST            self
+ 536: LOAD_ATTR            _negative_number_matcher
+ 546: LOAD_METHOD          match
+ 568: LOAD_FAST            arg_string
+ 570: PRECALL              
+ 574: CALL                 
+ 584: POP_JUMP_FORWARD_IF_FALSE to 604
+ 586: LOAD_FAST            self
+ 588: LOAD_ATTR            _has_negative_number_optionals
+ 598: POP_JUMP_FORWARD_IF_TRUE to 604
+ 600: LOAD_CONST           None
+ 602: RETURN_VALUE         
+ 604: LOAD_CONST           ' '
+ 606: LOAD_FAST            arg_string
+ 608: CONTAINS_OP          
+ 610: POP_JUMP_FORWARD_IF_FALSE to 616
+ 612: LOAD_CONST           None
+ 614: RETURN_VALUE         
+ 616: LOAD_CONST           None
+ 618: LOAD_FAST            arg_string
+ 620: LOAD_CONST           None
+ 622: BUILD_TUPLE          
+ 624: RETURN_VALUE         

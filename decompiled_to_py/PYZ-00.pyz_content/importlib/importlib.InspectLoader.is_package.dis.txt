@@ -1,0 +1,14 @@
+# Disassembly for importlib.InspectLoader.is_package
+# From module file: importlib.abc
+
+## co_consts:
+('Optional method which when implemented should return whether the\n        module is a package.  The fullname is a str.  Returns a bool.\n\n        Raises ImportError if the module cannot be found.\n        ',)
+
+## co_names:
+('ImportError',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          ImportError
+  14: RAISE_VARARGS        

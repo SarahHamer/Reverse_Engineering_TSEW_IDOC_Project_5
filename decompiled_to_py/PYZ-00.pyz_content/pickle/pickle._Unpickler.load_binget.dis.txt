@@ -1,0 +1,56 @@
+# Disassembly for pickle._Unpickler.load_binget
+# From module file: pickle
+
+## co_consts:
+(None, 1, 0, 'Memo value not found at index ')
+
+## co_names:
+('read', 'append', 'memo', 'KeyError', 'UnpicklingError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          read
+  26: LOAD_CONST           1
+  28: PRECALL              
+  32: CALL                 
+  42: LOAD_CONST           0
+  44: BINARY_SUBSCR        
+  54: STORE_FAST           i
+  56: NOP                  
+  58: LOAD_FAST            self
+  60: LOAD_METHOD          append
+  82: LOAD_FAST            self
+  84: LOAD_ATTR            memo
+  94: LOAD_FAST            i
+  96: BINARY_SUBSCR        
+ 106: PRECALL              
+ 110: CALL                 
+ 120: POP_TOP              
+ 122: LOAD_CONST           None
+ 124: RETURN_VALUE         
+ 126: PUSH_EXC_INFO        
+ 128: LOAD_GLOBAL          KeyError
+ 140: CHECK_EXC_MATCH      
+ 142: POP_JUMP_FORWARD_IF_FALSE to 196
+ 144: STORE_FAST           exc
+ 146: LOAD_CONST           'Memo value not found at index '
+ 148: LOAD_FAST            i
+ 150: FORMAT_VALUE         
+ 152: BUILD_STRING         
+ 154: STORE_FAST           msg
+ 156: LOAD_GLOBAL          NULL + UnpicklingError
+ 168: LOAD_FAST            msg
+ 170: PRECALL              
+ 174: CALL                 
+ 184: LOAD_CONST           None
+ 186: RAISE_VARARGS        
+ 188: LOAD_CONST           None
+ 190: STORE_FAST           exc
+ 192: DELETE_FAST          exc
+ 194: RERAISE              
+ 196: RERAISE              
+ 198: COPY                 
+ 200: POP_EXCEPT           
+ 202: RERAISE              

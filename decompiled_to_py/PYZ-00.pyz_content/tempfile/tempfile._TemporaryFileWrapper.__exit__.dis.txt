@@ -1,0 +1,28 @@
+# Disassembly for tempfile._TemporaryFileWrapper.__exit__
+# From module file: tempfile
+
+## co_consts:
+(None,)
+
+## co_names:
+('file', '__exit__', 'close')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            file
+  14: LOAD_METHOD          __exit__
+  36: LOAD_FAST            exc
+  38: LOAD_FAST            value
+  40: LOAD_FAST            tb
+  42: PRECALL              
+  46: CALL                 
+  56: STORE_FAST           result
+  58: LOAD_FAST            self
+  60: LOAD_METHOD          close
+  82: PRECALL              
+  86: CALL                 
+  96: POP_TOP              
+  98: LOAD_FAST            result
+ 100: RETURN_VALUE         

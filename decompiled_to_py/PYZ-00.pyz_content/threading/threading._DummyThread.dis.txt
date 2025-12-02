@@ -1,0 +1,31 @@
+# Disassembly for threading._DummyThread
+# From module file: threading
+
+## co_consts:
+('_DummyThread', <code object __init__ at 0x0000024069498030, file "threading.py", line 1423>, <code object _stop at 0x000002406943B0F0, file "threading.py", line 1433>, <code object is_alive at 0x000002406944BBB0, file "threading.py", line 1436>, None, <code object join at 0x0000024069496250, file "threading.py", line 1440>, (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', '_stop', 'is_alive', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_DummyThread'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           <code object __init__ at 0x0000024069498030, file "threading.py", line 1423>
+  12: MAKE_FUNCTION        
+  14: STORE_NAME           __init__
+  16: LOAD_CONST           <code object _stop at 0x000002406943B0F0, file "threading.py", line 1433>
+  18: MAKE_FUNCTION        
+  20: STORE_NAME           _stop
+  22: LOAD_CONST           <code object is_alive at 0x000002406944BBB0, file "threading.py", line 1436>
+  24: MAKE_FUNCTION        
+  26: STORE_NAME           is_alive
+  28: LOAD_CONST           (None,)
+  30: LOAD_CONST           <code object join at 0x0000024069496250, file "threading.py", line 1440>
+  32: MAKE_FUNCTION        defaults
+  34: STORE_NAME           join
+  36: LOAD_CONST           None
+  38: RETURN_VALUE         

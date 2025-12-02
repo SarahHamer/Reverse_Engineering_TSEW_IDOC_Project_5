@@ -1,0 +1,64 @@
+# Disassembly for statistics._float_sqrt_of_frac
+# From module file: statistics
+
+## co_consts:
+('Square root of n/m as a float, correctly rounded.', 2, 0, 1, -2)
+
+## co_names:
+('bit_length', '_sqrt_bit_width', '_integer_sqrt_of_frac_rto')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            n
+   4: LOAD_METHOD          bit_length
+  26: PRECALL              
+  30: CALL                 
+  40: LOAD_FAST            m
+  42: LOAD_METHOD          bit_length
+  64: PRECALL              
+  68: CALL                 
+  78: BINARY_OP            -
+  82: LOAD_GLOBAL          _sqrt_bit_width
+  94: BINARY_OP            -
+  98: LOAD_CONST           2
+ 100: BINARY_OP            //
+ 104: STORE_FAST           q
+ 106: LOAD_FAST            q
+ 108: LOAD_CONST           0
+ 110: COMPARE_OP           >=
+ 116: POP_JUMP_FORWARD_IF_FALSE to 174
+ 118: LOAD_GLOBAL          NULL + _integer_sqrt_of_frac_rto
+ 130: LOAD_FAST            n
+ 132: LOAD_FAST            m
+ 134: LOAD_CONST           2
+ 136: LOAD_FAST            q
+ 138: BINARY_OP            *
+ 142: BINARY_OP            <<
+ 146: PRECALL              
+ 150: CALL                 
+ 160: LOAD_FAST            q
+ 162: BINARY_OP            <<
+ 166: STORE_FAST           numerator
+ 168: LOAD_CONST           1
+ 170: STORE_FAST           denominator
+ 172: JUMP_FORWARD         to 230
+ 174: LOAD_GLOBAL          NULL + _integer_sqrt_of_frac_rto
+ 186: LOAD_FAST            n
+ 188: LOAD_CONST           -2
+ 190: LOAD_FAST            q
+ 192: BINARY_OP            *
+ 196: BINARY_OP            <<
+ 200: LOAD_FAST            m
+ 202: PRECALL              
+ 206: CALL                 
+ 216: STORE_FAST           numerator
+ 218: LOAD_CONST           1
+ 220: LOAD_FAST            q
+ 222: UNARY_NEGATIVE       
+ 224: BINARY_OP            <<
+ 228: STORE_FAST           denominator
+ 230: LOAD_FAST            numerator
+ 232: LOAD_FAST            denominator
+ 234: BINARY_OP            /
+ 238: RETURN_VALUE         

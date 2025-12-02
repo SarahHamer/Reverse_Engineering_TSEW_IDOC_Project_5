@@ -1,0 +1,48 @@
+# Disassembly for typing._AnnotatedAlias
+# From module file: typing
+
+## co_consts:
+('_AnnotatedAlias', "Runtime representation of an annotated type.\n\n    At its core 'Annotated[t, dec1, dec2, ...]' is an alias for the type 't'\n    with extra annotations. The alias behaves like a normal typing alias.\n    Instantiating is the same as instantiating the underlying type; binding\n    it to types is also the same.\n\n    The metadata itself is stored in a '__metadata__' attribute as a tuple.\n    ", <code object __init__ at 0x00000240691C2EF0, file "typing.py", line 2121>, <code object copy_with at 0x000002406941AD30, file "typing.py", line 2128>, <code object __repr__ at 0x000002406922D920, file "typing.py", line 2133>, <code object __reduce__ at 0x0000024069CDC830, file "typing.py", line 2139>, <code object __eq__ at 0x00000240693AB730, file "typing.py", line 2144>, <code object __hash__ at 0x0000024069CF4B70, file "typing.py", line 2150>, <code object __getattr__ at 0x000002406944BBB0, file "typing.py", line 2153>)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', 'copy_with', '__repr__', '__reduce__', '__eq__', '__hash__', '__getattr__', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           '_AnnotatedAlias'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           "Runtime representation of an annotated type.\n\n    At its core 'Annotated[t, dec1, dec2, ...]' is an alias for the type 't'\n    with extra annotations. The alias behaves like a normal typing alias.\n    Instantiating is the same as instantiating the underlying type; binding\n    it to types is also the same.\n\n    The metadata itself is stored in a '__metadata__' attribute as a tuple.\n    "
+  14: STORE_NAME           __doc__
+  16: LOAD_CLOSURE         __class__
+  18: BUILD_TUPLE          
+  20: LOAD_CONST           <code object __init__ at 0x00000240691C2EF0, file "typing.py", line 2121>
+  22: MAKE_FUNCTION        closure
+  24: STORE_NAME           __init__
+  26: LOAD_CONST           <code object copy_with at 0x000002406941AD30, file "typing.py", line 2128>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           copy_with
+  32: LOAD_CONST           <code object __repr__ at 0x000002406922D920, file "typing.py", line 2133>
+  34: MAKE_FUNCTION        
+  36: STORE_NAME           __repr__
+  38: LOAD_CONST           <code object __reduce__ at 0x0000024069CDC830, file "typing.py", line 2139>
+  40: MAKE_FUNCTION        
+  42: STORE_NAME           __reduce__
+  44: LOAD_CONST           <code object __eq__ at 0x00000240693AB730, file "typing.py", line 2144>
+  46: MAKE_FUNCTION        
+  48: STORE_NAME           __eq__
+  50: LOAD_CONST           <code object __hash__ at 0x0000024069CF4B70, file "typing.py", line 2150>
+  52: MAKE_FUNCTION        
+  54: STORE_NAME           __hash__
+  56: LOAD_CLOSURE         __class__
+  58: BUILD_TUPLE          
+  60: LOAD_CONST           <code object __getattr__ at 0x000002406944BBB0, file "typing.py", line 2153>
+  62: MAKE_FUNCTION        closure
+  64: STORE_NAME           __getattr__
+  66: LOAD_CLOSURE         __class__
+  68: COPY                 
+  70: STORE_NAME           __classcell__
+  72: RETURN_VALUE         

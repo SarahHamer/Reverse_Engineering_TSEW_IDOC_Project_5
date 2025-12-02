@@ -1,0 +1,31 @@
+# Disassembly for _threading_local._localimpl
+# From module file: _threading_local
+
+## co_consts:
+('_localimpl', 'A class managing thread-local dicts', ('key', 'dicts', 'localargs', 'locallock', '__weakref__'), <code object __init__ at 0x000002406941A9D0, file "_threading_local.py", line 150>, <code object get_dict at 0x000002406941A790, file "_threading_local.py", line 158>, <code object create_dict at 0x00000240691F6730, file "_threading_local.py", line 164>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__slots__', '__init__', 'get_dict', 'create_dict')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_localimpl'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'A class managing thread-local dicts'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           ('key', 'dicts', 'localargs', 'locallock', '__weakref__')
+  16: STORE_NAME           __slots__
+  18: LOAD_CONST           <code object __init__ at 0x000002406941A9D0, file "_threading_local.py", line 150>
+  20: MAKE_FUNCTION        
+  22: STORE_NAME           __init__
+  24: LOAD_CONST           <code object get_dict at 0x000002406941A790, file "_threading_local.py", line 158>
+  26: MAKE_FUNCTION        
+  28: STORE_NAME           get_dict
+  30: LOAD_CONST           <code object create_dict at 0x00000240691F6730, file "_threading_local.py", line 164>
+  32: MAKE_FUNCTION        
+  34: STORE_NAME           create_dict
+  36: LOAD_CONST           None
+  38: RETURN_VALUE         

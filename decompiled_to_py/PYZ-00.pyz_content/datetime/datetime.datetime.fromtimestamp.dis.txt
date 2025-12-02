@@ -1,0 +1,27 @@
+# Disassembly for datetime.datetime.fromtimestamp
+# From module file: datetime
+
+## co_consts:
+('Construct a datetime from a POSIX timestamp (like time.time()).\n\n        A timezone info object may be passed in as well.\n        ', None)
+
+## co_names:
+('_check_tzinfo_arg', '_fromtimestamp')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _check_tzinfo_arg
+  14: LOAD_FAST            tz
+  16: PRECALL              
+  20: CALL                 
+  30: POP_TOP              
+  32: LOAD_FAST            cls
+  34: LOAD_METHOD          _fromtimestamp
+  56: LOAD_FAST            t
+  58: LOAD_FAST            tz
+  60: LOAD_CONST           None
+  62: IS_OP                
+  64: LOAD_FAST            tz
+  66: PRECALL              
+  70: CALL                 
+  80: RETURN_VALUE         

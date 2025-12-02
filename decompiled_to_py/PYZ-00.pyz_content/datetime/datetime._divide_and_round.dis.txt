@@ -1,0 +1,54 @@
+# Disassembly for datetime._divide_and_round
+# From module file: datetime
+
+## co_consts:
+('divide a by b and round result to the nearest integer\n\n    When the ratio is exactly half-way between two integers,\n    the even integer is returned.\n    ', 2, 0, 1)
+
+## co_names:
+('divmod',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + divmod
+  14: LOAD_FAST            a
+  16: LOAD_FAST            b
+  18: PRECALL              
+  22: CALL                 
+  32: UNPACK_SEQUENCE      
+  36: STORE_FAST           q
+  38: STORE_FAST           r
+  40: LOAD_FAST            r
+  42: LOAD_CONST           2
+  44: BINARY_OP            *=
+  48: STORE_FAST           r
+  50: LOAD_FAST            b
+  52: LOAD_CONST           0
+  54: COMPARE_OP           >
+  60: POP_JUMP_FORWARD_IF_FALSE to 74
+  62: LOAD_FAST            r
+  64: LOAD_FAST            b
+  66: COMPARE_OP           >
+  72: JUMP_FORWARD         to 84
+  74: LOAD_FAST            r
+  76: LOAD_FAST            b
+  78: COMPARE_OP           <
+  84: STORE_FAST           greater_than_half
+  86: LOAD_FAST            greater_than_half
+  88: POP_JUMP_FORWARD_IF_TRUE to 120
+  90: LOAD_FAST            r
+  92: LOAD_FAST            b
+  94: COMPARE_OP           ==
+ 100: POP_JUMP_FORWARD_IF_FALSE to 130
+ 102: LOAD_FAST            q
+ 104: LOAD_CONST           2
+ 106: BINARY_OP            %
+ 110: LOAD_CONST           1
+ 112: COMPARE_OP           ==
+ 118: POP_JUMP_FORWARD_IF_FALSE to 130
+ 120: LOAD_FAST            q
+ 122: LOAD_CONST           1
+ 124: BINARY_OP            +=
+ 128: STORE_FAST           q
+ 130: LOAD_FAST            q
+ 132: RETURN_VALUE         

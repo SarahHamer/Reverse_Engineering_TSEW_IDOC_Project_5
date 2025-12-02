@@ -1,0 +1,20 @@
+# Disassembly for importlib.resources._
+# From module file: importlib.resources._common
+
+## co_consts:
+('\n    Degenerate behavior for pathlib.Path objects.\n    ', None)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_FAST            path
+   8: YIELD_VALUE          
+  10: RESUME               
+  12: POP_TOP              
+  14: LOAD_CONST           None
+  16: RETURN_VALUE         

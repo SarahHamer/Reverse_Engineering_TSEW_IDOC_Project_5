@@ -1,0 +1,24 @@
+# Disassembly for ssl._ipaddress_match
+# From module file: ssl
+
+## co_consts:
+('Exact matching of IP addresses.\n\n    RFC 6125 explicitly doesn\'t define an algorithm for this\n    (section 1.7.2 - "Out of Scope").\n    ',)
+
+## co_names:
+('_inet_paton', 'rstrip')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _inet_paton
+  14: LOAD_FAST            cert_ipaddress
+  16: LOAD_METHOD          rstrip
+  38: PRECALL              
+  42: CALL                 
+  52: PRECALL              
+  56: CALL                 
+  66: STORE_FAST           ip
+  68: LOAD_FAST            ip
+  70: LOAD_FAST            host_ip
+  72: COMPARE_OP           ==
+  78: RETURN_VALUE         

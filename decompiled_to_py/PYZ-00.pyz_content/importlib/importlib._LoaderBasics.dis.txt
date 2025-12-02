@@ -1,0 +1,32 @@
+# Disassembly for importlib._LoaderBasics
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('_LoaderBasics', 'Base class of common code needed by both SourceLoader and\n    SourcelessFileLoader.', <code object is_package at 0x000002406942D930, file "importlib\_bootstrap_external.py", line 923>, <code object create_module at 0x000002406943B330, file "importlib\_bootstrap_external.py", line 931>, <code object exec_module at 0x000002406942E8D0, file "importlib\_bootstrap_external.py", line 934>, <code object load_module at 0x000002406945E2E0, file "importlib\_bootstrap_external.py", line 942>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'is_package', 'create_module', 'exec_module', 'load_module')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           '_LoaderBasics'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Base class of common code needed by both SourceLoader and\n    SourcelessFileLoader.'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object is_package at 0x000002406942D930, file "importlib\_bootstrap_external.py", line 923>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           is_package
+  20: LOAD_CONST           <code object create_module at 0x000002406943B330, file "importlib\_bootstrap_external.py", line 931>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           create_module
+  26: LOAD_CONST           <code object exec_module at 0x000002406942E8D0, file "importlib\_bootstrap_external.py", line 934>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           exec_module
+  32: LOAD_CONST           <code object load_module at 0x000002406945E2E0, file "importlib\_bootstrap_external.py", line 942>
+  34: MAKE_FUNCTION        
+  36: STORE_NAME           load_module
+  38: LOAD_CONST           None
+  40: RETURN_VALUE         

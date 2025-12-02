@@ -1,0 +1,28 @@
+# Disassembly for shlex.shlex.error_leader
+# From module file: shlex
+
+## co_consts:
+('Emit a C-compiler-like, Emacs-friendly error-message leader.', None, '"%s", line %d: ')
+
+## co_names:
+('infile', 'lineno')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            infile
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 20
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            infile
+  18: STORE_FAST           infile
+  20: LOAD_FAST            lineno
+  22: POP_JUMP_FORWARD_IF_NOT_NONE to 38
+  24: LOAD_FAST            self
+  26: LOAD_ATTR            lineno
+  36: STORE_FAST           lineno
+  38: LOAD_CONST           '"%s", line %d: '
+  40: LOAD_FAST            infile
+  42: LOAD_FAST            lineno
+  44: BUILD_TUPLE          
+  46: BINARY_OP            %
+  50: RETURN_VALUE         

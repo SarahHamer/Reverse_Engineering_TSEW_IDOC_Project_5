@@ -1,0 +1,29 @@
+# Disassembly for tempfile.SpooledTemporaryFile.name
+# From module file: tempfile
+
+## co_consts:
+(None,)
+
+## co_names:
+('_file', 'name', 'AttributeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            _file
+  16: LOAD_ATTR            name
+  26: RETURN_VALUE         
+  28: PUSH_EXC_INFO        
+  30: LOAD_GLOBAL          AttributeError
+  42: CHECK_EXC_MATCH      
+  44: POP_JUMP_FORWARD_IF_FALSE to 54
+  46: POP_TOP              
+  48: POP_EXCEPT           
+  50: LOAD_CONST           None
+  52: RETURN_VALUE         
+  54: RERAISE              
+  56: COPY                 
+  58: POP_EXCEPT           
+  60: RERAISE              

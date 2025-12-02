@@ -1,0 +1,73 @@
+# Disassembly for importlib.FrozenImporter.find_spec
+# From module file: importlib._bootstrap
+
+## co_consts:
+(None, ('origin', 'is_package'), ('filename', 'origname'), 0)
+
+## co_names:
+('_call_with_frames_removed', '_imp', 'find_frozen', 'spec_from_loader', '_ORIGIN', '_resolve_filename', 'type', 'sys', 'implementation', 'loader_state', 'submodule_search_locations', 'insert')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _call_with_frames_removed
+  14: LOAD_GLOBAL          _imp
+  26: LOAD_ATTR            find_frozen
+  36: LOAD_FAST            fullname
+  38: PRECALL              
+  42: CALL                 
+  52: STORE_FAST           info
+  54: LOAD_FAST            info
+  56: POP_JUMP_FORWARD_IF_NOT_NONE to 62
+  58: LOAD_CONST           None
+  60: RETURN_VALUE         
+  62: LOAD_FAST            info
+  64: UNPACK_SEQUENCE      
+  68: STORE_FAST           _
+  70: STORE_FAST           ispkg
+  72: STORE_FAST           origname
+  74: LOAD_GLOBAL          NULL + spec_from_loader
+  86: LOAD_FAST            fullname
+  88: LOAD_FAST            cls
+  90: LOAD_FAST            cls
+  92: LOAD_ATTR            _ORIGIN
+ 102: LOAD_FAST            ispkg
+ 104: KW_NAMES             
+ 106: PRECALL              
+ 110: CALL                 
+ 120: STORE_FAST           spec
+ 122: LOAD_FAST            cls
+ 124: LOAD_METHOD          _resolve_filename
+ 146: LOAD_FAST            origname
+ 148: LOAD_FAST            fullname
+ 150: LOAD_FAST            ispkg
+ 152: PRECALL              
+ 156: CALL                 
+ 166: UNPACK_SEQUENCE      
+ 170: STORE_FAST           filename
+ 172: STORE_FAST           pkgdir
+ 174: PUSH_NULL            
+ 176: LOAD_GLOBAL          NULL + type
+ 188: LOAD_GLOBAL          sys
+ 200: LOAD_ATTR            implementation
+ 210: PRECALL              
+ 214: CALL                 
+ 224: LOAD_FAST            filename
+ 226: LOAD_FAST            origname
+ 228: KW_NAMES             
+ 230: PRECALL              
+ 234: CALL                 
+ 244: LOAD_FAST            spec
+ 246: STORE_ATTR           loader_state
+ 256: LOAD_FAST            pkgdir
+ 258: POP_JUMP_FORWARD_IF_FALSE to 314
+ 260: LOAD_FAST            spec
+ 262: LOAD_ATTR            submodule_search_locations
+ 272: LOAD_METHOD          insert
+ 294: LOAD_CONST           0
+ 296: LOAD_FAST            pkgdir
+ 298: PRECALL              
+ 302: CALL                 
+ 312: POP_TOP              
+ 314: LOAD_FAST            spec
+ 316: RETURN_VALUE         

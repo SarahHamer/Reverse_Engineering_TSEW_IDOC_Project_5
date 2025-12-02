@@ -1,0 +1,77 @@
+# Disassembly for logging.FileHandler.__init__
+# From module file: logging
+
+## co_consts:
+('\n        Open the specified file and use it as the stream for logging.\n        ', 'b', None)
+
+## co_names:
+('os', 'fspath', 'path', 'abspath', 'baseFilename', 'mode', 'encoding', 'io', 'text_encoding', 'errors', 'delay', 'open', '_builtin_open', 'Handler', '__init__', 'stream', 'StreamHandler', '_open')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + os
+  14: LOAD_ATTR            fspath
+  24: LOAD_FAST            filename
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           filename
+  42: LOAD_GLOBAL          os
+  54: LOAD_ATTR            path
+  64: LOAD_METHOD          abspath
+  86: LOAD_FAST            filename
+  88: PRECALL              
+  92: CALL                 
+ 102: LOAD_FAST            self
+ 104: STORE_ATTR           baseFilename
+ 114: LOAD_FAST            mode
+ 116: LOAD_FAST            self
+ 118: STORE_ATTR           mode
+ 128: LOAD_FAST            encoding
+ 130: LOAD_FAST            self
+ 132: STORE_ATTR           encoding
+ 142: LOAD_CONST           'b'
+ 144: LOAD_FAST            mode
+ 146: CONTAINS_OP          
+ 148: POP_JUMP_FORWARD_IF_FALSE to 200
+ 150: LOAD_GLOBAL          NULL + io
+ 162: LOAD_ATTR            text_encoding
+ 172: LOAD_FAST            encoding
+ 174: PRECALL              
+ 178: CALL                 
+ 188: LOAD_FAST            self
+ 190: STORE_ATTR           encoding
+ 200: LOAD_FAST            errors
+ 202: LOAD_FAST            self
+ 204: STORE_ATTR           errors
+ 214: LOAD_FAST            delay
+ 216: LOAD_FAST            self
+ 218: STORE_ATTR           delay
+ 228: LOAD_GLOBAL          open
+ 240: LOAD_FAST            self
+ 242: STORE_ATTR           _builtin_open
+ 252: LOAD_FAST            delay
+ 254: POP_JUMP_FORWARD_IF_FALSE to 326
+ 256: LOAD_GLOBAL          Handler
+ 268: LOAD_METHOD          __init__
+ 290: LOAD_FAST            self
+ 292: PRECALL              
+ 296: CALL                 
+ 306: POP_TOP              
+ 308: LOAD_CONST           None
+ 310: LOAD_FAST            self
+ 312: STORE_ATTR           stream
+ 322: LOAD_CONST           None
+ 324: RETURN_VALUE         
+ 326: LOAD_GLOBAL          StreamHandler
+ 338: LOAD_METHOD          __init__
+ 360: LOAD_FAST            self
+ 362: LOAD_FAST            self
+ 364: LOAD_METHOD          _open
+ 386: PRECALL              
+ 390: CALL                 
+ 400: PRECALL              
+ 404: CALL                 
+ 414: POP_TOP              
+ 416: LOAD_CONST           None
+ 418: RETURN_VALUE         

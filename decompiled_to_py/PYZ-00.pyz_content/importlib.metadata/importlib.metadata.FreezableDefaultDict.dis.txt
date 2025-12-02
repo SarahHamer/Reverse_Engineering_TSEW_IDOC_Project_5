@@ -1,0 +1,31 @@
+# Disassembly for importlib.metadata.FreezableDefaultDict
+# From module file: importlib.metadata._collections
+
+## co_consts:
+('FreezableDefaultDict', "\n    Often it is desirable to prevent the mutation of\n    a default dict after its initial construction, such\n    as to prevent mutation during iteration.\n\n    >>> dd = FreezableDefaultDict(list)\n    >>> dd[0].append('1')\n    >>> dd.freeze()\n    >>> dd[1]\n    []\n    >>> len(dd)\n    1\n    ", <code object __missing__ at 0x000002406941A790, file "importlib\metadata\_collections.py", line 20>, <code object freeze at 0x0000024069467130, file "importlib\metadata\_collections.py", line 23>)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__missing__', 'freeze', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'FreezableDefaultDict'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           "\n    Often it is desirable to prevent the mutation of\n    a default dict after its initial construction, such\n    as to prevent mutation during iteration.\n\n    >>> dd = FreezableDefaultDict(list)\n    >>> dd[0].append('1')\n    >>> dd.freeze()\n    >>> dd[1]\n    []\n    >>> len(dd)\n    1\n    "
+  14: STORE_NAME           __doc__
+  16: LOAD_CLOSURE         __class__
+  18: BUILD_TUPLE          
+  20: LOAD_CONST           <code object __missing__ at 0x000002406941A790, file "importlib\metadata\_collections.py", line 20>
+  22: MAKE_FUNCTION        closure
+  24: STORE_NAME           __missing__
+  26: LOAD_CONST           <code object freeze at 0x0000024069467130, file "importlib\metadata\_collections.py", line 23>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           freeze
+  32: LOAD_CLOSURE         __class__
+  34: COPY                 
+  36: STORE_NAME           __classcell__
+  38: RETURN_VALUE         

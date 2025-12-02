@@ -1,0 +1,45 @@
+# Disassembly for email.Message.attach
+# From module file: email.message
+
+## co_consts:
+('Add the given payload to the current payload.\n\n        The current payload will always be a list of objects after this method\n        is called.  If you want to set the payload to a scalar object, use\n        set_payload() instead.\n        ', None, 'Attach is not valid on a message with a non-multipart payload')
+
+## co_names:
+('_payload', 'append', 'AttributeError', 'TypeError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _payload
+  14: POP_JUMP_FORWARD_IF_NOT_NONE to 36
+  16: LOAD_FAST            payload
+  18: BUILD_LIST           
+  20: LOAD_FAST            self
+  22: STORE_ATTR           _payload
+  32: LOAD_CONST           None
+  34: RETURN_VALUE         
+  36: NOP                  
+  38: LOAD_FAST            self
+  40: LOAD_ATTR            _payload
+  50: LOAD_METHOD          append
+  72: LOAD_FAST            payload
+  74: PRECALL              
+  78: CALL                 
+  88: POP_TOP              
+  90: LOAD_CONST           None
+  92: RETURN_VALUE         
+  94: PUSH_EXC_INFO        
+  96: LOAD_GLOBAL          AttributeError
+ 108: CHECK_EXC_MATCH      
+ 110: POP_JUMP_FORWARD_IF_FALSE to 144
+ 112: POP_TOP              
+ 114: LOAD_GLOBAL          NULL + TypeError
+ 126: LOAD_CONST           'Attach is not valid on a message with a non-multipart payload'
+ 128: PRECALL              
+ 132: CALL                 
+ 142: RAISE_VARARGS        
+ 144: RERAISE              
+ 146: COPY                 
+ 148: POP_EXCEPT           
+ 150: RERAISE              

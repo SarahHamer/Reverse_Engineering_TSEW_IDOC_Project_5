@@ -1,0 +1,115 @@
+# Disassembly for pprint.PrettyPrinter._pprint_chain_map
+# From module file: pprint
+
+## co_consts:
+(None, '(', 1, ')', ',\n', ' ')
+
+## co_names:
+('len', 'maps', 'write', 'repr', '__class__', '__name__', 'enumerate', '_format')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + len
+  14: LOAD_FAST            object
+  16: LOAD_ATTR            maps
+  26: PRECALL              
+  30: CALL                 
+  40: POP_JUMP_FORWARD_IF_TRUE to 114
+  42: LOAD_FAST            stream
+  44: LOAD_METHOD          write
+  66: LOAD_GLOBAL          NULL + repr
+  78: LOAD_FAST            object
+  80: PRECALL              
+  84: CALL                 
+  94: PRECALL              
+  98: CALL                 
+ 108: POP_TOP              
+ 110: LOAD_CONST           None
+ 112: RETURN_VALUE         
+ 114: LOAD_FAST            object
+ 116: LOAD_ATTR            __class__
+ 126: STORE_FAST           cls
+ 128: LOAD_FAST            stream
+ 130: LOAD_METHOD          write
+ 152: LOAD_FAST            cls
+ 154: LOAD_ATTR            __name__
+ 164: LOAD_CONST           '('
+ 166: BINARY_OP            +
+ 170: PRECALL              
+ 174: CALL                 
+ 184: POP_TOP              
+ 186: LOAD_FAST            indent
+ 188: LOAD_GLOBAL          NULL + len
+ 200: LOAD_FAST            cls
+ 202: LOAD_ATTR            __name__
+ 212: PRECALL              
+ 216: CALL                 
+ 226: LOAD_CONST           1
+ 228: BINARY_OP            +
+ 232: BINARY_OP            +=
+ 236: STORE_FAST           indent
+ 238: LOAD_GLOBAL          NULL + enumerate
+ 250: LOAD_FAST            object
+ 252: LOAD_ATTR            maps
+ 262: PRECALL              
+ 266: CALL                 
+ 276: GET_ITER             
+ 278: FOR_ITER             to 552
+ 280: UNPACK_SEQUENCE      
+ 284: STORE_FAST           i
+ 286: STORE_FAST           m
+ 288: LOAD_FAST            i
+ 290: LOAD_GLOBAL          NULL + len
+ 302: LOAD_FAST            object
+ 304: LOAD_ATTR            maps
+ 314: PRECALL              
+ 318: CALL                 
+ 328: LOAD_CONST           1
+ 330: BINARY_OP            -
+ 334: COMPARE_OP           ==
+ 340: POP_JUMP_FORWARD_IF_FALSE to 444
+ 342: LOAD_FAST            self
+ 344: LOAD_METHOD          _format
+ 366: LOAD_FAST            m
+ 368: LOAD_FAST            stream
+ 370: LOAD_FAST            indent
+ 372: LOAD_FAST            allowance
+ 374: LOAD_CONST           1
+ 376: BINARY_OP            +
+ 380: LOAD_FAST            context
+ 382: LOAD_FAST            level
+ 384: PRECALL              
+ 388: CALL                 
+ 398: POP_TOP              
+ 400: LOAD_FAST            stream
+ 402: LOAD_METHOD          write
+ 424: LOAD_CONST           ')'
+ 426: PRECALL              
+ 430: CALL                 
+ 440: POP_TOP              
+ 442: JUMP_BACKWARD        to 278
+ 444: LOAD_FAST            self
+ 446: LOAD_METHOD          _format
+ 468: LOAD_FAST            m
+ 470: LOAD_FAST            stream
+ 472: LOAD_FAST            indent
+ 474: LOAD_CONST           1
+ 476: LOAD_FAST            context
+ 478: LOAD_FAST            level
+ 480: PRECALL              
+ 484: CALL                 
+ 494: POP_TOP              
+ 496: LOAD_FAST            stream
+ 498: LOAD_METHOD          write
+ 520: LOAD_CONST           ',\n'
+ 522: LOAD_CONST           ' '
+ 524: LOAD_FAST            indent
+ 526: BINARY_OP            *
+ 530: BINARY_OP            +
+ 534: PRECALL              
+ 538: CALL                 
+ 548: POP_TOP              
+ 550: JUMP_BACKWARD        to 278
+ 552: LOAD_CONST           None
+ 554: RETURN_VALUE         

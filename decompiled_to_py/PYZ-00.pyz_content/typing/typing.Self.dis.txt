@@ -1,0 +1,20 @@
+# Disassembly for typing.Self
+# From module file: typing
+
+## co_consts:
+('Used to spell the type of "self" in classes.\n\n    Example::\n\n        from typing import Self\n\n        class Foo:\n            def return_self(self) -> Self:\n                ...\n                return self\n\n    This is especially useful for:\n        - classmethods that are used as alternative constructors\n        - annotating an `__enter__` method which returns self\n    ', ' is not subscriptable')
+
+## co_names:
+('TypeError',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + TypeError
+  14: LOAD_FAST            self
+  16: FORMAT_VALUE         
+  18: LOAD_CONST           ' is not subscriptable'
+  20: BUILD_STRING         
+  22: PRECALL              
+  26: CALL                 
+  36: RAISE_VARARGS        

@@ -1,0 +1,146 @@
+# Disassembly for email.AddrlistClass.getdomain
+# From module file: email._parseaddr
+
+## co_consts:
+('Get the complete domain name from an address.', 1, '(', '[', '.', '@')
+
+## co_names:
+('pos', 'len', 'field', 'LWS', 'commentlist', 'append', 'getcomment', 'getdomainliteral', 'EMPTYSTRING', 'atomends', 'getatom', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           sdlist
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            pos
+  18: LOAD_GLOBAL          NULL + len
+  30: LOAD_FAST            self
+  32: LOAD_ATTR            field
+  42: PRECALL              
+  46: CALL                 
+  56: COMPARE_OP           <
+  62: EXTENDED_ARG         
+  64: POP_JUMP_FORWARD_IF_FALSE to 778
+  66: LOAD_FAST            self
+  68: LOAD_ATTR            field
+  78: LOAD_FAST            self
+  80: LOAD_ATTR            pos
+  90: BINARY_SUBSCR        
+ 100: LOAD_FAST            self
+ 102: LOAD_ATTR            LWS
+ 112: CONTAINS_OP          
+ 114: POP_JUMP_FORWARD_IF_FALSE to 152
+ 116: LOAD_FAST            self
+ 118: COPY                 
+ 120: LOAD_ATTR            pos
+ 130: LOAD_CONST           1
+ 132: BINARY_OP            +=
+ 136: SWAP                 
+ 138: STORE_ATTR           pos
+ 148: EXTENDED_ARG         
+ 150: JUMP_FORWARD         to 718
+ 152: LOAD_FAST            self
+ 154: LOAD_ATTR            field
+ 164: LOAD_FAST            self
+ 166: LOAD_ATTR            pos
+ 176: BINARY_SUBSCR        
+ 186: LOAD_CONST           '('
+ 188: COMPARE_OP           ==
+ 194: POP_JUMP_FORWARD_IF_FALSE to 286
+ 196: LOAD_FAST            self
+ 198: LOAD_ATTR            commentlist
+ 208: LOAD_METHOD          append
+ 230: LOAD_FAST            self
+ 232: LOAD_METHOD          getcomment
+ 254: PRECALL              
+ 258: CALL                 
+ 268: PRECALL              
+ 272: CALL                 
+ 282: POP_TOP              
+ 284: JUMP_FORWARD         to 718
+ 286: LOAD_FAST            self
+ 288: LOAD_ATTR            field
+ 298: LOAD_FAST            self
+ 300: LOAD_ATTR            pos
+ 310: BINARY_SUBSCR        
+ 320: LOAD_CONST           '['
+ 322: COMPARE_OP           ==
+ 328: POP_JUMP_FORWARD_IF_FALSE to 410
+ 330: LOAD_FAST            sdlist
+ 332: LOAD_METHOD          append
+ 354: LOAD_FAST            self
+ 356: LOAD_METHOD          getdomainliteral
+ 378: PRECALL              
+ 382: CALL                 
+ 392: PRECALL              
+ 396: CALL                 
+ 406: POP_TOP              
+ 408: JUMP_FORWARD         to 718
+ 410: LOAD_FAST            self
+ 412: LOAD_ATTR            field
+ 422: LOAD_FAST            self
+ 424: LOAD_ATTR            pos
+ 434: BINARY_SUBSCR        
+ 444: LOAD_CONST           '.'
+ 446: COMPARE_OP           ==
+ 452: POP_JUMP_FORWARD_IF_FALSE to 530
+ 454: LOAD_FAST            self
+ 456: COPY                 
+ 458: LOAD_ATTR            pos
+ 468: LOAD_CONST           1
+ 470: BINARY_OP            +=
+ 474: SWAP                 
+ 476: STORE_ATTR           pos
+ 486: LOAD_FAST            sdlist
+ 488: LOAD_METHOD          append
+ 510: LOAD_CONST           '.'
+ 512: PRECALL              
+ 516: CALL                 
+ 526: POP_TOP              
+ 528: JUMP_FORWARD         to 718
+ 530: LOAD_FAST            self
+ 532: LOAD_ATTR            field
+ 542: LOAD_FAST            self
+ 544: LOAD_ATTR            pos
+ 554: BINARY_SUBSCR        
+ 564: LOAD_CONST           '@'
+ 566: COMPARE_OP           ==
+ 572: POP_JUMP_FORWARD_IF_FALSE to 588
+ 574: LOAD_GLOBAL          EMPTYSTRING
+ 586: RETURN_VALUE         
+ 588: LOAD_FAST            self
+ 590: LOAD_ATTR            field
+ 600: LOAD_FAST            self
+ 602: LOAD_ATTR            pos
+ 612: BINARY_SUBSCR        
+ 622: LOAD_FAST            self
+ 624: LOAD_ATTR            atomends
+ 634: CONTAINS_OP          
+ 636: POP_JUMP_FORWARD_IF_FALSE to 640
+ 638: JUMP_FORWARD         to 778
+ 640: LOAD_FAST            sdlist
+ 642: LOAD_METHOD          append
+ 664: LOAD_FAST            self
+ 666: LOAD_METHOD          getatom
+ 688: PRECALL              
+ 692: CALL                 
+ 702: PRECALL              
+ 706: CALL                 
+ 716: POP_TOP              
+ 718: LOAD_FAST            self
+ 720: LOAD_ATTR            pos
+ 730: LOAD_GLOBAL          NULL + len
+ 742: LOAD_FAST            self
+ 744: LOAD_ATTR            field
+ 754: PRECALL              
+ 758: CALL                 
+ 768: COMPARE_OP           <
+ 774: EXTENDED_ARG         
+ 776: POP_JUMP_BACKWARD_IF_TRUE to 66
+ 778: LOAD_GLOBAL          EMPTYSTRING
+ 790: LOAD_METHOD          join
+ 812: LOAD_FAST            sdlist
+ 814: PRECALL              
+ 818: CALL                 
+ 828: RETURN_VALUE         

@@ -1,0 +1,25 @@
+# Disassembly for argparse.HelpFormatter._Section
+# From module file: argparse
+
+## co_consts:
+('HelpFormatter._Section', None, <code object __init__ at 0x00000240693EA230, file "argparse.py", line 206>, <code object format_help at 0x0000024068E24A20, file "argparse.py", line 212>, (None,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', 'format_help')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'HelpFormatter._Section'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           (None,)
+  12: LOAD_CONST           <code object __init__ at 0x00000240693EA230, file "argparse.py", line 206>
+  14: MAKE_FUNCTION        defaults
+  16: STORE_NAME           __init__
+  18: LOAD_CONST           <code object format_help at 0x0000024068E24A20, file "argparse.py", line 212>
+  20: MAKE_FUNCTION        
+  22: STORE_NAME           format_help
+  24: LOAD_CONST           None
+  26: RETURN_VALUE         

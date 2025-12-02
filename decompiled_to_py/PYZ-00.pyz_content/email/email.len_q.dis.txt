@@ -1,0 +1,22 @@
+# Disassembly for email.len_q
+# From module file: email._encoded_words
+
+## co_consts:
+(None, <code object <genexpr> at 0x000002406944A340, file "email\_encoded_words.py", line 93>)
+
+## co_names:
+('sum',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + sum
+  14: LOAD_CONST           <code object <genexpr> at 0x000002406944A340, file "email\_encoded_words.py", line 93>
+  16: MAKE_FUNCTION        
+  18: LOAD_FAST            bstring
+  20: GET_ITER             
+  22: PRECALL              
+  26: CALL                 
+  36: PRECALL              
+  40: CALL                 
+  50: RETURN_VALUE         

@@ -1,0 +1,17 @@
+# Disassembly for gzip.GzipFile.mtime
+# From module file: gzip
+
+## co_consts:
+('Last modification time read from stream, or None',)
+
+## co_names:
+('_buffer', 'raw', '_last_mtime')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _buffer
+  14: LOAD_ATTR            raw
+  24: LOAD_ATTR            _last_mtime
+  34: RETURN_VALUE         

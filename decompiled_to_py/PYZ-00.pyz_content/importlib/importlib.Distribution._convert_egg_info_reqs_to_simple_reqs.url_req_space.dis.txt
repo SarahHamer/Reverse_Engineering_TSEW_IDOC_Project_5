@@ -1,0 +1,18 @@
+# Disassembly for importlib.Distribution._convert_egg_info_reqs_to_simple_reqs.url_req_space
+# From module file: importlib.metadata
+
+## co_consts:
+('\n            PEP 508 requires a space between the url_spec and the quoted_marker.\n            Ref python/importlib_metadata#357.\n            ', ' ', '@')
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           ' '
+   4: LOAD_CONST           '@'
+   6: LOAD_FAST            req
+   8: CONTAINS_OP          
+  10: BINARY_OP            *
+  14: RETURN_VALUE         

@@ -1,0 +1,69 @@
+# Disassembly for copy._deepcopy_tuple
+# From module file: copy
+
+## co_consts:
+(None, <code object <listcomp> at 0x00000240694657D0, file "copy.py", line 211>)
+
+## co_names:
+('id', 'KeyError', 'zip', 'tuple')
+
+## bytecode:
+
+   0: MAKE_CELL            memo
+   2: MAKE_CELL            deepcopy
+   4: RESUME               
+   6: LOAD_CLOSURE         deepcopy
+   8: LOAD_CLOSURE         memo
+  10: BUILD_TUPLE          
+  12: LOAD_CONST           <code object <listcomp> at 0x00000240694657D0, file "copy.py", line 211>
+  14: MAKE_FUNCTION        closure
+  16: LOAD_FAST            x
+  18: GET_ITER             
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           y
+  36: NOP                  
+  38: LOAD_DEREF           memo
+  40: LOAD_GLOBAL          NULL + id
+  52: LOAD_FAST            x
+  54: PRECALL              
+  58: CALL                 
+  68: BINARY_SUBSCR        
+  78: RETURN_VALUE         
+  80: PUSH_EXC_INFO        
+  82: LOAD_GLOBAL          KeyError
+  94: CHECK_EXC_MATCH      
+  96: POP_JUMP_FORWARD_IF_FALSE to 104
+  98: POP_TOP              
+ 100: POP_EXCEPT           
+ 102: JUMP_FORWARD         to 112
+ 104: RERAISE              
+ 106: COPY                 
+ 108: POP_EXCEPT           
+ 110: RERAISE              
+ 112: LOAD_GLOBAL          NULL + zip
+ 124: LOAD_FAST            x
+ 126: LOAD_FAST            y
+ 128: PRECALL              
+ 132: CALL                 
+ 142: GET_ITER             
+ 144: FOR_ITER             to 198
+ 146: UNPACK_SEQUENCE      
+ 150: STORE_FAST           k
+ 152: STORE_FAST           j
+ 154: LOAD_FAST            k
+ 156: LOAD_FAST            j
+ 158: IS_OP                
+ 160: POP_JUMP_FORWARD_IF_FALSE to 196
+ 162: LOAD_GLOBAL          NULL + tuple
+ 174: LOAD_FAST            y
+ 176: PRECALL              
+ 180: CALL                 
+ 190: STORE_FAST           y
+ 192: POP_TOP              
+ 194: JUMP_FORWARD         to 202
+ 196: JUMP_BACKWARD        to 144
+ 198: LOAD_FAST            x
+ 200: STORE_FAST           y
+ 202: LOAD_FAST            y
+ 204: RETURN_VALUE         

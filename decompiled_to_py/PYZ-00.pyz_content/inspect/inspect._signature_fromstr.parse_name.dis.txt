@@ -1,0 +1,32 @@
+# Disassembly for inspect._signature_fromstr.parse_name
+# From module file: inspect
+
+## co_consts:
+(None, 'Annotations are not currently supported')
+
+## co_names:
+('isinstance', 'ast', 'arg', 'annotation', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            node
+  16: LOAD_GLOBAL          ast
+  28: LOAD_ATTR            arg
+  38: PRECALL              
+  42: CALL                 
+  52: POP_JUMP_FORWARD_IF_TRUE to 58
+  54: LOAD_ASSERTION_ERROR 
+  56: RAISE_VARARGS        
+  58: LOAD_FAST            node
+  60: LOAD_ATTR            annotation
+  70: POP_JUMP_FORWARD_IF_NONE to 102
+  72: LOAD_GLOBAL          NULL + ValueError
+  84: LOAD_CONST           'Annotations are not currently supported'
+  86: PRECALL              
+  90: CALL                 
+ 100: RAISE_VARARGS        
+ 102: LOAD_FAST            node
+ 104: LOAD_ATTR            arg
+ 114: RETURN_VALUE         

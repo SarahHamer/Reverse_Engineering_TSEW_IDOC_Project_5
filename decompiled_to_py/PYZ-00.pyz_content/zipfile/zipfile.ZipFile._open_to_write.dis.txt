@@ -1,0 +1,134 @@
+# Disassembly for zipfile.ZipFile._open_to_write
+# From module file: zipfile
+
+## co_consts:
+(None, 'force_zip64 is True, but allowZip64 was False when opening the ZIP file.', "Can't write to the ZIP file while there is another write handle open on it. Close the first handle before opening another.", 0, 25165824, 1.05, 'Filesize would require ZIP64 extensions', True)
+
+## co_names:
+('_allowZip64', 'ValueError', '_writing', 'compress_size', 'CRC', 'flag_bits', 'compress_type', 'ZIP_LZMA', '_MASK_COMPRESS_OPTION_1', '_seekable', '_MASK_USE_DATA_DESCRIPTOR', 'external_attr', 'file_size', 'ZIP64_LIMIT', 'LargeZipFile', 'fp', 'seek', 'start_dir', 'tell', 'header_offset', '_writecheck', '_didModify', 'write', 'FileHeader', '_ZipWriteFile')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            force_zip64
+   4: POP_JUMP_FORWARD_IF_FALSE to 50
+   6: LOAD_FAST            self
+   8: LOAD_ATTR            _allowZip64
+  18: POP_JUMP_FORWARD_IF_TRUE to 50
+  20: LOAD_GLOBAL          NULL + ValueError
+  32: LOAD_CONST           'force_zip64 is True, but allowZip64 was False when opening the ZIP file.'
+  34: PRECALL              
+  38: CALL                 
+  48: RAISE_VARARGS        
+  50: LOAD_FAST            self
+  52: LOAD_ATTR            _writing
+  62: POP_JUMP_FORWARD_IF_FALSE to 94
+  64: LOAD_GLOBAL          NULL + ValueError
+  76: LOAD_CONST           "Can't write to the ZIP file while there is another write handle open on it. Close the first handle before opening another."
+  78: PRECALL              
+  82: CALL                 
+  92: RAISE_VARARGS        
+  94: LOAD_CONST           0
+  96: LOAD_FAST            zinfo
+  98: STORE_ATTR           compress_size
+ 108: LOAD_CONST           0
+ 110: LOAD_FAST            zinfo
+ 112: STORE_ATTR           CRC
+ 122: LOAD_CONST           0
+ 124: LOAD_FAST            zinfo
+ 126: STORE_ATTR           flag_bits
+ 136: LOAD_FAST            zinfo
+ 138: LOAD_ATTR            compress_type
+ 148: LOAD_GLOBAL          ZIP_LZMA
+ 160: COMPARE_OP           ==
+ 166: POP_JUMP_FORWARD_IF_FALSE to 210
+ 168: LOAD_FAST            zinfo
+ 170: COPY                 
+ 172: LOAD_ATTR            flag_bits
+ 182: LOAD_GLOBAL          _MASK_COMPRESS_OPTION_1
+ 194: BINARY_OP            |=
+ 198: SWAP                 
+ 200: STORE_ATTR           flag_bits
+ 210: LOAD_FAST            self
+ 212: LOAD_ATTR            _seekable
+ 222: POP_JUMP_FORWARD_IF_TRUE to 266
+ 224: LOAD_FAST            zinfo
+ 226: COPY                 
+ 228: LOAD_ATTR            flag_bits
+ 238: LOAD_GLOBAL          _MASK_USE_DATA_DESCRIPTOR
+ 250: BINARY_OP            |=
+ 254: SWAP                 
+ 256: STORE_ATTR           flag_bits
+ 266: LOAD_FAST            zinfo
+ 268: LOAD_ATTR            external_attr
+ 278: POP_JUMP_FORWARD_IF_TRUE to 294
+ 280: LOAD_CONST           25165824
+ 282: LOAD_FAST            zinfo
+ 284: STORE_ATTR           external_attr
+ 294: LOAD_FAST            force_zip64
+ 296: JUMP_IF_TRUE_OR_POP  to 334
+ 298: LOAD_FAST            zinfo
+ 300: LOAD_ATTR            file_size
+ 310: LOAD_CONST           1.05
+ 312: BINARY_OP            *
+ 316: LOAD_GLOBAL          ZIP64_LIMIT
+ 328: COMPARE_OP           >
+ 334: STORE_FAST           zip64
+ 336: LOAD_FAST            self
+ 338: LOAD_ATTR            _allowZip64
+ 348: POP_JUMP_FORWARD_IF_TRUE to 384
+ 350: LOAD_FAST            zip64
+ 352: POP_JUMP_FORWARD_IF_FALSE to 384
+ 354: LOAD_GLOBAL          NULL + LargeZipFile
+ 366: LOAD_CONST           'Filesize would require ZIP64 extensions'
+ 368: PRECALL              
+ 372: CALL                 
+ 382: RAISE_VARARGS        
+ 384: LOAD_FAST            self
+ 386: LOAD_ATTR            _seekable
+ 396: POP_JUMP_FORWARD_IF_FALSE to 460
+ 398: LOAD_FAST            self
+ 400: LOAD_ATTR            fp
+ 410: LOAD_METHOD          seek
+ 432: LOAD_FAST            self
+ 434: LOAD_ATTR            start_dir
+ 444: PRECALL              
+ 448: CALL                 
+ 458: POP_TOP              
+ 460: LOAD_FAST            self
+ 462: LOAD_ATTR            fp
+ 472: LOAD_METHOD          tell
+ 494: PRECALL              
+ 498: CALL                 
+ 508: LOAD_FAST            zinfo
+ 510: STORE_ATTR           header_offset
+ 520: LOAD_FAST            self
+ 522: LOAD_METHOD          _writecheck
+ 544: LOAD_FAST            zinfo
+ 546: PRECALL              
+ 550: CALL                 
+ 560: POP_TOP              
+ 562: LOAD_CONST           True
+ 564: LOAD_FAST            self
+ 566: STORE_ATTR           _didModify
+ 576: LOAD_FAST            self
+ 578: LOAD_ATTR            fp
+ 588: LOAD_METHOD          write
+ 610: LOAD_FAST            zinfo
+ 612: LOAD_METHOD          FileHeader
+ 634: LOAD_FAST            zip64
+ 636: PRECALL              
+ 640: CALL                 
+ 650: PRECALL              
+ 654: CALL                 
+ 664: POP_TOP              
+ 666: LOAD_CONST           True
+ 668: LOAD_FAST            self
+ 670: STORE_ATTR           _writing
+ 680: LOAD_GLOBAL          NULL + _ZipWriteFile
+ 692: LOAD_FAST            self
+ 694: LOAD_FAST            zinfo
+ 696: LOAD_FAST            zip64
+ 698: PRECALL              
+ 702: CALL                 
+ 712: RETURN_VALUE         

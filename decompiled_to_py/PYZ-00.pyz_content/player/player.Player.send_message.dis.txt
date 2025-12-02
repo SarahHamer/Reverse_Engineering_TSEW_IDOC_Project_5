@@ -1,0 +1,39 @@
+# Disassembly for player.Player.send_message
+# From module file: player
+
+## co_consts:
+(None, '', '\n')
+
+## co_names:
+('print', 'prepare_message', 'split')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + print
+  14: LOAD_CONST           ''
+  16: PRECALL              
+  20: CALL                 
+  30: POP_TOP              
+  32: LOAD_FAST            self
+  34: LOAD_METHOD          prepare_message
+  56: LOAD_FAST            message
+  58: PRECALL              
+  62: CALL                 
+  72: LOAD_METHOD          split
+  94: LOAD_CONST           '\n'
+  96: PRECALL              
+ 100: CALL                 
+ 110: STORE_FAST           lines
+ 112: LOAD_FAST            lines
+ 114: GET_ITER             
+ 116: FOR_ITER             to 152
+ 118: STORE_FAST           line
+ 120: LOAD_GLOBAL          NULL + print
+ 132: LOAD_FAST            line
+ 134: PRECALL              
+ 138: CALL                 
+ 148: POP_TOP              
+ 150: JUMP_BACKWARD        to 116
+ 152: LOAD_CONST           None
+ 154: RETURN_VALUE         

@@ -1,0 +1,55 @@
+# Disassembly for importlib.FileLoader
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('FileLoader', 'Base file loader class which implements the loader protocol methods that\n    require file system usage.', <code object __init__ at 0x0000024069466870, file "importlib\_bootstrap_external.py", line 1097>, <code object __eq__ at 0x00000240693EAB30, file "importlib\_bootstrap_external.py", line 1103>, <code object __hash__ at 0x000002406944B330, file "importlib\_bootstrap_external.py", line 1107>, <code object load_module at 0x000002406944ABC0, file "importlib\_bootstrap_external.py", line 1110>, <code object get_filename at 0x00000240694968D0, file "importlib\_bootstrap_external.py", line 1122>, <code object get_data at 0x0000024068E21FA0, file "importlib\_bootstrap_external.py", line 1127>, <code object get_resource_reader at 0x00000240694658B0, file "importlib\_bootstrap_external.py", line 1136>)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', '__init__', '__eq__', '__hash__', '_check_name', 'load_module', 'get_filename', 'get_data', 'get_resource_reader', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'FileLoader'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           'Base file loader class which implements the loader protocol methods that\n    require file system usage.'
+  14: STORE_NAME           __doc__
+  16: LOAD_CONST           <code object __init__ at 0x0000024069466870, file "importlib\_bootstrap_external.py", line 1097>
+  18: MAKE_FUNCTION        
+  20: STORE_NAME           __init__
+  22: LOAD_CONST           <code object __eq__ at 0x00000240693EAB30, file "importlib\_bootstrap_external.py", line 1103>
+  24: MAKE_FUNCTION        
+  26: STORE_NAME           __eq__
+  28: LOAD_CONST           <code object __hash__ at 0x000002406944B330, file "importlib\_bootstrap_external.py", line 1107>
+  30: MAKE_FUNCTION        
+  32: STORE_NAME           __hash__
+  34: LOAD_NAME            _check_name
+  36: LOAD_CLOSURE         __class__
+  38: BUILD_TUPLE          
+  40: LOAD_CONST           <code object load_module at 0x000002406944ABC0, file "importlib\_bootstrap_external.py", line 1110>
+  42: MAKE_FUNCTION        closure
+  44: PRECALL              
+  48: CALL                 
+  58: STORE_NAME           load_module
+  60: LOAD_NAME            _check_name
+  62: LOAD_CONST           <code object get_filename at 0x00000240694968D0, file "importlib\_bootstrap_external.py", line 1122>
+  64: MAKE_FUNCTION        
+  66: PRECALL              
+  70: CALL                 
+  80: STORE_NAME           get_filename
+  82: LOAD_CONST           <code object get_data at 0x0000024068E21FA0, file "importlib\_bootstrap_external.py", line 1127>
+  84: MAKE_FUNCTION        
+  86: STORE_NAME           get_data
+  88: LOAD_NAME            _check_name
+  90: LOAD_CONST           <code object get_resource_reader at 0x00000240694658B0, file "importlib\_bootstrap_external.py", line 1136>
+  92: MAKE_FUNCTION        
+  94: PRECALL              
+  98: CALL                 
+ 108: STORE_NAME           get_resource_reader
+ 110: LOAD_CLOSURE         __class__
+ 112: COPY                 
+ 114: STORE_NAME           __classcell__
+ 116: RETURN_VALUE         

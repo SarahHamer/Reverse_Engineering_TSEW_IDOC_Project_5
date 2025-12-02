@@ -1,0 +1,29 @@
+# Disassembly for giftshop.CashRegister.__init__
+# From module file: giftshop
+
+## co_consts:
+(None, False)
+
+## co_names:
+('super', '__init__', 'is_open', 'money_taken')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_GLOBAL          NULL + super
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_METHOD          __init__
+  52: LOAD_FAST            name
+  54: PRECALL              
+  58: CALL                 
+  68: POP_TOP              
+  70: LOAD_CONST           False
+  72: LOAD_FAST            self
+  74: STORE_ATTR           is_open
+  84: LOAD_CONST           False
+  86: LOAD_FAST            self
+  88: STORE_ATTR           money_taken
+  98: LOAD_CONST           None
+ 100: RETURN_VALUE         

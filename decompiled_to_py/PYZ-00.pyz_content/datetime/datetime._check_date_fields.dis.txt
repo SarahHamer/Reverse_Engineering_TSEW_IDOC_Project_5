@@ -1,0 +1,95 @@
+# Disassembly for datetime._check_date_fields
+# From module file: datetime
+
+## co_consts:
+(None, 'year must be in %d..%d', 1, 12, 'month must be in 1..12', 'day must be in 1..%d')
+
+## co_names:
+('_index', 'MINYEAR', 'MAXYEAR', 'ValueError', '_days_in_month')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _index
+  14: LOAD_FAST            year
+  16: PRECALL              
+  20: CALL                 
+  30: STORE_FAST           year
+  32: LOAD_GLOBAL          NULL + _index
+  44: LOAD_FAST            month
+  46: PRECALL              
+  50: CALL                 
+  60: STORE_FAST           month
+  62: LOAD_GLOBAL          NULL + _index
+  74: LOAD_FAST            day
+  76: PRECALL              
+  80: CALL                 
+  90: STORE_FAST           day
+  92: LOAD_GLOBAL          MINYEAR
+ 104: LOAD_FAST            year
+ 106: SWAP                 
+ 108: COPY                 
+ 110: COMPARE_OP           <=
+ 116: POP_JUMP_FORWARD_IF_FALSE to 140
+ 118: LOAD_GLOBAL          MAXYEAR
+ 130: COMPARE_OP           <=
+ 136: POP_JUMP_FORWARD_IF_TRUE to 204
+ 138: JUMP_FORWARD         to 142
+ 140: POP_TOP              
+ 142: LOAD_GLOBAL          NULL + ValueError
+ 154: LOAD_CONST           'year must be in %d..%d'
+ 156: LOAD_GLOBAL          MINYEAR
+ 168: LOAD_GLOBAL          MAXYEAR
+ 180: BUILD_TUPLE          
+ 182: BINARY_OP            %
+ 186: LOAD_FAST            year
+ 188: PRECALL              
+ 192: CALL                 
+ 202: RAISE_VARARGS        
+ 204: LOAD_CONST           1
+ 206: LOAD_FAST            month
+ 208: SWAP                 
+ 210: COPY                 
+ 212: COMPARE_OP           <=
+ 218: POP_JUMP_FORWARD_IF_FALSE to 232
+ 220: LOAD_CONST           12
+ 222: COMPARE_OP           <=
+ 228: POP_JUMP_FORWARD_IF_TRUE to 266
+ 230: JUMP_FORWARD         to 234
+ 232: POP_TOP              
+ 234: LOAD_GLOBAL          NULL + ValueError
+ 246: LOAD_CONST           'month must be in 1..12'
+ 248: LOAD_FAST            month
+ 250: PRECALL              
+ 254: CALL                 
+ 264: RAISE_VARARGS        
+ 266: LOAD_GLOBAL          NULL + _days_in_month
+ 278: LOAD_FAST            year
+ 280: LOAD_FAST            month
+ 282: PRECALL              
+ 286: CALL                 
+ 296: STORE_FAST           dim
+ 298: LOAD_CONST           1
+ 300: LOAD_FAST            day
+ 302: SWAP                 
+ 304: COPY                 
+ 306: COMPARE_OP           <=
+ 312: POP_JUMP_FORWARD_IF_FALSE to 326
+ 314: LOAD_FAST            dim
+ 316: COMPARE_OP           <=
+ 322: POP_JUMP_FORWARD_IF_TRUE to 366
+ 324: JUMP_FORWARD         to 328
+ 326: POP_TOP              
+ 328: LOAD_GLOBAL          NULL + ValueError
+ 340: LOAD_CONST           'day must be in 1..%d'
+ 342: LOAD_FAST            dim
+ 344: BINARY_OP            %
+ 348: LOAD_FAST            day
+ 350: PRECALL              
+ 354: CALL                 
+ 364: RAISE_VARARGS        
+ 366: LOAD_FAST            year
+ 368: LOAD_FAST            month
+ 370: LOAD_FAST            day
+ 372: BUILD_TUPLE          
+ 374: RETURN_VALUE         

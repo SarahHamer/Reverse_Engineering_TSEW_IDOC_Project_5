@@ -1,0 +1,117 @@
+# Disassembly for email.AddressHeader.parse
+# From module file: email.headerregistry
+
+## co_consts:
+(None, 'parse_tree', <code object <listcomp> at 0x0000024069419FB0, file "email\headerregistry.py", line 346>, '__iter__', <code object <listcomp> at 0x000002406944A890, file "email\headerregistry.py", line 355>, 'groups', 'defects', ', ', <code object <listcomp> at 0x000002406945E100, file "email\headerregistry.py", line 361>, 'decoded')
+
+## co_names:
+('isinstance', 'str', 'value_parser', 'addresses', 'append', 'Group', 'display_name', 'all_mailboxes', 'list', 'all_defects', 'hasattr', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            value
+  16: LOAD_GLOBAL          str
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 272
+  44: LOAD_FAST            cls
+  46: LOAD_METHOD          value_parser
+  68: LOAD_FAST            value
+  70: PRECALL              
+  74: CALL                 
+  84: COPY                 
+  86: LOAD_FAST            kwds
+  88: LOAD_CONST           'parse_tree'
+  90: STORE_SUBSCR         
+  94: STORE_FAST           address_list
+  96: BUILD_LIST           
+  98: STORE_FAST           groups
+ 100: LOAD_FAST            address_list
+ 102: LOAD_ATTR            addresses
+ 112: GET_ITER             
+ 114: FOR_ITER             to 230
+ 116: STORE_FAST           addr
+ 118: LOAD_FAST            groups
+ 120: LOAD_METHOD          append
+ 142: LOAD_GLOBAL          NULL + Group
+ 154: LOAD_FAST            addr
+ 156: LOAD_ATTR            display_name
+ 166: LOAD_CONST           <code object <listcomp> at 0x0000024069419FB0, file "email\headerregistry.py", line 346>
+ 168: MAKE_FUNCTION        
+ 170: LOAD_FAST            addr
+ 172: LOAD_ATTR            all_mailboxes
+ 182: GET_ITER             
+ 184: PRECALL              
+ 188: CALL                 
+ 198: PRECALL              
+ 202: CALL                 
+ 212: PRECALL              
+ 216: CALL                 
+ 226: POP_TOP              
+ 228: JUMP_BACKWARD        to 114
+ 230: LOAD_GLOBAL          NULL + list
+ 242: LOAD_FAST            address_list
+ 244: LOAD_ATTR            all_defects
+ 254: PRECALL              
+ 258: CALL                 
+ 268: STORE_FAST           defects
+ 270: JUMP_FORWARD         to 338
+ 272: LOAD_GLOBAL          NULL + hasattr
+ 284: LOAD_FAST            value
+ 286: LOAD_CONST           '__iter__'
+ 288: PRECALL              
+ 292: CALL                 
+ 302: POP_JUMP_FORWARD_IF_TRUE to 310
+ 304: LOAD_FAST            value
+ 306: BUILD_LIST           
+ 308: STORE_FAST           value
+ 310: LOAD_CONST           <code object <listcomp> at 0x000002406944A890, file "email\headerregistry.py", line 355>
+ 312: MAKE_FUNCTION        
+ 314: LOAD_FAST            value
+ 316: GET_ITER             
+ 318: PRECALL              
+ 322: CALL                 
+ 332: STORE_FAST           groups
+ 334: BUILD_LIST           
+ 336: STORE_FAST           defects
+ 338: LOAD_FAST            groups
+ 340: LOAD_FAST            kwds
+ 342: LOAD_CONST           'groups'
+ 344: STORE_SUBSCR         
+ 348: LOAD_FAST            defects
+ 350: LOAD_FAST            kwds
+ 352: LOAD_CONST           'defects'
+ 354: STORE_SUBSCR         
+ 358: LOAD_CONST           ', '
+ 360: LOAD_METHOD          join
+ 382: LOAD_CONST           <code object <listcomp> at 0x000002406945E100, file "email\headerregistry.py", line 361>
+ 384: MAKE_FUNCTION        
+ 386: LOAD_FAST            groups
+ 388: GET_ITER             
+ 390: PRECALL              
+ 394: CALL                 
+ 404: PRECALL              
+ 408: CALL                 
+ 418: LOAD_FAST            kwds
+ 420: LOAD_CONST           'decoded'
+ 422: STORE_SUBSCR         
+ 426: LOAD_CONST           'parse_tree'
+ 428: LOAD_FAST            kwds
+ 430: CONTAINS_OP          
+ 432: POP_JUMP_FORWARD_IF_FALSE to 498
+ 434: LOAD_FAST            cls
+ 436: LOAD_METHOD          value_parser
+ 458: LOAD_FAST            kwds
+ 460: LOAD_CONST           'decoded'
+ 462: BINARY_SUBSCR        
+ 472: PRECALL              
+ 476: CALL                 
+ 486: LOAD_FAST            kwds
+ 488: LOAD_CONST           'parse_tree'
+ 490: STORE_SUBSCR         
+ 494: LOAD_CONST           None
+ 496: RETURN_VALUE         
+ 498: LOAD_CONST           None
+ 500: RETURN_VALUE         

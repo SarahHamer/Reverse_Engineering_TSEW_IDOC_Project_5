@@ -1,0 +1,17 @@
+# Disassembly for http.CookieJar.set_policy
+# From module file: http.cookiejar
+
+## co_consts:
+(None,)
+
+## co_names:
+('_policy',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            policy
+   4: LOAD_FAST            self
+   6: STORE_ATTR           _policy
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         

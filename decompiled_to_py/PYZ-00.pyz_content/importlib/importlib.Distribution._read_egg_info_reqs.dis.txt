@@ -1,0 +1,28 @@
+# Disassembly for importlib.Distribution._read_egg_info_reqs
+# From module file: importlib.metadata
+
+## co_consts:
+(None, 'requires.txt')
+
+## co_names:
+('read_text', 'pass_none', '_deps_from_requires_text')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          read_text
+  26: LOAD_CONST           'requires.txt'
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           source
+  44: PUSH_NULL            
+  46: LOAD_GLOBAL          NULL + pass_none
+  58: LOAD_FAST            self
+  60: LOAD_ATTR            _deps_from_requires_text
+  70: PRECALL              
+  74: CALL                 
+  84: LOAD_FAST            source
+  86: PRECALL              
+  90: CALL                 
+ 100: RETURN_VALUE         

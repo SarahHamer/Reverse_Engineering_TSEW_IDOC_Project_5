@@ -1,0 +1,16 @@
+# Disassembly for importlib.resources.CompatibilityFiles.SpecPath.name
+# From module file: importlib.resources._adapters
+
+## co_consts:
+(None,)
+
+## co_names:
+('_spec', 'name')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _spec
+  14: LOAD_ATTR            name
+  24: RETURN_VALUE         

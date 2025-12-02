@@ -1,0 +1,22 @@
+# Disassembly for email._ValueFormatter.add_transition
+# From module file: email.header
+
+## co_consts:
+(None, ' ', '')
+
+## co_names:
+('_current_line', 'push')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _current_line
+  14: LOAD_METHOD          push
+  36: LOAD_CONST           ' '
+  38: LOAD_CONST           ''
+  40: PRECALL              
+  44: CALL                 
+  54: POP_TOP              
+  56: LOAD_CONST           None
+  58: RETURN_VALUE         

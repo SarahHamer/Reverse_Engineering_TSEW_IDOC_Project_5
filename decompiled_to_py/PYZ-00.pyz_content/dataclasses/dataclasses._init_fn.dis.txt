@@ -1,0 +1,158 @@
+# Disassembly for dataclasses._init_fn
+# From module file: dataclasses
+
+## co_consts:
+(None, False, True, 'non-default argument ', ' follows default argument', <code object <dictcomp> at 0x000002406945F690, file "dataclasses.py", line 548>, ('MISSING', '_HAS_DEFAULT_FACTORY', '__dataclass_builtins_object__'), ',', <code object <genexpr> at 0x00000240693EA530, file "dataclasses.py", line 565>, '.', '(', ')', 'pass', <code object <listcomp> at 0x000002406945F780, file "dataclasses.py", line 573>, '*', <code object <listcomp> at 0x000002406945DA70, file "dataclasses.py", line 579>, '__init__', ('locals', 'globals', 'return_type'))
+
+## co_names:
+('init', 'default', 'MISSING', 'default_factory', 'TypeError', 'name', 'update', '_HAS_DEFAULT_FACTORY', 'object', '_field_init', 'append', 'join', '_POST_INIT_NAME', '_create_fn')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           False
+   4: STORE_FAST           seen_default
+   6: LOAD_FAST            std_fields
+   8: GET_ITER             
+  10: FOR_ITER             to 144
+  12: STORE_FAST           f
+  14: LOAD_FAST            f
+  16: LOAD_ATTR            init
+  26: POP_JUMP_FORWARD_IF_FALSE to 142
+  28: LOAD_FAST            f
+  30: LOAD_ATTR            default
+  40: LOAD_GLOBAL          MISSING
+  52: IS_OP                
+  54: POP_JUMP_FORWARD_IF_FALSE to 84
+  56: LOAD_FAST            f
+  58: LOAD_ATTR            default_factory
+  68: LOAD_GLOBAL          MISSING
+  80: IS_OP                
+  82: POP_JUMP_FORWARD_IF_TRUE to 90
+  84: LOAD_CONST           True
+  86: STORE_FAST           seen_default
+  88: JUMP_BACKWARD        to 10
+  90: LOAD_FAST            seen_default
+  92: POP_JUMP_FORWARD_IF_FALSE to 142
+  94: LOAD_GLOBAL          NULL + TypeError
+ 106: LOAD_CONST           'non-default argument '
+ 108: LOAD_FAST            f
+ 110: LOAD_ATTR            name
+ 120: FORMAT_VALUE         repr
+ 122: LOAD_CONST           ' follows default argument'
+ 124: BUILD_STRING         
+ 126: PRECALL              
+ 130: CALL                 
+ 140: RAISE_VARARGS        
+ 142: JUMP_BACKWARD        to 10
+ 144: LOAD_CONST           <code object <dictcomp> at 0x000002406945F690, file "dataclasses.py", line 548>
+ 146: MAKE_FUNCTION        
+ 148: LOAD_FAST            fields
+ 150: GET_ITER             
+ 152: PRECALL              
+ 156: CALL                 
+ 166: STORE_FAST           locals
+ 168: LOAD_FAST            locals
+ 170: LOAD_METHOD          update
+ 192: LOAD_GLOBAL          MISSING
+ 204: LOAD_GLOBAL          _HAS_DEFAULT_FACTORY
+ 216: LOAD_GLOBAL          object
+ 228: LOAD_CONST           ('MISSING', '_HAS_DEFAULT_FACTORY', '__dataclass_builtins_object__')
+ 230: BUILD_CONST_KEY_MAP  
+ 232: PRECALL              
+ 236: CALL                 
+ 246: POP_TOP              
+ 248: BUILD_LIST           
+ 250: STORE_FAST           body_lines
+ 252: LOAD_FAST            fields
+ 254: GET_ITER             
+ 256: FOR_ITER             to 346
+ 258: STORE_FAST           f
+ 260: LOAD_GLOBAL          NULL + _field_init
+ 272: LOAD_FAST            f
+ 274: LOAD_FAST            frozen
+ 276: LOAD_FAST            locals
+ 278: LOAD_FAST            self_name
+ 280: LOAD_FAST            slots
+ 282: PRECALL              
+ 286: CALL                 
+ 296: STORE_FAST           line
+ 298: LOAD_FAST            line
+ 300: POP_JUMP_FORWARD_IF_FALSE to 344
+ 302: LOAD_FAST            body_lines
+ 304: LOAD_METHOD          append
+ 326: LOAD_FAST            line
+ 328: PRECALL              
+ 332: CALL                 
+ 342: POP_TOP              
+ 344: JUMP_BACKWARD        to 256
+ 346: LOAD_FAST            has_post_init
+ 348: POP_JUMP_FORWARD_IF_FALSE to 482
+ 350: LOAD_CONST           ','
+ 352: LOAD_METHOD          join
+ 374: LOAD_CONST           <code object <genexpr> at 0x00000240693EA530, file "dataclasses.py", line 565>
+ 376: MAKE_FUNCTION        
+ 378: LOAD_FAST            fields
+ 380: GET_ITER             
+ 382: PRECALL              
+ 386: CALL                 
+ 396: PRECALL              
+ 400: CALL                 
+ 410: STORE_FAST           params_str
+ 412: LOAD_FAST            body_lines
+ 414: LOAD_METHOD          append
+ 436: LOAD_FAST            self_name
+ 438: FORMAT_VALUE         
+ 440: LOAD_CONST           '.'
+ 442: LOAD_GLOBAL          _POST_INIT_NAME
+ 454: FORMAT_VALUE         
+ 456: LOAD_CONST           '('
+ 458: LOAD_FAST            params_str
+ 460: FORMAT_VALUE         
+ 462: LOAD_CONST           ')'
+ 464: BUILD_STRING         
+ 466: PRECALL              
+ 470: CALL                 
+ 480: POP_TOP              
+ 482: LOAD_FAST            body_lines
+ 484: POP_JUMP_FORWARD_IF_TRUE to 492
+ 486: LOAD_CONST           'pass'
+ 488: BUILD_LIST           
+ 490: STORE_FAST           body_lines
+ 492: LOAD_CONST           <code object <listcomp> at 0x000002406945F780, file "dataclasses.py", line 573>
+ 494: MAKE_FUNCTION        
+ 496: LOAD_FAST            std_fields
+ 498: GET_ITER             
+ 500: PRECALL              
+ 504: CALL                 
+ 514: STORE_FAST           _init_params
+ 516: LOAD_FAST            kw_only_fields
+ 518: POP_JUMP_FORWARD_IF_FALSE to 562
+ 520: LOAD_FAST            _init_params
+ 522: LOAD_CONST           '*'
+ 524: BUILD_LIST           
+ 526: BINARY_OP            +=
+ 530: STORE_FAST           _init_params
+ 532: LOAD_FAST            _init_params
+ 534: LOAD_CONST           <code object <listcomp> at 0x000002406945DA70, file "dataclasses.py", line 579>
+ 536: MAKE_FUNCTION        
+ 538: LOAD_FAST            kw_only_fields
+ 540: GET_ITER             
+ 542: PRECALL              
+ 546: CALL                 
+ 556: BINARY_OP            +=
+ 560: STORE_FAST           _init_params
+ 562: LOAD_GLOBAL          NULL + _create_fn
+ 574: LOAD_CONST           '__init__'
+ 576: LOAD_FAST            self_name
+ 578: BUILD_LIST           
+ 580: LOAD_FAST            _init_params
+ 582: BINARY_OP            +
+ 586: LOAD_FAST            body_lines
+ 588: LOAD_FAST            locals
+ 590: LOAD_FAST            globals
+ 592: LOAD_CONST           None
+ 594: KW_NAMES             
+ 596: PRECALL              
+ 600: CALL                 
+ 610: RETURN_VALUE         

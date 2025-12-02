@@ -1,0 +1,1484 @@
+# Disassembly for typing
+# From module file: typing
+
+## co_consts:
+('\nThe typing module: Support for gradual typing as defined by PEP 484 and subsequent PEPs.\n\nAmong other things, the module includes the following:\n* Generic, Protocol, and internal machinery to support generic aliases.\n  All subscripted types like X[int], Union[int, str] are generic aliases.\n* Various "special forms" that have unique meanings in type annotations:\n  NoReturn, Never, ClassVar, Self, Concatenate, Unpack, and others.\n* Classes whose instances can be type arguments to generic classes and functions:\n  TypeVar, ParamSpec, TypeVarTuple.\n* Public helper functions: get_type_hints, overload, cast, final, and others.\n* Several protocols to support duck-typing:\n  SupportsFloat, SupportsIndex, SupportsAbs, and others.\n* Special types: NewType, NamedTuple, TypedDict.\n* Deprecated wrapper submodules for re and io related types.\n* Deprecated aliases for builtin types and collections.abc ABCs.\n\nAny name not present in __all__ is an implementation detail\nthat may be changed without notice. Use at your own risk!\n', 0, ('abstractmethod', 'ABCMeta'), None, ('defaultdict',), ('WrapperDescriptorType', 'MethodWrapperType', 'MethodDescriptorType', 'GenericAlias'), ('_idfunc',), <code object _idfunc at 0x000002406943AEB0, file "typing.py", line 39>, ('Annotated', 'Any', 'Callable', 'ClassVar', 'Concatenate', 'Final', 'ForwardRef', 'Generic', 'Literal', 'Optional', 'ParamSpec', 'Protocol', 'Tuple', 'Type', 'TypeVar', 'TypeVarTuple', 'Union', 'AbstractSet', 'ByteString', 'Container', 'ContextManager', 'Hashable', 'ItemsView', 'Iterable', 'Iterator', 'KeysView', 'Mapping', 'MappingView', 'MutableMapping', 'MutableSequence', 'MutableSet', 'Sequence', 'Sized', 'ValuesView', 'Awaitable', 'AsyncIterator', 'AsyncIterable', 'Coroutine', 'Collection', 'AsyncGenerator', 'AsyncContextManager', 'Reversible', 'SupportsAbs', 'SupportsBytes', 'SupportsComplex', 'SupportsFloat', 'SupportsIndex', 'SupportsInt', 'SupportsRound', 'ChainMap', 'Counter', 'Deque', 'Dict', 'DefaultDict', 'List', 'OrderedDict', 'Set', 'FrozenSet', 'NamedTuple', 'TypedDict', 'Generator', 'BinaryIO', 'IO', 'Match', 'Pattern', 'TextIO', 'AnyStr', 'assert_type', 'assert_never', 'cast', 'clear_overloads', 'dataclass_transform', 'final', 'get_args', 'get_origin', 'get_overloads', 'get_type_hints', 'is_typeddict', 'LiteralString', 'Never', 'NewType', 'no_type_check', 'no_type_check_decorator', 'NoReturn', 'NotRequired', 'overload', 'ParamSpecArgs', 'ParamSpecKwargs', 'Required', 'reveal_type', 'runtime_checkable', 'Self', 'Text', 'TYPE_CHECKING', 'TypeAlias', 'TypeGuard', 'Unpack'), False, ('allow_special_forms',), <code object _type_convert at 0x00000240693D2630, file "typing.py", line 159>, True, <code object _type_check at 0x0000024068C08FC0, file "typing.py", line 168>, <code object _is_param_expr at 0x000002406941A310, file "typing.py", line 201>, <code object _should_unflatten_callable_args at 0x00000240693AA0B0, file "typing.py", line 206>, <code object _type_repr at 0x0000024069365D40, file "typing.py", line 226>, <code object _collect_parameters at 0x0000024068C5ABD0, file "typing.py", line 247>, <code object _check_generic at 0x00000240691C02F0, file "typing.py", line 277>, <code object _unpack_args at 0x00000240691C0DF0, file "typing.py", line 289>, <code object _deduplicate at 0x000002406934F7E0, file "typing.py", line 299>, <code object _remove_dups_flatten at 0x000002406934F480, file "typing.py", line 313>, <code object _flatten_literal_params at 0x000002406921FB20, file "typing.py", line 329>, ('typed',), <code object _tp_cache at 0x000002406945CF30, file "typing.py", line 343>, <code object _eval_type at 0x0000024068E410A0, file "typing.py", line 366>, <code object _Final at 0x00000240694665D0, file "typing.py", line 400>, '_Final', <code object _Immutable at 0x0000024069467C90, file "typing.py", line 409>, '_Immutable', <code object _NotIterable at 0x0000024069465450, file "typing.py", line 421>, '_NotIterable', <code object _SpecialForm at 0x000002406941B3F0, file "typing.py", line 441>, '_SpecialForm', ('_root',), <code object _LiteralSpecialForm at 0x0000024069494440, file "typing.py", line 484>, '_LiteralSpecialForm', <code object _AnyMeta at 0x0000024069465990, file "typing.py", line 491>, '_AnyMeta', <code object Any at 0x0000024069465290, file "typing.py", line 503>, 'Any', ('metaclass',), <code object NoReturn at 0x0000024069467BB0, file "typing.py", line 521>, <code object Never at 0x0000024069467130, file "typing.py", line 542>, <code object Self at 0x0000024069465ED0, file "typing.py", line 567>, <code object LiteralString at 0x0000024069466B10, file "typing.py", line 587>, <code object ClassVar at 0x000002406944ADE0, file "typing.py", line 614>, <code object Final at 0x000002406944B330, file "typing.py", line 636>, <code object Union at 0x0000024068DB4610, file "typing.py", line 658>, <code object Optional at 0x000002406941B750, file "typing.py", line 702>, <code object Literal at 0x00000240691F5A30, file "typing.py", line 708>, <code object TypeAlias at 0x00000240694666B0, file "typing.py", line 743>, <code object Concatenate at 0x0000024069365B50, file "typing.py", line 760>, <code object TypeGuard at 0x000002406944BCC0, file "typing.py", line 787>, <code object ForwardRef at 0x00000240693EAE30, file "typing.py", line 837>, 'ForwardRef', 'x', 'return', <code object _is_unpacked_typevartuple at 0x000002406944B550, file "typing.py", line 921>, <code object _is_typevar_like at 0x000002406944A010, file "typing.py", line 926>, <code object _PickleUsingNameMixin at 0x0000024069495B00, file "typing.py", line 930>, '_PickleUsingNameMixin', <code object _BoundVarianceMixin at 0x000002406945DF20, file "typing.py", line 937>, '_BoundVarianceMixin', <code object TypeVar at 0x000002406945D4D0, file "typing.py", line 974>, 'TypeVar', <code object TypeVarTuple at 0x000002406945F5A0, file "typing.py", line 1042>, 'TypeVarTuple', <code object ParamSpecArgs at 0x0000024069466790, file "typing.py", line 1121>, 'ParamSpecArgs', <code object ParamSpecKwargs at 0x0000024069467E50, file "typing.py", line 1145>, 'ParamSpecKwargs', <code object ParamSpec at 0x0000024069419C50, file "typing.py", line 1169>, 'ParamSpec', <code object _is_dunder at 0x000002406944B990, file "typing.py", line 1245>, <code object _BaseGenericAlias at 0x0000024069449F00, file "typing.py", line 1248>, '_BaseGenericAlias', <code object _GenericAlias at 0x00000240693AA830, file "typing.py", line 1327>, '_GenericAlias', <code object _SpecialGenericAlias at 0x00000240694196B0, file "typing.py", line 1552>, '_SpecialGenericAlias', <code object _CallableGenericAlias at 0x0000024069CF08F0, file "typing.py", line 1595>, '_CallableGenericAlias', <code object _CallableType at 0x000002406945E790, file "typing.py", line 1612>, '_CallableType', <code object _TupleType at 0x0000024069CF09D0, file "typing.py", line 1646>, '_TupleType', <code object _UnionGenericAlias at 0x0000024069CDC430, file "typing.py", line 1660>, '_UnionGenericAlias', <code object _value_and_type_iter at 0x0000024069CF0B90, file "typing.py", line 1694>, <code object _LiteralGenericAlias at 0x0000024069CF0C70, file "typing.py", line 1698>, '_LiteralGenericAlias', <code object _ConcatenateGenericAlias at 0x0000024069CF0D50, file "typing.py", line 1709>, '_ConcatenateGenericAlias', <code object Unpack at 0x000002406944BDD0, file "typing.py", line 1718>, <code object _UnpackGenericAlias at 0x000002406944A340, file "typing.py", line 1753>, '_UnpackGenericAlias', <code object Generic at 0x0000024069CDC730, file "typing.py", line 1781>, 'Generic', <code object _TypingEllipsis at 0x0000024069496E80, file "typing.py", line 1889>, '_TypingEllipsis', ('__parameters__', '__orig_bases__', '__orig_class__', '_is_protocol', '_is_runtime_protocol', '__final__'), ('__abstractmethods__', '__annotations__', '__dict__', '__doc__', '__init__', '__module__', '__new__', '__slots__', '__subclasshook__', '__weakref__', '__class_getitem__'), '_MutableMapping__marker', <code object _get_protocol_attrs at 0x0000024068DB4190, file "typing.py", line 1904>, <code object _is_callable_members_only at 0x000002406944A670, file "typing.py", line 1921>, <code object _no_init_or_replace_init at 0x0000024069366310, file "typing.py", line 1926>, 1, '__main__', <code object _caller at 0x000002406922D530, file "typing.py", line 1955>, 3, <code object _allow_reckless_class_checks at 0x0000024069CF0FF0, file "typing.py", line 1962>, ('Callable', 'Awaitable', 'Iterable', 'Iterator', 'AsyncIterable', 'Hashable', 'Sized', 'Container', 'Collection', 'Reversible'), 'AbstractContextManager', 'AbstractAsyncContextManager', ('collections.abc', 'contextlib'), <code object _ProtocolMeta at 0x0000024069CF10D0, file "typing.py", line 1980>, '_ProtocolMeta', <code object Protocol at 0x0000024069CF4990, file "typing.py", line 2008>, 'Protocol', <code object _AnnotatedAlias at 0x0000024069CE4030, file "typing.py", line 2110>, '_AnnotatedAlias', <code object Annotated at 0x0000024069CF4C60, file "typing.py", line 2159>, 'Annotated', <code object runtime_checkable at 0x00000240693D36D0, file "typing.py", line 2230>, <code object cast at 0x0000024069CC81B0, file "typing.py", line 2256>, <code object assert_type at 0x0000024069CC8270, file "typing.py", line 2267>, <code object get_type_hints at 0x000002406956AE70, file "typing.py", line 2288>, <code object _strip_annotations at 0x0000024068C25940, file "typing.py", line 2387>, <code object get_origin at 0x0000024069498AB0, file "typing.py", line 2412>, <code object get_args at 0x0000024069CD8830, file "typing.py", line 2441>, <code object is_typeddict at 0x0000024069CF52F0, file "typing.py", line 2466>, 100, 'arg', <code object assert_never at 0x000002406922D7D0, file "typing.py", line 2484>, <code object no_type_check at 0x0000024068DC5910, file "typing.py", line 2509>, <code object no_type_check_decorator at 0x0000024069CDC930, file "typing.py", line 2545>, <code object _overload_dummy at 0x0000024069CF1530, file "typing.py", line 2560>, <code object overload at 0x000002406949DB80, file "typing.py", line 2573>, <code object get_overloads at 0x000002406942D930, file "typing.py", line 2614>, <code object clear_overloads at 0x0000024069CF55C0, file "typing.py", line 2626>, <code object final at 0x0000024069CDCB30, file "typing.py", line 2631>, 'T', 'KT', 'VT', 'T_co', ('covariant',), 'V_co', 'VT_co', 'T_contra', ('contravariant',), 'CT_co', ('covariant', 'bound'), 'AnyStr', 2, 'Deprecated alias to collections.abc.Callable.\n\n    Callable[[int], str] signifies a function that takes a single\n    parameter of type int and returns a str.\n\n    The subscription syntax must always be used with exactly two\n    values: the argument list and the return type.\n    The argument list must be a list of types, a ParamSpec,\n    Concatenate or ellipsis. The return type must be a single type.\n\n    There is no syntax to indicate optional or keyword arguments;\n    such function types are rarely used as callback types.\n    ', 'AbstractSet', ('name',), -1, 'Tuple', ('inst', 'name'), 'Deprecated alias to builtins.tuple.\n\n    Tuple[X, Y] is the cross-product type of X and Y.\n\n    Example: Tuple[T1, T2] is a tuple of two elements corresponding\n    to type variables T1 and T2.  Tuple[int, float, str] is a tuple\n    of an int, a float and a string.\n\n    To specify a variable-length tuple of homogeneous type, use Tuple[T, ...].\n    ', 'List', 'Deque', 'Set', 'FrozenSet', 'ContextManager', 'AsyncContextManager', 'Dict', 'DefaultDict', 'Type', "Deprecated alias to builtins.type.\n\n    builtins.type or typing.Type can be used to annotate class objects.\n    For example, suppose we have the following classes::\n\n        class User: ...  # Abstract base for User classes\n        class BasicUser(User): ...\n        class ProUser(User): ...\n        class TeamUser(User): ...\n\n    And a function that takes a class argument that's a subclass of\n    User and returns an instance of the corresponding class::\n\n        U = TypeVar('U', bound=User)\n        def new_user(user_class: Type[U]) -> U:\n            user = user_class()\n            # (Here we could write the user object to a database)\n            return user\n\n        joe = new_user(BasicUser)\n\n    At this point the type checker knows that joe has type BasicUser.\n    ", <code object SupportsInt at 0x0000024069CF56B0, file "typing.py", line 2778>, 'SupportsInt', <code object SupportsFloat at 0x0000024069CF57A0, file "typing.py", line 2789>, 'SupportsFloat', <code object SupportsComplex at 0x0000024069CF5890, file "typing.py", line 2800>, 'SupportsComplex', <code object SupportsBytes at 0x0000024069CF5980, file "typing.py", line 2811>, 'SupportsBytes', <code object SupportsIndex at 0x0000024069CF5A70, file "typing.py", line 2822>, 'SupportsIndex', <code object SupportsAbs at 0x0000024069CF5B60, file "typing.py", line 2833>, 'SupportsAbs', <code object SupportsRound at 0x0000024069CF5C50, file "typing.py", line 2844>, 'SupportsRound', (), <code object _make_nmtuple at 0x000002406922C570, file "typing.py", line 2855>, frozenset({'_source', '_replace', '__new__', '_fields', '_field_defaults', '_asdict', '__init__', '__slots__', '__getnewargs__', '_make'}), frozenset({'__annotations__', '__name__', '__module__'}), <code object NamedTupleMeta at 0x0000024069495E40, file "typing.py", line 2873>, 'NamedTupleMeta', <code object NamedTuple at 0x000002406922D3E0, file "typing.py", line 2909>, 'NamedTuple', <code object _namedtuple_mro_entries at 0x0000024069CF18B0, file "typing.py", line 2938>, <code object _TypedDictMeta at 0x0000024069CF1A70, file "typing.py", line 2945>, '_TypedDictMeta', ('total',), <code object TypedDict at 0x00000240691F6590, file "typing.py", line 3015>, 'TypedDict', <code object <lambda> at 0x00000240694970F0, file "typing.py", line 3085>, <code object Required at 0x0000024069CE4250, file "typing.py", line 3088>, <code object NotRequired at 0x0000024069CE4360, file "typing.py", line 3112>, <code object NewType at 0x0000024069CDD230, file "typing.py", line 3131>, 'NewType', <code object IO at 0x0000024068DD4960, file "typing.py", line 3201>, 'IO', <code object BinaryIO at 0x000002406941A670, file "typing.py", line 3300>, 'BinaryIO', <code object TextIO at 0x00000240691DB860, file "typing.py", line 3314>, 'TextIO', <code object _DeprecatedType at 0x0000024069CF2090, file "typing.py", line 3349>, '_DeprecatedType', <code object io at 0x0000024069CF2170, file "typing.py", line 3362>, 'io', '.io', <code object re at 0x0000024069CF2250, file "typing.py", line 3377>, 're', '.re', 'obj', <code object reveal_type at 0x000002406941B870, file "typing.py", line 3389>, ('eq_default', 'order_default', 'kw_only_default', 'field_specifiers'), 'eq_default', 'order_default', 'kw_only_default', 'field_specifiers', Ellipsis, 'kwargs', <code object dataclass_transform at 0x0000024069CF2410, file "typing.py", line 3408>, (None,), (True, None), (1, '__main__'), (3,), (None, None, False), ((),))
+
+## co_names:
+('__doc__', 'abc', 'abstractmethod', 'ABCMeta', 'collections', 'defaultdict', 'collections.abc', 'contextlib', 'functools', 'operator', 're', 'stdlib_re', 'sys', 'types', 'warnings', 'WrapperDescriptorType', 'MethodWrapperType', 'MethodDescriptorType', 'GenericAlias', '_typing', '_idfunc', 'ImportError', '__all__', '_type_convert', '_type_check', '_is_param_expr', '_should_unflatten_callable_args', '_type_repr', '_collect_parameters', '_check_generic', '_unpack_args', '_deduplicate', '_remove_dups_flatten', '_flatten_literal_params', '_cleanups', '_tp_cache', 'frozenset', '_eval_type', '_Final', '_Immutable', '_NotIterable', '_SpecialForm', '_LiteralSpecialForm', 'type', '_AnyMeta', 'Any', 'NoReturn', 'Never', 'Self', 'LiteralString', 'ClassVar', 'Final', 'Union', 'Optional', 'Literal', 'TypeAlias', 'Concatenate', 'TypeGuard', 'ForwardRef', 'bool', '_is_unpacked_typevartuple', '_is_typevar_like', '_PickleUsingNameMixin', '_BoundVarianceMixin', 'TypeVar', 'TypeVarTuple', 'ParamSpecArgs', 'ParamSpecKwargs', 'ParamSpec', '_is_dunder', '_BaseGenericAlias', '_GenericAlias', '_SpecialGenericAlias', '_CallableGenericAlias', '_CallableType', '_TupleType', '_UnionGenericAlias', '_value_and_type_iter', '_LiteralGenericAlias', '_ConcatenateGenericAlias', 'Unpack', '_UnpackGenericAlias', 'Generic', '_TypingEllipsis', '_TYPING_INTERNALS', '_SPECIAL_NAMES', 'EXCLUDED_ATTRIBUTES', '_get_protocol_attrs', '_is_callable_members_only', '_no_init_or_replace_init', '_caller', '_allow_reckless_class_checks', '_PROTO_ALLOWLIST', '_ProtocolMeta', 'Protocol', '_AnnotatedAlias', 'Annotated', 'runtime_checkable', 'cast', 'assert_type', 'FunctionType', 'BuiltinFunctionType', 'MethodType', 'ModuleType', '_allowed_types', 'get_type_hints', '_strip_annotations', 'get_origin', 'get_args', 'is_typeddict', '_ASSERT_NEVER_REPR_MAX_LENGTH', 'assert_never', 'no_type_check', 'no_type_check_decorator', '_overload_dummy', 'partial', 'dict', '_overload_registry', 'overload', 'get_overloads', 'clear_overloads', 'final', 'T', 'KT', 'VT', 'T_co', 'V_co', 'VT_co', 'T_contra', 'CT_co', 'bytes', 'str', 'AnyStr', '_alias', 'Hashable', 'Awaitable', 'Coroutine', 'AsyncIterable', 'AsyncIterator', 'Iterable', 'Iterator', 'Reversible', 'Sized', 'Container', 'Collection', 'Callable', 'Set', 'AbstractSet', 'MutableSet', 'Mapping', 'MutableMapping', 'Sequence', 'MutableSequence', 'ByteString', 'tuple', 'Tuple', 'list', 'List', 'deque', 'Deque', 'set', 'FrozenSet', 'MappingView', 'KeysView', 'ItemsView', 'ValuesView', 'AbstractContextManager', 'ContextManager', 'AbstractAsyncContextManager', 'AsyncContextManager', 'Dict', 'DefaultDict', 'OrderedDict', 'Counter', 'ChainMap', 'Generator', 'AsyncGenerator', 'Type', 'SupportsInt', 'SupportsFloat', 'SupportsComplex', 'SupportsBytes', 'SupportsIndex', 'SupportsAbs', 'SupportsRound', '_make_nmtuple', '_prohibited', '_special', 'NamedTupleMeta', 'NamedTuple', '__new__', '_NamedTuple', '_namedtuple_mro_entries', '__mro_entries__', '_TypedDictMeta', 'TypedDict', '_TypedDict', 'Required', 'NotRequired', 'NewType', 'Text', 'TYPE_CHECKING', 'IO', 'BinaryIO', 'TextIO', '_DeprecatedType', 'io', '__name__', 'modules', 'Pattern', 'Match', 'reveal_type', 'dataclass_transform')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '\nThe typing module: Support for gradual typing as defined by PEP 484 and subsequent PEPs.\n\nAmong other things, the module includes the following:\n* Generic, Protocol, and internal machinery to support generic aliases.\n  All subscripted types like X[int], Union[int, str] are generic aliases.\n* Various "special forms" that have unique meanings in type annotations:\n  NoReturn, Never, ClassVar, Self, Concatenate, Unpack, and others.\n* Classes whose instances can be type arguments to generic classes and functions:\n  TypeVar, ParamSpec, TypeVarTuple.\n* Public helper functions: get_type_hints, overload, cast, final, and others.\n* Several protocols to support duck-typing:\n  SupportsFloat, SupportsIndex, SupportsAbs, and others.\n* Special types: NewType, NamedTuple, TypedDict.\n* Deprecated wrapper submodules for re and io related types.\n* Deprecated aliases for builtin types and collections.abc ABCs.\n\nAny name not present in __all__ is an implementation detail\nthat may be changed without notice. Use at your own risk!\n'
+   4: STORE_NAME           __doc__
+   6: LOAD_CONST           0
+   8: LOAD_CONST           ('abstractmethod', 'ABCMeta')
+  10: IMPORT_NAME          abc
+  12: IMPORT_FROM          abstractmethod
+  14: STORE_NAME           abstractmethod
+  16: IMPORT_FROM          ABCMeta
+  18: STORE_NAME           ABCMeta
+  20: POP_TOP              
+  22: LOAD_CONST           0
+  24: LOAD_CONST           None
+  26: IMPORT_NAME          collections
+  28: STORE_NAME           collections
+  30: LOAD_CONST           0
+  32: LOAD_CONST           ('defaultdict',)
+  34: IMPORT_NAME          collections
+  36: IMPORT_FROM          defaultdict
+  38: STORE_NAME           defaultdict
+  40: POP_TOP              
+  42: LOAD_CONST           0
+  44: LOAD_CONST           None
+  46: IMPORT_NAME          collections.abc
+  48: STORE_NAME           collections
+  50: LOAD_CONST           0
+  52: LOAD_CONST           None
+  54: IMPORT_NAME          contextlib
+  56: STORE_NAME           contextlib
+  58: LOAD_CONST           0
+  60: LOAD_CONST           None
+  62: IMPORT_NAME          functools
+  64: STORE_NAME           functools
+  66: LOAD_CONST           0
+  68: LOAD_CONST           None
+  70: IMPORT_NAME          operator
+  72: STORE_NAME           operator
+  74: LOAD_CONST           0
+  76: LOAD_CONST           None
+  78: IMPORT_NAME          re
+  80: STORE_NAME           stdlib_re
+  82: LOAD_CONST           0
+  84: LOAD_CONST           None
+  86: IMPORT_NAME          sys
+  88: STORE_NAME           sys
+  90: LOAD_CONST           0
+  92: LOAD_CONST           None
+  94: IMPORT_NAME          types
+  96: STORE_NAME           types
+  98: LOAD_CONST           0
+ 100: LOAD_CONST           None
+ 102: IMPORT_NAME          warnings
+ 104: STORE_NAME           warnings
+ 106: LOAD_CONST           0
+ 108: LOAD_CONST           ('WrapperDescriptorType', 'MethodWrapperType', 'MethodDescriptorType', 'GenericAlias')
+ 110: IMPORT_NAME          types
+ 112: IMPORT_FROM          WrapperDescriptorType
+ 114: STORE_NAME           WrapperDescriptorType
+ 116: IMPORT_FROM          MethodWrapperType
+ 118: STORE_NAME           MethodWrapperType
+ 120: IMPORT_FROM          MethodDescriptorType
+ 122: STORE_NAME           MethodDescriptorType
+ 124: IMPORT_FROM          GenericAlias
+ 126: STORE_NAME           GenericAlias
+ 128: POP_TOP              
+ 130: NOP                  
+ 132: LOAD_CONST           0
+ 134: LOAD_CONST           ('_idfunc',)
+ 136: IMPORT_NAME          _typing
+ 138: IMPORT_FROM          _idfunc
+ 140: STORE_NAME           _idfunc
+ 142: POP_TOP              
+ 144: JUMP_FORWARD         to 174
+ 146: PUSH_EXC_INFO        
+ 148: LOAD_NAME            ImportError
+ 150: CHECK_EXC_MATCH      
+ 152: POP_JUMP_FORWARD_IF_FALSE to 166
+ 154: POP_TOP              
+ 156: LOAD_CONST           <code object _idfunc at 0x000002406943AEB0, file "typing.py", line 39>
+ 158: MAKE_FUNCTION        
+ 160: STORE_NAME           _idfunc
+ 162: POP_EXCEPT           
+ 164: JUMP_FORWARD         to 174
+ 166: RERAISE              
+ 168: COPY                 
+ 170: POP_EXCEPT           
+ 172: RERAISE              
+ 174: BUILD_LIST           
+ 176: LOAD_CONST           ('Annotated', 'Any', 'Callable', 'ClassVar', 'Concatenate', 'Final', 'ForwardRef', 'Generic', 'Literal', 'Optional', 'ParamSpec', 'Protocol', 'Tuple', 'Type', 'TypeVar', 'TypeVarTuple', 'Union', 'AbstractSet', 'ByteString', 'Container', 'ContextManager', 'Hashable', 'ItemsView', 'Iterable', 'Iterator', 'KeysView', 'Mapping', 'MappingView', 'MutableMapping', 'MutableSequence', 'MutableSet', 'Sequence', 'Sized', 'ValuesView', 'Awaitable', 'AsyncIterator', 'AsyncIterable', 'Coroutine', 'Collection', 'AsyncGenerator', 'AsyncContextManager', 'Reversible', 'SupportsAbs', 'SupportsBytes', 'SupportsComplex', 'SupportsFloat', 'SupportsIndex', 'SupportsInt', 'SupportsRound', 'ChainMap', 'Counter', 'Deque', 'Dict', 'DefaultDict', 'List', 'OrderedDict', 'Set', 'FrozenSet', 'NamedTuple', 'TypedDict', 'Generator', 'BinaryIO', 'IO', 'Match', 'Pattern', 'TextIO', 'AnyStr', 'assert_type', 'assert_never', 'cast', 'clear_overloads', 'dataclass_transform', 'final', 'get_args', 'get_origin', 'get_overloads', 'get_type_hints', 'is_typeddict', 'LiteralString', 'Never', 'NewType', 'no_type_check', 'no_type_check_decorator', 'NoReturn', 'NotRequired', 'overload', 'ParamSpecArgs', 'ParamSpecKwargs', 'Required', 'reveal_type', 'runtime_checkable', 'Self', 'Text', 'TYPE_CHECKING', 'TypeAlias', 'TypeGuard', 'Unpack')
+ 178: LIST_EXTEND          
+ 180: STORE_NAME           __all__
+ 182: LOAD_CONST           (None,)
+ 184: LOAD_CONST           False
+ 186: LOAD_CONST           ('allow_special_forms',)
+ 188: BUILD_CONST_KEY_MAP  
+ 190: LOAD_CONST           <code object _type_convert at 0x00000240693D2630, file "typing.py", line 159>
+ 192: MAKE_FUNCTION        defaults, kwdefaults
+ 194: STORE_NAME           _type_convert
+ 196: LOAD_CONST           (True, None)
+ 198: LOAD_CONST           False
+ 200: LOAD_CONST           ('allow_special_forms',)
+ 202: BUILD_CONST_KEY_MAP  
+ 204: LOAD_CONST           <code object _type_check at 0x0000024068C08FC0, file "typing.py", line 168>
+ 206: MAKE_FUNCTION        defaults, kwdefaults
+ 208: STORE_NAME           _type_check
+ 210: LOAD_CONST           <code object _is_param_expr at 0x000002406941A310, file "typing.py", line 201>
+ 212: MAKE_FUNCTION        
+ 214: STORE_NAME           _is_param_expr
+ 216: LOAD_CONST           <code object _should_unflatten_callable_args at 0x00000240693AA0B0, file "typing.py", line 206>
+ 218: MAKE_FUNCTION        
+ 220: STORE_NAME           _should_unflatten_callable_args
+ 222: LOAD_CONST           <code object _type_repr at 0x0000024069365D40, file "typing.py", line 226>
+ 224: MAKE_FUNCTION        
+ 226: STORE_NAME           _type_repr
+ 228: LOAD_CONST           <code object _collect_parameters at 0x0000024068C5ABD0, file "typing.py", line 247>
+ 230: MAKE_FUNCTION        
+ 232: STORE_NAME           _collect_parameters
+ 234: LOAD_CONST           <code object _check_generic at 0x00000240691C02F0, file "typing.py", line 277>
+ 236: MAKE_FUNCTION        
+ 238: STORE_NAME           _check_generic
+ 240: LOAD_CONST           <code object _unpack_args at 0x00000240691C0DF0, file "typing.py", line 289>
+ 242: MAKE_FUNCTION        
+ 244: STORE_NAME           _unpack_args
+ 246: LOAD_CONST           <code object _deduplicate at 0x000002406934F7E0, file "typing.py", line 299>
+ 248: MAKE_FUNCTION        
+ 250: STORE_NAME           _deduplicate
+ 252: LOAD_CONST           <code object _remove_dups_flatten at 0x000002406934F480, file "typing.py", line 313>
+ 254: MAKE_FUNCTION        
+ 256: STORE_NAME           _remove_dups_flatten
+ 258: LOAD_CONST           <code object _flatten_literal_params at 0x000002406921FB20, file "typing.py", line 329>
+ 260: MAKE_FUNCTION        
+ 262: STORE_NAME           _flatten_literal_params
+ 264: BUILD_LIST           
+ 266: STORE_NAME           _cleanups
+ 268: LOAD_CONST           (None,)
+ 270: LOAD_CONST           False
+ 272: LOAD_CONST           ('typed',)
+ 274: BUILD_CONST_KEY_MAP  
+ 276: LOAD_CONST           <code object _tp_cache at 0x000002406945CF30, file "typing.py", line 343>
+ 278: MAKE_FUNCTION        defaults, kwdefaults
+ 280: STORE_NAME           _tp_cache
+ 282: PUSH_NULL            
+ 284: LOAD_NAME            frozenset
+ 286: PRECALL              
+ 290: CALL                 
+ 300: BUILD_TUPLE          
+ 302: LOAD_CONST           <code object _eval_type at 0x0000024068E410A0, file "typing.py", line 366>
+ 304: MAKE_FUNCTION        defaults
+ 306: STORE_NAME           _eval_type
+ 308: PUSH_NULL            
+ 310: LOAD_BUILD_CLASS     
+ 312: LOAD_CONST           <code object _Final at 0x00000240694665D0, file "typing.py", line 400>
+ 314: MAKE_FUNCTION        
+ 316: LOAD_CONST           '_Final'
+ 318: PRECALL              
+ 322: CALL                 
+ 332: STORE_NAME           _Final
+ 334: PUSH_NULL            
+ 336: LOAD_BUILD_CLASS     
+ 338: LOAD_CONST           <code object _Immutable at 0x0000024069467C90, file "typing.py", line 409>
+ 340: MAKE_FUNCTION        
+ 342: LOAD_CONST           '_Immutable'
+ 344: PRECALL              
+ 348: CALL                 
+ 358: STORE_NAME           _Immutable
+ 360: PUSH_NULL            
+ 362: LOAD_BUILD_CLASS     
+ 364: LOAD_CONST           <code object _NotIterable at 0x0000024069465450, file "typing.py", line 421>
+ 366: MAKE_FUNCTION        
+ 368: LOAD_CONST           '_NotIterable'
+ 370: PRECALL              
+ 374: CALL                 
+ 384: STORE_NAME           _NotIterable
+ 386: PUSH_NULL            
+ 388: LOAD_BUILD_CLASS     
+ 390: LOAD_CONST           <code object _SpecialForm at 0x000002406941B3F0, file "typing.py", line 441>
+ 392: MAKE_FUNCTION        
+ 394: LOAD_CONST           '_SpecialForm'
+ 396: LOAD_NAME            _Final
+ 398: LOAD_NAME            _NotIterable
+ 400: LOAD_CONST           True
+ 402: KW_NAMES             
+ 404: PRECALL              
+ 408: CALL                 
+ 418: STORE_NAME           _SpecialForm
+ 420: PUSH_NULL            
+ 422: LOAD_BUILD_CLASS     
+ 424: LOAD_CONST           <code object _LiteralSpecialForm at 0x0000024069494440, file "typing.py", line 484>
+ 426: MAKE_FUNCTION        
+ 428: LOAD_CONST           '_LiteralSpecialForm'
+ 430: LOAD_NAME            _SpecialForm
+ 432: LOAD_CONST           True
+ 434: KW_NAMES             
+ 436: PRECALL              
+ 440: CALL                 
+ 450: STORE_NAME           _LiteralSpecialForm
+ 452: PUSH_NULL            
+ 454: LOAD_BUILD_CLASS     
+ 456: LOAD_CONST           <code object _AnyMeta at 0x0000024069465990, file "typing.py", line 491>
+ 458: MAKE_FUNCTION        
+ 460: LOAD_CONST           '_AnyMeta'
+ 462: LOAD_NAME            type
+ 464: PRECALL              
+ 468: CALL                 
+ 478: STORE_NAME           _AnyMeta
+ 480: PUSH_NULL            
+ 482: LOAD_BUILD_CLASS     
+ 484: LOAD_CONST           <code object Any at 0x0000024069465290, file "typing.py", line 503>
+ 486: MAKE_FUNCTION        
+ 488: LOAD_CONST           'Any'
+ 490: LOAD_NAME            _AnyMeta
+ 492: KW_NAMES             
+ 494: PRECALL              
+ 498: CALL                 
+ 508: STORE_NAME           Any
+ 510: LOAD_NAME            _SpecialForm
+ 512: LOAD_CONST           <code object NoReturn at 0x0000024069467BB0, file "typing.py", line 521>
+ 514: MAKE_FUNCTION        
+ 516: PRECALL              
+ 520: CALL                 
+ 530: STORE_NAME           NoReturn
+ 532: LOAD_NAME            _SpecialForm
+ 534: LOAD_CONST           <code object Never at 0x0000024069467130, file "typing.py", line 542>
+ 536: MAKE_FUNCTION        
+ 538: PRECALL              
+ 542: CALL                 
+ 552: STORE_NAME           Never
+ 554: LOAD_NAME            _SpecialForm
+ 556: LOAD_CONST           <code object Self at 0x0000024069465ED0, file "typing.py", line 567>
+ 558: MAKE_FUNCTION        
+ 560: PRECALL              
+ 564: CALL                 
+ 574: STORE_NAME           Self
+ 576: LOAD_NAME            _SpecialForm
+ 578: LOAD_CONST           <code object LiteralString at 0x0000024069466B10, file "typing.py", line 587>
+ 580: MAKE_FUNCTION        
+ 582: PRECALL              
+ 586: CALL                 
+ 596: STORE_NAME           LiteralString
+ 598: LOAD_NAME            _SpecialForm
+ 600: LOAD_CONST           <code object ClassVar at 0x000002406944ADE0, file "typing.py", line 614>
+ 602: MAKE_FUNCTION        
+ 604: PRECALL              
+ 608: CALL                 
+ 618: STORE_NAME           ClassVar
+ 620: LOAD_NAME            _SpecialForm
+ 622: LOAD_CONST           <code object Final at 0x000002406944B330, file "typing.py", line 636>
+ 624: MAKE_FUNCTION        
+ 626: PRECALL              
+ 630: CALL                 
+ 640: STORE_NAME           Final
+ 642: LOAD_NAME            _SpecialForm
+ 644: LOAD_CONST           <code object Union at 0x0000024068DB4610, file "typing.py", line 658>
+ 646: MAKE_FUNCTION        
+ 648: PRECALL              
+ 652: CALL                 
+ 662: STORE_NAME           Union
+ 664: LOAD_NAME            _SpecialForm
+ 666: LOAD_CONST           <code object Optional at 0x000002406941B750, file "typing.py", line 702>
+ 668: MAKE_FUNCTION        
+ 670: PRECALL              
+ 674: CALL                 
+ 684: STORE_NAME           Optional
+ 686: LOAD_NAME            _LiteralSpecialForm
+ 688: PUSH_NULL            
+ 690: LOAD_NAME            _tp_cache
+ 692: LOAD_CONST           True
+ 694: KW_NAMES             
+ 696: PRECALL              
+ 700: CALL                 
+ 710: LOAD_CONST           <code object Literal at 0x00000240691F5A30, file "typing.py", line 708>
+ 712: MAKE_FUNCTION        
+ 714: PRECALL              
+ 718: CALL                 
+ 728: PRECALL              
+ 732: CALL                 
+ 742: STORE_NAME           Literal
+ 744: LOAD_NAME            _SpecialForm
+ 746: LOAD_CONST           <code object TypeAlias at 0x00000240694666B0, file "typing.py", line 743>
+ 748: MAKE_FUNCTION        
+ 750: PRECALL              
+ 754: CALL                 
+ 764: STORE_NAME           TypeAlias
+ 766: LOAD_NAME            _SpecialForm
+ 768: LOAD_CONST           <code object Concatenate at 0x0000024069365B50, file "typing.py", line 760>
+ 770: MAKE_FUNCTION        
+ 772: PRECALL              
+ 776: CALL                 
+ 786: STORE_NAME           Concatenate
+ 788: LOAD_NAME            _SpecialForm
+ 790: LOAD_CONST           <code object TypeGuard at 0x000002406944BCC0, file "typing.py", line 787>
+ 792: MAKE_FUNCTION        
+ 794: PRECALL              
+ 798: CALL                 
+ 808: STORE_NAME           TypeGuard
+ 810: PUSH_NULL            
+ 812: LOAD_BUILD_CLASS     
+ 814: LOAD_CONST           <code object ForwardRef at 0x00000240693EAE30, file "typing.py", line 837>
+ 816: MAKE_FUNCTION        
+ 818: LOAD_CONST           'ForwardRef'
+ 820: LOAD_NAME            _Final
+ 822: LOAD_CONST           True
+ 824: KW_NAMES             
+ 826: PRECALL              
+ 830: CALL                 
+ 840: STORE_NAME           ForwardRef
+ 842: LOAD_CONST           'x'
+ 844: LOAD_NAME            Any
+ 846: LOAD_CONST           'return'
+ 848: LOAD_NAME            bool
+ 850: BUILD_TUPLE          
+ 852: LOAD_CONST           <code object _is_unpacked_typevartuple at 0x000002406944B550, file "typing.py", line 921>
+ 854: MAKE_FUNCTION        annotations
+ 856: STORE_NAME           _is_unpacked_typevartuple
+ 858: LOAD_CONST           'x'
+ 860: LOAD_NAME            Any
+ 862: LOAD_CONST           'return'
+ 864: LOAD_NAME            bool
+ 866: BUILD_TUPLE          
+ 868: LOAD_CONST           <code object _is_typevar_like at 0x000002406944A010, file "typing.py", line 926>
+ 870: MAKE_FUNCTION        annotations
+ 872: STORE_NAME           _is_typevar_like
+ 874: PUSH_NULL            
+ 876: LOAD_BUILD_CLASS     
+ 878: LOAD_CONST           <code object _PickleUsingNameMixin at 0x0000024069495B00, file "typing.py", line 930>
+ 880: MAKE_FUNCTION        
+ 882: LOAD_CONST           '_PickleUsingNameMixin'
+ 884: PRECALL              
+ 888: CALL                 
+ 898: STORE_NAME           _PickleUsingNameMixin
+ 900: PUSH_NULL            
+ 902: LOAD_BUILD_CLASS     
+ 904: LOAD_CONST           <code object _BoundVarianceMixin at 0x000002406945DF20, file "typing.py", line 937>
+ 906: MAKE_FUNCTION        
+ 908: LOAD_CONST           '_BoundVarianceMixin'
+ 910: PRECALL              
+ 914: CALL                 
+ 924: STORE_NAME           _BoundVarianceMixin
+ 926: PUSH_NULL            
+ 928: LOAD_BUILD_CLASS     
+ 930: LOAD_CONST           <code object TypeVar at 0x000002406945D4D0, file "typing.py", line 974>
+ 932: MAKE_FUNCTION        
+ 934: LOAD_CONST           'TypeVar'
+ 936: LOAD_NAME            _Final
+ 938: LOAD_NAME            _Immutable
+ 940: LOAD_NAME            _BoundVarianceMixin
+ 942: LOAD_NAME            _PickleUsingNameMixin
+ 944: LOAD_CONST           True
+ 946: KW_NAMES             
+ 948: PRECALL              
+ 952: CALL                 
+ 962: STORE_NAME           TypeVar
+ 964: PUSH_NULL            
+ 966: LOAD_BUILD_CLASS     
+ 968: LOAD_CONST           <code object TypeVarTuple at 0x000002406945F5A0, file "typing.py", line 1042>
+ 970: MAKE_FUNCTION        
+ 972: LOAD_CONST           'TypeVarTuple'
+ 974: LOAD_NAME            _Final
+ 976: LOAD_NAME            _Immutable
+ 978: LOAD_NAME            _PickleUsingNameMixin
+ 980: LOAD_CONST           True
+ 982: KW_NAMES             
+ 984: PRECALL              
+ 988: CALL                 
+ 998: STORE_NAME           TypeVarTuple
+1000: PUSH_NULL            
+1002: LOAD_BUILD_CLASS     
+1004: LOAD_CONST           <code object ParamSpecArgs at 0x0000024069466790, file "typing.py", line 1121>
+1006: MAKE_FUNCTION        
+1008: LOAD_CONST           'ParamSpecArgs'
+1010: LOAD_NAME            _Final
+1012: LOAD_NAME            _Immutable
+1014: LOAD_CONST           True
+1016: KW_NAMES             
+1018: PRECALL              
+1022: CALL                 
+1032: STORE_NAME           ParamSpecArgs
+1034: PUSH_NULL            
+1036: LOAD_BUILD_CLASS     
+1038: LOAD_CONST           <code object ParamSpecKwargs at 0x0000024069467E50, file "typing.py", line 1145>
+1040: MAKE_FUNCTION        
+1042: LOAD_CONST           'ParamSpecKwargs'
+1044: LOAD_NAME            _Final
+1046: LOAD_NAME            _Immutable
+1048: LOAD_CONST           True
+1050: KW_NAMES             
+1052: PRECALL              
+1056: CALL                 
+1066: STORE_NAME           ParamSpecKwargs
+1068: PUSH_NULL            
+1070: LOAD_BUILD_CLASS     
+1072: LOAD_CONST           <code object ParamSpec at 0x0000024069419C50, file "typing.py", line 1169>
+1074: MAKE_FUNCTION        
+1076: LOAD_CONST           'ParamSpec'
+1078: LOAD_NAME            _Final
+1080: LOAD_NAME            _Immutable
+1082: LOAD_NAME            _BoundVarianceMixin
+1084: LOAD_NAME            _PickleUsingNameMixin
+1086: LOAD_CONST           True
+1088: KW_NAMES             
+1090: PRECALL              
+1094: CALL                 
+1104: STORE_NAME           ParamSpec
+1106: LOAD_CONST           <code object _is_dunder at 0x000002406944B990, file "typing.py", line 1245>
+1108: MAKE_FUNCTION        
+1110: STORE_NAME           _is_dunder
+1112: PUSH_NULL            
+1114: LOAD_BUILD_CLASS     
+1116: LOAD_CONST           <code object _BaseGenericAlias at 0x0000024069449F00, file "typing.py", line 1248>
+1118: MAKE_FUNCTION        
+1120: LOAD_CONST           '_BaseGenericAlias'
+1122: LOAD_NAME            _Final
+1124: LOAD_CONST           True
+1126: KW_NAMES             
+1128: PRECALL              
+1132: CALL                 
+1142: STORE_NAME           _BaseGenericAlias
+1144: PUSH_NULL            
+1146: LOAD_BUILD_CLASS     
+1148: LOAD_CONST           <code object _GenericAlias at 0x00000240693AA830, file "typing.py", line 1327>
+1150: MAKE_FUNCTION        
+1152: LOAD_CONST           '_GenericAlias'
+1154: LOAD_NAME            _BaseGenericAlias
+1156: LOAD_CONST           True
+1158: KW_NAMES             
+1160: PRECALL              
+1164: CALL                 
+1174: STORE_NAME           _GenericAlias
+1176: PUSH_NULL            
+1178: LOAD_BUILD_CLASS     
+1180: LOAD_CONST           <code object _SpecialGenericAlias at 0x00000240694196B0, file "typing.py", line 1552>
+1182: MAKE_FUNCTION        
+1184: LOAD_CONST           '_SpecialGenericAlias'
+1186: LOAD_NAME            _NotIterable
+1188: LOAD_NAME            _BaseGenericAlias
+1190: LOAD_CONST           True
+1192: KW_NAMES             
+1194: PRECALL              
+1198: CALL                 
+1208: STORE_NAME           _SpecialGenericAlias
+1210: PUSH_NULL            
+1212: LOAD_BUILD_CLASS     
+1214: LOAD_CONST           <code object _CallableGenericAlias at 0x0000024069CF08F0, file "typing.py", line 1595>
+1216: MAKE_FUNCTION        
+1218: LOAD_CONST           '_CallableGenericAlias'
+1220: LOAD_NAME            _NotIterable
+1222: LOAD_NAME            _GenericAlias
+1224: LOAD_CONST           True
+1226: KW_NAMES             
+1228: PRECALL              
+1232: CALL                 
+1242: STORE_NAME           _CallableGenericAlias
+1244: PUSH_NULL            
+1246: LOAD_BUILD_CLASS     
+1248: LOAD_CONST           <code object _CallableType at 0x000002406945E790, file "typing.py", line 1612>
+1250: MAKE_FUNCTION        
+1252: LOAD_CONST           '_CallableType'
+1254: LOAD_NAME            _SpecialGenericAlias
+1256: LOAD_CONST           True
+1258: KW_NAMES             
+1260: PRECALL              
+1264: CALL                 
+1274: STORE_NAME           _CallableType
+1276: PUSH_NULL            
+1278: LOAD_BUILD_CLASS     
+1280: LOAD_CONST           <code object _TupleType at 0x0000024069CF09D0, file "typing.py", line 1646>
+1282: MAKE_FUNCTION        
+1284: LOAD_CONST           '_TupleType'
+1286: LOAD_NAME            _SpecialGenericAlias
+1288: LOAD_CONST           True
+1290: KW_NAMES             
+1292: PRECALL              
+1296: CALL                 
+1306: STORE_NAME           _TupleType
+1308: PUSH_NULL            
+1310: LOAD_BUILD_CLASS     
+1312: LOAD_CONST           <code object _UnionGenericAlias at 0x0000024069CDC430, file "typing.py", line 1660>
+1314: MAKE_FUNCTION        
+1316: LOAD_CONST           '_UnionGenericAlias'
+1318: LOAD_NAME            _NotIterable
+1320: LOAD_NAME            _GenericAlias
+1322: LOAD_CONST           True
+1324: KW_NAMES             
+1326: PRECALL              
+1330: CALL                 
+1340: STORE_NAME           _UnionGenericAlias
+1342: LOAD_CONST           <code object _value_and_type_iter at 0x0000024069CF0B90, file "typing.py", line 1694>
+1344: MAKE_FUNCTION        
+1346: STORE_NAME           _value_and_type_iter
+1348: PUSH_NULL            
+1350: LOAD_BUILD_CLASS     
+1352: LOAD_CONST           <code object _LiteralGenericAlias at 0x0000024069CF0C70, file "typing.py", line 1698>
+1354: MAKE_FUNCTION        
+1356: LOAD_CONST           '_LiteralGenericAlias'
+1358: LOAD_NAME            _GenericAlias
+1360: LOAD_CONST           True
+1362: KW_NAMES             
+1364: PRECALL              
+1368: CALL                 
+1378: STORE_NAME           _LiteralGenericAlias
+1380: PUSH_NULL            
+1382: LOAD_BUILD_CLASS     
+1384: LOAD_CONST           <code object _ConcatenateGenericAlias at 0x0000024069CF0D50, file "typing.py", line 1709>
+1386: MAKE_FUNCTION        
+1388: LOAD_CONST           '_ConcatenateGenericAlias'
+1390: LOAD_NAME            _GenericAlias
+1392: LOAD_CONST           True
+1394: KW_NAMES             
+1396: PRECALL              
+1400: CALL                 
+1410: STORE_NAME           _ConcatenateGenericAlias
+1412: LOAD_NAME            _SpecialForm
+1414: LOAD_CONST           <code object Unpack at 0x000002406944BDD0, file "typing.py", line 1718>
+1416: MAKE_FUNCTION        
+1418: PRECALL              
+1422: CALL                 
+1432: STORE_NAME           Unpack
+1434: PUSH_NULL            
+1436: LOAD_BUILD_CLASS     
+1438: LOAD_CONST           <code object _UnpackGenericAlias at 0x000002406944A340, file "typing.py", line 1753>
+1440: MAKE_FUNCTION        
+1442: LOAD_CONST           '_UnpackGenericAlias'
+1444: LOAD_NAME            _GenericAlias
+1446: LOAD_CONST           True
+1448: KW_NAMES             
+1450: PRECALL              
+1454: CALL                 
+1464: STORE_NAME           _UnpackGenericAlias
+1466: PUSH_NULL            
+1468: LOAD_BUILD_CLASS     
+1470: LOAD_CONST           <code object Generic at 0x0000024069CDC730, file "typing.py", line 1781>
+1472: MAKE_FUNCTION        
+1474: LOAD_CONST           'Generic'
+1476: PRECALL              
+1480: CALL                 
+1490: STORE_NAME           Generic
+1492: PUSH_NULL            
+1494: LOAD_BUILD_CLASS     
+1496: LOAD_CONST           <code object _TypingEllipsis at 0x0000024069496E80, file "typing.py", line 1889>
+1498: MAKE_FUNCTION        
+1500: LOAD_CONST           '_TypingEllipsis'
+1502: PRECALL              
+1506: CALL                 
+1516: STORE_NAME           _TypingEllipsis
+1518: BUILD_LIST           
+1520: LOAD_CONST           ('__parameters__', '__orig_bases__', '__orig_class__', '_is_protocol', '_is_runtime_protocol', '__final__')
+1522: LIST_EXTEND          
+1524: STORE_NAME           _TYPING_INTERNALS
+1526: BUILD_LIST           
+1528: LOAD_CONST           ('__abstractmethods__', '__annotations__', '__dict__', '__doc__', '__init__', '__module__', '__new__', '__slots__', '__subclasshook__', '__weakref__', '__class_getitem__')
+1530: LIST_EXTEND          
+1532: STORE_NAME           _SPECIAL_NAMES
+1534: LOAD_NAME            _TYPING_INTERNALS
+1536: LOAD_NAME            _SPECIAL_NAMES
+1538: BINARY_OP            +
+1542: LOAD_CONST           '_MutableMapping__marker'
+1544: BUILD_LIST           
+1546: BINARY_OP            +
+1550: STORE_NAME           EXCLUDED_ATTRIBUTES
+1552: LOAD_CONST           <code object _get_protocol_attrs at 0x0000024068DB4190, file "typing.py", line 1904>
+1554: MAKE_FUNCTION        
+1556: STORE_NAME           _get_protocol_attrs
+1558: LOAD_CONST           <code object _is_callable_members_only at 0x000002406944A670, file "typing.py", line 1921>
+1560: MAKE_FUNCTION        
+1562: STORE_NAME           _is_callable_members_only
+1564: LOAD_CONST           <code object _no_init_or_replace_init at 0x0000024069366310, file "typing.py", line 1926>
+1566: MAKE_FUNCTION        
+1568: STORE_NAME           _no_init_or_replace_init
+1570: LOAD_CONST           (1, '__main__')
+1572: LOAD_CONST           <code object _caller at 0x000002406922D530, file "typing.py", line 1955>
+1574: MAKE_FUNCTION        defaults
+1576: STORE_NAME           _caller
+1578: LOAD_CONST           (3,)
+1580: LOAD_CONST           <code object _allow_reckless_class_checks at 0x0000024069CF0FF0, file "typing.py", line 1962>
+1582: MAKE_FUNCTION        defaults
+1584: STORE_NAME           _allow_reckless_class_checks
+1586: BUILD_LIST           
+1588: LOAD_CONST           ('Callable', 'Awaitable', 'Iterable', 'Iterator', 'AsyncIterable', 'Hashable', 'Sized', 'Container', 'Collection', 'Reversible')
+1590: LIST_EXTEND          
+1592: LOAD_CONST           'AbstractContextManager'
+1594: LOAD_CONST           'AbstractAsyncContextManager'
+1596: BUILD_LIST           
+1598: LOAD_CONST           ('collections.abc', 'contextlib')
+1600: BUILD_CONST_KEY_MAP  
+1602: STORE_NAME           _PROTO_ALLOWLIST
+1604: PUSH_NULL            
+1606: LOAD_BUILD_CLASS     
+1608: LOAD_CONST           <code object _ProtocolMeta at 0x0000024069CF10D0, file "typing.py", line 1980>
+1610: MAKE_FUNCTION        
+1612: LOAD_CONST           '_ProtocolMeta'
+1614: LOAD_NAME            ABCMeta
+1616: PRECALL              
+1620: CALL                 
+1630: STORE_NAME           _ProtocolMeta
+1632: PUSH_NULL            
+1634: LOAD_BUILD_CLASS     
+1636: LOAD_CONST           <code object Protocol at 0x0000024069CF4990, file "typing.py", line 2008>
+1638: MAKE_FUNCTION        
+1640: LOAD_CONST           'Protocol'
+1642: LOAD_NAME            Generic
+1644: LOAD_NAME            _ProtocolMeta
+1646: KW_NAMES             
+1648: PRECALL              
+1652: CALL                 
+1662: STORE_NAME           Protocol
+1664: PUSH_NULL            
+1666: LOAD_BUILD_CLASS     
+1668: LOAD_CONST           <code object _AnnotatedAlias at 0x0000024069CE4030, file "typing.py", line 2110>
+1670: MAKE_FUNCTION        
+1672: LOAD_CONST           '_AnnotatedAlias'
+1674: LOAD_NAME            _NotIterable
+1676: LOAD_NAME            _GenericAlias
+1678: LOAD_CONST           True
+1680: KW_NAMES             
+1682: PRECALL              
+1686: CALL                 
+1696: STORE_NAME           _AnnotatedAlias
+1698: PUSH_NULL            
+1700: LOAD_BUILD_CLASS     
+1702: LOAD_CONST           <code object Annotated at 0x0000024069CF4C60, file "typing.py", line 2159>
+1704: MAKE_FUNCTION        
+1706: LOAD_CONST           'Annotated'
+1708: PRECALL              
+1712: CALL                 
+1722: STORE_NAME           Annotated
+1724: LOAD_CONST           <code object runtime_checkable at 0x00000240693D36D0, file "typing.py", line 2230>
+1726: MAKE_FUNCTION        
+1728: STORE_NAME           runtime_checkable
+1730: LOAD_CONST           <code object cast at 0x0000024069CC81B0, file "typing.py", line 2256>
+1732: MAKE_FUNCTION        
+1734: STORE_NAME           cast
+1736: LOAD_CONST           <code object assert_type at 0x0000024069CC8270, file "typing.py", line 2267>
+1738: MAKE_FUNCTION        
+1740: STORE_NAME           assert_type
+1742: LOAD_NAME            types
+1744: LOAD_ATTR            FunctionType
+1754: LOAD_NAME            types
+1756: LOAD_ATTR            BuiltinFunctionType
+1766: LOAD_NAME            types
+1768: LOAD_ATTR            MethodType
+1778: LOAD_NAME            types
+1780: LOAD_ATTR            ModuleType
+1790: LOAD_NAME            WrapperDescriptorType
+1792: LOAD_NAME            MethodWrapperType
+1794: LOAD_NAME            MethodDescriptorType
+1796: BUILD_TUPLE          
+1798: STORE_NAME           _allowed_types
+1800: LOAD_CONST           (None, None, False)
+1802: LOAD_CONST           <code object get_type_hints at 0x000002406956AE70, file "typing.py", line 2288>
+1804: MAKE_FUNCTION        defaults
+1806: STORE_NAME           get_type_hints
+1808: LOAD_CONST           <code object _strip_annotations at 0x0000024068C25940, file "typing.py", line 2387>
+1810: MAKE_FUNCTION        
+1812: STORE_NAME           _strip_annotations
+1814: LOAD_CONST           <code object get_origin at 0x0000024069498AB0, file "typing.py", line 2412>
+1816: MAKE_FUNCTION        
+1818: STORE_NAME           get_origin
+1820: LOAD_CONST           <code object get_args at 0x0000024069CD8830, file "typing.py", line 2441>
+1822: MAKE_FUNCTION        
+1824: STORE_NAME           get_args
+1826: LOAD_CONST           <code object is_typeddict at 0x0000024069CF52F0, file "typing.py", line 2466>
+1828: MAKE_FUNCTION        
+1830: STORE_NAME           is_typeddict
+1832: LOAD_CONST           100
+1834: STORE_NAME           _ASSERT_NEVER_REPR_MAX_LENGTH
+1836: LOAD_CONST           'arg'
+1838: LOAD_NAME            Never
+1840: LOAD_CONST           'return'
+1842: LOAD_NAME            Never
+1844: BUILD_TUPLE          
+1846: LOAD_CONST           <code object assert_never at 0x000002406922D7D0, file "typing.py", line 2484>
+1848: MAKE_FUNCTION        annotations
+1850: STORE_NAME           assert_never
+1852: LOAD_CONST           <code object no_type_check at 0x0000024068DC5910, file "typing.py", line 2509>
+1854: MAKE_FUNCTION        
+1856: STORE_NAME           no_type_check
+1858: LOAD_CONST           <code object no_type_check_decorator at 0x0000024069CDC930, file "typing.py", line 2545>
+1860: MAKE_FUNCTION        
+1862: STORE_NAME           no_type_check_decorator
+1864: LOAD_CONST           <code object _overload_dummy at 0x0000024069CF1530, file "typing.py", line 2560>
+1866: MAKE_FUNCTION        
+1868: STORE_NAME           _overload_dummy
+1870: PUSH_NULL            
+1872: LOAD_NAME            defaultdict
+1874: PUSH_NULL            
+1876: LOAD_NAME            functools
+1878: LOAD_ATTR            partial
+1888: LOAD_NAME            defaultdict
+1890: LOAD_NAME            dict
+1892: PRECALL              
+1896: CALL                 
+1906: PRECALL              
+1910: CALL                 
+1920: STORE_NAME           _overload_registry
+1922: LOAD_CONST           <code object overload at 0x000002406949DB80, file "typing.py", line 2573>
+1924: MAKE_FUNCTION        
+1926: STORE_NAME           overload
+1928: LOAD_CONST           <code object get_overloads at 0x000002406942D930, file "typing.py", line 2614>
+1930: MAKE_FUNCTION        
+1932: STORE_NAME           get_overloads
+1934: LOAD_CONST           <code object clear_overloads at 0x0000024069CF55C0, file "typing.py", line 2626>
+1936: MAKE_FUNCTION        
+1938: STORE_NAME           clear_overloads
+1940: LOAD_CONST           <code object final at 0x0000024069CDCB30, file "typing.py", line 2631>
+1942: MAKE_FUNCTION        
+1944: STORE_NAME           final
+1946: PUSH_NULL            
+1948: LOAD_NAME            TypeVar
+1950: LOAD_CONST           'T'
+1952: PRECALL              
+1956: CALL                 
+1966: STORE_NAME           T
+1968: PUSH_NULL            
+1970: LOAD_NAME            TypeVar
+1972: LOAD_CONST           'KT'
+1974: PRECALL              
+1978: CALL                 
+1988: STORE_NAME           KT
+1990: PUSH_NULL            
+1992: LOAD_NAME            TypeVar
+1994: LOAD_CONST           'VT'
+1996: PRECALL              
+2000: CALL                 
+2010: STORE_NAME           VT
+2012: PUSH_NULL            
+2014: LOAD_NAME            TypeVar
+2016: LOAD_CONST           'T_co'
+2018: LOAD_CONST           True
+2020: KW_NAMES             
+2022: PRECALL              
+2026: CALL                 
+2036: STORE_NAME           T_co
+2038: PUSH_NULL            
+2040: LOAD_NAME            TypeVar
+2042: LOAD_CONST           'V_co'
+2044: LOAD_CONST           True
+2046: KW_NAMES             
+2048: PRECALL              
+2052: CALL                 
+2062: STORE_NAME           V_co
+2064: PUSH_NULL            
+2066: LOAD_NAME            TypeVar
+2068: LOAD_CONST           'VT_co'
+2070: LOAD_CONST           True
+2072: KW_NAMES             
+2074: PRECALL              
+2078: CALL                 
+2088: STORE_NAME           VT_co
+2090: PUSH_NULL            
+2092: LOAD_NAME            TypeVar
+2094: LOAD_CONST           'T_contra'
+2096: LOAD_CONST           True
+2098: KW_NAMES             
+2100: PRECALL              
+2104: CALL                 
+2114: STORE_NAME           T_contra
+2116: PUSH_NULL            
+2118: LOAD_NAME            TypeVar
+2120: LOAD_CONST           'CT_co'
+2122: LOAD_CONST           True
+2124: LOAD_NAME            type
+2126: KW_NAMES             
+2128: PRECALL              
+2132: CALL                 
+2142: STORE_NAME           CT_co
+2144: PUSH_NULL            
+2146: LOAD_NAME            TypeVar
+2148: LOAD_CONST           'AnyStr'
+2150: LOAD_NAME            bytes
+2152: LOAD_NAME            str
+2154: PRECALL              
+2158: CALL                 
+2168: STORE_NAME           AnyStr
+2170: LOAD_NAME            _SpecialGenericAlias
+2172: STORE_NAME           _alias
+2174: PUSH_NULL            
+2176: LOAD_NAME            _alias
+2178: LOAD_NAME            collections
+2180: LOAD_ATTR            abc
+2190: LOAD_ATTR            Hashable
+2200: LOAD_CONST           0
+2202: PRECALL              
+2206: CALL                 
+2216: STORE_NAME           Hashable
+2218: PUSH_NULL            
+2220: LOAD_NAME            _alias
+2222: LOAD_NAME            collections
+2224: LOAD_ATTR            abc
+2234: LOAD_ATTR            Awaitable
+2244: LOAD_CONST           1
+2246: PRECALL              
+2250: CALL                 
+2260: STORE_NAME           Awaitable
+2262: PUSH_NULL            
+2264: LOAD_NAME            _alias
+2266: LOAD_NAME            collections
+2268: LOAD_ATTR            abc
+2278: LOAD_ATTR            Coroutine
+2288: LOAD_CONST           3
+2290: PRECALL              
+2294: CALL                 
+2304: STORE_NAME           Coroutine
+2306: PUSH_NULL            
+2308: LOAD_NAME            _alias
+2310: LOAD_NAME            collections
+2312: LOAD_ATTR            abc
+2322: LOAD_ATTR            AsyncIterable
+2332: LOAD_CONST           1
+2334: PRECALL              
+2338: CALL                 
+2348: STORE_NAME           AsyncIterable
+2350: PUSH_NULL            
+2352: LOAD_NAME            _alias
+2354: LOAD_NAME            collections
+2356: LOAD_ATTR            abc
+2366: LOAD_ATTR            AsyncIterator
+2376: LOAD_CONST           1
+2378: PRECALL              
+2382: CALL                 
+2392: STORE_NAME           AsyncIterator
+2394: PUSH_NULL            
+2396: LOAD_NAME            _alias
+2398: LOAD_NAME            collections
+2400: LOAD_ATTR            abc
+2410: LOAD_ATTR            Iterable
+2420: LOAD_CONST           1
+2422: PRECALL              
+2426: CALL                 
+2436: STORE_NAME           Iterable
+2438: PUSH_NULL            
+2440: LOAD_NAME            _alias
+2442: LOAD_NAME            collections
+2444: LOAD_ATTR            abc
+2454: LOAD_ATTR            Iterator
+2464: LOAD_CONST           1
+2466: PRECALL              
+2470: CALL                 
+2480: STORE_NAME           Iterator
+2482: PUSH_NULL            
+2484: LOAD_NAME            _alias
+2486: LOAD_NAME            collections
+2488: LOAD_ATTR            abc
+2498: LOAD_ATTR            Reversible
+2508: LOAD_CONST           1
+2510: PRECALL              
+2514: CALL                 
+2524: STORE_NAME           Reversible
+2526: PUSH_NULL            
+2528: LOAD_NAME            _alias
+2530: LOAD_NAME            collections
+2532: LOAD_ATTR            abc
+2542: LOAD_ATTR            Sized
+2552: LOAD_CONST           0
+2554: PRECALL              
+2558: CALL                 
+2568: STORE_NAME           Sized
+2570: PUSH_NULL            
+2572: LOAD_NAME            _alias
+2574: LOAD_NAME            collections
+2576: LOAD_ATTR            abc
+2586: LOAD_ATTR            Container
+2596: LOAD_CONST           1
+2598: PRECALL              
+2602: CALL                 
+2612: STORE_NAME           Container
+2614: PUSH_NULL            
+2616: LOAD_NAME            _alias
+2618: LOAD_NAME            collections
+2620: LOAD_ATTR            abc
+2630: LOAD_ATTR            Collection
+2640: LOAD_CONST           1
+2642: PRECALL              
+2646: CALL                 
+2656: STORE_NAME           Collection
+2658: PUSH_NULL            
+2660: LOAD_NAME            _CallableType
+2662: LOAD_NAME            collections
+2664: LOAD_ATTR            abc
+2674: LOAD_ATTR            Callable
+2684: LOAD_CONST           2
+2686: PRECALL              
+2690: CALL                 
+2700: STORE_NAME           Callable
+2702: LOAD_CONST           'Deprecated alias to collections.abc.Callable.\n\n    Callable[[int], str] signifies a function that takes a single\n    parameter of type int and returns a str.\n\n    The subscription syntax must always be used with exactly two\n    values: the argument list and the return type.\n    The argument list must be a list of types, a ParamSpec,\n    Concatenate or ellipsis. The return type must be a single type.\n\n    There is no syntax to indicate optional or keyword arguments;\n    such function types are rarely used as callback types.\n    '
+2704: LOAD_NAME            Callable
+2706: STORE_ATTR           __doc__
+2716: PUSH_NULL            
+2718: LOAD_NAME            _alias
+2720: LOAD_NAME            collections
+2722: LOAD_ATTR            abc
+2732: LOAD_ATTR            Set
+2742: LOAD_CONST           1
+2744: LOAD_CONST           'AbstractSet'
+2746: KW_NAMES             
+2748: PRECALL              
+2752: CALL                 
+2762: STORE_NAME           AbstractSet
+2764: PUSH_NULL            
+2766: LOAD_NAME            _alias
+2768: LOAD_NAME            collections
+2770: LOAD_ATTR            abc
+2780: LOAD_ATTR            MutableSet
+2790: LOAD_CONST           1
+2792: PRECALL              
+2796: CALL                 
+2806: STORE_NAME           MutableSet
+2808: PUSH_NULL            
+2810: LOAD_NAME            _alias
+2812: LOAD_NAME            collections
+2814: LOAD_ATTR            abc
+2824: LOAD_ATTR            Mapping
+2834: LOAD_CONST           2
+2836: PRECALL              
+2840: CALL                 
+2850: STORE_NAME           Mapping
+2852: PUSH_NULL            
+2854: LOAD_NAME            _alias
+2856: LOAD_NAME            collections
+2858: LOAD_ATTR            abc
+2868: LOAD_ATTR            MutableMapping
+2878: LOAD_CONST           2
+2880: PRECALL              
+2884: CALL                 
+2894: STORE_NAME           MutableMapping
+2896: PUSH_NULL            
+2898: LOAD_NAME            _alias
+2900: LOAD_NAME            collections
+2902: LOAD_ATTR            abc
+2912: LOAD_ATTR            Sequence
+2922: LOAD_CONST           1
+2924: PRECALL              
+2928: CALL                 
+2938: STORE_NAME           Sequence
+2940: PUSH_NULL            
+2942: LOAD_NAME            _alias
+2944: LOAD_NAME            collections
+2946: LOAD_ATTR            abc
+2956: LOAD_ATTR            MutableSequence
+2966: LOAD_CONST           1
+2968: PRECALL              
+2972: CALL                 
+2982: STORE_NAME           MutableSequence
+2984: PUSH_NULL            
+2986: LOAD_NAME            _alias
+2988: LOAD_NAME            collections
+2990: LOAD_ATTR            abc
+3000: LOAD_ATTR            ByteString
+3010: LOAD_CONST           0
+3012: PRECALL              
+3016: CALL                 
+3026: STORE_NAME           ByteString
+3028: PUSH_NULL            
+3030: LOAD_NAME            _TupleType
+3032: LOAD_NAME            tuple
+3034: LOAD_CONST           -1
+3036: LOAD_CONST           False
+3038: LOAD_CONST           'Tuple'
+3040: KW_NAMES             
+3042: PRECALL              
+3046: CALL                 
+3056: STORE_NAME           Tuple
+3058: LOAD_CONST           'Deprecated alias to builtins.tuple.\n\n    Tuple[X, Y] is the cross-product type of X and Y.\n\n    Example: Tuple[T1, T2] is a tuple of two elements corresponding\n    to type variables T1 and T2.  Tuple[int, float, str] is a tuple\n    of an int, a float and a string.\n\n    To specify a variable-length tuple of homogeneous type, use Tuple[T, ...].\n    '
+3060: LOAD_NAME            Tuple
+3062: STORE_ATTR           __doc__
+3072: PUSH_NULL            
+3074: LOAD_NAME            _alias
+3076: LOAD_NAME            list
+3078: LOAD_CONST           1
+3080: LOAD_CONST           False
+3082: LOAD_CONST           'List'
+3084: KW_NAMES             
+3086: PRECALL              
+3090: CALL                 
+3100: STORE_NAME           List
+3102: PUSH_NULL            
+3104: LOAD_NAME            _alias
+3106: LOAD_NAME            collections
+3108: LOAD_ATTR            deque
+3118: LOAD_CONST           1
+3120: LOAD_CONST           'Deque'
+3122: KW_NAMES             
+3124: PRECALL              
+3128: CALL                 
+3138: STORE_NAME           Deque
+3140: PUSH_NULL            
+3142: LOAD_NAME            _alias
+3144: LOAD_NAME            set
+3146: LOAD_CONST           1
+3148: LOAD_CONST           False
+3150: LOAD_CONST           'Set'
+3152: KW_NAMES             
+3154: PRECALL              
+3158: CALL                 
+3168: STORE_NAME           Set
+3170: PUSH_NULL            
+3172: LOAD_NAME            _alias
+3174: LOAD_NAME            frozenset
+3176: LOAD_CONST           1
+3178: LOAD_CONST           False
+3180: LOAD_CONST           'FrozenSet'
+3182: KW_NAMES             
+3184: PRECALL              
+3188: CALL                 
+3198: STORE_NAME           FrozenSet
+3200: PUSH_NULL            
+3202: LOAD_NAME            _alias
+3204: LOAD_NAME            collections
+3206: LOAD_ATTR            abc
+3216: LOAD_ATTR            MappingView
+3226: LOAD_CONST           1
+3228: PRECALL              
+3232: CALL                 
+3242: STORE_NAME           MappingView
+3244: PUSH_NULL            
+3246: LOAD_NAME            _alias
+3248: LOAD_NAME            collections
+3250: LOAD_ATTR            abc
+3260: LOAD_ATTR            KeysView
+3270: LOAD_CONST           1
+3272: PRECALL              
+3276: CALL                 
+3286: STORE_NAME           KeysView
+3288: PUSH_NULL            
+3290: LOAD_NAME            _alias
+3292: LOAD_NAME            collections
+3294: LOAD_ATTR            abc
+3304: LOAD_ATTR            ItemsView
+3314: LOAD_CONST           2
+3316: PRECALL              
+3320: CALL                 
+3330: STORE_NAME           ItemsView
+3332: PUSH_NULL            
+3334: LOAD_NAME            _alias
+3336: LOAD_NAME            collections
+3338: LOAD_ATTR            abc
+3348: LOAD_ATTR            ValuesView
+3358: LOAD_CONST           1
+3360: PRECALL              
+3364: CALL                 
+3374: STORE_NAME           ValuesView
+3376: PUSH_NULL            
+3378: LOAD_NAME            _alias
+3380: LOAD_NAME            contextlib
+3382: LOAD_ATTR            AbstractContextManager
+3392: LOAD_CONST           1
+3394: LOAD_CONST           'ContextManager'
+3396: KW_NAMES             
+3398: PRECALL              
+3402: CALL                 
+3412: STORE_NAME           ContextManager
+3414: PUSH_NULL            
+3416: LOAD_NAME            _alias
+3418: LOAD_NAME            contextlib
+3420: LOAD_ATTR            AbstractAsyncContextManager
+3430: LOAD_CONST           1
+3432: LOAD_CONST           'AsyncContextManager'
+3434: KW_NAMES             
+3436: PRECALL              
+3440: CALL                 
+3450: STORE_NAME           AsyncContextManager
+3452: PUSH_NULL            
+3454: LOAD_NAME            _alias
+3456: LOAD_NAME            dict
+3458: LOAD_CONST           2
+3460: LOAD_CONST           False
+3462: LOAD_CONST           'Dict'
+3464: KW_NAMES             
+3466: PRECALL              
+3470: CALL                 
+3480: STORE_NAME           Dict
+3482: PUSH_NULL            
+3484: LOAD_NAME            _alias
+3486: LOAD_NAME            collections
+3488: LOAD_ATTR            defaultdict
+3498: LOAD_CONST           2
+3500: LOAD_CONST           'DefaultDict'
+3502: KW_NAMES             
+3504: PRECALL              
+3508: CALL                 
+3518: STORE_NAME           DefaultDict
+3520: PUSH_NULL            
+3522: LOAD_NAME            _alias
+3524: LOAD_NAME            collections
+3526: LOAD_ATTR            OrderedDict
+3536: LOAD_CONST           2
+3538: PRECALL              
+3542: CALL                 
+3552: STORE_NAME           OrderedDict
+3554: PUSH_NULL            
+3556: LOAD_NAME            _alias
+3558: LOAD_NAME            collections
+3560: LOAD_ATTR            Counter
+3570: LOAD_CONST           1
+3572: PRECALL              
+3576: CALL                 
+3586: STORE_NAME           Counter
+3588: PUSH_NULL            
+3590: LOAD_NAME            _alias
+3592: LOAD_NAME            collections
+3594: LOAD_ATTR            ChainMap
+3604: LOAD_CONST           2
+3606: PRECALL              
+3610: CALL                 
+3620: STORE_NAME           ChainMap
+3622: PUSH_NULL            
+3624: LOAD_NAME            _alias
+3626: LOAD_NAME            collections
+3628: LOAD_ATTR            abc
+3638: LOAD_ATTR            Generator
+3648: LOAD_CONST           3
+3650: PRECALL              
+3654: CALL                 
+3664: STORE_NAME           Generator
+3666: PUSH_NULL            
+3668: LOAD_NAME            _alias
+3670: LOAD_NAME            collections
+3672: LOAD_ATTR            abc
+3682: LOAD_ATTR            AsyncGenerator
+3692: LOAD_CONST           2
+3694: PRECALL              
+3698: CALL                 
+3708: STORE_NAME           AsyncGenerator
+3710: PUSH_NULL            
+3712: LOAD_NAME            _alias
+3714: LOAD_NAME            type
+3716: LOAD_CONST           1
+3718: LOAD_CONST           False
+3720: LOAD_CONST           'Type'
+3722: KW_NAMES             
+3724: PRECALL              
+3728: CALL                 
+3738: STORE_NAME           Type
+3740: LOAD_CONST           "Deprecated alias to builtins.type.\n\n    builtins.type or typing.Type can be used to annotate class objects.\n    For example, suppose we have the following classes::\n\n        class User: ...  # Abstract base for User classes\n        class BasicUser(User): ...\n        class ProUser(User): ...\n        class TeamUser(User): ...\n\n    And a function that takes a class argument that's a subclass of\n    User and returns an instance of the corresponding class::\n\n        U = TypeVar('U', bound=User)\n        def new_user(user_class: Type[U]) -> U:\n            user = user_class()\n            # (Here we could write the user object to a database)\n            return user\n\n        joe = new_user(BasicUser)\n\n    At this point the type checker knows that joe has type BasicUser.\n    "
+3742: LOAD_NAME            Type
+3744: STORE_ATTR           __doc__
+3754: LOAD_NAME            runtime_checkable
+3756: PUSH_NULL            
+3758: LOAD_BUILD_CLASS     
+3760: LOAD_CONST           <code object SupportsInt at 0x0000024069CF56B0, file "typing.py", line 2778>
+3762: MAKE_FUNCTION        
+3764: LOAD_CONST           'SupportsInt'
+3766: LOAD_NAME            Protocol
+3768: PRECALL              
+3772: CALL                 
+3782: PRECALL              
+3786: CALL                 
+3796: STORE_NAME           SupportsInt
+3798: LOAD_NAME            runtime_checkable
+3800: PUSH_NULL            
+3802: LOAD_BUILD_CLASS     
+3804: LOAD_CONST           <code object SupportsFloat at 0x0000024069CF57A0, file "typing.py", line 2789>
+3806: MAKE_FUNCTION        
+3808: LOAD_CONST           'SupportsFloat'
+3810: LOAD_NAME            Protocol
+3812: PRECALL              
+3816: CALL                 
+3826: PRECALL              
+3830: CALL                 
+3840: STORE_NAME           SupportsFloat
+3842: LOAD_NAME            runtime_checkable
+3844: PUSH_NULL            
+3846: LOAD_BUILD_CLASS     
+3848: LOAD_CONST           <code object SupportsComplex at 0x0000024069CF5890, file "typing.py", line 2800>
+3850: MAKE_FUNCTION        
+3852: LOAD_CONST           'SupportsComplex'
+3854: LOAD_NAME            Protocol
+3856: PRECALL              
+3860: CALL                 
+3870: PRECALL              
+3874: CALL                 
+3884: STORE_NAME           SupportsComplex
+3886: LOAD_NAME            runtime_checkable
+3888: PUSH_NULL            
+3890: LOAD_BUILD_CLASS     
+3892: LOAD_CONST           <code object SupportsBytes at 0x0000024069CF5980, file "typing.py", line 2811>
+3894: MAKE_FUNCTION        
+3896: LOAD_CONST           'SupportsBytes'
+3898: LOAD_NAME            Protocol
+3900: PRECALL              
+3904: CALL                 
+3914: PRECALL              
+3918: CALL                 
+3928: STORE_NAME           SupportsBytes
+3930: LOAD_NAME            runtime_checkable
+3932: PUSH_NULL            
+3934: LOAD_BUILD_CLASS     
+3936: LOAD_CONST           <code object SupportsIndex at 0x0000024069CF5A70, file "typing.py", line 2822>
+3938: MAKE_FUNCTION        
+3940: LOAD_CONST           'SupportsIndex'
+3942: LOAD_NAME            Protocol
+3944: PRECALL              
+3948: CALL                 
+3958: PRECALL              
+3962: CALL                 
+3972: STORE_NAME           SupportsIndex
+3974: LOAD_NAME            runtime_checkable
+3976: PUSH_NULL            
+3978: LOAD_BUILD_CLASS     
+3980: LOAD_CONST           <code object SupportsAbs at 0x0000024069CF5B60, file "typing.py", line 2833>
+3982: MAKE_FUNCTION        
+3984: LOAD_CONST           'SupportsAbs'
+3986: LOAD_NAME            Protocol
+3988: LOAD_NAME            T_co
+3990: BINARY_SUBSCR        
+4000: PRECALL              
+4004: CALL                 
+4014: PRECALL              
+4018: CALL                 
+4028: STORE_NAME           SupportsAbs
+4030: LOAD_NAME            runtime_checkable
+4032: PUSH_NULL            
+4034: LOAD_BUILD_CLASS     
+4036: LOAD_CONST           <code object SupportsRound at 0x0000024069CF5C50, file "typing.py", line 2844>
+4038: MAKE_FUNCTION        
+4040: LOAD_CONST           'SupportsRound'
+4042: LOAD_NAME            Protocol
+4044: LOAD_NAME            T_co
+4046: BINARY_SUBSCR        
+4056: PRECALL              
+4060: CALL                 
+4070: PRECALL              
+4074: CALL                 
+4084: STORE_NAME           SupportsRound
+4086: LOAD_CONST           ((),)
+4088: LOAD_CONST           <code object _make_nmtuple at 0x000002406922C570, file "typing.py", line 2855>
+4090: MAKE_FUNCTION        defaults
+4092: STORE_NAME           _make_nmtuple
+4094: PUSH_NULL            
+4096: LOAD_NAME            frozenset
+4098: BUILD_SET            
+4100: LOAD_CONST           frozenset({'_source', '_replace', '__new__', '_fields', '_field_defaults', '_asdict', '__init__', '__slots__', '__getnewargs__', '_make'})
+4102: SET_UPDATE           
+4104: PRECALL              
+4108: CALL                 
+4118: STORE_NAME           _prohibited
+4120: PUSH_NULL            
+4122: LOAD_NAME            frozenset
+4124: BUILD_SET            
+4126: LOAD_CONST           frozenset({'__annotations__', '__name__', '__module__'})
+4128: SET_UPDATE           
+4130: PRECALL              
+4134: CALL                 
+4144: STORE_NAME           _special
+4146: PUSH_NULL            
+4148: LOAD_BUILD_CLASS     
+4150: LOAD_CONST           <code object NamedTupleMeta at 0x0000024069495E40, file "typing.py", line 2873>
+4152: MAKE_FUNCTION        
+4154: LOAD_CONST           'NamedTupleMeta'
+4156: LOAD_NAME            type
+4158: PRECALL              
+4162: CALL                 
+4172: STORE_NAME           NamedTupleMeta
+4174: LOAD_CONST           (None,)
+4176: LOAD_CONST           <code object NamedTuple at 0x000002406922D3E0, file "typing.py", line 2909>
+4178: MAKE_FUNCTION        defaults
+4180: STORE_NAME           NamedTuple
+4182: LOAD_NAME            type
+4184: LOAD_METHOD          __new__
+4206: LOAD_NAME            NamedTupleMeta
+4208: LOAD_CONST           'NamedTuple'
+4210: LOAD_CONST           ()
+4212: BUILD_MAP            
+4214: PRECALL              
+4218: CALL                 
+4228: STORE_NAME           _NamedTuple
+4230: LOAD_CONST           <code object _namedtuple_mro_entries at 0x0000024069CF18B0, file "typing.py", line 2938>
+4232: MAKE_FUNCTION        
+4234: STORE_NAME           _namedtuple_mro_entries
+4236: LOAD_NAME            _namedtuple_mro_entries
+4238: LOAD_NAME            NamedTuple
+4240: STORE_ATTR           __mro_entries__
+4250: PUSH_NULL            
+4252: LOAD_BUILD_CLASS     
+4254: LOAD_CONST           <code object _TypedDictMeta at 0x0000024069CF1A70, file "typing.py", line 2945>
+4256: MAKE_FUNCTION        
+4258: LOAD_CONST           '_TypedDictMeta'
+4260: LOAD_NAME            type
+4262: PRECALL              
+4266: CALL                 
+4276: STORE_NAME           _TypedDictMeta
+4278: LOAD_CONST           (None,)
+4280: LOAD_CONST           True
+4282: LOAD_CONST           ('total',)
+4284: BUILD_CONST_KEY_MAP  
+4286: LOAD_CONST           <code object TypedDict at 0x00000240691F6590, file "typing.py", line 3015>
+4288: MAKE_FUNCTION        defaults, kwdefaults
+4290: STORE_NAME           TypedDict
+4292: LOAD_NAME            type
+4294: LOAD_METHOD          __new__
+4316: LOAD_NAME            _TypedDictMeta
+4318: LOAD_CONST           'TypedDict'
+4320: LOAD_CONST           ()
+4322: BUILD_MAP            
+4324: PRECALL              
+4328: CALL                 
+4338: STORE_NAME           _TypedDict
+4340: LOAD_CONST           <code object <lambda> at 0x00000240694970F0, file "typing.py", line 3085>
+4342: MAKE_FUNCTION        
+4344: LOAD_NAME            TypedDict
+4346: STORE_ATTR           __mro_entries__
+4356: LOAD_NAME            _SpecialForm
+4358: LOAD_CONST           <code object Required at 0x0000024069CE4250, file "typing.py", line 3088>
+4360: MAKE_FUNCTION        
+4362: PRECALL              
+4366: CALL                 
+4376: STORE_NAME           Required
+4378: LOAD_NAME            _SpecialForm
+4380: LOAD_CONST           <code object NotRequired at 0x0000024069CE4360, file "typing.py", line 3112>
+4382: MAKE_FUNCTION        
+4384: PRECALL              
+4388: CALL                 
+4398: STORE_NAME           NotRequired
+4400: PUSH_NULL            
+4402: LOAD_BUILD_CLASS     
+4404: LOAD_CONST           <code object NewType at 0x0000024069CDD230, file "typing.py", line 3131>
+4406: MAKE_FUNCTION        
+4408: LOAD_CONST           'NewType'
+4410: PRECALL              
+4414: CALL                 
+4424: STORE_NAME           NewType
+4426: LOAD_NAME            str
+4428: STORE_NAME           Text
+4430: LOAD_CONST           False
+4432: STORE_NAME           TYPE_CHECKING
+4434: PUSH_NULL            
+4436: LOAD_BUILD_CLASS     
+4438: LOAD_CONST           <code object IO at 0x0000024068DD4960, file "typing.py", line 3201>
+4440: MAKE_FUNCTION        
+4442: LOAD_CONST           'IO'
+4444: LOAD_NAME            Generic
+4446: LOAD_NAME            AnyStr
+4448: BINARY_SUBSCR        
+4458: PRECALL              
+4462: CALL                 
+4472: STORE_NAME           IO
+4474: PUSH_NULL            
+4476: LOAD_BUILD_CLASS     
+4478: LOAD_CONST           <code object BinaryIO at 0x000002406941A670, file "typing.py", line 3300>
+4480: MAKE_FUNCTION        
+4482: LOAD_CONST           'BinaryIO'
+4484: LOAD_NAME            IO
+4486: LOAD_NAME            bytes
+4488: BINARY_SUBSCR        
+4498: PRECALL              
+4502: CALL                 
+4512: STORE_NAME           BinaryIO
+4514: PUSH_NULL            
+4516: LOAD_BUILD_CLASS     
+4518: LOAD_CONST           <code object TextIO at 0x00000240691DB860, file "typing.py", line 3314>
+4520: MAKE_FUNCTION        
+4522: LOAD_CONST           'TextIO'
+4524: LOAD_NAME            IO
+4526: LOAD_NAME            str
+4528: BINARY_SUBSCR        
+4538: PRECALL              
+4542: CALL                 
+4552: STORE_NAME           TextIO
+4554: PUSH_NULL            
+4556: LOAD_BUILD_CLASS     
+4558: LOAD_CONST           <code object _DeprecatedType at 0x0000024069CF2090, file "typing.py", line 3349>
+4560: MAKE_FUNCTION        
+4562: LOAD_CONST           '_DeprecatedType'
+4564: LOAD_NAME            type
+4566: PRECALL              
+4570: CALL                 
+4580: STORE_NAME           _DeprecatedType
+4582: PUSH_NULL            
+4584: LOAD_BUILD_CLASS     
+4586: LOAD_CONST           <code object io at 0x0000024069CF2170, file "typing.py", line 3362>
+4588: MAKE_FUNCTION        
+4590: LOAD_CONST           'io'
+4592: LOAD_NAME            _DeprecatedType
+4594: KW_NAMES             
+4596: PRECALL              
+4600: CALL                 
+4610: STORE_NAME           io
+4612: LOAD_NAME            __name__
+4614: LOAD_CONST           '.io'
+4616: BINARY_OP            +
+4620: LOAD_NAME            io
+4622: STORE_ATTR           __name__
+4632: LOAD_NAME            io
+4634: LOAD_NAME            sys
+4636: LOAD_ATTR            modules
+4646: LOAD_NAME            io
+4648: LOAD_ATTR            __name__
+4658: STORE_SUBSCR         
+4662: PUSH_NULL            
+4664: LOAD_NAME            _alias
+4666: LOAD_NAME            stdlib_re
+4668: LOAD_ATTR            Pattern
+4678: LOAD_CONST           1
+4680: PRECALL              
+4684: CALL                 
+4694: STORE_NAME           Pattern
+4696: PUSH_NULL            
+4698: LOAD_NAME            _alias
+4700: LOAD_NAME            stdlib_re
+4702: LOAD_ATTR            Match
+4712: LOAD_CONST           1
+4714: PRECALL              
+4718: CALL                 
+4728: STORE_NAME           Match
+4730: PUSH_NULL            
+4732: LOAD_BUILD_CLASS     
+4734: LOAD_CONST           <code object re at 0x0000024069CF2250, file "typing.py", line 3377>
+4736: MAKE_FUNCTION        
+4738: LOAD_CONST           're'
+4740: LOAD_NAME            _DeprecatedType
+4742: KW_NAMES             
+4744: PRECALL              
+4748: CALL                 
+4758: STORE_NAME           re
+4760: LOAD_NAME            __name__
+4762: LOAD_CONST           '.re'
+4764: BINARY_OP            +
+4768: LOAD_NAME            re
+4770: STORE_ATTR           __name__
+4780: LOAD_NAME            re
+4782: LOAD_NAME            sys
+4784: LOAD_ATTR            modules
+4794: LOAD_NAME            re
+4796: LOAD_ATTR            __name__
+4806: STORE_SUBSCR         
+4810: LOAD_CONST           'obj'
+4812: LOAD_NAME            T
+4814: LOAD_CONST           'return'
+4816: LOAD_NAME            T
+4818: BUILD_TUPLE          
+4820: LOAD_CONST           <code object reveal_type at 0x000002406941B870, file "typing.py", line 3389>
+4822: MAKE_FUNCTION        annotations
+4824: STORE_NAME           reveal_type
+4826: LOAD_CONST           True
+4828: LOAD_CONST           False
+4830: LOAD_CONST           False
+4832: LOAD_CONST           ()
+4834: LOAD_CONST           ('eq_default', 'order_default', 'kw_only_default', 'field_specifiers')
+4836: BUILD_CONST_KEY_MAP  
+4838: LOAD_CONST           'eq_default'
+4840: LOAD_NAME            bool
+4842: LOAD_CONST           'order_default'
+4844: LOAD_NAME            bool
+4846: LOAD_CONST           'kw_only_default'
+4848: LOAD_NAME            bool
+4850: LOAD_CONST           'field_specifiers'
+4852: LOAD_NAME            tuple
+4854: LOAD_NAME            type
+4856: LOAD_NAME            Any
+4858: BINARY_SUBSCR        
+4868: LOAD_NAME            Callable
+4870: LOAD_CONST           Ellipsis
+4872: LOAD_NAME            Any
+4874: BUILD_TUPLE          
+4876: BINARY_SUBSCR        
+4886: BINARY_OP            |
+4890: LOAD_CONST           Ellipsis
+4892: BUILD_TUPLE          
+4894: BINARY_SUBSCR        
+4904: LOAD_CONST           'kwargs'
+4906: LOAD_NAME            Any
+4908: LOAD_CONST           'return'
+4910: LOAD_NAME            Callable
+4912: LOAD_NAME            T
+4914: BUILD_LIST           
+4916: LOAD_NAME            T
+4918: BUILD_TUPLE          
+4920: BINARY_SUBSCR        
+4930: BUILD_TUPLE          
+4932: LOAD_CONST           <code object dataclass_transform at 0x0000024069CF2410, file "typing.py", line 3408>
+4934: MAKE_FUNCTION        kwdefaults, annotations
+4936: STORE_NAME           dataclass_transform
+4938: LOAD_CONST           None
+4940: RETURN_VALUE         

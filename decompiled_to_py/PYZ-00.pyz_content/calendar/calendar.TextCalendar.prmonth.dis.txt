@@ -1,0 +1,28 @@
+# Disassembly for calendar.TextCalendar.prmonth
+# From module file: calendar
+
+## co_consts:
+("\n        Print a month's calendar.\n        ", '', ('end',), None)
+
+## co_names:
+('print', 'formatmonth')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + print
+  14: LOAD_FAST            self
+  16: LOAD_METHOD          formatmonth
+  38: LOAD_FAST            theyear
+  40: LOAD_FAST            themonth
+  42: LOAD_FAST            w
+  44: LOAD_FAST            l
+  46: PRECALL              
+  50: CALL                 
+  60: LOAD_CONST           ''
+  62: KW_NAMES             
+  64: PRECALL              
+  68: CALL                 
+  78: POP_TOP              
+  80: LOAD_CONST           None
+  82: RETURN_VALUE         

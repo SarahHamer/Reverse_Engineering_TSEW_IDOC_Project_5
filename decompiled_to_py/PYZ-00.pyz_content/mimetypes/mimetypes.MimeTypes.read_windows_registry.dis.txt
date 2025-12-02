@@ -1,0 +1,50 @@
+# Disassembly for mimetypes.MimeTypes.read_windows_registry
+# From module file: mimetypes
+
+## co_consts:
+('\n        Load the MIME types database from Windows registry.\n\n        If strict is true, information will be added to\n        list of standard types, else to the list of non-standard\n        types.\n        ', None, <code object <lambda> at 0x000002406945D7A0, file "mimetypes.py", line 249>)
+
+## co_names:
+('_mimetypes_read_windows_registry', '_winreg', 'add_type', '_read_windows_registry')
+
+## bytecode:
+
+   0: MAKE_CELL            self
+   2: RESUME               
+   4: LOAD_GLOBAL          _mimetypes_read_windows_registry
+  16: POP_JUMP_FORWARD_IF_TRUE to 36
+  18: LOAD_GLOBAL          _winreg
+  30: POP_JUMP_FORWARD_IF_TRUE to 36
+  32: LOAD_CONST           None
+  34: RETURN_VALUE         
+  36: LOAD_DEREF           self
+  38: LOAD_ATTR            add_type
+  48: STORE_FAST           add_type
+  50: LOAD_FAST            strict
+  52: POP_JUMP_FORWARD_IF_FALSE to 64
+  54: LOAD_CLOSURE         self
+  56: BUILD_TUPLE          
+  58: LOAD_CONST           <code object <lambda> at 0x000002406945D7A0, file "mimetypes.py", line 249>
+  60: MAKE_FUNCTION        closure
+  62: STORE_FAST           add_type
+  64: LOAD_GLOBAL          _mimetypes_read_windows_registry
+  76: POP_JUMP_FORWARD_IF_FALSE to 112
+  78: LOAD_GLOBAL          NULL + _mimetypes_read_windows_registry
+  90: LOAD_FAST            add_type
+  92: PRECALL              
+  96: CALL                 
+ 106: POP_TOP              
+ 108: LOAD_CONST           None
+ 110: RETURN_VALUE         
+ 112: LOAD_GLOBAL          _winreg
+ 124: POP_JUMP_FORWARD_IF_FALSE to 172
+ 126: LOAD_DEREF           self
+ 128: LOAD_METHOD          _read_windows_registry
+ 150: LOAD_FAST            add_type
+ 152: PRECALL              
+ 156: CALL                 
+ 166: POP_TOP              
+ 168: LOAD_CONST           None
+ 170: RETURN_VALUE         
+ 172: LOAD_CONST           None
+ 174: RETURN_VALUE         

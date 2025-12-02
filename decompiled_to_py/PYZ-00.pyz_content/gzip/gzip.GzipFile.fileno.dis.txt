@@ -1,0 +1,18 @@
+# Disassembly for gzip.GzipFile.fileno
+# From module file: gzip
+
+## co_consts:
+("Invoke the underlying file object's fileno() method.\n\n        This will raise AttributeError if the underlying file object\n        doesn't support fileno().\n        ",)
+
+## co_names:
+('fileobj', 'fileno')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            fileobj
+  14: LOAD_METHOD          fileno
+  36: PRECALL              
+  40: CALL                 
+  50: RETURN_VALUE         

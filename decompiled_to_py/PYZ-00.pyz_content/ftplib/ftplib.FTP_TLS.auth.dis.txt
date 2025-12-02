@@ -1,0 +1,69 @@
+# Disassembly for ftplib.FTP_TLS.auth
+# From module file: ftplib
+
+## co_consts:
+('Set up secure control connection by using TLS/SSL.', 'Already using TLS', 'AUTH TLS', 'AUTH SSL', ('server_hostname',), 'r', ('mode', 'encoding'))
+
+## co_names:
+('isinstance', 'sock', 'ssl', 'SSLSocket', 'ValueError', 'ssl_version', 'PROTOCOL_TLS', 'voidcmd', 'context', 'wrap_socket', 'host', 'makefile', 'encoding', 'file')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            self
+  16: LOAD_ATTR            sock
+  26: LOAD_GLOBAL          ssl
+  38: LOAD_ATTR            SSLSocket
+  48: PRECALL              
+  52: CALL                 
+  62: POP_JUMP_FORWARD_IF_FALSE to 94
+  64: LOAD_GLOBAL          NULL + ValueError
+  76: LOAD_CONST           'Already using TLS'
+  78: PRECALL              
+  82: CALL                 
+  92: RAISE_VARARGS        
+  94: LOAD_FAST            self
+  96: LOAD_ATTR            ssl_version
+ 106: LOAD_GLOBAL          ssl
+ 118: LOAD_ATTR            PROTOCOL_TLS
+ 128: COMPARE_OP           >=
+ 134: POP_JUMP_FORWARD_IF_FALSE to 180
+ 136: LOAD_FAST            self
+ 138: LOAD_METHOD          voidcmd
+ 160: LOAD_CONST           'AUTH TLS'
+ 162: PRECALL              
+ 166: CALL                 
+ 176: STORE_FAST           resp
+ 178: JUMP_FORWARD         to 222
+ 180: LOAD_FAST            self
+ 182: LOAD_METHOD          voidcmd
+ 204: LOAD_CONST           'AUTH SSL'
+ 206: PRECALL              
+ 210: CALL                 
+ 220: STORE_FAST           resp
+ 222: LOAD_FAST            self
+ 224: LOAD_ATTR            context
+ 234: LOAD_METHOD          wrap_socket
+ 256: LOAD_FAST            self
+ 258: LOAD_ATTR            sock
+ 268: LOAD_FAST            self
+ 270: LOAD_ATTR            host
+ 280: KW_NAMES             
+ 282: PRECALL              
+ 286: CALL                 
+ 296: LOAD_FAST            self
+ 298: STORE_ATTR           sock
+ 308: LOAD_FAST            self
+ 310: LOAD_ATTR            sock
+ 320: LOAD_METHOD          makefile
+ 342: LOAD_CONST           'r'
+ 344: LOAD_FAST            self
+ 346: LOAD_ATTR            encoding
+ 356: KW_NAMES             
+ 358: PRECALL              
+ 362: CALL                 
+ 372: LOAD_FAST            self
+ 374: STORE_ATTR           file
+ 384: LOAD_FAST            resp
+ 386: RETURN_VALUE         

@@ -1,0 +1,47 @@
+# Disassembly for logging.Handler.close
+# From module file: logging
+
+## co_consts:
+('\n        Tidy up any resources used by the handler.\n\n        This version removes the handler from an internal map of handlers,\n        _handlers, which is used for handler lookup by name. Subclasses\n        should ensure that this gets called from overridden close()\n        methods.\n        ', True, None)
+
+## co_names:
+('_acquireLock', '_closed', '_name', '_handlers', '_releaseLock')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _acquireLock
+  14: PRECALL              
+  18: CALL                 
+  28: POP_TOP              
+  30: NOP                  
+  32: LOAD_CONST           True
+  34: LOAD_FAST            self
+  36: STORE_ATTR           _closed
+  46: LOAD_FAST            self
+  48: LOAD_ATTR            _name
+  58: POP_JUMP_FORWARD_IF_FALSE to 114
+  60: LOAD_FAST            self
+  62: LOAD_ATTR            _name
+  72: LOAD_GLOBAL          _handlers
+  84: CONTAINS_OP          
+  86: POP_JUMP_FORWARD_IF_FALSE to 114
+  88: LOAD_GLOBAL          _handlers
+ 100: LOAD_FAST            self
+ 102: LOAD_ATTR            _name
+ 112: DELETE_SUBSCR        
+ 114: LOAD_GLOBAL          NULL + _releaseLock
+ 126: PRECALL              
+ 130: CALL                 
+ 140: POP_TOP              
+ 142: LOAD_CONST           None
+ 144: RETURN_VALUE         
+ 146: PUSH_EXC_INFO        
+ 148: LOAD_GLOBAL          NULL + _releaseLock
+ 160: PRECALL              
+ 164: CALL                 
+ 174: POP_TOP              
+ 176: RERAISE              
+ 178: COPY                 
+ 180: POP_EXCEPT           
+ 182: RERAISE              

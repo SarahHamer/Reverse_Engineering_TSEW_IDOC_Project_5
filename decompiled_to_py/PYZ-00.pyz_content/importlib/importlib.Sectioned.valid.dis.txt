@@ -1,0 +1,21 @@
+# Disassembly for importlib.Sectioned.valid
+# From module file: importlib.metadata
+
+## co_consts:
+(None, '#')
+
+## co_names:
+('startswith',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            line
+   4: JUMP_IF_FALSE_OR_POP to 48
+   6: LOAD_FAST            line
+   8: LOAD_METHOD          startswith
+  30: LOAD_CONST           '#'
+  32: PRECALL              
+  36: CALL                 
+  46: UNARY_NOT            
+  48: RETURN_VALUE         

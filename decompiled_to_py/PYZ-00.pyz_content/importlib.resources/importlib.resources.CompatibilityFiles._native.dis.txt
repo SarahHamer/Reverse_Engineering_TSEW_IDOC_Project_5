@@ -1,0 +1,25 @@
+# Disassembly for importlib.resources.CompatibilityFiles._native
+# From module file: importlib.resources._adapters
+
+## co_consts:
+('\n        Return the native reader if it supports files().\n        ', 'files')
+
+## co_names:
+('_reader', 'hasattr')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _reader
+  14: STORE_FAST           reader
+  16: LOAD_GLOBAL          NULL + hasattr
+  28: LOAD_FAST            reader
+  30: LOAD_CONST           'files'
+  32: PRECALL              
+  36: CALL                 
+  46: POP_JUMP_FORWARD_IF_FALSE to 52
+  48: LOAD_FAST            reader
+  50: JUMP_FORWARD         to 54
+  52: LOAD_FAST            self
+  54: RETURN_VALUE         

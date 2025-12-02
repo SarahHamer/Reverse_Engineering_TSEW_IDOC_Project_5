@@ -1,0 +1,63 @@
+# Disassembly for tarfile._Stream.__write
+# From module file: tarfile
+
+## co_consts:
+('Write string s to the stream if a whole new block\n           is ready to be written.\n        ', None)
+
+## co_names:
+('buf', 'len', 'bufsize', 'fileobj', 'write')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: COPY                 
+   6: LOAD_ATTR            buf
+  16: LOAD_FAST            s
+  18: BINARY_OP            +=
+  22: SWAP                 
+  24: STORE_ATTR           buf
+  34: LOAD_GLOBAL          NULL + len
+  46: LOAD_FAST            self
+  48: LOAD_ATTR            buf
+  58: PRECALL              
+  62: CALL                 
+  72: LOAD_FAST            self
+  74: LOAD_ATTR            bufsize
+  84: COMPARE_OP           >
+  90: POP_JUMP_FORWARD_IF_FALSE to 292
+  92: LOAD_FAST            self
+  94: LOAD_ATTR            fileobj
+ 104: LOAD_METHOD          write
+ 126: LOAD_FAST            self
+ 128: LOAD_ATTR            buf
+ 138: LOAD_CONST           None
+ 140: LOAD_FAST            self
+ 142: LOAD_ATTR            bufsize
+ 152: BUILD_SLICE          
+ 154: BINARY_SUBSCR        
+ 164: PRECALL              
+ 168: CALL                 
+ 178: POP_TOP              
+ 180: LOAD_FAST            self
+ 182: LOAD_ATTR            buf
+ 192: LOAD_FAST            self
+ 194: LOAD_ATTR            bufsize
+ 204: LOAD_CONST           None
+ 206: BUILD_SLICE          
+ 208: BINARY_SUBSCR        
+ 218: LOAD_FAST            self
+ 220: STORE_ATTR           buf
+ 230: LOAD_GLOBAL          NULL + len
+ 242: LOAD_FAST            self
+ 244: LOAD_ATTR            buf
+ 254: PRECALL              
+ 258: CALL                 
+ 268: LOAD_FAST            self
+ 270: LOAD_ATTR            bufsize
+ 280: COMPARE_OP           >
+ 286: POP_JUMP_BACKWARD_IF_TRUE to 92
+ 288: LOAD_CONST           None
+ 290: RETURN_VALUE         
+ 292: LOAD_CONST           None
+ 294: RETURN_VALUE         

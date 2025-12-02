@@ -1,0 +1,26 @@
+# Disassembly for importlib.SourcelessFileLoader
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('SourcelessFileLoader', 'Loader which handles sourceless file imports.', <code object get_code at 0x000002406942D480, file "importlib\_bootstrap_external.py", line 1191>, <code object get_source at 0x000002406943B1B0, file "importlib\_bootstrap_external.py", line 1207>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'get_code', 'get_source')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'SourcelessFileLoader'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Loader which handles sourceless file imports.'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object get_code at 0x000002406942D480, file "importlib\_bootstrap_external.py", line 1191>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           get_code
+  20: LOAD_CONST           <code object get_source at 0x000002406943B1B0, file "importlib\_bootstrap_external.py", line 1207>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           get_source
+  26: LOAD_CONST           None
+  28: RETURN_VALUE         

@@ -1,0 +1,47 @@
+# Disassembly for gzip._GzipReader
+# From module file: gzip
+
+## co_consts:
+('_GzipReader', <code object __init__ at 0x000002406949CBB0, file "gzip.py", line 456>, <code object _init_read at 0x00000240693EB430, file "gzip.py", line 463>, <code object _read_gzip_header at 0x00000240693EB330, file "gzip.py", line 467>, -1, <code object read at 0x0000024068C9DF80, file "gzip.py", line 474>, <code object _add_read_data at 0x00000240693ABC30, file "gzip.py", line 525>, <code object _read_eof at 0x0000024068C5ABD0, file "gzip.py", line 529>, <code object _rewind at 0x000002406944A230, file "gzip.py", line 550>, (-1,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', '_init_read', '_read_gzip_header', 'read', '_add_read_data', '_read_eof', '_rewind', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           '_GzipReader'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CLOSURE         __class__
+  14: BUILD_TUPLE          
+  16: LOAD_CONST           <code object __init__ at 0x000002406949CBB0, file "gzip.py", line 456>
+  18: MAKE_FUNCTION        closure
+  20: STORE_NAME           __init__
+  22: LOAD_CONST           <code object _init_read at 0x00000240693EB430, file "gzip.py", line 463>
+  24: MAKE_FUNCTION        
+  26: STORE_NAME           _init_read
+  28: LOAD_CONST           <code object _read_gzip_header at 0x00000240693EB330, file "gzip.py", line 467>
+  30: MAKE_FUNCTION        
+  32: STORE_NAME           _read_gzip_header
+  34: LOAD_CONST           (-1,)
+  36: LOAD_CONST           <code object read at 0x0000024068C9DF80, file "gzip.py", line 474>
+  38: MAKE_FUNCTION        defaults
+  40: STORE_NAME           read
+  42: LOAD_CONST           <code object _add_read_data at 0x00000240693ABC30, file "gzip.py", line 525>
+  44: MAKE_FUNCTION        
+  46: STORE_NAME           _add_read_data
+  48: LOAD_CONST           <code object _read_eof at 0x0000024068C5ABD0, file "gzip.py", line 529>
+  50: MAKE_FUNCTION        
+  52: STORE_NAME           _read_eof
+  54: LOAD_CLOSURE         __class__
+  56: BUILD_TUPLE          
+  58: LOAD_CONST           <code object _rewind at 0x000002406944A230, file "gzip.py", line 550>
+  60: MAKE_FUNCTION        closure
+  62: STORE_NAME           _rewind
+  64: LOAD_CLOSURE         __class__
+  66: COPY                 
+  68: STORE_NAME           __classcell__
+  70: RETURN_VALUE         

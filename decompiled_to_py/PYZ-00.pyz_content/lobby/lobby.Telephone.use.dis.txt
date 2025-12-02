@@ -1,0 +1,37 @@
+# Disassembly for lobby.Telephone.use
+# From module file: lobby
+
+## co_consts:
+(None, True, 'You pick up the handset and listen...you hear pops and crackles.\nYou see a note next to the phone that says:\n --- To dial an extension, enter the 2 digits', "You pick up the handset and listen...no dial tone.\nMaybe it's not plugged in.")
+
+## co_names:
+('plugged_in', 'ready_for_number', 'send_message', 'tried_phone')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            plugged_in
+  14: POP_JUMP_FORWARD_IF_FALSE to 76
+  16: LOAD_CONST           True
+  18: LOAD_FAST            self
+  20: STORE_ATTR           ready_for_number
+  30: LOAD_FAST            self
+  32: LOAD_METHOD          send_message
+  54: LOAD_CONST           'You pick up the handset and listen...you hear pops and crackles.\nYou see a note next to the phone that says:\n --- To dial an extension, enter the 2 digits'
+  56: PRECALL              
+  60: CALL                 
+  70: POP_TOP              
+  72: LOAD_CONST           None
+  74: RETURN_VALUE         
+  76: LOAD_CONST           True
+  78: LOAD_FAST            self
+  80: STORE_ATTR           tried_phone
+  90: LOAD_FAST            self
+  92: LOAD_METHOD          send_message
+ 114: LOAD_CONST           "You pick up the handset and listen...no dial tone.\nMaybe it's not plugged in."
+ 116: PRECALL              
+ 120: CALL                 
+ 130: POP_TOP              
+ 132: LOAD_CONST           None
+ 134: RETURN_VALUE         

@@ -1,0 +1,104 @@
+# Disassembly for gzip.GzipFile.write
+# From module file: gzip
+
+## co_consts:
+(None, 0, 'write() on read-only GzipFile object', 'write() on closed GzipFile object')
+
+## co_names:
+('_check_not_closed', 'mode', 'WRITE', 'errno', 'OSError', 'EBADF', 'fileobj', 'ValueError', 'isinstance', 'bytes', 'bytearray', 'len', 'memoryview', 'nbytes', 'write', 'compress', 'size', 'zlib', 'crc32', 'crc', 'offset')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          _check_not_closed
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            mode
+  54: LOAD_GLOBAL          WRITE
+  66: COMPARE_OP           !=
+  72: POP_JUMP_FORWARD_IF_FALSE to 124
+  74: LOAD_CONST           0
+  76: LOAD_CONST           None
+  78: IMPORT_NAME          errno
+  80: STORE_FAST           errno
+  82: LOAD_GLOBAL          NULL + OSError
+  94: LOAD_FAST            errno
+  96: LOAD_ATTR            EBADF
+ 106: LOAD_CONST           'write() on read-only GzipFile object'
+ 108: PRECALL              
+ 112: CALL                 
+ 122: RAISE_VARARGS        
+ 124: LOAD_FAST            self
+ 126: LOAD_ATTR            fileobj
+ 136: POP_JUMP_FORWARD_IF_NOT_NONE to 168
+ 138: LOAD_GLOBAL          NULL + ValueError
+ 150: LOAD_CONST           'write() on closed GzipFile object'
+ 152: PRECALL              
+ 156: CALL                 
+ 166: RAISE_VARARGS        
+ 168: LOAD_GLOBAL          NULL + isinstance
+ 180: LOAD_FAST            data
+ 182: LOAD_GLOBAL          bytes
+ 194: LOAD_GLOBAL          bytearray
+ 206: BUILD_TUPLE          
+ 208: PRECALL              
+ 212: CALL                 
+ 222: POP_JUMP_FORWARD_IF_FALSE to 256
+ 224: LOAD_GLOBAL          NULL + len
+ 236: LOAD_FAST            data
+ 238: PRECALL              
+ 242: CALL                 
+ 252: STORE_FAST           length
+ 254: JUMP_FORWARD         to 300
+ 256: LOAD_GLOBAL          NULL + memoryview
+ 268: LOAD_FAST            data
+ 270: PRECALL              
+ 274: CALL                 
+ 284: STORE_FAST           data
+ 286: LOAD_FAST            data
+ 288: LOAD_ATTR            nbytes
+ 298: STORE_FAST           length
+ 300: LOAD_FAST            length
+ 302: LOAD_CONST           0
+ 304: COMPARE_OP           >
+ 310: POP_JUMP_FORWARD_IF_FALSE to 538
+ 312: LOAD_FAST            self
+ 314: LOAD_ATTR            fileobj
+ 324: LOAD_METHOD          write
+ 346: LOAD_FAST            self
+ 348: LOAD_ATTR            compress
+ 358: LOAD_METHOD          compress
+ 380: LOAD_FAST            data
+ 382: PRECALL              
+ 386: CALL                 
+ 396: PRECALL              
+ 400: CALL                 
+ 410: POP_TOP              
+ 412: LOAD_FAST            self
+ 414: COPY                 
+ 416: LOAD_ATTR            size
+ 426: LOAD_FAST            length
+ 428: BINARY_OP            +=
+ 432: SWAP                 
+ 434: STORE_ATTR           size
+ 444: LOAD_GLOBAL          NULL + zlib
+ 456: LOAD_ATTR            crc32
+ 466: LOAD_FAST            data
+ 468: LOAD_FAST            self
+ 470: LOAD_ATTR            crc
+ 480: PRECALL              
+ 484: CALL                 
+ 494: LOAD_FAST            self
+ 496: STORE_ATTR           crc
+ 506: LOAD_FAST            self
+ 508: COPY                 
+ 510: LOAD_ATTR            offset
+ 520: LOAD_FAST            length
+ 522: BINARY_OP            +=
+ 526: SWAP                 
+ 528: STORE_ATTR           offset
+ 538: LOAD_FAST            length
+ 540: RETURN_VALUE         

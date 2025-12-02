@@ -1,0 +1,21 @@
+# Disassembly for typing.NewType.__repr__
+# From module file: typing
+
+## co_consts:
+(None, '.')
+
+## co_names:
+('__module__', '__qualname__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            __module__
+  14: FORMAT_VALUE         
+  16: LOAD_CONST           '.'
+  18: LOAD_FAST            self
+  20: LOAD_ATTR            __qualname__
+  30: FORMAT_VALUE         
+  32: BUILD_STRING         
+  34: RETURN_VALUE         

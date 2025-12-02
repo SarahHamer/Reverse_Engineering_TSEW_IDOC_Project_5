@@ -1,0 +1,15 @@
+# Disassembly for email.Message.get_charset
+# From module file: email.message
+
+## co_consts:
+("Return the Charset instance associated with the message's payload.\n        ",)
+
+## co_names:
+('_charset',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _charset
+  14: RETURN_VALUE         

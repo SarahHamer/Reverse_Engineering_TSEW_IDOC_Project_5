@@ -1,0 +1,77 @@
+# Disassembly for http.Cookie.__repr__
+# From module file: http.cookiejar
+
+## co_consts:
+(None, ('version', 'name', 'value', 'port', 'port_specified', 'domain', 'domain_specified', 'domain_initial_dot', 'path', 'path_specified', 'secure', 'expires', 'discard', 'comment', 'comment_url'), '=', 'rest=%s', 'rfc2109=%s', '(', ', ', ')')
+
+## co_names:
+('getattr', 'append', 'repr', '_rest', 'rfc2109', '__class__', '__name__', 'join')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           args
+   6: LOAD_CONST           ('version', 'name', 'value', 'port', 'port_specified', 'domain', 'domain_specified', 'domain_initial_dot', 'path', 'path_specified', 'secure', 'expires', 'discard', 'comment', 'comment_url')
+   8: GET_ITER             
+  10: FOR_ITER             to 126
+  12: STORE_FAST           name
+  14: LOAD_GLOBAL          NULL + getattr
+  26: LOAD_FAST            self
+  28: LOAD_FAST            name
+  30: PRECALL              
+  34: CALL                 
+  44: STORE_FAST           attr
+  46: LOAD_FAST            args
+  48: LOAD_METHOD          append
+  70: LOAD_FAST            name
+  72: FORMAT_VALUE         str
+  74: LOAD_CONST           '='
+  76: LOAD_GLOBAL          NULL + repr
+  88: LOAD_FAST            attr
+  90: PRECALL              
+  94: CALL                 
+ 104: FORMAT_VALUE         str
+ 106: BUILD_STRING         
+ 108: PRECALL              
+ 112: CALL                 
+ 122: POP_TOP              
+ 124: JUMP_BACKWARD        to 10
+ 126: LOAD_FAST            args
+ 128: LOAD_METHOD          append
+ 150: LOAD_CONST           'rest=%s'
+ 152: LOAD_GLOBAL          NULL + repr
+ 164: LOAD_FAST            self
+ 166: LOAD_ATTR            _rest
+ 176: PRECALL              
+ 180: CALL                 
+ 190: BINARY_OP            %
+ 194: PRECALL              
+ 198: CALL                 
+ 208: POP_TOP              
+ 210: LOAD_FAST            args
+ 212: LOAD_METHOD          append
+ 234: LOAD_CONST           'rfc2109=%s'
+ 236: LOAD_GLOBAL          NULL + repr
+ 248: LOAD_FAST            self
+ 250: LOAD_ATTR            rfc2109
+ 260: PRECALL              
+ 264: CALL                 
+ 274: BINARY_OP            %
+ 278: PRECALL              
+ 282: CALL                 
+ 292: POP_TOP              
+ 294: LOAD_FAST            self
+ 296: LOAD_ATTR            __class__
+ 306: LOAD_ATTR            __name__
+ 316: FORMAT_VALUE         str
+ 318: LOAD_CONST           '('
+ 320: LOAD_CONST           ', '
+ 322: LOAD_METHOD          join
+ 344: LOAD_FAST            args
+ 346: PRECALL              
+ 350: CALL                 
+ 360: FORMAT_VALUE         str
+ 362: LOAD_CONST           ')'
+ 364: BUILD_STRING         
+ 366: RETURN_VALUE         

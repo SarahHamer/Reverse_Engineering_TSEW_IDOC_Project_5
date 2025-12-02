@@ -1,0 +1,55 @@
+# Disassembly for pickle._Pickler.put
+# From module file: pickle
+
+## co_consts:
+(None, 4, 256, '<B', '<I', 'ascii', b'\n')
+
+## co_names:
+('proto', 'MEMOIZE', 'bin', 'BINPUT', 'pack', 'LONG_BINPUT', 'PUT', 'repr', 'encode')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            proto
+  14: LOAD_CONST           4
+  16: COMPARE_OP           >=
+  22: POP_JUMP_FORWARD_IF_FALSE to 38
+  24: LOAD_GLOBAL          MEMOIZE
+  36: RETURN_VALUE         
+  38: LOAD_FAST            self
+  40: LOAD_ATTR            bin
+  50: POP_JUMP_FORWARD_IF_FALSE to 160
+  52: LOAD_FAST            idx
+  54: LOAD_CONST           256
+  56: COMPARE_OP           <
+  62: POP_JUMP_FORWARD_IF_FALSE to 112
+  64: LOAD_GLOBAL          BINPUT
+  76: LOAD_GLOBAL          NULL + pack
+  88: LOAD_CONST           '<B'
+  90: LOAD_FAST            idx
+  92: PRECALL              
+  96: CALL                 
+ 106: BINARY_OP            +
+ 110: RETURN_VALUE         
+ 112: LOAD_GLOBAL          LONG_BINPUT
+ 124: LOAD_GLOBAL          NULL + pack
+ 136: LOAD_CONST           '<I'
+ 138: LOAD_FAST            idx
+ 140: PRECALL              
+ 144: CALL                 
+ 154: BINARY_OP            +
+ 158: RETURN_VALUE         
+ 160: LOAD_GLOBAL          PUT
+ 172: LOAD_GLOBAL          NULL + repr
+ 184: LOAD_FAST            idx
+ 186: PRECALL              
+ 190: CALL                 
+ 200: LOAD_METHOD          encode
+ 222: LOAD_CONST           'ascii'
+ 224: PRECALL              
+ 228: CALL                 
+ 238: BINARY_OP            +
+ 242: LOAD_CONST           b'\n'
+ 244: BINARY_OP            +
+ 248: RETURN_VALUE         

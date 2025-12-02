@@ -1,0 +1,37 @@
+# Disassembly for dataclasses.field
+# From module file: dataclasses
+
+## co_consts:
+("Return an object to identify dataclass fields.\n\n    default is the default value of the field.  default_factory is a\n    0-argument function called to initialize a field's value.  If init\n    is true, the field will be a parameter to the class's __init__()\n    function.  If repr is true, the field will be included in the\n    object's repr().  If hash is true, the field will be included in the\n    object's hash().  If compare is true, the field will be used in\n    comparison functions.  metadata, if specified, must be a mapping\n    which is stored but not otherwise examined by dataclass.  If kw_only\n    is true, the field will become a keyword-only parameter to\n    __init__().\n\n    It is an error to specify both default and default_factory.\n    ", 'cannot specify both default and default_factory')
+
+## co_names:
+('MISSING', 'ValueError', 'Field')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            default
+   4: LOAD_GLOBAL          MISSING
+  16: IS_OP                
+  18: POP_JUMP_FORWARD_IF_FALSE to 68
+  20: LOAD_FAST            default_factory
+  22: LOAD_GLOBAL          MISSING
+  34: IS_OP                
+  36: POP_JUMP_FORWARD_IF_FALSE to 68
+  38: LOAD_GLOBAL          NULL + ValueError
+  50: LOAD_CONST           'cannot specify both default and default_factory'
+  52: PRECALL              
+  56: CALL                 
+  66: RAISE_VARARGS        
+  68: LOAD_GLOBAL          NULL + Field
+  80: LOAD_FAST            default
+  82: LOAD_FAST            default_factory
+  84: LOAD_FAST            init
+  86: LOAD_FAST            repr
+  88: LOAD_FAST            hash
+  90: LOAD_FAST            compare
+  92: LOAD_FAST            metadata
+  94: LOAD_FAST            kw_only
+  96: PRECALL              
+ 100: CALL                 
+ 110: RETURN_VALUE         

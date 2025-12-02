@@ -1,0 +1,23 @@
+# Disassembly for logging.Filter.__init__
+# From module file: logging
+
+## co_consts:
+('\n        Initialize a filter.\n\n        Initialize with the name of the logger which, together with its\n        children, will have its events allowed through the filter. If no\n        name is specified, allow every event.\n        ', None)
+
+## co_names:
+('name', 'len', 'nlen')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            name
+   4: LOAD_FAST            self
+   6: STORE_ATTR           name
+  16: LOAD_GLOBAL          NULL + len
+  28: LOAD_FAST            name
+  30: PRECALL              
+  34: CALL                 
+  44: LOAD_FAST            self
+  46: STORE_ATTR           nlen
+  56: LOAD_CONST           None
+  58: RETURN_VALUE         

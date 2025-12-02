@@ -1,0 +1,43 @@
+# Disassembly for email._splitparam
+# From module file: email.message
+
+## co_consts:
+(None, ';')
+
+## co_names:
+('str', 'partition', 'strip')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + str
+  14: LOAD_FAST            param
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_METHOD          partition
+  52: LOAD_CONST           ';'
+  54: PRECALL              
+  58: CALL                 
+  68: UNPACK_SEQUENCE      
+  72: STORE_FAST           a
+  74: STORE_FAST           sep
+  76: STORE_FAST           b
+  78: LOAD_FAST            sep
+  80: POP_JUMP_FORWARD_IF_TRUE to 126
+  82: LOAD_FAST            a
+  84: LOAD_METHOD          strip
+ 106: PRECALL              
+ 110: CALL                 
+ 120: LOAD_CONST           None
+ 122: BUILD_TUPLE          
+ 124: RETURN_VALUE         
+ 126: LOAD_FAST            a
+ 128: LOAD_METHOD          strip
+ 150: PRECALL              
+ 154: CALL                 
+ 164: LOAD_FAST            b
+ 166: LOAD_METHOD          strip
+ 188: PRECALL              
+ 192: CALL                 
+ 202: BUILD_TUPLE          
+ 204: RETURN_VALUE         

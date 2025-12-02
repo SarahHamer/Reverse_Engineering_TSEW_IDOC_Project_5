@@ -1,0 +1,15 @@
+# Disassembly for inspect.getlineno
+# From module file: inspect
+
+## co_consts:
+('Get the line number from a frame object, allowing for optimization.',)
+
+## co_names:
+('f_lineno',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            frame
+   4: LOAD_ATTR            f_lineno
+  14: RETURN_VALUE         

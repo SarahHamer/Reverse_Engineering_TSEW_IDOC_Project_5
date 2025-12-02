@@ -1,0 +1,31 @@
+# Disassembly for lobby.TicketMachine.get_options
+# From module file: lobby
+
+## co_consts:
+(None, <code object <lambda> at 0x000002406945FA50, file "lobby.py", line 129>, 'Take a ticket.')
+
+## co_names:
+('broken', 'append')
+
+## bytecode:
+
+   0: MAKE_CELL            self
+   2: RESUME               
+   4: BUILD_LIST           
+   6: STORE_FAST           options
+   8: LOAD_DEREF           self
+  10: LOAD_ATTR            broken
+  20: POP_JUMP_FORWARD_IF_TRUE to 74
+  22: LOAD_FAST            options
+  24: LOAD_METHOD          append
+  46: LOAD_CLOSURE         self
+  48: BUILD_TUPLE          
+  50: LOAD_CONST           <code object <lambda> at 0x000002406945FA50, file "lobby.py", line 129>
+  52: MAKE_FUNCTION        closure
+  54: LOAD_CONST           'Take a ticket.'
+  56: BUILD_TUPLE          
+  58: PRECALL              
+  62: CALL                 
+  72: POP_TOP              
+  74: LOAD_FAST            options
+  76: RETURN_VALUE         

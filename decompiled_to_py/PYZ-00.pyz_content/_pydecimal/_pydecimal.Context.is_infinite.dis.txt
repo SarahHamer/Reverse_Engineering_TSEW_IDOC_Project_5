@@ -1,0 +1,24 @@
+# Disassembly for _pydecimal.Context.is_infinite
+# From module file: _pydecimal
+
+## co_consts:
+("Return True if the operand is infinite; otherwise return False.\n\n        >>> ExtendedContext.is_infinite(Decimal('2.50'))\n        False\n        >>> ExtendedContext.is_infinite(Decimal('-Inf'))\n        True\n        >>> ExtendedContext.is_infinite(Decimal('NaN'))\n        False\n        >>> ExtendedContext.is_infinite(1)\n        False\n        ", True, ('raiseit',))
+
+## co_names:
+('_convert_other', 'is_infinite')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _convert_other
+  14: LOAD_FAST            a
+  16: LOAD_CONST           True
+  18: KW_NAMES             
+  20: PRECALL              
+  24: CALL                 
+  34: STORE_FAST           a
+  36: LOAD_FAST            a
+  38: LOAD_METHOD          is_infinite
+  60: PRECALL              
+  64: CALL                 
+  74: RETURN_VALUE         

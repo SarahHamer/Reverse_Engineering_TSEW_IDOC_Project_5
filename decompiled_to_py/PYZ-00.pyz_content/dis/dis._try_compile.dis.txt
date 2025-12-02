@@ -1,0 +1,41 @@
+# Disassembly for dis._try_compile
+# From module file: dis
+
+## co_consts:
+('Attempts to compile the given source, first as an expression and\n       then as a statement if the first approach fails.\n\n       Utility function to accept strings in functions that otherwise\n       expect code objects\n    ', 'eval', 'exec')
+
+## co_names:
+('compile', 'SyntaxError')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_GLOBAL          NULL + compile
+  16: LOAD_FAST            source
+  18: LOAD_FAST            name
+  20: LOAD_CONST           'eval'
+  22: PRECALL              
+  26: CALL                 
+  36: STORE_FAST           c
+  38: JUMP_FORWARD         to 106
+  40: PUSH_EXC_INFO        
+  42: LOAD_GLOBAL          SyntaxError
+  54: CHECK_EXC_MATCH      
+  56: POP_JUMP_FORWARD_IF_FALSE to 98
+  58: POP_TOP              
+  60: LOAD_GLOBAL          NULL + compile
+  72: LOAD_FAST            source
+  74: LOAD_FAST            name
+  76: LOAD_CONST           'exec'
+  78: PRECALL              
+  82: CALL                 
+  92: STORE_FAST           c
+  94: POP_EXCEPT           
+  96: JUMP_FORWARD         to 106
+  98: RERAISE              
+ 100: COPY                 
+ 102: POP_EXCEPT           
+ 104: RERAISE              
+ 106: LOAD_FAST            c
+ 108: RETURN_VALUE         

@@ -1,0 +1,158 @@
+# Disassembly for shlex.shlex.__init__
+# From module file: shlex
+
+## co_consts:
+(None, '', '#', 'abcdfeghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_', 'ßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞ', ' \t\r\n', False, '\'"', '\\', '"', ' ', 1, 0, True, '();<>|&', '~-./*?=')
+
+## co_names:
+('isinstance', 'str', 'StringIO', 'instream', 'infile', 'sys', 'stdin', 'posix', 'eof', 'commenters', 'wordchars', 'whitespace', 'whitespace_split', 'quotes', 'escape', 'escapedquotes', 'state', 'deque', 'pushback', 'lineno', 'debug', 'token', 'filestack', 'source', '_punctuation_chars', '_pushback_chars', 'maketrans', 'dict', 'fromkeys', 'translate')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            instream
+  16: LOAD_GLOBAL          str
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 74
+  44: LOAD_GLOBAL          NULL + StringIO
+  56: LOAD_FAST            instream
+  58: PRECALL              
+  62: CALL                 
+  72: STORE_FAST           instream
+  74: LOAD_FAST            instream
+  76: POP_JUMP_FORWARD_IF_NONE to 108
+  78: LOAD_FAST            instream
+  80: LOAD_FAST            self
+  82: STORE_ATTR           instream
+  92: LOAD_FAST            infile
+  94: LOAD_FAST            self
+  96: STORE_ATTR           infile
+ 106: JUMP_FORWARD         to 156
+ 108: LOAD_GLOBAL          sys
+ 120: LOAD_ATTR            stdin
+ 130: LOAD_FAST            self
+ 132: STORE_ATTR           instream
+ 142: LOAD_CONST           None
+ 144: LOAD_FAST            self
+ 146: STORE_ATTR           infile
+ 156: LOAD_FAST            posix
+ 158: LOAD_FAST            self
+ 160: STORE_ATTR           posix
+ 170: LOAD_FAST            posix
+ 172: POP_JUMP_FORWARD_IF_FALSE to 190
+ 174: LOAD_CONST           None
+ 176: LOAD_FAST            self
+ 178: STORE_ATTR           eof
+ 188: JUMP_FORWARD         to 204
+ 190: LOAD_CONST           ''
+ 192: LOAD_FAST            self
+ 194: STORE_ATTR           eof
+ 204: LOAD_CONST           '#'
+ 206: LOAD_FAST            self
+ 208: STORE_ATTR           commenters
+ 218: LOAD_CONST           'abcdfeghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_'
+ 220: LOAD_FAST            self
+ 222: STORE_ATTR           wordchars
+ 232: LOAD_FAST            self
+ 234: LOAD_ATTR            posix
+ 244: POP_JUMP_FORWARD_IF_FALSE to 278
+ 246: LOAD_FAST            self
+ 248: COPY                 
+ 250: LOAD_ATTR            wordchars
+ 260: LOAD_CONST           'ßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞ'
+ 262: BINARY_OP            +=
+ 266: SWAP                 
+ 268: STORE_ATTR           wordchars
+ 278: LOAD_CONST           ' \t\r\n'
+ 280: LOAD_FAST            self
+ 282: STORE_ATTR           whitespace
+ 292: LOAD_CONST           False
+ 294: LOAD_FAST            self
+ 296: STORE_ATTR           whitespace_split
+ 306: LOAD_CONST           '\'"'
+ 308: LOAD_FAST            self
+ 310: STORE_ATTR           quotes
+ 320: LOAD_CONST           '\\'
+ 322: LOAD_FAST            self
+ 324: STORE_ATTR           escape
+ 334: LOAD_CONST           '"'
+ 336: LOAD_FAST            self
+ 338: STORE_ATTR           escapedquotes
+ 348: LOAD_CONST           ' '
+ 350: LOAD_FAST            self
+ 352: STORE_ATTR           state
+ 362: LOAD_GLOBAL          NULL + deque
+ 374: PRECALL              
+ 378: CALL                 
+ 388: LOAD_FAST            self
+ 390: STORE_ATTR           pushback
+ 400: LOAD_CONST           1
+ 402: LOAD_FAST            self
+ 404: STORE_ATTR           lineno
+ 414: LOAD_CONST           0
+ 416: LOAD_FAST            self
+ 418: STORE_ATTR           debug
+ 428: LOAD_CONST           ''
+ 430: LOAD_FAST            self
+ 432: STORE_ATTR           token
+ 442: LOAD_GLOBAL          NULL + deque
+ 454: PRECALL              
+ 458: CALL                 
+ 468: LOAD_FAST            self
+ 470: STORE_ATTR           filestack
+ 480: LOAD_CONST           None
+ 482: LOAD_FAST            self
+ 484: STORE_ATTR           source
+ 494: LOAD_FAST            punctuation_chars
+ 496: POP_JUMP_FORWARD_IF_TRUE to 504
+ 498: LOAD_CONST           ''
+ 500: STORE_FAST           punctuation_chars
+ 502: JUMP_FORWARD         to 516
+ 504: LOAD_FAST            punctuation_chars
+ 506: LOAD_CONST           True
+ 508: IS_OP                
+ 510: POP_JUMP_FORWARD_IF_FALSE to 516
+ 512: LOAD_CONST           '();<>|&'
+ 514: STORE_FAST           punctuation_chars
+ 516: LOAD_FAST            punctuation_chars
+ 518: LOAD_FAST            self
+ 520: STORE_ATTR           _punctuation_chars
+ 530: LOAD_FAST            punctuation_chars
+ 532: POP_JUMP_FORWARD_IF_FALSE to 770
+ 534: LOAD_GLOBAL          NULL + deque
+ 546: PRECALL              
+ 550: CALL                 
+ 560: LOAD_FAST            self
+ 562: STORE_ATTR           _pushback_chars
+ 572: LOAD_FAST            self
+ 574: COPY                 
+ 576: LOAD_ATTR            wordchars
+ 586: LOAD_CONST           '~-./*?='
+ 588: BINARY_OP            +=
+ 592: SWAP                 
+ 594: STORE_ATTR           wordchars
+ 604: LOAD_FAST            self
+ 606: LOAD_ATTR            wordchars
+ 616: LOAD_METHOD          maketrans
+ 638: LOAD_GLOBAL          dict
+ 650: LOAD_METHOD          fromkeys
+ 672: LOAD_FAST            punctuation_chars
+ 674: PRECALL              
+ 678: CALL                 
+ 688: PRECALL              
+ 692: CALL                 
+ 702: STORE_FAST           t
+ 704: LOAD_FAST            self
+ 706: LOAD_ATTR            wordchars
+ 716: LOAD_METHOD          translate
+ 738: LOAD_FAST            t
+ 740: PRECALL              
+ 744: CALL                 
+ 754: LOAD_FAST            self
+ 756: STORE_ATTR           wordchars
+ 766: LOAD_CONST           None
+ 768: RETURN_VALUE         
+ 770: LOAD_CONST           None
+ 772: RETURN_VALUE         

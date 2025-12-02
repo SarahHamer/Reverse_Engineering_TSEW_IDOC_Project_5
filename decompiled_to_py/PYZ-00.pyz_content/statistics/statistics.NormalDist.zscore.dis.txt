@@ -1,0 +1,28 @@
+# Disassembly for statistics.NormalDist.zscore
+# From module file: statistics
+
+## co_consts:
+('Compute the Standard Score.  (x - mean) / stdev\n\n        Describes *x* in terms of the number of standard deviations\n        above or below the mean of the normal distribution.\n        ', 'zscore() not defined when sigma is zero')
+
+## co_names:
+('_sigma', 'StatisticsError', '_mu')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _sigma
+  14: POP_JUMP_FORWARD_IF_TRUE to 46
+  16: LOAD_GLOBAL          NULL + StatisticsError
+  28: LOAD_CONST           'zscore() not defined when sigma is zero'
+  30: PRECALL              
+  34: CALL                 
+  44: RAISE_VARARGS        
+  46: LOAD_FAST            x
+  48: LOAD_FAST            self
+  50: LOAD_ATTR            _mu
+  60: BINARY_OP            -
+  64: LOAD_FAST            self
+  66: LOAD_ATTR            _sigma
+  76: BINARY_OP            /
+  80: RETURN_VALUE         

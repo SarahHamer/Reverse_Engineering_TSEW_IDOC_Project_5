@@ -1,0 +1,26 @@
+# Disassembly for string.Formatter.get_value
+# From module file: string
+
+## co_consts:
+(None,)
+
+## co_names:
+('isinstance', 'int')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            key
+  16: LOAD_GLOBAL          int
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 60
+  44: LOAD_FAST            args
+  46: LOAD_FAST            key
+  48: BINARY_SUBSCR        
+  58: RETURN_VALUE         
+  60: LOAD_FAST            kwargs
+  62: LOAD_FAST            key
+  64: BINARY_SUBSCR        
+  74: RETURN_VALUE         

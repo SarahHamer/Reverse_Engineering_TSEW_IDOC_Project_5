@@ -1,0 +1,71 @@
+# Disassembly for email.Header.__init__
+# From module file: email.header
+
+## co_consts:
+("Create a MIME-compliant header that can contain many character sets.\n\n        Optional s is the initial header value.  If None, the initial header\n        value is not set.  You can later append to the header with .append()\n        method calls.  s may be a byte string or a Unicode string, but see the\n        .append() documentation for semantics.\n\n        Optional charset serves two purposes: it has the same meaning as the\n        charset argument to the .append() method.  It also sets the default\n        character set for all subsequent .append() calls that omit the charset\n        argument.  If charset is not provided in the constructor, the us-ascii\n        charset is used both as s's initial charset and as the default for\n        subsequent .append() calls.\n\n        The maximum line length can be specified explicitly via maxlinelen. For\n        splitting the first line to a shorter value (to account for the field\n        header which isn't included in s, e.g. `Subject') pass in the name of\n        the field in header_name.  The default maxlinelen is 78 as recommended\n        by RFC 2822.\n\n        continuation_ws must be RFC 2822 compliant folding whitespace (usually\n        either a space or a hard tab) which will be prepended to continuation\n        lines.\n\n        errors is passed through to the .append() call.\n        ", None, 0, 2)
+
+## co_names:
+('USASCII', 'isinstance', 'Charset', '_charset', '_continuation_ws', '_chunks', 'append', 'MAXLINELEN', '_maxlinelen', '_headerlen', 'len')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            charset
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 22
+   6: LOAD_GLOBAL          USASCII
+  18: STORE_FAST           charset
+  20: JUMP_FORWARD         to 94
+  22: LOAD_GLOBAL          NULL + isinstance
+  34: LOAD_FAST            charset
+  36: LOAD_GLOBAL          Charset
+  48: PRECALL              
+  52: CALL                 
+  62: POP_JUMP_FORWARD_IF_TRUE to 94
+  64: LOAD_GLOBAL          NULL + Charset
+  76: LOAD_FAST            charset
+  78: PRECALL              
+  82: CALL                 
+  92: STORE_FAST           charset
+  94: LOAD_FAST            charset
+  96: LOAD_FAST            self
+  98: STORE_ATTR           _charset
+ 108: LOAD_FAST            continuation_ws
+ 110: LOAD_FAST            self
+ 112: STORE_ATTR           _continuation_ws
+ 122: BUILD_LIST           
+ 124: LOAD_FAST            self
+ 126: STORE_ATTR           _chunks
+ 136: LOAD_FAST            s
+ 138: POP_JUMP_FORWARD_IF_NONE to 186
+ 140: LOAD_FAST            self
+ 142: LOAD_METHOD          append
+ 164: LOAD_FAST            s
+ 166: LOAD_FAST            charset
+ 168: LOAD_FAST            errors
+ 170: PRECALL              
+ 174: CALL                 
+ 184: POP_TOP              
+ 186: LOAD_FAST            maxlinelen
+ 188: POP_JUMP_FORWARD_IF_NOT_NONE to 204
+ 190: LOAD_GLOBAL          MAXLINELEN
+ 202: STORE_FAST           maxlinelen
+ 204: LOAD_FAST            maxlinelen
+ 206: LOAD_FAST            self
+ 208: STORE_ATTR           _maxlinelen
+ 218: LOAD_FAST            header_name
+ 220: POP_JUMP_FORWARD_IF_NOT_NONE to 240
+ 222: LOAD_CONST           0
+ 224: LOAD_FAST            self
+ 226: STORE_ATTR           _headerlen
+ 236: LOAD_CONST           None
+ 238: RETURN_VALUE         
+ 240: LOAD_GLOBAL          NULL + len
+ 252: LOAD_FAST            header_name
+ 254: PRECALL              
+ 258: CALL                 
+ 268: LOAD_CONST           2
+ 270: BINARY_OP            +
+ 274: LOAD_FAST            self
+ 276: STORE_ATTR           _headerlen
+ 286: LOAD_CONST           None
+ 288: RETURN_VALUE         

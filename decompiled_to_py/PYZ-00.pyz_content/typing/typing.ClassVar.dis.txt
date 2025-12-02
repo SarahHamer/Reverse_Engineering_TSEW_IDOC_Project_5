@@ -1,0 +1,28 @@
+# Disassembly for typing.ClassVar
+# From module file: typing
+
+## co_consts:
+('Special type construct to mark class variables.\n\n    An annotation wrapped in ClassVar indicates that a given\n    attribute is intended to be used as a class variable and\n    should not be set on instances of that class.\n\n    Usage::\n\n        class Starship:\n            stats: ClassVar[dict[str, int]] = {} # class variable\n            damage: int = 10                     # instance variable\n\n    ClassVar accepts only types and cannot be further subscribed.\n\n    Note that ClassVar is not a class itself, and should not\n    be used with isinstance() or issubclass().\n    ', ' accepts only single type.')
+
+## co_names:
+('_type_check', '_GenericAlias')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _type_check
+  14: LOAD_FAST            parameters
+  16: LOAD_FAST            self
+  18: FORMAT_VALUE         
+  20: LOAD_CONST           ' accepts only single type.'
+  22: BUILD_STRING         
+  24: PRECALL              
+  28: CALL                 
+  38: STORE_FAST           item
+  40: LOAD_GLOBAL          NULL + _GenericAlias
+  52: LOAD_FAST            self
+  54: LOAD_FAST            item
+  56: BUILD_TUPLE          
+  58: PRECALL              
+  62: CALL                 
+  72: RETURN_VALUE         

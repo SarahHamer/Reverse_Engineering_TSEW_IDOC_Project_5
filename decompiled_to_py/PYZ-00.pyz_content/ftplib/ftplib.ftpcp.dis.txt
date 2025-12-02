@@ -1,0 +1,98 @@
+# Disassembly for ftplib.ftpcp
+# From module file: ftplib
+
+## co_consts:
+('Copy file from one FTP-instance to another.', 'TYPE ', 'PASV', 'STOR ', None, 3, frozenset({'125', '150'}), 'RETR ')
+
+## co_names:
+('voidcmd', 'parse227', 'sendcmd', 'sendport', 'error_proto', 'voidresp')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            targetname
+   4: POP_JUMP_FORWARD_IF_TRUE to 10
+   6: LOAD_FAST            sourcename
+   8: STORE_FAST           targetname
+  10: LOAD_CONST           'TYPE '
+  12: LOAD_FAST            type
+  14: BINARY_OP            +
+  18: STORE_FAST           type
+  20: LOAD_FAST            source
+  22: LOAD_METHOD          voidcmd
+  44: LOAD_FAST            type
+  46: PRECALL              
+  50: CALL                 
+  60: POP_TOP              
+  62: LOAD_FAST            target
+  64: LOAD_METHOD          voidcmd
+  86: LOAD_FAST            type
+  88: PRECALL              
+  92: CALL                 
+ 102: POP_TOP              
+ 104: LOAD_GLOBAL          NULL + parse227
+ 116: LOAD_FAST            source
+ 118: LOAD_METHOD          sendcmd
+ 140: LOAD_CONST           'PASV'
+ 142: PRECALL              
+ 146: CALL                 
+ 156: PRECALL              
+ 160: CALL                 
+ 170: UNPACK_SEQUENCE      
+ 174: STORE_FAST           sourcehost
+ 176: STORE_FAST           sourceport
+ 178: LOAD_FAST            target
+ 180: LOAD_METHOD          sendport
+ 202: LOAD_FAST            sourcehost
+ 204: LOAD_FAST            sourceport
+ 206: PRECALL              
+ 210: CALL                 
+ 220: POP_TOP              
+ 222: LOAD_FAST            target
+ 224: LOAD_METHOD          sendcmd
+ 246: LOAD_CONST           'STOR '
+ 248: LOAD_FAST            targetname
+ 250: BINARY_OP            +
+ 254: PRECALL              
+ 258: CALL                 
+ 268: STORE_FAST           treply
+ 270: LOAD_FAST            treply
+ 272: LOAD_CONST           None
+ 274: LOAD_CONST           3
+ 276: BUILD_SLICE          
+ 278: BINARY_SUBSCR        
+ 288: LOAD_CONST           frozenset({'125', '150'})
+ 290: CONTAINS_OP          
+ 292: POP_JUMP_FORWARD_IF_FALSE to 308
+ 294: LOAD_GLOBAL          error_proto
+ 306: RAISE_VARARGS        
+ 308: LOAD_FAST            source
+ 310: LOAD_METHOD          sendcmd
+ 332: LOAD_CONST           'RETR '
+ 334: LOAD_FAST            sourcename
+ 336: BINARY_OP            +
+ 340: PRECALL              
+ 344: CALL                 
+ 354: STORE_FAST           sreply
+ 356: LOAD_FAST            sreply
+ 358: LOAD_CONST           None
+ 360: LOAD_CONST           3
+ 362: BUILD_SLICE          
+ 364: BINARY_SUBSCR        
+ 374: LOAD_CONST           frozenset({'125', '150'})
+ 376: CONTAINS_OP          
+ 378: POP_JUMP_FORWARD_IF_FALSE to 394
+ 380: LOAD_GLOBAL          error_proto
+ 392: RAISE_VARARGS        
+ 394: LOAD_FAST            source
+ 396: LOAD_METHOD          voidresp
+ 418: PRECALL              
+ 422: CALL                 
+ 432: POP_TOP              
+ 434: LOAD_FAST            target
+ 436: LOAD_METHOD          voidresp
+ 458: PRECALL              
+ 462: CALL                 
+ 472: POP_TOP              
+ 474: LOAD_CONST           None
+ 476: RETURN_VALUE         

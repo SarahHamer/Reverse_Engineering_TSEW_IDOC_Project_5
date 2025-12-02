@@ -1,0 +1,29 @@
+# Disassembly for importlib.PathEntryFinder
+# From module file: importlib.abc
+
+## co_consts:
+('PathEntryFinder', 'Abstract base class for path entry finders used by PathFinder.', <code object find_loader at 0x000002406942DAC0, file "importlib\abc.py", line 119>, <code object invalidate_caches at 0x000002406943BC30, file "importlib\abc.py", line 153>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'find_loader', '_bootstrap_external', '_find_module_shim', 'find_module', 'invalidate_caches')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'PathEntryFinder'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Abstract base class for path entry finders used by PathFinder.'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object find_loader at 0x000002406942DAC0, file "importlib\abc.py", line 119>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           find_loader
+  20: LOAD_NAME            _bootstrap_external
+  22: LOAD_ATTR            _find_module_shim
+  32: STORE_NAME           find_module
+  34: LOAD_CONST           <code object invalidate_caches at 0x000002406943BC30, file "importlib\abc.py", line 153>
+  36: MAKE_FUNCTION        
+  38: STORE_NAME           invalidate_caches
+  40: LOAD_CONST           None
+  42: RETURN_VALUE         

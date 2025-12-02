@@ -1,0 +1,400 @@
+# Disassembly for dataclasses
+# From module file: dataclasses
+
+## co_consts:
+(0, None, ('FunctionType', 'GenericAlias'), ('dataclass', 'field', 'Field', 'FrozenInstanceError', 'InitVar', 'KW_ONLY', 'MISSING', 'fields', 'asdict', 'astuple', 'make_dataclass', 'replace', 'is_dataclass'), <code object FrozenInstanceError at 0x0000024069427770, file "dataclasses.py", line 173>, 'FrozenInstanceError', <code object _HAS_DEFAULT_FACTORY_CLASS at 0x0000024069427EC0, file "dataclasses.py", line 178>, '_HAS_DEFAULT_FACTORY_CLASS', <code object _MISSING_TYPE at 0x0000024069427B80, file "dataclasses.py", line 185>, '_MISSING_TYPE', <code object _KW_ONLY_TYPE at 0x0000024069495890, file "dataclasses.py", line 191>, '_KW_ONLY_TYPE', <code object _FIELD_BASE at 0x0000024069467750, file "dataclasses.py", line 200>, '_FIELD_BASE', '_FIELD', '_FIELD_CLASSVAR', '_FIELD_INITVAR', '__dataclass_fields__', '__dataclass_params__', '__post_init__', '^(?:\\s*(\\w+)\\s*\\.)?\\s*(\\w+)', <code object _recursive_repr at 0x000002406941A9D0, file "dataclasses.py", line 228>, <code object InitVar at 0x0000024069465290, file "dataclasses.py", line 246>, 'InitVar', <code object Field at 0x000002406944A230, file "dataclasses.py", line 273>, 'Field', <code object _DataclassParams at 0x00000240694656F0, file "dataclasses.py", line 337>, '_DataclassParams', True, ('default', 'default_factory', 'init', 'repr', 'hash', 'compare', 'metadata', 'kw_only'), <code object field at 0x00000240693D2760, file "dataclasses.py", line 368>, <code object _fields_in_init_order at 0x000002406941A550, file "dataclasses.py", line 392>, <code object _tuple_str at 0x000002406944A010, file "dataclasses.py", line 401>, ('globals', 'locals', 'return_type'), <code object _create_fn at 0x0000024068E21B60, file "dataclasses.py", line 413>, <code object _field_assign at 0x000002406945DD40, file "dataclasses.py", line 437>, <code object _field_init at 0x0000024068E1C840, file "dataclasses.py", line 449>, <code object _init_param at 0x000002406921F9B0, file "dataclasses.py", line 509>, <code object _init_fn at 0x0000024068B79230, file "dataclasses.py", line 528>, <code object _repr_fn at 0x00000240691F13E0, file "dataclasses.py", line 588>, <code object _frozen_get_del_attr at 0x000002406942DC50, file "dataclasses.py", line 599>, <code object _cmp_fn at 0x00000240693EAB30, file "dataclasses.py", line 624>, <code object _hash_fn at 0x000002406944B770, file "dataclasses.py", line 638>, <code object _is_classvar at 0x000002406941A790, file "dataclasses.py", line 646>, <code object _is_initvar at 0x00000240693EAE30, file "dataclasses.py", line 654>, <code object _is_kw_only at 0x0000024069495550, file "dataclasses.py", line 660>, <code object _is_type at 0x0000024068DC3CF0, file "dataclasses.py", line 664>, <code object _get_field at 0x0000024066CF3CC0, file "dataclasses.py", line 723>, <code object _set_qualname at 0x000002406941B1B0, file "dataclasses.py", line 820>, <code object _set_new_attribute at 0x000002406941B2D0, file "dataclasses.py", line 827>, <code object _hash_set_none at 0x000002406943AF70, file "dataclasses.py", line 842>, <code object _hash_add at 0x000002406944BBB0, file "dataclasses.py", line 845>, <code object _hash_exception at 0x000002406945F3C0, file "dataclasses.py", line 849>, (False, False, False, False), (False, False, False, True), (False, False, True, False), (False, False, True, True), (False, True, False, False), (False, True, False, True), (False, True, True, False), (False, True, True, True), (True, False, False, False), (True, False, False, True), (True, False, True, False), (True, False, True, True), (True, True, False, False), (True, True, False, True), (True, True, True, False), (True, True, True, True), <code object _process_class at 0x0000024068E11C20, file "dataclasses.py", line 884>, <code object _dataclass_getstate at 0x00000240693EAF30, file "dataclasses.py", line 1123>, <code object _dataclass_setstate at 0x00000240691F23A0, file "dataclasses.py", line 1127>, <code object _get_slots at 0x000002406942D930, file "dataclasses.py", line 1133>, <code object _add_slots at 0x0000024068D071A0, file "dataclasses.py", line 1147>, False, ('init', 'repr', 'eq', 'order', 'unsafe_hash', 'frozen', 'match_args', 'kw_only', 'slots', 'weakref_slot'), <code object dataclass at 0x000002406944BCC0, file "dataclasses.py", line 1202>, <code object fields at 0x00000240691E9830, file "dataclasses.py", line 1233>, <code object _is_dataclass_instance at 0x00000240693EB130, file "dataclasses.py", line 1251>, <code object is_dataclass at 0x00000240693D2500, file "dataclasses.py", line 1256>, ('dict_factory',), <code object asdict at 0x0000024069419590, file "dataclasses.py", line 1263>, <code object _asdict_inner at 0x0000024068DD5A90, file "dataclasses.py", line 1287>, ('tuple_factory',), <code object astuple at 0x00000240694198F0, file "dataclasses.py", line 1328>, <code object _astuple_inner at 0x00000240663494F0, file "dataclasses.py", line 1352>, (), ('bases', 'namespace', 'init', 'repr', 'eq', 'order', 'unsafe_hash', 'frozen', 'match_args', 'kw_only', 'slots', 'weakref_slot'), <code object make_dataclass at 0x0000024066348AD0, file "dataclasses.py", line 1379>, <code object replace at 0x0000024066C249C0, file "dataclasses.py", line 1453>, (None,))
+
+## co_names:
+('re', 'sys', 'copy', 'types', 'inspect', 'keyword', 'builtins', 'functools', 'itertools', 'abc', '_thread', 'FunctionType', 'GenericAlias', '__all__', 'AttributeError', 'FrozenInstanceError', '_HAS_DEFAULT_FACTORY_CLASS', '_HAS_DEFAULT_FACTORY', '_MISSING_TYPE', 'MISSING', '_KW_ONLY_TYPE', 'KW_ONLY', 'MappingProxyType', '_EMPTY_METADATA', '_FIELD_BASE', '_FIELD', '_FIELD_CLASSVAR', '_FIELD_INITVAR', '_FIELDS', '_PARAMS', '_POST_INIT_NAME', 'compile', '_MODULE_IDENTIFIER_RE', '_recursive_repr', 'InitVar', 'Field', '_DataclassParams', 'field', '_fields_in_init_order', '_tuple_str', '_create_fn', '_field_assign', '_field_init', '_init_param', '_init_fn', '_repr_fn', '_frozen_get_del_attr', '_cmp_fn', '_hash_fn', '_is_classvar', '_is_initvar', '_is_kw_only', '_is_type', '_get_field', '_set_qualname', '_set_new_attribute', '_hash_set_none', '_hash_add', '_hash_exception', '_hash_action', '_process_class', '_dataclass_getstate', '_dataclass_setstate', '_get_slots', '_add_slots', 'dataclass', 'fields', '_is_dataclass_instance', 'is_dataclass', 'dict', 'asdict', '_asdict_inner', 'tuple', 'astuple', '_astuple_inner', 'make_dataclass', 'replace')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           None
+   6: IMPORT_NAME          re
+   8: STORE_NAME           re
+  10: LOAD_CONST           0
+  12: LOAD_CONST           None
+  14: IMPORT_NAME          sys
+  16: STORE_NAME           sys
+  18: LOAD_CONST           0
+  20: LOAD_CONST           None
+  22: IMPORT_NAME          copy
+  24: STORE_NAME           copy
+  26: LOAD_CONST           0
+  28: LOAD_CONST           None
+  30: IMPORT_NAME          types
+  32: STORE_NAME           types
+  34: LOAD_CONST           0
+  36: LOAD_CONST           None
+  38: IMPORT_NAME          inspect
+  40: STORE_NAME           inspect
+  42: LOAD_CONST           0
+  44: LOAD_CONST           None
+  46: IMPORT_NAME          keyword
+  48: STORE_NAME           keyword
+  50: LOAD_CONST           0
+  52: LOAD_CONST           None
+  54: IMPORT_NAME          builtins
+  56: STORE_NAME           builtins
+  58: LOAD_CONST           0
+  60: LOAD_CONST           None
+  62: IMPORT_NAME          functools
+  64: STORE_NAME           functools
+  66: LOAD_CONST           0
+  68: LOAD_CONST           None
+  70: IMPORT_NAME          itertools
+  72: STORE_NAME           itertools
+  74: LOAD_CONST           0
+  76: LOAD_CONST           None
+  78: IMPORT_NAME          abc
+  80: STORE_NAME           abc
+  82: LOAD_CONST           0
+  84: LOAD_CONST           None
+  86: IMPORT_NAME          _thread
+  88: STORE_NAME           _thread
+  90: LOAD_CONST           0
+  92: LOAD_CONST           ('FunctionType', 'GenericAlias')
+  94: IMPORT_NAME          types
+  96: IMPORT_FROM          FunctionType
+  98: STORE_NAME           FunctionType
+ 100: IMPORT_FROM          GenericAlias
+ 102: STORE_NAME           GenericAlias
+ 104: POP_TOP              
+ 106: BUILD_LIST           
+ 108: LOAD_CONST           ('dataclass', 'field', 'Field', 'FrozenInstanceError', 'InitVar', 'KW_ONLY', 'MISSING', 'fields', 'asdict', 'astuple', 'make_dataclass', 'replace', 'is_dataclass')
+ 110: LIST_EXTEND          
+ 112: STORE_NAME           __all__
+ 114: PUSH_NULL            
+ 116: LOAD_BUILD_CLASS     
+ 118: LOAD_CONST           <code object FrozenInstanceError at 0x0000024069427770, file "dataclasses.py", line 173>
+ 120: MAKE_FUNCTION        
+ 122: LOAD_CONST           'FrozenInstanceError'
+ 124: LOAD_NAME            AttributeError
+ 126: PRECALL              
+ 130: CALL                 
+ 140: STORE_NAME           FrozenInstanceError
+ 142: PUSH_NULL            
+ 144: LOAD_BUILD_CLASS     
+ 146: LOAD_CONST           <code object _HAS_DEFAULT_FACTORY_CLASS at 0x0000024069427EC0, file "dataclasses.py", line 178>
+ 148: MAKE_FUNCTION        
+ 150: LOAD_CONST           '_HAS_DEFAULT_FACTORY_CLASS'
+ 152: PRECALL              
+ 156: CALL                 
+ 166: STORE_NAME           _HAS_DEFAULT_FACTORY_CLASS
+ 168: PUSH_NULL            
+ 170: LOAD_NAME            _HAS_DEFAULT_FACTORY_CLASS
+ 172: PRECALL              
+ 176: CALL                 
+ 186: STORE_NAME           _HAS_DEFAULT_FACTORY
+ 188: PUSH_NULL            
+ 190: LOAD_BUILD_CLASS     
+ 192: LOAD_CONST           <code object _MISSING_TYPE at 0x0000024069427B80, file "dataclasses.py", line 185>
+ 194: MAKE_FUNCTION        
+ 196: LOAD_CONST           '_MISSING_TYPE'
+ 198: PRECALL              
+ 202: CALL                 
+ 212: STORE_NAME           _MISSING_TYPE
+ 214: PUSH_NULL            
+ 216: LOAD_NAME            _MISSING_TYPE
+ 218: PRECALL              
+ 222: CALL                 
+ 232: STORE_NAME           MISSING
+ 234: PUSH_NULL            
+ 236: LOAD_BUILD_CLASS     
+ 238: LOAD_CONST           <code object _KW_ONLY_TYPE at 0x0000024069495890, file "dataclasses.py", line 191>
+ 240: MAKE_FUNCTION        
+ 242: LOAD_CONST           '_KW_ONLY_TYPE'
+ 244: PRECALL              
+ 248: CALL                 
+ 258: STORE_NAME           _KW_ONLY_TYPE
+ 260: PUSH_NULL            
+ 262: LOAD_NAME            _KW_ONLY_TYPE
+ 264: PRECALL              
+ 268: CALL                 
+ 278: STORE_NAME           KW_ONLY
+ 280: PUSH_NULL            
+ 282: LOAD_NAME            types
+ 284: LOAD_ATTR            MappingProxyType
+ 294: BUILD_MAP            
+ 296: PRECALL              
+ 300: CALL                 
+ 310: STORE_NAME           _EMPTY_METADATA
+ 312: PUSH_NULL            
+ 314: LOAD_BUILD_CLASS     
+ 316: LOAD_CONST           <code object _FIELD_BASE at 0x0000024069467750, file "dataclasses.py", line 200>
+ 318: MAKE_FUNCTION        
+ 320: LOAD_CONST           '_FIELD_BASE'
+ 322: PRECALL              
+ 326: CALL                 
+ 336: STORE_NAME           _FIELD_BASE
+ 338: PUSH_NULL            
+ 340: LOAD_NAME            _FIELD_BASE
+ 342: LOAD_CONST           '_FIELD'
+ 344: PRECALL              
+ 348: CALL                 
+ 358: STORE_NAME           _FIELD
+ 360: PUSH_NULL            
+ 362: LOAD_NAME            _FIELD_BASE
+ 364: LOAD_CONST           '_FIELD_CLASSVAR'
+ 366: PRECALL              
+ 370: CALL                 
+ 380: STORE_NAME           _FIELD_CLASSVAR
+ 382: PUSH_NULL            
+ 384: LOAD_NAME            _FIELD_BASE
+ 386: LOAD_CONST           '_FIELD_INITVAR'
+ 388: PRECALL              
+ 392: CALL                 
+ 402: STORE_NAME           _FIELD_INITVAR
+ 404: LOAD_CONST           '__dataclass_fields__'
+ 406: STORE_NAME           _FIELDS
+ 408: LOAD_CONST           '__dataclass_params__'
+ 410: STORE_NAME           _PARAMS
+ 412: LOAD_CONST           '__post_init__'
+ 414: STORE_NAME           _POST_INIT_NAME
+ 416: PUSH_NULL            
+ 418: LOAD_NAME            re
+ 420: LOAD_ATTR            compile
+ 430: LOAD_CONST           '^(?:\\s*(\\w+)\\s*\\.)?\\s*(\\w+)'
+ 432: PRECALL              
+ 436: CALL                 
+ 446: STORE_NAME           _MODULE_IDENTIFIER_RE
+ 448: LOAD_CONST           <code object _recursive_repr at 0x000002406941A9D0, file "dataclasses.py", line 228>
+ 450: MAKE_FUNCTION        
+ 452: STORE_NAME           _recursive_repr
+ 454: PUSH_NULL            
+ 456: LOAD_BUILD_CLASS     
+ 458: LOAD_CONST           <code object InitVar at 0x0000024069465290, file "dataclasses.py", line 246>
+ 460: MAKE_FUNCTION        
+ 462: LOAD_CONST           'InitVar'
+ 464: PRECALL              
+ 468: CALL                 
+ 478: STORE_NAME           InitVar
+ 480: PUSH_NULL            
+ 482: LOAD_BUILD_CLASS     
+ 484: LOAD_CONST           <code object Field at 0x000002406944A230, file "dataclasses.py", line 273>
+ 486: MAKE_FUNCTION        
+ 488: LOAD_CONST           'Field'
+ 490: PRECALL              
+ 494: CALL                 
+ 504: STORE_NAME           Field
+ 506: PUSH_NULL            
+ 508: LOAD_BUILD_CLASS     
+ 510: LOAD_CONST           <code object _DataclassParams at 0x00000240694656F0, file "dataclasses.py", line 337>
+ 512: MAKE_FUNCTION        
+ 514: LOAD_CONST           '_DataclassParams'
+ 516: PRECALL              
+ 520: CALL                 
+ 530: STORE_NAME           _DataclassParams
+ 532: LOAD_NAME            MISSING
+ 534: LOAD_NAME            MISSING
+ 536: LOAD_CONST           True
+ 538: LOAD_CONST           True
+ 540: LOAD_CONST           None
+ 542: LOAD_CONST           True
+ 544: LOAD_CONST           None
+ 546: LOAD_NAME            MISSING
+ 548: LOAD_CONST           ('default', 'default_factory', 'init', 'repr', 'hash', 'compare', 'metadata', 'kw_only')
+ 550: BUILD_CONST_KEY_MAP  
+ 552: LOAD_CONST           <code object field at 0x00000240693D2760, file "dataclasses.py", line 368>
+ 554: MAKE_FUNCTION        kwdefaults
+ 556: STORE_NAME           field
+ 558: LOAD_CONST           <code object _fields_in_init_order at 0x000002406941A550, file "dataclasses.py", line 392>
+ 560: MAKE_FUNCTION        
+ 562: STORE_NAME           _fields_in_init_order
+ 564: LOAD_CONST           <code object _tuple_str at 0x000002406944A010, file "dataclasses.py", line 401>
+ 566: MAKE_FUNCTION        
+ 568: STORE_NAME           _tuple_str
+ 570: LOAD_CONST           None
+ 572: LOAD_CONST           None
+ 574: LOAD_NAME            MISSING
+ 576: LOAD_CONST           ('globals', 'locals', 'return_type')
+ 578: BUILD_CONST_KEY_MAP  
+ 580: LOAD_CONST           <code object _create_fn at 0x0000024068E21B60, file "dataclasses.py", line 413>
+ 582: MAKE_FUNCTION        kwdefaults
+ 584: STORE_NAME           _create_fn
+ 586: LOAD_CONST           <code object _field_assign at 0x000002406945DD40, file "dataclasses.py", line 437>
+ 588: MAKE_FUNCTION        
+ 590: STORE_NAME           _field_assign
+ 592: LOAD_CONST           <code object _field_init at 0x0000024068E1C840, file "dataclasses.py", line 449>
+ 594: MAKE_FUNCTION        
+ 596: STORE_NAME           _field_init
+ 598: LOAD_CONST           <code object _init_param at 0x000002406921F9B0, file "dataclasses.py", line 509>
+ 600: MAKE_FUNCTION        
+ 602: STORE_NAME           _init_param
+ 604: LOAD_CONST           <code object _init_fn at 0x0000024068B79230, file "dataclasses.py", line 528>
+ 606: MAKE_FUNCTION        
+ 608: STORE_NAME           _init_fn
+ 610: LOAD_CONST           <code object _repr_fn at 0x00000240691F13E0, file "dataclasses.py", line 588>
+ 612: MAKE_FUNCTION        
+ 614: STORE_NAME           _repr_fn
+ 616: LOAD_CONST           <code object _frozen_get_del_attr at 0x000002406942DC50, file "dataclasses.py", line 599>
+ 618: MAKE_FUNCTION        
+ 620: STORE_NAME           _frozen_get_del_attr
+ 622: LOAD_CONST           <code object _cmp_fn at 0x00000240693EAB30, file "dataclasses.py", line 624>
+ 624: MAKE_FUNCTION        
+ 626: STORE_NAME           _cmp_fn
+ 628: LOAD_CONST           <code object _hash_fn at 0x000002406944B770, file "dataclasses.py", line 638>
+ 630: MAKE_FUNCTION        
+ 632: STORE_NAME           _hash_fn
+ 634: LOAD_CONST           <code object _is_classvar at 0x000002406941A790, file "dataclasses.py", line 646>
+ 636: MAKE_FUNCTION        
+ 638: STORE_NAME           _is_classvar
+ 640: LOAD_CONST           <code object _is_initvar at 0x00000240693EAE30, file "dataclasses.py", line 654>
+ 642: MAKE_FUNCTION        
+ 644: STORE_NAME           _is_initvar
+ 646: LOAD_CONST           <code object _is_kw_only at 0x0000024069495550, file "dataclasses.py", line 660>
+ 648: MAKE_FUNCTION        
+ 650: STORE_NAME           _is_kw_only
+ 652: LOAD_CONST           <code object _is_type at 0x0000024068DC3CF0, file "dataclasses.py", line 664>
+ 654: MAKE_FUNCTION        
+ 656: STORE_NAME           _is_type
+ 658: LOAD_CONST           <code object _get_field at 0x0000024066CF3CC0, file "dataclasses.py", line 723>
+ 660: MAKE_FUNCTION        
+ 662: STORE_NAME           _get_field
+ 664: LOAD_CONST           <code object _set_qualname at 0x000002406941B1B0, file "dataclasses.py", line 820>
+ 666: MAKE_FUNCTION        
+ 668: STORE_NAME           _set_qualname
+ 670: LOAD_CONST           <code object _set_new_attribute at 0x000002406941B2D0, file "dataclasses.py", line 827>
+ 672: MAKE_FUNCTION        
+ 674: STORE_NAME           _set_new_attribute
+ 676: LOAD_CONST           <code object _hash_set_none at 0x000002406943AF70, file "dataclasses.py", line 842>
+ 678: MAKE_FUNCTION        
+ 680: STORE_NAME           _hash_set_none
+ 682: LOAD_CONST           <code object _hash_add at 0x000002406944BBB0, file "dataclasses.py", line 845>
+ 684: MAKE_FUNCTION        
+ 686: STORE_NAME           _hash_add
+ 688: LOAD_CONST           <code object _hash_exception at 0x000002406945F3C0, file "dataclasses.py", line 849>
+ 690: MAKE_FUNCTION        
+ 692: STORE_NAME           _hash_exception
+ 694: BUILD_MAP            
+ 696: LOAD_CONST           (False, False, False, False)
+ 698: LOAD_CONST           None
+ 700: MAP_ADD              
+ 702: LOAD_CONST           (False, False, False, True)
+ 704: LOAD_CONST           None
+ 706: MAP_ADD              
+ 708: LOAD_CONST           (False, False, True, False)
+ 710: LOAD_CONST           None
+ 712: MAP_ADD              
+ 714: LOAD_CONST           (False, False, True, True)
+ 716: LOAD_CONST           None
+ 718: MAP_ADD              
+ 720: LOAD_CONST           (False, True, False, False)
+ 722: LOAD_NAME            _hash_set_none
+ 724: MAP_ADD              
+ 726: LOAD_CONST           (False, True, False, True)
+ 728: LOAD_CONST           None
+ 730: MAP_ADD              
+ 732: LOAD_CONST           (False, True, True, False)
+ 734: LOAD_NAME            _hash_add
+ 736: MAP_ADD              
+ 738: LOAD_CONST           (False, True, True, True)
+ 740: LOAD_CONST           None
+ 742: MAP_ADD              
+ 744: LOAD_CONST           (True, False, False, False)
+ 746: LOAD_NAME            _hash_add
+ 748: MAP_ADD              
+ 750: LOAD_CONST           (True, False, False, True)
+ 752: LOAD_NAME            _hash_exception
+ 754: MAP_ADD              
+ 756: LOAD_CONST           (True, False, True, False)
+ 758: LOAD_NAME            _hash_add
+ 760: MAP_ADD              
+ 762: LOAD_CONST           (True, False, True, True)
+ 764: LOAD_NAME            _hash_exception
+ 766: MAP_ADD              
+ 768: LOAD_CONST           (True, True, False, False)
+ 770: LOAD_NAME            _hash_add
+ 772: MAP_ADD              
+ 774: LOAD_CONST           (True, True, False, True)
+ 776: LOAD_NAME            _hash_exception
+ 778: MAP_ADD              
+ 780: LOAD_CONST           (True, True, True, False)
+ 782: LOAD_NAME            _hash_add
+ 784: MAP_ADD              
+ 786: LOAD_CONST           (True, True, True, True)
+ 788: LOAD_NAME            _hash_exception
+ 790: MAP_ADD              
+ 792: STORE_NAME           _hash_action
+ 794: LOAD_CONST           <code object _process_class at 0x0000024068E11C20, file "dataclasses.py", line 884>
+ 796: MAKE_FUNCTION        
+ 798: STORE_NAME           _process_class
+ 800: LOAD_CONST           <code object _dataclass_getstate at 0x00000240693EAF30, file "dataclasses.py", line 1123>
+ 802: MAKE_FUNCTION        
+ 804: STORE_NAME           _dataclass_getstate
+ 806: LOAD_CONST           <code object _dataclass_setstate at 0x00000240691F23A0, file "dataclasses.py", line 1127>
+ 808: MAKE_FUNCTION        
+ 810: STORE_NAME           _dataclass_setstate
+ 812: LOAD_CONST           <code object _get_slots at 0x000002406942D930, file "dataclasses.py", line 1133>
+ 814: MAKE_FUNCTION        
+ 816: STORE_NAME           _get_slots
+ 818: LOAD_CONST           <code object _add_slots at 0x0000024068D071A0, file "dataclasses.py", line 1147>
+ 820: MAKE_FUNCTION        
+ 822: STORE_NAME           _add_slots
+ 824: LOAD_CONST           (None,)
+ 826: LOAD_CONST           True
+ 828: LOAD_CONST           True
+ 830: LOAD_CONST           True
+ 832: LOAD_CONST           False
+ 834: LOAD_CONST           False
+ 836: LOAD_CONST           False
+ 838: LOAD_CONST           True
+ 840: LOAD_CONST           False
+ 842: LOAD_CONST           False
+ 844: LOAD_CONST           False
+ 846: LOAD_CONST           ('init', 'repr', 'eq', 'order', 'unsafe_hash', 'frozen', 'match_args', 'kw_only', 'slots', 'weakref_slot')
+ 848: BUILD_CONST_KEY_MAP  
+ 850: LOAD_CONST           <code object dataclass at 0x000002406944BCC0, file "dataclasses.py", line 1202>
+ 852: MAKE_FUNCTION        defaults, kwdefaults
+ 854: STORE_NAME           dataclass
+ 856: LOAD_CONST           <code object fields at 0x00000240691E9830, file "dataclasses.py", line 1233>
+ 858: MAKE_FUNCTION        
+ 860: STORE_NAME           fields
+ 862: LOAD_CONST           <code object _is_dataclass_instance at 0x00000240693EB130, file "dataclasses.py", line 1251>
+ 864: MAKE_FUNCTION        
+ 866: STORE_NAME           _is_dataclass_instance
+ 868: LOAD_CONST           <code object is_dataclass at 0x00000240693D2500, file "dataclasses.py", line 1256>
+ 870: MAKE_FUNCTION        
+ 872: STORE_NAME           is_dataclass
+ 874: LOAD_NAME            dict
+ 876: LOAD_CONST           ('dict_factory',)
+ 878: BUILD_CONST_KEY_MAP  
+ 880: LOAD_CONST           <code object asdict at 0x0000024069419590, file "dataclasses.py", line 1263>
+ 882: MAKE_FUNCTION        kwdefaults
+ 884: STORE_NAME           asdict
+ 886: LOAD_CONST           <code object _asdict_inner at 0x0000024068DD5A90, file "dataclasses.py", line 1287>
+ 888: MAKE_FUNCTION        
+ 890: STORE_NAME           _asdict_inner
+ 892: LOAD_NAME            tuple
+ 894: LOAD_CONST           ('tuple_factory',)
+ 896: BUILD_CONST_KEY_MAP  
+ 898: LOAD_CONST           <code object astuple at 0x00000240694198F0, file "dataclasses.py", line 1328>
+ 900: MAKE_FUNCTION        kwdefaults
+ 902: STORE_NAME           astuple
+ 904: LOAD_CONST           <code object _astuple_inner at 0x00000240663494F0, file "dataclasses.py", line 1352>
+ 906: MAKE_FUNCTION        
+ 908: STORE_NAME           _astuple_inner
+ 910: LOAD_CONST           ()
+ 912: LOAD_CONST           None
+ 914: LOAD_CONST           True
+ 916: LOAD_CONST           True
+ 918: LOAD_CONST           True
+ 920: LOAD_CONST           False
+ 922: LOAD_CONST           False
+ 924: LOAD_CONST           False
+ 926: LOAD_CONST           True
+ 928: LOAD_CONST           False
+ 930: LOAD_CONST           False
+ 932: LOAD_CONST           False
+ 934: LOAD_CONST           ('bases', 'namespace', 'init', 'repr', 'eq', 'order', 'unsafe_hash', 'frozen', 'match_args', 'kw_only', 'slots', 'weakref_slot')
+ 936: BUILD_CONST_KEY_MAP  
+ 938: LOAD_CONST           <code object make_dataclass at 0x0000024066348AD0, file "dataclasses.py", line 1379>
+ 940: MAKE_FUNCTION        kwdefaults
+ 942: STORE_NAME           make_dataclass
+ 944: LOAD_CONST           <code object replace at 0x0000024066C249C0, file "dataclasses.py", line 1453>
+ 946: MAKE_FUNCTION        
+ 948: STORE_NAME           replace
+ 950: LOAD_CONST           None
+ 952: RETURN_VALUE         

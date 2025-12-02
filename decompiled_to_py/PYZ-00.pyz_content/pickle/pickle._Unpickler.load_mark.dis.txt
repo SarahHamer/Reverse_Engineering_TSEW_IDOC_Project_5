@@ -1,0 +1,30 @@
+# Disassembly for pickle._Unpickler.load_mark
+# From module file: pickle
+
+## co_consts:
+(None,)
+
+## co_names:
+('metastack', 'append', 'stack')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            metastack
+  14: LOAD_METHOD          append
+  36: LOAD_FAST            self
+  38: LOAD_ATTR            stack
+  48: PRECALL              
+  52: CALL                 
+  62: POP_TOP              
+  64: BUILD_LIST           
+  66: LOAD_FAST            self
+  68: STORE_ATTR           stack
+  78: LOAD_FAST            self
+  80: LOAD_ATTR            stack
+  90: LOAD_ATTR            append
+ 100: LOAD_FAST            self
+ 102: STORE_ATTR           append
+ 112: LOAD_CONST           None
+ 114: RETURN_VALUE         

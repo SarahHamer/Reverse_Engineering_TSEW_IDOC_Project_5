@@ -1,0 +1,38 @@
+# Disassembly for ftplib.FTP_TLS.login
+# From module file: ftplib
+
+## co_consts:
+(None,)
+
+## co_names:
+('isinstance', 'sock', 'ssl', 'SSLSocket', 'auth', 'super', 'login')
+
+## bytecode:
+
+   0: COPY_FREE_VARS       
+   2: RESUME               
+   4: LOAD_FAST            secure
+   6: POP_JUMP_FORWARD_IF_FALSE to 110
+   8: LOAD_GLOBAL          NULL + isinstance
+  20: LOAD_FAST            self
+  22: LOAD_ATTR            sock
+  32: LOAD_GLOBAL          ssl
+  44: LOAD_ATTR            SSLSocket
+  54: PRECALL              
+  58: CALL                 
+  68: POP_JUMP_FORWARD_IF_TRUE to 110
+  70: LOAD_FAST            self
+  72: LOAD_METHOD          auth
+  94: PRECALL              
+  98: CALL                 
+ 108: POP_TOP              
+ 110: LOAD_GLOBAL          NULL + super
+ 122: PRECALL              
+ 126: CALL                 
+ 136: LOAD_METHOD          login
+ 158: LOAD_FAST            user
+ 160: LOAD_FAST            passwd
+ 162: LOAD_FAST            acct
+ 164: PRECALL              
+ 168: CALL                 
+ 178: RETURN_VALUE         

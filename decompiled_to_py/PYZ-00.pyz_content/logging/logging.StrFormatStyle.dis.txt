@@ -1,0 +1,46 @@
+# Disassembly for logging.StrFormatStyle
+# From module file: logging
+
+## co_consts:
+('StrFormatStyle', '{message}', '{asctime}', '{asctime', '^(.?[<>=^])?[+ -]?#?0?(\\d+|{\\w+})?[,_]?(\\.(\\d+|{\\w+}))?[bcdefgnosx%]?$', '^(\\d+|\\w+)(\\.\\w+|\\[[^]]+\\])*$', <code object _format at 0x0000024069419E90, file "logging\__init__.py", line 462>, <code object validate at 0x0000024068C30CB0, file "logging\__init__.py", line 469>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', 'default_format', 'asctime_format', 'asctime_search', 're', 'compile', 'I', 'fmt_spec', 'field_spec', '_format', 'validate')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'StrFormatStyle'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           '{message}'
+  12: STORE_NAME           default_format
+  14: LOAD_CONST           '{asctime}'
+  16: STORE_NAME           asctime_format
+  18: LOAD_CONST           '{asctime'
+  20: STORE_NAME           asctime_search
+  22: PUSH_NULL            
+  24: LOAD_NAME            re
+  26: LOAD_ATTR            compile
+  36: LOAD_CONST           '^(.?[<>=^])?[+ -]?#?0?(\\d+|{\\w+})?[,_]?(\\.(\\d+|{\\w+}))?[bcdefgnosx%]?$'
+  38: LOAD_NAME            re
+  40: LOAD_ATTR            I
+  50: PRECALL              
+  54: CALL                 
+  64: STORE_NAME           fmt_spec
+  66: PUSH_NULL            
+  68: LOAD_NAME            re
+  70: LOAD_ATTR            compile
+  80: LOAD_CONST           '^(\\d+|\\w+)(\\.\\w+|\\[[^]]+\\])*$'
+  82: PRECALL              
+  86: CALL                 
+  96: STORE_NAME           field_spec
+  98: LOAD_CONST           <code object _format at 0x0000024069419E90, file "logging\__init__.py", line 462>
+ 100: MAKE_FUNCTION        
+ 102: STORE_NAME           _format
+ 104: LOAD_CONST           <code object validate at 0x0000024068C30CB0, file "logging\__init__.py", line 469>
+ 106: MAKE_FUNCTION        
+ 108: STORE_NAME           validate
+ 110: LOAD_CONST           None
+ 112: RETURN_VALUE         

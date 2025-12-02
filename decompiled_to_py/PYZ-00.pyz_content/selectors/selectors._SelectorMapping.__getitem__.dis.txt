@@ -1,0 +1,45 @@
+# Disassembly for selectors._SelectorMapping.__getitem__
+# From module file: selectors
+
+## co_consts:
+(None, '{!r} is not registered')
+
+## co_names:
+('_selector', '_fileobj_lookup', '_fd_to_key', 'KeyError', 'format')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            _selector
+  16: LOAD_METHOD          _fileobj_lookup
+  38: LOAD_FAST            fileobj
+  40: PRECALL              
+  44: CALL                 
+  54: STORE_FAST           fd
+  56: LOAD_FAST            self
+  58: LOAD_ATTR            _selector
+  68: LOAD_ATTR            _fd_to_key
+  78: LOAD_FAST            fd
+  80: BINARY_SUBSCR        
+  90: RETURN_VALUE         
+  92: PUSH_EXC_INFO        
+  94: LOAD_GLOBAL          KeyError
+ 106: CHECK_EXC_MATCH      
+ 108: POP_JUMP_FORWARD_IF_FALSE to 182
+ 110: POP_TOP              
+ 112: LOAD_GLOBAL          NULL + KeyError
+ 124: LOAD_CONST           '{!r} is not registered'
+ 126: LOAD_METHOD          format
+ 148: LOAD_FAST            fileobj
+ 150: PRECALL              
+ 154: CALL                 
+ 164: PRECALL              
+ 168: CALL                 
+ 178: LOAD_CONST           None
+ 180: RAISE_VARARGS        
+ 182: RERAISE              
+ 184: COPY                 
+ 186: POP_EXCEPT           
+ 188: RERAISE              

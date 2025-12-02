@@ -1,0 +1,60 @@
+# Disassembly for pprint._safe_key.__lt__
+# From module file: pprint
+
+## co_consts:
+(None,)
+
+## co_names:
+('obj', 'TypeError', 'str', 'type', 'id')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            obj
+  16: LOAD_FAST            other
+  18: LOAD_ATTR            obj
+  28: COMPARE_OP           <
+  34: RETURN_VALUE         
+  36: PUSH_EXC_INFO        
+  38: LOAD_GLOBAL          TypeError
+  50: CHECK_EXC_MATCH      
+  52: POP_JUMP_FORWARD_IF_FALSE to 276
+  54: POP_TOP              
+  56: LOAD_GLOBAL          NULL + str
+  68: LOAD_GLOBAL          NULL + type
+  80: LOAD_FAST            self
+  82: LOAD_ATTR            obj
+  92: PRECALL              
+  96: CALL                 
+ 106: PRECALL              
+ 110: CALL                 
+ 120: LOAD_GLOBAL          NULL + id
+ 132: LOAD_FAST            self
+ 134: LOAD_ATTR            obj
+ 144: PRECALL              
+ 148: CALL                 
+ 158: BUILD_TUPLE          
+ 160: LOAD_GLOBAL          NULL + str
+ 172: LOAD_GLOBAL          NULL + type
+ 184: LOAD_FAST            other
+ 186: LOAD_ATTR            obj
+ 196: PRECALL              
+ 200: CALL                 
+ 210: PRECALL              
+ 214: CALL                 
+ 224: LOAD_GLOBAL          NULL + id
+ 236: LOAD_FAST            other
+ 238: LOAD_ATTR            obj
+ 248: PRECALL              
+ 252: CALL                 
+ 262: BUILD_TUPLE          
+ 264: COMPARE_OP           <
+ 270: SWAP                 
+ 272: POP_EXCEPT           
+ 274: RETURN_VALUE         
+ 276: RERAISE              
+ 278: COPY                 
+ 280: POP_EXCEPT           
+ 282: RERAISE              

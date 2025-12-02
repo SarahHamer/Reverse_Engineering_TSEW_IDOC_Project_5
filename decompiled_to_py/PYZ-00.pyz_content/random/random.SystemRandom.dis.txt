@@ -1,0 +1,39 @@
+# Disassembly for random.SystemRandom
+# From module file: random
+
+## co_consts:
+('SystemRandom', 'Alternate random number generator using sources provided\n    by the operating system (such as /dev/urandom on Unix or\n    CryptGenRandom on Windows).\n\n     Not available on all systems (see os.urandom() for details).\n\n    ', <code object random at 0x000002406941A430, file "random.py", line 796>, <code object getrandbits at 0x00000240691C14D0, file "random.py", line 800>, <code object randbytes at 0x0000024069467C90, file "random.py", line 808>, <code object seed at 0x000002406943B270, file "random.py", line 814>, <code object _notimplemented at 0x0000024069465FB0, file "random.py", line 818>, None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'random', 'getrandbits', 'randbytes', 'seed', '_notimplemented', 'getstate', 'setstate')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'SystemRandom'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'Alternate random number generator using sources provided\n    by the operating system (such as /dev/urandom on Unix or\n    CryptGenRandom on Windows).\n\n     Not available on all systems (see os.urandom() for details).\n\n    '
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           <code object random at 0x000002406941A430, file "random.py", line 796>
+  16: MAKE_FUNCTION        
+  18: STORE_NAME           random
+  20: LOAD_CONST           <code object getrandbits at 0x00000240691C14D0, file "random.py", line 800>
+  22: MAKE_FUNCTION        
+  24: STORE_NAME           getrandbits
+  26: LOAD_CONST           <code object randbytes at 0x0000024069467C90, file "random.py", line 808>
+  28: MAKE_FUNCTION        
+  30: STORE_NAME           randbytes
+  32: LOAD_CONST           <code object seed at 0x000002406943B270, file "random.py", line 814>
+  34: MAKE_FUNCTION        
+  36: STORE_NAME           seed
+  38: LOAD_CONST           <code object _notimplemented at 0x0000024069465FB0, file "random.py", line 818>
+  40: MAKE_FUNCTION        
+  42: STORE_NAME           _notimplemented
+  44: LOAD_NAME            _notimplemented
+  46: COPY                 
+  48: STORE_NAME           getstate
+  50: STORE_NAME           setstate
+  52: LOAD_CONST           None
+  54: RETURN_VALUE         

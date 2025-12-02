@@ -1,0 +1,20 @@
+# Disassembly for email.InvalidMultipartContentTransferEncodingDefect
+# From module file: email.errors
+
+## co_consts:
+('InvalidMultipartContentTransferEncodingDefect', 'An invalid content transfer encoding was set on the multipart itself.', None)
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_NAME            __name__
+   4: STORE_NAME           __module__
+   6: LOAD_CONST           'InvalidMultipartContentTransferEncodingDefect'
+   8: STORE_NAME           __qualname__
+  10: LOAD_CONST           'An invalid content transfer encoding was set on the multipart itself.'
+  12: STORE_NAME           __doc__
+  14: LOAD_CONST           None
+  16: RETURN_VALUE         

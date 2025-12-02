@@ -1,0 +1,192 @@
+# Disassembly for base64.main
+# From module file: base64
+
+## co_consts:
+('Small main program', 0, None, "usage: %s [-h|-d|-e|-u|-t] [file|-]\n        -h: print this help message and exit\n        -d, -u: decode\n        -e: encode (default)\n        -t: encode and decode string 'Aladdin:open sesame'", 1, 'hdeut', 2, '-e', '-d', '-u', '-t', '-h', '-', 'rb')
+
+## co_names:
+('sys', 'getopt', 'argv', 'error', 'stderr', 'stdout', 'print', 'exit', 'encode', 'decode', 'test', 'open', 'buffer', 'stdin')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           0
+   4: LOAD_CONST           None
+   6: IMPORT_NAME          sys
+   8: STORE_FAST           sys
+  10: LOAD_CONST           0
+  12: LOAD_CONST           None
+  14: IMPORT_NAME          getopt
+  16: STORE_FAST           getopt
+  18: LOAD_CONST           "usage: %s [-h|-d|-e|-u|-t] [file|-]\n        -h: print this help message and exit\n        -d, -u: decode\n        -e: encode (default)\n        -t: encode and decode string 'Aladdin:open sesame'"
+  20: LOAD_FAST            sys
+  22: LOAD_ATTR            argv
+  32: LOAD_CONST           0
+  34: BINARY_SUBSCR        
+  44: BINARY_OP            %
+  48: STORE_FAST           usage
+  50: NOP                  
+  52: LOAD_FAST            getopt
+  54: LOAD_METHOD          getopt
+  76: LOAD_FAST            sys
+  78: LOAD_ATTR            argv
+  88: LOAD_CONST           1
+  90: LOAD_CONST           None
+  92: BUILD_SLICE          
+  94: BINARY_SUBSCR        
+ 104: LOAD_CONST           'hdeut'
+ 106: PRECALL              
+ 110: CALL                 
+ 120: UNPACK_SEQUENCE      
+ 124: STORE_FAST           opts
+ 126: STORE_FAST           args
+ 128: JUMP_FORWARD         to 302
+ 130: PUSH_EXC_INFO        
+ 132: LOAD_FAST            getopt
+ 134: LOAD_ATTR            error
+ 144: CHECK_EXC_MATCH      
+ 146: POP_JUMP_FORWARD_IF_FALSE to 294
+ 148: STORE_FAST           msg
+ 150: LOAD_FAST            sys
+ 152: LOAD_ATTR            stderr
+ 162: LOAD_FAST            sys
+ 164: STORE_ATTR           stdout
+ 174: LOAD_GLOBAL          NULL + print
+ 186: LOAD_FAST            msg
+ 188: PRECALL              
+ 192: CALL                 
+ 202: POP_TOP              
+ 204: LOAD_GLOBAL          NULL + print
+ 216: LOAD_FAST            usage
+ 218: PRECALL              
+ 222: CALL                 
+ 232: POP_TOP              
+ 234: LOAD_FAST            sys
+ 236: LOAD_METHOD          exit
+ 258: LOAD_CONST           2
+ 260: PRECALL              
+ 264: CALL                 
+ 274: POP_TOP              
+ 276: POP_EXCEPT           
+ 278: LOAD_CONST           None
+ 280: STORE_FAST           msg
+ 282: DELETE_FAST          msg
+ 284: JUMP_FORWARD         to 302
+ 286: LOAD_CONST           None
+ 288: STORE_FAST           msg
+ 290: DELETE_FAST          msg
+ 292: RERAISE              
+ 294: RERAISE              
+ 296: COPY                 
+ 298: POP_EXCEPT           
+ 300: RERAISE              
+ 302: LOAD_GLOBAL          encode
+ 314: STORE_FAST           func
+ 316: LOAD_FAST            opts
+ 318: GET_ITER             
+ 320: FOR_ITER             to 504
+ 322: UNPACK_SEQUENCE      
+ 326: STORE_FAST           o
+ 328: STORE_FAST           a
+ 330: LOAD_FAST            o
+ 332: LOAD_CONST           '-e'
+ 334: COMPARE_OP           ==
+ 340: POP_JUMP_FORWARD_IF_FALSE to 356
+ 342: LOAD_GLOBAL          encode
+ 354: STORE_FAST           func
+ 356: LOAD_FAST            o
+ 358: LOAD_CONST           '-d'
+ 360: COMPARE_OP           ==
+ 366: POP_JUMP_FORWARD_IF_FALSE to 382
+ 368: LOAD_GLOBAL          decode
+ 380: STORE_FAST           func
+ 382: LOAD_FAST            o
+ 384: LOAD_CONST           '-u'
+ 386: COMPARE_OP           ==
+ 392: POP_JUMP_FORWARD_IF_FALSE to 408
+ 394: LOAD_GLOBAL          decode
+ 406: STORE_FAST           func
+ 408: LOAD_FAST            o
+ 410: LOAD_CONST           '-t'
+ 412: COMPARE_OP           ==
+ 418: POP_JUMP_FORWARD_IF_FALSE to 454
+ 420: LOAD_GLOBAL          NULL + test
+ 432: PRECALL              
+ 436: CALL                 
+ 446: POP_TOP              
+ 448: POP_TOP              
+ 450: LOAD_CONST           None
+ 452: RETURN_VALUE         
+ 454: LOAD_FAST            o
+ 456: LOAD_CONST           '-h'
+ 458: COMPARE_OP           ==
+ 464: POP_JUMP_FORWARD_IF_FALSE to 502
+ 466: LOAD_GLOBAL          NULL + print
+ 478: LOAD_FAST            usage
+ 480: PRECALL              
+ 484: CALL                 
+ 494: POP_TOP              
+ 496: POP_TOP              
+ 498: LOAD_CONST           None
+ 500: RETURN_VALUE         
+ 502: JUMP_BACKWARD        to 320
+ 504: LOAD_FAST            args
+ 506: POP_JUMP_FORWARD_IF_FALSE to 674
+ 508: LOAD_FAST            args
+ 510: LOAD_CONST           0
+ 512: BINARY_SUBSCR        
+ 522: LOAD_CONST           '-'
+ 524: COMPARE_OP           !=
+ 530: POP_JUMP_FORWARD_IF_FALSE to 674
+ 532: LOAD_GLOBAL          NULL + open
+ 544: LOAD_FAST            args
+ 546: LOAD_CONST           0
+ 548: BINARY_SUBSCR        
+ 558: LOAD_CONST           'rb'
+ 560: PRECALL              
+ 564: CALL                 
+ 574: BEFORE_WITH          
+ 576: STORE_FAST           f
+ 578: PUSH_NULL            
+ 580: LOAD_FAST            func
+ 582: LOAD_FAST            f
+ 584: LOAD_FAST            sys
+ 586: LOAD_ATTR            stdout
+ 596: LOAD_ATTR            buffer
+ 606: PRECALL              
+ 610: CALL                 
+ 620: POP_TOP              
+ 622: LOAD_CONST           None
+ 624: LOAD_CONST           None
+ 626: LOAD_CONST           None
+ 628: PRECALL              
+ 632: CALL                 
+ 642: POP_TOP              
+ 644: LOAD_CONST           None
+ 646: RETURN_VALUE         
+ 648: PUSH_EXC_INFO        
+ 650: WITH_EXCEPT_START    
+ 652: POP_JUMP_FORWARD_IF_TRUE to 662
+ 654: RERAISE              
+ 656: COPY                 
+ 658: POP_EXCEPT           
+ 660: RERAISE              
+ 662: POP_TOP              
+ 664: POP_EXCEPT           
+ 666: POP_TOP              
+ 668: POP_TOP              
+ 670: LOAD_CONST           None
+ 672: RETURN_VALUE         
+ 674: PUSH_NULL            
+ 676: LOAD_FAST            func
+ 678: LOAD_FAST            sys
+ 680: LOAD_ATTR            stdin
+ 690: LOAD_ATTR            buffer
+ 700: LOAD_FAST            sys
+ 702: LOAD_ATTR            stdout
+ 712: LOAD_ATTR            buffer
+ 722: PRECALL              
+ 726: CALL                 
+ 736: POP_TOP              
+ 738: LOAD_CONST           None
+ 740: RETURN_VALUE         

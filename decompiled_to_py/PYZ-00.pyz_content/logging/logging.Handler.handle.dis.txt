@@ -1,0 +1,50 @@
+# Disassembly for logging.Handler.handle
+# From module file: logging
+
+## co_consts:
+('\n        Conditionally emit the specified logging record.\n\n        Emission depends on filters which may have been added to the handler.\n        Wrap the actual emission of the record with acquisition/release of\n        the I/O thread lock. Returns whether the filter passed the record for\n        emission.\n        ',)
+
+## co_names:
+('filter', 'acquire', 'emit', 'release')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          filter
+  26: LOAD_FAST            record
+  28: PRECALL              
+  32: CALL                 
+  42: STORE_FAST           rv
+  44: LOAD_FAST            rv
+  46: POP_JUMP_FORWARD_IF_FALSE to 224
+  48: LOAD_FAST            self
+  50: LOAD_METHOD          acquire
+  72: PRECALL              
+  76: CALL                 
+  86: POP_TOP              
+  88: NOP                  
+  90: LOAD_FAST            self
+  92: LOAD_METHOD          emit
+ 114: LOAD_FAST            record
+ 116: PRECALL              
+ 120: CALL                 
+ 130: POP_TOP              
+ 132: LOAD_FAST            self
+ 134: LOAD_METHOD          release
+ 156: PRECALL              
+ 160: CALL                 
+ 170: POP_TOP              
+ 172: JUMP_FORWARD         to 224
+ 174: PUSH_EXC_INFO        
+ 176: LOAD_FAST            self
+ 178: LOAD_METHOD          release
+ 200: PRECALL              
+ 204: CALL                 
+ 214: POP_TOP              
+ 216: RERAISE              
+ 218: COPY                 
+ 220: POP_EXCEPT           
+ 222: RERAISE              
+ 224: LOAD_FAST            rv
+ 226: RETURN_VALUE         

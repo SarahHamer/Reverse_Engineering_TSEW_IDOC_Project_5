@@ -1,0 +1,19 @@
+# Disassembly for threading._RLock._is_owned
+# From module file: threading
+
+## co_consts:
+(None,)
+
+## co_names:
+('_owner', 'get_ident')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _owner
+  14: LOAD_GLOBAL          NULL + get_ident
+  26: PRECALL              
+  30: CALL                 
+  40: COMPARE_OP           ==
+  46: RETURN_VALUE         

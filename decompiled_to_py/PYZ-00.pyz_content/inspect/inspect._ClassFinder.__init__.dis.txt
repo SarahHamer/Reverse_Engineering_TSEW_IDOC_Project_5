@@ -1,0 +1,20 @@
+# Disassembly for inspect._ClassFinder.__init__
+# From module file: inspect
+
+## co_consts:
+(None,)
+
+## co_names:
+('stack', 'qualname')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            self
+   6: STORE_ATTR           stack
+  16: LOAD_FAST            qualname
+  18: LOAD_FAST            self
+  20: STORE_ATTR           qualname
+  30: LOAD_CONST           None
+  32: RETURN_VALUE         

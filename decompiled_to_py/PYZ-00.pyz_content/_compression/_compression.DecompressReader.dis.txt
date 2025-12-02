@@ -1,0 +1,60 @@
+# Disassembly for _compression.DecompressReader
+# From module file: _compression
+
+## co_consts:
+('DecompressReader', 'Adapts the decompressor API to a RawIOBase reader API', <code object readable at 0x000002406943AEB0, file "_compression.py", line 36>, (), <code object __init__ at 0x00000240691F3B40, file "_compression.py", line 39>, <code object close at 0x000002406944A560, file "_compression.py", line 59>, <code object seekable at 0x000002406945DD40, file "_compression.py", line 63>, <code object readinto at 0x0000024069366120, file "_compression.py", line 66>, -1, <code object read at 0x0000024068BFED70, file "_compression.py", line 72>, <code object readall at 0x00000240691F5890, file "_compression.py", line 113>, <code object _rewind at 0x00000240693AA0B0, file "_compression.py", line 124>, <code object seek at 0x0000024068B7ABB0, file "_compression.py", line 130>, <code object tell at 0x00000240694949F0, file "_compression.py", line 160>, ((),), (-1,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__doc__', 'readable', '__init__', 'close', 'seekable', 'readinto', 'read', 'readall', '_rewind', 'io', 'SEEK_SET', 'seek', 'tell', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'DecompressReader'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           'Adapts the decompressor API to a RawIOBase reader API'
+  14: STORE_NAME           __doc__
+  16: LOAD_CONST           <code object readable at 0x000002406943AEB0, file "_compression.py", line 36>
+  18: MAKE_FUNCTION        
+  20: STORE_NAME           readable
+  22: LOAD_CONST           ((),)
+  24: LOAD_CONST           <code object __init__ at 0x00000240691F3B40, file "_compression.py", line 39>
+  26: MAKE_FUNCTION        defaults
+  28: STORE_NAME           __init__
+  30: LOAD_CLOSURE         __class__
+  32: BUILD_TUPLE          
+  34: LOAD_CONST           <code object close at 0x000002406944A560, file "_compression.py", line 59>
+  36: MAKE_FUNCTION        closure
+  38: STORE_NAME           close
+  40: LOAD_CONST           <code object seekable at 0x000002406945DD40, file "_compression.py", line 63>
+  42: MAKE_FUNCTION        
+  44: STORE_NAME           seekable
+  46: LOAD_CONST           <code object readinto at 0x0000024069366120, file "_compression.py", line 66>
+  48: MAKE_FUNCTION        
+  50: STORE_NAME           readinto
+  52: LOAD_CONST           (-1,)
+  54: LOAD_CONST           <code object read at 0x0000024068BFED70, file "_compression.py", line 72>
+  56: MAKE_FUNCTION        defaults
+  58: STORE_NAME           read
+  60: LOAD_CONST           <code object readall at 0x00000240691F5890, file "_compression.py", line 113>
+  62: MAKE_FUNCTION        
+  64: STORE_NAME           readall
+  66: LOAD_CONST           <code object _rewind at 0x00000240693AA0B0, file "_compression.py", line 124>
+  68: MAKE_FUNCTION        
+  70: STORE_NAME           _rewind
+  72: LOAD_NAME            io
+  74: LOAD_ATTR            SEEK_SET
+  84: BUILD_TUPLE          
+  86: LOAD_CONST           <code object seek at 0x0000024068B7ABB0, file "_compression.py", line 130>
+  88: MAKE_FUNCTION        defaults
+  90: STORE_NAME           seek
+  92: LOAD_CONST           <code object tell at 0x00000240694949F0, file "_compression.py", line 160>
+  94: MAKE_FUNCTION        
+  96: STORE_NAME           tell
+  98: LOAD_CLOSURE         __class__
+ 100: COPY                 
+ 102: STORE_NAME           __classcell__
+ 104: RETURN_VALUE         

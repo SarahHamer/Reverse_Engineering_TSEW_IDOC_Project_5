@@ -1,0 +1,58 @@
+# Disassembly for http.CookieJar.clear_session_cookies
+# From module file: http.cookiejar
+
+## co_consts:
+("Discard all session cookies.\n\n        Note that the .save() method won't save session cookies anyway, unless\n        you ask otherwise by passing a true ignore_discard argument.\n\n        ", None)
+
+## co_names:
+('_cookies_lock', 'acquire', 'discard', 'clear', 'domain', 'path', 'name', 'release')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _cookies_lock
+  14: LOAD_METHOD          acquire
+  36: PRECALL              
+  40: CALL                 
+  50: POP_TOP              
+  52: NOP                  
+  54: LOAD_FAST            self
+  56: GET_ITER             
+  58: FOR_ITER             to 154
+  60: STORE_FAST           cookie
+  62: LOAD_FAST            cookie
+  64: LOAD_ATTR            discard
+  74: POP_JUMP_FORWARD_IF_FALSE to 152
+  76: LOAD_FAST            self
+  78: LOAD_METHOD          clear
+ 100: LOAD_FAST            cookie
+ 102: LOAD_ATTR            domain
+ 112: LOAD_FAST            cookie
+ 114: LOAD_ATTR            path
+ 124: LOAD_FAST            cookie
+ 126: LOAD_ATTR            name
+ 136: PRECALL              
+ 140: CALL                 
+ 150: POP_TOP              
+ 152: JUMP_BACKWARD        to 58
+ 154: NOP                  
+ 156: LOAD_FAST            self
+ 158: LOAD_ATTR            _cookies_lock
+ 168: LOAD_METHOD          release
+ 190: PRECALL              
+ 194: CALL                 
+ 204: POP_TOP              
+ 206: LOAD_CONST           None
+ 208: RETURN_VALUE         
+ 210: PUSH_EXC_INFO        
+ 212: LOAD_FAST            self
+ 214: LOAD_ATTR            _cookies_lock
+ 224: LOAD_METHOD          release
+ 246: PRECALL              
+ 250: CALL                 
+ 260: POP_TOP              
+ 262: RERAISE              
+ 264: COPY                 
+ 266: POP_EXCEPT           
+ 268: RERAISE              

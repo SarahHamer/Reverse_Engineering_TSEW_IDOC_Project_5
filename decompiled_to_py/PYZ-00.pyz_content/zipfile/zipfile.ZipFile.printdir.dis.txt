@@ -1,0 +1,52 @@
+# Disassembly for zipfile.ZipFile.printdir
+# From module file: zipfile
+
+## co_consts:
+('Print a table of contents for the zip file.', '%-46s %19s %12s', ('File Name', 'Modified    ', 'Size'), ('file',), '%d-%02d-%02d %02d:%02d:%02d', None, 6, '%-46s %s %12d')
+
+## co_names:
+('print', 'filelist', 'date_time', 'filename', 'file_size')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + print
+  14: LOAD_CONST           '%-46s %19s %12s'
+  16: LOAD_CONST           ('File Name', 'Modified    ', 'Size')
+  18: BINARY_OP            %
+  22: LOAD_FAST            file
+  24: KW_NAMES             
+  26: PRECALL              
+  30: CALL                 
+  40: POP_TOP              
+  42: LOAD_FAST            self
+  44: LOAD_ATTR            filelist
+  54: GET_ITER             
+  56: FOR_ITER             to 164
+  58: STORE_FAST           zinfo
+  60: LOAD_CONST           '%d-%02d-%02d %02d:%02d:%02d'
+  62: LOAD_FAST            zinfo
+  64: LOAD_ATTR            date_time
+  74: LOAD_CONST           None
+  76: LOAD_CONST           6
+  78: BUILD_SLICE          
+  80: BINARY_SUBSCR        
+  90: BINARY_OP            %
+  94: STORE_FAST           date
+  96: LOAD_GLOBAL          NULL + print
+ 108: LOAD_CONST           '%-46s %s %12d'
+ 110: LOAD_FAST            zinfo
+ 112: LOAD_ATTR            filename
+ 122: LOAD_FAST            date
+ 124: LOAD_FAST            zinfo
+ 126: LOAD_ATTR            file_size
+ 136: BUILD_TUPLE          
+ 138: BINARY_OP            %
+ 142: LOAD_FAST            file
+ 144: KW_NAMES             
+ 146: PRECALL              
+ 150: CALL                 
+ 160: POP_TOP              
+ 162: JUMP_BACKWARD        to 56
+ 164: LOAD_CONST           None
+ 166: RETURN_VALUE         

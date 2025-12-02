@@ -1,0 +1,198 @@
+# Disassembly for inspect.getfullargspec
+# From module file: inspect
+
+## co_consts:
+('Get the names and default values of a callable object\'s parameters.\n\n    A tuple of seven things is returned:\n    (args, varargs, varkw, defaults, kwonlyargs, kwonlydefaults, annotations).\n    \'args\' is a list of the parameter names.\n    \'varargs\' and \'varkw\' are the names of the * and ** parameters or None.\n    \'defaults\' is an n-tuple of the default values of the last n parameters.\n    \'kwonlyargs\' is a list of keyword-only parameter names.\n    \'kwonlydefaults\' is a dictionary mapping names from kwonlyargs to defaults.\n    \'annotations\' is a dictionary mapping parameter names to annotations.\n\n    Notable differences from inspect.signature():\n      - the "self" parameter is always reported, even for bound methods\n      - wrapper chains defined by __wrapped__ *not* unwrapped automatically\n    ', False, ('follow_wrapper_chains', 'skip_bound_arg', 'sigcls', 'eval_str'), 'unsupported callable', None, (), 'return')
+
+## co_names:
+('_signature_from_callable', 'Signature', 'Exception', 'TypeError', 'return_annotation', 'empty', 'parameters', 'values', 'kind', 'name', '_POSITIONAL_ONLY', 'append', 'default', '_POSITIONAL_OR_KEYWORD', '_VAR_POSITIONAL', '_KEYWORD_ONLY', '_VAR_KEYWORD', 'annotation', 'FullArgSpec')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_GLOBAL          NULL + _signature_from_callable
+  16: LOAD_FAST            func
+  18: LOAD_CONST           False
+  20: LOAD_CONST           False
+  22: LOAD_GLOBAL          Signature
+  34: LOAD_CONST           False
+  36: KW_NAMES             
+  38: PRECALL              
+  42: CALL                 
+  52: STORE_FAST           sig
+  54: JUMP_FORWARD         to 124
+  56: PUSH_EXC_INFO        
+  58: LOAD_GLOBAL          Exception
+  70: CHECK_EXC_MATCH      
+  72: POP_JUMP_FORWARD_IF_FALSE to 116
+  74: STORE_FAST           ex
+  76: LOAD_GLOBAL          NULL + TypeError
+  88: LOAD_CONST           'unsupported callable'
+  90: PRECALL              
+  94: CALL                 
+ 104: LOAD_FAST            ex
+ 106: RAISE_VARARGS        
+ 108: LOAD_CONST           None
+ 110: STORE_FAST           ex
+ 112: DELETE_FAST          ex
+ 114: RERAISE              
+ 116: RERAISE              
+ 118: COPY                 
+ 120: POP_EXCEPT           
+ 122: RERAISE              
+ 124: BUILD_LIST           
+ 126: STORE_FAST           args
+ 128: LOAD_CONST           None
+ 130: STORE_FAST           varargs
+ 132: LOAD_CONST           None
+ 134: STORE_FAST           varkw
+ 136: BUILD_LIST           
+ 138: STORE_FAST           posonlyargs
+ 140: BUILD_LIST           
+ 142: STORE_FAST           kwonlyargs
+ 144: BUILD_MAP            
+ 146: STORE_FAST           annotations
+ 148: LOAD_CONST           ()
+ 150: STORE_FAST           defaults
+ 152: BUILD_MAP            
+ 154: STORE_FAST           kwdefaults
+ 156: LOAD_FAST            sig
+ 158: LOAD_ATTR            return_annotation
+ 168: LOAD_FAST            sig
+ 170: LOAD_ATTR            empty
+ 180: IS_OP                
+ 182: POP_JUMP_FORWARD_IF_FALSE to 204
+ 184: LOAD_FAST            sig
+ 186: LOAD_ATTR            return_annotation
+ 196: LOAD_FAST            annotations
+ 198: LOAD_CONST           'return'
+ 200: STORE_SUBSCR         
+ 204: LOAD_FAST            sig
+ 206: LOAD_ATTR            parameters
+ 216: LOAD_METHOD          values
+ 238: PRECALL              
+ 242: CALL                 
+ 252: GET_ITER             
+ 254: FOR_ITER             to 716
+ 256: STORE_FAST           param
+ 258: LOAD_FAST            param
+ 260: LOAD_ATTR            kind
+ 270: STORE_FAST           kind
+ 272: LOAD_FAST            param
+ 274: LOAD_ATTR            name
+ 284: STORE_FAST           name
+ 286: LOAD_FAST            kind
+ 288: LOAD_GLOBAL          _POSITIONAL_ONLY
+ 300: IS_OP                
+ 302: POP_JUMP_FORWARD_IF_FALSE to 398
+ 304: LOAD_FAST            posonlyargs
+ 306: LOAD_METHOD          append
+ 328: LOAD_FAST            name
+ 330: PRECALL              
+ 334: CALL                 
+ 344: POP_TOP              
+ 346: LOAD_FAST            param
+ 348: LOAD_ATTR            default
+ 358: LOAD_FAST            param
+ 360: LOAD_ATTR            empty
+ 370: IS_OP                
+ 372: POP_JUMP_FORWARD_IF_FALSE to 396
+ 374: LOAD_FAST            defaults
+ 376: LOAD_FAST            param
+ 378: LOAD_ATTR            default
+ 388: BUILD_TUPLE          
+ 390: BINARY_OP            +=
+ 394: STORE_FAST           defaults
+ 396: JUMP_FORWARD         to 666
+ 398: LOAD_FAST            kind
+ 400: LOAD_GLOBAL          _POSITIONAL_OR_KEYWORD
+ 412: IS_OP                
+ 414: POP_JUMP_FORWARD_IF_FALSE to 510
+ 416: LOAD_FAST            args
+ 418: LOAD_METHOD          append
+ 440: LOAD_FAST            name
+ 442: PRECALL              
+ 446: CALL                 
+ 456: POP_TOP              
+ 458: LOAD_FAST            param
+ 460: LOAD_ATTR            default
+ 470: LOAD_FAST            param
+ 472: LOAD_ATTR            empty
+ 482: IS_OP                
+ 484: POP_JUMP_FORWARD_IF_FALSE to 508
+ 486: LOAD_FAST            defaults
+ 488: LOAD_FAST            param
+ 490: LOAD_ATTR            default
+ 500: BUILD_TUPLE          
+ 502: BINARY_OP            +=
+ 506: STORE_FAST           defaults
+ 508: JUMP_FORWARD         to 666
+ 510: LOAD_FAST            kind
+ 512: LOAD_GLOBAL          _VAR_POSITIONAL
+ 524: IS_OP                
+ 526: POP_JUMP_FORWARD_IF_FALSE to 534
+ 528: LOAD_FAST            name
+ 530: STORE_FAST           varargs
+ 532: JUMP_FORWARD         to 666
+ 534: LOAD_FAST            kind
+ 536: LOAD_GLOBAL          _KEYWORD_ONLY
+ 548: IS_OP                
+ 550: POP_JUMP_FORWARD_IF_FALSE to 644
+ 552: LOAD_FAST            kwonlyargs
+ 554: LOAD_METHOD          append
+ 576: LOAD_FAST            name
+ 578: PRECALL              
+ 582: CALL                 
+ 592: POP_TOP              
+ 594: LOAD_FAST            param
+ 596: LOAD_ATTR            default
+ 606: LOAD_FAST            param
+ 608: LOAD_ATTR            empty
+ 618: IS_OP                
+ 620: POP_JUMP_FORWARD_IF_FALSE to 642
+ 622: LOAD_FAST            param
+ 624: LOAD_ATTR            default
+ 634: LOAD_FAST            kwdefaults
+ 636: LOAD_FAST            name
+ 638: STORE_SUBSCR         
+ 642: JUMP_FORWARD         to 666
+ 644: LOAD_FAST            kind
+ 646: LOAD_GLOBAL          _VAR_KEYWORD
+ 658: IS_OP                
+ 660: POP_JUMP_FORWARD_IF_FALSE to 666
+ 662: LOAD_FAST            name
+ 664: STORE_FAST           varkw
+ 666: LOAD_FAST            param
+ 668: LOAD_ATTR            annotation
+ 678: LOAD_FAST            param
+ 680: LOAD_ATTR            empty
+ 690: IS_OP                
+ 692: POP_JUMP_FORWARD_IF_FALSE to 714
+ 694: LOAD_FAST            param
+ 696: LOAD_ATTR            annotation
+ 706: LOAD_FAST            annotations
+ 708: LOAD_FAST            name
+ 710: STORE_SUBSCR         
+ 714: JUMP_BACKWARD        to 254
+ 716: LOAD_FAST            kwdefaults
+ 718: POP_JUMP_FORWARD_IF_TRUE to 724
+ 720: LOAD_CONST           None
+ 722: STORE_FAST           kwdefaults
+ 724: LOAD_FAST            defaults
+ 726: POP_JUMP_FORWARD_IF_TRUE to 732
+ 728: LOAD_CONST           None
+ 730: STORE_FAST           defaults
+ 732: LOAD_GLOBAL          NULL + FullArgSpec
+ 744: LOAD_FAST            posonlyargs
+ 746: LOAD_FAST            args
+ 748: BINARY_OP            +
+ 752: LOAD_FAST            varargs
+ 754: LOAD_FAST            varkw
+ 756: LOAD_FAST            defaults
+ 758: LOAD_FAST            kwonlyargs
+ 760: LOAD_FAST            kwdefaults
+ 762: LOAD_FAST            annotations
+ 764: PRECALL              
+ 768: CALL                 
+ 778: RETURN_VALUE         

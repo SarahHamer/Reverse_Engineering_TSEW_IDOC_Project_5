@@ -1,0 +1,22 @@
+# Disassembly for importlib.Distribution._deps_from_requires_text
+# From module file: importlib.metadata
+
+## co_consts:
+(None,)
+
+## co_names:
+('_convert_egg_info_reqs_to_simple_reqs', 'Sectioned', 'read')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            cls
+   4: LOAD_METHOD          _convert_egg_info_reqs_to_simple_reqs
+  26: LOAD_GLOBAL          Sectioned
+  38: LOAD_METHOD          read
+  60: LOAD_FAST            source
+  62: PRECALL              
+  66: CALL                 
+  76: PRECALL              
+  80: CALL                 
+  90: RETURN_VALUE         

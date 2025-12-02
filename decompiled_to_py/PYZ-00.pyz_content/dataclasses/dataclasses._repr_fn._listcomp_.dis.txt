@@ -1,0 +1,28 @@
+# Disassembly for dataclasses._repr_fn.<listcomp>
+# From module file: dataclasses
+
+## co_consts:
+('={self.', '!r}')
+
+## co_names:
+('name',)
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: LOAD_FAST            .0
+   6: FOR_ITER             to 48
+   8: STORE_FAST           f
+  10: LOAD_FAST            f
+  12: LOAD_ATTR            name
+  22: FORMAT_VALUE         
+  24: LOAD_CONST           '={self.'
+  26: LOAD_FAST            f
+  28: LOAD_ATTR            name
+  38: FORMAT_VALUE         
+  40: LOAD_CONST           '!r}'
+  42: BUILD_STRING         
+  44: LIST_APPEND          
+  46: JUMP_BACKWARD        to 6
+  48: RETURN_VALUE         

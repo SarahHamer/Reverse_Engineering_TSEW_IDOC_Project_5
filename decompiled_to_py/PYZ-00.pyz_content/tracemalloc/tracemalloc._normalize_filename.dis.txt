@@ -1,0 +1,33 @@
+# Disassembly for tracemalloc._normalize_filename
+# From module file: tracemalloc
+
+## co_consts:
+(None, '.pyc', -1)
+
+## co_names:
+('os', 'path', 'normcase', 'endswith')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          os
+  14: LOAD_ATTR            path
+  24: LOAD_METHOD          normcase
+  46: LOAD_FAST            filename
+  48: PRECALL              
+  52: CALL                 
+  62: STORE_FAST           filename
+  64: LOAD_FAST            filename
+  66: LOAD_METHOD          endswith
+  88: LOAD_CONST           '.pyc'
+  90: PRECALL              
+  94: CALL                 
+ 104: POP_JUMP_FORWARD_IF_FALSE to 126
+ 106: LOAD_FAST            filename
+ 108: LOAD_CONST           None
+ 110: LOAD_CONST           -1
+ 112: BUILD_SLICE          
+ 114: BINARY_SUBSCR        
+ 124: STORE_FAST           filename
+ 126: LOAD_FAST            filename
+ 128: RETURN_VALUE         

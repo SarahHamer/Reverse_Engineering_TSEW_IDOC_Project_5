@@ -1,0 +1,39 @@
+# Disassembly for calendar.Calendar.itermonthdates
+# From module file: calendar
+
+## co_consts:
+('\n        Return an iterator for one month. The iterator will yield datetime.date\n        values and will always iterate through complete weeks, so it will yield\n        dates outside the specified month.\n        ', None)
+
+## co_names:
+('itermonthdays3', 'datetime', 'date')
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_FAST            self
+   8: LOAD_METHOD          itermonthdays3
+  30: LOAD_FAST            year
+  32: LOAD_FAST            month
+  34: PRECALL              
+  38: CALL                 
+  48: GET_ITER             
+  50: FOR_ITER             to 112
+  52: UNPACK_SEQUENCE      
+  56: STORE_FAST           y
+  58: STORE_FAST           m
+  60: STORE_FAST           d
+  62: LOAD_GLOBAL          NULL + datetime
+  74: LOAD_ATTR            date
+  84: LOAD_FAST            y
+  86: LOAD_FAST            m
+  88: LOAD_FAST            d
+  90: PRECALL              
+  94: CALL                 
+ 104: YIELD_VALUE          
+ 106: RESUME               
+ 108: POP_TOP              
+ 110: JUMP_BACKWARD        to 50
+ 112: LOAD_CONST           None
+ 114: RETURN_VALUE         

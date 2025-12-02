@@ -1,0 +1,52 @@
+# Disassembly for tarfile._StreamProxy.getcomptype
+# From module file: tarfile
+
+## co_consts:
+(None, b'\x1f\x8b\x08', 'gz', 0, 3, b'BZh', 4, 10, b'1AY&SY', 'bz2', (b']\x00\x00\x80', b'\xfd7zXZ'), 'xz', 'tar')
+
+## co_names:
+('buf', 'startswith')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            buf
+  14: LOAD_METHOD          startswith
+  36: LOAD_CONST           b'\x1f\x8b\x08'
+  38: PRECALL              
+  42: CALL                 
+  52: POP_JUMP_FORWARD_IF_FALSE to 58
+  54: LOAD_CONST           'gz'
+  56: RETURN_VALUE         
+  58: LOAD_FAST            self
+  60: LOAD_ATTR            buf
+  70: LOAD_CONST           0
+  72: LOAD_CONST           3
+  74: BUILD_SLICE          
+  76: BINARY_SUBSCR        
+  86: LOAD_CONST           b'BZh'
+  88: COMPARE_OP           ==
+  94: POP_JUMP_FORWARD_IF_FALSE to 138
+  96: LOAD_FAST            self
+  98: LOAD_ATTR            buf
+ 108: LOAD_CONST           4
+ 110: LOAD_CONST           10
+ 112: BUILD_SLICE          
+ 114: BINARY_SUBSCR        
+ 124: LOAD_CONST           b'1AY&SY'
+ 126: COMPARE_OP           ==
+ 132: POP_JUMP_FORWARD_IF_FALSE to 138
+ 134: LOAD_CONST           'bz2'
+ 136: RETURN_VALUE         
+ 138: LOAD_FAST            self
+ 140: LOAD_ATTR            buf
+ 150: LOAD_METHOD          startswith
+ 172: LOAD_CONST           (b']\x00\x00\x80', b'\xfd7zXZ')
+ 174: PRECALL              
+ 178: CALL                 
+ 188: POP_JUMP_FORWARD_IF_FALSE to 194
+ 190: LOAD_CONST           'xz'
+ 192: RETURN_VALUE         
+ 194: LOAD_CONST           'tar'
+ 196: RETURN_VALUE         

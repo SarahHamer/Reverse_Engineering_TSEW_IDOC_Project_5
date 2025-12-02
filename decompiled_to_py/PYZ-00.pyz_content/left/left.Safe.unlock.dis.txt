@@ -1,0 +1,83 @@
+# Disassembly for left.Safe.unlock
+# From module file: left
+
+## co_consts:
+(None, 'The safe has a dial lock.  You will need to turn the lock right to the 1st number,\nleft to the 2nd number, and then right to the 3rd number.', '1st - Turn right to (2 digit number)', 2, '2nd - Turn left to (2 digit number)', '3rd - Turn right to (2 digit number)', True, 'You hear a click and the safe opens!\nInside is a card with a cryptography cypher.', "You try to open the safe and it's still locked.")
+
+## co_names:
+('send_message', 'ask_number', 'n1', 'n2', 'n3', 'unlocked', 'CryptoCypherCard', 'set_parent', 'world', 'player')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_METHOD          send_message
+  26: LOAD_CONST           'The safe has a dial lock.  You will need to turn the lock right to the 1st number,\nleft to the 2nd number, and then right to the 3rd number.'
+  28: PRECALL              
+  32: CALL                 
+  42: POP_TOP              
+  44: LOAD_FAST            self
+  46: LOAD_METHOD          ask_number
+  68: LOAD_CONST           '1st - Turn right to (2 digit number)'
+  70: LOAD_CONST           2
+  72: PRECALL              
+  76: CALL                 
+  86: STORE_FAST           n1_attempt
+  88: LOAD_FAST            self
+  90: LOAD_METHOD          ask_number
+ 112: LOAD_CONST           '2nd - Turn left to (2 digit number)'
+ 114: LOAD_CONST           2
+ 116: PRECALL              
+ 120: CALL                 
+ 130: STORE_FAST           n2_attempt
+ 132: LOAD_FAST            self
+ 134: LOAD_METHOD          ask_number
+ 156: LOAD_CONST           '3rd - Turn right to (2 digit number)'
+ 158: LOAD_CONST           2
+ 160: PRECALL              
+ 164: CALL                 
+ 174: STORE_FAST           n3_attempt
+ 176: LOAD_FAST            n1_attempt
+ 178: LOAD_FAST            self
+ 180: LOAD_ATTR            n1
+ 190: COMPARE_OP           ==
+ 196: POP_JUMP_FORWARD_IF_FALSE to 388
+ 198: LOAD_FAST            n2_attempt
+ 200: LOAD_FAST            self
+ 202: LOAD_ATTR            n2
+ 212: COMPARE_OP           ==
+ 218: POP_JUMP_FORWARD_IF_FALSE to 388
+ 220: LOAD_FAST            n3_attempt
+ 222: LOAD_FAST            self
+ 224: LOAD_ATTR            n3
+ 234: COMPARE_OP           ==
+ 240: POP_JUMP_FORWARD_IF_FALSE to 388
+ 242: LOAD_CONST           True
+ 244: LOAD_FAST            self
+ 246: STORE_ATTR           unlocked
+ 256: LOAD_FAST            self
+ 258: LOAD_METHOD          send_message
+ 280: LOAD_CONST           'You hear a click and the safe opens!\nInside is a card with a cryptography cypher.'
+ 282: PRECALL              
+ 286: CALL                 
+ 296: POP_TOP              
+ 298: LOAD_GLOBAL          NULL + CryptoCypherCard
+ 310: PRECALL              
+ 314: CALL                 
+ 324: LOAD_METHOD          set_parent
+ 346: LOAD_FAST            self
+ 348: LOAD_ATTR            world
+ 358: LOAD_ATTR            player
+ 368: PRECALL              
+ 372: CALL                 
+ 382: POP_TOP              
+ 384: LOAD_CONST           None
+ 386: RETURN_VALUE         
+ 388: LOAD_FAST            self
+ 390: LOAD_METHOD          send_message
+ 412: LOAD_CONST           "You try to open the safe and it's still locked."
+ 414: PRECALL              
+ 418: CALL                 
+ 428: POP_TOP              
+ 430: LOAD_CONST           None
+ 432: RETURN_VALUE         

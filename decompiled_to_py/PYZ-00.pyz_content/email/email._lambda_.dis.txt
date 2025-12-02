@@ -1,0 +1,25 @@
+# Disassembly for email.<lambda>
+# From module file: email._encoded_words
+
+## co_consts:
+(None, 1)
+
+## co_names:
+('bytes', 'fromhex', 'group', 'decode')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          bytes
+  14: LOAD_METHOD          fromhex
+  36: LOAD_FAST            m
+  38: LOAD_METHOD          group
+  60: LOAD_CONST           1
+  62: PRECALL              
+  66: CALL                 
+  76: LOAD_METHOD          decode
+  98: PRECALL              
+ 102: CALL                 
+ 112: PRECALL              
+ 116: CALL                 
+ 126: RETURN_VALUE         

@@ -1,0 +1,67 @@
+# Disassembly for pickle._Pickler.save_type
+# From module file: pickle
+
+## co_consts:
+(None, (None,), ('obj',), Ellipsis, (Ellipsis,))
+
+## co_names:
+('type', 'save_reduce', 'NotImplemented', 'save_global')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            obj
+   4: LOAD_GLOBAL          NULL + type
+  16: LOAD_CONST           None
+  18: PRECALL              
+  22: CALL                 
+  32: IS_OP                
+  34: POP_JUMP_FORWARD_IF_FALSE to 94
+  36: LOAD_FAST            self
+  38: LOAD_METHOD          save_reduce
+  60: LOAD_GLOBAL          type
+  72: LOAD_CONST           (None,)
+  74: LOAD_FAST            obj
+  76: KW_NAMES             
+  78: PRECALL              
+  82: CALL                 
+  92: RETURN_VALUE         
+  94: LOAD_FAST            obj
+  96: LOAD_GLOBAL          NULL + type
+ 108: LOAD_GLOBAL          NotImplemented
+ 120: PRECALL              
+ 124: CALL                 
+ 134: IS_OP                
+ 136: POP_JUMP_FORWARD_IF_FALSE to 208
+ 138: LOAD_FAST            self
+ 140: LOAD_METHOD          save_reduce
+ 162: LOAD_GLOBAL          type
+ 174: LOAD_GLOBAL          NotImplemented
+ 186: BUILD_TUPLE          
+ 188: LOAD_FAST            obj
+ 190: KW_NAMES             
+ 192: PRECALL              
+ 196: CALL                 
+ 206: RETURN_VALUE         
+ 208: LOAD_FAST            obj
+ 210: LOAD_GLOBAL          NULL + type
+ 222: LOAD_CONST           Ellipsis
+ 224: PRECALL              
+ 228: CALL                 
+ 238: IS_OP                
+ 240: POP_JUMP_FORWARD_IF_FALSE to 300
+ 242: LOAD_FAST            self
+ 244: LOAD_METHOD          save_reduce
+ 266: LOAD_GLOBAL          type
+ 278: LOAD_CONST           (Ellipsis,)
+ 280: LOAD_FAST            obj
+ 282: KW_NAMES             
+ 284: PRECALL              
+ 288: CALL                 
+ 298: RETURN_VALUE         
+ 300: LOAD_FAST            self
+ 302: LOAD_METHOD          save_global
+ 324: LOAD_FAST            obj
+ 326: PRECALL              
+ 330: CALL                 
+ 340: RETURN_VALUE         

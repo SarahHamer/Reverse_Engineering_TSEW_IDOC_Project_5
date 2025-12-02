@@ -1,0 +1,100 @@
+# Disassembly for central.Machine
+# From module file: central
+
+## co_consts:
+('Machine', <code object __init__ at 0x000002406941A550, file "central.py", line 105>, 'return', <code object get_description at 0x000002406943ABB0, file "central.py", line 110>, None, <code object get_options at 0x0000024068C8EED0, file "central.py", line 113>, <code object setup at 0x00000240691F56F0, file "central.py", line 125>, <code object check at 0x00000240693EAE30, file "central.py", line 134>, <code object start at 0x000002406942CFD0, file "central.py", line 142>, <code object screen_new at 0x000002406945F690, file "central.py", line 152>, 'screen', 'x', 'y', 's', <code object screen_set at 0x00000240693AB230, file "central.py", line 156>, False, 'card_num', 'found', <code object draw_card at 0x0000024068E78230, file "central.py", line 166>, <code object find_match at 0x0000024068E0F540, file "central.py", line 211>, ('Machine',), (False,))
+
+## co_names:
+('__name__', '__module__', '__qualname__', '__init__', 'str', 'get_description', 'list', 'typing', 'Union', 'Callable', 'get_options', 'setup', 'check', 'start', 'screen_new', 'int', 'screen_set', 'bool', 'draw_card', 'find_match', '__classcell__')
+
+## bytecode:
+
+   0: MAKE_CELL            __class__
+   2: RESUME               
+   4: LOAD_NAME            __name__
+   6: STORE_NAME           __module__
+   8: LOAD_CONST           'Machine'
+  10: STORE_NAME           __qualname__
+  12: LOAD_CONST           ('Machine',)
+  14: LOAD_CLOSURE         __class__
+  16: BUILD_TUPLE          
+  18: LOAD_CONST           <code object __init__ at 0x000002406941A550, file "central.py", line 105>
+  20: MAKE_FUNCTION        defaults, closure
+  22: STORE_NAME           __init__
+  24: LOAD_CONST           'return'
+  26: LOAD_NAME            str
+  28: BUILD_TUPLE          
+  30: LOAD_CONST           <code object get_description at 0x000002406943ABB0, file "central.py", line 110>
+  32: MAKE_FUNCTION        annotations
+  34: STORE_NAME           get_description
+  36: LOAD_CONST           'return'
+  38: LOAD_NAME            list
+  40: LOAD_NAME            typing
+  42: LOAD_ATTR            Union
+  52: LOAD_NAME            str
+  54: LOAD_NAME            typing
+  56: LOAD_ATTR            Callable
+  66: BUILD_LIST           
+  68: LOAD_CONST           None
+  70: BUILD_TUPLE          
+  72: BINARY_SUBSCR        
+  82: BUILD_TUPLE          
+  84: BINARY_SUBSCR        
+  94: LOAD_NAME            str
+  96: BUILD_TUPLE          
+  98: BINARY_SUBSCR        
+ 108: BUILD_TUPLE          
+ 110: LOAD_CONST           <code object get_options at 0x0000024068C8EED0, file "central.py", line 113>
+ 112: MAKE_FUNCTION        annotations
+ 114: STORE_NAME           get_options
+ 116: LOAD_CONST           <code object setup at 0x00000240691F56F0, file "central.py", line 125>
+ 118: MAKE_FUNCTION        
+ 120: STORE_NAME           setup
+ 122: LOAD_CONST           <code object check at 0x00000240693EAE30, file "central.py", line 134>
+ 124: MAKE_FUNCTION        
+ 126: STORE_NAME           check
+ 128: LOAD_CONST           <code object start at 0x000002406942CFD0, file "central.py", line 142>
+ 130: MAKE_FUNCTION        
+ 132: STORE_NAME           start
+ 134: LOAD_CONST           'return'
+ 136: LOAD_NAME            list
+ 138: LOAD_NAME            str
+ 140: BINARY_SUBSCR        
+ 150: BUILD_TUPLE          
+ 152: LOAD_CONST           <code object screen_new at 0x000002406945F690, file "central.py", line 152>
+ 154: MAKE_FUNCTION        annotations
+ 156: STORE_NAME           screen_new
+ 158: LOAD_CONST           'screen'
+ 160: LOAD_NAME            list
+ 162: LOAD_NAME            str
+ 164: BINARY_SUBSCR        
+ 174: LOAD_CONST           'x'
+ 176: LOAD_NAME            int
+ 178: LOAD_CONST           'y'
+ 180: LOAD_NAME            int
+ 182: LOAD_CONST           's'
+ 184: LOAD_NAME            str
+ 186: BUILD_TUPLE          
+ 188: LOAD_CONST           <code object screen_set at 0x00000240693AB230, file "central.py", line 156>
+ 190: MAKE_FUNCTION        annotations
+ 192: STORE_NAME           screen_set
+ 194: LOAD_CONST           (False,)
+ 196: LOAD_CONST           'screen'
+ 198: LOAD_NAME            list
+ 200: LOAD_NAME            str
+ 202: BINARY_SUBSCR        
+ 212: LOAD_CONST           'card_num'
+ 214: LOAD_NAME            int
+ 216: LOAD_CONST           'found'
+ 218: LOAD_NAME            bool
+ 220: BUILD_TUPLE          
+ 222: LOAD_CONST           <code object draw_card at 0x0000024068E78230, file "central.py", line 166>
+ 224: MAKE_FUNCTION        defaults, annotations
+ 226: STORE_NAME           draw_card
+ 228: LOAD_CONST           <code object find_match at 0x0000024068E0F540, file "central.py", line 211>
+ 230: MAKE_FUNCTION        
+ 232: STORE_NAME           find_match
+ 234: LOAD_CLOSURE         __class__
+ 236: COPY                 
+ 238: STORE_NAME           __classcell__
+ 240: RETURN_VALUE         

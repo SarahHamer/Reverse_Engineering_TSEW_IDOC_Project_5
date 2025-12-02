@@ -1,0 +1,15 @@
+# Disassembly for statistics.NormalDist.mean
+# From module file: statistics
+
+## co_consts:
+('Arithmetic mean of the normal distribution.',)
+
+## co_names:
+('_mu',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _mu
+  14: RETURN_VALUE         

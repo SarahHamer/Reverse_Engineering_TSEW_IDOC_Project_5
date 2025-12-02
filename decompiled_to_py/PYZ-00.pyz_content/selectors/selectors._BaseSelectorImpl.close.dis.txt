@@ -1,0 +1,23 @@
+# Disassembly for selectors._BaseSelectorImpl.close
+# From module file: selectors
+
+## co_consts:
+(None,)
+
+## co_names:
+('_fd_to_key', 'clear', '_map')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _fd_to_key
+  14: LOAD_METHOD          clear
+  36: PRECALL              
+  40: CALL                 
+  50: POP_TOP              
+  52: LOAD_CONST           None
+  54: LOAD_FAST            self
+  56: STORE_ATTR           _map
+  66: LOAD_CONST           None
+  68: RETURN_VALUE         

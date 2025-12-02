@@ -1,0 +1,17 @@
+# Disassembly for tarfile.TarInfo.issparse
+# From module file: tarfile
+
+## co_consts:
+(None,)
+
+## co_names:
+('sparse',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            sparse
+  14: LOAD_CONST           None
+  16: IS_OP                
+  18: RETURN_VALUE         

@@ -1,0 +1,111 @@
+# Disassembly for _pydecimal._dlog10
+# From module file: _pydecimal
+
+## co_consts:
+('Given integers c, e and p with c > 0, p >= 0, compute an integer\n    approximation to 10**p * log10(c*10**e), with an absolute error of\n    at most 1.  Assumes that c*10**e is not exactly 1.', 2, 1, 0, 10, 100)
+
+## co_names:
+('len', 'str', '_div_nearest', '_ilog', '_log10_digits')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            p
+   4: LOAD_CONST           2
+   6: BINARY_OP            +=
+  10: STORE_FAST           p
+  12: LOAD_GLOBAL          NULL + len
+  24: LOAD_GLOBAL          NULL + str
+  36: LOAD_FAST            c
+  38: PRECALL              
+  42: CALL                 
+  52: PRECALL              
+  56: CALL                 
+  66: STORE_FAST           l
+  68: LOAD_FAST            e
+  70: LOAD_FAST            l
+  72: BINARY_OP            +
+  76: LOAD_FAST            e
+  78: LOAD_FAST            l
+  80: BINARY_OP            +
+  84: LOAD_CONST           1
+  86: COMPARE_OP           >=
+  92: BINARY_OP            -
+  96: STORE_FAST           f
+  98: LOAD_FAST            p
+ 100: LOAD_CONST           0
+ 102: COMPARE_OP           >
+ 108: POP_JUMP_FORWARD_IF_FALSE to 318
+ 110: LOAD_CONST           10
+ 112: LOAD_FAST            p
+ 114: BINARY_OP            **
+ 118: STORE_FAST           M
+ 120: LOAD_FAST            e
+ 122: LOAD_FAST            p
+ 124: BINARY_OP            +
+ 128: LOAD_FAST            f
+ 130: BINARY_OP            -
+ 134: STORE_FAST           k
+ 136: LOAD_FAST            k
+ 138: LOAD_CONST           0
+ 140: COMPARE_OP           >=
+ 146: POP_JUMP_FORWARD_IF_FALSE to 166
+ 148: LOAD_FAST            c
+ 150: LOAD_CONST           10
+ 152: LOAD_FAST            k
+ 154: BINARY_OP            **
+ 158: BINARY_OP            *=
+ 162: STORE_FAST           c
+ 164: JUMP_FORWARD         to 206
+ 166: LOAD_GLOBAL          NULL + _div_nearest
+ 178: LOAD_FAST            c
+ 180: LOAD_CONST           10
+ 182: LOAD_FAST            k
+ 184: UNARY_NEGATIVE       
+ 186: BINARY_OP            **
+ 190: PRECALL              
+ 194: CALL                 
+ 204: STORE_FAST           c
+ 206: LOAD_GLOBAL          NULL + _ilog
+ 218: LOAD_FAST            c
+ 220: LOAD_FAST            M
+ 222: PRECALL              
+ 226: CALL                 
+ 236: STORE_FAST           log_d
+ 238: LOAD_GLOBAL          NULL + _log10_digits
+ 250: LOAD_FAST            p
+ 252: PRECALL              
+ 256: CALL                 
+ 266: STORE_FAST           log_10
+ 268: LOAD_GLOBAL          NULL + _div_nearest
+ 280: LOAD_FAST            log_d
+ 282: LOAD_FAST            M
+ 284: BINARY_OP            *
+ 288: LOAD_FAST            log_10
+ 290: PRECALL              
+ 294: CALL                 
+ 304: STORE_FAST           log_d
+ 306: LOAD_FAST            f
+ 308: LOAD_FAST            M
+ 310: BINARY_OP            *
+ 314: STORE_FAST           log_tenpower
+ 316: JUMP_FORWARD         to 362
+ 318: LOAD_CONST           0
+ 320: STORE_FAST           log_d
+ 322: LOAD_GLOBAL          NULL + _div_nearest
+ 334: LOAD_FAST            f
+ 336: LOAD_CONST           10
+ 338: LOAD_FAST            p
+ 340: UNARY_NEGATIVE       
+ 342: BINARY_OP            **
+ 346: PRECALL              
+ 350: CALL                 
+ 360: STORE_FAST           log_tenpower
+ 362: LOAD_GLOBAL          NULL + _div_nearest
+ 374: LOAD_FAST            log_tenpower
+ 376: LOAD_FAST            log_d
+ 378: BINARY_OP            +
+ 382: LOAD_CONST           100
+ 384: PRECALL              
+ 388: CALL                 
+ 398: RETURN_VALUE         

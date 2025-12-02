@@ -1,0 +1,30 @@
+# Disassembly for selectors._BaseSelectorImpl._key_from_fd
+# From module file: selectors
+
+## co_consts:
+('Return the key associated to a given file descriptor.\n\n        Parameters:\n        fd -- file descriptor\n\n        Returns:\n        corresponding key, or None if not found\n        ', None)
+
+## co_names:
+('_fd_to_key', 'KeyError')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_FAST            self
+   6: LOAD_ATTR            _fd_to_key
+  16: LOAD_FAST            fd
+  18: BINARY_SUBSCR        
+  28: RETURN_VALUE         
+  30: PUSH_EXC_INFO        
+  32: LOAD_GLOBAL          KeyError
+  44: CHECK_EXC_MATCH      
+  46: POP_JUMP_FORWARD_IF_FALSE to 56
+  48: POP_TOP              
+  50: POP_EXCEPT           
+  52: LOAD_CONST           None
+  54: RETURN_VALUE         
+  56: RERAISE              
+  58: COPY                 
+  60: POP_EXCEPT           
+  62: RERAISE              

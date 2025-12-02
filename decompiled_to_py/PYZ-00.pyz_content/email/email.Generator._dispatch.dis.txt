@@ -1,0 +1,75 @@
+# Disassembly for email.Generator._dispatch
+# From module file: email.generator
+
+## co_consts:
+(None, '-', '_', '_handle_')
+
+## co_names:
+('get_content_maintype', 'get_content_subtype', 'UNDERSCORE', 'join', 'replace', 'getattr', '_writeBody')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            msg
+   4: LOAD_METHOD          get_content_maintype
+  26: PRECALL              
+  30: CALL                 
+  40: STORE_FAST           main
+  42: LOAD_FAST            msg
+  44: LOAD_METHOD          get_content_subtype
+  66: PRECALL              
+  70: CALL                 
+  80: STORE_FAST           sub
+  82: LOAD_GLOBAL          UNDERSCORE
+  94: LOAD_METHOD          join
+ 116: LOAD_FAST            main
+ 118: LOAD_FAST            sub
+ 120: BUILD_TUPLE          
+ 122: PRECALL              
+ 126: CALL                 
+ 136: LOAD_METHOD          replace
+ 158: LOAD_CONST           '-'
+ 160: LOAD_CONST           '_'
+ 162: PRECALL              
+ 166: CALL                 
+ 176: STORE_FAST           specific
+ 178: LOAD_GLOBAL          NULL + getattr
+ 190: LOAD_FAST            self
+ 192: LOAD_CONST           '_handle_'
+ 194: LOAD_FAST            specific
+ 196: BINARY_OP            +
+ 200: LOAD_CONST           None
+ 202: PRECALL              
+ 206: CALL                 
+ 216: STORE_FAST           meth
+ 218: LOAD_FAST            meth
+ 220: POP_JUMP_FORWARD_IF_NOT_NONE to 324
+ 222: LOAD_FAST            main
+ 224: LOAD_METHOD          replace
+ 246: LOAD_CONST           '-'
+ 248: LOAD_CONST           '_'
+ 250: PRECALL              
+ 254: CALL                 
+ 264: STORE_FAST           generic
+ 266: LOAD_GLOBAL          NULL + getattr
+ 278: LOAD_FAST            self
+ 280: LOAD_CONST           '_handle_'
+ 282: LOAD_FAST            generic
+ 284: BINARY_OP            +
+ 288: LOAD_CONST           None
+ 290: PRECALL              
+ 294: CALL                 
+ 304: STORE_FAST           meth
+ 306: LOAD_FAST            meth
+ 308: POP_JUMP_FORWARD_IF_NOT_NONE to 324
+ 310: LOAD_FAST            self
+ 312: LOAD_ATTR            _writeBody
+ 322: STORE_FAST           meth
+ 324: PUSH_NULL            
+ 326: LOAD_FAST            meth
+ 328: LOAD_FAST            msg
+ 330: PRECALL              
+ 334: CALL                 
+ 344: POP_TOP              
+ 346: LOAD_CONST           None
+ 348: RETURN_VALUE         

@@ -1,0 +1,116 @@
+# Disassembly for _pydecimal.Decimal.scaleb
+# From module file: _pydecimal
+
+## co_consts:
+('Returns self operand after adding the second value to its exp.', None, True, ('raiseit',), 0, -2, 2)
+
+## co_names:
+('getcontext', '_convert_other', '_check_nans', '_exp', '_raise_error', 'InvalidOperation', 'Emax', 'prec', 'int', '_isinfinity', 'Decimal', '_dec_from_triple', '_sign', '_int', '_fix')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            context
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 34
+   6: LOAD_GLOBAL          NULL + getcontext
+  18: PRECALL              
+  22: CALL                 
+  32: STORE_FAST           context
+  34: LOAD_GLOBAL          NULL + _convert_other
+  46: LOAD_FAST            other
+  48: LOAD_CONST           True
+  50: KW_NAMES             
+  52: PRECALL              
+  56: CALL                 
+  66: STORE_FAST           other
+  68: LOAD_FAST            self
+  70: LOAD_METHOD          _check_nans
+  92: LOAD_FAST            other
+  94: LOAD_FAST            context
+  96: PRECALL              
+ 100: CALL                 
+ 110: STORE_FAST           ans
+ 112: LOAD_FAST            ans
+ 114: POP_JUMP_FORWARD_IF_FALSE to 120
+ 116: LOAD_FAST            ans
+ 118: RETURN_VALUE         
+ 120: LOAD_FAST            other
+ 122: LOAD_ATTR            _exp
+ 132: LOAD_CONST           0
+ 134: COMPARE_OP           !=
+ 140: POP_JUMP_FORWARD_IF_FALSE to 194
+ 142: LOAD_FAST            context
+ 144: LOAD_METHOD          _raise_error
+ 166: LOAD_GLOBAL          InvalidOperation
+ 178: PRECALL              
+ 182: CALL                 
+ 192: RETURN_VALUE         
+ 194: LOAD_CONST           -2
+ 196: LOAD_FAST            context
+ 198: LOAD_ATTR            Emax
+ 208: LOAD_FAST            context
+ 210: LOAD_ATTR            prec
+ 220: BINARY_OP            +
+ 224: BINARY_OP            *
+ 228: STORE_FAST           liminf
+ 230: LOAD_CONST           2
+ 232: LOAD_FAST            context
+ 234: LOAD_ATTR            Emax
+ 244: LOAD_FAST            context
+ 246: LOAD_ATTR            prec
+ 256: BINARY_OP            +
+ 260: BINARY_OP            *
+ 264: STORE_FAST           limsup
+ 266: LOAD_FAST            liminf
+ 268: LOAD_GLOBAL          NULL + int
+ 280: LOAD_FAST            other
+ 282: PRECALL              
+ 286: CALL                 
+ 296: SWAP                 
+ 298: COPY                 
+ 300: COMPARE_OP           <=
+ 306: POP_JUMP_FORWARD_IF_FALSE to 320
+ 308: LOAD_FAST            limsup
+ 310: COMPARE_OP           <=
+ 316: POP_JUMP_FORWARD_IF_TRUE to 374
+ 318: JUMP_FORWARD         to 322
+ 320: POP_TOP              
+ 322: LOAD_FAST            context
+ 324: LOAD_METHOD          _raise_error
+ 346: LOAD_GLOBAL          InvalidOperation
+ 358: PRECALL              
+ 362: CALL                 
+ 372: RETURN_VALUE         
+ 374: LOAD_FAST            self
+ 376: LOAD_METHOD          _isinfinity
+ 398: PRECALL              
+ 402: CALL                 
+ 412: POP_JUMP_FORWARD_IF_FALSE to 444
+ 414: LOAD_GLOBAL          NULL + Decimal
+ 426: LOAD_FAST            self
+ 428: PRECALL              
+ 432: CALL                 
+ 442: RETURN_VALUE         
+ 444: LOAD_GLOBAL          NULL + _dec_from_triple
+ 456: LOAD_FAST            self
+ 458: LOAD_ATTR            _sign
+ 468: LOAD_FAST            self
+ 470: LOAD_ATTR            _int
+ 480: LOAD_FAST            self
+ 482: LOAD_ATTR            _exp
+ 492: LOAD_GLOBAL          NULL + int
+ 504: LOAD_FAST            other
+ 506: PRECALL              
+ 510: CALL                 
+ 520: BINARY_OP            +
+ 524: PRECALL              
+ 528: CALL                 
+ 538: STORE_FAST           d
+ 540: LOAD_FAST            d
+ 542: LOAD_METHOD          _fix
+ 564: LOAD_FAST            context
+ 566: PRECALL              
+ 570: CALL                 
+ 580: STORE_FAST           d
+ 582: LOAD_FAST            d
+ 584: RETURN_VALUE         

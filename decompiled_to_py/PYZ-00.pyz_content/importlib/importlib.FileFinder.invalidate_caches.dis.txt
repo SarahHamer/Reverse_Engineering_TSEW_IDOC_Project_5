@@ -1,0 +1,17 @@
+# Disassembly for importlib.FileFinder.invalidate_caches
+# From module file: importlib._bootstrap_external
+
+## co_consts:
+('Invalidate the directory mtime.', -1, None)
+
+## co_names:
+('_path_mtime',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           -1
+   4: LOAD_FAST            self
+   6: STORE_ATTR           _path_mtime
+  16: LOAD_CONST           None
+  18: RETURN_VALUE         

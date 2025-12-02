@@ -1,0 +1,37 @@
+# Disassembly for threading.Barrier._exit
+# From module file: threading
+
+## co_consts:
+(None, 0, (-1, 1))
+
+## co_names:
+('_count', '_state', '_cond', 'notify_all')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            self
+   4: LOAD_ATTR            _count
+  14: LOAD_CONST           0
+  16: COMPARE_OP           ==
+  22: POP_JUMP_FORWARD_IF_FALSE to 110
+  24: LOAD_FAST            self
+  26: LOAD_ATTR            _state
+  36: LOAD_CONST           (-1, 1)
+  38: CONTAINS_OP          
+  40: POP_JUMP_FORWARD_IF_FALSE to 114
+  42: LOAD_CONST           0
+  44: LOAD_FAST            self
+  46: STORE_ATTR           _state
+  56: LOAD_FAST            self
+  58: LOAD_ATTR            _cond
+  68: LOAD_METHOD          notify_all
+  90: PRECALL              
+  94: CALL                 
+ 104: POP_TOP              
+ 106: LOAD_CONST           None
+ 108: RETURN_VALUE         
+ 110: LOAD_CONST           None
+ 112: RETURN_VALUE         
+ 114: LOAD_CONST           None
+ 116: RETURN_VALUE         

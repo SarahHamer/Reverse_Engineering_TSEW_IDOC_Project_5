@@ -1,0 +1,119 @@
+# Disassembly for selectors.EpollSelector.select
+# From module file: selectors
+
+## co_consts:
+(None, -1, 0, 1000.0, 0.001, 1)
+
+## co_names:
+('math', 'ceil', 'max', 'len', '_fd_to_key', '_selector', 'poll', 'InterruptedError', 'select', 'EPOLLIN', 'EVENT_WRITE', 'EPOLLOUT', 'EVENT_READ', '_key_from_fd', 'append', 'events')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_FAST            timeout
+   4: POP_JUMP_FORWARD_IF_NOT_NONE to 12
+   6: LOAD_CONST           -1
+   8: STORE_FAST           timeout
+  10: JUMP_FORWARD         to 82
+  12: LOAD_FAST            timeout
+  14: LOAD_CONST           0
+  16: COMPARE_OP           <=
+  22: POP_JUMP_FORWARD_IF_FALSE to 30
+  24: LOAD_CONST           0
+  26: STORE_FAST           timeout
+  28: JUMP_FORWARD         to 82
+  30: LOAD_GLOBAL          NULL + math
+  42: LOAD_ATTR            ceil
+  52: LOAD_FAST            timeout
+  54: LOAD_CONST           1000.0
+  56: BINARY_OP            *
+  60: PRECALL              
+  64: CALL                 
+  74: LOAD_CONST           0.001
+  76: BINARY_OP            *
+  80: STORE_FAST           timeout
+  82: LOAD_GLOBAL          NULL + max
+  94: LOAD_GLOBAL          NULL + len
+ 106: LOAD_FAST            self
+ 108: LOAD_ATTR            _fd_to_key
+ 118: PRECALL              
+ 122: CALL                 
+ 132: LOAD_CONST           1
+ 134: PRECALL              
+ 138: CALL                 
+ 148: STORE_FAST           max_ev
+ 150: BUILD_LIST           
+ 152: STORE_FAST           ready
+ 154: NOP                  
+ 156: LOAD_FAST            self
+ 158: LOAD_ATTR            _selector
+ 168: LOAD_METHOD          poll
+ 190: LOAD_FAST            timeout
+ 192: LOAD_FAST            max_ev
+ 194: PRECALL              
+ 198: CALL                 
+ 208: STORE_FAST           fd_event_list
+ 210: JUMP_FORWARD         to 248
+ 212: PUSH_EXC_INFO        
+ 214: LOAD_GLOBAL          InterruptedError
+ 226: CHECK_EXC_MATCH      
+ 228: POP_JUMP_FORWARD_IF_FALSE to 240
+ 230: POP_TOP              
+ 232: LOAD_FAST            ready
+ 234: SWAP                 
+ 236: POP_EXCEPT           
+ 238: RETURN_VALUE         
+ 240: RERAISE              
+ 242: COPY                 
+ 244: POP_EXCEPT           
+ 246: RERAISE              
+ 248: LOAD_FAST            fd_event_list
+ 250: GET_ITER             
+ 252: FOR_ITER             to 480
+ 254: UNPACK_SEQUENCE      
+ 258: STORE_FAST           fd
+ 260: STORE_FAST           event
+ 262: LOAD_CONST           0
+ 264: STORE_FAST           events
+ 266: LOAD_FAST            event
+ 268: LOAD_GLOBAL          select
+ 280: LOAD_ATTR            EPOLLIN
+ 290: UNARY_INVERT         
+ 292: BINARY_OP            &
+ 296: POP_JUMP_FORWARD_IF_FALSE to 318
+ 298: LOAD_FAST            events
+ 300: LOAD_GLOBAL          EVENT_WRITE
+ 312: BINARY_OP            |=
+ 316: STORE_FAST           events
+ 318: LOAD_FAST            event
+ 320: LOAD_GLOBAL          select
+ 332: LOAD_ATTR            EPOLLOUT
+ 342: UNARY_INVERT         
+ 344: BINARY_OP            &
+ 348: POP_JUMP_FORWARD_IF_FALSE to 370
+ 350: LOAD_FAST            events
+ 352: LOAD_GLOBAL          EVENT_READ
+ 364: BINARY_OP            |=
+ 368: STORE_FAST           events
+ 370: LOAD_FAST            self
+ 372: LOAD_METHOD          _key_from_fd
+ 394: LOAD_FAST            fd
+ 396: PRECALL              
+ 400: CALL                 
+ 410: STORE_FAST           key
+ 412: LOAD_FAST            key
+ 414: POP_JUMP_FORWARD_IF_FALSE to 478
+ 416: LOAD_FAST            ready
+ 418: LOAD_METHOD          append
+ 440: LOAD_FAST            key
+ 442: LOAD_FAST            events
+ 444: LOAD_FAST            key
+ 446: LOAD_ATTR            events
+ 456: BINARY_OP            &
+ 460: BUILD_TUPLE          
+ 462: PRECALL              
+ 466: CALL                 
+ 476: POP_TOP              
+ 478: JUMP_BACKWARD        to 252
+ 480: LOAD_FAST            ready
+ 482: RETURN_VALUE         

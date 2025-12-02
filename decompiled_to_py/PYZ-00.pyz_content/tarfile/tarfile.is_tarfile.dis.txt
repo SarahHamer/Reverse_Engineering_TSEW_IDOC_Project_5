@@ -1,0 +1,61 @@
+# Disassembly for tarfile.is_tarfile
+# From module file: tarfile
+
+## co_consts:
+("Return True if name points to a tar archive that we\n       are able to handle, else return False.\n\n       'name' should be a string, file, or file-like object.\n    ", 'read', ('fileobj',), True, False)
+
+## co_names:
+('hasattr', 'tell', 'open', 'seek', 'close', 'TarError')
+
+## bytecode:
+
+   0: RESUME               
+   2: NOP                  
+   4: LOAD_GLOBAL          NULL + hasattr
+  16: LOAD_FAST            name
+  18: LOAD_CONST           'read'
+  20: PRECALL              
+  24: CALL                 
+  34: POP_JUMP_FORWARD_IF_FALSE to 152
+  36: LOAD_FAST            name
+  38: LOAD_METHOD          tell
+  60: PRECALL              
+  64: CALL                 
+  74: STORE_FAST           pos
+  76: LOAD_GLOBAL          NULL + open
+  88: LOAD_FAST            name
+  90: KW_NAMES             
+  92: PRECALL              
+  96: CALL                 
+ 106: STORE_FAST           t
+ 108: LOAD_FAST            name
+ 110: LOAD_METHOD          seek
+ 132: LOAD_FAST            pos
+ 134: PRECALL              
+ 138: CALL                 
+ 148: POP_TOP              
+ 150: JUMP_FORWARD         to 182
+ 152: LOAD_GLOBAL          NULL + open
+ 164: LOAD_FAST            name
+ 166: PRECALL              
+ 170: CALL                 
+ 180: STORE_FAST           t
+ 182: LOAD_FAST            t
+ 184: LOAD_METHOD          close
+ 206: PRECALL              
+ 210: CALL                 
+ 220: POP_TOP              
+ 222: LOAD_CONST           True
+ 224: RETURN_VALUE         
+ 226: PUSH_EXC_INFO        
+ 228: LOAD_GLOBAL          TarError
+ 240: CHECK_EXC_MATCH      
+ 242: POP_JUMP_FORWARD_IF_FALSE to 252
+ 244: POP_TOP              
+ 246: POP_EXCEPT           
+ 248: LOAD_CONST           False
+ 250: RETURN_VALUE         
+ 252: RERAISE              
+ 254: COPY                 
+ 256: POP_EXCEPT           
+ 258: RERAISE              

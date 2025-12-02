@@ -1,0 +1,44 @@
+# Disassembly for importlib._find_spec_legacy
+# From module file: importlib._bootstrap
+
+## co_consts:
+(None, '.find_spec() not found; falling back to find_module()')
+
+## co_names:
+('_object_name', '_warnings', 'warn', 'ImportWarning', 'find_module', 'spec_from_loader')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _object_name
+  14: LOAD_FAST            finder
+  16: PRECALL              
+  20: CALL                 
+  30: FORMAT_VALUE         
+  32: LOAD_CONST           '.find_spec() not found; falling back to find_module()'
+  34: BUILD_STRING         
+  36: STORE_FAST           msg
+  38: LOAD_GLOBAL          _warnings
+  50: LOAD_METHOD          warn
+  72: LOAD_FAST            msg
+  74: LOAD_GLOBAL          ImportWarning
+  86: PRECALL              
+  90: CALL                 
+ 100: POP_TOP              
+ 102: LOAD_FAST            finder
+ 104: LOAD_METHOD          find_module
+ 126: LOAD_FAST            name
+ 128: LOAD_FAST            path
+ 130: PRECALL              
+ 134: CALL                 
+ 144: STORE_FAST           loader
+ 146: LOAD_FAST            loader
+ 148: POP_JUMP_FORWARD_IF_NOT_NONE to 154
+ 150: LOAD_CONST           None
+ 152: RETURN_VALUE         
+ 154: LOAD_GLOBAL          NULL + spec_from_loader
+ 166: LOAD_FAST            name
+ 168: LOAD_FAST            loader
+ 170: PRECALL              
+ 174: CALL                 
+ 184: RETURN_VALUE         

@@ -1,0 +1,28 @@
+# Disassembly for importlib.resources.MultiplexedPath.__repr__.<genexpr>
+# From module file: importlib.resources.readers
+
+## co_consts:
+("'", None)
+
+## co_names:
+()
+
+## bytecode:
+
+   0: RETURN_GENERATOR     
+   2: POP_TOP              
+   4: RESUME               
+   6: LOAD_FAST            .0
+   8: FOR_ITER             to 30
+  10: STORE_FAST           path
+  12: LOAD_CONST           "'"
+  14: LOAD_FAST            path
+  16: FORMAT_VALUE         
+  18: LOAD_CONST           "'"
+  20: BUILD_STRING         
+  22: YIELD_VALUE          
+  24: RESUME               
+  26: POP_TOP              
+  28: JUMP_BACKWARD        to 8
+  30: LOAD_CONST           None
+  32: RETURN_VALUE         

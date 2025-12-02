@@ -1,0 +1,28 @@
+# Disassembly for statistics.NormalDist.quantiles
+# From module file: statistics
+
+## co_consts:
+('Divide into *n* continuous intervals with equal probability.\n\n        Returns a list of (n - 1) cut points separating the intervals.\n\n        Set *n* to 4 for quartiles (the default).  Set *n* to 10 for deciles.\n        Set *n* to 100 for percentiles which gives the 99 cuts points that\n        separate the normal distribution in to 100 equal sized groups.\n        ', <code object <listcomp> at 0x00000240693EBA30, file "statistics.py", line 1237>, 1)
+
+## co_names:
+('range',)
+
+## bytecode:
+
+   0: MAKE_CELL            self
+   2: MAKE_CELL            n
+   4: RESUME               
+   6: LOAD_CLOSURE         n
+   8: LOAD_CLOSURE         self
+  10: BUILD_TUPLE          
+  12: LOAD_CONST           <code object <listcomp> at 0x00000240693EBA30, file "statistics.py", line 1237>
+  14: MAKE_FUNCTION        closure
+  16: LOAD_GLOBAL          NULL + range
+  28: LOAD_CONST           1
+  30: LOAD_DEREF           n
+  32: PRECALL              
+  36: CALL                 
+  46: GET_ITER             
+  48: PRECALL              
+  52: CALL                 
+  62: RETURN_VALUE         

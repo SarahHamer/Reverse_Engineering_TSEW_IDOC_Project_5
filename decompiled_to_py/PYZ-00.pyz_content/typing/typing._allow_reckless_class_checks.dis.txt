@@ -1,0 +1,19 @@
+# Disassembly for typing._allow_reckless_class_checks
+# From module file: typing
+
+## co_consts:
+('Allow instance and class checks for special stdlib modules.\n\n    The abc and functools modules indiscriminately call isinstance() and\n    issubclass() on the whole MRO of a user class, which may contain protocols.\n    ', frozenset({None, 'functools', 'abc'}))
+
+## co_names:
+('_caller',)
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + _caller
+  14: LOAD_FAST            depth
+  16: PRECALL              
+  20: CALL                 
+  30: LOAD_CONST           frozenset({None, 'functools', 'abc'})
+  32: CONTAINS_OP          
+  34: RETURN_VALUE         

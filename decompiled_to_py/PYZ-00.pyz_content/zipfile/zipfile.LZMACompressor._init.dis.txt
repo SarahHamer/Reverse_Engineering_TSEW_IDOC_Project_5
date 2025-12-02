@@ -1,0 +1,52 @@
+# Disassembly for zipfile.LZMACompressor._init
+# From module file: zipfile
+
+## co_consts:
+(None, 'id', ('filters',), '<BBH', 9, 4)
+
+## co_names:
+('lzma', '_encode_filter_properties', 'FILTER_LZMA1', 'LZMACompressor', 'FORMAT_RAW', '_decode_filter_properties', '_comp', 'struct', 'pack', 'len')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + lzma
+  14: LOAD_ATTR            _encode_filter_properties
+  24: LOAD_CONST           'id'
+  26: LOAD_GLOBAL          lzma
+  38: LOAD_ATTR            FILTER_LZMA1
+  48: BUILD_MAP            
+  50: PRECALL              
+  54: CALL                 
+  64: STORE_FAST           props
+  66: LOAD_GLOBAL          NULL + lzma
+  78: LOAD_ATTR            LZMACompressor
+  88: LOAD_GLOBAL          lzma
+ 100: LOAD_ATTR            FORMAT_RAW
+ 110: LOAD_GLOBAL          NULL + lzma
+ 122: LOAD_ATTR            _decode_filter_properties
+ 132: LOAD_GLOBAL          lzma
+ 144: LOAD_ATTR            FILTER_LZMA1
+ 154: LOAD_FAST            props
+ 156: PRECALL              
+ 160: CALL                 
+ 170: BUILD_LIST           
+ 172: KW_NAMES             
+ 174: PRECALL              
+ 178: CALL                 
+ 188: LOAD_FAST            self
+ 190: STORE_ATTR           _comp
+ 200: LOAD_GLOBAL          NULL + struct
+ 212: LOAD_ATTR            pack
+ 222: LOAD_CONST           '<BBH'
+ 224: LOAD_CONST           9
+ 226: LOAD_CONST           4
+ 228: LOAD_GLOBAL          NULL + len
+ 240: LOAD_FAST            props
+ 242: PRECALL              
+ 246: CALL                 
+ 256: PRECALL              
+ 260: CALL                 
+ 270: LOAD_FAST            props
+ 272: BINARY_OP            +
+ 276: RETURN_VALUE         

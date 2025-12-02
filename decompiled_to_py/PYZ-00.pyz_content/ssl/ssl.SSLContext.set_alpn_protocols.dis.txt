@@ -1,0 +1,69 @@
+# Disassembly for ssl.SSLContext.set_alpn_protocols
+# From module file: ssl
+
+## co_consts:
+(None, 'ascii', 0, 255, 'ALPN protocols must be 1 to 255 in length')
+
+## co_names:
+('bytearray', 'bytes', 'len', 'SSLError', 'append', 'extend', '_set_alpn_protocols')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + bytearray
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           protos
+  30: LOAD_FAST            alpn_protocols
+  32: GET_ITER             
+  34: FOR_ITER             to 288
+  36: STORE_FAST           protocol
+  38: LOAD_GLOBAL          NULL + bytes
+  50: LOAD_FAST            protocol
+  52: LOAD_CONST           'ascii'
+  54: PRECALL              
+  58: CALL                 
+  68: STORE_FAST           b
+  70: LOAD_GLOBAL          NULL + len
+  82: LOAD_FAST            b
+  84: PRECALL              
+  88: CALL                 
+  98: LOAD_CONST           0
+ 100: COMPARE_OP           ==
+ 106: POP_JUMP_FORWARD_IF_TRUE to 146
+ 108: LOAD_GLOBAL          NULL + len
+ 120: LOAD_FAST            b
+ 122: PRECALL              
+ 126: CALL                 
+ 136: LOAD_CONST           255
+ 138: COMPARE_OP           >
+ 144: POP_JUMP_FORWARD_IF_FALSE to 176
+ 146: LOAD_GLOBAL          NULL + SSLError
+ 158: LOAD_CONST           'ALPN protocols must be 1 to 255 in length'
+ 160: PRECALL              
+ 164: CALL                 
+ 174: RAISE_VARARGS        
+ 176: LOAD_FAST            protos
+ 178: LOAD_METHOD          append
+ 200: LOAD_GLOBAL          NULL + len
+ 212: LOAD_FAST            b
+ 214: PRECALL              
+ 218: CALL                 
+ 228: PRECALL              
+ 232: CALL                 
+ 242: POP_TOP              
+ 244: LOAD_FAST            protos
+ 246: LOAD_METHOD          extend
+ 268: LOAD_FAST            b
+ 270: PRECALL              
+ 274: CALL                 
+ 284: POP_TOP              
+ 286: JUMP_BACKWARD        to 34
+ 288: LOAD_FAST            self
+ 290: LOAD_METHOD          _set_alpn_protocols
+ 312: LOAD_FAST            protos
+ 314: PRECALL              
+ 318: CALL                 
+ 328: POP_TOP              
+ 330: LOAD_CONST           None
+ 332: RETURN_VALUE         

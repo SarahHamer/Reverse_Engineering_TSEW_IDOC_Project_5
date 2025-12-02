@@ -1,0 +1,34 @@
+# Disassembly for subprocess._optim_args_from_interpreter_flags
+# From module file: subprocess
+
+## co_consts:
+('Return a list of command-line arguments reproducing the current\n    optimization settings in sys.flags.', 0, '-', 'O')
+
+## co_names:
+('sys', 'flags', 'optimize', 'append')
+
+## bytecode:
+
+   0: RESUME               
+   2: BUILD_LIST           
+   4: STORE_FAST           args
+   6: LOAD_GLOBAL          sys
+  18: LOAD_ATTR            flags
+  28: LOAD_ATTR            optimize
+  38: STORE_FAST           value
+  40: LOAD_FAST            value
+  42: LOAD_CONST           0
+  44: COMPARE_OP           >
+  50: POP_JUMP_FORWARD_IF_FALSE to 106
+  52: LOAD_FAST            args
+  54: LOAD_METHOD          append
+  76: LOAD_CONST           '-'
+  78: LOAD_CONST           'O'
+  80: LOAD_FAST            value
+  82: BINARY_OP            *
+  86: BINARY_OP            +
+  90: PRECALL              
+  94: CALL                 
+ 104: POP_TOP              
+ 106: LOAD_FAST            args
+ 108: RETURN_VALUE         

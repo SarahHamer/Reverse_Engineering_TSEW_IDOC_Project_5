@@ -1,0 +1,67 @@
+# Disassembly for datetime._format_time
+# From module file: datetime
+
+## co_consts:
+(None, '{:02d}', '{:02d}:{:02d}', '{:02d}:{:02d}:{:02d}', '{:02d}:{:02d}:{:02d}.{:03d}', '{:02d}:{:02d}:{:02d}.{:06d}', ('hours', 'minutes', 'seconds', 'milliseconds', 'microseconds'), 'auto', 'microseconds', 'seconds', 'milliseconds', 1000, 'Unknown timespec value')
+
+## co_names:
+('format', 'KeyError', 'ValueError')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_CONST           '{:02d}'
+   4: LOAD_CONST           '{:02d}:{:02d}'
+   6: LOAD_CONST           '{:02d}:{:02d}:{:02d}'
+   8: LOAD_CONST           '{:02d}:{:02d}:{:02d}.{:03d}'
+  10: LOAD_CONST           '{:02d}:{:02d}:{:02d}.{:06d}'
+  12: LOAD_CONST           ('hours', 'minutes', 'seconds', 'milliseconds', 'microseconds')
+  14: BUILD_CONST_KEY_MAP  
+  16: STORE_FAST           specs
+  18: LOAD_FAST            timespec
+  20: LOAD_CONST           'auto'
+  22: COMPARE_OP           ==
+  28: POP_JUMP_FORWARD_IF_FALSE to 44
+  30: LOAD_FAST            us
+  32: POP_JUMP_FORWARD_IF_FALSE to 38
+  34: LOAD_CONST           'microseconds'
+  36: JUMP_FORWARD         to 40
+  38: LOAD_CONST           'seconds'
+  40: STORE_FAST           timespec
+  42: JUMP_FORWARD         to 66
+  44: LOAD_FAST            timespec
+  46: LOAD_CONST           'milliseconds'
+  48: COMPARE_OP           ==
+  54: POP_JUMP_FORWARD_IF_FALSE to 66
+  56: LOAD_FAST            us
+  58: LOAD_CONST           1000
+  60: BINARY_OP            //=
+  64: STORE_FAST           us
+  66: NOP                  
+  68: LOAD_FAST            specs
+  70: LOAD_FAST            timespec
+  72: BINARY_SUBSCR        
+  82: STORE_FAST           fmt
+  84: LOAD_FAST            fmt
+  86: LOAD_METHOD          format
+ 108: LOAD_FAST            hh
+ 110: LOAD_FAST            mm
+ 112: LOAD_FAST            ss
+ 114: LOAD_FAST            us
+ 116: PRECALL              
+ 120: CALL                 
+ 130: RETURN_VALUE         
+ 132: PUSH_EXC_INFO        
+ 134: LOAD_GLOBAL          KeyError
+ 146: CHECK_EXC_MATCH      
+ 148: POP_JUMP_FORWARD_IF_FALSE to 182
+ 150: POP_TOP              
+ 152: LOAD_GLOBAL          NULL + ValueError
+ 164: LOAD_CONST           'Unknown timespec value'
+ 166: PRECALL              
+ 170: CALL                 
+ 180: RAISE_VARARGS        
+ 182: RERAISE              
+ 184: COPY                 
+ 186: POP_EXCEPT           
+ 188: RERAISE              

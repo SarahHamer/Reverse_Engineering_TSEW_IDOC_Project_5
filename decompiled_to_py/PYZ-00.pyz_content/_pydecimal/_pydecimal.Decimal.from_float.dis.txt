@@ -1,0 +1,130 @@
+# Disassembly for _pydecimal.Decimal.from_float
+# From module file: _pydecimal
+
+## co_consts:
+("Converts a float to a decimal number, exactly.\n\n        Note that Decimal.from_float(0.1) is not the same as Decimal('0.1').\n        Since 0.1 is not exactly representable in binary floating point, the\n        value is stored as the nearest representable value which is\n        0x1.999999999999ap-4.  The exact equivalent of the value in decimal\n        is 0.1000000000000000055511151231257827021181583404541015625.\n\n        >>> Decimal.from_float(0.1)\n        Decimal('0.1000000000000000055511151231257827021181583404541015625')\n        >>> Decimal.from_float(float('nan'))\n        Decimal('NaN')\n        >>> Decimal.from_float(float('inf'))\n        Decimal('Infinity')\n        >>> Decimal.from_float(-float('inf'))\n        Decimal('-Infinity')\n        >>> Decimal.from_float(-0.0)\n        Decimal('-0')\n\n        ", 0, 1, 1.0, 5, 'argument must be int or float.')
+
+## co_names:
+('isinstance', 'int', 'str', 'abs', 'float', '_math', 'isinf', 'isnan', 'repr', 'copysign', 'as_integer_ratio', 'bit_length', 'TypeError', '_dec_from_triple', 'Decimal')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + isinstance
+  14: LOAD_FAST            f
+  16: LOAD_GLOBAL          int
+  28: PRECALL              
+  32: CALL                 
+  42: POP_JUMP_FORWARD_IF_FALSE to 126
+  44: LOAD_FAST            f
+  46: LOAD_CONST           0
+  48: COMPARE_OP           >=
+  54: POP_JUMP_FORWARD_IF_FALSE to 60
+  56: LOAD_CONST           0
+  58: JUMP_FORWARD         to 62
+  60: LOAD_CONST           1
+  62: STORE_FAST           sign
+  64: LOAD_CONST           0
+  66: STORE_FAST           k
+  68: LOAD_GLOBAL          NULL + str
+  80: LOAD_GLOBAL          NULL + abs
+  92: LOAD_FAST            f
+  94: PRECALL              
+  98: CALL                 
+ 108: PRECALL              
+ 112: CALL                 
+ 122: STORE_FAST           coeff
+ 124: JUMP_FORWARD         to 548
+ 126: LOAD_GLOBAL          NULL + isinstance
+ 138: LOAD_FAST            f
+ 140: LOAD_GLOBAL          float
+ 152: PRECALL              
+ 156: CALL                 
+ 166: POP_JUMP_FORWARD_IF_FALSE to 518
+ 168: LOAD_GLOBAL          NULL + _math
+ 180: LOAD_ATTR            isinf
+ 190: LOAD_FAST            f
+ 192: PRECALL              
+ 196: CALL                 
+ 206: POP_JUMP_FORWARD_IF_TRUE to 248
+ 208: LOAD_GLOBAL          NULL + _math
+ 220: LOAD_ATTR            isnan
+ 230: LOAD_FAST            f
+ 232: PRECALL              
+ 236: CALL                 
+ 246: POP_JUMP_FORWARD_IF_FALSE to 296
+ 248: PUSH_NULL            
+ 250: LOAD_FAST            cls
+ 252: LOAD_GLOBAL          NULL + repr
+ 264: LOAD_FAST            f
+ 266: PRECALL              
+ 270: CALL                 
+ 280: PRECALL              
+ 284: CALL                 
+ 294: RETURN_VALUE         
+ 296: LOAD_GLOBAL          NULL + _math
+ 308: LOAD_ATTR            copysign
+ 318: LOAD_CONST           1.0
+ 320: LOAD_FAST            f
+ 322: PRECALL              
+ 326: CALL                 
+ 336: LOAD_CONST           1.0
+ 338: COMPARE_OP           ==
+ 344: POP_JUMP_FORWARD_IF_FALSE to 352
+ 346: LOAD_CONST           0
+ 348: STORE_FAST           sign
+ 350: JUMP_FORWARD         to 356
+ 352: LOAD_CONST           1
+ 354: STORE_FAST           sign
+ 356: LOAD_GLOBAL          NULL + abs
+ 368: LOAD_FAST            f
+ 370: PRECALL              
+ 374: CALL                 
+ 384: LOAD_METHOD          as_integer_ratio
+ 406: PRECALL              
+ 410: CALL                 
+ 420: UNPACK_SEQUENCE      
+ 424: STORE_FAST           n
+ 426: STORE_FAST           d
+ 428: LOAD_FAST            d
+ 430: LOAD_METHOD          bit_length
+ 452: PRECALL              
+ 456: CALL                 
+ 466: LOAD_CONST           1
+ 468: BINARY_OP            -
+ 472: STORE_FAST           k
+ 474: LOAD_GLOBAL          NULL + str
+ 486: LOAD_FAST            n
+ 488: LOAD_CONST           5
+ 490: LOAD_FAST            k
+ 492: BINARY_OP            **
+ 496: BINARY_OP            *
+ 500: PRECALL              
+ 504: CALL                 
+ 514: STORE_FAST           coeff
+ 516: JUMP_FORWARD         to 548
+ 518: LOAD_GLOBAL          NULL + TypeError
+ 530: LOAD_CONST           'argument must be int or float.'
+ 532: PRECALL              
+ 536: CALL                 
+ 546: RAISE_VARARGS        
+ 548: LOAD_GLOBAL          NULL + _dec_from_triple
+ 560: LOAD_FAST            sign
+ 562: LOAD_FAST            coeff
+ 564: LOAD_FAST            k
+ 566: UNARY_NEGATIVE       
+ 568: PRECALL              
+ 572: CALL                 
+ 582: STORE_FAST           result
+ 584: LOAD_FAST            cls
+ 586: LOAD_GLOBAL          Decimal
+ 598: IS_OP                
+ 600: POP_JUMP_FORWARD_IF_FALSE to 606
+ 602: LOAD_FAST            result
+ 604: RETURN_VALUE         
+ 606: PUSH_NULL            
+ 608: LOAD_FAST            cls
+ 610: LOAD_FAST            result
+ 612: PRECALL              
+ 616: CALL                 
+ 626: RETURN_VALUE         

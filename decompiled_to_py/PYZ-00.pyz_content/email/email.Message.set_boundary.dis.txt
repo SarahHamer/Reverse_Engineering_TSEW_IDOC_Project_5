@@ -1,0 +1,164 @@
+# Disassembly for email.Message.set_boundary
+# From module file: email.message
+
+## co_consts:
+("Set the boundary parameter in Content-Type to 'boundary'.\n\n        This is subtly different than deleting the Content-Type header and\n        adding a new one with a new boundary parameter via add_header().  The\n        main difference is that using the set_boundary() method preserves the\n        order of the Content-Type header in the original message.\n\n        HeaderParseError is raised if the message has no Content-Type header.\n        ", 'content-type', 'No Content-Type header found', False, 'boundary', '"%s"', True, '', '=', None)
+
+## co_names:
+('object', '_get_params_preserve', 'errors', 'HeaderParseError', 'lower', 'append', '_headers', 'SEMISPACE', 'join', 'policy', 'header_store_parse')
+
+## bytecode:
+
+   0: RESUME               
+   2: LOAD_GLOBAL          NULL + object
+  14: PRECALL              
+  18: CALL                 
+  28: STORE_FAST           missing
+  30: LOAD_FAST            self
+  32: LOAD_METHOD          _get_params_preserve
+  54: LOAD_FAST            missing
+  56: LOAD_CONST           'content-type'
+  58: PRECALL              
+  62: CALL                 
+  72: STORE_FAST           params
+  74: LOAD_FAST            params
+  76: LOAD_FAST            missing
+  78: IS_OP                
+  80: POP_JUMP_FORWARD_IF_FALSE to 122
+  82: LOAD_GLOBAL          NULL + errors
+  94: LOAD_ATTR            HeaderParseError
+ 104: LOAD_CONST           'No Content-Type header found'
+ 106: PRECALL              
+ 110: CALL                 
+ 120: RAISE_VARARGS        
+ 122: BUILD_LIST           
+ 124: STORE_FAST           newparams
+ 126: LOAD_CONST           False
+ 128: STORE_FAST           foundp
+ 130: LOAD_FAST            params
+ 132: GET_ITER             
+ 134: FOR_ITER             to 298
+ 136: UNPACK_SEQUENCE      
+ 140: STORE_FAST           pk
+ 142: STORE_FAST           pv
+ 144: LOAD_FAST            pk
+ 146: LOAD_METHOD          lower
+ 168: PRECALL              
+ 172: CALL                 
+ 182: LOAD_CONST           'boundary'
+ 184: COMPARE_OP           ==
+ 190: POP_JUMP_FORWARD_IF_FALSE to 250
+ 192: LOAD_FAST            newparams
+ 194: LOAD_METHOD          append
+ 216: LOAD_CONST           'boundary'
+ 218: LOAD_CONST           '"%s"'
+ 220: LOAD_FAST            boundary
+ 222: BINARY_OP            %
+ 226: BUILD_TUPLE          
+ 228: PRECALL              
+ 232: CALL                 
+ 242: POP_TOP              
+ 244: LOAD_CONST           True
+ 246: STORE_FAST           foundp
+ 248: JUMP_BACKWARD        to 134
+ 250: LOAD_FAST            newparams
+ 252: LOAD_METHOD          append
+ 274: LOAD_FAST            pk
+ 276: LOAD_FAST            pv
+ 278: BUILD_TUPLE          
+ 280: PRECALL              
+ 284: CALL                 
+ 294: POP_TOP              
+ 296: JUMP_BACKWARD        to 134
+ 298: LOAD_FAST            foundp
+ 300: POP_JUMP_FORWARD_IF_TRUE to 354
+ 302: LOAD_FAST            newparams
+ 304: LOAD_METHOD          append
+ 326: LOAD_CONST           'boundary'
+ 328: LOAD_CONST           '"%s"'
+ 330: LOAD_FAST            boundary
+ 332: BINARY_OP            %
+ 336: BUILD_TUPLE          
+ 338: PRECALL              
+ 342: CALL                 
+ 352: POP_TOP              
+ 354: BUILD_LIST           
+ 356: STORE_FAST           newheaders
+ 358: LOAD_FAST            self
+ 360: LOAD_ATTR            _headers
+ 370: GET_ITER             
+ 372: FOR_ITER             to 752
+ 374: UNPACK_SEQUENCE      
+ 378: STORE_FAST           h
+ 380: STORE_FAST           v
+ 382: LOAD_FAST            h
+ 384: LOAD_METHOD          lower
+ 406: PRECALL              
+ 410: CALL                 
+ 420: LOAD_CONST           'content-type'
+ 422: COMPARE_OP           ==
+ 428: POP_JUMP_FORWARD_IF_FALSE to 704
+ 430: BUILD_LIST           
+ 432: STORE_FAST           parts
+ 434: LOAD_FAST            newparams
+ 436: GET_ITER             
+ 438: FOR_ITER             to 558
+ 440: UNPACK_SEQUENCE      
+ 444: STORE_FAST           k
+ 446: STORE_FAST           v
+ 448: LOAD_FAST            v
+ 450: LOAD_CONST           ''
+ 452: COMPARE_OP           ==
+ 458: POP_JUMP_FORWARD_IF_FALSE to 504
+ 460: LOAD_FAST            parts
+ 462: LOAD_METHOD          append
+ 484: LOAD_FAST            k
+ 486: PRECALL              
+ 490: CALL                 
+ 500: POP_TOP              
+ 502: JUMP_BACKWARD        to 438
+ 504: LOAD_FAST            parts
+ 506: LOAD_METHOD          append
+ 528: LOAD_FAST            k
+ 530: FORMAT_VALUE         str
+ 532: LOAD_CONST           '='
+ 534: LOAD_FAST            v
+ 536: FORMAT_VALUE         str
+ 538: BUILD_STRING         
+ 540: PRECALL              
+ 544: CALL                 
+ 554: POP_TOP              
+ 556: JUMP_BACKWARD        to 438
+ 558: LOAD_GLOBAL          SEMISPACE
+ 570: LOAD_METHOD          join
+ 592: LOAD_FAST            parts
+ 594: PRECALL              
+ 598: CALL                 
+ 608: STORE_FAST           val
+ 610: LOAD_FAST            newheaders
+ 612: LOAD_METHOD          append
+ 634: LOAD_FAST            self
+ 636: LOAD_ATTR            policy
+ 646: LOAD_METHOD          header_store_parse
+ 668: LOAD_FAST            h
+ 670: LOAD_FAST            val
+ 672: PRECALL              
+ 676: CALL                 
+ 686: PRECALL              
+ 690: CALL                 
+ 700: POP_TOP              
+ 702: JUMP_BACKWARD        to 372
+ 704: LOAD_FAST            newheaders
+ 706: LOAD_METHOD          append
+ 728: LOAD_FAST            h
+ 730: LOAD_FAST            v
+ 732: BUILD_TUPLE          
+ 734: PRECALL              
+ 738: CALL                 
+ 748: POP_TOP              
+ 750: JUMP_BACKWARD        to 372
+ 752: LOAD_FAST            newheaders
+ 754: LOAD_FAST            self
+ 756: STORE_ATTR           _headers
+ 766: LOAD_CONST           None
+ 768: RETURN_VALUE         

@@ -4,9 +4,6 @@ import marshal
 import dis
 import types
 
-# === CONFIG ===
-# Folder that contains the raw members extracted from PYZ-00.pyz.
-# Adjust this to match your actual path.
 PYZ_ROOT = os.path.join("TheFactory.exe_extracted\PYZ-00.pyz_extracted", "PYZ-00.pyz")
 
 # Output root directory for human-readable disassembly files
@@ -18,13 +15,7 @@ def log(msg: str):
 
 
 def try_load_code_object(path: str):
-    """
-    Try to load a marshalled Python code object from a file.
-
-    The files extracted from PYZ-00.pyz are usually raw marshalled
-    code objects (no .pyc header), so we can feed them directly to
-    marshal.loads().
-    """
+    # Try to load a marshalled Python code object from a file
     try:
         with open(path, "rb") as f:
             data = f.read()
@@ -35,7 +26,7 @@ def try_load_code_object(path: str):
     try:
         obj = marshal.loads(data)
     except Exception as e:
-        # Not a marshalled object at all, or encrypted, or data.
+        # Not a marshalled object at all or data
         log(f"[skip] {path}: not a marshalled code object ({e})")
         return None
 
@@ -47,20 +38,14 @@ def try_load_code_object(path: str):
 
 
 def safe_name(name: str) -> str:
-    """
-    Make a filesystem-safe version of a qualified function name.
-    """
+    # Make a filesystem-safe version of qualified function name
     for ch in "<>:/\\ \t":
         name = name.replace(ch, "_")
     return name
 
-
+    # Write a readable disassembly of a single code object to a .dis.txt file
+    # One file per function/code object to keep it small and focused
 def dump_code_object(code: types.CodeType, qualified_name: str, module_rel_path: str):
-    """
-    Write a readable disassembly of a single code object to a .dis.txt file.
-
-    One file per function / code object to keep things small and focused.
-    """
     # Derive a subdirectory from the module path, e.g.
     # module_rel_path = "pkg/mod" → base = "pkg/mod"
     base_without_ext = os.path.splitext(module_rel_path)[0]
@@ -89,10 +74,7 @@ def dump_code_object(code: types.CodeType, qualified_name: str, module_rel_path:
 
 
 def walk_code_object(code: types.CodeType, qualified_name: str, module_rel_path: str):
-    """
-    Recursively walk a code object and all nested code objects (functions,
-    methods, lambdas, comprehensions, etc.), dumping each one.
-    """
+    # Recursively walk a code object and all nested code objects (functions, methods, lambdas, comprehensions, etc.), dumping each one
     dump_code_object(code, qualified_name, module_rel_path)
 
     for const in code.co_consts:
@@ -111,7 +93,7 @@ def main():
     for dirpath, dirnames, filenames in os.walk(PYZ_ROOT):
         for name in filenames:
             full_path = os.path.join(dirpath, name)
-            # Module-relative path inside PYZ (for nicer folder layout)
+            # Module-relative path inside PYZ (for nicer folder layout and less confusion)
             module_rel_path = os.path.relpath(full_path, PYZ_ROOT)
 
             log(f"[*] Processing {module_rel_path}")

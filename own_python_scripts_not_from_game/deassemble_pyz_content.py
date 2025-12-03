@@ -47,7 +47,7 @@ def safe_name(name: str) -> str:
     # One file per function/code object to keep it small and focused
 def dump_code_object(code: types.CodeType, qualified_name: str, module_rel_path: str):
     # Derive a subdirectory from the module path, e.g.
-    # module_rel_path = "pkg/mod" → base = "pkg/mod"
+    # module_rel_path = "pkg/mod" -> base = "pkg/mod"
     base_without_ext = os.path.splitext(module_rel_path)[0]
     out_dir = os.path.join(OUT_ROOT, base_without_ext)
     os.makedirs(out_dir, exist_ok=True)

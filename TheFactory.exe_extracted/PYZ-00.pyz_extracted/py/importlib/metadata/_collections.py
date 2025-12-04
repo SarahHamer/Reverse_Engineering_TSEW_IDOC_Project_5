@@ -1,7 +1,25 @@
-# decompyle3 version 3.9.3
-# Python bytecode version base 3.11 (3495)
-# Decompiled from: Python 3.11.14 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 18:30:03) [MSC v.1929 64 bit (AMD64)]
-# Embedded file name: importlib\metadata\_collections.py
+import collections
+class FreezableDefaultDict(collections.defaultdict):
+  __doc__ = '''
+    Often it is desirable to prevent the mutation of
+    a default dict after its initial construction, such
+    as to prevent mutation during iteration.
 
-Unsupported Python version, 3.11, for decompilation
+    >>> dd = FreezableDefaultDict(list)
+    >>> dd[0].append(\'1\')
+    >>> dd.freeze()
+    >>> dd[1]
+    []
+    >>> len(dd)
+    1
+    '''
+  def __missing__(self,key):
+    return getattr(self,'_frozen',super().__missing__)(key)
 
+  def freeze(self):
+    self._frozen = lambda key: self.default_factory()
+
+class Pair(collections.namedtuple):
+  @classmethod
+  def parse(cls,text):
+    return map(str.strip,text.split('=',1))

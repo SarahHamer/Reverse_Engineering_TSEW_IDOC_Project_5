@@ -1,7 +1,33 @@
-# decompyle3 version 3.9.3
-# Python bytecode version base 3.11 (3495)
-# Decompiled from: Python 3.11.14 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 18:30:03) [MSC v.1929 64 bit (AMD64)]
-# Embedded file name: email\__init__.py
+__doc__ = 'A package for parsing, handling, and generating email messages.'
+__all__ = ['base64mime','charset','encoders','errors','feedparser','generator','header','iterators','message','message_from_file','message_from_binary_file','message_from_string','message_from_bytes','mime','parser','quoprimime','utils']
+def message_from_string(s):
+  '''Parse a string into a Message object model.
 
-Unsupported Python version, 3.11, for decompilation
+    Optional _class and strict are passed to the Parser constructor.
+    '''
+  from email.parser import Parser
+  return kws.parsestr(s)
 
+def message_from_bytes(s):
+  '''Parse a bytes string into a Message object model.
+
+    Optional _class and strict are passed to the Parser constructor.
+    '''
+  from email.parser import BytesParser
+  return kws.parsebytes(s)
+
+def message_from_file(fp):
+  '''Read a file and parse its contents into a Message object model.
+
+    Optional _class and strict are passed to the Parser constructor.
+    '''
+  from email.parser import Parser
+  return kws.parse(fp)
+
+def message_from_binary_file(fp):
+  '''Read a binary file and parse its contents into a Message object model.
+
+    Optional _class and strict are passed to the Parser constructor.
+    '''
+  from email.parser import BytesParser
+  return kws.parse(fp)

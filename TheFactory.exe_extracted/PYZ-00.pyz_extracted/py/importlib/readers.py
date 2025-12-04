@@ -1,7 +1,8 @@
-# decompyle3 version 3.9.3
-# Python bytecode version base 3.11 (3495)
-# Decompiled from: Python 3.11.14 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 18:30:03) [MSC v.1929 64 bit (AMD64)]
-# Embedded file name: importlib\readers.py
+__doc__ = '''
+Compatibility shim for .resources.readers as found on Python 3.10.
 
-Unsupported Python version, 3.11, for decompilation
-
+Consumers that can rely on Python 3.11 should use the other
+module directly.
+'''
+from .resources.readers import FileReader, ZipReader, MultiplexedPath, NamespaceReader
+__all__ = ['FileReader','ZipReader','MultiplexedPath','NamespaceReader']
